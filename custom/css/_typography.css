@@ -1,0 +1,409 @@
+/* ========================================
+   ACADEMIC PROFESSIONAL TYPOGRAPHY
+   ========================================
+   
+   Typography system designed for academic readability
+   and scholarly credibility. Uses serif fonts for 
+   body text (better for long-form reading) and 
+   sans-serif for headings (modern, clean hierarchy).
+   ======================================== */
+
+/* ----------------------------------------
+   FONTS
+   Using system fonts for optimal performance
+   and native OS appearance
+   ---------------------------------------- */
+
+/* ----------------------------------------
+   BASE TYPOGRAPHY
+   ---------------------------------------- */
+
+body,
+.wp-site-blocks {
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-base);
+    font-weight: var(--academic-weight-normal);
+    line-height: var(--academic-leading-relaxed);
+    color: var(--academic-text-primary);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ----------------------------------------
+   HEADINGS
+   ---------------------------------------- */
+
+h1, h2, h3, h4, h5, h6,
+.wp-block-heading,
+.wp-block-post-title,
+.entry-title {
+    font-family: var(--academic-font-sans);
+    font-weight: var(--academic-weight-bold);
+    line-height: var(--academic-leading-tight);
+    color: var(--academic-gray-900);
+    letter-spacing: var(--academic-tracking-tight);
+    margin-top: var(--academic-space-6);
+    margin-bottom: var(--academic-space-3);
+}
+
+h1,
+.wp-block-heading.is-style-h1 {
+    font-size: clamp(2rem, 5vw, var(--academic-text-4xl));
+    font-weight: var(--academic-weight-bold);
+    letter-spacing: var(--academic-tracking-tighter);
+    margin-top: 0;
+    margin-bottom: var(--academic-space-4);
+}
+
+h2,
+.wp-block-heading.is-style-h2 {
+    font-size: clamp(1.5rem, 4vw, var(--academic-text-3xl));
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+h3,
+.wp-block-heading.is-style-h3 {
+    font-size: clamp(1.25rem, 3vw, var(--academic-text-2xl));
+}
+
+h4,
+.wp-block-heading.is-style-h4 {
+    font-size: var(--academic-text-xl);
+    font-weight: var(--academic-weight-semibold);
+}
+
+h5,
+.wp-block-heading.is-style-h5 {
+    font-size: var(--academic-text-lg);
+    font-weight: var(--academic-weight-semibold);
+    text-transform: none;
+    letter-spacing: var(--academic-tracking-normal);
+}
+
+h6,
+.wp-block-heading.is-style-h6 {
+    font-size: var(--academic-text-base);
+    font-weight: var(--academic-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--academic-tracking-wide);
+    color: var(--academic-text-secondary);
+}
+
+/* First heading after content start */
+.wp-site-blocks > * > h1:first-child,
+.wp-site-blocks > * > h2:first-child,
+article h1:first-child,
+article h2:first-child {
+    margin-top: 0;
+}
+
+/* ----------------------------------------
+   PARAGRAPHS
+   ---------------------------------------- */
+
+p,
+.wp-block-paragraph {
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-base);
+    line-height: var(--academic-leading-relaxed);
+    margin-bottom: var(--academic-space-4);
+    color: var(--academic-text-primary);
+}
+
+/* Lead/intro paragraph style */
+.is-style-lead,
+.wp-block-paragraph.has-large-font-size,
+.entry-content > p:first-of-type {
+    font-size: var(--academic-text-lg);
+    line-height: var(--academic-leading-relaxed);
+    color: var(--academic-text-secondary);
+}
+
+/* Small text */
+.has-small-font-size,
+small,
+.small {
+    font-size: var(--academic-text-sm);
+    line-height: var(--academic-leading-normal);
+}
+
+/* ----------------------------------------
+   LINKS
+   ---------------------------------------- */
+
+a {
+    color: var(--academic-primary);
+    text-decoration: none;
+    text-underline-offset: 3px;
+    transition: var(--academic-transition-fast);
+}
+
+a:hover,
+a:focus {
+    color: var(--academic-accent);
+    text-decoration: underline;
+    text-decoration-color: var(--academic-accent);
+}
+
+/* Navigation links */
+.wp-block-navigation a,
+.wp-block-site-title a,
+.wp-block-post-title a {
+    text-decoration: none;
+}
+
+.wp-block-navigation a:hover,
+.wp-block-site-title a:hover {
+    text-decoration: none;
+    color: var(--academic-primary-light);
+}
+
+.wp-block-post-title a:hover {
+    color: var(--academic-accent);
+}
+
+/* ----------------------------------------
+   LISTS
+   ---------------------------------------- */
+
+ul, ol,
+.wp-block-list {
+    font-family: var(--academic-font-sans);
+    line-height: var(--academic-leading-relaxed);
+    margin-bottom: var(--academic-space-4);
+    padding-left: var(--academic-space-6);
+}
+
+li {
+    margin-bottom: var(--academic-space-1);
+}
+
+/* Nested lists */
+li ul,
+li ol {
+    margin-top: var(--academic-space-2);
+    margin-bottom: var(--academic-space-2);
+}
+
+/* Definition lists - common in academic writing */
+dl {
+    margin-bottom: var(--academic-space-5);
+}
+
+dt {
+    font-family: var(--academic-font-sans);
+    font-weight: var(--academic-weight-semibold);
+    color: var(--academic-primary);
+    margin-bottom: var(--academic-space-1);
+}
+
+dd {
+    margin-left: var(--academic-space-6);
+    margin-bottom: var(--academic-space-4);
+    color: var(--academic-text-secondary);
+}
+
+/* ----------------------------------------
+   BLOCKQUOTES
+   ---------------------------------------- */
+
+blockquote,
+.wp-block-quote {
+    font-family: var(--academic-font-serif);
+    font-style: italic;
+    font-size: var(--academic-text-lg);
+    line-height: var(--academic-leading-relaxed);
+    color: var(--academic-text-secondary);
+    border-left: 4px solid var(--academic-accent);
+    margin: var(--academic-space-6) 0;
+    padding: var(--academic-space-3) var(--academic-space-5);
+    background: var(--academic-bg-secondary);
+}
+
+blockquote p,
+.wp-block-quote p {
+    margin-bottom: var(--academic-space-3);
+}
+
+blockquote cite,
+.wp-block-quote cite,
+.wp-block-quote__citation {
+    font-family: var(--academic-font-sans);
+    font-style: normal;
+    font-size: var(--academic-text-sm);
+    font-weight: var(--academic-weight-medium);
+    color: var(--academic-text-muted);
+    display: block;
+    margin-top: var(--academic-space-3);
+}
+
+blockquote cite::before,
+.wp-block-quote cite::before,
+.wp-block-quote__citation::before {
+    content: "— ";
+}
+
+/* Pull quotes - for academic emphasis */
+.wp-block-pullquote {
+    border-top: 3px solid var(--academic-accent);
+    border-bottom: 3px solid var(--academic-accent);
+    border-left: none;
+    padding: var(--academic-space-8) var(--academic-space-4);
+    margin: var(--academic-space-10) 0;
+    text-align: center;
+}
+
+.wp-block-pullquote blockquote {
+    border: none;
+    background: transparent;
+    margin: 0;
+    padding: 0;
+}
+
+/* ----------------------------------------
+   CODE & PREFORMATTED TEXT
+   ---------------------------------------- */
+
+/* code,
+kbd,
+samp,
+.wp-block-code code {
+    font-family: var(--academic-font-mono);
+    font-size: 0.9em;
+    background: var(--academic-gray-100);
+    padding: 0.2em 0.4em;
+    border-radius: var(--academic-radius-sm);
+    color: var(--academic-primary-dark);
+}
+
+pre,
+.wp-block-code,
+.wp-block-preformatted {
+    font-family: var(--academic-font-mono);
+    font-size: var(--academic-text-sm);
+    line-height: var(--academic-leading-relaxed);
+    background: var(--academic-gray-800);
+    color: var(--academic-gray-100);
+    padding: var(--academic-space-5);
+    border-radius: var(--academic-radius-md);
+    overflow-x: auto;
+    margin-bottom: var(--academic-space-5);
+}
+
+pre code,
+.wp-block-code code {
+    background: transparent;
+    padding: 0;
+    color: inherit;
+} */
+
+/* ----------------------------------------
+   CAPTIONS & FIGCAPTIONS
+   ---------------------------------------- */
+
+figcaption,
+.wp-block-image figcaption,
+.wp-element-caption {
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-sm);
+    color: var(--academic-text-muted);
+    text-align: center;
+    margin-top: var(--academic-space-3);
+    font-style: italic;
+}
+
+/* ----------------------------------------
+   TABLES
+   ---------------------------------------- */
+
+/*table,
+.wp-block-table table {
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-base);
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: var(--academic-space-6);
+}
+
+th,
+.wp-block-table th {
+    font-weight: var(--academic-weight-semibold);
+    text-align: left;
+    padding: var(--academic-space-3) var(--academic-space-4);
+    background: var(--academic-primary);
+    color: var(--academic-white);
+    border: 1px solid var(--academic-primary-dark);
+}
+
+td,
+.wp-block-table td {
+    padding: var(--academic-space-3) var(--academic-space-4);
+    border: 1px solid var(--academic-border-light);
+}
+
+tr:nth-child(even),
+.wp-block-table tr:nth-child(even) {
+    background: var(--academic-bg-secondary);
+}
+
+/~ Table caption ~/
+.wp-block-table figcaption,
+caption {
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-sm);
+    font-weight: var(--academic-weight-medium);
+    color: var(--academic-text-secondary);
+    text-align: left;
+    caption-side: top;
+    margin-bottom: var(--academic-space-3);
+}
+*/
+/* ----------------------------------------
+   HORIZONTAL RULES
+   ---------------------------------------- */
+
+hr,
+.wp-block-separator {
+    border: none;
+    height: 1px;
+    background: linear-gradient(
+        to right,
+        transparent,
+        var(--academic-border-medium) 20%,
+        var(--academic-border-medium) 80%,
+        transparent
+    );
+    margin: var(--academic-space-10) auto;
+    max-width: var(--academic-content-md);
+}
+
+.wp-block-separator.is-style-wide {
+    max-width: 100%;
+}
+
+.wp-block-separator.is-style-dots {
+    background: none;
+    text-align: center;
+}
+
+.wp-block-separator.is-style-dots::before {
+    content: "• • •";
+    color: var(--academic-text-muted);
+    letter-spacing: 1em;
+}
+
+/* ----------------------------------------
+   SELECTION STYLING
+   ---------------------------------------- */
+
+::selection {
+    background: var(--academic-accent-muted);
+    color: var(--academic-primary-dark);
+}
+
+::-moz-selection {
+    background: var(--academic-accent-muted);
+    color: var(--academic-primary-dark);
+}

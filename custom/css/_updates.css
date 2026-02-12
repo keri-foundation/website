@@ -1,0 +1,302 @@
+/* ========================================
+   PROFESSIONAL UPDATE BLOCKS STYLING
+   ========================================
+   
+   Custom styling for update/announcement blocks
+   using WordPress table blocks to create a 
+   polished, card-like appearance.
+   ======================================== */
+
+/* ----------------------------------------
+   UPDATE CARD CONTAINERS
+   ---------------------------------------- */
+
+/* Style the columns layout containing update cards */
+.wp-block-columns.alignwide .wp-block-column .wp-block-table {
+    margin-bottom: 0;
+}
+
+.wp-block-columns.alignwide .wp-block-column {
+    margin-bottom: var(--academic-space-6);
+}
+
+/* ----------------------------------------
+   INDIVIDUAL UPDATE CARDS (Tables in Columns)
+   ---------------------------------------- */
+
+/* Base styling for update card tables */
+.wp-block-columns .wp-block-table table {
+    background: var(--academic-white);
+    border: 1px solid var(--academic-border-light);
+    border-radius: var(--academic-radius-lg);
+    box-shadow: var(--academic-shadow-sm);
+    overflow: hidden;
+    transition: all var(--academic-transition-base);
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.wp-block-columns .wp-block-table table:hover {
+    box-shadow: var(--academic-shadow-lg);
+    border-color: var(--academic-primary-light);
+    transform: translateY(-2px);
+}
+
+/* Update card headers (titles) */
+.wp-block-columns .wp-block-table table thead th {
+    background: linear-gradient(135deg, var(--academic-accent) 0%, var(--academic-accent-light) 100%);
+    color: var(--academic-white);
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-lg) !important;
+    font-weight: var(--academic-weight-semibold);
+    padding: var(--academic-space-5) var(--academic-space-6) !important;
+    text-align: left;
+    border: none;
+    position: relative;
+}
+
+/* Update card content */
+.wp-block-columns .wp-block-table table tbody td {
+    background: var(--academic-white);
+    color: var(--academic-text-primary);
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-base) !important;
+    line-height: var(--academic-leading-relaxed);
+    padding: var(--academic-space-6) !important;
+    border: none;
+}
+
+/* Links in update cards */
+.wp-block-columns .wp-block-table table tbody td a {
+    color: var(--academic-accent);
+    text-decoration: none;
+    font-weight: var(--academic-weight-medium);
+    border-bottom: 1px solid transparent;
+    transition: var(--academic-transition-fast);
+}
+
+.wp-block-columns .wp-block-table table tbody td a:hover {
+    color: var(--academic-accent-dark);
+    border-bottom-color: var(--academic-accent);
+}
+
+/* ----------------------------------------
+   WIDE UPDATE TABLES (Horizontal Layout)
+   ---------------------------------------- */
+
+/* Style for the wider update tables below the cards */
+.entry-content > .wp-block-table {
+    margin: var(--academic-space-8) 0;
+}
+
+.entry-content > .wp-block-table table {
+    border: 1px solid var(--academic-border-light);
+    border-radius: var(--academic-radius-lg);
+    box-shadow: var(--academic-shadow-md);
+    overflow: hidden;
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* Headers for wide tables */
+.entry-content > .wp-block-table table thead th {
+    background: var(--academic-primary-dark);
+    color: var(--academic-white);
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-base) !important;
+    font-weight: var(--academic-weight-semibold);
+    padding: var(--academic-space-4) var(--academic-space-5) !important;
+    text-align: left;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 2px solid var(--academic-primary);
+}
+
+.entry-content > .wp-block-table table thead th:last-child {
+    border-right: none;
+}
+
+/* Body cells for wide tables */
+.entry-content > .wp-block-table table tbody td {
+    background: var(--academic-white);
+    color: var(--academic-text-primary);
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-base) !important;
+    line-height: var(--academic-leading-relaxed);
+    padding: var(--academic-space-5) !important;
+    border-right: 1px solid var(--academic-border-light);
+    border-bottom: 1px solid var(--academic-border-light);
+    vertical-align: top;
+}
+
+.entry-content > .wp-block-table table tbody td:last-child {
+    border-right: none;
+}
+
+.entry-content > .wp-block-table table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Striped style variation */
+.entry-content > .wp-block-table.is-style-stripes table {
+    background-color: transparent;
+}
+
+.entry-content > .wp-block-table.is-style-stripes table thead th {
+    background: var(--academic-accent);
+    border-bottom: 2px solid var(--academic-accent-dark);
+}
+
+.entry-content > .wp-block-table.is-style-stripes table tbody tr:nth-child(odd) td {
+    background: #fef8f3;
+}
+
+.entry-content > .wp-block-table.is-style-stripes table tbody tr:nth-child(even) td {
+    background: var(--academic-white);
+}
+
+/* Links in wide tables */
+.entry-content > .wp-block-table table tbody td a {
+    color: var(--academic-accent);
+    text-decoration: none;
+    font-weight: var(--academic-weight-medium);
+    border-bottom: 1px solid transparent;
+    transition: var(--academic-transition-fast);
+}
+
+.entry-content > .wp-block-table table tbody td a:hover {
+    color: var(--academic-accent-dark);
+    border-bottom-color: var(--academic-accent);
+}
+
+/* ----------------------------------------
+   TOGGLE ICONS
+   ---------------------------------------- */
+
+/* Style for the hide/show toggle icons */
+.table-toggle-icon {
+    background: rgba(255, 255, 255, 0.2) !important;
+    border-radius: var(--academic-radius-sm) !important;
+    opacity: 0.7;
+    transition: all var(--academic-transition-fast);
+}
+
+.table-toggle-icon:hover {
+    background: rgba(255, 255, 255, 0.3) !important;
+    opacity: 1;
+}
+
+thead th .table-toggle-icon {
+    background: rgba(255, 255, 255, 0.15) !important;
+}
+
+tbody td .table-toggle-icon {
+    background: rgba(0, 0, 0, 0.05) !important;
+}
+
+tbody td .table-toggle-icon:hover {
+    background: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ----------------------------------------
+   HEADING ABOVE UPDATES
+   ---------------------------------------- */
+
+/* Style the "Latest updates!" heading */
+.entry-content h3.has-text-align-center {
+    color: var(--academic-primary-dark);
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-2xl);
+    font-weight: var(--academic-weight-bold);
+    margin-bottom: var(--academic-space-8);
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.entry-content h3.has-text-align-center::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--academic-accent), var(--academic-primary));
+    border-radius: var(--academic-radius-full);
+}
+
+/* ----------------------------------------
+   RESPONSIVE DESIGN
+   ---------------------------------------- */
+
+@media (max-width: 768px) {
+    /* Stack cards vertically on mobile */
+    .wp-block-columns {
+        flex-direction: column;
+    }
+    
+    .wp-block-columns .wp-block-column {
+        flex-basis: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    
+    /* Adjust font sizes on mobile */
+    .wp-block-columns .wp-block-table table thead th {
+        font-size: var(--academic-text-md) !important;
+        padding: var(--academic-space-4) var(--academic-space-5) !important;
+    }
+    
+    .wp-block-columns .wp-block-table table tbody td,
+    .entry-content > .wp-block-table table tbody td {
+        font-size: var(--academic-text-sm) !important;
+        padding: var(--academic-space-4) !important;
+    }
+    
+    .entry-content h3.has-text-align-center {
+        font-size: var(--academic-text-xl);
+    }
+    
+    /* Make wide tables scroll horizontally on small screens */
+    .entry-content > .wp-block-table {
+        overflow-x: auto;
+    }
+    
+    .entry-content > .wp-block-table table {
+        min-width: 600px;
+    }
+}
+
+@media (max-width: 480px) {
+    .wp-block-columns .wp-block-table table thead th {
+        font-size: var(--academic-text-base) !important;
+        padding: var(--academic-space-3) var(--academic-space-4) !important;
+    }
+    
+    .wp-block-columns .wp-block-table table tbody td {
+        font-size: var(--academic-text-sm) !important;
+        padding: var(--academic-space-3) !important;
+    }
+}
+
+/* ----------------------------------------
+   PRINT STYLES
+   ---------------------------------------- */
+
+@media print {
+    .wp-block-table table {
+        box-shadow: none;
+        border: 1px solid #000;
+    }
+    
+    .table-toggle-icon {
+        display: none;
+    }
+    
+    .wp-block-columns .wp-block-table table:hover {
+        transform: none;
+    }
+}

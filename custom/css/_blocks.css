@@ -1,0 +1,516 @@
+/* ========================================
+   ACADEMIC PROFESSIONAL BLOCK OVERRIDES
+   ========================================
+   
+   Overrides for WordPress core blocks and 
+   Twenty Twenty-Five specific block styles
+   to maintain academic aesthetic consistency.
+   ======================================== */
+
+/* ----------------------------------------
+   IMAGE BLOCKS
+   ---------------------------------------- */
+
+.wp-block-image {
+    margin-bottom: var(--academic-space-4);
+}
+
+.wp-block-image img {
+    border-radius: var(--academic-radius-sm);
+    box-shadow: var(--academic-shadow-sm);
+}
+
+.wp-block-image.is-style-rounded img {
+    border-radius: var(--academic-radius-lg);
+}
+
+/* Image with border */
+.wp-block-image.academic-bordered img {
+    border: 1px solid var(--academic-border-light);
+    padding: var(--academic-space-2);
+    background: var(--academic-white);
+}
+
+/* ----------------------------------------
+   GALLERY BLOCKS
+   ---------------------------------------- */
+
+.wp-block-gallery {
+    gap: var(--academic-space-4);
+    margin-bottom: var(--academic-space-6);
+}
+
+.wp-block-gallery .wp-block-image {
+    margin-bottom: 0;
+}
+
+.wp-block-gallery figcaption {
+    background: linear-gradient(transparent, rgba(0,0,0,0.7));
+    padding: var(--academic-space-6) var(--academic-space-3) var(--academic-space-3);
+    font-size: var(--academic-text-sm);
+}
+
+/* ----------------------------------------
+   COVER BLOCK
+   ---------------------------------------- */
+
+.wp-block-cover {
+    min-height: 400px;
+    margin-bottom: var(--academic-space-6);
+}
+
+.wp-block-cover__inner-container {
+    max-width: var(--academic-content-lg);
+    padding: var(--academic-space-6);
+}
+
+.wp-block-cover h1,
+.wp-block-cover h2,
+.wp-block-cover h3 {
+    color: var(--academic-white);
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.wp-block-cover p {
+    color: var(--academic-gray-100);
+}
+
+/* Academic cover style */
+.wp-block-cover.academic-cover-dark {
+    background-color: var(--academic-primary-dark);
+}
+
+.wp-block-cover.academic-cover-dark::before {
+    background: linear-gradient(135deg, 
+        rgba(15, 40, 71, 0.95) 0%, 
+        rgba(30, 58, 95, 0.85) 100%
+    );
+}
+
+/* ----------------------------------------
+   MEDIA & TEXT BLOCK
+   ---------------------------------------- */
+
+.wp-block-media-text {
+    gap: var(--academic-space-6);
+    margin-bottom: var(--academic-space-6);
+}
+
+.wp-block-media-text .wp-block-media-text__content {
+    padding: var(--academic-space-3) 0;
+}
+
+@media (max-width: 767px) {
+    .wp-block-media-text {
+        gap: var(--academic-space-4);
+    }
+}
+
+/* ----------------------------------------
+   POST TEMPLATE / QUERY LOOP
+   ---------------------------------------- */
+
+.wp-block-post-template {
+    gap: var(--academic-space-6);
+}
+
+.wp-block-post-template .wp-block-post {
+    padding-bottom: var(--academic-space-6);
+    border-bottom: 1px solid var(--academic-border-light);
+}
+
+.wp-block-post-template .wp-block-post:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+/* Grid layout for posts */
+.wp-block-post-template.is-flex-container {
+    gap: var(--academic-space-5);
+}
+
+.wp-block-post-template.is-flex-container .wp-block-post {
+    background: var(--academic-white);
+    border: 1px solid var(--academic-border-light);
+    border-radius: var(--academic-radius-md);
+    padding: var(--academic-space-5);
+    transition: var(--academic-transition-base);
+}
+
+.wp-block-post-template.is-flex-container .wp-block-post:hover {
+    border-color: var(--academic-border-medium);
+    box-shadow: var(--academic-shadow-md);
+}
+
+/* ----------------------------------------
+   POST TITLE BLOCK
+   ---------------------------------------- */
+
+.wp-block-post-title {
+    font-family: var(--academic-font-sans);
+    color: var(--academic-primary);
+    margin-bottom: var(--academic-space-3);
+}
+
+.wp-block-post-title a {
+    color: var(--academic-primary);
+    text-decoration: none;
+}
+
+.wp-block-post-title a:hover {
+    color: var(--academic-accent-dark);
+}
+
+/* ----------------------------------------
+   POST EXCERPT
+   ---------------------------------------- */
+
+.wp-block-post-excerpt {
+    margin-bottom: var(--academic-space-4);
+}
+
+.wp-block-post-excerpt__excerpt {
+    font-family: var(--academic-font-serif);
+    color: var(--academic-text-secondary);
+    line-height: var(--academic-leading-relaxed);
+}
+
+.wp-block-post-excerpt__more-link {
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-sm);
+    font-weight: var(--academic-weight-medium);
+    color: var(--academic-primary);
+}
+
+/* ----------------------------------------
+   POST FEATURED IMAGE
+   ---------------------------------------- */
+
+.wp-block-post-featured-image {
+    margin-bottom: var(--academic-space-4);
+}
+
+.wp-block-post-featured-image img {
+    border-radius: var(--academic-radius-sm);
+}
+
+/* ----------------------------------------
+   DETAILS/ACCORDION BLOCK
+   ---------------------------------------- */
+
+.wp-block-details {
+    border: 1px solid var(--academic-border-light);
+    border-radius: var(--academic-radius-md);
+    margin-bottom: var(--academic-space-3);
+}
+
+.wp-block-details summary {
+    font-family: var(--academic-font-sans);
+    font-weight: var(--academic-weight-medium);
+    padding: var(--academic-space-4);
+    cursor: pointer;
+    background: var(--academic-bg-secondary);
+    transition: var(--academic-transition-fast);
+}
+
+.wp-block-details summary:hover {
+    background: var(--academic-gray-100);
+}
+
+.wp-block-details[open] summary {
+    border-bottom: 1px solid var(--academic-border-light);
+}
+
+.wp-block-details > *:not(summary) {
+    padding: var(--academic-space-4);
+}
+
+/* ----------------------------------------
+   TABLE OF CONTENTS (if plugin installed)
+   ---------------------------------------- */
+
+.wp-block-table-of-contents {
+    background: var(--academic-bg-secondary);
+    border: 1px solid var(--academic-border-light);
+    border-radius: var(--academic-radius-md);
+    padding: var(--academic-space-5);
+    margin: var(--academic-space-6) 0;
+}
+
+.wp-block-table-of-contents ol {
+    list-style: decimal;
+    padding-left: var(--academic-space-6);
+}
+
+.wp-block-table-of-contents li {
+    margin-bottom: var(--academic-space-2);
+}
+
+.wp-block-table-of-contents a {
+    text-decoration: none;
+    color: var(--academic-primary);
+}
+
+.wp-block-table-of-contents a:hover {
+    text-decoration: underline;
+}
+
+/* ----------------------------------------
+   FOOTNOTES (Gutenberg footnotes block)
+   ---------------------------------------- */
+
+.wp-block-footnotes {
+    font-size: var(--academic-text-sm);
+    color: var(--academic-text-secondary);
+    border-top: 1px solid var(--academic-border-light);
+    padding-top: var(--academic-space-6);
+    margin-top: var(--academic-space-10);
+}
+
+.wp-block-footnotes li {
+    margin-bottom: var(--academic-space-3);
+}
+
+/* Footnote reference in text */
+sup.fn-ref a,
+a[data-fn] {
+    color: var(--academic-accent);
+    font-weight: var(--academic-weight-semibold);
+    text-decoration: none;
+}
+
+/* ----------------------------------------
+   COMMENTS BLOCK
+   ---------------------------------------- */
+
+.wp-block-comments {
+    margin-top: var(--academic-space-12);
+    padding-top: var(--academic-space-8);
+    border-top: 2px solid var(--academic-border-light);
+}
+
+.wp-block-comments-title {
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-xl);
+    margin-bottom: var(--academic-space-6);
+}
+
+.wp-block-comment-template {
+    gap: var(--academic-space-6);
+}
+
+.wp-block-comment-template li {
+    padding: var(--academic-space-5);
+    background: var(--academic-bg-secondary);
+    border-radius: var(--academic-radius-md);
+}
+
+/* ----------------------------------------
+   FILE BLOCK
+   ---------------------------------------- */
+
+.wp-block-file {
+    background: var(--academic-bg-secondary);
+    border: 1px solid var(--academic-border-light);
+    border-radius: var(--academic-radius-md);
+    padding: var(--academic-space-4);
+    display: flex;
+    align-items: center;
+    gap: var(--academic-space-4);
+}
+
+.wp-block-file__content-wrapper {
+    flex: 1;
+}
+
+.wp-block-file a:not(.wp-block-file__button) {
+    font-weight: var(--academic-weight-medium);
+}
+
+.wp-block-file__button {
+    font-size: var(--academic-text-sm);
+    padding: var(--academic-space-2) var(--academic-space-4);
+}
+
+/* ----------------------------------------
+   EMBED BLOCKS
+   ---------------------------------------- */
+
+.wp-block-embed {
+    margin: var(--academic-space-8) 0;
+}
+
+.wp-block-embed figcaption {
+    margin-top: var(--academic-space-3);
+}
+
+/* ----------------------------------------
+   LATEST POSTS BLOCK
+   ---------------------------------------- */
+
+.wp-block-latest-posts {
+    padding: 0;
+    list-style: none;
+}
+
+.wp-block-latest-posts li {
+    padding: var(--academic-space-4) 0;
+    border-bottom: 1px solid var(--academic-border-light);
+}
+
+.wp-block-latest-posts li:last-child {
+    border-bottom: none;
+}
+
+.wp-block-latest-posts__post-title {
+    font-family: var(--academic-font-sans);
+    font-weight: var(--academic-weight-medium);
+    color: var(--academic-primary);
+    text-decoration: none;
+    display: block;
+    margin-bottom: var(--academic-space-1);
+}
+
+.wp-block-latest-posts__post-title:hover {
+    color: var(--academic-accent-dark);
+}
+
+.wp-block-latest-posts__post-date,
+.wp-block-latest-posts__post-author {
+    font-size: var(--academic-text-sm);
+    color: var(--academic-text-muted);
+}
+
+/* ----------------------------------------
+   CALENDAR BLOCK
+   ---------------------------------------- */
+
+.wp-block-calendar {
+    font-family: var(--academic-font-sans);
+}
+
+.wp-block-calendar table {
+    border-collapse: separate;
+    border-spacing: 2px;
+}
+
+.wp-block-calendar caption {
+    font-weight: var(--academic-weight-semibold);
+    color: var(--academic-primary);
+    margin-bottom: var(--academic-space-3);
+}
+
+.wp-block-calendar th {
+    background: var(--academic-primary);
+    color: var(--academic-white);
+    font-weight: var(--academic-weight-medium);
+    padding: var(--academic-space-2);
+}
+
+.wp-block-calendar td {
+    padding: var(--academic-space-2);
+    text-align: center;
+}
+
+.wp-block-calendar td a {
+    font-weight: var(--academic-weight-semibold);
+    color: var(--academic-accent);
+}
+
+/* ----------------------------------------
+   ARCHIVES & CATEGORIES BLOCKS
+   ---------------------------------------- */
+
+.wp-block-archives,
+.wp-block-categories {
+    padding: 0;
+    list-style: none;
+}
+
+.wp-block-archives li,
+.wp-block-categories li {
+    padding: var(--academic-space-2) 0;
+    border-bottom: 1px solid var(--academic-border-light);
+}
+
+.wp-block-archives li:last-child,
+.wp-block-categories li:last-child {
+    border-bottom: none;
+}
+
+.wp-block-archives a,
+.wp-block-categories a {
+    font-family: var(--academic-font-sans);
+    color: var(--academic-text-primary);
+    text-decoration: none;
+}
+
+.wp-block-archives a:hover,
+.wp-block-categories a:hover {
+    color: var(--academic-primary);
+}
+
+/* ----------------------------------------
+   TAG CLOUD BLOCK
+   ---------------------------------------- */
+
+.wp-block-tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--academic-space-2);
+}
+
+.wp-block-tag-cloud a {
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-sm);
+    background: var(--academic-gray-100);
+    padding: var(--academic-space-1) var(--academic-space-3);
+    border-radius: var(--academic-radius-full);
+    text-decoration: none;
+    color: var(--academic-text-secondary);
+    transition: var(--academic-transition-fast);
+}
+
+.wp-block-tag-cloud a:hover {
+    background: var(--academic-primary);
+    color: var(--academic-white);
+}
+
+/* ----------------------------------------
+   RSS BLOCK
+   ---------------------------------------- */
+
+.wp-block-rss {
+    padding: 0;
+    list-style: none;
+}
+
+.wp-block-rss__item {
+    padding: var(--academic-space-4) 0;
+    border-bottom: 1px solid var(--academic-border-light);
+}
+
+.wp-block-rss__item-title {
+    font-family: var(--academic-font-sans);
+    font-weight: var(--academic-weight-medium);
+}
+
+.wp-block-rss__item-excerpt,
+.wp-block-rss__item-full-content {
+    font-size: var(--academic-text-sm);
+    color: var(--academic-text-secondary);
+    margin-top: var(--academic-space-2);
+}
+
+/* ----------------------------------------
+   VERSE BLOCK (for poetry, academic quotes)
+   ---------------------------------------- */
+
+.wp-block-verse {
+    font-family: var(--academic-font-serif);
+    font-style: italic;
+    background: var(--academic-bg-secondary);
+    padding: var(--academic-space-5);
+    border-left: 3px solid var(--academic-accent);
+    white-space: pre-wrap;
+}

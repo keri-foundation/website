@@ -1,0 +1,491 @@
+/* ========================================
+   LAYOUT & BACKGROUND
+   ======================================== */
+body {
+    /* position: relative; */
+    /* min-height: 100vh; */
+    /* background: linear-gradient(to right, #b4d070, #91a956); */
+    background: linear-gradient(to right, #f3f9f9, #f2f7f9);
+    /* color: #060b6f; */
+}
+
+/*body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    /~ background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20xml%3Aspace%3D'preserve'%20width%3D'210mm'%20height%3D'297mm'%20viewBox%3D'0%200%20210%20297'%3E%3Cpath%20fill%3D'%2361783e'%20d%3D'M113%20128H82q-6%201-7%204-2%201%201%207l3%207-4%204-5-8q-4-9%200-14%203-5%2011-6h31zm6%2038%203-6%2012-20q2-6%201-9l-6-3h-8l-1-6h9q9%201%2012%207%202%205-2%2013v1l-11%2020-3%205zm-9%2015%205-9%206%202-5%2010q-5%208-12%208-5-2-10-8l-1-1-11-20-4-7%205-4%204%208%2012%2020%206%206q3%200%205-5'%20style%3D'stroke-width%3A.264583'/%3E%3Cpath%20fill%3D'%23986c32'%20d%3D'M105%20105q7%200%2011%208%204%206%204%2016v10l-6-1a41%2041%200%200%200-4-22q-2-5-5-5-2%200-4%205l-3%206h-6l3-10q4-6%2010-7m-8%2033h15q9%201%2018%207l-3%206-1-1a35%2035%200%200%200-28-6zm3%2023a40%2040%200%200%201-10-32h7q-1%209%201%2017l7%2011zm38%206q1-2-2-6l-4-5%204-6%206%208q4%207%201%2012t-11%205l-17-3-9-6%205-4%207%204%2014%203q4%200%206-2m-25-22%206%202-1%201q-4%2012-15%2019l-8%205-3-6h1q14-7%2020-21m-46%2025q-3-5%202-12%203-7%2012-13l9-5%201%206-7%204-10%2011q-2%204-1%206%202%203%206%202h5l4%205-9%201q-8%200-12-5'%20style%3D'stroke-width%3A.264583'/%3E%3C/svg%3E"); ~/
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.15;
+    filter: blur(10px);
+    pointer-events: none;
+}*/
+
+header::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: calc(100% + 0px);
+    /* explicit sizing so the image displays reliably */
+    width: 360px;
+    height: 208px;
+    background-image: url(../img/waves-kim-1.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 360px 208px;
+    transform: rotate(180deg);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+/* ========================================
+   HEADER & FOOTER
+   ======================================== */
+header {
+    background: linear-gradient(to right, #e8e6de, #e8e6de) !important;
+}
+
+/* header,
+header div.wp-block-group {
+    width: 100% !important;
+    padding: 1em;
+} */
+
+.kericonf-header-logo img {
+    /* display: block !important; */
+    height: 80px !important;
+    width: 80px !important;
+    min-height: 80px !important;
+    min-width: 80px !important;
+    /* margin-right: 1em; */
+    border: 1px solid transparent !important;
+}
+
+header,
+footer {
+    /* border-top: 8px solid #986c32; */
+    /* border-bottom: 8px solid #e8e6df; */
+}
+
+header,
+footer {
+    position: relative;
+    padding: 0.5em;
+    box-sizing: border-box;
+}
+
+header div {
+    padding: 0 !important;
+}
+
+header::before,
+footer::before,
+footer::after {
+    background-image: url(../img/logo-F.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+}
+
+header::before {
+    /* background image only (rotated) */
+    background-position: right bottom;
+    right: 6px;
+    bottom: 0;
+    transform: rotate(180deg);
+    transform-origin: center center;
+}
+
+/* Keep the textual hashtag unrotated by rendering it from
+   the block container's pseudo-element instead of the image pseudo.
+   This places the text in the same spot but won't inherit the
+   rotation applied to the image pseudo-element. */
+header div.wp-block-group {
+    position: relative;
+}
+
+
+footer::before {
+    background-position: right bottom;
+    right: 6px;
+    bottom: 0;
+    transform: rotate(180deg);
+    transform-origin: center center;
+}
+
+footer::after {
+    background-position: left top;
+    left: 6px;
+    top: 3px;
+}
+
+@media (max-width: 600px) {
+
+    header::before,
+    footer::before,
+    footer::after {
+        width: 15px;
+        height: 15px;
+    }
+
+    header nav {
+        position: absolute !important;
+        right: 0 !important;
+    }
+}
+
+
+/* EASTER EGG */
+/*header::after {
+    /~ keep the existing content string (easter-egg) but visually place it inside the top border ~/
+    content: '{"v":"KERICAACAAJSONAAMf.","t":"rot","d":"EJOnAKXGaSyJ_43kit0V806NNeGWS07lfjybB1UcfWsv","i":"EPR7FWsN3tOM8PqfMap2FRfF4MFQ4v3ZXjBUcMVtvhmB","s":"2","p":"EDeCPBTHAt75Acgi9PfEciHFnc1r2DKAno3s9_QIYrXk","kt":"2","k":["DLv9BlDvjcZWkfPfWcYhNK-xQxz89h82_wA184Vxk8dj","DCx3WypeBym3fCkVizTg18qEThSrVnB63dFq2oX5c3mz","DO0PG_ww4PbF2jUIxQnlb4DluJu5ndNehp0BTGWXErXf"],"nt":"2","n":["EA8_fj-Ezin_Us_gUcg5JQJkIIBnrcZt3HEIuH-E1lpe","EERS8udHp2FW89nmaHweQWnZz7I8v9FTQdA-LZ_amqGh","EAEzmrPusrj4CDKnSFQvhCEW6T95C7hBeFtZtRD7rOTg"],"bt":"4","br":["BA4PSatfQMw1lYhQoZkSSvOCrE0Sdw1hmmniDL-yDtrB"],"ba":["BO3cCAfQiqndZBBxwNk6RGkyA-OA1XbZhBj3s4-VIsCo","BPowpltoeF14nMbU1ng89JSoYf3AmWhZ50KaCaVO6SIW"],"c":[],"a":[{"i":"EHqSsH1Imc2MEcgzEordBUFqJKWTcRyTz2GRc2SG3aur","s":"1","d":"ENl9GdcDY-4hlg5GtVwOg2E9X7JHw-7Dr5Zq5KNirISF"}]}';
+    position: absolute;
+    left: 50%;
+    top: -7px;
+    transform: translate(-50%, 0);
+    padding: 0;
+    max-width: calc(100% - 0px);
+    color: #533103;
+    font-size: 7px;
+    line-height: 1;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    z-index: 2;
+    pointer-events: none;
+}*/
+
+/* ========================================
+   TYPOGRAPHY
+   ======================================== */
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #060b6f !important;
+} */
+
+.homepage-title {
+    font-size: 3em !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+/* Add horizontal lines left and right of heading */
+/* .wp-block-post-title {
+    max-width: 100% !important;
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-top: 1em !important;
+    margin-bottom: 2em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    background: none !important;
+}
+
+.wp-block-post-title::before,
+.wp-block-post-title::after {
+    content: "";
+    flex: 1 1 0;
+    height: 4px;
+    background: #060b6f78;
+    opacity: 0.7;
+    position: relative;
+    top: 0.2em;
+    box-shadow: #060b6f 0px 0px 1px 0px;
+    border-radius: 6px;
+}
+
+.wp-block-post-title::before {
+    margin-left: -20px;
+}
+
+.wp-block-post-title::after {
+    margin-right: -20px;
+} */
+
+/* End: Add horizontal lines left and right of heading */
+
+
+
+
+/* Add horizontal logo to left and right of post title */
+.wp-block-post-title {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    /* center the element itself (without changing the parent) */
+    margin: 1em 0 0 !important;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.wp-block-post-title::before,
+.wp-block-post-title::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 2.5rem;
+    height: 1.5rem;
+    background-image: url("../img/logo-horizontal-line.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    pointer-events: none;
+}
+
+.wp-block-post-title::before {
+    right: 100%;
+    /* make the left logo sit very close to the text */
+    margin-right: 1.5rem;
+    transform: translateY(-10%);
+}
+
+.wp-block-post-title::after {
+    left: 100%;
+    /* make the right logo sit very close to the text and flip it */
+    margin-left: 1.5rem;
+    transform: translateY(-30%) rotate(180deg);
+}
+
+@media (max-width: 600px) {
+    .wp-block-post-title {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .wp-block-post-title::before,
+    .wp-block-post-title::after {
+        width: 2rem;
+        height: 1rem;
+    }
+
+    .wp-block-post-title::before {
+        margin-right: 0.1rem;
+    }
+
+    .wp-block-post-title::after {
+        margin-left: 0.1rem;
+    }
+}
+
+/* End: Add horizontal logo to left and right of post title */
+
+
+/* https: //codepen.io/caseycallow/pen/yMNqPY */
+.keri-animated-fonts,
+.keri-animated-fonts2 {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 6rem;
+    font-weight: 100;
+    letter-spacing: 2px;
+    color: #61783e;
+    background-image: -webkit-linear-gradient(92deg, #61783e, #986c32);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: hue 60s infinite linear;
+}
+
+.keri-animated-fonts {
+    text-align: center;
+}
+
+@keyframes hue {
+    from {
+        filter: hue-rotate(0deg);
+    }
+
+    to {
+        filter: hue-rotate(-360deg);
+    }
+}
+
+
+/* ========================================
+   LOGO & BRANDING
+   ======================================== */
+.logo-background {
+    background: url(wp-content/uploads/2025/11/two-stick-man-variants-shaking-hands-distance.png) no-repeat;
+    background-size: contain;
+    padding-left: 2em;
+}
+
+/* ========================================
+   HORIZONTAL RULE
+   ======================================== */
+hr {
+    border: 0 !important;
+    /* height: 130px; */
+    height: 2em;
+    margin: 0.5em 0;
+    padding: 0 !important;
+    position: relative;
+    background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D'http%3A//www.w3.org/2000/svg'%20xml%3Aspace%3D'preserve'%20viewBox%3D'65%20105%2080%2090'%3E%3Cpath%20fill%3D'%2361783e'%20d%3D'M113%20128H82q-6%201-7%204-2%201%201%207l3%207-4%204-5-8q-4-9%200-14%203-5%2011-6h31zm6%2038%203-6%2012-20q2-6%201-9l-6-3h-8l-1-6h9q9%201%2012%207%202%205-2%2013v1l-11%2020-3%205zm-9%2015%205-9%206%202-5%2010q-5%208-12%208-5-2-10-8l-1-1-11-20-4-7%205-4%204%208%2012%2020%206%206q3%200%205-5'%20style%3D'stroke-width%3A.264583'/%3E%3Cpath%20fill%3D'%23986c32'%20d%3D'M105%20105q7%200%2011%208%204%206%204%2016v10l-6-1a41%2041%200%200%200-4-22q-2-5-5-5-2%200-4%205l-3%206h-6l3-10q4-6%2010-7m-8%2033h15q9%201%2018%207l-3%206-1-1a35%2035%200%200%200-28-6zm3%2023a40%2040%200%200%201-10-32h7q-1%209%201%2017l7%2011zm38%206q1-2-2-6l-4-5%204-6%206%208q4%207%201%2012t-11%205l-17-3-9-6%205-4%207%204%2014%203q4%200%206-2m-25-22%206%202-1%201q-4%2012-15%2019l-8%205-3-6h1q14-7%2020-21m-46%2025q-3-5%202-12%203-7%2012-13l9-5%201%206-7%204-10%2011q-2%204-1%206%202%203%206%202h5l4%205-9%201q-8%200-12-5'%20style%3D'stroke-width%3A.264583'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+hr::before,
+hr::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: calc(50% - 30px);
+    height: 2px;
+    background: #555;
+}
+
+hr::before {
+    left: 0;
+}
+
+hr::after {
+    right: 0;
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+.display-none {
+    display: none !important;
+}
+
+/* Visually Hidden Class - Based on WCAG 2024
+ * Hides content visually while keeping it accessible to screen readers
+ * Better than display:none or visibility:hidden for a11y purposes
+ * Supports focus visibility for keyboard navigation
+ */
+.visually-hidden {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border-width: 0 !important;
+}
+
+/* Allow visually-hidden content to be visible when focused (for interactive elements) */
+.visually-hidden:focus,
+.visually-hidden:active,
+.visually-hidden:focus-visible {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    padding: inherit !important;
+    margin: inherit !important;
+    overflow: visible !important;
+    clip: auto !important;
+    white-space: normal !important;
+}
+
+.countdown span {
+    font-size: 0.28em;
+    display: block;
+}
+
+/* ========================================
+   BLOCK-SPECIFIC STYLES
+   ======================================== */
+/* Compact Search Block Styles */
+
+.wp-block-search {
+    /* Compact search form — keep rules minimal and proportional */
+    font-size: 0.9rem;
+    /* slightly smaller base text */
+    margin-left: 1em !important;
+    display: inline;
+}
+
+/* Input, button and icon sizing to keep everything visually proportionate */
+.wp-block-search .wp-block-search__inside-wrapper {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: transparent;
+    border: none;
+}
+
+.wp-block-search .wp-block-search__input {
+    background: #f2f7f9;
+    height: 1.6rem;
+    padding: 0.12rem 0.5rem;
+    font-size: 0.95rem;
+    border-radius: 20px;
+}
+
+.wp-block-search .wp-block-search__button {
+    height: 1.6rem;
+    padding: 0.08rem 0.45rem;
+    margin-left: 0;
+    min-width: 1.6rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wp-block-search .search-icon {
+    width: 16px;
+    height: 16px;
+}
+
+/*@media (max-width: 600px) {
+    .wp-block-search {
+        /~ margin-right: 2em !important; ~/
+        display: block;
+        max-width: 10em;
+    }
+}*/
+
+aside {
+    /* original bottom-right decorative wave */
+    background: transparent url(../img/waves-kim-1.png) no-repeat right bottom;
+    /* establish positioning context for the pseudo element */
+    position: relative;
+    overflow: visible;
+}
+
+/* replicate the same image in the top-left and rotate it 180deg */
+aside::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    /* explicit sizing so the image displays reliably */
+    width: 180px;
+    height: 104px;
+    background-image: url(../img/waves-kim-1.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: 180px 104px;
+    transform: rotate(180deg);
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.5;
+}
+
+/* hide decoration on very narrow screens so it doesn't interfere with content */
+@media (max-width: 360px) {
+    aside::before {
+        display: none;
+    }
+}
+
