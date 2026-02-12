@@ -54,6 +54,10 @@
     text-align: left;
     border: none;
     position: relative;
+    /* ensure headings occupy at least three text lines */
+    line-height: var(--academic-leading-relaxed);
+    min-height: calc(3 * 1em * var(--academic-leading-relaxed));
+    vertical-align: middle;
 }
 
 /* Update card content */
@@ -111,6 +115,10 @@
     text-align: left;
     border-right: 1px solid rgba(255, 255, 255, 0.1);
     border-bottom: 2px solid var(--academic-primary);
+    /* ensure headings occupy at least three text lines */
+    line-height: var(--academic-leading-relaxed);
+    min-height: calc(3 * 1em * var(--academic-leading-relaxed));
+    vertical-align: middle;
 }
 
 .entry-content > .wp-block-table table thead th:last-child {
