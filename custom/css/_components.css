@@ -1,0 +1,468 @@
+/* ========================================
+   ACADEMIC PROFESSIONAL COMPONENTS
+   ========================================
+   
+   UI components designed for academic websites:
+   - Buttons & CTAs
+   - Navigation
+   - Cards & Panels
+   - Forms
+   - Badges & Tags
+   ======================================== */
+
+/* ----------------------------------------
+   BUTTONS
+   ---------------------------------------- */
+
+button,
+.wp-block-button__link,
+.wp-element-button,
+input[type="submit"],
+input[type="button"] {
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-base);
+    font-weight: var(--academic-weight-medium);
+    letter-spacing: var(--academic-tracking-normal);
+    line-height: 1;
+    padding: var(--academic-space-3) var(--academic-space-6);
+    border: 2px solid transparent;
+    border-radius: var(--academic-radius-md);
+    cursor: pointer;
+    transition: var(--academic-transition-base);
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Primary Button (default) */
+.wp-block-button__link,
+.wp-element-button,
+input[type="submit"] {
+    background: var(--academic-primary);
+    color: var(--academic-white);
+    border-color: var(--academic-primary);
+}
+
+.wp-block-button__link:hover,
+.wp-element-button:hover,
+input[type="submit"]:hover {
+    background: var(--academic-primary-dark);
+    border-color: var(--academic-primary-dark);
+    color: var(--academic-white);
+    transform: translateY(-1px);
+    box-shadow: var(--academic-shadow-md);
+}
+
+/* Outline Button */
+.wp-block-button.is-style-outline .wp-block-button__link,
+.is-style-outline .wp-block-button__link {
+    background: transparent;
+    color: var(--academic-primary);
+    border-color: var(--academic-primary);
+}
+
+.wp-block-button.is-style-outline .wp-block-button__link:hover,
+.is-style-outline .wp-block-button__link:hover {
+    background: var(--academic-primary);
+    color: var(--academic-white);
+}
+
+/* Accent Button */
+.wp-block-button.academic-btn-accent .wp-block-button__link {
+    background: var(--academic-accent);
+    color: var(--academic-white);
+    border-color: var(--academic-accent);
+}
+
+.wp-block-button.academic-btn-accent .wp-block-button__link:hover {
+    background: var(--academic-accent-dark);
+    border-color: var(--academic-accent-dark);
+}
+
+/* Ghost Button */
+.wp-block-button.academic-btn-ghost .wp-block-button__link {
+    background: transparent;
+    color: var(--academic-text-primary);
+    border-color: transparent;
+}
+
+.wp-block-button.academic-btn-ghost .wp-block-button__link:hover {
+    background: var(--academic-gray-100);
+}
+
+/* Small Button */
+.wp-block-button.academic-btn-small .wp-block-button__link {
+    font-size: var(--academic-text-sm);
+    padding: var(--academic-space-2) var(--academic-space-4);
+}
+
+/* Large Button */
+.wp-block-button.academic-btn-large .wp-block-button__link {
+    font-size: var(--academic-text-lg);
+    padding: var(--academic-space-4) var(--academic-space-8);
+}
+
+/* Button Focus State */
+.wp-block-button__link:focus,
+.wp-element-button:focus,
+input[type="submit"]:focus {
+    outline: 2px solid var(--academic-accent);
+    outline-offset: 2px;
+}
+
+/* ----------------------------------------
+   NAVIGATION
+   ---------------------------------------- */
+
+/* Main navigation container - preserve theme's horizontal layout */
+.wp-block-navigation {
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-base);
+    font-weight: var(--academic-weight-normal);
+}
+
+/* Navigation links */
+.wp-block-navigation-item__content {
+    padding: var(--academic-space-2) var(--academic-space-3);
+    color: var(--academic-text-primary);
+    transition: color var(--academic-transition-fast);
+}
+
+.wp-block-navigation-item__content:hover {
+    color: var(--academic-primary);
+}
+
+/* Current/Active navigation item */
+.wp-block-navigation-item.current-menu-item > .wp-block-navigation-item__content,
+.wp-block-navigation-item.current-page-item > .wp-block-navigation-item__content {
+    color: var(--academic-primary);
+    font-weight: var(--academic-weight-semibold);
+}
+
+/* Submenu styling */
+.wp-block-navigation__submenu-container {
+    background: var(--academic-white);
+    border: 1px solid var(--academic-border-light);
+    border-radius: var(--academic-radius-md);
+    box-shadow: var(--academic-shadow-lg);
+    padding: var(--academic-space-2) 0;
+    min-width: 200px;
+}
+
+.wp-block-navigation__submenu-container .wp-block-navigation-item__content {
+    padding: var(--academic-space-2) var(--academic-space-4);
+    font-size: var(--academic-text-base);
+}
+
+.wp-block-navigation__submenu-container .wp-block-navigation-item__content:hover {
+    background: var(--academic-bg-secondary);
+}
+
+/* Mobile navigation */
+.wp-block-navigation__responsive-container.is-menu-open {
+    background: var(--academic-white);
+    padding: var(--academic-space-6);
+}
+
+.wp-block-navigation__responsive-container-open,
+.wp-block-navigation__responsive-container-close {
+    color: var(--academic-primary);
+}
+
+/* ----------------------------------------
+   SITE TITLE & LOGO
+   ---------------------------------------- */
+
+.wp-block-site-title {
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-xl);
+    font-weight: var(--academic-weight-bold);
+    letter-spacing: var(--academic-tracking-tight);
+}
+
+.wp-block-site-title a {
+    color: var(--academic-primary);
+}
+
+.wp-block-site-tagline {
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-sm);
+    color: var(--academic-text-muted);
+    font-style: italic;
+}
+
+/* ----------------------------------------
+   CARDS & PANELS
+   ---------------------------------------- */
+
+/* Basic Card */
+.academic-card,
+.wp-block-group.academic-card {
+    background: var(--academic-white);
+    border: 1px solid var(--academic-border-light);
+    border-radius: var(--academic-radius-md);
+    padding: var(--academic-space-6);
+    transition: var(--academic-transition-base);
+}
+
+.academic-card:hover,
+.wp-block-group.academic-card:hover {
+    border-color: var(--academic-border-medium);
+    box-shadow: var(--academic-shadow-md);
+}
+
+/* Featured Card */
+.academic-card-featured,
+.wp-block-group.academic-card-featured {
+    background: var(--academic-white);
+    border: 2px solid var(--academic-accent);
+    border-radius: var(--academic-radius-md);
+    padding: var(--academic-space-8);
+    position: relative;
+}
+
+.academic-card-featured::before {
+    content: "Featured";
+    position: absolute;
+    top: calc(-1 * var(--academic-space-3));
+    left: var(--academic-space-4);
+    background: var(--academic-accent);
+    color: var(--academic-white);
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-xs);
+    font-weight: var(--academic-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--academic-tracking-wider);
+    padding: var(--academic-space-1) var(--academic-space-3);
+    border-radius: var(--academic-radius-sm);
+}
+
+/* Info Panel */
+.academic-panel,
+.wp-block-group.academic-panel {
+    background: var(--academic-bg-secondary);
+    border-left: 4px solid var(--academic-primary);
+    padding: var(--academic-space-5) var(--academic-space-6);
+    margin: var(--academic-space-6) 0;
+}
+
+/* Callout Box */
+.academic-callout,
+.wp-block-group.academic-callout {
+    background: var(--academic-primary-muted);
+    border-radius: var(--academic-radius-md);
+    padding: var(--academic-space-6);
+    margin: var(--academic-space-6) 0;
+}
+
+/* ----------------------------------------
+   BADGES & TAGS
+   ---------------------------------------- */
+
+.academic-badge,
+.wp-block-post-terms a {
+    display: inline-block;
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-xs);
+    font-weight: var(--academic-weight-semibold);
+    text-transform: uppercase;
+    letter-spacing: var(--academic-tracking-wider);
+    padding: var(--academic-space-1) var(--academic-space-3);
+    background: var(--academic-gray-100);
+    color: var(--academic-text-secondary);
+    border-radius: var(--academic-radius-full);
+    text-decoration: none;
+    transition: var(--academic-transition-fast);
+}
+
+.academic-badge:hover,
+.wp-block-post-terms a:hover {
+    background: var(--academic-primary);
+    color: var(--academic-white);
+}
+
+/* Category/Tag specific colors */
+.wp-block-post-terms.taxonomy-category a {
+    background: var(--academic-primary-muted);
+    color: var(--academic-primary);
+}
+
+.wp-block-post-terms.taxonomy-post_tag a {
+    background: var(--academic-accent-muted);
+    color: var(--academic-accent-dark);
+}
+
+/* ----------------------------------------
+   FORMS
+   ---------------------------------------- */
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select {
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-base);
+    padding: var(--academic-space-3) var(--academic-space-4);
+    border: 1px solid var(--academic-border-medium);
+    border-radius: var(--academic-radius-md);
+    background: var(--academic-white);
+    color: var(--academic-text-primary);
+    width: 100%;
+    transition: var(--academic-transition-fast);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--academic-primary);
+    box-shadow: 0 0 0 3px var(--academic-primary-muted);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--academic-text-light);
+}
+
+label {
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-sm);
+    font-weight: var(--academic-weight-medium);
+    color: var(--academic-text-secondary);
+    display: block;
+    margin-bottom: var(--academic-space-2);
+}
+
+/* Search form */
+.wp-block-search__input {
+    border-radius: var(--academic-radius-md) 0 0 var(--academic-radius-md);
+}
+
+.wp-block-search__button {
+    border-radius: 0 var(--academic-radius-md) var(--academic-radius-md) 0;
+    margin-left: -1px;
+}
+
+/* ----------------------------------------
+   POST META
+   ---------------------------------------- */
+
+.wp-block-post-date,
+.wp-block-post-author,
+.wp-block-post-author-name {
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-sm);
+    color: var(--academic-text-muted);
+}
+
+.wp-block-post-date a,
+.wp-block-post-author a,
+.wp-block-post-author-name a {
+    color: var(--academic-text-muted);
+}
+
+.wp-block-post-date a:hover,
+.wp-block-post-author a:hover,
+.wp-block-post-author-name a:hover {
+    color: var(--academic-primary);
+}
+
+/* Author avatar */
+.wp-block-avatar img {
+    border-radius: var(--academic-radius-full);
+    border: 2px solid var(--academic-border-light);
+}
+
+/* ----------------------------------------
+   PAGINATION
+   ---------------------------------------- */
+
+.wp-block-query-pagination {
+    font-family: var(--academic-font-sans);
+    gap: var(--academic-space-2);
+    margin-top: var(--academic-space-10);
+}
+
+.wp-block-query-pagination-numbers .page-numbers {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0 var(--academic-space-2);
+    font-size: var(--academic-text-sm);
+    font-weight: var(--academic-weight-medium);
+    color: var(--academic-text-secondary);
+    background: transparent;
+    border: 1px solid var(--academic-border-light);
+    border-radius: var(--academic-radius-md);
+    text-decoration: none;
+    transition: var(--academic-transition-fast);
+}
+
+.wp-block-query-pagination-numbers .page-numbers:hover {
+    background: var(--academic-bg-secondary);
+    border-color: var(--academic-border-medium);
+}
+
+.wp-block-query-pagination-numbers .page-numbers.current {
+    background: var(--academic-primary);
+    border-color: var(--academic-primary);
+    color: var(--academic-white);
+}
+
+/* ----------------------------------------
+   SOCIAL LINKS
+   ---------------------------------------- */
+
+.wp-block-social-links {
+    gap: var(--academic-space-3);
+}
+
+.wp-block-social-link {
+    background: var(--academic-gray-200);
+    transition: var(--academic-transition-fast);
+}
+
+.wp-block-social-link:hover {
+    background: var(--academic-primary);
+    transform: translateY(-2px);
+}
+
+.wp-block-social-link a {
+    color: var(--academic-text-secondary);
+}
+
+.wp-block-social-link:hover a {
+    color: var(--academic-white);
+}
+
+/* ----------------------------------------
+   BREADCRUMBS (if using Yoast or similar)
+   ---------------------------------------- */
+
+.breadcrumbs,
+.yoast-breadcrumbs,
+.rank-math-breadcrumb {
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-sm);
+    color: var(--academic-text-muted);
+    margin-bottom: var(--academic-space-6);
+}
+
+.breadcrumbs a,
+.yoast-breadcrumbs a,
+.rank-math-breadcrumb a {
+    color: var(--academic-text-muted);
+}
+
+.breadcrumbs a:hover,
+.yoast-breadcrumbs a:hover,
+.rank-math-breadcrumb a:hover {
+    color: var(--academic-primary);
+}

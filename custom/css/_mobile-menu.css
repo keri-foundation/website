@@ -1,0 +1,35 @@
+@media (max-width: 600px) {
+    nav *:not(.wp-block-navigation__responsive-container-close) {
+        width: 100% !important;
+        box-sizing: border-box;
+        width: 100%;
+    }
+
+    .wp-block-navigation__responsive-container {
+        border-top: 8px solid #060b6f6b;
+        border-bottom: 8px solid #060b6f6b;
+        background: linear-gradient(to right, #b7d3d0, #9ecbcb) !important;
+    }
+
+    .wp-block-navigation__responsive-container button.wp-block-navigation__responsive-container-close {
+        color: #060b6f;
+        position: fixed;
+        top: 1em;
+        right: 1em;
+    }
+
+    .wp-block-navigation__responsive-dialog li {
+        padding: 0.3em !important;
+        border-bottom: 1px solid #060b6f78;
+    }
+    .wp-block-navigation__responsive-dialog li li {
+        border-bottom: none;
+    }
+
+    .wp-block-navigation__responsive-dialog li a:focus,
+    .wp-block-navigation__responsive-dialog li a:focus-visible {
+        outline: none !important;
+        border: none !important;
+        background-color: #7db8b3 !important;
+    }
+}

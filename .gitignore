@@ -1,0 +1,10 @@
+# Ignore all top-level files and directories except the `custom` folder
+# - `/*` ignores every file and directory at the repository root
+# - `!/custom/` and `!/custom/**` re-include the `custom` directory and its contents
+
+/*
+!/custom/
+!/custom/**
+
+# Keep the .gitignore file tracked
+!/.gitignore

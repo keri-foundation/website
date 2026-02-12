@@ -1,0 +1,188 @@
+/* ========================================
+   ACADEMIC PROFESSIONAL CSS VARIABLES
+   ========================================
+   
+   A minimalistic academic design system for WordPress 
+   Twenty Twenty-Five theme customization.
+   
+   Color Philosophy:
+   - Primary: Deep navy/slate for authority and professionalism
+   - Accents: Muted gold/amber for academic prestige
+   - Neutrals: Warm grays for readability and elegance
+   ======================================== */
+
+:root {
+    /* ----------------------------------------
+       COLOR PALETTE
+       ---------------------------------------- */
+    
+    /* Primary Colors - Modern Professional */
+    --academic-primary: #2563eb;
+    --academic-primary-light: #3b82f6;
+    --academic-primary-dark: #1e40af;
+    --academic-primary-muted: rgba(37, 99, 235, 0.08);
+    
+    /* Accent Colors - Complementary Teal */
+    --academic-accent: #0891b2;
+    --academic-accent-light: #06b6d4;
+    --academic-accent-dark: #0e7490;
+    --academic-accent-muted: rgba(8, 145, 178, 0.08);
+    
+    /* Neutral Colors - Clean Grays */
+    --academic-white: #ffffff;
+    --academic-off-white: #f9fafb;
+    --academic-gray-100: #f3f4f6;
+    --academic-gray-200: #e5e7eb;
+    --academic-gray-300: #d1d5db;
+    --academic-gray-400: #9ca3af;
+    --academic-gray-500: #6b7280;
+    --academic-gray-600: #4b5563;
+    --academic-gray-700: #374151;
+    --academic-gray-800: #1f2937;
+    --academic-gray-900: #111827;
+    --academic-black: #111827;
+    
+    /* Semantic Colors */
+    --academic-success: #2e7d32;
+    --academic-warning: #ed6c02;
+    --academic-error: #c62828;
+    --academic-info: #0277bd;
+    
+    /* Background Colors */
+    --academic-bg-primary: var(--academic-white);
+    --academic-bg-secondary: var(--academic-off-white);
+    --academic-bg-tertiary: var(--academic-gray-100);
+    --academic-bg-dark: var(--academic-primary-dark);
+    
+    /* Text Colors */
+    --academic-text-primary: var(--academic-gray-800);
+    --academic-text-secondary: var(--academic-gray-600);
+    --academic-text-muted: var(--academic-gray-500);
+    --academic-text-light: var(--academic-gray-400);
+    --academic-text-inverse: var(--academic-white);
+    
+    /* Border Colors */
+    --academic-border-light: var(--academic-gray-200);
+    --academic-border-medium: var(--academic-gray-300);
+    --academic-border-dark: var(--academic-gray-400);
+    
+    /* ----------------------------------------
+       TYPOGRAPHY
+       ---------------------------------------- */
+    
+    /* Font Families - System fonts for performance */
+    --academic-font-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    --academic-font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --academic-font-mono: ui-monospace, "Fira Code", SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+    
+    /* Font Sizes - Following a modular scale (1.25 ratio) */
+    --academic-text-xs: 0.75rem;      /* 12px */
+    --academic-text-sm: 0.875rem;     /* 14px */
+    --academic-text-base: 1rem;       /* 16px */
+    --academic-text-md: 1.125rem;     /* 18px */
+    --academic-text-lg: 1.25rem;      /* 20px */
+    --academic-text-xl: 1.5rem;       /* 24px */
+    --academic-text-2xl: 1.875rem;    /* 30px */
+    --academic-text-3xl: 2.25rem;     /* 36px */
+    --academic-text-4xl: 3rem;        /* 48px */
+    --academic-text-5xl: 3.75rem;     /* 60px */
+    
+    /* Line Heights */
+    --academic-leading-none: 1;
+    --academic-leading-tight: 1.25;
+    --academic-leading-snug: 1.375;
+    --academic-leading-normal: 1.5;
+    --academic-leading-relaxed: 1.625;
+    --academic-leading-loose: 1.75;
+    --academic-leading-prose: 1.8;
+    
+    /* Font Weights */
+    --academic-weight-light: 300;
+    --academic-weight-normal: 400;
+    --academic-weight-medium: 500;
+    --academic-weight-semibold: 600;
+    --academic-weight-bold: 700;
+    
+    /* Letter Spacing */
+    --academic-tracking-tighter: -0.05em;
+    --academic-tracking-tight: -0.025em;
+    --academic-tracking-normal: 0;
+    --academic-tracking-wide: 0.025em;
+    --academic-tracking-wider: 0.05em;
+    --academic-tracking-widest: 0.1em;
+    
+    /* ----------------------------------------
+       SPACING
+       ---------------------------------------- */
+    
+    --academic-space-0: 0;
+    --academic-space-1: 0.25rem;      /* 4px */
+    --academic-space-2: 0.5rem;       /* 8px */
+    --academic-space-3: 0.75rem;      /* 12px */
+    --academic-space-4: 1rem;         /* 16px */
+    --academic-space-5: 1.25rem;      /* 20px */
+    --academic-space-6: 1.5rem;       /* 24px */
+    --academic-space-8: 2rem;         /* 32px */
+    --academic-space-10: 2.5rem;      /* 40px */
+    --academic-space-12: 3rem;        /* 48px */
+    --academic-space-16: 4rem;        /* 64px */
+    --academic-space-20: 5rem;        /* 80px */
+    --academic-space-24: 6rem;        /* 96px */
+    --academic-space-32: 8rem;        /* 128px */
+    
+    /* ----------------------------------------
+       LAYOUT
+       ---------------------------------------- */
+    
+    /* Content Widths */
+    --academic-content-xs: 20rem;     /* 320px - Small widgets */
+    --academic-content-sm: 36rem;     /* 576px - Narrow content */
+    --academic-content-md: 42rem;     /* 672px - Optimal reading width */
+    --academic-content-lg: 52rem;     /* 832px - Wide content */
+    --academic-content-xl: 72rem;     /* 1152px - Full width content */
+    --academic-content-max: 80rem;    /* 1280px - Maximum container */
+    
+    /* ----------------------------------------
+       BORDERS & EFFECTS
+       ---------------------------------------- */
+    
+    /* Border Radius */
+    --academic-radius-none: 0;
+    --academic-radius-sm: 0.125rem;   /* 2px */
+    --academic-radius-md: 0.25rem;    /* 4px */
+    --academic-radius-lg: 0.5rem;     /* 8px */
+    --academic-radius-xl: 1rem;       /* 16px */
+    --academic-radius-full: 9999px;
+    
+    /* Shadows - Subtle for academic feel */
+    --academic-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --academic-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --academic-shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+    --academic-shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+    
+    /* ----------------------------------------
+       TRANSITIONS
+       ---------------------------------------- */
+    
+    --academic-transition-fast: 150ms ease;
+    --academic-transition-base: 250ms ease;
+    --academic-transition-slow: 350ms ease;
+    
+    /* ----------------------------------------
+       Z-INDEX SCALE
+       ---------------------------------------- */
+    
+    --academic-z-negative: -1;
+    --academic-z-base: 0;
+    --academic-z-raised: 10;
+    --academic-z-dropdown: 100;
+    --academic-z-sticky: 200;
+    --academic-z-overlay: 300;
+    --academic-z-modal: 400;
+    --academic-z-toast: 500;
+}
+
+/* ----------------------------------------
+   DARK MODE SUPPORT (optional)
+   Future: Add dark mode overrides here
+   ---------------------------------------- */

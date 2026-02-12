@@ -1,0 +1,281 @@
+/* ========================================
+   CONTACT FORM - PROFESSIONAL DESIGN
+   ========================================
+   
+   Clean, minimal form styling for WPForms
+   and Contact Form 7 using KERI design tokens.
+   ======================================== */
+
+/* ----------------------------------------
+   FORM CONTAINER
+   ---------------------------------------- */
+
+.wpcf7-form,
+form {
+    max-width: 650px;
+    margin: var(--keri-space-lg) auto;
+}
+
+/* Remove form wrapper spacing issues */
+.uacf7-form-wrapper-container {
+    display: grid;
+    gap: var(--keri-space-md);
+}
+
+/* ----------------------------------------
+   FORM LABELS
+   ---------------------------------------- */
+
+label {
+    display: block;
+    margin-bottom: var(--keri-space-xs);
+    font-weight: 500;
+    color: var(--keri-gray-900);
+    font-family: var(--keri-font-sans);
+}
+
+label span {
+    display: block;
+    margin-top: var(--keri-space-xs);
+}
+
+/* ----------------------------------------
+   FORM INPUTS & TEXTAREA
+   ---------------------------------------- */
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+textarea,
+select {
+    width: 100%;
+    max-width: 100%;
+    padding: 0.75rem 1rem;
+    font-family: var(--keri-font-sans);
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--keri-gray-900);
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.375rem;
+    box-sizing: border-box;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+select {
+    height: 2.75rem;
+}
+
+/* Focus state - clean and professional */
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: var(--keri-blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* Placeholder styling */
+input::placeholder,
+textarea::placeholder {
+    color: var(--keri-gray-600);
+}
+
+/* Textarea specific */
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* ----------------------------------------
+   WPForms / Contact Form 7 Specific
+   ---------------------------------------- */
+
+.wpcf7-form-control {
+    width: 100%;
+}
+
+.wpcf7-form-control-wrap {
+    display: block;
+}
+
+/* ----------------------------------------
+   SUBMIT BUTTON
+   ---------------------------------------- */
+
+.wpcf7-submit,
+input[type="submit"] {
+    background: var(--keri-blue);
+    color: white;
+    border: 2px solid var(--keri-blue);
+    padding: 0.75rem 2rem;
+    font-family: var(--keri-font-sans);
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 0.375rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-block;
+    margin-top: var(--keri-space-sm);
+}
+
+.wpcf7-submit:hover,
+input[type="submit"]:hover {
+    background: var(--keri-blue-dark);
+    border-color: var(--keri-blue-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.2);
+}
+
+.wpcf7-submit:focus,
+input[type="submit"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.2);
+}
+
+.wpcf7-submit:active,
+input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+/* Spinner animation for form submission */
+.wpcf7-submit.wpcf7-submit.has-spinner.wpcf7-processing::after {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white"><circle cx="12" cy="12" r="10" stroke="white" stroke-width="2" fill="none"/><path d="M12 2 A10 10 0 0 1 22 12" stroke="white" stroke-width="2" fill="none"/></svg>') no-repeat center;
+    content: '';
+}
+
+/* ----------------------------------------
+   VALIDATION STATES
+   ---------------------------------------- */
+
+/* Invalid/Error state */
+input[aria-invalid="true"],
+textarea[aria-invalid="true"],
+select[aria-invalid="true"] {
+    border-color: #dc2626;
+    background: rgba(220, 38, 38, 0.02);
+}
+
+input[aria-invalid="true"]:focus,
+textarea[aria-invalid="true"]:focus,
+select[aria-invalid="true"]:focus {
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+    border-color: #dc2626;
+}
+
+/* Success state */
+input[aria-invalid="false"]:valid,
+textarea[aria-invalid="false"]:valid {
+    border-color: #16a34a;
+}
+
+/* ----------------------------------------
+   FORM MESSAGES
+   ---------------------------------------- */
+
+.wpcf7-response-output {
+    padding: var(--keri-space-md);
+    border-radius: 0.375rem;
+    font-weight: 500;
+    margin-bottom: var(--keri-space-md);
+}
+
+.wpcf7-response-output.wpcf7-mail-success-message {
+    background: #d1fae5;
+    border: 1px solid #6ee7b7;
+    color: #065f46;
+}
+
+.wpcf7-response-output.wpcf7-mail-failure-message {
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    color: #7f1d1d;
+}
+
+.wpcf7-response-output.wpcf7-validation-error {
+    background: #fef3c7;
+    border: 1px solid #fcd34d;
+    color: #78350f;
+}
+
+/* ----------------------------------------
+   FIELDSET STYLING
+   ---------------------------------------- */
+
+fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hidden-fields-container {
+    display: none !important;
+}
+
+/* ----------------------------------------
+   RESPONSIVE DESIGN
+   ---------------------------------------- */
+
+@media (max-width: 768px) {
+    .wpcf7-form,
+    form {
+        margin: var(--keri-space-md) auto;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+
+    .wpcf7-submit,
+    input[type="submit"] {
+        width: 100%;
+        padding: 1rem 2rem;
+    }
+}
+
+/* ----------------------------------------
+   ACCESSIBILITY
+   ---------------------------------------- */
+
+/* Required field indicator */
+.wpcf7-validates-as-required::after {
+    content: ' *';
+    color: #dc2626;
+    font-weight: bold;
+}
+
+/* Clear focus indicators */
+:focus-visible {
+    outline: 2px solid var(--keri-blue);
+    outline-offset: 2px;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    input,
+    textarea,
+    select,
+    button,
+    .wpcf7-submit {
+        transition: none !important;
+    }
+}
