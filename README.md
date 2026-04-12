@@ -1,4 +1,4 @@
-# wp-site
+# General information
 
 This repo contains information about and backups of <https://keri.foundation>.
 
