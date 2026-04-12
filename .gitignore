@@ -1,10 +1,20 @@
-# Ignore all top-level files and directories except the `custom` folder
-# - `/*` ignores every file and directory at the repository root
-# - `!/custom/` and `!/custom/**` re-include the `custom` directory and its contents
-
+# Deny-all: ignore everything at the repository root by default.
+# Only the entries explicitly un-ignored below will be tracked.
 /*
+
+# --- Git & editor housekeeping ---
+!/.gitignore
+!/.htaccess
+
+# --- Custom theme / plugin code ---
 !/custom/
 !/custom/**
 
-# Keep the .gitignore file tracked
-!/.gitignore
+# --- Utility scripts & misc data ---
+# !/fetch.sh
+# !/various/
+# !/various/**
+
+# --- Database dump (password-protected ZIP) ---
+# Add the dump file to the repo root and it will be tracked.
+!/*.zip
