@@ -181,8 +181,8 @@ footer a:hover {
 .wp-block-button__link {
     color: var(--academic-gray-900);
     background: #e8e6de;
-}
 
+}
 .wp-block-button__link:hover {
     background: #d6d3c9;
 }
