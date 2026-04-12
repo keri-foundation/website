@@ -18,3 +18,6 @@
 # --- Database dump (password-protected ZIP) ---
 # Add the dump file to the repo root and it will be tracked.
 !/*.zip
+
+# --- Documentation ---
+!/README.md
