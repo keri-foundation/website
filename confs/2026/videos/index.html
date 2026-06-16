@@ -169,6 +169,55 @@
             padding: 0 2px;
         }
 
+        /* ── Search result grouping ── */
+        .search-result-group {
+            background: rgba(177, 209, 207, 0.08);
+            border: 1px solid rgba(177, 209, 207, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .search-result-group-title {
+            background: rgba(177, 209, 207, 0.15);
+            border-bottom: 1px solid rgba(177, 209, 207, 0.2);
+            padding: 10px 16px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #060b6f;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .search-result-group-title:hover {
+            background: rgba(177, 209, 207, 0.25);
+        }
+
+        .search-result-group-items {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .search-result-group .search-result {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(177, 209, 207, 0.1);
+            border-radius: 0;
+            padding: 10px 16px;
+            margin: 0;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .search-result-group .search-result:last-child {
+            border-bottom: none;
+        }
+
+        .search-result-group .search-result:hover {
+            background: rgba(177, 209, 207, 0.12);
+            border-color: transparent;
+        }
+
         /* ── Day sections ── */
         .video-container {
             display: grid;
@@ -1014,43 +1063,90 @@
             searchStatus.textContent =
                 `${truncated ? MAX_RESULTS + '+' : matches.length} result${matches.length !== 1 ? 's' : ''}${loadedNote}`;
 
-            const frag = document.createDocumentFragment();
+            // Group matches by video
+            const groupsByVideoPath = {};
             for (const { video, cue } of matches) {
-                const item = document.createElement('div');
-                item.className = 'search-result';
-                item.setAttribute('role', 'listitem');
-                item.setAttribute('tabindex', '0');
-                item.title = `Jump to ${cue.startLabel} in "${video.title}"`;
+                if (!groupsByVideoPath[video.path]) {
+                    groupsByVideoPath[video.path] = { video, cues: [] };
+                }
+                groupsByVideoPath[video.path].cues.push(cue);
+            }
 
+            const frag = document.createDocumentFragment();
+
+            // Render groups in order of first match
+            for (const { video, cue } of matches) {
+                // Skip if we already rendered this video's group
+                if (!groupsByVideoPath[video.path]) continue;
+                const group = groupsByVideoPath[video.path];
+                delete groupsByVideoPath[video.path];  // Mark as rendered
+
+                const groupEl = document.createElement('div');
+                groupEl.className = 'search-result-group';
+                groupEl.setAttribute('role', 'region');
+                groupEl.setAttribute('aria-label', `Results for ${video.title}`);
+
+                // Group title (clickable to jump to video)
                 const titleEl = document.createElement('div');
-                titleEl.className   = 'search-result-title';
+                titleEl.className = 'search-result-group-title';
+                titleEl.setAttribute('role', 'button');
+                titleEl.setAttribute('tabindex', '0');
                 titleEl.textContent = video.title;
+                titleEl.title = `View "${video.title}"`;
 
-                const timeEl = document.createElement('span');
-                timeEl.className   = 'search-result-time';
-                timeEl.textContent = cue.startLabel;
-
-                const textEl = document.createElement('div');
-                textEl.className = 'search-result-text';
-                textEl.innerHTML  = highlightMatch(cue.text, query);
-
-                item.appendChild(titleEl);
-                item.appendChild(timeEl);
-                item.appendChild(textEl);
-
-                const seek = () => {
+                const titleSeek = () => {
                     const videoEl = videoElementMap[video.path];
                     if (!videoEl) return;
-                    videoEl.currentTime = cue.start;
-                    videoEl.play();
+                    videoEl.currentTime = 0;
                     videoEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 };
-                item.addEventListener('click', seek);
-                item.addEventListener('keydown', e => {
-                    if (e.key === 'Enter') { e.preventDefault(); seek(); }
+                titleEl.addEventListener('click', titleSeek);
+                titleEl.addEventListener('keydown', e => {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); titleSeek(); }
                 });
 
-                frag.appendChild(item);
+                groupEl.appendChild(titleEl);
+
+                // Container for cue results
+                const itemsContainer = document.createElement('div');
+                itemsContainer.className = 'search-result-group-items';
+                itemsContainer.setAttribute('role', 'list');
+
+                for (const cue of group.cues) {
+                    const item = document.createElement('div');
+                    item.className = 'search-result';
+                    item.setAttribute('role', 'listitem');
+                    item.setAttribute('tabindex', '0');
+                    item.title = `Jump to ${cue.startLabel}`;
+
+                    const timeEl = document.createElement('span');
+                    timeEl.className   = 'search-result-time';
+                    timeEl.textContent = cue.startLabel;
+
+                    const textEl = document.createElement('div');
+                    textEl.className = 'search-result-text';
+                    textEl.innerHTML  = highlightMatch(cue.text, query);
+
+                    item.appendChild(timeEl);
+                    item.appendChild(textEl);
+
+                    const seek = () => {
+                        const videoEl = videoElementMap[video.path];
+                        if (!videoEl) return;
+                        videoEl.currentTime = cue.start;
+                        videoEl.play();
+                        videoEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    };
+                    item.addEventListener('click', seek);
+                    item.addEventListener('keydown', e => {
+                        if (e.key === 'Enter') { e.preventDefault(); seek(); }
+                    });
+
+                    itemsContainer.appendChild(item);
+                }
+
+                groupEl.appendChild(itemsContainer);
+                frag.appendChild(groupEl);
             }
             searchResults.appendChild(frag);
         }
