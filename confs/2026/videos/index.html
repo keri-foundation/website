@@ -952,7 +952,10 @@
             videoEl.playsInline = "true";
 
             const source = document.createElement('source');
-            source.src = video.path;
+            const sourceSrc = video.path.startsWith('/')
+                ? video.path
+                : '/confs/2026/videos/' + video.path;
+            source.src = sourceSrc;
             source.type = 'video/mp4';
             videoEl.appendChild(source);
             thumbDiv.appendChild(videoEl);
