@@ -202,7 +202,7 @@
             border-radius: 15px;
             overflow: hidden;
             box-shadow: 0 8px 32px rgba(6, 11, 111, 0.28);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
             backdrop-filter: blur(10px);
             border: 1px solid rgba(177, 209, 207, 0.18);
             display: flex;
@@ -212,6 +212,16 @@
         .video-card:hover {
             transform: translateY(-5px);
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+        }
+
+        .video-card.dimmed {
+            opacity: 0.45;
+            filter: grayscale(0.45);
+        }
+
+        .video-card.dimmed:hover {
+            transform: none;
+            box-shadow: 0 8px 32px rgba(6, 11, 111, 0.28);
         }
 
         .video-thumbnail {
@@ -803,6 +813,7 @@
             card.appendChild(thumbDiv);
 
             videoElementMap[video.path] = videoEl;
+            videoCardMap.set(video.path, card);
             videoEl.addEventListener('play', () => pauseAllVideos(videoEl));
 
             // ── info ──
@@ -885,6 +896,7 @@
         //  Render day sections
         // ─────────────────────────────────────────────────────────────────────
         const container = document.getElementById('videoContainer');
+        const videoCardMap = new Map();
 
         const sorted = [...videos].sort((a, b) =>
             a.day !== b.day
@@ -940,10 +952,23 @@
         const MAX_RESULTS    = 80;
         const subtitledCount = videos.filter(v => v.subtitle).length;
 
+        function updateVideoCardDimState(activePaths) {
+            for (const video of videos) {
+                const card = videoCardMap.get(video.path);
+                if (!card) continue;
+                if (activePaths && activePaths.has(video.path)) {
+                    card.classList.remove('dimmed');
+                } else {
+                    card.classList.add('dimmed');
+                }
+            }
+        }
+
         function runSearch(query) {
             searchResults.innerHTML = '';
             if (!query || query.length < 2) {
                 searchStatus.textContent = query.length === 1 ? 'Type at least 2 characters…' : '';
+                updateVideoCardDimState(null);
                 return;
             }
 
@@ -974,8 +999,12 @@
 
             if (!matches.length) {
                 searchStatus.textContent = `No results for "${query}"${loadedNote}`;
+                updateVideoCardDimState(new Set());
                 return;
             }
+
+            const activePaths = new Set(matches.map(({ video }) => video.path));
+            updateVideoCardDimState(activePaths);
 
             const truncated = matches.length >= MAX_RESULTS;
             searchStatus.textContent =
@@ -1032,6 +1061,7 @@
             searchInput.value = '';
             searchResults.innerHTML = '';
             searchStatus.textContent = '';
+            updateVideoCardDimState(null);
             searchInput.focus();
         });
     </script>
