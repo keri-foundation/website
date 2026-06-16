@@ -61,11 +61,6 @@ function downloadFile(url) {
         const filename = decodeURIComponent(encodedBasename);
         const destPath = path.join(SUBTITLES_DIR, filename);
 
-        if (fs.existsSync(destPath)) {
-            console.log(`  skip  ${filename} (already exists)`);
-            return resolve({ filename, skipped: true });
-        }
-
         const file = fs.createWriteStream(destPath);
 
         const request = https.get(url, (res) => {
@@ -105,7 +100,7 @@ async function main() {
     fs.mkdirSync(SUBTITLES_DIR, { recursive: true });
     console.log(`Saving subtitles to: ${SUBTITLES_DIR}\n`);
 
-    let downloaded = 0, skipped = 0, failed = 0;
+    let downloaded = 0, failed = 0;
 
     let subtitleUrls;
     try {
@@ -122,15 +117,15 @@ async function main() {
 
     for (const url of subtitleUrls) {
         try {
-            const result = await downloadFile(url);
-            if (result.skipped) skipped++; else downloaded++;
+            await downloadFile(url);
+            downloaded++;
         } catch (err) {
             console.error(`  FAIL  ${url}\n        ${err.message}`);
             failed++;
         }
     }
 
-    console.log(`\nDone. Downloaded: ${downloaded}, Skipped: ${skipped}, Failed: ${failed}`);
+    console.log(`\nDone. Downloaded: ${downloaded}, Failed: ${failed}`);
 }
 
 main();
