@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <!-- NEW VERSION — rebuilt with transcript accordions, clickable timestamps, and cross-video search -->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -97,8 +98,13 @@
             transition: border-color 0.2s;
         }
 
-        #transcriptSearch::placeholder { color: rgba(255,255,255,0.45); }
-        #transcriptSearch:focus { border-color: #986c32; }
+        #transcriptSearch::placeholder {
+            color: rgba(255, 255, 255, 0.45);
+        }
+
+        #transcriptSearch:focus {
+            border-color: #986c32;
+        }
 
         #searchClear {
             background: rgba(177, 209, 207, 0.18);
@@ -110,7 +116,10 @@
             cursor: pointer;
             transition: background 0.2s;
         }
-        #searchClear:hover { background: rgba(177, 209, 207, 0.28); }
+
+        #searchClear:hover {
+            background: rgba(177, 209, 207, 0.28);
+        }
 
         #searchStatus {
             font-size: 0.85rem;
@@ -134,7 +143,8 @@
             transition: background 0.2s, border-color 0.2s;
         }
 
-        .search-result:hover, .search-result:focus-visible {
+        .search-result:hover,
+        .search-result:focus-visible {
             background: rgba(6, 11, 111, 0.12);
             border-color: rgba(152, 108, 50, 0.35);
             outline: none;
@@ -167,6 +177,55 @@
             color: #060b6f;
             border-radius: 2px;
             padding: 0 2px;
+        }
+
+        /* ── Search result grouping ── */
+        .search-result-group {
+            background: rgba(177, 209, 207, 0.08);
+            border: 1px solid rgba(177, 209, 207, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .search-result-group-title {
+            background: rgba(177, 209, 207, 0.15);
+            border-bottom: 1px solid rgba(177, 209, 207, 0.2);
+            padding: 10px 16px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #986c32;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .search-result-group-title:hover {
+            background: rgba(177, 209, 207, 0.25);
+        }
+
+        .search-result-group-items {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .search-result-group .search-result {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid rgba(177, 209, 207, 0.1);
+            border-radius: 0;
+            padding: 10px 16px;
+            margin: 0;
+            cursor: pointer;
+            transition: background 0.15s;
+        }
+
+        .search-result-group .search-result:last-child {
+            border-bottom: none;
+        }
+
+        .search-result-group .search-result:hover {
+            background: rgba(177, 209, 207, 0.12);
+            border-color: transparent;
         }
 
         /* ── Day sections ── */
@@ -281,7 +340,9 @@
             margin-top: auto;
         }
 
-        .transcript-toggle:hover { background: rgba(152, 108, 50, 0.22); }
+        .transcript-toggle:hover {
+            background: rgba(152, 108, 50, 0.22);
+        }
 
         .transcript-toggle:focus-visible {
             outline: 2px solid #986c32;
@@ -317,7 +378,10 @@
             scrollbar-color: rgba(177, 209, 207, 0.6) transparent;
         }
 
-        .transcript-body::-webkit-scrollbar { width: 5px; }
+        .transcript-body::-webkit-scrollbar {
+            width: 5px;
+        }
+
         .transcript-body::-webkit-scrollbar-thumb {
             background: rgba(177, 209, 207, 0.6);
             border-radius: 3px;
@@ -341,7 +405,9 @@
             transition: background 0.15s;
         }
 
-        .cue-line:hover { background: rgba(177, 209, 207, 0.14); }
+        .cue-line:hover {
+            background: rgba(177, 209, 207, 0.14);
+        }
 
         .cue-line:focus-visible {
             outline: 2px solid #986c32;
@@ -374,13 +440,23 @@
         }
 
         @media (max-width: 768px) {
-            .video-container { gap: 24px; }
-            h1 { font-size: 2.2rem; }
+            .video-container {
+                gap: 24px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
         }
 
         @media (max-width: 480px) {
-            .video-grid { grid-template-columns: 1fr; }
-            h1 { font-size: 1.8rem; }
+            .video-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
         }
     </style>
 </head>
@@ -390,10 +466,18 @@
         <h1>KERI Conference April 2026 Videos</h1>
         <div class="happy-ribbon" aria-live="polite">🎀 The subtitles are currently being reviewed and revised.</div>
         <p class="subtitle">A collection of presentations and talks from the KERI community</p>
-         <a href="https://kericonf.com/archive/kericonf26/program/" target="_blank" rel="noopener noreferrer">Conference 2026 Program</a> | 
-         <a href="https://kericonf.com/archive/kericonf26/speakers-2026/" target="_blank" rel="noopener noreferrer">Speakers 2026</a> | All videos on YouTube:
-         <a href="https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL" target="_blank" rel="noopener noreferrer"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiA4djggbC00LTIuNXYtMy4yTDggMTJ6Ii8+PC9zdmc+" alt="YouTube" width="24" height="24" style="vertical-align: middle; margin-right: 5px;">Day 1</a>
-         <a href="https://www.youtube.com/playlist?list=PLnHy2ee5UksMjwBseKJ7ivXiYukRvI65a" target="_blank" rel="noopener noreferrer"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiA4djggbC00LTIuNXYtMy4yTDggMTJ6Ii8+PC9zdmc+" alt="YouTube" width="24" height="24" style="vertical-align: middle; margin-right: 5px;">Day 2</a>
+        <a href="https://kericonf.com/archive/kericonf26/program/" target="_blank" rel="noopener noreferrer">Conference
+            2026 Program</a> |
+        <a href="https://kericonf.com/archive/kericonf26/speakers-2026/" target="_blank"
+            rel="noopener noreferrer">Speakers 2026</a> | All videos on YouTube:
+        <a href="https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL" target="_blank"
+            rel="noopener noreferrer"><img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiA4djggbC00LTIuNXYtMy4yTDggMTJ6Ii8+PC9zdmc+"
+                alt="YouTube" width="24" height="24" style="vertical-align: middle; margin-right: 5px;">Day 1</a>
+        <a href="https://www.youtube.com/playlist?list=PLnHy2ee5UksMjwBseKJ7ivXiYukRvI65a" target="_blank"
+            rel="noopener noreferrer"><img
+                src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiA4djggbC00LTIuNXYtMy4yTDggMTJ6Ii8+PC9zdmc+"
+                alt="YouTube" width="24" height="24" style="vertical-align: middle; margin-right: 5px;">Day 2</a>
     </header>
 
     <!-- Cross-video transcript search -->
@@ -401,8 +485,8 @@
         <label for="transcriptSearch">Search all transcripts</label>
         <div class="search-wrapper">
             <input type="search" id="transcriptSearch"
-                   placeholder="Type to search across all talks… (currently only exact matches)"
-                   autocomplete="off" spellcheck="false">
+                placeholder="Type to search across all talks…" autocomplete="off"
+                spellcheck="false">
             <button id="searchClear" type="button" aria-label="Clear search">Clear</button>
         </div>
         <p id="searchStatus" aria-live="polite"></p>
@@ -427,203 +511,203 @@
                 title: "State of the KERI Suite - Samuel Smith",
                 path: "KERICONF26/Samuel Smith ｜ State of the KERI Suite ｜ KERI Conference 2026.mp4",
                 duration: "50:10",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Samuel%20Smith%20%EF%BD%9C%20State%20of%20the%20KERI%20Suite%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Samuel Smith ｜ State of the KERI Suite ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 2, day: "KERICONF26 Day 1",
                 title: "Open Verifiable Communications - Daniel Hardman",
                 path: "KERICONF26/Daniel Hardman ｜ Open Verifiable Communications ｜ KERI Conference 2026.mp4",
                 duration: "39:55",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Daniel%20Hardman%20%EF%BD%9C%20Open%20Verifiable%20Communications%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Daniel Hardman ｜ Open Verifiable Communications ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 3, day: "KERICONF26 Day 1",
                 title: "Provenanting Patient's Medical Records - Scott Stuewe Mark Scrimshire Jared Jeffery",
                 path: "KERICONF26/Scott Stuewe Mark Scrimshire Jared Jeffery ｜ Provenanting Patient's Medical Records ｜ KERI Conf 2026.mp4",
                 duration: "35:40",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Scott%20Stuewe%20Mark%20Scrimshire%20Jared%20Jeffery%20%EF%BD%9C%20Provenanting%20Patient%27s%20Medical%20Records%20%EF%BD%9C%20KERI%20Conf%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Scott Stuewe Mark Scrimshire Jared Jeffery ｜ Provenanting Patient's Medical Records ｜ KERI Conf 2026.fixed.srt"
             },
             {
                 order: 4, day: "KERICONF26 Day 1",
                 title: "The Landscape of SEDI - George McEwan",
                 path: "KERICONF26/George McEwan ｜ The Landscape of SEDI ｜ KERI Conference 2026.mp4",
                 duration: "38:35",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/George%20McEwan%20%EF%BD%9C%20The%20Landscape%20of%20SEDI%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/George McEwan ｜ The Landscape of SEDI ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 5, day: "KERICONF26 Day 1",
                 title: "Contract Credentials & Verifiable Identity - Cole Davis",
                 path: "KERICONF26/Cole Davis ｜ Contract Credentials & Verifiable Identity ｜ KERI Conference 2026.mp4",
                 duration: "39:10",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Cole%20Davis%20%EF%BD%9C%20Contract%20Credentials%20%26%20Verifiable%20Identity%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Cole Davis ｜ Contract Credentials & Verifiable Identity ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 6, day: "KERICONF26 Day 1",
                 title: "Infrastructure for Security - Phil Feairheller",
                 path: "KERICONF26/Phil Feairheller ｜ Infrastructure for Security ｜ Keri Conference 2026.mp4",
                 duration: "41:15",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Phil%20Feairheller%20%EF%BD%9C%20Infrastructure%20for%20Security%20%EF%BD%9C%20Keri%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Phil Feairheller ｜ Infrastructure for Security ｜ Keri Conference 2026.fixed.srt"
             },
             {
                 order: 7, day: "KERICONF26 Day 1",
                 title: "Open KERI Infrastructure - Jay Alexander Elliot",
                 path: "KERICONF26/Jay Alexander Elliot ｜ Open KERI Infrastructure ｜ KERI Conference 2026.mp4",
                 duration: "42:50",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Jay%20Alexander%20Elliot%20%EF%BD%9C%20Open%20KERI%20Infrastructure%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Jay Alexander Elliot ｜ Open KERI Infrastructure ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 8, day: "KERICONF26 Day 1",
                 title: "KRAM IT! with Ari - Ari Argoud",
                 path: "KERICONF26/Ari Argoud ｜ KRAM IT! with Ari ｜ KERI Conference 2026.mp4",
                 duration: "37:20",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Ari%20Argoud%20%EF%BD%9C%20KRAM%20IT%21%20with%20Ari%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Ari Argoud ｜ KRAM IT! with Ari ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 9, day: "KERICONF26 Day 1",
                 title: "Signify Security Architecture - Fergal O'Conner",
                 path: "KERICONF26/Fergal O'Conner ｜ Signify Security Architecture ｜ KERI Conference 2026.mp4",
                 duration: "37:45",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Fergal%20O%27Conner%20%EF%BD%9C%20Signify%20Security%20Architecture%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Fergal O'Conner ｜ Signify Security Architecture ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 10, day: "KERICONF26 Day 1",
                 title: "Witnesses & Watchers - Ryan Hansen",
                 path: "KERICONF26/Ryan Hansen ｜ Witnesses & Watchers ｜ KERI Conference 2026.mp4",
                 duration: "40:30",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Ryan%20Hansen%20%EF%BD%9C%20Witnesses%20%26%20Watchers%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Ryan Hansen ｜ Witnesses & Watchers ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 11, day: "KERICONF26 Day 1",
                 title: "FHIR and CMS - Jared Jefferey",
                 path: "KERICONF26/Jared Jefferey ｜ FHIR and CMS ｜ KERI Conference 2026.mp4",
                 duration: "38:25",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Jared%20Jefferey%20%EF%BD%9C%20FHIR%20and%20CMS%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Jared Jefferey ｜ FHIR and CMS ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 12, day: "KERICONF26 Day 1",
                 title: "The Digital Identity Tradespace - Samuel Smith",
                 path: "KERICONF26/Samuel Smith ｜ The Digital Identity Tradespace ｜ KERI Conference 2026.mp4",
                 duration: "45:30",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Samuel%20Smith%20%EF%BD%9C%20The%20Digital%20Identity%20Tradespace%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Samuel Smith ｜ The Digital Identity Tradespace ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 13, day: "KERICONF26 Day 1",
                 title: "KERIA Tutorial - Kent Bull",
                 path: "KERICONF26/Kent Bull ｜ KERIA Tutorial ｜ KERI Conference 2026.mp4",
                 duration: "51:20",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Kent%20Bull%20%EF%BD%9C%20KERIA%20Tutorial%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Kent Bull ｜ KERIA Tutorial ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 14, day: "KERICONF26 Day 1",
                 title: "How KERI Enables Better Private-Public Partnerships - George McEwan",
                 path: "KERICONF26/George McEwan ｜ How KERI Enables Better Private-Public Partnerships ｜ KERI Conference 2026.mp4",
                 duration: "44:20",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/George%20McEwan%20%EF%BD%9C%20How%20KERI%20Enables%20Better%20Private-Public%20Partnerships%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/George McEwan ｜ How KERI Enables Better Private-Public Partnerships ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 1, day: "KERICONF26 Day 2",
                 title: "The Future of KERI - Samuel Smith",
                 path: "KERICONF26/Samuel Smith ｜ The Future of KERI ｜ KERI Conference 2026.mp4",
                 duration: "52:10",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Samuel%20Smith%20%EF%BD%9C%20The%20Future%20of%20KERI%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Samuel Smith ｜ The Future of KERI ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 2, day: "KERICONF26 Day 2",
                 title: "ACDCs for Authorization - Phil Feairheller",
                 path: "KERICONF26/Phil Feairheller ｜ ACDCs for Authorization ｜ KERI Conference 2026.mp4",
                 duration: "36:15",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Phil%20Feairheller%20%EF%BD%9C%20ACDCs%20for%20Authorization%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Phil Feairheller ｜ ACDCs for Authorization ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 3, day: "KERICONF26 Day 2",
                 title: "KERI Infrastructure & the 5 W's - Thomas Mayfield",
                 path: "KERICONF26/Thomas Mayfield ｜ KERI Infrastructure & the 5 W's ｜ KERI Conference 2026.mp4",
                 duration: "43:20",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Thomas%20Mayfield%20%EF%BD%9C%20KERI%20Infrastructure%20%26%20the%205%20W%27s%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Thomas Mayfield ｜ KERI Infrastructure & the 5 W's ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 4, day: "KERICONF26 Day 2",
                 title: "ACDCs for Enterprises - Alan Davies",
                 path: "KERICONF26/Alan Davies ｜ ACDCs for Enterprises ｜ KERI Conference 2026.mp4",
                 duration: "35:55",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Alan%20Davies%20%EF%BD%9C%20ACDCs%20for%20Enterprises%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Alan Davies ｜ ACDCs for Enterprises ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 5, day: "KERICONF26 Day 2",
                 title: "KERI Bridge to the DID World - Jonathan Rayback",
                 path: "KERICONF26/Jonathan Rayback ｜ KERI Bridge to the DID World ｜ KERI Conference 2026.mp4",
                 duration: "41:35",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Jonathan%20Rayback%20%EF%BD%9C%20KERI%20Bridge%20to%20the%20DID%20World%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Jonathan Rayback ｜ KERI Bridge to the DID World ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 6, day: "KERICONF26 Day 2",
                 title: "Mobile Wallet - Evan Asawaka",
                 path: "KERICONF26/Evan Asawaka ｜ Mobile Wallet ｜ KERI Conference 2026.mp4",
                 duration: "40:15",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Evan%20Asawaka%20%EF%BD%9C%20Mobile%20Wallet%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Evan Asawaka ｜ Mobile Wallet ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 7, day: "KERICONF26 Day 2",
                 title: "Digital Identity Needs a Legal Foundation - Phil Windley",
                 path: "KERICONF26/Phil Windley ｜ Digital Identity Needs a Legal Foundation ｜ KERI Conference 2026.mp4",
                 duration: "43:10",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Phil%20Windley%20%EF%BD%9C%20Digital%20Identity%20Needs%20a%20Legal%20Foundation%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Phil Windley ｜ Digital Identity Needs a Legal Foundation ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 8, day: "KERICONF26 Day 2",
                 title: "KERIpy Async Architecture - Kent Bull",
                 path: "KERICONF26/Kent Bull ｜ KERIpy Async Architecture ｜ KERI Conference 2026.mp4",
                 duration: "43:30",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Kent%20Bull%20%EF%BD%9C%20KERIpy%20Async%20Architecture%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Kent Bull ｜ KERIpy Async Architecture ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 9, day: "KERICONF26 Day 2",
                 title: "Secure Asset Transfer Protocol - Ned Smith",
                 path: "KERICONF26/Ned Smith ｜ Secure Asset Transfer Protocol ｜ KERI Conference 2026.mp4",
                 duration: "36:50",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Ned%20Smith%20%EF%BD%9C%20Secure%20Asset%20Transfer%20Protocol%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Ned Smith ｜ Secure Asset Transfer Protocol ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 10, day: "KERICONF26 Day 2",
                 title: "Investigating the Game of Trust - Nicholas Racz",
                 path: "KERICONF26/Nicholas Racz ｜ Investigating the Game of Trust ｜ KERI Conference 2026.mp4",
                 duration: "39:15",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Nicholas%20Racz%20%EF%BD%9C%20Investigating%20the%20Game%20of%20Trust%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Nicholas Racz ｜ Investigating the Game of Trust ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 11, day: "KERICONF26 Day 2",
                 title: "Applying KERI to General Evidence Problems - Daniel Hardman",
                 path: "KERICONF26/Daniel Hardman ｜ Applying KERI to General Evidence Problems ｜ KERI Conference 2026.mp4",
                 duration: "39:45",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Daniel%20Hardman%20%EF%BD%9C%20Applying%20KERI%20to%20General%20Evidence%20Problems%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Daniel Hardman ｜ Applying KERI to General Evidence Problems ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 12, day: "KERICONF26 Day 2",
                 title: "KERI Development & Deployment - Keanu Pahio",
                 path: "KERICONF26/Keanu Pahio ｜ KERI Developement & Deployment ｜ KERI Conference 2026.mp4",
                 duration: "48:15",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Keanu%20Pahio%20%EF%BD%9C%20KERI%20Developement%20%26%20Deployment%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Keanu Pahio ｜ KERI Developement & Deployment ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 13, day: "KERICONF26 Day 2",
                 title: "SPAC & TSP - Samuel Smith",
                 path: "KERICONF26/Samuel Smith ｜ SPAC & TSP ｜ KERI Conference 2026.mp4",
                 duration: "42:25",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Samuel%20Smith%20%EF%BD%9C%20SPAC%20%26%20TSP%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Samuel Smith ｜ SPAC & TSP ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 14, day: "KERICONF26 Day 2",
                 title: "KERIA & Signify Path to Production - Fergal O'Connor",
                 path: "KERICONF26/Fergal O'Connor ｜ KERIA & Signify Path to Production ｜ KERI Conference 2026.mp4",
                 duration: "38:45",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Fergal%20O%27Connor%20%EF%BD%9C%20KERIA%20%26%20Signify%20Path%20to%20Production%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Fergal O'Connor ｜ KERIA & Signify Path to Production ｜ KERI Conference 2026.fixed.srt"
             },
             {
                 order: 15, day: "KERICONF26 Day 2",
                 title: "What KERI allows us to do that we couldn't before - Ryan Hansen Panel",
                 path: "KERICONF26/Ryan Hansen Pannel ｜ What KERI allows us to do that we couldn't before ｜ KERI Conference 2026.mp4",
                 duration: "37:30",
-                subtitle: "https://raw.githubusercontent.com/keri-foundation/CONF26-subtitles/refs/heads/main/subtitles/Ryan%20Hansen%20Pannel%20%EF%BD%9C%20What%20KERI%20allows%20us%20to%20do%20that%20we%20couldn%27t%20before%20%EF%BD%9C%20KERI%20Conference%202026.fixed.srt"
+                subtitle: "/confs/2026/videos/KERICONF26/subtitles/Ryan Hansen Pannel ｜ What KERI allows us to do that we couldn't before ｜ KERI Conference 2026.fixed.srt"
             }
         ];
 
@@ -640,8 +724,8 @@
             const m = Math.floor((totalSec % 3600) / 60);
             const s = Math.floor(totalSec % 60);
             return h > 0
-                ? `${h}:${String(m).padStart(2,'0')}:${String(s).padStart(2,'0')}`
-                : `${m}:${String(s).padStart(2,'0')}`;
+                ? `${h}:${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`
+                : `${m}:${String(s).padStart(2, '0')}`;
         }
 
         function escHtml(str) {
@@ -682,7 +766,7 @@
                 const m = lines[timeLine].match(timePat);
                 if (!m) continue;
                 const startSec = srtTimeToSeconds(m[1], m[2]);
-                const cueText  = lines.slice(timeLine + 1).join(' ').trim();
+                const cueText = lines.slice(timeLine + 1).join(' ').trim();
                 if (!cueText) continue;
                 cues.push({
                     start: startSec,
@@ -698,8 +782,8 @@
         //  In-memory transcript store  path → { status, cues, rawText }
         //  status: 'loading' | 'ready' | 'error'
         // ─────────────────────────────────────────────────────────────────────
-        const transcriptStore  = {};
-        const videoElementMap  = {};   // path → <video> element
+        const transcriptStore = {};
+        const videoElementMap = {};   // path → <video> element
 
         function pauseAllVideos(exceptVideo) {
             for (const key in videoElementMap) {
@@ -715,13 +799,12 @@
             if (transcriptStore[id]) return Promise.resolve(transcriptStore[id]);
             transcriptStore[id] = { status: 'loading', cues: [], rawText: '' };
 
-            const url = `subtitle-proxy.php?url=${encodeURIComponent(video.subtitle)}`;
-            return fetch(url)
+            return fetch(video.subtitle)
                 .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.text(); })
                 .then(raw => {
                     transcriptStore[id].rawText = raw;
-                    transcriptStore[id].cues    = parseSrt(raw);
-                    transcriptStore[id].status  = 'ready';
+                    transcriptStore[id].cues = parseSrt(raw);
+                    transcriptStore[id].status = 'ready';
                     return transcriptStore[id];
                 })
                 .catch(() => {
@@ -736,15 +819,15 @@
             const vtt = 'WEBVTT\n\n' + rawSrt
                 .replace(/\r\n/g, '\n').replace(/\r/g, '\n')
                 .replace(/(\d{2}:\d{2}:\d{2}),(\d{3})/g, '$1.$2');
-            const blob   = new Blob([vtt], { type: 'text/vtt' });
+            const blob = new Blob([vtt], { type: 'text/vtt' });
             const blobUrl = URL.createObjectURL(blob);
-            const track  = document.createElement('track');
-            track.kind    = 'subtitles';
+            const track = document.createElement('track');
+            track.kind = 'subtitles';
             track.srclang = 'en';
-            track.label   = 'English';
+            track.label = 'English';
             track.default = true;
-            track.src     = blobUrl;
-            track.addEventListener('load',  () => URL.revokeObjectURL(blobUrl), { once: true });
+            track.src = blobUrl;
+            track.addEventListener('load', () => URL.revokeObjectURL(blobUrl), { once: true });
             track.addEventListener('error', () => URL.revokeObjectURL(blobUrl), { once: true });
             videoEl.appendChild(track);
         }
@@ -760,7 +843,7 @@
             div.title = `Jump to ${cue.startLabel}`;
 
             const timeSpan = document.createElement('span');
-            timeSpan.className   = 'cue-time';
+            timeSpan.className = 'cue-time';
             timeSpan.textContent = cue.startLabel;
 
             const textSpan = document.createElement('span');
@@ -801,12 +884,12 @@
 
             const videoEl = document.createElement('video');
             videoEl.controls = true;
-            videoEl.poster   = '/wp-content/uploads/2026/02/FullLogo@3x.png';
-            videoEl.preload  = 'none';
-            videoEl.playsInline  =  "true" ;
+            videoEl.poster = '/wp-content/uploads/2026/02/FullLogo@3x.png';
+            videoEl.preload = 'none';
+            videoEl.playsInline = "true";
 
             const source = document.createElement('source');
-            source.src  = video.path;
+            source.src = video.path;
             source.type = 'video/mp4';
             videoEl.appendChild(source);
             thumbDiv.appendChild(videoEl);
@@ -821,14 +904,14 @@
             infoDiv.className = 'video-info';
 
             const titleEl = document.createElement('h3');
-            titleEl.className   = 'video-title';
+            titleEl.className = 'video-title';
             titleEl.textContent = video.title;
             infoDiv.appendChild(titleEl);
 
             const metaDiv = document.createElement('div');
             metaDiv.className = 'video-meta';
             const durSpan = document.createElement('span');
-            durSpan.className   = 'video-duration';
+            durSpan.className = 'video-duration';
             durSpan.textContent = video.duration;
             metaDiv.appendChild(durSpan);
             infoDiv.appendChild(metaDiv);
@@ -944,19 +1027,18 @@
         // ─────────────────────────────────────────────────────────────────────
         //  Throttled cross-video search
         // ─────────────────────────────────────────────────────────────────────
-        const searchInput   = document.getElementById('transcriptSearch');
-        const searchStatus  = document.getElementById('searchStatus');
+        const searchInput = document.getElementById('transcriptSearch');
+        const searchStatus = document.getElementById('searchStatus');
         const searchResults = document.getElementById('searchResults');
-        const searchClear   = document.getElementById('searchClear');
+        const searchClear = document.getElementById('searchClear');
 
-        const MAX_RESULTS    = 80;
-        const subtitledCount = videos.filter(v => v.subtitle).length;
+        const MAX_RESULTS = 80;
 
         function updateVideoCardDimState(activePaths) {
             for (const video of videos) {
                 const card = videoCardMap.get(video.path);
                 if (!card) continue;
-                if (activePaths && activePaths.has(video.path)) {
+                if (!activePaths || activePaths.has(video.path)) {
                     card.classList.remove('dimmed');
                 } else {
                     card.classList.add('dimmed');
@@ -988,17 +1070,8 @@
                 if (matches.length >= MAX_RESULTS) break;
             }
 
-            const loadedCount = videos.filter(v => {
-                const s = transcriptStore[v.path];
-                return s && s.status === 'ready';
-            }).length;
-
-            const loadedNote = loadedCount < subtitledCount
-                ? ` (${loadedCount}/${subtitledCount} transcripts loaded — results grow as they load)`
-                : '';
-
             if (!matches.length) {
-                searchStatus.textContent = `No results for "${query}"${loadedNote}`;
+                searchStatus.textContent = `No results for "${query}"`;
                 updateVideoCardDimState(new Set());
                 return;
             }
@@ -1008,46 +1081,90 @@
 
             const truncated = matches.length >= MAX_RESULTS;
             searchStatus.textContent =
-                `${truncated ? MAX_RESULTS + '+' : matches.length} result${matches.length !== 1 ? 's' : ''}${loadedNote}`;
+                `${truncated ? MAX_RESULTS + '+' : matches.length} result${matches.length !== 1 ? 's' : ''}`;
+
+            const groupsByVideoPath = {};
+            for (const { video, cue } of matches) {
+                if (!groupsByVideoPath[video.path]) {
+                    groupsByVideoPath[video.path] = { video, cues: [] };
+                }
+                groupsByVideoPath[video.path].cues.push(cue);
+            }
 
             const frag = document.createDocumentFragment();
-            for (const { video, cue } of matches) {
-                const item = document.createElement('div');
-                item.className = 'search-result';
-                item.setAttribute('role', 'listitem');
-                item.setAttribute('tabindex', '0');
-                item.title = `Jump to ${cue.startLabel} in "${video.title}"`;
+
+            // Render groups in order of first match
+            for (const { video } of matches) {
+                if (!groupsByVideoPath[video.path]) continue;
+                const group = groupsByVideoPath[video.path];
+                delete groupsByVideoPath[video.path];
+
+                const groupEl = document.createElement('div');
+                groupEl.className = 'search-result-group';
+                groupEl.setAttribute('role', 'region');
+                groupEl.setAttribute('aria-label', `Results for ${video.title}`);
 
                 const titleEl = document.createElement('div');
-                titleEl.className   = 'search-result-title';
+                titleEl.className = 'search-result-group-title';
+                titleEl.setAttribute('role', 'button');
+                titleEl.setAttribute('tabindex', '0');
                 titleEl.textContent = video.title;
+                titleEl.title = `View "${video.title}"`;
 
-                const timeEl = document.createElement('span');
-                timeEl.className   = 'search-result-time';
-                timeEl.textContent = cue.startLabel;
-
-                const textEl = document.createElement('div');
-                textEl.className = 'search-result-text';
-                textEl.innerHTML  = highlightMatch(cue.text, query);
-
-                item.appendChild(titleEl);
-                item.appendChild(timeEl);
-                item.appendChild(textEl);
-
-                const seek = () => {
+                const titleSeek = () => {
                     const videoEl = videoElementMap[video.path];
                     if (!videoEl) return;
-                    videoEl.currentTime = cue.start;
-                    videoEl.play();
+                    videoEl.currentTime = 0;
                     videoEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 };
-                item.addEventListener('click', seek);
-                item.addEventListener('keydown', e => {
-                    if (e.key === 'Enter') { e.preventDefault(); seek(); }
+                titleEl.addEventListener('click', titleSeek);
+                titleEl.addEventListener('keydown', e => {
+                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); titleSeek(); }
                 });
 
-                frag.appendChild(item);
+                groupEl.appendChild(titleEl);
+
+                const itemsContainer = document.createElement('div');
+                itemsContainer.className = 'search-result-group-items';
+                itemsContainer.setAttribute('role', 'list');
+
+                for (const cue of group.cues) {
+                    const item = document.createElement('div');
+                    item.className = 'search-result';
+                    item.setAttribute('role', 'listitem');
+                    item.setAttribute('tabindex', '0');
+                    item.title = `Jump to ${cue.startLabel}`;
+
+                    const timeEl = document.createElement('span');
+                    timeEl.className = 'search-result-time';
+                    timeEl.textContent = cue.startLabel;
+
+                    const textEl = document.createElement('div');
+                    textEl.className = 'search-result-text';
+                    textEl.innerHTML = highlightMatch(cue.text, query);
+
+                    item.appendChild(timeEl);
+                    item.appendChild(textEl);
+
+                    const seek = () => {
+                        const videoEl = videoElementMap[video.path];
+                        if (!videoEl) return;
+                        videoEl.currentTime = cue.start;
+                        videoEl.play();
+                        videoEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    };
+                    item.addEventListener('click', seek);
+                    item.addEventListener('keydown', e => {
+                        if (e.key === 'Enter') { e.preventDefault(); seek(); }
+                    });
+
+                    itemsContainer.appendChild(item);
+                }
+
+                groupEl.appendChild(itemsContainer);
+                frag.appendChild(groupEl);
             }
+
             searchResults.appendChild(frag);
         }
 
@@ -1066,4 +1183,5 @@
         });
     </script>
 </body>
+
 </html>
