@@ -97,6 +97,12 @@ function downloadFile(url) {
 }
 
 async function main() {
+    // Remove existing subtitles directory to ensure a clean mirror
+    if (fs.existsSync(SUBTITLES_DIR)) {
+        fs.rmSync(SUBTITLES_DIR, { recursive: true });
+        console.log(`Removed existing subtitles directory\n`);
+    }
+    
     fs.mkdirSync(SUBTITLES_DIR, { recursive: true });
     console.log(`Saving subtitles to: ${SUBTITLES_DIR}\n`);
 
