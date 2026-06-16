@@ -121,6 +121,21 @@
             background: rgba(177, 209, 207, 0.28);
         }
 
+        #searchToggleAll {
+            background: rgba(177, 209, 207, 0.18);
+            border: 1px solid rgba(177, 209, 207, 0.3);
+            border-radius: 8px;
+            color: #b1d1cf;
+            font-size: 0.95rem;
+            padding: 10px 16px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        #searchToggleAll:hover {
+            background: rgba(177, 209, 207, 0.28);
+        }
+
         #searchStatus {
             font-size: 0.85rem;
             opacity: 0.7;
@@ -531,6 +546,7 @@
             <input type="search" id="transcriptSearch"
                 placeholder="Type to search across all talks…" autocomplete="off"
                 spellcheck="false">
+            <button id="searchToggleAll" type="button" aria-label="Toggle all results" title="Collapse/expand all result groups">Toggle All</button>
             <button id="searchClear" type="button" aria-label="Clear search">Clear</button>
         </div>
         <p id="searchStatus" aria-live="polite"></p>
@@ -1078,8 +1094,10 @@
         const searchStatus = document.getElementById('searchStatus');
         const searchResults = document.getElementById('searchResults');
         const searchClear = document.getElementById('searchClear');
+        const searchToggleAll = document.getElementById('searchToggleAll');
 
         let groupIdCounter = 0;
+        let allGroupsExpanded = true;
         const MAX_RESULTS = 80;
 
         function updateVideoCardDimState(activePaths) {
@@ -1255,6 +1273,8 @@
             }
 
             searchResults.appendChild(frag);
+            searchToggleAll.disabled = false;
+            allGroupsExpanded = true;
         }
 
         let searchTimer = null;
@@ -1265,11 +1285,26 @@
             searchTimer = setTimeout(() => runSearch(searchInput.value.trim()), 300);
         });
 
+        searchToggleAll.addEventListener('click', () => {
+            const groups = document.querySelectorAll('.search-result-group-toggle');
+            allGroupsExpanded = !allGroupsExpanded;
+            
+            groups.forEach(toggle => {
+                const items = toggle.closest('.search-result-group')?.querySelector('.search-result-group-items');
+                if (items) {
+                    items.hidden = !allGroupsExpanded;
+                    toggle.setAttribute('aria-expanded', String(allGroupsExpanded));
+                }
+            });
+        });
+
         searchClear.addEventListener('click', () => {
             searchInput.value = '';
             searchResults.innerHTML = '';
             searchStatus.textContent = '';
             updateVideoCardDimState(null);
+            allGroupsExpanded = true;
+            searchToggleAll.disabled = false;
             searchInput.focus();
         });
     </script>
