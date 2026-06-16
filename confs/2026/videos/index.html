@@ -1218,18 +1218,15 @@
                     toggleButton.setAttribute('aria-expanded', String(!hidden));
                 };
 
-                toggleButton.addEventListener('click', e => {
-                    e.stopPropagation();
+                titleEl.addEventListener('click', (e) => {
+                    e.preventDefault();
                     toggleGroup();
                 });
 
-                const titleSeek = () => {
-                    const videoEl = videoElementMap[video.path];
-                    if (!videoEl) return;
-                    videoEl.currentTime = 0;
-                    videoEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                };
-                titleText.addEventListener('click', titleSeek);
+                toggleButton.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    toggleGroup();
+                });
 
                 titleEl.appendChild(titleText);
                 titleEl.appendChild(toggleButton);
