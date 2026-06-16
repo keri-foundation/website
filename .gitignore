@@ -14,6 +14,10 @@
 !/confs/
 !/confs/**
 
+# --- .github ---
+!/.github/
+!/.github/**
+
 # --- Video files ---
 *.mp4
 
