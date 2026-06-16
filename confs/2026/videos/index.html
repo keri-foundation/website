@@ -936,6 +936,10 @@
                 if (store.rawText && videoElementMap[v.path]) {
                     attachVttTrack(videoElementMap[v.path], store.rawText);
                 }
+                // Re-run active search so results accumulate as transcripts load,
+                // making results independent of how fast the user typed.
+                const q = searchInput.value.trim();
+                if (q.length >= 2) runSearch(q);
                 setTimeout(preloadNext, 350);
             });
         }
