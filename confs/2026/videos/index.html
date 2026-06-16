@@ -188,13 +188,15 @@
         }
 
         .search-result-group-title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
             background: rgba(177, 209, 207, 0.15);
             border-bottom: 1px solid rgba(177, 209, 207, 0.2);
             padding: 10px 16px;
             font-size: 0.95rem;
             font-weight: 600;
             color: #060b6f;
-            cursor: pointer;
             transition: background 0.2s;
         }
 
@@ -202,10 +204,52 @@
             background: rgba(177, 209, 207, 0.25);
         }
 
+        .search-result-group-title-text {
+            display: inline-flex;
+            align-items: center;
+            width: 100%;
+            text-align: left;
+            font: inherit;
+            color: inherit;
+            background: transparent;
+            border: none;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+        }
+
+        .search-result-group-title-text:hover {
+            text-decoration: underline;
+        }
+
+        .search-result-group-toggle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 1.8em;
+            min-height: 1.8em;
+            border: none;
+            background: transparent;
+            color: inherit;
+            cursor: pointer;
+            padding: 0;
+            margin-left: 1rem;
+            transition: transform 0.2s;
+            font-size: 1rem;
+        }
+
+        .search-result-group-toggle[aria-expanded="false"] {
+            transform: rotate(-90deg);
+        }
+
         .search-result-group-items {
             display: flex;
             flex-direction: column;
             gap: 0;
+        }
+
+        .search-result-group-items[hidden] {
+            display: none !important;
         }
 
         .search-result-group .search-result {
@@ -1035,6 +1079,7 @@
         const searchResults = document.getElementById('searchResults');
         const searchClear = document.getElementById('searchClear');
 
+        let groupIdCounter = 0;
         const MAX_RESULTS = 80;
 
         function updateVideoCardDimState(activePaths) {
@@ -1123,12 +1168,42 @@
                 groupEl.setAttribute('role', 'region');
                 groupEl.setAttribute('aria-label', `Results for ${video.title}`);
 
+                const groupIndex = ++groupIdCounter;
+                const groupId = `search-result-group-items-${groupIndex}`;
+
                 const titleEl = document.createElement('div');
                 titleEl.className = 'search-result-group-title';
-                titleEl.setAttribute('role', 'button');
-                titleEl.setAttribute('tabindex', '0');
-                titleEl.textContent = video.title;
-                titleEl.title = `View "${video.title}"`;
+
+                const itemsContainer = document.createElement('div');
+                itemsContainer.className = 'search-result-group-items';
+                itemsContainer.id = groupId;
+                itemsContainer.setAttribute('role', 'list');
+
+                const toggleButton = document.createElement('button');
+                toggleButton.className = 'search-result-group-toggle';
+                toggleButton.type = 'button';
+                toggleButton.setAttribute('aria-expanded', 'true');
+                toggleButton.setAttribute('aria-controls', groupId);
+                toggleButton.setAttribute('aria-label', `Toggle results for ${video.title}`);
+                toggleButton.textContent = '▾';
+                toggleButton.title = `Toggle results for ${video.title}`;
+
+                const titleText = document.createElement('button');
+                titleText.className = 'search-result-group-title-text';
+                titleText.type = 'button';
+                titleText.textContent = video.title;
+                titleText.title = `View "${video.title}"`;
+
+                const toggleGroup = () => {
+                    const hidden = !itemsContainer.hidden;
+                    itemsContainer.hidden = hidden;
+                    toggleButton.setAttribute('aria-expanded', String(!hidden));
+                };
+
+                toggleButton.addEventListener('click', e => {
+                    e.stopPropagation();
+                    toggleGroup();
+                });
 
                 const titleSeek = () => {
                     const videoEl = videoElementMap[video.path];
@@ -1136,16 +1211,11 @@
                     videoEl.currentTime = 0;
                     videoEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 };
-                titleEl.addEventListener('click', titleSeek);
-                titleEl.addEventListener('keydown', e => {
-                    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); titleSeek(); }
-                });
+                titleText.addEventListener('click', titleSeek);
 
+                titleEl.appendChild(titleText);
+                titleEl.appendChild(toggleButton);
                 groupEl.appendChild(titleEl);
-
-                const itemsContainer = document.createElement('div');
-                itemsContainer.className = 'search-result-group-items';
-                itemsContainer.setAttribute('role', 'list');
 
                 for (const cue of group.cues) {
                     const item = document.createElement('div');
