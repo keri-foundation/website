@@ -193,7 +193,7 @@
             padding: 10px 16px;
             font-size: 0.95rem;
             font-weight: 600;
-            color: #986c32;
+            color: #060b6f;
             cursor: pointer;
             transition: background 0.2s;
         }
@@ -246,7 +246,7 @@
             padding: 0 10px;
             text-transform: uppercase;
             letter-spacing: 0.08em;
-            color: #986c32;
+            color: #060b6f;
         }
 
         .video-grid {
@@ -783,6 +783,7 @@
         //  status: 'loading' | 'ready' | 'error'
         // ─────────────────────────────────────────────────────────────────────
         const transcriptStore = {};
+        const transcriptPromises = {};  // path → Promise — kept so in-flight fetches are reusable
         const videoElementMap = {};   // path → <video> element
 
         function pauseAllVideos(exceptVideo) {
@@ -796,10 +797,11 @@
 
         function loadTranscript(video) {
             const id = video.path;
-            if (transcriptStore[id]) return Promise.resolve(transcriptStore[id]);
+            // Return the existing promise so concurrent callers all wait for the same fetch
+            if (transcriptPromises[id]) return transcriptPromises[id];
             transcriptStore[id] = { status: 'loading', cues: [], rawText: '' };
 
-            return fetch(video.subtitle)
+            transcriptPromises[id] = fetch(video.subtitle)
                 .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.text(); })
                 .then(raw => {
                     transcriptStore[id].rawText = raw;
@@ -811,6 +813,7 @@
                     transcriptStore[id].status = 'error';
                     return transcriptStore[id];
                 });
+            return transcriptPromises[id];
         }
 
         function attachVttTrack(videoEl, rawSrt) {
@@ -1013,16 +1016,16 @@
         function preloadNext() {
             if (preloadIdx >= videos.length) return;
             const v = videos[preloadIdx++];
-            if (!v.subtitle) { setTimeout(preloadNext, 50); return; }
+            if (!v.subtitle) { preloadNext(); return; }  // skip instantly if no subtitle
             loadTranscript(v).then(store => {
                 // Eagerly attach VTT to all videos so captions are ready on play
                 if (store.rawText && videoElementMap[v.path]) {
                     attachVttTrack(videoElementMap[v.path], store.rawText);
                 }
-                setTimeout(preloadNext, 350);
+                setTimeout(preloadNext, 50);  // files are local — short stagger is enough
             });
         }
-        setTimeout(preloadNext, 1800);  // let the page paint first
+        setTimeout(preloadNext, 500);  // let the page paint first
 
         // ─────────────────────────────────────────────────────────────────────
         //  Throttled cross-video search
@@ -1046,13 +1049,29 @@
             }
         }
 
-        function runSearch(query) {
+        // Generation counter: incremented on every new search so stale async results are discarded
+        let searchGeneration = 0;
+
+        async function runSearch(query) {
+            const generation = ++searchGeneration;
+
             searchResults.innerHTML = '';
             if (!query || query.length < 2) {
                 searchStatus.textContent = query.length === 1 ? 'Type at least 2 characters…' : '';
                 updateVideoCardDimState(null);
                 return;
             }
+
+            // Kick off (or reuse) loads for every video that has a subtitle file,
+            // then wait for all of them so results are never partial.
+            const pending = videos.filter(v => v.subtitle).map(v => loadTranscript(v));
+            if (pending.length) {
+                searchStatus.textContent = 'Loading transcripts…';
+                await Promise.all(pending);
+            }
+
+            // A newer search was started while we were waiting — discard our results
+            if (generation !== searchGeneration) return;
 
             const q = query.toLowerCase();
             const matches = [];
@@ -1171,6 +1190,8 @@
         let searchTimer = null;
         searchInput.addEventListener('input', () => {
             clearTimeout(searchTimer);
+            // Bump the generation immediately so any in-flight search is discarded
+            searchGeneration++;
             searchTimer = setTimeout(() => runSearch(searchInput.value.trim()), 300);
         });
 
