@@ -10,6 +10,10 @@
 !/custom/
 !/custom/**
 
+# --- Conferences ---
+!/confs/
+!/confs/**
+
 # --- Utility scripts & misc data ---
 # !/fetch.sh
 # !/various/
