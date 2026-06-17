@@ -342,6 +342,10 @@
             box-shadow: 0 8px 32px rgba(6, 11, 111, 0.28);
         }
 
+        .video-card.highlighted {
+            box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 1);
+        }
+
         .video-thumbnail {
             width: 100%;
             background: #000;
@@ -377,6 +381,13 @@
             padding: 3px 8px;
             border-radius: 20px;
             color: #b1d1cf;
+        }
+
+        .copy-button {
+            background: transparent;
+            border: none;
+            font-size: 1.5em;
+            cursor: pointer;
         }
 
         /* ── Transcript accordion ── */
@@ -543,10 +554,10 @@
     <section class="search-section" aria-label="Search transcripts">
         <label for="transcriptSearch">Search all transcripts</label>
         <div class="search-wrapper">
-            <input type="search" id="transcriptSearch"
-                placeholder="Type to search across all talks…" autocomplete="off"
+            <input type="search" id="transcriptSearch" placeholder="Type to search across all talks…" autocomplete="off"
                 spellcheck="false">
-            <button id="searchToggleAll" type="button" aria-label="Toggle all results" title="Collapse/expand all result groups">Toggle All</button>
+            <button id="searchToggleAll" type="button" aria-label="Toggle all results"
+                title="Collapse/expand all result groups">Toggle All</button>
             <button id="searchClear" type="button" aria-label="Clear search">Clear</button>
         </div>
         <p id="searchStatus" aria-live="polite"></p>
@@ -813,7 +824,7 @@
             const cues = [];
             const normalized = raw.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
             const blocks = normalized.split(/\n{2,}/);
-            const timePat = /(\d{2}:\d{2}:\d{2})[,.](\d{3})\s*-->\s*(\d{2}:\d{2}:\d{2})[,.](\d{3})/;
+            const timePat = /(\d{2}:\d{2}:\d{2})[,.](\d{3})\s*-->\s* (\d{ 2 }: \d{ 2 }: \d{ 2 })[,.](\d{ 3}) /;
 
             for (const block of blocks) {
                 const lines = block.trim().split('\n');
@@ -935,11 +946,28 @@
         }
 
         // ─────────────────────────────────────────────────────────────────────
+        //  Generate unique ID for a video
+        // ─────────────────────────────────────────────────────────────────────
+        function generateVideoId(video) {
+            // Create a base ID from title 
+            const baseId = video.title.toLowerCase()
+                .replace(/[^a-z0-9]/g, '-')
+                .replace(/-+/g, '-')
+                .replace(/^-|-$/g, '');
+
+            return baseId;
+        }
+
+        // ─────────────────────────────────────────────────────────────────────
         //  Build a video card
         // ─────────────────────────────────────────────────────────────────────
         function createVideoCard(video) {
             const card = document.createElement('article');
             card.className = 'video-card';
+
+            // Generate unique ID for this video
+            const videoId = generateVideoId(video);
+            card.id = videoId;
 
             // ── video player ──
             const thumbDiv = document.createElement('div');
@@ -964,7 +992,10 @@
             card.appendChild(thumbDiv);
 
             videoElementMap[video.path] = videoEl;
-            videoCardMap.set(video.path, card);
+            if (!window.videoCardMap) {
+                window.videoCardMap = new Map();
+            }
+            window.videoCardMap.set(video.path, card);
             videoEl.addEventListener('play', () => pauseAllVideos(videoEl));
 
             // ── info ──
@@ -981,7 +1012,28 @@
             const durSpan = document.createElement('span');
             durSpan.className = 'video-duration';
             durSpan.textContent = video.duration;
+
+            // Add copy-to-clipboard button
+            const copyBtn = document.createElement('button');
+            copyBtn.className = 'copy-button';
+            copyBtn.setAttribute('aria-label', `Copy link to ${video.title}`);
+            copyBtn.title = 'Copy link';
+            copyBtn.innerHTML = '🔗';
+            copyBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const url = `${window.location.origin}${window.location.pathname}#${videoId}`;
+                navigator.clipboard.writeText(url).then(() => {
+                    // Show visual feedback
+                    const originalText = copyBtn.textContent;
+                    copyBtn.textContent = '✓';
+                    setTimeout(() => {
+                        copyBtn.textContent = originalText;
+                    }, 1000);
+                });
+            });
+
             metaDiv.appendChild(durSpan);
+            metaDiv.appendChild(copyBtn);
             infoDiv.appendChild(metaDiv);
             card.appendChild(infoDiv);
 
@@ -1047,7 +1099,6 @@
         //  Render day sections
         // ─────────────────────────────────────────────────────────────────────
         const container = document.getElementById('videoContainer');
-        const videoCardMap = new Map();
 
         const sorted = [...videos].sort((a, b) =>
             a.day !== b.day
@@ -1072,6 +1123,17 @@
             dayGroups[day].forEach(v => grid.appendChild(createVideoCard(v)));
             section.appendChild(grid);
             container.appendChild(section);
+        });
+
+        // Initialize videoCardMap after all cards are created
+        const videoCardMap = new Map();
+        videos.forEach(video => {
+            if (videoElementMap[video.path]) {
+                const card = window.videoCardMap.get(video.path);
+                if (card) {
+                    videoCardMap.set(video.path, card);
+                }
+            }
         });
 
         // ─────────────────────────────────────────────────────────────────────
@@ -1290,7 +1352,7 @@
         searchToggleAll.addEventListener('click', () => {
             const groups = document.querySelectorAll('.search-result-group-toggle');
             allGroupsExpanded = !allGroupsExpanded;
-            
+
             groups.forEach(toggle => {
                 const items = toggle.closest('.search-result-group')?.querySelector('.search-result-group-items');
                 if (items) {
@@ -1309,7 +1371,30 @@
             searchToggleAll.disabled = false;
             searchInput.focus();
         });
+
+        // ─────────────────────────────────────────────────────────────────────
+        //  Handle URL hash for scrolling to videos
+        // ─────────────────────────────────────────────────────────────────────
+        function handleHashChange() {
+            const hash = window.location.hash;
+            if (!hash) return;
+
+            const videoId = hash.substring(1); // Remove the '#' prefix
+            const videoCard = document.getElementById(videoId);
+
+            if (videoCard) {
+                // Scroll to the video card
+                videoCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+                // Add highlight effect
+                videoCard.classList.add('highlighted');
+            }
+        }
+
+        // Handle hash change when page loads and when hash changes
+        // Call immediately after DOM is ready and cards are created
+        handleHashChange();
+        window.addEventListener('load', handleHashChange);
+        window.addEventListener('hashchange', handleHashChange);
     </script>
 </body>
-
-</html>
