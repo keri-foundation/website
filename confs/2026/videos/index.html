@@ -1013,24 +1013,24 @@
             durSpan.className = 'video-duration';
             durSpan.textContent = video.duration;
 
-            // Add copy-to-clipboard button
-            const copyBtn = document.createElement('button');
-            copyBtn.className = 'copy-button';
-            copyBtn.setAttribute('aria-label', `Copy link to ${video.title}`);
-            copyBtn.title = 'Copy link';
-            copyBtn.innerHTML = '🔗';
-            copyBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                const url = `${window.location.origin}${window.location.pathname}#${videoId}`;
-                navigator.clipboard.writeText(url).then(() => {
-                    // Show visual feedback
-                    const originalText = copyBtn.textContent;
-                    copyBtn.textContent = '✓';
-                    setTimeout(() => {
-                        copyBtn.textContent = originalText;
-                    }, 1000);
-                });
-            });
+             // Add copy-to-clipboard button
+             const copyBtn = document.createElement('button');
+             copyBtn.className = 'copy-button';
+             copyBtn.setAttribute('aria-label', `Copy link to ${video.title}`);
+             copyBtn.title = 'Copy link';
+             copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+             copyBtn.addEventListener('click', (e) => {
+                 e.stopPropagation();
+                 const url = `${window.location.origin}${window.location.pathname}#${videoId}`;
+                 navigator.clipboard.writeText(url).then(() => {
+                     // Show visual feedback
+                     const originalText = copyBtn.innerHTML;
+                     copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+                     setTimeout(() => {
+                         copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+                     }, 1000);
+                 });
+             });
 
             metaDiv.appendChild(durSpan);
             metaDiv.appendChild(copyBtn);
