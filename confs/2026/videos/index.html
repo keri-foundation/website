@@ -950,6 +950,8 @@
             videoEl.poster = '/wp-content/uploads/2026/02/FullLogo@3x.png';
             videoEl.preload = 'none';
             videoEl.playsInline = "true";
+            videoEl.controlsList = "nodownload";
+            videoEl.oncontextmenu = () => false;  // Disable right-click on video for an extra layer of download prevention
 
             const source = document.createElement('source');
             const sourceSrc = video.path.startsWith('/')
