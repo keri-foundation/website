@@ -1322,11 +1322,11 @@
                 `${truncated ? MAX_RESULTS + '+' : matches.length} result${matches.length !== 1 ? 's' : ''}`;
 
             const groupsByVideoPath = {};
-            for (const { video, cue } of matches) {
+            for (const { video, cue, index } of matches) {
                 if (!groupsByVideoPath[video.path]) {
                     groupsByVideoPath[video.path] = { video, cues: [] };
                 }
-                groupsByVideoPath[video.path].cues.push(cue);
+                groupsByVideoPath[video.path].cues.push({ cue, index });
             }
 
             const frag = document.createDocumentFragment();
