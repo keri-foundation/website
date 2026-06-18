@@ -121,7 +121,8 @@
             background: rgba(177, 209, 207, 0.28);
         }
 
-        #searchToggleAll {
+        #searchToggleAll,
+        #toggleAllVideos {
             background: rgba(177, 209, 207, 0.18);
             border: 1px solid rgba(177, 209, 207, 0.3);
             border-radius: 8px;
@@ -132,7 +133,8 @@
             transition: background 0.2s;
         }
 
-        #searchToggleAll:hover {
+        #searchToggleAll:hover,
+        #toggleAllVideos:hover {
             background: rgba(177, 209, 207, 0.28);
         }
 
@@ -325,6 +327,25 @@
             border: 1px solid rgba(177, 209, 207, 0.18);
             display: flex;
             flex-direction: column;
+        }
+
+        .video-card.condensed {
+            background: transparent;
+            box-shadow: none;
+            border: none;
+            flex-direction: row;
+            align-items: center;
+            gap: 15px;
+            padding: 0px;
+            margin: 0;
+        }
+
+        .video-card.condensed .video-info {
+            padding: 0;
+        }
+
+        .video-card.condensed *:not(.video-info):not(.video-title) {
+            display: none;
         }
 
         .video-card:hover {
@@ -558,6 +579,8 @@
                 spellcheck="false">
             <button id="searchToggleAll" type="button" aria-label="Toggle all results"
                 title="Collapse/expand all result groups">Toggle All</button>
+            <button id="toggleAllVideos" type="button" aria-label="Toggle condensed view"
+                title="Toggle condensed view for all videos">Condensed View</button>
             <button id="searchClear" type="button" aria-label="Clear search">Clear</button>
         </div>
         <p id="searchStatus" aria-live="polite"></p>
@@ -817,6 +840,18 @@
             return escHtml(text).replace(re, '<mark>$1</mark>');
         }
 
+        const condensedViewIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8"></path><path d="M3 16l7.89-5.26a2 2 0 0 1 2.22 0L21 16"></path></svg>';
+        const expandedViewIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8L12 17l-5-5"></path><path d="M3 16l9-9"></path></svg>';
+
+        function setCondensedToggleButtonIcon(toggleBtn, isCondensed) {
+            toggleBtn.innerHTML = isCondensed ? condensedViewIcon : expandedViewIcon;
+        }
+
+        function toggleCardCondensedState(card, toggleBtn) {
+            card.classList.toggle('condensed');
+            setCondensedToggleButtonIcon(toggleBtn, card.classList.contains('condensed'));
+        }
+
         // ─────────────────────────────────────────────────────────────────────
         //  SRT parser → array of { start, end, startLabel, text }
         // ─────────────────────────────────────────────────────────────────────
@@ -824,7 +859,7 @@
             const cues = [];
             const normalized = raw.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
             const blocks = normalized.split(/\n{2,}/);
-            const timePat = /(\d{2}:\d{2}:\d{2})[,.](\d{3})\s*-->\s*(\d{2}:\d{2}:\d{2})[,.](\d{3})/;
+            const timePat = /(\d{2}:\d{2}:\d{2})[,.](\d{3})\s*-->\s* (\d{ 2 }: \d{ 2 }: \d{ 2 })[,.](\d{ 3}) /;
 
             for (const block of blocks) {
                 const lines = block.trim().split('\n');
@@ -1013,40 +1048,40 @@
             durSpan.className = 'video-duration';
             durSpan.textContent = video.duration;
 
-             // Add copy-to-clipboard button
-             const copyBtn = document.createElement('button');
-             copyBtn.className = 'copy-button';
-             copyBtn.setAttribute('aria-label', `Copy link to ${video.title}`);
-             copyBtn.title = 'Copy link';
-             copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
-             copyBtn.addEventListener('click', (e) => {
-                 e.stopPropagation();
-                 const url = `${window.location.origin}${window.location.pathname}#${videoId}`;
-                 navigator.clipboard.writeText(url).then(() => {
-                     // Show visual feedback
-                     const originalText = copyBtn.innerHTML;
-                     copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
-                     setTimeout(() => {
-                         copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
-                     }, 1000);
-                 });
-             });
+            // Add copy-to-clipboard button
+            const copyBtn = document.createElement('button');
+            copyBtn.className = 'copy-button';
+            copyBtn.setAttribute('aria-label', `Copy link to ${video.title}`);
+            copyBtn.title = 'Copy link';
+            copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+            copyBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const url = `${window.location.origin}${window.location.pathname}#${videoId}`;
+                navigator.clipboard.writeText(url).then(() => {
+                    // Show visual feedback
+                    const originalText = copyBtn.innerHTML;
+                    copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+                    setTimeout(() => {
+                        copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+                    }, 1000);
+                });
+            });
 
             metaDiv.appendChild(durSpan);
             metaDiv.appendChild(copyBtn);
             infoDiv.appendChild(metaDiv);
             card.appendChild(infoDiv);
 
+            const toggleBtn = document.querySelector('#toggleAllVideos');
+            toggleBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                toggleCardCondensedState(card, toggleBtn);
+            });
+
             // ── transcript accordion ──
             if (video.subtitle) {
                 const safeId = CSS.escape(video.path.replace(/\W/g, '_'));
                 const panelId = `transcript-${safeId}`;
-
-                const toggleBtn = document.createElement('button');
-                toggleBtn.className = 'transcript-toggle';
-                toggleBtn.setAttribute('aria-expanded', 'false');
-                toggleBtn.setAttribute('aria-controls', panelId);
-                toggleBtn.innerHTML = '<span class="arrow" aria-hidden="true">▶</span> Transcript';
 
                 const panel = document.createElement('div');
                 panel.className = 'transcript-panel';
@@ -1061,34 +1096,6 @@
 
                 let transcriptLoaded = false;
 
-                toggleBtn.addEventListener('click', () => {
-                    const expanded = toggleBtn.getAttribute('aria-expanded') === 'true';
-                    toggleBtn.setAttribute('aria-expanded', String(!expanded));
-                    panel.classList.toggle('open', !expanded);
-
-                    if (!transcriptLoaded && !expanded) {
-                        transcriptLoaded = true;
-                        body.innerHTML = '<p class="transcript-loading">Loading transcript…</p>';
-
-                        loadTranscript(video).then(store => {
-                            // Attach VTT to video element
-                            if (store.rawText) attachVttTrack(videoEl, store.rawText);
-
-                            body.innerHTML = '';
-                            if (store.status === 'error' || !store.cues.length) {
-                                body.innerHTML = '<p class="transcript-loading">Transcript unavailable.</p>';
-                                return;
-                            }
-                            const frag = document.createDocumentFragment();
-                            store.cues.forEach(cue =>
-                                frag.appendChild(makeCueLine(cue, video.path, ''))
-                            );
-                            body.appendChild(frag);
-                        });
-                    }
-                });
-
-                card.appendChild(toggleBtn);
                 card.appendChild(panel);
             }
 
@@ -1392,9 +1399,10 @@
         }
 
         // Handle hash change when page loads and when hash changes
-        // Call immediately after DOM is ready and cards are created
-        handleHashChange();
-        window.addEventListener('load', handleHashChange);
-        window.addEventListener('hashchange', handleHashChange);
+        // Call after all elements are created
+        window.addEventListener('load', () => {
+            handleHashChange();
+            window.addEventListener('hashchange', handleHashChange);
+        });
     </script>
 </body>
