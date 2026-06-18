@@ -139,12 +139,16 @@
         }
 
         .search-result {
+            display: flex;
+            align-items: center;
+            gap: 14px;
             background: rgba(177, 209, 207, 0.12);
             border: 1px solid rgba(177, 209, 207, 0.25);
             border-radius: 10px;
             padding: 12px 16px;
             cursor: pointer;
             transition: background 0.2s, border-color 0.2s;
+            min-height: 40px;
         }
 
         .search-result:hover,
@@ -167,24 +171,31 @@
             background: rgba(177, 209, 207, 0.16);
             border-radius: 20px;
             padding: 2px 8px;
-            display: inline-block;
-            margin-bottom: 6px;
+            white-space: nowrap;
+            flex: none;
+            margin-bottom: 0;
         }
 
         .search-result-text {
             font-size: 0.9rem;
             line-height: 1.45;
+            flex: 1 1 0;
+            min-width: 0;
         }
 
         .search-result-context {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
+            display: inline;
         }
 
         .context-line {
+            display: inline;
             margin: 0;
             padding: 0;
+        }
+
+        .context-line.before::after,
+        .context-line.match::after {
+            content: ' ';
         }
 
         .context-line.before,
