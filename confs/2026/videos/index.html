@@ -1423,7 +1423,7 @@
                     const seek = () => {
                         const videoEl = videoElementMap[video.path];
                         if (!videoEl) return;
-                        videoEl.currentTime = cue.start;
+                        videoEl.currentTime = cueMatch.cue.start;
                         videoEl.play();
                         videoEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
                     };
