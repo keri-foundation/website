@@ -331,8 +331,13 @@
             padding: 0;
         }
 
-        .video-card.condensed *:not(.video-info):not(.video-title) {
+        .video-card.condensed *:not(.video-info):not(.video-title):not(.video-icon):not(.video-icon *) {
             display: none;
+        }
+
+        .video-card.condensed .video-title>.video-icon,
+        .video-card.condensed .video-title>.video-icon * {
+            display: inline-flex;
         }
 
         .video-card:hover {
@@ -1054,7 +1059,15 @@
 
             const titleEl = document.createElement('h3');
             titleEl.className = 'video-title';
-            titleEl.textContent = video.title;
+            // Create a span for the video camera icon
+            const iconSpan = document.createElement('span');
+            iconSpan.className = 'video-icon';
+            iconSpan.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: middle; margin-right: 5px;"><rect x="3" y="7" width="14" height="11" rx="2"/><path d="M7 7l2-3h4l2 3"/><circle cx="13" cy="13.5" r="3"/></svg>';
+            // Create title text node
+            const titleText = document.createTextNode(video.title);
+            // Append icon and title to the title element
+            titleEl.appendChild(iconSpan);
+            titleEl.appendChild(titleText);
             infoDiv.appendChild(titleEl);
 
             const metaDiv = document.createElement('div');
