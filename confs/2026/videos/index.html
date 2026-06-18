@@ -843,13 +843,38 @@
         const condensedViewIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8l7.89 5.26a2 2 0 0 0 2.22 0L21 8"></path><path d="M3 16l7.89-5.26a2 2 0 0 1 2.22 0L21 16"></path></svg>';
         const expandedViewIcon = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 8L12 17l-5-5"></path><path d="M3 16l9-9"></path></svg>';
 
-        function setCondensedToggleButtonIcon(toggleBtn, isCondensed) {
-            toggleBtn.innerHTML = isCondensed ? condensedViewIcon : expandedViewIcon;
+        function setCondensedButtonState(toggleBtn, allCondensed) {
+            if (!toggleBtn) return;
+            toggleBtn.dataset.allCondensed = String(allCondensed);
+            toggleBtn.title = allCondensed ? 'Expand all videos' : 'Condense all videos';
+            toggleBtn.setAttribute('aria-pressed', String(allCondensed));
+            toggleBtn.innerHTML = allCondensed ? expandedViewIcon : condensedViewIcon;
         }
 
-        function toggleCardCondensedState(card, toggleBtn) {
-            card.classList.toggle('condensed');
-            setCondensedToggleButtonIcon(toggleBtn, card.classList.contains('condensed'));
+        function updateCondensedToggleState() {
+            const toggleAllBtn = document.querySelector('#toggleAllVideos');
+            if (!toggleAllBtn) return;
+            const cards = document.querySelectorAll('.video-card');
+            const allCondensed = cards.length > 0 && Array.from(cards).every(card => card.classList.contains('condensed'));
+            setCondensedButtonState(toggleAllBtn, allCondensed);
+        }
+
+        function setAllCardsCondensed(condensed) {
+            const cards = document.querySelectorAll('.video-card');
+            cards.forEach(card => {
+                if (condensed) {
+                    card.classList.add('condensed');
+                } else {
+                    card.classList.remove('condensed');
+                }
+            });
+            updateCondensedToggleState();
+        }
+
+        function toggleAllCardsCondensed() {
+            const cards = document.querySelectorAll('.video-card');
+            const allCondensed = cards.length > 0 && Array.from(cards).every(card => card.classList.contains('condensed'));
+            setAllCardsCondensed(!allCondensed);
         }
 
         // ─────────────────────────────────────────────────────────────────────
@@ -1072,10 +1097,20 @@
             infoDiv.appendChild(metaDiv);
             card.appendChild(infoDiv);
 
-            const toggleBtn = document.querySelector('#toggleAllVideos');
-            toggleBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                toggleCardCondensedState(card, toggleBtn);
+            const toggleAllBtn = document.querySelector('#toggleAllVideos');
+            if (toggleAllBtn && !toggleAllBtn.dataset.cardToggleInitialized) {
+                toggleAllBtn.dataset.cardToggleInitialized = 'true';
+                setCondensedButtonState(toggleAllBtn, false);
+                toggleAllBtn.addEventListener('click', () => {
+                    toggleAllCardsCondensed();
+                });
+            }
+
+            card.addEventListener('click', (event) => {
+                if (!card.classList.contains('condensed')) return;
+                // if (event.target.closest('.copy-button')) return;
+                card.classList.remove('condensed');
+                updateCondensedToggleState();
             });
 
             // ── transcript accordion ──
@@ -1101,6 +1136,9 @@
 
             return card;
         }
+
+
+
 
         // ─────────────────────────────────────────────────────────────────────
         //  Render day sections
