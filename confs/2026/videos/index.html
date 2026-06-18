@@ -176,6 +176,26 @@
             line-height: 1.45;
         }
 
+        .search-result-context {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .context-line {
+            margin: 0;
+            padding: 0;
+        }
+
+        .context-line.before,
+        .context-line.after {
+            opacity: 0.82;
+        }
+
+        .context-line.match {
+            font-weight: 700;
+        }
+
         .search-result-text mark {
             background: rgba(177, 209, 207, 0.75);
             color: #060b6f;
@@ -833,6 +853,25 @@
             return escHtml(text).replace(re, '<mark>$1</mark>');
         }
 
+        function getCueContextLines(cues, index) {
+            const lines = [];
+            if (index > 0) {
+                lines.push({ type: 'before', text: cues[index - 1].text });
+            }
+            lines.push({ type: 'match', text: cues[index].text });
+            if (index < cues.length - 1) {
+                lines.push({ type: 'after', text: cues[index + 1].text });
+            }
+            return lines;
+        }
+
+        function createSearchResultContextHTML(cues, index, query) {
+            const lines = getCueContextLines(cues, index);
+            return `<div class="search-result-context">${lines.map(line =>
+                `<div class="context-line ${line.type}">${highlightMatch(line.text, query)}</div>`
+            ).join('')}</div>`;
+        }
+
         const expandedViewText = 'Show only titles';
         const condensedViewText = 'Expand All Videos';
 
@@ -1258,9 +1297,11 @@
                 if (!video.subtitle) continue;
                 const store = transcriptStore[video.path];
                 if (!store || store.status !== 'ready') continue;
-                for (const cue of store.cues) {
+                const cues = store.cues;
+                for (let cueIndex = 0; cueIndex < cues.length; cueIndex++) {
+                    const cue = cues[cueIndex];
                     if (cue.text.toLowerCase().includes(q)) {
-                        matches.push({ video, cue });
+                        matches.push({ video, cue, index: cueIndex });
                         if (matches.length >= MAX_RESULTS) break;
                     }
                 }
@@ -1347,20 +1388,23 @@
                 titleEl.appendChild(toggleButton);
                 groupEl.appendChild(titleEl);
 
-                for (const cue of group.cues) {
+                for (const cueMatch of group.cues) {
                     const item = document.createElement('div');
                     item.className = 'search-result';
                     item.setAttribute('role', 'listitem');
                     item.setAttribute('tabindex', '0');
-                    item.title = `Jump to ${cue.startLabel}`;
+                    item.title = `Jump to ${cueMatch.cue.startLabel}`;
 
                     const timeEl = document.createElement('span');
                     timeEl.className = 'search-result-time';
-                    timeEl.textContent = cue.startLabel;
+                    timeEl.textContent = cueMatch.cue.startLabel;
 
                     const textEl = document.createElement('div');
                     textEl.className = 'search-result-text';
-                    textEl.innerHTML = highlightMatch(cue.text, query);
+                    const store = transcriptStore[video.path];
+                    textEl.innerHTML = store && store.cues
+                        ? createSearchResultContextHTML(store.cues, cueMatch.index, query)
+                        : highlightMatch(cueMatch.cue.text, query);
 
                     item.appendChild(timeEl);
                     item.appendChild(textEl);
