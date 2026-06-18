@@ -872,7 +872,9 @@
             const cues = [];
             const normalized = raw.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
             const blocks = normalized.split(/\n{2,}/);
-            const timePat = /(\d{2}:\d{2}:\d{2})[,.](\d{3})\s*-->\s* (\d{ 2 }: \d{ 2 }: \d{ 2 })[,.](\d{ 3}) /;
+            const timePat = new RegExp(
+                '(\\d{2}:\\d{2}:\\d{2})[.,](\\d{3})\\s*-->\\s*(\\d{2}:\\d{2}:\\d{2})[.,](\\d{3})'
+            );
 
             for (const block of blocks) {
                 const lines = block.trim().split('\n');
