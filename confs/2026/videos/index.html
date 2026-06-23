@@ -1081,7 +1081,7 @@
             const videoEl = document.createElement('video');
             videoEl.controls = true;
             videoEl.poster = 'https://kericonf.com/wp-content/uploads/2025/11/logo-keri-conference-scaled.png';
-            videoEl.preload = 'none';
+            videoEl.preload = 'metadata';
             videoEl.playsInline = "true";
             videoEl.controlsList = "nodownload";
             videoEl.oncontextmenu = () => false;  // Disable right-click on video for an extra layer of download prevention
