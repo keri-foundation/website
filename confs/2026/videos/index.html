@@ -1134,7 +1134,12 @@
             copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
             copyBtn.addEventListener('click', (e) => {
                 e.stopPropagation();
-                const url = `${window.location.origin}${window.location.pathname}#${videoId}`;
+                // Include current video time in the URL
+                const currentTime = Math.floor(videoEl.currentTime);
+                let url = `${window.location.origin}${window.location.pathname}#${videoId}`;
+                if (currentTime > 0) {
+                    url += `&t=${currentTime}`;
+                }
                 navigator.clipboard.writeText(url).then(() => {
                     // Show visual feedback
                     const originalText = copyBtn.innerHTML;
@@ -1486,7 +1491,10 @@
             const hash = window.location.hash;
             if (!hash) return;
 
-            const videoId = hash.substring(1); // Remove the '#' prefix
+            // Parse hash format: #videoId or #videoId&t=timestamp
+            const hashPart = hash.substring(1); // Remove the '#' prefix
+            const [videoId, queryStr] = hashPart.split('&');
+            
             const videoCard = document.getElementById(videoId);
 
             if (videoCard) {
@@ -1495,6 +1503,27 @@
 
                 // Add highlight effect
                 videoCard.classList.add('highlighted');
+
+                // Parse and apply timestamp if present
+                if (queryStr && queryStr.startsWith('t=')) {
+                    const timestamp = parseFloat(queryStr.substring(2));
+                    if (!isNaN(timestamp) && timestamp >= 0) {
+                        // Find the video element within the card
+                        const videoEl = videoCard.querySelector('video');
+                        if (videoEl) {
+                            // Wait for metadata to load before seeking
+                            if (videoEl.readyState >= 1) {
+                                // Metadata already loaded
+                                videoEl.currentTime = timestamp;
+                            } else {
+                                // Wait for metadata to load
+                                videoEl.addEventListener('loadedmetadata', () => {
+                                    videoEl.currentTime = timestamp;
+                                }, { once: true });
+                            }
+                        }
+                    }
+                }
             }
         }
 
