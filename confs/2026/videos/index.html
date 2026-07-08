@@ -1788,14 +1788,23 @@
             modalVideoEl.querySelectorAll('track').forEach(t => t.remove());
             modalVideoEl.load();
 
-            const seekAndMaybePlay = () => {
+            const seekModalVideo = () => {
+                if (modalSourceVideoPath !== video.path) return;
                 modalVideoEl.currentTime = time;
+            };
+
+            const seekAndMaybePlay = () => {
+                seekModalVideo();
                 if (wasPlaying) modalVideoEl.play();
             };
             if (modalVideoEl.readyState >= 1) {
                 seekAndMaybePlay();
             } else {
                 modalVideoEl.addEventListener('loadedmetadata', seekAndMaybePlay, { once: true });
+            }
+
+            if (time > 0) {
+                modalVideoEl.addEventListener('play', seekModalVideo, { once: true });
             }
 
             modalTitleEl.textContent = video.title;
@@ -1847,6 +1856,16 @@
                 .replace(/^-|-$/g, '');
 
             return baseId;
+        }
+
+        function findVideoById(videoId) {
+            return videos.find(v => generateVideoId(v) === videoId) ?? null;
+        }
+
+        function parseHashTimestamp(queryStr) {
+            if (!queryStr || !queryStr.startsWith('t=')) return null;
+            const timestamp = parseFloat(queryStr.substring(2));
+            return !isNaN(timestamp) && timestamp >= 0 ? timestamp : null;
         }
 
         // ─────────────────────────────────────────────────────────────────────
@@ -2232,42 +2251,38 @@
         });
 
         // ─────────────────────────────────────────────────────────────────────
-        //  Handle URL hash for scrolling to videos
+        //  Handle URL hash for deep-linking to videos
         // ─────────────────────────────────────────────────────────────────────
         function handleHashChange() {
             const hash = window.location.hash;
             if (!hash) return;
 
-            // Parse hash format: #videoId or #videoId&t=timestamp
-            const hashPart = hash.substring(1); // Remove the '#' prefix
+            const hashPart = hash.substring(1);
             const [videoId, queryStr] = hashPart.split('&');
-            
+            const timestamp = parseHashTimestamp(queryStr);
+            const video = findVideoById(videoId);
+
+            if (timestamp !== null && video?.subtitle) {
+                openVideoModal(video, timestamp);
+                return;
+            }
+
             const videoCard = document.getElementById(videoId);
 
             if (videoCard) {
-                // Scroll to the video card
                 videoCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-                // Add highlight effect
                 videoCard.classList.add('highlighted');
 
-                // Parse and apply timestamp if present
-                if (queryStr && queryStr.startsWith('t=')) {
-                    const timestamp = parseFloat(queryStr.substring(2));
-                    if (!isNaN(timestamp) && timestamp >= 0) {
-                        // Find the video element within the card
-                        const videoEl = videoCard.querySelector('video');
-                        if (videoEl) {
-                            // Wait for metadata to load before seeking
-                            if (videoEl.readyState >= 1) {
-                                // Metadata already loaded
-                                videoEl.currentTime = timestamp;
-                            } else {
-                                // Wait for metadata to load
-                                videoEl.addEventListener('loadedmetadata', () => {
-                                    videoEl.currentTime = timestamp;
-                                }, { once: true });
-                            }
+                if (timestamp !== null) {
+                    const videoEl = videoCard.querySelector('video');
+                    if (videoEl) {
+                        const seekCardVideo = () => {
+                            videoEl.currentTime = timestamp;
+                        };
+                        if (videoEl.readyState >= 1) {
+                            seekCardVideo();
+                        } else {
+                            videoEl.addEventListener('loadedmetadata', seekCardVideo, { once: true });
                         }
                     }
                 }
