@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KERI Conference April 2026 Videos</title>
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.8.4/plyr.css">
     <style>
         * {
             margin: 0;
@@ -570,6 +571,36 @@
             box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 1);
         }
 
+        :root {
+            --plyr-color-main: #5f7c2f;
+        }
+
+        .plyr--video:not(.plyr--playing) .plyr__control--overlaid {
+            display: block;
+            visibility: visible;
+            opacity: 0.95;
+        }
+
+        .plyr--video.plyr--playing:not(.plyr--hide-controls) .plyr__control--overlaid {
+            display: block;
+            visibility: visible;
+            opacity: 0.95;
+        }
+
+        .plyr__control--overlaid {
+            padding: 1.35rem;
+            z-index: 3;
+        }
+
+        .plyr__control--overlaid svg {
+            width: 1.75rem;
+            height: 1.75rem;
+        }
+
+        .plyr__control--overlaid.plyr__control--pressed svg {
+            left: 0;
+        }
+
         .video-thumbnail {
             width: 100%;
             background: #accfce;
@@ -799,6 +830,8 @@
         <p>KERI Foundation • Conference Videos Collection</p>
     </footer>
 
+    <link rel="stylesheet" href="https://cdn.plyr.io/3.8.4/plyr.css" />
+    <script src="https://cdn.plyr.io/3.8.4/plyr.polyfilled.js"></script>
     <script>
         // ─────────────────────────────────────────────────────────────────────
         //  Video data
@@ -1010,6 +1043,93 @@
         ];
 
         const defaultPoster = 'https://kericonf.com/wp-content/uploads/2025/11/logo-keri-conference-scaled.png';
+        const plyrConfig = {
+            seekTime: 10,
+            controls: ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'fullscreen'],
+            iconUrl: 'https://cdn.plyr.io/3.8.4/plyr.svg',
+            loadSprite: true,
+            hideControls: true,
+            clickToPlay: true,
+            captions: {
+                active: true,
+                update: true,
+                language: 'en'
+            },
+            storage: {
+                enabled: false
+            }
+        };
+
+        function enhanceOverlaidPlayToggle(player, iconUrl) {
+            if (!player?.elements?.container) return;
+
+            const overlaid = player.elements.container.querySelector('.plyr__control--overlaid');
+            if (!overlaid) return;
+
+            const playIcon = overlaid.querySelector('svg');
+            if (!playIcon || overlaid.querySelector('.icon--pressed')) return;
+
+            playIcon.classList.add('icon--not-pressed');
+
+            const namespace = 'http://www.w3.org/2000/svg';
+            const pauseIcon = document.createElementNS(namespace, 'svg');
+            pauseIcon.setAttribute('aria-hidden', 'true');
+            pauseIcon.setAttribute('focusable', 'false');
+            pauseIcon.classList.add('icon--pressed');
+
+            const use = document.createElementNS(namespace, 'use');
+            const path = `${iconUrl}#plyr-pause`;
+            use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', path);
+            use.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', path);
+            pauseIcon.appendChild(use);
+
+            playIcon.before(pauseIcon);
+        }
+
+        function initPlyrVideo(videoEl) {
+            if (!videoEl || !window.Plyr || videoEl.dataset.plyrInitialized === 'true') return null;
+            if (!videoEl.isConnected) {
+                if (videoEl.dataset.plyrInitPending !== 'true') {
+                    videoEl.dataset.plyrInitPending = 'true';
+                    requestAnimationFrame(() => {
+                        videoEl.dataset.plyrInitPending = 'false';
+                        initPlyrVideo(videoEl);
+                    });
+                }
+                return null;
+            }
+            const player = new window.Plyr(videoEl, plyrConfig);
+            videoEl.dataset.plyrInitialized = 'true';
+            videoEl._plyrPlayer = player;
+            enhanceOverlaidPlayToggle(player, plyrConfig.iconUrl);
+            return player;
+        }
+
+        function syncPlyrCaptions(videoEl) {
+            const player = videoEl && videoEl._plyrPlayer ? videoEl._plyrPlayer : null;
+            if (!player || !player.media) return;
+
+            const media = player.media;
+            const tracks = Array.from(media.textTracks).filter(track => track.kind === 'subtitles' || track.kind === 'captions');
+            if (!tracks.length) return;
+
+            const preferred = tracks.find(track => track.language === 'en') ?? tracks[0];
+            if (!preferred) return;
+
+            const apply = () => {
+                try {
+                    player.language = preferred.language || 'en';
+                    player.toggleCaptions(true);
+                } catch {
+                    // Plyr may not be ready yet; ignore.
+                }
+            };
+
+            apply();
+            if (!preferred.cues?.length) {
+                preferred.addEventListener('load', apply, { once: true });
+            }
+        }
 
         // Speaker photos from https://kericonf.com/archive/kericonf26/speakers-2026/
         const speakerPhotos = {
@@ -1232,7 +1352,10 @@
             track.label = 'English';
             track.default = true;
             track.src = blobUrl;
-            track.addEventListener('load', () => URL.revokeObjectURL(blobUrl), { once: true });
+            track.addEventListener('load', () => {
+                URL.revokeObjectURL(blobUrl);
+                syncPlyrCaptions(videoEl);
+            }, { once: true });
             track.addEventListener('error', () => URL.revokeObjectURL(blobUrl), { once: true });
             videoEl.appendChild(track);
         }
@@ -1333,6 +1456,7 @@
             source.type = 'video/mp4';
             modalVideoEl.appendChild(source);
             playerWrap.appendChild(modalVideoEl);
+            initPlyrVideo(modalVideoEl);
 
             const transcriptSection = document.createElement('div');
             transcriptSection.className = 'video-modal-transcript';
@@ -1492,6 +1616,7 @@
             source.type = 'video/mp4';
             videoEl.appendChild(source);
             thumbDiv.appendChild(videoEl);
+            initPlyrVideo(videoEl);
             card.appendChild(thumbDiv);
 
             videoElementMap[video.path] = videoEl;
