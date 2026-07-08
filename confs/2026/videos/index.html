@@ -1075,13 +1075,13 @@
             const pauseIcon = document.createElementNS(namespace, 'svg');
             pauseIcon.setAttribute('aria-hidden', 'true');
             pauseIcon.setAttribute('focusable', 'false');
+            pauseIcon.setAttribute('viewBox', '0 0 24 24');
             pauseIcon.classList.add('icon--pressed');
 
-            const use = document.createElementNS(namespace, 'use');
-            const path = `${iconUrl}#plyr-pause`;
-            use.setAttributeNS('http://www.w3.org/1999/xlink', 'href', path);
-            use.setAttributeNS('http://www.w3.org/1999/xlink', 'xlink:href', path);
-            pauseIcon.appendChild(use);
+            const pausePath = document.createElementNS(namespace, 'path');
+            pausePath.setAttribute('d', 'M6 4h4v16H6zM14 4h4v16h-4z');
+            pausePath.setAttribute('fill', 'currentColor');
+            pauseIcon.appendChild(pausePath);
 
             playIcon.before(pauseIcon);
         }
