@@ -476,6 +476,10 @@
             background: #000;
             aspect-ratio: 16 / 9;
             max-height: min(52vh, 56vw);
+            --plyr-font-size-small: 1.6rem;
+            --plyr-font-size-base: 1.8rem;
+            --plyr-font-size-large: 1.8rem;
+            --plyr-font-size-xlarge: 1.8rem;
         }
 
         .video-modal-player video {
@@ -486,9 +490,8 @@
             background: #000;
         }
 
-        .video-modal-player video::cue {
-            font-size: 1.125rem;
-            line-height: 1.5;
+        .video-modal-player .plyr__caption {
+            line-height: 1.6;
         }
 
         .video-modal-transcript {
