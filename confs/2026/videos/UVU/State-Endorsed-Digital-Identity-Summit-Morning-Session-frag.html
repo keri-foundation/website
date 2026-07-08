@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>State-Endorsed Digital Identity Summit — Morning Session</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 24px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #222;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        video {
+            width: 100%;
+            background: #000;
+            border-radius: 8px;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 1rem;
+            color: #02887f;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1>State-Endorsed Digital Identity Summit — Morning Session</h1>
+
+        <video id="player" controls playsinline preload="metadata">
+            <source src="State-Endorsed-Digital-Identity-Summit-Morning-Session-frag.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <a class="back-link" href="index.html">← Back to all videos</a>
+    </main>
+
+    <script>
+        const SRT_FILE = 'State-Endorsed-Digital-Identity-Summit-Morning-Session-frag.srt';
+
+        function srtToVtt(rawSrt) {
+            return 'WEBVTT\n\n' + rawSrt
+                .replace(/\r\n/g, '\n')
+                .replace(/\r/g, '\n')
+                .replace(/(\d{2}:\d{2}:\d{2}),(\d{3})/g, '$1.$2');
+        }
+
+        function attachSubtitles(videoEl, rawSrt) {
+            const vtt = srtToVtt(rawSrt);
+            const blob = new Blob([vtt], { type: 'text/vtt' });
+            const blobUrl = URL.createObjectURL(blob);
+
+            const track = document.createElement('track');
+            track.kind = 'subtitles';
+            track.srclang = 'en';
+            track.label = 'English';
+            track.default = true;
+            track.src = blobUrl;
+            track.addEventListener('load', () => URL.revokeObjectURL(blobUrl), { once: true });
+            track.addEventListener('error', () => URL.revokeObjectURL(blobUrl), { once: true });
+            videoEl.appendChild(track);
+        }
+
+        const player = document.getElementById('player');
+
+        fetch(SRT_FILE)
+            .then(r => {
+                if (!r.ok) throw new Error(`Failed to load subtitles (${r.status})`);
+                return r.text();
+            })
+            .then(raw => attachSubtitles(player, raw))
+            .catch(err => console.error('Subtitles unavailable:', err));
+    </script>
+</body>
+
+</html>
