@@ -362,13 +362,193 @@
             padding: 0;
         }
 
-        .video-card.condensed *:not(.video-info):not(.video-title):not(.video-icon):not(.video-icon *) {
+        .video-card.condensed *:not(.video-info):not(.video-title):not(.video-icon):not(.video-icon *):not(.open-video-modal-btn) {
             display: none;
         }
 
         .video-card.condensed .video-title>.video-icon,
         .video-card.condensed .video-title>.video-icon * {
             display: inline-flex;
+        }
+
+        .open-video-modal-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            width: 100%;
+            margin-top: 10px;
+            background: rgba(152, 108, 50, 0.18);
+            border: 1px solid rgba(152, 108, 50, 0.35);
+            border-radius: 8px;
+            color: #060b6f;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.03em;
+            padding: 10px 14px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .open-video-modal-btn:hover {
+            background: rgba(152, 108, 50, 0.32);
+        }
+
+        .open-video-modal-btn:focus-visible {
+            outline: 2px solid #986c32;
+            outline-offset: 2px;
+        }
+
+        /* ── Video modal ── */
+        .video-modal-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: clamp(20px, 4vw, 48px);
+            background: rgba(6, 11, 111, 0.55);
+            backdrop-filter: blur(4px);
+        }
+
+        .video-modal-overlay[hidden] {
+            display: none !important;
+        }
+
+        .video-modal {
+            display: flex;
+            flex-direction: column;
+            width: min(1200px, 100%);
+            max-height: calc(100vh - clamp(40px, 8vw, 96px));
+            background: #f4f8f7;
+            border-radius: 16px;
+            box-shadow: 0 24px 64px rgba(6, 11, 111, 0.45);
+            overflow: hidden;
+            color: #060b6f;
+        }
+
+        .video-modal-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 14px 18px;
+            background: rgba(177, 209, 207, 0.35);
+            border-bottom: 1px solid rgba(6, 11, 111, 0.12);
+            flex-shrink: 0;
+        }
+
+        .video-modal-title {
+            font-size: 1.05rem;
+            line-height: 1.4;
+            font-weight: 700;
+            margin: 0;
+            padding-right: 8px;
+        }
+
+        .video-modal-close {
+            flex-shrink: 0;
+            width: 2.25rem;
+            height: 2.25rem;
+            border: none;
+            border-radius: 8px;
+            background: rgba(6, 11, 111, 0.1);
+            color: #060b6f;
+            font-size: 1.4rem;
+            line-height: 1;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .video-modal-close:hover {
+            background: rgba(6, 11, 111, 0.2);
+        }
+
+        .video-modal-close:focus-visible {
+            outline: 2px solid #986c32;
+            outline-offset: 2px;
+        }
+
+        .video-modal-player {
+            flex-shrink: 0;
+            background: #000;
+            aspect-ratio: 16 / 9;
+            max-height: min(52vh, 56vw);
+        }
+
+        .video-modal-player video {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #000;
+        }
+
+        .video-modal-player video::cue {
+            font-size: 1.125rem;
+            line-height: 1.5;
+        }
+
+        .video-modal-transcript {
+            flex: 1 1 auto;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+            border-top: 1px solid rgba(6, 11, 111, 0.12);
+            background: #fff;
+        }
+
+        .video-modal-transcript-label {
+            flex-shrink: 0;
+            padding: 10px 18px 8px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: rgba(6, 11, 111, 0.7);
+        }
+
+        .video-modal-transcript-body {
+            flex: 1 1 auto;
+            min-height: 0;
+            overflow-y: auto;
+            padding: 4px 14px 18px;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(6, 11, 111, 0.35) transparent;
+        }
+
+        .video-modal-transcript-body::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .video-modal-transcript-body::-webkit-scrollbar-thumb {
+            background: rgba(6, 11, 111, 0.35);
+            border-radius: 4px;
+        }
+
+        .video-modal-transcript-body .cue-line {
+            padding: 8px 10px;
+            margin-bottom: 4px;
+        }
+
+        .video-modal-transcript-body .cue-time {
+            font-size: 1rem;
+            padding: 3px 10px;
+            color: #02887f;
+            background: rgba(177, 209, 207, 0.35);
+        }
+
+        .video-modal-transcript-body .cue-text {
+            font-size: 1.125rem;
+            line-height: 1.6;
+            opacity: 1;
+            color: #1a1a2e;
+        }
+
+        .video-modal-transcript-body .transcript-loading {
+            font-size: 1rem;
+            padding: 12px 4px;
         }
 
         .video-card:hover {
@@ -1012,6 +1192,9 @@
                     otherVideo.pause();
                 }
             }
+            if (modalVideoEl && modalVideoEl !== exceptVideo && !modalVideoEl.paused) {
+                modalVideoEl.pause();
+            }
         }
 
         function loadTranscript(video) {
@@ -1057,7 +1240,7 @@
         // ─────────────────────────────────────────────────────────────────────
         //  Cue line element (shared by accordion and search results)
         // ─────────────────────────────────────────────────────────────────────
-        function makeCueLine(cue, videoPath, highlightQuery) {
+        function makeCueLine(cue, videoPath, highlightQuery, targetVideoEl) {
             const div = document.createElement('div');
             div.className = 'cue-line';
             div.setAttribute('role', 'listitem');
@@ -1080,11 +1263,13 @@
             div.appendChild(textSpan);
 
             const seek = () => {
-                const videoEl = videoElementMap[videoPath];
+                const videoEl = targetVideoEl || videoElementMap[videoPath];
                 if (!videoEl) return;
                 videoEl.currentTime = cue.start;
                 videoEl.play();
-                videoEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                if (!targetVideoEl) {
+                    videoEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
             };
             div.addEventListener('click', seek);
             div.addEventListener('keydown', e => {
@@ -1092,6 +1277,176 @@
             });
             return div;
         }
+
+        // ─────────────────────────────────────────────────────────────────────
+        //  Video modal (landscape player + scrollable transcript below)
+        // ─────────────────────────────────────────────────────────────────────
+        let videoModalOverlay = null;
+        let modalVideoEl = null;
+        let modalTranscriptBody = null;
+        let modalTitleEl = null;
+        let modalPreviousFocus = null;
+        let modalSourceVideoPath = null;
+
+        function ensureVideoModal() {
+            if (videoModalOverlay) return;
+
+            videoModalOverlay = document.createElement('div');
+            videoModalOverlay.className = 'video-modal-overlay';
+            videoModalOverlay.hidden = true;
+            videoModalOverlay.setAttribute('role', 'presentation');
+
+            const dialog = document.createElement('div');
+            dialog.className = 'video-modal';
+            dialog.setAttribute('role', 'dialog');
+            dialog.setAttribute('aria-modal', 'true');
+            dialog.setAttribute('aria-labelledby', 'videoModalTitle');
+
+            const header = document.createElement('div');
+            header.className = 'video-modal-header';
+
+            modalTitleEl = document.createElement('h2');
+            modalTitleEl.className = 'video-modal-title';
+            modalTitleEl.id = 'videoModalTitle';
+
+            const closeBtn = document.createElement('button');
+            closeBtn.type = 'button';
+            closeBtn.className = 'video-modal-close';
+            closeBtn.setAttribute('aria-label', 'Close video');
+            closeBtn.innerHTML = '&times;';
+            closeBtn.addEventListener('click', closeVideoModal);
+
+            header.appendChild(modalTitleEl);
+            header.appendChild(closeBtn);
+
+            const playerWrap = document.createElement('div');
+            playerWrap.className = 'video-modal-player';
+
+            modalVideoEl = document.createElement('video');
+            modalVideoEl.controls = true;
+            modalVideoEl.playsInline = true;
+            modalVideoEl.controlsList = 'nodownload';
+            modalVideoEl.oncontextmenu = () => false;
+            modalVideoEl.addEventListener('play', () => pauseAllVideos(modalVideoEl));
+
+            const source = document.createElement('source');
+            source.type = 'video/mp4';
+            modalVideoEl.appendChild(source);
+            playerWrap.appendChild(modalVideoEl);
+
+            const transcriptSection = document.createElement('div');
+            transcriptSection.className = 'video-modal-transcript';
+
+            const transcriptLabel = document.createElement('div');
+            transcriptLabel.className = 'video-modal-transcript-label';
+            transcriptLabel.textContent = 'Transcript';
+
+            modalTranscriptBody = document.createElement('div');
+            modalTranscriptBody.className = 'video-modal-transcript-body';
+            modalTranscriptBody.setAttribute('role', 'list');
+
+            transcriptSection.appendChild(transcriptLabel);
+            transcriptSection.appendChild(modalTranscriptBody);
+
+            dialog.appendChild(header);
+            dialog.appendChild(playerWrap);
+            dialog.appendChild(transcriptSection);
+            videoModalOverlay.appendChild(dialog);
+
+            videoModalOverlay.addEventListener('click', (e) => {
+                if (e.target === videoModalOverlay) closeVideoModal();
+            });
+
+            document.body.appendChild(videoModalOverlay);
+        }
+
+        function populateModalTranscript(store, videoPath) {
+            modalTranscriptBody.innerHTML = '';
+            if (!store || store.status !== 'ready' || !store.cues.length) {
+                const loading = document.createElement('p');
+                loading.className = 'transcript-loading';
+                loading.textContent = store?.status === 'error'
+                    ? 'Transcript unavailable.'
+                    : 'Loading transcript…';
+                modalTranscriptBody.appendChild(loading);
+                return;
+            }
+            const frag = document.createDocumentFragment();
+            for (const cue of store.cues) {
+                frag.appendChild(makeCueLine(cue, videoPath, null, modalVideoEl));
+            }
+            modalTranscriptBody.appendChild(frag);
+        }
+
+        function openVideoModal(video, startTime) {
+            if (!video.subtitle) return;
+            ensureVideoModal();
+
+            modalPreviousFocus = document.activeElement;
+            modalSourceVideoPath = video.path;
+
+            const cardVideo = videoElementMap[video.path];
+            const wasPlaying = cardVideo && !cardVideo.paused;
+            const time = typeof startTime === 'number' ? startTime : (cardVideo?.currentTime ?? 0);
+
+            if (cardVideo) cardVideo.pause();
+
+            const sourceSrc = video.path.startsWith('/')
+                ? video.path
+                : '/confs/2026/videos/' + video.path;
+
+            const source = modalVideoEl.querySelector('source');
+            source.src = sourceSrc;
+            modalVideoEl.querySelectorAll('track').forEach(t => t.remove());
+            modalVideoEl.load();
+
+            const seekAndMaybePlay = () => {
+                modalVideoEl.currentTime = time;
+                if (wasPlaying) modalVideoEl.play();
+            };
+            if (modalVideoEl.readyState >= 1) {
+                seekAndMaybePlay();
+            } else {
+                modalVideoEl.addEventListener('loadedmetadata', seekAndMaybePlay, { once: true });
+            }
+
+            modalTitleEl.textContent = video.title;
+            modalTranscriptBody.innerHTML = '<p class="transcript-loading">Loading transcript…</p>';
+
+            loadTranscript(video).then(store => {
+                if (modalSourceVideoPath !== video.path) return;
+                if (store.rawText) attachVttTrack(modalVideoEl, store.rawText);
+                populateModalTranscript(store, video.path);
+            });
+
+            videoModalOverlay.hidden = false;
+            document.body.style.overflow = 'hidden';
+            modalVideoEl.focus();
+        }
+
+        function closeVideoModal() {
+            if (!videoModalOverlay || videoModalOverlay.hidden) return;
+
+            const time = modalVideoEl.currentTime;
+            modalVideoEl.pause();
+
+            const cardVideo = videoElementMap[modalSourceVideoPath];
+            if (cardVideo) cardVideo.currentTime = time;
+
+            videoModalOverlay.hidden = true;
+            document.body.style.overflow = '';
+            modalSourceVideoPath = null;
+
+            if (modalPreviousFocus && typeof modalPreviousFocus.focus === 'function') {
+                modalPreviousFocus.focus();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && videoModalOverlay && !videoModalOverlay.hidden) {
+                closeVideoModal();
+            }
+        });
 
         // ─────────────────────────────────────────────────────────────────────
         //  Generate unique ID for a video
@@ -1196,6 +1551,20 @@
             metaDiv.appendChild(durSpan);
             metaDiv.appendChild(copyBtn);
             infoDiv.appendChild(metaDiv);
+
+            if (video.subtitle) {
+                const modalBtn = document.createElement('button');
+                modalBtn.type = 'button';
+                modalBtn.className = 'open-video-modal-btn';
+                modalBtn.setAttribute('aria-label', `Open ${video.title} with transcript`);
+                modalBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg> Watch with transcript';
+                modalBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    openVideoModal(video, videoEl.currentTime);
+                });
+                infoDiv.appendChild(modalBtn);
+            }
+
             card.appendChild(infoDiv);
 
             const toggleAllBtn = document.querySelector('#toggleAllVideos');
@@ -1213,27 +1582,6 @@
                 card.classList.remove('condensed');
                 updateCondensedToggleState();
             });
-
-            // ── transcript accordion ──
-            if (video.subtitle) {
-                const safeId = CSS.escape(video.path.replace(/\W/g, '_'));
-                const panelId = `transcript-${safeId}`;
-
-                const panel = document.createElement('div');
-                panel.className = 'transcript-panel';
-                panel.id = panelId;
-                panel.setAttribute('role', 'region');
-                panel.setAttribute('aria-label', `Transcript — ${video.title}`);
-
-                const body = document.createElement('div');
-                body.className = 'transcript-body';
-                body.setAttribute('role', 'list');
-                panel.appendChild(body);
-
-                let transcriptLoaded = false;
-
-                card.appendChild(panel);
-            }
 
             return card;
         }
@@ -1468,16 +1816,9 @@
                     item.appendChild(timeEl);
                     item.appendChild(textEl);
 
-                    const seek = () => {
-                        const videoEl = videoElementMap[video.path];
-                        if (!videoEl) return;
-                        videoEl.currentTime = cueMatch.cue.start;
-                        videoEl.play();
-                        videoEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    };
                     const activateSearchResult = () => {
                         setAllCardsCondensed(false);
-                        seek();
+                        openVideoModal(video, cueMatch.cue.start);
                     };
                     item.addEventListener('click', activateSearchResult);
                     item.addEventListener('keydown', e => {
