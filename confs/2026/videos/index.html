@@ -829,6 +829,49 @@
             }
         ];
 
+        const defaultPoster = 'https://kericonf.com/wp-content/uploads/2025/11/logo-keri-conference-scaled.png';
+
+        // Speaker photos from https://kericonf.com/archive/kericonf26/speakers-2026/
+        const speakerPhotos = {
+            'Samuel Smith': 'https://kericonf.com/wp-content/uploads/2025/11/Samuel-Smith.jpg',
+            'Phil Feairheller': 'https://kericonf.com/wp-content/uploads/2026/01/PhilFeairheller_v1.0-edited.jpeg',
+            'Daniel Hardman': 'https://kericonf.com/wp-content/uploads/2026/01/DanielHardman_v1.0.png',
+            'George McEwan': 'https://kericonf.com/wp-content/uploads/2026/01/GeorgeMcEwan_v1.0-scaled.jpg',
+            'Ari Argoud': 'https://kericonf.com/wp-content/uploads/2026/02/AriArgoud_v1.0.jpeg',
+            'Thomas Mayfield': 'https://kericonf.com/wp-content/uploads/2026/01/ThomasMayfield_v1.0-scaled.jpg',
+            'Jonathan Rayback': 'https://kericonf.com/wp-content/uploads/2026/02/JonathanRayback_v1.0.jpg',
+            'Kent Bull': 'https://kericonf.com/wp-content/uploads/2026/01/KentBull_v1.0.png',
+            'Ned Smith': 'https://kericonf.com/wp-content/uploads/2026/02/NedSmith_v1.0.jpeg',
+            'Cole Davis': 'https://kericonf.com/wp-content/uploads/2026/02/ColeDavis_v1.0-edited.jpeg',
+            'Alan Davies': 'https://kericonf.com/wp-content/uploads/2026/02/AlanDavies_v1.0-edited.jpeg',
+            "Fergal O'Connor": 'https://kericonf.com/wp-content/uploads/2026/03/FergalOConnor_v.1.0.png',
+            "Fergal O'Conner": 'https://kericonf.com/wp-content/uploads/2026/03/FergalOConnor_v.1.0.png',
+            'Scott Stuewe': 'https://kericonf.com/wp-content/uploads/2026/03/ScottStuewe_v1.0-e1773917316969.jpg',
+            'Jay Alexander Elliot': 'https://kericonf.com/wp-content/uploads/2026/03/JayElliot_v1.0-scaled.jpg',
+            'Mark Scrimshire': 'https://kericonf.com/wp-content/uploads/2026/03/MarkScripshire_v1.0.png',
+            'Phil Windley': 'https://kericonf.com/wp-content/uploads/2026/03/phil-windley.jpg',
+            'Jared Jeffery': 'https://kericonf.com/wp-content/uploads/2026/03/jared-jeffery.jpg',
+            'Jared Jefferey': 'https://kericonf.com/wp-content/uploads/2026/03/jared-jeffery.jpg',
+            'Keanu Pahio': 'https://kericonf.com/wp-content/uploads/2026/04/KeanuPahio_v1.0.jpg',
+            'Karla McKenna': 'https://kericonf.com/wp-content/uploads/2026/04/KarlaMcKenna_v1.0-edited.jpg',
+            'Nicholas Racz': 'https://kericonf.com/wp-content/uploads/2026/04/NicholasRacz_v1.0-edited.jpeg',
+            'Christopher Bramwell': 'https://kericonf.com/wp-content/uploads/2026/04/ChristopherBramwell_v1.0-scaled.jpg',
+            'Evan Asakawa': 'https://kericonf.com/wp-content/uploads/2026/04/EvanAsakawa_v1.0-scaled.jpg',
+            'Evan Asawaka': 'https://kericonf.com/wp-content/uploads/2026/04/EvanAsakawa_v1.0-scaled.jpg',
+            'Ryan Hansen': 'https://kericonf.com/wp-content/uploads/2026/04/RyanHansen_v1.0.jpeg'
+        };
+
+        function getSpeakerPoster(video) {
+            const filename = video.path.split('/').pop() || '';
+            const speaker = filename.split('｜')[0].trim()
+                .replace(/\s+Pannel$/i, '')
+                .replace(/\s+Panel$/i, '');
+            if (speakerPhotos[speaker]) return speakerPhotos[speaker];
+            const firstSpeaker = speaker.match(/^([A-Za-z]+ [A-Za-z]+)/);
+            if (firstSpeaker && speakerPhotos[firstSpeaker[1]]) return speakerPhotos[firstSpeaker[1]];
+            return defaultPoster;
+        }
+
         // ─────────────────────────────────────────────────────────────────────
         //  Utilities
         // ─────────────────────────────────────────────────────────────────────
@@ -1080,8 +1123,8 @@
 
             const videoEl = document.createElement('video');
             videoEl.controls = true;
-            videoEl.poster = 'https://kericonf.com/wp-content/uploads/2025/11/logo-keri-conference-scaled.png';
-            videoEl.preload = 'metadata';
+            videoEl.poster = getSpeakerPoster(video);
+            videoEl.preload = 'none';
             videoEl.playsInline = "true";
             videoEl.controlsList = "nodownload";
             videoEl.oncontextmenu = () => false;  // Disable right-click on video for an extra layer of download prevention
