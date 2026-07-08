@@ -330,9 +330,31 @@
         }
 
         .video-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 25px;
+            columns: 22rem;
+            column-gap: 25px;
+        }
+
+        @supports (grid-template-rows: masonry) {
+            .video-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+                grid-template-rows: masonry;
+                gap: 25px;
+                columns: unset;
+                column-gap: unset;
+            }
+        }
+
+        .video-grid:has(.video-card.condensed) {
+            columns: 1;
+            max-width: 56rem;
+        }
+
+        @supports (grid-template-rows: masonry) {
+            .video-grid:has(.video-card.condensed) {
+                grid-template-columns: 1fr;
+                max-width: 56rem;
+            }
         }
 
         /* ── Video cards ── */
@@ -346,6 +368,15 @@
             border: 1px solid rgba(177, 209, 207, 0.18);
             display: flex;
             flex-direction: column;
+            width: 100%;
+            break-inside: avoid;
+            margin-bottom: 25px;
+        }
+
+        @supports (grid-template-rows: masonry) {
+            .video-card {
+                margin-bottom: 0;
+            }
         }
 
         .video-card.condensed {
@@ -910,7 +941,13 @@
 
         @media (max-width: 480px) {
             .video-grid {
-                grid-template-columns: 1fr;
+                columns: 1;
+            }
+
+            @supports (grid-template-rows: masonry) {
+                .video-grid {
+                    grid-template-columns: 1fr;
+                }
             }
 
             h1 {
