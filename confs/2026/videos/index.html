@@ -408,9 +408,9 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: clamp(20px, 4vw, 48px);
-            background: rgba(6, 11, 111, 0.55);
-            backdrop-filter: blur(4px);
+            padding: 12px;
+            background: rgba(6, 11, 111, 0.42);
+            backdrop-filter: blur(3px);
         }
 
         .video-modal-overlay[hidden] {
@@ -420,11 +420,13 @@
         .video-modal {
             display: flex;
             flex-direction: column;
-            width: min(1200px, 100%);
-            max-height: calc(100vh - clamp(40px, 8vw, 96px));
+            width: calc(100vw - 24px);
+            height: calc(100vh - 24px);
+            max-width: calc(100vw - 24px);
+            max-height: calc(100vh - 24px);
             background: #f4f8f7;
-            border-radius: 16px;
-            box-shadow: 0 24px 64px rgba(6, 11, 111, 0.45);
+            border-radius: 14px;
+            box-shadow: 0 20px 56px rgba(6, 11, 111, 0.38);
             overflow: hidden;
             color: #060b6f;
         }
@@ -434,7 +436,7 @@
             align-items: flex-start;
             justify-content: space-between;
             gap: 16px;
-            padding: 14px 18px;
+            padding: 12px 16px;
             background: rgba(177, 209, 207, 0.35);
             border-bottom: 1px solid rgba(6, 11, 111, 0.12);
             flex-shrink: 0;
@@ -471,11 +473,105 @@
             outline-offset: 2px;
         }
 
-        .video-modal-player {
-            flex-shrink: 0;
+        .video-modal-workspace {
+            position: relative;
+            flex: 1 1 auto;
+            min-height: 0;
+            overflow: hidden;
+            background:
+                linear-gradient(rgba(6, 11, 111, 0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(6, 11, 111, 0.04) 1px, transparent 1px),
+                rgba(177, 209, 207, 0.1);
+            background-size: 24px 24px;
+        }
+
+        .video-modal-panel {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            min-width: 260px;
+            min-height: 180px;
+            max-width: calc(100% - 24px);
+            max-height: calc(100% - 24px);
+            overflow: auto;
+            resize: both;
+            border: 1px solid rgba(6, 11, 111, 0.16);
+            border-radius: 10px;
+            box-shadow: 0 8px 24px rgba(6, 11, 111, 0.14);
+            background: #fff;
+        }
+
+        .video-modal-panel--video {
+            left: 12px;
+            top: 12px;
+            width: calc(58% - 18px);
+            height: calc(100% - 24px);
             background: #000;
-            aspect-ratio: 16 / 9;
-            max-height: min(52vh, 56vw);
+            z-index: 1;
+        }
+
+        .video-modal-panel--transcript {
+            left: calc(58% + 6px);
+            top: 12px;
+            width: calc(42% - 18px);
+            height: calc(100% - 24px);
+            z-index: 2;
+        }
+
+        .video-modal-panel.is-dragging {
+            opacity: 0.96;
+            box-shadow: 0 14px 36px rgba(6, 11, 111, 0.22);
+        }
+
+        .video-modal-panel-handle {
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border-bottom: 1px solid rgba(6, 11, 111, 0.1);
+            background: rgba(177, 209, 207, 0.28);
+            cursor: grab;
+            touch-action: none;
+            user-select: none;
+        }
+
+        .video-modal-panel--video .video-modal-panel-handle {
+            background: rgba(255, 255, 255, 0.08);
+            border-bottom-color: rgba(255, 255, 255, 0.12);
+            color: rgba(255, 255, 255, 0.92);
+        }
+
+        .video-modal-panel-handle:active {
+            cursor: grabbing;
+        }
+
+        .video-modal-panel-handle-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+        }
+
+        .video-modal-panel-handle-hint {
+            margin-left: auto;
+            font-size: 0.68rem;
+            opacity: 0.65;
+            letter-spacing: 0.02em;
+        }
+
+        .video-modal-panel-content {
+            flex: 1 1 auto;
+            min-height: 0;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .video-modal-player {
+            flex: 1 1 auto;
+            min-height: 0;
+            background: #000;
             --plyr-font-size-small: 1.6rem;
             --plyr-font-size-base: 1.8rem;
             --plyr-font-size-large: 1.8rem;
@@ -490,6 +586,11 @@
             background: #000;
         }
 
+        .video-modal-player .plyr,
+        .video-modal-player .plyr__video-wrapper {
+            height: 100%;
+        }
+
         .video-modal-player .plyr__caption {
             line-height: 1.6;
         }
@@ -499,18 +600,7 @@
             min-height: 0;
             display: flex;
             flex-direction: column;
-            border-top: 1px solid rgba(6, 11, 111, 0.12);
             background: #fff;
-        }
-
-        .video-modal-transcript-label {
-            flex-shrink: 0;
-            padding: 10px 18px 8px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 0.06em;
-            text-transform: uppercase;
-            color: rgba(6, 11, 111, 0.7);
         }
 
         .video-modal-transcript-body {
@@ -774,6 +864,24 @@
 
             h1 {
                 font-size: 2.2rem;
+            }
+
+            .video-modal-panel--video {
+                left: 8px;
+                top: 8px;
+                width: calc(100% - 16px);
+                height: calc(52% - 12px);
+            }
+
+            .video-modal-panel--transcript {
+                left: 8px;
+                top: calc(52% + 4px);
+                width: calc(100% - 16px);
+                height: calc(48% - 12px);
+            }
+
+            .video-modal-panel-handle-hint {
+                display: none;
             }
         }
 
@@ -1405,7 +1513,7 @@
         }
 
         // ─────────────────────────────────────────────────────────────────────
-        //  Video modal (landscape player + scrollable transcript below)
+        //  Video modal (side-by-side draggable + resizable panels)
         // ─────────────────────────────────────────────────────────────────────
         let videoModalOverlay = null;
         let modalVideoEl = null;
@@ -1413,6 +1521,93 @@
         let modalTitleEl = null;
         let modalPreviousFocus = null;
         let modalSourceVideoPath = null;
+        let modalWorkspace = null;
+        let modalPanelZIndex = 2;
+
+        function bringModalPanelToFront(panel) {
+            modalPanelZIndex += 1;
+            panel.style.zIndex = String(modalPanelZIndex);
+        }
+
+        function clampModalPanelPosition(panel) {
+            if (!modalWorkspace) return;
+            const maxLeft = Math.max(0, modalWorkspace.clientWidth - panel.offsetWidth);
+            const maxTop = Math.max(0, modalWorkspace.clientHeight - panel.offsetHeight);
+            const left = Math.min(Math.max(0, panel.offsetLeft), maxLeft);
+            const top = Math.min(Math.max(0, panel.offsetTop), maxTop);
+            panel.style.left = `${left}px`;
+            panel.style.top = `${top}px`;
+        }
+
+        function initModalPanelDrag(panel, handle) {
+            handle.addEventListener('pointerdown', (e) => {
+                if (e.button !== 0) return;
+                e.preventDefault();
+                bringModalPanelToFront(panel);
+                panel.classList.add('is-dragging');
+
+                const startX = e.clientX;
+                const startY = e.clientY;
+                const startLeft = panel.offsetLeft;
+                const startTop = panel.offsetTop;
+
+                handle.setPointerCapture(e.pointerId);
+
+                const onMove = (ev) => {
+                    const dx = ev.clientX - startX;
+                    const dy = ev.clientY - startY;
+                    const maxLeft = Math.max(0, modalWorkspace.clientWidth - panel.offsetWidth);
+                    const maxTop = Math.max(0, modalWorkspace.clientHeight - panel.offsetHeight);
+                    panel.style.left = `${Math.min(Math.max(0, startLeft + dx), maxLeft)}px`;
+                    panel.style.top = `${Math.min(Math.max(0, startTop + dy), maxTop)}px`;
+                };
+
+                const onEnd = () => {
+                    panel.classList.remove('is-dragging');
+                    handle.removeEventListener('pointermove', onMove);
+                    handle.removeEventListener('pointerup', onEnd);
+                    handle.removeEventListener('pointercancel', onEnd);
+                    if (handle.hasPointerCapture(e.pointerId)) {
+                        handle.releasePointerCapture(e.pointerId);
+                    }
+                };
+
+                handle.addEventListener('pointermove', onMove);
+                handle.addEventListener('pointerup', onEnd);
+                handle.addEventListener('pointercancel', onEnd);
+            });
+
+            panel.addEventListener('pointerdown', () => bringModalPanelToFront(panel));
+        }
+
+        function createModalPanel(className, label) {
+            const panel = document.createElement('div');
+            panel.className = `video-modal-panel ${className}`;
+
+            const handle = document.createElement('div');
+            handle.className = 'video-modal-panel-handle';
+            handle.setAttribute('aria-label', `Drag ${label} panel`);
+
+            const handleLabel = document.createElement('span');
+            handleLabel.className = 'video-modal-panel-handle-label';
+            handleLabel.textContent = label;
+
+            const handleHint = document.createElement('span');
+            handleHint.className = 'video-modal-panel-handle-hint';
+            handleHint.textContent = 'Drag header · resize corner';
+
+            handle.appendChild(handleLabel);
+            handle.appendChild(handleHint);
+
+            const content = document.createElement('div');
+            content.className = 'video-modal-panel-content';
+
+            panel.appendChild(handle);
+            panel.appendChild(content);
+            initModalPanelDrag(panel, handle);
+
+            return { panel, content };
+        }
 
         function ensureVideoModal() {
             if (videoModalOverlay) return;
@@ -1445,6 +1640,10 @@
             header.appendChild(modalTitleEl);
             header.appendChild(closeBtn);
 
+            modalWorkspace = document.createElement('div');
+            modalWorkspace.className = 'video-modal-workspace';
+
+            const { panel: videoPanel, content: videoContent } = createModalPanel('video-modal-panel--video', 'Video');
             const playerWrap = document.createElement('div');
             playerWrap.className = 'video-modal-player';
 
@@ -1459,26 +1658,35 @@
             source.type = 'video/mp4';
             modalVideoEl.appendChild(source);
             playerWrap.appendChild(modalVideoEl);
+            videoContent.appendChild(playerWrap);
             initPlyrVideo(modalVideoEl);
 
+            const { panel: transcriptPanel, content: transcriptContent } = createModalPanel('video-modal-panel--transcript', 'Transcript');
             const transcriptSection = document.createElement('div');
             transcriptSection.className = 'video-modal-transcript';
-
-            const transcriptLabel = document.createElement('div');
-            transcriptLabel.className = 'video-modal-transcript-label';
-            transcriptLabel.textContent = 'Transcript';
 
             modalTranscriptBody = document.createElement('div');
             modalTranscriptBody.className = 'video-modal-transcript-body';
             modalTranscriptBody.setAttribute('role', 'list');
 
-            transcriptSection.appendChild(transcriptLabel);
             transcriptSection.appendChild(modalTranscriptBody);
+            transcriptContent.appendChild(transcriptSection);
+
+            modalWorkspace.appendChild(videoPanel);
+            modalWorkspace.appendChild(transcriptPanel);
 
             dialog.appendChild(header);
-            dialog.appendChild(playerWrap);
-            dialog.appendChild(transcriptSection);
+            dialog.appendChild(modalWorkspace);
             videoModalOverlay.appendChild(dialog);
+
+            const clampPanels = () => {
+                clampModalPanelPosition(videoPanel);
+                clampModalPanelPosition(transcriptPanel);
+            };
+            window.addEventListener('resize', clampPanels);
+            [videoPanel, transcriptPanel].forEach((panel) => {
+                panel.addEventListener('mouseup', clampPanels);
+            });
 
             videoModalOverlay.addEventListener('click', (e) => {
                 if (e.target === videoModalOverlay) closeVideoModal();
@@ -1685,7 +1893,7 @@
                 modalBtn.type = 'button';
                 modalBtn.className = 'open-video-modal-btn';
                 modalBtn.setAttribute('aria-label', `Open ${video.title} with transcript`);
-                modalBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg> Watch with transcript';
+                modalBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg> Watch with transcript';
                 modalBtn.addEventListener('click', (e) => {
                     e.stopPropagation();
                     openVideoModal(video, videoEl.currentTime);
