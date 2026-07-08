@@ -16,7 +16,7 @@
         }
 
         body {
-            background: linear-gradient(135deg, #b1d1cf, #986c32, #b1d1cf);
+            background: #b1d1cf;
             color: #060b6f;
             padding: 20px;
             min-height: 100vh;
@@ -26,10 +26,9 @@
             text-align: center;
             padding: 30px 0;
             margin-bottom: 20px;
-            background: rgba(6, 11, 111, 0.32);
-            border-radius: 15px;
-            box-shadow: 0 8px 32px rgba(6, 11, 111, 0.35);
-            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.35);
+            border-radius: 8px;
+            border: 1px solid rgba(6, 11, 111, 0.12);
         }
 
         h1 {
@@ -37,22 +36,20 @@
             margin-bottom: 10px;
         }
 
-        .happy-ribbon {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.6rem;
+        .status-notice {
+            display: inline-block;
             margin: 0 auto 18px;
-            padding: 12px 18px;
-            background: linear-gradient(135deg, #fff1b8, #ffca75);
-            color: #422600;
-            border-radius: 999px;
-            box-shadow: 0 15px 30px rgba(6, 11, 111, 0.18);
-            border: 1px solid rgba(255, 255, 255, 0.8);
-            font-size: 1rem;
-            font-weight: 700;
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.55);
+            color: #060b6f;
+            border-radius: 4px;
+            border: 1px solid rgba(6, 11, 111, 0.14);
+            border-left: 3px solid #986c32;
+            font-size: 0.9rem;
+            font-weight: 500;
             max-width: 760px;
-            text-align: center;
+            text-align: left;
+            line-height: 1.45;
         }
 
         .subtitle {
@@ -65,11 +62,10 @@
         /* ── Search bar ── */
         .search-section {
             margin-bottom: 30px;
-            background: rgba(6, 11, 111, 0.42);
-            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.35);
+            border-radius: 8px;
             padding: 20px 24px;
-            backdrop-filter: blur(10px);
-            box-shadow: 0 8px 32px rgba(6, 11, 111, 0.35);
+            border: 1px solid rgba(6, 11, 111, 0.12);
         }
 
         .search-section label {
@@ -359,13 +355,11 @@
 
         /* ── Video cards ── */
         .video-card {
-            background: rgba(177, 209, 207, 0.12);
-            border-radius: 15px;
+            background: rgba(255, 255, 255, 0.4);
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 8px 32px rgba(6, 11, 111, 0.28);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, filter 0.3s ease;
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(177, 209, 207, 0.18);
+            transition: border-color 0.2s ease, opacity 0.3s ease, filter 0.3s ease;
+            border: 1px solid rgba(6, 11, 111, 0.12);
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -440,8 +434,7 @@
             align-items: center;
             justify-content: center;
             padding: 12px;
-            background: rgba(6, 11, 111, 0.42);
-            backdrop-filter: blur(3px);
+            background: rgba(6, 11, 111, 0.35);
         }
 
         .video-modal-overlay[hidden] {
@@ -456,8 +449,8 @@
             max-width: calc(100vw - 24px);
             max-height: calc(100vh - 24px);
             background: #f4f8f7;
-            border-radius: 14px;
-            box-shadow: 0 20px 56px rgba(6, 11, 111, 0.38);
+            border-radius: 8px;
+            border: 1px solid rgba(6, 11, 111, 0.14);
             overflow: hidden;
             color: #060b6f;
         }
@@ -516,11 +509,7 @@
             flex: 1 1 auto;
             min-height: 0;
             overflow: hidden;
-            background:
-                linear-gradient(rgba(6, 11, 111, 0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(6, 11, 111, 0.04) 1px, transparent 1px),
-                rgba(177, 209, 207, 0.1);
-            background-size: 24px 24px;
+            background: rgba(177, 209, 207, 0.12);
         }
 
         .video-modal-panel {
@@ -533,9 +522,8 @@
             max-height: calc(100% - 24px);
             overflow: auto;
             resize: both;
-            border: 1px solid rgba(6, 11, 111, 0.16);
-            border-radius: 10px;
-            box-shadow: 0 8px 24px rgba(6, 11, 111, 0.14);
+            border: 1px solid rgba(6, 11, 111, 0.14);
+            border-radius: 6px;
             background: #fff;
         }
 
@@ -558,7 +546,7 @@
 
         .video-modal-panel.is-dragging {
             opacity: 0.96;
-            box-shadow: 0 14px 36px rgba(6, 11, 111, 0.22);
+            border-color: rgba(6, 11, 111, 0.28);
         }
 
         .video-modal-panel-handle {
@@ -684,8 +672,7 @@
         }
 
         .video-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            border-color: rgba(6, 11, 111, 0.28);
         }
 
         .video-card.dimmed {
@@ -694,12 +681,12 @@
         }
 
         .video-card.dimmed:hover {
-            transform: none;
-            box-shadow: 0 8px 32px rgba(6, 11, 111, 0.28);
+            border-color: rgba(6, 11, 111, 0.12);
         }
 
         .video-card.highlighted {
-            box-shadow: 0px 0px 0px 10px rgba(255, 255, 255, 1);
+            border-color: #986c32;
+            border-width: 2px;
         }
 
         :root {
@@ -960,7 +947,7 @@
 <body>
     <header>
         <h1><a href="/confs/2026/videos/">KERI Conference April 2026 Videos</a></h1>
-        <div class="happy-ribbon" aria-live="polite">🎀 The subtitles are currently being reviewed and revised.</div>
+        <div class="status-notice" aria-live="polite">The subtitles are currently being reviewed and revised.</div>
         <p class="subtitle">A collection of presentations and talks from the KERI community</p>
         <a href="https://kericonf.com/archive/kericonf26/program/" target="_blank" rel="noopener noreferrer">Conference
             2026 Program</a> |
