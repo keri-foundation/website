@@ -442,6 +442,13 @@
             flex-shrink: 0;
         }
 
+        .video-modal-header-actions {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-shrink: 0;
+        }
+
         .video-modal-title {
             font-size: 1.05rem;
             line-height: 1.4;
@@ -732,10 +739,26 @@
         }
 
         .copy-button {
-            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.25rem;
+            height: 2.25rem;
+            background: rgba(6, 11, 111, 0.1);
             border: none;
-            font-size: 1.5em;
+            border-radius: 8px;
+            color: #060b6f;
             cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .copy-button:hover {
+            background: rgba(6, 11, 111, 0.2);
+        }
+
+        .copy-button:focus-visible {
+            outline: 2px solid #986c32;
+            outline-offset: 2px;
         }
 
         /* ── Transcript accordion ── */
@@ -1519,6 +1542,8 @@
         let modalVideoEl = null;
         let modalTranscriptBody = null;
         let modalTitleEl = null;
+        let modalCopyBtn = null;
+        let modalVideoId = null;
         let modalPreviousFocus = null;
         let modalSourceVideoPath = null;
         let modalWorkspace = null;
@@ -1630,6 +1655,29 @@
             modalTitleEl.className = 'video-modal-title';
             modalTitleEl.id = 'videoModalTitle';
 
+            const headerActions = document.createElement('div');
+            headerActions.className = 'video-modal-header-actions';
+
+            modalCopyBtn = document.createElement('button');
+            modalCopyBtn.type = 'button';
+            modalCopyBtn.className = 'copy-button';
+            modalCopyBtn.title = 'Copy link';
+            modalCopyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+            modalCopyBtn.addEventListener('click', () => {
+                if (!modalVideoId) return;
+                const currentTime = Math.floor(modalVideoEl.currentTime);
+                let url = `${window.location.origin}${window.location.pathname}#${modalVideoId}`;
+                if (currentTime > 0) {
+                    url += `&t=${currentTime}`;
+                }
+                navigator.clipboard.writeText(url).then(() => {
+                    modalCopyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+                    setTimeout(() => {
+                        modalCopyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+                    }, 1000);
+                });
+            });
+
             const closeBtn = document.createElement('button');
             closeBtn.type = 'button';
             closeBtn.className = 'video-modal-close';
@@ -1637,8 +1685,11 @@
             closeBtn.innerHTML = '&times;';
             closeBtn.addEventListener('click', closeVideoModal);
 
+            headerActions.appendChild(modalCopyBtn);
+            headerActions.appendChild(closeBtn);
+
             header.appendChild(modalTitleEl);
-            header.appendChild(closeBtn);
+            header.appendChild(headerActions);
 
             modalWorkspace = document.createElement('div');
             modalWorkspace.className = 'video-modal-workspace';
@@ -1719,6 +1770,8 @@
 
             modalPreviousFocus = document.activeElement;
             modalSourceVideoPath = video.path;
+            modalVideoId = generateVideoId(video);
+            modalCopyBtn.setAttribute('aria-label', `Copy link to ${video.title}`);
 
             const cardVideo = videoElementMap[video.path];
             const wasPlaying = cardVideo && !cardVideo.paused;
@@ -1860,32 +1913,7 @@
             durSpan.className = 'video-duration';
             durSpan.textContent = video.duration;
 
-            // Add copy-to-clipboard button
-            const copyBtn = document.createElement('button');
-            copyBtn.className = 'copy-button';
-            copyBtn.setAttribute('aria-label', `Copy link to ${video.title}`);
-            copyBtn.title = 'Copy link';
-            copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
-            copyBtn.addEventListener('click', (e) => {
-                e.stopPropagation();
-                // Include current video time in the URL
-                const currentTime = Math.floor(videoEl.currentTime);
-                let url = `${window.location.origin}${window.location.pathname}#${videoId}`;
-                if (currentTime > 0) {
-                    url += `&t=${currentTime}`;
-                }
-                navigator.clipboard.writeText(url).then(() => {
-                    // Show visual feedback
-                    const originalText = copyBtn.innerHTML;
-                    copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
-                    setTimeout(() => {
-                        copyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
-                    }, 1000);
-                });
-            });
-
             metaDiv.appendChild(durSpan);
-            metaDiv.appendChild(copyBtn);
             infoDiv.appendChild(metaDiv);
 
             if (video.subtitle) {
@@ -1914,7 +1942,6 @@
 
             card.addEventListener('click', (event) => {
                 if (!card.classList.contains('condensed')) return;
-                // if (event.target.closest('.copy-button')) return;
                 card.classList.remove('condensed');
                 updateCondensedToggleState();
             });
