@@ -738,6 +738,7 @@
             left: 0;
         }
 
+        /* Cinematic split-tone on speaker posters only (while player is stopped) */
         .video-thumbnail {
             width: 100%;
             background: #accfce;
@@ -747,6 +748,53 @@
             width: 100%;
             height: 200px;
             display: block;
+        }
+
+        /* Plyr duplicates the poster; we render our own filtered copy instead */
+        .video-thumbnail .plyr__poster {
+            display: none !important;
+        }
+
+        .video-thumbnail .video-poster-filter-wrap {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            transition: opacity 0.2s ease, visibility 0.2s ease;
+        }
+
+        .video-thumbnail .video-poster-filter {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: contain;
+            object-position: center;
+            filter: saturate(1.45) contrast(1.2) brightness(0.84) sepia(0.32) hue-rotate(-18deg);
+            transition: filter 0.45s ease;
+        }
+
+        .video-thumbnail .video-poster-filter-wrap::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                145deg,
+                rgba(6, 11, 111, 0.35) 0%,
+                transparent 45%,
+                rgba(152, 108, 50, 0.28) 100%
+            );
+            mix-blend-mode: soft-light;
+        }
+
+        .video-card:hover .video-thumbnail .plyr.plyr--stopped .video-poster-filter {
+            filter: saturate(1.55) contrast(1.24) brightness(0.88) sepia(0.26) hue-rotate(-14deg);
+        }
+
+        .video-thumbnail .plyr:not(.plyr--stopped) .video-poster-filter-wrap {
+            opacity: 0;
+            visibility: hidden;
         }
 
         .video-info {
@@ -1264,6 +1312,27 @@
             playIcon.before(pauseIcon);
         }
 
+        function attachFilteredPoster(videoEl) {
+            const posterUrl = videoEl.poster;
+            if (!posterUrl) return;
+
+            const wrapper = videoEl.closest('.plyr__video-wrapper');
+            if (!wrapper || wrapper.querySelector('.video-poster-filter-wrap')) return;
+
+            const wrap = document.createElement('div');
+            wrap.className = 'video-poster-filter-wrap';
+            wrap.setAttribute('aria-hidden', 'true');
+
+            const img = document.createElement('img');
+            img.className = 'video-poster-filter';
+            img.src = posterUrl;
+            img.alt = '';
+            img.decoding = 'async';
+
+            wrap.appendChild(img);
+            wrapper.appendChild(wrap);
+        }
+
         function initPlyrVideo(videoEl) {
             if (!videoEl || !window.Plyr || videoEl.dataset.plyrInitialized === 'true') return null;
             if (!videoEl.isConnected) {
@@ -1280,6 +1349,7 @@
             videoEl.dataset.plyrInitialized = 'true';
             videoEl._plyrPlayer = player;
             enhanceOverlaidPlayToggle(player, plyrConfig.iconUrl);
+            attachFilteredPoster(videoEl);
             return player;
         }
 
