@@ -6,16 +6,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KERI Conference April 2026 Videos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.plyr.io/3.8.4/plyr.css">
     <style>
+        :root {
+            --heading-font: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: #b1d1cf;
             color: #060b6f;
             padding: 20px;
@@ -48,8 +55,20 @@
             border: 1px solid rgba(6, 11, 111, 0.12);
         }
 
+        h1,
+        h1 a,
+        h2,
+        h3,
+        .video-title,
+        .video-modal-title {
+            font-family: var(--heading-font);
+        }
+
         h1 {
             font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.12;
             margin-bottom: 10px;
         }
 
@@ -337,11 +356,12 @@
 
         .day-section h2 {
             font-size: 2rem;
+            font-weight: 700;
             margin: 0;
             padding: 24px 10px 12px;
             text-align: center;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
+            letter-spacing: 0.06em;
             color: #060b6f;
         }
 
@@ -741,8 +761,18 @@
 
         /* Cinematic split-tone on speaker posters only (while player is stopped) */
         .video-thumbnail {
+            position: relative;
             width: 100%;
             background: #accfce;
+        }
+
+        .video-thumbnail::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            box-shadow: inset 0 0 0 9px #060b6f;
+            pointer-events: none;
+            z-index: 2;
         }
 
         .video-thumbnail video {
@@ -804,6 +834,7 @@
 
         .video-title {
             font-size: 1.1rem;
+            font-weight: 600;
             margin-bottom: 10px;
             line-height: 1.4;
         }
