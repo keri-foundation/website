@@ -1862,6 +1862,7 @@
 
             videoModalOverlay.hidden = false;
             document.body.style.overflow = 'hidden';
+            updateVideoUrlForModal(modalVideoId, time);
             modalVideoEl.focus();
         }
 
@@ -1877,6 +1878,7 @@
             videoModalOverlay.hidden = true;
             document.body.style.overflow = '';
             modalSourceVideoPath = null;
+            clearVideoUrlHash();
 
             if (modalPreviousFocus && typeof modalPreviousFocus.focus === 'function') {
                 modalPreviousFocus.focus();
@@ -1904,6 +1906,24 @@
 
         function findVideoById(videoId) {
             return videos.find(v => generateVideoId(v) === videoId) ?? null;
+        }
+
+        function buildVideoHash(videoId, time) {
+            const t = Math.floor(typeof time === 'number' ? time : 0);
+            return `#${videoId}&t=${t}`;
+        }
+
+        function updateVideoUrlForModal(videoId, time) {
+            const hash = buildVideoHash(videoId, time);
+            const newUrl = `${window.location.pathname}${window.location.search}${hash}`;
+            const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+            if (currentUrl === newUrl) return;
+            history.replaceState(null, '', newUrl);
+        }
+
+        function clearVideoUrlHash() {
+            if (!window.location.hash) return;
+            history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
         }
 
         function parseHashTimestamp(queryStr) {
@@ -2306,8 +2326,8 @@
             const timestamp = parseHashTimestamp(queryStr);
             const video = findVideoById(videoId);
 
-            if (timestamp !== null && video?.subtitle) {
-                openVideoModal(video, timestamp);
+            if (video?.subtitle) {
+                openVideoModal(video, timestamp ?? 0);
                 return;
             }
 
