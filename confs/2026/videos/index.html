@@ -704,6 +704,43 @@
             background: #fff;
         }
 
+        .video-modal-transcript-toolbar {
+            flex: 0 0 auto;
+            padding: 8px 14px;
+            border-bottom: 1px solid rgba(6, 11, 111, 0.1);
+            background: rgba(177, 209, 207, 0.18);
+        }
+
+        .video-modal-transcript-sync-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(152, 108, 50, 0.18);
+            border: 1px solid rgba(152, 108, 50, 0.35);
+            border-radius: 6px;
+            color: #060b6f;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.02em;
+            padding: 7px 12px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .video-modal-transcript-sync-btn:hover:not(:disabled) {
+            background: rgba(152, 108, 50, 0.32);
+        }
+
+        .video-modal-transcript-sync-btn:focus-visible {
+            outline: 2px solid #986c32;
+            outline-offset: 2px;
+        }
+
+        .video-modal-transcript-sync-btn:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+
         .video-modal-transcript-body {
             flex: 1 1 auto;
             min-height: 0;
@@ -1751,6 +1788,7 @@
             div.className = 'cue-line';
             div.setAttribute('role', 'listitem');
             div.setAttribute('tabindex', '0');
+            div.dataset.cueStart = String(cue.start);
             div.title = `Jump to ${cue.startLabel}`;
 
             const timeSpan = document.createElement('span');
@@ -1790,6 +1828,7 @@
         let videoModalOverlay = null;
         let modalVideoEl = null;
         let modalTranscriptBody = null;
+        let modalTranscriptSyncBtn = null;
         let modalLinksSection = null;
         let modalTitleEl = null;
         let modalCopyBtn = null;
@@ -1884,6 +1923,39 @@
             return { panel, content };
         }
 
+        function scrollElementIntoContainer(container, element) {
+            const containerRect = container.getBoundingClientRect();
+            const elementRect = element.getBoundingClientRect();
+            const relativeTop = elementRect.top - containerRect.top + container.scrollTop;
+            const targetTop = relativeTop - (container.clientHeight / 2) + (element.clientHeight / 2);
+            container.scrollTo({ top: Math.max(0, targetTop), behavior: 'smooth' });
+        }
+
+        function scrollModalTranscriptToCurrentTime() {
+            if (!modalVideoEl || !modalTranscriptBody) return;
+
+            const time = modalVideoEl.currentTime;
+            const cueLines = modalTranscriptBody.querySelectorAll('.cue-line[data-cue-start]');
+            if (!cueLines.length) return;
+
+            let targetLine = cueLines[0];
+            for (const line of cueLines) {
+                const start = Number.parseFloat(line.dataset.cueStart);
+                if (Number.isFinite(start) && start <= time) {
+                    targetLine = line;
+                } else {
+                    break;
+                }
+            }
+
+            scrollElementIntoContainer(modalTranscriptBody, targetLine);
+        }
+
+        function setModalTranscriptSyncEnabled(enabled) {
+            if (!modalTranscriptSyncBtn) return;
+            modalTranscriptSyncBtn.disabled = !enabled;
+        }
+
         function ensureVideoModal() {
             if (videoModalOverlay) return;
 
@@ -1972,10 +2044,24 @@
             const transcriptSection = document.createElement('div');
             transcriptSection.className = 'video-modal-transcript';
 
+            const transcriptToolbar = document.createElement('div');
+            transcriptToolbar.className = 'video-modal-transcript-toolbar';
+
+            modalTranscriptSyncBtn = document.createElement('button');
+            modalTranscriptSyncBtn.type = 'button';
+            modalTranscriptSyncBtn.className = 'video-modal-transcript-sync-btn';
+            modalTranscriptSyncBtn.textContent = 'Go to current position';
+            modalTranscriptSyncBtn.setAttribute('aria-label', 'Scroll transcript to the subtitle at the current playback position');
+            modalTranscriptSyncBtn.disabled = true;
+            modalTranscriptSyncBtn.addEventListener('click', scrollModalTranscriptToCurrentTime);
+
+            transcriptToolbar.appendChild(modalTranscriptSyncBtn);
+
             modalTranscriptBody = document.createElement('div');
             modalTranscriptBody.className = 'video-modal-transcript-body';
             modalTranscriptBody.setAttribute('role', 'list');
 
+            transcriptSection.appendChild(transcriptToolbar);
             transcriptSection.appendChild(modalTranscriptBody);
             transcriptContent.appendChild(transcriptSection);
 
@@ -2037,6 +2123,7 @@
         function populateModalTranscript(store, videoPath) {
             modalTranscriptBody.innerHTML = '';
             if (!store || store.status !== 'ready' || !store.cues.length) {
+                setModalTranscriptSyncEnabled(false);
                 const loading = document.createElement('p');
                 loading.className = 'transcript-loading';
                 loading.textContent = store?.status === 'error'
@@ -2050,6 +2137,7 @@
                 frag.appendChild(makeCueLine(cue, videoPath, null, modalVideoEl));
             }
             modalTranscriptBody.appendChild(frag);
+            setModalTranscriptSyncEnabled(true);
         }
 
         function openVideoModal(video, startTime) {
@@ -2096,6 +2184,7 @@
             }
 
             modalTitleEl.textContent = video.title;
+            setModalTranscriptSyncEnabled(false);
             modalTranscriptBody.innerHTML = '<p class="transcript-loading">Loading transcript…</p>';
             renderModalLinks(null);
 
