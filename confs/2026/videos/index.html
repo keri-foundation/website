@@ -661,6 +661,41 @@
             line-height: 1.6;
         }
 
+        .video-modal-links {
+            flex: 0 0 auto;
+            padding: 10px 14px 14px;
+            background: #111;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+        }
+
+        .video-modal-links-heading {
+            margin: 0 0 6px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .subtitle-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 0.35rem;
+        }
+
+        .subtitle-links a {
+            color: #8fb85a;
+            font-size: 0.875rem;
+            line-height: 1.4;
+            word-break: break-all;
+            text-decoration: none;
+        }
+
+        .subtitle-links a:hover {
+            text-decoration: underline;
+        }
+
         .video-modal-transcript {
             flex: 1 1 auto;
             min-height: 0;
@@ -1567,6 +1602,84 @@
             return cues;
         }
 
+        function normalizeUrl(url) {
+            return url.replace(/^(https?:)\/([^/])/, '$1//$2');
+        }
+
+        function parseSrtTimestamp(value) {
+            const match = value.trim().match(/^(\d{2}):(\d{2}):(\d{2})[,.](\d{3})$/);
+            if (!match) return Number.NaN;
+            const hours = Number(match[1]);
+            const minutes = Number(match[2]);
+            const seconds = Number(match[3]);
+            const millis = Number(match[4]);
+            return hours * 3600 + minutes * 60 + seconds + millis / 1000;
+        }
+
+        function extractUrlsFromText(text) {
+            const regex = /https?:\/\/[^\s)<>\]]+/gi;
+            const seen = new Set();
+            const urls = [];
+
+            for (const match of text.matchAll(regex)) {
+                const raw = match[0].replace(/[.,;:!?)]+$/, '');
+                const normalized = normalizeUrl(raw);
+                if (!seen.has(normalized)) {
+                    seen.add(normalized);
+                    urls.push(normalized);
+                }
+            }
+
+            return urls;
+        }
+
+        function parseSrtCuesForUrls(srt) {
+            const normalized = srt.replace(/\r\n/g, '\n').replace(/\r/g, '\n').trim();
+            const cues = [];
+
+            for (const block of normalized.split(/\n\n+/)) {
+                const lines = block.split('\n');
+                const timeLineIndex = lines.findIndex(line => line.includes('-->'));
+                if (timeLineIndex === -1) continue;
+
+                const [startStr, endStr] = lines[timeLineIndex].split('-->').map(part => part.trim());
+                const start = parseSrtTimestamp(startStr);
+                const end = parseSrtTimestamp(endStr);
+                if (!Number.isFinite(start) || !Number.isFinite(end)) continue;
+
+                cues.push({
+                    start,
+                    end,
+                    text: lines.slice(timeLineIndex + 1).join('\n'),
+                });
+            }
+
+            return cues;
+        }
+
+        function cueOverlapsRange(cue, rangeStart, rangeStop) {
+            const rangeEnd = rangeStop ?? Number.POSITIVE_INFINITY;
+            return cue.end > rangeStart && cue.start < rangeEnd;
+        }
+
+        function extractUrlsFromSrt(srt, rangeStart = 0, rangeStop = null) {
+            const cues = parseSrtCuesForUrls(srt);
+            const seen = new Set();
+            const urls = [];
+
+            for (const cue of cues) {
+                if (!cueOverlapsRange(cue, rangeStart, rangeStop)) continue;
+                for (const url of extractUrlsFromText(cue.text)) {
+                    if (!seen.has(url)) {
+                        seen.add(url);
+                        urls.push(url);
+                    }
+                }
+            }
+
+            return urls;
+        }
+
         // ─────────────────────────────────────────────────────────────────────
         //  In-memory transcript store  path → { status, cues, rawText }
         //  status: 'loading' | 'ready' | 'error'
@@ -1677,6 +1790,7 @@
         let videoModalOverlay = null;
         let modalVideoEl = null;
         let modalTranscriptBody = null;
+        let modalLinksSection = null;
         let modalTitleEl = null;
         let modalCopyBtn = null;
         let modalVideoId = null;
@@ -1846,6 +1960,12 @@
             modalVideoEl.appendChild(source);
             playerWrap.appendChild(modalVideoEl);
             videoContent.appendChild(playerWrap);
+
+            modalLinksSection = document.createElement('div');
+            modalLinksSection.className = 'video-modal-links';
+            modalLinksSection.hidden = true;
+            videoContent.appendChild(modalLinksSection);
+
             initPlyrVideo(modalVideoEl);
 
             const { panel: transcriptPanel, content: transcriptContent } = createModalPanel('video-modal-panel--transcript', 'Transcript');
@@ -1880,6 +2000,38 @@
             });
 
             document.body.appendChild(videoModalOverlay);
+        }
+
+        function renderModalLinks(rawSrt) {
+            if (!modalLinksSection) return;
+            modalLinksSection.innerHTML = '';
+            modalLinksSection.hidden = true;
+            if (!rawSrt) return;
+
+            const urls = extractUrlsFromSrt(rawSrt);
+            if (!urls.length) return;
+
+            modalLinksSection.hidden = false;
+
+            const heading = document.createElement('p');
+            heading.className = 'video-modal-links-heading';
+            heading.textContent = 'Links';
+
+            const list = document.createElement('ul');
+            list.className = 'subtitle-links';
+            for (const link of urls) {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = link;
+                a.target = '_blank';
+                a.rel = 'noopener noreferrer';
+                a.textContent = link;
+                li.appendChild(a);
+                list.appendChild(li);
+            }
+
+            modalLinksSection.appendChild(heading);
+            modalLinksSection.appendChild(list);
         }
 
         function populateModalTranscript(store, videoPath) {
@@ -1945,11 +2097,13 @@
 
             modalTitleEl.textContent = video.title;
             modalTranscriptBody.innerHTML = '<p class="transcript-loading">Loading transcript…</p>';
+            renderModalLinks(null);
 
             loadTranscript(video).then(store => {
                 if (modalSourceVideoPath !== video.path) return;
                 if (store.rawText) attachVttTrack(modalVideoEl, store.rawText);
                 populateModalTranscript(store, video.path);
+                renderModalLinks(store.rawText);
             });
 
             videoModalOverlay.hidden = false;
