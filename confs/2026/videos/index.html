@@ -709,6 +709,50 @@
             padding: 8px 14px;
             border-bottom: 1px solid rgba(6, 11, 111, 0.1);
             background: rgba(177, 209, 207, 0.18);
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .video-modal-transcript-search-wrap {
+            flex: 1 1 auto;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            min-width: 0;
+        }
+
+        .video-modal-transcript-search {
+            flex: 1 1 auto;
+            min-width: 0;
+            background: rgba(255, 255, 255, 0.65);
+            border: 1px solid rgba(6, 11, 111, 0.2);
+            border-radius: 6px;
+            color: #060b6f;
+            font-size: 0.82rem;
+            padding: 7px 12px;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+
+        .video-modal-transcript-search::placeholder {
+            color: rgba(6, 11, 111, 0.5);
+        }
+
+        .video-modal-transcript-search:focus {
+            border-color: #986c32;
+        }
+
+        .video-modal-transcript-search:disabled {
+            opacity: 0.45;
+            cursor: not-allowed;
+        }
+
+        .video-modal-transcript-search-status {
+            flex: 0 0 auto;
+            font-size: 0.75rem;
+            color: #2e3a7a;
+            white-space: nowrap;
         }
 
         .video-modal-transcript-sync-btn {
@@ -776,6 +820,13 @@
             line-height: 1.6;
             opacity: 1;
             color: #1a1a2e;
+        }
+
+        .video-modal-transcript-body .cue-text mark {
+            background: rgba(177, 209, 207, 0.75);
+            color: #060b6f;
+            border-radius: 2px;
+            padding: 0 2px;
         }
 
         .video-modal-transcript-body .transcript-loading {
@@ -1829,6 +1880,11 @@
         let modalVideoEl = null;
         let modalTranscriptBody = null;
         let modalTranscriptSyncBtn = null;
+        let modalTranscriptSearchInput = null;
+        let modalTranscriptSearchStatus = null;
+        let modalTranscriptStore = null;
+        let modalTranscriptVideoPath = null;
+        let modalTranscriptSearchTimer = null;
         let modalLinksSection = null;
         let modalTitleEl = null;
         let modalCopyBtn = null;
@@ -2055,6 +2111,29 @@
             modalTranscriptSyncBtn.disabled = true;
             modalTranscriptSyncBtn.addEventListener('click', scrollModalTranscriptToCurrentTime);
 
+            const searchWrap = document.createElement('div');
+            searchWrap.className = 'video-modal-transcript-search-wrap';
+
+            modalTranscriptSearchInput = document.createElement('input');
+            modalTranscriptSearchInput.type = 'search';
+            modalTranscriptSearchInput.className = 'video-modal-transcript-search';
+            modalTranscriptSearchInput.placeholder = 'Search this transcript…';
+            modalTranscriptSearchInput.autocomplete = 'off';
+            modalTranscriptSearchInput.disabled = true;
+            modalTranscriptSearchInput.setAttribute('aria-label', 'Search this transcript');
+            modalTranscriptSearchInput.addEventListener('input', () => {
+                clearTimeout(modalTranscriptSearchTimer);
+                modalTranscriptSearchTimer = setTimeout(runModalTranscriptSearch, 200);
+            });
+
+            modalTranscriptSearchStatus = document.createElement('span');
+            modalTranscriptSearchStatus.className = 'video-modal-transcript-search-status';
+            modalTranscriptSearchStatus.setAttribute('aria-live', 'polite');
+
+            searchWrap.appendChild(modalTranscriptSearchInput);
+            searchWrap.appendChild(modalTranscriptSearchStatus);
+
+            transcriptToolbar.appendChild(searchWrap);
             transcriptToolbar.appendChild(modalTranscriptSyncBtn);
 
             modalTranscriptBody = document.createElement('div');
@@ -2120,10 +2199,19 @@
             modalLinksSection.appendChild(list);
         }
 
-        function populateModalTranscript(store, videoPath) {
+        function clearModalTranscriptSearch() {
+            if (modalTranscriptSearchInput) modalTranscriptSearchInput.value = '';
+            if (modalTranscriptSearchStatus) modalTranscriptSearchStatus.textContent = '';
+        }
+
+        function populateModalTranscript(store, videoPath, query = '') {
+            modalTranscriptStore = store;
+            modalTranscriptVideoPath = videoPath;
             modalTranscriptBody.innerHTML = '';
+
             if (!store || store.status !== 'ready' || !store.cues.length) {
                 setModalTranscriptSyncEnabled(false);
+                if (modalTranscriptSearchInput) modalTranscriptSearchInput.disabled = true;
                 const loading = document.createElement('p');
                 loading.className = 'transcript-loading';
                 loading.textContent = store?.status === 'error'
@@ -2132,12 +2220,58 @@
                 modalTranscriptBody.appendChild(loading);
                 return;
             }
+
+            if (modalTranscriptSearchInput) modalTranscriptSearchInput.disabled = false;
+
+            const trimmedQuery = query.trim();
+            const normalizedQuery = trimmedQuery.toLowerCase();
+            const cues = normalizedQuery
+                ? store.cues.filter(cue => cue.text.toLowerCase().includes(normalizedQuery))
+                : store.cues;
+
+            if (normalizedQuery && !cues.length) {
+                setModalTranscriptSyncEnabled(false);
+                const empty = document.createElement('p');
+                empty.className = 'transcript-loading';
+                empty.textContent = `No results for "${trimmedQuery}"`;
+                modalTranscriptBody.appendChild(empty);
+                if (modalTranscriptSearchStatus) {
+                    modalTranscriptSearchStatus.textContent = 'No matches';
+                }
+                return;
+            }
+
             const frag = document.createDocumentFragment();
-            for (const cue of store.cues) {
-                frag.appendChild(makeCueLine(cue, videoPath, null, modalVideoEl));
+            for (const cue of cues) {
+                frag.appendChild(makeCueLine(
+                    cue,
+                    videoPath,
+                    normalizedQuery ? trimmedQuery : null,
+                    modalVideoEl
+                ));
             }
             modalTranscriptBody.appendChild(frag);
-            setModalTranscriptSyncEnabled(true);
+            setModalTranscriptSyncEnabled(!normalizedQuery);
+
+            if (modalTranscriptSearchStatus) {
+                modalTranscriptSearchStatus.textContent = normalizedQuery
+                    ? `${cues.length} match${cues.length === 1 ? '' : 'es'}`
+                    : '';
+            }
+
+            if (normalizedQuery && cues.length) {
+                const firstLine = modalTranscriptBody.querySelector('.cue-line');
+                if (firstLine) scrollElementIntoContainer(modalTranscriptBody, firstLine);
+            }
+        }
+
+        function runModalTranscriptSearch() {
+            if (!modalTranscriptStore || !modalTranscriptVideoPath) return;
+            populateModalTranscript(
+                modalTranscriptStore,
+                modalTranscriptVideoPath,
+                modalTranscriptSearchInput?.value ?? ''
+            );
         }
 
         function openVideoModal(video, startTime) {
@@ -2184,14 +2318,18 @@
             }
 
             modalTitleEl.textContent = video.title;
+            clearModalTranscriptSearch();
+            modalTranscriptStore = null;
+            modalTranscriptVideoPath = null;
             setModalTranscriptSyncEnabled(false);
+            if (modalTranscriptSearchInput) modalTranscriptSearchInput.disabled = true;
             modalTranscriptBody.innerHTML = '<p class="transcript-loading">Loading transcript…</p>';
             renderModalLinks(null);
 
             loadTranscript(video).then(store => {
                 if (modalSourceVideoPath !== video.path) return;
                 if (store.rawText) attachVttTrack(modalVideoEl, store.rawText);
-                populateModalTranscript(store, video.path);
+                populateModalTranscript(store, video.path, modalTranscriptSearchInput?.value ?? '');
                 renderModalLinks(store.rawText);
             });
 
@@ -2213,6 +2351,9 @@
             videoModalOverlay.hidden = true;
             document.body.style.overflow = '';
             modalSourceVideoPath = null;
+            modalTranscriptStore = null;
+            modalTranscriptVideoPath = null;
+            clearModalTranscriptSearch();
             clearVideoUrlHash();
 
             if (modalPreviousFocus && typeof modalPreviousFocus.focus === 'function') {
