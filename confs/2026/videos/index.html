@@ -635,6 +635,7 @@
         }
 
         .video-modal-player {
+            position: relative;
             flex: 1 1 auto;
             min-height: 0;
             background: #000;
@@ -979,7 +980,7 @@
             border-radius: 8px;
             color: #060b6f;
             cursor: pointer;
-            transition: background 0.2s;
+            transition: background 0.2s, box-shadow 0.2s;
         }
 
         .copy-button:hover {
@@ -989,6 +990,48 @@
         .copy-button:focus-visible {
             outline: 2px solid #986c32;
             outline-offset: 2px;
+        }
+
+        .copy-button.is-pending-start {
+            background: rgba(152, 108, 50, 0.28);
+            box-shadow: inset 0 0 0 2px #986c32;
+        }
+
+        .clip-timer {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            z-index: 20;
+            display: none;
+            align-items: center;
+            gap: 8px;
+            padding: 6px 12px;
+            border-radius: 8px;
+            background: rgba(6, 11, 111, 0.88);
+            color: #fff;
+            font-size: 0.95rem;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: 0.03em;
+            pointer-events: none;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+        }
+
+        .clip-timer.is-visible {
+            display: inline-flex;
+        }
+
+        .clip-timer-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            opacity: 0.85;
+        }
+
+        .clip-timer-value {
+            min-width: 3.2em;
+            text-align: right;
         }
 
         /* ── Transcript accordion ── */
@@ -1888,11 +1931,130 @@
         let modalLinksSection = null;
         let modalTitleEl = null;
         let modalCopyBtn = null;
+        let modalClipTimer = null;
+        let modalClipTimerValue = null;
         let modalVideoId = null;
         let modalPreviousFocus = null;
         let modalSourceVideoPath = null;
         let modalWorkspace = null;
         let modalPanelZIndex = 2;
+        let copyRangeStart = null;
+        let clipEndTime = null;
+        let clipTimeUpdateHandler = null;
+        let copyFlashTimer = null;
+
+        const COPY_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        const COPY_CHECK_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+
+        function formatClipCountdown(seconds) {
+            const total = Math.max(0, Math.ceil(seconds));
+            const mins = Math.floor(total / 60);
+            const secs = total % 60;
+            return `${mins}:${String(secs).padStart(2, '0')}`;
+        }
+
+        function clearClipPlayback() {
+            if (modalVideoEl && clipTimeUpdateHandler) {
+                modalVideoEl.removeEventListener('timeupdate', clipTimeUpdateHandler);
+            }
+            clipTimeUpdateHandler = null;
+            clipEndTime = null;
+            if (modalClipTimer) {
+                modalClipTimer.classList.remove('is-visible');
+                modalClipTimer.hidden = true;
+            }
+            if (modalClipTimerValue) {
+                modalClipTimerValue.textContent = '';
+            }
+        }
+
+        function updateClipTimerDisplay() {
+            if (!modalVideoEl || clipEndTime === null || !modalClipTimerValue) return;
+            const remaining = clipEndTime - modalVideoEl.currentTime;
+            modalClipTimerValue.textContent = formatClipCountdown(remaining);
+            if (remaining <= 0) {
+                modalVideoEl.pause();
+                modalClipTimerValue.textContent = '0:00';
+                // Release the end-stop so Play can continue past the clip if desired
+                if (clipTimeUpdateHandler) {
+                    modalVideoEl.removeEventListener('timeupdate', clipTimeUpdateHandler);
+                    clipTimeUpdateHandler = null;
+                }
+                clipEndTime = null;
+                const onResume = () => {
+                    clearClipPlayback();
+                    modalVideoEl.removeEventListener('play', onResume);
+                };
+                modalVideoEl.addEventListener('play', onResume, { once: true });
+            }
+        }
+
+        function setupClipPlayback(endTime) {
+            clearClipPlayback();
+            if (typeof endTime !== 'number' || !Number.isFinite(endTime) || endTime <= 0) return;
+
+            clipEndTime = endTime;
+            if (modalClipTimer) {
+                modalClipTimer.hidden = false;
+                modalClipTimer.classList.add('is-visible');
+            }
+
+            clipTimeUpdateHandler = () => updateClipTimerDisplay();
+            modalVideoEl.addEventListener('timeupdate', clipTimeUpdateHandler);
+            updateClipTimerDisplay();
+        }
+
+        function resetCopyRangeState() {
+            copyRangeStart = null;
+            if (copyFlashTimer) {
+                clearTimeout(copyFlashTimer);
+                copyFlashTimer = null;
+            }
+            if (modalCopyBtn) {
+                modalCopyBtn.classList.remove('is-pending-start');
+                modalCopyBtn.title = 'Copy link';
+                modalCopyBtn.innerHTML = COPY_ICON_SVG;
+            }
+        }
+
+        function flashCopyButtonSuccess(pendingStart) {
+            if (!modalCopyBtn) return;
+            if (copyFlashTimer) {
+                clearTimeout(copyFlashTimer);
+                copyFlashTimer = null;
+            }
+            modalCopyBtn.innerHTML = COPY_CHECK_SVG;
+            if (pendingStart) {
+                modalCopyBtn.classList.add('is-pending-start');
+                modalCopyBtn.title = 'Start set — click again at the end, or here again for start-only';
+            } else {
+                modalCopyBtn.classList.remove('is-pending-start');
+                modalCopyBtn.title = 'Copy link';
+            }
+            copyFlashTimer = setTimeout(() => {
+                copyFlashTimer = null;
+                if (!modalCopyBtn) return;
+                modalCopyBtn.innerHTML = COPY_ICON_SVG;
+            }, 1000);
+        }
+
+        function buildShareUrl(videoId, startTime, endTime) {
+            let url = `${window.location.origin}${window.location.pathname}#${videoId}`;
+            const start = Math.floor(typeof startTime === 'number' ? startTime : 0);
+            if (start > 0 || (typeof endTime === 'number' && Number.isFinite(endTime))) {
+                url += `&t=${Math.max(0, start)}`;
+            }
+            if (typeof endTime === 'number' && Number.isFinite(endTime) && endTime > start) {
+                url += `&e=${Math.floor(endTime)}`;
+            }
+            return url;
+        }
+
+        function copyShareUrl(url, pendingStart) {
+            navigator.clipboard.writeText(url).then(() => {
+                flashCopyButtonSuccess(pendingStart);
+            });
+        }
 
         function bringModalPanelToFront(panel) {
             modalPanelZIndex += 1;
@@ -2040,20 +2202,28 @@
             modalCopyBtn.type = 'button';
             modalCopyBtn.className = 'copy-button';
             modalCopyBtn.title = 'Copy link';
-            modalCopyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+            modalCopyBtn.innerHTML = COPY_ICON_SVG;
             modalCopyBtn.addEventListener('click', () => {
-                if (!modalVideoId) return;
+                if (!modalVideoId || !modalVideoEl) return;
                 const currentTime = Math.floor(modalVideoEl.currentTime);
-                let url = `${window.location.origin}${window.location.pathname}#${modalVideoId}`;
-                if (currentTime > 0) {
-                    url += `&t=${currentTime}`;
+
+                if (copyRangeStart === null) {
+                    copyRangeStart = currentTime;
+                    copyShareUrl(buildShareUrl(modalVideoId, currentTime), true);
+                    return;
                 }
-                navigator.clipboard.writeText(url).then(() => {
-                    modalCopyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
-                    setTimeout(() => {
-                        modalCopyBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
-                    }, 1000);
-                });
+
+                if (currentTime === copyRangeStart) {
+                    const startOnly = copyRangeStart;
+                    resetCopyRangeState();
+                    copyShareUrl(buildShareUrl(modalVideoId, startOnly), false);
+                    return;
+                }
+
+                const start = Math.min(copyRangeStart, currentTime);
+                const end = Math.max(copyRangeStart, currentTime);
+                resetCopyRangeState();
+                copyShareUrl(buildShareUrl(modalVideoId, start, end), false);
             });
 
             const closeBtn = document.createElement('button');
@@ -2087,6 +2257,21 @@
             source.type = 'video/mp4';
             modalVideoEl.appendChild(source);
             playerWrap.appendChild(modalVideoEl);
+
+            modalClipTimer = document.createElement('div');
+            modalClipTimer.className = 'clip-timer';
+            modalClipTimer.hidden = true;
+            modalClipTimer.setAttribute('aria-live', 'polite');
+            modalClipTimer.setAttribute('aria-label', 'Clip time remaining');
+            const clipTimerLabel = document.createElement('span');
+            clipTimerLabel.className = 'clip-timer-label';
+            clipTimerLabel.textContent = 'Clip';
+            modalClipTimerValue = document.createElement('span');
+            modalClipTimerValue.className = 'clip-timer-value';
+            modalClipTimer.appendChild(clipTimerLabel);
+            modalClipTimer.appendChild(modalClipTimerValue);
+            playerWrap.appendChild(modalClipTimer);
+
             videoContent.appendChild(playerWrap);
 
             modalLinksSection = document.createElement('div');
@@ -2095,6 +2280,8 @@
             videoContent.appendChild(modalLinksSection);
 
             initPlyrVideo(modalVideoEl);
+            // Keep the clip timer above Plyr's rebuilt player chrome
+            playerWrap.appendChild(modalClipTimer);
 
             const { panel: transcriptPanel, content: transcriptContent } = createModalPanel('video-modal-panel--transcript', 'Transcript');
             const transcriptSection = document.createElement('div');
@@ -2274,7 +2461,7 @@
             );
         }
 
-        function openVideoModal(video, startTime) {
+        function openVideoModal(video, startTime, endTime) {
             if (!video.subtitle) return;
             ensureVideoModal();
 
@@ -2282,10 +2469,14 @@
             modalSourceVideoPath = video.path;
             modalVideoId = generateVideoId(video);
             modalCopyBtn.setAttribute('aria-label', `Copy link to ${video.title}`);
+            resetCopyRangeState();
+            clearClipPlayback();
 
             const cardVideo = videoElementMap[video.path];
             const wasPlaying = cardVideo && !cardVideo.paused;
             const time = typeof startTime === 'number' ? startTime : (cardVideo?.currentTime ?? 0);
+            const hasClipEnd = typeof endTime === 'number' && Number.isFinite(endTime) && endTime > time;
+            const shouldAutoplay = wasPlaying || hasClipEnd;
 
             if (cardVideo) cardVideo.pause();
 
@@ -2305,7 +2496,8 @@
 
             const seekAndMaybePlay = () => {
                 seekModalVideo();
-                if (wasPlaying) modalVideoEl.play();
+                if (hasClipEnd) setupClipPlayback(endTime);
+                if (shouldAutoplay) modalVideoEl.play();
             };
             if (modalVideoEl.readyState >= 1) {
                 seekAndMaybePlay();
@@ -2335,7 +2527,7 @@
 
             videoModalOverlay.hidden = false;
             document.body.style.overflow = 'hidden';
-            updateVideoUrlForModal(modalVideoId, time);
+            updateVideoUrlForModal(modalVideoId, time, hasClipEnd ? endTime : null);
             modalVideoEl.focus();
         }
 
@@ -2344,6 +2536,8 @@
 
             const time = modalVideoEl.currentTime;
             modalVideoEl.pause();
+            clearClipPlayback();
+            resetCopyRangeState();
 
             const cardVideo = videoElementMap[modalSourceVideoPath];
             if (cardVideo) cardVideo.currentTime = time;
@@ -2384,13 +2578,17 @@
             return videos.find(v => generateVideoId(v) === videoId) ?? null;
         }
 
-        function buildVideoHash(videoId, time) {
+        function buildVideoHash(videoId, time, endTime) {
             const t = Math.floor(typeof time === 'number' ? time : 0);
-            return `#${videoId}&t=${t}`;
+            let hash = `#${videoId}&t=${t}`;
+            if (typeof endTime === 'number' && Number.isFinite(endTime) && endTime > t) {
+                hash += `&e=${Math.floor(endTime)}`;
+            }
+            return hash;
         }
 
-        function updateVideoUrlForModal(videoId, time) {
-            const hash = buildVideoHash(videoId, time);
+        function updateVideoUrlForModal(videoId, time, endTime) {
+            const hash = buildVideoHash(videoId, time, endTime);
             const newUrl = `${window.location.pathname}${window.location.search}${hash}`;
             const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
             if (currentUrl === newUrl) return;
@@ -2402,10 +2600,29 @@
             history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
         }
 
-        function parseHashTimestamp(queryStr) {
-            if (!queryStr || !queryStr.startsWith('t=')) return null;
-            const timestamp = parseFloat(queryStr.substring(2));
-            return !isNaN(timestamp) && timestamp >= 0 ? timestamp : null;
+        function parseHashTimeRange(queryStr) {
+            if (!queryStr) return { start: null, end: null };
+
+            let start = null;
+            let end = null;
+            const params = queryStr.split('&');
+            for (const param of params) {
+                if (param.startsWith('t=')) {
+                    const timestamp = parseFloat(param.substring(2));
+                    if (!isNaN(timestamp) && timestamp >= 0) start = timestamp;
+                } else if (param.startsWith('e=')) {
+                    const timestamp = parseFloat(param.substring(2));
+                    if (!isNaN(timestamp) && timestamp >= 0) end = timestamp;
+                }
+            }
+
+            if (start !== null && end !== null && end < start) {
+                const swap = start;
+                start = end;
+                end = swap;
+            }
+
+            return { start, end };
         }
 
         // ─────────────────────────────────────────────────────────────────────
@@ -2798,12 +3015,14 @@
             if (!hash) return;
 
             const hashPart = hash.substring(1);
-            const [videoId, queryStr] = hashPart.split('&');
-            const timestamp = parseHashTimestamp(queryStr);
+            const ampIndex = hashPart.indexOf('&');
+            const videoId = ampIndex === -1 ? hashPart : hashPart.substring(0, ampIndex);
+            const queryStr = ampIndex === -1 ? '' : hashPart.substring(ampIndex + 1);
+            const { start: timestamp, end: endTimestamp } = parseHashTimeRange(queryStr);
             const video = findVideoById(videoId);
 
             if (video?.subtitle) {
-                openVideoModal(video, timestamp ?? 0);
+                openVideoModal(video, timestamp ?? 0, endTimestamp);
                 return;
             }
 
@@ -2823,6 +3042,16 @@
                             seekCardVideo();
                         } else {
                             videoEl.addEventListener('loadedmetadata', seekCardVideo, { once: true });
+                        }
+
+                        if (endTimestamp !== null && endTimestamp > timestamp) {
+                            const stopAtEnd = () => {
+                                if (videoEl.currentTime >= endTimestamp) {
+                                    videoEl.pause();
+                                    videoEl.removeEventListener('timeupdate', stopAtEnd);
+                                }
+                            };
+                            videoEl.addEventListener('timeupdate', stopAtEnd);
                         }
                     }
                 }
