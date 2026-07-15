@@ -1970,6 +1970,7 @@
         let modalLinksSection = null;
         let modalTitleEl = null;
         let modalCopyBtn = null;
+        let modalClearTimestampsBtn = null;
         let modalCopyHint = null;
         let modalClipTimer = null;
         let modalClipTimerValue = null;
@@ -1985,6 +1986,7 @@
 
         const COPY_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
         const COPY_CHECK_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+        const CLEAR_TIMESTAMPS_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline><line x1="4" y1="4" x2="20" y2="20"></line></svg>';
 
         function formatClipCountdown(seconds) {
             const total = Math.max(0, Math.ceil(seconds));
@@ -2256,8 +2258,11 @@
                 const currentTime = Math.floor(modalVideoEl.currentTime);
 
                 if (copyRangeStart === null) {
+                    // Starting a new cycle: drop any existing t/e stamps first
+                    clearExistingShareTimestamps();
                     copyRangeStart = currentTime;
                     setCopyPendingUi(true);
+                    updateVideoUrlForModal(modalVideoId, currentTime);
                     copyShareUrl(buildShareUrl(modalVideoId, currentTime), true);
                     return;
                 }
@@ -2265,6 +2270,7 @@
                 if (currentTime === copyRangeStart) {
                     const startOnly = copyRangeStart;
                     resetCopyRangeState();
+                    updateVideoUrlForModal(modalVideoId, startOnly);
                     copyShareUrl(buildShareUrl(modalVideoId, startOnly), false);
                     return;
                 }
@@ -2272,6 +2278,7 @@
                 const start = Math.min(copyRangeStart, currentTime);
                 const end = Math.max(copyRangeStart, currentTime);
                 resetCopyRangeState();
+                updateVideoUrlForModal(modalVideoId, start, end);
                 copyShareUrl(buildShareUrl(modalVideoId, start, end), false);
             });
 
@@ -2282,6 +2289,17 @@
             modalCopyHint.setAttribute('aria-live', 'polite');
             modalCopyHint.textContent = 'Start set — click again for start-only, or move later and click to set the end.';
 
+            modalClearTimestampsBtn = document.createElement('button');
+            modalClearTimestampsBtn.type = 'button';
+            modalClearTimestampsBtn.className = 'copy-button clear-timestamps-button';
+            modalClearTimestampsBtn.title = 'Clear timestamps';
+            modalClearTimestampsBtn.setAttribute('aria-label', 'Clear timestamps from link');
+            modalClearTimestampsBtn.innerHTML = CLEAR_TIMESTAMPS_ICON_SVG;
+            modalClearTimestampsBtn.addEventListener('click', () => {
+                if (!modalVideoId) return;
+                clearAllTimestamps();
+            });
+
             const closeBtn = document.createElement('button');
             closeBtn.type = 'button';
             closeBtn.className = 'video-modal-close';
@@ -2291,6 +2309,7 @@
 
             headerActions.appendChild(modalCopyHint);
             headerActions.appendChild(modalCopyBtn);
+            headerActions.appendChild(modalClearTimestampsBtn);
             headerActions.appendChild(closeBtn);
 
             header.appendChild(modalTitleEl);
@@ -2635,9 +2654,45 @@
             return videos.find(v => generateVideoId(v) === videoId) ?? null;
         }
 
+        function getCurrentHashTimeRange() {
+            const hash = window.location.hash;
+            if (!hash) return { start: null, end: null };
+            const hashPart = hash.substring(1);
+            const ampIndex = hashPart.indexOf('&');
+            const queryStr = ampIndex === -1 ? '' : hashPart.substring(ampIndex + 1);
+            return parseHashTimeRange(queryStr);
+        }
+
+        function clearExistingShareTimestamps() {
+            const { start, end } = getCurrentHashTimeRange();
+            const hadStamps = start !== null || end !== null || clipEndTime !== null;
+            if (!hadStamps) return false;
+
+            clearClipPlayback();
+            if (modalVideoId) {
+                const cleanHash = `#${modalVideoId}`;
+                const newUrl = `${window.location.pathname}${window.location.search}${cleanHash}`;
+                history.replaceState(null, '', newUrl);
+            }
+            return true;
+        }
+
+        function clearAllTimestamps() {
+            resetCopyRangeState();
+            clearClipPlayback();
+            if (modalVideoId) {
+                const cleanHash = `#${modalVideoId}`;
+                const newUrl = `${window.location.pathname}${window.location.search}${cleanHash}`;
+                history.replaceState(null, '', newUrl);
+            }
+        }
+
         function buildVideoHash(videoId, time, endTime) {
             const t = Math.floor(typeof time === 'number' ? time : 0);
-            let hash = `#${videoId}&t=${t}`;
+            let hash = `#${videoId}`;
+            if (t > 0 || (typeof endTime === 'number' && Number.isFinite(endTime))) {
+                hash += `&t=${Math.max(0, t)}`;
+            }
             if (typeof endTime === 'number' && Number.isFinite(endTime) && endTime > t) {
                 hash += `&e=${Math.floor(endTime)}`;
             }
