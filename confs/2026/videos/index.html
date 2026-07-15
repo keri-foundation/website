@@ -509,8 +509,11 @@
         .video-modal-header-actions {
             display: flex;
             align-items: center;
+            justify-content: flex-end;
+            flex-wrap: wrap;
             gap: 8px;
             flex-shrink: 0;
+            max-width: min(100%, 28rem);
         }
 
         .video-modal-title {
@@ -993,8 +996,44 @@
         }
 
         .copy-button.is-pending-start {
-            background: rgba(152, 108, 50, 0.28);
+            background: rgba(152, 108, 50, 0.35);
             box-shadow: inset 0 0 0 2px #986c32;
+            animation: copy-pending-blink 1s ease-in-out infinite;
+        }
+
+        .copy-pending-hint {
+            display: none;
+            max-width: 16rem;
+            padding: 6px 10px;
+            border-radius: 8px;
+            background: rgba(152, 108, 50, 0.2);
+            border: 1px solid rgba(152, 108, 50, 0.55);
+            color: #4a3520;
+            font-size: 0.75rem;
+            font-weight: 600;
+            line-height: 1.35;
+            animation: copy-pending-blink 1s ease-in-out infinite;
+        }
+
+        .copy-pending-hint.is-visible {
+            display: block;
+        }
+
+        @keyframes copy-pending-blink {
+            0%,
+            100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.35;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .copy-button.is-pending-start,
+            .copy-pending-hint {
+                animation: none;
+            }
         }
 
         .clip-timer {
@@ -1931,6 +1970,7 @@
         let modalLinksSection = null;
         let modalTitleEl = null;
         let modalCopyBtn = null;
+        let modalCopyHint = null;
         let modalClipTimer = null;
         let modalClipTimerValue = null;
         let modalVideoId = null;
@@ -2004,6 +2044,21 @@
             updateClipTimerDisplay();
         }
 
+        function setCopyPendingHintVisible(visible) {
+            if (!modalCopyHint) return;
+            modalCopyHint.classList.toggle('is-visible', visible);
+            modalCopyHint.hidden = !visible;
+        }
+
+        function setCopyPendingUi(pending) {
+            if (!modalCopyBtn) return;
+            modalCopyBtn.classList.toggle('is-pending-start', pending);
+            modalCopyBtn.title = pending
+                ? 'Start set — click again at the end, or here again for start-only'
+                : 'Copy link';
+            setCopyPendingHintVisible(pending);
+        }
+
         function resetCopyRangeState() {
             copyRangeStart = null;
             if (copyFlashTimer) {
@@ -2011,10 +2066,9 @@
                 copyFlashTimer = null;
             }
             if (modalCopyBtn) {
-                modalCopyBtn.classList.remove('is-pending-start');
-                modalCopyBtn.title = 'Copy link';
                 modalCopyBtn.innerHTML = COPY_ICON_SVG;
             }
+            setCopyPendingUi(false);
         }
 
         function flashCopyButtonSuccess(pendingStart) {
@@ -2024,13 +2078,7 @@
                 copyFlashTimer = null;
             }
             modalCopyBtn.innerHTML = COPY_CHECK_SVG;
-            if (pendingStart) {
-                modalCopyBtn.classList.add('is-pending-start');
-                modalCopyBtn.title = 'Start set — click again at the end, or here again for start-only';
-            } else {
-                modalCopyBtn.classList.remove('is-pending-start');
-                modalCopyBtn.title = 'Copy link';
-            }
+            setCopyPendingUi(pendingStart);
             copyFlashTimer = setTimeout(() => {
                 copyFlashTimer = null;
                 if (!modalCopyBtn) return;
@@ -2209,6 +2257,7 @@
 
                 if (copyRangeStart === null) {
                     copyRangeStart = currentTime;
+                    setCopyPendingUi(true);
                     copyShareUrl(buildShareUrl(modalVideoId, currentTime), true);
                     return;
                 }
@@ -2226,6 +2275,13 @@
                 copyShareUrl(buildShareUrl(modalVideoId, start, end), false);
             });
 
+            modalCopyHint = document.createElement('div');
+            modalCopyHint.className = 'copy-pending-hint';
+            modalCopyHint.hidden = true;
+            modalCopyHint.setAttribute('role', 'status');
+            modalCopyHint.setAttribute('aria-live', 'polite');
+            modalCopyHint.textContent = 'Start set — click again for start-only, or move later and click to set the end.';
+
             const closeBtn = document.createElement('button');
             closeBtn.type = 'button';
             closeBtn.className = 'video-modal-close';
@@ -2233,6 +2289,7 @@
             closeBtn.innerHTML = '&times;';
             closeBtn.addEventListener('click', closeVideoModal);
 
+            headerActions.appendChild(modalCopyHint);
             headerActions.appendChild(modalCopyBtn);
             headerActions.appendChild(closeBtn);
 
