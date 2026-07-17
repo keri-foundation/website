@@ -342,6 +342,198 @@
             border-color: transparent;
         }
 
+        /* ── Top ten clips ── */
+        .top-clips-section {
+            margin-bottom: 30px;
+            background: rgba(255, 255, 255, 0.35);
+            border-radius: 8px;
+            padding: 20px 24px 14px;
+            border: 1px solid rgba(6, 11, 111, 0.12);
+        }
+
+        .top-clips-header {
+            display: flex;
+            align-items: baseline;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 4px 18px;
+            margin-bottom: 14px;
+        }
+
+        .top-clips-header h2 {
+            font-size: 1.45rem;
+            font-weight: 800;
+            letter-spacing: -0.01em;
+            color: #060b6f;
+        }
+
+        .top-clips-sub {
+            font-size: 0.88rem;
+            color: #2e3a7a;
+        }
+
+        .top-clips-row {
+            display: grid;
+            grid-auto-flow: column;
+            grid-auto-columns: 15.5rem;
+            gap: 14px;
+            overflow-x: auto;
+            scroll-snap-type: x proximity;
+            padding: 4px 2px 12px;
+            margin: 0;
+            list-style: none;
+            scrollbar-width: thin;
+            scrollbar-color: rgba(6, 11, 111, 0.35) transparent;
+        }
+
+        .top-clips-row::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .top-clips-row::-webkit-scrollbar-thumb {
+            background: rgba(6, 11, 111, 0.3);
+            border-radius: 3px;
+        }
+
+        .top-clips-row > li {
+            scroll-snap-align: start;
+            min-height: 19rem;
+        }
+
+        .top-clip-card {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 100%;
+            height: 100%;
+            min-height: 19rem;
+            border: 1px solid rgba(6, 11, 111, 0.2);
+            border-radius: 12px;
+            overflow: hidden;
+            background: #060b6f;
+            color: #fff;
+            font: inherit;
+            text-align: left;
+            padding: 0;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+        }
+
+        .top-clip-card:hover,
+        .top-clip-card:focus-visible {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 28px rgba(6, 11, 111, 0.35);
+            border-color: #986c32;
+            outline: none;
+        }
+
+        .top-clip-photo {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 20%;
+            opacity: 0.9;
+            transition: transform 0.3s;
+        }
+
+        .top-clip-card:hover .top-clip-photo {
+            transform: scale(1.04);
+        }
+
+        .top-clip-scrim {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg,
+                    rgba(6, 11, 111, 0.25) 0%,
+                    rgba(6, 11, 111, 0.55) 42%,
+                    rgba(4, 6, 60, 0.94) 78%,
+                    rgba(3, 5, 48, 0.98) 100%);
+        }
+
+        .top-clip-rank {
+            position: absolute;
+            top: 2px;
+            left: 10px;
+            font-family: var(--heading-font);
+            font-size: 3.4rem;
+            font-weight: 800;
+            line-height: 1;
+            color: transparent;
+            -webkit-text-stroke: 2px rgba(255, 255, 255, 0.92);
+            text-shadow: 0 2px 12px rgba(6, 11, 111, 0.6);
+        }
+
+        @supports not (-webkit-text-stroke: 2px #fff) {
+            .top-clip-rank {
+                color: rgba(255, 255, 255, 0.92);
+            }
+        }
+
+        .top-clip-duration {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: rgba(255, 255, 255, 0.92);
+            color: #060b6f;
+            font-size: 0.75rem;
+            font-weight: 700;
+            font-variant-numeric: tabular-nums;
+            letter-spacing: 0.03em;
+        }
+
+        .top-clip-duration svg {
+            display: block;
+        }
+
+        .top-clip-quote {
+            position: relative;
+            padding: 0 14px 10px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            line-height: 1.42;
+            text-shadow: 0 1px 8px rgba(3, 5, 48, 0.8);
+        }
+
+        .top-clip-meta {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            gap: 1px;
+            padding: 0 14px 13px;
+        }
+
+        .top-clip-speaker {
+            font-family: var(--heading-font);
+            font-size: 0.82rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            color: #b1d1cf;
+        }
+
+        .top-clip-talk {
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        @media (max-width: 480px) {
+            .top-clips-row {
+                grid-auto-columns: 82vw;
+            }
+
+            .top-clips-row > li,
+            .top-clip-card {
+                min-height: 17rem;
+            }
+        }
+
         /* ── Day sections ── */
         .video-container {
             display: grid;
@@ -1301,6 +1493,15 @@
                 src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiA4djggbC00LTIuNXYtMy4yTDggMTJ6Ii8+PC9zdmc+"
                 alt="YouTube" width="24" height="24" style="vertical-align: middle; margin-right: 5px;">Day 2</a>
     </header>
+
+    <!-- Top ten clips -->
+    <section class="top-clips-section" aria-label="Top ten clips">
+        <div class="top-clips-header">
+            <h2>Top Ten Clips</h2>
+            <span class="top-clips-sub">Ten bite-size moments from the talks — each clip plays for 10–20 seconds.</span>
+        </div>
+        <ol class="top-clips-row" id="topClipsRow" aria-label="Top ten clips"></ol>
+    </section>
 
     <!-- Cross-video transcript search -->
     <section class="search-section" aria-label="Search transcripts">
@@ -3259,6 +3460,165 @@
             searchToggleAll.disabled = false;
             searchInput.focus();
         });
+
+        // ─────────────────────────────────────────────────────────────────────
+        //  Top ten clips — short teaser fragments that open in the clip player
+        // ─────────────────────────────────────────────────────────────────────
+        const topClips = [
+            {
+                videoTitle: "The Future of KERI - Samuel Smith",
+                speaker: "Samuel Smith",
+                talk: "The Future of KERI",
+                start: 29,
+                end: 43,
+                quote: "I wanted to save the internet. I wanted to fix the broken internet. And I didn't realize I had to work on identity to do that."
+            },
+            {
+                videoTitle: "Open Verifiable Communications - Daniel Hardman",
+                speaker: "Daniel Hardman",
+                talk: "Open Verifiable Communications",
+                start: 67,
+                end: 85,
+                quote: "Just don't answer your phone — or just stop sending texts. That's a pretty bad indictment of a technical infrastructure when the best advice we can give is just stop using it."
+            },
+            {
+                videoTitle: "State of the KERI Suite - Samuel Smith",
+                speaker: "Samuel Smith",
+                talk: "State of the KERI Suite",
+                start: 866,
+                end: 883,
+                quote: "You thought somebody could exploit you? Wait till an AI exploits you. You thought you were being surveilled online? Just ask an AI to surveil you."
+            },
+            {
+                videoTitle: "KERI Infrastructure & the 5 W's - Thomas Mayfield",
+                speaker: "Thomas Mayfield",
+                talk: "KERI Infrastructure & the 5 W's",
+                start: 131,
+                end: 148,
+                quote: "If that platform shuts down, or that issuer revokes access, your identity effectively disappears with it. You are a tenant, not an owner of your digital identity."
+            },
+            {
+                videoTitle: "Digital Identity Needs a Legal Foundation - Phil Windley",
+                speaker: "Phil Windley",
+                talk: "Digital Identity Needs a Legal Foundation",
+                start: 1027,
+                end: 1043,
+                quote: "These are legal rights, not terms of service. This is not a click-through contract that you don't read, where to enforce whatever small rights they've left you, you have to go to court."
+            },
+            {
+                videoTitle: "KERIA Tutorial - Kent Bull",
+                speaker: "Kent Bull",
+                talk: "KERIA Tutorial",
+                start: 672,
+                end: 689,
+                quote: "They're encrypted with the key derived from the passcode you have at the edge. This passcode never moves over here — ever. That's why it's called a signing-at-the-edge architecture."
+            },
+            {
+                videoTitle: "Mobile Wallet - Evan Asawaka",
+                speaker: "Evan Asawaka",
+                talk: "Mobile Wallet",
+                start: 46,
+                end: 66,
+                quote: "We wanted everything to happen in the browser — all of your keys created and stored on your device. Don't worry about them sitting on some server. We send you the app, and you get your in-browser wallet."
+            },
+            {
+                videoTitle: "FHIR and CMS - Jared Jefferey",
+                speaker: "Jared Jefferey",
+                talk: "FHIR and CMS",
+                start: 1989,
+                end: 2003,
+                quote: "The question used to be: can we connect? The answer is yes. Now the question is: can we trust those connections?"
+            },
+            {
+                videoTitle: "ACDCs for Enterprises - Alan Davies",
+                speaker: "Alan Davies",
+                talk: "ACDCs for Enterprises",
+                start: 522,
+                end: 535,
+                quote: "Everybody will be their own identity provider — which is how it should be. I'm the only person who knows that I am me."
+            },
+            {
+                videoTitle: "Contract Credentials & Verifiable Identity - Cole Davis",
+                speaker: "Cole Davis",
+                talk: "Contract Credentials & Verifiable Identity",
+                start: 251,
+                end: 268,
+                quote: "What if the contract is the credential? What if you can hold your lease up to the smart lock — or the stock purchase agreement is the stock certificate?"
+            }
+        ];
+
+        function renderTopClips() {
+            const row = document.getElementById('topClipsRow');
+            if (!row) return;
+            row.innerHTML = '';
+
+            topClips.forEach((clip, index) => {
+                const video = videos.find(v => v.title === clip.videoTitle);
+                if (!video) return;
+
+                const item = document.createElement('li');
+
+                const card = document.createElement('button');
+                card.type = 'button';
+                card.className = 'top-clip-card';
+                card.setAttribute('aria-label',
+                    `Play clip ${index + 1}: ${clip.speaker} — ${clip.quote}`);
+
+                const photo = document.createElement('img');
+                photo.className = 'top-clip-photo';
+                photo.src = getSpeakerPoster(video);
+                photo.alt = '';
+                photo.loading = 'lazy';
+                photo.decoding = 'async';
+
+                const scrim = document.createElement('div');
+                scrim.className = 'top-clip-scrim';
+
+                const rank = document.createElement('span');
+                rank.className = 'top-clip-rank';
+                rank.textContent = String(index + 1);
+                rank.setAttribute('aria-hidden', 'true');
+
+                const duration = document.createElement('span');
+                duration.className = 'top-clip-duration';
+                duration.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
+                duration.appendChild(document.createTextNode(`${clip.end - clip.start}s`));
+
+                const quote = document.createElement('p');
+                quote.className = 'top-clip-quote';
+                quote.textContent = `\u201C${clip.quote}\u201D`;
+
+                const meta = document.createElement('div');
+                meta.className = 'top-clip-meta';
+                const speaker = document.createElement('span');
+                speaker.className = 'top-clip-speaker';
+                speaker.textContent = clip.speaker;
+                const talk = document.createElement('span');
+                talk.className = 'top-clip-talk';
+                talk.textContent = clip.talk;
+                meta.appendChild(speaker);
+                meta.appendChild(talk);
+
+                card.appendChild(photo);
+                card.appendChild(scrim);
+                card.appendChild(rank);
+                card.appendChild(duration);
+                card.appendChild(quote);
+                card.appendChild(meta);
+
+                card.addEventListener('click', () => {
+                    openVideoModal(video, clip.start, clip.end);
+                });
+
+                item.appendChild(card);
+                row.appendChild(item);
+            });
+
+            const section = row.closest('.top-clips-section');
+            if (section) section.hidden = row.children.length === 0;
+        }
+
+        renderTopClips();
 
         // ─────────────────────────────────────────────────────────────────────
         //  Handle URL hash for deep-linking to videos
