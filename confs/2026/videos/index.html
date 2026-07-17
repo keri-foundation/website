@@ -823,6 +823,20 @@
             margin-bottom: 4px;
         }
 
+        @keyframes cue-position-flash {
+            0%,
+            15% {
+                background-color: #ffe566;
+            }
+            100% {
+                background-color: transparent;
+            }
+        }
+
+        .video-modal-transcript-body .cue-line.is-current-position {
+            animation: cue-position-flash 10s ease-out forwards;
+        }
+
         .video-modal-transcript-body .cue-time {
             font-size: 1rem;
             padding: 3px 10px;
@@ -2249,6 +2263,25 @@
             }
 
             scrollElementIntoContainer(modalTranscriptBody, targetLine);
+            flashModalTranscriptCue(targetLine);
+        }
+
+        function flashModalTranscriptCue(line) {
+            if (!line || !modalTranscriptBody) return;
+
+            modalTranscriptBody.querySelectorAll('.cue-line.is-current-position').forEach((el) => {
+                el.classList.remove('is-current-position');
+            });
+
+            // Restart the animation if the same line is targeted again
+            void line.offsetWidth;
+            line.classList.add('is-current-position');
+
+            const clearFlash = () => {
+                line.classList.remove('is-current-position');
+                line.removeEventListener('animationend', clearFlash);
+            };
+            line.addEventListener('animationend', clearFlash);
         }
 
         function setModalTranscriptSyncEnabled(enabled) {
