@@ -1038,22 +1038,23 @@
 
         .clip-timer {
             position: absolute;
-            top: 12px;
-            right: 12px;
+            top: 16px;
+            right: 16px;
             z-index: 20;
             display: none;
-            align-items: center;
-            gap: 8px;
-            padding: 6px 12px;
-            border-radius: 8px;
-            background: rgba(6, 11, 111, 0.88);
+            align-items: baseline;
+            gap: 12px;
+            padding: 12px 18px;
+            border-radius: 12px;
+            background: rgba(6, 11, 111, 0.94);
             color: #fff;
-            font-size: 0.95rem;
-            font-weight: 700;
+            font-size: 1.75rem;
+            font-weight: 800;
             font-variant-numeric: tabular-nums;
-            letter-spacing: 0.03em;
+            letter-spacing: 0.02em;
+            line-height: 1;
             pointer-events: none;
-            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45), 0 0 0 2px rgba(255, 255, 255, 0.18);
         }
 
         .clip-timer.is-visible {
@@ -1061,16 +1062,18 @@
         }
 
         .clip-timer-label {
-            font-size: 0.72rem;
-            font-weight: 600;
-            letter-spacing: 0.08em;
+            font-size: 0.95rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
             text-transform: uppercase;
-            opacity: 0.85;
+            opacity: 0.9;
         }
 
         .clip-timer-value {
-            min-width: 3.2em;
+            min-width: 3.6em;
             text-align: right;
+            font-size: 2.1rem;
+            font-weight: 800;
         }
 
         /* ── Transcript accordion ── */
@@ -1244,6 +1247,7 @@
         <h1><a href="/confs/2026/videos/">KERI Conference April 2026 Videos</a></h1>
         <div class="status-notice" aria-live="polite">The subtitles are currently being reviewed and revised.</div>
         <p class="subtitle">A collection of presentations and talks from the KERI community</p>
+        <a href="/" target="_blank" rel="noopener noreferrer">Home</a> |
         <a href="https://kericonf.com/archive/kericonf26/program/" target="_blank" rel="noopener noreferrer">Conference
             2026 Program</a> |
         <a href="https://kericonf.com/archive/kericonf26/speakers-2026/" target="_blank"
