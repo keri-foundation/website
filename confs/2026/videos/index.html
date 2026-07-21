@@ -1737,6 +1737,97 @@
                 path: "KERICONF26/Ryan Hansen Pannel ｜ What KERI allows us to do that we couldn't before ｜ KERI Conference 2026.mp4",
                 duration: "37:30",
                 subtitle: "/confs/2026/videos/KERICONF26/subtitles/Ryan Hansen Pannel ｜ What KERI allows us to do that we couldn't before ｜ KERI Conference 2026.fixed.srt"
+            },
+            {
+                order: 1, day: "KERICONF26 Interviews",
+                title: "Interview - Ari Argoud",
+                path: "KERICONF26-interviews/Ari-Argoud-Interview.mp4",
+                duration: "1:04",
+                subtitle: "/confs/2026/videos/KERICONF26-interviews/subtitles/Ari-Argoud-Interview.fixed.srt"
+            },
+            {
+                order: 2, day: "KERICONF26 Interviews",
+                title: "Interview - Cole Davis",
+                path: "KERICONF26-interviews/Cole-Davis-Interview.mp4",
+                duration: "1:54",
+                subtitle: "/confs/2026/videos/KERICONF26-interviews/subtitles/Cole-Davis-Interview.fixed.srt"
+            },
+            {
+                order: 3, day: "KERICONF26 Interviews",
+                title: "Interview - Daniel Hardman",
+                path: "KERICONF26-interviews/Daniel-Hardman-Interview.mp4",
+                duration: "1:19",
+                subtitle: "/confs/2026/videos/KERICONF26-interviews/subtitles/Daniel-Hardman-Interview.fixed.srt"
+            },
+            {
+                order: 4, day: "KERICONF26 Interviews",
+                title: "Interview - Fergal O'Connor",
+                path: "KERICONF26-interviews/Fergal-O'Connor.mp4",
+                duration: "2:00",
+                subtitle: "/confs/2026/videos/KERICONF26-interviews/subtitles/Fergal-O'Connor.fixed.srt"
+            },
+            {
+                order: 5, day: "KERICONF26 Interviews",
+                title: "Interview - Jared Jefferey",
+                path: "KERICONF26-interviews/Jared-Jefferey-Interview.mp4",
+                duration: "3:01",
+                subtitle: "/confs/2026/videos/KERICONF26-interviews/subtitles/Jared-Jefferey-Interview.fixed.srt"
+            },
+            {
+                order: 6, day: "KERICONF26 Interviews",
+                title: "Interview - Jonathan Rayback",
+                path: "KERICONF26-interviews/Jonathan-Rayback-Interview.mp4",
+                duration: "1:29",
+                subtitle: "/confs/2026/videos/KERICONF26-interviews/subtitles/Jonathan-Rayback-Interview.fixed.srt"
+            },
+            {
+                order: 7, day: "KERICONF26 Interviews",
+                title: "Interview - Keanu Pahio",
+                path: "KERICONF26-interviews/Keanu-Pahio-Interview.mp4",
+                duration: "1:00",
+                subtitle: "/confs/2026/videos/KERICONF26-interviews/subtitles/Keanu-Pahio-Interview.fixed.srt"
+            },
+            {
+                order: 8, day: "KERICONF26 Interviews",
+                title: "Interview - Kent Bull",
+                path: "KERICONF26-interviews/Kent-Bull-Interview.mp4",
+                duration: "1:10",
+                subtitle: "/confs/2026/videos/KERICONF26-interviews/subtitles/Kent-Bull-Interview.fixed.srt"
+            },
+            {
+                order: 9, day: "KERICONF26 Interviews",
+                title: "Interview - Ned Smith",
+                path: "KERICONF26-interviews/Ned-Smith-Interview.mp4",
+                duration: "1:41",
+                subtitle: "/confs/2026/videos/KERICONF26-interviews/subtitles/Ned-Smith-Interview.fixed.srt"
+            },
+            {
+                order: 10, day: "KERICONF26 Interviews",
+                title: "Interview - Nicholas Racz",
+                path: "KERICONF26-interviews/Nicholas-Racz-Interview.mp4",
+                duration: "1:33",
+                subtitle: "/confs/2026/videos/KERICONF26-interviews/subtitles/Nicholas-Racz-Interview.fixed.srt"
+            },
+            {
+                order: 11, day: "KERICONF26 Interviews",
+                title: "Interview - Phil Feairheller",
+                path: "KERICONF26-interviews/Phil-Feairheller-Interview.mp4",
+                duration: "0:44",
+                subtitle: "/confs/2026/videos/KERICONF26-interviews/subtitles/Phil-Feairheller-Interview.fixed.srt"
+            },
+            {
+                order: 12, day: "KERICONF26 Interviews",
+                title: "Interview - Phil Windley",
+                path: "KERICONF26-interviews/Phil-Windley-Interview.mp4",
+                duration: "1:24",
+                subtitle: "/confs/2026/videos/KERICONF26-interviews/subtitles/Phil-Windley-Interview.fixed.srt"
+            },
+            {
+                order: 13, day: "KERICONF26 Interviews",
+                title: "Interview - Ryan Hansen",
+                path: "KERICONF26-interviews/Ryan-Hansen-Interview.mp4",
+                duration: "1:22",
+                subtitle: "/confs/2026/videos/KERICONF26-interviews/subtitles/Ryan-Hansen-Interview.fixed.srt"
             }
         ];
 
@@ -1882,10 +1973,14 @@
         };
 
         function getSpeakerPoster(video) {
-            const filename = video.path.split('/').pop() || '';
-            const speaker = filename.split('｜')[0].trim()
+            const filename = (video.path.split('/').pop() || '').replace(/\.mp4$/i, '');
+            let speaker = filename.split('｜')[0].trim()
                 .replace(/\s+Pannel$/i, '')
                 .replace(/\s+Panel$/i, '');
+            // Interview files use "First-Last-Interview.mp4" (no ｜ separators)
+            if (!filename.includes('｜') && speaker.includes('-')) {
+                speaker = speaker.replace(/-Interview$/i, '').replace(/-/g, ' ');
+            }
             if (speakerPhotos[speaker]) return speakerPhotos[speaker];
             const firstSpeaker = speaker.match(/^([A-Za-z]+ [A-Za-z]+)/);
             if (firstSpeaker && speakerPhotos[firstSpeaker[1]]) return speakerPhotos[firstSpeaker[1]];
@@ -3198,7 +3293,7 @@
             return acc;
         }, {});
 
-        ['KERICONF26 Day 1', 'KERICONF26 Day 2'].forEach(day => {
+        ['KERICONF26 Day 1', 'KERICONF26 Day 2', 'KERICONF26 Interviews'].forEach(day => {
             if (!dayGroups[day]) return;
             const section = document.createElement('section');
             section.className = 'day-section';
