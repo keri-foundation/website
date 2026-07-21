@@ -1,0 +1,99 @@
+{
+  "Ari-Argoud-Interview": {
+    "presentations": [
+      "Ari Argoud \uff5c KRAM IT! with Ari \uff5c KERI Conference 2026"
+    ],
+    "hotwords": "KRAM, KERI, Ari Argoud, KEL, KERIpy, key event log, DID, KERI Foundation, KERI Conference 2026, KERIA, ACDC, ACDCs, SEDI, SPAC, TSP, Signify, CESR, CESR2, verifiable credentials, autonomic identifiers, witnesses, watchers, pre-rotation, delegated authority, DIDs, FHIR, CMS, Health KERI, SAID, KELs, SAIDs, ESSR, IPEX, EXN, TCP, Request Authentication Mechanism, Key State",
+    "initial_prompt": "KERI Conference 2026 interview about KERI, KRAM, ACDC, KEL, KERIA, SEDI, verifiable credentials, and Signify."
+  },
+  "Cole-Davis-Interview": {
+    "presentations": [
+      "Cole Davis \uff5c Contract Credentials & Verifiable Identity \uff5c KERI Conference 2026"
+    ],
+    "hotwords": "ACDC, KERI, DID, Cole Davis, DIDs, KEL, ACDCs, verifiable credentials, KERI Conference 2026, W3C, TEL, GLEIF, KERIA, KERIpy, KRAM, SEDI, SPAC, TSP, Signify, CESR, CESR2, autonomic identifiers, key event log, witnesses, watchers, pre-rotation, delegated authority, FHIR, CMS, Health KERI, KERI Foundation, ECR, TELs, KELs, SAID, SEC, I2I, IETF, IIW, TCU, GPA, NI2I, QVI, AIDs",
+    "initial_prompt": "KERI Conference 2026 interview about KERI, KRAM, ACDC, KEL, KERIA, SEDI, verifiable credentials, and Signify."
+  },
+  "Daniel-Hardman-Interview": {
+    "presentations": [
+      "Daniel Hardman \uff5c Applying KERI to General Evidence Problems \uff5c KERI Conference 2026",
+      "Daniel Hardman \uff5c Open Verifiable Communications \uff5c KERI Conference 2026"
+    ],
+    "hotwords": "Daniel Hardman, ACDC, KERI, ACDCs, KEL, SPAC, verifiable credentials, witnesses, watchers, delegated authority, DID, KERI Conference 2026, JWT, SIP, OVC, SMS, STIR, KERIA, KERIpy, KRAM, SEDI, TSP, Signify, CESR, CESR2, autonomic identifiers, key event log, pre-rotation, DIDs, FHIR, CMS, Health KERI, KERI Foundation, Microsoft, SIM, GSMA, IETF, SHAKEN, W3C, OOBI, If Microsoft",
+    "initial_prompt": "KERI Conference 2026 interview about KERI, KRAM, ACDC, KEL, KERIA, SEDI, verifiable credentials, and Signify."
+  },
+  "Fergal-O'Connor": {
+    "presentations": [
+      "Fergal O'Connor \uff5c KERIA & Signify Path to Production \uff5c KERI Conference 2026",
+      "Fergal O'Conner \uff5c Signify Security Architecture \uff5c KERI Conference 2026"
+    ],
+    "hotwords": "KERI, KERIA, CESR, ACDC, Signify, KEL, Fergal O'Connor, Fergal O'Conner, ACDCs, SPAC, SEDI, CESR2, KERIpy, key event log, witnesses, watchers, DID, KERI Conference 2026, IPEX, TypeScript, OOBIs, LMDB, ESSR, GitHub, KRAM, TSP, verifiable credentials, autonomic identifiers, pre-rotation, delegated authority, DIDs, FHIR, CMS, Health KERI, KERI Foundation, OOBI, WebOfTrust, GLEIF",
+    "initial_prompt": "KERI Conference 2026 interview about KERI, KRAM, ACDC, KEL, KERIA, SEDI, verifiable credentials, and Signify."
+  },
+  "Jared-Jefferey-Interview": {
+    "presentations": [
+      "Jared Jefferey \uff5c FHIR and CMS \uff5c KERI Conference 2026",
+      "Scott Stuewe Mark Scrimshire Jared Jeffery \uff5c Provenanting Patient's Medical Records \uff5c KERI Conf 2026"
+    ],
+    "hotwords": "FHIR, CMS, KERI, Jared Jefferey, Scott Stuewe Mark Scrimshire Jared Jeffery, SEDI, SPAC, witnesses, watchers, DID, KERI Foundation, KERI Conference 2026, TEFCA, DirectTrust, HL7, EHR, GLEIF, KERIA, KERIpy, KEL, KRAM, ACDC, ACDCs, TSP, Signify, CESR, CESR2, verifiable credentials, autonomic identifiers, key event log, pre-rotation, delegated authority, DIDs, Health KERI, ONYX",
+    "initial_prompt": "KERI Conference 2026 interview about KERI, KRAM, ACDC, KEL, KERIA, SEDI, verifiable credentials, and Signify."
+  },
+  "Jonathan-Rayback-Interview": {
+    "presentations": [
+      "Jonathan Rayback \uff5c KERI Bridge to the DID World \uff5c KERI Conference 2026"
+    ],
+    "hotwords": "DID, KERI, ACDC, KEL, CESR, Jonathan Rayback, DIDs, ACDCs, key event log, witnesses, watchers, KERI Conference 2026, Event Stream, W3C, KERIA, KERIpy, KRAM, SEDI, SPAC, TSP, Signify, CESR2, verifiable credentials, autonomic identifiers, pre-rotation, delegated authority, FHIR, CMS, Health KERI, KERI Foundation, OOBI, Web, URI, Universal Resolver, DNS, JWK, DIF, Stream",
+    "initial_prompt": "KERI Conference 2026 interview about KERI, KRAM, ACDC, KEL, KERIA, SEDI, verifiable credentials, and Signify."
+  },
+  "Keanu-Pahio-Interview": {
+    "presentations": [
+      "Keanu Pahio \uff5c KERI Developement & Deployment \uff5c KERI Conference 2026"
+    ],
+    "hotwords": "KERI, Keanu Pahio, KERIpy, KEL, witnesses, watchers, KERI Foundation, KERI Conference 2026, KERIA, KRAM, ACDC, ACDCs, SEDI, SPAC, TSP, Signify, CESR, CESR2, verifiable credentials, autonomic identifiers, key event log, pre-rotation, delegated authority, DID, DIDs, FHIR, CMS, Health KERI, POST, OOBIs, Locksmith, PluginBase, PyPy, KELs, DELETE, The Objectives, AIDs",
+    "initial_prompt": "KERI Conference 2026 interview about KERI, KRAM, ACDC, KEL, KERIA, SEDI, verifiable credentials, and Signify."
+  },
+  "Kent-Bull-Interview": {
+    "presentations": [
+      "Kent Bull \uff5c KERIA Tutorial \uff5c KERI Conference 2026",
+      "Kent Bull \uff5c KERIpy Async Architecture \uff5c KERI Conference 2026"
+    ],
+    "hotwords": "Kent Bull, KERIA, KERI, DoDoer, SEDI, Signify, CESR, ACDCs, KERIpy, ACDC, DID, SPAC, key event log, witnesses, KERI Foundation, KERI Conference 2026, JavaScript, HIO, TypeScript, WebOfTrust, KEL, KRAM, TSP, CESR2, verifiable credentials, autonomic identifiers, watchers, pre-rotation, delegated authority, DIDs, FHIR, CMS, Health KERI, GLEIF, Python, ONYX, HSM, IURLs, Signify Py",
+    "initial_prompt": "KERI Conference 2026 interview about KERI, KRAM, ACDC, KEL, KERIA, SEDI, verifiable credentials, and Signify."
+  },
+  "Ned-Smith-Interview": {
+    "presentations": [
+      "Ned Smith \uff5c Secure Asset Transfer Protocol \uff5c KERI Conference 2026"
+    ],
+    "hotwords": "KERI, Ned Smith, ACDC, CESR, KEL, DID, KERIpy, SPAC, KERI Conference 2026, SATP, IETF, X509, DICE, KERIA, KRAM, ACDCs, SEDI, TSP, Signify, CESR2, verifiable credentials, autonomic identifiers, key event log, witnesses, watchers, pre-rotation, delegated authority, DIDs, FHIR, CMS, Health KERI, KERI Foundation, SAT, NW1, GLEIF, QVI, LLU, LEI, ECR, IESG, RFC, DR2, TCG, OCP, X519",
+    "initial_prompt": "KERI Conference 2026 interview about KERI, KRAM, ACDC, KEL, KERIA, SEDI, verifiable credentials, and Signify."
+  },
+  "Nicholas-Racz-Interview": {
+    "presentations": [
+      "Nicholas Racz \uff5c Investigating the Game of Trust \uff5c KERI Conference 2026"
+    ],
+    "hotwords": "KERI, Nicholas Racz, SEDI, KEL, KERIpy, SPAC, witnesses, watchers, DID, KERI Conference 2026, DirectTrust, KERIA, KRAM, ACDC, ACDCs, TSP, Signify, CESR, CESR2, verifiable credentials, autonomic identifiers, key event log, pre-rotation, delegated authority, DIDs, FHIR, CMS, Health KERI, KERI Foundation, GSMA, QVI, COVID, Key State, SMS, Provenant, Timothy Ruff, New Zealand",
+    "initial_prompt": "KERI Conference 2026 interview about KERI, KRAM, ACDC, KEL, KERIA, SEDI, verifiable credentials, and Signify."
+  },
+  "Phil-Feairheller-Interview": {
+    "presentations": [
+      "Phil Feairheller \uff5c ACDCs for Authorization \uff5c KERI Conference 2026",
+      "Phil Feairheller \uff5c Infrastructure for Security \uff5c Keri Conference 2026"
+    ],
+    "hotwords": "KERI, Phil Feairheller, ACDC, FHIR, SEDI, ACDCs, CESR, CMS, KERIpy, key event log, witnesses, watchers, pre-rotation, DID, Health KERI, KERI Foundation, KERI Conference 2026, OOBI, IPEX, GLEIF, OOBIs, KERIA, KEL, KRAM, SPAC, TSP, Signify, CESR2, verifiable credentials, autonomic identifiers, delegated authority, DIDs, ESSR, UDAP, OIDC, PKI, SaaS, GitHub, Key Event Logs, Alice",
+    "initial_prompt": "KERI Conference 2026 interview about KERI, KRAM, ACDC, KEL, KERIA, SEDI, verifiable credentials, and Signify."
+  },
+  "Phil-Windley-Interview": {
+    "presentations": [
+      "Phil Windley \uff5c Digital Identity Needs a Legal Foundation \uff5c KERI Conference 2026"
+    ],
+    "hotwords": "SEDI, Phil Windley, KERI, SPAC, DID, KERI Conference 2026, KERIA, KERIpy, KEL, KRAM, ACDC, ACDCs, TSP, Signify, CESR, CESR2, verifiable credentials, autonomic identifiers, key event log, witnesses, watchers, pre-rotation, delegated authority, DIDs, FHIR, CMS, Health KERI, KERI Foundation, GLEIF, LEI, Digital Identity Needs, Legal Foundation, IRA, REAL, IRS, EIN, MDL",
+    "initial_prompt": "KERI Conference 2026 interview about KERI, KRAM, ACDC, KEL, KERIA, SEDI, verifiable credentials, and Signify."
+  },
+  "Ryan-Hansen-Interview": {
+    "presentations": [
+      "Ryan Hansen \uff5c Witnesses & Watchers \uff5c KERI Conference 2026",
+      "Ryan Hansen Pannel \uff5c What KERI allows us to do that we couldn't before \uff5c KERI Conference 2026"
+    ],
+    "hotwords": "KERI, Ryan Hansen, Ryan Hansen Pannel, KEL, ACDC, SEDI, KERIpy, SPAC, key event log, witnesses, watchers, delegated authority, DID, KERI Foundation, KERI Conference 2026, GitHub, KERIA, KRAM, ACDCs, TSP, Signify, CESR, CESR2, verifiable credentials, autonomic identifiers, pre-rotation, DIDs, FHIR, CMS, Health KERI, PyPy, Circus, OOBIs, W3C, Python, LTS, URLs, IDE, OOBI, FCC",
+    "initial_prompt": "KERI Conference 2026 interview about KERI, KRAM, ACDC, KEL, KERIA, SEDI, verifiable credentials, and Signify."
+  }
+}
