@@ -14,6 +14,9 @@
 !/confs/
 !/confs/**
 
+# Local promo clips (must come after !/confs/** — .gitignore beats info/exclude)
+/confs/2026/videos/clips/
+
 # --- .github ---
 !/.github/
 !/.github/**
@@ -33,5 +36,6 @@
 # --- Documentation ---
 !/README.md
 confs/2026/videos/KERICONF26/
+confs/2026/videos/KERICONF26-interviews/
 
 .DS_Store
