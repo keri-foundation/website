@@ -1,0 +1,7492 @@
+1
+00:00:00,560 --> 00:00:16,500
+I will never edit it, but I'm going to
+keep it. I'm happy to keep it. Thank you.
+
+2
+00:00:36,300 --> 00:00:37,500
+Thank you.
+
+3
+00:01:14,780 --> 00:01:16,180
+Thank you.
+
+4
+00:01:37,180 --> 00:01:39,740
+Thank you.
+
+5
+00:02:11,240 --> 00:02:11,960
+Thank you.
+
+6
+00:02:36,300 --> 00:02:37,400
+Thank you.
+
+7
+00:03:07,860 --> 00:03:08,080
+Thank you.
+
+8
+00:03:36,300 --> 00:03:36,420
+Thank you.
+
+9
+00:04:17,220 --> 00:04:20,020
+Thank you.
+
+10
+00:04:40,260 --> 00:04:41,940
+Thank you.
+
+11
+00:05:14,980 --> 00:05:15,120
+Thank you.
+
+12
+00:05:42,720 --> 00:05:44,560
+Thank you.
+
+13
+00:06:09,680 --> 00:06:12,480
+Thank you.
+
+14
+00:06:36,700 --> 00:06:39,500
+Thank you.
+
+15
+00:06:43,520 --> 00:06:43,580
+Thank you.
+
+16
+00:07:13,320 --> 00:07:13,380
+Thank you.
+
+17
+00:07:42,660 --> 00:07:46,480
+Thank you. Thank you.
+
+18
+00:08:18,060 --> 00:08:19,340
+Thank you.
+
+19
+00:09:06,380 --> 00:09:09,180
+Thank you.
+
+20
+00:09:36,040 --> 00:09:38,840
+Thank you.
+
+21
+00:10:02,920 --> 00:10:05,720
+Thank you.
+
+22
+00:10:32,860 --> 00:10:39,920
+Thank you, Chris. Thank you.
+
+23
+00:11:07,080 --> 00:11:17,100
+Thank you. Thank you.
+
+24
+00:11:51,300 --> 00:11:54,420
+Thank you. Thank you.
+
+25
+00:12:27,400 --> 00:12:30,200
+Thank you.
+
+26
+00:12:57,180 --> 00:12:59,980
+Thank you.
+
+27
+00:13:17,420 --> 00:13:20,220
+Thank you.
+
+28
+00:13:34,220 --> 00:13:37,020
+Thank you.
+
+29
+00:14:07,280 --> 00:14:10,080
+Thank you.
+
+30
+00:14:34,920 --> 00:14:37,720
+Thank you.
+
+31
+00:15:23,860 --> 00:15:26,660
+Thank you.
+
+32
+00:15:29,980 --> 00:15:35,060
+Thank you. Thank you. Thank you. Thank
+you.
+
+33
+00:15:40,440 --> 00:15:46,960
+Thank you. Thank you. Thank you.
+
+34
+00:15:46,960 --> 00:15:57,820
+Thank you. Thank you. Thank you. Thank
+you.
+
+35
+00:16:06,760 --> 00:16:13,300
+There we go. Yay. All right. So my name is
+Scott Perry. I'm here to talk about open
+
+36
+00:16:13,300 --> 00:16:19,560
+standards and open protocols. And so when
+you're looking at a SEDI project, okay,
+
+37
+00:16:19,660 --> 00:16:24,800
+we're just getting started, but there's
+been effort to deal with decentralized
+
+38
+00:16:24,800 --> 00:16:32,080
+identity for the last 20 years. Starting
+with Phil Windley co-chairing the Internet
+
+39
+00:16:32,080 --> 00:16:37,620
+Identity Workshop 20 years ago. And then
+for me, it's been 10 years after I got a
+
+40
+00:16:37,620 --> 00:16:43,880
+call from Timothy Ruff saying, I need help
+around trying to deal with internet trust.
+
+41
+00:16:44,020 --> 00:16:48,500
+And I realized as an auditor that was
+auditing certification authorities, I
+
+42
+00:16:48,500 --> 00:16:54,600
+realized that the traditional model wasn't
+going to work to add internet, to add the
+
+43
+00:16:54,600 --> 00:17:01,200
+kind of trust that we're trying to do with
+the SEDI project. So just a quick little
+
+44
+00:17:01,200 --> 00:17:06,440
+bit about me. I'm the auditor in the room.
+I was auditing for my career last 20
+
+45
+00:17:06,440 --> 00:17:14,140
+years. I've been auditing cryptography as
+a profession. Auditing small group folks
+
+46
+00:17:14,140 --> 00:17:19,020
+that audit certification authorities. I
+was the auditor for a certification
+
+47
+00:17:19,020 --> 00:17:25,120
+authority based in Utah. It's great to be
+back here. You know, I was working with
+
+48
+00:17:25,120 --> 00:17:30,940
+DigiCert for quite a long time. And I've
+also been leading some open source and
+
+49
+00:17:30,940 --> 00:17:38,520
+open standards projects that are listed
+here. But I want to focus on the acronym
+
+50
+00:17:38,520 --> 00:17:43,960
+suit that I'm going to talk about because
+it's important for folks to understand
+
+51
+00:17:43,960 --> 00:17:49,040
+there has been a lot of work. There was a
+question around is it going to work today?
+
+52
+00:17:49,200 --> 00:17:53,580
+I'd say two years ago, things hadn't been
+completely baked in, but I think we're
+
+53
+00:17:53,580 --> 00:17:59,140
+ready. The open source community is
+absolutely ready for SEDI and I'm excited
+
+54
+00:17:59,140 --> 00:18:04,660
+for them to demonstrate their value in all
+of the work that they've been doing for
+
+55
+00:18:04,660 --> 00:18:09,820
+over 10 years. And so when we start about
+the I'm going to give you just a summary
+
+56
+00:18:09,820 --> 00:18:14,380
+of some of the organizations that I've
+been touched with that have been
+
+57
+00:18:14,380 --> 00:18:21,300
+developing some unique products that can
+be leveraged in into the SEDI project. And
+
+58
+00:18:21,300 --> 00:18:25,180
+it starts with the Linux Foundation. So I
+don't know if you know, but the Linux
+
+59
+00:18:25,180 --> 00:18:28,960
+Foundation is the largest repository of
+repository of open source code in the
+
+60
+00:18:28,960 --> 00:18:36,320
+world. They operate 100% of all the
+supercomputers and 62.7 of servers run the
+
+61
+00:18:36,320 --> 00:18:43,980
+Linux kernel. And so they decided, you
+know, to get involved in decentralized
+
+62
+00:18:43,980 --> 00:18:49,720
+trust. There was a number of projects that
+was driving some of this type of thinking.
+
+63
+00:18:50,200 --> 00:18:57,600
+And so they established a subset of their
+organization last year. And they invited
+
+64
+00:18:57,600 --> 00:19:05,600
+and consolidated a couple of open source
+and open standards projects. One that is
+
+65
+00:19:05,600 --> 00:19:10,300
+called the Trust over IP. And I'd invite
+all of you to spend time going to the
+
+66
+00:19:10,300 --> 00:19:14,300
+Trust over IP. I am the co-chair of the
+steering committee. We have a couple of
+
+67
+00:19:14,300 --> 00:19:19,680
+steering committee members here in the
+audience. And they've been doing enormous
+
+68
+00:19:19,680 --> 00:19:26,040
+work to get ready for the SEDI project.
+We've created a stack, a technology and
+
+69
+00:19:26,040 --> 00:19:31,700
+governance stack. We everyone's talking
+about governance. Trust over IP is the
+
+70
+00:19:31,700 --> 00:19:36,860
+leading organization driving governance
+standards and methodologies and toolkits.
+
+71
+00:19:37,600 --> 00:19:42,520
+And I hope that the organization here, the
+SEDI projects uses it because it's been
+
+72
+00:19:42,520 --> 00:19:49,020
+successful in the C2PA, in GLEIF, in the
+government of Bhutan and such. It also is
+
+73
+00:19:49,020 --> 00:19:53,540
+housing KERI. You've heard some stories
+about KERI. It's a blueprint of how to
+
+74
+00:19:53,540 --> 00:19:59,440
+decentralize identity and make security
+more autonomous and user-controlled. It's
+
+75
+00:19:59,440 --> 00:20:01,740
+a security more autonomous and user
+-controlled. It's exactly one of the main
+
+76
+00:20:01,740 --> 00:20:08,300
+principles within the SEDI project. We
+have a trust spanning protocol which acts
+
+77
+00:20:08,300 --> 00:20:14,200
+underneath the internet protocol to the
+
+78
+00:20:14,200 --> 00:20:19,500
+ability to authenticate senders and
+payloads of transactions because we need
+
+79
+00:20:19,500 --> 00:20:24,540
+that level of trust in our transaction
+protocols and also it is leading around
+
+80
+00:20:24,540 --> 00:20:28,300
+trust registries which are public
+repositories which are public repositories
+
+81
+00:20:28,300 --> 00:20:30,700
+which are public repositories of those
+that have passed certain governance
+
+82
+00:20:30,700 --> 00:20:38,160
+frameworks. The Open Wallet Foundation was
+founded in August 2023. It hosts
+
+83
+00:20:38,160 --> 00:20:43,400
+components that can be used to create
+secure, flexible, and portable wallets.
+
+84
+00:20:43,900 --> 00:20:49,640
+Where are we going to keep the SEDI
+credentials? We need a secure place
+
+85
+00:20:49,640 --> 00:20:55,760
+because they have private cryptographic
+keys. Also, we've talked about the you
+
+86
+00:20:55,760 --> 00:21:02,400
+know, the W3C, you know, the W3C started
+in 1994 produces two key standards that we
+
+87
+00:21:02,400 --> 00:21:07,720
+can leverage within the SEDI project. The
+decentralized identifiers, the DIDs
+
+88
+00:21:07,720 --> 00:21:13,700
+projects as well as defining the
+components of verifiable credentials which
+
+89
+00:21:13,700 --> 00:21:20,680
+we expect to use. In the decentralized
+identity foundation started in 2017, we
+
+90
+00:21:20,680 --> 00:21:26,120
+have a number of projects that are working
+that can add value. They are the leading
+
+91
+00:21:26,120 --> 00:21:29,220
+place to deal with the leading place to
+deal with all of the decentralized
+
+92
+00:21:29,220 --> 00:21:33,680
+identity methods that are out in the
+marketplace and they are working to
+
+93
+00:21:33,680 --> 00:21:38,380
+consolidate that. They're creating
+standards around the communication using
+
+94
+00:21:38,380 --> 00:21:45,360
+DIDCOM as well as the presentation
+exchange of credentials as well as hosting
+
+95
+00:21:45,360 --> 00:21:50,740
+an organization called the Creators
+Assertion Working Group which I co-chair
+
+96
+00:21:50,740 --> 00:21:56,500
+which deals with individual and
+organizational attribution to any digital
+
+97
+00:21:56,500 --> 00:22:02,460
+object based on the content credential
+created by the C2PA. So I would look up
+
+98
+00:22:02,460 --> 00:22:08,880
+look that up as well. Also, the OpenID
+which has been around since 2007 and has
+
+99
+00:22:08,880 --> 00:22:14,600
+modified their standards to deal with
+verifiable credentials with OpenID Connect
+
+100
+00:22:14,600 --> 00:22:21,400
+and OpenID Verifiable Credentials. ISO, as
+we have mentioned here, has been
+
+101
+00:22:21,400 --> 00:22:26,260
+instrumental in creating foundational
+security standards standards standards
+
+102
+00:22:26,260 --> 00:22:32,480
+standards both with quality and ISO 27001
+for foundational security management
+
+103
+00:22:32,480 --> 00:22:40,660
+systems as well as they have identity
+management standard ISO 24760 and finally
+
+104
+00:22:40,660 --> 00:22:45,800
+also the mobile driver's license the ISO
+1801.
+
+105
+00:22:48,420 --> 00:22:53,620
+We talked a little bit about what the role
+of the federal government would be. Well,
+
+106
+00:22:53,680 --> 00:22:59,460
+NIST is is providing a lot of value there
+associated with dealing with post-quantum
+
+107
+00:22:59,460 --> 00:23:06,460
+cryptography. They're also dealing with
+the certification of hardware security
+
+108
+00:23:06,460 --> 00:23:11,760
+modules which protect your private key and
+are the leading standard for digital
+
+109
+00:23:11,760 --> 00:23:19,640
+identity guidelines both for proofing of
+identity authentication and federation. So
+
+110
+00:23:19,640 --> 00:23:24,200
+what's the case for open standards? How do
+you use it? Okay, at the end of the day,
+
+111
+00:23:24,680 --> 00:23:32,560
+it enhances interoperability and
+compatibility. Okay? It prevents the
+
+112
+00:23:32,560 --> 00:23:37,920
+vendor lock-in so that all the tech
+vendors are using open standards and they
+
+113
+00:23:37,920 --> 00:23:45,280
+can use it so you're not locked into an
+individual technology company and can't
+
+114
+00:23:45,280 --> 00:23:51,640
+get out of them. It creates the innovation
+and collaboration. You're not limited to
+
+115
+00:23:51,640 --> 00:23:58,160
+an individual's company. R&D you're
+leveraging world R&D. You're leveraging
+
+116
+00:23:58,160 --> 00:24:01,560
+world R&D. And that's what the state of
+the organizations that I work for. They
+
+117
+00:24:01,560 --> 00:24:08,080
+are creating that research and development
+that we could leverage. It increases
+
+118
+00:24:08,080 --> 00:24:12,820
+flexibility and Joe Jackson had mentioned
+about future proofing. They're baking in
+
+119
+00:24:12,820 --> 00:24:20,340
+advances of these standards to deal with
+new technologies as they come along and
+
+120
+00:24:20,340 --> 00:24:26,440
+they're free. State loves free, right? And
+the best way to leverage it. And the best
+
+121
+00:24:26,440 --> 00:24:29,660
+way to leverage it is steal this
+technology and steal these standards
+
+122
+00:24:29,660 --> 00:24:36,040
+because it's there for the taking and they
+work. So I'm going to just walk through.
+
+123
+00:24:36,120 --> 00:24:39,680
+I'm not going to go into details of some
+of the products that we've created in the
+
+124
+00:24:39,680 --> 00:24:45,760
+open standards world, but these are some
+of the ones as a governance professional
+
+125
+00:24:45,760 --> 00:24:52,340
+have leveraged on. And we've realized
+there was a trust triangle with the
+
+126
+00:24:52,340 --> 00:24:56,620
+issuer, holder, and verifier. Verifier.
+Trust over IP added a governance model.
+
+127
+00:24:57,340 --> 00:25:02,180
+And we have found that that's the missing,
+that's the secret sauce into making it
+
+128
+00:25:02,180 --> 00:25:08,360
+long lasting and workable. This I'm not
+going to go into the detail, but this is
+
+129
+00:25:08,360 --> 00:25:14,900
+the trust over IP trust stack. And you can
+see that there's been a lot of work that's
+
+130
+00:25:14,900 --> 00:25:20,060
+gone into it. And Chris Rammel said to me,
+if you do one thing, let people know how
+
+131
+00:25:20,060 --> 00:25:24,820
+complicated it is. And we've done a lot of
+the baked in work. So governance
+
+132
+00:25:24,820 --> 00:25:27,740
+framework. So governance framework. It's
+already built the framework, but you don't
+
+133
+00:25:27,740 --> 00:25:31,840
+have to worry about it. You just have to
+put in your requirements into the
+
+134
+00:25:31,840 --> 00:25:35,640
+governance framework. And then you could
+leverage the time and energy to get this
+
+135
+00:25:35,640 --> 00:25:41,440
+to market. So I'm going to quickly go
+through the reasons why you should adopt
+
+136
+00:25:41,440 --> 00:25:42,260
+open standards.
+
+137
+00:25:46,220 --> 00:25:51,000
+It's all there. And I think we're ready to
+go. And I think you could take advantage
+
+138
+00:25:51,000 --> 00:25:55,340
+of a lot of the work that's been done to
+make this happen. If you want to have an
+
+139
+00:25:55,340 --> 00:26:01,080
+idea of a white paper that's free to use
+on how to use governance and use trust
+
+140
+00:26:01,080 --> 00:26:07,140
+registries. I put it out there. It'll be
+in the videotape so that you could access
+
+141
+00:26:07,140 --> 00:26:11,980
+this at your leisure. Thank you very much
+for your time. Thank you.
+
+142
+00:26:28,120 --> 00:26:35,620
+I would like to recognize two individuals
+if they are here. Scott Stornetta, are you
+
+143
+00:26:35,620 --> 00:26:47,160
+here? Been walking around. Is he in the
+room? Samuel Smith. He took off. I was
+
+144
+00:26:47,160 --> 00:26:55,560
+hoping to I want to acknowledge two people
+whom I think are fathers of modern digital
+
+145
+00:26:55,560 --> 00:27:03,440
+trust. And I'll just say that Scott
+Stornetta was cited by Satoshi Nakamoto's
+
+146
+00:27:03,440 --> 00:27:10,400
+Bitcoin paper. He's the original conceiver
+of blockchain, which is a really important
+
+147
+00:27:10,400 --> 00:27:13,660
+innovation in digital trust. We wouldn't
+have cryptocurrency without that
+
+148
+00:27:13,660 --> 00:27:18,240
+innovation. And literally the creator of
+blockchain quoted Scott Stornetta, who's
+
+149
+00:27:18,240 --> 00:27:22,380
+been here today. He's out in the hall or
+somewhere. And then Sam had to leave. Sam
+
+150
+00:27:22,380 --> 00:27:26,480
+is the creator of the KERI protocol key
+event receipt infrastructure that has
+
+151
+00:27:26,480 --> 00:27:32,140
+inspired the SEDI identity model,
+including the very exciting thing I get to
+
+152
+00:27:32,140 --> 00:27:37,140
+talk about, which is guardianship and
+delegation. A really big breakthrough in
+
+153
+00:27:37,140 --> 00:27:41,820
+digital trust to solve a very thorny
+problem. Now I'm going to break from how I
+
+154
+00:27:41,820 --> 00:27:47,800
+usually present things and I am going to
+I'm
+
+155
+00:27:47,800 --> 00:27:52,880
+going to really almost read the slides,
+which I hate to do that, but I know this
+
+156
+00:27:52,880 --> 00:27:55,840
+is being videoed and I know these
+presentations are going to be asked for
+
+157
+00:27:55,840 --> 00:27:59,800
+and I want anyone who gets this
+presentation at a later time to be able to
+
+158
+00:27:59,800 --> 00:28:04,380
+understand every single point. And so
+you're going to see me, you know,
+
+159
+00:28:04,580 --> 00:28:08,660
+basically reading some of this, but we're
+going to go quickly. Really important
+
+160
+00:28:08,660 --> 00:28:13,080
+concept. First of all, a couple of
+definitions. Guardianship gives someone
+
+161
+00:28:13,080 --> 00:28:19,680
+legal authority and responsibility to make
+decisions for another like a child or a
+
+162
+00:28:19,680 --> 00:28:26,160
+disabled person. So real key concepts
+underlying their legal authority and
+
+163
+00:28:26,160 --> 00:28:31,900
+responsibility. Two different really
+important concepts that make up
+
+164
+00:28:31,900 --> 00:28:39,240
+guardianship. Delegation. I want to wait
+for my example to come up. There's a
+
+165
+00:28:39,240 --> 00:28:44,580
+little bit of a lag here. Temporarily
+transfers specific duties or powers, but
+
+166
+00:28:44,580 --> 00:28:50,940
+not full legal responsibility. Key
+concepts are temporarily and specific
+
+167
+00:28:50,940 --> 00:28:56,100
+duties or powers and not full legal
+responsibility. That's the difference
+
+168
+00:28:56,100 --> 00:29:00,700
+between guardianship and delegation. So
+let's give an example. If a parent
+
+169
+00:29:00,700 --> 00:29:05,700
+delegates school pickup to a neighbor, the
+parent still holds the ultimate
+
+170
+00:29:05,700 --> 00:29:11,060
+responsibility for the child's welfare.
+Okay. Okay. That's just a task that has
+
+171
+00:29:11,060 --> 00:29:15,280
+been delegated, but not ultimate
+responsibility or legal authority.
+
+172
+00:29:15,680 --> 00:29:20,160
+Guardianship legally transfers that
+responsibility. The guardian and not the
+
+173
+00:29:20,160 --> 00:29:25,780
+parent is now the one accountable for
+decisions and care. So those are the two
+
+174
+00:29:25,780 --> 00:29:31,880
+conceptual differences. Now, I'm going to
+share with you 10 tools that we use in
+
+175
+00:29:31,880 --> 00:29:36,380
+combination to make guardianship and
+delegation work as well as all of the rest
+
+176
+00:29:36,380 --> 00:29:44,580
+of the SEDI protocol. I chose Lego or Lego
+here instead of a toolbox. The difference
+
+177
+00:29:44,580 --> 00:29:50,040
+is when you put Legos together, you might
+make a pirate ship. You might make a
+
+178
+00:29:50,040 --> 00:29:52,860
+pirate, you might make spaceship, you
+might make a dinosaur. You put them
+
+179
+00:29:52,860 --> 00:29:56,360
+together in different combinations to do
+the thing you're trying to do. A toolbox,
+
+180
+00:29:56,760 --> 00:30:00,500
+you get out of the toolbox and you do
+something to use the tools and then you're
+
+181
+00:30:00,500 --> 00:30:06,120
+done. So with SEDI, it's very much the
+Legos, even though they are tools. The
+
+182
+00:30:06,120 --> 00:30:09,700
+first tool is Verifiable containers. Now,
+Verifiable containers. Now, for those of
+
+183
+00:30:09,700 --> 00:30:13,860
+you familiar with Verifiable credentials,
+we're talking about the same concept, but
+
+184
+00:30:13,860 --> 00:30:18,740
+a Verifiable credential is misnamed. It is
+a container that holds data and makes it
+
+185
+00:30:18,740 --> 00:30:21,820
+portable. It might or might not be a
+credential. It can have anything inside
+
+186
+00:30:21,820 --> 00:30:26,120
+the container. It's the container that's
+verifiable technically. So it makes data
+
+187
+00:30:26,120 --> 00:30:31,840
+portable and verifiable. The next tool is
+secure attribution to verify who digitally
+
+188
+00:30:31,840 --> 00:30:36,400
+signed a thing. So if you get a container
+that has some data in it, who put that
+
+189
+00:30:36,400 --> 00:30:44,500
+container together? Who did it? And being
+able to secure part is really important.
+
+190
+00:30:45,200 --> 00:30:51,320
+Verify who did it. The third tool, non
+-reputability. You can't later say that
+
+191
+00:30:51,320 --> 00:30:58,480
+you didn't. Once it's been signed, it is
+non-reputable. You can't later say someone
+
+192
+00:30:58,480 --> 00:31:05,200
+else did that. So when you have encryption
+with TLS or HTTPS, you see the encryption
+
+193
+00:31:05,200 --> 00:31:10,120
+that happens on the internet. There is
+repudiability. You don't know who is on
+
+194
+00:31:10,120 --> 00:31:12,720
+the other side of the other side of the
+other side. It's not bound to a human
+
+195
+00:31:12,720 --> 00:31:19,580
+person or an individual. It's just there's
+a weak form of authentication that goes
+
+196
+00:31:19,580 --> 00:31:22,740
+with encryption, but it's not like a
+digital signature that you can actually
+
+197
+00:31:22,740 --> 00:31:28,820
+bind to an individual and say who did the
+thing. Chain signatures which give you
+
+198
+00:31:28,820 --> 00:31:33,880
+verifiable provenance. So you can actually
+see a chain of authority rather than just
+
+199
+00:31:33,880 --> 00:31:39,660
+a single level. So if someone's signed
+something like a manager, like a manager,
+
+200
+00:31:39,660 --> 00:31:42,520
+well, who was their boss, where'd they get
+their authority from? Who was their boss?
+
+201
+00:31:42,640 --> 00:31:45,760
+Who did they work for? And is that really
+the company? How do we know that was
+
+202
+00:31:45,760 --> 00:31:51,120
+really the company? And on you can see a
+full chain and it's unlimited. A full
+
+203
+00:31:51,120 --> 00:31:54,600
+chain of provenance on there is another
+really important tool. And then weighted
+
+204
+00:31:54,600 --> 00:31:59,080
+multisig critical for business and on a
+whole lot of other cases we're going to
+
+205
+00:31:59,080 --> 00:32:04,580
+talk about here in a moment. But weighted
+multisig means that you can have one of
+
+206
+00:32:04,580 --> 00:32:08,680
+two signatures. You can have one of one,
+just one person signs it and they have the
+
+207
+00:32:08,680 --> 00:32:13,140
+full weight. You can have one of two, two
+of three, five of seven, 11 of 92,
+
+208
+00:32:13,440 --> 00:32:17,640
+whatever you make up. Okay. So it's
+weighted because you can have one
+
+209
+00:32:17,640 --> 00:32:22,680
+signature have more weight than another.
+And in a situation with divorced parents
+
+210
+00:32:22,680 --> 00:32:27,060
+and things like that and where the court
+might be intervening, really important in
+
+211
+00:32:27,060 --> 00:32:31,580
+guardianship to have weighted multisig.
+We'll talk a little bit about that.
+
+212
+00:32:32,480 --> 00:32:38,880
+Consent. The ability to use your identity
+to make a non-reputable reputable
+
+213
+00:32:38,880 --> 00:32:43,900
+agreement and say, I agree to a thing.
+Delegation of authority, which we're going
+
+214
+00:32:43,900 --> 00:32:50,240
+to talk about in a little greater detail.
+Revocability of that delegation. And
+
+215
+00:32:50,240 --> 00:32:54,240
+critically, a really important
+breakthrough with SEDI, privacy respecting
+
+216
+00:32:54,240 --> 00:32:58,760
+delegation. I was just talking to a
+representative from another state who said
+
+217
+00:32:58,760 --> 00:33:04,180
+that the reason that they were adopting a
+very popular technology for identity is
+
+218
+00:33:04,180 --> 00:33:08,280
+because their technical people thought
+that there was no way to get around a
+
+219
+00:33:08,280 --> 00:33:15,200
+phone home for revocation. That is not
+true. There is a way to get around a phone
+
+220
+00:33:15,200 --> 00:33:19,800
+home and have privacy respecting
+revocation. Really important breakthrough
+
+221
+00:33:19,800 --> 00:33:24,300
+in digital trust in one of the tools in
+SEDI. Graduated disclosure, which can be
+
+222
+00:33:24,300 --> 00:33:30,240
+selective, contractual. Basically, you can
+disclose as little as you want to disclose
+
+223
+00:33:30,240 --> 00:33:34,860
+when you're doing something and there's
+actually a way to only disclose that thing
+
+224
+00:33:34,860 --> 00:33:39,460
+once terms for disclosure have been agreed
+to and consented to and that can happen
+
+225
+00:33:39,460 --> 00:33:43,120
+behind the scenes with agentic AI and
+these agreements could be made and you
+
+226
+00:33:43,120 --> 00:33:46,300
+actually don't disclose a thing until the
+terms have been agreed and it's mutual.
+
+227
+00:33:46,480 --> 00:33:54,200
+It's like a real-time NDA done digitally.
+Really exciting capability and detection
+
+228
+00:33:54,200 --> 00:33:59,360
+and recovery from compromise. As a matter
+of fact, SEDI brings a four-step concept
+
+229
+00:33:59,360 --> 00:34:05,820
+I'm very excited about from a security
+standpoint. SEDI expects compromise, then
+
+230
+00:34:05,820 --> 00:34:10,720
+it can detect compromise, then it can
+contain compromise, then it can contain
+
+231
+00:34:10,720 --> 00:34:16,100
+compromise and recover. These are mind
+-bendingly awesome in digital trust.
+
+232
+00:34:16,540 --> 00:34:23,760
+Expect, detect, contain, recover. Secure
+attribution, really important in Utah law
+
+233
+00:34:23,760 --> 00:34:27,900
+and electronic signature can be as legally
+valid as handwritten with some
+
+234
+00:34:27,900 --> 00:34:32,900
+assumptions. There's got to be an intent
+to sign. There's got to be attribution
+
+235
+00:34:32,900 --> 00:34:37,060
+which is where SEDI comes in and really
+helps consent to electronic transaction
+
+236
+00:34:37,060 --> 00:34:40,700
+which interestingly there's going to be a
+dilemma. There's going to be a legal one.
+
+237
+00:34:41,040 --> 00:34:44,980
+Can you use digital means to agree to use
+digital means?
+
+238
+00:34:47,780 --> 00:34:52,660
+That's going to be a fun one. And then no
+legal exclusion. Sometimes there's a legal
+
+239
+00:34:52,660 --> 00:34:57,020
+exclusion that says you cannot use
+digital. You must have paper. SEDI can use
+
+240
+00:34:57,020 --> 00:35:01,700
+its own tools to prove each of these.
+Doesn't mean that we legally want it to.
+
+241
+00:35:02,120 --> 00:35:06,440
+There's going to be some policy debates
+but it does mean that SEDI can use the
+
+242
+00:35:06,440 --> 00:35:10,560
+tools to do these things. So guardianship.
+Examples of guardianship. Parent of a
+
+243
+00:35:10,560 --> 00:35:15,020
+child, the natural guardian, guardian of a
+disabled adult, guardian for an orphan,
+
+244
+00:35:15,500 --> 00:35:19,240
+which is court appointed, or temporary
+guardianship like when parents are
+
+245
+00:35:19,240 --> 00:35:24,900
+traveling. Guardianship is the missing
+piece of government digital identity. You
+
+246
+00:35:24,900 --> 00:35:30,260
+don't see it anywhere. You don't see it
+talked about. I think it is the cherry on
+
+247
+00:35:30,260 --> 00:35:33,960
+the sundae when you're doing a digital
+identity system if you're government. If
+
+248
+00:35:33,960 --> 00:35:37,020
+you're not government, you don't care as
+much. But when you are government, you
+
+249
+00:35:37,020 --> 00:35:43,840
+absolutely are the dog wagged by the tail
+of dependent populations. So these are the
+
+250
+00:35:43,840 --> 00:35:49,380
+children, infants, elderly, disabled,
+homeless, right? There's advocates for all
+
+251
+00:35:49,380 --> 00:35:54,240
+of those and they're loud and they're
+powerful and they should be. And so to be
+
+252
+00:35:54,240 --> 00:35:59,820
+able to have guardianship and digital
+guardianship that actually brings those
+
+253
+00:35:59,820 --> 00:36:04,420
+dependent populations into the digital
+realm, really important stuff. And if
+
+254
+00:36:04,420 --> 00:36:07,340
+there's one takeaway from any
+representatives of other states that are
+
+255
+00:36:07,340 --> 00:36:12,960
+looking at SEDI, there's some privacy and
+autonomy reasons for looking at SEDI,
+
+256
+00:36:13,200 --> 00:36:17,840
+there's some security reasons for looking
+at SEDI. But I think the number one reason
+
+257
+00:36:17,840 --> 00:36:23,140
+why a state would look at SEDI is because
+of digital guardianship. Because it
+
+258
+00:36:23,140 --> 00:36:26,580
+includes everybody. All the different
+dependent populations you want to include.
+
+259
+00:36:26,880 --> 00:36:31,460
+No government system has figured this out.
+Few of them are even talking about it.
+
+260
+00:36:31,960 --> 00:36:39,340
+Only 25% of US 16 year olds get a driver's
+license. Only 50% of 20 year olds have
+
+261
+00:36:39,340 --> 00:36:45,880
+driver's license. But yet 100% of 15 year
+olds need identity.
+
+262
+00:36:48,360 --> 00:36:52,900
+SEDI solves a big technical challenge.
+Decentralized digital guardianship that's
+
+263
+00:36:52,900 --> 00:36:56,620
+peer to peer with no phone home and no
+dependence on any vendor network or
+
+264
+00:36:56,620 --> 00:37:01,260
+blockchain. That's a really important
+thing. You know what's easy to do
+
+265
+00:37:01,260 --> 00:37:05,060
+technically? To prove a guardian
+relationship. If you phone home to a
+
+266
+00:37:05,060 --> 00:37:06,080
+server and the server and the server and
+the server and the server and the server
+
+267
+00:37:06,080 --> 00:37:07,960
+and the server and the server says, oh
+yeah, that's the parent of the child,
+
+268
+00:37:08,400 --> 00:37:13,320
+we're good. And you're phoning home to the
+server. That's easy technically to do. You
+
+269
+00:37:13,320 --> 00:37:18,380
+know it's extremely hard that requires the
+breakthroughs enabled by Sam Smith who I
+
+270
+00:37:18,380 --> 00:37:23,280
+mentioned earlier is to be able to verify
+that guardian relationship in a
+
+271
+00:37:23,280 --> 00:37:30,260
+decentralized manner where you're not
+phoning home. Offline using Bluetooth peer
+
+272
+00:37:30,260 --> 00:37:35,400
+to peer. Major breakthrough in digital
+trust. Now you know I gave you these guys
+
+273
+00:37:35,400 --> 00:37:40,840
+some kudos at the beginning. SEDI can
+mimic any form of guardianship. A guardian
+
+274
+00:37:40,840 --> 00:37:45,580
+can prove that the guardian award can
+prove who their guardian is and verifiers
+
+275
+00:37:45,580 --> 00:37:51,280
+can follow guardian requirements for award
+authorization. So what I mean by that is
+
+276
+00:37:51,280 --> 00:37:55,940
+Johnny requests to spend 35 bucks on
+fortnight and his mother is prompted for
+
+277
+00:37:55,940 --> 00:38:03,280
+approval. It's a simple example of how a
+verifier can follow guardian requirements
+
+278
+00:38:03,280 --> 00:38:08,000
+for award authorization. Guardianship,
+however, guardianship, however, gets very
+
+279
+00:38:08,000 --> 00:38:13,540
+tricky. A single guardian is very simple.
+It's one to one. A single parent actually
+
+280
+00:38:13,540 --> 00:38:18,220
+is the simplest use case. A single parent
+just they're the only one who makes the
+
+281
+00:38:18,220 --> 00:38:22,960
+decision, right? It gets trickier when
+there's two parents. When they're married,
+
+282
+00:38:23,120 --> 00:38:27,660
+it's still trickier than a single single
+because you can say the parents either one
+
+283
+00:38:27,660 --> 00:38:32,580
+of them can say Johnny can do it. You can
+say both of them have to approve before
+
+284
+00:38:32,580 --> 00:38:38,000
+Johnny can do it. You can say up to a
+certain dollar amount. Up to a certain
+
+285
+00:38:38,000 --> 00:38:41,200
+dollar amount. Either parent can do it.
+But if it exceeds another dollar amount,
+
+286
+00:38:41,440 --> 00:38:45,860
+then both parents need to be able to do
+it. And that's what I call graduated. So
+
+287
+00:38:45,860 --> 00:38:50,760
+you can have conditions in there and
+things like that for that approval. It
+
+288
+00:38:50,760 --> 00:38:55,180
+gets even trickier with divorced parents
+where you have a two to one relationship
+
+289
+00:38:55,180 --> 00:38:58,740
+with Johnny, potentially a three to one
+relationship if the court is involved,
+
+290
+00:38:59,480 --> 00:39:04,060
+which they might be for some things that
+Johnny might want to do. And there's
+
+291
+00:39:04,060 --> 00:39:08,520
+waiting so you can give more weight to the
+court. You can give more weight to one
+
+292
+00:39:08,520 --> 00:39:11,760
+parent. You can give weight to a
+grandparent. You can do whatever you want.
+
+293
+00:39:12,380 --> 00:39:17,480
+It's called weighted M of N multisig and
+so you can divide that authority however
+
+294
+00:39:17,480 --> 00:39:24,280
+you choose. And adult children of a
+disabled parent. So I've got a mother
+
+295
+00:39:24,280 --> 00:39:28,460
+who's 89 and she's starting to forget some
+things. And she's got a lot of living
+
+296
+00:39:28,460 --> 00:39:33,240
+adult children. And there's some of these
+adult children who should probably not
+
+297
+00:39:33,240 --> 00:39:38,240
+have a say. And what happens with mom.
+It's an opinion. But at some point that
+
+298
+00:39:38,240 --> 00:39:42,340
+might have to be adjudicated. And someone
+might have to say, well, when push comes
+
+299
+00:39:42,340 --> 00:39:49,040
+to sub, the kids are not agreeing. How is
+that adjudicated? And however that is, if
+
+300
+00:39:49,040 --> 00:39:53,560
+the conclusion is that a certain subset of
+children have authority and maybe one has
+
+301
+00:39:53,560 --> 00:39:58,200
+more than the others, that can be modeled
+with M of N weighted multisig, which is
+
+302
+00:39:58,200 --> 00:40:03,360
+part of KERI, part of SEDI. How about
+homeless people unable to carry
+
+303
+00:40:03,360 --> 00:40:08,580
+credentials? Well, what are you doing
+there to bring that homeless person in the
+
+304
+00:40:08,580 --> 00:40:12,240
+digital realm if they're unable to carry
+credentials? How does it work in real
+
+305
+00:40:12,240 --> 00:40:15,400
+life? We try to mimic what happens in real
+life and that is there's a government
+
+306
+00:40:15,400 --> 00:40:19,400
+agency that actually holds some
+credentials or has the ability to do
+
+307
+00:40:19,400 --> 00:40:26,100
+something on behalf of that homeless
+person. Very tricky situations. And I'm
+
+308
+00:40:26,100 --> 00:40:29,500
+going a little bit slower than I want, so
+I'm going to go a lot faster. Delegation.
+
+309
+00:40:29,720 --> 00:40:33,740
+A parent signs a permission slip that
+authorizes another adult child to pick up
+
+310
+00:40:33,740 --> 00:40:40,740
+their child or a manager delegates a task
+or an individual delegates to an AI agent.
+
+311
+00:40:40,960 --> 00:40:46,780
+We talk about AI and agentic AI. That is a
+form of delegation. Delegation is
+
+312
+00:40:46,780 --> 00:40:50,500
+absolutely everywhere. A legislature can
+delegate to committees and agencies who
+
+313
+00:40:50,500 --> 00:40:54,260
+then delegate to departments and outside
+companies who delegate multiple levels of
+
+314
+00:40:54,260 --> 00:41:00,820
+employees who provide a service to a
+citizen. So delegation is absolutely
+
+315
+00:41:00,820 --> 00:41:05,760
+everywhere. All organizations, private or
+public or public or our hierarchies of
+
+316
+00:41:05,760 --> 00:41:09,780
+delegation. SEDI enables an individual to
+directly delegate authority to another
+
+317
+00:41:09,780 --> 00:41:14,700
+without involving anyone else. The
+individual, the authority can go directly
+
+318
+00:41:14,700 --> 00:41:20,040
+to the delegate and give them that
+authority. With SEDI anyone anywhere can
+
+319
+00:41:20,040 --> 00:41:23,200
+verify the claimed authority without
+phoning home. We talked about that earlier
+
+320
+00:41:23,200 --> 00:41:28,960
+decentralization. SEDI can mimic any form
+of delegation. A delegator can prove what
+
+321
+00:41:28,960 --> 00:41:33,800
+and to whom they've delegated. A delegate
+can prove what's delegated and from whom.
+
+322
+00:41:34,040 --> 00:41:35,100
+And by the way, from whom. And by the way,
+from whom, and by the way, the word
+
+323
+00:41:35,100 --> 00:41:39,280
+delegate a little bit awkward because in
+some cases a noun, in some cases a verb.
+
+324
+00:41:39,820 --> 00:41:45,480
+Okay, so I'm using the form delegate here
+in number two. A delegate noun can prove
+
+325
+00:41:45,480 --> 00:41:52,160
+what's delegated verb and from whom.
+Delegation can expire or be revoked. A
+
+326
+00:41:52,160 --> 00:41:57,200
+delegate can delegate again with proof of
+authority to do so. Delegations are non
+
+327
+00:41:57,200 --> 00:42:02,000
+-reputable and which means they can't be
+denied later. Delegations can form
+
+328
+00:42:02,000 --> 00:42:05,620
+hierarchies or chains. They're auditable,
+auditable, traceable, they cannot be
+
+329
+00:42:05,620 --> 00:42:09,520
+forged. They're resilient to key rotation.
+And rules and restrictions can be made
+
+330
+00:42:09,520 --> 00:42:14,680
+verifiable, machine readable, and
+enforceable. Sounds like a dream list. It
+
+331
+00:42:14,680 --> 00:42:18,780
+is. Now you know why we're excited.
+Agentic future, by the way, I have to
+
+332
+00:42:18,780 --> 00:42:22,420
+laugh at this picture of grandma being
+helped by a robot. And no, that wasn't
+
+333
+00:42:22,420 --> 00:42:30,420
+made by AI. And no, I didn't take that
+photo. But Microsoft CEO said this and I'm
+
+334
+00:42:30,420 --> 00:42:34,540
+paraphrasing because this quote is too
+long. But the the paraphrase of the the
+
+335
+00:42:34,540 --> 00:42:39,040
+paraphrase of the Microsoft CEO, AI agents
+will replace all software as a service,
+
+336
+00:42:39,140 --> 00:42:49,680
+SaaS. CEO of Microsoft. And the reason he
+says that is because of frankly what I
+
+337
+00:42:49,680 --> 00:42:55,300
+think is illustrated by grandma. It's a
+user experience. Most agentic tasks are
+
+338
+00:42:55,300 --> 00:43:00,020
+simple and don't require delegation, but
+some important ones do. And they require
+
+339
+00:43:00,020 --> 00:43:04,280
+some delegation, some authority on behalf
+of the agent. And I think one of the
+
+340
+00:43:04,280 --> 00:43:11,840
+greatest use cases. And I think one of the
+greatest use cases for agentic AI is user
+
+341
+00:43:11,840 --> 00:43:18,600
+experience for elderly people. I know my
+mom could talk to an agent and ask her to
+
+342
+00:43:18,600 --> 00:43:23,280
+do something. She struggles to open her
+phone and start an app to play Scrabble
+
+343
+00:43:23,280 --> 00:43:27,120
+with her daughter in Pennsylvania. But I
+know she could talk to an agent and say
+
+344
+00:43:27,120 --> 00:43:33,360
+please open the Scrabble game or please do
+something. I think the future of of AI for
+
+345
+00:43:33,360 --> 00:43:38,920
+elderly people is really bright. And I
+want that agent's authority to do
+
+346
+00:43:38,920 --> 00:43:42,580
+something on behalf of my mom carefully
+constrained.
+
+347
+00:43:46,120 --> 00:43:51,400
+SEDI is ideal for delegating to agentic
+AI. So in conclusion, SEDI brings
+
+348
+00:43:51,400 --> 00:43:55,980
+guardianship and delegation into
+verifiable digital form, harmonizing law
+
+349
+00:43:55,980 --> 00:44:00,920
+and technology. SEDI includes everyone
+through digital guardianship. Parents,
+
+350
+00:44:01,080 --> 00:44:05,940
+caregivers, and courts, can securely
+represent those who cannot self-manage
+
+351
+00:44:05,940 --> 00:44:11,360
+their identity. Through SEDI delegation,
+individuals can safely empower others or
+
+352
+00:44:11,360 --> 00:44:17,060
+AI agents with limited revocable
+authority. SEDI actualizes both human and
+
+353
+00:44:17,060 --> 00:44:21,360
+legal rights and principles and is
+designed for the coming agentic AI era.
+
+354
+00:44:21,820 --> 00:44:24,860
+Thank you. Thank you.
+
+355
+00:44:57,560 --> 00:44:58,960
+Thank you.
+
+356
+00:45:26,820 --> 00:45:52,500
+SEDI actualized by the way. Good
+afternoon. Good afternoon.
+
+357
+00:45:52,500 --> 00:46:02,260
+Thank you.
+
+358
+00:46:31,700 --> 00:46:32,480
+Thank you. Thank you.
+
+359
+00:46:57,520 --> 00:47:02,880
+Thank you. Thank you. Thank you. Thank
+you.
+
+360
+00:47:23,960 --> 00:47:31,280
+I Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild
+
+361
+00:47:31,280 --> 00:47:31,440
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+362
+00:47:31,440 --> 00:47:32,640
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+363
+00:47:32,640 --> 00:47:35,160
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+364
+00:47:35,160 --> 00:47:37,440
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+365
+00:47:37,440 --> 00:47:43,800
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+366
+00:47:43,800 --> 00:47:43,840
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+367
+00:47:43,840 --> 00:47:44,000
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+368
+00:47:44,000 --> 00:47:46,540
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+369
+00:47:46,540 --> 00:47:46,540
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+370
+00:47:46,540 --> 00:47:46,560
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+371
+00:47:46,560 --> 00:47:46,620
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+372
+00:47:46,620 --> 00:47:49,540
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+373
+00:47:49,540 --> 00:47:49,880
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+374
+00:47:49,880 --> 00:48:04,440
+Wild increased dramatically between 2019
+and 2024 from 675 to 24,000 cases. In the
+
+375
+00:48:04,440 --> 00:48:10,220
+first six months of this year alone,
+Roblox has reported more than it reported
+
+376
+00:48:10,220 --> 00:48:19,640
+all of last year. In 2019, a study of more
+than 2,000 child Minecraft players found
+
+377
+00:48:19,640 --> 00:48:26,600
+that nearly 10% had been asked by another
+player to meet in real life. That's almost
+
+378
+00:48:26,600 --> 00:48:33,220
+200 children and that was six years ago.
+This number has grown exponentially. There
+
+379
+00:48:33,220 --> 00:48:37,400
+have been numerous attempts to remedy
+these risks to children. However, they do
+
+380
+00:48:37,400 --> 00:48:42,880
+not address the core problems, how we
+access the internet, digital content, and
+
+381
+00:48:42,880 --> 00:48:48,140
+the interactions children are exposed to.
+Today, you will witness for the first time
+
+382
+00:48:48,140 --> 00:48:53,640
+in the world two technologies, key event
+receipt infrastructure, commonly referred
+
+383
+00:48:53,640 --> 00:48:59,620
+to as KERI, and authentic chained data
+containers, ACDCs, being leveraged in a
+
+384
+00:48:59,620 --> 00:49:05,040
+manner that no other technology can
+achieve today. Providing open source,
+
+385
+00:49:05,780 --> 00:49:12,580
+state endorsed, digital identity wallet
+and supporting services designed to return
+
+386
+00:49:12,580 --> 00:49:18,660
+control back in the hands of parents and
+guardians, empowering them to ensure a
+
+387
+00:49:18,660 --> 00:49:23,820
+safe and verified digital future for their
+children and their children's children.
+
+388
+00:49:24,320 --> 00:49:28,040
+What we'd like to do now is walk you
+through a demonstration leveraging these
+
+389
+00:49:28,040 --> 00:49:28,620
+technologies.
+
+390
+00:49:32,080 --> 00:49:36,320
+What Fergal is going to be demonstrating
+on the left-hand side is a representation
+
+391
+00:49:36,320 --> 00:49:41,260
+of the state of Utah Vital Records
+platform. What he will be doing here is
+
+392
+00:49:41,260 --> 00:49:46,060
+issuing a birth certificate. Now, this may
+be a manual process conducted by an
+
+393
+00:49:46,060 --> 00:49:49,880
+administrator. It could be a checkbox in
+an existing system that's integrated
+
+394
+00:49:49,880 --> 00:49:52,840
+integrated. It could be fully automated.
+It could be fully automated. It could be
+
+395
+00:49:52,840 --> 00:49:56,840
+fully automated. But the point here is
+that there are certain aspects of SEDI
+
+396
+00:49:56,840 --> 00:50:01,960
+that must be introduced by the government
+and others that fall into the power of the
+
+397
+00:50:01,960 --> 00:50:09,080
+parents. Fergal is forming a peer-to-peer
+channel with the government leveraging the
+
+398
+00:50:09,080 --> 00:50:15,380
+mobile wallet of the child Oliver in
+today's demonstration. The parent, Mary,
+
+399
+00:50:16,160 --> 00:50:20,740
+also has established a peer-to-peer
+communication and she will be requesting
+
+400
+00:50:20,740 --> 00:50:27,280
+the government issue a birth certificate
+to her child as well as a guardianship
+
+401
+00:50:27,280 --> 00:50:31,560
+credential. These are all ACDC technology.
+
+402
+00:50:40,440 --> 00:50:45,040
+So what has happened now is a guardianship
+credential has been issued to the parent
+
+403
+00:50:45,040 --> 00:50:51,020
+and a birth certificate has been issued to
+Oliver. What you can see online here is
+
+404
+00:50:51,020 --> 00:50:55,300
+the credential contains any amount of
+information including a direct link
+
+405
+00:50:55,300 --> 00:51:02,000
+potentially to a file system or server. It
+can be fully customized based on policy
+
+406
+00:51:02,000 --> 00:51:08,360
+and that is the most important aspect.
+This is not tech providers dictating what
+
+407
+00:51:08,360 --> 00:51:15,300
+the state can use. This is technology that
+is built based on policy and law. Now that
+
+408
+00:51:15,300 --> 00:51:19,680
+the birth certificate has been issued and
+the guardianship credential has now been
+
+409
+00:51:19,680 --> 00:51:24,560
+issued issued to Mary the mother. And this
+could be a multi-signature relationship
+
+410
+00:51:24,560 --> 00:51:30,380
+for both parents for example. All capable
+with KERI and ACDC technology. Now Mary
+
+411
+00:51:30,380 --> 00:51:35,740
+will leverage the family portal. This is
+all open source software you are seeing
+
+412
+00:51:35,740 --> 00:51:41,840
+here today. This could be running in your
+home system like a home media center or it
+
+413
+00:51:41,840 --> 00:51:47,000
+could be provided by a third party. The
+key difference here is these are not like
+
+414
+00:51:47,000 --> 00:51:52,100
+the centralized systems. The keys
+controlling the data reside in the data
+
+415
+00:51:52,100 --> 00:51:57,520
+reside in the hand of the parent. They
+never leave that platform. They never go
+
+416
+00:51:57,520 --> 00:52:02,940
+into this system you are seeing.
+Everything must be signed and approved at
+
+417
+00:52:02,940 --> 00:52:08,180
+the edge or from the wallet. So now Mary
+has logged into this system. You'll notice
+
+418
+00:52:08,180 --> 00:52:11,960
+there were no usernames, no passwords.
+This is known as passwordless
+
+419
+00:52:11,960 --> 00:52:17,820
+authentication. And now Mary is presenting
+her SEDI credentials to the family portal.
+
+420
+00:52:18,140 --> 00:52:22,240
+This will allow the portal to determine
+what features should be available to her.
+
+421
+00:52:22,880 --> 00:52:27,580
+In there you will see a number of things
+appearing in the family tree. This is this
+
+422
+00:52:27,580 --> 00:52:33,440
+chaining characteristic that was just
+mentioned behind ACDC credentials. In the
+
+423
+00:52:33,440 --> 00:52:38,520
+SEDI wallet is not only a credential
+dictating the guardian relationship for
+
+424
+00:52:38,520 --> 00:52:46,000
+Oliver but also the guardian relationship
+to Liam, Liam's father. So this would be a
+
+425
+00:52:46,000 --> 00:52:50,120
+power of attorney issued by a court for
+example. The idea is to demonstrate that
+
+426
+00:52:50,120 --> 00:52:55,500
+all of this information can be contained
+within a chain of credentials that are
+
+427
+00:52:55,500 --> 00:52:59,680
+cryptographically built upon one another
+similar to that scenario with the Lego
+
+428
+00:52:59,680 --> 00:53:05,560
+blocks just presented on screen. So now
+the parents are empowered to issue
+
+429
+00:53:05,560 --> 00:53:12,500
+credentials to delegate authority to their
+children completely removed from the
+
+430
+00:53:12,500 --> 00:53:16,920
+state. The state has provided the
+credential to prove guardianship but now
+
+431
+00:53:16,920 --> 00:53:21,900
+the parent has control. Now Mary will
+issue a credential to control. Now Mary
+
+432
+00:53:21,900 --> 00:53:24,240
+will issue a credential to Oliver and
+you'll see there are three scenarios we've
+
+433
+00:53:24,240 --> 00:53:30,220
+explored here. Social media, streaming
+platforms and gaming consoles. We will
+
+434
+00:53:30,220 --> 00:53:34,840
+demonstrate a social media credential and
+the ability to customize the attributes.
+
+435
+00:53:35,400 --> 00:53:40,700
+What you can see here initially is a
+conversational age rating. This is the
+
+436
+00:53:40,700 --> 00:53:45,200
+ability for the parent to decide the age
+in which they want their children to
+
+437
+00:53:45,200 --> 00:53:50,760
+interact with. Second, you will see a time
+constraint. They can set parameters around
+
+438
+00:53:50,760 --> 00:53:55,840
+when these credentials can be used when
+these platforms can be accessed. And
+
+439
+00:53:55,840 --> 00:54:00,480
+finally there is a content rating that can
+be set by the parent. You'll see a check
+
+440
+00:54:00,480 --> 00:54:06,200
+box at the bottom that says enable safe
+interactions. What this is telling the
+
+441
+00:54:06,200 --> 00:54:11,360
+system wherever this credential is
+presented that this user can only interact
+
+442
+00:54:11,360 --> 00:54:18,240
+with other SEDI endorsed users. What we're
+going to do now is issue this credential
+
+443
+00:54:18,240 --> 00:54:23,480
+but before I do so. This is just an
+example. The policy will dictate the
+
+444
+00:54:23,480 --> 00:54:28,520
+parameters of this credential. Not the
+tech providers. So when that is
+
+445
+00:54:28,520 --> 00:54:32,860
+established exactly what will go into this
+credential, what are those options, then
+
+446
+00:54:32,860 --> 00:54:38,340
+that will be implemented. They are fully
+flexible. What you will see now is Mary
+
+447
+00:54:38,340 --> 00:54:42,820
+will receive a request because although it
+looks like this system is creating and
+
+448
+00:54:42,820 --> 00:54:47,880
+issuing the credential, it isn't. It is
+merely a Lego block to build but Mary the
+
+449
+00:54:47,880 --> 00:54:50,380
+ability to do the right. So Mary must sign
+with the keys that are stored in her SEDI
+
+450
+00:54:50,380 --> 00:54:55,800
+wallet, her identity which is contained
+within in order to execute this action.
+
+451
+00:54:56,380 --> 00:55:00,160
+And now what you will see is the child
+will receive a prompt in their phone
+
+452
+00:55:00,160 --> 00:55:04,260
+saying their mother would like to issue
+them a credential and they must also
+
+453
+00:55:04,260 --> 00:55:09,160
+approve this credential in order to hold
+it and receive it. So what you see here is
+
+454
+00:55:09,160 --> 00:55:14,620
+not only holding and issuing but also the
+ability to do decentralized verification
+
+455
+00:55:14,620 --> 00:55:21,900
+which is the next step. So now that Oliver
+has received a social media access
+
+456
+00:55:21,900 --> 00:55:28,120
+credential, he can now register for a new
+paradigm shift in social media that we are
+
+457
+00:55:28,120 --> 00:55:32,940
+calling SocialBook today. You'll notice
+again there is no usernames and passwords.
+
+458
+00:55:33,300 --> 00:55:39,220
+Oliver will log in online with his
+delegated authority from his mother in an
+
+459
+00:55:39,220 --> 00:55:45,640
+ACDC credential into the SocialBook
+platform. Oliver will scan this QR code
+
+460
+00:55:45,640 --> 00:55:49,400
+you see on screen to establish a peer-to
+-peer connection to establish a peer-to
+
+461
+00:55:49,400 --> 00:55:53,460
+-peer connection with SocialBook. He will
+input his email but you'll notice Oliver
+
+462
+00:55:53,460 --> 00:55:58,100
+will not be telling the system how old he
+is. The state endorsed digital identity
+
+463
+00:55:58,100 --> 00:56:04,200
+which empowered the mother to create a
+social media access credential will inform
+
+464
+00:56:04,200 --> 00:56:11,720
+the platform cryptographically how old
+Oliver is. Oliver will now register for
+
+465
+00:56:11,720 --> 00:56:17,360
+the platform and will then log into the
+platform using no usernames and passwords.
+
+466
+00:56:23,960 --> 00:56:29,400
+Once Oliver has logged into the platform
+we will now start to explore how those
+
+467
+00:56:29,400 --> 00:56:34,840
+criteria and restrictions that were set by
+his parent can be visualized in a system.
+
+468
+00:56:35,100 --> 00:56:40,640
+What we have done here is we have tagged
+the data in this post with a metadata
+
+469
+00:56:40,640 --> 00:56:47,340
+label indicating the content level of
+which this image was and because the
+
+470
+00:56:47,340 --> 00:56:53,160
+parent has set that restriction to teen is
+no longer view that image. If he wanted to
+
+471
+00:56:53,160 --> 00:56:58,180
+view it he could request it but let's move
+on now to the chat to demonstrate how chat
+
+472
+00:56:58,180 --> 00:57:02,600
+now is leveraging that age restriction.
+What you will see on screen here is
+
+473
+00:57:02,600 --> 00:57:07,160
+existing conversations that are already
+underway and you will notice below there
+
+474
+00:57:07,160 --> 00:57:12,260
+are a number of SEDI tokens that indicate
+that these are users that have leveraged a
+
+475
+00:57:12,260 --> 00:57:16,460
+SEDI based credential to access and
+register for the system. and you will see
+
+476
+00:57:16,460 --> 00:57:21,420
+other users that have red tags there.
+These fall outside of the constraints of
+
+477
+00:57:21,420 --> 00:57:26,280
+the age that was set by the mother. In a
+scenario where Oliver would like to talk
+
+478
+00:57:26,280 --> 00:57:33,380
+to Justin he must receive approval from
+his parents. In this scenario Mary in
+
+479
+00:57:33,380 --> 00:57:40,320
+order to do so. This is creating a shield
+online that parents can control for their
+
+480
+00:57:40,320 --> 00:57:45,940
+children cryptographically. What we will
+now do is we will move on to another
+
+481
+00:57:45,940 --> 00:57:51,800
+example of how social media can be
+leveraged. We will move on to another
+
+482
+00:57:51,800 --> 00:57:52,340
+example of how social media can be
+leveraged. We've had a couple of
+
+483
+00:57:52,340 --> 00:58:00,200
+conversations with social media platforms
+as well as game development houses and we
+
+484
+00:58:00,200 --> 00:58:07,100
+were trying to establish proof of concept
+leveraging decentralized identity and the
+
+485
+00:58:07,100 --> 00:58:11,880
+very common feedback we received was
+decentralized identity is too complex to
+
+486
+00:58:11,880 --> 00:58:16,660
+integrate into gaming. Games must have
+centralized servers and the very common
+
+487
+00:58:16,660 --> 00:58:16,660
+feedback. We have centralized servers and
+the very common feedback we have
+
+488
+00:58:16,660 --> 00:58:19,420
+centralized servers. The identity systems
+must be centralized in the platform to
+
+489
+00:58:19,420 --> 00:58:24,540
+ensure the game and user experience is
+maintained. So although the concept and
+
+490
+00:58:24,540 --> 00:58:29,220
+the idea behind decentralized identity is
+powerful and they understood the value it
+
+491
+00:58:29,220 --> 00:58:33,620
+could bring their statement was you simply
+cannot integrate this comprehensive
+
+492
+00:58:33,620 --> 00:58:41,060
+technology. So I set this task upon my
+team to do exactly that. So what we have
+
+493
+00:58:41,060 --> 00:58:46,740
+done is we have cloned roadblocks. We are
+calling it KERI blocks. We did this in
+
+494
+00:58:46,740 --> 00:58:48,280
+less than two weeks. We did this in less
+than two weeks. Just to give you an
+
+495
+00:58:48,280 --> 00:58:52,780
+understanding of the timeframe here. We
+are not game developers by any means. And
+
+496
+00:58:52,780 --> 00:58:56,580
+what you will see is Oliver is now going
+to register and log into this platform in
+
+497
+00:58:56,580 --> 00:59:01,820
+the exact same way leveraging a credential
+that was issued to him by his mother in
+
+498
+00:59:01,820 --> 00:59:06,240
+order to play this game online. And all of
+those constraints and restrictions that
+
+499
+00:59:06,240 --> 00:59:10,200
+are embedded inside the credential will
+also pertain to his usage of this game
+
+500
+00:59:10,200 --> 00:59:17,020
+platform. So Oliver will join the system
+and we he will begin gameplay. And there
+
+501
+00:59:17,020 --> 00:59:23,460
+are a number of elements here I would like
+to touch upon. The level of predatory
+
+502
+00:59:23,460 --> 00:59:31,820
+engagement that is happening in in-game
+chat is a significant concern. What you
+
+503
+00:59:31,820 --> 00:59:38,380
+have now demonstrated today on screen is
+the ability to have age verification built
+
+504
+00:59:38,380 --> 00:59:45,700
+into a game. This is a complete KERI and
+ACDC based chat integration into KERI
+
+505
+00:59:45,700 --> 00:59:51,720
+blocks. All of these communications are
+digitally signed and the age of the
+
+506
+00:59:51,720 --> 00:59:55,740
+individuals that can communicate with
+Oliver must fall within those constraints
+
+507
+00:59:55,740 --> 01:00:02,980
+that were set in the credential. Another
+huge element to in-game concerns is
+
+508
+01:00:02,980 --> 01:00:11,920
+purchases. Many times parents will input
+their credit card information to purchase
+
+509
+01:00:11,920 --> 01:00:15,400
+something that time and what has happened
+is that they will be able to have racked
+
+510
+01:00:15,400 --> 01:00:18,200
+up their credit card bills. Children have
+racked up credit card bills because that
+
+511
+01:00:18,200 --> 01:00:22,340
+information is in the game. The children
+can click on things and purchase them and
+
+512
+01:00:22,340 --> 01:00:27,200
+mom and dad only find out once the bill
+arrives. In the exact same way that Oliver
+
+513
+01:00:27,200 --> 01:00:30,440
+had to request permission to speak to
+someone who was outside of the age
+
+514
+01:00:30,440 --> 01:00:36,340
+constraints, mom and dad also have to
+approve the purchase. Again, this is a
+
+515
+01:00:36,340 --> 01:00:42,000
+completely new paradigm shift in in-game
+purchases and parental controls for
+
+516
+01:00:42,000 --> 01:00:47,080
+individuals leveraging online systems. The
+next one to two minutes of what you're
+
+517
+01:00:47,080 --> 01:00:52,880
+about to see is the potential future for
+the users that are leveraging Roblox.
+
+518
+01:00:53,060 --> 01:01:00,300
+There are 20 to 40 million users a day
+leveraging this system. There is a huge
+
+519
+01:01:00,300 --> 01:01:04,780
+opportunity here from a commercial
+perspective but there is a huge risk that
+
+520
+01:01:04,780 --> 01:01:07,060
+can be solved with this technology.
+
+521
+01:01:10,680 --> 01:01:11,960
+Let's see if the sound works.
+
+522
+01:01:14,960 --> 01:01:24,900
+Okay. Okay. Sounds not working, but that's
+okay. Go ahead. Do it one more time. Okay.
+
+523
+01:01:26,700 --> 01:01:34,180
+Secure, portable, and self-sovereign.
+Using this identity, you can create your
+
+524
+01:01:34,180 --> 01:01:41,360
+own rules and trusted circles with
+cryptographic proof. Set age limits for
+
+525
+01:01:41,360 --> 01:01:48,240
+your private space. Define your play hours
+or grant access only to friends you have
+
+526
+01:01:48,240 --> 01:01:55,220
+personally approved. In KERI blocks, you
+don't just build worlds. You build the
+
+527
+01:01:55,220 --> 01:02:01,520
+rules that govern them, creating a
+provably safe and personalized gaming
+
+528
+01:02:01,520 --> 01:02:10,180
+experience. Developed by Veridian and
+integrated with notblocks.online! KERI
+
+529
+01:02:10,180 --> 01:02:17,240
+blocks redefines how we play in a
+connected world. So, I leave you here with
+
+530
+01:02:17,240 --> 01:02:24,000
+a thought. To the parents and guardians in
+the audience and viewing online today, if
+
+531
+01:02:24,000 --> 01:02:31,360
+you could choose from this safe, secure,
+friendly gaming experience for your
+
+532
+01:02:31,360 --> 01:02:39,100
+children, or you can take a gamble and
+leverage the systems that are available
+
+533
+01:02:39,100 --> 01:02:46,600
+today, what choice would you make? Thank
+you very much for your time. Thank you.
+
+534
+01:03:14,900 --> 01:03:19,980
+Thank you. Thank you.
+
+535
+01:04:11,080 --> 01:04:13,880
+Thank you.
+
+536
+01:04:40,940 --> 01:04:43,740
+Thank you.
+
+537
+01:04:48,820 --> 01:04:51,620
+Thank you.
+
+538
+01:05:22,020 --> 01:05:22,760
+Thank you. Thank you.
+
+539
+01:05:52,280 --> 01:05:53,520
+Thank you. Thank you. Thank you. Thank
+you.
+
+540
+01:06:41,340 --> 01:06:44,140
+Thank you.
+
+541
+01:06:53,920 --> 01:06:55,020
+I'm Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+542
+01:06:55,020 --> 01:06:55,020
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+543
+01:06:55,020 --> 01:06:55,020
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+544
+01:06:55,020 --> 01:06:55,440
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+545
+01:06:55,440 --> 01:06:57,560
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+546
+01:06:57,560 --> 01:06:59,080
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+547
+01:06:59,080 --> 01:07:03,120
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+548
+01:07:03,120 --> 01:07:03,120
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+549
+01:07:03,120 --> 01:07:06,300
+Wild Wild Wild Wild
+
+550
+01:07:06,300 --> 01:07:06,360
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+551
+01:07:06,360 --> 01:07:06,760
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+552
+01:07:06,760 --> 01:07:06,860
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+553
+01:07:06,860 --> 01:07:06,860
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+554
+01:07:06,860 --> 01:07:10,800
+Wild Wild
+
+555
+01:07:10,800 --> 01:07:10,800
+Wild Wild Wild Wild Wild Wild Wild Wild
+Wild Wild Wild Wild Wild Wild Wild Wild
+
+556
+01:07:10,800 --> 01:07:14,540
+Wild Wild Wild Wild Wild Wild
+
+557
+01:07:14,540 --> 01:07:18,520
+in her life. These are some of the things
+that actually can do it in real time. And
+
+558
+01:07:18,520 --> 01:07:23,700
+so when a grandparent actually imagine a
+future where a grandparent doesn't need to
+
+559
+01:07:23,700 --> 01:07:27,820
+use username and passwords. They just grab
+their phone, push on an apps, log in, and
+
+560
+01:07:27,820 --> 01:07:33,020
+they can actually see all of their assets,
+all of their ability to pay things, all of
+
+561
+01:07:33,020 --> 01:07:36,760
+the things that they own, all the
+contacts. And it's actually managed by
+
+562
+01:07:36,760 --> 01:07:41,760
+someone that's given guardianship rights
+from an organization like a state to be
+
+563
+01:07:41,760 --> 01:07:46,100
+able to help manage that grandparent.
+Maybe it's a accounts. Maybe it's paying
+
+564
+01:07:46,100 --> 01:07:50,360
+bills. Maybe it's paying different
+vendors. Maybe it's different assets and
+
+565
+01:07:50,360 --> 01:07:54,420
+how to pass them from one generation to
+another. Maybe it's currencies. Maybe it's
+
+566
+01:07:54,420 --> 01:07:58,660
+the ability to actually manage contacts,
+not just for your child, but also for
+
+567
+01:07:58,660 --> 01:08:02,720
+grandparents. There's a lot of confusion
+when people get into that environment. And
+
+568
+01:08:02,720 --> 01:08:06,860
+then the ability to actually take these
+types of things and actually drop from one
+
+569
+01:08:06,860 --> 01:08:11,700
+environment to another to actually make it
+easy for them to pay. So if you wanted to
+
+570
+01:08:11,700 --> 01:08:15,380
+pay a utility bill or you wanted to pay a
+grandchild, it's all integrated and
+
+571
+01:08:15,380 --> 01:08:17,980
+simple. It's all integrated and simple. So
+that's a good example of a grandparent
+
+572
+01:08:17,980 --> 01:08:24,140
+type guardianship reality with a simple
+app that you can pull down, log in today
+
+573
+01:08:24,140 --> 01:08:28,580
+and actually start using these types of
+things. It also works with children. So
+
+574
+01:08:28,580 --> 01:08:33,580
+the ability for children to be able to be
+managed from what apps are they using to
+
+575
+01:08:33,580 --> 01:08:37,940
+what sites are they going to. There's a
+lot of functionality and opportunities
+
+576
+01:08:37,940 --> 01:08:43,300
+there. So I just want to say thank you for
+those specifically Sam Smith, Phil
+
+577
+01:08:43,300 --> 01:08:46,540
+Windley, these are people that have
+dedicated their lives to solving this
+
+578
+01:08:46,540 --> 01:08:52,620
+problem. Tim, I mean this is real. And
+this is a nucleus here in Utah that we can
+
+579
+01:08:52,620 --> 01:08:56,760
+actually make a real difference. But
+ultimately, it's actually all of you that
+
+580
+01:08:56,760 --> 01:08:59,860
+have said this is a problem that I want to
+learn about and a problem that I want to
+
+581
+01:08:59,860 --> 01:09:03,820
+be able to be a part of the solution in
+the future. So thank you for coming and
+
+582
+01:09:03,820 --> 01:09:07,600
+thank you for actually understanding
+what's happening here in Utah. But it's
+
+583
+01:09:07,600 --> 01:09:12,160
+really the world. It's a problem that
+society has a responsibility in our
+
+584
+01:09:12,160 --> 01:09:16,320
+generation. Like when all of us were born.
+Like when all of us were born, we didn't
+
+585
+01:09:16,320 --> 01:09:19,380
+have the cell phones. We didn't have the
+internet. And when we pass on, we've got
+
+586
+01:09:19,380 --> 01:09:23,860
+to pass on a better legacy than what's
+currently there. So thank you for Chris
+
+587
+01:09:23,860 --> 01:09:28,080
+and all the hard work that he does to put
+this together and those at the state that
+
+588
+01:09:28,080 --> 01:09:32,600
+truly are aligning with this effort.
+Because I know it's not easy to put these
+
+589
+01:09:32,600 --> 01:09:36,460
+parts and pieces together. When we went
+and searched the world, we could not find
+
+590
+01:09:36,460 --> 01:09:40,320
+a body like this. We went to the
+government in the DC. We went here. We
+
+591
+01:09:40,320 --> 01:09:45,660
+went. It's just amazing to see the heart,
+the alignment to support someone like
+
+592
+01:09:45,660 --> 01:09:53,380
+Cindy who 10 years ago lost a son. That's
+real in this university. That young man
+
+593
+01:09:53,380 --> 01:10:00,500
+went to this university 10 years ago. And
+here we are. So thank you for being here
+
+594
+01:10:00,500 --> 01:10:02,120
+and understanding some of these concepts.
+
+595
+01:10:36,540 --> 01:10:36,580
+!
+
+596
+01:10:42,300 --> 01:10:57,620
+I think
+
+597
+01:10:57,620 --> 01:10:57,660
+I should stay on our site to stay on site
+to stay on site to stay on site to stay on
+
+598
+01:10:57,660 --> 01:10:57,660
+site to stay on site to stay on site to
+stay on site to stay on site to stay on
+
+599
+01:10:57,660 --> 01:10:57,660
+site to stay on site to stay on site to
+stay on site to stay on site to stay on
+
+600
+01:10:57,660 --> 01:10:57,660
+site to stay on site to stay on site to
+stay on site to stay on site to stay on
+
+601
+01:10:57,660 --> 01:10:57,680
+site to stay on site to stay on site to
+stay on site to stay on site to stay on
+
+602
+01:10:57,680 --> 01:10:57,720
+site to stay on site to stay on site to
+stay on site to stay on site to stay on
+
+603
+01:10:57,720 --> 01:10:57,740
+site to stay on site to stay on site to
+stay on site to stay on site to stay on
+
+604
+01:10:57,740 --> 01:10:57,780
+site to stay on site to stay on site to
+stay on site to stay on site to stay on
+
+605
+01:10:57,780 --> 01:10:58,000
+site to stay on site to stay on site to
+stay on site to stay on site to stay on
+
+606
+01:10:58,000 --> 01:10:58,000
+site to stay on site to stay on site to
+stay on site to stay on site to stay on
+
+607
+01:10:58,000 --> 01:10:59,980
+site to stay on site to stay on site to
+stay on site to stay on site
+
+608
+01:11:15,760 --> 01:11:22,960
+Thank you. All right. My name is Steve
+McCown and I am a commissioner on the Utah
+
+609
+01:11:22,960 --> 01:11:30,640
+Privacy Commission. I'm also chief
+architect of Anonomy Labs. And I'd like to
+
+610
+01:11:30,640 --> 01:11:36,100
+talk to you about surveillance and
+tracking today and what SEDI does to get
+
+611
+01:11:36,100 --> 01:11:43,460
+in the way of that. Years ago, I worked
+for the US Department of Energy as
+
+612
+01:11:43,460 --> 01:11:50,280
+basically a computer hacker. And one of my
+assignments was to work on compromising
+
+613
+01:11:50,280 --> 01:11:55,520
+cell phones. Another part of my assignment
+was what they call open source
+
+614
+01:11:55,520 --> 01:12:01,920
+intelligence. And this is the collection
+and analysis of data gathered from open
+
+615
+01:12:01,920 --> 01:12:07,880
+sources, think internet, and in order to
+produce actionable intelligence. And in
+
+616
+01:12:07,880 --> 01:12:15,260
+that capacity, I was able to be given
+target sites and pull together enough
+
+617
+01:12:15,260 --> 01:12:21,900
+information from the internet that
+resulted in classified reports. So the
+
+618
+01:12:21,900 --> 01:12:27,560
+first, I wanted to look and see when the
+first open source intelligence was taking
+
+619
+01:12:27,560 --> 01:12:35,260
+place. And this is January of 1862. A
+publication called Harper's Weekly was
+
+620
+01:12:35,260 --> 01:12:43,100
+publishing articles about force movements
+during the US Civil War. And as you can
+
+621
+01:12:43,100 --> 01:12:51,680
+see here, the text talks about a general's
+expeditions and where the troops were
+
+622
+01:12:51,680 --> 01:12:59,620
+going, what assets he had. And while the
+specific targets were secret, they also
+
+623
+01:12:59,620 --> 01:13:03,540
+were able to surmise where they were
+going, they went so far as to draw
+
+624
+01:13:03,540 --> 01:13:12,960
+pictures of the target locations and the
+forces attacking the other forces. In
+
+625
+01:13:12,960 --> 01:13:17,340
+modern times, let's talk about
+surveillance for modern times. So how do
+
+626
+01:13:17,340 --> 01:13:21,980
+email marketers know when to call you? So
+sometimes, and this happened to me
+
+627
+01:13:21,980 --> 01:13:26,260
+personally, I was reading an email and
+within five minutes of reading the email,
+
+628
+01:13:26,340 --> 01:13:30,200
+I received a call from from the sender of
+the sender of the sender of the email. And
+
+629
+01:13:30,200 --> 01:13:36,560
+I engaged them in conversation to find out
+how they were doing this. Here's an
+
+630
+01:13:36,560 --> 01:13:43,140
+example, one of many examples of what we
+call tracking beacons. So what they'll do,
+
+631
+01:13:43,320 --> 01:13:50,280
+an email is simply like a webpage. It's an
+HTML-based email these days. And they'll
+
+632
+01:13:50,280 --> 01:13:57,100
+put a one-by-one pixel transparent image
+on there. And for those of you who know
+
+633
+01:13:57,100 --> 01:14:02,680
+HTML, HTML, HTML, there's a little tag
+called image that's supposed to load an
+
+634
+01:14:02,680 --> 01:14:07,020
+actual image. And instead of loading an
+image, what it does is it contacts the
+
+635
+01:14:07,020 --> 01:14:12,440
+internet and pings a web service. And that
+web service can do a variety of things.
+
+636
+01:14:12,440 --> 01:14:19,160
+And you can add a variety of information,
+username, email address, GPS location,
+
+637
+01:14:19,380 --> 01:14:24,740
+whatever you can get your handle, whatever
+you can get a hold of and your email
+
+638
+01:14:24,740 --> 01:14:32,960
+client allows, you can then send that off.
+So that's a modern example of open source
+
+639
+01:14:32,960 --> 01:14:38,620
+intelligence. And this leads us into what
+we call surveillance capitalism, which is
+
+640
+01:14:38,620 --> 01:14:44,320
+a concept in political economics which
+denotes the widespread collection and
+
+641
+01:14:44,320 --> 01:14:48,840
+commodification of personal data by
+corporations. It's not limited to
+
+642
+01:14:48,840 --> 01:14:53,280
+corporations. Governments can do this too
+and there can be collaboration between the
+
+643
+01:14:53,280 --> 01:14:58,340
+two. A couple of interesting points about
+surveillance surveillance capitalism is
+
+644
+01:14:58,340 --> 01:15:03,660
+that it operates without meaningful
+mechanisms of consent. It just happens to
+
+645
+01:15:03,660 --> 01:15:10,320
+you. And you can lose your self
+-determination through the manipulation of
+
+646
+01:15:10,320 --> 01:15:16,680
+advertising and other practices that might
+happen as a result of this. Duke
+
+647
+01:15:16,680 --> 01:15:25,560
+University with West Point University with
+the Army, they did a study back in 2023
+
+648
+01:15:25,560 --> 01:15:28,920
+about data brokers and the sale of data
+brokers and the sale of data on US
+
+649
+01:15:28,920 --> 01:15:34,000
+military personnel. So data brokers using
+these kinds of methods were able to
+
+650
+01:15:34,000 --> 01:15:39,480
+collect sufficient information that it
+became of interest to foreign entities.
+
+651
+01:15:39,720 --> 01:15:43,940
+And so as part of the study, they were
+able to approach the data brokers
+
+652
+01:15:43,940 --> 01:15:51,360
+originating from either US domains or dot
+Asia domains and purchase information on
+
+653
+01:15:51,360 --> 01:15:57,980
+US service members and veterans. And when
+they ordered in bulk, it was about 12 to
+
+654
+01:15:57,980 --> 01:16:05,120
+32 cents per record that you could get on
+US military members. Think of all the
+
+655
+01:16:05,120 --> 01:16:10,560
+things we do on social media and how that
+might be used as we heard this morning for
+
+656
+01:16:10,560 --> 01:16:17,940
+blackmail in order to invoke espionage.
+This is a real problem, yet it's also the
+
+657
+01:16:17,940 --> 01:16:25,060
+way the web kind of operates these days.
+Their recommendations were federal privacy
+
+658
+01:16:25,060 --> 01:16:35,580
+legislation and also to restrict the data
+on current and how that might
+
+659
+01:16:35,580 --> 01:16:40,360
+be used as we have to protect our
+identity. So one of the things if you look
+
+660
+01:16:40,360 --> 01:16:49,200
+back to SB 260, it says in a couple of
+lines in here, the state endorsed digital
+
+661
+01:16:49,200 --> 01:16:55,660
+identity enables an individual to
+selectively disclose elements of an
+
+662
+01:16:55,660 --> 01:17:00,000
+individual's identity. So taking the
+driver's license as an individual's
+
+663
+01:17:00,000 --> 01:17:01,720
+identity. So taking the driver's license
+as an example, when you go to a government
+
+664
+01:17:01,720 --> 01:17:05,340
+entity, say the Department of Motor
+Vehicles, you don't really have an
+
+665
+01:17:05,340 --> 01:17:10,560
+expectation of privacy. You're going there
+to give your information in order to get a
+
+666
+01:17:10,560 --> 01:17:15,320
+driver's license credential. So we don't
+really have an expectation of privacy in
+
+667
+01:17:15,320 --> 01:17:20,460
+that regard just by the nature of that
+interaction. However, when we go to the
+
+668
+01:17:20,460 --> 01:17:24,780
+bank, you don't need to give your height
+and your weight and your donor status and
+
+669
+01:17:24,780 --> 01:17:28,320
+your donor status and all that kind of
+stuff. And so you can selectively disclose
+
+670
+01:17:28,320 --> 01:17:34,400
+what the bank requires. Then if you go
+shopping on Amazon or somewhere other than
+
+671
+01:17:34,400 --> 01:17:38,860
+payment information, they need your name
+and they need your address to ship
+
+672
+01:17:38,860 --> 01:17:43,400
+whatever it is you're buying. They don't
+need your driver's license number. And so
+
+673
+01:17:43,400 --> 01:17:50,460
+over the summer, Apple has allowed MDLs to
+be used for website logins and that may
+
+674
+01:17:50,460 --> 01:17:55,000
+create some very unintended side effects
+about the transfer of information.
+
+675
+01:17:58,780 --> 01:18:06,180
+Another aspect of SB260 is asserting with
+zero correlation. So part of the one of
+
+676
+01:18:06,180 --> 01:18:12,460
+the lines in that bill says verify that
+the individual's age satisfies an age
+
+677
+01:18:12,460 --> 01:18:18,580
+requirement without revealing the
+individual's age or date of birth. So for
+
+678
+01:18:18,580 --> 01:18:25,020
+example, if I were to go to the Department
+of Alcoholic Beverage Services, which is
+
+679
+01:18:25,020 --> 01:18:31,600
+where you buy liquor here in Utah, the
+assertion you need to make is I'm 21 or
+
+680
+01:18:31,600 --> 01:18:36,220
+older. That's what's required in the law.
+You don't have to give your name, your
+
+681
+01:18:36,220 --> 01:18:41,660
+address, or any other information. There
+should be a way to give only the
+
+682
+01:18:41,660 --> 01:18:47,400
+information that is required. And that's
+what SEDI is after. So when I go to a
+
+683
+01:18:47,400 --> 01:18:54,240
+concert at the Delta Center and I want to
+use that neat, fancy digital ticket,
+
+684
+01:18:54,560 --> 01:18:56,780
+digital ticket, digital ticket, digital
+ticket, I need to be able to assert that I
+
+685
+01:18:56,780 --> 01:19:02,500
+purchased a ticket, that I'm authorized to
+get in having paid my money and so forth
+
+686
+01:19:02,500 --> 01:19:07,740
+without having to give all the other
+information that may sometimes come with
+
+687
+01:19:07,740 --> 01:19:14,320
+digital credentials. I want this to be a
+process of least disclosure, not full
+
+688
+01:19:14,320 --> 01:19:22,860
+disclosure. Now when I go to the hardware
+store as a veteran myself, I'm offered a
+
+689
+01:19:22,860 --> 01:19:29,480
+10% discount and I get that by scanning
+everything on my driver's license. That
+
+690
+01:19:29,480 --> 01:19:34,820
+includes obviously that I am a veteran
+which is on my status. It includes whether
+
+691
+01:19:34,820 --> 01:19:39,300
+I'm a donor, my height, my weight, my
+address, all these things that are
+
+692
+01:19:39,300 --> 01:19:48,860
+unnecessary for that transaction. So SEDI
+gives you a choice. Here's a quote from
+
+693
+01:19:48,860 --> 01:19:56,560
+the US Supreme Court from back in 1995. It
+says, anonymity is a shield from the
+
+694
+01:19:56,560 --> 01:20:00,880
+tyranny of the majority. It thus
+exemplifies the purpose behind the Bill of
+
+695
+01:20:00,880 --> 01:20:05,360
+Rights and the First Amendment in
+particular to protect unpopular
+
+696
+01:20:05,360 --> 01:20:10,960
+individuals from retaliation at the hand
+of an intolerant society. Now whether
+
+697
+01:20:10,960 --> 01:20:14,740
+you're on the left or the right, this
+should resonate with you maybe for
+
+698
+01:20:14,740 --> 01:20:20,580
+different reasons. But this is a really
+important principle because if we don't
+
+699
+01:20:20,580 --> 01:20:24,760
+enable you to disclose only the right,
+this should not enable you to disclose
+
+700
+01:20:24,760 --> 01:20:31,140
+only the information that's required in an
+untrackable sense in some situations, what
+
+701
+01:20:31,140 --> 01:20:37,520
+we will end up with is what Scott McNeely
+from Sun Microsystems said back in 1999,
+
+702
+01:20:38,500 --> 01:20:46,460
+you have zero privacy anyway, get over it.
+And so SEDI is giving you the choice of
+
+703
+01:20:46,460 --> 01:20:52,260
+what you disclose and when you disclose it
+and they put that choice in the hands of
+
+704
+01:20:52,260 --> 01:20:57,920
+the holder. So that's what I would hope
+that you would take away with and you
+
+705
+01:20:57,920 --> 01:21:03,500
+would go back to your respective
+companies, departments and states and pose
+
+706
+01:21:03,500 --> 01:21:12,600
+this to your constituents because we want
+a private identity system that keeps
+
+707
+01:21:12,600 --> 01:21:16,400
+individuals safe. So thank you very much.
+Thank you.
+
+708
+01:21:48,000 --> 01:21:49,800
+I can be honest. I can be honest. I can be
+honest. I can be honest. I can be honest.
+
+709
+01:21:49,800 --> 01:21:51,260
+I can be honest.
+
+710
+01:21:59,980 --> 01:22:01,940
+I can be honest. I can be honest. I can be
+honest. I can be honest. I can be honest.
+
+711
+01:22:01,940 --> 01:22:06,640
+I can be honest. I can be honest. I can be
+honest. I can be honest. I can be honest.
+
+712
+01:22:06,640 --> 01:22:13,100
+I can be honest. I can be honest. I can be
+honest!
+
+713
+01:22:14,960 --> 01:22:21,820
+I Thank you. Okay. Good afternoon all.
+Apologies for being your remote speaker of
+
+714
+01:22:21,820 --> 01:22:26,520
+the day. Unfortunately, I couldn't get
+across from the UK to join for this. But
+
+715
+01:22:26,520 --> 01:22:30,720
+I'd like to spend the next 10 minutes
+looking at something slightly different in
+
+716
+01:22:30,720 --> 01:22:34,540
+terms of the presentations that have
+happened so far. We've heard an awful lot
+
+717
+01:22:34,540 --> 01:22:40,980
+today about what SEDI can protect from the
+fraud, making sure everything is assured,
+
+718
+01:22:41,140 --> 01:22:45,640
+making sure we have the assertions, making
+sure child age verification and adult age
+
+719
+01:22:45,640 --> 01:22:49,400
+verification can put in place. I'd like to
+spend a few minutes looking at the flip
+
+720
+01:22:49,400 --> 01:22:53,480
+side of that and looking at economic
+benefit as a result of a state-endorsed
+
+721
+01:22:53,480 --> 01:22:58,880
+digital identity and what can be achieved
+there and bring forwards a proof point to
+
+722
+01:22:58,880 --> 01:23:02,340
+show that this has happened and the sort
+of values that can be expected from that.
+
+723
+01:23:03,740 --> 01:23:08,520
+So, Simon Wood, I've been involved in
+identity systems for a long time now. Most
+
+724
+01:23:08,520 --> 01:23:13,340
+recently, Group CEO of Ubisecure.
+Ubisecure is a UK company but deploys a
+
+725
+01:23:13,340 --> 01:23:17,620
+lot in the Nordics. Ubisecure has deployed
+a number of platforms in a number of
+
+726
+01:23:17,620 --> 01:23:21,740
+platforms in Finland and Sweden and the
+case studies taken from there. One of the
+
+727
+01:23:21,740 --> 01:23:25,640
+things I'd just like to touch on before
+getting into that is a differentiator that
+
+728
+01:23:25,640 --> 01:23:30,460
+McKinsey makes on digital identity versus
+advanced identity. Everything that has
+
+729
+01:23:30,460 --> 01:23:34,580
+been spoken about today, I would say falls
+in that advanced identity category as
+
+730
+01:23:34,580 --> 01:23:39,660
+defined by McKinsey. In the UK, we're
+obviously reeling at the moment from the
+
+731
+01:23:39,660 --> 01:23:44,740
+brick card announcements and so on. And
+the McKinsey report is often rolled out as
+
+732
+01:23:44,740 --> 01:23:48,620
+one of the values for having an identity
+and it's referred to as digital identity
+
+733
+01:23:48,620 --> 01:23:54,260
+in the general sense. But if you read that
+report in detail, you'll see that to
+
+734
+01:23:54,260 --> 01:23:59,380
+benefit from the advanced capabilities and
+the returns and the GDP increases that are
+
+735
+01:23:59,380 --> 01:24:04,780
+positioned there specifically for the US
+and for the UK, it needs to be advanced
+
+736
+01:24:04,780 --> 01:24:08,920
+identity which brings in additional
+attributes, additional information and
+
+737
+01:24:08,920 --> 01:24:12,880
+additional features as well. You've
+already seen a number of demonstrations of
+
+738
+01:24:12,880 --> 01:24:16,680
+those today in a SEDI context and that's
+what we're looking at here. We're looking
+
+739
+01:24:16,680 --> 01:24:21,780
+at those advanced capabilities beyond just
+authentication and authorization which is
+
+740
+01:24:21,780 --> 01:24:27,720
+McKinsey's classical definition of digital
+identity. I want to run you through a very
+
+741
+01:24:27,720 --> 01:24:32,240
+quick scenario. You've seen a couple of
+diagrams like this already today where we
+
+742
+01:24:32,240 --> 01:24:38,460
+have a chain of delegation. Ficknish's
+example here, we'll look at setting up a
+
+743
+01:24:38,460 --> 01:24:45,320
+new company in Utah. So the CEO of that
+company to be contacts the Utah Division
+
+744
+01:24:45,320 --> 01:24:50,180
+of Corporate Corporations goes online and
+uses their SEDI identity to register that
+
+745
+01:24:50,180 --> 01:24:55,900
+company. The Utah Division of Corporations
+automatically passes that across to the
+
+746
+01:24:55,900 --> 01:24:59,000
+state tax commission because there will be
+taxes to pay and collect from that
+
+747
+01:24:59,000 --> 01:25:06,460
+organization and the tax commission will
+send a request back to the CEO using let's
+
+748
+01:25:06,460 --> 01:25:10,420
+assume that there's a secure main box
+capability from a SEDI implementation so
+
+749
+01:25:10,420 --> 01:25:15,600
+you can securely contact people who have
+that identity and a request of that tax
+
+750
+01:25:15,600 --> 01:25:21,160
+registration. The CEO will obviously go to
+that website register to submit the taxes
+
+751
+01:25:21,160 --> 01:25:26,080
+but then the CEO themselves will not be
+undertaking that work. They will delegate
+
+752
+01:25:26,080 --> 01:25:30,180
+that capability to the CFO of the
+organization. So that delegation will be
+
+753
+01:25:30,180 --> 01:25:35,300
+done through the website. The CEO will
+invite the CFO to that system using their
+
+754
+01:25:35,300 --> 01:25:39,900
+SEDI identity as well. And so a delegation
+chain is built. You've seen examples of
+
+755
+01:25:39,900 --> 01:25:43,120
+such a delegation chain already in a
+couple of the demos that have been
+
+756
+01:25:43,120 --> 01:25:48,100
+delivered today. But if we consider
+consider that tax is reasonably complex,
+
+757
+01:25:48,340 --> 01:25:52,300
+you might have three different types of
+sales tax, corporation tax, employment
+
+758
+01:25:52,300 --> 01:25:57,140
+tax, maybe the employment tax is
+outsourced to an organization. So that
+
+759
+01:25:57,140 --> 01:26:01,300
+organization can be invited in and
+delegated to the administrator in the
+
+760
+01:26:01,300 --> 01:26:04,380
+organization can pick that up and then
+onwards delegate to an internal
+
+761
+01:26:04,380 --> 01:26:07,800
+accountant. So we've got a chain of
+delegations running through individuals
+
+762
+01:26:07,800 --> 01:26:13,820
+and organizations using an identity that's
+highly assured and available to them. This
+
+763
+01:26:13,820 --> 01:26:17,520
+delegation chain builds and allows all of
+the tax to take place all of the tax to
+
+764
+01:26:17,520 --> 01:26:21,780
+take place and not once as the state tax
+commission being involved in that. They've
+
+765
+01:26:21,780 --> 01:26:25,440
+just provided that service to allow it to
+happen. Now this seems like a great
+
+766
+01:26:25,440 --> 01:26:31,920
+scenario. If that were true, what would
+deliver us? Well, that does happen already
+
+767
+01:26:31,920 --> 01:26:42,920
+in Finland. There is a platform delivered
+in 2008. I believe
+
+768
+01:26:42,920 --> 01:26:49,440
+so. Are they not coming coming through?
+That will help?
+
+769
+01:26:54,300 --> 01:26:55,160
+How's that?
+
+770
+01:26:58,000 --> 01:27:04,420
+So just to reiterate that previous slide
+so you can see what was there. It's a
+
+771
+01:27:04,420 --> 01:27:08,240
+delegation chain across individuals and
+through an organization there towards the
+
+772
+01:27:08,240 --> 01:27:13,160
+bottom as we have around here. Chris, I
+assume that's coming through now.
+
+773
+01:27:28,000 --> 01:27:28,880
+Is that okay?
+
+774
+01:27:34,420 --> 01:27:39,860
+Is that okay? I think that's okay. So this
+platform was delivered or it is delivered
+
+775
+01:27:39,860 --> 01:27:44,760
+in Finland. It's called the Katsio
+platform delivered in 2008. 2008. It is a
+
+776
+01:27:44,760 --> 01:27:49,180
+state-operated platform as opposed to
+state-endorsed. Back in 2008, there was
+
+777
+01:27:49,180 --> 01:27:52,060
+not this distinction and this
+understanding of privacy and how important
+
+778
+01:27:52,060 --> 01:27:57,740
+that is as we acknowledge today. State
+-operated platform integrates with the
+
+779
+01:27:57,740 --> 01:28:03,700
+business registry to generate that link to
+the tax office. In 2018, the Finnish
+
+780
+01:28:03,700 --> 01:28:08,320
+government published stats on the savings
+as a result of having that platform. And
+
+781
+01:28:08,320 --> 01:28:12,820
+when they published that, at that time
+there were 450,000 users registered on
+
+782
+01:28:12,820 --> 01:28:19,460
+there. 420,000 organizations and 104
+different online government services using
+
+783
+01:28:19,460 --> 01:28:24,500
+that platform. One of those services was
+the tax office and it worked exactly as I
+
+784
+01:28:24,500 --> 01:28:29,740
+just described in that delegation chain
+that's there. In terms of the stats that
+
+785
+01:28:29,740 --> 01:28:33,820
+were collected on that, a significant
+reduction in physical service points
+
+786
+01:28:33,820 --> 01:28:38,420
+because everything was online and
+everything was driven by the organization
+
+787
+01:28:38,420 --> 01:28:43,000
+that was registering. They could massively
+reduce the physical points of presence.
+
+788
+01:28:43,180 --> 01:28:47,120
+That allowed them to make a 20% year on
+year tax admin staff reduction. That
+
+789
+01:28:47,120 --> 01:28:47,540
+allowed them to make a 20% year on year
+tax admin staff reduction, repurpose them
+
+790
+01:28:47,540 --> 01:28:52,420
+to more profitable areas and the cost of
+servicing the tax transactions when they
+
+791
+01:28:52,420 --> 01:28:57,460
+went from the old physical base to an
+online basis dropped from 35 euros per tax
+
+792
+01:28:57,460 --> 01:29:04,800
+transaction to 30 euro cents. That's a 99%
+reduction in cost per transaction measured
+
+793
+01:29:04,800 --> 01:29:09,640
+by the Finnish government. That's the
+value that they achieved deploying a
+
+794
+01:29:09,640 --> 01:29:14,400
+highly assured identity that has
+delegation capabilities that has the
+
+795
+01:29:14,400 --> 01:29:18,040
+ability to work across individuals and
+organizations.
+
+796
+01:29:20,940 --> 01:29:24,820
+Within that you've heard me talking about
+organizations. Organizations are an
+
+797
+01:29:24,820 --> 01:29:28,960
+important part of the identity chain.
+Incorporating an organization identity
+
+798
+01:29:28,960 --> 01:29:33,260
+enables the really advanced identity use
+cases and that's where we see a lot of the
+
+799
+01:29:33,260 --> 01:29:37,020
+economic benefit coming from. Now, it
+would be wrong to assume that
+
+800
+01:29:37,020 --> 01:29:41,420
+organizations are just legal entities. We
+get a lot of utility and benefit from
+
+801
+01:29:41,420 --> 01:29:45,720
+lower assurance levels of organizations.
+Just like individual identities. Just like
+
+802
+01:29:45,720 --> 01:29:48,200
+individual identities, there can be low
+assurance and high assurance and we see
+
+803
+01:29:48,200 --> 01:29:52,640
+economic savings at higher assurance
+levels. You've heard multiple times today
+
+804
+01:29:52,640 --> 01:29:58,060
+that SB260 already considers organization
+identity in the form of family units and
+
+805
+01:29:58,060 --> 01:30:02,400
+family structures. That is an
+organization. There's no reason not to
+
+806
+01:30:02,400 --> 01:30:06,700
+have the ability ultimately to extend that
+to bring in private sector legal entities
+
+807
+01:30:06,700 --> 01:30:11,900
+as well to take advantage of that massive
+uplift in utility and economic potential
+
+808
+01:30:11,900 --> 01:30:20,080
+that comes comes from there. So, to
+conclude from there. We've seen already
+
+809
+01:30:20,080 --> 01:30:27,340
+that SEDI has phenomenal potential for
+protection for implementing privacy and
+
+810
+01:30:27,340 --> 01:30:32,540
+for making sure that state citizens, the
+public get the protection and the
+
+811
+01:30:32,540 --> 01:30:38,560
+facilities that they need. But once that's
+up and running, then extending that to
+
+812
+01:30:38,560 --> 01:30:43,080
+organization identity will bring
+significant significant benefit as well.
+
+813
+01:30:43,640 --> 01:30:46,580
+We've seen a significant benefit as well.
+We've heard again a number of times that
+
+814
+01:30:46,580 --> 01:30:51,560
+we shouldn't let private sector define
+this and I fully agree. It needs to be run
+
+815
+01:30:51,560 --> 01:30:55,420
+at the policy level, generating the
+privacy that's needed, ensuring that's
+
+816
+01:30:55,420 --> 01:31:00,160
+first and then bringing utility and
+benefit to public sector organizations
+
+817
+01:31:00,160 --> 01:31:05,160
+afterwards. But incorporating those public
+sector organizations and allowing them to
+
+818
+01:31:05,160 --> 01:31:08,940
+leverage that information and be involved
+in there and integrate their platforms and
+
+819
+01:31:08,940 --> 01:31:12,820
+their systems to that will bring
+significant significant benefit. And what
+
+820
+01:31:12,820 --> 01:31:17,540
+has already happened in the Nordics and in
+the Baltics gives very strong proof points
+
+821
+01:31:17,540 --> 01:31:20,980
+to show what can be done and the level of
+savings and level of return that can be
+
+822
+01:31:20,980 --> 01:31:25,580
+achieved there. I've run through this very
+quickly and realize this is remote and a
+
+823
+01:31:25,580 --> 01:31:30,240
+little bit more complicated but I believe
+the slides and this recording will be out
+
+824
+01:31:30,240 --> 01:31:34,020
+later. So, you can always contact me
+afterwards or Chris can put you in contact
+
+825
+01:31:34,020 --> 01:31:37,300
+and I can provide more information if
+that's useful. Thank you very much. Thank
+
+826
+01:31:37,300 --> 01:31:45,380
+you.
+
+827
+01:32:08,240 --> 01:32:18,340
+All right. All right. Oh, am I? Oh. It was
+today. I was obviously here all day.
+
+828
+01:32:21,040 --> 01:32:26,740
+Actually, it looked like I missed some
+meetings today. So, I assure you, I work
+
+829
+01:32:26,740 --> 01:32:31,400
+really hard. I really do. All right. This
+is actually, I think, going to be the most
+
+830
+01:32:31,400 --> 01:32:36,820
+exciting part of the day. This is the
+final discussion. I am going to ask and we
+
+831
+01:32:36,820 --> 01:32:42,420
+didn't plan on some chairs. Could we get a
+couple chairs just for some of this? We're
+
+832
+01:32:42,420 --> 01:32:47,860
+actually going to discuss how are we going
+to move forward. We have enough brain
+
+833
+01:32:47,860 --> 01:32:52,340
+power in this room. We have enough
+policymaking authority. We have the
+
+834
+01:32:52,340 --> 01:32:57,800
+ability to create legislation. We had
+Senator Kullimore here earlier, our Senate
+
+835
+01:32:57,800 --> 01:33:00,960
+majority leader. I've already heard
+there's going to be discussions happening
+
+836
+01:33:00,960 --> 01:33:05,020
+with some other state Senate majority
+leaders. We have counterparts in states.
+
+837
+01:33:05,180 --> 01:33:08,760
+We have companies we work with. So, now
+the discussion for this last hour before
+
+838
+01:33:08,760 --> 01:33:13,260
+we leave is how do we move forward? You
+never want to have a summit like this
+
+839
+01:33:13,260 --> 01:33:17,760
+without some outcome and some
+deliverables. We have a lot of momentum
+
+840
+01:33:17,760 --> 01:33:22,360
+built and in order to keep this going, you
+don't stop. That's what usually slows
+
+841
+01:33:22,360 --> 01:33:25,780
+government down is then you go back and
+you review. So, the question is how do we
+
+842
+01:33:25,780 --> 01:33:31,400
+keep the momentum going? I think three
+will be good. So, we're going to ask
+
+843
+01:33:31,400 --> 01:33:36,520
+Representative Cutler to come up and then
+is Alan Fuller in here? Alan, if you'll
+
+844
+01:33:36,520 --> 01:33:41,720
+come up. So, this is we're going to have
+we'll just have one mic for us to share
+
+845
+01:33:41,720 --> 01:33:45,840
+but then the rest of the mics we'll have
+some interns around and we want to discuss
+
+846
+01:33:45,840 --> 01:33:53,160
+what are we doing next? What are our next
+action items from our side but then how do
+
+847
+01:33:53,160 --> 01:33:58,880
+we engage with states to go ahead and get
+this consortium going? And then I see the
+
+848
+01:33:58,880 --> 01:34:04,180
+clock here says 14 minutes but I think
+we're just at the end right? So, we have
+
+849
+01:34:04,180 --> 01:34:16,600
+until four timers, right? Okay. So, let's
+actually check.
+
+850
+01:34:24,700 --> 01:34:29,620
+I think it'd be beneficial if we explain
+some of what our next steps are actually
+
+851
+01:34:29,620 --> 01:34:35,460
+going to be. Alan, do you want to take the
+first? Let me just get started by saying
+
+852
+01:34:35,460 --> 01:34:41,720
+that Senate Bill 260 gave the Department
+of Government Operations of which Chris
+
+853
+01:34:41,720 --> 01:34:47,860
+and I and Marvin Dodge was here are a part
+or all are all part of and it tasks us
+
+854
+01:34:47,860 --> 01:34:53,960
+with coming back to the legislature with a
+specific proposal and the input we receive
+
+855
+01:34:53,960 --> 01:34:57,360
+here and the input we received through a
+request for information that we put out
+
+856
+01:34:57,360 --> 01:35:01,480
+many of you responded to that RFI. Thank
+you for for that. We over the next couple
+
+857
+01:35:01,480 --> 01:35:05,460
+of months are going to be putting together
+a proposal to go back to the legislature
+
+858
+01:35:05,460 --> 01:35:12,880
+for our for our SEDI program going forward
+and you know we live in the real world we
+
+859
+01:35:12,880 --> 01:35:17,440
+have to if we're going to create a system
+that's going to have provide identity for
+
+860
+01:35:17,440 --> 01:35:22,000
+millions of people in the state it has to
+be something that works really well as
+
+861
+01:35:22,000 --> 01:35:27,020
+performant as secure as private and so all
+of the principles we've talked about today
+
+862
+01:35:27,020 --> 01:35:31,960
+need to eventually come together in a real
+life system that actually works. If we can
+
+863
+01:35:31,960 --> 01:35:39,640
+turn over to you represent Cutler. Sure.
+One of the thoughts that I have is if is
+
+864
+01:35:39,640 --> 01:35:46,800
+in order to we can I mentioned this before
+we can pass the policy but we need our
+
+865
+01:35:46,800 --> 01:35:51,480
+industry partners and we need a large
+enough coalition that that we have a
+
+866
+01:35:51,480 --> 01:35:58,140
+critical mass. So what you can do to help
+is encourage our industry partners that
+
+867
+01:35:58,140 --> 01:36:02,040
+you by telling them look I'm interested in
+this by telling them look I'm interested
+
+868
+01:36:02,040 --> 01:36:04,400
+in this or let's work together to get
+something done.
+
+869
+01:36:07,080 --> 01:36:10,680
+Communicating that you're interested in
+being part of a critical mass to move this
+
+870
+01:36:10,680 --> 01:36:14,360
+forward even if even if we don't
+necessarily agree on all the finer points
+
+871
+01:36:14,360 --> 01:36:22,880
+I think is really important and the I
+thought the gentleman Steve from the the
+
+872
+01:36:22,880 --> 01:36:29,300
+blockchain co-inventor that that was real
+wisdom that working together even even if
+
+873
+01:36:29,300 --> 01:36:35,140
+it's not perfect we can make a tremendous
+impact so but we can't do this without our
+
+874
+01:36:35,140 --> 01:36:41,940
+industry partners pushing very very hard
+and getting products that we can put in an
+
+875
+01:36:41,940 --> 01:36:47,720
+alpha phase or a beta phase and start
+testing and finding the flaws and finding
+
+876
+01:36:47,720 --> 01:36:48,400
+the successes.
+
+877
+01:36:51,920 --> 01:36:57,920
+Two practical things that I think we can
+expand here in Utah for the last couple
+
+878
+01:36:57,920 --> 01:37:01,100
+months we've actually held a private
+private sector stakeholder group every
+
+879
+01:37:01,100 --> 01:37:07,080
+Friday we meet whether we're exhausted or
+not to engage with the private sector. I
+
+880
+01:37:07,080 --> 01:37:11,760
+do think we should expand that to invite
+all private sector in other states if you
+
+881
+01:37:11,760 --> 01:37:16,140
+are ready to participate and you want to
+engage you want to help be part of
+
+882
+01:37:16,140 --> 01:37:19,940
+building the solution we can expand that
+and get that set up so you can come and
+
+883
+01:37:19,940 --> 01:37:24,440
+coordinate and this doesn't have to just
+be a Utah stakeholder group this is part
+
+884
+01:37:24,440 --> 01:37:27,520
+of the SEDI consortium. How do we make
+sure everybody's engaged and
+
+885
+01:37:27,520 --> 01:37:33,180
+participating? we want a diverse set of
+ideas you know so long as you love
+
+886
+01:37:33,180 --> 01:37:40,540
+constitutional rights and but but but I
+think you know it we all have a role to
+
+887
+01:37:40,540 --> 01:37:44,420
+play here and for the private market
+there's always going to be money to play
+
+888
+01:37:44,420 --> 01:37:49,980
+you can bring real value-added services we
+don't want government to be doing beyond
+
+889
+01:37:49,980 --> 01:37:55,280
+the bare minimum of providing a foundation
+to protect individuals so this is amazing
+
+890
+01:37:55,280 --> 01:37:59,720
+for you this is going to be really
+disruptive in a good way to move that
+
+891
+01:37:59,720 --> 01:38:03,400
+money from incumbent players to others
+that can help create a more competitive
+
+892
+01:38:03,400 --> 01:38:08,040
+marketplace so that's one thing we'll do
+right away we'll open that up I'll start
+
+893
+01:38:08,040 --> 01:38:12,680
+on the communication for that and get
+invites out set next week I think we had
+
+894
+01:38:12,680 --> 01:38:16,720
+the National Chamber of Commerce
+Foundation here today as well so I'm
+
+895
+01:38:16,720 --> 01:38:19,600
+assuming you might be able to help us with
+that as well how do we get this out to all
+
+896
+01:38:19,600 --> 01:38:24,860
+the businesses that are part of that the
+other thing is now that we're through the
+
+897
+01:38:24,860 --> 01:38:27,760
+summit we need to go back and start
+defining some of those baseline
+
+898
+01:38:27,760 --> 01:38:31,240
+requirements what is what are the
+requirements we're going to compare
+
+899
+01:38:31,240 --> 01:38:36,720
+technology to and everybody should play a
+part in that obviously the RFI is closed
+
+900
+01:38:36,720 --> 01:38:41,940
+we have a was that a thousand or thirteen
+hundred pages to read we have 1200 pages
+
+901
+01:38:41,940 --> 01:38:46,000
+to read and I know we don't have all the
+info we need so we're going to need
+
+902
+01:38:46,000 --> 01:38:50,680
+everyone to participate to say what
+additional requirements are we missing and
+
+903
+01:38:50,680 --> 01:38:54,860
+then comes the hard work of the technology
+needs to prove itself how do you meet the
+
+904
+01:38:54,860 --> 01:38:59,640
+requirements and then also I think to what
+you said earlier the hierarchy of values
+
+905
+01:38:59,640 --> 01:39:04,540
+that's going to be the hardest part I know
+a lot of people in this room are concerned
+
+906
+01:39:04,540 --> 01:39:08,880
+that we are going to compromise on the
+wrong things in the name of
+
+907
+01:39:08,880 --> 01:39:13,140
+interoperability interoperability and
+efficiency so as we define the
+
+908
+01:39:13,140 --> 01:39:16,700
+requirements we're going to have to create
+this hierarchy of values which I have seen
+
+909
+01:39:16,700 --> 01:39:21,080
+nowhere I think that slide was the first
+time I've seen that presented in that way
+
+910
+01:39:21,080 --> 01:39:27,360
+to have technology value at the highest
+level of that constitutional rights so
+
+911
+01:39:27,360 --> 01:39:30,400
+that's going to be a hard part in the
+requirements building list but that's the
+
+912
+01:39:30,400 --> 01:39:33,460
+type of stuff that's going to build trust
+with the public when they see what we are
+
+913
+01:39:33,460 --> 01:39:36,560
+prioritizing and I think it's going to be
+great I think it's actually going to be
+
+914
+01:39:36,560 --> 01:39:40,480
+great for government trust is at an all
+-time low so this is a really good way to
+
+915
+01:39:40,480 --> 01:39:45,320
+be very transparent to an extreme and let
+them know that we really want to protect
+
+916
+01:39:45,320 --> 01:39:51,640
+them. One of the things I think that we
+should talk a lot about is something that
+
+917
+01:39:51,640 --> 01:39:55,900
+Ryan brought up earlier in his
+presentation about the kind of practical
+
+918
+01:39:55,900 --> 01:39:59,460
+side of rolling something like this of
+rolling something like this out and
+
+919
+01:39:59,460 --> 01:40:07,320
+gaining adoption we need to find a launch
+customer that not maybe customer is not
+
+920
+01:40:07,320 --> 01:40:12,920
+the right word but a launch tenant that
+can help us that will pick this up and run
+
+921
+01:40:12,920 --> 01:40:18,860
+with it maybe in Utah like a Zions Bank or
+something like that that will help launch
+
+922
+01:40:18,860 --> 01:40:25,780
+the whole process and also create the
+system in such a way that it incentivizes
+
+923
+01:40:25,780 --> 01:40:29,420
+use rather than disincentivizing use
+rather than disincentivizing use in order
+
+924
+01:40:29,420 --> 01:40:34,080
+to get adoption. One of the big problems
+that we have with our current MDL program
+
+925
+01:40:34,080 --> 01:40:41,100
+in Utah is that by charging the verifiers
+for the verification software it's a
+
+926
+01:40:41,100 --> 01:40:46,580
+disincentive for them to verify and that
+makes it so you got a you got an MDL that
+
+927
+01:40:46,580 --> 01:40:50,120
+that people can walk around with on their
+phone but there's not very many places it
+
+928
+01:40:50,120 --> 01:40:55,080
+can be used so then you have not very much
+adoption and we want to set this up
+
+929
+01:40:55,080 --> 01:41:00,580
+systematically so that it will have
+adoption and incentives to use from the
+
+930
+01:41:00,580 --> 01:41:00,940
+beginning.
+
+931
+01:41:04,220 --> 01:41:11,340
+Chris and Alan if people have ideas for
+use cases where do they go and I think I'm
+
+932
+01:41:11,340 --> 01:41:16,520
+thinking back to our experience with
+verifiable digital credentials we didn't
+
+933
+01:41:16,520 --> 01:41:21,620
+start with the most critical key we
+started with something easy that that no
+
+934
+01:41:21,620 --> 01:41:27,620
+one was it wasn't controversial. So I
+think maybe there's some lessons learned
+
+935
+01:41:27,620 --> 01:41:32,280
+here that how do we start this and get
+some use cases where we can learn from
+
+936
+01:41:32,280 --> 01:41:38,400
+before scaling it and what's what are your
+thoughts on that process? Well, I was
+
+937
+01:41:38,400 --> 01:41:49,180
+thinking they should call the legislator.
+All the
+
+938
+01:41:49,180 --> 01:41:54,500
+RFI responses are protected but I think I
+can semi quote what was in them. One of
+
+939
+01:41:54,500 --> 01:41:58,340
+the best ones that I read was it was
+actually from an entity that's not looking
+
+940
+01:41:58,340 --> 01:42:01,660
+to compete. They were just giving advice
+of how they could best serve their
+
+941
+01:42:01,660 --> 01:42:06,260
+customers with this and they said and this
+is actually a saying I was in health human
+
+942
+01:42:06,260 --> 01:42:12,280
+services for seven years before this role.
+They said in the RFI response help us meet
+
+943
+01:42:12,280 --> 01:42:17,500
+the clients where they are meet people
+where the use cases are and so they said
+
+944
+01:42:17,500 --> 01:42:21,840
+you know TSA probably was not the best
+example. That's not something that you
+
+945
+01:42:21,840 --> 01:42:25,680
+know everybody is going to need. But
+there's lots of people who have their kids
+
+946
+01:42:25,680 --> 01:42:29,140
+going to school every year. They need to
+enroll and need to have a birth
+
+947
+01:42:29,140 --> 01:42:33,800
+certificate or immunization records. There
+are use cases where we don't have to try
+
+948
+01:42:33,800 --> 01:42:37,740
+to replicate what's already being done
+with MDL and is working and they're
+
+949
+01:42:37,740 --> 01:42:41,720
+getting traction on that side. What are
+other use cases that we can tackle to
+
+950
+01:42:41,720 --> 01:42:48,700
+tackle other more complex issues that are
+a different subset of individuals but it's
+
+951
+01:42:48,700 --> 01:42:52,400
+meeting people where they are and they're
+going to use it and government's great. I
+
+952
+01:42:52,400 --> 01:42:56,340
+love the saying government can actually do
+almost whatever it wants because it's the
+
+953
+01:42:56,340 --> 01:43:00,480
+only entity that can have a legal
+monopoly. So the only thing stopping us
+
+954
+01:43:00,480 --> 01:43:04,640
+from getting the credentials out to where
+they're needed in a secure way and getting
+
+955
+01:43:04,640 --> 01:43:10,360
+these use cases is I think that's the
+legislature. Speaking of the legislature.
+
+956
+01:43:10,540 --> 01:43:16,040
+You need money. Yeah, if we need money, we
+know who to talk to. You know, this is not
+
+957
+01:43:16,040 --> 01:43:20,160
+just about us talking. We really want to
+this is audience participation. I really
+
+958
+01:43:20,160 --> 01:43:24,440
+wanted to maybe start by asking the
+audience some questions. especially can I
+
+959
+01:43:24,440 --> 01:43:31,220
+start with the legislators in the room.
+What do you feel like you've seen today or
+
+960
+01:43:31,220 --> 01:43:36,540
+what questions do you have coming out of
+the conversations today? Would anybody
+
+961
+01:43:36,540 --> 01:43:37,120
+like to please?
+
+962
+01:43:41,320 --> 01:43:42,840
+And introduce yourself too.
+
+963
+01:43:48,980 --> 01:43:55,780
+Okay. Knowledge is power and you know
+getting more more of us in the room or you
+
+964
+01:43:55,780 --> 01:44:00,000
+know legislative trainings, etc. Because
+it's hard to vote for something if you're
+
+965
+01:44:00,000 --> 01:44:06,400
+insecure or ignorant of an issue. You're
+less apt to vote for something or even
+
+966
+01:44:06,400 --> 01:44:11,140
+make any kind of progress if you are
+unsure of what you're voting for, which is
+
+967
+01:44:11,140 --> 01:44:13,800
+a good thing. You don't want your
+legislators voting on things that they're
+
+968
+01:44:13,800 --> 01:44:18,600
+they don't know about. So I think you know
+increase you know I see a handful of us
+
+969
+01:44:18,600 --> 01:44:22,520
+here today. Maybe it's because you know my
+colleagues just know all the things but
+
+970
+01:44:22,520 --> 01:44:27,140
+I've certainly learned a lot today. I
+appreciate especially those presenters who
+
+971
+01:44:27,140 --> 01:44:32,580
+really broke it down into simplistic terms
+for me and you know I'm a lot more
+
+972
+01:44:32,580 --> 01:44:38,000
+comfortable. I was never against not
+completely against it but I definitely
+
+973
+01:44:38,000 --> 01:44:40,780
+feel more comfortable after the things
+I've learned today. So I would just say
+
+974
+01:44:40,780 --> 01:44:47,580
+especially with our lawmakers we need
+them. We need us in a room so that
+
+975
+01:44:47,580 --> 01:44:51,040
+everyone can understand and then make the
+decision based on that. And I think that
+
+976
+01:44:51,040 --> 01:44:54,440
+you know the more people learn the more
+comfortable they'll be with the direction
+
+977
+01:44:54,440 --> 01:44:57,000
+that we're heading. Thank you.
+
+978
+01:45:01,120 --> 01:45:08,320
+Anyone else? Questions out there? Yeah,
+let's open up to everyone. Other thoughts
+
+979
+01:45:08,320 --> 01:45:14,120
+and…
+
+980
+01:45:14,120 --> 01:45:17,520
+Thank
+
+981
+01:45:17,520 --> 01:45:17,700
+you.
+
+982
+01:45:20,820 --> 01:45:27,780
+Were you the one that was that works with
+the Anonomy Labs? Anonomy Labs? No, he's
+
+983
+01:45:27,780 --> 01:45:34,580
+over there. Steve McCown. So I use my
+pseudo and that's yep. Excellent. I was
+
+984
+01:45:34,580 --> 01:45:38,380
+curious. So you're asking how we can
+implement this technology into that. I
+
+985
+01:45:38,380 --> 01:45:44,360
+mean is this something that's being
+implemented into my pseudo? We do a wide
+
+986
+01:45:44,360 --> 01:45:50,420
+variety of credentials and so we implement
+and support a wide variety of current
+
+987
+01:45:50,420 --> 01:45:54,200
+credentials and so So SEDI is definitely
+on our roadmap.
+
+988
+01:45:57,300 --> 01:46:02,280
+Okay, well that's awesome. And I just
+think that this is excellent technology.
+
+989
+01:46:03,020 --> 01:46:07,280
+My limited understanding so far but I
+think from some of the policies that we've
+
+990
+01:46:07,280 --> 01:46:12,420
+seen get passed the app store
+identification forgetting SB whichever one
+
+991
+01:46:12,420 --> 01:46:18,360
+that was and just a variety of bills that
+Utah has passed has been you know for the
+
+992
+01:46:18,360 --> 01:46:22,760
+children is kind of like the the messaging
+push behind it but it's devastating to
+
+993
+01:46:22,760 --> 01:46:25,780
+internet privacy and anonymity like we've
+talked about some of these here in my
+
+994
+01:46:25,780 --> 01:46:30,420
+opinion and I think that SEDI is one of
+the technologies that can bridge that gap
+
+995
+01:46:30,420 --> 01:46:33,940
+and that can really help us and my
+understanding right now it seems like this
+
+996
+01:46:33,940 --> 01:46:37,480
+is some vital technology. So I just I'm
+championing you know everyone here working
+
+997
+01:46:37,480 --> 01:46:43,960
+on this. It's great. So. Thank you.
+Question over here. So maybe not so much a
+
+998
+01:46:43,960 --> 01:46:48,160
+question. It's just you know you talked
+about what use cases and things that you
+
+999
+01:46:48,160 --> 01:46:51,720
+can do to make it move forward. So Eric
+Torgensen. So Eric Torgensen. I'm the
+
+1000
+01:46:51,720 --> 01:46:56,760
+Motor Vehicle Director out of Arizona.
+Fantastic conversation and discussion this
+
+1001
+01:46:56,760 --> 01:47:02,040
+week. Thank you very much for today for
+putting it on. I think a couple things
+
+1002
+01:47:02,040 --> 01:47:08,660
+that I would just want to say that I think
+would be key was one is you know we
+
+1003
+01:47:08,660 --> 01:47:15,520
+already have a great head start on this
+with MDL. Right? So somebody early on said
+
+1004
+01:47:15,520 --> 01:47:19,300
+hey let's not worry about the technology
+aspect of it. This is really about the
+
+1005
+01:47:19,300 --> 01:47:23,440
+underpinning policies and I will tell you
+I've been involved with MDL for the past
+
+1006
+01:47:23,440 --> 01:47:32,640
+10 years almost over 10 years now and I
+haven't heard a single thing today that
+
+1007
+01:47:32,640 --> 01:47:37,540
+like butts heads with that technology and
+the good news is when we talk about
+
+1008
+01:47:37,540 --> 01:47:42,840
+adoption 60% of the US population is
+covered by a state that issues a MDL
+
+1009
+01:47:42,840 --> 01:47:47,320
+today. So we already have it and in
+Arizona by the way we have over 1 million
+
+1010
+01:47:47,320 --> 01:47:56,940
+1.2 million MDL issued issued. We have a
+population of 5.6 million driver's
+
+1011
+01:47:56,940 --> 01:48:04,420
+licenses out there. Biggest use case is
+not TSA. It's the Motor Vehicle Division.
+
+1012
+01:48:04,960 --> 01:48:13,100
+It's state services. We use it now we used
+it in a pre part 7 ISO compliant way to do
+
+1013
+01:48:13,100 --> 01:48:19,840
+it but we had it out there. We consume our
+own MDL and that became one of the biggest
+
+1014
+01:48:19,840 --> 01:48:25,080
+use cases massive driver for adoption for
+us. So something to think about and
+
+1015
+01:48:25,080 --> 01:48:30,040
+something that is in your control as you
+look at it is why not use it yourselves?
+
+1016
+01:48:31,140 --> 01:48:35,300
+That's a place where you can control both
+sides of the equation and make sure not
+
+1017
+01:48:35,300 --> 01:48:39,860
+only is the provisioning done in a privacy
+preserving secure way but the consumption
+
+1018
+01:48:39,860 --> 01:48:43,440
+too and set kind of that example for
+everybody else on how to consume it too.
+
+1019
+01:48:43,660 --> 01:48:47,140
+So just a thought. That's terrific and
+also let's acknowledge Chris Keras. Chris
+
+1020
+01:48:47,140 --> 01:48:51,380
+if you could raise your hand. He's our the
+director of the director of our driver's
+
+1021
+01:48:51,380 --> 01:48:54,480
+license division here in the state of Utah
+and has done a terrific job leading our
+
+1022
+01:48:54,480 --> 01:48:58,320
+MDL program. We're grateful for him. I
+think Jimmy Higgs is here as well
+
+1023
+01:48:58,320 --> 01:49:03,560
+somewhere. I don't see him at the moment
+who will be the next driver's license
+
+1024
+01:49:03,560 --> 01:49:14,860
+division lead after Chris retires. We are
+I believe that my expectation and hope and
+
+1025
+01:49:14,860 --> 01:49:20,500
+this was mentioned to me today too from
+someone else that likely the states who
+
+1026
+01:49:20,500 --> 01:49:24,540
+are already doing MDL will be the first
+adopters of moving to more broad study
+
+1027
+01:49:24,540 --> 01:49:29,040
+because they kind of get it and have
+already invested in creating a credential
+
+1028
+01:49:29,040 --> 01:49:32,720
+like that. Let's see. I think I saw a hand
+up here. I think it was was it Sarah or
+
+1029
+01:49:32,720 --> 01:49:37,040
+Okay,
+
+1030
+01:49:37,140 --> 01:49:42,320
+we'll go here and then back. Oh, yeah,
+Amelia, please. Yeah, I know that I've
+
+1031
+01:49:42,320 --> 01:49:46,660
+obviously been working on this with you
+guys for years. Introduce yourself,
+
+1032
+01:49:46,780 --> 01:49:49,900
+Amelia. My name is Amelia Powers Gardner.
+I'm a county commissioner. I'm a county
+
+1033
+01:49:49,900 --> 01:49:53,380
+commissioner in Utah County and I've been
+working on decentralized ID and self
+
+1034
+01:49:53,380 --> 01:50:00,800
+-sovereign identity since 2019 pre-COVID.
+And, you know, as I look for as a county
+
+1035
+01:50:00,800 --> 01:50:05,080
+commissioner in the fastest growing county
+in the state or 43.6% of the state's
+
+1036
+01:50:05,080 --> 01:50:11,180
+growth as I'm starting to look at capital
+projects and building brick and mortar to
+
+1037
+01:50:11,180 --> 01:50:16,060
+the tune of tens of millions of dollars
+because of for a growing population, the
+
+1038
+01:50:16,060 --> 01:50:23,080
+sooner we can get these services you know,
+instituted in a way that we can start
+
+1039
+01:50:23,080 --> 01:50:28,140
+utilizing them to deliver services to our
+citizens in a secure private way. That
+
+1040
+01:50:28,140 --> 01:50:32,400
+prevents me from having to spend millions
+of dollars. And so my question comes in
+
+1041
+01:50:32,400 --> 01:50:37,240
+like I know we've got the groundwork, but
+I mean, you know me, I'm like rock. I want
+
+1042
+01:50:37,240 --> 01:50:40,980
+to run first. I want to run first and then
+I want to walk and then I want to crawl
+
+1043
+01:50:40,980 --> 01:50:44,560
+on. We do need backwards compatibility,
+but when are we going to have the ability
+
+1044
+01:50:44,560 --> 01:50:48,580
+for an organization like mine that has
+already done some of this work? Like, when
+
+1045
+01:50:48,580 --> 01:50:52,360
+are we going to start adopting this? When
+are we going to start adopting this on a
+
+1046
+01:50:52,360 --> 01:50:58,640
+broad scale? Like when do I start getting
+the schema and the requirements so that I
+
+1047
+01:50:58,640 --> 01:51:02,000
+can start implementing this for my
+citizens so that I can deliver services to
+
+1048
+01:51:02,000 --> 01:51:05,440
+my citizens without having to spend tens
+of millions of dollars building brick and
+
+1049
+01:51:05,440 --> 01:51:17,300
+mortar buildings? Was that chastising us,
+Amelia? I'm joking. Now, wait. Yeah. Yeah.
+
+1050
+01:51:17,480 --> 01:51:21,520
+So, there's a lot actually going on in
+Utah for those that are from other states
+
+1051
+01:51:21,520 --> 01:51:24,240
+and just, you know, we work with Amelia
+all the time. So, we've had this
+
+1052
+01:51:24,240 --> 01:51:30,360
+discussion. For every state, you actually
+have a unique opportunity right now. Every
+
+1053
+01:51:30,360 --> 01:51:34,380
+state nationwide is pretty much non
+-compliant with their records management
+
+1054
+01:51:34,380 --> 01:51:38,820
+and data governance laws. And Amelia is
+shaking her head, but this is the
+
+1055
+01:51:38,820 --> 01:51:42,880
+opportunity. So, when I say that, what I
+mean is you all have antiquated laws from
+
+1056
+01:51:42,880 --> 01:51:47,280
+the 70s and 80s that require certain
+things like disposal of data according to
+
+1057
+01:51:47,280 --> 01:51:52,840
+retention schedules. Most systems have not
+been created to dispose of data. Most
+
+1058
+01:51:52,840 --> 01:51:57,140
+states haven't established the purpose and
+use of data. Most states haven't been
+
+1059
+01:51:57,140 --> 01:52:02,760
+giving privacy notices. And that sounds
+really bad, but the great thing about it
+
+1060
+01:52:02,760 --> 01:52:07,260
+means there needs to be a modernization
+anyway over the next decade. And so,
+
+1061
+01:52:07,340 --> 01:52:12,300
+you're in the unique spot of because you
+know there's non-compliance. And I'll
+
+1062
+01:52:12,300 --> 01:52:16,960
+actually I'll share out after if one of my
+team can take a note. We had interns over
+
+1063
+01:52:16,960 --> 01:52:21,440
+the summer actually research all 50
+states' laws to determine where they are
+
+1064
+01:52:21,440 --> 01:52:26,260
+legislation wise. So, you can see where is
+your state with privacy, with records
+
+1065
+01:52:26,260 --> 01:52:29,660
+management, with data governance. You'll
+know you're non-compliant, but now that
+
+1066
+01:52:29,660 --> 01:52:32,560
+you know what's coming with digital
+identity, you know you need data
+
+1067
+01:52:32,560 --> 01:52:37,300
+governance. And now what Amelia mentioned
+is the schemas, this concept of what are
+
+1068
+01:52:37,300 --> 01:52:41,140
+the rules? What's the schema? What's the
+formats of the data that needs to be
+
+1069
+01:52:41,140 --> 01:52:44,560
+collected? When Amelia is asking what's
+the schema, it's hey, when somebody
+
+1070
+01:52:44,560 --> 01:52:48,340
+applies for a building permit, what is the
+exact data that the county should be
+
+1071
+01:52:48,340 --> 01:52:50,700
+collecting? What needs to be on the forms?
+What needs to be on the forms? They can
+
+1072
+01:52:50,700 --> 01:52:55,440
+automatically ingest it, automate that
+process with AI or machine learning, and
+
+1073
+01:52:55,440 --> 01:52:59,500
+then move toward the efficiency that
+government can get. So, what I'm saying is
+
+1074
+01:52:59,500 --> 01:53:03,740
+now is actually the perfect time to learn
+where you are. You and it takes about a
+
+1075
+01:53:03,740 --> 01:53:07,820
+decade to transform. Utah is about three
+years in on this journey. And that's why
+
+1076
+01:53:07,820 --> 01:53:11,260
+we've been modernizing our laws. We've
+been getting comprehensive privacy law.
+
+1077
+01:53:11,360 --> 01:53:15,040
+Amelia, but the schemas will come sooner.
+We actually have on our team, we're doing
+
+1078
+01:53:15,040 --> 01:53:18,760
+modernization of then the data governance
+structures, the rules around the data. How
+
+1079
+01:53:18,760 --> 01:53:22,800
+long can you keep it? What's the legal
+basis? What's the purpose and purposes and
+
+1080
+01:53:22,800 --> 01:53:26,560
+uses? We're starting to define what are
+the immutable records? Which records are
+
+1081
+01:53:26,560 --> 01:53:31,400
+immutable public permanent records which
+make sense to go on a blockchain. These
+
+1082
+01:53:31,400 --> 01:53:35,500
+are the things you need in a schema to
+then implement technology correctly. If
+
+1083
+01:53:35,500 --> 01:53:38,820
+you jump right to the technology without
+having these things, you end up having to
+
+1084
+01:53:38,820 --> 01:53:42,700
+backtrack. So, I don't know if that's the
+answer, but it's coming soon. And the
+
+1085
+01:53:42,700 --> 01:53:51,020
+schemas I think will be very soon. We have
+some almost ready. Maybe Sarah? Maybe
+
+1086
+01:53:51,020 --> 01:54:16,020
+Sarah?
+
+1087
+01:54:16,020 --> 01:54:20,740
+Learn from you also share what we are
+doing in Colorado and other states so that
+
+1088
+01:54:20,740 --> 01:54:28,000
+we can learn together. I was reflecting on
+the statement about MDL and opportunities
+
+1089
+01:54:28,000 --> 01:54:34,500
+around MDL. We recently discovered that
+the standard MDL contract with the big
+
+1090
+01:54:34,500 --> 01:54:39,640
+tech wallet companies, Apple, Google,
+Samsung in our case, have a clause in them
+
+1091
+01:54:39,640 --> 01:54:45,600
+that says they are sole and exclusive
+provisioner and revoker of MDL. And like
+
+1092
+01:54:45,600 --> 01:54:48,420
+that's something I want to share with you
+all about like one particular thing
+
+1093
+01:54:48,420 --> 01:54:53,120
+because it does conflict with the SEDI
+idea. And so how do we join forces
+
+1094
+01:54:53,120 --> 01:54:58,540
+together and say like, hey, Apple, Google,
+let's not have that as the standard
+
+1095
+01:54:58,540 --> 01:55:06,340
+clause. All of us are sort of against that
+idea. So, I think that there is an ask
+
+1096
+01:55:06,340 --> 01:55:11,220
+maybe and how can we contribute? It's not
+just an ask of you. Can we host it? Can we
+
+1097
+01:55:11,220 --> 01:55:15,640
+do something so that we can do that
+knowledge sharing and really accelerate
+
+1098
+01:55:15,640 --> 01:55:21,720
+our co-growth? We will be emailing out
+after the summit. One, obviously we had
+
+1099
+01:55:21,720 --> 01:55:26,500
+the white paper of what is SEDI. We have
+some resources that we've created of model
+
+1100
+01:55:26,500 --> 01:55:31,760
+legislation, model resolutions, model
+executive orders. For us to do a formal
+
+1101
+01:55:31,760 --> 01:55:35,260
+consortium, there should be something you
+want your elected officials, governor or
+
+1102
+01:55:35,260 --> 01:55:40,300
+legislature to authorize. We've had this
+discussion with our governor and let him
+
+1103
+01:55:40,300 --> 01:55:44,260
+know we wanted to do a consortium, which
+is why we've invited you all today. If one
+
+1104
+01:55:44,260 --> 01:55:46,620
+more state for, I mean, we've had a couple
+of people reach out and say, actually,
+
+1105
+01:55:46,740 --> 01:55:51,820
+we're very interested. If you can get the
+formal approval, we'll start SEDI.gov. And
+
+1106
+01:55:51,820 --> 01:55:56,640
+it's not SEDI.Utah.gov, SEDI.gov. You need
+at least two states with formal approval.
+
+1107
+01:55:57,020 --> 01:56:01,740
+And that's where we start building that
+multi-state formal consortium. And we can
+
+1108
+01:56:01,740 --> 01:56:06,780
+start then advocating for ourselves and
+for our citizens and put these resources
+
+1109
+01:56:06,780 --> 01:56:08,660
+there and we can build it together. there.
+
+1110
+01:56:12,140 --> 01:56:20,140
+More hands over here. Go. Yeah, that
+works. Okay. So first of all, thank you.
+
+1111
+01:56:20,220 --> 01:56:25,980
+This is actually turned out very well as
+an event. And I think there's been a lot
+
+1112
+01:56:25,980 --> 01:56:30,620
+of really great interest. I always talk
+about this as an idea when we talk about
+
+1113
+01:56:30,620 --> 01:56:35,880
+off-Broadway use cases as Representative
+Koehler mentioned, but I think the idea of
+
+1114
+01:56:35,880 --> 01:56:43,640
+vital records records is something that is
+not so much having anything really
+
+1115
+01:56:43,640 --> 01:56:49,580
+implemented yet. And I always like to say
+death records because everyone needs one
+
+1116
+01:56:49,580 --> 01:56:54,560
+one day. Death and taxes are the two
+things that they say are inevitable. And
+
+1117
+01:56:54,560 --> 01:56:59,900
+there's a guardianship mechanism and a
+burial permit mechanism and a plot of
+
+1118
+01:56:59,900 --> 01:57:06,940
+land. Kind of have everything at once. I
+do am the treasurer of a cemetery. So I
+
+1119
+01:57:06,940 --> 01:57:11,720
+would love some funds. We're actually
+going to have George McKeown make a
+
+1120
+01:57:11,720 --> 01:57:15,280
+comment about how are we engaging vital
+records. The amazing thing actually about
+
+1121
+01:57:15,280 --> 01:57:19,320
+government is once we start saying we want
+to do something, it opens doors with all
+
+1122
+01:57:19,320 --> 01:57:24,220
+these organizations. I wasn't anticipating
+getting on stage. So one of the things
+
+1123
+01:57:24,220 --> 01:57:28,000
+we've done is we've reached out to Napsis
+and I just gave a discussion to their
+
+1124
+01:57:28,000 --> 01:57:33,400
+security and privacy group last week. We
+are actually talking about the schema that
+
+1125
+01:57:33,400 --> 01:57:37,080
+they have for a national standard for a
+certified birth certificate and their
+
+1126
+01:57:37,080 --> 01:57:40,840
+digital schema. So we have committed that
+if they want us to come out to their
+
+1127
+01:57:40,840 --> 01:57:45,500
+December event, we will bring a SEDI
+compatible version of that. So they're
+
+1128
+01:57:45,500 --> 01:57:49,160
+close on their standard. We just need to
+wrap it in the appropriate cryptography to
+
+1129
+01:57:49,160 --> 01:57:53,160
+make sure that meets the SEDI threshold.
+And I think we'll be there. The real goal
+
+1130
+01:57:53,160 --> 01:57:57,000
+will be is in June of next year when they
+have their annual event that we'll really
+
+1131
+01:57:57,000 --> 01:57:59,060
+move that forward with them and kind of
+codify all that.
+
+1132
+01:58:02,660 --> 01:58:08,800
+One of the this session as we go in to
+make recommendations for the SEDI program
+
+1133
+01:58:08,800 --> 01:58:12,240
+and we also need to recommend what would
+the next legislation look like. Part of
+
+1134
+01:58:12,240 --> 01:58:15,880
+that does need to be prioritization of
+credentials and that's been a very common
+
+1135
+01:58:15,880 --> 01:58:19,660
+ask. How do we get these other value-added
+credentials, not just mobile driver's
+
+1136
+01:58:19,660 --> 01:58:23,500
+license or a driving credential, but it
+was birth certificate, your immunization
+
+1137
+01:58:23,500 --> 01:58:29,080
+records, your death certificate. And so I
+would anticipate that would be part of the
+
+1138
+01:58:29,080 --> 01:58:32,300
+discussion we have this session is not
+only do we need to get it out there, but
+
+1139
+01:58:32,300 --> 01:58:35,340
+then we need to work with the group. So we
+had I think we had part of the group here
+
+1140
+01:58:35,340 --> 01:58:40,360
+from Health and Human Services today where
+vital records is, but I think that is a
+
+1141
+01:58:40,360 --> 01:58:44,740
+low-hanging fruit use case to get out
+there. We'd actually love to know what are
+
+1142
+01:58:44,740 --> 01:58:48,500
+you going to use that data for if people
+have it, what's the private sector able to
+
+1143
+01:58:48,500 --> 01:58:52,560
+provide value for if you have those
+records though? And Scott, I think you had
+
+1144
+01:58:52,560 --> 01:58:58,560
+a question, right? – Oh, sorry. – Three
+things. One, excellent day, really
+
+1145
+01:58:58,560 --> 01:59:05,160
+outstanding. Two, incrementalism is
+important, but there's a cart and a horse
+
+1146
+01:59:05,160 --> 01:59:10,220
+kind of kind of aspect to this kind of
+kind of aspect to this. And so who, how do
+
+1147
+01:59:10,220 --> 01:59:15,380
+you get to trust? And I think that's one
+thing that we really need to ask ourselves
+
+1148
+01:59:15,380 --> 01:59:21,840
+in terms of who is trusted to each of us
+and if that's our teacher, our professor,
+
+1149
+01:59:22,060 --> 01:59:28,420
+our doctor, our lawyer, our banker. I mean
+where that comes in, I think really it
+
+1150
+01:59:28,420 --> 01:59:35,640
+might help you define use cases and how to
+go after those early and first. And third,
+
+1151
+01:59:36,000 --> 01:59:42,080
+if you want an example of one state that I
+if you went to Hawaii anytime during the
+
+1152
+01:59:42,080 --> 01:59:48,620
+pandemic, Hawaii did a really excellent
+job of making sure that they could reopen
+
+1153
+01:59:48,620 --> 01:59:54,860
+their economy, which is tourism, by making
+sure that they had the smart health card
+
+1154
+01:59:54,860 --> 02:00:00,460
+for people to come in and show proof. You
+had to prove you were vaccinated in order
+
+1155
+02:00:00,460 --> 02:00:05,400
+to visit at that time. And they did a
+really great job job of it. People were
+
+1156
+02:00:05,400 --> 02:00:10,140
+motivated of it. People were motivated of
+course to fill this out and ID for it. But
+
+1157
+02:00:10,140 --> 02:00:14,120
+it's just one example that you might want
+to loop in Hawaii on.
+
+1158
+02:00:18,120 --> 02:00:25,400
+– So listening to all the constituents
+here, the challenge I think that we have
+
+1159
+02:00:25,400 --> 02:00:31,440
+here is a scope problem. There's lots of
+things that can be done, but the way to
+
+1160
+02:00:31,440 --> 02:00:36,420
+get something done is iterative and it
+needs to start with the core of what
+
+1161
+02:00:36,420 --> 02:00:37,940
+you're looking for. It needs to start with
+the core of what you're looking for. So
+
+1162
+02:00:37,940 --> 02:00:43,120
+you've done two things. You've said we're
+going to have a state endorsed identity.
+
+1163
+02:00:43,620 --> 02:00:49,540
+Okay? And you have a law. So you have two
+things to build upon. I think you start
+
+1164
+02:00:49,540 --> 02:00:56,960
+there. What is the state going to do?
+Whether you have paper to present to the
+
+1165
+02:00:56,960 --> 02:01:01,720
+state to endorse, but it has to be focused
+on the first and foremost thing, which is
+
+1166
+02:01:01,720 --> 02:01:09,400
+how do we issue a state state endorsed
+digital identity? And then use cases will
+
+1167
+02:01:09,400 --> 02:01:13,980
+come once you have that established. If
+you don't have that established, what's
+
+1168
+02:01:13,980 --> 02:01:19,340
+the SEDI project? So that needs to be the
+absolute core and it needs to start with a
+
+1169
+02:01:19,340 --> 02:01:23,120
+risk assessment because there's a million
+risks we talk about today, but there are
+
+1170
+02:01:23,120 --> 02:01:27,920
+only certain risks that can be mitigated
+by a project like this. And that will
+
+1171
+02:01:27,920 --> 02:01:33,540
+drive the scope of how you can mitigate
+the risk to the degree that the state the
+
+1172
+02:01:33,540 --> 02:01:37,880
+state can accept. And you take the law and
+all the requirements that you have in the
+
+1173
+02:01:37,880 --> 02:01:42,960
+law and put it in the governance framework
+and set of requirements. And at least you
+
+1174
+02:01:42,960 --> 02:01:49,480
+are have momentum. You need to start with
+momentum and leadership and others will
+
+1175
+02:01:49,480 --> 02:01:55,920
+come and use cases will come, but it has
+to be right down the road for what you've
+
+1176
+02:01:55,920 --> 02:02:03,180
+done. Don't lose focus on that. You have
+law to drive a state endorsed digital
+
+1177
+02:02:03,180 --> 02:02:09,340
+identity. Make that law and you have the
+means to do it and you have the expertise
+
+1178
+02:02:09,340 --> 02:02:11,380
+in the room here to start for sure.
+
+1179
+02:02:15,860 --> 02:02:20,700
+So Matthew Helstone here from Brigham
+Young University and I think transcripts
+
+1180
+02:02:20,700 --> 02:02:25,560
+and educational data is a very complex use
+case and been working on this since 2016
+
+1181
+02:02:25,560 --> 02:02:32,180
+with SSI space and we've made a long way
+so it's really amazing. But I wanted to
+
+1182
+02:02:32,180 --> 02:02:37,100
+emphasize something that I think about
+with decentralized identity is something
+
+1183
+02:02:37,100 --> 02:02:38,780
+that I think about with decentralized
+identity I think is important is that just
+
+1184
+02:02:38,780 --> 02:02:43,200
+because we have a credential and a steady
+credential doesn't mean we have a
+
+1185
+02:02:43,200 --> 02:02:49,300
+ubiquitous identifier. So we don't want to
+have a unique identifier that correlates
+
+1186
+02:02:49,300 --> 02:02:55,180
+us wherever we go. We have the possibility
+of using that identifier where we want to
+
+1187
+02:02:55,180 --> 02:03:01,060
+but we can create an ephemeral identifier
+with our credential and make a connection
+
+1188
+02:03:01,060 --> 02:03:06,160
+with another entity to present our
+information. That's really important that
+
+1189
+02:03:06,160 --> 02:03:10,700
+when we think of our use cases we're not
+thinking of I can be correlated wherever
+
+1190
+02:03:10,700 --> 02:03:15,420
+and that's a great user experience and
+that may be true but I may not want that
+
+1191
+02:03:15,420 --> 02:03:21,400
+as an individual and the technology needs
+to support the privacy policy of me being
+
+1192
+02:03:21,400 --> 02:03:26,440
+able to choose to create an identifier to
+present my interface and my information
+
+1193
+02:03:26,440 --> 02:03:31,760
+through. So I want to emphasize that
+another thing I wanted to emphasize is
+
+1194
+02:03:32,440 --> 02:03:35,920
+credentials need to be credentials need to
+be intentional. They don't have to be
+
+1195
+02:03:35,920 --> 02:03:40,620
+where everything is stored in one
+credential, right? I can have a very micro
+
+1196
+02:03:40,620 --> 02:03:47,800
+credential for a specific intended purpose
+and the technology stack allows me to take
+
+1197
+02:03:47,800 --> 02:03:53,280
+multiple credentials and draw selective
+disclosure information from each of them
+
+1198
+02:03:53,280 --> 02:03:59,940
+and aggregate it into a presentation for
+the verifier. So that means as an issuer
+
+1199
+02:03:59,940 --> 02:04:04,200
+of a credential I don't have to solve all
+my use cases where I think my credential
+
+1200
+02:04:04,200 --> 02:04:10,380
+is going to be used. I just have to focus
+on my data and give that to the individual
+
+1201
+02:04:10,380 --> 02:04:16,660
+and let the verifier define their own data
+contract that really empowers them from a
+
+1202
+02:04:16,660 --> 02:04:22,420
+data model perspective of verifier defines
+their contract and we can fulfill it from
+
+1203
+02:04:22,420 --> 02:04:29,240
+a number of credentials. We can give an
+example of that with our the first
+
+1204
+02:04:29,240 --> 02:04:32,360
+credential and this is what representative
+Kutler is referring to is is our off
+
+1205
+02:04:32,360 --> 02:04:36,180
+highway vehicle training certificate which
+we put out a verifiable digital credential
+
+1206
+02:04:36,180 --> 02:04:41,040
+for this training certificate to drive
+your four-wheeler on the roads. Yeah,
+
+1207
+02:04:41,140 --> 02:04:48,380
+thank you. And we have but it doesn't say
+who you are. So you still it doesn't
+
+1208
+02:04:48,380 --> 02:04:52,160
+provide your identity. You have to have
+both an identity and this credential to
+
+1209
+02:04:52,160 --> 02:04:55,920
+say you know who you are and that you've
+taken the course. Let's see where are we
+
+1210
+02:04:55,920 --> 02:05:01,220
+with our microphones maybe here. Yeah, go
+ahead. Yeah, Phil Long from the US Chamber
+
+1211
+02:05:01,220 --> 02:05:04,900
+of Commerce Foundation and T3 Innovation
+and T3 Innovation Network. I just want to
+
+1212
+02:05:04,900 --> 02:05:08,400
+bring us back to the actually the first
+presentation that was given this morning
+
+1213
+02:05:08,400 --> 02:05:16,120
+by Ryan first who are Ryan yeah that
+reminded us that we really need to look at
+
+1214
+02:05:16,120 --> 02:05:21,320
+the the examples of failures of the things
+that we're looking at as potential
+
+1215
+02:05:21,320 --> 02:05:26,600
+priorities to try to learn from them
+because we we tend to dismiss you know
+
+1216
+02:05:26,600 --> 02:05:30,660
+that was done by them it was done at a
+different time perhaps a year ago it may
+
+1217
+02:05:30,660 --> 02:05:35,320
+not be relevant but there are things and
+lessons in there that will be extremely
+
+1218
+02:05:35,320 --> 02:05:40,120
+valuable if you look for them. So that's
+one thing. The second to reinforce several
+
+1219
+02:05:40,120 --> 02:05:45,400
+of the comments here which is to pick the
+two or three to start with that are win
+
+1220
+02:05:45,400 --> 02:05:49,920
+-wins for all of the stakeholders involved
+because everybody's going to have
+
+1221
+02:05:49,920 --> 02:05:55,380
+resistance to it at some point in this
+early stage. So where you can come up with
+
+1222
+02:05:55,380 --> 02:05:59,560
+one where there's beneficial time savings
+for a government office to get something
+
+1223
+02:05:59,560 --> 02:06:02,860
+done that time savings benefits the
+individual who's benefits the individual
+
+1224
+02:06:02,860 --> 02:06:07,540
+who's making a request and the benefit of
+the credential actually has direct value
+
+1225
+02:06:07,540 --> 02:06:11,500
+to that person for what they're trying to
+do. Those combinations are absolutely
+
+1226
+02:06:11,500 --> 02:06:15,900
+critical and I applaud you for doing all
+of this. Thank you. Do we still have
+
+1227
+02:06:15,900 --> 02:06:21,680
+Jeremy Grant here? I'm going to steal a
+line that he said we can't build identity
+
+1228
+02:06:21,680 --> 02:06:26,780
+or what did he call it? It says we can't
+build identity or we're a bunch of
+
+1229
+02:06:26,780 --> 02:06:33,220
+identity weenies building identity for
+other identity weenies. And so we can't be
+
+1230
+02:06:33,220 --> 02:06:39,320
+identity nerds trying to build this really
+small use case of like yeah it'd be great
+
+1231
+02:06:39,320 --> 02:06:42,780
+to use a verifiable credential to I don't
+know Timothy what's a really weird use
+
+1232
+02:06:42,780 --> 02:06:49,940
+case you can probably think of one off
+your head. What? Okay. You got it you got
+
+1233
+02:06:49,940 --> 02:06:55,580
+a use case? Which one? Oh yeah. What about
+the beekeepers license? Okay. All right.
+
+1234
+02:06:55,700 --> 02:07:00,080
+Beekeepers license. That's a pretty small
+use case and does government go and
+
+1235
+02:07:00,080 --> 02:07:05,060
+actually check beekeepers keep your
+licenses. So but we have to build identity
+
+1236
+02:07:05,060 --> 02:07:09,000
+for people that it's going to have value
+and we have to meet them where they are.
+
+1237
+02:07:09,160 --> 02:07:12,920
+Who how are they going to get value? How
+is government going to get some value? And
+
+1238
+02:07:12,920 --> 02:07:16,820
+I think that's also where I said we have
+the ability because we are a monopoly to
+
+1239
+02:07:16,820 --> 02:07:22,520
+solve the catch-22 of well let's create
+that instance where both can get value and
+
+1240
+02:07:22,520 --> 02:07:25,860
+we're already spending money on it. So
+it's let's move those resources to
+
+1241
+02:07:25,860 --> 02:07:31,140
+actually realize the savings that can come
+from that. All right. So who has ideas of
+
+1242
+02:07:31,140 --> 02:07:33,460
+how we can work together with other
+government entities?
+
+1243
+02:07:42,180 --> 02:07:46,380
+Hello hello my name is Mariano. Mariano
+Green. I'm from Mexico City. I'm very glad
+
+1244
+02:07:46,380 --> 02:07:50,260
+to be here with you guys. Even though that
+I'm born Mexican-American, I'm more
+
+1245
+02:07:50,260 --> 02:07:55,200
+Mexican than American. I live most of my
+life there in Mexico. So I have learned a
+
+1246
+02:07:55,200 --> 02:08:00,420
+lot with you guys how we can implement. We
+have been working with clear companies try
+
+1247
+02:08:00,420 --> 02:08:05,340
+to like develop the Mexican the Mexican
+environment there and develop the Mexican
+
+1248
+02:08:05,340 --> 02:08:08,320
+environment there. But we came to the
+conclusion that it has to be a grassroots
+
+1249
+02:08:08,320 --> 02:08:13,300
+movement. It has to be with the
+communities. You know the community has to
+
+1250
+02:08:13,300 --> 02:08:17,720
+endorse their own. So not only the
+identity you know like yes the identity
+
+1251
+02:08:17,720 --> 02:08:25,260
+has to be more broad you know but it's
+something that this movement has to be
+
+1252
+02:08:25,260 --> 02:08:32,000
+more locally. You know I have been talking
+with some of these persons here and a lot
+
+1253
+02:08:32,000 --> 02:08:34,880
+of those persons came to the same
+conclusion you know and a lot of those
+
+1254
+02:08:34,880 --> 02:08:36,560
+persons came to the same conclusion you
+know and that's that's the way that I
+
+1255
+02:08:36,560 --> 02:08:43,380
+think personally the human being has to
+like has to move towards to that because
+
+1256
+02:08:43,380 --> 02:08:48,140
+if not that will happen with
+centralization and control power we all
+
+1257
+02:08:48,140 --> 02:08:53,780
+know that. So this idea of stay indoors I
+will say it more like community indoors.
+
+1258
+02:08:54,160 --> 02:08:59,800
+That's my grain of salt. I like that
+community indoors. One of the I had the
+
+1259
+02:08:59,800 --> 02:09:04,000
+opportunity I think it was as
+representative Chevrier still here. She
+
+1260
+02:09:04,000 --> 02:09:07,740
+invited me to speak at one of her events
+for Stand for Health Freedom a couple
+
+1261
+02:09:07,740 --> 02:09:12,180
+weeks ago and we had a really interesting
+discussion of you mentioned community of
+
+1262
+02:09:12,180 --> 02:09:16,600
+how to decentralize the proofing process
+out into the community. A lot of cities
+
+1263
+02:09:16,600 --> 02:09:21,200
+and towns and school districts or even our
+post offices are in the community. Do you
+
+1264
+02:09:21,200 --> 02:09:25,260
+need to go essentially to a DMV to do
+proofing or can we have lots of entities
+
+1265
+02:09:25,260 --> 02:09:28,460
+doing it? Move it out to the community so
+there's more trust because these are their
+
+1266
+02:09:28,460 --> 02:09:32,380
+neighbors that work out there. If you can
+standardize the identity verification and
+
+1267
+02:09:32,380 --> 02:09:34,500
+standardize the identity verification and
+proofing process there's some real low
+
+1268
+02:09:34,500 --> 02:09:39,460
+hanging fruit and we can eliminate some of
+those inefficiencies or barriers for
+
+1269
+02:09:39,460 --> 02:09:43,340
+people that can't get it currently and if
+you could just go to your local city
+
+1270
+02:09:43,340 --> 02:09:48,260
+recorder or your local treasurer or your
+local postal office why don't you have all
+
+1271
+02:09:48,260 --> 02:09:52,180
+the options and that's I think a great way
+to get that grassroots going of those
+
+1272
+02:09:52,180 --> 02:09:56,100
+communities that want it. We know Utah
+County and some small cities have been
+
+1273
+02:09:56,100 --> 02:10:01,780
+saying we want it if we could build it
+bring it out to them. Pat Brooks with the
+
+1274
+02:10:01,780 --> 02:10:05,420
+state of Missouri judiciary.
+
+1275
+02:10:06,640 --> 02:10:11,680
+I'm not sure how many people here are
+familiar with the standard called NIME.
+
+1276
+02:10:11,680 --> 02:10:19,780
+Anyone familiar with NIME? NIME is the
+national information exchange model and
+
+1277
+02:10:19,780 --> 02:10:25,920
+that started as what was the predecessor
+of that was called GJ XDM and that was a
+
+1278
+02:10:25,920 --> 02:10:32,200
+global justice data exchange change model.
+And what you're talking about doing here
+
+1279
+02:10:32,200 --> 02:10:38,900
+is following the same path that that
+program followed. You have a grassroots
+
+1280
+02:10:38,900 --> 02:10:45,120
+follow along with the gentleman just
+before that people had a need to do
+
+1281
+02:10:45,120 --> 02:10:51,480
+something and the standards were
+established and not so much in legislation
+
+1282
+02:10:51,480 --> 02:10:56,000
+but in adoption from a technology
+perspective to say this is how we can get
+
+1283
+02:10:56,000 --> 02:10:59,860
+the work done. Going back to the comments
+of publishing schemas, publishing
+
+1284
+02:10:59,860 --> 02:11:07,600
+standards that people can adopt and the
+organization that started that was a multi
+
+1285
+02:11:07,600 --> 02:11:12,700
+-state organization and it was in the
+justice domain. And what happened to it
+
+1286
+02:11:12,700 --> 02:11:20,440
+was it saw a need to exchange information
+in multiple domains and identity is one of
+
+1287
+02:11:20,440 --> 02:11:25,640
+those domains. And so I would encourage
+you to make sure that if we're
+
+1288
+02:11:25,640 --> 02:11:32,060
+establishing a standard for multiple
+states to follow that we look at if there
+
+1289
+02:11:32,060 --> 02:11:37,900
+is RA something at the national level that
+could be more readily adopted than maybe
+
+1290
+02:11:37,900 --> 02:11:41,720
+building something from total to scratch.
+You have governance that you have to
+
+1291
+02:11:41,720 --> 02:11:50,280
+issue. You have to have vitality issues.
+You have technology standards. But I think
+
+1292
+02:11:50,280 --> 02:11:58,400
+this is a wonderful idea and I think that
+it can be well served to see how others
+
+1293
+02:11:58,400 --> 02:12:00,560
+have done something similar and how others
+have done something similar and going
+
+1294
+02:12:00,560 --> 02:12:00,980
+forward.
+
+1295
+02:12:07,860 --> 02:12:15,120
+Michael proper. I have seen this dilemma
+that we've been building and sitting upon
+
+1296
+02:12:15,120 --> 02:12:22,500
+for years. Well over a decade actually.
+And the solution is right in front of us.
+
+1297
+02:12:24,320 --> 02:12:30,860
+But will we really see it? And what I mean
+by that is we know that we've all got to
+
+1298
+02:12:30,860 --> 02:12:35,280
+come together and adopt a system. And we
+know that there's a political side of it
+
+1299
+02:12:35,280 --> 02:12:42,600
+and there's a technology side of it. But
+what if they really existed? Would you
+
+1300
+02:12:42,600 --> 02:12:46,920
+really adopt them? Would you really use
+them? Even if it had the beekeeper
+
+1301
+02:12:46,920 --> 02:12:55,380
+scenario built into it and 86 other
+certificates, permits, licenses that
+
+1302
+02:12:55,380 --> 02:13:00,720
+already exist and already use these
+standards. would you really use them?
+
+1303
+02:13:01,240 --> 02:13:02,020
+Would you really use them? Would you
+really use them? Would you really use it?
+
+1304
+02:13:02,020 --> 02:13:07,420
+Would the state of Utah really use it?
+Would the state of Arizona really use it?
+
+1305
+02:13:08,220 --> 02:13:15,220
+Would Mexico really use it? Mexico doesn't
+know. It's a community thing. It's the
+
+1306
+02:13:15,220 --> 02:13:19,820
+person that would actually be the ultimate
+decision maker if they're going to use it.
+
+1307
+02:13:20,120 --> 02:13:28,720
+That's why MDL has such I think Arizona
+has a ton of adoption. 17% adoption. If we
+
+1308
+02:13:28,720 --> 02:13:33,020
+could do that with a decentralized system
+where the individual actually will throw.
+
+1309
+02:13:33,280 --> 02:13:40,560
+If we could do the same 20% of MDL energy
+into a decentralized system and people
+
+1310
+02:13:40,560 --> 02:13:44,580
+knew about it, the awareness and adoption
+would go through the roof because it's
+
+1311
+02:13:44,580 --> 02:13:49,760
+around the individual first. If we want to
+be true and honest around what's going on,
+
+1312
+02:13:50,260 --> 02:13:56,600
+Cindy who has a son that's dead is one
+very small proof. It's not just a person's
+
+1313
+02:13:56,600 --> 02:14:00,480
+life and their breath and their breath
+that's gone. It's their time on earth that
+
+1314
+02:14:00,480 --> 02:14:06,100
+sucked from them from these corporations.
+Whether they're slumming around
+
+1315
+02:14:06,100 --> 02:14:13,260
+pornography or they're slumming around
+video games that are taking the youth or
+
+1316
+02:14:13,260 --> 02:14:19,440
+we're allowing AI to be able to replicate
+and take not just from the next
+
+1317
+02:14:19,440 --> 02:14:26,660
+generation, the grandparents, our parents,
+our children. This is our responsibility.
+
+1318
+02:14:26,660 --> 02:14:34,020
+In Hawaii, it's our kuleana. It's our
+kuleana. It's our time. And I look at what
+
+1319
+02:14:34,020 --> 02:14:40,140
+Chris and Phil and Sam and Tim, these
+people have dedicated decades of their
+
+1320
+02:14:40,140 --> 02:14:51,020
+life. I too, 19 years, $28 million of my
+own hard-earned money into this technology
+
+1321
+02:14:51,020 --> 02:15:00,760
+for the state, for the countries, other
+countries, for no price. Would you really
+
+1322
+02:15:00,760 --> 02:15:07,300
+adopt it? Would you really look at it?
+Because if you do it here and you can do
+
+1323
+02:15:07,300 --> 02:15:11,720
+10% of what we're talking about, other
+states will get on board with it. If you
+
+1324
+02:15:11,720 --> 02:15:16,800
+give it back to the individuals and truly
+let them own their own identity, their own
+
+1325
+02:15:16,800 --> 02:15:21,020
+data, their own payments, their own
+assets, and pass it to the next generation
+
+1326
+02:15:21,020 --> 02:15:25,340
+instead of the state sucking out hundreds
+of millions of dollars of unclaimed assets
+
+1327
+02:15:25,340 --> 02:15:29,700
+because people don't even know where they
+are. where they are. The technology is
+
+1328
+02:15:29,700 --> 02:15:36,280
+here today. It's not just in some
+proprietary phone that's really open. It's
+
+1329
+02:15:36,280 --> 02:15:43,360
+not about a phone. Even though Cindy's
+parents, Cindy's son, that's how they took
+
+1330
+02:15:43,360 --> 02:15:48,800
+his life. That's how they stole him. As a
+parent of six kids, I want to be able to
+
+1331
+02:15:48,800 --> 02:15:56,780
+say, I did everything that I could so that
+my son that went to this university and
+
+1332
+02:15:56,780 --> 02:16:01,560
+when I sat on the board of this
+university, when her son killed himself,
+
+1333
+02:16:01,860 --> 02:16:07,340
+was responsible enough to say, you know
+what? Enough is enough. We got to stop the
+
+1334
+02:16:07,340 --> 02:16:11,520
+games. We got to come together with the
+policy. We got to come together with the
+
+1335
+02:16:11,520 --> 02:16:18,500
+technology. And we have to actually act.
+Charlie Kirk was killed 500 feet from
+
+1336
+02:16:18,500 --> 02:16:25,440
+here, 150 feet from here. The action
+behind his choice network was all what
+
+1337
+02:16:25,440 --> 02:16:30,660
+it's about. It's about acting. It's about
+doing. The technology's here. People have
+
+1338
+02:16:30,660 --> 02:16:36,040
+seen it. People can live it. They can
+adopt it. You can download it. Utah life.
+
+1339
+02:16:36,940 --> 02:16:42,320
+Go to your app store, download it, log in.
+It's simple. This isn't hypothetical.
+
+1340
+02:16:43,080 --> 02:16:47,860
+These are real systems that really
+function better than Bitcoin, better than
+
+1341
+02:16:47,860 --> 02:16:51,860
+Ethereum, better than the banking system,
+better than the current identity
+
+1342
+02:16:51,860 --> 02:16:56,900
+management systems. And I'm sorry, I want
+to slow down and I want to slow down and I
+
+1343
+02:16:56,900 --> 02:17:03,280
+want to just let the process take its
+process. And Chris, I emphatically support
+
+1344
+02:17:03,280 --> 02:17:08,600
+everything that you're doing. But we don't
+have time. We don't have another 10 years
+
+1345
+02:17:08,600 --> 02:17:14,700
+for another decade worth of kids to not
+only stick bullets in their heads, but to
+
+1346
+02:17:14,700 --> 02:17:18,120
+stick bits in their heads that takes them
+away from the life that they've been
+
+1347
+02:17:18,120 --> 02:17:23,020
+given. It steals their time. It steals
+their souls. It steals their hearts. It
+
+1348
+02:17:23,020 --> 02:17:31,860
+steals their hearts. I'm sorry that this
+means so much to me. But I can see the
+
+1349
+02:17:31,860 --> 02:17:32,320
+solution.
+
+1350
+02:17:38,980 --> 02:17:45,320
+Thank you, Michael. And our timeline is
+that 10 years is data governance. Our time
+
+1351
+02:17:45,320 --> 02:17:52,240
+on lists is as fast as we can. Senator
+Collin Moore said this on KUTV last week
+
+1352
+02:17:52,240 --> 02:17:55,360
+and he said, we have to say, we have to
+get it right. We don't want to cause more
+
+1353
+02:17:55,360 --> 02:18:00,020
+harm, but the time is as fast as we can
+get out there. So parents and individuals
+
+1354
+02:18:00,020 --> 02:18:03,620
+have the tool. So that's our timeline and
+that's our commitment as we're trying to
+
+1355
+02:18:03,620 --> 02:18:08,260
+get it out as fast as we can. Obviously,
+we have to follow the law, but we
+
+1356
+02:18:08,260 --> 02:18:13,540
+understand the importance and that it's
+needed now. This is not something that we
+
+1357
+02:18:13,540 --> 02:18:18,340
+want regular bureaucracy to just sit on.
+And I think that's why we're all here.
+
+1358
+02:18:18,460 --> 02:18:23,580
+This is not normal bureaucracy. This is
+not a normal meeting. This is something
+
+1359
+02:18:23,580 --> 02:18:26,880
+different is happening. This is something
+different is happening and this is going
+
+1360
+02:18:26,880 --> 02:18:27,720
+to get done right.
+
+1361
+02:18:35,440 --> 02:18:41,760
+I'm not going to try to follow that, but
+my question is for those in the private
+
+1362
+02:18:41,760 --> 02:18:46,200
+sector partners who are helping us, what
+can we do to help move this faster?
+
+1363
+02:18:46,320 --> 02:18:53,920
+Understanding that we have to do it right,
+but how can we move faster? I think Tim.
+
+1364
+02:18:54,440 --> 02:18:54,440
+Tim.
+
+1365
+02:18:59,420 --> 02:19:04,560
+I've been
+
+1366
+02:19:04,560 --> 02:19:11,040
+working in the space for over a decade
+now. It's like trying to push a really
+
+1367
+02:19:11,040 --> 02:19:15,360
+heavy rock uphill really hard. A lot of
+failure. A lot of things we tried in
+
+1368
+02:19:15,360 --> 02:19:20,560
+different ways that didn't work. And I'm
+very optimistic about SEDI and what's
+
+1369
+02:19:20,560 --> 02:19:25,720
+happening in the state level? I think the
+answer, I've always been a small
+
+1370
+02:19:25,720 --> 02:19:33,140
+government guy. And the reality is that
+now that government is getting into the
+
+1371
+02:19:33,140 --> 02:19:38,060
+digital identity space, it's several
+decades behind private industry and
+
+1372
+02:19:38,060 --> 02:19:43,220
+private industry has turned the digital
+identity space into this just incredible
+
+1373
+02:19:43,220 --> 02:19:47,600
+surveillance mechanism. But now
+government's getting into the digital
+
+1374
+02:19:47,600 --> 02:19:55,760
+identity space. And government at the end,
+you said has the monopoly on whatever it
+
+1375
+02:19:55,760 --> 02:20:04,780
+decides to do. Government will dictate how
+much privacy or freedom or autonomy we
+
+1376
+02:20:04,780 --> 02:20:10,980
+have or don't have in the digital realm is
+my prediction after all I've seen. So to
+
+1377
+02:20:10,980 --> 02:20:17,120
+answer your question about how to finally
+solve this, I think Utah has to be
+
+1378
+02:20:17,120 --> 02:20:23,420
+successful in getting other states and
+create momentum. I know that Utah has deep
+
+1379
+02:20:23,420 --> 02:20:28,200
+prioritized interoperability, which is
+really interesting when you look at Utah's
+
+1380
+02:20:28,200 --> 02:20:35,240
+hierarchy of values for a lot of identity
+initiatives specifically, but technology
+
+1381
+02:20:35,240 --> 02:20:39,320
+in general, the highest priority is
+interoperability. And so what gets
+
+1382
+02:20:39,320 --> 02:20:46,900
+sacrificed is security and privacy.
+Specifically with the MDL standard, there
+
+1383
+02:20:46,900 --> 02:20:50,780
+was a country that said we need to have
+phone home and they didn't call it that we
+
+1384
+02:20:50,780 --> 02:20:52,440
+need to have server retrieval. We need to
+have server retrieval and it was baked
+
+1385
+02:20:52,440 --> 02:20:55,900
+into the standard because a country
+demanded it. Different culture. It's not
+
+1386
+02:20:55,900 --> 02:21:00,580
+our culture. Someone else's culture
+demanded it. It got baked in. A bunch of
+
+1387
+02:21:00,580 --> 02:21:05,480
+us squawked about this a couple few months
+ago and they have now separated it
+
+1388
+02:21:05,480 --> 02:21:08,340
+thankfully. But the point is that was made
+earlier.
+
+1389
+02:21:10,960 --> 02:21:16,420
+We as Utah need to do what's best for
+Utahns if even if it means that we're not
+
+1390
+02:21:16,420 --> 02:21:20,180
+interoperable with the rest of the world.
+We have to deprioritize interoperability
+
+1391
+02:21:20,180 --> 02:21:25,060
+and do what's best for the privacy and
+security of our citizens. And so what I
+
+1392
+02:21:25,060 --> 02:21:29,780
+think is the answer to your question is to
+get Utah to be more than just Utah that's
+
+1393
+02:21:29,780 --> 02:21:34,300
+doing this to get some representatives
+from other states who are here to actually
+
+1394
+02:21:34,300 --> 02:21:39,720
+move forward and join. It reminds me of
+the end of the movie A Bug's Life where
+
+1395
+02:21:39,720 --> 02:21:44,140
+the grasshoppers were were bullying the
+ants through the whole movie and finally
+
+1396
+02:21:44,140 --> 02:21:49,240
+at the very end the ants realize they're
+more powerful if they lock arms. I have
+
+1397
+02:21:49,240 --> 02:21:55,300
+this digital identity thing is so big and
+I see grasshoppers everywhere who are the
+
+1398
+02:21:55,300 --> 02:22:00,700
+bullies in digital identity and I think
+the only way we do it is Utah's an ant and
+
+1399
+02:22:00,700 --> 02:22:05,300
+we need to lock lock arms with other ants
+and scare the grasshoppers out of this
+
+1400
+02:22:05,300 --> 02:22:05,660
+space.
+
+1401
+02:22:13,140 --> 02:22:18,860
+My name is Jeremy Furster from Cardano
+Foundation in Veridian and I'm going to
+
+1402
+02:22:18,860 --> 02:22:21,580
+say that I'm in the technology a
+technologist camp camp or stakeholder
+
+1403
+02:22:21,580 --> 02:22:28,260
+group and normally when speaking to
+policymakers there is a view from
+
+1404
+02:22:28,260 --> 02:22:32,560
+technologists that you're way off the mark
+with what you're presenting as policy.
+
+1405
+02:22:33,000 --> 02:22:41,480
+However, that is not the case at all when
+coming to SEDI and I think the engagement
+
+1406
+02:22:41,480 --> 02:22:45,760
+that you receive and the interest that
+you're receiving the reason why it's so
+
+1407
+02:22:45,760 --> 02:22:54,520
+high is because fundamentally the policy
+makes sense for the constituents. We've
+
+1408
+02:22:54,520 --> 02:23:00,800
+been able to demonstrate with our demo
+that today SEDI is not just policy. It can
+
+1409
+02:23:00,800 --> 02:23:08,060
+be codified. It can be implemented. And I
+would ask do you see a path where you can
+
+1410
+02:23:08,060 --> 02:23:13,080
+eat your own dog food? Because when you
+look to implement SEDI you need that first
+
+1411
+02:23:13,080 --> 02:23:20,380
+user. A very easy low-hanging fruit could
+be having a SEDI wallet to have a
+
+1412
+02:23:20,380 --> 02:23:25,280
+passwordless login to have a passwordless
+login to a government website. And if you
+
+1413
+02:23:25,280 --> 02:23:29,860
+do something like this it's very low risk
+to actually get things started and have
+
+1414
+02:23:29,860 --> 02:23:33,140
+something put into production that is end
+-to-end.
+
+1415
+02:23:36,080 --> 02:23:39,820
+Well, I'm going to make a quick comment
+because I actually got some text I get
+
+1416
+02:23:39,820 --> 02:23:43,160
+texts every weekend just you guys know
+from citizens that are like I hate this
+
+1417
+02:23:43,160 --> 02:23:47,720
+what are you doing? And they actually sent
+a text and you may have been about to go
+
+1418
+02:23:47,720 --> 02:23:51,080
+here where they're going to say hey what
+they were like what is this Utah ID I now
+
+1419
+02:23:51,080 --> 02:23:55,380
+need to use to log into a system. It's a
+just a single sign-on portal which any
+
+1420
+02:23:55,380 --> 02:23:59,280
+it's any single sign-on system is going to
+have tracking. It's a centralized. Yeah,
+
+1421
+02:23:59,360 --> 02:24:03,220
+it's a username password type system. So
+there's low hanging fruit and I think
+
+1422
+02:24:03,220 --> 02:24:07,140
+there's discussions already happening. So
+we know constituents have identified the
+
+1423
+02:24:07,140 --> 02:24:11,500
+system. They actually have said they want
+SEDI on. We have the man here in charge of
+
+1424
+02:24:11,500 --> 02:24:17,580
+it. So we have a couple of initiatives
+that we're working on and we have first of
+
+1425
+02:24:17,580 --> 02:24:25,000
+all we have our we have we have in a beta
+form our next version citizen portal which
+
+1426
+02:24:25,000 --> 02:24:29,720
+we branded my Utah and you'll probably see
+Governor Cox making an announcement about
+
+1427
+02:24:29,720 --> 02:24:34,140
+this early next year but the goal and we
+don't have this quite here yet I'm looking
+
+1428
+02:24:34,140 --> 02:24:38,180
+at but we'll we'll be getting there where
+we hope to be able to have people
+
+1429
+02:24:38,180 --> 02:24:44,180
+authenticate with a SEDI credential for
+that and we don't quite have the SEDI
+
+1430
+02:24:44,180 --> 02:24:50,120
+credential yet to do that but we want it
+and so that'll be be one of our first and
+
+1431
+02:24:50,120 --> 02:24:54,540
+best use cases to get that going and we
+also want to look at state systems. So we
+
+1432
+02:24:54,540 --> 02:24:58,700
+have our 22,000 state employees and we
+have identity and access management that
+
+1433
+02:24:58,700 --> 02:25:03,500
+we log them into our state system and we
+like to have a a SEDI credential so that
+
+1434
+02:25:03,500 --> 02:25:08,900
+they can log in as employees and we would
+like to move away from passwords even with
+
+1435
+02:25:08,900 --> 02:25:13,760
+our multi-factor we don't love them we'd
+like to move to a more secure SEDI type
+
+1436
+02:25:13,760 --> 02:25:18,280
+credential for login and use in identity
+and access management systems across the
+
+1437
+02:25:18,280 --> 02:25:21,740
+state hopefully that will be one place we
+can start to get rolling.
+
+1438
+02:25:27,160 --> 02:25:32,080
+Hi, I'm Mark Allen. I'm with citizen
+portal my brother today ancestor.com and
+
+1439
+02:25:32,080 --> 02:25:36,460
+we're trying to work towards government
+transparency and accountability and Chris
+
+1440
+02:25:36,460 --> 02:25:41,260
+you're spot on when you say that most of
+the state of Utah is not compliant. I
+
+1441
+02:25:41,260 --> 02:25:47,000
+think our stats show about 15% of public
+meetings are being recorded gavel to
+
+1442
+02:25:47,000 --> 02:25:50,240
+gavel. I think some of the low-hanging
+fruit that I think some of the low-hanging
+
+1443
+02:25:50,240 --> 02:25:55,140
+fruit that I'd suggest for authentication
+and certification would be within your own
+
+1444
+02:25:55,140 --> 02:26:02,760
+home of state government. I have been
+branded a vexatious litigant as of last
+
+1445
+02:26:02,760 --> 02:26:09,500
+night but the judge of Charlie Kirk case
+because I asked for a court record. Let
+
+1446
+02:26:09,500 --> 02:26:13,200
+that sink in. I asked for a Webex video
+hearing.
+
+1447
+02:26:16,220 --> 02:26:21,780
+I can't get anybody in the state of Utah
+to give me a certified record. When I'm
+
+1448
+02:26:21,780 --> 02:26:27,720
+doing grammar they say oh it's a duplicate
+request. I want state certified
+
+1449
+02:26:27,720 --> 02:26:36,560
+authenticated genuine record that I can
+take to the bank and say I'm innocent. But
+
+1450
+02:26:36,560 --> 02:26:41,100
+when I asked for that I get branded a
+vexatious litigant. So my admission
+
+1451
+02:26:41,100 --> 02:26:46,540
+admonition as a state and county delegate
+is also with what we're doing is clean up
+
+1452
+02:26:46,540 --> 02:26:51,660
+your own house first not at your level but
+at the clerk level where they won't give
+
+1453
+02:26:51,660 --> 02:26:57,080
+me a certified record where the keyboard
+is the weapon of today and I'm the first
+
+1454
+02:26:57,080 --> 02:27:03,500
+victim probably in the state of Utah of
+lawfare and but if I had everything that
+
+1455
+02:27:03,500 --> 02:27:09,360
+you've been talking about today set
+ability to authenticate ability to track
+
+1456
+02:27:09,360 --> 02:27:13,920
+back into the record to see who was the
+ghost that hit the keyboard word to
+
+1457
+02:27:13,920 --> 02:27:20,620
+backdate the record by two years. I
+wouldn't be as smart as I am now but I've
+
+1458
+02:27:20,620 --> 02:27:25,100
+learned a lot in the last 10 years and I'd
+say Utah let's get it right first. Let's
+
+1459
+02:27:25,100 --> 02:27:30,880
+start in the judiciary where the problems
+are and then my personal identifying
+
+1460
+02:27:30,880 --> 02:27:36,100
+information I can control and protect it
+but mine's been scattered to databases
+
+1461
+02:27:36,100 --> 02:27:42,360
+around the world and I don't know how to
+undamage what that's been done. We also
+
+1462
+02:27:42,360 --> 02:27:48,400
+have a problem with all three branches of
+government in Utah. They're not
+
+1463
+02:27:48,400 --> 02:27:52,120
+watchdogging each other. There's not
+enough healthy friction. I'd like to see a
+
+1464
+02:27:52,120 --> 02:27:56,180
+little more healthy friction between
+stuff. So and this is not specific SETI
+
+1465
+02:27:56,180 --> 02:28:03,860
+related. It really is civil rights, my
+personal protections and I don't need to
+
+1466
+02:28:03,860 --> 02:28:07,580
+go deeper down that because I really
+appreciate what you're trying to do. If we
+
+1467
+02:28:07,580 --> 02:28:11,620
+would have had implemented what you did,
+what you're talking about 10 years ago, my
+
+1468
+02:28:11,620 --> 02:28:16,700
+life would be totally different. But I've
+seen how China weaponizes and surveils.
+
+1469
+02:28:16,960 --> 02:28:25,940
+I've been surveilled in Utah, Provo, Utah.
+So court certified records definitions are
+
+1470
+02:28:25,940 --> 02:28:30,060
+really important. What's a certified
+record? What does a certified record look
+
+1471
+02:28:30,060 --> 02:28:38,100
+like to you if I go down to the court and
+try and get a digital copy or something
+
+1472
+02:28:38,100 --> 02:28:44,040
+that someone will go, oh, this is we made
+a mistake. How do we undo the mistake? So
+
+1473
+02:28:44,040 --> 02:28:50,680
+that's a personal use case scenario. But I
+think our courts, they don't on a standard
+
+1474
+02:28:50,680 --> 02:28:56,160
+basis do a transcript. You can't get a
+certified record unless I pay for it. $2
+
+1475
+02:28:56,160 --> 02:29:01,300
+,500 for me to get a certified record. So
+I would start within the court judiciary
+
+1476
+02:29:01,300 --> 02:29:06,540
+and start certifying records and start
+doing court transcripts. If it were me,
+
+1477
+02:29:06,720 --> 02:29:12,000
+that's low hanging fruit that would
+benefit most of Utah. Thank you, Mark. We
+
+1478
+02:29:12,000 --> 02:29:16,340
+are all right. We're going to have one
+more question. We're at time. But Jeremy
+
+1479
+02:29:16,340 --> 02:29:20,700
+Baker is a Utah privacy commissioner. If
+you don't know, governance structure in
+
+1480
+02:29:20,700 --> 02:29:24,540
+Utah, we have a whole commission dedicated
+to privacy. So take that back to your
+
+1481
+02:29:24,540 --> 02:29:27,880
+state if you don't have one. Go ahead,
+Jeremy. So I'm actually going to take this
+
+1482
+02:29:27,880 --> 02:29:31,760
+from a different perspective and this is
+from my private sector experience with
+
+1483
+02:29:31,760 --> 02:29:39,360
+being someone that integrates security and
+identity into software applications. And
+
+1484
+02:29:39,360 --> 02:29:44,140
+it's related to how do we get the private
+sector to adopt this. A lot of private
+
+1485
+02:29:44,140 --> 02:29:48,500
+sector companies like even roblox or
+others. They end up using identity
+
+1486
+02:29:48,500 --> 02:29:57,360
+providers like AWS Cognito, Okta, Azure,
+B2C. All of those they've added in
+
+1487
+02:29:57,360 --> 02:30:01,700
+different integrations for identities. So
+you have like your social media logins
+
+1488
+02:30:01,700 --> 02:30:06,680
+that are allowed in there as well as like
+the current adoption of passkeys which has
+
+1489
+02:30:06,680 --> 02:30:11,480
+been really slow to roll out across the
+entire private sector even though they're
+
+1490
+02:30:11,480 --> 02:30:18,780
+significantly better idea than passwords
+and user names. But to get SEDI adopted
+
+1491
+02:30:18,780 --> 02:30:23,860
+across all of them, I think the framework
+like what we've talked about today having
+
+1492
+02:30:23,860 --> 02:30:28,760
+an open framework where those major
+identity providers could bring that
+
+1493
+02:30:28,760 --> 02:30:33,920
+integration in as an authentication
+service under the umbrella to have it as
+
+1494
+02:30:33,920 --> 02:30:38,800
+an option to add directly into
+applications that are currently working
+
+1495
+02:30:38,800 --> 02:30:45,660
+with their products. I think that would be
+be a significant push for adoption. Thank
+
+1496
+02:30:45,660 --> 02:30:51,460
+you, Jeremy. Okay, we're going to close up
+first by raise of hands who wants to help
+
+1497
+02:30:51,460 --> 02:30:57,780
+get SEDI going forward. Okay, and if it's
+not up, okay, everyone got it up. I and
+
+1498
+02:30:57,780 --> 02:31:00,700
+that was the worst thing to do because I
+am shameless. One of my tricks in
+
+1499
+02:31:00,700 --> 02:31:05,060
+government is I have no problem asking for
+your time. So you will all be getting
+
+1500
+02:31:05,060 --> 02:31:09,500
+calls in your states to move this forward
+and we'll be shameless together to take
+
+1501
+02:31:09,500 --> 02:31:14,120
+this national. We are so thankful that
+everyone came today. I know this is a long
+
+1502
+02:31:14,120 --> 02:31:19,620
+day and this was a lot of information but
+you now are ready to actually have the in
+
+1503
+02:31:19,620 --> 02:31:23,260
+-depth discussions. So we will go back.
+We'll do some of the grunt work to get
+
+1504
+02:31:23,260 --> 02:31:27,920
+organized. We'll set up and we'll make our
+materials available. We'll reach out to
+
+1505
+02:31:27,920 --> 02:31:31,660
+the states to get at least one more
+formally involved so we can get SEDI.gov
+
+1506
+02:31:31,660 --> 02:31:36,480
+going going at SEDI.Utah.gov doesn't have
+the same you know ring to it. We want SEDI
+
+1507
+02:31:36,480 --> 02:31:41,700
+.gov. But we'll get rolling on that and
+we're going to meet back here again in
+
+1508
+02:31:41,700 --> 02:31:45,580
+less than six months for the next SEDI
+summit and from what we're already hearing
+
+1509
+02:31:45,580 --> 02:31:49,840
+it's probably going to be twice as big and
+by that point with the pace we're going
+
+1510
+02:31:49,840 --> 02:31:54,080
+not only we have more legislation but
+hopefully we have a lot more to share so
+
+1511
+02:31:54,080 --> 02:31:58,020
+other states can take it steal from our
+tax dollars and take it to your state so
+
+1512
+02:31:58,020 --> 02:32:01,440
+you don't have to pay for it and let's get
+SEDI rolling. So thank you everyone.
+
+1513
+02:32:01,440 --> 02:32:05,540
+Thanks Brian. Brian Thank you.
+
+1514
+02:32:33,520 --> 02:32:34,300
+Thank you.
+
