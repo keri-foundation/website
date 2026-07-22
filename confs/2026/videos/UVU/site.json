@@ -1,0 +1,61 @@
+{
+  "page": {
+    "title": "State Endorsed Digital Identity Summit — UVU",
+    "heading": "State Endorsed Digital Identity Summit",
+    "headingHref": "/confs/2026/videos/UVU/",
+    "statusNotice": "Full-session subtitles are still being prepared.",
+    "subtitle": "Morning, lunch panel, and afternoon sessions from the UVU summit",
+    "footer": "KERI Foundation • UVU Summit Videos",
+    "searchPlaceholder": "Type to search across all sessions…",
+    "searchLabel": "Search all transcripts",
+    "nav": [
+      {
+        "label": "Home",
+        "href": "/",
+        "external": true
+      },
+      {
+        "label": "KERIConf 2026 Videos",
+        "href": "/confs/2026/videos/",
+        "external": false
+      }
+    ]
+  },
+  "topClips": {
+    "enabled": false,
+    "title": "Top Clips",
+    "subtitle": "",
+    "clips": []
+  },
+  "days": [
+    "Summit Sessions"
+  ],
+  "defaultPoster": "poster-sedi-summit.jpg",
+  "speakerPhotos": {},
+  "videos": [
+    {
+      "order": 1,
+      "day": "Summit Sessions",
+      "title": "Morning Session",
+      "path": "State Endorsed Digital Identity Summit - Morning Session.mp4",
+      "duration": "2:34:40",
+      "subtitle": "subtitles/State Endorsed Digital Identity Summit - Morning Session.srt"
+    },
+    {
+      "order": 2,
+      "day": "Summit Sessions",
+      "title": "Lunch Panel",
+      "path": "State Endorsed Digital Identity Summit - Lunch Panel.mp4",
+      "duration": "59:50",
+      "subtitle": "subtitles/State Endorsed Digital Identity Summit - Lunch Panel.srt"
+    },
+    {
+      "order": 3,
+      "day": "Summit Sessions",
+      "title": "Afternoon Session",
+      "path": "State Endorsed Digital Identity Summit - Afternoon Session.mp4",
+      "duration": "2:33:02",
+      "subtitle": "subtitles/State Endorsed Digital Identity Summit - Afternoon Session.srt"
+    }
+  ]
+}
