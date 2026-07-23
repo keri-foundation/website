@@ -1079,16 +1079,45 @@ h1 {
     --plyr-color-main: #5f7c2f;
 }
 
+.plyr--video:not(.plyr--playing) .plyr__overlay-controls,
 .plyr--video:not(.plyr--playing) .plyr__control--overlaid {
-    display: block;
+    display: flex;
     visibility: visible;
     opacity: 0.95;
 }
 
-.plyr--video.plyr--playing:not(.plyr--hide-controls) .plyr__control--overlaid {
-    display: block;
+.plyr--video.plyr--playing:not(.plyr--hide-controls) .plyr__overlay-controls,
+.plyr--video.plyr--playing:not(.plyr--hide-controls) .plyr__control--overlaid,
+.plyr--video.plyr--playing.plyr--overlay-controls-pinned .plyr__overlay-controls,
+.plyr--video.plyr--playing.plyr--overlay-controls-pinned .plyr__control--overlaid {
+    display: flex;
     visibility: visible;
     opacity: 0.95;
+}
+
+.plyr__overlay-controls {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 0.85rem;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.plyr__overlay-controls .plyr__control {
+    pointer-events: auto;
+}
+
+.plyr__overlay-controls .plyr__control--overlaid {
+    position: static;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 0;
 }
 
 .plyr__control--overlaid {
@@ -1096,9 +1125,35 @@ h1 {
     z-index: 3;
 }
 
-.plyr__control--overlaid svg {
+.plyr__control--overlay-seek {
+    padding: 0.95rem;
+    background: rgba(0, 0, 0, 0.55);
+    border-radius: 100%;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.plyr__control--overlay-seek:hover,
+.plyr__control--overlay-seek:focus-visible {
+    background: var(--plyr-color-main, #5f7c2f);
+}
+
+.plyr__control--overlay-seek:active {
+    transform: scale(0.96);
+}
+
+.plyr__control--overlaid svg,
+.plyr__control--overlay-seek svg {
     width: 1.75rem;
     height: 1.75rem;
+    display: block;
+}
+
+.plyr__control--overlay-seek svg {
+    width: 1.35rem;
+    height: 1.35rem;
 }
 
 .plyr__control--overlaid.plyr__control--pressed svg {

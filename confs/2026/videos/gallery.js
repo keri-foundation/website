@@ -33,6 +33,50 @@ const plyrConfig = {
     }
 };
 
+const OVERLAY_CONTROLS_HOLD_MS = 2500;
+
+function createOverlaySeekButton(label, title, pathD, onClick) {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'plyr__control plyr__control--overlay-seek';
+    btn.setAttribute('aria-label', label);
+    btn.setAttribute('title', title);
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        onClick();
+    });
+
+    const namespace = 'http://www.w3.org/2000/svg';
+    const svg = document.createElementNS(namespace, 'svg');
+    svg.setAttribute('aria-hidden', 'true');
+    svg.setAttribute('focusable', 'false');
+    svg.setAttribute('viewBox', '0 0 24 24');
+
+    const path = document.createElementNS(namespace, 'path');
+    path.setAttribute('d', pathD);
+    path.setAttribute('fill', 'currentColor');
+    svg.appendChild(path);
+    btn.appendChild(svg);
+    return btn;
+}
+
+function pinOverlayControls(player, holdMs = OVERLAY_CONTROLS_HOLD_MS) {
+    const container = player?.elements?.container;
+    if (!container) return;
+
+    if (typeof player.toggleControls === 'function') {
+        player.toggleControls(true);
+    }
+
+    container.classList.add('plyr--overlay-controls-pinned');
+    clearTimeout(container._overlayControlsPinTimer);
+    container._overlayControlsPinTimer = setTimeout(() => {
+        container.classList.remove('plyr--overlay-controls-pinned');
+        container._overlayControlsPinTimer = null;
+    }, holdMs);
+}
+
 function enhanceOverlaidPlayToggle(player, iconUrl) {
     if (!player?.elements?.container) return;
 
@@ -40,23 +84,59 @@ function enhanceOverlaidPlayToggle(player, iconUrl) {
     if (!overlaid) return;
 
     const playIcon = overlaid.querySelector('svg');
-    if (!playIcon || overlaid.querySelector('.icon--pressed')) return;
+    if (playIcon && !overlaid.querySelector('.icon--pressed')) {
+        playIcon.classList.add('icon--not-pressed');
 
-    playIcon.classList.add('icon--not-pressed');
+        const namespace = 'http://www.w3.org/2000/svg';
+        const pauseIcon = document.createElementNS(namespace, 'svg');
+        pauseIcon.setAttribute('aria-hidden', 'true');
+        pauseIcon.setAttribute('focusable', 'false');
+        pauseIcon.setAttribute('viewBox', '0 0 24 24');
+        pauseIcon.classList.add('icon--pressed');
 
-    const namespace = 'http://www.w3.org/2000/svg';
-    const pauseIcon = document.createElementNS(namespace, 'svg');
-    pauseIcon.setAttribute('aria-hidden', 'true');
-    pauseIcon.setAttribute('focusable', 'false');
-    pauseIcon.setAttribute('viewBox', '0 0 24 24');
-    pauseIcon.classList.add('icon--pressed');
+        const pausePath = document.createElementNS(namespace, 'path');
+        pausePath.setAttribute('d', 'M6 4h4v16H6zM14 4h4v16h-4z');
+        pausePath.setAttribute('fill', 'currentColor');
+        pauseIcon.appendChild(pausePath);
 
-    const pausePath = document.createElementNS(namespace, 'path');
-    pausePath.setAttribute('d', 'M6 4h4v16H6zM14 4h4v16h-4z');
-    pausePath.setAttribute('fill', 'currentColor');
-    pauseIcon.appendChild(pausePath);
+        playIcon.before(pauseIcon);
+    }
 
-    playIcon.before(pauseIcon);
+    if (player.elements.container.querySelector('.plyr__overlay-controls')) return;
+
+    const seekTime = typeof player.config?.seekTime === 'number' ? player.config.seekTime : 10;
+    const cluster = document.createElement('div');
+    cluster.className = 'plyr__overlay-controls';
+
+    const rewindBtn = createOverlaySeekButton(
+        `Go back ${seekTime} seconds`,
+        `Go back ${seekTime} seconds`,
+        'M11.5 12l8.5 6V6l-8.5 6zm-9 0l8.5 6V6L2.5 12z',
+        () => {
+            if (typeof player.rewind === 'function') player.rewind(seekTime);
+            else player.currentTime = Math.max(0, (player.currentTime || 0) - seekTime);
+            pinOverlayControls(player);
+        }
+    );
+
+    const forwardBtn = createOverlaySeekButton(
+        `Go forward ${seekTime} seconds`,
+        `Go forward ${seekTime} seconds`,
+        'M12.5 12l-8.5 6V6l8.5 6zm9 0l-8.5 6V6l8.5 6z',
+        () => {
+            if (typeof player.forward === 'function') player.forward(seekTime);
+            else {
+                const duration = player.duration || 0;
+                player.currentTime = Math.min(duration, (player.currentTime || 0) + seekTime);
+            }
+            pinOverlayControls(player);
+        }
+    );
+
+    overlaid.replaceWith(cluster);
+    cluster.appendChild(rewindBtn);
+    cluster.appendChild(overlaid);
+    cluster.appendChild(forwardBtn);
 }
 
 function attachFilteredPoster(videoEl) {
