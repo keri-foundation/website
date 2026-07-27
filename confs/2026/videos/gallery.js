@@ -18,7 +18,12 @@ function resolveAssetUrl(path) {
 
 const plyrConfig = {
     seekTime: 10,
-    controls: ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'fullscreen'],
+    controls: ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'settings', 'fullscreen'],
+    settings: ['speed'],
+    speed: {
+        selected: 1,
+        options: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]
+    },
     iconUrl: 'https://cdn.plyr.io/3.8.4/plyr.svg',
     loadSprite: true,
     hideControls: true,
