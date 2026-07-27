@@ -16,6 +16,7 @@
 
 # Local promo clips (must come after !/confs/** — .gitignore beats info/exclude)
 /confs/2026/videos/clips/
+/confs/2026/videos/.venv-clips
 
 # --- .github ---
 !/.github/
