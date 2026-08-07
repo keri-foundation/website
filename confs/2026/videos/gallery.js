@@ -1570,16 +1570,26 @@ function createVideoCard(video) {
         }
 
         if (video.presentation) {
-            const pdfLink = document.createElement('a');
-            pdfLink.className = 'download-presentation-btn';
-            pdfLink.href = resolveAssetUrl(video.presentation);
-            pdfLink.download = '';
-            pdfLink.target = '_blank';
-            pdfLink.rel = 'noopener noreferrer';
-            pdfLink.setAttribute('aria-label', `Download presentation PDF for ${video.title}`);
-            pdfLink.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg> Download PDF';
-            pdfLink.addEventListener('click', (e) => e.stopPropagation());
-            actionsRow.appendChild(pdfLink);
+            const pdfUrl = resolveAssetUrl(video.presentation);
+
+            const pdfDownload = document.createElement('a');
+            pdfDownload.className = 'download-presentation-btn';
+            pdfDownload.href = pdfUrl;
+            pdfDownload.download = '';
+            pdfDownload.setAttribute('aria-label', `Download presentation PDF for ${video.title}`);
+            pdfDownload.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg> Download PDF';
+            pdfDownload.addEventListener('click', (e) => e.stopPropagation());
+            actionsRow.appendChild(pdfDownload);
+
+            const pdfView = document.createElement('a');
+            pdfView.className = 'view-presentation-btn';
+            pdfView.href = pdfUrl;
+            pdfView.target = '_blank';
+            pdfView.rel = 'noopener noreferrer';
+            pdfView.setAttribute('aria-label', `Open presentation PDF for ${video.title} in a new tab`);
+            pdfView.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Open PDF';
+            pdfView.addEventListener('click', (e) => e.stopPropagation());
+            actionsRow.appendChild(pdfView);
         }
 
         infoDiv.appendChild(actionsRow);
