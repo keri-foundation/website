@@ -616,13 +616,20 @@ h1 {
     display: inline-flex;
 }
 
-.open-video-modal-btn {
+.video-card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.open-video-modal-btn,
+.download-presentation-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 7px;
-    width: 100%;
-    margin-top: 10px;
+    flex: 1 1 10rem;
     background: rgba(152, 108, 50, 0.18);
     border: 1px solid rgba(152, 108, 50, 0.35);
     border-radius: 8px;
@@ -633,13 +640,17 @@ h1 {
     padding: 10px 14px;
     cursor: pointer;
     transition: background 0.2s;
+    text-decoration: none;
+    box-sizing: border-box;
 }
 
-.open-video-modal-btn:hover {
+.open-video-modal-btn:hover,
+.download-presentation-btn:hover {
     background: rgba(152, 108, 50, 0.32);
 }
 
-.open-video-modal-btn:focus-visible {
+.open-video-modal-btn:focus-visible,
+.download-presentation-btn:focus-visible {
     outline: 2px solid #986c32;
     outline-offset: 2px;
 }

@@ -175,7 +175,8 @@
       "title": "Open Verifiable Communications - Daniel Hardman",
       "path": "KERICONF26/Daniel Hardman ｜ Open Verifiable Communications ｜ KERI Conference 2026.mp4",
       "duration": "39:55",
-      "subtitle": "KERICONF26/subtitles/Daniel Hardman ｜ Open Verifiable Communications ｜ KERI Conference 2026.fixed.srt"
+      "subtitle": "KERICONF26/subtitles/Daniel Hardman ｜ Open Verifiable Communications ｜ KERI Conference 2026.fixed.srt",
+      "presentation": "KERICONF26/presentations/Daniel Hardman ｜ Open Verifiable Communications ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 3,
@@ -191,7 +192,8 @@
       "title": "The Landscape of SEDI - George McEwan",
       "path": "KERICONF26/George McEwan ｜ The Landscape of SEDI ｜ KERI Conference 2026.mp4",
       "duration": "38:35",
-      "subtitle": "KERICONF26/subtitles/George McEwan ｜ The Landscape of SEDI ｜ KERI Conference 2026.fixed.srt"
+      "subtitle": "KERICONF26/subtitles/George McEwan ｜ The Landscape of SEDI ｜ KERI Conference 2026.fixed.srt",
+      "presentation": "KERICONF26/presentations/George McEwan ｜ The Landscape of SEDI ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 5,
@@ -199,7 +201,8 @@
       "title": "Contract Credentials & Verifiable Identity - Cole Davis",
       "path": "KERICONF26/Cole Davis ｜ Contract Credentials & Verifiable Identity ｜ KERI Conference 2026.mp4",
       "duration": "39:10",
-      "subtitle": "KERICONF26/subtitles/Cole Davis ｜ Contract Credentials & Verifiable Identity ｜ KERI Conference 2026.fixed.srt"
+      "subtitle": "KERICONF26/subtitles/Cole Davis ｜ Contract Credentials & Verifiable Identity ｜ KERI Conference 2026.fixed.srt",
+      "presentation": "KERICONF26/presentations/Cole Davis ｜ Contract Credentials & Verifiable Identity ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 6,
@@ -215,7 +218,8 @@
       "title": "Open KERI Infrastructure - Jay Alexander Elliot",
       "path": "KERICONF26/Jay Alexander Elliot ｜ Open KERI Infrastructure ｜ KERI Conference 2026.mp4",
       "duration": "42:50",
-      "subtitle": "KERICONF26/subtitles/Jay Alexander Elliot ｜ Open KERI Infrastructure ｜ KERI Conference 2026.fixed.srt"
+      "subtitle": "KERICONF26/subtitles/Jay Alexander Elliot ｜ Open KERI Infrastructure ｜ KERI Conference 2026.fixed.srt",
+      "presentation": "KERICONF26/presentations/Jay Alexander Elliot ｜ Open KERI Infrastructure ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 8,
@@ -231,7 +235,8 @@
       "title": "Signify Security Architecture - Fergal O'Conner",
       "path": "KERICONF26/Fergal O'Conner ｜ Signify Security Architecture ｜ KERI Conference 2026.mp4",
       "duration": "37:45",
-      "subtitle": "KERICONF26/subtitles/Fergal O'Conner ｜ Signify Security Architecture ｜ KERI Conference 2026.fixed.srt"
+      "subtitle": "KERICONF26/subtitles/Fergal O'Conner ｜ Signify Security Architecture ｜ KERI Conference 2026.fixed.srt",
+      "presentation": "KERICONF26/presentations/Fergal O'Conner ｜ Signify Security Architecture ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 10,
@@ -247,7 +252,8 @@
       "title": "FHIR and CMS - Jared Jefferey",
       "path": "KERICONF26/Jared Jefferey ｜ FHIR and CMS ｜ KERI Conference 2026.mp4",
       "duration": "38:25",
-      "subtitle": "KERICONF26/subtitles/Jared Jefferey ｜ FHIR and CMS ｜ KERI Conference 2026.fixed.srt"
+      "subtitle": "KERICONF26/subtitles/Jared Jefferey ｜ FHIR and CMS ｜ KERI Conference 2026.fixed.srt",
+      "presentation": "KERICONF26/presentations/Jared Jefferey ｜ FHIR and CMS ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 12,
@@ -263,7 +269,8 @@
       "title": "KERIA Tutorial - Kent Bull",
       "path": "KERICONF26/Kent Bull ｜ KERIA Tutorial ｜ KERI Conference 2026.mp4",
       "duration": "51:20",
-      "subtitle": "KERICONF26/subtitles/Kent Bull ｜ KERIA Tutorial ｜ KERI Conference 2026.fixed.srt"
+      "subtitle": "KERICONF26/subtitles/Kent Bull ｜ KERIA Tutorial ｜ KERI Conference 2026.fixed.srt",
+      "presentation": "KERICONF26/presentations/Kent Bull ｜ KERIA Tutorial ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 14,
@@ -303,7 +310,8 @@
       "title": "ACDCs for Enterprises - Alan Davies",
       "path": "KERICONF26/Alan Davies ｜ ACDCs for Enterprises ｜ KERI Conference 2026.mp4",
       "duration": "35:55",
-      "subtitle": "KERICONF26/subtitles/Alan Davies ｜ ACDCs for Enterprises ｜ KERI Conference 2026.fixed.srt"
+      "subtitle": "KERICONF26/subtitles/Alan Davies ｜ ACDCs for Enterprises ｜ KERI Conference 2026.fixed.srt",
+      "presentation": "KERICONF26/presentations/Alan Davies ｜ ACDCs for Enterprises ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 5,
@@ -311,7 +319,8 @@
       "title": "KERI Bridge to the DID World - Jonathan Rayback",
       "path": "KERICONF26/Jonathan Rayback ｜ KERI Bridge to the DID World ｜ KERI Conference 2026.mp4",
       "duration": "41:35",
-      "subtitle": "KERICONF26/subtitles/Jonathan Rayback ｜ KERI Bridge to the DID World ｜ KERI Conference 2026.fixed.srt"
+      "subtitle": "KERICONF26/subtitles/Jonathan Rayback ｜ KERI Bridge to the DID World ｜ KERI Conference 2026.fixed.srt",
+      "presentation": "KERICONF26/presentations/Jonathan Rayback ｜ KERI Bridge to the DID World ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 6,
@@ -319,7 +328,8 @@
       "title": "Mobile Wallet - Evan Asawaka",
       "path": "KERICONF26/Evan Asawaka ｜ Mobile Wallet ｜ KERI Conference 2026.mp4",
       "duration": "40:15",
-      "subtitle": "KERICONF26/subtitles/Evan Asawaka ｜ Mobile Wallet ｜ KERI Conference 2026.fixed.srt"
+      "subtitle": "KERICONF26/subtitles/Evan Asawaka ｜ Mobile Wallet ｜ KERI Conference 2026.fixed.srt",
+      "presentation": "KERICONF26/presentations/Evan Asawaka ｜ Mobile Wallet ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 7,
@@ -335,7 +345,8 @@
       "title": "KERIpy Async Architecture - Kent Bull",
       "path": "KERICONF26/Kent Bull ｜ KERIpy Async Architecture ｜ KERI Conference 2026.mp4",
       "duration": "43:30",
-      "subtitle": "KERICONF26/subtitles/Kent Bull ｜ KERIpy Async Architecture ｜ KERI Conference 2026.fixed.srt"
+      "subtitle": "KERICONF26/subtitles/Kent Bull ｜ KERIpy Async Architecture ｜ KERI Conference 2026.fixed.srt",
+      "presentation": "KERICONF26/presentations/Kent Bull ｜ KERIpy Async Architecture ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 9,
@@ -359,7 +370,8 @@
       "title": "Applying KERI to General Evidence Problems - Daniel Hardman",
       "path": "KERICONF26/Daniel Hardman ｜ Applying KERI to General Evidence Problems ｜ KERI Conference 2026.mp4",
       "duration": "39:45",
-      "subtitle": "KERICONF26/subtitles/Daniel Hardman ｜ Applying KERI to General Evidence Problems ｜ KERI Conference 2026.fixed.srt"
+      "subtitle": "KERICONF26/subtitles/Daniel Hardman ｜ Applying KERI to General Evidence Problems ｜ KERI Conference 2026.fixed.srt",
+      "presentation": "KERICONF26/presentations/Daniel Hardman ｜ Applying KERI to General Evidence Problems ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 12,
@@ -367,7 +379,8 @@
       "title": "KERI Development & Deployment - Keanu Pahio",
       "path": "KERICONF26/Keanu Pahio ｜ KERI Developement & Deployment ｜ KERI Conference 2026.mp4",
       "duration": "48:15",
-      "subtitle": "KERICONF26/subtitles/Keanu Pahio ｜ KERI Developement & Deployment ｜ KERI Conference 2026.fixed.srt"
+      "subtitle": "KERICONF26/subtitles/Keanu Pahio ｜ KERI Developement & Deployment ｜ KERI Conference 2026.fixed.srt",
+      "presentation": "KERICONF26/presentations/Keanu Pahio ｜ KERI Developement & Deployment ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 13,
@@ -383,7 +396,8 @@
       "title": "KERIA & Signify Path to Production - Fergal O'Connor",
       "path": "KERICONF26/Fergal O'Connor ｜ KERIA & Signify Path to Production ｜ KERI Conference 2026.mp4",
       "duration": "38:45",
-      "subtitle": "KERICONF26/subtitles/Fergal O'Connor ｜ KERIA & Signify Path to Production ｜ KERI Conference 2026.fixed.srt"
+      "subtitle": "KERICONF26/subtitles/Fergal O'Connor ｜ KERIA & Signify Path to Production ｜ KERI Conference 2026.fixed.srt",
+      "presentation": "KERICONF26/presentations/Fergal O'Connor ｜ KERIA & Signify Path to Production ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 15,
