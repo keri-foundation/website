@@ -1552,17 +1552,37 @@ function createVideoCard(video) {
     metaDiv.appendChild(durSpan);
     infoDiv.appendChild(metaDiv);
 
-    if (video.subtitle) {
-        const modalBtn = document.createElement('button');
-        modalBtn.type = 'button';
-        modalBtn.className = 'open-video-modal-btn';
-        modalBtn.setAttribute('aria-label', `Open ${video.title} with transcript`);
-        modalBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg> Watch with transcript';
-        modalBtn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            openVideoModal(video, videoEl.currentTime);
-        });
-        infoDiv.appendChild(modalBtn);
+    if (video.subtitle || video.presentation) {
+        const actionsRow = document.createElement('div');
+        actionsRow.className = 'video-card-actions';
+
+        if (video.subtitle) {
+            const modalBtn = document.createElement('button');
+            modalBtn.type = 'button';
+            modalBtn.className = 'open-video-modal-btn';
+            modalBtn.setAttribute('aria-label', `Open ${video.title} with transcript`);
+            modalBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg> Watch with transcript';
+            modalBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                openVideoModal(video, videoEl.currentTime);
+            });
+            actionsRow.appendChild(modalBtn);
+        }
+
+        if (video.presentation) {
+            const pdfLink = document.createElement('a');
+            pdfLink.className = 'download-presentation-btn';
+            pdfLink.href = resolveAssetUrl(video.presentation);
+            pdfLink.download = '';
+            pdfLink.target = '_blank';
+            pdfLink.rel = 'noopener noreferrer';
+            pdfLink.setAttribute('aria-label', `Download presentation PDF for ${video.title}`);
+            pdfLink.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><polyline points="9 15 12 18 15 15"/></svg> Download PDF';
+            pdfLink.addEventListener('click', (e) => e.stopPropagation());
+            actionsRow.appendChild(pdfLink);
+        }
+
+        infoDiv.appendChild(actionsRow);
     }
 
     card.appendChild(infoDiv);
@@ -1595,6 +1615,7 @@ async function initGallery(config) {
     videos = Array.isArray(config.videos) ? config.videos : [];
     videos.forEach((v) => {
         if (v.subtitle) v.subtitle = resolveAssetUrl(v.subtitle);
+        if (v.presentation) v.presentation = resolveAssetUrl(v.presentation);
     });
     speakerPhotos = config.speakerPhotos || {};
     defaultPoster = config.defaultPoster || '';
