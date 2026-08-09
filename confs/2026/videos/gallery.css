@@ -329,6 +329,51 @@ h1 {
     border-color: transparent;
 }
 
+/* ── Optional promo movie (omit promo from site.json to hide) ── */
+.promo-section {
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.35);
+    border-radius: 8px;
+    padding: 20px 24px 24px;
+    border: 1px solid rgba(6, 11, 111, 0.12);
+}
+
+.promo-section[hidden] {
+    display: none !important;
+}
+
+.promo-title {
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: #060b6f;
+    margin: 0 0 14px;
+    text-align: center;
+}
+
+.promo-title[hidden] {
+    display: none !important;
+}
+
+.promo-player {
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    border: 1px solid rgba(6, 11, 111, 0.2);
+}
+
+.promo-player .plyr {
+    width: 100%;
+}
+
+.promo-player .plyr__poster {
+    background-size: cover;
+    background-position: center;
+}
+
 /* ── Top ten clips ── */
 .top-clips-section {
     margin-bottom: 30px;
