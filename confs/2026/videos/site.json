@@ -39,6 +39,11 @@
       }
     ]
   },
+  "promo": {
+    "src": "KERICONF26-promo/Keri2026Promo.mp4",
+    "poster": "KERICONF26-promo/Keri2026Promo.jpg",
+    "title": "KERI Conference 2026 Promo"
+  },
   "topClips": {
     "enabled": true,
     "title": "Top Ten Clips",
