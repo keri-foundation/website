@@ -691,6 +691,8 @@ let modalPreviousFocus = null;
 let modalSourceVideoPath = null;
 let modalWorkspace = null;
 let modalPanelZIndex = 2;
+let modalSourceLink = null;
+let hashSourceUrl = null;
 let copyRangeStart = null;
 let clipEndTime = null;
 let clipTimeUpdateHandler = null;
@@ -1002,9 +1004,19 @@ function ensureVideoModal() {
     const header = document.createElement('div');
     header.className = 'video-modal-header';
 
+    const headerText = document.createElement('div');
+    headerText.className = 'video-modal-header-text';
+
     modalTitleEl = document.createElement('h2');
     modalTitleEl.className = 'video-modal-title';
     modalTitleEl.id = 'videoModalTitle';
+
+    modalSourceLink = document.createElement('p');
+    modalSourceLink.className = 'video-modal-source';
+    modalSourceLink.hidden = true;
+
+    headerText.appendChild(modalTitleEl);
+    headerText.appendChild(modalSourceLink);
 
     const headerActions = document.createElement('div');
     headerActions.className = 'video-modal-header-actions';
@@ -1073,7 +1085,7 @@ function ensureVideoModal() {
     headerActions.appendChild(modalClearTimestampsBtn);
     headerActions.appendChild(closeBtn);
 
-    header.appendChild(modalTitleEl);
+    header.appendChild(headerText);
     header.appendChild(headerActions);
 
     modalWorkspace = document.createElement('div');
@@ -1386,6 +1398,7 @@ function openVideoModal(video, startTime, endTime) {
     }
 
     modalTitleEl.textContent = video.title;
+    updateModalSourceLink();
     clearModalTranscriptSearch();
     modalTranscriptStore = null;
     modalTranscriptVideoPath = null;
@@ -1424,6 +1437,8 @@ function closeVideoModal() {
     videoModalOverlay.hidden = true;
     document.body.style.overflow = '';
     modalSourceVideoPath = null;
+    hashSourceUrl = null;
+    updateModalSourceLink();
     modalTranscriptStore = null;
     modalTranscriptVideoPath = null;
     modalTranscriptPlainView = false;
@@ -1475,7 +1490,7 @@ function clearExistingShareTimestamps() {
 
     clearClipPlayback();
     if (modalVideoId) {
-        const cleanHash = `#${modalVideoId}`;
+        const cleanHash = buildVideoHash(modalVideoId, 0, null);
         const newUrl = `${window.location.pathname}${window.location.search}${cleanHash}`;
         history.replaceState(null, '', newUrl);
     }
@@ -1486,7 +1501,7 @@ function clearAllTimestamps() {
     resetCopyRangeState();
     clearClipPlayback();
     if (modalVideoId) {
-        const cleanHash = `#${modalVideoId}`;
+        const cleanHash = buildVideoHash(modalVideoId, 0, null);
         const newUrl = `${window.location.pathname}${window.location.search}${cleanHash}`;
         history.replaceState(null, '', newUrl);
     }
@@ -1500,6 +1515,9 @@ function buildVideoHash(videoId, time, endTime) {
     }
     if (typeof endTime === 'number' && Number.isFinite(endTime) && endTime > t) {
         hash += `&e=${Math.floor(endTime)}`;
+    }
+    if (hashSourceUrl) {
+        hash += `&from=${encodeURIComponent(hashSourceUrl)}`;
     }
     return hash;
 }
@@ -1517,29 +1535,85 @@ function clearVideoUrlHash() {
     history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
 }
 
-function parseHashTimeRange(queryStr) {
-    if (!queryStr) return { start: null, end: null };
+function parseHashQuery(queryStr) {
+    const result = { start: null, end: null, from: null };
+    if (!queryStr) return result;
 
-    let start = null;
-    let end = null;
-    const params = queryStr.split('&');
-    for (const param of params) {
-        if (param.startsWith('t=')) {
-            const timestamp = parseFloat(param.substring(2));
-            if (!isNaN(timestamp) && timestamp >= 0) start = timestamp;
-        } else if (param.startsWith('e=')) {
-            const timestamp = parseFloat(param.substring(2));
-            if (!isNaN(timestamp) && timestamp >= 0) end = timestamp;
+    for (const param of queryStr.split('&')) {
+        const eq = param.indexOf('=');
+        const key = eq === -1 ? param : param.substring(0, eq);
+        const raw = eq === -1 ? '' : param.substring(eq + 1);
+        if (key === 't') {
+            const timestamp = parseFloat(raw);
+            if (!isNaN(timestamp) && timestamp >= 0) result.start = timestamp;
+        } else if (key === 'e') {
+            const timestamp = parseFloat(raw);
+            if (!isNaN(timestamp) && timestamp >= 0) result.end = timestamp;
+        } else if (key === 'from') {
+            try {
+                result.from = decodeURIComponent(raw);
+            } catch {
+                result.from = raw;
+            }
         }
     }
 
-    if (start !== null && end !== null && end < start) {
-        const swap = start;
-        start = end;
-        end = swap;
+    if (result.start !== null && result.end !== null && result.end < result.start) {
+        const swap = result.start;
+        result.start = result.end;
+        result.end = swap;
     }
 
+    return result;
+}
+
+function parseHashTimeRange(queryStr) {
+    const { start, end } = parseHashQuery(queryStr);
     return { start, end };
+}
+
+function sanitizeSourceUrl(raw) {
+    if (!raw || typeof raw !== 'string') return null;
+    try {
+        const url = new URL(raw);
+        if (url.protocol !== 'http:' && url.protocol !== 'https:') return null;
+        if (url.origin === window.location.origin) return null;
+        return url.href;
+    } catch {
+        return null;
+    }
+}
+
+function resolveSourceUrl(fromParam) {
+    return sanitizeSourceUrl(fromParam) || sanitizeSourceUrl(document.referrer);
+}
+
+function formatSourceLabel(href) {
+    try {
+        const url = new URL(href);
+        const path = url.pathname === '/' ? '' : url.pathname.replace(/\/$/, '');
+        return `${url.host}${path}`;
+    } catch {
+        return href;
+    }
+}
+
+function updateModalSourceLink() {
+    if (!modalSourceLink) return;
+    modalSourceLink.replaceChildren();
+    if (!hashSourceUrl) {
+        modalSourceLink.hidden = true;
+        return;
+    }
+
+    const isValueGraph = /KERI-value-system-visualisation/i.test(hashSourceUrl);
+    modalSourceLink.appendChild(document.createTextNode(isValueGraph ? 'From value graph: ' : 'From: '));
+    const a = document.createElement('a');
+    a.href = hashSourceUrl;
+    a.textContent = formatSourceLabel(hashSourceUrl);
+    a.rel = 'noopener';
+    modalSourceLink.appendChild(a);
+    modalSourceLink.hidden = false;
 }
 
 // ─────────────────────────────────────────────────────────────────────
@@ -2058,7 +2132,8 @@ function handleHashChange() {
     const ampIndex = hashPart.indexOf('&');
     const videoId = ampIndex === -1 ? hashPart : hashPart.substring(0, ampIndex);
     const queryStr = ampIndex === -1 ? '' : hashPart.substring(ampIndex + 1);
-    const { start: timestamp, end: endTimestamp } = parseHashTimeRange(queryStr);
+    const { start: timestamp, end: endTimestamp, from } = parseHashQuery(queryStr);
+    hashSourceUrl = resolveSourceUrl(from);
     const video = findVideoById(videoId);
 
     if (video?.subtitle) {

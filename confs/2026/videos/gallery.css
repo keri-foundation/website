@@ -754,12 +754,30 @@ h1 {
     max-width: min(100%, 28rem);
 }
 
+.video-modal-header-text {
+    min-width: 0;
+    flex: 1;
+}
+
 .video-modal-title {
     font-size: 1.05rem;
     line-height: 1.4;
     font-weight: 700;
     margin: 0;
     padding-right: 8px;
+}
+
+.video-modal-source {
+    margin: 6px 8px 0 0;
+    font-size: 0.82rem;
+    line-height: 1.35;
+    font-weight: 600;
+    color: rgba(6, 11, 111, 0.78);
+    word-break: break-all;
+}
+
+.video-modal-source a {
+    font-weight: 700;
 }
 
 .video-modal-close {
