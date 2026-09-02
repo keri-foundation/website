@@ -12,7 +12,7 @@
       {
         "label": "Home",
         "href": "/",
-        "external": true
+        "external": false
       },
       {
         "label": "KERIConf 2026 Videos",
