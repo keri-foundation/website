@@ -8,7 +8,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Videos</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -607,31 +607,21 @@ h1 {
 }
 
 .video-grid {
-    columns: 22rem;
-    column-gap: 25px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 22rem));
+    justify-content: center;
+    justify-items: stretch;
+    gap: 25px;
 }
 
 @supports (grid-template-rows: masonry) {
     .video-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
         grid-template-rows: masonry;
-        gap: 25px;
-        columns: unset;
-        column-gap: unset;
     }
 }
 
 .video-grid:has(.video-card.condensed) {
-    columns: 1;
-    max-width: 56rem;
-}
-
-@supports (grid-template-rows: masonry) {
-    .video-grid:has(.video-card.condensed) {
-        grid-template-columns: 1fr;
-        max-width: 56rem;
-    }
+    grid-template-columns: minmax(0, 56rem);
 }
 
 /* ── Video cards ── */
@@ -644,14 +634,9 @@ h1 {
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 22rem;
+    justify-self: center;
     break-inside: avoid;
-    margin-bottom: 25px;
-}
-
-@supports (grid-template-rows: masonry) {
-    .video-card {
-        margin-bottom: 0;
-    }
 }
 
 .video-card.condensed {
@@ -663,6 +648,7 @@ h1 {
     gap: 15px;
     padding: 0px;
     margin: 0;
+    max-width: none;
 }
 
 .video-card.condensed .video-info {
@@ -728,7 +714,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 12px;
+    padding: max(12px, env(safe-area-inset-top, 0px)) max(12px, env(safe-area-inset-right, 0px)) max(12px, env(safe-area-inset-bottom, 0px)) max(12px, env(safe-area-inset-left, 0px));
     background: rgba(6, 11, 111, 0.35);
 }
 
@@ -739,10 +725,10 @@ h1 {
 .video-modal {
     display: flex;
     flex-direction: column;
-    width: calc(100vw - 24px);
-    height: calc(100vh - 24px);
-    max-width: calc(100vw - 24px);
-    max-height: calc(100vh - 24px);
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     background: #f4f8f7;
     border-radius: 8px;
     border: 1px solid rgba(6, 11, 111, 0.14);
@@ -751,10 +737,12 @@ h1 {
 }
 
 .video-modal-header {
+    position: relative;
+    z-index: 6;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    gap: 16px;
+    gap: 12px;
     padding: 12px 16px;
     background: rgba(177, 209, 207, 0.35);
     border-bottom: 1px solid rgba(6, 11, 111, 0.12);
@@ -798,16 +786,23 @@ h1 {
 }
 
 .video-modal-close {
-    flex-shrink: 0;
-    width: 2.25rem;
-    height: 2.25rem;
+    position: relative;
+    z-index: 8;
+    flex: 0 0 2.75rem;
+    align-self: flex-start;
+    width: 2.75rem;
+    min-width: 2.75rem;
+    height: 2.75rem;
+    margin: -4px -4px -4px 0;
     border: none;
     border-radius: 8px;
     background: rgba(6, 11, 111, 0.1);
     color: #060b6f;
-    font-size: 1.4rem;
+    font-size: 1.75rem;
     line-height: 1;
     cursor: pointer;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
     transition: background 0.2s;
 }
 
@@ -1573,6 +1568,58 @@ footer {
         font-size: 2.2rem;
     }
 
+    .video-modal-overlay {
+        padding: 0;
+        padding-top: env(safe-area-inset-top, 0px);
+        padding-right: env(safe-area-inset-right, 0px);
+        padding-bottom: env(safe-area-inset-bottom, 0px);
+        padding-left: env(safe-area-inset-left, 0px);
+    }
+
+    .video-modal {
+        border-radius: 0;
+        border: none;
+        width: 100%;
+        height: 100%;
+        max-width: none;
+        max-height: none;
+    }
+
+    .video-modal-header {
+        align-items: center;
+        gap: 8px;
+        padding: 8px 10px 8px 12px;
+    }
+
+    .video-modal-header-actions {
+        max-width: none;
+        flex-shrink: 1;
+        min-width: 0;
+        gap: 6px;
+    }
+
+    .copy-pending-hint,
+    .copy-pending-hint.is-visible {
+        display: none !important;
+    }
+
+    .video-modal-title {
+        font-size: 0.95rem;
+        padding-right: 0;
+    }
+
+    .video-modal-panel {
+        resize: none;
+        min-width: 0;
+        min-height: 0;
+    }
+
+    .video-modal-panel-handle {
+        cursor: default;
+        touch-action: auto;
+        pointer-events: none;
+    }
+
     .video-modal-panel--video {
         left: 8px;
         top: 8px;
@@ -1593,16 +1640,6 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .video-grid {
-        columns: 1;
-    }
-
-    @supports (grid-template-rows: masonry) {
-        .video-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-
     h1 {
         font-size: 1.8rem;
     }
@@ -1694,8 +1731,108 @@ const plyrConfig = {
     },
     storage: {
         enabled: false
+    },
+    fullscreen: {
+        enabled: true,
+        iosNative: false
     }
 };
+
+function isCoarsePointer() {
+    return window.matchMedia('(hover: none) and (pointer: coarse)').matches
+        || (('ontouchstart' in window) && navigator.maxTouchPoints > 0);
+}
+
+function getPlyrConfig() {
+    const config = {
+        ...plyrConfig,
+        fullscreen: {
+            enabled: !isCoarsePointer(),
+            iosNative: false
+        }
+    };
+    if (!config.fullscreen.enabled) {
+        config.controls = plyrConfig.controls.filter((item) => item !== 'fullscreen');
+    }
+    return config;
+}
+
+function prepareVideoElement(videoEl) {
+    if (!videoEl) return;
+    videoEl.playsInline = true;
+    videoEl.setAttribute('playsinline', '');
+    videoEl.setAttribute('webkit-playsinline', '');
+}
+
+function setVideoSource(videoEl, url) {
+    if (!videoEl) return;
+    const source = videoEl.querySelector('source');
+    if (url) {
+        if (source) source.src = url;
+        videoEl.src = url;
+    } else {
+        videoEl.removeAttribute('src');
+        if (source) source.removeAttribute('src');
+    }
+    try { videoEl.load(); } catch {
+        // Ignore load errors while swapping or releasing media.
+    }
+}
+
+function playMedia(videoEl) {
+    if (!videoEl) return Promise.resolve();
+    const duration = Number(videoEl.duration);
+    if (videoEl.ended || (Number.isFinite(duration) && duration > 0 && videoEl.currentTime >= duration - 0.15)) {
+        try { videoEl.currentTime = 0; } catch {
+            // Ignore seek errors on unloaded media.
+        }
+    }
+    const player = videoEl._plyrPlayer;
+    let attempt;
+    try {
+        attempt = player && typeof player.play === 'function' ? player.play() : videoEl.play();
+    } catch (err) {
+        attempt = Promise.reject(err);
+    }
+    if (!attempt || typeof attempt.catch !== 'function') return Promise.resolve();
+    return attempt.catch(() => {
+        try {
+            if (videoEl.readyState < 2) videoEl.load();
+            else videoEl.currentTime = Math.max(0, Number(videoEl.currentTime) || 0);
+        } catch {
+            // Ignore recovery errors and try play() once more.
+        }
+        const retry = videoEl.play();
+        if (retry && typeof retry.catch === 'function') {
+            return retry.catch((error) => {
+                console.warn('Video playback could not be started', error);
+            });
+        }
+        return undefined;
+    });
+}
+
+function attachMobilePlaybackRecovery(videoEl, player) {
+    if (!videoEl || videoEl.dataset.playbackRecovery === 'true') return;
+    videoEl.dataset.playbackRecovery = 'true';
+
+    const resetIfEnded = () => {
+        if (!videoEl.ended) return;
+        try { videoEl.currentTime = 0; } catch {
+            // Ignore seek errors.
+        }
+        if (player) pinOverlayControls(player, 8000);
+    };
+
+    videoEl.addEventListener('ended', resetIfEnded);
+    videoEl.addEventListener('pause', () => {
+        if (!isCoarsePointer() || !player) return;
+        pinOverlayControls(player, 6000);
+    });
+    videoEl.addEventListener('webkitendfullscreen', () => {
+        if (player) pinOverlayControls(player, 8000);
+    });
+}
 
 const OVERLAY_CONTROLS_HOLD_MS = 2500;
 
@@ -1801,6 +1938,19 @@ function enhanceOverlaidPlayToggle(player, iconUrl) {
     cluster.appendChild(rewindBtn);
     cluster.appendChild(overlaid);
     cluster.appendChild(forwardBtn);
+
+    overlaid.addEventListener('click', (e) => {
+        const media = player.media;
+        if (!media) return;
+        const duration = Number(media.duration);
+        const atEnd = media.ended || (Number.isFinite(duration) && duration > 0 && media.currentTime >= duration - 0.15);
+        if (!media.paused && !atEnd) return;
+        if (atEnd) {
+            e.preventDefault();
+            e.stopImmediatePropagation();
+        }
+        playMedia(media);
+    }, true);
 }
 
 function attachFilteredPoster(videoEl) {
@@ -1836,10 +1986,11 @@ function initPlyrVideo(videoEl, options = {}) {
         }
         return null;
     }
-    const player = new window.Plyr(videoEl, plyrConfig);
+    const player = new window.Plyr(videoEl, getPlyrConfig());
     videoEl.dataset.plyrInitialized = 'true';
     videoEl._plyrPlayer = player;
     enhanceOverlaidPlayToggle(player, plyrConfig.iconUrl);
+    attachMobilePlaybackRecovery(videoEl, player);
     if (options.filteredPoster !== false) {
         attachFilteredPoster(videoEl);
     }
@@ -2035,10 +2186,10 @@ function renderPromo(promoConfig) {
     playerHost.innerHTML = '';
     const videoEl = document.createElement('video');
     videoEl.controls = true;
-    videoEl.playsInline = true;
     videoEl.preload = 'metadata';
     videoEl.controlsList = 'nodownload';
     videoEl.oncontextmenu = () => false;
+    prepareVideoElement(videoEl);
     if (promoConfig.poster) {
         videoEl.poster = resolveAssetUrl(promoConfig.poster);
     }
@@ -2330,7 +2481,7 @@ function makeCueLine(cue, videoPath, highlightQuery, targetVideoEl) {
         const videoEl = targetVideoEl || videoElementMap[videoPath];
         if (!videoEl) return;
         videoEl.currentTime = cue.start;
-        videoEl.play();
+        playMedia(videoEl);
         if (!targetVideoEl) {
             videoEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
         }
@@ -2515,6 +2666,7 @@ function clampModalPanelPosition(panel) {
 function initModalPanelDrag(panel, handle) {
     handle.addEventListener('pointerdown', (e) => {
         if (e.button !== 0) return;
+        if (window.matchMedia('(max-width: 768px)').matches) return;
         e.preventDefault();
         bringModalPanelToFront(panel);
         panel.classList.add('is-dragging');
@@ -2755,15 +2907,25 @@ function ensureVideoModal() {
     closeBtn.className = 'video-modal-close';
     closeBtn.setAttribute('aria-label', 'Close video');
     closeBtn.innerHTML = '&times;';
-    closeBtn.addEventListener('click', closeVideoModal);
 
     headerActions.appendChild(modalCopyHint);
     headerActions.appendChild(modalCopyBtn);
     headerActions.appendChild(modalClearTimestampsBtn);
-    headerActions.appendChild(closeBtn);
+
+    const requestCloseVideoModal = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        closeVideoModal();
+    };
+    closeBtn.addEventListener('pointerup', (e) => {
+        if (e.pointerType === 'mouse') return;
+        requestCloseVideoModal(e);
+    });
+    closeBtn.addEventListener('click', requestCloseVideoModal);
 
     header.appendChild(headerText);
     header.appendChild(headerActions);
+    header.appendChild(closeBtn);
 
     modalWorkspace = document.createElement('div');
     modalWorkspace.className = 'video-modal-workspace';
@@ -2774,9 +2936,10 @@ function ensureVideoModal() {
 
     modalVideoEl = document.createElement('video');
     modalVideoEl.controls = true;
-    modalVideoEl.playsInline = true;
+    modalVideoEl.preload = 'auto';
     modalVideoEl.controlsList = 'nodownload';
     modalVideoEl.oncontextmenu = () => false;
+    prepareVideoElement(modalVideoEl);
     modalVideoEl.addEventListener('play', () => pauseAllVideos(modalVideoEl));
 
     const source = document.createElement('source');
@@ -3028,6 +3191,23 @@ function runModalTranscriptSearch() {
     );
 }
 
+function exitAnyFullscreen(videoEl) {
+    const player = videoEl && videoEl._plyrPlayer;
+    if (player?.fullscreen?.active && typeof player.fullscreen.exit === 'function') {
+        try { player.fullscreen.exit(); } catch {
+            // Ignore fullscreen exit errors.
+        }
+    }
+    if (document.fullscreenElement && document.exitFullscreen) {
+        document.exitFullscreen().catch(() => {});
+    }
+    if (videoEl?.webkitDisplayingFullscreen && typeof videoEl.webkitExitFullscreen === 'function') {
+        try { videoEl.webkitExitFullscreen(); } catch {
+            // Ignore native iOS fullscreen exit errors.
+        }
+    }
+}
+
 function openVideoModal(video, startTime, endTime) {
     if (!video.subtitle) return;
     ensureVideoModal();
@@ -3048,21 +3228,20 @@ function openVideoModal(video, startTime, endTime) {
     if (cardVideo) cardVideo.pause();
 
     const sourceSrc = resolveAssetUrl(video.path);
-
-    const source = modalVideoEl.querySelector('source');
-    source.src = sourceSrc;
     modalVideoEl.querySelectorAll('track').forEach(t => t.remove());
-    modalVideoEl.load();
+    setVideoSource(modalVideoEl, sourceSrc);
 
     const seekModalVideo = () => {
         if (modalSourceVideoPath !== video.path) return;
-        modalVideoEl.currentTime = time;
+        try { modalVideoEl.currentTime = time; } catch {
+            // Ignore seek errors if the new source is not ready yet.
+        }
     };
 
     const seekAndMaybePlay = () => {
         seekModalVideo();
         if (hasClipEnd) setupClipPlayback(endTime);
-        if (shouldAutoplay) modalVideoEl.play();
+        if (shouldAutoplay) playMedia(modalVideoEl);
     };
     if (modalVideoEl.readyState >= 1) {
         seekAndMaybePlay();
@@ -3097,33 +3276,46 @@ function openVideoModal(video, startTime, endTime) {
     videoModalOverlay.hidden = false;
     document.body.style.overflow = 'hidden';
     updateVideoUrlForModal(modalVideoId, time, hasClipEnd ? endTime : null);
-    modalVideoEl.focus();
+    if (!isCoarsePointer()) modalVideoEl.focus();
 }
 
 function closeVideoModal() {
     if (!videoModalOverlay || videoModalOverlay.hidden) return;
 
-    const time = modalVideoEl.currentTime;
-    modalVideoEl.pause();
-    clearClipPlayback();
-    resetCopyRangeState();
+    const cardPath = modalSourceVideoPath;
+    let time = 0;
+    try {
+        time = modalVideoEl ? modalVideoEl.currentTime : 0;
+    } catch {
+        time = 0;
+    }
 
-    const cardVideo = videoElementMap[modalSourceVideoPath];
-    if (cardVideo) cardVideo.currentTime = time;
+    try {
+        exitAnyFullscreen(modalVideoEl);
+        if (modalVideoEl) modalVideoEl.pause();
+        clearClipPlayback();
+        resetCopyRangeState();
+        const cardVideo = videoElementMap[cardPath];
+        if (cardVideo) {
+            try { cardVideo.currentTime = time; } catch {
+                // Ignore seek errors on unloaded card videos.
+            }
+        }
+    } finally {
+        videoModalOverlay.hidden = true;
+        document.body.style.overflow = '';
+        modalSourceVideoPath = null;
+        hashSourceUrl = null;
+        updateModalSourceLink();
+        modalTranscriptStore = null;
+        modalTranscriptVideoPath = null;
+        modalTranscriptPlainView = false;
+        updateModalTranscriptViewBtn();
+        clearModalTranscriptSearch();
+        clearVideoUrlHash();
+    }
 
-    videoModalOverlay.hidden = true;
-    document.body.style.overflow = '';
-    modalSourceVideoPath = null;
-    hashSourceUrl = null;
-    updateModalSourceLink();
-    modalTranscriptStore = null;
-    modalTranscriptVideoPath = null;
-    modalTranscriptPlainView = false;
-    updateModalTranscriptViewBtn();
-    clearModalTranscriptSearch();
-    clearVideoUrlHash();
-
-    if (modalPreviousFocus && typeof modalPreviousFocus.focus === 'function') {
+    if (modalPreviousFocus && typeof modalPreviousFocus.focus === 'function' && !isCoarsePointer()) {
         modalPreviousFocus.focus();
     }
 }
@@ -3311,9 +3503,9 @@ function createVideoCard(video) {
     videoEl.controls = true;
     videoEl.poster = getSpeakerPoster(video);
     videoEl.preload = 'none';
-    videoEl.playsInline = "true";
     videoEl.controlsList = "nodownload";
     videoEl.oncontextmenu = () => false;  // Disable right-click on video for an extra layer of download prevention
+    prepareVideoElement(videoEl);
 
     const source = document.createElement('source');
     const sourceSrc = resolveAssetUrl(video.path);
