@@ -1,0 +1,551 @@
+1
+00:00:04,420 --> 00:00:11,000
+– Excellent. Thank you. Okay. Good
+afternoon all. Apologies for being your
+
+2
+00:00:11,000 --> 00:00:15,340
+remote speaker of the day. Unfortunately,
+I couldn't get across from the UK to join
+
+3
+00:00:15,340 --> 00:00:19,580
+for this. But I'd like to spend the next
+10 minutes looking at something slightly
+
+4
+00:00:19,580 --> 00:00:24,140
+different in terms of the presentations
+that have happened so far. We've heard an
+
+5
+00:00:24,140 --> 00:00:29,920
+awful lot today about what SEDI can
+protect from the fraud, making sure
+
+6
+00:00:29,920 --> 00:00:34,440
+everything is assured, making sure we have
+the assertions, making sure child age
+
+7
+00:00:34,440 --> 00:00:38,220
+verification and adult age verification
+can be put in place. I'd like to spend a
+
+8
+00:00:38,220 --> 00:00:42,220
+few minutes looking at the flip side of
+that and looking at economic benefit as a
+
+9
+00:00:42,220 --> 00:00:45,760
+result of a state-endorsed digital
+identity and what can be achieved there
+
+10
+00:00:45,760 --> 00:00:50,640
+and bring forwards a proof point to show
+that this has happened and the sort of
+
+11
+00:00:50,640 --> 00:00:56,640
+values that can be expected from that. So,
+Simon Wood, I've been involved in identity
+
+12
+00:00:56,640 --> 00:01:00,560
+systems for a long time now. Most
+recently, Group CEO of Ubisecure.
+
+13
+00:01:00,680 --> 00:01:05,700
+Ubisecure is a UK company but deploys a
+lot in the Nordics. Ubisecure has deployed
+
+14
+00:01:05,700 --> 00:01:09,880
+a number of platforms in Finland and
+Sweden and the case study is taken from
+
+15
+00:01:09,880 --> 00:01:14,920
+there. One of the things I'd just like to
+touch on before getting into that is a
+
+16
+00:01:14,920 --> 00:01:18,740
+differentiator that McKinsey makes on
+digital identity versus advanced identity.
+
+17
+00:01:19,660 --> 00:01:23,360
+Everything that has been spoken about
+today, I would say falls in that advanced
+
+18
+00:01:23,360 --> 00:01:28,940
+identity category as defined by McKinsey.
+In the UK, we're obviously reeling at the
+
+19
+00:01:28,940 --> 00:01:33,580
+moment from the brick card announcements
+and so on. And the McKinsey report is
+
+20
+00:01:33,580 --> 00:01:38,040
+often rolled out as one of the values for
+having an identity and it's referred to as
+
+21
+00:01:38,040 --> 00:01:43,720
+digital identity in the general sense. But
+if you read that report in detail, you'll
+
+22
+00:01:43,720 --> 00:01:48,380
+see that to benefit from the advanced
+capabilities and the returns and the GDP
+
+23
+00:01:48,380 --> 00:01:53,820
+increases that are positioned there
+specifically for the US and for the UK, it
+
+24
+00:01:53,820 --> 00:01:57,620
+needs to be advanced identity, which
+brings in additional attributes,
+
+25
+00:01:57,780 --> 00:02:01,720
+additional information, and additional
+features as well. You've already seen a
+
+26
+00:02:01,720 --> 00:02:05,880
+number of demonstrations of those today in
+a SEDI context. And that's what we're
+
+27
+00:02:05,880 --> 00:02:09,320
+looking at here. We're looking at those
+advanced capabilities beyond just
+
+28
+00:02:09,320 --> 00:02:14,400
+authentication and authorization, which is
+McKinsey's classical definition of digital
+
+29
+00:02:14,400 --> 00:02:19,460
+identity. I want to run you through a very
+quick scenario. You've seen a couple of
+
+30
+00:02:19,460 --> 00:02:26,460
+diagrams like this already today where we
+have a chain of delegation. Fiknish's
+
+31
+00:02:26,460 --> 00:02:32,940
+example here, we'll look at setting up new
+company in Utah. So, the CEO of that
+
+32
+00:02:32,940 --> 00:02:38,240
+company to be contacts the Utah division
+of corporations, goes online and uses
+
+33
+00:02:38,240 --> 00:02:43,360
+their steady identity to register that
+company. The Utah division of corporations
+
+34
+00:02:43,360 --> 00:02:47,620
+automatically passes that across to the
+state tax commission because there will be
+
+35
+00:02:47,620 --> 00:02:53,060
+taxes to pay and collect from that
+organization. And the tax commission will
+
+36
+00:02:53,060 --> 00:02:57,920
+send a request back to the CEO using let's
+assume that there's a secure mailbox
+
+37
+00:02:57,920 --> 00:03:03,180
+capability from a SEDI implementation. So
+you can securely contact people who have
+
+38
+00:03:03,180 --> 00:03:08,240
+that identity and request that tax
+registration. The CEO will obviously go to
+
+39
+00:03:08,240 --> 00:03:13,540
+that website, register to submit the
+taxes, but then the CEO themselves will
+
+40
+00:03:13,540 --> 00:03:18,340
+not be undertaking that work. They will
+delegate that capability to the CFO of the
+
+41
+00:03:18,340 --> 00:03:22,040
+organization. So that delegation will be
+done through the website. The CEO will
+
+42
+00:03:22,040 --> 00:03:28,300
+invite the CFO to that system using their
+SEDI identity as well. And so a delegation
+
+43
+00:03:28,300 --> 00:03:32,040
+chain is built. You've seen examples of
+such a delegation chain already in a
+
+44
+00:03:32,040 --> 00:03:36,640
+couple of the demos that have been
+delivered today. But if we consider that
+
+45
+00:03:36,640 --> 00:03:40,380
+tax is reasonably complex, you might have
+three different types of sales tax,
+
+46
+00:03:40,880 --> 00:03:45,820
+corporation tax, employment tax. Maybe the
+employment tax is outsourced to an
+
+47
+00:03:45,820 --> 00:03:50,700
+organization. So that organization can be
+invited in and delegated to. The
+
+48
+00:03:50,700 --> 00:03:54,140
+administrator in the organization can pick
+that up and then onwards delegate to an
+
+49
+00:03:54,140 --> 00:03:57,860
+internal accountant. So we've got a chain
+of delegations running through individuals
+
+50
+00:03:57,860 --> 00:04:03,880
+and organizations using an identity that's
+highly assured and available to them. This
+
+51
+00:04:03,880 --> 00:04:09,360
+delegation chain builds and allows all of
+the tax to take place and not once as the
+
+52
+00:04:09,360 --> 00:04:13,000
+state tax commission being involved in
+that they've just provided that service to
+
+53
+00:04:13,000 --> 00:04:17,560
+allow it to happen. Now this seems like a
+great scenario. If that were true, what
+
+54
+00:04:17,560 --> 00:04:25,220
+would deliver us? Well, that does happen
+already in Finland. There is a platform
+
+55
+00:04:25,220 --> 00:04:28,980
+delivered in 2008 Wait. Hi.
+
+56
+00:04:32,000 --> 00:04:39,500
+I believe so. Are they not coming through?
+That will help.
+
+57
+00:04:44,260 --> 00:04:52,420
+How's that? So, just to reiterate that
+previous slide so you can see what was
+
+58
+00:04:52,420 --> 00:04:57,440
+there. It's a delegation chain across
+individuals and through an organization
+
+59
+00:04:57,440 --> 00:05:02,800
+there towards the bottom as we have around
+here. Chris, I assume that's coming
+
+60
+00:05:02,800 --> 00:05:03,260
+through now.
+
+61
+00:05:18,140 --> 00:05:18,960
+Is that okay?
+
+62
+00:05:24,560 --> 00:05:30,140
+I think that's okay. So, So this platform
+was delivered or it is delivered in
+
+63
+00:05:30,140 --> 00:05:35,360
+Finland. It's called the Katso platform
+delivered in 2008. It is a state operated
+
+64
+00:05:35,360 --> 00:05:39,960
+platform as opposed to state endorsed back
+in 2008. There was not this distinction
+
+65
+00:05:39,960 --> 00:05:43,660
+and this understanding of privacy and how
+important that that is as we acknowledge
+
+66
+00:05:43,660 --> 00:05:49,980
+today. State operated platform integrates
+with the business registry to generate
+
+67
+00:05:49,980 --> 00:05:55,100
+that link to the tax office. In 2018, the
+Finnish government published stats on the
+
+68
+00:05:55,100 --> 00:05:59,600
+savings as a result of of having that
+platform. And when they published that at
+
+69
+00:05:59,600 --> 00:06:04,560
+that time there were 450,000 users
+registered on there, the 420,000
+
+70
+00:06:04,560 --> 00:06:10,160
+organizations and 104 different online
+government services using that platform.
+
+71
+00:06:10,660 --> 00:06:15,200
+One of those services was the tax office
+and it worked exactly as I just described
+
+72
+00:06:15,200 --> 00:06:20,480
+in that delegation chain that's there. In
+terms of the stats that were collected on
+
+73
+00:06:20,480 --> 00:06:24,800
+that, a significant reduction in physical
+service points because everything was
+
+74
+00:06:24,800 --> 00:06:30,480
+online and everything was driven by the
+organization that was registering, they
+
+75
+00:06:30,480 --> 00:06:34,600
+could massively reduce the physical points
+of presence that allowed them to make a 20
+
+76
+00:06:34,600 --> 00:06:39,160
+% year-on-year tax admin staff reduction,
+repurpose them to more profitable areas
+
+77
+00:06:39,160 --> 00:06:43,100
+and the cost of servicing the tax
+transactions when they went from the old
+
+78
+00:06:43,100 --> 00:06:49,460
+physical base to an online basis dropped
+from 35 euros per tax transaction to 30
+
+79
+00:06:49,460 --> 00:06:55,380
+euro cents. That's a 99% reduction in cost
+per transaction measured by the Finnish
+
+80
+00:06:55,380 --> 00:07:00,840
+government. That's the value that they
+achieved deploying a highly assured
+
+81
+00:07:00,840 --> 00:07:06,040
+identity that has delegation capabilities,
+that has the ability to work across
+
+82
+00:07:06,040 --> 00:07:08,100
+individuals and organizations.
+
+83
+00:07:10,940 --> 00:07:14,880
+Within that, you've heard me talking about
+organizations. Organizations are an
+
+84
+00:07:14,880 --> 00:07:19,080
+important part of the identity chain.
+Incorporating an organization identity
+
+85
+00:07:19,080 --> 00:07:23,320
+enables the really advanced identity use
+cases and that's where we see a lot of the
+
+86
+00:07:23,320 --> 00:07:27,100
+economic benefit coming from. Now, it
+would be wrong to assume that
+
+87
+00:07:27,100 --> 00:07:31,460
+organizations are just legal entities. We
+get a lot of utility and benefit from
+
+88
+00:07:31,460 --> 00:07:35,880
+lower assurance levels of organizations.
+Just like individual identities, there can
+
+89
+00:07:35,880 --> 00:07:39,580
+be low assurance and high assurance, and
+we see economic savings at higher
+
+90
+00:07:39,580 --> 00:07:44,680
+assurance levels. You've heard multiple
+times today that SB260 already considers
+
+91
+00:07:44,680 --> 00:07:49,340
+organization identity in the form of
+family units and family structures. That
+
+92
+00:07:49,340 --> 00:07:54,140
+is an organization. There's no reason not
+to have the ability ultimately to extend
+
+93
+00:07:54,140 --> 00:07:59,040
+that to bring in private sector legal
+entities as well to take advantage of that
+
+94
+00:07:59,040 --> 00:08:06,860
+massive uplift in utility and economic
+potential that comes from there. So to
+
+95
+00:08:06,860 --> 00:08:14,300
+conclude from there, we've seen already
+that SEDI has phenomenal potential for
+
+96
+00:08:14,300 --> 00:08:20,640
+protection for implementing privacy and
+for making sure that state citizens, the
+
+97
+00:08:20,640 --> 00:08:25,040
+public gets the protection and the
+facilities that they need need. But once
+
+98
+00:08:25,040 --> 00:08:30,540
+that's up and running, then extending that
+to organization identity will bring
+
+99
+00:08:30,540 --> 00:08:37,480
+significant benefit as well. We've heard
+again a number of times that we shouldn't
+
+100
+00:08:37,480 --> 00:08:42,460
+let private sector define this and I fully
+agree it needs to be run at the policy
+
+101
+00:08:42,460 --> 00:08:46,540
+level, generating the privacy that's
+needed, ensuring that's first and then
+
+102
+00:08:46,540 --> 00:08:51,920
+bringing utility and benefit to public
+sector organizations afterwards. But
+
+103
+00:08:51,920 --> 00:08:55,220
+incorporating those public sector
+organizations and allowing them to
+
+104
+00:08:55,220 --> 00:08:59,000
+leverage that information and be involved
+in there and integrate their platforms and
+
+105
+00:08:59,000 --> 00:09:03,500
+their systems to that will bring
+significant benefit. And what has already
+
+106
+00:09:03,500 --> 00:09:07,960
+happened in the Nordics and in the Baltics
+gives very strong proof points to show
+
+107
+00:09:07,960 --> 00:09:11,280
+what can be done and the level of savings
+and level of return that can be achieved
+
+108
+00:09:11,280 --> 00:09:15,840
+there. I've run through this very quickly.
+I realize this is remote and a little bit
+
+109
+00:09:15,840 --> 00:09:21,000
+more complicated. But I believe the slides
+in this recording will be out later. So
+
+110
+00:09:21,000 --> 00:09:24,880
+you can always contact me afterwards or
+Chris can put you in contact and I can
+
+111
+00:09:24,880 --> 00:09:27,380
+provide more information if that's useful.
+Thank you very much.
+

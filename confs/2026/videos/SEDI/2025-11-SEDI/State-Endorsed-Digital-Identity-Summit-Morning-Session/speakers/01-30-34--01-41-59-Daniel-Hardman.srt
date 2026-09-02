@@ -1,0 +1,588 @@
+1
+00:00:04,020 --> 00:00:12,500
+– Hello. Okay, great. My name is Daniel
+Hardman. I am a CEO of a company that is
+
+2
+00:00:12,500 --> 00:00:17,920
+in the telecom space. I've been working in
+identity for many years. And I got an
+
+3
+00:00:17,920 --> 00:00:23,680
+almost impossible assignment from
+Christopher and crew, which is to try to
+
+4
+00:00:23,680 --> 00:00:31,580
+summarize the state of the identity
+landscape in 10 minutes. And that's almost
+
+5
+00:00:31,580 --> 00:00:37,960
+impossible because there's so much that's
+happening and that has been happening. So,
+
+6
+00:00:38,700 --> 00:00:43,300
+you know, being a progressive thinker
+here, I said, I'll ask AI to help me find
+
+7
+00:00:43,300 --> 00:00:48,520
+a list of things that are going on in the
+space. Now, I knew that this was going to
+
+8
+00:00:48,520 --> 00:00:56,120
+generate massive amounts of stuff. So, I
+said, just find 40 headlines that have
+
+9
+00:00:56,120 --> 00:01:00,720
+been in the news recently in English about
+things that are going on in identity that
+
+10
+00:01:00,720 --> 00:01:08,800
+have been widely reported. So this is what
+it came up with and this is of course an
+
+11
+00:01:08,800 --> 00:01:14,180
+AI summary but the point of this is not
+the specific headlines. The main point of
+
+12
+00:01:14,180 --> 00:01:19,440
+it is how many of them there are and how
+hard it was even for the AI to pick from
+
+13
+00:01:19,440 --> 00:01:25,580
+all the different things that are going on
+in the space. And as I was watching this
+
+14
+00:01:25,580 --> 00:01:29,000
+list come in from AI what was going
+through my head that is that Billy Joel
+
+15
+00:01:29,000 --> 00:01:34,200
+song, We Didn't Start the Fire. You know
+what I'm talking about? There's just so
+
+16
+00:01:34,200 --> 00:01:38,900
+much that's happening and it's virtually
+impossible or overwhelming to keep track
+
+17
+00:01:38,900 --> 00:01:44,540
+of it all. So to summarize in 10 minutes
+is very hard, but what I'm going to do is
+
+18
+00:01:44,540 --> 00:01:51,320
+I'm going to try to explain how it looks
+to me as a practitioner in the space at a
+
+19
+00:01:51,320 --> 00:01:55,440
+high level. I'm going to make some
+generalizations. These generalizations are
+
+20
+00:01:55,440 --> 00:02:00,020
+partly subjective, perspective, but I
+think they're a useful mental model for
+
+21
+00:02:00,020 --> 00:02:04,840
+people to understand if you're not
+thinking about identity all the time and
+
+22
+00:02:04,840 --> 00:02:11,840
+you want to kind of wrap your brain around
+it. So, my generalizations basically say
+
+23
+00:02:11,840 --> 00:02:17,040
+that there have been three waves of
+innovation in identity and I would start
+
+24
+00:02:17,040 --> 00:02:21,400
+the really interesting and this is digital
+identity by the way. I would start these
+
+25
+00:02:21,400 --> 00:02:26,060
+waves going back to something like maybe
+the Diffie-Hellman. Diffie-Hellman was a
+
+26
+00:02:26,680 --> 00:02:31,240
+cryptographic technique that was invented
+in 1976. You could possibly go back to
+
+27
+00:02:31,240 --> 00:02:36,640
+email which was a little bit earlier than
+Diffie-Hellman. But anyway, and then I
+
+28
+00:02:36,640 --> 00:02:41,180
+would say that there's these three bands
+of or waves of innovation and they have
+
+29
+00:02:41,180 --> 00:02:47,040
+characteristics that are common or
+commonalities in the way they think about
+
+30
+00:02:47,040 --> 00:02:50,320
+things. These aren't exactly
+
+31
+00:02:53,700 --> 00:02:57,980
+perfectly aligned technologies in each of
+these bands, but they have these common
+
+32
+00:02:57,980 --> 00:03:04,160
+characteristics. So I'm not sure what
+happened there. Maybe my laptop is still
+
+33
+00:03:04,160 --> 00:03:14,740
+alive. I'm going to keep talking. Maybe we
+can get it to come back up. Okay. So the
+
+34
+00:03:14,740 --> 00:03:21,500
+first band here, central or federated
+governance, it was an assumption that when
+
+35
+00:03:21,500 --> 00:03:26,040
+you built identity systems initially there
+was going to be some central body that did
+
+36
+00:03:26,040 --> 00:03:31,200
+it for you. And it was an assumption that
+you were going to use this brand new cool
+
+37
+00:03:31,200 --> 00:03:34,340
+thing called Diffie-Hellman and this brand
+new cool thing called asymmetric
+
+38
+00:03:34,340 --> 00:03:38,780
+cryptography and all that kind of good
+stuff. And that you were going to use keys
+
+39
+00:03:38,780 --> 00:03:44,480
+and certificates. That was kind of the new
+kid on the block that was cool at the
+
+40
+00:03:44,480 --> 00:03:48,800
+beginning. And a lot of innovation has
+happened since then that kind of keeps
+
+41
+00:03:48,800 --> 00:03:55,320
+those key assumptions. solutions. And by
+the way, when I represent these three
+
+42
+00:03:55,320 --> 00:04:02,140
+bands here, I'm not saying that there's
+bad and okay and better so much as I'm
+
+43
+00:04:02,140 --> 00:04:07,440
+saying it's kind of like a classic car
+that had a carburetor and then a car that
+
+44
+00:04:07,440 --> 00:04:10,900
+has a fuel injector and a computer and
+then an electric car or something. These
+
+45
+00:04:10,900 --> 00:04:18,040
+are waves of technology. There are reasons
+though why we learn from our experience.
+
+46
+00:04:19,440 --> 00:04:25,760
+And so there is thinking in these later
+bands that looks back at what was done in
+
+47
+00:04:25,760 --> 00:04:30,540
+the earlier bands and says there might be
+a better way to do this and there's
+
+48
+00:04:30,540 --> 00:04:37,920
+advantages to tweaking our mental model.
+So the second band of identity innovation
+
+49
+00:04:37,920 --> 00:04:43,200
+I would kind of track back HIPA is kind of
+an outlier in the fact that it came about
+
+50
+00:04:43,200 --> 00:04:47,980
+pretty early and by the way HIPA has Utah
+roots. I didn't know that until yesterday
+
+51
+00:04:47,980 --> 00:04:54,280
+I was talking to somebody. But anyway,
+really kind of when blockchain started
+
+52
+00:04:54,280 --> 00:04:59,380
+impinging on people's consciousness, there
+were a number of things that people said,
+
+53
+00:04:59,460 --> 00:05:02,160
+oh, wait a minute. That means there's a
+different way that we could do this. Oh,
+
+54
+00:05:02,220 --> 00:05:06,060
+there's a different way we could do that.
+And there were some dominoes that fell and
+
+55
+00:05:06,060 --> 00:05:10,680
+it brought about this yellow band of
+thinking. And the thing that's different
+
+56
+00:05:10,680 --> 00:05:15,520
+mainly between the red and the yellow is
+that we're using generation two techniques
+
+57
+00:05:15,520 --> 00:05:20,020
+where we're not identifying people by
+keys. Now we're identifying people by
+
+58
+00:05:20,020 --> 00:05:27,900
+identifiers. And we're using probably
+upgraded cryptography like elliptic curve
+
+59
+00:05:27,900 --> 00:05:31,680
+and so forth. And there's a lot of
+blockchain, although it's not all
+
+60
+00:05:31,680 --> 00:05:36,800
+blockchain oriented in the yellow band.
+But there's a lot of the notion of
+
+61
+00:05:36,800 --> 00:05:42,120
+wallets, digital wallets was a big deal.
+And then there are a lot of dissonance
+
+62
+00:05:42,120 --> 00:05:48,440
+around privacy issues as this yellow band
+kind of came about. out. The third wave of
+
+63
+00:05:48,440 --> 00:05:55,220
+thinking here, this green band is typified
+in my mind by a much more sophisticated
+
+64
+00:05:55,220 --> 00:06:04,360
+and nuanced view about the governance that
+has to be in place. And that doesn't mean
+
+65
+00:06:04,360 --> 00:06:10,060
+that people that are making yellow banded
+stuff or red banded stuff are ignorant
+
+66
+00:06:10,060 --> 00:06:15,780
+about governance by any means. But it's
+kind of like playing a symphony. There's a
+
+67
+00:06:15,780 --> 00:06:20,180
+lot of different instruments and I think
+in the green band the full range of
+
+68
+00:06:20,180 --> 00:06:28,780
+instruments is now much more apparent. And
+big emphasis on auditability of what's
+
+69
+00:06:28,780 --> 00:06:37,520
+going on in a system and a big emphasis on
+recoverability. If something goes wrong
+
+70
+00:06:37,520 --> 00:06:43,320
+and you assume in the green band that
+things will go wrong. So the question
+
+71
+00:06:43,320 --> 00:06:47,200
+becomes what do you do when things go
+wrong? wrong, not how do you prevent
+
+72
+00:06:47,200 --> 00:06:52,220
+things from going wrong, which is an
+unrealistic question in some ways. And
+
+73
+00:06:52,220 --> 00:06:56,760
+there's different cryptographic
+primitives. There's identifiers, yes, but
+
+74
+00:06:56,760 --> 00:07:02,460
+they're upgraded to autonomic identifiers
+which have certain desirable properties,
+
+75
+00:07:02,760 --> 00:07:09,220
+so forth. And an emphasis on look post
+-quantum is going to be a reality soon.
+
+76
+00:07:09,460 --> 00:07:14,440
+Are we ready for it? It would be really
+foolish to build an identity system that's
+
+77
+00:07:14,440 --> 00:07:20,380
+not ready for post-quantum at this point
+when NIST has already announced post
+
+78
+00:07:20,380 --> 00:07:22,800
+-quantum standards.
+
+79
+00:07:24,360 --> 00:07:30,420
+Okay, so enough on that slide. I can't
+spend that much time because there's just
+
+80
+00:07:30,420 --> 00:07:36,380
+like I said 10 minutes is nearly
+impossible here. What I see in the market
+
+81
+00:07:36,380 --> 00:07:44,580
+is that there's major tensions. There's
+things that are pulling solutions to the
+
+82
+00:07:44,580 --> 00:07:52,300
+yellow and the red band. hands and you can
+see what I've said roughly kind of argues
+
+83
+00:07:52,300 --> 00:07:57,780
+for yellow and red solutions today. And
+then there's things that pull people
+
+84
+00:07:57,780 --> 00:08:02,540
+towards the green direction when they're
+designing solutions.
+
+85
+00:08:04,800 --> 00:08:10,360
+Enough said on that. I could go into this
+for hours, but let me just talk about the
+
+86
+00:08:10,360 --> 00:08:16,840
+two biggest forces that I see in the
+market today. I just returned from living
+
+87
+00:08:16,840 --> 00:08:24,140
+in Europe for several years. So I've lived
+personally through the EUDI initiative a
+
+88
+00:08:24,140 --> 00:08:32,560
+little bit and what's going on there. And
+the EUDI initiative has enormous, enormous
+
+89
+00:08:32,560 --> 00:08:38,680
+momentum. It's a juggernaut in Europe. But
+it doesn't, it's not without its
+
+90
+00:08:38,680 --> 00:08:44,740
+challenges. many different countries have
+built systems and they kind of don't all
+
+91
+00:08:44,740 --> 00:08:54,320
+get along, but they're trying really hard.
+And the state of play in the United States
+
+92
+00:08:54,320 --> 00:09:01,120
+is a little bit different. You have state
+level initiatives, which is why this
+
+93
+00:09:01,120 --> 00:09:06,560
+conference makes so much sense. States are
+making the decisions, not a central
+
+94
+00:09:06,560 --> 00:09:12,460
+government. There are things that are
+being built with generation one solutions
+
+95
+00:09:12,460 --> 00:09:18,600
+or generation two solutions in the United
+States. Absolutely. SEDI is an example of
+
+96
+00:09:18,600 --> 00:09:22,560
+a generation three solution and there's
+reasons why I think that's really
+
+97
+00:09:22,560 --> 00:09:30,940
+exciting. The strategic trends that I'm
+aware of, I'm not going to say them all,
+
+98
+00:09:31,120 --> 00:09:36,120
+but you can read them there. I'll just say
+that the thing I would bet on, bet my
+
+99
+00:09:36,120 --> 00:09:41,940
+bottom dollar on, is that last bullet.
+Security pressures are going to grow and
+
+100
+00:09:41,940 --> 00:09:46,940
+legal pressures are going to grow. I
+guarantee that's going to be true. If
+
+101
+00:09:46,940 --> 00:09:52,580
+nothing else that I can forecast, that
+one's for sure. Remember what that might
+
+102
+00:09:52,580 --> 00:09:59,120
+imply about what kinds of solutions are
+wise. I'd like to end with a thought here
+
+103
+00:09:59,120 --> 00:10:05,920
+and that is we sometimes hear solutions
+described in terms of formats. So, you're
+
+104
+00:10:05,920 --> 00:10:09,700
+going to hear today about ISO mobile
+driver's licenses and you're going to hear
+
+105
+00:10:09,700 --> 00:10:14,980
+about W3C verifiable credentials and so
+forth. I think that's the wrong way to
+
+106
+00:10:14,980 --> 00:10:22,580
+think about decisions. Up here you have
+two pictures of the same person and one of
+
+107
+00:10:22,580 --> 00:10:26,360
+them is the lossless view that you get off
+of a digital camera when you take an image
+
+108
+00:10:26,360 --> 00:10:32,920
+and the other one is a JPEG. Now, are
+JPEGs bad? No. We use them all the time
+
+109
+00:10:32,920 --> 00:10:36,820
+and they're very useful. But if you're a
+professional graphic artist, you would
+
+110
+00:10:36,820 --> 00:10:42,440
+never want to deal in JPEGs as inputs to
+your graphic projects. So they have
+
+111
+00:10:42,440 --> 00:10:49,140
+different uses. And I'd like to suggest
+that permanent evidence needs to be
+
+112
+00:10:49,140 --> 00:10:55,540
+lossless evidence. And there are a number
+of dimensions to losslessness. There's
+
+113
+00:10:55,540 --> 00:11:01,420
+time-related dimensions like how long does
+this evidence persist. There's governance
+
+114
+00:11:01,420 --> 00:11:06,940
+-related dimensions to evidence. There's
+post-quantum cryptography related
+
+115
+00:11:06,940 --> 00:11:12,480
+dimensions to evidence and losslessness.
+There's all kinds of stuff. So I'd like to
+
+116
+00:11:12,480 --> 00:11:17,920
+just suggest that as you run into
+conversations about this, don't make it a
+
+117
+00:11:17,920 --> 00:11:24,500
+debate about formats. Make it a debate
+about how to solve problems and you'll
+
+118
+00:11:24,500 --> 00:11:29,020
+find that the format questions fall out.
+Thank you.
+

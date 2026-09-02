@@ -1,0 +1,1042 @@
+1
+00:00:03,240 --> 00:00:10,680
+I would like to recognize two individuals
+if they are here. Scott Stornetta, are you
+
+2
+00:00:10,680 --> 00:00:22,220
+here? Been walking around. Is he in the
+room? Samuel Smith. He took off. I was
+
+3
+00:00:22,220 --> 00:00:29,200
+hoping to, I want to acknowledge two
+people whom I think are fathers of modern
+
+4
+00:00:30,020 --> 00:00:37,760
+digital trust. And I'll just say that
+Scott Stornetta was cited by Satoshi
+
+5
+00:00:37,760 --> 00:00:44,220
+Nakamoto's Bitcoin paper. He's the
+original conceiver of blockchain, which is
+
+6
+00:00:44,220 --> 00:00:48,000
+a really important innovation in digital
+trust. We wouldn't have cryptocurrency
+
+7
+00:00:48,000 --> 00:00:52,480
+without that innovation. And literally the
+creator of blockchain quoted Scott
+
+8
+00:00:52,480 --> 00:00:56,240
+Stornetta, who's been here today. He's out
+in the hall or somewhere. And then Sam had
+
+9
+00:00:56,240 --> 00:01:00,880
+to leave. Sam is the creator of the KERI
+protocol key event receipt infrastructure
+
+10
+00:01:00,880 --> 00:01:07,180
+that has inspired the SEDI identity model
+including the very exciting thing I get to
+
+11
+00:01:07,180 --> 00:01:12,200
+talk about which is guardianship and
+delegation. A really big breakthrough in
+
+12
+00:01:12,200 --> 00:01:16,860
+digital trust to solve a very thorny
+problem. Now I'm going to break from how I
+
+13
+00:01:16,860 --> 00:01:22,860
+usually present things and I am going to
+I'm
+
+14
+00:01:22,860 --> 00:01:28,080
+going to really almost read the slides
+which I hate to do that but I know this is
+
+15
+00:01:28,080 --> 00:01:30,900
+being videoed And I know these
+presentations are going to be asked for.
+
+16
+00:01:31,020 --> 00:01:34,860
+And I want anyone who gets this
+presentation at a later time to be able to
+
+17
+00:01:34,860 --> 00:01:39,460
+understand every single point. And so
+you're going to see me, you know,
+
+18
+00:01:39,620 --> 00:01:43,720
+basically reading some of this, but we're
+going to go quickly. Really important
+
+19
+00:01:43,720 --> 00:01:48,120
+concept. First of all, a couple of
+definitions. Guardianship gives someone
+
+20
+00:01:48,120 --> 00:01:54,740
+legal authority and responsibility to make
+decisions for another, like a child or a
+
+21
+00:01:54,740 --> 00:02:01,180
+disabled person. So real key concepts
+underlying there legal authority and
+
+22
+00:02:01,180 --> 00:02:06,960
+responsibility. Two different really
+important concepts that make up
+
+23
+00:02:06,960 --> 00:02:14,300
+guardianship. Delegation, I want to wait
+for my example to come up. There's a
+
+24
+00:02:14,300 --> 00:02:19,620
+little bit of a lag here. Temporarily
+transfers specific duties or powers but
+
+25
+00:02:19,620 --> 00:02:25,980
+not full legal responsibility. Key
+concepts are temporarily and specific
+
+26
+00:02:25,980 --> 00:02:31,160
+duties or powers and not full legal
+responsibility. That's the difference
+
+27
+00:02:31,160 --> 00:02:35,760
+between guardianship and delegation. So
+let's give an example. If a parent
+
+28
+00:02:35,760 --> 00:02:40,740
+delegates school pickup to a neighbor, the
+parent still holds the ultimate
+
+29
+00:02:40,740 --> 00:02:46,240
+responsibility for the child's welfare.
+Okay, that's just a task that has been
+
+30
+00:02:46,240 --> 00:02:51,760
+delegated, but not ultimate responsibility
+or legal authority. Guardianship legally
+
+31
+00:02:51,760 --> 00:02:56,480
+transfers that responsibility. The
+guardian and not the parent is now the one
+
+32
+00:02:56,480 --> 00:03:01,880
+accountable for decisions and care. So
+those are the two conceptual differences.
+
+33
+00:03:02,140 --> 00:03:08,480
+Now I'm going to share with you 10 tools
+that we use in combination to make
+
+34
+00:03:08,480 --> 00:03:14,340
+guardianship and delegation work as well
+as all of the rest of the SEDI protocol. I
+
+35
+00:03:14,340 --> 00:03:21,800
+chose Lego here instead of a toolbox. The
+difference is when you put Legos together,
+
+36
+00:03:21,800 --> 00:03:26,260
+you might make a pirate ship. You might
+make a pirate, you might make spaceship,
+
+37
+00:03:26,520 --> 00:03:29,540
+you might make a dinosaur. You put them
+together in different combinations to do
+
+38
+00:03:29,540 --> 00:03:33,860
+the thing you're trying to do. A toolbox,
+you get out of the toolbox and you do
+
+39
+00:03:33,860 --> 00:03:38,500
+something to use the tools and then you're
+done. So with SEDI, it's very much the
+
+40
+00:03:38,500 --> 00:03:44,220
+Legos, even though they are tools. The
+first tool is verifiable containers. Now,
+
+41
+00:03:44,380 --> 00:03:47,360
+for those of you familiar with verifiable
+credentials, we're talking about the same
+
+42
+00:03:47,360 --> 00:03:53,060
+concept, but a verifiable credential is
+misnamed. It is a container that holds
+
+43
+00:03:53,060 --> 00:03:56,220
+data and makes it portable. It might or
+might not be a credential. It can have
+
+44
+00:03:56,220 --> 00:03:59,980
+anything inside the container. It's the
+container that's verifiable technically.
+
+45
+00:04:00,180 --> 00:04:05,880
+So it makes data portable and verifiable.
+The next tool is secure attribution to
+
+46
+00:04:05,880 --> 00:04:09,420
+verify who digitally signed a thing. So if
+you get a container that has some data in
+
+47
+00:04:09,420 --> 00:04:18,960
+it, who put that container together? Who
+did it? And being able to secure part is
+
+48
+00:04:18,960 --> 00:04:25,760
+really important. Verify who did it. The
+third tool, non-reputability. You can't
+
+49
+00:04:25,760 --> 00:04:32,820
+later say that you didn't. once it's been
+signed, it is non-reputable. You can't
+
+50
+00:04:32,820 --> 00:04:39,440
+later say someone else did that. So when
+you have encryption with TLS or HTTPS, you
+
+51
+00:04:39,440 --> 00:04:43,880
+see the encryption that happens on the
+internet. There is repudiability. You
+
+52
+00:04:43,880 --> 00:04:48,420
+don't know who is on the other side of it.
+It's not bound to a human person or an
+
+53
+00:04:48,420 --> 00:04:54,860
+individual. It's just there's a weak form
+of authentication that goes with
+
+54
+00:04:54,860 --> 00:04:59,080
+encryption, but it's not like a digital
+signature that you can actually bind to an
+
+55
+00:04:59,080 --> 00:05:04,380
+individual and say who did the thing.
+Chain signatures which give you verifiable
+
+56
+00:05:04,380 --> 00:05:09,420
+provenance so you can actually see a chain
+of authority rather than just a single
+
+57
+00:05:09,420 --> 00:05:15,580
+level. So if someone signs something like
+a manager, well, who was their boss?
+
+58
+00:05:15,720 --> 00:05:19,240
+Where'd they get their authority from? Who
+was their boss? Who did they work for? And
+
+59
+00:05:19,240 --> 00:05:23,020
+is that really the company? How do we know
+that was really the company? And on you
+
+60
+00:05:23,020 --> 00:05:27,620
+can see a full chain and it's unlimited. A
+full chain of provenance on there is
+
+61
+00:05:27,620 --> 00:05:31,940
+another really important tool. And then
+weighted multisig critical for business
+
+62
+00:05:31,940 --> 00:05:35,660
+and on a whole lot of other cases we're
+going to talk about here in a moment. But
+
+63
+00:05:35,660 --> 00:05:41,400
+weighted multisig means that you can have
+one of two signatures. You can have one of
+
+64
+00:05:41,400 --> 00:05:45,220
+one, just one person signs it and they
+have the full weight. You could have one
+
+65
+00:05:45,220 --> 00:05:50,940
+of two, two of three, five of seven, 11 of
+92, whatever you make up. Okay. So it's
+
+66
+00:05:50,940 --> 00:05:54,680
+weighted because you can have one
+signature have more weight than another.
+
+67
+00:05:55,440 --> 00:06:00,160
+and in a situation with divorced parents
+and things like that and where the court
+
+68
+00:06:00,160 --> 00:06:04,940
+might be intervening, really important in
+guardianship to have weighted multisig.
+
+69
+00:06:05,260 --> 00:06:11,080
+We'll talk a little bit about that.
+Consent. The ability to use your identity
+
+70
+00:06:11,080 --> 00:06:18,040
+to make a non-reputable agreement and say,
+I agree to a thing. Delegation of
+
+71
+00:06:18,040 --> 00:06:21,860
+authority, which we're going to talk about
+in a little greater detail. Revocability
+
+72
+00:06:21,860 --> 00:06:27,620
+of that delegation. And critically, a
+really important breakthrough with SEDI,
+
+73
+00:06:28,040 --> 00:06:32,640
+privacy respecting delegation. I was just
+talking to a representative from another
+
+74
+00:06:32,640 --> 00:06:38,140
+state who said that the reason that they
+were adopting a very popular technology
+
+75
+00:06:38,140 --> 00:06:42,320
+for identity is because their technical
+people thought that there was no way to
+
+76
+00:06:42,320 --> 00:06:49,620
+get around a phone home for revocation.
+That is not true. There is a way to get
+
+77
+00:06:49,620 --> 00:06:54,360
+around a phone home and have privacy
+respecting revocation. Really important
+
+78
+00:06:54,360 --> 00:06:58,640
+breakthrough in digital trust in one of
+the tools in SEDI. Graduated disclosure
+
+79
+00:06:58,640 --> 00:07:04,280
+which can be selective contractual.
+Basically you can disclose as little as
+
+80
+00:07:04,280 --> 00:07:08,420
+you want to disclose when you're doing
+something and there's actually a way to
+
+81
+00:07:08,420 --> 00:07:12,540
+only disclose that thing once terms for
+disclosure have been agreed to and
+
+82
+00:07:12,540 --> 00:07:17,020
+consented to and that can happen behind
+the scenes with agentic AI and these
+
+83
+00:07:17,020 --> 00:07:19,840
+agreements can be made and you actually
+don't disclose a thing until the terms
+
+84
+00:07:19,840 --> 00:07:25,300
+have been agreed and it's mutual. It's
+like a real-time NDA. done digitally.
+
+85
+00:07:26,300 --> 00:07:31,900
+Really exciting capability and detection
+and recovery from compromise. As a matter
+
+86
+00:07:31,900 --> 00:07:36,480
+of fact, SEDI brings a four-step concept
+I'm very excited about from a security
+
+87
+00:07:36,480 --> 00:07:43,520
+standpoint. SEDI expects compromise, then
+it can detect compromise, then it can
+
+88
+00:07:43,520 --> 00:07:51,140
+contain compromise and recover. These are
+mind-bendingly awesome in digital trust.
+
+89
+00:07:51,360 --> 00:07:58,800
+Expect, detect, contain, recover. Secure
+attribution, really important in Utah law,
+
+90
+00:07:59,080 --> 00:08:02,960
+an electronic signature can be as legally
+valid as handwritten with some
+
+91
+00:08:02,960 --> 00:08:07,980
+assumptions. There's got to be an intent
+to sign. There's got to be attribution,
+
+92
+00:08:08,160 --> 00:08:12,140
+which is where SEDI comes in and really
+helps consent to electronic transaction,
+
+93
+00:08:12,740 --> 00:08:17,340
+which interestingly, there's going to be a
+dilemma, a legal one. Can you use digital
+
+94
+00:08:17,340 --> 00:08:19,980
+means to agree to use digital means?
+
+95
+00:08:22,820 --> 00:08:27,720
+That's going to be a fun one. And then no
+legal exclusion. Sometimes there's a legal
+
+96
+00:08:27,720 --> 00:08:32,080
+exclusion that says you cannot use
+digital. You must have paper. SEDI can use
+
+97
+00:08:32,080 --> 00:08:36,760
+its own tools to prove each of these.
+Doesn't mean that we legally want it to.
+
+98
+00:08:37,140 --> 00:08:41,500
+There's going to be some policy debates,
+but it does mean that SEDI can use the
+
+99
+00:08:41,500 --> 00:08:45,600
+tools to do these things. So guardianship,
+examples of guardianship, parent of a
+
+100
+00:08:45,600 --> 00:08:49,960
+child, the natural guardian, guardian of a
+disabled adult, guardian for an orphan,
+
+101
+00:08:49,960 --> 00:08:54,140
+orphan, which is court appointed or
+temporary guardianship like when parents
+
+102
+00:08:54,140 --> 00:08:59,940
+are traveling. Guardianship is the missing
+piece of government digital identity. You
+
+103
+00:08:59,940 --> 00:09:05,320
+don't see it anywhere. You don't see it
+talked about. I think it is the cherry on
+
+104
+00:09:05,320 --> 00:09:09,020
+the Sunday when you're doing a digital
+identity system if you're government. If
+
+105
+00:09:09,020 --> 00:09:12,080
+you're not government, you don't care as
+much. But when you are government, you
+
+106
+00:09:12,080 --> 00:09:18,860
+absolutely are the dog wagged by the tail
+of dependent populations. So these are the
+
+107
+00:09:18,860 --> 00:09:23,120
+children children, infants, elderly,
+disabled, homeless, right? There's
+
+108
+00:09:23,120 --> 00:09:27,320
+advocates for all of those and they're
+loud and they're powerful and they should
+
+109
+00:09:27,320 --> 00:09:33,800
+be. And so to be able to have guardianship
+and digital guardianship that actually
+
+110
+00:09:33,800 --> 00:09:39,120
+brings those dependent populations into
+the digital realm, really important stuff.
+
+111
+00:09:39,320 --> 00:09:42,380
+And if there's one takeaway from any
+representatives of other states that are
+
+112
+00:09:42,380 --> 00:09:48,000
+looking at SEDI, there's some privacy and
+autonomy reasons for looking at SEDI.
+
+113
+00:09:48,160 --> 00:09:52,880
+There's some security reasons for looking
+at SEDI. But I think the number one reason
+
+114
+00:09:52,880 --> 00:09:58,180
+why a state would look at SEDI is because
+of digital guardianship. Because it
+
+115
+00:09:58,180 --> 00:10:01,620
+includes everybody. All the different
+dependent populations you want to include.
+
+116
+00:10:01,940 --> 00:10:06,520
+No government system has figured this out.
+Few of them are even talking about it.
+
+117
+00:10:07,040 --> 00:10:14,400
+Only 25% of US 16 year olds get a driver's
+license. Only 50% of 20 year olds have
+
+118
+00:10:14,400 --> 00:10:20,940
+driver's licenses. But yet 100% of 15teen
+-year-olds need identity.
+
+119
+00:10:23,540 --> 00:10:27,980
+SETI solves a big technical challenge,
+decentralized digital guardianship that's
+
+120
+00:10:27,980 --> 00:10:31,680
+peer-to-peer with no phone home and no
+dependence on any vendor network or
+
+121
+00:10:31,680 --> 00:10:36,300
+blockchain. That's a really important
+thing. You know what's easy to do
+
+122
+00:10:36,300 --> 00:10:40,080
+technically? To prove a guardian
+relationship, if you phone home to a
+
+123
+00:10:40,080 --> 00:10:43,500
+server and the server says, oh yeah,
+that's the parent of the child, we're
+
+124
+00:10:43,500 --> 00:10:48,400
+good. And you're phoning home to the
+server. That's easy technically to do. You
+
+125
+00:10:48,400 --> 00:10:53,440
+know it's extremely hard that requires the
+breakthroughs enabled by Sam Smith, who I
+
+126
+00:10:53,440 --> 00:10:58,360
+mentioned earlier, is to be able to verify
+that guardian relationship in a
+
+127
+00:10:58,360 --> 00:11:04,880
+decentralized manner where you're not
+phoning home. Offline, using Bluetooth
+
+128
+00:11:04,880 --> 00:11:10,200
+peer-to-peer, major breakthrough in
+digital trust. Now, you know, I gave these
+
+129
+00:11:10,200 --> 00:11:15,880
+guys some kudos at the beginning. SEDI can
+mimic any form of guardianship. A guardian
+
+130
+00:11:15,880 --> 00:11:20,620
+can prove that the guardian award can
+prove who their guardian is and verifiers
+
+131
+00:11:20,620 --> 00:11:26,340
+can follow guardian requirements for award
+authorization. So what I mean by that is
+
+132
+00:11:26,340 --> 00:11:31,000
+Johnny requests to spend 35 bucks on
+Fortnite and his mother is prompted for
+
+133
+00:11:31,000 --> 00:11:38,420
+approval. It's a simple example of how a
+verifier can follow guardian requirements
+
+134
+00:11:38,420 --> 00:11:45,320
+for award authorization. Guardianship
+however gets very tricky. A single
+
+135
+00:11:45,320 --> 00:11:49,200
+guardian is very simple. It's one-to-one.
+A single parent actually is the simplest
+
+136
+00:11:49,200 --> 00:11:55,080
+use case. A single parent just they're the
+only one who makes the decision, right? It
+
+137
+00:11:55,080 --> 00:11:58,840
+gets trickier when there's two parents.
+When they're married, it's still trickier
+
+138
+00:11:58,840 --> 00:12:03,400
+than a single single because you can say
+the parents either one of them can say
+
+139
+00:12:03,400 --> 00:12:08,420
+Johnny can do it. You can say both of them
+have to approve before Johnny can do it.
+
+140
+00:12:09,120 --> 00:12:14,320
+You can say up to a certain dollar amount
+either parent can do it, but if it exceeds
+
+141
+00:12:14,320 --> 00:12:19,380
+another dollar amount, then both parents
+need to be able to do it. and that's what
+
+142
+00:12:19,380 --> 00:12:23,720
+I call graduated. So you can have
+conditions in there and things like that
+
+143
+00:12:23,720 --> 00:12:29,500
+for that approval. It gets even trickier
+with divorced parents where you have a two
+
+144
+00:12:29,500 --> 00:12:32,920
+-to-one relationship with Johnny,
+potentially a three-to-one relationship if
+
+145
+00:12:32,920 --> 00:12:37,140
+the court is involved, which they might be
+for some things that Johnny might want to
+
+146
+00:12:37,140 --> 00:12:42,740
+do. And there's waiting. So you can give
+more weight to the court. You can give
+
+147
+00:12:42,740 --> 00:12:46,280
+more weight to one parent. You can give
+weight to a grandparent. You can do
+
+148
+00:12:46,280 --> 00:12:51,500
+whatever you want. It's called weighted M
+of N multi-sig and so you can divide that
+
+149
+00:12:51,500 --> 00:12:58,700
+authority however you choose. And adults
+show children of a disabled parent. So
+
+150
+00:12:58,700 --> 00:13:02,760
+I've got a mother who's 89 and she's
+starting to forget some things and she's
+
+151
+00:13:02,760 --> 00:13:07,140
+got a lot of living adult children. And
+there's some of these adult children who
+
+152
+00:13:07,140 --> 00:13:12,680
+should probably not have a say in what
+happens with mom. It's an opinion, but at
+
+153
+00:13:12,680 --> 00:13:16,040
+some point that might have to be
+adjudicated. And someone might have to
+
+154
+00:13:16,040 --> 00:13:20,500
+say, well, when push comes to sub, the
+kids are not agreeing. How is that
+
+155
+00:13:20,500 --> 00:13:26,500
+adjudicated? And however that is, if the
+conclusion is that a certain subset of
+
+156
+00:13:26,500 --> 00:13:31,260
+children have authority and maybe one has
+more than the others, that can be modeled
+
+157
+00:13:31,260 --> 00:13:36,940
+with MFN weighted multisig, which is part
+of KERI, part of SEDI. How about homeless
+
+158
+00:13:36,940 --> 00:13:42,720
+people unable to carry credentials? Well,
+what are you doing there to bring that
+
+159
+00:13:42,720 --> 00:13:46,460
+homeless person in the digital realm if
+they're unable to carry credentials? How
+
+160
+00:13:46,460 --> 00:13:49,900
+does work in real life. We try to mimic
+what happens in real life and that is
+
+161
+00:13:49,900 --> 00:13:54,080
+there's a government agency that actually
+holds some credentials or has the ability
+
+162
+00:13:54,080 --> 00:14:01,180
+to do something on behalf of that homeless
+person. Very tricky situations. And I'm
+
+163
+00:14:01,180 --> 00:14:04,560
+going a little bit slower than I want so
+I'm going to go a lot faster. Delegation.
+
+164
+00:14:04,780 --> 00:14:08,980
+A parent signs a permission slip that
+authorizes another adult child to pick up
+
+165
+00:14:08,980 --> 00:14:15,800
+their child or a manager delegates a task
+or an individual delegates to an AI agent.
+
+166
+00:14:15,920 --> 00:14:21,840
+We talk about AI and agentic AI. That is a
+form of delegation. Delegation is
+
+167
+00:14:21,840 --> 00:14:25,560
+absolutely everywhere. A legislature can
+delegate to committees and agencies who
+
+168
+00:14:25,560 --> 00:14:29,320
+then delegate to departments and outside
+companies who delegate multiple levels of
+
+169
+00:14:29,320 --> 00:14:35,860
+employees who provide a service to a
+citizen. So delegation is absolutely
+
+170
+00:14:35,860 --> 00:14:41,360
+everywhere. All organizations, private or
+public or are hierarchies of delegation.
+
+171
+00:14:41,680 --> 00:14:45,100
+SEDI enables an individual to directly
+delegate authority to another without
+
+172
+00:14:45,100 --> 00:14:49,760
+involving anyone else. else. The
+individual, the authority can go directly
+
+173
+00:14:49,760 --> 00:14:55,080
+to the delegate and give them that
+authority. With SEDI anyone anywhere can
+
+174
+00:14:55,080 --> 00:14:58,260
+verify the claimed authority without
+phoning home. We talked about that earlier
+
+175
+00:14:58,260 --> 00:15:04,000
+decentralization. SEDI can mimic any form
+of delegation. A delegator can prove what
+
+176
+00:15:04,000 --> 00:15:08,920
+and to whom they've delegated. A delegate
+can prove what's delegated and from whom.
+
+177
+00:15:09,100 --> 00:15:13,040
+And by the way, the word delegate a little
+bit awkward because in some cases a noun,
+
+178
+00:15:13,280 --> 00:15:18,200
+in some cases a verb. Okay, so I'm I'm
+using the form delegate here in number
+
+179
+00:15:18,200 --> 00:15:24,840
+two. A delegate noun can prove what's
+delegated verb and from home. Delegation
+
+180
+00:15:24,840 --> 00:15:30,080
+can expire or be revoked. A delegate can
+delegate again with proof of authority to
+
+181
+00:15:30,080 --> 00:15:34,800
+do so. Delegations are non-reputable which
+means they can't be denied later.
+
+182
+00:15:36,120 --> 00:15:40,240
+Delegations can form hierarchies or
+chains. They're auditable, traceable. They
+
+183
+00:15:40,240 --> 00:15:44,240
+cannot be forged. They're resilient to key
+rotation. And rules and restrictions can
+
+184
+00:15:44,240 --> 00:15:49,720
+be made verifiable, machine readable, and
+enforceable. Sounds like a dream list. It
+
+185
+00:15:49,720 --> 00:15:53,840
+is. Now you know why we're excited.
+Agentic future, by the way, I have to
+
+186
+00:15:53,840 --> 00:15:57,460
+laugh at this picture of grandma being
+helped by a robot. And no, that wasn't
+
+187
+00:15:57,460 --> 00:16:05,460
+made by AI. And no, I didn't take that
+photo. But Microsoft CEO said this and I'm
+
+188
+00:16:05,460 --> 00:16:09,200
+paraphrasing because this quote is too
+long, but the the paraphrase of the
+
+189
+00:16:09,200 --> 00:16:17,420
+Microsoft CEO, AI agents will replace all
+software as a service, SaaS. class. CEO of
+
+190
+00:16:17,420 --> 00:16:25,540
+Microsoft. And the reason he says that is
+because of frankly what I think is
+
+191
+00:16:25,540 --> 00:16:30,640
+illustrated by grandma. It's a user
+experience. Most agentic tasks are simple
+
+192
+00:16:30,640 --> 00:16:35,400
+and don't require delegation, but some
+important ones do. And they require some
+
+193
+00:16:35,400 --> 00:16:40,380
+delegation, some authority on behalf of
+the agent. And I think one of the greatest
+
+194
+00:16:40,380 --> 00:16:44,040
+use cases, I keep it in the wrong button
+and gets rid of them. I think one of the
+
+195
+00:16:44,040 --> 00:16:51,780
+greatest use cases for agentic AI is user
+experience for elderly people. I know my
+
+196
+00:16:51,780 --> 00:16:55,800
+mom could talk to an agent and ask her to
+do something. She struggles to open her
+
+197
+00:16:55,800 --> 00:17:00,820
+phone and start an app to play Scrabble
+with her daughter in Pennsylvania. But I
+
+198
+00:17:00,820 --> 00:17:05,440
+know she could talk to an agent and say,
+please open the Scrabble game or please do
+
+199
+00:17:05,440 --> 00:17:10,260
+something. I think the future of AI for
+elderly people is really, really bright.
+
+200
+00:17:10,680 --> 00:17:16,640
+And I want that agent's authority to do
+something on behalf of my mom, carefully
+
+201
+00:17:16,640 --> 00:17:17,640
+constrained.
+
+202
+00:17:21,100 --> 00:17:26,440
+SEDI is ideal for delegating to agentic
+AI. So in conclusion, SEDI brings
+
+203
+00:17:26,440 --> 00:17:31,020
+guardianship and delegation into
+verifiable digital form, harmonizing law
+
+204
+00:17:31,020 --> 00:17:35,980
+and technology. SEDI includes everyone
+through digital guardianship. Parents,
+
+205
+00:17:36,140 --> 00:17:40,980
+caregivers, and courts can securely
+represent those who cannot self-manage
+
+206
+00:17:40,980 --> 00:17:46,420
+their identity. Through SEDI, delegation
+individuals can safely empower others or
+
+207
+00:17:46,420 --> 00:17:52,120
+AI agents with limited revocable
+authority. SETI actualizes both human and
+
+208
+00:17:52,120 --> 00:17:56,400
+legal rights and principles and is
+designed for the coming agentic AI era.
+
+209
+00:17:56,820 --> 00:17:57,580
+Thank you.
+

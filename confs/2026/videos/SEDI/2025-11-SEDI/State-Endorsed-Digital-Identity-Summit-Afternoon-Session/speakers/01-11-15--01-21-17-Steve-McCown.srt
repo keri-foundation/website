@@ -1,0 +1,484 @@
+1
+00:00:00,860 --> 00:00:08,020
+Thank you. All right. My name is Steve
+McCown and I am a commissioner on the Utah
+
+2
+00:00:08,020 --> 00:00:15,680
+Privacy Commission. I'm also chief
+architect of Anonomy Labs. And I'd like to
+
+3
+00:00:15,680 --> 00:00:21,140
+talk to you about surveillance and
+tracking today and what SEDI does to get
+
+4
+00:00:21,140 --> 00:00:28,500
+in the way of that. Years ago, I worked
+for the US Department of Energy as
+
+5
+00:00:28,500 --> 00:00:35,320
+basically a computer hacker. And one of my
+assignments was to work on compromising
+
+6
+00:00:35,320 --> 00:00:40,540
+cell phones. Another part of my assignment
+was what they call open source
+
+7
+00:00:40,540 --> 00:00:46,980
+intelligence. And this is the collection
+and analysis of data gathered from open
+
+8
+00:00:46,980 --> 00:00:52,920
+sources, think internet, and in order to
+produce actionable intelligence. And in
+
+9
+00:00:52,920 --> 00:01:00,320
+that capacity, I was able to be given
+target sites and and pull together enough
+
+10
+00:01:00,320 --> 00:01:06,960
+information from the internet that
+resulted in classified reports. So the
+
+11
+00:01:06,960 --> 00:01:12,600
+first I wanted to look and see when the
+first open source intelligence was taking
+
+12
+00:01:12,600 --> 00:01:20,340
+place and this is January of 1862. A
+publication called Harper's Weekly was
+
+13
+00:01:20,340 --> 00:01:28,160
+publishing articles about force movements
+during the US Civil War. And as you can
+
+14
+00:01:28,160 --> 00:01:36,720
+see here, the text talks about a general's
+expeditions and where the troops were
+
+15
+00:01:36,720 --> 00:01:44,700
+going, what assets he had. And while the
+specific targets were secret, they also
+
+16
+00:01:44,700 --> 00:01:48,580
+were able to surmise where they were
+going. They went so far as to draw
+
+17
+00:01:48,580 --> 00:01:57,980
+pictures of the target locations and the
+forces attacking the other forces. In
+
+18
+00:01:57,980 --> 00:02:02,400
+modern times, let's talk about
+surveillance for modern times. So how do
+
+19
+00:02:02,400 --> 00:02:07,040
+email marketers know when to call you? So
+sometimes, and this happened to me
+
+20
+00:02:07,040 --> 00:02:11,300
+personally, I was reading an email and
+within five minutes of reading the email,
+
+21
+00:02:11,440 --> 00:02:16,580
+I received a call from the sender of the
+email and I engaged them in conversation
+
+22
+00:02:16,580 --> 00:02:24,540
+to find out how they were doing this.
+Here's an example, one of many examples of
+
+23
+00:02:24,540 --> 00:02:30,820
+what we call tracking beacons. So what
+they'll do, an email is simply like a web
+
+24
+00:02:30,820 --> 00:02:37,120
+page. It's an HTML-based email these days.
+And they'll put a one-by-one pixel
+
+25
+00:02:37,120 --> 00:02:45,800
+transparent image on there. And for those
+of you who know HTML, there's a little tag
+
+26
+00:02:45,800 --> 00:02:50,160
+called image that's supposed to load an
+actual image. And instead of loading an
+
+27
+00:02:50,160 --> 00:02:55,300
+image, what it does is it contacts the
+internet and pings a web service. And that
+
+28
+00:02:55,300 --> 00:03:00,180
+web service can do a variety of things and
+you can add a variety of information,
+
+29
+00:03:00,560 --> 00:03:07,420
+username, email address, GPS location,
+whatever you can get your handle, whatever
+
+30
+00:03:07,420 --> 00:03:12,940
+you can get a hold of and your email
+client allows, you can then send that off.
+
+31
+00:03:13,920 --> 00:03:21,120
+So that's a modern example of open source
+intelligence. And this leads us into what
+
+32
+00:03:21,120 --> 00:03:27,020
+we call surveillance capitalism, which is
+a concept in political economics which
+
+33
+00:03:27,020 --> 00:03:31,660
+denotes the widespread collection and
+commodification of personal data by
+
+34
+00:03:31,660 --> 00:03:36,140
+corporations. It's not limited to
+corporations. Governments can do this too
+
+35
+00:03:36,140 --> 00:03:41,440
+and there can be collaboration between the
+two. A couple of interesting points about
+
+36
+00:03:41,440 --> 00:03:46,840
+surveillance capitalism is that it
+operates without meaningful mechanisms of
+
+37
+00:03:46,840 --> 00:03:53,660
+consent. It just happens to you. And you
+can lose your self-determination through
+
+38
+00:03:53,660 --> 00:04:00,160
+the manipulation of advertising and other
+practices that might happen as a result of
+
+39
+00:04:00,160 --> 00:04:08,600
+this. Duke University with West Point
+University with the Army, they did a study
+
+40
+00:04:08,600 --> 00:04:15,780
+back in 2023 about data brokers and the
+sale of data on US military personnel. So
+
+41
+00:04:15,780 --> 00:04:19,920
+data brokers using these kinds of methods
+were able to collect sufficient
+
+42
+00:04:19,920 --> 00:04:25,680
+information that it became of interest to
+foreign entities. And so as part of the
+
+43
+00:04:25,680 --> 00:04:31,360
+study, they were able to approach the data
+brokers originating from either US domains
+
+44
+00:04:31,360 --> 00:04:39,400
+or .Asia domains and purchase information
+on US service members and veterans. And
+
+45
+00:04:39,400 --> 00:04:47,400
+when they ordered in bulk, it was about 12
+to 32 cents per record that you could get
+
+46
+00:04:47,400 --> 00:04:53,000
+on US military members. Think of all the
+things we do on social media and how that
+
+47
+00:04:53,000 --> 00:04:58,740
+might be used as we heard this morning for
+blackmail in order to invoke espionage.
+
+48
+00:04:59,360 --> 00:05:06,020
+This is a real problem yet it's also the
+way the web kind of operates these days.
+
+49
+00:05:06,760 --> 00:05:13,660
+Their recommendations were federal privacy
+legislation and also to restrict the
+
+50
+00:05:13,660 --> 00:05:20,580
+collection of data on current and former
+military personnel. So how SEDI helps
+
+51
+00:05:20,580 --> 00:05:28,480
+protect our identity. So one of the
+things, if you look back to SB 260, it
+
+52
+00:05:28,480 --> 00:05:35,540
+says in a couple of lines in here, the
+state-endorsed digital identity enables an
+
+53
+00:05:35,540 --> 00:05:42,800
+individual to selectively disclose
+elements of an individual's identity. So
+
+54
+00:05:42,800 --> 00:05:47,640
+taking the driver's license as an example,
+when you go to a government entity, say
+
+55
+00:05:47,640 --> 00:05:51,280
+the Department of Motor Vehicles, you
+don't really have an expectation of
+
+56
+00:05:51,280 --> 00:05:56,080
+privacy. You're going there to give your
+information in order to get a driver's
+
+57
+00:05:56,080 --> 00:06:00,560
+license credential. So we don't really
+have an expectation of privacy in that
+
+58
+00:06:00,560 --> 00:06:05,500
+regard just by the nature of that
+interaction. However, when we go to the
+
+59
+00:06:05,500 --> 00:06:09,820
+bank, you don't need to give your height
+and your weight and your donor status and
+
+60
+00:06:09,820 --> 00:06:14,160
+all that kind of stuff. And so you can
+selectively disclose what the bank
+
+61
+00:06:14,160 --> 00:06:19,820
+requires. Then if you go shopping on
+Amazon or somewhere other than payment
+
+62
+00:06:19,820 --> 00:06:24,600
+information, they need your name and they
+need your address to ship whatever it is
+
+63
+00:06:24,600 --> 00:06:30,040
+you're buying. They don't need your
+driver's license number. And so over the
+
+64
+00:06:30,040 --> 00:06:36,120
+summer, Apple has allowed MDLs to be used
+for website logins. And that may create
+
+65
+00:06:36,120 --> 00:06:40,020
+some very unintended side effects about
+the transfer of information.
+
+66
+00:06:43,920 --> 00:06:51,240
+Another aspect of SB260 is asserting with
+zero correlation. So part of the one of
+
+67
+00:06:51,240 --> 00:06:57,520
+the lines in that bill says verify that
+the individual's age satisfies an age
+
+68
+00:06:57,520 --> 00:07:03,600
+requirement without revealing the
+individual's age or date of birth. So for
+
+69
+00:07:03,600 --> 00:07:10,080
+example, if I were to go to the Department
+of Alcoholic Beverage Services, which is
+
+70
+00:07:10,080 --> 00:07:16,660
+where you buy liquor here in Utah, the
+assertion you need to make is I'm 21 or
+
+71
+00:07:16,660 --> 00:07:21,260
+older. That's what's required in the law.
+You don't have to give your name, your
+
+72
+00:07:21,260 --> 00:07:26,700
+address, or any other information. There
+should be a way to give only the
+
+73
+00:07:26,700 --> 00:07:32,440
+information that is required. And that's
+what SEDI is after. So when I go to a
+
+74
+00:07:32,440 --> 00:07:40,360
+concert at the Delta Center and I want to
+use that neat fancy digital ticket, I need
+
+75
+00:07:40,360 --> 00:07:44,720
+to be able to assert that I purchased a
+ticket that I am authorized to get in
+
+76
+00:07:44,720 --> 00:07:50,920
+having paid my money and so forth without
+having to give all the other information
+
+77
+00:07:50,920 --> 00:07:56,200
+that may sometimes come with digital
+credentials. I want this to be a process
+
+78
+00:07:56,200 --> 00:08:05,700
+of least disclosure, not full disclosure.
+Now, when I go to the hardware store as a
+
+79
+00:08:05,700 --> 00:08:12,580
+veteran myself, I'm offered a 10% discount
+and I get that by scanning everything on
+
+80
+00:08:12,580 --> 00:08:17,900
+my driver's license. That includes
+obviously that I am a veteran, which is on
+
+81
+00:08:17,900 --> 00:08:22,620
+my status. It includes whether I'm a
+donor, my height, my weight, my address,
+
+82
+00:08:22,760 --> 00:08:30,500
+all these things that are unnecessary for
+that transaction. So SETI gives you a
+
+83
+00:08:30,500 --> 00:08:38,680
+choice. Here's a quote from the US Supreme
+Court from back in 1995. It says,
+
+84
+00:08:38,860 --> 00:08:44,600
+anonymity is a shield from the tyranny of
+the majority. It thus exemplifies the
+
+85
+00:08:44,600 --> 00:08:49,640
+purpose behind the Bill of Rights and the
+First Amendment in particular. to protect
+
+86
+00:08:49,640 --> 00:08:55,760
+unpopular individuals from retaliation at
+the hand of an intolerant society. Now,
+
+87
+00:08:55,840 --> 00:08:59,780
+whether you're on the left or the right,
+this should resonate with you, maybe for
+
+88
+00:08:59,780 --> 00:09:05,660
+different reasons. But this is a really
+important principle because if we don't
+
+89
+00:09:05,660 --> 00:09:11,680
+enable you to disclose only the
+information that's required in an
+
+90
+00:09:11,680 --> 00:09:18,620
+untrackable sense in some situations, what
+we will end up with is what's Scott
+
+91
+00:09:18,620 --> 00:09:26,020
+McNeely from Sun Microsystems said back in
+1999, you have zero privacy anyway, get
+
+92
+00:09:26,020 --> 00:09:34,340
+over it. And so SEDI is giving you the
+choice of what you disclose and when you
+
+93
+00:09:34,340 --> 00:09:40,500
+disclose it and they put that choice in
+the hands of the holder. So that's what I
+
+94
+00:09:40,500 --> 00:09:45,440
+would hope that you would take away with
+and you would go back to your respective
+
+95
+00:09:45,440 --> 00:09:52,740
+companies, departments and states and and
+pose this to your constituents because we
+
+96
+00:09:52,740 --> 00:10:01,200
+want a private identity system that keeps
+individuals safe. So thank you very much.
+
+97
+00:10:01,200 --> 00:10:02,020
+Max Max Max Max Max Max Max Max
+

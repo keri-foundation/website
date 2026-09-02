@@ -1,0 +1,347 @@
+1
+00:00:00,000 --> 00:00:04,720
+– – – –
+
+2
+00:00:04,720 --> 00:00:11,320
+– – – – – – – – – – – – – – – – – –
+
+3
+00:00:11,320 --> 00:00:18,040
+– – – – – – – – – – – – – – – – – –
+
+4
+00:00:18,040 --> 00:00:18,040
+– – – – – – – – – – – – – – – – – – – – –
+– – – – – – – – – – – – – – – – – – – – –
+
+5
+00:00:18,040 --> 00:00:21,480
+– – – – – – – – – – – – – – – – – – – – –
+– – – – – – – – – – – – – – – – – – – – –
+
+6
+00:00:21,480 --> 00:00:26,760
+– – – – – – – – – – – – – – – – – – – – –
+– – – – – – – – – – – – – – – –
+
+7
+00:00:26,760 --> 00:00:27,420
+– – – – – – – – – – – – – – – – – – – – –
+– – – – – – – – – – – – – – – – – – – – –
+
+8
+00:00:27,420 --> 00:00:29,920
+– – – – – – – – – – – – – – – – – – – – I
+don't mean privacy. I mean it's private to
+
+9
+00:00:29,920 --> 00:00:35,040
+Amazon. They own it. We call these
+administrative identity systems because
+
+10
+00:00:35,040 --> 00:00:39,760
+they're designed to administer identity
+for a specific purpose in a specific
+
+11
+00:00:39,760 --> 00:00:46,280
+domain. In this case, it's Amazon, but you
+know, there are millions of them. The
+
+12
+00:00:46,280 --> 00:00:52,440
+system, the identifiers, how they work are
+owned and controlled by Amazon. They're
+
+13
+00:00:52,440 --> 00:00:57,520
+the subject of Amazon's terms and
+conditions. They're useful for
+
+14
+00:00:57,520 --> 00:01:03,420
+establishing trust within a domain, but
+they're not useful for establishing trust
+
+15
+00:01:03,420 --> 00:01:11,380
+across domains. People are party to
+dozens, hundreds, thousands of these
+
+16
+00:01:11,380 --> 00:01:14,820
+things. I have over a thousand entries in
+my one password.
+
+17
+00:01:17,420 --> 00:01:24,300
+In contrast, decentralized identity flips
+that model. The person becomes the center
+
+18
+00:01:24,300 --> 00:01:29,380
+of trust and credentials about that trust
+flow through protocols rather than
+
+19
+00:01:29,380 --> 00:01:36,420
+platforms. Unlike the decentralized
+identity model, decentralized identity
+
+20
+00:01:36,420 --> 00:01:40,620
+provides a consistent experience for
+interacting with all of the relationships
+
+21
+00:01:40,620 --> 00:01:46,760
+in your digital life. But decentralization
+alone isn't enough. What we really need is
+
+22
+00:01:46,760 --> 00:01:52,040
+what I think is called first-person
+identity, a way for people to act as
+
+23
+00:01:52,040 --> 00:01:57,540
+themselves online, not as managed account.
+I like the term first person identity
+
+24
+00:01:57,540 --> 00:02:02,420
+better than decentralized because it's
+more clearly distinguishes that identity
+
+25
+00:02:02,420 --> 00:02:08,780
+is based on the individual, the first
+party in a relationship. First person
+
+26
+00:02:08,780 --> 00:02:12,340
+describes an idea that most people
+understand naturally. We're taught about
+
+27
+00:02:12,340 --> 00:02:20,140
+we're taught this in grade school. First
+person is I, me, myself, mine. First
+
+28
+00:02:20,140 --> 00:02:24,160
+person describes precisely the kind of
+thinking that will allow people to create
+
+29
+00:02:24,160 --> 00:02:30,560
+their own online relationships without an
+intermediating administrator like a social
+
+30
+00:02:30,560 --> 00:02:35,180
+network. In first-person identity, you
+might have relationships and credentials
+
+31
+00:02:35,180 --> 00:02:39,760
+from your employer, from your bank, from
+your school, from the driver's license
+
+32
+00:02:39,760 --> 00:02:45,320
+bureau, and so on. You can use these alone
+or in combination to prove things about
+
+33
+00:02:45,320 --> 00:02:51,600
+yourself. In first-person identity, people
+are the integration point for information
+
+34
+00:02:51,600 --> 00:02:58,060
+about themselves. ourselves. Now, why does
+this matter so much? It matters because
+
+35
+00:02:58,060 --> 00:03:04,520
+something essential is missing in our
+digital lives. Maybe.
+
+36
+00:03:16,020 --> 00:03:22,680
+There we go. The real challenge online
+isn't utility or convenience. its
+
+37
+00:03:22,680 --> 00:03:28,740
+proximity. In the physical world, we're
+next to each other. We rely on tacit
+
+38
+00:03:28,740 --> 00:03:36,040
+knowledge that we gain from our senses to
+see when we see and speak with people. We
+
+39
+00:03:36,040 --> 00:03:43,720
+use this tacit information to establish
+trust. We don't have that online. Online,
+
+40
+00:03:44,220 --> 00:03:50,460
+we interact at a distance through screens
+and systems and platforms that usually are
+
+41
+00:03:50,460 --> 00:03:56,920
+not controlled by us. Our relationships
+are mediated by companies rather than
+
+42
+00:03:56,920 --> 00:04:03,240
+being direct. Let's talk about what that
+distance costs us and how endorsement
+
+43
+00:04:03,240 --> 00:04:09,980
+rather than control can close it.
+Descartes didn't say, I have a Google
+
+44
+00:04:09,980 --> 00:04:18,020
+login, therefore I am. He said, I think,
+therefore I am. We exist independent of
+
+45
+00:04:18,020 --> 00:04:29,280
+anything else around us. Now, that's where
+endorsement comes in. It bridges the gap
+
+46
+00:04:29,280 --> 00:04:38,000
+of distance. It allows people or anything
+half a world away to trust who you are
+
+47
+00:04:38,000 --> 00:04:45,200
+because your own state endorses what
+you're saying, your assertions that you're
+
+48
+00:04:45,200 --> 00:04:50,400
+making. SEDI, State Endorsed Digital
+Identity, doesn't give you an identity.
+
+49
+00:04:50,740 --> 00:04:56,500
+You already have one. Rather, SEDI
+endorses it. It provides the assurance we
+
+50
+00:04:56,500 --> 00:05:02,720
+need to act confidently across digital
+distances. So the problem isn't that we
+
+51
+00:05:02,720 --> 00:05:07,360
+lack digital IDs. We've got plenty of
+those. I've got a thousand. It's that we
+
+52
+00:05:07,360 --> 00:05:14,800
+lack standing in the online world. We are
+ghosts existing only through the grace of
+
+53
+00:05:14,800 --> 00:05:23,200
+some company. We are not embodied
+autonomous agents. SEDI changes that.
+
+54
+00:05:23,840 --> 00:05:29,180
+Again, it doesn't create your identity. It
+endorses it and gives you the ability to
+
+55
+00:05:29,180 --> 00:05:35,740
+act across distance that can lead to
+something much bigger. A chance to reclaim
+
+56
+00:05:35,740 --> 00:05:42,680
+our digital freedom. First-person identity
+represents a chance for us to declare our
+
+57
+00:05:42,680 --> 00:05:48,560
+independence in the digital realm. to
+regain the freedom to act as ourselves.
+
+58
+00:05:49,580 --> 00:05:55,360
+SEDI enables that by supporting the
+individual and giving each of us a place
+
+59
+00:05:55,360 --> 00:06:01,500
+to stand online. Freedom in a digital
+world begins when we act from our own
+
+60
+00:06:01,500 --> 00:06:09,580
+identity, not one assigned to us and
+mediated by someone else. This is our
+
+61
+00:06:09,580 --> 00:06:16,820
+moment to build a digital world that
+honors human dignity. A world where we are
+
+62
+00:06:16,820 --> 00:06:24,360
+free to live and act as ourselves, as
+digital citizens rather than digital
+
+63
+00:06:24,360 --> 00:06:30,580
+subjects. If we don't build it, someone
+else will. And it will reflect their
+
+64
+00:06:30,580 --> 00:06:37,640
+goals, goals that probably don't align
+with the ones we think they should have.
+
+65
+00:06:38,620 --> 00:06:45,620
+For Utah, this is a chance to lead by
+example, demonstrating that trust in
+
+66
+00:06:45,620 --> 00:06:53,260
+identity can scale without surveillance.
+Across the US, SEDI can mark a shift from
+
+67
+00:06:53,260 --> 00:06:58,800
+digital subjects to digital citizens,
+people who live effective online lives
+
+68
+00:06:58,800 --> 00:07:04,920
+with agency and respect. We have the
+opportunity to build a digital world that
+
+69
+00:07:04,920 --> 00:07:10,460
+respects human dignity, a world where
+people are free to live and act for
+
+70
+00:07:10,460 --> 00:07:13,780
+themselves. Let's not squander that
+opportunity. community.
+

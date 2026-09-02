@@ -1,0 +1,468 @@
+1
+00:00:00,000 --> 00:00:02,740
+All right, we're going to see if I get to
+keep my geek card here.
+
+2
+00:00:16,460 --> 00:00:22,700
+Yes. Okay. Today, I want to talk about the
+evolution of technology and how backward
+
+3
+00:00:22,700 --> 00:00:27,420
+compatibility is essential for growth.
+Technologies are in a constant state of
+
+4
+00:00:27,420 --> 00:00:31,300
+change and they're always adding new
+features and and enhanced functionality to
+
+5
+00:00:31,300 --> 00:00:35,580
+meet growing demands. The three phones
+that you see here are a perfect
+
+6
+00:00:35,580 --> 00:00:39,880
+illustration of this. They represent the
+dramatic evolution of the simple telephone
+
+7
+00:00:39,880 --> 00:00:46,240
+over just the last 30 years from a device
+tethered to a wall, to a portable gadget
+
+8
+00:00:46,240 --> 00:00:51,360
+for calls and eventually text messages, to
+the powerful computer we all carry in our
+
+9
+00:00:51,360 --> 00:00:57,100
+pockets now. The infrastructure to support
+the corded and the corded and smartphones
+
+10
+00:00:57,100 --> 00:01:01,260
+are still in place today, but the first
+generation of mobile devices no longer
+
+11
+00:01:01,260 --> 00:01:05,980
+function. This progression is a familiar
+story, but it holds important lessons for
+
+12
+00:01:05,980 --> 00:01:09,700
+the future of other technologies,
+including digital identity. And the
+
+13
+00:01:09,700 --> 00:01:15,300
+progress shown here is not always
+guaranteed. So I want to talk about two
+
+14
+00:01:15,300 --> 00:01:19,560
+ubiquitous internet technologies that we
+all use every day but don't think about.
+
+15
+00:01:19,720 --> 00:01:24,400
+Some of you may not even know these exist.
+But they were both introduced around 30
+
+16
+00:01:24,400 --> 00:01:29,860
+years ago and their paths to adoption have
+been significantly different. The first is
+
+17
+00:01:29,860 --> 00:01:35,200
+IPv6 and was introduced in December of
+1995 and it's so foundational to the
+
+18
+00:01:35,200 --> 00:01:41,320
+internet that it's literally called the
+internet protocol. IPv6 is the successor
+
+19
+00:01:41,320 --> 00:01:46,400
+to the original internet protocol and it
+has struggled to gain traction only
+
+20
+00:01:46,400 --> 00:01:51,000
+reaching about 50% market share today
+despite decades of effort and superior
+
+21
+00:01:51,000 --> 00:01:58,660
+capabilities. Second technology is 802.11
+also known as Wi-Fi. It was first
+
+22
+00:01:58,660 --> 00:02:03,960
+introduced and standardized in 1997. And
+then Wi-Fi has been a massive success.
+
+23
+00:02:04,320 --> 00:02:09,880
+It's seen seven major releases, each one
+faster and more capable than the last and
+
+24
+00:02:09,880 --> 00:02:14,300
+has become an indispensable part of our
+daily lives. So why the difference in
+
+25
+00:02:14,300 --> 00:02:20,420
+adoption? Backward compatibility. Wi-Fi
+was designed from the ground up to be
+
+26
+00:02:20,420 --> 00:02:25,460
+backward compatible. Each new generation
+of Wi-Fi routers and devices could still
+
+27
+00:02:25,460 --> 00:02:31,160
+communicate with the older ones. This
+created a smooth seamless upgrade path for
+
+28
+00:02:31,160 --> 00:02:36,520
+everyone. IPv6 however was not backward
+compatible with its predecessor. This
+
+29
+00:02:36,520 --> 00:02:42,340
+meant that the transition required a
+complete and often costly overhaul of
+
+30
+00:02:42,340 --> 00:02:47,680
+network infrastructure. This major
+difference is the primary reason why Wi
+
+31
+00:02:47,680 --> 00:02:52,600
+-Fi's adoption has progressed so smoothly
+while IPv6's adoption has been a long slow
+
+32
+00:02:52,600 --> 00:02:58,240
+struggle. Another way to allow for
+continuous improvement of technologies is
+
+33
+00:02:58,240 --> 00:03:02,740
+to ensure compatibility with alternative
+standards. To illustrate this, think of
+
+34
+00:03:02,740 --> 00:03:07,220
+the audio codecs that power our digital
+music and podcasts. Many different
+
+35
+00:03:07,220 --> 00:03:12,240
+standards like FLAC, MPEG, and OPUS
+coexist today. For the vast majority of
+
+36
+00:03:12,240 --> 00:03:16,680
+us, the complex process of encoding and
+decoding audio is completely transparent.
+
+37
+00:03:17,120 --> 00:03:22,580
+We just push play. Each codec is optimized
+for a specific situation, whether it's
+
+38
+00:03:22,580 --> 00:03:26,540
+streaming high fidelity music or ensuring
+a clear voice call over a weak connection.
+
+39
+00:03:26,540 --> 00:03:30,900
+While this isn't ideal, the ecosystem
+works because applications have the
+
+40
+00:03:30,900 --> 00:03:35,600
+ability to handle the different types of
+audio files, seamlessly switching codecs
+
+41
+00:03:35,600 --> 00:03:40,280
+as needed. New codecs can be added to the
+ecosystem while old ones are eventually
+
+42
+00:03:40,280 --> 00:03:40,840
+retired.
+
+43
+00:03:43,780 --> 00:03:48,680
+So just like these other technologies,
+digital identity is at a crossroads. We
+
+44
+00:03:48,680 --> 00:03:53,680
+have a mix of established legacy systems
+and emerging innovative solutions. The
+
+45
+00:03:53,680 --> 00:03:57,560
+challenge is figuring out how to move
+forward without immediately abandoning the
+
+46
+00:03:57,560 --> 00:04:02,780
+significant investments we've already made
+and without destroying the user experience
+
+47
+00:04:02,780 --> 00:04:07,560
+or preventing progress. A core principle
+of the SEDI framework is to support
+
+48
+00:04:07,560 --> 00:04:11,740
+backward compatibility. We believe the
+only viable path forward is one that
+
+49
+00:04:11,740 --> 00:04:16,700
+embraces interoperability with existing
+options without being confined by them.
+
+50
+00:04:17,000 --> 00:04:21,420
+This approach will allow organizations to
+continue using their existing investments
+
+51
+00:04:21,420 --> 00:04:27,180
+and infrastructure while providing a clear
+path to upgrade to newer, more secure and
+
+52
+00:04:27,180 --> 00:04:31,720
+more capable technologies over time. It
+ensures that progress doesn't require
+
+53
+00:04:31,720 --> 00:04:37,080
+starting from scratch or forcing adoption
+of a single solution across the ecosystem.
+
+54
+00:04:39,920 --> 00:04:44,540
+To show you what this looks like in
+practice, we're going to do live demos. We
+
+55
+00:04:44,540 --> 00:04:49,200
+realize the risk in that. So, I'm pleased
+to introduce the participants for our
+
+56
+00:04:49,200 --> 00:04:53,440
+technical demonstrations today and I'll
+invite them to start coming up on the
+
+57
+00:04:53,440 --> 00:04:58,160
+stage here. In the upcoming demos for this
+session and later this afternoon, they'll
+
+58
+00:04:58,160 --> 00:05:01,780
+showcase how several of the currently
+available identity technologies can be
+
+59
+00:05:01,780 --> 00:05:06,360
+used together in a cohesive and
+interoperable ecosystem. While no
+
+60
+00:05:06,360 --> 00:05:10,920
+technologies for SEDI have been chosen,
+they will present possible scenarios
+
+61
+00:05:10,920 --> 00:05:14,540
+utilizing several different technologies
+working together for the first time.
+
+62
+00:05:15,060 --> 00:05:18,720
+You'll notice how the user experience is
+similar despite differences in the
+
+63
+00:05:18,720 --> 00:05:25,160
+underlying technologies. So if you could
+start making your way to the stage as I as
+
+64
+00:05:25,160 --> 00:05:34,140
+I introduce you. First we have Spruce ID.
+They're a US-based company whose mission
+
+65
+00:05:34,140 --> 00:05:37,740
+is to give people control over their
+identity and data across all digital
+
+66
+00:05:37,740 --> 00:05:43,360
+interactions. Here you go, Wayne. Wayne
+Chang is here and their software powers
+
+67
+00:05:43,360 --> 00:05:47,700
+secure standards-based credentials such as
+mobile drivers licenses and verifiable
+
+68
+00:05:47,700 --> 00:05:52,160
+digital credentials that can be used both
+online and in person across government and
+
+69
+00:05:52,160 --> 00:05:56,240
+enterprise services. As a leader in the
+decentralized identity and credential
+
+70
+00:05:56,240 --> 00:06:01,140
+interoperability space Spruce's technology
+supports selective disclosure
+
+71
+00:06:01,140 --> 00:06:04,680
+unlinkability and no phone home
+verification. Their work with states,
+
+72
+00:06:04,840 --> 00:06:08,680
+federal agencies and standards bodies
+demonstrates how digital identity can
+
+73
+00:06:08,680 --> 00:06:12,500
+enhance access to services, strengthen
+security and preserve user autonomy in a
+
+74
+00:06:12,500 --> 00:06:20,700
+connected world. GET Group North America
+is a US-based company specializing in
+
+75
+00:06:20,700 --> 00:06:24,560
+identity management solutions with over 40
+years of experience supporting governments
+
+76
+00:06:24,560 --> 00:06:30,520
+worldwide and has been a leader in digital
+identity since 2017. GET was selected to
+
+77
+00:06:30,520 --> 00:06:35,020
+deploy the technology for Utah's mobile
+driver's license in 2021, helping Utah
+
+78
+00:06:35,020 --> 00:06:38,780
+citizens securely share their MDL details,
+prove their age, and maintain their
+
+79
+00:06:38,780 --> 00:06:42,960
+privacy. The company has worked with
+government agencies and businesses to
+
+80
+00:06:42,960 --> 00:06:49,580
+accept and verify MDLs, including the TSA,
+Utah Highway Patrol, UCCU, and AFCU credit
+
+81
+00:06:49,580 --> 00:06:53,700
+unions. And then last, they'll be
+presenting later, but their technology is
+
+82
+00:06:53,700 --> 00:06:57,620
+used in the demonstrations. The Cardano
+Foundation is a not-for-profit
+
+83
+00:06:57,620 --> 00:07:02,740
+organization based in Switzerland which
+promotes the education development and
+
+84
+00:07:02,740 --> 00:07:06,680
+adoption of decentralized technologies to
+build future-proof industry solutions.
+
+85
+00:07:07,340 --> 00:07:11,120
+Veridian is an open source digital
+identity platform developed by the
+
+86
+00:07:11,120 --> 00:07:15,760
+foundation that delivers secure enterprise
+-ready verification services which protect
+
+87
+00:07:15,760 --> 00:07:21,740
+user data and prevent fraud. Veridian's
+credential management platform led by
+
+88
+00:07:21,740 --> 00:07:25,300
+Thomas Mayfield implements self-sovereign
+identity for individuals and
+
+89
+00:07:25,300 --> 00:07:28,920
+organizations. And Veridian's core
+objective is to ensure authentic
+
+90
+00:07:28,920 --> 00:07:33,960
+communications and verifiable identity
+protocols are easily accessible to all. So
+
+91
+00:07:33,960 --> 00:07:38,180
+I want to personally thank all of the
+presenters for our technical
+
+92
+00:07:38,180 --> 00:07:44,220
+demonstrations today. They put this
+together in a matter of weeks and we're
+
+93
+00:07:44,220 --> 00:07:47,820
+really excited to see these technologies
+working together for the first time. So
+
+94
+00:07:47,820 --> 00:07:48,780
+I'll turn the time over to them.
+
