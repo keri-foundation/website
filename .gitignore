@@ -22,8 +22,32 @@
 !/.github/
 !/.github/**
 
-# --- Video files ---
+# --- Media files ---
 *.mp4
+*.mp3
+*.wav
+*.ogg
+*.flac
+*.m4a
+*.m4v
+*.mov
+*.avi
+*.wmv
+*.mkv
+*.webm
+*.webp
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.ico
+*.webp
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
 
 # --- Utility scripts & misc data ---
 # !/fetch.sh
