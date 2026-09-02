@@ -1,0 +1,789 @@
+1
+00:00:01,220 --> 00:00:05,260
+– Thanks, Chris. Sorry to interrupt so
+many great conversations, but this is when
+
+2
+00:00:05,260 --> 00:00:10,520
+I've been told to speak, so you're stuck
+with me. Again, Jay Stanley with the ACLU.
+
+3
+00:00:10,660 --> 00:00:17,000
+I've been working for a long time for the
+ACLU. I started in 2001 and I've been
+
+4
+00:00:17,000 --> 00:00:23,080
+dealing with a lot of tech issues since
+then. Things are constantly new, so it
+
+5
+00:00:23,080 --> 00:00:28,580
+keeps us on our feet. And the ACLU has
+always been against a national identity
+
+6
+00:00:28,580 --> 00:00:33,880
+system. We don't like a national ID for a
+lot of reasons. For one thing, it does
+
+7
+00:00:33,880 --> 00:00:39,240
+take away your individual identity and it
+makes it a bureaucratic artifact and it
+
+8
+00:00:39,240 --> 00:00:44,380
+threatens to create a system of tracking
+in which government agencies and big
+
+9
+00:00:44,380 --> 00:00:48,560
+businesses have a unique identifier, a key
+that you are stuck with and you cannot get
+
+10
+00:00:48,560 --> 00:00:52,760
+rid of that will track you across
+different areas. If one company is
+
+11
+00:00:52,760 --> 00:00:55,360
+tracking you here, one government agency
+is tracking you there, and somebody else
+
+12
+00:00:55,360 --> 00:00:59,260
+is tracking you there and they all have
+their silos, that is good for privacy. A
+
+13
+00:00:59,260 --> 00:01:04,760
+national identity system creates a unique
+identifier. And we've always… So we oppose
+
+14
+00:01:04,760 --> 00:01:12,440
+RealID because it basically turned our
+driver's licenses into a de facto
+
+15
+00:01:12,440 --> 00:01:16,760
+distributed national identity system. Now,
+a lot of the bad consequences that we
+
+16
+00:01:16,760 --> 00:01:20,780
+feared that would come from that have not
+materialized. It's sort of a low-key
+
+17
+00:01:20,780 --> 00:01:25,140
+national identity system that we have. But
+a lot of that is because it's physical.
+
+18
+00:01:26,480 --> 00:01:33,380
+And what we worry about with a digital
+identity is that it will fully bring forth
+
+19
+00:01:33,380 --> 00:01:38,560
+the negative potential that Americans
+across the political spectrum have always
+
+20
+00:01:38,560 --> 00:01:43,600
+worried about with a national ID system.
+And I work on privacy issues. I have
+
+21
+00:01:43,600 --> 00:01:46,440
+always gotten support from the left and
+from the right. I think among all the
+
+22
+00:01:46,440 --> 00:01:50,740
+issues the ACLU works on, it really is the
+least partisan. And I think with the
+
+23
+00:01:50,740 --> 00:01:56,540
+national identity issue, in some ways it
+is it is the left and the right against
+
+24
+00:01:56,540 --> 00:01:59,740
+people who aren't really thinking about it
+and just marching forward. And I think
+
+25
+00:01:59,740 --> 00:02:02,720
+that, you know, the driver's license
+started as a license to drive. You need
+
+26
+00:02:02,720 --> 00:02:07,080
+to, it's probably in the public interest
+to license people who are drivers, but it
+
+27
+00:02:07,080 --> 00:02:09,780
+has become something much bigger than
+that. It's become something much more
+
+28
+00:02:09,780 --> 00:02:15,980
+central to our society. And as it moves
+online, it's going to become much, much
+
+29
+00:02:15,980 --> 00:02:20,840
+bigger. And that is the goal of the
+digital identity proponents, of course.
+
+30
+00:02:24,160 --> 00:02:28,940
+So, we, I was ignoring the digital
+identity issue for a while because it
+
+31
+00:02:28,940 --> 00:02:32,340
+seemed like nothing was going to happen.
+And then in around 2001, I wrote a big
+
+32
+00:02:32,340 --> 00:02:36,520
+report because it seemed like this MDL
+thing was really happening in the States.
+
+33
+00:02:36,680 --> 00:02:41,220
+We were starting to see a lot of uptake.
+It was like, okay, this is real again. And
+
+34
+00:02:41,220 --> 00:02:46,080
+we were very concerned because it was
+created by an international group, the
+
+35
+00:02:46,080 --> 00:02:52,880
+ISO, which included, as we know, some big
+tech companies like Apple and Google and
+
+36
+00:02:52,880 --> 00:02:59,200
+some government agencies like DHS and
+AMVA. And we don't know who else is on it.
+
+37
+00:02:59,280 --> 00:03:03,360
+I asked them who else was on the committee
+and they refused to tell me. And also you
+
+38
+00:03:03,360 --> 00:03:06,360
+couldn't even see the standard without
+paying thousands of dollars and it was
+
+39
+00:03:06,360 --> 00:03:10,340
+copyrighted. What kind of a way is that to
+make public policy? Maybe that is okay for
+
+40
+00:03:10,340 --> 00:03:13,020
+light bulb standards or something like
+that, but for something that's going to be
+
+41
+00:03:13,020 --> 00:03:16,680
+at the heart of the relationship between
+government and the governed, that was very
+
+42
+00:03:16,680 --> 00:03:22,040
+dubious. And in fact, the ISO standard,
+the MDL standard, reflects the interests
+
+43
+00:03:22,040 --> 00:03:25,200
+of who was at that table, which is the
+verifiers. We're going to do everything
+
+44
+00:03:25,200 --> 00:03:28,940
+possible to make sure that nobody can ever
+fool a verifier about their identity, but
+
+45
+00:03:28,940 --> 00:03:32,380
+it doesn't reflect the interests of the
+holders, the people who are holding the
+
+46
+00:03:32,380 --> 00:03:37,180
+identity, the people whose identity has
+been granted to them by the DMVs under
+
+47
+00:03:37,180 --> 00:03:45,120
+this thing. So, we did a report in 2001
+called Identity Crisis. And then over
+
+48
+00:03:45,120 --> 00:03:49,600
+time, me and my colleague, who is our
+technologist and others, refined our
+
+49
+00:03:49,600 --> 00:03:55,900
+thinking and put out a last year a set of
+state legislative recommendations for
+
+50
+00:03:55,900 --> 00:04:00,840
+state legislators with proposed language.
+It's kind of a work in progress. That's a
+
+51
+00:04:00,840 --> 00:04:05,780
+version 1.0. We're working on a second
+version now. But the question, you know,
+
+52
+00:04:05,800 --> 00:04:09,140
+we've been hearing talk all day today. We
+need a privacy protecting digital identity
+
+53
+00:04:09,140 --> 00:04:11,660
+system. We're going to have digital
+identity needs to be privacy protective.
+
+54
+00:04:12,300 --> 00:04:15,500
+Well, when the rubber hits the road, what
+does that look like? What is privacy
+
+55
+00:04:15,500 --> 00:04:18,900
+protective? And that's what we set out to
+answer and put some meat on the bones
+
+56
+00:04:18,900 --> 00:04:23,180
+there. And so this report basically has 12
+items that we think state legislature
+
+57
+00:04:23,180 --> 00:04:27,460
+should pass and basically say our state
+shall not have a digital identity system
+
+58
+00:04:27,460 --> 00:04:32,160
+unless it has these technological
+qualities and comes with these policy
+
+59
+00:04:32,160 --> 00:04:35,440
+envelopes and protections because you
+can't do everything through technology.
+
+60
+00:04:35,900 --> 00:04:38,580
+Although we think you should do as much as
+you can with technology because it's much
+
+61
+00:04:38,580 --> 00:04:45,020
+harder to change and to back out of. So
+let me just I'm going to mention quickly
+
+62
+00:04:45,020 --> 00:04:48,280
+we're going to run through the 12 just so
+you have a flavor. You can look it up if
+
+63
+00:04:48,280 --> 00:04:51,180
+you're interested in any of those more. I
+might highlight one two, which might be
+
+64
+00:04:51,180 --> 00:04:54,020
+interesting that people have thought
+about. And then I'm going to finish with a
+
+65
+00:04:54,020 --> 00:05:00,140
+couple thoughts and then I'll be done in
+the next five minutes, which is how much
+
+66
+00:05:00,140 --> 00:05:04,480
+time I have. So one of the big features is
+no phone home. If I show my driver's
+
+67
+00:05:04,480 --> 00:05:08,460
+license to a liquor store clerk, they look
+at it. End of story. Nobody's the wiser.
+
+68
+00:05:08,620 --> 00:05:13,180
+If it's digital, there's the capability to
+create a record. And in particular for the
+
+69
+00:05:13,180 --> 00:05:20,000
+issuer, the DMV, the government or the
+companies that are their contractors to
+
+70
+00:05:20,000 --> 00:05:24,120
+see that that I've done that and what time
+and at what liquor store and everywhere
+
+71
+00:05:24,120 --> 00:05:33,700
+else that I show my ID. Locker's offices,
+etc. And it needs to be built without that
+
+72
+00:05:33,700 --> 00:05:38,220
+feature. There should be no phone home. We
+can build it. The ISO standard allowed for
+
+73
+00:05:38,220 --> 00:05:43,700
+that. And that is something that we've
+been working on. We think that a key
+
+74
+00:05:43,700 --> 00:05:50,260
+privacy feature is verifier unlinkability.
+If I show my digital driver's license at
+
+75
+00:05:51,380 --> 00:05:56,220
+six gun shops or six liquor stores or six
+doctor's offices, the companies involved
+
+76
+00:05:56,220 --> 00:06:00,180
+should not be able to… First of all, if I,
+for example, if I have to prove I'm over
+
+77
+00:06:00,180 --> 00:06:06,740
+18 or I'm over 21, they should just get a
+binary which a binary bit which says, yes,
+
+78
+00:06:06,820 --> 00:06:11,340
+no, this person's over 21 and it's
+encrypted and proofed. But there shouldn't
+
+79
+00:06:11,340 --> 00:06:16,380
+be a unique signature or any other unique
+identifier that is passed over as part of
+
+80
+00:06:16,380 --> 00:06:20,020
+that that can later be used to correlate
+all your presentations. And there are
+
+81
+00:06:20,020 --> 00:06:24,600
+there are readily available cryptographic
+techniques that can make that possible.
+
+82
+00:06:25,160 --> 00:06:30,540
+And that needs to be a part of a privacy
+protecting digital identity system. New
+
+83
+00:06:30,540 --> 00:06:37,500
+Jersey, which may have outside of Utah the
+best digital driver's license law, has
+
+84
+00:06:37,500 --> 00:06:40,960
+this. They say their law says, which was
+just passed a couple months ago, the
+
+85
+00:06:40,960 --> 00:06:44,640
+system shall ensure that a digital
+driver's license or non-digital license
+
+86
+00:06:44,640 --> 00:06:49,220
+includes techniques and methodologies that
+ensure that multiple presentations of non
+
+87
+00:06:49,220 --> 00:06:53,020
+-unique data by a the holder cannot be
+linked together by one or more verifiers.
+
+88
+00:06:55,520 --> 00:07:00,800
+The selective disclosure we think needs to
+be mandated that basically you should have
+
+89
+00:07:00,800 --> 00:07:03,720
+the right to disclose the minimum amount
+of data that is necessary for the
+
+90
+00:07:03,720 --> 00:07:08,380
+transaction. You are over 21, you are not.
+You are a resident of the city without
+
+91
+00:07:08,380 --> 00:07:14,020
+sharing your address. Whatever the use
+case may be, people should… relying
+
+92
+00:07:14,020 --> 00:07:17,120
+parties, verifiers shouldn't get any more
+than they need for that transaction.
+
+93
+00:07:17,980 --> 00:07:20,680
+Here's an interesting one and I talked
+about this in one of breakouts, there
+
+94
+00:07:20,680 --> 00:07:23,940
+shouldn't be a government's kill switch
+for your identity. And I think that's
+
+95
+00:07:23,940 --> 00:07:27,980
+where the philosophical approach of the
+government endorses your identity and
+
+96
+00:07:27,980 --> 00:07:32,140
+doesn't create or bestow upon you your
+identity. But in bureaucratic sense,
+
+97
+00:07:32,280 --> 00:07:37,520
+that's what is happening in some senses.
+And there is a real potential that the
+
+98
+00:07:37,520 --> 00:07:42,580
+government is going to have a significant
+power that it has never had before. Three
+
+99
+00:07:42,580 --> 00:07:47,380
+steps. Step one, create a digital identity
+system. Step two, allow a bunch of
+
+100
+00:07:47,380 --> 00:07:51,960
+dependencies to be built on that. And some
+of our proposals are trying to avoid this
+
+101
+00:07:51,960 --> 00:07:55,760
+so that your digital identity doesn't
+become the key to actually doing your
+
+102
+00:07:55,760 --> 00:08:00,960
+ability to do anything in life, which is a
+real threat. Make it so you can't live
+
+103
+00:08:00,960 --> 00:08:03,920
+without the digital identity system. And
+then because some governor doesn't like
+
+104
+00:08:03,920 --> 00:08:07,560
+your politics or whatever, pull the rug
+out from those people, revoke their
+
+105
+00:08:07,560 --> 00:08:12,060
+digital ID and make them an unperson and
+unable to do many things in society. And
+
+106
+00:08:12,060 --> 00:08:17,060
+that is a power a government has never had
+before. But with a central digital
+
+107
+00:08:17,060 --> 00:08:23,180
+identity becomes a very real possibility
+and danger. We think that there should be
+
+108
+00:08:23,180 --> 00:08:29,880
+verifier accountability. You have to
+verify yourself to whoever wants you to
+
+109
+00:08:29,880 --> 00:08:35,300
+prove something about yourself. You should
+have a verified identity of who that is
+
+110
+00:08:35,300 --> 00:08:38,200
+and make sure that you actually are
+identifying yourself to who you think
+
+111
+00:08:38,200 --> 00:08:42,380
+you're identifying yourself with. That
+hasn't really been implemented. We call
+
+112
+00:08:42,380 --> 00:08:45,740
+for an open wallet ecosystem so that
+people have a choice of wallets. We think
+
+113
+00:08:45,740 --> 00:08:49,360
+that like forcing people to run government
+code on their personal phones is bad idea.
+
+114
+00:08:49,700 --> 00:08:54,280
+It should not be government code. If it
+is, it should certainly be open source.
+
+115
+00:08:55,280 --> 00:08:59,780
+But it's better to have the free market
+provide lots of different wallets provided
+
+116
+00:08:59,780 --> 00:09:02,800
+that they meet security standards so that
+people can pick whose wallet they want to
+
+117
+00:09:02,800 --> 00:09:06,540
+put it in whether it's Google's or
+Samsung's or Apple's or maybe you know
+
+118
+00:09:06,540 --> 00:09:10,260
+Mozilla's or a privacy protecting group
+that you have more trust in or what have
+
+119
+00:09:10,260 --> 00:09:16,760
+you. And we call for and one of our
+biggest things is restrictions on ID
+
+120
+00:09:16,760 --> 00:09:21,520
+demands. The real threat here is that once
+this infrastructure is created, it makes
+
+121
+00:09:21,520 --> 00:09:26,200
+it really frictionless to present your ID.
+When you go into websites, unless they
+
+122
+00:09:26,200 --> 00:09:29,380
+really need you to approve ID, they do not
+ask you to approve your ID. They're not
+
+123
+00:09:29,380 --> 00:09:33,800
+going to like make you get a camera and go
+in different angles and show your ID. It's
+
+124
+00:09:33,800 --> 00:09:37,460
+too big an ask. They'll scare away
+customers and they know that. But if they
+
+125
+00:09:37,460 --> 00:09:40,300
+can send you a pop-up says click here to
+send us your digital driver's license,
+
+126
+00:09:40,540 --> 00:09:43,960
+they will. They'll have a bunch of
+incentives to do it for advertising and to
+
+127
+00:09:43,960 --> 00:09:49,360
+make sure you know who you are as cookies
+go away potentially. for security and
+
+128
+00:09:49,360 --> 00:09:52,940
+forensics. And so the real danger is that
+we wake up one day, say, oh, you want to
+
+129
+00:09:52,940 --> 00:09:55,360
+watch this YouTube video? Well, just click
+here to send us your digital driver's
+
+130
+00:09:55,360 --> 00:10:01,620
+license. You click no. Sorry, we can't. It
+could be used for surveillance pricing
+
+131
+00:10:01,620 --> 00:10:05,380
+where companies set their prices for you
+based on who you are and everything they
+
+132
+00:10:05,380 --> 00:10:08,720
+know about you rather than offering the
+same price to everybody else. And there's
+
+133
+00:10:08,720 --> 00:10:14,220
+a lot of abuses there. So let me just… I'm
+running out of time rapidly. Let me just
+
+134
+00:10:14,220 --> 00:10:20,060
+finish up by saying that that the really
+important thing here is that legislators
+
+135
+00:10:20,060 --> 00:10:23,720
+decide. We have our 12 things that we
+think are important parts of privacy.
+
+136
+00:10:24,120 --> 00:10:26,980
+Maybe some people disagree with we're
+going to have disagreements over some of
+
+137
+00:10:26,980 --> 00:10:31,580
+those and the details and they're complex.
+But I think we should all agree that it
+
+138
+00:10:31,580 --> 00:10:35,600
+should be part of the political process.
+It should be legislators who are making
+
+139
+00:10:35,600 --> 00:10:38,580
+these value judgments. We obviously don't
+want legislators getting the nuts and
+
+140
+00:10:38,580 --> 00:10:42,040
+bolts of technology, but this should be
+back in the hands of the legislature. It
+
+141
+00:10:42,040 --> 00:10:46,080
+should not be in the hands of secret
+international committee, China and Russia.
+
+142
+00:10:46,080 --> 00:10:50,340
+or I'm part of the overseeing committee of
+the smaller committee. It should not be
+
+143
+00:10:50,340 --> 00:10:53,360
+technologists in the DMV who are just been
+told to implement it or get to make the
+
+144
+00:10:53,360 --> 00:10:57,580
+decisions in the dark of night. It should
+not be unaccountable private organizations
+
+145
+00:10:57,580 --> 00:11:02,360
+like AMVA. No shade on AMVA, but they came
+out of the old world where it's about
+
+146
+00:11:02,360 --> 00:11:05,960
+licensing digital driver's licenses. And
+this is much, much bigger than that. I'm
+
+147
+00:11:05,960 --> 00:11:09,760
+sorry, licensing your ability to drive.
+This is much bigger than that. And it's,
+
+148
+00:11:09,880 --> 00:11:14,280
+it can't be left to a private organization
+that asserts copyrights in its policy
+
+149
+00:11:14,280 --> 00:11:18,220
+documents. It won't let people publish
+them. let alone not being subject to the
+
+150
+00:11:18,220 --> 00:11:21,920
+privacy action FOIA and so forth, checks
+and balances on government. And it should
+
+151
+00:11:21,920 --> 00:11:28,060
+not be the TSA. The TSA right now, because
+of RealID, has the power to shape what our
+
+152
+00:11:28,060 --> 00:11:33,860
+digital identity system looks like. It
+should be legislators and the political
+
+153
+00:11:33,860 --> 00:11:38,720
+community. And one of the things that's
+really fantastic about SEDI, and I think
+
+154
+00:11:38,720 --> 00:11:43,500
+that there's a bunch of traps and there
+are questions and I don't know what it'll
+
+155
+00:11:43,500 --> 00:11:46,980
+look like as it evolves and what the ACLU
+you will think of it, but I think it's
+
+156
+00:11:46,980 --> 00:11:51,880
+fantastic that these decisions have moved
+from people who are not involved and are
+
+157
+00:11:51,880 --> 00:11:55,700
+not going to be affected to the political
+level, which is where it belongs. Thank
+
+158
+00:11:55,700 --> 00:11:55,840
+you.
+

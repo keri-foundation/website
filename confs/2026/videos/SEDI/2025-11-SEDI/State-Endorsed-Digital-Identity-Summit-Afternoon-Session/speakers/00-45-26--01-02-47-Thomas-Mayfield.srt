@@ -1,0 +1,907 @@
+1
+00:00:00,000 --> 00:00:03,700
+– Good afternoon.
+
+2
+00:00:07,560 --> 00:00:12,380
+My name is Thomas Mayfield. I am joined
+here today by my colleagues Fergal O
+
+3
+00:00:12,380 --> 00:00:16,720
+'Connor on stage and Jeremy Furster in the
+audience. We are here representing the
+
+4
+00:00:16,720 --> 00:00:22,180
+Cardano Foundation, a Swiss-based non-for
+-profit, and we've traveled from quite far
+
+5
+00:00:22,180 --> 00:00:26,260
+and wide. Jeremy has traveled from Taiwan,
+Fergal has traveled from Ireland, and
+
+6
+00:00:26,260 --> 00:00:30,480
+myself has traveled from the United
+Kingdom. And we have done so because what
+
+7
+00:00:30,480 --> 00:00:35,960
+is happening here in the state of Utah is
+a paradigm shift in digital identity. And
+
+8
+00:00:35,960 --> 00:00:40,420
+what we would like to demonstrate for you
+today is the art of the possible, the
+
+9
+00:00:40,420 --> 00:00:44,200
+potential for what some of these things we
+have heard of today, such as guardianship,
+
+10
+00:00:44,580 --> 00:00:48,840
+could look like for your citizens and how
+the state could leverage these
+
+11
+00:00:48,840 --> 00:00:56,020
+technologies. Before we start the demo, I
+would just like to say a few words. We
+
+12
+00:00:56,020 --> 00:00:59,920
+live in a world where our trust in
+government technology and our fellow
+
+13
+00:00:59,920 --> 00:01:05,960
+citizens is eroding every day. I would
+testify that every person in this room and
+
+14
+00:01:05,960 --> 00:01:10,440
+those watching online believe the
+protection of children is our most
+
+15
+00:01:10,440 --> 00:01:15,960
+important societal responsibility. It is
+evident that the internet is a powerful
+
+16
+00:01:15,960 --> 00:01:22,320
+but dangerous place. A place where we do
+not know unequivocally who we are
+
+17
+00:01:22,320 --> 00:01:30,220
+interacting with online. Is it an adult or
+a child? Is it a human? or a machine. It
+
+18
+00:01:30,220 --> 00:01:36,780
+is a genuine person or a predator. There
+are numerous statistics available and I
+
+19
+00:01:36,780 --> 00:01:42,620
+would like to highlight a few given the
+time constraints we have today. In 2024,
+
+20
+00:01:42,920 --> 00:01:47,900
+ChildLight, the Global Child Safety
+Institute, reported more than 300 million
+
+21
+00:01:47,900 --> 00:01:54,100
+children fall victim to online sexual
+exploitation and abuse each and every
+
+22
+00:01:54,100 --> 00:01:59,760
+year. Similar to the tragic story we heard
+this morning, there are more than 1300
+
+23
+00:01:59,760 --> 00:02:05,820
+reports made involving violent online
+groups that encourage children to harm
+
+24
+00:02:05,820 --> 00:02:13,480
+themselves and others. Online games have
+become hunting grounds for predators. Some
+
+25
+00:02:13,480 --> 00:02:20,760
+of the largest being Roblox, Minecraft,
+and Fortnite. Roblox self-reported cases
+
+26
+00:02:20,760 --> 00:02:26,240
+of suspected child sexual exploitation to
+the National Center for Missing and
+
+27
+00:02:26,240 --> 00:02:37,500
+Exploited Children increased dramatically
+between 2019 and 2024 from 675 to 24,000
+
+28
+00:02:37,500 --> 00:02:44,700
+cases. In the first six months of this
+year alone, Roblox has reported more than
+
+29
+00:02:44,700 --> 00:02:53,220
+it reported all of last year. In 2019, a
+study of more than 2,000 child Minecraft
+
+30
+00:02:53,220 --> 00:02:59,480
+players found that nearly 10% had been
+asked by another player to meet in real
+
+31
+00:02:59,480 --> 00:03:06,240
+life. That's almost 200 children and that
+was six years ago. This number has grown
+
+32
+00:03:06,240 --> 00:03:10,920
+exponentially. There have been numerous
+attempts to remedy these risks to
+
+33
+00:03:10,920 --> 00:03:15,760
+children. However, they do not address the
+core problems, how we access the internet,
+
+34
+00:03:16,340 --> 00:03:22,120
+digital content, and the interactions
+children are exposed to. Today, you will
+
+35
+00:03:22,120 --> 00:03:26,920
+witness for the first time in the world
+two technologies, key event receipt
+
+36
+00:03:26,920 --> 00:03:31,380
+infrastructure, commonly referred to as
+KERI, and authentic chained data
+
+37
+00:03:31,380 --> 00:03:36,420
+containers, ACDCs, being leveraged in a
+manner that no other technology can
+
+38
+00:03:36,420 --> 00:03:43,680
+achieve today. Providing open source,
+state-endorsed, digital identity wallet
+
+39
+00:03:43,680 --> 00:03:50,400
+and supporting services designed to return
+control back in the hands of parents and
+
+40
+00:03:50,400 --> 00:03:56,580
+guardians, empowering them to ensure a
+safe and and verifiable digital future for
+
+41
+00:03:56,580 --> 00:04:00,860
+their children and their children's
+children. What we'd like to do now is walk
+
+42
+00:04:00,860 --> 00:04:03,680
+you through a demonstration leveraging
+these technologies.
+
+43
+00:04:07,140 --> 00:04:11,380
+What Fergal is going to be demonstrating
+on the left-hand side is a representation
+
+44
+00:04:11,380 --> 00:04:16,300
+of the state of Utah vital records
+platform. What he will be doing here is
+
+45
+00:04:16,300 --> 00:04:21,100
+issuing a birth certificate. Now, this may
+be a manual process conducted by an
+
+46
+00:04:21,100 --> 00:04:25,700
+administrator. It could be a checkbox in
+an existing system that's integrated. It
+
+47
+00:04:25,700 --> 00:04:31,520
+could be fully automated. But the point
+here is that there are certain aspects of
+
+48
+00:04:31,520 --> 00:04:36,380
+SEDI that must be introduced by the
+government and others that fall into the
+
+49
+00:04:36,380 --> 00:04:42,900
+power of the parents. Fergal is forming a
+peer-to-peer channel with the government,
+
+50
+00:04:43,120 --> 00:04:49,120
+leveraging the mobile wallet of the child
+Oliver in today's demonstration. The
+
+51
+00:04:49,120 --> 00:04:55,280
+parent, Mary, also has established a peer
+-to-peer communication. and she will be
+
+52
+00:04:55,280 --> 00:05:01,640
+requesting the government issue a birth
+certificate to her child as well as a
+
+53
+00:05:01,640 --> 00:05:06,600
+guardianship credential. These are all
+ACDC technology.
+
+54
+00:05:15,500 --> 00:05:20,060
+So what has happened now is a guardianship
+credential has been issued to the parent
+
+55
+00:05:20,060 --> 00:05:25,480
+and a birth certificate has been issued to
+Oliver. server. What you can see online
+
+56
+00:05:25,480 --> 00:05:30,340
+here is the credential contains any amount
+of information, including a direct link
+
+57
+00:05:30,340 --> 00:05:37,040
+potentially to a file system or server. It
+can be fully customized based on policy.
+
+58
+00:05:37,540 --> 00:05:43,400
+And that is the most important aspect.
+This is not tech providers dictating what
+
+59
+00:05:43,400 --> 00:05:50,340
+the state can use. This is technology that
+is built based on policy and law. Now that
+
+60
+00:05:50,340 --> 00:05:54,760
+the birth certificate has been issued and
+the guardianship credential has now been
+
+61
+00:05:54,760 --> 00:06:00,120
+issued to Mary, the mother. And this could
+be a multi-signature relationship for both
+
+62
+00:06:00,120 --> 00:06:05,660
+parents, for example, all capable with
+KERI and ACDC technology. Now, Mary will
+
+63
+00:06:05,660 --> 00:06:11,000
+leverage the family portal. This is all
+open source software you are seeing here
+
+64
+00:06:11,000 --> 00:06:16,880
+today. This could be running in your home
+system like a home media center, or it
+
+65
+00:06:16,880 --> 00:06:22,040
+could be provided by a third party. The
+key difference here is these are not like
+
+66
+00:06:22,040 --> 00:06:27,140
+the centralized systems. The keys
+controlling the data reside in the SEDI
+
+67
+00:06:27,140 --> 00:06:32,620
+wallet in the hand of the parent. They
+never leave that platform. They never go
+
+68
+00:06:32,620 --> 00:06:38,000
+into this system you are seeing.
+Everything must be signed and approved at
+
+69
+00:06:38,000 --> 00:06:43,220
+the edge or from the wallet. So now Mary
+has logged into this system. You'll notice
+
+70
+00:06:43,220 --> 00:06:47,020
+there were no usernames, no passwords.
+This is known as passwordless
+
+71
+00:06:47,020 --> 00:06:52,880
+authentication. And now Mary is presenting
+her SEDI credentials to the family portal.
+
+72
+00:06:52,880 --> 00:06:57,280
+This will allow the portal to determine
+what features should be available to her.
+
+73
+00:06:57,940 --> 00:07:02,640
+In there, you will see a number of things
+appearing in the family tree. This is this
+
+74
+00:07:02,640 --> 00:07:08,500
+chaining characteristic that was just
+mentioned behind ACDC credentials. In the
+
+75
+00:07:08,500 --> 00:07:13,580
+SEDI wallet is not only a credential
+dictating the guardian relationship for
+
+76
+00:07:13,580 --> 00:07:21,040
+Oliver, but also the guardian relationship
+to Liam, Liam's father. So this would be a
+
+77
+00:07:21,040 --> 00:07:25,180
+power of attorney issued by a court, for
+example. The idea is to demonstrate that
+
+78
+00:07:25,180 --> 00:07:30,540
+all of this information can be contained
+within a chain of credentials that are
+
+79
+00:07:30,540 --> 00:07:34,740
+cryptographically built upon one another,
+similar to that scenario with the Lego
+
+80
+00:07:34,740 --> 00:07:40,600
+blocks just presented on screen. So now
+the parents are empowered to issue
+
+81
+00:07:40,600 --> 00:07:47,540
+credentials to delegate authority to their
+children, completely removed from the
+
+82
+00:07:47,540 --> 00:07:51,980
+state. The state has provided the
+credential to prove guardianship, but now
+
+83
+00:07:51,980 --> 00:07:57,860
+the parent has control. Now, Mary will
+issue a credential to Oliver and you'll
+
+84
+00:07:57,860 --> 00:08:02,460
+see there are three scenarios we've
+explored here. Social media, streaming
+
+85
+00:08:02,460 --> 00:08:07,860
+platforms, and gaming consoles. We will
+demonstrate a social media credential and
+
+86
+00:08:07,860 --> 00:08:13,200
+the ability to customize the attributes.
+What you can see here initially is a
+
+87
+00:08:13,200 --> 00:08:18,420
+conversational age rating. This is the
+ability for the parent to decide the age
+
+88
+00:08:18,420 --> 00:08:22,920
+in which they want their children to
+interact with. with. Second, you will see
+
+89
+00:08:22,920 --> 00:08:27,620
+a time constraint. They can set parameters
+around when these credentials can be used,
+
+90
+00:08:27,860 --> 00:08:32,980
+when these platforms can be accessed. And
+finally, there is a content rating that
+
+91
+00:08:32,980 --> 00:08:37,500
+can be set by the parent. You'll see a
+checkbox at the bottom that says enable
+
+92
+00:08:37,500 --> 00:08:43,040
+safe interactions. What this is telling
+the system wherever this credential is
+
+93
+00:08:43,040 --> 00:08:49,340
+presented, that this user can only
+interact with other SEDI-endorsed users.
+
+94
+00:08:50,360 --> 00:08:55,920
+What we're going to do now is issue this
+credential. But before I do so, this is
+
+95
+00:08:55,920 --> 00:09:01,360
+just an example. The policy will dictate
+the parameters of this credential, not the
+
+96
+00:09:01,360 --> 00:09:05,460
+tech providers. So when that is
+established, exactly what will go into
+
+97
+00:09:05,460 --> 00:09:10,060
+this credential, what are those options,
+then that will be implemented. They are
+
+98
+00:09:10,060 --> 00:09:14,740
+fully flexible. What you will see now is
+Mary will receive a request because
+
+99
+00:09:14,740 --> 00:09:18,900
+although it looks like this system is
+creating and issuing the credential, it
+
+100
+00:09:18,900 --> 00:09:24,620
+isn't. It is merely a Lego block to build,
+but Mary must sign with the keys that are
+
+101
+00:09:24,620 --> 00:09:29,700
+stored in her SEDI wallet, her identity
+which is contained within, in order to
+
+102
+00:09:29,700 --> 00:09:34,780
+execute this action. And now what you will
+see is the child will receive a prompt in
+
+103
+00:09:34,780 --> 00:09:38,960
+their phone saying their mother would like
+to issue them a credential and they must
+
+104
+00:09:38,960 --> 00:09:43,800
+also approve this credential in order to
+hold it and receive it. So what you see
+
+105
+00:09:43,800 --> 00:09:48,900
+here is not only holding and issuing, but
+also the ability to do decentralized
+
+106
+00:09:48,900 --> 00:09:56,100
+verification, which is the next step. So
+now that Oliver has received a social
+
+107
+00:09:56,100 --> 00:10:01,480
+media access credential, he can now
+register for a new paradigm shift in
+
+108
+00:10:01,480 --> 00:10:06,140
+social media that we are calling
+Socialbook today. You'll notice again
+
+109
+00:10:06,140 --> 00:10:11,600
+there is no usernames and passwords.
+Oliver will log in online with his
+
+110
+00:10:11,600 --> 00:10:16,920
+delegated authority from his mother in an
+ACDC credential into the Socialbook
+
+111
+00:10:16,920 --> 00:10:23,040
+platform. Oliver will scan this QR code
+you see on screen to establish a peer-to
+
+112
+00:10:23,040 --> 00:10:28,520
+-peer connection with SocialBook. He will
+input his email, but you'll notice Oliver
+
+113
+00:10:28,520 --> 00:10:33,160
+will not be telling the system how old he
+is. The state-endorsed digital identity,
+
+114
+00:10:33,380 --> 00:10:38,600
+which empowered the mother to create a
+social media access credential, will
+
+115
+00:10:38,600 --> 00:10:46,240
+inform the platform cryptographically how
+old Oliver is. Oliver will now register
+
+116
+00:10:46,240 --> 00:10:51,900
+for the platform and will then then log
+into the platform using no usernames and
+
+117
+00:10:51,900 --> 00:10:52,420
+passwords.
+
+118
+00:10:59,040 --> 00:11:04,440
+Once Oliver has logged into the platform,
+we will now start to explore how those
+
+119
+00:11:04,440 --> 00:11:09,900
+criteria and restrictions that were set by
+his parent can be visualized in a system.
+
+120
+00:11:10,200 --> 00:11:15,680
+What we have done here is we have tagged
+the data in this post with a metadata
+
+121
+00:11:15,680 --> 00:11:22,400
+label indicating the content level of
+which this image was. And because the
+
+122
+00:11:22,400 --> 00:11:27,720
+parent has set that restriction to teen,
+he can no longer view that image. If he
+
+123
+00:11:27,720 --> 00:11:32,080
+wanted to view it, he could request it.
+But let's move on now to the chat to
+
+124
+00:11:32,080 --> 00:11:36,700
+demonstrate how chat now is leveraging
+that age restriction. What you will see on
+
+125
+00:11:36,700 --> 00:11:41,340
+screen here is existing conversations that
+are already underway. And you will notice
+
+126
+00:11:41,340 --> 00:11:46,100
+below there are a number of SEDI tokens
+that indicate that these are users that
+
+127
+00:11:46,100 --> 00:11:50,120
+that have leveraged a SEDI-based
+credential to access and register for the
+
+128
+00:11:50,120 --> 00:11:55,460
+system. And you will see other users that
+have red tags there. These fall outside of
+
+129
+00:11:55,460 --> 00:12:00,140
+the constraints of the age that was set by
+the mother. In a scenario where Oliver
+
+130
+00:12:00,140 --> 00:12:06,860
+would like to talk to Justin, he must
+receive approval from his parents. In this
+
+131
+00:12:06,860 --> 00:12:14,260
+scenario, Mary, in order to do so. This is
+creating a shield online that parents can
+
+132
+00:12:14,260 --> 00:12:19,260
+control for their children children
+cryptographically. What we will now do is
+
+133
+00:12:19,260 --> 00:12:27,060
+we will move on to another example of how
+social media can be leveraged. We've had a
+
+134
+00:12:27,060 --> 00:12:33,200
+couple of conversations with social media
+platforms as well as game development
+
+135
+00:12:33,200 --> 00:12:39,600
+houses. And we were trying to establish a
+proof of concept leveraging decentralized
+
+136
+00:12:39,600 --> 00:12:46,320
+identity. And the very common feedback we
+received was decentralizedidentity is too
+
+137
+00:12:46,320 --> 00:12:51,360
+complex to integrate into gaming. Games
+must have centralized servers. The
+
+138
+00:12:51,360 --> 00:12:55,860
+identity systems must be centralized in
+the platform to ensure the game and user
+
+139
+00:12:55,860 --> 00:13:00,880
+experience is maintained. So although the
+concept and the idea behind a centralized
+
+140
+00:13:00,880 --> 00:13:06,060
+identity is powerful and they understood
+the value it could bring, their statement
+
+141
+00:13:06,060 --> 00:13:11,380
+was you simply cannot integrate this
+comprehensive technology. So I set this
+
+142
+00:13:11,380 --> 00:13:17,220
+task upon my team to do exactly that. So,
+what we have done is we have cloned
+
+143
+00:13:17,220 --> 00:13:22,880
+roadblocks. We are calling it KERI blocks.
+We did this in less than two weeks. Just
+
+144
+00:13:22,880 --> 00:13:26,080
+to give you an understanding of the
+timeframe here, we are not game developers
+
+145
+00:13:26,080 --> 00:13:30,680
+by any means. And what you will see is
+Oliver is now going to register and log
+
+146
+00:13:30,680 --> 00:13:35,200
+into this platform in the exact same way,
+leveraging a credential that was issued to
+
+147
+00:13:35,200 --> 00:13:40,360
+him by his mother in order to play this
+game online. And all of those constraints
+
+148
+00:13:40,360 --> 00:13:44,400
+and restrictions that are embedded inside
+the credential will also pertain to his
+
+149
+00:13:44,400 --> 00:13:50,140
+usage of this game platform. So, Oliver
+will join the system and he will begin
+
+150
+00:13:50,140 --> 00:13:53,940
+gameplay. And there are a number of
+elements here I would like to touch upon.
+
+151
+00:13:55,940 --> 00:14:04,380
+The level of predatory engagement that is
+happening in in-game chat is a significant
+
+152
+00:14:04,380 --> 00:14:11,960
+concern. What you have now demonstrated
+today on screen is the ability to have age
+
+153
+00:14:11,960 --> 00:14:18,500
+verification built into a game This is a
+complete KERI and ACDC based chat
+
+154
+00:14:18,500 --> 00:14:25,620
+integration into KERI blocks. All of these
+communications are digitally signed and
+
+155
+00:14:25,620 --> 00:14:30,040
+the age of the individuals that can
+communicate with Oliver must fall within
+
+156
+00:14:30,040 --> 00:14:34,700
+those constraints that were set in the
+credential. Another huge element to in
+
+157
+00:14:34,700 --> 00:14:43,660
+-game concerns is purchases. Many times
+parents will input their credit card
+
+158
+00:14:43,660 --> 00:14:50,420
+information to purchase something that
+time. And what has happened is children
+
+159
+00:14:50,420 --> 00:14:54,980
+have racked up credit card bills because
+that information is in the game. The
+
+160
+00:14:54,980 --> 00:14:58,740
+children can click on things and purchase
+them and mom and dad only find out once
+
+161
+00:14:58,740 --> 00:15:03,480
+the bill arrives. In the exact same way
+that Oliver had to request permission to
+
+162
+00:15:03,480 --> 00:15:08,000
+speak to someone who was outside of the
+age constraints, mom and dad also have to
+
+163
+00:15:08,000 --> 00:15:14,020
+approve the purchase. Again, this is a
+completely new paradigm shift in in-game
+
+164
+00:15:14,020 --> 00:15:20,180
+purchases and parental controls for
+individuals leveraging online systems. The
+
+165
+00:15:20,180 --> 00:15:26,260
+next one to two minutes of what you're
+about to see is the potential future for
+
+166
+00:15:26,260 --> 00:15:31,060
+the users that are leveraging Roblox.
+There are 20 to 40 million users a day
+
+167
+00:15:31,060 --> 00:15:37,220
+leveraging this system. There is a huge
+opportunity here from a commercial
+
+168
+00:15:37,220 --> 00:15:44,200
+perspective, but there is a huge risk that
+can be solved with this technology. Go
+
+169
+00:15:44,200 --> 00:15:47,040
+ahead. Let's see if the sound works.
+
+170
+00:15:50,500 --> 00:15:52,700
+Okay. Sound's not working, but that's
+okay.
+
+171
+00:15:55,660 --> 00:16:05,120
+Go ahead. Do it one more time. Okay.
+Secure, portable, and self-sovereign.
+
+172
+00:16:05,720 --> 00:16:12,260
+Using this identity, you can create your
+own rules and trusted circles with
+
+173
+00:16:12,260 --> 00:16:19,720
+cryptographic proof. Set age limits for
+your private space. Define your play hours
+
+174
+00:16:19,720 --> 00:16:27,240
+or grant access only to friends you have
+personally approved. In KERI blocks, you
+
+175
+00:16:27,240 --> 00:16:33,240
+don't just build worlds. You build the
+rules that govern them, creating a
+
+176
+00:16:33,240 --> 00:16:40,480
+provably safe and personalized gaming
+experience. Developed by Veridian and
+
+177
+00:16:40,480 --> 00:16:48,380
+integrated with NotBlocks.online project,
+KERI Blocks redefines how we play in a
+
+178
+00:16:48,380 --> 00:16:54,200
+connected world. So I leave you here with
+a thought. To the parents and the
+
+179
+00:16:54,200 --> 00:17:01,400
+guardians in the audience and viewing
+online today. If you could choose from
+
+180
+00:17:01,400 --> 00:17:10,520
+this safe, secure, friendly gaming
+experience for your children, or you can
+
+181
+00:17:10,520 --> 00:17:16,220
+take a gamble and leverage the systems
+that are available today, what choice
+
+182
+00:17:16,220 --> 00:17:19,640
+would you make? Thank you very much for
+your time.
+

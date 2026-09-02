@@ -1,0 +1,823 @@
+1
+00:00:00,000 --> 00:00:04,400
+I'm the director of Utah's Office of Data
+Privacy located in the Department of
+
+2
+00:00:04,400 --> 00:00:10,600
+Government Operations. I want to thank the
+Herbert Institute of Public Policy, the
+
+3
+00:00:10,600 --> 00:00:14,940
+Department of Government Operations, and
+the Utah Legislature for all helping to
+
+4
+00:00:14,940 --> 00:00:21,800
+host this event and also to UVU for
+allowing us to use their facilities. I
+
+5
+00:00:21,800 --> 00:00:26,500
+also want to thank UVU. We had many
+employees and students and interns help to
+
+6
+00:00:26,500 --> 00:00:30,760
+bring this event together for the last few
+months and so we couldn't do this without
+
+7
+00:00:30,760 --> 00:00:36,280
+the work that they've been putting in. And
+I want to thank all of you for coming to
+
+8
+00:00:36,280 --> 00:00:41,040
+Utah to participate in this event. We put
+a lot of thought into how would we
+
+9
+00:00:41,040 --> 00:00:46,260
+actually host an event to cause change.
+And we thought about just doing a virtual
+
+10
+00:00:46,260 --> 00:00:51,880
+event and we knew that it's going to take
+a lot of passion and a lot of work to pull
+
+11
+00:00:51,880 --> 00:00:56,180
+off what we're going to be proposing
+today. So it was important to see who can
+
+12
+00:00:56,180 --> 00:01:01,080
+we get to come in person that cares the
+most about it to help us build what we are
+
+13
+00:01:01,080 --> 00:01:06,320
+going to be proposing. So I thank all of
+you for coming. Those from states, we have
+
+14
+00:01:06,320 --> 00:01:13,000
+12 states represented. Those from
+academia, those from executive branch
+
+15
+00:01:13,000 --> 00:01:17,420
+agencies, those from legislators. I think
+we have more than a dozen companies
+
+16
+00:01:17,420 --> 00:01:21,740
+represented. We have concerned citizens.
+We have private interest groups. We have
+
+17
+00:01:21,740 --> 00:01:27,720
+the national ACLU. So we have the start of
+what I think is going to be a really great
+
+18
+00:01:27,720 --> 00:01:28,620
+consortium.
+
+19
+00:01:32,040 --> 00:01:39,100
+Now, the purpose of today is simple. We
+invited you all to come here to one,
+
+20
+00:01:39,340 --> 00:01:46,000
+receive an education about a very complex
+topic, is digital identity. The second
+
+21
+00:01:46,000 --> 00:01:51,680
+reason we've invited you is to help you
+understand the problem and what we think
+
+22
+00:01:51,680 --> 00:01:57,400
+is a really big opportunity for America to
+lead out. And the third and final reason
+
+23
+00:01:57,400 --> 00:02:02,340
+that we've invited you here today is to
+actually invite you to join the SEDI
+
+24
+00:02:02,340 --> 00:02:06,920
+consortium, the state-endorsed digital
+identity consortium, so that we can move
+
+25
+00:02:06,920 --> 00:02:14,940
+forward and work together on what we think
+is a big opportunity for America. Now, I
+
+26
+00:02:14,940 --> 00:02:20,840
+am an optimist by nature and I'm very
+optimistic about digital identity if we do
+
+27
+00:02:20,840 --> 00:02:25,760
+it right. And I believe that we can build
+technology that reflects American values,
+
+28
+00:02:26,260 --> 00:02:30,660
+that protects freedoms and strengthens
+families and builds trust in the digital
+
+29
+00:02:30,660 --> 00:02:38,420
+world. But I am also a realist about why
+this effort is needed. I am very concerned
+
+30
+00:02:38,420 --> 00:02:43,200
+about some of what I see happening not
+just in the United States, but what is
+
+31
+00:02:43,200 --> 00:02:47,120
+happening around the world. There are many
+of you in this room that have expressed
+
+32
+00:02:47,120 --> 00:02:51,220
+those same concerns. That is why
+Representative Cutler and Senator
+
+33
+00:02:51,220 --> 00:02:56,240
+Kullimore sponsored Senate Bill 260 this
+last session, the first state-endorsed
+
+34
+00:02:56,240 --> 00:03:00,280
+digital identity bill in the and the
+nation to begin addressing these concerns.
+
+35
+00:03:00,680 --> 00:03:07,520
+So I want to share with you some of our
+concerns. I am concerned for my kids and
+
+36
+00:03:07,520 --> 00:03:13,980
+your kids who can engage online and video
+games and social media and they do not
+
+37
+00:03:13,980 --> 00:03:19,060
+know and we do not know if the people they
+are engaging with are actually who they
+
+38
+00:03:19,060 --> 00:03:26,000
+say they are. I am concerned for my and
+your elderly parents and grandparents who
+
+39
+00:03:26,000 --> 00:03:31,920
+continue to be taken advantage of by
+individuals pretending to be family
+
+40
+00:03:31,920 --> 00:03:40,340
+members in distress. I am concerned for
+young men facing exploitation and
+
+41
+00:03:40,340 --> 00:03:46,560
+sextortion online. This is one of the
+fastest growing crimes in America and in
+
+42
+00:03:46,560 --> 00:03:52,660
+Utah facing our young men. They are being
+driven to despair and even suicide in a
+
+43
+00:03:52,660 --> 00:03:58,960
+world where anonymity and manipulation
+coexist without protection. I am concerned
+
+44
+00:03:58,960 --> 00:04:05,200
+that fraud enabled by identity theft and
+impersonation is now costing the United
+
+45
+00:04:05,200 --> 00:04:12,560
+States hundreds of billions of dollars a
+year. I am concerned that algorithms based
+
+46
+00:04:12,560 --> 00:04:18,660
+on profiling and scoring are influencing
+our behavior and quietly shaping the
+
+47
+00:04:18,660 --> 00:04:25,280
+concept of even freedom and free agency. I
+am concerned that the free market is being
+
+48
+00:04:25,280 --> 00:04:30,420
+distorted, that those who control personal
+data are facilitating monopolistic
+
+49
+00:04:30,420 --> 00:04:38,620
+behavior that maximizes exploitation of
+individuals for profit instead of driving
+
+50
+00:04:38,620 --> 00:04:46,240
+a free market based off of competition and
+best prices. I am concerned that nation
+
+51
+00:04:46,240 --> 00:04:51,360
+state attacks on future digital identity
+systems will occur and we have to assume
+
+52
+00:04:51,360 --> 00:04:58,380
+digital identity will be compromised. I am
+concerned that government-sponsored
+
+53
+00:04:58,380 --> 00:05:03,200
+digital identity systems both in the
+United States and around the world have
+
+54
+00:05:03,200 --> 00:05:10,500
+been created that are capable of tracking,
+surveilling, and controlling. I am
+
+55
+00:05:10,500 --> 00:05:15,800
+concerned that governments, corporations,
+and technologists are rushing to create
+
+56
+00:05:15,800 --> 00:05:21,380
+digital identity systems that are
+compulsory and are required and that these
+
+57
+00:05:21,380 --> 00:05:24,560
+are being created without the
+comprehensive governance its frameworks
+
+58
+00:05:24,560 --> 00:05:32,160
+and protections needed to protect
+individual rights. And I am most concerned
+
+59
+00:05:32,160 --> 00:05:37,280
+that in democracies around the world,
+digital identity systems are being
+
+60
+00:05:37,280 --> 00:05:42,120
+designed and implemented in ways contrary
+to the first principles of America's
+
+61
+00:05:42,120 --> 00:05:47,860
+founding. And that is that individuals
+have individual inalienable rights that
+
+62
+00:05:47,860 --> 00:05:53,780
+they are endowed with that is innate to
+them, including identity. Government does
+
+63
+00:05:53,780 --> 00:05:59,600
+not give identity. Government does not
+create identity. And any identity system
+
+64
+00:05:59,600 --> 00:06:03,860
+built on the premise that government is
+giving it to you means that they can also
+
+65
+00:06:03,860 --> 00:06:10,620
+take it away, which is in opposition to
+this founding principle. So the truth is
+
+66
+00:06:10,620 --> 00:06:15,900
+there is no trust in the digital world
+today. We don't know who or what is real.
+
+67
+00:06:16,280 --> 00:06:23,660
+We do not know. You do not control your
+digital identity. Usernames, passwords,
+
+68
+00:06:24,660 --> 00:06:29,780
+even mobile driver's license can be taken
+away. They can be compromised. There is
+
+69
+00:06:29,780 --> 00:06:34,660
+currently no national strategy for digital
+identity and we know that there are many,
+
+70
+00:06:35,180 --> 00:06:39,360
+both foreign and abroad, who would love to
+control your digital identity and
+
+71
+00:06:39,360 --> 00:06:45,480
+compromise it for their own gains. So the
+dilemma before us is that if we do
+
+72
+00:06:45,480 --> 00:06:50,680
+nothing, we will be left with a system
+created by others that do not share our
+
+73
+00:06:50,680 --> 00:06:55,320
+same values. But this is not the end of
+the story. It is the reason that we are
+
+74
+00:06:55,320 --> 00:07:01,600
+here. All of us in this room are in a
+position to influence. Some of you have
+
+75
+00:07:01,600 --> 00:07:06,540
+the power to create laws. Some of you have
+the power to create and dictate public
+
+76
+00:07:06,540 --> 00:07:10,980
+policy. Some of you have the power to
+create technology. Some of you have the
+
+77
+00:07:10,980 --> 00:07:15,300
+power to fund new businesses to create the
+solutions that we need. Some of you have
+
+78
+00:07:15,300 --> 00:07:19,560
+the power to create governance frameworks.
+And some of you have the power to create
+
+79
+00:07:19,560 --> 00:07:23,220
+standards. And some of you just have the
+power to raise your concerns and create
+
+80
+00:07:23,220 --> 00:07:28,000
+trouble for the rest of us, which we need.
+So you all have something to contribute
+
+81
+00:07:28,000 --> 00:07:32,340
+that is needed to create the solution
+necessary to address our concerns and
+
+82
+00:07:32,340 --> 00:07:37,780
+create a better digital identity. So there
+is a path a path forward by building
+
+83
+00:07:37,780 --> 00:07:43,540
+digital identity in a manner that
+prioritizes rights and dignity. This is
+
+84
+00:07:43,540 --> 00:07:50,700
+what state endorsed digital identity is
+all about. So I want you to imagine for a
+
+85
+00:07:50,700 --> 00:07:56,760
+minute a future. A future 10 years from
+now after we've put in a lot of hard work.
+
+86
+00:07:56,900 --> 00:08:02,380
+We need to agree today and in future
+summits what that work is going to be. But
+
+87
+00:08:02,380 --> 00:08:06,180
+a future where our fears about digital
+identity theft, manipulation,
+
+88
+00:08:06,760 --> 00:08:12,860
+impersonation, exploitation, loss of
+control have been replaced by trust and
+
+89
+00:08:12,860 --> 00:08:18,760
+authenticity. Where parents know their
+children are safe online. Where our
+
+90
+00:08:18,760 --> 00:08:23,720
+elderly are protected from scams and
+impersonation, where there is trust that
+
+91
+00:08:23,720 --> 00:08:28,700
+government is protecting your digital
+identity and rights above all other
+
+92
+00:08:28,700 --> 00:08:36,000
+interests. That is the world we need all
+of you to help create. So through the SEDI
+
+93
+00:08:36,000 --> 00:08:40,660
+consortium that we are proposing and
+inviting you to join today, states will
+
+94
+00:08:40,660 --> 00:08:46,540
+work together to define an American model
+for digital identity, one that protects
+
+95
+00:08:46,540 --> 00:08:52,100
+citizens, and instead of importing
+surveillance and control-based standards
+
+96
+00:08:52,100 --> 00:08:59,020
+and technology from abroad, we will export
+freedom by design, showing that privacy,
+
+97
+00:08:59,740 --> 00:09:05,980
+security, protection of rights and
+protection of individual rights and
+
+98
+00:09:05,980 --> 00:09:12,340
+innovation can coexist. The benefits and
+capabilities of SEDI will be profound. It
+
+99
+00:09:12,340 --> 00:09:16,400
+will provide the foundation for
+individuals and businesses to derive value
+
+100
+00:09:16,400 --> 00:09:22,380
+and utility for the free market, to create
+new and and innovative solutions. We know
+
+101
+00:09:22,380 --> 00:09:26,820
+there will be new solutions for proof of
+identity. There will be new solutions for
+
+102
+00:09:26,820 --> 00:09:31,700
+replacements of usernames and passwords.
+Imagine that if you don't have to worry
+
+103
+00:09:31,700 --> 00:09:36,200
+about your passwords being compromised.
+There will be new solutions for consent
+
+104
+00:09:36,200 --> 00:09:40,200
+and management and agreements that
+individuals control. There will be new
+
+105
+00:09:40,200 --> 00:09:45,300
+solutions for delegation, empowering
+families and guardians and organizations
+
+106
+00:09:45,300 --> 00:09:51,180
+to act safely on behalf of the vulnerable
+and those they serve. There will be
+
+107
+00:09:51,180 --> 00:09:56,200
+solutions for agentic AI where artificial
+intelligence operates with your explicit
+
+108
+00:09:56,200 --> 00:10:01,000
+authorization and not in your place,
+extending your agency rather than
+
+109
+00:10:01,000 --> 00:10:06,260
+replacing it. So many of you are probably
+wondering, how would we ever get from the
+
+110
+00:10:06,260 --> 00:10:12,400
+current state to that future state? And we
+do that the same way all great things are
+
+111
+00:10:12,400 --> 00:10:17,600
+done. And we have to do that together. We
+have to create a plan. We have to agree on
+
+112
+00:10:17,600 --> 00:10:23,100
+our values. We have to create a structure.
+We have to roll up our sleeves. And then,
+
+113
+00:10:23,620 --> 00:10:27,520
+as my teenagers and young kids like to
+say, we have to grind. We're going to have
+
+114
+00:10:27,520 --> 00:10:31,420
+to get out there and actually do the work
+to make it happen. And it is going to take
+
+115
+00:10:31,420 --> 00:10:36,200
+a long time. And under the SEDI consortium
+is where we can take the fruits of all
+
+116
+00:10:36,200 --> 00:10:40,400
+these labors that we are about to do and
+give them away to everyone else so that
+
+117
+00:10:40,400 --> 00:10:44,060
+they can follow us. We know not everybody
+is going to be able to do this. We don't
+
+118
+00:10:44,060 --> 00:10:48,600
+have all 50 states here. Not everybody has
+the funding, but but we are public
+
+119
+00:10:48,600 --> 00:10:53,180
+entities. We can create it and we can give
+it to them for the good of everyone. So
+
+120
+00:10:53,180 --> 00:10:56,120
+the work we're going to do is going to
+include comprehensive governance
+
+121
+00:10:56,120 --> 00:11:02,100
+frameworks, model legislation,
+resolutions, executive orders, defining
+
+122
+00:11:02,100 --> 00:11:08,060
+SEDI requirements, technology and policy
+controls, conformance programs, RFIs and
+
+123
+00:11:08,060 --> 00:11:11,860
+RFPs. We're going to have to do security
+assessments. We're going to have to do
+
+124
+00:11:11,860 --> 00:11:15,580
+continuous engagement with civil rights
+groups and watchdogs. We're going to have
+
+125
+00:11:15,580 --> 00:11:17,900
+to have absolute transparency and we're
+going to have to have absolute
+
+126
+00:11:17,900 --> 00:11:19,320
+transparency and we're going to have to
+have going to have to do much, much more
+
+127
+00:11:19,320 --> 00:11:24,600
+to move the digital identity market in
+America to align with what are going to be
+
+128
+00:11:24,600 --> 00:11:25,880
+the SEDI standards.
+
+129
+00:11:34,480 --> 00:11:39,920
+So today you are here to learn about
+digital identity and some of the
+
+130
+00:11:39,920 --> 00:11:44,740
+principles that will guide the creation of
+state-endorsed digital identity. You will
+
+131
+00:11:44,740 --> 00:11:48,380
+understand the concerns and the
+opportunities ahead of us and I hope you
+
+132
+00:11:48,380 --> 00:11:54,240
+will accept our invitation to join. But to
+end, I'm going to teach you just one of
+
+133
+00:11:54,240 --> 00:11:58,760
+the founding principles and requirements
+of state-endorsed digital identity. This
+
+134
+00:11:58,760 --> 00:12:03,520
+is the very first one that we identified
+when Senate Bill 260 was written. And this
+
+135
+00:12:03,520 --> 00:12:07,380
+is probably the most foundational and
+fundamental difference compared to what
+
+136
+00:12:07,380 --> 00:12:13,140
+you see happening in the rest of the
+world. Identity belongs to the person, not
+
+137
+00:12:13,140 --> 00:12:18,960
+to the government. The government's role
+is not to create or control identity, but
+
+138
+00:12:18,960 --> 00:12:25,460
+to endorse and protect it as a matter of
+public trust. SEDI recognizes it is the
+
+139
+00:12:25,460 --> 00:12:31,960
+role of the state to act as a trusted
+endorser, verifying an individual's
+
+140
+00:12:31,960 --> 00:12:38,800
+digital identity and then issuing an
+endorsed credential mathematically bound
+
+141
+00:12:38,800 --> 00:12:45,640
+to a digital identifier that individuals
+alone control. The state does not create
+
+142
+00:12:45,640 --> 00:12:52,440
+the individual identifier cannot revoke
+it. The state simply endorses that the
+
+143
+00:12:52,440 --> 00:12:57,220
+person is who they say they are and then
+provides a credential that empowers the
+
+144
+00:12:57,220 --> 00:13:02,960
+individual to say to the world that I am
+me and the world will accept it because it
+
+145
+00:13:02,960 --> 00:13:08,180
+has been endorsed and backed by the state.
+The state will have no control or ability
+
+146
+00:13:08,180 --> 00:13:14,440
+to surveil or to track the usage and the
+state cannot take away the underlying
+
+147
+00:13:14,440 --> 00:13:21,380
+digital identifier. The state has no role
+to take away anybody's digital identity.
+
+148
+00:13:22,100 --> 00:13:27,440
+So with that said, we have a very busy day
+ahead of us. This is mostly about
+
+149
+00:13:27,440 --> 00:13:34,740
+introductory education. This is going to
+be a very fast-paced style to get you
+
+150
+00:13:34,740 --> 00:13:39,020
+information. We'll have a couple breakouts
+throughout the day where you can ask
+
+151
+00:13:39,020 --> 00:13:43,200
+questions and you can participate and
+learn what it means to help define policy
+
+152
+00:13:43,200 --> 00:13:47,000
+and technical controls. We're going to end
+at the end of the with an hour-long
+
+153
+00:13:47,000 --> 00:13:52,860
+discussion of how can we actually move
+forward together as states. This morning,
+
+154
+00:13:53,440 --> 00:13:57,760
+the run of the show is we're going to have
+Ryan Hurst speak to us and educate you on
+
+155
+00:13:57,760 --> 00:14:03,600
+what is digital identity. We will then
+have Cindy George speaking to us about her
+
+156
+00:14:03,600 --> 00:14:08,820
+family's experience with sextortion and
+impersonation and the impact it has had on
+
+157
+00:14:08,820 --> 00:14:13,200
+them through their son's suicide. We'll
+then have a legislative panel of Senator
+
+158
+00:14:13,200 --> 00:14:16,660
+Kullimore, Representative Cutler,
+Representative Chevrier, and
+
+159
+00:14:16,660 --> 00:14:20,860
+Representative Shepherd to discuss with
+you the importance of this work, why they
+
+160
+00:14:20,860 --> 00:14:24,820
+are supporting it, and why you should be a
+part of the consortium. We'll then hear
+
+161
+00:14:24,820 --> 00:14:28,580
+from Daniel Hardman who will teach us
+about the current lay of the digital
+
+162
+00:14:28,580 --> 00:14:34,140
+identity market. Phil Windley will explain
+why Utah is the first state to formally
+
+163
+00:14:34,140 --> 00:14:39,840
+take the decentralized or first-person
+identity approach. And Joe Jackson will
+
+164
+00:14:39,840 --> 00:14:44,140
+teach you why we are moving forward with
+backward compatibility to help the entire
+
+165
+00:14:44,140 --> 00:14:48,100
+market move forward. So with that, Ryan,
+I'll invite you to come up. Thank you.
+

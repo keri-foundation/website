@@ -1,0 +1,1268 @@
+1
+00:00:04,340 --> 00:00:07,880
+Thanks so much, Joe. Really grateful for
+the opportunity to be here and talk more
+
+2
+00:00:07,880 --> 00:00:12,840
+about the different approaches, especially
+in the context of how do we start with
+
+3
+00:00:12,840 --> 00:00:17,800
+individual rights, think about the policy
+before we rush to the technology, right?
+
+4
+00:00:17,920 --> 00:00:22,460
+Because there's an implicit social
+contract, right? That is the use of these
+
+5
+00:00:22,460 --> 00:00:26,280
+digital identity systems. And it is much
+better for that to be an explicit one
+
+6
+00:00:26,280 --> 00:00:29,980
+rather than one that is the most
+convenient or imposed or anything else.
+
+7
+00:00:29,980 --> 00:00:33,980
+else, right? So I think we're all here for
+the same thing. And being able to move
+
+8
+00:00:33,980 --> 00:00:38,220
+towards that, I have a pretty nerdy quote
+actually that I want to start with from a
+
+9
+00:00:38,220 --> 00:00:43,420
+fantasy novel by Brandon Sanderson. Then
+be wise about it. There are two kinds of
+
+10
+00:00:43,420 --> 00:00:48,240
+important people, Shallan. Some, when the
+boulder of time rolls towards them, plant
+
+11
+00:00:48,240 --> 00:00:51,900
+themselves before it and throughout their
+hands. All their lives they've been told
+
+12
+00:00:51,900 --> 00:00:55,480
+how great they are. They assume the world
+itself will bend to their whims as a
+
+13
+00:00:55,480 --> 00:01:00,160
+caregiver once did when fetching a fresh
+cup of milk. Those people end up squished.
+
+14
+00:01:00,820 --> 00:01:05,720
+Others step to the side as the boulder
+passes, but are quick to say, see what I
+
+15
+00:01:05,720 --> 00:01:10,320
+did? I made it roll there. Don't make me
+do it again. These are the ones who get
+
+16
+00:01:10,320 --> 00:01:15,760
+everyone else squished. Is there not a
+third type of person? There is, but they
+
+17
+00:01:15,760 --> 00:01:21,240
+are rare. These know they can't stop the
+boulder. They walk beside it, study it,
+
+18
+00:01:21,400 --> 00:01:27,200
+and bide their time. Then they nudge it
+ever so slightly to bend its path. These
+
+19
+00:01:27,200 --> 00:01:31,200
+are the ones who actually changed the
+world, and they terrify me for people
+
+20
+00:01:31,200 --> 00:01:36,340
+never see as far as they think they do.
+And I think the wisdom in that is it takes
+
+21
+00:01:36,340 --> 00:01:41,160
+a diversity of thought approaches and use
+cases and opinions to actually consider
+
+22
+00:01:41,160 --> 00:01:45,600
+all the different facets of this. It's an
+enormously complex and ambitious
+
+23
+00:01:45,600 --> 00:01:50,480
+undertaking to build digital identity in a
+way that minimizes the harms, but we're
+
+24
+00:01:50,480 --> 00:01:56,360
+able to derive most of the benefits. So
+I'm really happy that we're in a room with
+
+25
+00:01:56,360 --> 00:02:01,040
+a ton of diverse thinkers from people who
+are experts on individual rights, what
+
+26
+00:02:01,040 --> 00:02:05,120
+constituents care about, what people
+actually feel, the technology itself,
+
+27
+00:02:05,500 --> 00:02:10,000
+including the cryptography, security and
+privacy aspects of it, adoption, change
+
+28
+00:02:10,000 --> 00:02:16,720
+management and user experience. So I think
+that we're very excited to show how these
+
+29
+00:02:16,720 --> 00:02:22,380
+concepts from SEDI where you start with
+the policy and the rights and then the
+
+30
+00:02:22,380 --> 00:02:26,740
+technology is figured out after that.
+That's really what we want to showcase and
+
+31
+00:02:26,740 --> 00:02:32,820
+how it can help our existing investments
+we can derive value from those. And
+
+32
+00:02:32,820 --> 00:02:40,320
+especially as we saw with the adoption,
+MDL is in I think 17 states at this point.
+
+33
+00:02:40,680 --> 00:02:43,680
+A lot of investment, a lot of great
+security people have been thinking about
+
+34
+00:02:43,680 --> 00:02:48,960
+that model. The TSA spent over $250
+million on machines that can accept the
+
+35
+00:02:48,960 --> 00:02:54,320
+MDL. So is that all to waste if it doesn't
+comply? Or what are we thinking about
+
+36
+00:02:54,320 --> 00:02:59,260
+here? What about everything else? And
+fortunately, you might even be able to
+
+37
+00:02:59,260 --> 00:03:02,360
+shed some more light on this. Yeah.
+Thanks, Soren. And thanks for taking all
+
+38
+00:03:02,360 --> 00:03:12,140
+our five minutes. But it's been actually
+an honor to work with Utah. Excellent
+
+39
+00:03:12,140 --> 00:03:17,860
+team, excellent people. It has been a
+fantastic experience and we're really
+
+40
+00:03:17,860 --> 00:03:21,920
+happy, of course, with all the work that
+they perform and we had the honor to
+
+41
+00:03:21,920 --> 00:03:28,720
+support them to have a successful MDL
+issued and being used and utilized in many
+
+42
+00:03:28,720 --> 00:03:35,560
+not enough use cases and relying parties
+including TSA and credit unions and law
+
+43
+00:03:35,560 --> 00:03:41,640
+enforcement. But we're happy to be also
+part of this group that Chris put together
+
+44
+00:03:41,640 --> 00:03:47,620
+to assist the best we can with our
+experience and knowledge and technology to
+
+45
+00:03:47,620 --> 00:03:57,880
+make whatever next steps Utah chooses to
+take successful. So it's amazing. So what
+
+46
+00:03:57,880 --> 00:04:03,380
+are we seeing over there? That's a
+verifier. A verifier is something a
+
+47
+00:04:03,380 --> 00:04:09,840
+relying party would have. A relying party
+being anything, anyone that accepts and
+
+48
+00:04:09,840 --> 00:04:17,000
+consumes a digital identity and MDL. And
+that can be a government agency that asks
+
+49
+00:04:17,000 --> 00:04:21,540
+for your ID. It can be law enforcement. It
+can be anyone in the private sector. It
+
+50
+00:04:21,540 --> 00:04:27,160
+could be a bank, could be AIDS restricted
+alcohol sales, tobacco, and so on.
+
+51
+00:04:27,160 --> 00:04:34,700
+Whenever they ask for that ID card of your
+driver's license, you can present the MDL
+
+52
+00:04:34,700 --> 00:04:41,300
+or at least that is the purpose and you
+can use verifiers as simple as an app or
+
+53
+00:04:41,300 --> 00:04:47,500
+in a fixed point with a scanner or
+eventually online. All that technology
+
+54
+00:04:47,500 --> 00:04:52,760
+exists and hopefully it's going to be part
+of the ecosystem we all operate in. Can
+
+55
+00:04:52,760 --> 00:04:57,940
+you talk about what's going to happen
+between this SEDI wallet and And what kind
+
+56
+00:04:57,940 --> 00:05:03,340
+of, you know, how is the data transmitted?
+What happens between this application
+
+57
+00:05:03,340 --> 00:05:07,900
+running on your phone and an application
+that holds a credential on my phone? Well,
+
+58
+00:05:08,940 --> 00:05:14,240
+yeah, originally the ISO standard, which
+is what the Utah MDL is complying to,
+
+59
+00:05:14,520 --> 00:05:18,960
+along with our close to 20 other
+jurisdictions that issue an MDL that
+
+60
+00:05:18,960 --> 00:05:29,640
+complies to the ISO 18013-5, which is the
+in-person standard. it had a phone home,
+
+61
+00:05:29,980 --> 00:05:34,240
+it had a connection to the system on
+record that is no longer the case. And
+
+62
+00:05:34,240 --> 00:05:40,280
+similarly, any verification we would
+conduct with a SEDI, it will only consume
+
+63
+00:05:40,280 --> 00:05:45,340
+whatever you have on the phone and you
+present. – And it goes, this could work in
+
+64
+00:05:45,340 --> 00:05:49,060
+the mountains, right? If there's no
+internet or anything. – Correct. It will
+
+65
+00:05:49,060 --> 00:05:56,580
+be done offline because again, it will
+cryptographically analyze whatever you
+
+66
+00:05:56,580 --> 00:06:01,880
+have provisioned in your phone as your
+digital identity. I always really like
+
+67
+00:06:01,880 --> 00:06:07,620
+this part where it goes over Bluetooth and
+NFC proximity technologies that involve no
+
+68
+00:06:07,620 --> 00:06:11,660
+servers, right? It's just peer-to-peer
+over device. That's actually the best
+
+69
+00:06:11,660 --> 00:06:15,460
+privacy profile you could hope for, right?
+So there are parts that have had
+
+70
+00:06:15,460 --> 00:06:19,860
+extraordinary investments that are really
+valuable from a privacy and usability
+
+71
+00:06:19,860 --> 00:06:24,480
+perspective. And what we see in that
+wallet is not an MDL. There's no driving
+
+72
+00:06:24,480 --> 00:06:29,420
+privileges there. It is a credential that
+is solely focused on identification,
+
+73
+00:06:29,820 --> 00:06:37,680
+right? And that the reason that it is a
+SEDI credential is that it conforms to the
+
+74
+00:06:37,680 --> 00:06:43,500
+code in SEDI, right? Is the idea. So if we
+start looking over here, I told you it
+
+75
+00:06:43,500 --> 00:06:48,320
+would be a nerdy presentation, right? We
+looked in the Utah code, right? And there
+
+76
+00:06:48,320 --> 00:06:54,300
+is SEDI enshrined in it as statutes. And
+when you click in, you're able to see the
+
+77
+00:06:54,300 --> 00:06:58,780
+different definitions, and requirement
+from Senate Bill 260 that was signed into
+
+78
+00:06:58,780 --> 00:07:03,560
+law by Governor Cox earlier this spring.
+And thank you to representative and
+
+79
+00:07:03,560 --> 00:07:09,140
+senator for the work and the whole
+coalition. So it's really about controls.
+
+80
+00:07:09,460 --> 00:07:13,060
+It's really about these are the things
+we're expecting this credential to do and
+
+81
+00:07:13,060 --> 00:07:19,940
+operate, right? That's what it represents.
+So data formats, everything else, those
+
+82
+00:07:19,940 --> 00:07:25,200
+are things to figure out, but making it
+policy-based and starting it from there is
+
+83
+00:07:25,200 --> 00:07:29,520
+the most important part because that is
+the social contract, right? To express the
+
+84
+00:07:29,520 --> 00:07:33,560
+will of a people and have those as the
+agreed upon controls if someone is to
+
+85
+00:07:33,560 --> 00:07:39,300
+participate in the system. So we just want
+to demonstrate that this model, right, can
+
+86
+00:07:39,300 --> 00:07:43,240
+also work with the corpus of investment
+for existing systems that have been
+
+87
+00:07:43,240 --> 00:07:48,160
+significant and growing in adoption. So we
+have looked into the mobile driver's
+
+88
+00:07:48,160 --> 00:07:53,600
+license technical specification. Sure. We
+have looked at the sub component called a
+
+89
+00:07:53,600 --> 00:07:58,780
+mobile document or an MDOT. And that is
+just a data format. That doesn't describe
+
+90
+00:07:58,780 --> 00:08:02,360
+how to use it or anything else. And there
+are other pieces that we can build up to
+
+91
+00:08:02,360 --> 00:08:07,660
+that we can agree with and are aligned to
+the SEDI framework. So that is the idea
+
+92
+00:08:07,660 --> 00:08:11,180
+and what you're going to see with this
+demonstration. – And similar, of course,
+
+93
+00:08:11,300 --> 00:08:15,980
+any digital identity, the benefits are
+you're not using your card, you don't
+
+94
+00:08:15,980 --> 00:08:19,740
+share your card, you don't show any
+information, it's not copied, you don't
+
+95
+00:08:19,740 --> 00:08:26,720
+flash past so-called whatever it is on the
+phone. and it respects the privacy of the
+
+96
+00:08:26,720 --> 00:08:34,900
+user and you only share what you choose.
+So if you want just your age to enter a
+
+97
+00:08:34,900 --> 00:08:40,580
+bar or alcohol sales, that's that is all
+you share, not the entire ID. Unless of
+
+98
+00:08:40,580 --> 00:08:44,120
+course you're at a bank or you're applying
+for a loan or law enforcement is asking
+
+99
+00:08:44,120 --> 00:08:51,080
+for the entire ID, that is when you share
+if you choose the entire information.
+
+100
+00:08:51,240 --> 00:08:54,880
+That's right. And the MDOC data format
+here point supports selective disclosure
+
+101
+00:08:54,880 --> 00:08:58,380
+as part of that base. We like that. We're
+like, okay, that sounds pretty good. Let's
+
+102
+00:08:58,380 --> 00:09:02,060
+take that part. Right. So we're going to
+demonstrate and there's no contact. You
+
+103
+00:09:02,060 --> 00:09:11,360
+can do it's a QR barcode scanning. It is
+via Bluetooth through a good range or a
+
+104
+00:09:11,360 --> 00:09:17,900
+tap NFC just like as everyone is familiar
+with the Apple pay and so on. Yep. So
+
+105
+00:09:17,900 --> 00:09:22,180
+let's say that we're in a use case where
+let's call it law enforcement. Let's say
+
+106
+00:09:22,180 --> 00:09:27,220
+there is warranted ability to request
+information, right? So there's going to be
+
+107
+00:09:27,220 --> 00:09:31,940
+a lot of it being requested. – So you can
+see there it says all info. So I'm asking
+
+108
+00:09:31,940 --> 00:09:37,360
+for all of the information from the user.
+– But this can be tailored to different
+
+109
+00:09:37,360 --> 00:09:40,980
+profiles depending on the context. And
+that's the really important policy work we
+
+110
+00:09:40,980 --> 00:09:50,260
+need help with to figure out. So I'm going
+to share the identity by creating a QR
+
+111
+00:09:50,260 --> 00:09:54,200
+code. You can either tap or create a QR
+code to share it. What it does is it
+
+112
+00:09:54,200 --> 00:09:58,580
+brokers a secure connection over
+Bluetooth. So it adds encryption on top of
+
+113
+00:09:58,580 --> 00:10:02,740
+Bluetooth because Bluetooth itself has
+challenges. That's how the MDL protocol
+
+114
+00:10:02,740 --> 00:10:08,700
+worked. That part of the MDOC and standard
+seemed to be pretty promising. And we were
+
+115
+00:10:08,700 --> 00:10:14,240
+able to show a QR code. So we're bringing
+up the scanner. No contact.
+
+116
+00:10:17,280 --> 00:10:26,180
+And actually it's going to consume. I get
+to decide what I share or not over here on
+
+117
+00:10:26,180 --> 00:10:29,580
+this screen. Those are the fields
+requested. As the user, I get to make the
+
+118
+00:10:29,580 --> 00:10:33,380
+determination. That's another feature of
+the protocol that was supported. And when
+
+119
+00:10:33,380 --> 00:10:40,280
+I press approve, it's transmitted over
+basically the Bluetooth connection peer-to
+
+120
+00:10:40,280 --> 00:10:44,280
+-peer. So this would work in the mountains
+without any kind of external connectivity,
+
+121
+00:10:44,660 --> 00:10:49,060
+right? And again, this is being used at a
+ton of airports already, right? So we're
+
+122
+00:10:49,060 --> 00:10:52,560
+just able to make sure that that part of
+the technology can also work for SEDI
+
+123
+00:10:52,560 --> 00:11:00,320
+credentials. – So you can see that I'm
+seeing the information that he shared. I
+
+124
+00:11:00,320 --> 00:11:07,080
+can bring up the picture, do one last
+visual check if I wish. And it has the
+
+125
+00:11:07,080 --> 00:11:12,720
+document information. So I know it's from
+Utah, the document number and that's about
+
+126
+00:11:12,720 --> 00:11:18,260
+it. Yeah. – As simple as that. Plus, of
+course, I have the verification on the age
+
+127
+00:11:18,260 --> 00:11:23,200
+verification. – Yeah. Well, let's say I'm
+I'm at a bar right at night and I want to
+
+128
+00:11:23,200 --> 00:11:27,560
+show I'm over 21 but kind of don't want
+you to know my full name and where I live,
+
+129
+00:11:27,660 --> 00:11:34,040
+my address, right? How do we do that? –
+So, I will just the one that is asking for
+
+130
+00:11:34,040 --> 00:11:42,580
+the information can can ask only for the
+age. So, unlike of what you choose, I can
+
+131
+00:11:42,580 --> 00:11:48,360
+only ask for the age and whatever you
+share, I will only get the age. And of
+
+132
+00:11:48,360 --> 00:11:55,880
+course, as you saw, once my hey, I leave
+that verified information I had is gone.
+
+133
+00:11:56,040 --> 00:12:01,140
+It's not saved. It's not tracked. None of
+that. And you cannot get a screenshot.
+
+134
+00:12:01,540 --> 00:12:05,520
+Yeah. So the policy consideration here is
+that there are many different attributes
+
+135
+00:12:05,520 --> 00:12:09,840
+that you could add to this thing and ask
+for, right? So those are the really
+
+136
+00:12:09,840 --> 00:12:14,720
+important decisions to be made. Can we add
+veteran status, disability rating? Can we
+
+137
+00:12:14,720 --> 00:12:18,480
+add how many dependents you have? These
+are all really relevant for programs like
+
+138
+00:12:18,480 --> 00:12:23,040
+Wix and others that that require expedient
+access, but we also want to eliminate the
+
+139
+00:12:23,040 --> 00:12:27,640
+fraud, right? So, and because it's the
+user consenting to display the
+
+140
+00:12:27,640 --> 00:12:32,900
+information, you don't really have to go
+with one of these very complex interagency
+
+141
+00:12:32,900 --> 00:12:38,160
+data sharing agreements if we faithfully
+present an opportunity consent for people,
+
+142
+00:12:38,380 --> 00:12:41,740
+right? So, if it's tough to do across
+agencies and coordinate, just give it to
+
+143
+00:12:41,740 --> 00:12:47,840
+the person and let them decide, right? All
+right. So, I know your age. You're looking
+
+144
+00:12:47,840 --> 00:12:49,320
+too young to me. Thank you. Thank you.
+
+145
+00:12:58,100 --> 00:13:02,040
+Oh, is this the right one that you've
+requested? Did you configure it to just
+
+146
+00:13:02,040 --> 00:13:06,040
+select the age only? – Just the age only.
+– Well, see, now I have the opportunity to
+
+147
+00:13:06,040 --> 00:13:13,780
+deny all this stuff. – If you agree, I
+want to deny all this new age. Try again?
+
+148
+00:13:14,000 --> 00:13:14,480
+– Yeah. Yeah.
+
+149
+00:13:20,000 --> 00:13:20,500
+Yeah.
+
+150
+00:13:23,440 --> 00:13:30,080
+Because there is an option also to request
+I need find info or to project that one.
+
+151
+00:13:30,560 --> 00:13:37,100
+Right. Because that was on. Oh for age.
+Okay. Yeah. Okay. So now I can let him in.
+
+152
+00:13:37,300 --> 00:13:38,260
+So you turn on the safety.
+
+153
+00:13:42,480 --> 00:13:47,560
+Let's see. Age over 18. Got a different
+set of things requested. But you know
+
+154
+00:13:47,560 --> 00:13:51,180
+what? I'm really just going to get rid of
+all these things except my portrait and
+
+155
+00:13:51,180 --> 00:13:58,340
+age. And that's all you're going to get.
+And the Verify will have to deal with it.
+
+156
+00:13:58,620 --> 00:14:01,700
+So I think there is a setting where I've
+definitely seen that work with this app
+
+157
+00:14:01,700 --> 00:14:06,080
+though. – You want to try again? – Sure. –
+Let's give it an answer. Right.
+
+158
+00:14:12,640 --> 00:14:21,300
+And you say okay. So those are the only
+data fields that ever left the wallet,
+
+159
+00:14:21,440 --> 00:14:27,080
+right? During that specific interaction.
+So yeah. See us after will definitely show
+
+160
+00:14:27,080 --> 00:14:32,040
+that you can do an age demonstration. I
+think that I have a version of the GT
+
+161
+00:14:32,040 --> 00:14:36,640
+mobile app where I can just ask for the
+age of mine. But But you'll see other
+
+162
+00:14:36,640 --> 00:14:43,540
+profiles where we can get it. So great. We
+have two more things to show you really
+
+163
+00:14:43,540 --> 00:14:49,420
+quickly. And one of them has to do… –
+What's the floor? – Okay, great. – And
+
+164
+00:14:49,420 --> 00:14:55,160
+those I'm on setter by the way. – Yeah. –
+Okay. – Welcome. Thank you. All right. So
+
+165
+00:14:55,160 --> 00:14:58,120
+the other two use cases.
+
+166
+00:15:02,000 --> 00:15:06,140
+One is banking and it's very important for
+people to get access to financial
+
+167
+00:15:06,140 --> 00:15:12,200
+services. Many of the same methods are
+more or less used for benefits
+
+168
+00:15:12,200 --> 00:15:15,460
+distribution when you're trying to figure
+out eligibility and identity verification
+
+169
+00:15:15,460 --> 00:15:28,620
+for some of those things, right? So this
+is a generally useful flow. In fact, NIST
+
+170
+00:15:28,620 --> 00:15:33,020
+has this National Cybersecurity Center of
+Excellence, right? And we're trying to
+
+171
+00:15:33,020 --> 00:15:36,680
+figure out how are we going to do banking
+KYC? privacy with the mobile driver's
+
+172
+00:15:36,680 --> 00:15:40,160
+license. I see some folks in here who are
+actually formal participants in this
+
+173
+00:15:40,160 --> 00:15:44,240
+program. So that's great because a lot of
+federal agencies and other states are
+
+174
+00:15:44,240 --> 00:15:47,060
+going to look to the output of this
+program and how that's going to work.
+
+175
+00:15:56,520 --> 00:16:00,560
+There are a lot of banks, a lot of tech
+companies, a lot of other actors, and
+
+176
+00:16:00,560 --> 00:16:04,720
+basically we're trying to figure out how
+do we preserve privacy but also allow for
+
+177
+00:16:04,720 --> 00:16:05,760
+these kinds of use cases.
+
+178
+00:16:11,720 --> 00:16:14,700
+They're even talking about shapes that
+it's going to work. But right now it's
+
+179
+00:16:14,700 --> 00:16:17,680
+just called the MDL program. There's no
+reason why it needs to be. It could just
+
+180
+00:16:17,680 --> 00:16:20,600
+be digital identities, right? But that's
+kind of the only thing that popped up,
+
+181
+00:16:20,760 --> 00:16:25,180
+right? So to have a credential that has
+steady controls over it would be very
+
+182
+00:16:25,180 --> 00:16:31,280
+interesting, I think. But back to our
+banking example, and this is where a lot
+
+183
+00:16:31,280 --> 00:16:35,600
+of tech companies have invested a ton of
+effort. They're best UX people. their best
+
+184
+00:16:35,600 --> 00:16:42,620
+security folks. How do we make this really
+good? And the interface is mostly for the
+
+185
+00:16:42,620 --> 00:16:47,700
+MDL, but those technologists have agreed
+that, hey, other things might be
+
+186
+00:16:47,700 --> 00:16:53,340
+acceptable here. Passports, EIDs in Europe
+are not driver's licenses, right? So MDL
+
+187
+00:16:53,340 --> 00:16:58,040
+isn't so strongly applicable in some
+areas. So how do we allow a diversity of
+
+188
+00:16:58,040 --> 00:17:03,760
+different credential types to be accepted?
+And there have been great strides in the
+
+189
+00:17:03,760 --> 00:17:07,840
+user experience towards this. So we're
+going to basically open a fictitious bank
+
+190
+00:17:07,840 --> 00:17:08,160
+account.
+
+191
+00:17:11,720 --> 00:17:17,060
+And I'm also going to make sure that I can
+show you what happens in the wallet
+
+192
+00:17:17,060 --> 00:17:26,080
+alongside that if I can figure out how to
+make this small again. There we go. So
+
+193
+00:17:26,080 --> 00:17:31,340
+we're at Arch's bank. We're going to open
+an account. We're going to begin our
+
+194
+00:17:31,340 --> 00:17:41,080
+banking application. and type in our
+email. I'll just imagine that I get a
+
+195
+00:17:41,080 --> 00:17:43,900
+confirmation code. You've probably done
+this before. Go to your email, you find
+
+196
+00:17:43,900 --> 00:17:48,920
+the code, you put it in. Multi-factor. So
+right now it's a phone number, but you
+
+197
+00:17:48,920 --> 00:17:52,760
+know future approaches like pass keys and
+digital credentials will hopefully leave
+
+198
+00:17:52,760 --> 00:17:58,240
+the need for this. So put a phone number
+in there. Same deal. Again, many banking
+
+199
+00:17:58,240 --> 00:18:04,020
+systems just work like this today. And a
+social security number is required by
+
+200
+00:18:04,020 --> 00:18:08,120
+FinCEN's customer identification program.
+So that's a Bank Secrecy Act requirement.
+
+201
+00:18:08,400 --> 00:18:12,580
+So, you know, you'll just see it as a
+requirement for banks. But at this stage,
+
+202
+00:18:12,840 --> 00:18:18,840
+it's part of identity verification, right?
+And what a lot of institutions do today is
+
+203
+00:18:18,840 --> 00:18:23,440
+they say, hey, upload a picture of your
+driver's license or upload a picture of
+
+204
+00:18:23,440 --> 00:18:28,260
+utility bill. And none of those security
+features are actually valid when you just
+
+205
+00:18:28,260 --> 00:18:32,060
+take a picture of it, right? Like that's
+the new world of security needs to be
+
+206
+00:18:32,060 --> 00:18:36,800
+built on things that AI is bad at. That's
+showing up in person. That's breaking
+
+207
+00:18:36,800 --> 00:18:41,940
+cryptography, especially post-quantum
+cryptography. That's making very complex
+
+208
+00:18:41,940 --> 00:18:46,500
+computational predictions about physics
+and how light refracts on things or how
+
+209
+00:18:46,500 --> 00:18:51,360
+you know something can change
+geometrically. And that's what a lot of
+
+210
+00:18:51,360 --> 00:18:56,760
+the liveness algorithms are about. But it
+all starts with having a really strongly
+
+211
+00:18:56,760 --> 00:19:03,720
+certified credential. And when you want to
+verify with it, then it uses the operating
+
+212
+00:19:03,720 --> 00:19:08,220
+system level controls to say, hey, do you
+want to share your data? It's built on the
+
+213
+00:19:08,220 --> 00:19:12,960
+same technologies as passkeys, actually,
+if you look under the hood. We want to
+
+214
+00:19:12,960 --> 00:19:17,260
+share it. QR code comes up. We see on the
+wallet. I'll scan it. You won't be able to
+
+215
+00:19:17,260 --> 00:19:20,320
+see everything. I think there's some
+privacy protections with the screen share,
+
+216
+00:19:20,520 --> 00:19:25,060
+but you'll be able to see the important
+parts. So it tells me only connect to
+
+217
+00:19:25,060 --> 00:19:32,100
+devices you trust. And when I connect what
+happens, you'll see a lower popover. This
+
+218
+00:19:32,100 --> 00:19:37,180
+is kind of like the Apple Pay experience
+or the Google Pay experience. It's part of
+
+219
+00:19:37,180 --> 00:19:40,940
+the operating system and you get to pick
+which wallet it comes out of, right?
+
+220
+00:19:40,960 --> 00:19:44,720
+You've been requested a credential from
+somewhere. We're going to agree. And
+
+221
+00:19:44,720 --> 00:19:50,340
+again, we have that opportunity to consent
+what gets sent, right? If we send it, then
+
+222
+00:19:50,340 --> 00:19:54,800
+what happens is instantaneously a
+cryptographic payload is sent along with
+
+223
+00:19:54,800 --> 00:19:59,740
+the data fields and that can be verified
+by a server. So it goes to from the phone
+
+224
+00:19:59,740 --> 00:20:05,720
+to the laptop, goes from the laptop to the
+server, and then it gets verified way
+
+225
+00:20:05,720 --> 00:20:11,560
+easier and more secure than uploading all
+those different documents. You submit and
+
+226
+00:20:11,560 --> 00:20:17,800
+you're good to go. So getting easy access
+to financial services benefits a slew of
+
+227
+00:20:17,800 --> 00:20:22,340
+other things requires really good UX, but
+we can't compromise on individual rights.
+
+228
+00:20:22,460 --> 00:20:26,360
+We can't compromise on security as we get
+there, right? So let's take those existing
+
+229
+00:20:26,360 --> 00:20:30,820
+investments that companies put their best
+UX and security people on and apply it to
+
+230
+00:20:30,820 --> 00:20:35,100
+a framework that is individual rights
+driven, right? So that's the proposal for
+
+231
+00:20:35,100 --> 00:20:38,480
+ensuring backwards compatibility to a lot
+of these systems. A lot of the time you
+
+232
+00:20:38,480 --> 00:20:42,140
+think legacy old experience, but these are
+actually some really great experiences
+
+233
+00:20:42,140 --> 00:20:47,060
+happening, right? And the last thing I'll
+show is interoperability with a completely
+
+234
+00:20:47,060 --> 00:20:53,400
+different system. This is the same
+technology harness. Thank you for the
+
+235
+00:20:53,400 --> 00:20:56,680
+Veridian team for providing their issuance
+portal for this part of the demo. So
+
+236
+00:20:56,680 --> 00:21:00,000
+different company, not Spruce ID. It's not
+like one company built all this stuff.
+
+237
+00:21:00,260 --> 00:21:05,040
+These are interoperable protocols. And
+there's something called the Global Legal
+
+238
+00:21:05,040 --> 00:21:10,060
+Entity Identifier Foundation that is able
+to do identification for organizations to
+
+239
+00:21:10,060 --> 00:21:14,480
+a high degree of proofing so that we can
+know who we're doing business with if a
+
+240
+00:21:14,480 --> 00:21:19,880
+company wants to get a benefit or
+something else, right? So basically, I
+
+241
+00:21:19,880 --> 00:21:25,300
+want to have another credential on my
+phone where I can have that employee badge
+
+242
+00:21:25,300 --> 00:21:28,860
+or proof that I'm part of an organization
+Let's say I'm going to ask someone else
+
+243
+00:21:28,860 --> 00:21:32,740
+for a credential or I want to open a
+business banking account. These are useful
+
+244
+00:21:32,740 --> 00:21:36,620
+to understand what entity I'm associated
+with. What if you're part of LEO and you
+
+245
+00:21:36,620 --> 00:21:40,340
+want to show that you're a real cop and
+you're not trying to just coerce someone
+
+246
+00:21:40,340 --> 00:21:46,540
+to do something, right? So you can issue a
+credential for this. There's some numbers
+
+247
+00:21:46,540 --> 00:21:51,780
+as part of it. I'll put my name. We'll
+just say employee and we'll issue the
+
+248
+00:21:51,780 --> 00:21:55,180
+credential. And this is a totally
+different technology stack built on KERI
+
+249
+00:21:55,180 --> 00:22:00,700
+and ACDCs, which protocol and format
+invented right here in Utah. You get to
+
+250
+00:22:00,700 --> 00:22:06,340
+accept it and a new credential shows up as
+an official organization role. And then
+
+251
+00:22:06,340 --> 00:22:10,980
+when we want to go request it, we can
+request a presentation from that wallet.
+
+252
+00:22:12,000 --> 00:22:21,000
+The wallets have been linked prior. It's a
+demo. Request a presentation. We will see
+
+253
+00:22:21,000 --> 00:22:27,600
+the request happening and approving it.
+We'll see the request is updated, right?
+
+254
+00:22:27,740 --> 00:22:31,480
+And these are different data formats
+entirely, but following the same control
+
+255
+00:22:31,480 --> 00:22:34,020
+principles, right? So that's the end of my
+demo. Thank you.
+

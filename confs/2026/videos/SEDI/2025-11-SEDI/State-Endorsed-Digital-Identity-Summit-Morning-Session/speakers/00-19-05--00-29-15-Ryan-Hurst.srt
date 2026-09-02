@@ -1,0 +1,628 @@
+1
+00:00:00,000 --> 00:00:06,940
+As 10 minutes is a short period of time to
+get quite a bit done. I am… looks like
+
+2
+00:00:06,940 --> 00:00:11,980
+this mic is live since I'm going to leave
+this here. I'll make this quick here. So,
+
+3
+00:00:12,520 --> 00:00:17,540
+I've been in working for companies like
+Google, Microsoft, Amazon, and others for
+
+4
+00:00:17,540 --> 00:00:24,360
+the last 30 something years focusing on
+technologies like authentication. And so,
+
+5
+00:00:24,460 --> 00:00:27,660
+today what I'm going to talk to you about
+is what is digital identity. And this was
+
+6
+00:00:27,660 --> 00:00:32,720
+a little bit of bias in this, But I'm
+going to try to get through about 30 years
+
+7
+00:00:32,720 --> 00:00:41,360
+of lessons in what I have left here. So
+identity is not new. This is a picture of
+
+8
+00:00:41,360 --> 00:00:46,580
+a clay tablet from 1900 BCE. Merchants
+used to put their thumbprint into these
+
+9
+00:00:46,580 --> 00:00:51,520
+clay tablets so that you could
+authenticate that this is legitimate. This
+
+10
+00:00:51,520 --> 00:00:55,780
+is a point
+
+11
+00:00:55,780 --> 00:01:00,000
+that authentication is of transaction
+actions is something that we've been
+
+12
+00:01:00,000 --> 00:01:04,160
+worried with since the dawn of time and
+this is the earliest example I could find.
+
+13
+00:01:04,920 --> 00:01:09,800
+But we've been trying over and over to
+solve this problem and each generation of
+
+14
+00:01:09,800 --> 00:01:13,580
+has to approach this problem slightly
+differently for the environment that they
+
+15
+00:01:13,580 --> 00:01:17,980
+exist in. I've got a few examples that
+exist in this timeline below here. We
+
+16
+00:01:17,980 --> 00:01:21,140
+won't go through them today, but at the
+end of this presentation, I have a QR code
+
+17
+00:01:21,140 --> 00:01:24,720
+that talks a little bit about successes
+that you can follow for a paper on
+
+18
+00:01:24,720 --> 00:01:30,060
+successes and failures in this space as
+I'm going to go fairly fast here. So what
+
+19
+00:01:30,060 --> 00:01:34,700
+identity is not is as important as what
+identity is. It is not a better document.
+
+20
+00:01:35,520 --> 00:01:42,060
+Digital identity is materially different
+than the one-time issuance of a document
+
+21
+00:01:42,060 --> 00:01:48,180
+that we would use to authenticate at a
+government office or when traveling. It is
+
+22
+00:01:48,180 --> 00:01:52,660
+more of a living type of credential that
+lives for a long period of time. And that
+
+23
+00:01:52,660 --> 00:01:57,120
+living nature means that this is a
+governance problem. This is not a
+
+24
+00:01:57,120 --> 00:02:04,540
+technology problem. So why is this
+important? Because seven out of ten of the
+
+25
+00:02:04,540 --> 00:02:08,740
+projects that I've looked at over the last
+several decades and then you'll see those
+
+26
+00:02:08,740 --> 00:02:12,160
+in that white paper have failed and they
+failed because they looked at this as a
+
+27
+00:02:12,160 --> 00:02:15,860
+government not as a governance problem but
+as a technology problem as IT or
+
+28
+00:02:15,860 --> 00:02:20,060
+procurement. And so that's why it's
+important that we're all here today and
+
+29
+00:02:20,060 --> 00:02:25,160
+I'm really excited to be involved in this
+conversation. So this is a model shift.
+
+30
+00:02:25,660 --> 00:02:30,240
+State issues document you carry it it,
+verifier inspects it. That's what we're
+
+31
+00:02:30,240 --> 00:02:36,000
+all used to. But as we look at what does
+it mean to have civic digital identity,
+
+32
+00:02:36,260 --> 00:02:40,540
+it's much larger than just my name is Ryan
+Hurst. There's many endorsements about
+
+33
+00:02:40,540 --> 00:02:44,900
+Ryan Hurst that might be material to the
+verification. I'm a motorcycle driver.
+
+34
+00:02:45,360 --> 00:02:51,280
+That is certainly a driver's license
+thing, but I also am a parent. I also have
+
+35
+00:02:51,280 --> 00:02:55,340
+other attributes about me that are
+important and the state is involved in
+
+36
+00:02:55,340 --> 00:02:59,620
+many elements of those and being able to
+prove that to third parties is becoming
+
+37
+00:02:59,620 --> 00:03:03,600
+increasingly important and I'll talk a
+little bit about some of those cases. This
+
+38
+00:03:03,600 --> 00:03:10,640
+expanded role of identity in the online
+world is something that means that we have
+
+39
+00:03:10,640 --> 00:03:14,240
+to change the way we look at this problem
+and we have to start with a set of guiding
+
+40
+00:03:14,240 --> 00:03:20,620
+principles which is why again I think SEDI
+is an important project. So one of the
+
+41
+00:03:20,620 --> 00:03:24,360
+biggest differences that we'll see as we
+look at digital identity versus our paper
+
+42
+00:03:24,360 --> 00:03:31,040
+history historical analog is that they
+actually codify the policy that you all
+
+43
+00:03:31,040 --> 00:03:36,740
+come up with. And this is important
+because now when you make a change, that
+
+44
+00:03:36,740 --> 00:03:41,060
+digital document and the systems that
+verify it may also need to be changing. So
+
+45
+00:03:41,060 --> 00:03:44,720
+we have to think a little bit more
+holistically than that issuance moment. We
+
+46
+00:03:44,720 --> 00:03:48,920
+have to think about how are we going to
+manage this over its entire life cycle. If
+
+47
+00:03:48,920 --> 00:03:53,500
+we think of this as we bought a solution
+to print these digital identities and
+
+48
+00:03:53,500 --> 00:03:57,660
+declare victory, we will fail. That's the
+number one pattern we see when we look
+
+49
+00:03:57,660 --> 00:03:59,360
+back at the failed systems.
+
+50
+00:04:02,300 --> 00:04:07,400
+So what is maintained over time? Well,
+there's a lot of status changes. Licenses
+
+51
+00:04:07,400 --> 00:04:12,680
+get suspended, whether it be medical or
+driver's license or credentials may get
+
+52
+00:04:12,680 --> 00:04:17,540
+compromised and may need to be replaced.
+Algorithms may need to be changed over
+
+53
+00:04:17,540 --> 00:04:21,780
+time. These are probabilistically secure
+methods to prove these things and so we
+
+54
+00:04:21,780 --> 00:04:25,540
+may have to change them. For example, post
+-quantum cryptography is coming in the
+
+55
+00:04:25,540 --> 00:04:31,980
+future. And policies change continuously
+faster than ever before. And this all
+
+56
+00:04:31,980 --> 00:04:37,680
+means that how we govern these systems is
+going to become increasingly important. So
+
+57
+00:04:37,680 --> 00:04:43,380
+if we look at these failure patterns,
+there's many that we can point at. One of
+
+58
+00:04:43,380 --> 00:04:48,980
+the ones that I like to point at is the
+German solution. Germany came up with a
+
+59
+00:04:48,980 --> 00:04:55,120
+national ID card that was technically pure
+and perfect. From their definition of
+
+60
+00:04:55,120 --> 00:05:00,260
+technically pure, and perfect and it was
+an abysmal failure. Nobody adopted it
+
+61
+00:05:00,260 --> 00:05:04,340
+because the governance model was not
+right. They put the burden on the
+
+62
+00:05:04,340 --> 00:05:11,040
+constituents. They made it very
+complicated to adopt. They didn't have a
+
+63
+00:05:11,040 --> 00:05:17,020
+core utility. So it was massive amounts of
+money spent with no return on investment.
+
+64
+00:05:17,180 --> 00:05:22,320
+So not something that we can afford. UK is
+another great example. I can't go into the
+
+65
+00:05:22,320 --> 00:05:26,540
+details today, but they wasted $233
+million in a decade of time roughly
+
+66
+00:05:26,540 --> 00:05:30,660
+because they didn't look at this problem
+holistically and they didn't measure it in
+
+67
+00:05:30,660 --> 00:05:36,180
+the right way. Some of the successes we
+can point at Estonia. They started with a
+
+68
+00:05:36,180 --> 00:05:39,800
+list of three or four utility scenarios
+that they were going to enable and as a
+
+69
+00:05:39,800 --> 00:05:45,760
+result, their system continues to exist.
+We can look at Sweden. They looked at what
+
+70
+00:05:45,760 --> 00:05:50,220
+was practical to deploy and achieve
+results with and their existing exists and
+
+71
+00:05:50,220 --> 00:05:54,200
+is loved. Very rarely do you find a
+government service that is loved, but I
+
+72
+00:05:54,200 --> 00:05:59,160
+think that it's fair to say that that
+particular program is. U.S. government has
+
+73
+00:05:59,160 --> 00:06:04,740
+its own as well and there's others that
+have elements of success but we'll go into
+
+74
+00:06:04,740 --> 00:06:10,200
+those later in that paper I mentioned. So
+why is this important? I'm from the state
+
+75
+00:06:10,200 --> 00:06:14,520
+of Washington. We have the honor of I
+believe being the largest COVID fraud for
+
+76
+00:06:14,520 --> 00:06:22,060
+distribution of COVID funds. I think
+Africa got more than we did. So this is a
+
+77
+00:06:22,060 --> 00:06:26,620
+big problem and it's a problem because we
+didn't invest ahead of time. We didn't
+
+78
+00:06:26,620 --> 00:06:29,960
+build the infrastructure to enable the
+government to be able to identify its
+
+79
+00:06:29,960 --> 00:06:37,400
+citizens online and we can't let this
+pattern repeat again. So why does this
+
+80
+00:06:37,400 --> 00:06:41,500
+matter now? I mentioned COVID, but it's
+much larger than COVID. We can look at AI,
+
+81
+00:06:41,880 --> 00:06:46,980
+for example. Today, I can generate a fake
+utility bill, birth certificate, and
+
+82
+00:06:46,980 --> 00:06:50,820
+whatever easily with just a few types of
+on my keyboard that you're going to
+
+83
+00:06:50,820 --> 00:06:55,960
+believe is legitimate. I can do real-time
+deepfakes that are nearly impossible to
+
+84
+00:06:55,960 --> 00:07:00,340
+distinguish. The voice will be the same.
+You cannot rely on a video call to
+
+85
+00:07:00,340 --> 00:07:03,920
+authenticate who you're talking to
+anymore. And so this means that we have to
+
+86
+00:07:03,920 --> 00:07:07,280
+invest in infrastructure to be able to
+strongly authenticate who we're dealing
+
+87
+00:07:07,280 --> 00:07:12,380
+with so that we're able to prevent
+mistakes like that one from happening
+
+88
+00:07:12,380 --> 00:07:16,220
+again. I also think it's important to note
+that in the context of security breaches,
+
+89
+00:07:16,760 --> 00:07:21,480
+88% of security breaches tracked by two
+companies, roughly that figure, I think
+
+90
+00:07:21,480 --> 00:07:26,200
+they have two slightly different numbers
+but very similar, were just using stolen
+
+91
+00:07:26,200 --> 00:07:31,440
+credentials. They didn't hack anything.
+They logged in. And so it's important that
+
+92
+00:07:31,440 --> 00:07:36,260
+we pick strong technologies that solve for
+the problems and don't have externalities
+
+93
+00:07:36,260 --> 00:07:41,100
+that make things worse. This is you are
+the foundation of how the federal
+
+94
+00:07:41,100 --> 00:07:45,640
+government interacts with Americans. You
+are the foundation of how the rest of the
+
+95
+00:07:45,640 --> 00:07:49,520
+world interacts with Americans online. And
+we have to solve this problem. This is not
+
+96
+00:07:49,520 --> 00:07:58,040
+something that we can ignore. So why does
+this matter for you? you don't manage
+
+97
+00:07:58,040 --> 00:08:01,720
+digital identity in abstract. There's a
+lot of different examples of this that
+
+98
+00:08:01,720 --> 00:08:04,980
+exist inside of your organizations. You
+may not think of them as digital identity.
+
+99
+00:08:05,760 --> 00:08:08,880
+Different people have different
+definitions of this term, but I view all
+
+100
+00:08:08,880 --> 00:08:13,660
+of these things as part of the life cycle
+of identity. A birth certificate is my
+
+101
+00:08:13,660 --> 00:08:19,260
+child's ID until they're old enough to get
+a driver's license. Many of these other
+
+102
+00:08:19,260 --> 00:08:23,180
+elements, my wife carries our marriage
+license because she's from another
+
+103
+00:08:23,180 --> 00:08:26,600
+country. When we travel because it's part
+of her digital identity. All of these
+
+104
+00:08:26,600 --> 00:08:30,240
+things are part of that package that we
+have to use, that the state produces, that
+
+105
+00:08:30,240 --> 00:08:35,120
+the rest of the world relies on to verify
+who we are. So before you commit to any
+
+106
+00:08:35,120 --> 00:08:42,700
+approach, I think it's important to
+understand what digital identity tells you
+
+107
+00:08:42,700 --> 00:08:48,980
+or what questions to ask. I didn't word
+that particularly well. So since this is a
+
+108
+00:08:48,980 --> 00:08:52,500
+codified thing, the question becomes when
+policy changes, how does the digital
+
+109
+00:08:52,500 --> 00:08:58,020
+identity get affected? it. Because it's
+policy-based, how are you actually going
+
+110
+00:08:58,020 --> 00:09:01,940
+to create demand for this thing? If you
+have no utility function for your
+
+111
+00:09:01,940 --> 00:09:05,240
+deployment, some scenarios that are
+enabled that are actually meaningful to
+
+112
+00:09:05,240 --> 00:09:08,420
+your constituents, they're not going to go
+through the hassle of doing it no matter
+
+113
+00:09:08,420 --> 00:09:13,180
+how beautiful the solution you build is.
+Because it's how are you going to maintain
+
+114
+00:09:13,180 --> 00:09:17,560
+the entire life cycle of this system? This
+is like any IT investment in that respect.
+
+115
+00:09:18,300 --> 00:09:22,760
+And because it's civic identity, you have
+to pay attention to who's excluded. My
+
+116
+00:09:22,760 --> 00:09:26,640
+parents are not particularly good at using
+things online anymore. And so we don't
+
+117
+00:09:26,640 --> 00:09:29,840
+want to exclude an entire segment of our
+society and there's of course other
+
+118
+00:09:29,840 --> 00:09:34,940
+examples as well. So what does success
+look like? You've identified anchor
+
+119
+00:09:34,940 --> 00:09:40,700
+tenants, you've budgeted some amount for
+continual governance, you've addressed how
+
+120
+00:09:40,700 --> 00:09:43,120
+are you going to deal with
+interoperability with existing systems,
+
+121
+00:09:43,180 --> 00:09:48,940
+you understand how your platform is
+related to the various dependencies that
+
+122
+00:09:48,940 --> 00:09:54,020
+you have, and you understand the equity
+implications for this system and how are
+
+123
+00:09:54,020 --> 00:09:57,960
+you going to manage them? And you've
+defined success metrics and how you're
+
+124
+00:09:57,960 --> 00:10:01,660
+going to continually revise those metrics
+so that you can make sure that your system
+
+125
+00:10:01,660 --> 00:10:06,180
+is delivering on the promises that you
+should have set out to do. So that is my
+
+126
+00:10:06,180 --> 00:10:09,500
+presentations. Ladies and gentlemen, I
+appreciate your time today.!
+

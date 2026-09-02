@@ -1,0 +1,297 @@
+1
+00:00:00,000 --> 00:00:03,720
+Thank you, Chris. And it's a pleasure to
+be here today. I'm so grateful. I had
+
+2
+00:00:03,720 --> 00:00:09,100
+really great conversations here. And I'm
+so glad that you're all able to come. Let
+
+3
+00:00:09,100 --> 00:00:15,800
+me just quickly make one big point. And I
+want to talk about digital identity as
+
+4
+00:00:15,800 --> 00:00:20,780
+critical infrastructure. So as Phil
+Windley talked about earlier, the purpose
+
+5
+00:00:20,780 --> 00:00:26,520
+of a digital identity is to create a
+trusted relationship online. And we used
+
+6
+00:00:26,520 --> 00:00:32,580
+to talk about with trust credentials that
+was going to be like with identity and
+
+7
+00:00:32,580 --> 00:00:37,680
+access management systems, that you needed
+something you know and something you have.
+
+8
+00:00:38,020 --> 00:00:43,740
+But that is becoming not sufficient. And
+what we need is something you can prove.
+
+9
+00:00:43,960 --> 00:00:47,500
+And something you can prove is a
+credential with cryptographic codes that
+
+10
+00:00:47,500 --> 00:00:53,940
+can verify both the holder and the issuer
+of the credential. And I just want to
+
+11
+00:00:53,940 --> 00:00:59,520
+point out that this is actually new
+territory for states to be leaning in to
+
+12
+00:00:59,520 --> 00:01:04,600
+this area where we are adding a state
+endorsement to a relationship where it
+
+13
+00:01:04,600 --> 00:01:10,540
+hasn't really existed before. Yes, the
+state has issued driver's licenses and
+
+14
+00:01:10,540 --> 00:01:15,520
+other credentials, lots of them, but the
+online age changes the nature of these
+
+15
+00:01:15,520 --> 00:01:22,540
+things. Okay, so in the digital age where
+so much of our lives have moved online
+
+16
+00:01:22,540 --> 00:01:28,200
+from social media, social banking,
+commerce, application for government
+
+17
+00:01:28,200 --> 00:01:33,080
+services, where so much of our
+relationships have moved online, this
+
+18
+00:01:33,080 --> 00:01:37,520
+identity, digital identity becomes
+absolutely critical infrastructure.
+
+19
+00:01:37,880 --> 00:01:42,980
+There's so many public sector areas that
+rely on this and we've seen in our country
+
+20
+00:01:42,980 --> 00:01:48,320
+since COVID hundreds of billions of
+dollars in fraud and a lot of that fraud
+
+21
+00:01:48,320 --> 00:01:54,680
+is tied directly to not having good
+identity verification. So, you know, for
+
+22
+00:01:54,680 --> 00:02:00,780
+at the state level, public social services
+systems like food stamps or unemployment
+
+23
+00:02:00,780 --> 00:02:06,200
+insurance or housing assistance or
+Medicaid or child health insurance. Many
+
+24
+00:02:06,200 --> 00:02:13,320
+of these rely on being able to identify
+someone successfully. We have a lot of
+
+25
+00:02:13,320 --> 00:02:18,100
+discussion in our state about voter
+registration and signature gathering and
+
+26
+00:02:18,100 --> 00:02:25,260
+petitions for citizen initiatives. Can we
+do those digitally without having a true
+
+27
+00:02:25,260 --> 00:02:29,620
+digital identity? In the last legislative
+session, one of our leading senators asked
+
+28
+00:02:29,620 --> 00:02:34,820
+me, what will it take to be able to do
+online elections and will this help us do
+
+29
+00:02:34,820 --> 00:02:41,100
+it? And I told them, I know for darn sure
+you can't do an online election without a
+
+30
+00:02:41,100 --> 00:02:46,480
+digital credential that is reliable and
+trustworthy for identity. Professional
+
+31
+00:02:46,480 --> 00:02:51,580
+licenses and education credential and also
+our corrections and public safety
+
+32
+00:02:51,580 --> 00:02:58,100
+interactions. Across the private sector,
+we have a plethora of use cases as well
+
+33
+00:02:58,100 --> 00:03:02,880
+that that rely on secure online
+infrastructure, whether it's verifying
+
+34
+00:03:02,880 --> 00:03:08,040
+proof of age online or in person, whether
+it's accessing our health records and
+
+35
+00:03:08,040 --> 00:03:12,960
+benefits and also our financial
+transactions. We have the know your
+
+36
+00:03:12,960 --> 00:03:17,600
+customer requirements in that area and
+then we have many different online
+
+37
+00:03:17,600 --> 00:03:24,240
+commercial and travel related needs. But
+we have a big problem. And so as part of
+
+38
+00:03:24,240 --> 00:03:29,580
+my organization, we have the state cyber
+security center. And what we see is we're
+
+39
+00:03:29,580 --> 00:03:34,700
+constantly under attack. Our state systems
+in Utah have about a billion and a half
+
+40
+00:03:34,700 --> 00:03:43,340
+scans per day of our system. And we have
+numerous efforts by malicious actors
+
+41
+00:03:43,340 --> 00:03:50,480
+trying to create fraud, trying to create
+ransomware attacks. And so what we see is
+
+42
+00:03:50,480 --> 00:03:57,780
+our infrastructure, especially our digital
+infrastructure of all kinds, will be under
+
+43
+00:03:57,780 --> 00:04:03,000
+attack. And the point of attack, the
+attack vector most often used, is
+
+44
+00:04:03,000 --> 00:04:11,740
+identity. And so because digital identity
+is critical infrastructure, incomplete and
+
+45
+00:04:11,740 --> 00:04:18,500
+half measures with regard to the security
+of these systems are not acceptable. We
+
+46
+00:04:18,500 --> 00:04:23,600
+have to have reciprocity between states,
+but that also means that all states need
+
+47
+00:04:23,600 --> 00:04:28,600
+to have strong security around their
+digital identity systems. We have to build
+
+48
+00:04:28,600 --> 00:04:33,880
+SEDI with the highest level of security
+that is available. And we know that
+
+49
+00:04:33,880 --> 00:04:41,020
+nothing is perfect. So we need an ability
+if compromise occurs, or I should say when
+
+50
+00:04:41,020 --> 00:04:46,760
+compromise occurs, we must have a way to
+recover. So when we think about SEDI and
+
+51
+00:04:46,760 --> 00:04:52,780
+we think about keys, cryptographic keys
+that are the backing that credential. What
+
+52
+00:04:52,780 --> 00:04:56,500
+I'm talking about for the technical person
+and the technical people in the room is we
+
+53
+00:04:56,500 --> 00:05:02,460
+need a way to rotate those keys. One of
+the concerns I have about the current MDL
+
+54
+00:05:02,460 --> 00:05:07,500
+technology is that we don't have a great
+ability to recover if those are
+
+55
+00:05:07,500 --> 00:05:12,740
+compromised, you know, short of canceling
+and reissuing credentials. So the ability
+
+56
+00:05:12,740 --> 00:05:20,900
+to revoke is important. The ability to
+recover if it's compromised is essential.
+
+57
+00:05:21,180 --> 00:05:22,700
+Thank you so much. Glad you're here.
+
+58
+00:05:34,120 --> 00:05:38,160
+We could do this quickly like a pit stop,
+right?
+
+59
+00:05:43,560 --> 00:05:45,060
+All righty.
+
+60
+00:05:47,440 --> 00:05:52,800
+They said wait 30 seconds. something
+
