@@ -1,0 +1,72 @@
+{
+  "page": {
+    "title": "Conference Videos",
+    "heading": "Conference Videos",
+    "headingHref": "./",
+    "statusNotice": "",
+    "subtitle": "Talks from the conference",
+    "footer": "Conference Videos",
+    "searchPlaceholder": "Type to search across all talks…",
+    "searchLabel": "Search all transcripts",
+    "nav": [
+      {
+        "label": "Home",
+        "href": "/",
+        "external": true
+      },
+      {
+        "label": "Program",
+        "href": "https://example.com/program/",
+        "external": true
+      },
+      {
+        "label": "Day 1",
+        "href": "https://www.youtube.com/playlist?list=EXAMPLE",
+        "external": true,
+        "icon": "youtube",
+        "prefix": "All videos on YouTube:"
+      }
+    ]
+  },
+  "promo": {
+    "src": "promo/promo.mp4",
+    "poster": "promo/promo.jpg",
+    "title": "Conference Promo"
+  },
+  "topClips": {
+    "enabled": true,
+    "title": "Top Clips",
+    "subtitle": "Short moments from the talks.",
+    "clips": [
+      {
+        "videoTitle": "Talk Title - Speaker Name",
+        "speaker": "Speaker Name",
+        "talk": "Talk Title",
+        "start": 30,
+        "end": 45,
+        "quote": "A short quote from this clip."
+      }
+    ]
+  },
+  "days": [
+    "Day 1",
+    "Day 2"
+  ],
+  "defaultPoster": "posters/default.jpg",
+  "speakerPhotos": {
+    "Speaker Name": "speaker-photos/Speaker-Name.jpg"
+  },
+  "videos": [
+    {
+      "order": 1,
+      "day": "Day 1",
+      "title": "Talk Title - Speaker Name",
+      "speaker": "Speaker Name",
+      "path": "videos/Speaker-Name-Talk-Title.mp4",
+      "duration": "20:00",
+      "subtitle": "videos/Speaker-Name-Talk-Title.srt",
+      "presentation": "presentations/Speaker-Name-Talk-Title.pdf",
+      "poster": "speaker-photos/Speaker-Name.jpg"
+    }
+  ]
+}
