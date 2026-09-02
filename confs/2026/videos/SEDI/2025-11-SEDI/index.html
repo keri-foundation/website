@@ -169,12 +169,14 @@ h1 {
 
 .search-wrapper {
     display: flex;
+    flex-wrap: wrap;
     gap: 10px;
     align-items: center;
 }
 
 #transcriptSearch {
-    flex: 1;
+    flex: 1 1 12rem;
+    min-width: 0;
     background: rgba(255, 255, 255, 0.65);
     border: 1px solid rgba(6, 11, 111, 0.2);
     border-radius: 8px;
@@ -1773,6 +1775,21 @@ footer {
 @media (max-width: 480px) {
     h1 {
         font-size: 1.8rem;
+    }
+
+    .search-section {
+        padding: 16px;
+    }
+
+    #transcriptSearch {
+        flex-basis: 100%;
+    }
+
+    #searchToggleAll,
+    #searchClear {
+        flex: 1 1 auto;
+        padding: 10px 12px;
+        white-space: nowrap;
     }
 }
     </style>
