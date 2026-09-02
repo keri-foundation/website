@@ -222,12 +222,22 @@ function getSpeakerPoster(video) {
         .replace(/\s+Pannel$/i, '')
         .replace(/\s+Panel$/i, '');
     // Interview files use "First-Last-Interview.mp4" (no ｜ separators)
+    // SEDI clips use "HH-MM-SS--HH-MM-SS-First-Last.mp4"
     if (!filename.includes('｜') && speaker.includes('-')) {
-        speaker = speaker.replace(/-Interview$/i, '').replace(/-/g, ' ');
+        speaker = speaker
+            .replace(/^\d{2}-\d{2}-\d{2}--\d{2}-\d{2}-\d{2}-/, '')
+            .replace(/-Interview$/i, '')
+            .replace(/-/g, ' ');
     }
-    if (speakerPhotos[speaker]) return speakerPhotos[speaker];
-    const firstSpeaker = speaker.match(/^([A-Za-z]+ [A-Za-z]+)/);
-    if (firstSpeaker && speakerPhotos[firstSpeaker[1]]) return speakerPhotos[firstSpeaker[1]];
+    const candidates = [speaker];
+    if (video.title) {
+        candidates.push(video.title.replace(/^(Opening|Closing Q&A)\s*-\s*/i, '').trim());
+    }
+    for (const name of candidates) {
+        if (speakerPhotos[name]) return speakerPhotos[name];
+        const firstSpeaker = name.match(/^([A-Za-z][A-Za-z'-]* [A-Za-z][A-Za-z'-]*)/);
+        if (firstSpeaker && speakerPhotos[firstSpeaker[1]]) return speakerPhotos[firstSpeaker[1]];
+    }
     return defaultPoster;
 }
 
@@ -1757,8 +1767,10 @@ async function initGallery(config) {
         if (v.subtitle) v.subtitle = resolveAssetUrl(v.subtitle);
         if (v.presentation) v.presentation = resolveAssetUrl(v.presentation);
     });
-    speakerPhotos = config.speakerPhotos || {};
-    defaultPoster = config.defaultPoster || '';
+    speakerPhotos = Object.fromEntries(
+        Object.entries(config.speakerPhotos || {}).map(([name, src]) => [name, resolveAssetUrl(src)])
+    );
+    defaultPoster = resolveAssetUrl(config.defaultPoster || '');
     topClips = (config.topClips && Array.isArray(config.topClips.clips)) ? config.topClips.clips : [];
     dayOrder = Array.isArray(config.days) && config.days.length
         ? config.days
