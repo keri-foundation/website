@@ -1296,8 +1296,13 @@ h1 {
     pointer-events: none;
 }
 
-.plyr__overlay-controls .plyr__control {
+.plyr__overlay-controls .plyr__control,
+.plyr__control--overlaid {
     pointer-events: auto;
+}
+
+.video-modal-player .plyr__poster {
+    pointer-events: none;
 }
 
 .plyr__overlay-controls .plyr__control--overlaid {
@@ -1363,6 +1368,10 @@ h1 {
 /* Plyr duplicates the poster; we render our own filtered copy instead */
 .video-thumbnail .plyr__poster {
     display: none !important;
+}
+
+.video-poster-filter-wrap {
+    pointer-events: none;
 }
 
 .video-thumbnail .video-poster-filter-wrap {
@@ -1862,11 +1871,38 @@ function getFocusableElements(root) {
     });
 }
 
-function setPageInert(inert) {
+function setBackgroundAriaHidden(hidden) {
     Array.from(document.body.children).forEach((el) => {
         if (el === videoModalOverlay) return;
-        el.inert = inert;
+        if (el.tagName === 'SCRIPT' || el.tagName === 'STYLE' || el.tagName === 'SVG') return;
+        if (hidden) {
+            el.setAttribute('aria-hidden', 'true');
+            el.setAttribute('data-modal-hidden', 'true');
+        } else if (el.getAttribute('data-modal-hidden') === 'true') {
+            el.removeAttribute('aria-hidden');
+            el.removeAttribute('data-modal-hidden');
+        }
     });
+}
+
+function hasTransientUserActivation() {
+    try {
+        return Boolean(navigator.userActivation && navigator.userActivation.isActive);
+    } catch {
+        return false;
+    }
+}
+
+function focusModalPlayControl() {
+    if (isCoarsePointer() || !videoModalOverlay) return;
+    const playBtn = videoModalOverlay.querySelector('.video-modal-player .plyr__control--overlaid');
+    if (playBtn && typeof playBtn.focus === 'function') {
+        playBtn.focus({ preventScroll: true });
+        return;
+    }
+    if (modalVideoEl && typeof modalVideoEl.focus === 'function') {
+        modalVideoEl.focus({ preventScroll: true });
+    }
 }
 
 function resolveAssetUrl(path) {
@@ -1959,12 +1995,8 @@ function playMedia(videoEl) {
     }
     if (!attempt || typeof attempt.catch !== 'function') return Promise.resolve();
     return attempt.catch(() => {
-        try {
-            if (videoEl.readyState < 2) videoEl.load();
-            else videoEl.currentTime = Math.max(0, Number(videoEl.currentTime) || 0);
-        } catch {
-            // Ignore recovery errors and try play() once more.
-        }
+        // Do not call videoEl.load() here: after a blocked autoplay (clip hash URLs)
+        // it resets the media element and Plyr's play button stops responding.
         const retry = videoEl.play();
         if (retry && typeof retry.catch === 'function') {
             return retry.catch((error) => {
@@ -2105,12 +2137,13 @@ function enhanceOverlaidPlayToggle(player, iconUrl) {
     overlaid.addEventListener('click', (e) => {
         const media = player.media;
         if (!media) return;
+        e.preventDefault();
+        e.stopImmediatePropagation();
         const duration = Number(media.duration);
         const atEnd = media.ended || (Number.isFinite(duration) && duration > 0 && media.currentTime >= duration - 0.15);
-        if (!media.paused && !atEnd) return;
-        if (atEnd) {
-            e.preventDefault();
-            e.stopImmediatePropagation();
+        if (!media.paused && !atEnd) {
+            media.pause();
+            return;
         }
         playMedia(media);
     }, true);
@@ -2717,6 +2750,7 @@ let modalSourceLink = null;
 let hashSourceUrl = null;
 let copyRangeStart = null;
 let clipEndTime = null;
+let clipStartTime = null;
 let clipTimeUpdateHandler = null;
 let copyFlashTimer = null;
 
@@ -2737,6 +2771,7 @@ function clearClipPlayback() {
     }
     clipTimeUpdateHandler = null;
     clipEndTime = null;
+    clipStartTime = null;
     if (modalClipTimer) {
         modalClipTimer.classList.remove('is-visible');
         modalClipTimer.hidden = true;
@@ -2748,9 +2783,11 @@ function clearClipPlayback() {
 
 function updateClipTimerDisplay() {
     if (!modalVideoEl || clipEndTime === null || !modalClipTimerValue) return;
-    const remaining = clipEndTime - modalVideoEl.currentTime;
+    const currentTime = modalVideoEl.currentTime;
+    const remaining = clipEndTime - currentTime;
     modalClipTimerValue.textContent = formatClipCountdown(remaining);
-    if (remaining <= 0) {
+    const reachedClip = clipStartTime === null || currentTime >= clipStartTime - 0.25;
+    if (remaining <= 0 && reachedClip) {
         modalVideoEl.pause();
         modalClipTimerValue.textContent = '0:00';
         // Release the end-stop so Play can continue past the clip if desired
@@ -2767,11 +2804,12 @@ function updateClipTimerDisplay() {
     }
 }
 
-function setupClipPlayback(endTime) {
+function setupClipPlayback(endTime, startTime) {
     clearClipPlayback();
     if (typeof endTime !== 'number' || !Number.isFinite(endTime) || endTime <= 0) return;
 
     clipEndTime = endTime;
+    clipStartTime = typeof startTime === 'number' && Number.isFinite(startTime) ? startTime : 0;
     if (modalClipTimer) {
         modalClipTimer.hidden = false;
         modalClipTimer.classList.add('is-visible');
@@ -3458,7 +3496,7 @@ function openVideoModal(video, startTime, endTime) {
     const wasPlaying = cardVideo && !cardVideo.paused;
     const time = typeof startTime === 'number' ? startTime : (cardVideo?.currentTime ?? 0);
     const hasClipEnd = typeof endTime === 'number' && Number.isFinite(endTime) && endTime > time;
-    const shouldAutoplay = wasPlaying || hasClipEnd;
+    const shouldAutoplay = wasPlaying || (hasClipEnd && hasTransientUserActivation());
 
     if (cardVideo) cardVideo.pause();
 
@@ -3475,7 +3513,7 @@ function openVideoModal(video, startTime, endTime) {
 
     const seekAndMaybePlay = () => {
         seekModalVideo();
-        if (hasClipEnd) setupClipPlayback(endTime);
+        if (hasClipEnd) setupClipPlayback(endTime, time);
         if (shouldAutoplay) playMedia(modalVideoEl);
     };
     if (modalVideoEl.readyState >= 1) {
@@ -3511,11 +3549,9 @@ function openVideoModal(video, startTime, endTime) {
 
     videoModalOverlay.hidden = false;
     document.body.style.overflow = 'hidden';
-    setPageInert(true);
     updateVideoUrlForModal(modalVideoId, time, hasClipEnd ? endTime : null);
-    if (!isCoarsePointer() && videoModalDialog) {
-        videoModalDialog.focus();
-    }
+    setBackgroundAriaHidden(true);
+    focusModalPlayControl();
 }
 
 function closeVideoModal() {
@@ -3542,7 +3578,7 @@ function closeVideoModal() {
         }
     } finally {
         videoModalOverlay.hidden = true;
-        setPageInert(false);
+        setBackgroundAriaHidden(false);
         document.body.style.overflow = '';
         modalSourceVideoPath = null;
         hashSourceUrl = null;
