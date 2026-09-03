@@ -48,6 +48,7 @@
 *.png
 *.gif
 *.svg
+*.pdf
 
 # --- Utility scripts & misc data ---
 # !/fetch.sh
