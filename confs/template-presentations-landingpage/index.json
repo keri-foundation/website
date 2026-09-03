@@ -12,17 +12,17 @@
       {
         "label": "Home",
         "href": "/",
-        "external": true
+        "external": false
       },
       {
         "label": "Program",
         "href": "https://example.com/program/",
-        "external": true
+        "external": false
       },
       {
         "label": "Day 1",
         "href": "https://www.youtube.com/playlist?list=EXAMPLE",
-        "external": true,
+        "external": false,
         "icon": "youtube",
         "prefix": "All videos on YouTube:"
       }
