@@ -1768,10 +1768,26 @@
                 padding-right: 0;
             }
 
+            .video-modal-workspace {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                padding: 8px;
+            }
+
             .video-modal-panel {
+                position: relative;
+                left: auto;
+                top: auto;
+                width: auto;
+                height: auto;
+                max-width: none;
+                max-height: none;
                 resize: none;
                 min-width: 0;
                 min-height: 0;
+                overflow: hidden;
+                z-index: auto;
             }
 
             .video-modal-panel-handle {
@@ -1780,18 +1796,25 @@
                 pointer-events: none;
             }
 
+            .video-modal-panel--video,
+            .video-modal-panel--transcript {
+                left: auto;
+                top: auto;
+                width: auto;
+                height: auto;
+                z-index: auto;
+            }
+
             .video-modal-panel--video {
-                left: 8px;
-                top: 8px;
-                width: calc(100% - 16px);
-                height: calc(52% - 12px);
+                flex: 1 1 46%;
+                min-height: 160px;
+                order: 1;
             }
 
             .video-modal-panel--transcript {
-                left: 8px;
-                top: calc(52% + 4px);
-                width: calc(100% - 16px);
-                height: calc(48% - 12px);
+                flex: 1 1 54%;
+                min-height: 140px;
+                order: 2;
             }
 
             .video-modal-panel-handle-hint {
@@ -3054,13 +3077,41 @@
                 });
             }
 
+            function isStackedModalLayout() {
+                return window.matchMedia('(max-width: 768px)').matches;
+            }
+
+            function getModalPanels() {
+                if (!modalWorkspace) return [];
+                return Array.from(modalWorkspace.querySelectorAll('.video-modal-panel'));
+            }
+
+            function clearModalPanelInlineLayout(panel) {
+                panel.style.left = '';
+                panel.style.top = '';
+                panel.style.width = '';
+                panel.style.height = '';
+                panel.style.zIndex = '';
+            }
+
+            function syncModalPanelLayout() {
+                const panels = getModalPanels();
+                if (!panels.length) return;
+                if (isStackedModalLayout()) {
+                    panels.forEach(clearModalPanelInlineLayout);
+                    return;
+                }
+                panels.forEach(clampModalPanelPosition);
+            }
+
             function bringModalPanelToFront(panel) {
+                if (isStackedModalLayout()) return;
                 modalPanelZIndex += 1;
                 panel.style.zIndex = String(modalPanelZIndex);
             }
 
             function clampModalPanelPosition(panel) {
-                if (!modalWorkspace) return;
+                if (!modalWorkspace || isStackedModalLayout()) return;
                 const maxLeft = Math.max(0, modalWorkspace.clientWidth - panel.offsetWidth);
                 const maxTop = Math.max(0, modalWorkspace.clientHeight - panel.offsetHeight);
                 const left = Math.min(Math.max(0, panel.offsetLeft), maxLeft);
@@ -3072,7 +3123,7 @@
             function initModalPanelDrag(panel, handle) {
                 handle.addEventListener('pointerdown', (e) => {
                     if (e.button !== 0) return;
-                    if (window.matchMedia('(max-width: 768px)').matches) return;
+                    if (isStackedModalLayout()) return;
                     e.preventDefault();
                     bringModalPanelToFront(panel);
                     panel.classList.add('is-dragging');
@@ -3449,10 +3500,10 @@
                 videoModalOverlay.appendChild(dialog);
 
                 const clampPanels = () => {
-                    clampModalPanelPosition(videoPanel);
-                    clampModalPanelPosition(transcriptPanel);
+                    syncModalPanelLayout();
                 };
                 window.addEventListener('resize', clampPanels);
+                window.matchMedia('(max-width: 768px)').addEventListener('change', clampPanels);
                 [videoPanel, transcriptPanel].forEach((panel) => {
                     panel.addEventListener('mouseup', clampPanels);
                 });
@@ -3726,6 +3777,7 @@
 
                 videoModalOverlay.hidden = false;
                 document.body.style.overflow = 'hidden';
+                syncModalPanelLayout();
                 updateVideoUrlForModal(modalVideoId, time, hasClipEnd ? endTime : null);
                 setBackgroundAriaHidden(true);
                 focusModalPlayControl();
