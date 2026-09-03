@@ -775,6 +775,22 @@
             display: inline-flex;
         }
 
+        /* Keep <audio> mounted while condensed so lock-screen playback can continue. */
+        .video-card.condensed .video-audio {
+            display: block;
+            position: fixed;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            opacity: 0;
+            pointer-events: none;
+            clip: rect(0 0 0 0);
+        }
+
+        .video-card.condensed .video-audio * {
+            display: block;
+        }
+
         .video-card-actions {
             display: flex;
             flex-wrap: wrap;
@@ -815,6 +831,72 @@
         .view-presentation-btn:focus-visible {
             outline: 2px solid #986c32;
             outline-offset: 2px;
+        }
+
+        /* ── Card audio player ── */
+        .video-audio {
+            width: 100%;
+            background: rgba(6, 11, 111, 0.08);
+            border-top: 1px solid rgba(6, 11, 111, 0.1);
+        }
+
+        .video-audio .plyr,
+        .video-audio .plyr--audio {
+            width: 100%;
+            min-width: 0;
+            background: transparent;
+        }
+
+        .video-audio .plyr--audio .plyr__controls {
+            align-items: center;
+            gap: 8px;
+            min-height: 4.25rem;
+            padding: 10px 12px;
+            background: transparent;
+            color: #060b6f;
+            border-radius: 0;
+        }
+
+        .video-audio .plyr--audio .plyr__control {
+            color: #060b6f;
+        }
+
+        .video-audio .plyr--audio .plyr__control.plyr__tab-focus,
+        .video-audio .plyr--audio .plyr__control:hover {
+            background: rgba(95, 124, 47, 0.18);
+        }
+
+        .video-audio .plyr--audio .plyr__control[data-plyr="play"] {
+            width: 2.6rem;
+            height: 2.6rem;
+            flex-shrink: 0;
+            background: #5f7c2f;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .video-audio .plyr--audio .plyr__control[data-plyr="play"] svg {
+            width: 1.35rem;
+            height: 1.35rem;
+            margin-left: 0.1rem;
+        }
+
+        .video-audio .plyr--audio .plyr__control[data-plyr="play"]:hover,
+        .video-audio .plyr--audio .plyr__control[data-plyr="play"]:focus-visible {
+            background: #4e6826;
+        }
+
+        .video-audio .plyr--audio .plyr__time {
+            color: #060b6f;
+            font-weight: 600;
+        }
+
+        .video-audio .plyr--audio .plyr__progress {
+            flex: 1 1 auto;
+            min-width: 0;
         }
 
         /* ── Video modal ── */
@@ -2034,6 +2116,33 @@
                 return { ...plyrConfig };
             }
 
+            function getPlyrAudioConfig() {
+                return {
+                    seekTime: plyrConfig.seekTime,
+                    controls: ['play', 'progress', 'current-time', 'duration', 'mute', 'settings'],
+                    settings: ['speed'],
+                    speed: plyrConfig.speed,
+                    iconUrl: plyrConfig.iconUrl,
+                    loadSprite: true,
+                    hideControls: false,
+                    clickToPlay: true,
+                    invertTime: false,
+                    storage: {
+                        enabled: false
+                    },
+                    fullscreen: {
+                        enabled: false
+                    }
+                };
+            }
+
+            function audioPathFor(video) {
+                if (!video) return '';
+                if (video.audio) return video.audio;
+                if (!video.path) return '';
+                return String(video.path).replace(/\.mp4$/i, '.mp3');
+            }
+
             function prepareVideoElement(videoEl) {
                 if (!videoEl) return;
                 videoEl.playsInline = true;
@@ -2327,6 +2436,24 @@
                 if (options.filteredPoster !== false) {
                     attachFilteredPoster(videoEl);
                 }
+                return player;
+            }
+
+            function initPlyrAudio(audioEl) {
+                if (!audioEl || !window.Plyr || audioEl.dataset.plyrInitialized === 'true') return null;
+                if (!audioEl.isConnected) {
+                    if (audioEl.dataset.plyrInitPending !== 'true') {
+                        audioEl.dataset.plyrInitPending = 'true';
+                        requestAnimationFrame(() => {
+                            audioEl.dataset.plyrInitPending = 'false';
+                            initPlyrAudio(audioEl);
+                        });
+                    }
+                    return null;
+                }
+                const player = new window.Plyr(audioEl, getPlyrAudioConfig());
+                audioEl.dataset.plyrInitialized = 'true';
+                audioEl._plyrPlayer = player;
                 return player;
             }
 
@@ -2758,18 +2885,152 @@
             const transcriptStore = {};
             const transcriptPromises = {};  // path → Promise — kept so in-flight fetches are reusable
             const videoElementMap = {};   // path → <video> element
+            const audioElementMap = {};   // path → <audio> element
+            const playbackClock = {};     // path → seconds
+            const clockSyncLock = {};     // path → true while applying a handoff seek
 
-            function pauseAllVideos(exceptVideo) {
+            function rememberClock(path, time) {
+                if (!path || !Number.isFinite(time) || time < 0) return;
+                playbackClock[path] = time;
+            }
+
+            function shouldAcceptMediaTime(path, time) {
+                if (clockSyncLock[path]) return false;
+                const clock = Number.isFinite(playbackClock[path]) ? playbackClock[path] : 0;
+                // Ignore the brief 0s burst when a newly loaded file starts before handoff seek.
+                if (time < 0.5 && clock > 1) return false;
+                return true;
+            }
+
+            function mediaElsForPath(path) {
+                const els = [];
+                if (audioElementMap[path]) els.push(audioElementMap[path]);
+                if (videoElementMap[path]) els.push(videoElementMap[path]);
+                if (modalVideoEl && modalSourceVideoPath === path) els.push(modalVideoEl);
+                return els;
+            }
+
+            function readClock(path) {
+                if (!path) return 0;
+                const playing = mediaElsForPath(path).find(el => el && !el.paused && !el.ended);
+                if (playing && Number.isFinite(playing.currentTime)) {
+                    playbackClock[path] = playing.currentTime;
+                    return playing.currentTime;
+                }
+                if (Number.isFinite(playbackClock[path])) return playbackClock[path];
+                const loaded = mediaElsForPath(path).find(el => el && el.readyState >= 1 && Number.isFinite(el.currentTime) && el.currentTime > 0);
+                if (loaded) {
+                    playbackClock[path] = loaded.currentTime;
+                    return loaded.currentTime;
+                }
+                return 0;
+            }
+
+            function seekWhenReady(el, time) {
+                if (!el || !Number.isFinite(time)) return;
+                const apply = () => {
+                    try { el.currentTime = time; } catch {
+                        // Ignore seek errors if the media is not ready yet.
+                    }
+                };
+                if (el.readyState >= 1) apply();
+                el.addEventListener('loadedmetadata', apply, { once: true });
+                el.addEventListener('canplay', apply, { once: true });
+                el.addEventListener('playing', apply, { once: true });
+            }
+
+            function syncMediaToClock(el, path) {
+                if (!el || !path) return;
+                const clock = Number.isFinite(playbackClock[path]) ? playbackClock[path] : 0;
+                if (!(clock > 0)) return;
+                clockSyncLock[path] = true;
+                const unlock = () => { clockSyncLock[path] = false; };
+                const apply = () => {
+                    try { el.currentTime = clock; } catch {
+                        // Ignore seek errors if the media is not ready yet.
+                    }
+                };
+                seekWhenReady(el, clock);
+                el.addEventListener('playing', () => {
+                    apply();
+                    requestAnimationFrame(unlock);
+                }, { once: true });
+                setTimeout(unlock, 4000);
+            }
+
+            function attachClockTracking(el, path) {
+                if (!el || !path || el.dataset.clockTracking === 'true') return;
+                el.dataset.clockTracking = 'true';
+                const save = () => {
+                    if (!shouldAcceptMediaTime(path, el.currentTime)) return;
+                    rememberClock(path, el.currentTime);
+                };
+                el.addEventListener('timeupdate', save);
+                el.addEventListener('pause', save);
+                el.addEventListener('seeked', () => rememberClock(path, el.currentTime));
+                el.addEventListener('ended', () => {
+                    if (!clockSyncLock[path]) rememberClock(path, 0);
+                });
+            }
+
+            function setSessionHandler(action, handler) {
+                if (!('mediaSession' in navigator)) return;
+                try { navigator.mediaSession.setActionHandler(action, handler); } catch {
+                    // Unsupported lock-screen / headset action on this browser.
+                }
+            }
+
+            function updateMediaSession(video, mediaEl) {
+                if (!('mediaSession' in navigator) || !video || !mediaEl) return;
+                try {
+                    const poster = getSpeakerPoster(video);
+                    navigator.mediaSession.metadata = new MediaMetadata({
+                        title: video.title || 'Conference talk',
+                        artist: video.speaker || '',
+                        album: document.title || 'Conference Videos',
+                        artwork: poster ? [{ src: poster, sizes: '512x512' }] : []
+                    });
+                    navigator.mediaSession.playbackState = mediaEl.paused ? 'paused' : 'playing';
+                    setSessionHandler('play', () => playMedia(mediaEl));
+                    setSessionHandler('pause', () => mediaEl.pause());
+                    setSessionHandler('seekbackward', () => {
+                        mediaEl.currentTime = Math.max(0, (mediaEl.currentTime || 0) - 10);
+                    });
+                    setSessionHandler('seekforward', () => {
+                        mediaEl.currentTime = (mediaEl.currentTime || 0) + 10;
+                    });
+                    setSessionHandler('seekto', (details) => {
+                        if (details && Number.isFinite(details.seekTime)) mediaEl.currentTime = details.seekTime;
+                    });
+                    if (Number.isFinite(mediaEl.duration) && mediaEl.duration > 0) {
+                        navigator.mediaSession.setPositionState({
+                            duration: mediaEl.duration,
+                            playbackRate: mediaEl.playbackRate || 1,
+                            position: Math.min(mediaEl.currentTime || 0, mediaEl.duration)
+                        });
+                    }
+                } catch {
+                    // Media Session is best-effort for lock-screen playback.
+                }
+            }
+
+            function pauseAllVideos(exceptMedia) {
                 for (const key in videoElementMap) {
                     const otherVideo = videoElementMap[key];
-                    if (otherVideo && otherVideo !== exceptVideo && !otherVideo.paused) {
+                    if (otherVideo && otherVideo !== exceptMedia && !otherVideo.paused) {
                         otherVideo.pause();
                     }
                 }
-                if (promoVideoEl && promoVideoEl !== exceptVideo && !promoVideoEl.paused) {
+                for (const key in audioElementMap) {
+                    const otherAudio = audioElementMap[key];
+                    if (otherAudio && otherAudio !== exceptMedia && !otherAudio.paused) {
+                        otherAudio.pause();
+                    }
+                }
+                if (promoVideoEl && promoVideoEl !== exceptMedia && !promoVideoEl.paused) {
                     promoVideoEl.pause();
                 }
-                if (modalVideoEl && modalVideoEl !== exceptVideo && !modalVideoEl.paused) {
+                if (modalVideoEl && modalVideoEl !== exceptMedia && !modalVideoEl.paused) {
                     modalVideoEl.pause();
                 }
             }
@@ -3400,6 +3661,18 @@
                 modalVideoEl.oncontextmenu = () => false;
                 prepareVideoElement(modalVideoEl);
                 modalVideoEl.addEventListener('play', () => pauseAllVideos(modalVideoEl));
+                modalVideoEl.addEventListener('timeupdate', () => {
+                    if (!modalSourceVideoPath || !shouldAcceptMediaTime(modalSourceVideoPath, modalVideoEl.currentTime)) return;
+                    rememberClock(modalSourceVideoPath, modalVideoEl.currentTime);
+                });
+                modalVideoEl.addEventListener('pause', () => {
+                    if (modalSourceVideoPath && shouldAcceptMediaTime(modalSourceVideoPath, modalVideoEl.currentTime)) {
+                        rememberClock(modalSourceVideoPath, modalVideoEl.currentTime);
+                    }
+                });
+                modalVideoEl.addEventListener('seeked', () => {
+                    if (modalSourceVideoPath) rememberClock(modalSourceVideoPath, modalVideoEl.currentTime);
+                });
 
                 const source = document.createElement('source');
                 source.type = 'video/mp4';
@@ -3709,12 +3982,16 @@
                 clearClipPlayback();
 
                 const cardVideo = videoElementMap[video.path];
-                const wasPlaying = cardVideo && !cardVideo.paused;
-                const time = typeof startTime === 'number' ? startTime : (cardVideo?.currentTime ?? 0);
+                const cardAudio = audioElementMap[video.path];
+                const wasPlaying = (cardVideo && !cardVideo.paused) || (cardAudio && !cardAudio.paused);
+                const time = typeof startTime === 'number' ? startTime : readClock(video.path);
+                rememberClock(video.path, time);
+                clockSyncLock[video.path] = true;
                 const hasClipEnd = typeof endTime === 'number' && Number.isFinite(endTime) && endTime > time;
                 const shouldAutoplay = wasPlaying || (hasClipEnd && hasTransientUserActivation());
 
                 if (cardVideo) cardVideo.pause();
+                if (cardAudio) cardAudio.pause();
 
                 const sourceSrc = resolveAssetUrl(video.path);
                 detachCaptionTracks(modalVideoEl);
@@ -3739,6 +4016,7 @@
                     seekModalVideo();
                     if (hasClipEnd) setupClipPlayback(endTime, time);
                     if (shouldAutoplay) playMedia(modalVideoEl);
+                    requestAnimationFrame(() => { clockSyncLock[video.path] = false; });
                 };
                 // Prefer this source's loadedmetadata. readyState can still belong to the
                 // previous clip immediately after load(), which used to end the new clip.
@@ -3800,12 +4078,11 @@
                     if (modalVideoEl) modalVideoEl.pause();
                     clearClipPlayback();
                     resetCopyRangeState();
+                    rememberClock(cardPath, time);
                     const cardVideo = videoElementMap[cardPath];
-                    if (cardVideo) {
-                        try { cardVideo.currentTime = time; } catch {
-                            // Ignore seek errors on unloaded card videos.
-                        }
-                    }
+                    const cardAudio = audioElementMap[cardPath];
+                    if (cardVideo) seekWhenReady(cardVideo, time);
+                    if (cardAudio) seekWhenReady(cardAudio, time);
                 } finally {
                     videoModalOverlay.hidden = true;
                     setBackgroundAriaHidden(false);
@@ -4028,7 +4305,62 @@
                     window.videoCardMap = new Map();
                 }
                 window.videoCardMap.set(video.path, card);
-                videoEl.addEventListener('play', () => pauseAllVideos(videoEl));
+                attachClockTracking(videoEl, video.path);
+                videoEl.addEventListener('play', () => {
+                    pauseAllVideos(videoEl);
+                    syncMediaToClock(videoEl, video.path);
+                });
+
+                const audioPath = audioPathFor(video);
+                if (audioPath) {
+                    const audioWrap = document.createElement('div');
+                    audioWrap.className = 'video-audio';
+
+                    const audioEl = document.createElement('audio');
+                    audioEl.controls = true;
+                    audioEl.preload = 'none';
+                    audioEl.controlsList = 'nodownload';
+                    audioEl.setAttribute('aria-label', `Audio: ${video.title}`);
+                    audioEl.oncontextmenu = () => false;
+
+                    const audioSource = document.createElement('source');
+                    audioSource.src = resolveAssetUrl(audioPath);
+                    audioSource.type = 'audio/mpeg';
+                    audioEl.appendChild(audioSource);
+                    audioWrap.appendChild(audioEl);
+                    card.appendChild(audioWrap);
+
+                    initPlyrAudio(audioEl);
+                    audioElementMap[video.path] = audioEl;
+                    attachClockTracking(audioEl, video.path);
+                    audioEl.addEventListener('play', () => {
+                        pauseAllVideos(audioEl);
+                        syncMediaToClock(audioEl, video.path);
+                        updateMediaSession(video, audioEl);
+                    });
+                    audioEl.addEventListener('pause', () => {
+                        rememberClock(video.path, audioEl.currentTime);
+                        if ('mediaSession' in navigator) {
+                            try { navigator.mediaSession.playbackState = 'paused'; } catch {
+                                // Ignore unsupported Media Session state updates.
+                            }
+                        }
+                    });
+                    audioEl.addEventListener('timeupdate', () => {
+                        if (audioEl.paused || !('mediaSession' in navigator)) return;
+                        try {
+                            if (Number.isFinite(audioEl.duration) && audioEl.duration > 0) {
+                                navigator.mediaSession.setPositionState({
+                                    duration: audioEl.duration,
+                                    playbackRate: audioEl.playbackRate || 1,
+                                    position: Math.min(audioEl.currentTime || 0, audioEl.duration)
+                                });
+                            }
+                        } catch {
+                            // Position state is optional on some browsers.
+                        }
+                    });
+                }
 
                 // ── info ──
                 const infoDiv = document.createElement('div');
@@ -4075,7 +4407,7 @@
                         modalBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg> Watch with transcript';
                         modalBtn.addEventListener('click', (e) => {
                             e.stopPropagation();
-                            openVideoModal(video, videoEl.currentTime);
+                            openVideoModal(video, readClock(video.path));
                         });
                         actionsRow.appendChild(modalBtn);
                     }
@@ -4538,7 +4870,10 @@
                         videoCard.classList.add('highlighted');
 
                         if (timestamp !== null) {
+                            if (video?.path) rememberClock(video.path, timestamp);
                             const videoEl = videoCard.querySelector('video');
+                            const audioEl = video?.path ? audioElementMap[video.path] : null;
+                            if (audioEl) seekWhenReady(audioEl, timestamp);
                             if (videoEl) {
                                 const seekCardVideo = () => {
                                     videoEl.currentTime = timestamp;
