@@ -2884,6 +2884,10 @@
             let clipEndTime = null;
             let clipStartTime = null;
             let clipTimeUpdateHandler = null;
+            let clipResumeHandler = null;
+            let modalSessionId = 0;
+            let modalLoadedMetadataHandler = null;
+            let modalPlaySeekHandler = null;
             let copyFlashTimer = null;
 
             const COPY_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
@@ -2897,11 +2901,32 @@
                 return `${mins}:${String(secs).padStart(2, '0')}`;
             }
 
+            function clearModalMediaHandlers() {
+                if (modalVideoEl && modalLoadedMetadataHandler) {
+                    modalVideoEl.removeEventListener('loadedmetadata', modalLoadedMetadataHandler);
+                }
+                if (modalVideoEl && modalPlaySeekHandler) {
+                    modalVideoEl.removeEventListener('play', modalPlaySeekHandler);
+                }
+                modalLoadedMetadataHandler = null;
+                modalPlaySeekHandler = null;
+            }
+
+            function beginModalSession() {
+                modalSessionId += 1;
+                clearModalMediaHandlers();
+                return modalSessionId;
+            }
+
             function clearClipPlayback() {
                 if (modalVideoEl && clipTimeUpdateHandler) {
                     modalVideoEl.removeEventListener('timeupdate', clipTimeUpdateHandler);
                 }
                 clipTimeUpdateHandler = null;
+                if (modalVideoEl && clipResumeHandler) {
+                    modalVideoEl.removeEventListener('play', clipResumeHandler);
+                }
+                clipResumeHandler = null;
                 clipEndTime = null;
                 clipStartTime = null;
                 if (modalClipTimer) {
@@ -2916,10 +2941,15 @@
             function updateClipTimerDisplay() {
                 if (!modalVideoEl || clipEndTime === null || !modalClipTimerValue) return;
                 const currentTime = modalVideoEl.currentTime;
+                const start = clipStartTime === null ? 0 : clipStartTime;
+                // Ignore the previous clip's position until this clip has actually been seeked into.
+                if (currentTime < start - 0.25 || currentTime > clipEndTime + 2) {
+                    modalClipTimerValue.textContent = formatClipCountdown(clipEndTime - start);
+                    return;
+                }
                 const remaining = clipEndTime - currentTime;
                 modalClipTimerValue.textContent = formatClipCountdown(remaining);
-                const reachedClip = clipStartTime === null || currentTime >= clipStartTime - 0.25;
-                if (remaining <= 0 && reachedClip) {
+                if (remaining <= 0) {
                     modalVideoEl.pause();
                     modalClipTimerValue.textContent = '0:00';
                     // Release the end-stop so Play can continue past the clip if desired
@@ -2928,11 +2958,13 @@
                         clipTimeUpdateHandler = null;
                     }
                     clipEndTime = null;
-                    const onResume = () => {
+                    if (clipResumeHandler) {
+                        modalVideoEl.removeEventListener('play', clipResumeHandler);
+                    }
+                    clipResumeHandler = () => {
                         clearClipPlayback();
-                        modalVideoEl.removeEventListener('play', onResume);
                     };
-                    modalVideoEl.addEventListener('play', onResume, { once: true });
+                    modalVideoEl.addEventListener('play', clipResumeHandler, { once: true });
                 }
             }
 
@@ -3617,6 +3649,7 @@
                 if (!video.subtitle) return;
                 ensureVideoModal();
 
+                const sessionId = beginModalSession();
                 modalPreviousFocus = document.activeElement;
                 modalSourceVideoPath = video.path;
                 modalVideoId = generateVideoId(video);
@@ -3637,24 +3670,36 @@
                 setVideoSource(modalVideoEl, sourceSrc);
 
                 const seekModalVideo = () => {
+                    if (sessionId !== modalSessionId) return;
                     if (modalSourceVideoPath !== video.path) return;
                     try { modalVideoEl.currentTime = time; } catch {
                         // Ignore seek errors if the new source is not ready yet.
                     }
                 };
 
+                let playbackStarted = false;
                 const seekAndMaybePlay = () => {
+                    if (sessionId !== modalSessionId || playbackStarted) return;
+                    playbackStarted = true;
+                    if (modalLoadedMetadataHandler) {
+                        modalVideoEl.removeEventListener('loadedmetadata', modalLoadedMetadataHandler);
+                        modalLoadedMetadataHandler = null;
+                    }
                     seekModalVideo();
                     if (hasClipEnd) setupClipPlayback(endTime, time);
                     if (shouldAutoplay) playMedia(modalVideoEl);
                 };
-                if (modalVideoEl.readyState >= 1) {
+                // Prefer this source's loadedmetadata. readyState can still belong to the
+                // previous clip immediately after load(), which used to end the new clip.
+                modalLoadedMetadataHandler = seekAndMaybePlay;
+                modalVideoEl.addEventListener('loadedmetadata', seekAndMaybePlay, { once: true });
+                const currentSrc = modalVideoEl.currentSrc || modalVideoEl.src;
+                if (modalVideoEl.readyState >= 1 && currentSrc && sourceSrc && currentSrc === sourceSrc) {
                     seekAndMaybePlay();
-                } else {
-                    modalVideoEl.addEventListener('loadedmetadata', seekAndMaybePlay, { once: true });
                 }
 
                 if (time > 0) {
+                    modalPlaySeekHandler = seekModalVideo;
                     modalVideoEl.addEventListener('play', seekModalVideo, { once: true });
                 }
 
@@ -3689,6 +3734,7 @@
             function closeVideoModal() {
                 if (!videoModalOverlay || videoModalOverlay.hidden) return;
 
+                beginModalSession();
                 const cardPath = modalSourceVideoPath;
                 let time = 0;
                 try {
