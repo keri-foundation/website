@@ -18,6 +18,11 @@
         "label": "KERIConf 2026 Videos",
         "href": "/confs/2026/videos/",
         "external": false
+      },
+      {
+        "label": "All Transcripts (PDF)",
+        "href": "pdf/2025-11-SEDI-Transcripts.pdf",
+        "external": false
       }
     ]
   },
