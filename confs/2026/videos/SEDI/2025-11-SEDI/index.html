@@ -1990,7 +1990,8 @@
                 },
                 fullscreen: {
                     enabled: true,
-                    iosNative: false
+                    fallback: true,
+                    iosNative: true
                 }
             };
 
@@ -2000,15 +2001,7 @@
             }
 
             function getPlyrConfig() {
-                const forceViewportFullscreen = isCoarsePointer();
-                return {
-                    ...plyrConfig,
-                    fullscreen: {
-                        enabled: true,
-                        fallback: forceViewportFullscreen ? 'force' : true,
-                        iosNative: false
-                    }
-                };
+                return { ...plyrConfig };
             }
 
             function prepareVideoElement(videoEl) {
