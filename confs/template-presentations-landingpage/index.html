@@ -1805,6 +1805,11 @@
             .video-modal-player .plyr__captions {
                 padding: 4px 8px 8px;
             }
+
+            .plyr__controls [data-plyr="fullscreen"] {
+                display: inline-flex;
+                flex-shrink: 0;
+            }
         }
 
         @media (max-width: 480px) {
@@ -1995,17 +2000,15 @@
             }
 
             function getPlyrConfig() {
-                const config = {
+                const forceViewportFullscreen = isCoarsePointer();
+                return {
                     ...plyrConfig,
                     fullscreen: {
-                        enabled: !isCoarsePointer(),
+                        enabled: true,
+                        fallback: forceViewportFullscreen ? 'force' : true,
                         iosNative: false
                     }
                 };
-                if (!config.fullscreen.enabled) {
-                    config.controls = plyrConfig.controls.filter((item) => item !== 'fullscreen');
-                }
-                return config;
             }
 
             function prepareVideoElement(videoEl) {
