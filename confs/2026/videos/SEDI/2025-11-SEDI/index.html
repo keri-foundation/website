@@ -1287,6 +1287,13 @@
             --plyr-color-main: #5f7c2f;
         }
 
+        /* Plyr hides native WebKit captions so it can draw its own overlay.
+           iOS native fullscreen has no overlay, so unhide them there. */
+        html.ios-native-fullscreen .plyr--full-ui ::-webkit-media-text-track-container,
+        html.ios-native-fullscreen video::-webkit-media-text-track-container {
+            display: block !important;
+        }
+
         .plyr--video:not(.plyr--playing) .plyr__overlay-controls,
         .plyr--video:not(.plyr--playing) .plyr__control--overlaid {
             display: flex;
@@ -2055,6 +2062,64 @@
                 });
             }
 
+            function isIosDevice() {
+                return /iP(hone|od|ad)/.test(navigator.userAgent)
+                    || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+            }
+
+            function isCaptionTextTrack(track) {
+                return track && (track.kind === 'subtitles' || track.kind === 'captions');
+            }
+
+            function setCaptionTracksMode(videoEl, mode) {
+                const tracks = videoEl?.textTracks;
+                if (!tracks) return;
+                for (let i = 0; i < tracks.length; i++) {
+                    if (isCaptionTextTrack(tracks[i]) && tracks[i].mode !== mode) {
+                        tracks[i].mode = mode;
+                    }
+                }
+            }
+
+            function enableNativeFullscreenCaptions(videoEl) {
+                document.documentElement.classList.add('ios-native-fullscreen');
+                setCaptionTracksMode(videoEl, 'showing');
+            }
+
+            function disableNativeFullscreenCaptions(videoEl) {
+                document.documentElement.classList.remove('ios-native-fullscreen');
+                setCaptionTracksMode(videoEl, 'hidden');
+                syncPlyrCaptions(videoEl);
+            }
+
+            function attachIosNativeCaptionBridge(videoEl, player) {
+                if (!videoEl || videoEl.dataset.iosCaptionBridge === 'true') return;
+                videoEl.dataset.iosCaptionBridge = 'true';
+
+                const keepNativeTracksShowing = () => {
+                    if (!videoEl.webkitDisplayingFullscreen) return;
+                    setCaptionTracksMode(videoEl, 'showing');
+                };
+
+                videoEl.addEventListener('webkitbeginfullscreen', () => {
+                    enableNativeFullscreenCaptions(videoEl);
+                    videoEl.textTracks.addEventListener('change', keepNativeTracksShowing);
+                });
+                videoEl.addEventListener('webkitendfullscreen', () => {
+                    videoEl.textTracks.removeEventListener('change', keepNativeTracksShowing);
+                    disableNativeFullscreenCaptions(videoEl);
+                });
+
+                const container = player?.elements?.container;
+                if (container && isIosDevice()) {
+                    container.addEventListener('click', (e) => {
+                        if (!e.target.closest('[data-plyr="fullscreen"]')) return;
+                        if (videoEl.webkitDisplayingFullscreen) return;
+                        enableNativeFullscreenCaptions(videoEl);
+                    }, true);
+                }
+            }
+
             function attachMobilePlaybackRecovery(videoEl, player) {
                 if (!videoEl || videoEl.dataset.playbackRecovery === 'true') return;
                 videoEl.dataset.playbackRecovery = 'true';
@@ -2235,6 +2300,7 @@
                 videoEl._plyrPlayer = player;
                 enhanceOverlaidPlayToggle(player, plyrConfig.iconUrl);
                 attachMobilePlaybackRecovery(videoEl, player);
+                attachIosNativeCaptionBridge(videoEl, player);
                 if (options.filteredPoster !== false) {
                     attachFilteredPoster(videoEl);
                 }
@@ -2706,25 +2772,43 @@
                 return transcriptPromises[id];
             }
 
+            function detachCaptionTracks(videoEl) {
+                if (!videoEl) return;
+                videoEl.querySelectorAll('track').forEach(track => {
+                    const blobUrl = track.dataset.blobUrl;
+                    track.remove();
+                    if (blobUrl) {
+                        try { URL.revokeObjectURL(blobUrl); } catch {
+                            // Ignore revoke errors for already-released blob URLs.
+                        }
+                    }
+                });
+            }
+
             function attachVttTrack(videoEl, rawSrt) {
                 // Avoid adding duplicate tracks
-                if (videoEl.querySelector('track[srclang="en"]')) return;
+                if (videoEl.querySelector('track[data-keri-captions="true"]')) return;
                 const vtt = 'WEBVTT\n\n' + rawSrt
                     .replace(/\r\n/g, '\n').replace(/\r/g, '\n')
                     .replace(/(\d{2}:\d{2}:\d{2}),(\d{3})/g, '$1.$2');
                 const blob = new Blob([vtt], { type: 'text/vtt' });
                 const blobUrl = URL.createObjectURL(blob);
                 const track = document.createElement('track');
-                track.kind = 'subtitles';
+                // iOS native fullscreen shows kind=captions more reliably than subtitles.
+                track.kind = 'captions';
                 track.srclang = 'en';
                 track.label = 'English';
                 track.default = true;
+                track.dataset.keriCaptions = 'true';
+                track.dataset.blobUrl = blobUrl;
                 track.src = blobUrl;
-                track.addEventListener('load', () => {
-                    URL.revokeObjectURL(blobUrl);
+                const activate = () => {
                     syncPlyrCaptions(videoEl);
-                }, { once: true });
-                track.addEventListener('error', () => URL.revokeObjectURL(blobUrl), { once: true });
+                    if (videoEl.webkitDisplayingFullscreen) {
+                        setCaptionTracksMode(videoEl, 'showing');
+                    }
+                };
+                track.addEventListener('load', activate, { once: true });
                 videoEl.appendChild(track);
             }
 
@@ -3549,7 +3633,7 @@
                 if (cardVideo) cardVideo.pause();
 
                 const sourceSrc = resolveAssetUrl(video.path);
-                modalVideoEl.querySelectorAll('track').forEach(t => t.remove());
+                detachCaptionTracks(modalVideoEl);
                 setVideoSource(modalVideoEl, sourceSrc);
 
                 const seekModalVideo = () => {
