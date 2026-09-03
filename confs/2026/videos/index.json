@@ -12,30 +12,35 @@
       {
         "label": "Home",
         "href": "/",
-        "external": true
+        "external": false
       },
       {
         "label": "Conference 2026 Program",
         "href": "https://kericonf.com/archive/kericonf26/program/",
-        "external": true
+        "external": false
       },
       {
         "label": "Speakers 2026",
         "href": "https://kericonf.com/archive/kericonf26/speakers-2026/",
-        "external": true
+        "external": false
       },
       {
         "label": "Day 1",
         "href": "https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL",
-        "external": true,
+        "external": false,
         "icon": "youtube",
         "prefix": "All videos on YouTube:"
       },
       {
         "label": "Day 2",
         "href": "https://www.youtube.com/playlist?list=PLnHy2ee5UksMjwBseKJ7ivXiYukRvI65a",
-        "external": true,
+        "external": false,
         "icon": "youtube"
+      },
+      {
+        "label": "SEDI nov 2025",
+        "href": "https://keri.foundation/confs/2026/videos/SEDI/2025-11-SEDI/",
+        "external": false
       }
     ]
   },
