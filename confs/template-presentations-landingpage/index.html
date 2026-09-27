@@ -92,6 +92,32 @@
             border: 0;
         }
 
+        /* Static crawl links — must stay in raw HTML (not JS) for non-JS indexers.
+           Adjust href(s) per gallery when copying this template. */
+        .seo-transcript-links {
+            margin: 0 0 10px;
+            padding: 6px 10px;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            color: #2e3a7a;
+            opacity: 0.85;
+        }
+
+        .seo-transcript-links a {
+            color: #0450a8;
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .seo-transcript-links a:hover {
+            color: #060b6f;
+        }
+
+        .seo-transcript-links .sep {
+            margin: 0 0.35em;
+            opacity: 0.55;
+        }
+
         .gallery-nav {
             margin-top: 14px;
             font-size: 0.95rem;
@@ -799,6 +825,7 @@
         }
 
         .open-video-modal-btn,
+        .read-transcript-btn,
         .download-presentation-btn,
         .view-presentation-btn {
             display: flex;
@@ -821,6 +848,7 @@
         }
 
         .open-video-modal-btn:hover,
+        .read-transcript-btn:hover,
         .download-presentation-btn:hover,
         .view-presentation-btn:hover {
             background: rgba(152, 108, 50, 0.32);
@@ -1949,6 +1977,10 @@
 
 <body>
     <a class="skip-link" href="#mainContent">Skip to main content</a>
+    <!-- Static crawl entry into transcripts/ (edit hrefs when deploying a new gallery). -->
+    <nav class="seo-transcript-links" aria-label="Transcript indexes">
+        <a href="transcripts/">All transcripts</a>
+    </nav>
     <header id="galleryHeader"></header>
 
     <main id="mainContent">
@@ -4122,6 +4154,19 @@
                 return baseId;
             }
 
+            /** Relative path to the static SEO transcript page (mirrors generate-transcript-pages.js). */
+            function transcriptPagePath(video) {
+                if (!video?.subtitle) return null;
+                const id = generateVideoId(video);
+                if (!id) return null;
+                const sub = String(video.subtitle).replace(/\\/g, '/');
+                if (sub.includes('/subtitles/')) {
+                    const root = sub.split('/subtitles/')[0];
+                    return `${root}/transcripts/${id}.html`;
+                }
+                return `transcripts/${id}.html`;
+            }
+
             function findVideoById(videoId) {
                 return videos.find(v => generateVideoId(v) === videoId) ?? null;
             }
@@ -4410,6 +4455,17 @@
                             openVideoModal(video, readClock(video.path));
                         });
                         actionsRow.appendChild(modalBtn);
+
+                        const transcriptPath = transcriptPagePath(video);
+                        if (transcriptPath) {
+                            const transcriptLink = document.createElement('a');
+                            transcriptLink.className = 'read-transcript-btn';
+                            transcriptLink.href = resolveAssetUrl(transcriptPath);
+                            transcriptLink.setAttribute('aria-label', `Read full transcript for ${video.title}`);
+                            transcriptLink.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg> Read transcript';
+                            transcriptLink.addEventListener('click', (e) => e.stopPropagation());
+                            actionsRow.appendChild(transcriptLink);
+                        }
                     }
 
                     if (video.presentation) {

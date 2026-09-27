@@ -20,3 +20,19 @@ This will create and update `confs/2026/videos/KERICONF26/subtitles/` with all `
 
 If you hit GitHub API rate limits, set a `GITHUB_TOKEN` environment variable before running the script.
 
+## Static transcript HTML (SEO)
+
+Talk transcripts for search engines are generated as separate HTML pages (not via the gallery JavaScript). Generation lives in the `CONF26-subtitles` repo:
+
+    cd /Users/kor/webdev/Blockchain-Bird/KERI/CONF26-subtitles
+    npm run build:transcript-pages   # local HTML only
+    npm run deploy:subtitles         # .srt + transcript HTML → local mirror + live server
+
+Generated trees:
+
+- `confs/2026/videos/KERICONF26/transcripts/`
+- `confs/2026/videos/KERICONF26-interviews/transcripts/`
+- `confs/2026/videos/SEDI/2025-11-SEDI/transcripts/`
+
+The gallery `index.html` template is independent: redeploy it only when the app changes. Transcript pages regenerate whenever subtitle content is deployed.
+
