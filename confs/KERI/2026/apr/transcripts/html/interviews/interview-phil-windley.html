@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview - Phil Windley — Transcript</title>
+  <meta name="description" content="Transcript: Interview - Phil Windley (KERICONF26 Interviews · 1:24)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #060b6f;
+      --muted: #2e3a7a;
+      --bg: #b1d1cf;
+      --panel: rgba(255, 255, 255, 0.55);
+      --accent: #986c32;
+      --link: #0450a8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Source Serif 4", Georgia, serif;
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(255,255,255,0.45), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 0%, rgba(152,108,50,0.12), transparent),
+        var(--bg);
+      color: var(--ink);
+      padding: 24px 16px 48px;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 44rem; margin: 0 auto; }
+    nav {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+    nav a { color: var(--link); }
+    nav a:hover { color: var(--ink); }
+    header {
+      background: var(--panel);
+      border: 1px solid rgba(6, 11, 111, 0.12);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      margin: 0 0 0.4rem;
+    }
+    .meta {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0 0 1rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .actions a {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--ink);
+      background: rgba(152, 108, 50, 0.18);
+      border: 1px solid rgba(152, 108, 50, 0.35);
+      border-radius: 8px;
+      padding: 0.55rem 0.9rem;
+    }
+    .actions a:hover { background: rgba(152, 108, 50, 0.28); }
+    .actions a.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+    .actions a.primary:hover { background: #0a1270; }
+    article {
+      background: var(--panel);
+      border: 1px solid rgba(6, 11, 111, 0.12);
+      border-radius: 10px;
+      padding: 1rem 1.25rem 1.5rem;
+    }
+    .cue {
+      display: grid;
+      grid-template-columns: 4.5rem 1fr;
+      gap: 0.65rem 0.85rem;
+      margin: 0;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(6, 11, 111, 0.08);
+    }
+    .cue:last-child { border-bottom: none; }
+    .cue-time {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      padding-top: 0.15rem;
+    }
+    .cue-time:hover { color: var(--ink); text-decoration: underline; }
+    .cue-text { font-size: 1.05rem; }
+    footer {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    @media (max-width: 520px) {
+      .cue { grid-template-columns: 1fr; gap: 0.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="../../../">KERI Conference April 2026 Videos</a>
+      · <a href="./">All transcripts</a>
+    </nav>
+    <header>
+      <h1>Interview - Phil Windley</h1>
+      <p class="meta">KERICONF26 Interviews · 1:24</p>
+      <div class="actions">
+        <a class="primary" href="../../../#interview-phil-windley">Watch video</a>
+        <a href="./">All transcripts</a>
+        <a href="../../../">Video gallery</a>
+      </div>
+    </header>
+    <article>
+    <p class="cue" id="t0">
+      <a class="cue-time" href="../../../#interview-phil-windley">0:00</a>
+      <span class="cue-text">So my presentation was about why decentralized identity, first-person</span>
+    </p>
+    <p class="cue" id="t5">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=5">0:05</a>
+      <span class="cue-text">identity as I like to call it, needs a legal foundation. And I spoke to the idea</span>
+    </p>
+    <p class="cue" id="t11">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=11">0:11</a>
+      <span class="cue-text">that SEDI, recent legislation that has been passed in Utah, SEDI stands for State</span>
+    </p>
+    <p class="cue" id="t18">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=18">0:18</a>
+      <span class="cue-text">Endorsed Digital Identity, can provide a lot of that legal foundation that we need</span>
+    </p>
+    <p class="cue" id="t24">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=24">0:24</a>
+      <span class="cue-text">to make digital identity work. I don't think it necessarily would surprise many</span>
+    </p>
+    <p class="cue" id="t28">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=28">0:28</a>
+      <span class="cue-text">people at this conference, but one thing I see differently than many is the need for</span>
+    </p>
+    <p class="cue" id="t34">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=34">0:34</a>
+      <span class="cue-text">first-person identity, for identity that is controlled by the individual rather</span>
+    </p>
+    <p class="cue" id="t40">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=40">0:40</a>
+      <span class="cue-text">than provided to them by some other organization. We've been working on self</span>
+    </p>
+    <p class="cue" id="t46">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=46">0:46</a>
+      <span class="cue-text">-sovereign, decentralized identity, first -person identity for since 2015, so 10, 11</span>
+    </p>
+    <p class="cue" id="t55">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=55">0:55</a>
+      <span class="cue-text">years at this point. What has been missing is the legal foundation that makes it</span>
+    </p>
+    <p class="cue" id="t61">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=61">1:01</a>
+      <span class="cue-text">possible. I believe that what I talked about, the legal foundation for digital</span>
+    </p>
+    <p class="cue" id="t68">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=68">1:08</a>
+      <span class="cue-text">identity is not just a nice to have, but a necessary component of a functioning</span>
+    </p>
+    <p class="cue" id="t74">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=74">1:14</a>
+      <span class="cue-text">digital ecosystem where people have dignity and the right to act for</span>
+    </p>
+    <p class="cue" id="t80">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=80">1:20</a>
+      <span class="cue-text">themselves. rules rules rules rules rules rules rules rules rules rules rules rules</span>
+    </p>
+    <p class="cue" id="t83">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=83">1:23</a>
+      <span class="cue-text">rules rules rules rules rules rules rules rules rules rules rules rules rules rules</span>
+    </p>
+    <p class="cue" id="t83">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=83">1:23</a>
+      <span class="cue-text">rules rules rules rules rules rules rules rules rules rules rules rules rules rules</span>
+    </p>
+    <p class="cue" id="t83">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=83">1:23</a>
+      <span class="cue-text">rules rules rules rules rules rules rules rules rules rules rules rules rules rules</span>
+    </p>
+    <p class="cue" id="t83">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=83">1:23</a>
+      <span class="cue-text">rules rules rules rules rules rules rules rules rules rules rules rules rules rules</span>
+    </p>
+    <p class="cue" id="t83">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=83">1:23</a>
+      <span class="cue-text">rules rules rules rules rules rules rules rules rules rules rules rules rules rules</span>
+    </p>
+    <p class="cue" id="t83">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=83">1:23</a>
+      <span class="cue-text">rules rules rules rules rules rules rules rules rules rules rules rules rules rules</span>
+    </p>
+    <p class="cue" id="t84">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=84">1:24</a>
+      <span class="cue-text">rules rules rules rules rules rules rules rules rules rules rules rules rules rules</span>
+    </p>
+    <p class="cue" id="t84">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=84">1:24</a>
+      <span class="cue-text">rules rules rules rules rules rules rules rules rules rules rules rules rules rules</span>
+    </p>
+    <p class="cue" id="t84">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=84">1:24</a>
+      <span class="cue-text">rules rules rules rules rules rules rules rules rules rules rules rules rules rules</span>
+    </p>
+    <p class="cue" id="t84">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=84">1:24</a>
+      <span class="cue-text">rules rules rules rules rules rules rules rules rules rules rules rules rules rules</span>
+    </p>
+    <p class="cue" id="t84">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=84">1:24</a>
+      <span class="cue-text">rules rules rules rules rules rules rules rules rules rules rules rules rules rules</span>
+    </p>
+    <p class="cue" id="t84">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=84">1:24</a>
+      <span class="cue-text">rules rules rules rules rules rules rules rules rules rules rules rules rules rules</span>
+    </p>
+    <p class="cue" id="t84">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=84">1:24</a>
+      <span class="cue-text">rules rules rules rules rules rules rules rules rules rules rules rules rules rules</span>
+    </p>
+    <p class="cue" id="t84">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=84">1:24</a>
+      <span class="cue-text">rules rules rules rules rules rules rules rules rules rules rules rules rules rules</span>
+    </p>
+    <p class="cue" id="t84">
+      <a class="cue-time" href="../../../#interview-phil-windley&amp;t=84">1:24</a>
+      <span class="cue-text">rules rules rules rules rules rules rules rules rules rules rules rules rules</span>
+    </p>
+    </article>
+    <footer>KERI Foundation • Conference Videos Collection</footer>
+  </div>
+</body>
+</html>

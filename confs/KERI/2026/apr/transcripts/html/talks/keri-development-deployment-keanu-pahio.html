@@ -1,0 +1,1886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>KERI Development &amp; Deployment - Keanu Pahio — Transcript</title>
+  <meta name="description" content="Transcript: KERI Development &amp; Deployment - Keanu Pahio (KERICONF26 Day 2 · 48:15)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #060b6f;
+      --muted: #2e3a7a;
+      --bg: #b1d1cf;
+      --panel: rgba(255, 255, 255, 0.55);
+      --accent: #986c32;
+      --link: #0450a8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Source Serif 4", Georgia, serif;
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(255,255,255,0.45), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 0%, rgba(152,108,50,0.12), transparent),
+        var(--bg);
+      color: var(--ink);
+      padding: 24px 16px 48px;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 44rem; margin: 0 auto; }
+    nav {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+    nav a { color: var(--link); }
+    nav a:hover { color: var(--ink); }
+    header {
+      background: var(--panel);
+      border: 1px solid rgba(6, 11, 111, 0.12);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      margin: 0 0 0.4rem;
+    }
+    .meta {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0 0 1rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .actions a {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--ink);
+      background: rgba(152, 108, 50, 0.18);
+      border: 1px solid rgba(152, 108, 50, 0.35);
+      border-radius: 8px;
+      padding: 0.55rem 0.9rem;
+    }
+    .actions a:hover { background: rgba(152, 108, 50, 0.28); }
+    .actions a.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+    .actions a.primary:hover { background: #0a1270; }
+    article {
+      background: var(--panel);
+      border: 1px solid rgba(6, 11, 111, 0.12);
+      border-radius: 10px;
+      padding: 1rem 1.25rem 1.5rem;
+    }
+    .cue {
+      display: grid;
+      grid-template-columns: 4.5rem 1fr;
+      gap: 0.65rem 0.85rem;
+      margin: 0;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(6, 11, 111, 0.08);
+    }
+    .cue:last-child { border-bottom: none; }
+    .cue-time {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      padding-top: 0.15rem;
+    }
+    .cue-time:hover { color: var(--ink); text-decoration: underline; }
+    .cue-text { font-size: 1.05rem; }
+    footer {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    @media (max-width: 520px) {
+      .cue { grid-template-columns: 1fr; gap: 0.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="../../../">KERI Conference April 2026 Videos</a>
+      · <a href="./">All transcripts</a>
+    </nav>
+    <header>
+      <h1>KERI Development &amp; Deployment - Keanu Pahio</h1>
+      <p class="meta">KERICONF26 Day 2 · 48:15</p>
+      <div class="actions">
+        <a class="primary" href="../../../#keri-development-deployment-keanu-pahio">Watch video</a>
+        <a href="./">All transcripts</a>
+        <a href="../../../">Video gallery</a>
+      </div>
+    </header>
+    <article>
+    <p class="cue" id="t0">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio">0:00</a>
+      <span class="cue-text">Keanu Pahio ｜ KERI Developement &amp; Deployment ｜ KERI Conference 2026</span>
+    </p>
+    <p class="cue" id="t4">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=4">0:04</a>
+      <span class="cue-text">I'm gonna start</span>
+    </p>
+    <p class="cue" id="t7">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=7">0:07</a>
+      <span class="cue-text">and talk about KERI development</span>
+    </p>
+    <p class="cue" id="t10">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=10">0:10</a>
+      <span class="cue-text">and deployment</span>
+    </p>
+    <p class="cue" id="t12">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=12">0:12</a>
+      <span class="cue-text">[checks]</span>
+    </p>
+    <p class="cue" id="t20">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=20">0:20</a>
+      <span class="cue-text">[inaudible, reconstruction - The Objectives are to:]</span>
+    </p>
+    <p class="cue" id="t23">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=23">0:23</a>
+      <span class="cue-text">[Understand the architecture for deployment</span>
+    </p>
+    <p class="cue" id="t31">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=31">0:31</a>
+      <span class="cue-text">understand the role of each part</span>
+    </p>
+    <p class="cue" id="t37">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=37">0:37</a>
+      <span class="cue-text">Deploying local witnesses,</span>
+    </p>
+    <p class="cue" id="t43">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=43">0:43</a>
+      <span class="cue-text">watchers and wallet</span>
+    </p>
+    <p class="cue" id="t47">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=47">0:47</a>
+      <span class="cue-text">And to give an idea</span>
+    </p>
+    <p class="cue" id="t53">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=53">0:53</a>
+      <span class="cue-text">where you]</span>
+    </p>
+    <p class="cue" id="t59">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=59">0:59</a>
+      <span class="cue-text">can start for development on your own</span>
+    </p>
+    <p class="cue" id="t62">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=62">1:02</a>
+      <span class="cue-text">and that includes maybe doing your</span>
+    </p>
+    <p class="cue" id="t66">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=66">1:06</a>
+      <span class="cue-text">own plugin for Locksmith and developing</span>
+    </p>
+    <p class="cue" id="t70">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=70">1:10</a>
+      <span class="cue-text">your own API for witnesses and</span>
+    </p>
+    <p class="cue" id="t73">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=73">1:13</a>
+      <span class="cue-text">watchers.</span>
+    </p>
+    <p class="cue" id="t75">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=75">1:15</a>
+      <span class="cue-text">So I want to talk first about the KERI</span>
+    </p>
+    <p class="cue" id="t78">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=78">1:18</a>
+      <span class="cue-text">infrastructure that we have.</span>
+    </p>
+    <p class="cue" id="t80">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=80">1:20</a>
+      <span class="cue-text">[inaudible - We have the Locksmith</span>
+    </p>
+    <p class="cue" id="t82">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=82">1:22</a>
+      <span class="cue-text">wallet for signing, witnesses]</span>
+    </p>
+    <p class="cue" id="t84">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=84">1:24</a>
+      <span class="cue-text">and the watchers which is pretty much</span>
+    </p>
+    <p class="cue" id="t86">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=86">1:26</a>
+      <span class="cue-text">you've seen this the diagram a lot</span>
+    </p>
+    <p class="cue" id="t90">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=90">1:30</a>
+      <span class="cue-text">in the past few days, but for the</span>
+    </p>
+    <p class="cue" id="t93">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=93">1:33</a>
+      <span class="cue-text">requirements, the</span>
+    </p>
+    <p class="cue" id="t96">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=96">1:36</a>
+      <span class="cue-text">only thing that we really need is Python.</span>
+    </p>
+    <p class="cue" id="t99">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=99">1:39</a>
+      <span class="cue-text">We recommend the version 3.13, [because]</span>
+    </p>
+    <p class="cue" id="t104">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=104">1:44</a>
+      <span class="cue-text">3.14 had some issues with some repos.</span>
+    </p>
+    <p class="cue" id="t109">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=109">1:49</a>
+      <span class="cue-text">3.13 should be fine. And then [we need]</span>
+    </p>
+    <p class="cue" id="t113">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=113">1:53</a>
+      <span class="cue-text">Libsodium because this is what</span>
+    </p>
+    <p class="cue" id="t116">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=116">1:56</a>
+      <span class="cue-text">KERI uses for its cryptographic</span>
+    </p>
+    <p class="cue" id="t118">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=118">1:58</a>
+      <span class="cue-text">library.</span>
+    </p>
+    <p class="cue" id="t120">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=120">2:00</a>
+      <span class="cue-text">First, we'll go with the wallet.</span>
+    </p>
+    <p class="cue" id="t123">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=123">2:03</a>
+      <span class="cue-text">It's a Locksmith. The role of</span>
+    </p>
+    <p class="cue" id="t125">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=125">2:05</a>
+      <span class="cue-text">Locksmith on this wallet is to generate</span>
+    </p>
+    <p class="cue" id="t127">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=127">2:07</a>
+      <span class="cue-text">the AIDs to sign it, to have the key</span>
+    </p>
+    <p class="cue" id="t131">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=131">2:11</a>
+      <span class="cue-text">pairs secure and to store and verify</span>
+    </p>
+    <p class="cue" id="t134">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=134">2:14</a>
+      <span class="cue-text">through your KELs and finally the</span>
+    </p>
+    <p class="cue" id="t136">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=136">2:16</a>
+      <span class="cue-text">OOBIs.</span>
+    </p>
+    <p class="cue" id="t138">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=138">2:18</a>
+      <span class="cue-text">Nothing more, I think, to expand on,</span>
+    </p>
+    <p class="cue" id="t143">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=143">2:23</a>
+      <span class="cue-text">It's the basic function</span>
+    </p>
+    <p class="cue" id="t145">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=145">2:25</a>
+      <span class="cue-text">of a wallet.</span>
+    </p>
+    <p class="cue" id="t147">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=147">2:27</a>
+      <span class="cue-text">And then we're going to go through</span>
+    </p>
+    <p class="cue" id="t148">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=148">2:28</a>
+      <span class="cue-text">deploying it. So we have just three</span>
+    </p>
+    <p class="cue" id="t151">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=151">2:31</a>
+      <span class="cue-text">parts that we're going to go through</span>
+    </p>
+    <p class="cue" id="t152">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=152">2:32</a>
+      <span class="cue-text">individually and first I'm</span>
+    </p>
+    <p class="cue" id="t155">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=155">2:35</a>
+      <span class="cue-text">going to show you the repo and how you</span>
+    </p>
+    <p class="cue" id="t157">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=157">2:37</a>
+      <span class="cue-text">can set up the environment with its</span>
+    </p>
+    <p class="cue" id="t159">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=159">2:39</a>
+      <span class="cue-text">dependencies and how to run it.</span>
+    </p>
+    <p class="cue" id="t163">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=163">2:43</a>
+      <span class="cue-text">Everything, every deployment that we're</span>
+    </p>
+    <p class="cue" id="t164">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=164">2:44</a>
+      <span class="cue-text">going to go through are going to be</span>
+    </p>
+    <p class="cue" id="t166">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=166">2:46</a>
+      <span class="cue-text">local.</span>
+    </p>
+    <p class="cue" id="t167">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=167">2:47</a>
+      <span class="cue-text">I can explain that for a while</span>
+    </p>
+    <p class="cue" id="t169">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=169">2:49</a>
+      <span class="cue-text">later. First you have the public</span>
+    </p>
+    <p class="cue" id="t174">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=174">2:54</a>
+      <span class="cue-text">repo for the Locksmith which is on</span>
+    </p>
+    <p class="cue" id="t177">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=177">2:57</a>
+      <span class="cue-text">the KERI Foundation [github repo]. Note that what</span>
+    </p>
+    <p class="cue" id="t181">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=181">3:01</a>
+      <span class="cue-text">I'm going to use in this presentation</span>
+    </p>
+    <p class="cue" id="t183">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=183">3:03</a>
+      <span class="cue-text">for the demo is from a branch of this</span>
+    </p>
+    <p class="cue" id="t189">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=189">3:09</a>
+      <span class="cue-text">repo which is the KERI Foundation</span>
+    </p>
+    <p class="cue" id="t191">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=191">3:11</a>
+      <span class="cue-text">branch. It's not the main branch that</span>
+    </p>
+    <p class="cue" id="t193">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=193">3:13</a>
+      <span class="cue-text">I'm going to use because the KERI</span>
+    </p>
+    <p class="cue" id="t195">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=195">3:15</a>
+      <span class="cue-text">Foundation branch has the KERI</span>
+    </p>
+    <p class="cue" id="t197">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=197">3:17</a>
+      <span class="cue-text">Foundation plugin that we're going to</span>
+    </p>
+    <p class="cue" id="t198">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=198">3:18</a>
+      <span class="cue-text">talk about later. I'm also going to</span>
+    </p>
+    <p class="cue" id="t203">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=203">3:23</a>
+      <span class="cue-text">try to get your attention for the</span>
+    </p>
+    <p class="cue" id="t206">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=206">3:26</a>
+      <span class="cue-text">docs that are provided by the repo and</span>
+    </p>
+    <p class="cue" id="t209">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=209">3:29</a>
+      <span class="cue-text">I'm just going to show you a bit through</span>
+    </p>
+    <p class="cue" id="t210">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=210">3:30</a>
+      <span class="cue-text">those docs. So the developer guide in</span>
+    </p>
+    <p class="cue" id="t214">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=214">3:34</a>
+      <span class="cue-text">those docs explain what I</span>
+    </p>
+    <p class="cue" id="t217">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=217">3:37</a>
+      <span class="cue-text">explained before. So if you need a</span>
+    </p>
+    <p class="cue" id="t219">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=219">3:39</a>
+      <span class="cue-text">reminder, you can just go to the repo</span>
+    </p>
+    <p class="cue" id="t221">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=221">3:41</a>
+      <span class="cue-text">and then read it. But first it's</span>
+    </p>
+    <p class="cue" id="t224">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=224">3:44</a>
+      <span class="cue-text">going to be Python 3.13. And then to set</span>
+    </p>
+    <p class="cue" id="t226">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=226">3:46</a>
+      <span class="cue-text">up your environment, you just have to</span>
+    </p>
+    <p class="cue" id="t228">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=228">3:48</a>
+      <span class="cue-text">follow the commands that are on the</span>
+    </p>
+    <p class="cue" id="t231">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=231">3:51</a>
+      <span class="cue-text">developer guide. Pretty easy.</span>
+    </p>
+    <p class="cue" id="t235">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=235">3:55</a>
+      <span class="cue-text">And then finally to run it, you have the</span>
+    </p>
+    <p class="cue" id="t238">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=238">3:58</a>
+      <span class="cue-text">Qt resource regeneration. And once you</span>
+    </p>
+    <p class="cue" id="t241">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=241">4:01</a>
+      <span class="cue-text">copy paste and run those commands,</span>
+    </p>
+    <p class="cue" id="t243">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=243">4:03</a>
+      <span class="cue-text">you can run this one. Then</span>
+    </p>
+    <p class="cue" id="t247">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=247">4:07</a>
+      <span class="cue-text">hopefully a lot of initialization logs</span>
+    </p>
+    <p class="cue" id="t251">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=251">4:11</a>
+      <span class="cue-text">will pop up and you will</span>
+    </p>
+    <p class="cue" id="t253">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=253">4:13</a>
+      <span class="cue-text">have your Locksmith.</span>
+    </p>
+    <p class="cue" id="t256">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=256">4:16</a>
+      <span class="cue-text">I'm going to run it myself,</span>
+    </p>
+    <p class="cue" id="t261">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=261">4:21</a>
+      <span class="cue-text">and show you.</span>
+    </p>
+    <p class="cue" id="t264">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=264">4:24</a>
+      <span class="cue-text">I'm going to</span>
+    </p>
+    <p class="cue" id="t268">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=268">4:28</a>
+      <span class="cue-text">activate the virtual environment</span>
+    </p>
+    <p class="cue" id="t272">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=272">4:32</a>
+      <span class="cue-text">[preparing his demo]</span>
+    </p>
+    <p class="cue" id="t310">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=310">5:10</a>
+      <span class="cue-text">So here we have our Locksmith.</span>
+    </p>
+    <p class="cue" id="t313">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=313">5:13</a>
+      <span class="cue-text">I just created a vault, but we can…</span>
+    </p>
+    <p class="cue" id="t316">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=316">5:16</a>
+      <span class="cue-text">I make a new one…</span>
+    </p>
+    <p class="cue" id="t320">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=320">5:20</a>
+      <span class="cue-text">call it presentation.</span>
+    </p>
+    <p class="cue" id="t323">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=323">5:23</a>
+      <span class="cue-text">No passcode and then, here you go.</span>
+    </p>
+    <p class="cue" id="t327">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=327">5:27</a>
+      <span class="cue-text">So here…</span>
+    </p>
+    <p class="cue" id="t329">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=329">5:29</a>
+      <span class="cue-text">– A vault is just a logical grouping of</span>
+    </p>
+    <p class="cue" id="t332">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=332">5:32</a>
+      <span class="cue-text">of AIDs or ..?</span>
+    </p>
+    <p class="cue" id="t335">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=335">5:35</a>
+      <span class="cue-text">Yes, if you're familiar with the</span>
+    </p>
+    <p class="cue" id="t337">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=337">5:37</a>
+      <span class="cue-text">KERIpy code, it's the same as a Habery</span>
+    </p>
+    <p class="cue" id="t340">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=340">5:40</a>
+      <span class="cue-text">which is where you host your AIDs and</span>
+    </p>
+    <p class="cue" id="t342">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=342">5:42</a>
+      <span class="cue-text">which is where you have your key pairs</span>
+    </p>
+    <p class="cue" id="t344">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=344">5:44</a>
+      <span class="cue-text">and all that stuff.</span>
+    </p>
+    <p class="cue" id="t345">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=345">5:45</a>
+      <span class="cue-text">– Okay.</span>
+    </p>
+    <p class="cue" id="t347">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=347">5:47</a>
+      <span class="cue-text">Here you have the KERI Foundation</span>
+    </p>
+    <p class="cue" id="t350">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=350">5:50</a>
+      <span class="cue-text">plugin which we're going to talk about</span>
+    </p>
+    <p class="cue" id="t352">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=352">5:52</a>
+      <span class="cue-text">now. The reason</span>
+    </p>
+    <p class="cue" id="t357">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=357">5:57</a>
+      <span class="cue-text">why we have a KERI Foundation plugin is</span>
+    </p>
+    <p class="cue" id="t360">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=360">6:00</a>
+      <span class="cue-text">because of a boot server that</span>
+    </p>
+    <p class="cue" id="t362">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=362">6:02</a>
+      <span class="cue-text">we have.</span>
+    </p>
+    <p class="cue" id="t364">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=364">6:04</a>
+      <span class="cue-text">So the boot server, what is the boot</span>
+    </p>
+    <p class="cue" id="t366">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=366">6:06</a>
+      <span class="cue-text">server? Well the boot server is kind of</span>
+    </p>
+    <p class="cue" id="t369">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=369">6:09</a>
+      <span class="cue-text">the in between</span>
+    </p>
+    <p class="cue" id="t372">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=372">6:12</a>
+      <span class="cue-text">between Locksmith and the</span>
+    </p>
+    <p class="cue" id="t374">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=374">6:14</a>
+      <span class="cue-text">witnesses and watchers. And the role of</span>
+    </p>
+    <p class="cue" id="t376">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=376">6:16</a>
+      <span class="cue-text">the boot server is to provision the</span>
+    </p>
+    <p class="cue" id="t378">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=378">6:18</a>
+      <span class="cue-text">witnesses to your wallet. And now,</span>
+    </p>
+    <p class="cue" id="t382">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=382">6:22</a>
+      <span class="cue-text">maybe a question that you might</span>
+    </p>
+    <p class="cue" id="t384">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=384">6:24</a>
+      <span class="cue-text">have is why can I not just talk from</span>
+    </p>
+    <p class="cue" id="t387">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=387">6:27</a>
+      <span class="cue-text">Locksmith directly to the witnesses and</span>
+    </p>
+    <p class="cue" id="t389">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=389">6:29</a>
+      <span class="cue-text">watchers? The reason for that is</span>
+    </p>
+    <p class="cue" id="t392">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=392">6:32</a>
+      <span class="cue-text">the witnesses and watchers API.</span>
+    </p>
+    <p class="cue" id="t396">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=396">6:36</a>
+      <span class="cue-text">When you look here, for example</span>
+    </p>
+    <p class="cue" id="t399">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=399">6:39</a>
+      <span class="cue-text">for the witnesses API, you have actually</span>
+    </p>
+    <p class="cue" id="t403">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=403">6:43</a>
+      <span class="cue-text">two servers: you have the boot server</span>
+    </p>
+    <p class="cue" id="t405">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=405">6:45</a>
+      <span class="cue-text">and then you have the witness server.</span>
+    </p>
+    <p class="cue" id="t407">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=407">6:47</a>
+      <span class="cue-text">The boot server, if you pay attention to</span>
+    </p>
+    <p class="cue" id="t410">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=410">6:50</a>
+      <span class="cue-text">the API,</span>
+    </p>
+    <p class="cue" id="t413">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=413">6:53</a>
+      <span class="cue-text">this is the one that actually creates</span>
+    </p>
+    <p class="cue" id="t416">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=416">6:56</a>
+      <span class="cue-text">the witnesses and deletes them. And the</span>
+    </p>
+    <p class="cue" id="t419">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=419">6:59</a>
+      <span class="cue-text">problem is that the boot server is</span>
+    </p>
+    <p class="cue" id="t422">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=422">7:02</a>
+      <span class="cue-text">private. So it's not publicly</span>
+    </p>
+    <p class="cue" id="t423">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=423">7:03</a>
+      <span class="cue-text">accessible. So even if you try to send a</span>
+    </p>
+    <p class="cue" id="t425">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=425">7:05</a>
+      <span class="cue-text">request to it, it will not respond.</span>
+    </p>
+    <p class="cue" id="t429">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=429">7:09</a>
+      <span class="cue-text">But the witness server and the</span>
+    </p>
+    <p class="cue" id="t431">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=431">7:11</a>
+      <span class="cue-text">watcher server, those two are public. So</span>
+    </p>
+    <p class="cue" id="t434">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=434">7:14</a>
+      <span class="cue-text">once you have your witnesses and your</span>
+    </p>
+    <p class="cue" id="t436">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=436">7:16</a>
+      <span class="cue-text">watcher you can publicly access those</span>
+    </p>
+    <p class="cue" id="t439">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=439">7:19</a>
+      <span class="cue-text">however you want. And same for the</span>
+    </p>
+    <p class="cue" id="t441">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=441">7:21</a>
+      <span class="cue-text">watcher API this is also private. So the</span>
+    </p>
+    <p class="cue" id="t444">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=444">7:24</a>
+      <span class="cue-text">reason is that we have our boot</span>
+    </p>
+    <p class="cue" id="t448">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=448">7:28</a>
+      <span class="cue-text">server which serve as the one who</span>
+    </p>
+    <p class="cue" id="t453">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=453">7:33</a>
+      <span class="cue-text">will call the private APIs to get the</span>
+    </p>
+    <p class="cue" id="t456">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=456">7:36</a>
+      <span class="cue-text">witnesses and watchers and the</span>
+    </p>
+    <p class="cue" id="t459">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=459">7:39</a>
+      <span class="cue-text">KERI Foundation plug-in acts as a</span>
+    </p>
+    <p class="cue" id="t461">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=461">7:41</a>
+      <span class="cue-text">bridge between the Locksmith wallet and</span>
+    </p>
+    <p class="cue" id="t464">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=464">7:44</a>
+      <span class="cue-text">the boot server. Currently the</span>
+    </p>
+    <p class="cue" id="t469">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=469">7:49</a>
+      <span class="cue-text">KERI Foundation plugin is in charge of</span>
+    </p>
+    <p class="cue" id="t472">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=472">7:52</a>
+      <span class="cue-text">onboarding, witness registration, watcher</span>
+    </p>
+    <p class="cue" id="t475">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=475">7:55</a>
+      <span class="cue-text">resolution and auth management. And when</span>
+    </p>
+    <p class="cue" id="t477">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=477">7:57</a>
+      <span class="cue-text">we're talking about onboarding we're</span>
+    </p>
+    <p class="cue" id="t479">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=479">7:59</a>
+      <span class="cue-text">talking about setting you up</span>
+    </p>
+    <p class="cue" id="t482">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=482">8:02</a>
+      <span class="cue-text">so you can have your own witnesses</span>
+    </p>
+    <p class="cue" id="t485">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=485">8:05</a>
+      <span class="cue-text">and watcher.</span>
+    </p>
+    <p class="cue" id="t487">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=487">8:07</a>
+      <span class="cue-text">Now an important thing to note is that</span>
+    </p>
+    <p class="cue" id="t490">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=490">8:10</a>
+      <span class="cue-text">for, at least locally, the</span>
+    </p>
+    <p class="cue" id="t493">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=493">8:13</a>
+      <span class="cue-text">boot server has</span>
+    </p>
+    <p class="cue" id="t496">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=496">8:16</a>
+      <span class="cue-text">to be on the same machine or server as</span>
+    </p>
+    <p class="cue" id="t501">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=501">8:21</a>
+      <span class="cue-text">the witnesses and watchers so it can</span>
+    </p>
+    <p class="cue" id="t503">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=503">8:23</a>
+      <span class="cue-text">talk locally. As I mentioned before</span>
+    </p>
+    <p class="cue" id="t506">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=506">8:26</a>
+      <span class="cue-text">because the APIs are private.</span>
+    </p>
+    <p class="cue" id="t516">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=516">8:36</a>
+      <span class="cue-text">Let's go through the</span>
+    </p>
+    <p class="cue" id="t518">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=518">8:38</a>
+      <span class="cue-text">plugin before we go through the boot</span>
+    </p>
+    <p class="cue" id="t520">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=520">8:40</a>
+      <span class="cue-text">server. So I want to go to the plugin</span>
+    </p>
+    <p class="cue" id="t522">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=522">8:42</a>
+      <span class="cue-text">and how you could, if you wanted, make</span>
+    </p>
+    <p class="cue" id="t525">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=525">8:45</a>
+      <span class="cue-text">your own plugin.</span>
+    </p>
+    <p class="cue" id="t527">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=527">8:47</a>
+      <span class="cue-text">If you go to the Locksmith</span>
+    </p>
+    <p class="cue" id="t530">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=530">8:50</a>
+      <span class="cue-text">repository and if you go to</span>
+    </p>
+    <p class="cue" id="t533">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=533">8:53</a>
+      <span class="cue-text">“Locksmith/plugins/base.py” it has a bunch of</span>
+    </p>
+    <p class="cue" id="t536">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=536">8:56</a>
+      <span class="cue-text">classes that allows you to create your</span>
+    </p>
+    <p class="cue" id="t539">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=539">8:59</a>
+      <span class="cue-text">own plugin. If you look at the</span>
+    </p>
+    <p class="cue" id="t543">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=543">9:03</a>
+      <span class="cue-text">“PluginBase,” it has a bunch of methods</span>
+    </p>
+    <p class="cue" id="t546">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=546">9:06</a>
+      <span class="cue-text">that you can override to create your</span>
+    </p>
+    <p class="cue" id="t549">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=549">9:09</a>
+      <span class="cue-text">own plugin.</span>
+    </p>
+    <p class="cue" id="t551">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=551">9:11</a>
+      <span class="cue-text">For example, here is the KERI</span>
+    </p>
+    <p class="cue" id="t553">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=553">9:13</a>
+      <span class="cue-text">Foundation plugin that is in the plugin</span>
+    </p>
+    <p class="cue" id="t556">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=556">9:16</a>
+      <span class="cue-text">folder. You can also look it up on the</span>
+    </p>
+    <p class="cue" id="t558">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=558">9:18</a>
+      <span class="cue-text">KERI Foundation branch. It is using</span>
+    </p>
+    <p class="cue" id="t561">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=561">9:21</a>
+      <span class="cue-text">the plugin base, the witness provider</span>
+    </p>
+    <p class="cue" id="t563">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=563">9:23</a>
+      <span class="cue-text">plugin and the account provider plugin.</span>
+    </p>
+    <p class="cue" id="t566">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=566">9:26</a>
+      <span class="cue-text">Then it has</span>
+    </p>
+    <p class="cue" id="t568">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=568">9:28</a>
+      <span class="cue-text">u for example here you can see that it's</span>
+    </p>
+    <p class="cue" id="t570">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=570">9:30</a>
+      <span class="cue-text">overriding the plugin_id function</span>
+    </p>
+    <p class="cue" id="t572">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=572">9:32</a>
+      <span class="cue-text">and the initialize function. I'm not</span>
+    </p>
+    <p class="cue" id="t575">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=575">9:35</a>
+      <span class="cue-text">going to go into too much detail as to</span>
+    </p>
+    <p class="cue" id="t577">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=577">9:37</a>
+      <span class="cue-text">How you can .. or What you should put into</span>
+    </p>
+    <p class="cue" id="t580">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=580">9:40</a>
+      <span class="cue-text">into those methods, but at least know</span>
+    </p>
+    <p class="cue" id="t582">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=582">9:42</a>
+      <span class="cue-text">that it's there. And if you need the</span>
+    </p>
+    <p class="cue" id="t584">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=584">9:44</a>
+      <span class="cue-text">preferences you can just look at the</span>
+    </p>
+    <p class="cue" id="t586">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=586">9:46</a>
+      <span class="cue-text">KERI Foundation plugin in the</span>
+    </p>
+    <p class="cue" id="t588">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=588">9:48</a>
+      <span class="cue-text">repository to get some</span>
+    </p>
+    <p class="cue" id="t591">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=591">9:51</a>
+      <span class="cue-text">inspiration.</span>
+    </p>
+    <p class="cue" id="t594">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=594">9:54</a>
+      <span class="cue-text">Now I want to go</span>
+    </p>
+    <p class="cue" id="t597">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=597">9:57</a>
+      <span class="cue-text">to the boot server. To</span>
+    </p>
+    <p class="cue" id="t601">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=601">10:01</a>
+      <span class="cue-text">remind you, the boot server serves as a</span>
+    </p>
+    <p class="cue" id="t603">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=603">10:03</a>
+      <span class="cue-text">public API to provision your</span>
+    </p>
+    <p class="cue" id="t606">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=606">10:06</a>
+      <span class="cue-text">witnesses and watcher. The kf-boot is</span>
+    </p>
+    <p class="cue" id="t609">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=609">10:09</a>
+      <span class="cue-text">also available publicly. So if you want</span>
+    </p>
+    <p class="cue" id="t611">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=611">10:11</a>
+      <span class="cue-text">to look at it, you can. It's on the</span>
+    </p>
+    <p class="cue" id="t613">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=613">10:13</a>
+      <span class="cue-text">KERI Foundation repository. You can</span>
+    </p>
+    <p class="cue" id="t616">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=616">10:16</a>
+      <span class="cue-text">look at it and see how the code works.</span>
+    </p>
+    <p class="cue" id="t620">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=620">10:20</a>
+      <span class="cue-text">To run it, very simple, create your</span>
+    </p>
+    <p class="cue" id="t623">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=623">10:23</a>
+      <span class="cue-text">virtual environment. And then here are</span>
+    </p>
+    <p class="cue" id="t626">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=626">10:26</a>
+      <span class="cue-text">the variables that your KERI</span>
+    </p>
+    <p class="cue" id="t630">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=630">10:30</a>
+      <span class="cue-text">Foundation boot needs to talk to</span>
+    </p>
+    <p class="cue" id="t633">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=633">10:33</a>
+      <span class="cue-text">the witnesses and watcher. I'm going</span>
+    </p>
+    <p class="cue" id="t636">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=636">10:36</a>
+      <span class="cue-text">to just show you a demo.</span>
+    </p>
+    <p class="cue" id="t643">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=643">10:43</a>
+      <span class="cue-text">Here I have my KERI Foundation</span>
+    </p>
+    <p class="cue" id="t647">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=647">10:47</a>
+      <span class="cue-text">boot server. I'm going to</span>
+    </p>
+    <p class="cue" id="t652">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=652">10:52</a>
+      <span class="cue-text">activate it. And then</span>
+    </p>
+    <p class="cue" id="t655">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=655">10:55</a>
+      <span class="cue-text">just like in the</span>
+    </p>
+    <p class="cue" id="t659">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=659">10:59</a>
+      <span class="cue-text">slide that I showed, I'm just going to</span>
+    </p>
+    <p class="cue" id="t660">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=660">11:00</a>
+      <span class="cue-text">copy .., I'm not going to install the</span>
+    </p>
+    <p class="cue" id="t663">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=663">11:03</a>
+      <span class="cue-text">dependencies since I have already done it.</span>
+    </p>
+    <p class="cue" id="t666">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=666">11:06</a>
+      <span class="cue-text">I'm going to go here, paste these,</span>
+    </p>
+    <p class="cue" id="t669">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=669">11:09</a>
+      <span class="cue-text">and then run it. So now you can see that</span>
+    </p>
+    <p class="cue" id="t672">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=672">11:12</a>
+      <span class="cue-text">it's running here. And if I go</span>
+    </p>
+    <p class="cue" id="t677">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=677">11:17</a>
+      <span class="cue-text">to my Locksmith [needs to refresh]</span>
+    </p>
+    <p class="cue" id="t707">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=707">11:47</a>
+      <span class="cue-text">I also need to give Locksmith the</span>
+    </p>
+    <p class="cue" id="t714">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=714">11:54</a>
+      <span class="cue-text">address for the</span>
+    </p>
+    <p class="cue" id="t720">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=720">12:00</a>
+      <span class="cue-text">boot server. So here and then if I run</span>
+    </p>
+    <p class="cue" id="t723">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=723">12:03</a>
+      <span class="cue-text">it back [then]</span>
+    </p>
+    <p class="cue" id="t729">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=729">12:09</a>
+      <span class="cue-text">my Locksmith</span>
+    </p>
+    <p class="cue" id="t732">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=732">12:12</a>
+      <span class="cue-text">can get in.</span>
+    </p>
+    <p class="cue" id="t734">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=734">12:14</a>
+      <span class="cue-text">[Keanu checks and prepares]</span>
+    </p>
+    <p class="cue" id="t773">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=773">12:53</a>
+      <span class="cue-text">So, I actually can't see it, but</span>
+    </p>
+    <p class="cue" id="t779">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=779">12:59</a>
+      <span class="cue-text">usually if you look it up on the KERI</span>
+    </p>
+    <p class="cue" id="t783">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=783">13:03</a>
+      <span class="cue-text">Foundation plugin, it should show that</span>
+    </p>
+    <p class="cue" id="t785">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=785">13:05</a>
+      <span class="cue-text">you can service an AID and connect</span>
+    </p>
+    <p class="cue" id="t790">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=790">13:10</a>
+      <span class="cue-text">witnesses and watchers to it.</span>
+    </p>
+    <p class="cue" id="t792">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=792">13:12</a>
+      <span class="cue-text">– You could try deleting your local KERI</span>
+    </p>
+    <p class="cue" id="t796">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=796">13:16</a>
+      <span class="cue-text">“home/.keri”</span>
+    </p>
+    <p class="cue" id="t799">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=799">13:19</a>
+      <span class="cue-text">and then start fresh and then should</span>
+    </p>
+    <p class="cue" id="t801">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=801">13:21</a>
+      <span class="cue-text">recreate on that.</span>
+    </p>
+    <p class="cue" id="t802">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=802">13:22</a>
+      <span class="cue-text">Oh, I make a whole other repo?</span>
+    </p>
+    <p class="cue" id="t805">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=805">13:25</a>
+      <span class="cue-text">I could…</span>
+    </p>
+    <p class="cue" id="t806">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=806">13:26</a>
+      <span class="cue-text">– Yeah, go ahead.</span>
+    </p>
+    <p class="cue" id="t807">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=807">13:27</a>
+      <span class="cue-text">I could do it at the end</span>
+    </p>
+    <p class="cue" id="t808">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=808">13:28</a>
+      <span class="cue-text">probably. I just want to go through</span>
+    </p>
+    <p class="cue" id="t811">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=811">13:31</a>
+      <span class="cue-text">the whole slide and maybe I'll do</span>
+    </p>
+    <p class="cue" id="t813">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=813">13:33</a>
+      <span class="cue-text">another demo. But so let me finish the</span>
+    </p>
+    <p class="cue" id="t816">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=816">13:36</a>
+      <span class="cue-text">slides first. Go to the witnesses, of</span>
+    </p>
+    <p class="cue" id="t820">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=820">13:40</a>
+      <span class="cue-text">course you have the role of the witnesses</span>
+    </p>
+    <p class="cue" id="t822">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=822">13:42</a>
+      <span class="cue-text">and what they do to anchor the events</span>
+    </p>
+    <p class="cue" id="t824">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=824">13:44</a>
+      <span class="cue-text">and trying to keep the authenticity</span>
+    </p>
+    <p class="cue" id="t829">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=829">13:49</a>
+      <span class="cue-text">and make sure that everything is correct</span>
+    </p>
+    <p class="cue" id="t830">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=830">13:50</a>
+      <span class="cue-text">of course, because they're the witnesses.</span>
+    </p>
+    <p class="cue" id="t834">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=834">13:54</a>
+      <span class="cue-text">So same thing, we're going to go through</span>
+    </p>
+    <p class="cue" id="t835">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=835">13:55</a>
+      <span class="cue-text">the repo, the environment and</span>
+    </p>
+    <p class="cue" id="t838">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=838">13:58</a>
+      <span class="cue-text">how to run it locally.</span>
+    </p>
+    <p class="cue" id="t841">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=841">14:01</a>
+      <span class="cue-text">So first you can get the code on the</span>
+    </p>
+    <p class="cue" id="t843">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=843">14:03</a>
+      <span class="cue-text">witness repository in the KERI</span>
+    </p>
+    <p class="cue" id="t846">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=846">14:06</a>
+      <span class="cue-text">Foundation.</span>
+    </p>
+    <p class="cue" id="t848">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=848">14:08</a>
+      <span class="cue-text">It also has docs. So I have the</span>
+    </p>
+    <p class="cue" id="t852">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=852">14:12</a>
+      <span class="cue-text">developer guide. Same thing just make</span>
+    </p>
+    <p class="cue" id="t855">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=855">14:15</a>
+      <span class="cue-text">sure that you have Libsodium.</span>
+    </p>
+    <p class="cue" id="t858">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=858">14:18</a>
+      <span class="cue-text">How to set up your environment.</span>
+    </p>
+    <p class="cue" id="t861">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=861">14:21</a>
+      <span class="cue-text">And then one thing about the</span>
+    </p>
+    <p class="cue" id="t864">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=864">14:24</a>
+      <span class="cue-text">configuration:</span>
+    </p>
+    <p class="cue" id="t866">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=866">14:26</a>
+      <span class="cue-text">If you were here last time Ryan (Hansen),</span>
+    </p>
+    <p class="cue" id="t869">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=869">14:29</a>
+      <span class="cue-text">you talked about it and how it works. So</span>
+    </p>
+    <p class="cue" id="t872">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=872">14:32</a>
+      <span class="cue-text">I'm not going to repeat it but</span>
+    </p>
+    <p class="cue" id="t874">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=874">14:34</a>
+      <span class="cue-text">surely the curls here</span>
+    </p>
+    <p class="cue" id="t878">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=878">14:38</a>
+      <span class="cue-text">will be the address that the witness</span>
+    </p>
+    <p class="cue" id="t882">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=882">14:42</a>
+      <span class="cue-text">server is going to use.</span>
+    </p>
+    <p class="cue" id="t886">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=886">14:46</a>
+      <span class="cue-text">To run the witnesses, you can</span>
+    </p>
+    <p class="cue" id="t889">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=889">14:49</a>
+      <span class="cue-text">use the first one or I usually use the</span>
+    </p>
+    <p class="cue" id="t892">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=892">14:52</a>
+      <span class="cue-text">other one. Let me</span>
+    </p>
+    <p class="cue" id="t896">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=896">14:56</a>
+      <span class="cue-text">show it here.</span>
+    </p>
+    <p class="cue" id="t902">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=902">15:02</a>
+      <span class="cue-text">So I have it here. Let me activate the ..,</span>
+    </p>
+    <p class="cue" id="t927">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=927">15:27</a>
+      <span class="cue-text">You have my</span>
+    </p>
+    <p class="cue" id="t928">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=928">15:28</a>
+      <span class="cue-text">witnesses running</span>
+    </p>
+    <p class="cue" id="t931">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=931">15:31</a>
+      <span class="cue-text">and if you look at here you can</span>
+    </p>
+    <p class="cue" id="t933">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=933">15:33</a>
+      <span class="cue-text">see the [private, red.] server address, I mean the</span>
+    </p>
+    <p class="cue" id="t935">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=935">15:35</a>
+      <span class="cue-text">port which is 5631 ..,</span>
+    </p>
+    <p class="cue" id="t938">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=938">15:38</a>
+      <span class="cue-text">Sorry, the private one which is</span>
+    </p>
+    <p class="cue" id="t940">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=940">15:40</a>
+      <span class="cue-text">internal and then external which is the</span>
+    </p>
+    <p class="cue" id="t942">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=942">15:42</a>
+      <span class="cue-text">public one at the 5632 port which is</span>
+    </p>
+    <p class="cue" id="t946">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=946">15:46</a>
+      <span class="cue-text">the default one unless you change it in</span>
+    </p>
+    <p class="cue" id="t949">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=949">15:49</a>
+      <span class="cue-text">the configuration and then you can see</span>
+    </p>
+    <p class="cue" id="t952">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=952">15:52</a>
+      <span class="cue-text">your witnesses and their own AID.</span>
+    </p>
+    <p class="cue" id="t957">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=957">15:57</a>
+      <span class="cue-text">Now to develop with witnesses</span>
+    </p>
+    <p class="cue" id="t960">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=960">16:00</a>
+      <span class="cue-text">you have the API which is given and</span>
+    </p>
+    <p class="cue" id="t963">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=963">16:03</a>
+      <span class="cue-text">shown in the readme file of the</span>
+    </p>
+    <p class="cue" id="t965">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=965">16:05</a>
+      <span class="cue-text">repository for the witnesses, you have</span>
+    </p>
+    <p class="cue" id="t968">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=968">16:08</a>
+      <span class="cue-text">different, of course, action POST</span>
+    </p>
+    <p class="cue" id="t971">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=971">16:11</a>
+      <span class="cue-text">[action] DELETE but I'm going to go into the POST</span>
+    </p>
+    <p class="cue" id="t975">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=975">16:15</a>
+      <span class="cue-text">and here basically we have the</span>
+    </p>
+    <p class="cue" id="t979">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=979">16:19</a>
+      <span class="cue-text">the whole POST function it's a Falcon</span>
+    </p>
+    <p class="cue" id="t982">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=982">16:22</a>
+      <span class="cue-text">app so it's in under the witness</span>
+    </p>
+    <p class="cue" id="t985">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=985">16:25</a>
+      <span class="cue-text">collection class. And if you look at it</span>
+    </p>
+    <p class="cue" id="t988">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=988">16:28</a>
+      <span class="cue-text">closely,</span>
+    </p>
+    <p class="cue" id="t989">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=989">16:29</a>
+      <span class="cue-text">you can see that when it receive a post</span>
+    </p>
+    <p class="cue" id="t993">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=993">16:33</a>
+      <span class="cue-text">method, it will first check for the AID,</span>
+    </p>
+    <p class="cue" id="t996">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=996">16:36</a>
+      <span class="cue-text">check that it's a valid AID, and then it</span>
+    </p>
+    <p class="cue" id="t998">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=998">16:38</a>
+      <span class="cue-text">just creates a witness,</span>
+    </p>
+    <p class="cue" id="t1001">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1001">16:41</a>
+      <span class="cue-text">gets the OOBIs and sends the data</span>
+    </p>
+    <p class="cue" id="t1003">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1003">16:43</a>
+      <span class="cue-text">back. That's all it does. So, if you</span>
+    </p>
+    <p class="cue" id="t1006">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1006">16:46</a>
+      <span class="cue-text">wanted, you could check for, I don't</span>
+    </p>
+    <p class="cue" id="t1009">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1009">16:49</a>
+      <span class="cue-text">know, check for more things. But if you</span>
+    </p>
+    <p class="cue" id="t1012">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1012">16:52</a>
+      <span class="cue-text">want to start developing witnesses and</span>
+    </p>
+    <p class="cue" id="t1014">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1014">16:54</a>
+      <span class="cue-text">changing maybe how they behave, this is</span>
+    </p>
+    <p class="cue" id="t1016">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1016">16:56</a>
+      <span class="cue-text">where you would go. This is just an</span>
+    </p>
+    <p class="cue" id="t1018">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1018">16:58</a>
+      <span class="cue-text">example of the 'on_post', but there's also</span>
+    </p>
+    <p class="cue" id="t1021">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1021">17:01</a>
+      <span class="cue-text">the 'on_delete'. There's also all the</span>
+    </p>
+    <p class="cue" id="t1024">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1024">17:04</a>
+      <span class="cue-text">the public</span>
+    </p>
+    <p class="cue" id="t1028">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1028">17:08</a>
+      <span class="cue-text">actions and API that you can change</span>
+    </p>
+    <p class="cue" id="t1031">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1031">17:11</a>
+      <span class="cue-text">which would also be under</span>
+    </p>
+    <p class="cue" id="t1034">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1034">17:14</a>
+      <span class="cue-text">under this. So it's in</span>
+    </p>
+    <p class="cue" id="t1037">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1037">17:17</a>
+      <span class="cue-text">”src/witopnet/witnessing.py”. So if you want to</span>
+    </p>
+    <p class="cue" id="t1039">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1039">17:19</a>
+      <span class="cue-text">change anything go here.</span>
+    </p>
+    <p class="cue" id="t1045">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1045">17:25</a>
+      <span class="cue-text">Now the watchers,</span>
+    </p>
+    <p class="cue" id="t1048">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1048">17:28</a>
+      <span class="cue-text">same thing that we're going to go</span>
+    </p>
+    <p class="cue" id="t1050">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1050">17:30</a>
+      <span class="cue-text">through: public repo of the watchers in</span>
+    </p>
+    <p class="cue" id="t1053">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1053">17:33</a>
+      <span class="cue-text">the KERI Foundation [github repo].</span>
+    </p>
+    <p class="cue" id="t1055">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1055">17:35</a>
+      <span class="cue-text">This one doesn't have docs yet. I</span>
+    </p>
+    <p class="cue" id="t1058">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1058">17:38</a>
+      <span class="cue-text">suppose we might either add it later.</span>
+    </p>
+    <p class="cue" id="t1062">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1062">17:42</a>
+      <span class="cue-text">But that's from the readme.</span>
+    </p>
+    <p class="cue" id="t1066">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1066">17:46</a>
+      <span class="cue-text">I don't think we can install from Pypy</span>
+    </p>
+    <p class="cue" id="t1068">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1068">17:48</a>
+      <span class="cue-text">yet. Correct me if I'm wrong. Yeah, we</span>
+    </p>
+    <p class="cue" id="t1070">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1070">17:50</a>
+      <span class="cue-text">can't install it from PyPy yet. So, just</span>
+    </p>
+    <p class="cue" id="t1073">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1073">17:53</a>
+      <span class="cue-text">clone the repo and then install the</span>
+    </p>
+    <p class="cue" id="t1076">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1076">17:56</a>
+      <span class="cue-text">environment or hopefully from a</span>
+    </p>
+    <p class="cue" id="t1079">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1079">17:59</a>
+      <span class="cue-text">virtual environment.</span>
+    </p>
+    <p class="cue" id="t1081">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1081">18:01</a>
+      <span class="cue-text">Same thing for the</span>
+    </p>
+    <p class="cue" id="t1083">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1083">18:03</a>
+      <span class="cue-text">configuration. The curls is also the</span>
+    </p>
+    <p class="cue" id="t1086">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1086">18:06</a>
+      <span class="cue-text">address from which the watcher server is</span>
+    </p>
+    <p class="cue" id="t1089">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1089">18:09</a>
+      <span class="cue-text">going to respond.</span>
+    </p>
+    <p class="cue" id="t1090">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1090">18:10</a>
+      <span class="cue-text">[Keanu prepares]</span>
+    </p>
+    <p class="cue" id="t1134">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1134">18:54</a>
+      <span class="cue-text">But here you can see the same thing as</span>
+    </p>
+    <p class="cue" id="t1135">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1135">18:55</a>
+      <span class="cue-text">the witnesses. It shows your address,</span>
+    </p>
+    <p class="cue" id="t1138">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1138">18:58</a>
+      <span class="cue-text">public address for the watcher</span>
+    </p>
+    <p class="cue" id="t1141">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1141">19:01</a>
+      <span class="cue-text">server, private and also the watchers</span>
+    </p>
+    <p class="cue" id="t1144">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1144">19:04</a>
+      <span class="cue-text">running. I can probably show it</span>
+    </p>
+    <p class="cue" id="t1146">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1146">19:06</a>
+      <span class="cue-text">better on here.</span>
+    </p>
+    <p class="cue" id="t1151">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1151">19:11</a>
+      <span class="cue-text">You can see they have the watchers here</span>
+    </p>
+    <p class="cue" id="t1154">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1154">19:14</a>
+      <span class="cue-text">as well as their AIDs. You can</span>
+    </p>
+    <p class="cue" id="t1157">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1157">19:17</a>
+      <span class="cue-text">see that it's going up because the</span>
+    </p>
+    <p class="cue" id="t1159">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1159">19:19</a>
+      <span class="cue-text">witnesses are running. So, they're all</span>
+    </p>
+    <p class="cue" id="t1161">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1161">19:21</a>
+      <span class="cue-text">checking the witnesses.</span>
+    </p>
+    <p class="cue" id="t1168">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1168">19:28</a>
+      <span class="cue-text">A quick note that is important</span>
+    </p>
+    <p class="cue" id="t1171">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1171">19:31</a>
+      <span class="cue-text">is that the witnesses and watcher are</span>
+    </p>
+    <p class="cue" id="t1174">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1174">19:34</a>
+      <span class="cue-text">supposed to run together. They're not</span>
+    </p>
+    <p class="cue" id="t1176">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1176">19:36</a>
+      <span class="cue-text">supposed to be individually</span>
+    </p>
+    <p class="cue" id="t1179">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1179">19:39</a>
+      <span class="cue-text">running. They have to be together.</span>
+    </p>
+    <p class="cue" id="t1181">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1181">19:41</a>
+      <span class="cue-text">So, first would be the witnesses and</span>
+    </p>
+    <p class="cue" id="t1183">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1183">19:43</a>
+      <span class="cue-text">then the watchers have to be</span>
+    </p>
+    <p class="cue" id="t1185">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1185">19:45</a>
+      <span class="cue-text">deployed together.</span>
+    </p>
+    <p class="cue" id="t1188">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1188">19:48</a>
+      <span class="cue-text">Same thing for the watchers. You</span>
+    </p>
+    <p class="cue" id="t1190">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1190">19:50</a>
+      <span class="cue-text">have the same API and you can find the</span>
+    </p>
+    <p class="cue" id="t1194">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1194">19:54</a>
+      <span class="cue-text">functions for them in this file here.</span>
+    </p>
+    <p class="cue" id="t1198">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1198">19:58</a>
+      <span class="cue-text">I took the POST for the watchers that</span>
+    </p>
+    <p class="cue" id="t1201">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1201">20:01</a>
+      <span class="cue-text">provision the watcher.</span>
+    </p>
+    <p class="cue" id="t1203">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1203">20:03</a>
+      <span class="cue-text">So to finish: what we have is this</span>
+    </p>
+    <p class="cue" id="t1208">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1208">20:08</a>
+      <span class="cue-text">architecture technically that we have</span>
+    </p>
+    <p class="cue" id="t1210">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1210">20:10</a>
+      <span class="cue-text">the wallet that can make public API</span>
+    </p>
+    <p class="cue" id="t1212">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1212">20:12</a>
+      <span class="cue-text">requests but mostly if you want to just</span>
+    </p>
+    <p class="cue" id="t1215">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1215">20:15</a>
+      <span class="cue-text">have witnesses and watchers provisioning</span>
+    </p>
+    <p class="cue" id="t1218">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1218">20:18</a>
+      <span class="cue-text">it would be through a boot server that</span>
+    </p>
+    <p class="cue" id="t1220">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1220">20:20</a>
+      <span class="cue-text">then talks privately to witnesses and</span>
+    </p>
+    <p class="cue" id="t1224">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1224">20:24</a>
+      <span class="cue-text">watcher server in their own environment.</span>
+    </p>
+    <p class="cue" id="t1228">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1228">20:28</a>
+      <span class="cue-text">I think that's all I have. Unless</span>
+    </p>
+    <p class="cue" id="t1233">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1233">20:33</a>
+      <span class="cue-text">do you guys have any questions?</span>
+    </p>
+    <p class="cue" id="t1236">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1236">20:36</a>
+      <span class="cue-text">Yes.</span>
+    </p>
+    <p class="cue" id="t1237">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1237">20:37</a>
+      <span class="cue-text">– Thank you.</span>
+    </p>
+    <p class="cue" id="t1239">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1239">20:39</a>
+      <span class="cue-text">Given that KERI is a protocol and again</span>
+    </p>
+    <p class="cue" id="t1242">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1242">20:42</a>
+      <span class="cue-text">protocols not companies. So why</span>
+    </p>
+    <p class="cue" id="t1243">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1243">20:43</a>
+      <span class="cue-text">would you want to make changes to</span>
+    </p>
+    <p class="cue" id="t1245">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1245">20:45</a>
+      <span class="cue-text">witnesses or watchers? I thought that</span>
+    </p>
+    <p class="cue" id="t1247">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1247">20:47</a>
+      <span class="cue-text">was like common infrastructure or am I</span>
+    </p>
+    <p class="cue" id="t1250">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1250">20:50</a>
+      <span class="cue-text">wrong?</span>
+    </p>
+    <p class="cue" id="t1252">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1252">20:52</a>
+      <span class="cue-text">– Like for example in this?</span>
+    </p>
+    <p class="cue" id="t1256">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1256">20:56</a>
+      <span class="cue-text">– Yeah. – For example, you can add</span>
+    </p>
+    <p class="cue" id="t1258">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1258">20:58</a>
+      <span class="cue-text">some more checks or you can have… we</span>
+    </p>
+    <p class="cue" id="t1261">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1261">21:01</a>
+      <span class="cue-text">were talking about weight limiting</span>
+    </p>
+    <p class="cue" id="t1264">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1264">21:04</a>
+      <span class="cue-text">for example on how much a person</span>
+    </p>
+    <p class="cue" id="t1268">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1268">21:08</a>
+      <span class="cue-text">could provision witnesses. You could</span>
+    </p>
+    <p class="cue" id="t1270">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1270">21:10</a>
+      <span class="cue-text">limit it or you could expand it.</span>
+    </p>
+    <p class="cue" id="t1273">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1273">21:13</a>
+      <span class="cue-text">Also another thing that you</span>
+    </p>
+    <p class="cue" id="t1276">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1276">21:16</a>
+      <span class="cue-text">could note</span>
+    </p>
+    <p class="cue" id="t1278">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1278">21:18</a>
+      <span class="cue-text">for example for the plugin if I can</span>
+    </p>
+    <p class="cue" id="t1281">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1281">21:21</a>
+      <span class="cue-text">find it. I think it was here. Oh yeah.</span>
+    </p>
+    <p class="cue" id="t1284">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1284">21:24</a>
+      <span class="cue-text">So, for example, for the KERI</span>
+    </p>
+    <p class="cue" id="t1285">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1285">21:25</a>
+      <span class="cue-text">Foundation plugin, all it does right now</span>
+    </p>
+    <p class="cue" id="t1287">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1287">21:27</a>
+      <span class="cue-text">is just onboarding. So, it's pretty</span>
+    </p>
+    <p class="cue" id="t1289">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1289">21:29</a>
+      <span class="cue-text">simple. But if you really wanted to, you</span>
+    </p>
+    <p class="cue" id="t1291">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1291">21:31</a>
+      <span class="cue-text">can make your own plugin where you</span>
+    </p>
+    <p class="cue" id="t1293">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1293">21:33</a>
+      <span class="cue-text">include payment. So, people go through</span>
+    </p>
+    <p class="cue" id="t1295">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1295">21:35</a>
+      <span class="cue-text">the payment first and then it would</span>
+    </p>
+    <p class="cue" id="t1297">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1297">21:37</a>
+      <span class="cue-text">provision your witnesses and watchers.</span>
+    </p>
+    <p class="cue" id="t1299">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1299">21:39</a>
+      <span class="cue-text">– And your watchers can make sure the</span>
+    </p>
+    <p class="cue" id="t1301">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1301">21:41</a>
+      <span class="cue-text">money was transferred.</span>
+    </p>
+    <p class="cue" id="t1303">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1303">21:43</a>
+      <span class="cue-text">– Yeah. So, it could it could go through</span>
+    </p>
+    <p class="cue" id="t1304">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1304">21:44</a>
+      <span class="cue-text">the auth authorization for some account</span>
+    </p>
+    <p class="cue" id="t1307">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1307">21:47</a>
+      <span class="cue-text">account management and</span>
+    </p>
+    <p class="cue" id="t1310">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1310">21:50</a>
+      <span class="cue-text">approvement.</span>
+    </p>
+    <p class="cue" id="t1311">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1311">21:51</a>
+      <span class="cue-text">– Approval.</span>
+    </p>
+    <p class="cue" id="t1312">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1312">21:52</a>
+      <span class="cue-text">Approval. That's the word.</span>
+    </p>
+    <p class="cue" id="t1314">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1314">21:54</a>
+      <span class="cue-text">If you want, I think what</span>
+    </p>
+    <p class="cue" id="t1317">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1317">21:57</a>
+      <span class="cue-text">would be more interesting is probably</span>
+    </p>
+    <p class="cue" id="t1319">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1319">21:59</a>
+      <span class="cue-text">doing your own plug-in first because</span>
+    </p>
+    <p class="cue" id="t1321">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1321">22:01</a>
+      <span class="cue-text">that's when you could decouple that</span>
+    </p>
+    <p class="cue" id="t1324">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1324">22:04</a>
+      <span class="cue-text">from the witnesses and just handle</span>
+    </p>
+    <p class="cue" id="t1325">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1325">22:05</a>
+      <span class="cue-text">everything in your own plugin.</span>
+    </p>
+    <p class="cue" id="t1328">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1328">22:08</a>
+      <span class="cue-text">– One thing to note also that this</span>
+    </p>
+    <p class="cue" id="t1330">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1330">22:10</a>
+      <span class="cue-text">witness service that we're talking about</span>
+    </p>
+    <p class="cue" id="t1332">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1332">22:12</a>
+      <span class="cue-text">here doesn't necessarily, if you're</span>
+    </p>
+    <p class="cue" id="t1335">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1335">22:15</a>
+      <span class="cue-text">manipulating in that 'on_post' handler,</span>
+    </p>
+    <p class="cue" id="t1338">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1338">22:18</a>
+      <span class="cue-text">you're not necessarily manipulating how</span>
+    </p>
+    <p class="cue" id="t1340">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1340">22:20</a>
+      <span class="cue-text">the witness code itself works [inaudible]</span>
+    </p>
+    <p class="cue" id="t1344">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1344">22:24</a>
+      <span class="cue-text">you're just manipulating the</span>
+    </p>
+    <p class="cue" id="t1347">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1347">22:27</a>
+      <span class="cue-text">layer, basically the API layer of</span>
+    </p>
+    <p class="cue" id="t1349">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1349">22:29</a>
+      <span class="cue-text">[inaudible]</span>
+    </p>
+    <p class="cue" id="t1350">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1350">22:30</a>
+      <span class="cue-text">so you can expand…</span>
+    </p>
+    <p class="cue" id="t1351">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1351">22:31</a>
+      <span class="cue-text">– So you're really not modifying any other…</span>
+    </p>
+    <p class="cue" id="t1354">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1354">22:34</a>
+      <span class="cue-text">– Just adding extra functionality,</span>
+    </p>
+    <p class="cue" id="t1355">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1355">22:35</a>
+      <span class="cue-text">auxiliary functionality.</span>
+    </p>
+    <p class="cue" id="t1359">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1359">22:39</a>
+      <span class="cue-text">– Of course being open source if you</span>
+    </p>
+    <p class="cue" id="t1361">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1361">22:41</a>
+      <span class="cue-text">wanted to go in and manipulate the</span>
+    </p>
+    <p class="cue" id="t1363">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1363">22:43</a>
+      <span class="cue-text">witness protocol some way for your own</span>
+    </p>
+    <p class="cue" id="t1365">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1365">22:45</a>
+      <span class="cue-text">version, that's on your own.</span>
+    </p>
+    <p class="cue" id="t1371">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1371">22:51</a>
+      <span class="cue-text">If you look here for example…</span>
+    </p>
+    <p class="cue" id="t1375">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1375">22:55</a>
+      <span class="cue-text">This is all it does, just calls create</span>
+    </p>
+    <p class="cue" id="t1378">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1378">22:58</a>
+      <span class="cue-text">witness but then everything after, you</span>
+    </p>
+    <p class="cue" id="t1380">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1380">23:00</a>
+      <span class="cue-text">can probably</span>
+    </p>
+    <p class="cue" id="t1383">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1383">23:03</a>
+      <span class="cue-text">add more functionalities for yourself</span>
+    </p>
+    <p class="cue" id="t1385">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1385">23:05</a>
+      <span class="cue-text">for example for tracking or for like</span>
+    </p>
+    <p class="cue" id="t1388">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1388">23:08</a>
+      <span class="cue-text">stats if you wanted to but that's up to</span>
+    </p>
+    <p class="cue" id="t1391">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1391">23:11</a>
+      <span class="cue-text">you. So I'm just trying to give you an</span>
+    </p>
+    <p class="cue" id="t1393">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1393">23:13</a>
+      <span class="cue-text">example of where you would start and how</span>
+    </p>
+    <p class="cue" id="t1396">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1396">23:16</a>
+      <span class="cue-text">you could start.</span>
+    </p>
+    <p class="cue" id="t1397">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1397">23:17</a>
+      <span class="cue-text">– That “createWitness” method weaves down</span>
+    </p>
+    <p class="cue" id="t1400">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1400">23:20</a>
+      <span class="cue-text">into the KERIpy.</span>
+    </p>
+    <p class="cue" id="t1402">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1402">23:22</a>
+      <span class="cue-text">– Yeah.</span>
+    </p>
+    <p class="cue" id="t1407">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1407">23:27</a>
+      <span class="cue-text">– Great. Thank you.</span>
+    </p>
+    <p class="cue" id="t1409">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1409">23:29</a>
+      <span class="cue-text">– Yeah, no problem. If you don't have</span>
+    </p>
+    <p class="cue" id="t1411">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1411">23:31</a>
+      <span class="cue-text">any questions, then I think I'll give</span>
+    </p>
+    <p class="cue" id="t1413">
+      <a class="cue-time" href="../../../#keri-development-deployment-keanu-pahio&amp;t=1413">23:33</a>
+      <span class="cue-text">you back 20 minutes.</span>
+    </p>
+    </article>
+    <footer>KERI Foundation • Conference Videos Collection</footer>
+  </div>
+</body>
+</html>
