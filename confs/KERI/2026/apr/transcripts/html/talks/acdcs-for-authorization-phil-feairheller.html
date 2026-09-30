@@ -1,0 +1,2942 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ACDCs for Authorization - Phil Feairheller — Transcript</title>
+  <meta name="description" content="Transcript: ACDCs for Authorization - Phil Feairheller (KERICONF26 Day 2 · 36:15)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #060b6f;
+      --muted: #2e3a7a;
+      --bg: #b1d1cf;
+      --panel: rgba(255, 255, 255, 0.55);
+      --accent: #986c32;
+      --link: #0450a8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Source Serif 4", Georgia, serif;
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(255,255,255,0.45), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 0%, rgba(152,108,50,0.12), transparent),
+        var(--bg);
+      color: var(--ink);
+      padding: 24px 16px 48px;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 44rem; margin: 0 auto; }
+    nav {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+    nav a { color: var(--link); }
+    nav a:hover { color: var(--ink); }
+    header {
+      background: var(--panel);
+      border: 1px solid rgba(6, 11, 111, 0.12);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      margin: 0 0 0.4rem;
+    }
+    .meta {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0 0 1rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .actions a {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--ink);
+      background: rgba(152, 108, 50, 0.18);
+      border: 1px solid rgba(152, 108, 50, 0.35);
+      border-radius: 8px;
+      padding: 0.55rem 0.9rem;
+    }
+    .actions a:hover { background: rgba(152, 108, 50, 0.28); }
+    .actions a.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+    .actions a.primary:hover { background: #0a1270; }
+    article {
+      background: var(--panel);
+      border: 1px solid rgba(6, 11, 111, 0.12);
+      border-radius: 10px;
+      padding: 1rem 1.25rem 1.5rem;
+    }
+    .cue {
+      display: grid;
+      grid-template-columns: 4.5rem 1fr;
+      gap: 0.65rem 0.85rem;
+      margin: 0;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(6, 11, 111, 0.08);
+    }
+    .cue:last-child { border-bottom: none; }
+    .cue-time {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      padding-top: 0.15rem;
+    }
+    .cue-time:hover { color: var(--ink); text-decoration: underline; }
+    .cue-text { font-size: 1.05rem; }
+    footer {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    @media (max-width: 520px) {
+      .cue { grid-template-columns: 1fr; gap: 0.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="../../../">KERI Conference April 2026 Videos</a>
+      · <a href="./">All transcripts</a>
+    </nav>
+    <header>
+      <h1>ACDCs for Authorization - Phil Feairheller</h1>
+      <p class="meta">KERICONF26 Day 2 · 36:15</p>
+      <div class="actions">
+        <a class="primary" href="../../../#acdcs-for-authorization-phil-feairheller">Watch video</a>
+        <a href="./">All transcripts</a>
+        <a href="../../../">Video gallery</a>
+      </div>
+    </header>
+    <article>
+    <p class="cue" id="t0">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller">0:00</a>
+      <span class="cue-text">｜ KERI Conference 2026</span>
+    </p>
+    <p class="cue" id="t3">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=3">0:03</a>
+      <span class="cue-text">Hi everyone. For those of you who don't</span>
+    </p>
+    <p class="cue" id="t4">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=4">0:04</a>
+      <span class="cue-text">know me, I'm Phil Feairheller, CTO and</span>
+    </p>
+    <p class="cue" id="t5">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=5">0:05</a>
+      <span class="cue-text">co-founder of healthKERI. And</span>
+    </p>
+    <p class="cue" id="t9">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=9">0:09</a>
+      <span class="cue-text">those of you who are presenters will</span>
+    </p>
+    <p class="cue" id="t12">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=12">0:12</a>
+      <span class="cue-text">know that we had to submit our talks</span>
+    </p>
+    <p class="cue" id="t15">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=15">0:15</a>
+      <span class="cue-text">ahead of time to get the slides</span>
+    </p>
+    <p class="cue" id="t18">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=18">0:18</a>
+      <span class="cue-text">approved. And so I submitted a talk on</span>
+    </p>
+    <p class="cue" id="t20">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=20">0:20</a>
+      <span class="cue-text">ACDCs for authentication. But I'm</span>
+    </p>
+    <p class="cue" id="t23">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=23">0:23</a>
+      <span class="cue-text">going to pull a little bit of a fast one</span>
+    </p>
+    <p class="cue" id="t25">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=25">0:25</a>
+      <span class="cue-text">and switch it up because there I think</span>
+    </p>
+    <p class="cue" id="t26">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=26">0:26</a>
+      <span class="cue-text">is a much more important topic that we</span>
+    </p>
+    <p class="cue" id="t29">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=29">0:29</a>
+      <span class="cue-text">need to discuss and that is HIO. Why</span>
+    </p>
+    <p class="cue" id="t33">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=33">0:33</a>
+      <span class="cue-text">Sam? I'm just kidding. I'm not going to do.</span>
+    </p>
+    <p class="cue" id="t38">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=38">0:38</a>
+      <span class="cue-text">Totally kidding. I'm actually doing</span>
+    </p>
+    <p class="cue" id="t39">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=39">0:39</a>
+      <span class="cue-text">ACDCs for authentication.</span>
+    </p>
+    <p class="cue" id="t42">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=42">0:42</a>
+      <span class="cue-text">Okay, so this talk is based on the</span>
+    </p>
+    <p class="cue" id="t45">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=45">0:45</a>
+      <span class="cue-text">demo that we did for the SEDI conference</span>
+    </p>
+    <p class="cue" id="t48">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=48">0:48</a>
+      <span class="cue-text">and I have it here. I'm just going to</span>
+    </p>
+    <p class="cue" id="t50">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=50">0:50</a>
+      <span class="cue-text">run the video of it real quick and</span>
+    </p>
+    <p class="cue" id="t53">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=53">0:53</a>
+      <span class="cue-text">talk through what we did.</span>
+    </p>
+    <p class="cue" id="t56">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=56">0:56</a>
+      <span class="cue-text">Let me get it started. In this demo,</span>
+    </p>
+    <p class="cue" id="t58">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=58">0:58</a>
+      <span class="cue-text">we start with our Locksmith wallet. We</span>
+    </p>
+    <p class="cue" id="t60">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=60">1:00</a>
+      <span class="cue-text">show that the wallet is holding a couple</span>
+    </p>
+    <p class="cue" id="t62">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=62">1:02</a>
+      <span class="cue-text">of credentials, a vLEI credential and a</span>
+    </p>
+    <p class="cue" id="t64">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=64">1:04</a>
+      <span class="cue-text">fake Utah SEDI health identification</span>
+    </p>
+    <p class="cue" id="t67">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=67">1:07</a>
+      <span class="cue-text">card credential and the various fields</span>
+    </p>
+    <p class="cue" id="t69">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=69">1:09</a>
+      <span class="cue-text">that are in it.</span>
+    </p>
+    <p class="cue" id="t72">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=72">1:12</a>
+      <span class="cue-text">And then we switch over to the site</span>
+    </p>
+    <p class="cue" id="t74">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=74">1:14</a>
+      <span class="cue-text">which is a fake healthcare portal and</span>
+    </p>
+    <p class="cue" id="t76">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=76">1:16</a>
+      <span class="cue-text">demonstrate how we could use those</span>
+    </p>
+    <p class="cue" id="t78">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=78">1:18</a>
+      <span class="cue-text">credentials to first create an account</span>
+    </p>
+    <p class="cue" id="t80">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=80">1:20</a>
+      <span class="cue-text">and second to authenticate and log into</span>
+    </p>
+    <p class="cue" id="t82">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=82">1:22</a>
+      <span class="cue-text">the account from there on; go through the</span>
+    </p>
+    <p class="cue" id="t85">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=85">1:25</a>
+      <span class="cue-text">fact that you could allow the user to</span>
+    </p>
+    <p class="cue" id="t87">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=87">1:27</a>
+      <span class="cue-text">type in the information and suffer</span>
+    </p>
+    <p class="cue" id="t89">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=89">1:29</a>
+      <span class="cue-text">through typos and everything else or you</span>
+    </p>
+    <p class="cue" id="t91">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=91">1:31</a>
+      <span class="cue-text">could use the SEDI credential and get</span>
+    </p>
+    <p class="cue" id="t93">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=93">1:33</a>
+      <span class="cue-text">accurate data and much more secure</span>
+    </p>
+    <p class="cue" id="t96">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=96">1:36</a>
+      <span class="cue-text">connections. In addition to that, we</span>
+    </p>
+    <p class="cue" id="t98">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=98">1:38</a>
+      <span class="cue-text">went over the fact that we could</span>
+    </p>
+    <p class="cue" id="t99">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=99">1:39</a>
+      <span class="cue-text">introduce at the beginning of the OAuth</span>
+    </p>
+    <p class="cue" id="t101">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=101">1:41</a>
+      <span class="cue-text">flow an offer stage that allows me to</span>
+    </p>
+    <p class="cue" id="t104">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=104">1:44</a>
+      <span class="cue-text">offer the credential without sharing the</span>
+    </p>
+    <p class="cue" id="t106">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=106">1:46</a>
+      <span class="cue-text">data and require a signed receipt back</span>
+    </p>
+    <p class="cue" id="t109">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=109">1:49</a>
+      <span class="cue-text">from the site that they agree to my</span>
+    </p>
+    <p class="cue" id="t111">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=111">1:51</a>
+      <span class="cue-text">terms and conditions before I give them</span>
+    </p>
+    <p class="cue" id="t113">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=113">1:53</a>
+      <span class="cue-text">my credential and all the data in it. So</span>
+    </p>
+    <p class="cue" id="t116">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=116">1:56</a>
+      <span class="cue-text">that's what we're doing here. We're</span>
+    </p>
+    <p class="cue" id="t117">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=117">1:57</a>
+      <span class="cue-text">doing the offer.</span>
+    </p>
+    <p class="cue" id="t119">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=119">1:59</a>
+      <span class="cue-text">We also demonstrated that the site is</span>
+    </p>
+    <p class="cue" id="t120">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=120">2:00</a>
+      <span class="cue-text">built so that anyone using any other</span>
+    </p>
+    <p class="cue" id="t122">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=122">2:02</a>
+      <span class="cue-text">KERI tool can create an offer and</span>
+    </p>
+    <p class="cue" id="t124">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=124">2:04</a>
+      <span class="cue-text">upload it. You don't need the plugin.</span>
+    </p>
+    <p class="cue" id="t125">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=125">2:05</a>
+      <span class="cue-text">We just use the plugin make it</span>
+    </p>
+    <p class="cue" id="t127">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=127">2:07</a>
+      <span class="cue-text">work a little more smoothly. And then</span>
+    </p>
+    <p class="cue" id="t129">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=129">2:09</a>
+      <span class="cue-text">here they have returned the signed</span>
+    </p>
+    <p class="cue" id="t131">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=131">2:11</a>
+      <span class="cue-text">receipt.</span>
+    </p>
+    <p class="cue" id="t133">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=133">2:13</a>
+      <span class="cue-text">You can view the receipt in the accepted</span>
+    </p>
+    <p class="cue" id="t135">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=135">2:15</a>
+      <span class="cue-text">offer section</span>
+    </p>
+    <p class="cue" id="t141">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=141">2:21</a>
+      <span class="cue-text">and then submit the full credential and</span>
+    </p>
+    <p class="cue" id="t143">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=143">2:23</a>
+      <span class="cue-text">now you're logged into the site. You've</span>
+    </p>
+    <p class="cue" id="t145">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=145">2:25</a>
+      <span class="cue-text">created your account.</span>
+    </p>
+    <p class="cue" id="t147">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=147">2:27</a>
+      <span class="cue-text">All the data is extracted from the</span>
+    </p>
+    <p class="cue" id="t149">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=149">2:29</a>
+      <span class="cue-text">credential</span>
+    </p>
+    <p class="cue" id="t151">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=151">2:31</a>
+      <span class="cue-text">and you are now signed in. And then you</span>
+    </p>
+    <p class="cue" id="t153">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=153">2:33</a>
+      <span class="cue-text">can go through the process and sign in</span>
+    </p>
+    <p class="cue" id="t154">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=154">2:34</a>
+      <span class="cue-text">again. And the point here was that we</span>
+    </p>
+    <p class="cue" id="t156">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=156">2:36</a>
+      <span class="cue-text">made it such that the process of</span>
+    </p>
+    <p class="cue" id="t159">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=159">2:39</a>
+      <span class="cue-text">using a any kind of ACDC credential for</span>
+    </p>
+    <p class="cue" id="t162">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=162">2:42</a>
+      <span class="cue-text">this form of authorization can be just</span>
+    </p>
+    <p class="cue" id="t164">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=164">2:44</a>
+      <span class="cue-text">as easy as using a passkey, for</span>
+    </p>
+    <p class="cue" id="t166">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=166">2:46</a>
+      <span class="cue-text">example, but of course much more secure</span>
+    </p>
+    <p class="cue" id="t168">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=168">2:48</a>
+      <span class="cue-text">because it's based on a KERI identifier</span>
+    </p>
+    <p class="cue" id="t171">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=171">2:51</a>
+      <span class="cue-text">through the stuff I'm going to show</span>
+    </p>
+    <p class="cue" id="t172">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=172">2:52</a>
+      <span class="cue-text">next. Key rotations work seamlessly. You</span>
+    </p>
+    <p class="cue" id="t176">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=176">2:56</a>
+      <span class="cue-text">can do them anytime you want. And if you</span>
+    </p>
+    <p class="cue" id="t178">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=178">2:58</a>
+      <span class="cue-text">use this AID in this account,</span>
+    </p>
+    <p class="cue" id="t181">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=181">3:01</a>
+      <span class="cue-text">(how do I go next? There we go.) If you</span>
+    </p>
+    <p class="cue" id="t184">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=184">3:04</a>
+      <span class="cue-text">use this AID for multiple sites that</span>
+    </p>
+    <p class="cue" id="t186">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=186">3:06</a>
+      <span class="cue-text">you've logged into, you do one key</span>
+    </p>
+    <p class="cue" id="t188">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=188">3:08</a>
+      <span class="cue-text">rotation and they'll all get your new</span>
+    </p>
+    <p class="cue" id="t190">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=190">3:10</a>
+      <span class="cue-text">keys. So you don't have to worry about</span>
+    </p>
+    <p class="cue" id="t191">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=191">3:11</a>
+      <span class="cue-text">changing a password, remembering</span>
+    </p>
+    <p class="cue" id="t193">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=193">3:13</a>
+      <span class="cue-text">passwords for many different sites, etc.</span>
+    </p>
+    <p class="cue" id="t196">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=196">3:16</a>
+      <span class="cue-text">So that demo was something that we kind</span>
+    </p>
+    <p class="cue" id="t200">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=200">3:20</a>
+      <span class="cue-text">of backed into because of the work that</span>
+    </p>
+    <p class="cue" id="t202">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=202">3:22</a>
+      <span class="cue-text">we've been doing in healthcare. And so</span>
+    </p>
+    <p class="cue" id="t204">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=204">3:24</a>
+      <span class="cue-text">what I want to cover today is how we got</span>
+    </p>
+    <p class="cue" id="t206">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=206">3:26</a>
+      <span class="cue-text">to that by starting to work with</span>
+    </p>
+    <p class="cue" id="t210">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=210">3:30</a>
+      <span class="cue-text">integrating the vLEI into the OAuth</span>
+    </p>
+    <p class="cue" id="t212">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=212">3:32</a>
+      <span class="cue-text">protocol for a specific purpose related</span>
+    </p>
+    <p class="cue" id="t215">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=215">3:35</a>
+      <span class="cue-text">sorry specific per purpose related to</span>
+    </p>
+    <p class="cue" id="t217">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=217">3:37</a>
+      <span class="cue-text">these protocols. But then we realized</span>
+    </p>
+    <p class="cue" id="t220">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=220">3:40</a>
+      <span class="cue-text">that if we just keep going and extend it</span>
+    </p>
+    <p class="cue" id="t222">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=222">3:42</a>
+      <span class="cue-text">a little bit further into OAuth, we could</span>
+    </p>
+    <p class="cue" id="t224">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=224">3:44</a>
+      <span class="cue-text">do end user authentication. So these</span>
+    </p>
+    <p class="cue" id="t226">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=226">3:46</a>
+      <span class="cue-text">protocols I realized this morning</span>
+    </p>
+    <p class="cue" id="t228">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=228">3:48</a>
+      <span class="cue-text">looking at my slide you've all heard</span>
+    </p>
+    <p class="cue" id="t230">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=230">3:50</a>
+      <span class="cue-text">about them now I think at least three</span>
+    </p>
+    <p class="cue" id="t232">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=232">3:52</a>
+      <span class="cue-text">different times in three different</span>
+    </p>
+    <p class="cue" id="t233">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=233">3:53</a>
+      <span class="cue-text">sessions. So I'm going to go over them</span>
+    </p>
+    <p class="cue" id="t234">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=234">3:54</a>
+      <span class="cue-text">very quickly but to make a very</span>
+    </p>
+    <p class="cue" id="t236">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=236">3:56</a>
+      <span class="cue-text">specific point about them. So HL7 FHIR</span>
+    </p>
+    <p class="cue" id="t240">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=240">4:00</a>
+      <span class="cue-text">think of it as REST APIs for healthcare</span>
+    </p>
+    <p class="cue" id="t242">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=242">4:02</a>
+      <span class="cue-text">very simple but extensible data model</span>
+    </p>
+    <p class="cue" id="t246">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=246">4:06</a>
+      <span class="cue-text">specific to healthcare. It supports</span>
+    </p>
+    <p class="cue" id="t248">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=248">4:08</a>
+      <span class="cue-text">real-time APIs documents and messages.</span>
+    </p>
+    <p class="cue" id="t251">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=251">4:11</a>
+      <span class="cue-text">It is actually written into HSS</span>
+    </p>
+    <p class="cue" id="t253">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=253">4:13</a>
+      <span class="cue-text">regulations and it was informed by all</span>
+    </p>
+    <p class="cue" id="t256">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=256">4:16</a>
+      <span class="cue-text">of these other standards that have been</span>
+    </p>
+    <p class="cue" id="t258">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=258">4:18</a>
+      <span class="cue-text">used in healthcare for 30 years, Mark.</span>
+    </p>
+    <p class="cue" id="t260">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=260">4:20</a>
+      <span class="cue-text">20 years. Yeah. And so the old way, Mark</span>
+    </p>
+    <p class="cue" id="t262">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=262">4:22</a>
+      <span class="cue-text">explained this in another session</span>
+    </p>
+    <p class="cue" id="t263">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=263">4:23</a>
+      <span class="cue-text">yesterday. The old way was is that as</span>
+    </p>
+    <p class="cue" id="t266">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=266">4:26</a>
+      <span class="cue-text">they were starting to exchange more and</span>
+    </p>
+    <p class="cue" id="t267">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=267">4:27</a>
+      <span class="cue-text">more data, they were just exchanging</span>
+    </p>
+    <p class="cue" id="t269">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=269">4:29</a>
+      <span class="cue-text">documents over these protocols and</span>
+    </p>
+    <p class="cue" id="t272">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=272">4:32</a>
+      <span class="cue-text">the documents were just getting bigger</span>
+    </p>
+    <p class="cue" id="t274">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=274">4:34</a>
+      <span class="cue-text">and bigger because they had to send the</span>
+    </p>
+    <p class="cue" id="t275">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=275">4:35</a>
+      <span class="cue-text">whole thing. So FHIR, what it did was</span>
+    </p>
+    <p class="cue" id="t277">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=277">4:37</a>
+      <span class="cue-text">allow people to send distinct sections</span>
+    </p>
+    <p class="cue" id="t280">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=280">4:40</a>
+      <span class="cue-text">of records that were much easier to</span>
+    </p>
+    <p class="cue" id="t282">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=282">4:42</a>
+      <span class="cue-text">transmit and of course modernized</span>
+    </p>
+    <p class="cue" id="t284">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=284">4:44</a>
+      <span class="cue-text">because they're REST APIs. So the FHIR</span>
+    </p>
+    <p class="cue" id="t287">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=287">4:47</a>
+      <span class="cue-text">modules are broken down into these</span>
+    </p>
+    <p class="cue" id="t288">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=288">4:48</a>
+      <span class="cue-text">different categories. You have your</span>
+    </p>
+    <p class="cue" id="t290">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=290">4:50</a>
+      <span class="cue-text">foundation and base resources and then</span>
+    </p>
+    <p class="cue" id="t292">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=292">4:52</a>
+      <span class="cue-text">of course you have the specific</span>
+    </p>
+    <p class="cue" id="t293">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=293">4:53</a>
+      <span class="cue-text">resources that are defined for things</span>
+    </p>
+    <p class="cue" id="t296">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=296">4:56</a>
+      <span class="cue-text">like clinical, financial, specialized</span>
+    </p>
+    <p class="cue" id="t298">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=298">4:58</a>
+      <span class="cue-text">resources. And you can see all the</span>
+    </p>
+    <p class="cue" id="t299">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=299">4:59</a>
+      <span class="cue-text">categories here. they're not</span>
+    </p>
+    <p class="cue" id="t301">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=301">5:01</a>
+      <span class="cue-text">particularly interesting to us or</span>
+    </p>
+    <p class="cue" id="t302">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=302">5:02</a>
+      <span class="cue-text">KERI, but I wanted to point out that</span>
+    </p>
+    <p class="cue" id="t304">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=304">5:04</a>
+      <span class="cue-text">what we're trying to accomplish is</span>
+    </p>
+    <p class="cue" id="t307">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=307">5:07</a>
+      <span class="cue-text">the ability to do authorization at a</span>
+    </p>
+    <p class="cue" id="t310">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=310">5:10</a>
+      <span class="cue-text">level that's as low as this. So, very</span>
+    </p>
+    <p class="cue" id="t312">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=312">5:12</a>
+      <span class="cue-text">particularly, we are working on</span>
+    </p>
+    <p class="cue" id="t315">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=315">5:15</a>
+      <span class="cue-text">something called payer-to-payer access,</span>
+    </p>
+    <p class="cue" id="t316">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=316">5:16</a>
+      <span class="cue-text">which allows payers to, for example, if</span>
+    </p>
+    <p class="cue" id="t319">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=319">5:19</a>
+      <span class="cue-text">you switch from one payer to another, get</span>
+    </p>
+    <p class="cue" id="t321">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=321">5:21</a>
+      <span class="cue-text">your information over to the other payer</span>
+    </p>
+    <p class="cue" id="t322">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=322">5:22</a>
+      <span class="cue-text">much more seamlessly than happens today.</span>
+    </p>
+    <p class="cue" id="t325">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=325">5:25</a>
+      <span class="cue-text">But we only want the two companies to be</span>
+    </p>
+    <p class="cue" id="t328">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=328">5:28</a>
+      <span class="cue-text">able to exchange data for</span>
+    </p>
+    <p class="cue" id="t329">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=329">5:29</a>
+      <span class="cue-text">payer-to-payer, not for anything else.</span>
+    </p>
+    <p class="cue" id="t331">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=331">5:31</a>
+      <span class="cue-text">So, we're able to dig in at this level</span>
+    </p>
+    <p class="cue" id="t333">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=333">5:33</a>
+      <span class="cue-text">and create authorizations very specific</span>
+    </p>
+    <p class="cue" id="t336">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=336">5:36</a>
+      <span class="cue-text">to the purpose of use.</span>
+    </p>
+    <p class="cue" id="t339">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=339">5:39</a>
+      <span class="cue-text">Okay. And what got us here? What got us</span>
+    </p>
+    <p class="cue" id="t341">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=341">5:41</a>
+      <span class="cue-text">here was CMS-0057-F final rule. Easy to</span>
+    </p>
+    <p class="cue" id="t345">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=345">5:45</a>
+      <span class="cue-text">say and it mandates that Medicare</span>
+    </p>
+    <p class="cue" id="t347">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=347">5:47</a>
+      <span class="cue-text">Advantage, Medicaid and CHIP plans. So</span>
+    </p>
+    <p class="cue" id="t349">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=349">5:49</a>
+      <span class="cue-text">anyone that interacts with these people</span>
+    </p>
+    <p class="cue" id="t351">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=351">5:51</a>
+      <span class="cue-text">have to implement FHIR-based APIs to</span>
+    </p>
+    <p class="cue" id="t354">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=354">5:54</a>
+      <span class="cue-text">streamline prior off and accelerate</span>
+    </p>
+    <p class="cue" id="t355">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=355">5:55</a>
+      <span class="cue-text">decision times.</span>
+    </p>
+    <p class="cue" id="t358">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=358">5:58</a>
+      <span class="cue-text">So you have the impacted players here as</span>
+    </p>
+    <p class="cue" id="t360">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=360">6:00</a>
+      <span class="cue-text">I said anyone who works with these</span>
+    </p>
+    <p class="cue" id="t362">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=362">6:02</a>
+      <span class="cue-text">people. The one that's probably most</span>
+    </p>
+    <p class="cue" id="t365">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=365">6:05</a>
+      <span class="cue-text">interesting to folks in the industry is</span>
+    </p>
+    <p class="cue" id="t367">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=367">6:07</a>
+      <span class="cue-text">the Prior Auth because that's always been</span>
+    </p>
+    <p class="cue" id="t368">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=368">6:08</a>
+      <span class="cue-text">a sticking point. Takes forever. It's</span>
+    </p>
+    <p class="cue" id="t371">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=371">6:11</a>
+      <span class="cue-text">manual in some cases. They want this</span>
+    </p>
+    <p class="cue" id="t373">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=373">6:13</a>
+      <span class="cue-text">to be automated much more quickly.</span>
+    </p>
+    <p class="cue" id="t376">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=376">6:16</a>
+      <span class="cue-text">Patient access, so getting into patients</span>
+    </p>
+    <p class="cue" id="t378">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=378">6:18</a>
+      <span class="cue-text">being able to get a hold of their own</span>
+    </p>
+    <p class="cue" id="t380">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=380">6:20</a>
+      <span class="cue-text">data at the FHIR level. But then the one</span>
+    </p>
+    <p class="cue" id="t383">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=383">6:23</a>
+      <span class="cue-text">that we focused on because it's the</span>
+    </p>
+    <p class="cue" id="t385">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=385">6:25</a>
+      <span class="cue-text">easiest to get pilots going, it's the</span>
+    </p>
+    <p class="cue" id="t387">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=387">6:27</a>
+      <span class="cue-text">most constrained use case was the</span>
+    </p>
+    <p class="cue" id="t389">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=389">6:29</a>
+      <span class="cue-text">payer-to-payer data exchange. So this</span>
+    </p>
+    <p class="cue" id="t391">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=391">6:31</a>
+      <span class="cue-text">mandate is forcing by January of 2027</span>
+    </p>
+    <p class="cue" id="t395">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=395">6:35</a>
+      <span class="cue-text">health plans to implement this. So that</span>
+    </p>
+    <p class="cue" id="t397">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=397">6:37</a>
+      <span class="cue-text">was our opportunity and what gave us the</span>
+    </p>
+    <p class="cue" id="t399">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=399">6:39</a>
+      <span class="cue-text">idea, actually Mark the idea, that we</span>
+    </p>
+    <p class="cue" id="t402">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=402">6:42</a>
+      <span class="cue-text">could integrate the vLEI into this, to</span>
+    </p>
+    <p class="cue" id="t404">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=404">6:44</a>
+      <span class="cue-text">accelerate the connections that are now</span>
+    </p>
+    <p class="cue" id="t407">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=407">6:47</a>
+      <span class="cue-text">going to be needed between these payers</span>
+    </p>
+    <p class="cue" id="t408">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=408">6:48</a>
+      <span class="cue-text">and then down the road between payers</span>
+    </p>
+    <p class="cue" id="t410">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=410">6:50</a>
+      <span class="cue-text">and providers and then down the road</span>
+    </p>
+    <p class="cue" id="t412">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=412">6:52</a>
+      <span class="cue-text">even further between patients and payers</span>
+    </p>
+    <p class="cue" id="t414">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=414">6:54</a>
+      <span class="cue-text">and providers. So you're starting to see</span>
+    </p>
+    <p class="cue" id="t416">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=416">6:56</a>
+      <span class="cue-text">the number of connections that are going</span>
+    </p>
+    <p class="cue" id="t417">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=417">6:57</a>
+      <span class="cue-text">to be needed. Making those connections</span>
+    </p>
+    <p class="cue" id="t420">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=420">7:00</a>
+      <span class="cue-text">quickly and securely would be a limiting</span>
+    </p>
+    <p class="cue" id="t423">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=423">7:03</a>
+      <span class="cue-text">factor without what we're trying to</span>
+    </p>
+    <p class="cue" id="t424">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=424">7:04</a>
+      <span class="cue-text">implement.</span>
+    </p>
+    <p class="cue" id="t427">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=427">7:07</a>
+      <span class="cue-text">OAuth 2.0, I don't really need to go</span>
+    </p>
+    <p class="cue" id="t429">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=429">7:09</a>
+      <span class="cue-text">into this, most of you probably are aware</span>
+    </p>
+    <p class="cue" id="t431">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=431">7:11</a>
+      <span class="cue-text">of what it is, legacy, kind of like</span>
+    </p>
+    <p class="cue" id="t434">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=434">7:14</a>
+      <span class="cue-text">using the word legacy, authorization</span>
+    </p>
+    <p class="cue" id="t436">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=436">7:16</a>
+      <span class="cue-text">authentication protocols,</span>
+    </p>
+    <p class="cue" id="t438">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=438">7:18</a>
+      <span class="cue-text">essential for</span>
+    </p>
+    <p class="cue" id="t439">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=439">7:19</a>
+      <span class="cue-text">interoperability and that's the key so I</span>
+    </p>
+    <p class="cue" id="t442">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=442">7:22</a>
+      <span class="cue-text">think the biggest lesson learned for</span>
+    </p>
+    <p class="cue" id="t445">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=445">7:25</a>
+      <span class="cue-text">healthKERI here is meeting the customer</span>
+    </p>
+    <p class="cue" id="t447">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=447">7:27</a>
+      <span class="cue-text">where they are. A little history when we</span>
+    </p>
+    <p class="cue" id="t450">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=450">7:30</a>
+      <span class="cue-text">first started out we created a product</span>
+    </p>
+    <p class="cue" id="t453">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=453">7:33</a>
+      <span class="cue-text">called RACK: Routing Authenticity and</span>
+    </p>
+    <p class="cue" id="t456">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=456">7:36</a>
+      <span class="cue-text">Confidentiality with</span>
+    </p>
+    <p class="cue" id="t458">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=458">7:38</a>
+      <span class="cue-text">KERI. I like making acronyms, too.</span>
+    </p>
+    <p class="cue" id="t462">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=462">7:42</a>
+      <span class="cue-text">And what that was, is a API gateway</span>
+    </p>
+    <p class="cue" id="t465">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=465">7:45</a>
+      <span class="cue-text">that wrapped every transaction in an</span>
+    </p>
+    <p class="cue" id="t469">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=469">7:49</a>
+      <span class="cue-text">ESSR packet. So, signed and encrypted to</span>
+    </p>
+    <p class="cue" id="t471">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=471">7:51</a>
+      <span class="cue-text">a specific destination and provided full</span>
+    </p>
+    <p class="cue" id="t474">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=474">7:54</a>
+      <span class="cue-text">security between those two endpoints. No</span>
+    </p>
+    <p class="cue" id="t476">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=476">7:56</a>
+      <span class="cue-text">need for TLS, no need for VPNs, anything</span>
+    </p>
+    <p class="cue" id="t478">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=478">7:58</a>
+      <span class="cue-text">else. And it also created a</span>
+    </p>
+    <p class="cue" id="t480">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=480">8:00</a>
+      <span class="cue-text">cryptographically verifiable audit log</span>
+    </p>
+    <p class="cue" id="t482">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=482">8:02</a>
+      <span class="cue-text">of every single transaction.</span>
+    </p>
+    <p class="cue" id="t484">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=484">8:04</a>
+      <span class="cue-text">Nobody wanted to use it because it was</span>
+    </p>
+    <p class="cue" id="t486">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=486">8:06</a>
+      <span class="cue-text">not interoperable. So what we have done</span>
+    </p>
+    <p class="cue" id="t489">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=489">8:09</a>
+      <span class="cue-text">over the course of the last six months</span>
+    </p>
+    <p class="cue" id="t490">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=490">8:10</a>
+      <span class="cue-text">is slowly back our way out and meet the</span>
+    </p>
+    <p class="cue" id="t493">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=493">8:13</a>
+      <span class="cue-text">customer where they are by integrating</span>
+    </p>
+    <p class="cue" id="t495">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=495">8:15</a>
+      <span class="cue-text">with OAuth because FHIR requires</span>
+    </p>
+    <p class="cue" id="t499">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=499">8:19</a>
+      <span class="cue-text">or mandates or includes the</span>
+    </p>
+    <p class="cue" id="t502">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=502">8:22</a>
+      <span class="cue-text">ability to use OAuth for authentication</span>
+    </p>
+    <p class="cue" id="t505">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=505">8:25</a>
+      <span class="cue-text">a protocol I'm about to talk about next.</span>
+    </p>
+    <p class="cue" id="t507">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=507">8:27</a>
+      <span class="cue-text">UDAP had taken OAuth and added five or</span>
+    </p>
+    <p class="cue" id="t511">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=511">8:31</a>
+      <span class="cue-text">six, I only mentioned four here, new</span>
+    </p>
+    <p class="cue" id="t513">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=513">8:33</a>
+      <span class="cue-text">profiles that allowed the use of X.509s</span>
+    </p>
+    <p class="cue" id="t517">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=517">8:37</a>
+      <span class="cue-text">embedded into these different flows to</span>
+    </p>
+    <p class="cue" id="t520">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=520">8:40</a>
+      <span class="cue-text">do authentication.</span>
+    </p>
+    <p class="cue" id="t522">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=522">8:42</a>
+      <span class="cue-text">Mark Scrimshire came to us and said</span>
+    </p>
+    <p class="cue" id="t525">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=525">8:45</a>
+      <span class="cue-text">that seems to work, but what happens</span>
+    </p>
+    <p class="cue" id="t528">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=528">8:48</a>
+      <span class="cue-text">when everyone hits their 47-day limit</span>
+    </p>
+    <p class="cue" id="t530">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=530">8:50</a>
+      <span class="cue-text">and they have to rotate all their</span>
+    </p>
+    <p class="cue" id="t531">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=531">8:51</a>
+      <span class="cue-text">certs? What happens? And so as the</span>
+    </p>
+    <p class="cue" id="t534">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=534">8:54</a>
+      <span class="cue-text">companies we were talking to, they're</span>
+    </p>
+    <p class="cue" id="t535">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=535">8:55</a>
+      <span class="cue-text">like, &quot;Well, I have to manage my certs,</span>
+    </p>
+    <p class="cue" id="t538">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=538">8:58</a>
+      <span class="cue-text">but now I got to worry about everyone</span>
+    </p>
+    <p class="cue" id="t540">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=540">9:00</a>
+      <span class="cue-text">else's certs. How what do I do when they</span>
+    </p>
+    <p class="cue" id="t542">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=542">9:02</a>
+      <span class="cue-text">all have to rotate? How do we</span>
+    </p>
+    <p class="cue" id="t543">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=543">9:03</a>
+      <span class="cue-text">reestablish these connections?&quot; And so</span>
+    </p>
+    <p class="cue" id="t545">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=545">9:05</a>
+      <span class="cue-text">he identified that the vLEI would be the</span>
+    </p>
+    <p class="cue" id="t548">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=548">9:08</a>
+      <span class="cue-text">perfect opportunity to introduce true</span>
+    </p>
+    <p class="cue" id="t550">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=550">9:10</a>
+      <span class="cue-text">organizational identity and KERI to</span>
+    </p>
+    <p class="cue" id="t554">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=554">9:14</a>
+      <span class="cue-text">solve this problem in a very similar way</span>
+    </p>
+    <p class="cue" id="t556">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=556">9:16</a>
+      <span class="cue-text">that UDAP did, but replace X.509s with</span>
+    </p>
+    <p class="cue" id="t558">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=558">9:18</a>
+      <span class="cue-text">the vLEI.</span>
+    </p>
+    <p class="cue" id="t560">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=560">9:20</a>
+      <span class="cue-text">And there's quite a bit more</span>
+    </p>
+    <p class="cue" id="t562">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=562">9:22</a>
+      <span class="cue-text">detail underneath. I'm not going to get</span>
+    </p>
+    <p class="cue" id="t564">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=564">9:24</a>
+      <span class="cue-text">into it, but we have other credentials</span>
+    </p>
+    <p class="cue" id="t565">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=565">9:25</a>
+      <span class="cue-text">that chain off of vLEIs to define the</span>
+    </p>
+    <p class="cue" id="t568">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=568">9:28</a>
+      <span class="cue-text">purpose of use to allow them to be that</span>
+    </p>
+    <p class="cue" id="t571">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=571">9:31</a>
+      <span class="cue-text">more specific authorization I was</span>
+    </p>
+    <p class="cue" id="t572">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=572">9:32</a>
+      <span class="cue-text">talking about, but we don't need to</span>
+    </p>
+    <p class="cue" id="t574">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=574">9:34</a>
+      <span class="cue-text">go to that level of detail. So these are</span>
+    </p>
+    <p class="cue" id="t577">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=577">9:37</a>
+      <span class="cue-text">the four protocols or profiles that</span>
+    </p>
+    <p class="cue" id="t579">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=579">9:39</a>
+      <span class="cue-text">were defined in UDAP that we are</span>
+    </p>
+    <p class="cue" id="t582">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=582">9:42</a>
+      <span class="cue-text">going to be augmenting or replacing.</span>
+    </p>
+    <p class="cue" id="t586">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=586">9:46</a>
+      <span class="cue-text">The first one and this is where we were</span>
+    </p>
+    <p class="cue" id="t587">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=587">9:47</a>
+      <span class="cue-text">going to stop before we decided to do</span>
+    </p>
+    <p class="cue" id="t589">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=589">9:49</a>
+      <span class="cue-text">something for the SEDI presentation</span>
+    </p>
+    <p class="cue" id="t591">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=591">9:51</a>
+      <span class="cue-text">and that is dynamic client registration.</span>
+    </p>
+    <p class="cue" id="t594">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=594">9:54</a>
+      <span class="cue-text">So in OAuth is what is it RFC7591</span>
+    </p>
+    <p class="cue" id="t597">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=597">9:57</a>
+      <span class="cue-text">dynamic client registration that allows</span>
+    </p>
+    <p class="cue" id="t600">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=600">10:00</a>
+      <span class="cue-text">people without having a developer go to</span>
+    </p>
+    <p class="cue" id="t602">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=602">10:02</a>
+      <span class="cue-text">a developer portal and register your</span>
+    </p>
+    <p class="cue" id="t604">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=604">10:04</a>
+      <span class="cue-text">client ID get a secret or enter a secret</span>
+    </p>
+    <p class="cue" id="t606">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=606">10:06</a>
+      <span class="cue-text">get it back so that your client app can</span>
+    </p>
+    <p class="cue" id="t608">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=608">10:08</a>
+      <span class="cue-text">now make token requests. There is a</span>
+    </p>
+    <p class="cue" id="t612">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=612">10:12</a>
+      <span class="cue-text">RFC that allows for that to be dynamic.</span>
+    </p>
+    <p class="cue" id="t614">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=614">10:14</a>
+      <span class="cue-text">And so what UDAP had done was say &quot;Okay,</span>
+    </p>
+    <p class="cue" id="t616">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=616">10:16</a>
+      <span class="cue-text">if we insert a signed statement from the</span>
+    </p>
+    <p class="cue" id="t619">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=619">10:19</a>
+      <span class="cue-text">client and a reference to their X509 certs</span>
+    </p>
+    <p class="cue" id="t623">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=623">10:23</a>
+      <span class="cue-text">if we have an ecosystem of CAs that we</span>
+    </p>
+    <p class="cue" id="t625">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=625">10:25</a>
+      <span class="cue-text">trust for this purpose, we can allow a</span>
+    </p>
+    <p class="cue" id="t628">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=628">10:28</a>
+      <span class="cue-text">client to be registered dynamically and</span>
+    </p>
+    <p class="cue" id="t630">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=630">10:30</a>
+      <span class="cue-text">and automatically.&quot; We saw that and</span>
+    </p>
+    <p class="cue" id="t632">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=632">10:32</a>
+      <span class="cue-text">said &quot;Okay, cool, works great, just replace</span>
+    </p>
+    <p class="cue" id="t635">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=635">10:35</a>
+      <span class="cue-text">X.509s with vLEIs and now we're on to</span>
+    </p>
+    <p class="cue" id="t637">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=637">10:37</a>
+      <span class="cue-text">something.&quot; So that's the first thing we</span>
+    </p>
+    <p class="cue" id="t639">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=639">10:39</a>
+      <span class="cue-text">did. So we automated the ability, payer-to-</span>
+    </p>
+    <p class="cue" id="t641">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=641">10:41</a>
+      <span class="cue-text">payer, remember that's what we're</span>
+    </p>
+    <p class="cue" id="t642">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=642">10:42</a>
+      <span class="cue-text">focusing on. We automated the ability</span>
+    </p>
+    <p class="cue" id="t644">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=644">10:44</a>
+      <span class="cue-text">for one payer to submit a credential to</span>
+    </p>
+    <p class="cue" id="t646">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=646">10:46</a>
+      <span class="cue-text">another payer, and without any human</span>
+    </p>
+    <p class="cue" id="t648">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=648">10:48</a>
+      <span class="cue-text">involved, be registered to start</span>
+    </p>
+    <p class="cue" id="t650">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=650">10:50</a>
+      <span class="cue-text">interacting payer-to-payer APIs and from</span>
+    </p>
+    <p class="cue" id="t654">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=654">10:54</a>
+      <span class="cue-text">that point down, the rest of their</span>
+    </p>
+    <p class="cue" id="t657">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=657">10:57</a>
+      <span class="cue-text">stack stays the same. They're using</span>
+    </p>
+    <p class="cue" id="t659">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=659">10:59</a>
+      <span class="cue-text">they're using FHIR APIs. They're using</span>
+    </p>
+    <p class="cue" id="t661">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=661">11:01</a>
+      <span class="cue-text">token. They're doing the token requests</span>
+    </p>
+    <p class="cue" id="t663">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=663">11:03</a>
+      <span class="cue-text">because this is client</span>
+    </p>
+    <p class="cue" id="t664">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=664">11:04</a>
+      <span class="cue-text">authentication, so there's no</span>
+    </p>
+    <p class="cue" id="t665">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=665">11:05</a>
+      <span class="cue-text">authorization-code step first. And so</span>
+    </p>
+    <p class="cue" id="t668">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=668">11:08</a>
+      <span class="cue-text">that worked great. Then when we decided</span>
+    </p>
+    <p class="cue" id="t671">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=671">11:11</a>
+      <span class="cue-text">that okay, that authorization server</span>
+    </p>
+    <p class="cue" id="t673">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=673">11:13</a>
+      <span class="cue-text">works great. There's a real good</span>
+    </p>
+    <p class="cue" id="t675">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=675">11:15</a>
+      <span class="cue-text">opportunity here to insert ahead of, or</span>
+    </p>
+    <p class="cue" id="t678">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=678">11:18</a>
+      <span class="cue-text">after client authentication, after client</span>
+    </p>
+    <p class="cue" id="t680">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=680">11:20</a>
+      <span class="cue-text">registration and then client</span>
+    </p>
+    <p class="cue" id="t681">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=681">11:21</a>
+      <span class="cue-text">authentication, to do user</span>
+    </p>
+    <p class="cue" id="t683">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=683">11:23</a>
+      <span class="cue-text">authentication. So they had JWT-based</span>
+    </p>
+    <p class="cue" id="t686">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=686">11:26</a>
+      <span class="cue-text">user authentication which allowed for a</span>
+    </p>
+    <p class="cue" id="t688">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=688">11:28</a>
+      <span class="cue-text">cert to be used to sign a JWT that would</span>
+    </p>
+    <p class="cue" id="t691">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=691">11:31</a>
+      <span class="cue-text">then assert who the user is. So you</span>
+    </p>
+    <p class="cue" id="t693">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=693">11:33</a>
+      <span class="cue-text">could do the user authorization flow</span>
+    </p>
+    <p class="cue" id="t695">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=695">11:35</a>
+      <span class="cue-text">which involves getting a code first then</span>
+    </p>
+    <p class="cue" id="t697">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=697">11:37</a>
+      <span class="cue-text">it redirects back to you and then you</span>
+    </p>
+    <p class="cue" id="t698">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=698">11:38</a>
+      <span class="cue-text">use that code to get the token. We</span>
+    </p>
+    <p class="cue" id="t700">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=700">11:40</a>
+      <span class="cue-text">replaced that with vLEI as well and that's</span>
+    </p>
+    <p class="cue" id="t702">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=702">11:42</a>
+      <span class="cue-text">what I demoed here. The last step was,</span>
+    </p>
+    <p class="cue" id="t705">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=705">11:45</a>
+      <span class="cue-text">after having conversations with the</span>
+    </p>
+    <p class="cue" id="t707">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=707">11:47</a>
+      <span class="cue-text">fine folks in the state of Utah,</span>
+    </p>
+    <p class="cue" id="t709">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=709">11:49</a>
+      <span class="cue-text">George and Chris, we realized that there</span>
+    </p>
+    <p class="cue" id="t712">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=712">11:52</a>
+      <span class="cue-text">was still one problem left to solve and</span>
+    </p>
+    <p class="cue" id="t714">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=714">11:54</a>
+      <span class="cue-text">that was &quot;Okay, if we're using these</span>
+    </p>
+    <p class="cue" id="t716">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=716">11:56</a>
+      <span class="cue-text">credentials, how do we still know that</span>
+    </p>
+    <p class="cue" id="t718">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=718">11:58</a>
+      <span class="cue-text">our data is being protected?&quot; And that's</span>
+    </p>
+    <p class="cue" id="t720">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=720">12:00</a>
+      <span class="cue-text">when we added a new step that's not part</span>
+    </p>
+    <p class="cue" id="t722">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=722">12:02</a>
+      <span class="cue-text">of OAuth, the &lt;i&gt;credential offer&lt;/i&gt;.</span>
+    </p>
+    <p class="cue" id="t724">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=724">12:04</a>
+      <span class="cue-text">Doing the credential offer allows us to</span>
+    </p>
+    <p class="cue" id="t726">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=726">12:06</a>
+      <span class="cue-text">offer a credential based on a schema. So</span>
+    </p>
+    <p class="cue" id="t728">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=728">12:08</a>
+      <span class="cue-text">the structure of the fields, a</span>
+    </p>
+    <p class="cue" id="t730">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=730">12:10</a>
+      <span class="cue-text">cryptographic commitment to what the</span>
+    </p>
+    <p class="cue" id="t732">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=732">12:12</a>
+      <span class="cue-text">data will be and require the site to</span>
+    </p>
+    <p class="cue" id="t735">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=735">12:15</a>
+      <span class="cue-text">sign your terms and conditions with that</span>
+    </p>
+    <p class="cue" id="t737">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=737">12:17</a>
+      <span class="cue-text">cryptographic commitment before you</span>
+    </p>
+    <p class="cue" id="t739">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=739">12:19</a>
+      <span class="cue-text">reveal the data to them. Then once you</span>
+    </p>
+    <p class="cue" id="t740">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=740">12:20</a>
+      <span class="cue-text">reveal the data, they can verify that</span>
+    </p>
+    <p class="cue" id="t742">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=742">12:22</a>
+      <span class="cue-text">yep, it matches the schema. Yep, that's</span>
+    </p>
+    <p class="cue" id="t743">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=743">12:23</a>
+      <span class="cue-text">the data they promised to give me</span>
+    </p>
+    <p class="cue" id="t745">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=745">12:25</a>
+      <span class="cue-text">without revealing the data. Now I can</span>
+    </p>
+    <p class="cue" id="t747">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=747">12:27</a>
+      <span class="cue-text">register them and allow them through.</span>
+    </p>
+    <p class="cue" id="t751">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=751">12:31</a>
+      <span class="cue-text">So I pretty much just talked about</span>
+    </p>
+    <p class="cue" id="t752">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=752">12:32</a>
+      <span class="cue-text">this but the client</span>
+    </p>
+    <p class="cue" id="t755">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=755">12:35</a>
+      <span class="cue-text">credentials flow with UDAP and vLEI</span>
+    </p>
+    <p class="cue" id="t758">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=758">12:38</a>
+      <span class="cue-text">involved, like I said, dynamic</span>
+    </p>
+    <p class="cue" id="t759">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=759">12:39</a>
+      <span class="cue-text">client registration with vLEI, we do a</span>
+    </p>
+    <p class="cue" id="t762">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=762">12:42</a>
+      <span class="cue-text">sign inserted inside of the</span>
+    </p>
+    <p class="cue" id="t766">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=766">12:46</a>
+      <span class="cue-text">client registration request, it's</span>
+    </p>
+    <p class="cue" id="t768">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=768">12:48</a>
+      <span class="cue-text">slash register is an IPEX presentation in</span>
+    </p>
+    <p class="cue" id="t771">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=771">12:51</a>
+      <span class="cue-text">the OAuth registration request itself the</span>
+    </p>
+    <p class="cue" id="t774">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=774">12:54</a>
+      <span class="cue-text">flip side of this, one of the things that</span>
+    </p>
+    <p class="cue" id="t776">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=776">12:56</a>
+      <span class="cue-text">UDAP had that we borrowed from, is a</span>
+    </p>
+    <p class="cue" id="t777">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=777">12:57</a>
+      <span class="cue-text">.well-known for the server so that we</span>
+    </p>
+    <p class="cue" id="t780">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=780">13:00</a>
+      <span class="cue-text">could identify the server. So we can</span>
+    </p>
+    <p class="cue" id="t782">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=782">13:02</a>
+      <span class="cue-text">avoid having a server that we get a man</span>
+    </p>
+    <p class="cue" id="t784">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=784">13:04</a>
+      <span class="cue-text">in the middle or whatever. So in our</span>
+    </p>
+    <p class="cue" id="t786">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=786">13:06</a>
+      <span class="cue-text">case, we just have in the .well-known an</span>
+    </p>
+    <p class="cue" id="t788">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=788">13:08</a>
+      <span class="cue-text">OOBI that identifies the AID of the</span>
+    </p>
+    <p class="cue" id="t790">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=790">13:10</a>
+      <span class="cue-text">server that we're going to be</span>
+    </p>
+    <p class="cue" id="t791">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=791">13:11</a>
+      <span class="cue-text">interacting with.</span>
+    </p>
+    <p class="cue" id="t793">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=793">13:13</a>
+      <span class="cue-text">Pardon me. Oh, so then finally, and</span>
+    </p>
+    <p class="cue" id="t797">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=797">13:17</a>
+      <span class="cue-text">most importantly in this case, the</span>
+    </p>
+    <p class="cue" id="t798">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=798">13:18</a>
+      <span class="cue-text">client ID is mapped to the SAID of the</span>
+    </p>
+    <p class="cue" id="t801">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=801">13:21</a>
+      <span class="cue-text">presented credential. The SAID of the</span>
+    </p>
+    <p class="cue" id="t803">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=803">13:23</a>
+      <span class="cue-text">presented credential. And there's no</span>
+    </p>
+    <p class="cue" id="t805">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=805">13:25</a>
+      <span class="cue-text">client secret. Every token request from</span>
+    </p>
+    <p class="cue" id="t808">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=808">13:28</a>
+      <span class="cue-text">here on out is a signed request. So you</span>
+    </p>
+    <p class="cue" id="t811">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=811">13:31</a>
+      <span class="cue-text">eliminate a shared secret from the</span>
+    </p>
+    <p class="cue" id="t812">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=812">13:32</a>
+      <span class="cue-text">equation and you have fully signed token</span>
+    </p>
+    <p class="cue" id="t815">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=815">13:35</a>
+      <span class="cue-text">requests. Now of course our hope is that</span>
+    </p>
+    <p class="cue" id="t817">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=817">13:37</a>
+      <span class="cue-text">once they see the power of this they'll</span>
+    </p>
+    <p class="cue" id="t820">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=820">13:40</a>
+      <span class="cue-text">say okay now that I can sign these token</span>
+    </p>
+    <p class="cue" id="t822">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=822">13:42</a>
+      <span class="cue-text">requests can I sign all my other</span>
+    </p>
+    <p class="cue" id="t823">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=823">13:43</a>
+      <span class="cue-text">requests and then we'll start selling</span>
+    </p>
+    <p class="cue" id="t825">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=825">13:45</a>
+      <span class="cue-text">them RACK.</span>
+    </p>
+    <p class="cue" id="t827">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=827">13:47</a>
+      <span class="cue-text">I just touched on the client credentials</span>
+    </p>
+    <p class="cue" id="t830">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=830">13:50</a>
+      <span class="cue-text">flow. Every other request after that</span>
+    </p>
+    <p class="cue" id="t833">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=833">13:53</a>
+      <span class="cue-text">is a IPEX presentation</span>
+    </p>
+    <p class="cue" id="t836">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=836">13:56</a>
+      <span class="cue-text">signed and the client and server key</span>
+    </p>
+    <p class="cue" id="t838">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=838">13:58</a>
+      <span class="cue-text">rotations are supported by the watcher</span>
+    </p>
+    <p class="cue" id="t840">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=840">14:00</a>
+      <span class="cue-text">network and I'll talk about how we</span>
+    </p>
+    <p class="cue" id="t841">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=841">14:01</a>
+      <span class="cue-text">implemented that to enable connectedness</span>
+    </p>
+    <p class="cue" id="t844">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=844">14:04</a>
+      <span class="cue-text">as trust at scale specifically for</span>
+    </p>
+    <p class="cue" id="t848">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=848">14:08</a>
+      <span class="cue-text">purpose of use and these extensions to</span>
+    </p>
+    <p class="cue" id="t850">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=850">14:10</a>
+      <span class="cue-text">the OAuth protocol.</span>
+    </p>
+    <p class="cue" id="t853">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=853">14:13</a>
+      <span class="cue-text">So then the logical next step</span>
+    </p>
+    <p class="cue" id="t856">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=856">14:16</a>
+      <span class="cue-text">authorization code flow. Let the</span>
+    </p>
+    <p class="cue" id="t858">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=858">14:18</a>
+      <span class="cue-text">user now leverage what we've done to log</span>
+    </p>
+    <p class="cue" id="t861">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=861">14:21</a>
+      <span class="cue-text">in with their vLEI credentials. Okay,</span>
+    </p>
+    <p class="cue" id="t863">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=863">14:23</a>
+      <span class="cue-text">good. So we extended the model to</span>
+    </p>
+    <p class="cue" id="t865">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=865">14:25</a>
+      <span class="cue-text">support user authentication with data</span>
+    </p>
+    <p class="cue" id="t868">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=868">14:28</a>
+      <span class="cue-text">privacy of doing the offer ahead of the</span>
+    </p>
+    <p class="cue" id="t871">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=871">14:31</a>
+      <span class="cue-text">actual credential presentation. So this</span>
+    </p>
+    <p class="cue" id="t873">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=873">14:33</a>
+      <span class="cue-text">is a typical OAuth flow. The user</span>
+    </p>
+    <p class="cue" id="t877">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=877">14:37</a>
+      <span class="cue-text">the resource owner goes to the client</span>
+    </p>
+    <p class="cue" id="t879">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=879">14:39</a>
+      <span class="cue-text">application. The user gets redirected to</span>
+    </p>
+    <p class="cue" id="t880">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=880">14:40</a>
+      <span class="cue-text">the authorization server. They say</span>
+    </p>
+    <p class="cue" id="t882">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=882">14:42</a>
+      <span class="cue-text">approve. It comes back here. The client</span>
+    </p>
+    <p class="cue" id="t885">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=885">14:45</a>
+      <span class="cue-text">then says, &quot;Okay, here's the code. Can I</span>
+    </p>
+    <p class="cue" id="t887">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=887">14:47</a>
+      <span class="cue-text">have a token?&quot; You get the token and</span>
+    </p>
+    <p class="cue" id="t890">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=890">14:50</a>
+      <span class="cue-text">then you send that over to the FHIR</span>
+    </p>
+    <p class="cue" id="t891">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=891">14:51</a>
+      <span class="cue-text">resource server and you get your data</span>
+    </p>
+    <p class="cue" id="t893">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=893">14:53</a>
+      <span class="cue-text">because the resource server is able to</span>
+    </p>
+    <p class="cue" id="t895">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=895">14:55</a>
+      <span class="cue-text">talk to the authorization server behind</span>
+    </p>
+    <p class="cue" id="t896">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=896">14:56</a>
+      <span class="cue-text">the scenes and say, &quot;Is this a valid</span>
+    </p>
+    <p class="cue" id="t897">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=897">14:57</a>
+      <span class="cue-text">token!&quot; So that's how it works. This is</span>
+    </p>
+    <p class="cue" id="t899">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=899">14:59</a>
+      <span class="cue-text">a… I stole this diagram. Actually I</span>
+    </p>
+    <p class="cue" id="t900">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=900">15:00</a>
+      <span class="cue-text">made it but I looked at someone else's.</span>
+    </p>
+    <p class="cue" id="t904">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=904">15:04</a>
+      <span class="cue-text">This is what it looks like with KERI</span>
+    </p>
+    <p class="cue" id="t905">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=905">15:05</a>
+      <span class="cue-text">and the vLEI. Well, KERI and ACDC.</span>
+    </p>
+    <p class="cue" id="t908">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=908">15:08</a>
+      <span class="cue-text">In this case the resource owner has a</span>
+    </p>
+    <p class="cue" id="t910">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=910">15:10</a>
+      <span class="cue-text">KERI database. The client application</span>
+    </p>
+    <p class="cue" id="t913">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=913">15:13</a>
+      <span class="cue-text">has a KERI database and the</span>
+    </p>
+    <p class="cue" id="t915">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=915">15:15</a>
+      <span class="cue-text">authorization server has a KERI</span>
+    </p>
+    <p class="cue" id="t917">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=917">15:17</a>
+      <span class="cue-text">database. So in this case when he is</span>
+    </p>
+    <p class="cue" id="t920">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=920">15:20</a>
+      <span class="cue-text">redirected over there he submits a</span>
+    </p>
+    <p class="cue" id="t923">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=923">15:23</a>
+      <span class="cue-text">credential instead of username and</span>
+    </p>
+    <p class="cue" id="t924">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=924">15:24</a>
+      <span class="cue-text">password. You've all done this with log</span>
+    </p>
+    <p class="cue" id="t927">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=927">15:27</a>
+      <span class="cue-text">on with Google, right? This is the exact</span>
+    </p>
+    <p class="cue" id="t928">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=928">15:28</a>
+      <span class="cue-text">same thing but it's now log on with your</span>
+    </p>
+    <p class="cue" id="t931">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=931">15:31</a>
+      <span class="cue-text">ACDC credential.</span>
+    </p>
+    <p class="cue" id="t933">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=933">15:33</a>
+      <span class="cue-text">So then you get redirected and</span>
+    </p>
+    <p class="cue" id="t934">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=934">15:34</a>
+      <span class="cue-text">everything works the same. But the</span>
+    </p>
+    <p class="cue" id="t936">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=936">15:36</a>
+      <span class="cue-text">really important part here is these</span>
+    </p>
+    <p class="cue" id="t938">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=938">15:38</a>
+      <span class="cue-text">arrows. Everybody is watching the</span>
+    </p>
+    <p class="cue" id="t942">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=942">15:42</a>
+      <span class="cue-text">watcher network and each other's</span>
+    </p>
+    <p class="cue" id="t944">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=944">15:44</a>
+      <span class="cue-text">witnesses so that when he decides to</span>
+    </p>
+    <p class="cue" id="t946">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=946">15:46</a>
+      <span class="cue-text">rotate his keys, he can do it every hour</span>
+    </p>
+    <p class="cue" id="t947">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=947">15:47</a>
+      <span class="cue-text">if he wants to. We actually did that in</span>
+    </p>
+    <p class="cue" id="t949">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=949">15:49</a>
+      <span class="cue-text">a in a pilot we were running. It was</span>
+    </p>
+    <p class="cue" id="t950">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=950">15:50</a>
+      <span class="cue-text">really fun. He can rotate every hour if</span>
+    </p>
+    <p class="cue" id="t952">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=952">15:52</a>
+      <span class="cue-text">he wants to. It'll get propagated to his</span>
+    </p>
+    <p class="cue" id="t954">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=954">15:54</a>
+      <span class="cue-text">witnesses. Everyone else's watchers will</span>
+    </p>
+    <p class="cue" id="t956">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=956">15:56</a>
+      <span class="cue-text">pick it up and now it's still fully</span>
+    </p>
+    <p class="cue" id="t958">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=958">15:58</a>
+      <span class="cue-text">secure and you have new keys as</span>
+    </p>
+    <p class="cue" id="t959">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=959">15:59</a>
+      <span class="cue-text">frequently as you want.</span>
+    </p>
+    <p class="cue" id="t970">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=970">16:10</a>
+      <span class="cue-text">Yes, you can hyper churn your</span>
+    </p>
+    <p class="cue" id="t971">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=971">16:11</a>
+      <span class="cue-text">credentials.</span>
+    </p>
+    <p class="cue" id="t973">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=973">16:13</a>
+      <span class="cue-text">And Sam, your voice is sounding better. [laughter]</span>
+    </p>
+    <p class="cue" id="t978">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=978">16:18</a>
+      <span class="cue-text">IPEX issuance and</span>
+    </p>
+    <p class="cue" id="t980">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=980">16:20</a>
+      <span class="cue-text">presentation exchange protocol. It's a</span>
+    </p>
+    <p class="cue" id="t983">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=983">16:23</a>
+      <span class="cue-text">protocol built on top of KERI EXN</span>
+    </p>
+    <p class="cue" id="t985">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=985">16:25</a>
+      <span class="cue-text">messages and it allows this flow…</span>
+    </p>
+    <p class="cue" id="t988">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=988">16:28</a>
+      <span class="cue-text">I stole this table from the</span>
+    </p>
+    <p class="cue" id="t990">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=990">16:30</a>
+      <span class="cue-text">the ACDC spec.</span>
+    </p>
+    <p class="cue" id="t993">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=993">16:33</a>
+      <span class="cue-text">It allows this flow of messages to</span>
+    </p>
+    <p class="cue" id="t997">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=997">16:37</a>
+      <span class="cue-text">negotiate credential exchange between</span>
+    </p>
+    <p class="cue" id="t1000">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1000">16:40</a>
+      <span class="cue-text">two parties. So we are only starting at</span>
+    </p>
+    <p class="cue" id="t1002">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1002">16:42</a>
+      <span class="cue-text">the offer phase and you can see where</span>
+    </p>
+    <p class="cue" id="t1004">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1004">16:44</a>
+      <span class="cue-text">you can start. That's the Ys in here.</span>
+    </p>
+    <p class="cue" id="t1007">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1007">16:47</a>
+      <span class="cue-text">And you can see after an apply you can</span>
+    </p>
+    <p class="cue" id="t1010">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1010">16:50</a>
+      <span class="cue-text">spurn it. I love that you use the word</span>
+    </p>
+    <p class="cue" id="t1012">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1012">16:52</a>
+      <span class="cue-text">spurn. (I don't know why I just do.)</span>
+    </p>
+    <p class="cue" id="t1015">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1015">16:55</a>
+      <span class="cue-text">You can offer it. You can either spurn</span>
+    </p>
+    <p class="cue" id="t1017">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1017">16:57</a>
+      <span class="cue-text">or agree to the offer and then you can</span>
+    </p>
+    <p class="cue" id="t1019">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1019">16:59</a>
+      <span class="cue-text">grant the credential. And then once you</span>
+    </p>
+    <p class="cue" id="t1021">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1021">17:01</a>
+      <span class="cue-text">grant the credential, this is an</span>
+    </p>
+    <p class="cue" id="t1023">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1023">17:03</a>
+      <span class="cue-text">important step, you admit it, which</span>
+    </p>
+    <p class="cue" id="t1024">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1024">17:04</a>
+      <span class="cue-text">sends the admission back to the person.</span>
+    </p>
+    <p class="cue" id="t1026">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1026">17:06</a>
+      <span class="cue-text">So you have a receipt that they accepted</span>
+    </p>
+    <p class="cue" id="t1028">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1028">17:08</a>
+      <span class="cue-text">your credential.</span>
+    </p>
+    <p class="cue" id="t1030">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1030">17:10</a>
+      <span class="cue-text">And so what we've leveraged with IPEX,</span>
+    </p>
+    <p class="cue" id="t1033">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1033">17:13</a>
+      <span class="cue-text">one of the I think the driving factors</span>
+    </p>
+    <p class="cue" id="t1035">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1035">17:15</a>
+      <span class="cue-text">for IPEX was graduated disclosure, chain</span>
+    </p>
+    <p class="cue" id="t1038">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1038">17:18</a>
+      <span class="cue-text">link confidentiality, and contingent</span>
+    </p>
+    <p class="cue" id="t1040">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1040">17:20</a>
+      <span class="cue-text">disclosure on them accepting your offer,</span>
+    </p>
+    <p class="cue" id="t1043">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1043">17:23</a>
+      <span class="cue-text">assigned acceptance of your offer. And</span>
+    </p>
+    <p class="cue" id="t1045">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1045">17:25</a>
+      <span class="cue-text">then once you embed the rules inside of</span>
+    </p>
+    <p class="cue" id="t1048">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1048">17:28</a>
+      <span class="cue-text">your credential, the metadata credential</span>
+    </p>
+    <p class="cue" id="t1050">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1050">17:30</a>
+      <span class="cue-text">that you exchange back and forth during</span>
+    </p>
+    <p class="cue" id="t1052">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1052">17:32</a>
+      <span class="cue-text">these exchanges, you get</span>
+    </p>
+    <p class="cue" id="t1054">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1054">17:34</a>
+      <span class="cue-text">contractually protected disclosure as</span>
+    </p>
+    <p class="cue" id="t1056">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1056">17:36</a>
+      <span class="cue-text">well. And that's what we're leveraging</span>
+    </p>
+    <p class="cue" id="t1058">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1058">17:38</a>
+      <span class="cue-text">here</span>
+    </p>
+    <p class="cue" id="t1061">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1061">17:41</a>
+      <span class="cue-text">and I just said that. So this just</span>
+    </p>
+    <p class="cue" id="t1063">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1063">17:43</a>
+      <span class="cue-text">details the contractually protected</span>
+    </p>
+    <p class="cue" id="t1065">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1065">17:45</a>
+      <span class="cue-text">disclosure. The user offers the terms</span>
+    </p>
+    <p class="cue" id="t1066">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1066">17:46</a>
+      <span class="cue-text">and conditions, no data exposed. You get</span>
+    </p>
+    <p class="cue" id="t1069">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1069">17:49</a>
+      <span class="cue-text">a cryptographic commitment in the offer</span>
+    </p>
+    <p class="cue" id="t1070">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1070">17:50</a>
+      <span class="cue-text">to the structure of the data hash of</span>
+    </p>
+    <p class="cue" id="t1072">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1072">17:52</a>
+      <span class="cue-text">what the data will be and then terms and</span>
+    </p>
+    <p class="cue" id="t1074">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1074">17:54</a>
+      <span class="cue-text">conditions which are being enforced. I</span>
+    </p>
+    <p class="cue" id="t1077">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1077">17:57</a>
+      <span class="cue-text">I think in the future we can see sites</span>
+    </p>
+    <p class="cue" id="t1079">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1079">17:59</a>
+      <span class="cue-text">offering a couple of .., just like when you</span>
+    </p>
+    <p class="cue" id="t1080">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1080">18:00</a>
+      <span class="cue-text">create a GitHub account you can pick</span>
+    </p>
+    <p class="cue" id="t1081">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1081">18:01</a>
+      <span class="cue-text">your license for the new</span>
+    </p>
+    <p class="cue" id="t1083">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1083">18:03</a>
+      <span class="cue-text">GitHub repo. I can see a world where</span>
+    </p>
+    <p class="cue" id="t1086">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1086">18:06</a>
+      <span class="cue-text">sites are offering different terms and</span>
+    </p>
+    <p class="cue" id="t1088">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1088">18:08</a>
+      <span class="cue-text">conditions and the user can select which</span>
+    </p>
+    <p class="cue" id="t1090">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1090">18:10</a>
+      <span class="cue-text">one best suits their needs for giving</span>
+    </p>
+    <p class="cue" id="t1092">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1092">18:12</a>
+      <span class="cue-text">the data to the site. And if none then</span>
+    </p>
+    <p class="cue" id="t1094">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1094">18:14</a>
+      <span class="cue-text">they don't give the data.</span>
+    </p>
+    <p class="cue" id="t1096">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1096">18:16</a>
+      <span class="cue-text">the site agrees, returns the signed</span>
+    </p>
+    <p class="cue" id="t1098">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1098">18:18</a>
+      <span class="cue-text">agreement, and then the user saves the</span>
+    </p>
+    <p class="cue" id="t1100">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1100">18:20</a>
+      <span class="cue-text">receipt and grants the full credential.</span>
+    </p>
+    <p class="cue" id="t1102">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1102">18:22</a>
+      <span class="cue-text">And that's what the flow that we showed</span>
+    </p>
+    <p class="cue" id="t1104">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1104">18:24</a>
+      <span class="cue-text">in the demo.</span>
+    </p>
+    <p class="cue" id="t1107">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1107">18:27</a>
+      <span class="cue-text">So, this is just further detailing.</span>
+    </p>
+    <p class="cue" id="t1109">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1109">18:29</a>
+      <span class="cue-text">The credential offer comes back or</span>
+    </p>
+    <p class="cue" id="t1112">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1112">18:32</a>
+      <span class="cue-text">I'm sorry, the site comes back</span>
+    </p>
+    <p class="cue" id="t1113">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1113">18:33</a>
+      <span class="cue-text">and says, &quot;We'll accept an offer, you</span>
+    </p>
+    <p class="cue" id="t1115">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1115">18:35</a>
+      <span class="cue-text">make the offer, you get to see what</span>
+    </p>
+    <p class="cue" id="t1116">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1116">18:36</a>
+      <span class="cue-text">terms and conditions are there before</span>
+    </p>
+    <p class="cue" id="t1118">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1118">18:38</a>
+      <span class="cue-text">you agree to it.&quot;</span>
+    </p>
+    <p class="cue" id="t1121">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1121">18:41</a>
+      <span class="cue-text">And then the signed agreement comes back</span>
+    </p>
+    <p class="cue" id="t1123">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1123">18:43</a>
+      <span class="cue-text">from the server. We use our plugin to</span>
+    </p>
+    <p class="cue" id="t1125">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1125">18:45</a>
+      <span class="cue-text">validate it. But again, at any point if</span>
+    </p>
+    <p class="cue" id="t1127">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1127">18:47</a>
+      <span class="cue-text">you don't have our plugin, you want to</span>
+    </p>
+    <p class="cue" id="t1128">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1128">18:48</a>
+      <span class="cue-text">do it yourself, you just download the</span>
+    </p>
+    <p class="cue" id="t1130">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1130">18:50</a>
+      <span class="cue-text">signed agreement, you send it through</span>
+    </p>
+    <p class="cue" id="t1131">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1131">18:51</a>
+      <span class="cue-text">KERIpy, if you want to or any tool</span>
+    </p>
+    <p class="cue" id="t1134">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1134">18:54</a>
+      <span class="cue-text">that supports this flow with KERI</span>
+    </p>
+    <p class="cue" id="t1136">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1136">18:56</a>
+      <span class="cue-text">and you can then upload your offer or</span>
+    </p>
+    <p class="cue" id="t1138">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1138">18:58</a>
+      <span class="cue-text">your full grant, sorry, you upload your</span>
+    </p>
+    <p class="cue" id="t1140">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1140">19:00</a>
+      <span class="cue-text">full grant, which we do with the submit</span>
+    </p>
+    <p class="cue" id="t1142">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1142">19:02</a>
+      <span class="cue-text">full credential and now the site gets</span>
+    </p>
+    <p class="cue" id="t1144">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1144">19:04</a>
+      <span class="cue-text">your information. And when we did this,</span>
+    </p>
+    <p class="cue" id="t1146">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1146">19:06</a>
+      <span class="cue-text">it really did hit home that the</span>
+    </p>
+    <p class="cue" id="t1148">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1148">19:08</a>
+      <span class="cue-text">user benefits greatly for all the</span>
+    </p>
+    <p class="cue" id="t1149">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1149">19:09</a>
+      <span class="cue-text">reasons I just talked about, but the</span>
+    </p>
+    <p class="cue" id="t1151">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1151">19:11</a>
+      <span class="cue-text">site benefits from it is something I</span>
+    </p>
+    <p class="cue" id="t1152">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1152">19:12</a>
+      <span class="cue-text">think George said in one of his talks.</span>
+    </p>
+    <p class="cue" id="t1154">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1154">19:14</a>
+      <span class="cue-text">They get cryptographically verifiable</span>
+    </p>
+    <p class="cue" id="t1156">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1156">19:16</a>
+      <span class="cue-text">data. They're not going to get typos.</span>
+    </p>
+    <p class="cue" id="t1158">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1158">19:18</a>
+      <span class="cue-text">That's going to halt that's going to</span>
+    </p>
+    <p class="cue" id="t1159">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1159">19:19</a>
+      <span class="cue-text">slow down the process of users signing</span>
+    </p>
+    <p class="cue" id="t1160">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1160">19:20</a>
+      <span class="cue-text">onto your site and getting access to the</span>
+    </p>
+    <p class="cue" id="t1162">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1162">19:22</a>
+      <span class="cue-text">data that they need.</span>
+    </p>
+    <p class="cue" id="t1165">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1165">19:25</a>
+      <span class="cue-text">Okay, so this is how we did it. We built</span>
+    </p>
+    <p class="cue" id="t1168">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1168">19:28</a>
+      <span class="cue-text">an ACDC authorization server. It acts</span>
+    </p>
+    <p class="cue" id="t1170">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1170">19:30</a>
+      <span class="cue-text">as both an OAuth 2.0 authorization service as</span>
+    </p>
+    <p class="cue" id="t1172">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1172">19:32</a>
+      <span class="cue-text">well as an OIDC Identity Provider. So</span>
+    </p>
+    <p class="cue" id="t1175">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1175">19:35</a>
+      <span class="cue-text">we're doing it with ACDC schema</span>
+    </p>
+    <p class="cue" id="t1178">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1178">19:38</a>
+      <span class="cue-text">configuration.</span>
+    </p>
+    <p class="cue" id="t1179">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1179">19:39</a>
+      <span class="cue-text">You can configure both the client</span>
+    </p>
+    <p class="cue" id="t1181">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1181">19:41</a>
+      <span class="cue-text">registration schema that you'll accept</span>
+    </p>
+    <p class="cue" id="t1184">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1184">19:44</a>
+      <span class="cue-text">and it can be a list and you also</span>
+    </p>
+    <p class="cue" id="t1186">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1186">19:46</a>
+      <span class="cue-text">specify the user authentication schema</span>
+    </p>
+    <p class="cue" id="t1189">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1189">19:49</a>
+      <span class="cue-text">that you'll accept and it can be a list.</span>
+    </p>
+    <p class="cue" id="t1192">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1192">19:52</a>
+      <span class="cue-text">Each of those supports a base schema</span>
+    </p>
+    <p class="cue" id="t1194">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1194">19:54</a>
+      <span class="cue-text">specification which allows you to</span>
+    </p>
+    <p class="cue" id="t1197">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1197">19:57</a>
+      <span class="cue-text">enforce what issuers you will accept at</span>
+    </p>
+    <p class="cue" id="t1200">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1200">20:00</a>
+      <span class="cue-text">any chain in your credential</span>
+    </p>
+    <p class="cue" id="t1202">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1202">20:02</a>
+      <span class="cue-text">hierarchy. For example, an oversight</span>
+    </p>
+    <p class="cue" id="t1205">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1205">20:05</a>
+      <span class="cue-text">we did with GLEIF. I can</span>
+    </p>
+    <p class="cue" id="t1208">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1208">20:08</a>
+      <span class="cue-text">issue vLEI credentials. They're not valid</span>
+    </p>
+    <p class="cue" id="t1210">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1210">20:10</a>
+      <span class="cue-text">because they don't come from GLEIF root,</span>
+    </p>
+    <p class="cue" id="t1211">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1211">20:11</a>
+      <span class="cue-text">but you can enforce that it has to come</span>
+    </p>
+    <p class="cue" id="t1213">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1213">20:13</a>
+      <span class="cue-text">from GLEIF Root in here by putting the</span>
+    </p>
+    <p class="cue" id="t1214">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1214">20:14</a>
+      <span class="cue-text">issuer of the GLEIF Root AID.</span>
+    </p>
+    <p class="cue" id="t1219">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1219">20:19</a>
+      <span class="cue-text">This was a fun part. ACDC payload to</span>
+    </p>
+    <p class="cue" id="t1221">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1221">20:21</a>
+      <span class="cue-text">OIDC claims mapping. We used a pretty</span>
+    </p>
+    <p class="cue" id="t1225">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1225">20:25</a>
+      <span class="cue-text">simple template syntax (Jinja2 for</span>
+    </p>
+    <p class="cue" id="t1226">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1226">20:26</a>
+      <span class="cue-text">those of you who are familiar with</span>
+    </p>
+    <p class="cue" id="t1227">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1227">20:27</a>
+      <span class="cue-text">Python) to create complex field mappings</span>
+    </p>
+    <p class="cue" id="t1230">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1230">20:30</a>
+      <span class="cue-text">between the credential payload and the</span>
+    </p>
+    <p class="cue" id="t1232">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1232">20:32</a>
+      <span class="cue-text">OIDC claims that come out the other end.</span>
+    </p>
+    <p class="cue" id="t1235">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1235">20:35</a>
+      <span class="cue-text">So when you put all this together, what</span>
+    </p>
+    <p class="cue" id="t1237">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1237">20:37</a>
+      <span class="cue-text">you're really doing is you're creating a</span>
+    </p>
+    <p class="cue" id="t1240">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1240">20:40</a>
+      <span class="cue-text">truly distributed identity provider</span>
+    </p>
+    <p class="cue" id="t1242">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1242">20:42</a>
+      <span class="cue-text">appliance. I can put one of these up,</span>
+    </p>
+    <p class="cue" id="t1245">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1245">20:45</a>
+      <span class="cue-text">specify a list of credentials, I'll</span>
+    </p>
+    <p class="cue" id="t1246">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1246">20:46</a>
+      <span class="cue-text">accept, specify how I want the data to</span>
+    </p>
+    <p class="cue" id="t1248">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1248">20:48</a>
+      <span class="cue-text">look in OIDC.</span>
+    </p>
+    <p class="cue" id="t1250">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1250">20:50</a>
+      <span class="cue-text">Someone will submit their credential to</span>
+    </p>
+    <p class="cue" id="t1252">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1252">20:52</a>
+      <span class="cue-text">me and I'll let him in. Sam can do the</span>
+    </p>
+    <p class="cue" id="t1255">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1255">20:55</a>
+      <span class="cue-text">same thing. We never have to talk. Our</span>
+    </p>
+    <p class="cue" id="t1257">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1257">20:57</a>
+      <span class="cue-text">systems aren't federated. We don't share</span>
+    </p>
+    <p class="cue" id="t1259">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1259">20:59</a>
+      <span class="cue-text">data. If he specifies the same schema as</span>
+    </p>
+    <p class="cue" id="t1261">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1261">21:01</a>
+      <span class="cue-text">me, he'll let the person in the same. It</span>
+    </p>
+    <p class="cue" id="t1263">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1263">21:03</a>
+      <span class="cue-text">looks exactly the same to the user. The</span>
+    </p>
+    <p class="cue" id="t1265">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1265">21:05</a>
+      <span class="cue-text">data comes back to</span>
+    </p>
+    <p class="cue" id="t1268">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1268">21:08</a>
+      <span class="cue-text">the client application,</span>
+    </p>
+    <p class="cue" id="t1270">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1270">21:10</a>
+      <span class="cue-text">of who that user is. But</span>
+    </p>
+    <p class="cue" id="t1273">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1273">21:13</a>
+      <span class="cue-text">there's no federation. You're not</span>
+    </p>
+    <p class="cue" id="t1275">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1275">21:15</a>
+      <span class="cue-text">relying on Google to hold your Gmail</span>
+    </p>
+    <p class="cue" id="t1277">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1277">21:17</a>
+      <span class="cue-text">account. You're doing it with a</span>
+    </p>
+    <p class="cue" id="t1278">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1278">21:18</a>
+      <span class="cue-text">decentralized credential issuance from</span>
+    </p>
+    <p class="cue" id="t1280">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1280">21:20</a>
+      <span class="cue-text">anyone.</span>
+    </p>
+    <p class="cue" id="t1282">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1282">21:22</a>
+      <span class="cue-text">So then these are the flows I've already</span>
+    </p>
+    <p class="cue" id="t1283">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1283">21:23</a>
+      <span class="cue-text">talked about that we worked with, dynamic</span>
+    </p>
+    <p class="cue" id="t1285">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1285">21:25</a>
+      <span class="cue-text">client registration, secret lists, the</span>
+    </p>
+    <p class="cue" id="t1288">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1288">21:28</a>
+      <span class="cue-text">client authentication flow, this is for</span>
+    </p>
+    <p class="cue" id="t1289">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1289">21:29</a>
+      <span class="cue-text">our payer-to-payer model so that the payers</span>
+    </p>
+    <p class="cue" id="t1292">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1292">21:32</a>
+      <span class="cue-text">can then just start as soon as they do</span>
+    </p>
+    <p class="cue" id="t1293">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1293">21:33</a>
+      <span class="cue-text">the DCR the payers can start exchanging</span>
+    </p>
+    <p class="cue" id="t1295">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1295">21:35</a>
+      <span class="cue-text">data by getting the token and then user</span>
+    </p>
+    <p class="cue" id="t1298">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1298">21:38</a>
+      <span class="cue-text">authentication.</span>
+    </p>
+    <p class="cue" id="t1301">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1301">21:41</a>
+      <span class="cue-text">The last part. I talked about</span>
+    </p>
+    <p class="cue" id="t1304">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1304">21:44</a>
+      <span class="cue-text">integration into the watcher network and</span>
+    </p>
+    <p class="cue" id="t1306">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1306">21:46</a>
+      <span class="cue-text">the witness network. For those of</span>
+    </p>
+    <p class="cue" id="t1309">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1309">21:49</a>
+      <span class="cue-text">you who know me, I do actually own a</span>
+    </p>
+    <p class="cue" id="t1311">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1311">21:51</a>
+      <span class="cue-text">Great Dane and a Bull Mastiff, but these</span>
+    </p>
+    <p class="cue" id="t1313">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1313">21:53</a>
+      <span class="cue-text">aren't my dogs.</span>
+    </p>
+    <p class="cue" id="t1315">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1315">21:55</a>
+      <span class="cue-text">So we called it HK Tracker and it's</span>
+    </p>
+    <p class="cue" id="t1317">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1317">21:57</a>
+      <span class="cue-text">what Sam has been calling forever a</span>
+    </p>
+    <p class="cue" id="t1319">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1319">21:59</a>
+      <span class="cue-text">local watcher. And so anywhere where we</span>
+    </p>
+    <p class="cue" id="t1322">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1322">22:02</a>
+      <span class="cue-text">deploy a server or a system</span>
+    </p>
+    <p class="cue" id="t1325">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1325">22:05</a>
+      <span class="cue-text">that needs access to the KERI watcher</span>
+    </p>
+    <p class="cue" id="t1328">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1328">22:08</a>
+      <span class="cue-text">network, it's going to be resolving AIDs</span>
+    </p>
+    <p class="cue" id="t1330">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1330">22:10</a>
+      <span class="cue-text">and it's going to need to keep track of</span>
+    </p>
+    <p class="cue" id="t1331">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1331">22:11</a>
+      <span class="cue-text">key state. Any enterprise system we can</span>
+    </p>
+    <p class="cue" id="t1334">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1334">22:14</a>
+      <span class="cue-text">put as a sidecar. So think of a sidecar</span>
+    </p>
+    <p class="cue" id="t1337">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1337">22:17</a>
+      <span class="cue-text">pod inside of Kubernetes or just running</span>
+    </p>
+    <p class="cue" id="t1339">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1339">22:19</a>
+      <span class="cue-text">along in a VM. We put a local watcher</span>
+    </p>
+    <p class="cue" id="t1341">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1341">22:21</a>
+      <span class="cue-text">service which is configured to our SaaS</span>
+    </p>
+    <p class="cue" id="t1346">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1346">22:26</a>
+      <span class="cue-text">platform to be able to ask our platform</span>
+    </p>
+    <p class="cue" id="t1349">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1349">22:29</a>
+      <span class="cue-text">to start watching new AIDs. So the</span>
+    </p>
+    <p class="cue" id="t1351">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1351">22:31</a>
+      <span class="cue-text">situation where someone authenticates</span>
+    </p>
+    <p class="cue" id="t1353">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1353">22:33</a>
+      <span class="cue-text">for the first time and then continue to</span>
+    </p>
+    <p class="cue" id="t1354">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1354">22:34</a>
+      <span class="cue-text">keep track of their key state changes. So</span>
+    </p>
+    <p class="cue" id="t1357">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1357">22:37</a>
+      <span class="cue-text">it adjudicates the key state changes</span>
+    </p>
+    <p class="cue" id="t1359">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1359">22:39</a>
+      <span class="cue-text">locally and integrates with the KERI</span>
+    </p>
+    <p class="cue" id="t1361">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1361">22:41</a>
+      <span class="cue-text">watcher network. It uses our ESSR</span>
+    </p>
+    <p class="cue" id="t1363">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1363">22:43</a>
+      <span class="cue-text">secure connections to our APIs to get</span>
+    </p>
+    <p class="cue" id="t1366">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1366">22:46</a>
+      <span class="cue-text">the updates for the AIDs that it cares</span>
+    </p>
+    <p class="cue" id="t1369">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1369">22:49</a>
+      <span class="cue-text">about. And the cool thing is it doesn't</span>
+    </p>
+    <p class="cue" id="t1370">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1370">22:50</a>
+      <span class="cue-text">have to do it for any ids that have</span>
+    </p>
+    <p class="cue" id="t1372">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1372">22:52</a>
+      <span class="cue-text">registered with Sam's server because I</span>
+    </p>
+    <p class="cue" id="t1374">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1374">22:54</a>
+      <span class="cue-text">don't care about those only the ones</span>
+    </p>
+    <p class="cue" id="t1375">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1375">22:55</a>
+      <span class="cue-text">that I have authenticated against. And</span>
+    </p>
+    <p class="cue" id="t1378">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1378">22:58</a>
+      <span class="cue-text">so we use, borrowed very heavily</span>
+    </p>
+    <p class="cue" id="t1381">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1381">23:01</a>
+      <span class="cue-text">from Tailscale if any of you are</span>
+    </p>
+    <p class="cue" id="t1382">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1382">23:02</a>
+      <span class="cue-text">familiar with that VPN company, t hey</span>
+    </p>
+    <p class="cue" id="t1384">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1384">23:04</a>
+      <span class="cue-text">have a model for when you want to get a</span>
+    </p>
+    <p class="cue" id="t1387">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1387">23:07</a>
+      <span class="cue-text">headless server on the system you</span>
+    </p>
+    <p class="cue" id="t1389">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1389">23:09</a>
+      <span class="cue-text">go into the site and you get a</span>
+    </p>
+    <p class="cue" id="t1391">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1391">23:11</a>
+      <span class="cue-text">authentication code onetime</span>
+    </p>
+    <p class="cue" id="t1392">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1392">23:12</a>
+      <span class="cue-text">authentication code that you use. And</span>
+    </p>
+    <p class="cue" id="t1394">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1394">23:14</a>
+      <span class="cue-text">so that's how we do it down there.</span>
+    </p>
+    <p class="cue" id="t1398">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1398">23:18</a>
+      <span class="cue-text">And so these are my actual dogs. I just</span>
+    </p>
+    <p class="cue" id="t1400">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1400">23:20</a>
+      <span class="cue-text">wanted to show this. That's Zoe, my</span>
+    </p>
+    <p class="cue" id="t1402">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1402">23:22</a>
+      <span class="cue-text">Great Dean. That's Jackson, our Bull</span>
+    </p>
+    <p class="cue" id="t1406">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1406">23:26</a>
+      <span class="cue-text">Mastiff. And that's Remy</span>
+    </p>
+    <p class="cue" id="t1408">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1408">23:28</a>
+      <span class="cue-text">rescue Pit Bull.</span>
+    </p>
+    <p class="cue" id="t1412">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1412">23:32</a>
+      <span class="cue-text">This is the diagram that</span>
+    </p>
+    <p class="cue" id="t1414">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1414">23:34</a>
+      <span class="cue-text">we've created. I think Jared already</span>
+    </p>
+    <p class="cue" id="t1415">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1415">23:35</a>
+      <span class="cue-text">showed this in one of his talks, but</span>
+    </p>
+    <p class="cue" id="t1416">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1416">23:36</a>
+      <span class="cue-text">this is the diagram we created when we</span>
+    </p>
+    <p class="cue" id="t1418">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1418">23:38</a>
+      <span class="cue-text">were first trying to conceptualize this.</span>
+    </p>
+    <p class="cue" id="t1420">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1420">23:40</a>
+      <span class="cue-text">And the idea here is that when you look</span>
+    </p>
+    <p class="cue" id="t1422">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1422">23:42</a>
+      <span class="cue-text">at the convergence of what's happening</span>
+    </p>
+    <p class="cue" id="t1424">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1424">23:44</a>
+      <span class="cue-text">here, DirectTrust is working very</span>
+    </p>
+    <p class="cue" id="t1425">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1425">23:45</a>
+      <span class="cue-text">closely with GLEIF</span>
+    </p>
+    <p class="cue" id="t1429">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1429">23:49</a>
+      <span class="cue-text">to help facilitate bringing the vLEI</span>
+    </p>
+    <p class="cue" id="t1433">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1433">23:53</a>
+      <span class="cue-text">ecosystem into healthcare.</span>
+    </p>
+    <p class="cue" id="t1436">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1436">23:56</a>
+      <span class="cue-text">You can have these credentials</span>
+    </p>
+    <p class="cue" id="t1437">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1437">23:57</a>
+      <span class="cue-text">issued into a payer and a provider</span>
+    </p>
+    <p class="cue" id="t1439">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1439">23:59</a>
+      <span class="cue-text">wallet, dynamic client registration,</span>
+    </p>
+    <p class="cue" id="t1442">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1442">24:02</a>
+      <span class="cue-text">client authentication.</span>
+    </p>
+    <p class="cue" id="t1444">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1444">24:04</a>
+      <span class="cue-text">They can issue vLEIs down to their</span>
+    </p>
+    <p class="cue" id="t1445">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1445">24:05</a>
+      <span class="cue-text">members. State of Utah can issue SEDI</span>
+    </p>
+    <p class="cue" id="t1448">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1448">24:08</a>
+      <span class="cue-text">credentials and then all of them can now</span>
+    </p>
+    <p class="cue" id="t1450">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1450">24:10</a>
+      <span class="cue-text">authenticate against the site and get</span>
+    </p>
+    <p class="cue" id="t1452">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1452">24:12</a>
+      <span class="cue-text">the data they need using this exact same</span>
+    </p>
+    <p class="cue" id="t1454">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1454">24:14</a>
+      <span class="cue-text">method. So that's what we're trying to</span>
+    </p>
+    <p class="cue" id="t1455">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1455">24:15</a>
+      <span class="cue-text">get at here.</span>
+    </p>
+    <p class="cue" id="t1459">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1459">24:19</a>
+      <span class="cue-text">And that's it. Any questions? Yes. Do we</span>
+    </p>
+    <p class="cue" id="t1461">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1461">24:21</a>
+      <span class="cue-text">have a microphone?</span>
+    </p>
+    <p class="cue" id="t1472">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1472">24:32</a>
+      <span class="cue-text">– Just a quick question. Can you say</span>
+    </p>
+    <p class="cue" id="t1473">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1473">24:33</a>
+      <span class="cue-text">more about the difference between the</span>
+    </p>
+    <p class="cue" id="t1475">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1475">24:35</a>
+      <span class="cue-text">payer and the provider wallets?</span>
+    </p>
+    <p class="cue" id="t1477">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1477">24:37</a>
+      <span class="cue-text">So, like what they're meant for.</span>
+    </p>
+    <p class="cue" id="t1480">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1480">24:40</a>
+      <span class="cue-text">Oh, like the purpose of use, like</span>
+    </p>
+    <p class="cue" id="t1482">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1482">24:42</a>
+      <span class="cue-text">why a payer would be accessing another</span>
+    </p>
+    <p class="cue" id="t1484">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1484">24:44</a>
+      <span class="cue-text">payer versus why they'd be accessing a</span>
+    </p>
+    <p class="cue" id="t1485">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1485">24:45</a>
+      <span class="cue-text">provider. Is that what you mean?</span>
+    </p>
+    <p class="cue" id="t1486">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1486">24:46</a>
+      <span class="cue-text">– Yeah, and what the wallets do;</span>
+    </p>
+    <p class="cue" id="t1488">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1488">24:48</a>
+      <span class="cue-text">what's their provider mean?</span>
+    </p>
+    <p class="cue" id="t1491">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1491">24:51</a>
+      <span class="cue-text">In this case this was just meant to</span>
+    </p>
+    <p class="cue" id="t1496">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1496">24:56</a>
+      <span class="cue-text">represent the fact that you have</span>
+    </p>
+    <p class="cue" id="t1499">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1499">24:59</a>
+      <span class="cue-text">this the same type of wallet.</span>
+    </p>
+    <p class="cue" id="t1501">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1501">25:01</a>
+      <span class="cue-text">– Got it. The payer would be holding his</span>
+    </p>
+    <p class="cue" id="t1502">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1502">25:02</a>
+      <span class="cue-text">vLEI credential and use it to access</span>
+    </p>
+    <p class="cue" id="t1504">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1504">25:04</a>
+      <span class="cue-text">anyone else in the ecosystem. Literally</span>
+    </p>
+    <p class="cue" id="t1506">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1506">25:06</a>
+      <span class="cue-text">anyone else in the ecosystem access</span>
+    </p>
+    <p class="cue" id="t1507">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1507">25:07</a>
+      <span class="cue-text">their data.</span>
+    </p>
+    <p class="cue" id="t1508">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1508">25:08</a>
+      <span class="cue-text">– Got it. Those are just roles, not</span>
+    </p>
+    <p class="cue" id="t1510">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1510">25:10</a>
+      <span class="cue-text">different wallets. Okay. Got it. I</span>
+    </p>
+    <p class="cue" id="t1511">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1511">25:11</a>
+      <span class="cue-text">misunderstood.</span>
+    </p>
+    <p class="cue" id="t1513">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1513">25:13</a>
+      <span class="cue-text">– My question is about the</span>
+    </p>
+    <p class="cue" id="t1516">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1516">25:16</a>
+      <span class="cue-text">authorization server flow. [adjusting volume]</span>
+    </p>
+    <p class="cue" id="t1521">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1521">25:21</a>
+      <span class="cue-text">So, the authorization server waits</span>
+    </p>
+    <p class="cue" id="t1523">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1523">25:23</a>
+      <span class="cue-text">for an ACDC presentation. Does</span>
+    </p>
+    <p class="cue" id="t1526">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1526">25:26</a>
+      <span class="cue-text">that make the ACDC essentially</span>
+    </p>
+    <p class="cue" id="t1530">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1530">25:30</a>
+      <span class="cue-text">the identity provider?</span>
+    </p>
+    <p class="cue" id="t1532">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1532">25:32</a>
+      <span class="cue-text">Yeah. That's why I call it a</span>
+    </p>
+    <p class="cue" id="t1533">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1533">25:33</a>
+      <span class="cue-text">dynamic identity provider appliance</span>
+    </p>
+    <p class="cue" id="t1535">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1535">25:35</a>
+      <span class="cue-text">because it's just you install</span>
+    </p>
+    <p class="cue" id="t1537">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1537">25:37</a>
+      <span class="cue-text">anyone anywhere and you say trust these</span>
+    </p>
+    <p class="cue" id="t1539">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1539">25:39</a>
+      <span class="cue-text">credentials.</span>
+    </p>
+    <p class="cue" id="t1540">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1540">25:40</a>
+      <span class="cue-text">– Okay.</span>
+    </p>
+    <p class="cue" id="t1540">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1540">25:40</a>
+      <span class="cue-text">And it just works.</span>
+    </p>
+    <p class="cue" id="t1541">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1541">25:41</a>
+      <span class="cue-text">– Cool.</span>
+    </p>
+    <p class="cue" id="t1542">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1542">25:42</a>
+      <span class="cue-text">– Is it limited to person</span>
+    </p>
+    <p class="cue" id="t1556">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1556">25:56</a>
+      <span class="cue-text">to business or can also be used in API</span>
+    </p>
+    <p class="cue" id="t1560">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1560">26:00</a>
+      <span class="cue-text">situations business to business?</span>
+    </p>
+    <p class="cue" id="t1562">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1562">26:02</a>
+      <span class="cue-text">Yeah, the client authentication</span>
+    </p>
+    <p class="cue" id="t1563">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1563">26:03</a>
+      <span class="cue-text">flow, dynamic client registration and</span>
+    </p>
+    <p class="cue" id="t1565">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1565">26:05</a>
+      <span class="cue-text">then client authentication flow supports</span>
+    </p>
+    <p class="cue" id="t1567">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1567">26:07</a>
+      <span class="cue-text">business to business.</span>
+    </p>
+    <p class="cue" id="t1572">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1572">26:12</a>
+      <span class="cue-text">In OAuth you can do just client</span>
+    </p>
+    <p class="cue" id="t1576">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1576">26:16</a>
+      <span class="cue-text">authentication where you skip the</span>
+    </p>
+    <p class="cue" id="t1578">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1578">26:18</a>
+      <span class="cue-text">authentication flow you get you don't</span>
+    </p>
+    <p class="cue" id="t1579">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1579">26:19</a>
+      <span class="cue-text">get the authentication code that's just</span>
+    </p>
+    <p class="cue" id="t1580">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1580">26:20</a>
+      <span class="cue-text">payer to payer that's business to business</span>
+    </p>
+    <p class="cue" id="t1582">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1582">26:22</a>
+      <span class="cue-text">so it does support that as well.</span>
+    </p>
+    <p class="cue" id="t1584">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1584">26:24</a>
+      <span class="cue-text">That's why I guess you have a client ID</span>
+    </p>
+    <p class="cue" id="t1586">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1586">26:26</a>
+      <span class="cue-text">because the client can get the data</span>
+    </p>
+    <p class="cue" id="t1588">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1588">26:28</a>
+      <span class="cue-text">themselves not on behalf of a user.</span>
+    </p>
+    <p class="cue" id="t1593">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1593">26:33</a>
+      <span class="cue-text">All right, thank you very much. [Applause]</span>
+    </p>
+    <p class="cue" id="t1595">
+      <a class="cue-time" href="../../../#acdcs-for-authorization-phil-feairheller&amp;t=1595">26:35</a>
+      <span class="cue-text">– Thank you.</span>
+    </p>
+    </article>
+    <footer>KERI Foundation • Conference Videos Collection</footer>
+  </div>
+</body>
+</html>

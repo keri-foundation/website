@@ -1,0 +1,4164 @@
+1
+00:00:00,000 --> 00:00:02,000
+Nicholas Racz ｜ Investigating the Game of Trust ｜ KERI Conference 2026
+
+2
+00:00:07,629 --> 00:00:14,480
+Okay, it is 3:15. So 3:16 now.
+
+3
+00:00:14,480 --> 00:00:17,680
+So I'm going to get started.
+
+4
+00:00:17,680 --> 00:00:21,199
+Welcome everyone to my second talk.
+
+5
+00:00:21,199 --> 00:00:23,840
+It's going to be a lot less complicated.
+
+6
+00:00:23,840 --> 00:00:25,519
+I can tell you that because I don't want
+
+7
+00:00:25,519 --> 00:00:26,800
+to delve into any of that anymore. We're
+
+8
+00:00:26,800 --> 00:00:28,400
+just going to talk about the history of
+
+9
+00:00:28,400 --> 00:00:30,000
+Key State. We're going to talk about our
+
+10
+00:00:30,000 --> 00:00:32,399
+philosophy, investing in the trust
+
+11
+00:00:32,399 --> 00:00:34,640
+spanning layer, what it's been like to
+
+12
+00:00:34,640 --> 00:00:37,040
+be at the ground floor and pushing it
+
+13
+00:00:37,040 --> 00:00:39,840
+forward going forward into the future.
+
+14
+00:00:39,840 --> 00:00:42,960
+So, yeah, we've been here six years.
+
+15
+00:00:42,960 --> 00:00:44,559
+We've got a partner right over here,
+
+16
+00:00:44,559 --> 00:00:46,800
+Will Dahlquist. Thank you for making it.
+
+17
+00:00:46,800 --> 00:00:49,520
+And this is a field report about,
+
+18
+00:00:49,520 --> 00:00:51,920
+you know, what we've done in this space.
+
+19
+00:00:51,920 --> 00:00:53,360
+And thank you all for being here,
+
+20
+00:00:53,360 --> 00:00:54,879
+everyone who's been part of our journey
+
+21
+00:00:54,879 --> 00:00:56,879
+from the beginning.
+
+22
+00:00:56,879 --> 00:01:00,879
+Okay, so the idea really is simple. Evan
+
+23
+00:01:00,879 --> 00:01:02,160
+and I actually had a conversation about
+
+24
+00:01:02,160 --> 00:01:05,439
+this earlier. Capital creates
+
+25
+00:01:05,439 --> 00:01:07,200
+reality.
+
+26
+00:01:07,200 --> 00:01:09,439
+It's pretty profound when you think
+
+27
+00:01:09,439 --> 00:01:12,159
+about it, but it can simply be said that
+
+28
+00:01:12,159 --> 00:01:14,240
+when you place money in something you
+
+29
+00:01:14,240 --> 00:01:16,880
+believe in, you bring that thing from
+
+30
+00:01:16,880 --> 00:01:19,119
+the future into the present. And
+
+31
+00:01:19,119 --> 00:01:21,840
+when we saw KERI, when we found Sam
+
+32
+00:01:21,840 --> 00:01:24,960
+out of the wreckage of the sovereign
+
+33
+00:01:24,960 --> 00:01:26,479
+debacle,
+
+34
+00:01:26,479 --> 00:01:28,880
+we saw a future that was worth
+
+35
+00:01:28,880 --> 00:01:31,360
+believing in. And it was
+
+36
+00:01:31,360 --> 00:01:33,119
+profound.
+
+37
+00:01:33,119 --> 00:01:35,520
+So, we're going to
+
+38
+00:01:35,520 --> 00:01:38,240
+talk about the rest.
+
+39
+00:01:38,240 --> 00:01:39,759
+And so this is the protocol
+
+40
+00:01:39,759 --> 00:01:43,119
+moment like what is KERI, right? Every
+
+41
+00:01:43,119 --> 00:01:45,200
+internet wave needed a protocol layer
+
+42
+00:01:45,200 --> 00:01:47,439
+first. The identity layer is being built
+
+43
+00:01:47,439 --> 00:01:50,079
+now into the open under the name KERI.
+
+44
+00:01:50,079 --> 00:01:52,960
+And the protocol is not a product. It is
+
+45
+00:01:52,960 --> 00:01:55,280
+a service,
+
+46
+00:01:55,280 --> 00:01:58,079
+public service. Every wave of the
+
+47
+00:01:58,079 --> 00:02:00,079
+internet value needed this protocol. It
+
+48
+00:02:00,079 --> 00:02:03,040
+starts with TCP/IP. It emerges with
+
+49
+00:02:03,040 --> 00:02:06,880
+HTTP and URL. Then we have SSL and TLS.
+
+50
+00:02:06,880 --> 00:02:08,800
+And finally, we have really the epitome
+
+51
+00:02:08,800 --> 00:02:10,479
+of security in the internet as we know
+
+52
+00:02:10,479 --> 00:02:12,959
+it in the form of KERI. In this
+
+53
+00:02:12,959 --> 00:02:14,879
+we're making trust portable and the
+
+54
+00:02:14,879 --> 00:02:17,599
+operators are being funded right now in
+
+55
+00:02:17,599 --> 00:02:18,796
+this room.
+
+56
+00:02:21,398 --> 00:02:23,647
+So yeah, what is KERI for those that
+
+57
+00:02:23,671 --> 00:02:25,920
+don't know? It's a self-certifying
+
+58
+00:02:25,920 --> 00:02:27,920
+identifier that travels,
+
+59
+00:02:27,920 --> 00:02:29,840
+cryptographically verifiable, portable
+
+60
+00:02:29,840 --> 00:02:32,160
+across jurisdictions, rotatable without
+
+61
+00:02:32,160 --> 00:02:34,319
+losing history. The protocol is stable,
+
+62
+00:02:34,319 --> 00:02:37,040
+the governance is real, and both are
+
+63
+00:02:37,040 --> 00:02:41,110
+open.
+
+64
+00:02:41,135 --> 00:02:45,920
+In essence, when we first started,
+
+65
+00:02:45,920 --> 00:02:48,560
+there was… this is really just a spec.
+
+66
+00:02:48,560 --> 00:02:50,319
+Sam came out with a white paper which
+
+67
+00:02:50,319 --> 00:02:52,560
+had every bit of the ingredients
+
+68
+00:02:52,560 --> 00:02:53,920
+that needed to establish the trust
+
+69
+00:02:53,920 --> 00:02:56,239
+spanning layer but no one had yet
+
+70
+00:02:56,239 --> 00:02:58,560
+built out the essential infrastructure.
+
+71
+00:02:58,560 --> 00:03:00,319
+And when we started actually and [via] 
+
+72
+00:03:00,319 --> 00:03:02,879
+Timothy Ruff (thank you for introducing
+
+73
+00:03:02,879 --> 00:03:06,879
+us). We got pitched the idea of
+
+74
+00:03:06,879 --> 00:03:10,640
+Provenant. Provenant was an idea
+
+75
+00:03:10,640 --> 00:03:12,720
+in the mind of Randy Warshaw. He wanted
+
+76
+00:03:12,720 --> 00:03:15,360
+to bring verifiable communications
+
+77
+00:03:15,360 --> 00:03:21,920
+natively to SMS, RCS, calling, Voice over
+
+78
+00:03:21,920 --> 00:03:25,440
+IP, etc. And it's only now six years
+
+79
+00:03:25,440 --> 00:03:27,360
+later finally coming to fruition for
+
+80
+00:03:27,360 --> 00:03:29,920
+example. And so, Provenant is one of
+
+81
+00:03:29,920 --> 00:03:32,319
+these three levers that we have in
+
+82
+00:03:32,319 --> 00:03:34,560
+the KERI ecosystem.
+
+83
+00:03:39,200 --> 00:03:41,599
+The three actual approaches we
+
+84
+00:03:41,599 --> 00:03:43,519
+want to take in terms of deciding what's
+
+85
+00:03:43,519 --> 00:03:45,840
+actually investable are the following.
+
+86
+00:03:45,840 --> 00:03:47,920
+The first is industry adoption. You have
+
+87
+00:03:47,920 --> 00:03:52,799
+to identify a vertical which distinctly
+
+88
+00:03:52,799 --> 00:03:55,599
+can be owned by the company we are
+
+89
+00:03:55,599 --> 00:03:58,239
+bringing into reality. And then
+
+90
+00:03:58,239 --> 00:03:59,599
+the second is actually technical
+
+91
+00:03:59,599 --> 00:04:02,080
+development. We want unique features
+
+92
+00:04:02,080 --> 00:04:05,840
+that's only possible to be created in
+
+93
+00:04:05,840 --> 00:04:07,200
+KERI that no one else has created
+
+94
+00:04:07,200 --> 00:04:10,080
+before. And then finally we want to
+
+95
+00:04:10,080 --> 00:04:12,640
+emphasize the human talent emphasizing
+
+96
+00:04:12,640 --> 00:04:15,040
+human resources that we can
+
+97
+00:04:15,040 --> 00:04:20,310
+attract to actually make this real.
+
+98
+00:04:20,335 --> 00:04:22,772
+So you need all these three things.
+
+99
+00:04:22,796 --> 00:04:25,040
+If you have tech without industry, you
+
+100
+00:04:25,040 --> 00:04:27,440
+essentially just have nice theory,
+
+101
+00:04:27,440 --> 00:04:29,040
+right? There's nothing to apply to. You
+
+102
+00:04:29,040 --> 00:04:31,040
+can't help anyone's problems and you
+
+103
+00:04:31,040 --> 00:04:33,440
+just have nothing to fund. If you have
+
+104
+00:04:33,440 --> 00:04:35,759
+industry without tech, you essentially
+
+105
+00:04:35,759 --> 00:04:38,320
+have synergy, synergy, synergy. You
+
+106
+00:04:38,320 --> 00:04:40,080
+choose logo and you can't ship
+
+107
+00:04:40,080 --> 00:04:43,440
+integration and you lose the edge. And
+
+108
+00:04:43,440 --> 00:04:45,040
+if you have both of these, but you don't
+
+109
+00:04:45,040 --> 00:04:47,440
+have the right human resources, you
+
+110
+00:04:47,440 --> 00:04:51,440
+essentially have a beautiful idea that
+
+111
+00:04:51,440 --> 00:04:54,080
+completely flames out. I've seen this
+
+112
+00:04:54,080 --> 00:04:58,479
+personally where visions of really
+
+113
+00:04:58,479 --> 00:05:01,600
+advanced technical ideas pushing forward
+
+114
+00:05:01,600 --> 00:05:03,919
+Proof of Work. For example, I visited
+
+115
+00:05:03,919 --> 00:05:06,479
+New Zealand twice to fund a specific
+
+116
+00:05:06,479 --> 00:05:08,400
+company that was pushing the edge of
+
+117
+00:05:08,400 --> 00:05:11,120
+what was possible in blockchain, but the
+
+118
+00:05:11,120 --> 00:05:13,440
+team just wasn't right. They had the ear
+
+119
+00:05:13,440 --> 00:05:15,280
+of the New Zealand government but they
+
+120
+00:05:15,280 --> 00:05:17,680
+could not bring it home because the
+
+121
+00:05:17,680 --> 00:05:19,680
+leader did not have the appropriate
+
+122
+00:05:19,680 --> 00:05:22,479
+direction to anchor in real economic
+
+123
+00:05:22,479 --> 00:05:27,120
+realities. So, right now within our
+
+124
+00:05:27,120 --> 00:05:28,800
+strategy we've identified three key
+
+125
+00:05:28,800 --> 00:05:32,160
+Roots of Trust. The first is GSMA.
+
+126
+00:05:32,160 --> 00:05:35,759
+And within each one of these entities
+
+127
+00:05:35,759 --> 00:05:39,039
+we've actually funded, we really wanted to
+
+128
+00:05:39,039 --> 00:05:43,440
+direct them to actually colonize and
+
+129
+00:05:43,440 --> 00:05:45,520
+leverage the trust that a Root of Trust
+
+130
+00:05:45,520 --> 00:05:47,360
+has within a given ecosystem. So the
+
+131
+00:05:47,360 --> 00:05:52,320
+GSMA route within telco is a clear
+
+132
+00:05:52,320 --> 00:05:54,639
+showstopper, right? When you have a
+
+133
+00:05:54,639 --> 00:05:56,240
+phone number that's verifiable, that
+
+134
+00:05:56,240 --> 00:05:58,479
+means you have an OOBI introduction at
+
+135
+00:05:58,479 --> 00:06:01,120
+your fingertips and that KERI is not
+
+136
+00:06:01,120 --> 00:06:02,639
+just a figment of the internet. It
+
+137
+00:06:02,639 --> 00:06:04,319
+actually starts to span multiple
+
+138
+00:06:04,319 --> 00:06:06,240
+different communication layers. So, it's
+
+139
+00:06:06,240 --> 00:06:09,280
+a great utility there. Secondly,
+
+140
+00:06:09,280 --> 00:06:11,600
+as well, we have DirectTrust and Vital
+
+141
+00:06:11,600 --> 00:06:14,080
+Alliance being emphasized by healthKERI.
+
+142
+00:06:14,080 --> 00:06:15,520
+– Vital Initiative.
+
+143
+00:06:16,720 --> 00:06:17,680
+– Was that changed?
+
+144
+00:06:17,680 --> 00:06:19,600
+– DirectTrust.
+
+145
+00:06:19,600 --> 00:06:22,720
+– Okay. Vital initiative. Excuse me.
+
+146
+00:06:22,720 --> 00:06:25,759
+So essentially DirectTrust
+
+147
+00:06:25,759 --> 00:06:28,639
+leading this were Jared and team are…
+
+148
+00:06:28,639 --> 00:06:29,759
+well maybe Jared do you want to speak
+
+149
+00:06:29,759 --> 00:06:30,560
+about it a bit?
+
+150
+00:06:30,560 --> 00:06:32,639
+– Yeah I'll tell you the thing that I
+
+151
+00:06:32,639 --> 00:06:34,639
+found most interesting about the work
+
+152
+00:06:34,639 --> 00:06:36,560
+we're doing with DirectTrust
+
+153
+00:06:36,560 --> 00:06:49,991
+is how [inaudible] it is to work [inaudible]
+
+154
+00:06:52,319 --> 00:06:56,000
+If you think about certain
+
+155
+00:06:56,000 --> 00:06:59,280
+evolutionary tactics in nature, there
+
+156
+00:06:59,280 --> 00:07:02,319
+are different paths like lobsters and
+
+157
+00:07:02,319 --> 00:07:04,479
+crabs and claws. They don't have the
+
+158
+00:07:04,479 --> 00:07:06,560
+same ancestor, but they came to the same
+
+159
+00:07:06,560 --> 00:07:07,840
+use case at the end of it.
+
+160
+00:07:07,840 --> 00:07:09,360
+– Well, you kind of do have the same
+
+161
+00:07:09,360 --> 00:07:10,400
+ancestor
+
+162
+00:07:10,400 --> 00:07:14,960
+in Key State [inaudible] but it wasn't like I
+
+163
+00:07:14,960 --> 00:07:16,560
+ever worked with ratings and how are
+
+164
+00:07:16,560 --> 00:07:18,319
+you guys tackling problem in your
+
+165
+00:07:18,319 --> 00:07:21,520
+industry, which I think gives stronger
+
+166
+00:07:21,520 --> 00:07:25,840
+validation to both missions.
+
+167
+00:07:25,840 --> 00:07:30,880
+The way that you win with a B2B focused
+
+168
+00:07:30,880 --> 00:07:33,440
+KERI play is to go from the
+
+169
+00:07:33,440 --> 00:07:35,840
+regulators, the standard bears in the
+
+170
+00:07:35,840 --> 00:07:39,680
+industry and convert them to the project
+
+171
+00:07:39,680 --> 00:07:41,360
+and then they will bring the rest of the
+
+172
+00:07:41,360 --> 00:07:42,479
+industry into
+
+173
+00:07:42,479 --> 00:07:44,800
+– Right. I mean I say this a lot. I
+
+174
+00:07:44,800 --> 00:07:47,280
+think, you know, the goal for me is
+
+175
+00:07:47,280 --> 00:07:49,360
+promoting harmony within different
+
+176
+00:07:49,360 --> 00:07:50,960
+investments in our ecosystem. We want
+
+177
+00:07:50,960 --> 00:07:53,919
+canopy shyness. So, you know, Provenant
+
+178
+00:07:53,919 --> 00:07:55,440
+doesn't tread on healthKERI's toes.
+
+179
+00:07:55,440 --> 00:07:57,840
+healthKERI doesn't tread on a yet
+
+180
+00:07:57,840 --> 00:07:59,599
+unnamed third company we're going to
+
+181
+00:07:59,599 --> 00:08:02,000
+fund in defense's toes. I can't wait to
+
+182
+00:08:02,000 --> 00:08:04,560
+bring you all to show off this next
+
+183
+00:08:04,560 --> 00:08:06,400
+team. They're going to be fantastic.
+
+184
+00:08:06,400 --> 00:08:09,360
+But yeah, and the idea is really getting
+
+185
+00:08:09,360 --> 00:08:11,360
+back to those previous principles, you
+
+186
+00:08:11,360 --> 00:08:13,280
+know, we have this beautiful network
+
+187
+00:08:13,280 --> 00:08:15,840
+effect in the form of KERI. We can
+
+188
+00:08:15,840 --> 00:08:17,280
+share in the things we build, the
+
+189
+00:08:17,280 --> 00:08:21,039
+learnings we have. And you
+
+190
+00:08:21,039 --> 00:08:23,199
+could even hunt together, but what you
+
+191
+00:08:23,199 --> 00:08:25,120
+catch is what you catch, right? We want
+
+192
+00:08:25,120 --> 00:08:27,440
+independent revenue streams that are
+
+193
+00:08:27,440 --> 00:08:30,479
+converting independent users and
+
+194
+00:08:30,479 --> 00:08:32,399
+adding to the overall network effect of
+
+195
+00:08:32,399 --> 00:08:35,680
+KERI as we see it. Which builds into
+
+196
+00:08:35,680 --> 00:08:38,320
+also our final Root of Trust which
+
+197
+00:08:38,320 --> 00:08:40,399
+would be the SEDI, state-endorsed digital
+
+198
+00:08:40,399 --> 00:08:42,800
+identity. Now that we have
+
+199
+00:08:42,800 --> 00:08:46,080
+organizational identity via the vLEI and
+
+200
+00:08:46,080 --> 00:08:49,040
+personal identity endorsed by the
+
+201
+00:08:49,040 --> 00:08:52,800
+state of Utah, we have both ends of what
+
+202
+00:08:52,800 --> 00:08:54,720
+essentially amounts to a trust
+
+203
+00:08:54,720 --> 00:08:57,279
+ecosystem. I think we can actually start
+
+204
+00:08:57,279 --> 00:09:00,959
+really creating new trust services
+
+205
+00:09:00,959 --> 00:09:02,320
+that previously weren't
+
+206
+00:09:02,320 --> 00:09:03,680
+possible.
+
+207
+00:09:03,680 --> 00:09:05,120
+So yeah, let's go first into
+
+208
+00:09:05,120 --> 00:09:09,200
+Provenant. This was the hardest.
+
+209
+00:09:09,200 --> 00:09:11,760
+We had to break really tough ground.
+
+210
+00:09:11,760 --> 00:09:15,519
+There was like, in Texas, right? I
+
+211
+00:09:15,519 --> 00:09:17,839
+actually was born in Lubbock, Texas, right?
+
+212
+00:09:17,839 --> 00:09:20,800
+And the Spanish actually colonized
+
+213
+00:09:20,800 --> 00:09:23,360
+that and they called it Llano Estacado,
+
+214
+00:09:23,360 --> 00:09:26,320
+which means the stake plains. And
+
+215
+00:09:26,320 --> 00:09:27,760
+the reason why they called it is because
+
+216
+00:09:27,760 --> 00:09:30,720
+there was this thin layer and by thin
+
+217
+00:09:30,720 --> 00:09:32,560
+it's like several inches thick of
+
+218
+00:09:32,560 --> 00:09:35,600
+capstone that covered the entire
+
+219
+00:09:35,600 --> 00:09:38,080
+west. And so breaking through that
+
+220
+00:09:38,080 --> 00:09:42,880
+capstone is tough. But once you did, you
+
+221
+00:09:42,880 --> 00:09:45,680
+could put a stake in the ground and know
+
+222
+00:09:45,680 --> 00:09:48,800
+that it would be there in perpetuity.
+
+223
+00:09:48,800 --> 00:09:52,000
+And for us, Provenant was exactly that.
+
+224
+00:09:52,000 --> 00:09:53,760
+We've been hammering down on this
+
+225
+00:09:53,760 --> 00:09:56,720
+stake for like literally six years now
+
+226
+00:09:56,720 --> 00:09:59,279
+and with GSMA we finally have it in the
+
+227
+00:09:59,279 --> 00:10:00,800
+ground.
+
+228
+00:10:00,800 --> 00:10:03,760
+So you know building out open
+
+229
+00:10:03,760 --> 00:10:06,080
+verifiable communications
+
+230
+00:10:06,080 --> 00:10:08,399
+did not just come overnight. You
+
+231
+00:10:08,399 --> 00:10:10,720
+know, initially we actually thought we
+
+232
+00:10:10,720 --> 00:10:13,040
+were gonna have an exit within a year,
+
+233
+00:10:13,040 --> 00:10:15,360
+right?
+
+234
+00:10:15,360 --> 00:10:16,800
+And the reason being is that we had a
+
+235
+00:10:16,800 --> 00:10:19,279
+precedent. Timothy Ruff had come
+
+236
+00:10:19,279 --> 00:10:23,040
+just recently out of Credential Master
+
+237
+00:10:23,040 --> 00:10:24,880
+selling to Salesforce. A beautiful exit
+
+238
+00:10:24,880 --> 00:10:27,519
+within nine months, wasn't it?
+
+239
+00:10:28,480 --> 00:10:30,640
+18. Oh, okay. Sorry. Excuse me.
+
+240
+00:10:30,640 --> 00:10:32,240
+But there was a really quick turnaround.
+
+241
+00:10:32,240 --> 00:10:34,560
+And so a lot of the members of Key State
+
+242
+00:10:34,560 --> 00:10:36,640
+itself actually thought, okay, great.
+
+243
+00:10:36,640 --> 00:10:38,480
+We'll do the same play.
+
+244
+00:10:38,480 --> 00:10:39,920
+We're going to appeal to one of these
+
+245
+00:10:39,920 --> 00:10:41,519
+regulatory bodies that needs the
+
+246
+00:10:41,519 --> 00:10:43,360
+services Provenant is bringing and
+
+247
+00:10:43,360 --> 00:10:44,800
+they'll snap us up and we'll have a nice
+
+248
+00:10:44,800 --> 00:10:46,160
+turnaround. But it didn't turn out that
+
+249
+00:10:46,160 --> 00:10:48,560
+way. So we actually had to pivot our
+
+250
+00:10:48,560 --> 00:10:51,120
+expectations on what Provenant was into
+
+251
+00:10:51,120 --> 00:10:53,920
+a much deeper technical play in
+
+252
+00:10:53,920 --> 00:10:57,040
+colonizing the GSMA Root of Trust.
+
+253
+00:10:57,040 --> 00:11:00,399
+And really also we funded it quite
+
+254
+00:11:00,399 --> 00:11:03,680
+heavily but they also had not only to
+
+255
+00:11:03,680 --> 00:11:05,600
+pierce telecom but they also had to
+
+256
+00:11:05,600 --> 00:11:09,120
+build the first QVIs, the first wallets
+
+257
+00:11:09,120 --> 00:11:11,200
+the first means of
+
+258
+00:11:11,200 --> 00:11:11,760
+I'm sorry
+
+259
+00:11:11,760 --> 00:11:12,800
+– I don't mean to interrupt but I'll
+
+260
+00:11:12,800 --> 00:11:14,959
+just add a comment when you have a break
+
+261
+00:11:14,959 --> 00:11:17,920
+– Right, I mean just go ahead
+
+262
+00:11:17,920 --> 00:11:21,519
+– So think about Provenant as often
+
+263
+00:11:21,519 --> 00:11:23,440
+happens with startups and by the way the
+
+264
+00:11:23,440 --> 00:11:25,920
+co-founder of Credential Master
+
+265
+00:11:25,920 --> 00:11:28,399
+sitting back there in the corner, Allan.
+
+266
+00:11:28,399 --> 00:11:30,399
+And you know, we went from zero to
+
+267
+00:11:30,399 --> 00:11:32,720
+exit in less than two years, which was
+
+268
+00:11:32,720 --> 00:11:36,000
+amazing. But if that was your
+
+269
+00:11:36,000 --> 00:11:37,839
+expectation?
+
+270
+00:11:39,839 --> 00:11:41,519
+– We and this was a naive
+
+271
+00:11:41,519 --> 00:11:42,880
+expectation. I'm being quite honest with
+
+272
+00:11:42,880 --> 00:11:43,680
+you, actually.
+
+273
+00:11:43,680 --> 00:11:46,160
+– But Provenant pivoted twice.
+
+274
+00:11:46,640 --> 00:11:48,800
+– Provenant pivoted from original
+
+275
+00:11:48,800 --> 00:11:52,399
+telecom focus to thinking that being the
+
+276
+00:11:52,399 --> 00:11:54,240
+world's first QVI was a business.
+
+277
+00:11:54,240 --> 00:11:55,600
+It wasn't.
+
+278
+00:11:56,320 --> 00:11:57,600
+It was a good thing. It was an important
+
+279
+00:11:57,600 --> 00:11:59,680
+thing. They broke important ground
+
+280
+00:11:59,680 --> 00:12:00,480
+business
+
+281
+00:12:00,480 --> 00:12:02,720
+and then pivoting back to telecom.
+
+282
+00:12:03,440 --> 00:12:06,959
+And it's dangerous and hard
+
+283
+00:12:06,959 --> 00:12:09,839
+to make pivots
+
+284
+00:12:09,839 --> 00:12:12,000
+and some investors will evaluate a
+
+285
+00:12:12,000 --> 00:12:13,600
+startup as to whether they've made any
+
+286
+00:12:13,600 --> 00:12:15,440
+pivots and if they haven't that they
+
+287
+00:12:15,440 --> 00:12:16,800
+haven't been listening to the market.
+
+288
+00:12:16,800 --> 00:12:19,120
+– I actually don't think that's quite
+
+289
+00:12:19,120 --> 00:12:22,800
+right. I think that
+
+290
+00:12:22,800 --> 00:12:27,040
+they did pivot away from .., oh my
+
+291
+00:12:27,040 --> 00:12:28,240
+goodness this is failing me, but
+
+292
+00:12:28,240 --> 00:12:29,760
+anyways but, they did pivot from their
+
+293
+00:12:29,760 --> 00:12:31,920
+first approach but when they had to
+
+294
+00:12:31,920 --> 00:12:34,959
+become the first QVI it was a necessary
+
+295
+00:12:34,959 --> 00:12:36,560
+step they had to take to actually
+
+296
+00:12:36,560 --> 00:12:38,880
+convince the regulators that existed
+
+297
+00:12:38,880 --> 00:12:41,839
+about the legitimacy of the vLEI and
+
+298
+00:12:41,839 --> 00:12:43,200
+essentially the leverage to convince
+
+299
+00:12:43,200 --> 00:12:44,399
+them to use KERI
+
+300
+00:12:44,399 --> 00:12:46,560
+– I'm in agreement with that the
+
+301
+00:12:46,560 --> 00:12:48,720
+pivot was where they would make money
+
+302
+00:12:50,000 --> 00:12:51,279
+They thought there would be a business
+
+303
+00:12:51,279 --> 00:12:53,279
+in one place, pivoted to that.
+
+304
+00:12:53,680 --> 00:12:55,839
+Decided it was and decided to pivot away
+
+305
+00:12:55,839 --> 00:12:57,040
+from the business model.
+
+306
+00:12:57,040 --> 00:13:00,000
+– That's right. Cool.
+
+307
+00:13:00,000 --> 00:13:03,110
+Thanks.
+
+308
+00:13:03,135 --> 00:13:05,022
+So, yeah, exactly. And going into
+
+309
+00:13:05,046 --> 00:13:07,279
+this, they had to build alongside their
+
+310
+00:13:07,279 --> 00:13:10,399
+product, wallet infrastructure, vLEI and
+
+311
+00:13:10,399 --> 00:13:13,200
+the first QVI. They had to build
+
+312
+00:13:13,200 --> 00:13:16,160
+Java SDKs for KERI, these KERIpy
+
+313
+00:13:16,160 --> 00:13:18,399
+libraries to be usable. And then
+
+314
+00:13:18,399 --> 00:13:20,079
+ultimately what amounted to the
+
+315
+00:13:20,079 --> 00:13:22,079
+Verifiable Voice Protocol, which is what
+
+316
+00:13:22,079 --> 00:13:26,240
+OVC itself is using to have branded
+
+317
+00:13:26,240 --> 00:13:30,629
+calling, verifiable branded calling.
+
+318
+00:13:30,654 --> 00:13:33,875
+And telecom as an industry is a
+
+319
+00:13:33,899 --> 00:13:37,120
+pretty substantially in need of what
+
+320
+00:13:37,120 --> 00:13:40,000
+KERI provides. You're seeing a 25%
+
+321
+00:13:40,000 --> 00:13:42,720
+decline year-over-year from 2024 to 2025
+
+322
+00:13:42,720 --> 00:13:45,839
+in terms of SMS trust. 72% of US
+
+323
+00:13:45,839 --> 00:13:48,639
+consumers, including myself, I don't
+
+324
+00:13:48,639 --> 00:13:50,320
+answer phone calls that I don't
+
+325
+00:13:50,320 --> 00:13:53,200
+recognize. I'm sure. Do if you guys
+
+326
+00:13:53,200 --> 00:13:54,800
+get a phone call that you don't
+
+327
+00:13:54,800 --> 00:13:56,639
+recognize, do you answer it?
+
+328
+00:13:56,639 --> 00:13:58,560
+– Only if it's from China.
+
+329
+00:13:58,560 --> 00:13:59,834
+– Okay. They might have a cookie for
+
+330
+00:13:59,834 --> 00:14:01,725
+you. You never know.
+
+331
+00:14:06,735 --> 00:14:09,246
+So, really it says to how much
+
+332
+00:14:09,270 --> 00:14:12,240
+this public utility has been abused and
+
+333
+00:14:12,240 --> 00:14:14,000
+how much it needs a trust infrastructure
+
+334
+00:14:14,000 --> 00:14:16,800
+like KERI. There's 80 billion in
+
+335
+00:14:16,800 --> 00:14:19,030
+fraud losses in 2025 and
+
+336
+00:14:19,030 --> 00:14:21,760
+STIR/SHAKEN as well was just insufficient.
+
+337
+00:14:21,760 --> 00:14:23,839
+It's built on X.509-based
+
+338
+00:14:23,839 --> 00:14:25,760
+infrastructure. It's not enough to
+
+339
+00:14:25,760 --> 00:14:28,639
+actually solve the problem of spam. Mr.
+
+340
+00:14:28,639 --> 00:14:30,240
+spam guy here is nodding his head in
+
+341
+00:14:30,240 --> 00:14:33,040
+approval. Yeah.
+
+342
+00:14:33,040 --> 00:14:36,959
+Cool. So now let's go to healthKERI.
+
+343
+00:14:36,959 --> 00:14:39,600
+So healthKERI was actually our second
+
+344
+00:14:39,600 --> 00:14:42,560
+investment.
+
+345
+00:14:43,514 --> 00:14:44,511
+Sam came to us.
+
+346
+00:14:44,536 --> 00:14:45,909
+He said hey I've got
+
+347
+00:14:45,934 --> 00:14:49,440
+a brilliant proposal. Phil Feairheller is
+
+348
+00:14:49,440 --> 00:14:51,760
+going to be the CTO. Jared Jeffery is
+
+349
+00:14:51,760 --> 00:14:54,639
+going to be the CEO and we're going to
+
+350
+00:14:54,639 --> 00:14:57,120
+take healthcare headon. I mean, and
+
+351
+00:14:57,120 --> 00:14:58,480
+Jared maybe you could talk about it.
+
+352
+00:14:58,480 --> 00:15:00,000
+What was your initial expectation
+
+353
+00:15:00,000 --> 00:15:02,160
+founding healthKERI? What were your
+
+354
+00:15:02,160 --> 00:15:04,000
+thoughts there?
+
+355
+00:15:04,000 --> 00:15:06,160
+– Well, we've pivoted. We're on our third.
+
+356
+00:15:06,340 --> 00:15:09,600
+Right. So, we were wrong twice. I think
+
+357
+00:15:09,600 --> 00:15:11,680
+we'll probably come back to some of
+
+358
+00:15:11,680 --> 00:15:14,320
+those concepts later.
+
+359
+00:15:14,320 --> 00:15:16,639
+But one of the things that we
+
+360
+00:15:16,639 --> 00:15:19,199
+initially thought was
+
+361
+00:15:19,199 --> 00:15:21,199
+that the
+
+362
+00:15:21,199 --> 00:15:23,360
+the pain of insecurity in this industry
+
+363
+00:15:23,360 --> 00:15:25,839
+would be sufficient to drive adoption of
+
+364
+00:15:25,839 --> 00:15:28,320
+new technology. What we found very
+
+365
+00:15:28,320 --> 00:15:32,399
+quickly was the industry gives a whole
+
+366
+00:15:32,399 --> 00:15:34,079
+lot of lip service
+
+367
+00:15:34,079 --> 00:15:36,959
+to this issue of patient harm by
+
+368
+00:15:36,959 --> 00:15:40,320
+way of cyber security. And in the
+
+369
+00:15:40,320 --> 00:15:42,959
+boardroom that all goes [inaudible]
+
+370
+00:15:43,275 --> 00:15:46,959
+and so for
+
+371
+00:15:46,959 --> 00:15:49,120
+us as we kind of initially started this
+
+372
+00:15:49,120 --> 00:15:51,519
+I was like I believe that KERI can solve
+
+373
+00:15:51,519 --> 00:15:53,680
+this problem.
+
+374
+00:15:53,680 --> 00:15:57,040
+But I've always tried to temper the
+
+375
+00:15:57,040 --> 00:16:01,199
+expectations of my team to know that…
+
+376
+00:16:01,199 --> 00:16:04,240
+listen, healtKERI runs on cold glasses
+
+377
+00:16:04,240 --> 00:16:08,320
+the industry moves very slow
+
+378
+00:16:08,320 --> 00:16:09,839
+[inaudible] technologies and that gets worse when
+
+379
+00:16:09,839 --> 00:16:11,839
+you're talking about technologies that
+
+380
+00:16:11,839 --> 00:16:13,120
+identity
+
+381
+00:16:13,120 --> 00:16:14,639
+– Do you think, and this
+
+382
+00:16:14,639 --> 00:16:17,120
+just occurred to me actually, the notion
+
+383
+00:16:17,120 --> 00:16:18,800
+of data loyalty could actually whip
+
+384
+00:16:18,800 --> 00:16:22,000
+these guys into shape?
+
+385
+00:16:22,000 --> 00:16:24,240
+– Yes probably,
+
+386
+00:16:24,240 --> 00:16:26,959
+it's going to be a long road to get them
+
+387
+00:16:26,959 --> 00:16:29,199
+to fight on something like that, it
+
+388
+00:16:29,199 --> 00:16:30,720
+would have to be forced.
+
+389
+00:16:30,720 --> 00:16:31,839
+– Well, but that's what I mean.
+
+390
+00:16:31,839 --> 00:16:33,920
+Enforced from SEDI down,
+
+391
+00:16:33,920 --> 00:16:34,880
+regulators down.
+
+392
+00:16:34,880 --> 00:16:38,800
+– Yeah. It would have to be regulatory,
+
+393
+00:16:38,800 --> 00:16:41,040
+[inaudible]
+
+394
+00:16:41,040 --> 00:16:42,560
+– Well, well, anyways. Oh, sorry. Go
+
+395
+00:16:42,560 --> 00:16:49,040
+ahead. – See I spent years a few more
+
+396
+00:16:49,040 --> 00:16:52,710
+understanding [inaudible]
+
+397
+00:16:52,735 --> 00:16:56,109
+the issue is the consumer
+
+398
+00:16:56,133 --> 00:16:58,560
+of what to ask for
+
+399
+00:16:58,560 --> 00:17:02,320
+unless that really gets in front
+
+400
+00:17:02,320 --> 00:17:06,160
+You don't know what to ask for
+
+401
+00:17:06,160 --> 00:17:08,880
+push these companies to move that
+
+402
+00:17:08,880 --> 00:17:09,520
+fast
+
+403
+00:17:09,520 --> 00:17:11,120
+– Right which is why I think the data
+
+404
+00:17:11,120 --> 00:17:13,600
+loyalty framework network if applied
+
+405
+00:17:13,600 --> 00:17:16,068
+could actually incentivize right.
+
+406
+00:17:19,877 --> 00:17:22,988
+– What happened to the data by
+
+407
+00:17:23,012 --> 00:17:26,400
+right? How much of privacy to give up
+
+408
+00:17:26,400 --> 00:17:29,600
+between just two weeks of March 2020?
+
+409
+00:17:29,600 --> 00:17:31,332
+Just look at that before COVID
+
+410
+00:17:31,356 --> 00:17:32,799
+during COVID after COVID.
+
+411
+00:17:33,360 --> 00:17:35,840
+So if you go through those parameters
+
+412
+00:17:35,840 --> 00:17:37,840
+and understand how people are
+
+413
+00:17:37,840 --> 00:17:40,640
+interacting and secondly how fragmented
+
+414
+00:17:40,640 --> 00:17:43,360
+the digital touch points are.
+
+415
+00:17:43,360 --> 00:17:45,200
+That's another area to look into and say
+
+416
+00:17:45,200 --> 00:17:47,120
+okay where is the where is the
+
+417
+00:17:47,120 --> 00:17:49,120
+commonality getting in where is the
+
+418
+00:17:49,120 --> 00:17:52,320
+critical mass? These are all critical
+
+419
+00:17:52,320 --> 00:17:54,320
+inputs because even if you look at from
+
+420
+00:17:54,320 --> 00:17:56,559
+their angle the digital engagements has
+
+421
+00:17:56,559 --> 00:17:59,600
+been completely different.
+
+422
+00:17:59,600 --> 00:18:01,440
+So there is opportunity here but it
+
+423
+00:18:01,440 --> 00:18:04,720
+comes with letting the consumer know
+
+424
+00:18:04,720 --> 00:18:06,400
+what to ask.
+
+425
+00:18:06,400 --> 00:18:08,400
+– Very good feedback. Thank you. I
+
+426
+00:18:08,400 --> 00:18:12,559
+appreciate that. Well that aside,
+
+427
+00:18:12,559 --> 00:18:15,120
+excuse me for bringing us off track.
+
+428
+00:18:15,120 --> 00:18:16,880
+Bringing this back healthKERI. So, we're
+
+429
+00:18:16,880 --> 00:18:19,440
+still high on
+
+430
+00:18:19,440 --> 00:18:21,200
+contributing to Provenant. There's a lot
+
+431
+00:18:21,200 --> 00:18:24,080
+of liquidity milling around in the
+
+432
+00:18:24,080 --> 00:18:26,880
+macroeconomic space. So, we place with
+
+433
+00:18:26,880 --> 00:18:29,440
+healthKERI as well. Jared, like Jared
+
+434
+00:18:29,440 --> 00:18:31,760
+said, you had to pivot several times. I
+
+435
+00:18:31,760 --> 00:18:35,039
+think Jared epitomizes actually a
+
+436
+00:18:35,039 --> 00:18:37,039
+tenacity that I think is
+
+437
+00:18:37,039 --> 00:18:39,360
+admirable because the amount of funding
+
+438
+00:18:39,360 --> 00:18:41,280
+we actually gave Jared as opposed to
+
+439
+00:18:41,280 --> 00:18:44,080
+Provenant was remarkably less. And I
+
+440
+00:18:44,080 --> 00:18:47,280
+think what they've done to produce is
+
+441
+00:18:47,280 --> 00:18:49,600
+substantially more proportional to
+
+442
+00:18:49,600 --> 00:18:50,799
+the amount of capital that we've
+
+443
+00:18:50,799 --> 00:18:53,600
+actually contributed. So Jared is an
+
+444
+00:18:53,600 --> 00:18:56,640
+exemplary showcase of what a founder
+
+445
+00:18:56,640 --> 00:18:58,640
+should be like in order to survive tough
+
+446
+00:18:58,640 --> 00:19:00,960
+times and we'll go over like what
+
+447
+00:19:00,960 --> 00:19:03,919
+I learned from that later. So yeah
+
+448
+00:19:03,919 --> 00:19:05,600
+healthKERI just the overview: quantum
+
+449
+00:19:05,600 --> 00:19:07,360
+ready, phish-proof network security for
+
+450
+00:19:07,360 --> 00:19:08,960
+healthcare data layer. You've got
+
+451
+00:19:08,960 --> 00:19:10,400
+production watchers, you've got
+
+452
+00:19:10,400 --> 00:19:12,320
+witnesses, you've got cryptographically
+
+453
+00:19:12,320 --> 00:19:14,640
+signed and transit gateways. The
+
+454
+00:19:14,640 --> 00:19:16,720
+vertical is healthcare obviously, the
+
+455
+00:19:16,720 --> 00:19:18,799
+layer is like an overlay essentially and
+
+456
+00:19:18,799 --> 00:19:23,990
+the idea is to sign every transaction.
+
+457
+00:19:24,000 --> 00:19:25,788
+So again they built production
+
+458
+00:19:25,812 --> 00:19:27,840
+witnesses you have watchers at the
+
+459
+00:19:27,840 --> 00:19:30,799
+edge. In-transit gateways and as well I
+
+460
+00:19:30,799 --> 00:19:33,840
+mean the Locksmith
+
+461
+00:19:33,840 --> 00:19:35,840
+stack that Phil has demonstrated several
+
+462
+00:19:35,840 --> 00:19:38,240
+times is extensive. This is a full end
+
+463
+00:19:38,240 --> 00:19:41,120
+to end credential life cycle management
+
+464
+00:19:41,120 --> 00:19:44,000
+for the healthcare ecosystem.
+
+465
+00:19:44,000 --> 00:19:46,000
+– And can I just put a comment on that
+
+466
+00:19:46,000 --> 00:19:48,240
+one? One of the questions that Phil got
+
+467
+00:19:48,240 --> 00:19:50,400
+a couple of times he's been demoing the
+
+468
+00:19:50,400 --> 00:19:52,880
+the wallet is the question of do you
+
+469
+00:19:52,880 --> 00:19:55,760
+think this is going to be the end UI for
+
+470
+00:19:55,760 --> 00:19:57,840
+the wallet? And the answer is no.
+
+471
+00:19:57,840 --> 00:19:59,200
+Absolutely not.
+
+472
+00:19:59,200 --> 00:20:03,039
+But we can't worry about UI challenges
+
+473
+00:20:03,039 --> 00:20:04,880
+until this exists. So part of the reason
+
+474
+00:20:04,880 --> 00:20:06,960
+we put that into the open source is
+
+475
+00:20:06,960 --> 00:20:09,360
+because I mean I'm operating
+
+476
+00:20:09,360 --> 00:20:11,200
+on a very
+
+477
+00:20:11,200 --> 00:20:12,480
+resource constraint
+
+478
+00:20:12,480 --> 00:20:15,280
+– Shoestring budget is what he means.
+
+479
+00:20:15,280 --> 00:20:17,440
+– We produce because we focus
+
+480
+00:20:17,440 --> 00:20:18,960
+on the things that matter most.
+
+481
+00:20:19,840 --> 00:20:21,360
+So part of the reason we put that into
+
+482
+00:20:21,360 --> 00:20:23,440
+open source understanding that right now
+
+483
+00:20:23,440 --> 00:20:26,960
+the UI is very KERI developer oriented
+
+484
+00:20:26,960 --> 00:20:29,440
+is to invite this community to come
+
+485
+00:20:29,440 --> 00:20:31,760
+together and say okay let's do the UI
+
+486
+00:20:31,760 --> 00:20:34,320
+work on this right let's make this thing
+
+487
+00:20:34,320 --> 00:20:36,320
+sing for all the different use cases
+
+488
+00:20:36,320 --> 00:20:38,240
+that will exist in the ecosystem.
+
+489
+00:20:38,240 --> 00:20:40,480
+– So do you think that the UI
+
+490
+00:20:40,480 --> 00:20:43,200
+itself has substantially been
+
+491
+00:20:43,200 --> 00:20:45,280
+influenced by the more you learn about
+
+492
+00:20:45,280 --> 00:20:47,679
+KERI as time goes on?
+
+493
+00:20:47,679 --> 00:20:50,720
+– So yes and no. I think really what we
+
+494
+00:20:50,720 --> 00:20:53,039
+found is
+
+495
+00:20:53,039 --> 00:20:58,159
+as we grow we need to hide KERI to
+
+496
+00:20:58,159 --> 00:21:00,960
+everyone
+
+497
+00:21:00,960 --> 00:21:06,159
+so that for them it feels like
+
+498
+00:21:06,159 --> 00:21:08,080
+everything else that they're used to. I
+
+499
+00:21:08,080 --> 00:21:10,480
+so during SEDI conference Phil's
+
+500
+00:21:10,480 --> 00:21:14,240
+demonstration of how to log into a payer
+
+501
+00:21:14,240 --> 00:21:15,440
+portal with Senn
+
+502
+00:21:15,440 --> 00:21:18,320
+Yep. I don't actually think that any
+
+503
+00:21:18,320 --> 00:21:21,360
+of the legislators that watched that
+
+504
+00:21:21,360 --> 00:21:24,559
+presentation had any idea the magic that
+
+505
+00:21:24,559 --> 00:21:26,240
+was happening there. And that was by
+
+506
+00:21:26,240 --> 00:21:27,760
+design, right? We wanted them to look at
+
+507
+00:21:27,760 --> 00:21:30,159
+this and we wanted them to say, "Yeah, I
+
+508
+00:21:30,159 --> 00:21:31,760
+logged in with Google this exact same
+
+509
+00:21:31,760 --> 00:21:32,855
+way."
+
+510
+00:21:32,880 --> 00:21:35,840
+Exactly. Perfect. So all of that to
+
+511
+00:21:35,840 --> 00:21:38,080
+say that the stuff that we put
+
+512
+00:21:38,080 --> 00:21:40,000
+into the open source, the watchers,
+
+513
+00:21:40,000 --> 00:21:42,559
+the witnesses, the wallet is an
+
+514
+00:21:42,559 --> 00:21:44,400
+invitation. It's an open invitation to
+
+515
+00:21:44,400 --> 00:21:47,120
+the industry to say go build on top of
+
+516
+00:21:47,120 --> 00:21:49,840
+this. We've given you the
+
+517
+00:21:49,840 --> 00:21:52,640
+production ready code to go pay
+
+518
+00:21:52,640 --> 00:21:52,960
+[inaudible]
+
+519
+00:21:52,960 --> 00:21:55,280
+– And didn't you also have several
+
+520
+00:21:55,280 --> 00:21:57,919
+feedback from
+
+521
+00:21:57,919 --> 00:22:00,720
+potential customers and adopters of your
+
+522
+00:22:00,720 --> 00:22:03,039
+technology that they wouldn't even adopt
+
+523
+00:22:03,039 --> 00:22:05,200
+the technology if it wasn't open source?
+
+524
+00:22:05,200 --> 00:22:08,799
+– Yeah. So,
+
+525
+00:22:08,799 --> 00:22:10,960
+one of the things that everyone in,
+
+526
+00:22:10,960 --> 00:22:14,080
+entrepreneurship, particularly tech,
+
+527
+00:22:14,080 --> 00:22:16,240
+has to contend with now is that the
+
+528
+00:22:16,240 --> 00:22:19,280
+stock standard mode of defensibility for
+
+529
+00:22:19,280 --> 00:22:21,280
+companies has completely dissolved in
+
+530
+00:22:21,280 --> 00:22:23,760
+the last year. And it used to be that
+
+531
+00:22:23,760 --> 00:22:25,440
+you were going to stand a proprietary
+
+532
+00:22:25,440 --> 00:22:27,280
+code, you would get a patent on those
+
+533
+00:22:27,280 --> 00:22:28,640
+things, and then you would basically
+
+534
+00:22:28,640 --> 00:22:32,159
+rinsing of that patent with your code.
+
+535
+00:22:32,159 --> 00:22:35,840
+Claude makes that completely
+
+536
+00:22:35,840 --> 00:22:37,440
+useless.
+
+537
+00:22:37,440 --> 00:22:39,600
+- I have watched videos of people just
+
+538
+00:22:39,600 --> 00:22:41,919
+walking through the UI of a platform
+
+539
+00:22:41,919 --> 00:22:44,400
+with an AI agent and the agent can then
+
+540
+00:22:44,400 --> 00:22:47,200
+on the back end code that for you.
+
+541
+00:22:47,200 --> 00:22:50,080
+This defensible mode of
+
+542
+00:22:50,080 --> 00:22:52,720
+the last 20 years is no more. Which
+
+543
+00:22:52,720 --> 00:22:55,600
+means I think that you need to find
+
+544
+00:22:55,600 --> 00:22:59,280
+other modes. And in so doing, the
+
+545
+00:22:59,280 --> 00:23:01,440
+code that you used to hold on to so
+
+546
+00:23:01,440 --> 00:23:04,720
+dearly now becomes only valuable if you
+
+547
+00:23:04,720 --> 00:23:06,480
+put it into open source and let the
+
+548
+00:23:06,480 --> 00:23:08,960
+community, let the, not the AI brain, but
+
+549
+00:23:08,960 --> 00:23:11,520
+the human brain and collective make that
+
+550
+00:23:11,520 --> 00:23:12,637
+code more valuable.
+
+551
+00:23:12,661 --> 00:23:13,735
+Jared's pointing
+
+552
+00:23:13,759 --> 00:23:15,919
+at something very essential that
+
+553
+00:23:15,919 --> 00:23:18,400
+Key State understood getting into this,
+
+554
+00:23:18,400 --> 00:23:21,120
+that most of these funds that we
+
+555
+00:23:21,120 --> 00:23:22,400
+put into these companies would be going
+
+556
+00:23:22,400 --> 00:23:24,320
+to open source development. And
+
+557
+00:23:24,320 --> 00:23:25,840
+there's a fine balance.
+
+558
+00:23:25,840 --> 00:23:28,799
+Not everything should be open source.
+
+559
+00:23:28,799 --> 00:23:30,998
+There's a time and a place for IP to
+
+560
+00:23:30,998 --> 00:23:32,400
+be leveraged. (IP = Intellectual Property)
+
+561
+00:23:32,400 --> 00:23:34,000
+– Our gateways are not open source.
+
+562
+00:23:34,000 --> 00:23:35,760
+– Right.
+
+563
+00:23:35,760 --> 00:23:37,520
+And exactly like the open
+
+564
+00:23:37,520 --> 00:23:38,960
+source is to invite people to
+
+565
+00:23:38,960 --> 00:23:40,880
+participate in the ecosystem and you can
+
+566
+00:23:40,880 --> 00:23:43,679
+provide what is uniquely yours on top.
+
+567
+00:23:45,840 --> 00:23:48,320
+– Just wanted to follow up to that source
+
+568
+00:23:48,320 --> 00:23:51,600
+code is not patentable. It's
+
+569
+00:23:51,600 --> 00:23:52,559
+copyrightable.
+
+570
+00:23:54,880 --> 00:23:57,039
+It's a big difference.
+
+571
+00:23:57,039 --> 00:23:58,720
+– I think you are the foremost
+
+572
+00:23:58,720 --> 00:24:00,640
+authority in making that declarative
+
+573
+00:24:00,640 --> 00:24:04,159
+statement. – Anyway, the issue is
+
+574
+00:24:04,159 --> 00:24:06,240
+that's how open source works is by
+
+575
+00:24:06,240 --> 00:24:06,960
+copyright.
+
+576
+00:24:07,520 --> 00:24:09,520
+Because since you assert the
+
+577
+00:24:09,520 --> 00:24:11,001
+copyright, you can decide what to do
+
+578
+00:24:11,026 --> 00:24:11,467
+with it.
+
+579
+00:24:11,760 --> 00:24:13,440
+– Sure. And it depends on the license you
+
+580
+00:24:13,440 --> 00:24:16,400
+use for said copyright, right?
+
+581
+00:24:16,400 --> 00:24:17,520
+– Well, yeah, that's your choice.
+
+582
+00:24:18,159 --> 00:24:19,840
+– But you're asserting
+
+583
+00:24:19,840 --> 00:24:23,200
+ownership in order to give it away. But
+
+584
+00:24:23,200 --> 00:24:25,520
+you have to assert the ownership first.
+
+585
+00:24:30,397 --> 00:24:32,160
+– I want to throw something out in an
+
+586
+00:24:32,185 --> 00:24:35,360
+assertion that I would love to have
+
+587
+00:24:35,360 --> 00:24:38,159
+challenged if someone disagrees with it
+
+588
+00:24:38,159 --> 00:24:39,919
+and it's about where open source is
+
+589
+00:24:39,919 --> 00:24:41,679
+appropriate and where capturing IP is
+
+590
+00:24:41,679 --> 00:24:43,200
+appropriate where the line is and I
+
+591
+00:24:43,200 --> 00:24:45,279
+think there's actually a new line a new
+
+592
+00:24:45,279 --> 00:24:46,880
+bright line because of AI
+
+593
+00:24:46,880 --> 00:24:48,559
+and I think it's bright
+
+594
+00:24:48,559 --> 00:24:50,159
+and let me just throw it out there as an
+
+595
+00:24:50,159 --> 00:24:51,360
+idea
+
+596
+00:24:51,360 --> 00:24:54,640
+and that is if your
+
+597
+00:24:54,640 --> 00:24:58,000
+code, your protocol is something that
+
+598
+00:24:58,000 --> 00:25:01,760
+you need multiple parties to adopt.
+
+599
+00:25:01,760 --> 00:25:04,000
+There's an issuer holder verifier or
+
+600
+00:25:04,000 --> 00:25:05,919
+there's two sides. If it's a two side,
+
+601
+00:25:05,919 --> 00:25:08,880
+if it's multi-sided at all,
+
+602
+00:25:08,880 --> 00:25:10,799
+I don't think there's a choice anymore.
+
+603
+00:25:10,799 --> 00:25:12,720
+But you have to open source
+
+604
+00:25:12,720 --> 00:25:13,840
+– From strategic necessity.
+
+605
+00:25:13,840 --> 00:25:14,960
+– Otherwise, you're trying to be the
+
+606
+00:25:14,960 --> 00:25:17,279
+platform, what I call EUM: “Everybody Use
+
+607
+00:25:17,279 --> 00:25:18,960
+Me” and I will be in the middle and
+
+608
+00:25:18,960 --> 00:25:20,559
+everybody use me to be the bridge of
+
+609
+00:25:20,559 --> 00:25:22,960
+everything. But that's only if it's
+
+610
+00:25:22,960 --> 00:25:24,480
+multi-sided.
+
+611
+00:25:24,480 --> 00:25:26,799
+I think it's 180 degrees different if
+
+612
+00:25:26,799 --> 00:25:28,480
+it's single-sided.
+
+613
+00:25:28,480 --> 00:25:31,520
+I think if you do not protect
+
+614
+00:25:31,520 --> 00:25:34,720
+your architecture, you copyright
+
+615
+00:25:34,720 --> 00:25:37,600
+code, but you can patent architecture,
+
+616
+00:25:37,600 --> 00:25:40,640
+right? So, you can patent architecture
+
+617
+00:25:40,640 --> 00:25:42,880
+and if it's single-sided
+
+618
+00:25:42,880 --> 00:25:44,400
+architecture
+
+619
+00:25:44,400 --> 00:25:47,760
+and you do not patent it, you're going
+
+620
+00:25:47,760 --> 00:25:50,320
+to be destroyed in a New York minute by
+
+621
+00:25:50,320 --> 00:25:54,480
+every AI copier… it's
+
+622
+00:25:54,480 --> 00:25:56,320
+too easy for them to just take it and do
+
+623
+00:25:56,320 --> 00:25:58,960
+it. And I used to feel that everything
+
+624
+00:25:58,960 --> 00:26:00,320
+was open source and make fun of
+
+625
+00:26:00,320 --> 00:26:01,360
+everything IP,
+
+626
+00:26:01,360 --> 00:26:03,600
+But now I'm starting a company to
+
+627
+00:26:03,600 --> 00:26:05,120
+take advantage of the SEDI momentum
+
+628
+00:26:05,120 --> 00:26:07,600
+and I started doing product design and I
+
+629
+00:26:07,600 --> 00:26:09,279
+invented something and I'm like, "Holy
+
+630
+00:26:09,279 --> 00:26:11,840
+cow, this is single-sided. If I come to
+
+631
+00:26:11,840 --> 00:26:14,720
+market with this product without any IP,
+
+632
+00:26:14,720 --> 00:26:17,760
+I'm going to get exploded in a minute."
+
+633
+00:26:17,760 --> 00:26:20,240
+And so I just defensively, apologies to
+
+634
+00:26:20,240 --> 00:26:22,080
+you, Steve, because I've been
+
+635
+00:26:22,080 --> 00:26:25,760
+criticizing you for your very pro-IP
+
+636
+00:26:25,760 --> 00:26:28,000
+perspective, but I realize the
+
+637
+00:26:28,000 --> 00:26:29,600
+distinction. It's whether it's a
+
+638
+00:26:29,600 --> 00:26:32,000
+single-sided product or multi-sided.
+
+639
+00:26:32,000 --> 00:26:34,799
+Multi-sided, open source, single-sided,
+
+640
+00:26:34,799 --> 00:26:36,559
+you got to patent it any way
+
+641
+00:26:36,559 --> 00:26:38,799
+you can or you're going to get raped as
+
+642
+00:26:38,799 --> 00:26:39,840
+soon as it gets public.
+
+643
+00:26:39,840 --> 00:26:41,279
+– Robert.
+
+644
+00:26:41,279 --> 00:26:44,159
+– Just a question to your challenge,
+
+645
+00:26:44,159 --> 00:26:45,919
+and I'm not saying it's either way, but
+
+646
+00:26:45,919 --> 00:26:48,080
+would you say the FICO score has to be
+
+647
+00:26:48,080 --> 00:26:51,120
+open source now since that's proprietary
+
+648
+00:26:51,120 --> 00:26:52,480
+yet multiple sides?
+
+649
+00:26:52,480 --> 00:26:54,880
+– No, it's singlesided.
+
+650
+00:26:54,880 --> 00:26:58,320
+Each one of those credit rating
+
+651
+00:26:58,320 --> 00:27:00,320
+authorities has their own proprietary
+
+652
+00:27:00,320 --> 00:27:02,320
+way of doing it single-sided to them in
+
+653
+00:27:02,320 --> 00:27:03,600
+their own environment. That's why they
+
+654
+00:27:03,600 --> 00:27:05,039
+keep it proprietary.
+
+655
+00:27:05,520 --> 00:27:07,600
+That's why there's three. If it was open
+
+656
+00:27:07,600 --> 00:27:08,960
+source, everyone would use the same one,
+
+657
+00:27:08,960 --> 00:27:11,600
+but they each have a proprietary one.
+
+658
+00:27:11,600 --> 00:27:12,799
+That's a good example,
+
+659
+00:27:12,799 --> 00:27:13,520
+– Steve.
+
+660
+00:27:13,520 --> 00:27:16,159
+– So, let me follow on to answer your
+
+661
+00:27:16,159 --> 00:27:19,200
+question, but I agree with Timothy.
+
+662
+00:27:19,200 --> 00:27:20,080
+– We agree.
+
+663
+00:27:20,080 --> 00:27:22,320
+– Yes.
+
+664
+00:27:22,320 --> 00:27:26,159
+But the issue is: the reason
+
+665
+00:27:26,159 --> 00:27:29,039
+it's good to have KERI open source is
+
+666
+00:27:29,039 --> 00:27:33,120
+because your goal is uniform adoption.
+
+667
+00:27:33,840 --> 00:27:34,799
+– Multi-sided.
+
+668
+00:27:34,799 --> 00:27:37,120
+– Yes multi-sided. I'm just trying
+
+669
+00:27:37,120 --> 00:27:39,440
+to put it in a different language that
+
+670
+00:27:39,440 --> 00:27:42,240
+you want everybody to use it because
+
+671
+00:27:42,240 --> 00:27:44,159
+then you become interoperable
+
+672
+00:27:44,799 --> 00:27:47,520
+and that's different than coming up
+
+673
+00:27:47,520 --> 00:27:51,760
+with secret sauce to do something
+
+674
+00:27:51,760 --> 00:27:54,080
+and you want to keep that protected. And
+
+675
+00:27:54,080 --> 00:27:57,919
+so both the app world and the open-
+
+676
+00:27:57,919 --> 00:28:01,440
+source world are indispensable
+
+677
+00:28:01,440 --> 00:28:03,520
+tools. We use a different time.
+
+678
+00:28:03,520 --> 00:28:06,000
+– Right. Exactly. The timing matters and
+
+679
+00:28:06,000 --> 00:28:08,000
+to what degree.
+
+680
+00:28:08,000 --> 00:28:10,159
+So, and honestly, it's still
+
+681
+00:28:10,159 --> 00:28:12,399
+something that I think we're working on
+
+682
+00:28:12,399 --> 00:28:15,120
+in terms of our understanding, but
+
+683
+00:28:15,120 --> 00:28:18,799
+Jared and the healthKERI team, I think,
+
+684
+00:28:18,799 --> 00:28:22,000
+have the right approach. A lot of this
+
+685
+00:28:22,000 --> 00:28:23,679
+sort of SEDI support for
+
+686
+00:28:23,679 --> 00:28:26,559
+example with the watchers the witnesses,
+
+687
+00:28:26,559 --> 00:28:31,520
+the wallets, it needs this level of
+
+688
+00:28:31,520 --> 00:28:35,360
+open-source licensing to allow for
+
+689
+00:28:35,360 --> 00:28:37,039
+that network effect to propagate and
+
+690
+00:28:37,039 --> 00:28:38,480
+again we knew that coming in
+
+691
+00:28:38,480 --> 00:28:39,760
+that this was going to be a little bit
+
+692
+00:28:39,760 --> 00:28:44,080
+of this sort of allowing the fruits
+
+693
+00:28:44,080 --> 00:28:46,239
+of our labor to be freely appreciated.
+
+694
+00:28:48,254 --> 00:28:50,715
+On healthcare in particular
+
+695
+00:28:50,739 --> 00:28:53,200
+to speak on what the opportunity was.
+
+696
+00:28:53,200 --> 00:28:54,960
+If breaches were a contest, healthcare
+
+697
+00:28:54,960 --> 00:28:58,240
+would be numero uno. The third party
+
+698
+00:28:58,240 --> 00:29:02,080
+ransomware origin is pretty
+
+699
+00:29:02,080 --> 00:29:04,480
+extensively documented. There's hundreds
+
+700
+00:29:04,480 --> 00:29:06,559
+of millions of US patient healthcare
+
+701
+00:29:06,559 --> 00:29:09,679
+records stolen. And the most serious
+
+702
+00:29:09,679 --> 00:29:13,360
+of attacks actually affect real life
+
+703
+00:29:13,360 --> 00:29:16,000
+care environments. Jared, I think
+
+704
+00:29:16,000 --> 00:29:17,840
+didn't we have the first case of someone
+
+705
+00:29:17,840 --> 00:29:20,240
+dying from ransomware?
+
+706
+00:29:20,240 --> 00:29:21,919
+– There have been a number of cases where
+
+707
+00:29:21,919 --> 00:29:24,320
+they said this probably was because of
+
+708
+00:29:24,320 --> 00:29:26,880
+ransomware. This last year BBC
+
+709
+00:29:26,880 --> 00:29:28,480
+finally put out an article and said,
+
+710
+00:29:28,480 --> 00:29:31,200
+"No, we can clearly state that
+
+711
+00:29:31,200 --> 00:29:33,440
+this person died to the hospital they
+
+712
+00:29:33,440 --> 00:29:35,600
+were supposed to go to but couldn't."
+
+713
+00:29:36,080 --> 00:29:38,320
+They would have survived. So,
+
+714
+00:29:38,320 --> 00:29:41,360
+Yes, ransonware, and it's worse than that.
+
+715
+00:29:41,360 --> 00:29:43,360
+Most of these attacks are not
+
+716
+00:29:43,360 --> 00:29:45,360
+individuals looking [inaudible]
+
+717
+00:29:45,360 --> 00:29:47,120
+Most of these attacks are nation state
+
+718
+00:29:47,120 --> 00:29:48,960
+actors that look at healthcare as a
+
+719
+00:29:48,960 --> 00:29:51,120
+critical infrastructure.
+
+720
+00:29:51,120 --> 00:29:52,320
+It's the cyberwar.
+
+721
+00:29:52,320 --> 00:29:54,159
+– And this is a key thing as
+
+722
+00:29:54,159 --> 00:29:56,240
+well. One of the big and we're going
+
+723
+00:29:56,240 --> 00:29:58,240
+to talk about macroeconomics in a bit.
+
+724
+00:29:58,240 --> 00:29:59,840
+One of the big investment thesises
+
+725
+00:29:59,840 --> 00:30:03,440
+that's emerging as we speak is defense.
+
+726
+00:30:03,440 --> 00:30:06,399
+We are literally as we're in
+
+727
+00:30:06,399 --> 00:30:08,559
+World War III right now. It's not
+
+728
+00:30:08,559 --> 00:30:11,120
+completely physical. It's not ballistic
+
+729
+00:30:11,120 --> 00:30:13,760
+necessarily. It's more information based,
+
+730
+00:30:13,760 --> 00:30:15,760
+state-based actors have been performing
+
+731
+00:30:15,760 --> 00:30:18,559
+these attacks for decades now. I
+
+732
+00:30:18,559 --> 00:30:21,919
+mean North Korea, Iran, classic examples
+
+733
+00:30:21,919 --> 00:30:25,440
+this is not just like fanning the fear
+
+734
+00:30:25,440 --> 00:30:27,200
+flames but it's actually these are real
+
+735
+00:30:27,200 --> 00:30:30,320
+outcomes that we have to protect against.
+
+736
+00:30:30,320 --> 00:30:33,760
+So here's a table so to speak of sort
+
+737
+00:30:33,760 --> 00:30:36,880
+of where the capital has been moved.
+
+738
+00:30:38,983 --> 00:30:39,840
+We still have
+
+739
+00:30:39,840 --> 00:30:44,320
+some gaps that we've identified. I
+
+740
+00:30:44,320 --> 00:30:45,760
+think we're addressing the wallets at
+
+741
+00:30:45,760 --> 00:30:48,880
+the edge with Locksmith in particular. I
+
+742
+00:30:48,880 --> 00:30:51,679
+want to see more use cases emerge that
+
+743
+00:30:51,679 --> 00:30:53,679
+feature wallets and credentials being
+
+744
+00:30:53,679 --> 00:30:57,039
+used in production. I honestly
+
+745
+00:30:57,039 --> 00:30:58,720
+think the gap in supply chain is
+
+746
+00:30:58,720 --> 00:31:02,080
+massive. Verifiable.Trade Foundation,
+
+747
+00:31:02,080 --> 00:31:05,360
+led by Stephan Wolf has been
+
+748
+00:31:05,360 --> 00:31:08,000
+spearheading this sort of approach now
+
+749
+00:31:08,000 --> 00:31:10,960
+for three years now. Yeah. ever since
+
+750
+00:31:10,960 --> 00:31:13,440
+Stephan Wolf left GLEIF and what
+
+751
+00:31:13,440 --> 00:31:15,360
+they're building to will be a
+
+752
+00:31:15,360 --> 00:31:18,320
+multi-billion dollar opportunity. It
+
+753
+00:31:18,320 --> 00:31:19,919
+just needs to be realized and the
+
+754
+00:31:19,919 --> 00:31:22,320
+problem of verifiable bills of lading
+
+755
+00:31:22,320 --> 00:31:24,399
+is one in particular that's quite hairy.
+
+756
+00:31:24,399 --> 00:31:26,240
+Getting that recognized across
+
+757
+00:31:26,240 --> 00:31:29,520
+different domains of trust. 
+
+758
+00:31:29,520 --> 00:31:33,600
+And then again having capital allotments
+
+759
+00:31:33,600 --> 00:31:36,480
+to future SEDI initiatives is something
+
+760
+00:31:36,480 --> 00:31:40,240
+that will open the floodgates for
+
+761
+00:31:40,240 --> 00:31:43,760
+startups and also KERI as a whole.
+
+762
+00:31:43,760 --> 00:31:47,519
+So Utah is just the start.
+
+763
+00:31:47,519 --> 00:31:50,000
+So we're going to go into what
+
+764
+00:31:50,000 --> 00:31:52,880
+this taught us.
+
+765
+00:31:52,880 --> 00:31:54,960
+When we first started most of
+
+766
+00:31:54,960 --> 00:31:57,440
+the members of Key State Capital were very
+
+767
+00:31:57,440 --> 00:32:01,440
+asset-rich. The crypto boom had
+
+768
+00:32:01,440 --> 00:32:05,440
+just finished in 2020. We were
+
+769
+00:32:05,440 --> 00:32:08,159
+sitting on our laurels. We have
+
+770
+00:32:08,159 --> 00:32:09,840
+this incredible technology in form of
+
+771
+00:32:09,840 --> 00:32:13,279
+KERI and we actually did not properly
+
+772
+00:32:13,279 --> 00:32:16,960
+allocate resources in a way that was
+
+773
+00:32:16,960 --> 00:32:19,600
+considering the fact that this flood of
+
+774
+00:32:19,600 --> 00:32:22,159
+capital was going to subside and it did.
+
+775
+00:32:22,159 --> 00:32:24,399
+It did in a way that was substantial.
+
+776
+00:32:24,399 --> 00:32:25,679
+We're talking about an order of
+
+777
+00:32:25,679 --> 00:32:28,799
+magnitude less capital available just in
+
+778
+00:32:28,799 --> 00:32:30,880
+terms of depreciation of assets and
+
+779
+00:32:30,880 --> 00:32:34,159
+how we allocated risk. For me that's
+
+780
+00:32:34,159 --> 00:32:37,120
+unacceptable going forward. It's not
+
+781
+00:32:37,120 --> 00:32:40,080
+something that I can do for myself, I
+
+782
+00:32:40,080 --> 00:32:42,240
+can't do it for my family, I can't do it
+
+783
+00:32:42,240 --> 00:32:44,880
+for my founders and the industry
+
+784
+00:32:44,880 --> 00:32:47,279
+as a whole. When capital actually
+
+785
+00:32:47,279 --> 00:32:50,000
+creates opportunities and we're
+
+786
+00:32:50,000 --> 00:32:53,039
+allocating capital irresponsibly, it
+
+787
+00:32:53,039 --> 00:32:55,600
+creates danger for our entire ecosystem.
+
+788
+00:32:55,600 --> 00:32:59,679
+So, we need to actually have a means of
+
+789
+00:32:59,679 --> 00:33:01,360
+measuring
+
+790
+00:33:01,360 --> 00:33:03,440
+the risks we take in an appropriate
+
+791
+00:33:03,440 --> 00:33:06,640
+fashion. Another thing that we've
+
+792
+00:33:06,640 --> 00:33:09,039
+learned is that before the contract is
+
+793
+00:33:09,039 --> 00:33:12,320
+set, no one's your friend. I mean, it's
+
+794
+00:33:12,320 --> 00:33:14,240
+really easy, especially when you're in
+
+795
+00:33:14,240 --> 00:33:15,919
+these sort of highly intellectual
+
+796
+00:33:15,919 --> 00:33:19,679
+pursuits where you have to share
+
+797
+00:33:19,679 --> 00:33:21,519
+ideas in order to validate and verify
+
+798
+00:33:21,519 --> 00:33:25,360
+their authenticity. But when
+
+799
+00:33:25,360 --> 00:33:28,000
+you're in a business negotiation, all
+
+800
+00:33:28,000 --> 00:33:31,039
+all hats are off. It's a matter of
+
+801
+00:33:31,039 --> 00:33:34,000
+survival in many ways. And you two are
+
+802
+00:33:34,000 --> 00:33:36,799
+feeling each other out in real time as
+
+803
+00:33:36,799 --> 00:33:40,000
+to the integrity of each one. And so
+
+804
+00:33:40,000 --> 00:33:42,559
+that respect is established in the
+
+805
+00:33:42,559 --> 00:33:45,519
+negotiation process. If you can't stand
+
+806
+00:33:45,519 --> 00:33:48,799
+up for yourself and have, as Timothy
+
+807
+00:33:48,799 --> 00:33:51,440
+says, the crucial conversations,
+
+808
+00:33:51,440 --> 00:33:54,399
+then there is just no basis of trust.
+
+809
+00:33:54,399 --> 00:33:56,159
+And when the deluge becomes the
+
+810
+00:33:56,159 --> 00:33:58,480
+desert, then people are pointing
+
+811
+00:33:58,480 --> 00:33:59,919
+fingers. You're like, why is this
+
+812
+00:33:59,919 --> 00:34:01,679
+happening? There's a lot of confusion,
+
+813
+00:34:01,679 --> 00:34:03,360
+and you don't have a relationship that
+
+814
+00:34:03,360 --> 00:34:06,480
+can actually stand the test of time. So
+
+815
+00:34:06,480 --> 00:34:08,552
+a lesson there.
+
+816
+00:34:08,552 --> 00:34:10,720
+Knowing your founders. So this is
+
+817
+00:34:10,720 --> 00:34:12,320
+something that I've really learned
+
+818
+00:34:12,320 --> 00:34:16,720
+personally. It's amazing how
+
+819
+00:34:16,720 --> 00:34:20,879
+distinct every single one of our
+
+820
+00:34:20,879 --> 00:34:23,679
+entrepreneurs are and understanding
+
+821
+00:34:23,679 --> 00:34:25,520
+their nuances, understanding what makes
+
+822
+00:34:25,520 --> 00:34:28,320
+them tick, understanding their
+
+823
+00:34:28,320 --> 00:34:30,879
+strengths and their weaknesses both
+
+824
+00:34:30,879 --> 00:34:34,000
+while you're evaluating and also after
+
+825
+00:34:34,000 --> 00:34:35,520
+you've placed capital. You don't
+
+826
+00:34:35,520 --> 00:34:38,720
+just go away after you place money.
+
+827
+00:34:38,720 --> 00:34:42,639
+Having equity in a company means being
+
+828
+00:34:42,639 --> 00:34:45,520
+part of that company. If you're
+
+829
+00:34:45,520 --> 00:34:48,879
+not actively contributing to the value
+
+830
+00:34:48,879 --> 00:34:50,560
+generating process,
+
+831
+00:34:50,560 --> 00:34:52,320
+you're not boots on the
+
+832
+00:34:52,320 --> 00:34:54,480
+ground necessarily selling this stuff,
+
+833
+00:34:54,480 --> 00:34:56,800
+but you can open opportunities, you can
+
+834
+00:34:56,800 --> 00:34:59,359
+introduce new capital. And you
+
+835
+00:34:59,359 --> 00:35:02,960
+can learn how to speak with your
+
+836
+00:35:02,960 --> 00:35:05,839
+founders. Communication is so key. And
+
+837
+00:35:05,839 --> 00:35:07,839
+so maintaining that dialogue and
+
+838
+00:35:07,839 --> 00:35:09,200
+checking in and keeping things
+
+839
+00:35:09,200 --> 00:35:12,240
+accountable is the way we've kept this
+
+840
+00:35:12,240 --> 00:35:15,119
+ship afloat. We've kept this
+
+841
+00:35:15,119 --> 00:35:16,720
+thing on track. So whenever something is
+
+842
+00:35:16,720 --> 00:35:18,800
+needed, we always have an ability to
+
+843
+00:35:18,800 --> 00:35:22,880
+call each other and that's essential. So
+
+844
+00:35:22,880 --> 00:35:25,839
+knowing your founders, communicating.
+
+845
+00:35:25,839 --> 00:35:28,640
+We heard this like two distinct
+
+846
+00:35:28,640 --> 00:35:32,640
+times. So obviously you invest to allow
+
+847
+00:35:32,640 --> 00:35:35,440
+people to create something new, but you
+
+848
+00:35:35,440 --> 00:35:37,359
+cannot be attached necessarily to the
+
+849
+00:35:37,359 --> 00:35:39,440
+first iteration of that vision. You have
+
+850
+00:35:39,440 --> 00:35:42,160
+to be able to pivot what you've created
+
+851
+00:35:42,160 --> 00:35:44,560
+and formed an emotional attachment with
+
+852
+00:35:44,560 --> 00:35:46,400
+when you get enough signals from the
+
+853
+00:35:46,400 --> 00:35:50,160
+marketplace that you're not going to
+
+854
+00:35:50,160 --> 00:35:53,920
+make it or this is not working.
+
+855
+00:35:53,920 --> 00:35:57,280
+So essentially when you have creativity
+
+856
+00:35:57,280 --> 00:35:58,960
+without flexibility it's just an
+
+857
+00:35:58,960 --> 00:36:01,991
+attachment and this is…
+
+858
+00:36:02,105 --> 00:36:02,800
+sorry go ahead Jared
+
+859
+00:36:02,800 --> 00:36:05,359
+– So one of the things that I, one of
+
+860
+00:36:05,359 --> 00:36:07,680
+my mantras is that creation is a
+
+861
+00:36:07,680 --> 00:36:09,599
+destructive process
+
+862
+00:36:09,599 --> 00:36:12,079
+by virtue of creating you will tear down
+
+863
+00:36:12,079 --> 00:36:15,990
+and try again,
+
+864
+00:36:16,013 --> 00:36:17,977
+creation is a destructive process.
+
+865
+00:36:18,002 --> 00:36:20,295
+– Right to make an omelet you got to break
+
+866
+00:36:20,320 --> 00:36:21,280
+a few eggs.
+
+867
+00:36:24,495 --> 00:36:26,388
+And finally, I think the key thing is
+
+868
+00:36:26,413 --> 00:36:31,280
+patience. When you have a vision for
+
+869
+00:36:31,280 --> 00:36:33,760
+something that is special, when you've
+
+870
+00:36:33,760 --> 00:36:36,400
+you've tested it and you know it's true,
+
+871
+00:36:36,400 --> 00:36:39,520
+you've done what you can. Having the
+
+872
+00:36:39,520 --> 00:36:42,720
+wisdom to know
+
+873
+00:36:42,720 --> 00:36:45,359
+when not to do things, when to just wait
+
+874
+00:36:45,359 --> 00:36:48,400
+for things to mature over time, and to
+
+875
+00:36:48,400 --> 00:36:51,280
+let your founders do what they do best,
+
+876
+00:36:51,280 --> 00:36:54,560
+I think is the key. We're only
+
+877
+00:36:54,560 --> 00:36:57,119
+just now after five years of investing,
+
+878
+00:36:57,119 --> 00:36:59,839
+seeing fruits from this labor. And I
+
+879
+00:36:59,839 --> 00:37:01,599
+think it's going to be accelerated
+
+880
+00:37:01,599 --> 00:37:03,680
+growth. I think we're in our teenage
+
+881
+00:37:03,680 --> 00:37:07,200
+years, so to speak. And we'll see
+
+882
+00:37:07,200 --> 00:37:09,440
+how far our core
+
+883
+00:37:09,440 --> 00:37:12,480
+companies go but I think being
+
+884
+00:37:12,480 --> 00:37:14,480
+patient is one of the best virtues you
+
+885
+00:37:14,480 --> 00:37:15,963
+can have as an investor.
+
+886
+00:37:18,735 --> 00:37:20,296
+So and these are the three principles
+
+887
+00:37:20,321 --> 00:37:22,880
+I'm looking at, right: identifying the
+
+888
+00:37:22,880 --> 00:37:25,680
+right market
+
+889
+00:37:25,680 --> 00:37:28,880
+finding the right technical ecosystem
+
+890
+00:37:28,880 --> 00:37:32,240
+and then having the right team. And
+
+891
+00:37:32,240 --> 00:37:33,760
+so when you have all these three things,
+
+892
+00:37:33,760 --> 00:37:35,920
+you have a recipe for success, I
+
+893
+00:37:35,920 --> 00:37:38,079
+think, in terms of finding an
+
+894
+00:37:38,079 --> 00:37:41,407
+investable opportunity in this space.
+
+895
+00:37:44,276 --> 00:37:46,479
+So we've been funding the teams from the
+
+896
+00:37:46,504 --> 00:37:50,000
+front lines. We're seeing that KERI
+
+897
+00:37:50,000 --> 00:37:51,920
+becoming the trust spanning layer of the
+
+898
+00:37:51,920 --> 00:37:55,040
+internet. And the job is to keep
+
+899
+00:37:55,040 --> 00:37:56,880
+filling in the gaps, recruiting new
+
+900
+00:37:56,880 --> 00:37:59,680
+Roots of Trust and
+
+901
+00:37:59,680 --> 00:38:02,240
+sharpening our filter, making sure that
+
+902
+00:38:02,240 --> 00:38:04,079
+we can understand what is a good
+
+903
+00:38:04,079 --> 00:38:05,440
+founder, what is a bad founder, a good
+
+904
+00:38:05,440 --> 00:38:06,720
+opportunity, a bad opportunity, and so
+
+905
+00:38:06,720 --> 00:38:09,359
+on and so forth. So we're still
+
+906
+00:38:09,359 --> 00:38:11,280
+looking for investable opportunities. If
+
+907
+00:38:11,280 --> 00:38:14,880
+you have any, please come my way.
+
+908
+00:38:14,880 --> 00:38:17,200
+I'll give you a card and we'll talk.
+
+909
+00:38:17,200 --> 00:38:19,232
+So, thank you all for your time.
+
+910
+00:38:19,256 --> 00:38:21,256
+[Applause]
+
+911
+00:38:25,458 --> 00:38:27,227
+Any questions?
+
+912
+00:38:29,851 --> 00:38:32,143
+– You work with other
+
+913
+00:38:32,167 --> 00:38:36,640
+try and help them understand what
+
+914
+00:38:36,640 --> 00:38:39,920
+the import of the digital
+
+915
+00:38:39,920 --> 00:38:42,640
+identity ecosystem is. What are some of
+
+916
+00:38:42,640 --> 00:38:44,560
+the biggest things that you hear in
+
+917
+00:38:44,560 --> 00:38:48,800
+terms of reticence to invest?
+
+918
+00:38:48,800 --> 00:38:51,040
+What are the complaints you hear from
+
+919
+00:38:51,040 --> 00:38:53,839
+other investors when you bring to them
+
+920
+00:38:53,839 --> 00:38:56,560
+identity based deals like…
+
+921
+00:38:56,560 --> 00:38:58,240
+– Well I think the uncertainty the
+
+922
+00:38:58,240 --> 00:39:00,960
+technical barrier is big, having an
+
+923
+00:39:00,960 --> 00:39:02,560
+ability to communicate what this is in
+
+924
+00:39:02,560 --> 00:39:04,079
+plain language to someone that isn't
+
+925
+00:39:04,079 --> 00:39:06,560
+technical is
+
+926
+00:39:06,560 --> 00:39:08,480
+one of the biggest barriers, I think
+
+927
+00:39:08,480 --> 00:39:10,560
+also
+
+928
+00:39:10,560 --> 00:39:13,440
+liquidity is an unconscious
+
+929
+00:39:13,440 --> 00:39:15,839
+limiting factor in a lot of this right
+
+930
+00:39:15,839 --> 00:39:19,200
+right now, it's not the best time
+
+931
+00:39:19,200 --> 00:39:21,520
+to raise money. I mean, if you have
+
+932
+00:39:21,520 --> 00:39:23,280
+adoption, if you have proven
+
+933
+00:39:23,280 --> 00:39:26,560
+revenue streams, you can raise, but
+
+934
+00:39:26,560 --> 00:39:28,000
+it's this is not a zero interest rate
+
+935
+00:39:28,000 --> 00:39:31,440
+environment any longer. So, I
+
+936
+00:39:31,440 --> 00:39:33,280
+think a lot of this comes down to trust.
+
+937
+00:39:33,280 --> 00:39:34,720
+You have to build a relationship
+
+938
+00:39:34,720 --> 00:39:36,960
+actually with the person you're
+
+939
+00:39:36,960 --> 00:39:39,440
+introducing the idea to. If someone
+
+940
+00:39:39,440 --> 00:39:41,520
+knows that you're a smart guy, they
+
+941
+00:39:41,520 --> 00:39:43,280
+trust you. They may not know what you're
+
+942
+00:39:43,280 --> 00:39:44,640
+talking about. They may not know what a
+
+943
+00:39:44,640 --> 00:39:48,079
+key rotation is, what a KEL is, any
+
+944
+00:39:48,079 --> 00:39:50,960
+of this stuff, but if they have your
+
+945
+00:39:50,960 --> 00:39:52,960
+trust, then I think you can convince
+
+946
+00:39:52,960 --> 00:39:54,880
+them to place. And that's how
+
+947
+00:39:54,880 --> 00:39:56,560
+literally what it comes down to. But…
+
+948
+00:39:56,560 --> 00:39:57,440
+what's up, Will?
+
+949
+00:39:57,440 --> 00:40:00,160
+– Yeah, I was going to add to that for
+
+950
+00:40:00,160 --> 00:40:02,880
+Jared's question here, too. From my
+
+951
+00:40:02,880 --> 00:40:05,119
+experience, conversations and trying to
+
+952
+00:40:05,119 --> 00:40:08,560
+persuade investors to take a leap into
+
+953
+00:40:08,560 --> 00:40:11,359
+this industry and this ecosystem, the
+
+954
+00:40:11,359 --> 00:40:14,160
+largest hesitation has been
+
+955
+00:40:14,160 --> 00:40:17,359
+just the vast scope of the problem that
+
+956
+00:40:17,359 --> 00:40:20,800
+is trying to be addressed and solved and
+
+957
+00:40:20,800 --> 00:40:24,000
+convincing them of the idea that
+
+958
+00:40:24,000 --> 00:40:26,480
+there is a technology, or
+
+959
+00:40:26,480 --> 00:40:28,720
+a protocol
+
+960
+00:40:28,720 --> 00:40:31,359
+that has the ability to address that
+
+961
+00:40:31,359 --> 00:40:34,320
+issue that they see as just almost
+
+962
+00:40:34,320 --> 00:40:35,599
+unsolvable.
+
+963
+00:40:35,599 --> 00:40:37,119
+– Right, or they just presume that it's
+
+964
+00:40:37,119 --> 00:40:38,720
+always going to be this way…
+
+965
+00:40:38,720 --> 00:40:40,320
+– And then there are so many others trying
+
+966
+00:40:40,320 --> 00:40:40,880
+to do it
+
+967
+00:40:40,880 --> 00:40:41,200
+right
+
+968
+00:40:41,200 --> 00:40:42,640
+the fact that there are so many that
+
+969
+00:40:42,640 --> 00:40:44,640
+have tried and failed or have
+
+970
+00:40:44,640 --> 00:40:47,520
+tried and succeeded at various levels.
+
+971
+00:40:47,520 --> 00:40:49,760
+So, that's been the largest
+
+972
+00:40:49,760 --> 00:40:53,040
+amount of hesitancy that I've seen.
+
+973
+00:40:55,440 --> 00:40:57,680
+– Two questions that probably are related,
+
+974
+00:40:57,680 --> 00:40:59,839
+a lot of times
+
+975
+00:40:59,839 --> 00:41:02,640
+investors during a pitch or
+
+976
+00:41:02,640 --> 00:41:05,200
+whatever will ask about exit strategy.
+
+977
+00:41:05,440 --> 00:41:06,800
+Meaning when are they going
+
+978
+00:41:06,800 --> 00:41:08,160
+to get paid back as an investor
+
+979
+00:41:08,160 --> 00:41:08,720
+basically,
+
+980
+00:41:08,720 --> 00:41:12,400
+and this is the
+
+981
+00:41:12,400 --> 00:41:14,800
+kind of bet that may take a
+
+982
+00:41:14,800 --> 00:41:16,775
+while to pay off [inaudible]
+
+983
+00:41:16,800 --> 00:41:18,240
+…investor perspective and so be
+
+984
+00:41:18,240 --> 00:41:19,839
+… your color on that. And
+
+985
+00:41:19,839 --> 00:41:22,240
+then the other one especially you
+
+986
+00:41:22,240 --> 00:41:24,640
+know perhaps with healthKERI and Provenant
+
+987
+00:41:24,640 --> 00:41:27,119
+that are starting to gain some traction.
+
+988
+00:41:27,119 --> 00:41:28,640
+It's not going to be too long before
+
+989
+00:41:28,640 --> 00:41:30,160
+they're looking for A rounds.
+
+990
+00:41:30,560 --> 00:41:32,640
+And so how do you see your role in
+
+991
+00:41:32,640 --> 00:41:34,400
+helping secure A rounds?
+
+992
+00:41:34,400 --> 00:41:35,870
+– Well I think one of the
+
+993
+00:41:35,870 --> 00:41:39,440
+interesting things that…
+
+994
+00:41:39,440 --> 00:41:41,119
+In a traditional equity
+
+995
+00:41:41,119 --> 00:41:43,440
+market, exit is a binary, right? You
+
+996
+00:41:43,440 --> 00:41:45,520
+either have an exit or you're waiting
+
+997
+00:41:45,520 --> 00:41:48,800
+for one. You can be bought out. In
+
+998
+00:41:48,800 --> 00:41:49,520
+private markets…
+
+999
+00:41:49,520 --> 00:41:50,720
+– Also a valid exit.
+
+1000
+00:41:50,720 --> 00:41:52,880
+– Not really, honestly. Dividends are a
+
+1001
+00:41:52,880 --> 00:41:54,960
+bad, they're a poor choice. Every time
+
+1002
+00:41:54,960 --> 00:41:56,319
+you take a dividend, you're taking away
+
+1003
+00:41:56,319 --> 00:41:57,839
+from the reinvestment opportunity of the
+
+1004
+00:41:57,839 --> 00:41:59,440
+company to actually push it forward.
+
+1005
+00:41:59,440 --> 00:42:02,160
+– Going public is a long shot for
+
+1006
+00:42:02,160 --> 00:42:04,160
+many companies. So, what do you
+
+1007
+00:42:04,160 --> 00:42:07,440
+look for an exit strategies pitch?
+
+1008
+00:42:08,800 --> 00:42:11,440
+– Well, in this case, it's like just
+
+1009
+00:42:11,440 --> 00:42:13,359
+building as much value as you possibly
+
+1010
+00:42:13,359 --> 00:42:16,319
+can as an acquisition target is
+
+1011
+00:42:16,319 --> 00:42:18,319
+smart. I think there's a lot of
+
+1012
+00:42:18,319 --> 00:42:20,319
+potential innovations we can actually
+
+1013
+00:42:20,319 --> 00:42:23,200
+leverage around
+
+1014
+00:42:23,200 --> 00:42:25,599
+tokenized revenue
+
+1015
+00:42:25,599 --> 00:42:28,240
+that I think are fascinating.
+
+1016
+00:42:28,240 --> 00:42:29,839
+In this case, if you actually have
+
+1017
+00:42:29,839 --> 00:42:32,319
+market adoption in terms of
+
+1018
+00:42:32,319 --> 00:42:35,760
+infrastructure that has a longterm
+
+1019
+00:42:35,760 --> 00:42:40,000
+productive yield and that's an
+
+1020
+00:42:40,000 --> 00:42:42,720
+asset and if you can actually sell that
+
+1021
+00:42:42,720 --> 00:42:44,720
+up front, right,
+
+1022
+00:42:44,720 --> 00:42:47,280
+you can have
+
+1023
+00:42:47,280 --> 00:42:49,359
+liquidity without necessarily having an
+
+1024
+00:42:49,359 --> 00:42:52,079
+exit. And I think within five
+
+1025
+00:42:52,079 --> 00:42:54,000
+years there will be plenty of these sort
+
+1026
+00:42:54,000 --> 00:42:56,480
+of new sort of levers that companies can
+
+1027
+00:42:56,480 --> 00:42:58,480
+actually pull that previously they would
+
+1028
+00:42:58,480 --> 00:43:00,960
+never even dream of doing, right? So I
+
+1029
+00:43:00,960 --> 00:43:02,480
+think it's going to be less of a binary
+
+1030
+00:43:02,480 --> 00:43:04,640
+thing and more of a… it'll be more of
+
+1031
+00:43:04,640 --> 00:43:07,440
+a liquidity friendly equity
+
+1032
+00:43:07,440 --> 00:43:08,480
+investment market.
+
+1033
+00:43:08,800 --> 00:43:10,720
+But that's out of
+
+1034
+00:43:10,720 --> 00:43:12,160
+my scope. I don't know whether or not
+
+1035
+00:43:12,160 --> 00:43:13,839
+that's coming.
+
+1036
+00:43:13,839 --> 00:43:15,440
+– And then with the A round, if you have
+
+1037
+00:43:15,440 --> 00:43:17,040
+just a thought, or we can take this
+
+1038
+00:43:17,040 --> 00:43:18,748
+offline if we're out of time.
+
+1039
+00:43:18,772 --> 00:43:20,480
+I'll get back to you on that.
+
+1040
+00:43:20,480 --> 00:43:22,626
+– Okay, cool.
+
+1041
+00:43:22,651 --> 00:43:27,825
+[Applause]
+

@@ -14,6 +14,10 @@
 !/confs/
 !/confs/**
 
+# --- Conference build / deploy scripts ---
+!/scripts/
+!/scripts/**
+
 # Local promo clips (must come after !/confs/** — .gitignore beats info/exclude)
 /confs/2026/videos/clips/
 /confs/2026/videos/.venv-clips

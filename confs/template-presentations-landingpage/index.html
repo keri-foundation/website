@@ -1977,9 +1977,9 @@
 
 <body>
     <a class="skip-link" href="#mainContent">Skip to main content</a>
-    <!-- Static crawl entry into transcripts/ (edit hrefs when deploying a new gallery). -->
+    <!-- Static crawl entry into <transcriptsDir>/<section>/ (edit hrefs when deploying a new gallery). -->
     <nav class="seo-transcript-links" aria-label="Transcript indexes">
-        <a href="transcripts/">All transcripts</a>
+        <a href="transcripts/html/talks/">Talk transcripts</a><span class="sep" aria-hidden="true">·</span><a href="transcripts/html/interviews/">Interview transcripts</a>
     </nav>
     <header id="galleryHeader"></header>
 
@@ -2038,6 +2038,7 @@
             'use strict';
 
             let videos = [];
+            let transcriptsDir = '';
             let defaultPoster = '';
             let dayOrder = [];
             let topClips = [];
@@ -4160,6 +4161,13 @@
                 const id = generateVideoId(video);
                 if (!id) return null;
                 const sub = String(video.subtitle).replace(/\\/g, '/');
+                if (transcriptsDir) {
+                    // Section = folder holding the subtitle (talks/, interviews/, …).
+                    const section = sub.split(/[?#]/)[0].split('/').slice(-2, -1)[0];
+                    return section
+                        ? `${transcriptsDir}/${decodeURIComponent(section)}/${id}.html`
+                        : `${transcriptsDir}/${id}.html`;
+                }
                 if (sub.includes('/subtitles/')) {
                     const root = sub.split('/subtitles/')[0];
                     return `${root}/transcripts/${id}.html`;
@@ -4531,6 +4539,9 @@
                 renderPromo(config.promo);
 
                 videos = Array.isArray(config.videos) ? config.videos : [];
+                transcriptsDir = typeof config.transcriptsDir === 'string'
+                    ? config.transcriptsDir.replace(/\/+$/, '')
+                    : '';
                 videos.forEach((v) => {
                     if (v.subtitle) v.subtitle = resolveAssetUrl(v.subtitle);
                     if (v.presentation) v.presentation = resolveAssetUrl(v.presentation);

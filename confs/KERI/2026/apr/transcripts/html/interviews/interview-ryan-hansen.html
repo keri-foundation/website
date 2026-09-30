@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interview - Ryan Hansen — Transcript</title>
+  <meta name="description" content="Transcript: Interview - Ryan Hansen (KERICONF26 Interviews · 1:22)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #060b6f;
+      --muted: #2e3a7a;
+      --bg: #b1d1cf;
+      --panel: rgba(255, 255, 255, 0.55);
+      --accent: #986c32;
+      --link: #0450a8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Source Serif 4", Georgia, serif;
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(255,255,255,0.45), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 0%, rgba(152,108,50,0.12), transparent),
+        var(--bg);
+      color: var(--ink);
+      padding: 24px 16px 48px;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 44rem; margin: 0 auto; }
+    nav {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+    nav a { color: var(--link); }
+    nav a:hover { color: var(--ink); }
+    header {
+      background: var(--panel);
+      border: 1px solid rgba(6, 11, 111, 0.12);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      margin: 0 0 0.4rem;
+    }
+    .meta {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0 0 1rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .actions a {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--ink);
+      background: rgba(152, 108, 50, 0.18);
+      border: 1px solid rgba(152, 108, 50, 0.35);
+      border-radius: 8px;
+      padding: 0.55rem 0.9rem;
+    }
+    .actions a:hover { background: rgba(152, 108, 50, 0.28); }
+    .actions a.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+    .actions a.primary:hover { background: #0a1270; }
+    article {
+      background: var(--panel);
+      border: 1px solid rgba(6, 11, 111, 0.12);
+      border-radius: 10px;
+      padding: 1rem 1.25rem 1.5rem;
+    }
+    .cue {
+      display: grid;
+      grid-template-columns: 4.5rem 1fr;
+      gap: 0.65rem 0.85rem;
+      margin: 0;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(6, 11, 111, 0.08);
+    }
+    .cue:last-child { border-bottom: none; }
+    .cue-time {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      padding-top: 0.15rem;
+    }
+    .cue-time:hover { color: var(--ink); text-decoration: underline; }
+    .cue-text { font-size: 1.05rem; }
+    footer {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    @media (max-width: 520px) {
+      .cue { grid-template-columns: 1fr; gap: 0.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="../../../">KERI Conference April 2026 Videos</a>
+      · <a href="./">All transcripts</a>
+    </nav>
+    <header>
+      <h1>Interview - Ryan Hansen</h1>
+      <p class="meta">KERICONF26 Interviews · 1:22</p>
+      <div class="actions">
+        <a class="primary" href="../../../#interview-ryan-hansen">Watch video</a>
+        <a href="./">All transcripts</a>
+        <a href="../../../">Video gallery</a>
+      </div>
+    </header>
+    <article>
+    <p class="cue" id="t0">
+      <a class="cue-time" href="../../../#interview-ryan-hansen">0:00</a>
+      <span class="cue-text">My name is Ryan Hanson. I'm one of the core developers for the KERI Foundation</span>
+    </p>
+    <p class="cue" id="t4">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=4">0:04</a>
+      <span class="cue-text">development team. Presentation today was about witnesses and watchers and our boot</span>
+    </p>
+    <p class="cue" id="t9">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=9">0:09</a>
+      <span class="cue-text">service in the KERI infrastructure that we're deploying and making open to the</span>
+    </p>
+    <p class="cue" id="t13">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=13">0:13</a>
+      <span class="cue-text">world. Witnesses and watchers are a key part of a crucial part of the KERI</span>
+    </p>
+    <p class="cue" id="t19">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=19">0:19</a>
+      <span class="cue-text">ecosystem the way it's designed to be used and without them there's some value in key</span>
+    </p>
+    <p class="cue" id="t26">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=26">0:26</a>
+      <span class="cue-text">management at least in terms of being able to have somewhat self-sovereign keys but</span>
+    </p>
+    <p class="cue" id="t32">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=32">0:32</a>
+      <span class="cue-text">without the witness and watcher infrastructure to prove that those things</span>
+    </p>
+    <p class="cue" id="t36">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=36">0:36</a>
+      <span class="cue-text">are still valid, that your keys are still yours, the kind of the whole principle</span>
+    </p>
+    <p class="cue" id="t42">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=42">0:42</a>
+      <span class="cue-text">underlying what KERI is all about falls apart. For me personally when I first got</span>
+    </p>
+    <p class="cue" id="t47">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=47">0:47</a>
+      <span class="cue-text">introduced to KERI, the witness and watcher idea was the thing that really</span>
+    </p>
+    <p class="cue" id="t50">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=50">0:50</a>
+      <span class="cue-text">hooked me in because it doesn't really matter what assertion is made if there's</span>
+    </p>
+    <p class="cue" id="t56">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=56">0:56</a>
+      <span class="cue-text">not something that can prove that that assertion is true, then it ultimately</span>
+    </p>
+    <p class="cue" id="t60">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=60">1:00</a>
+      <span class="cue-text">doesn't matter. So in practice the witness and watcher network infrastructure is</span>
+    </p>
+    <p class="cue" id="t67">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=67">1:07</a>
+      <span class="cue-text">critical</span>
+    </p>
+    <p class="cue" id="t70">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=70">1:10</a>
+      <span class="cue-text">for being able to assert and prove that something is true and therefore to make</span>
+    </p>
+    <p class="cue" id="t77">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=77">1:17</a>
+      <span class="cue-text">the KERI ecosystem actually work. they have a perfectly excellent they have</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">perfectly excellent they have perfectly excellent they have perfectly excellent</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">they have perfectly excellent they have perfectly excellent they have perfectly</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">excellent they have perfectly excellent they have perfectly excellent they have</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">perfectly excellent they have perfectly excellent they have perfectly excellent</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">they have perfectly excellent they have perfectly excellent they have perfectly</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">excellent they have perfectly excellent they have perfectly excellent they have</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">perfectly excellent they have perfectly excellent they have perfectly excellent</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">they have perfectly excellent they have perfectly excellent they have perfectly</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">excellent they have perfectly excellent they have perfectly excellent they have</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">perfectly excellent they have perfectly excellent they have perfectly excellent</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">they have perfectly excellent they have perfectly excellent they have perfectly</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">excellent they have perfectly excellent they have perfectly excellent they have</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">perfectly excellent they have perfectly excellent they have perfectly excellent</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">they have perfectly excellent they have perfectly excellent they have perfectly</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">excellent they have perfectly excellent they have perfectly excellent they have</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">perfectly excellent they have perfectly excellent they have perfectly excellent</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">they have perfectly excellent they have perfectly excellent they have perfectly</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">excellent they have perfectly excellent they have perfectly excellent they have</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">perfectly excellent they have perfectly excellent they have perfectly perfectly</span>
+    </p>
+    <p class="cue" id="t79">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=79">1:19</a>
+      <span class="cue-text">perfectly excellent they have perfectly perfectly perfectly perfectly perfectly</span>
+    </p>
+    <p class="cue" id="t81">
+      <a class="cue-time" href="../../../#interview-ryan-hansen&amp;t=81">1:21</a>
+      <span class="cue-text">perfectly perfectly perfectly Thank you.</span>
+    </p>
+    </article>
+    <footer>KERI Foundation • Conference Videos Collection</footer>
+  </div>
+</body>
+</html>

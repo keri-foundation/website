@@ -1,0 +1,526 @@
+{
+  "page": {
+    "title": "KERI Conference April 2026 Videos",
+    "heading": "KERI Conference April 2026 Videos",
+    "headingHref": "/confs/KERI/2026/apr/",
+    "statusNotice": "",
+    "subtitle": "A collection of presentations and talks from the KERI community",
+    "footer": "KERI Foundation \u2022 Conference Videos Collection",
+    "searchPlaceholder": "Type to search across all talks\u2026",
+    "searchLabel": "Search all transcripts",
+    "nav": [
+      {
+        "label": "Home",
+        "href": "/",
+        "external": false
+      },
+      {
+        "label": "Conference 2026 Program",
+        "href": "https://kericonf.com/archive/kericonf26/program/",
+        "external": false
+      },
+      {
+        "label": "Speakers 2026",
+        "href": "https://kericonf.com/archive/kericonf26/speakers-2026/",
+        "external": false
+      },
+      {
+        "label": "Day 1",
+        "href": "https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL",
+        "external": false,
+        "icon": "youtube",
+        "prefix": "All videos on YouTube:"
+      },
+      {
+        "label": "Day 2",
+        "href": "https://www.youtube.com/playlist?list=PLnHy2ee5UksMjwBseKJ7ivXiYukRvI65a",
+        "external": false,
+        "icon": "youtube"
+      },
+      {
+        "label": "SEDI nov 2025",
+        "href": "/confs/SEDI/2025/nov/",
+        "external": false
+      }
+    ]
+  },
+  "promo": {
+    "src": "promo/promo.mp4",
+    "poster": "promo/promo.jpg",
+    "title": "KERI Conference 2026 Promo"
+  },
+  "topClips": {
+    "enabled": true,
+    "title": "Top Ten Clips",
+    "subtitle": "Ten bite-size moments from the talks \u2014 each clip plays for 10\u201320 seconds.",
+    "clips": [
+      {
+        "videoTitle": "The Future of KERI - Samuel Smith",
+        "speaker": "Samuel Smith",
+        "talk": "The Future of KERI",
+        "start": 29,
+        "end": 43,
+        "quote": "I wanted to save the internet. I wanted to fix the broken internet. And I didn't realize I had to work on identity to do that."
+      },
+      {
+        "videoTitle": "Open Verifiable Communications - Daniel Hardman",
+        "speaker": "Daniel Hardman",
+        "talk": "Open Verifiable Communications",
+        "start": 67,
+        "end": 85,
+        "quote": "Just don't answer your phone \u2014 or just stop sending texts. That's a pretty bad indictment of a technical infrastructure when the best advice we can give is just stop using it."
+      },
+      {
+        "videoTitle": "State of the KERI Suite - Samuel Smith",
+        "speaker": "Samuel Smith",
+        "talk": "State of the KERI Suite",
+        "start": 866,
+        "end": 883,
+        "quote": "You thought somebody could exploit you? Wait till an AI exploits you. You thought you were being surveilled online? Just ask an AI to surveil you."
+      },
+      {
+        "videoTitle": "KERI Infrastructure & the 5 W's - Thomas Mayfield",
+        "speaker": "Thomas Mayfield",
+        "talk": "KERI Infrastructure & the 5 W's",
+        "start": 131,
+        "end": 148,
+        "quote": "If that platform shuts down, or that issuer revokes access, your identity effectively disappears with it. You are a tenant, not an owner of your digital identity."
+      },
+      {
+        "videoTitle": "Digital Identity Needs a Legal Foundation - Phil Windley",
+        "speaker": "Phil Windley",
+        "talk": "Digital Identity Needs a Legal Foundation",
+        "start": 1027,
+        "end": 1043,
+        "quote": "These are legal rights, not terms of service. This is not a click-through contract that you don't read, where to enforce whatever small rights they've left you, you have to go to court."
+      },
+      {
+        "videoTitle": "KERIA Tutorial - Kent Bull",
+        "speaker": "Kent Bull",
+        "talk": "KERIA Tutorial",
+        "start": 672,
+        "end": 689,
+        "quote": "They're encrypted with the key derived from the passcode you have at the edge. This passcode never moves over here \u2014 ever. That's why it's called a signing-at-the-edge architecture."
+      },
+      {
+        "videoTitle": "Mobile Wallet - Evan Asawaka",
+        "speaker": "Evan Asawaka",
+        "talk": "Mobile Wallet",
+        "start": 46,
+        "end": 66,
+        "quote": "We wanted everything to happen in the browser \u2014 all of your keys created and stored on your device. Don't worry about them sitting on some server. We send you the app, and you get your in-browser wallet."
+      },
+      {
+        "videoTitle": "FHIR and CMS - Jared Jefferey",
+        "speaker": "Jared Jefferey",
+        "talk": "FHIR and CMS",
+        "start": 1989,
+        "end": 2003,
+        "quote": "The question used to be: can we connect? The answer is yes. Now the question is: can we trust those connections?"
+      },
+      {
+        "videoTitle": "ACDCs for Enterprises - Alan Davies",
+        "speaker": "Alan Davies",
+        "talk": "ACDCs for Enterprises",
+        "start": 522,
+        "end": 535,
+        "quote": "Everybody will be their own identity provider \u2014 which is how it should be. I'm the only person who knows that I am me."
+      },
+      {
+        "videoTitle": "Contract Credentials & Verifiable Identity - Cole Davis",
+        "speaker": "Cole Davis",
+        "talk": "Contract Credentials & Verifiable Identity",
+        "start": 251,
+        "end": 268,
+        "quote": "What if the contract is the credential? What if you can hold your lease up to the smart lock \u2014 or the stock purchase agreement is the stock certificate?"
+      }
+    ]
+  },
+  "days": [
+    "KERICONF26 Day 1",
+    "KERICONF26 Day 2",
+    "KERICONF26 Interviews"
+  ],
+  "transcriptsDir": "transcripts/html",
+  "defaultPoster": "https://kericonf.com/wp-content/uploads/2025/11/logo-keri-conference-scaled.png",
+  "speakerPhotos": {
+    "Samuel Smith": "https://kericonf.com/wp-content/uploads/2025/11/Samuel-Smith.jpg",
+    "Phil Feairheller": "https://kericonf.com/wp-content/uploads/2026/01/PhilFeairheller_v1.0-edited.jpeg",
+    "Daniel Hardman": "https://kericonf.com/wp-content/uploads/2026/01/DanielHardman_v1.0.png",
+    "George McEwan": "https://kericonf.com/wp-content/uploads/2026/01/GeorgeMcEwan_v1.0-scaled.jpg",
+    "Ari Argoud": "https://kericonf.com/wp-content/uploads/2026/02/AriArgoud_v1.0.jpeg",
+    "Thomas Mayfield": "https://kericonf.com/wp-content/uploads/2026/01/ThomasMayfield_v1.0-scaled.jpg",
+    "Jonathan Rayback": "https://kericonf.com/wp-content/uploads/2026/02/JonathanRayback_v1.0.jpg",
+    "Kent Bull": "https://kericonf.com/wp-content/uploads/2026/01/KentBull_v1.0.png",
+    "Ned Smith": "https://kericonf.com/wp-content/uploads/2026/02/NedSmith_v1.0.jpeg",
+    "Cole Davis": "https://kericonf.com/wp-content/uploads/2026/02/ColeDavis_v1.0-edited.jpeg",
+    "Alan Davies": "https://kericonf.com/wp-content/uploads/2026/02/AlanDavies_v1.0-edited.jpeg",
+    "Fergal O'Connor": "https://kericonf.com/wp-content/uploads/2026/03/FergalOConnor_v.1.0.png",
+    "Fergal O'Conner": "https://kericonf.com/wp-content/uploads/2026/03/FergalOConnor_v.1.0.png",
+    "Scott Stuewe": "https://kericonf.com/wp-content/uploads/2026/03/ScottStuewe_v1.0-e1773917316969.jpg",
+    "Jay Alexander Elliot": "https://kericonf.com/wp-content/uploads/2026/03/JayElliot_v1.0-scaled.jpg",
+    "Mark Scrimshire": "https://kericonf.com/wp-content/uploads/2026/03/MarkScripshire_v1.0.png",
+    "Phil Windley": "https://kericonf.com/wp-content/uploads/2026/03/phil-windley.jpg",
+    "Jared Jeffery": "https://kericonf.com/wp-content/uploads/2026/03/jared-jeffery.jpg",
+    "Jared Jefferey": "https://kericonf.com/wp-content/uploads/2026/03/jared-jeffery.jpg",
+    "Keanu Pahio": "https://kericonf.com/wp-content/uploads/2026/04/KeanuPahio_v1.0.jpg",
+    "Karla McKenna": "https://kericonf.com/wp-content/uploads/2026/04/KarlaMcKenna_v1.0-edited.jpg",
+    "Nicholas Racz": "https://kericonf.com/wp-content/uploads/2026/04/NicholasRacz_v1.0-edited.jpeg",
+    "Christopher Bramwell": "https://kericonf.com/wp-content/uploads/2026/04/ChristopherBramwell_v1.0-scaled.jpg",
+    "Evan Asakawa": "https://kericonf.com/wp-content/uploads/2026/04/EvanAsakawa_v1.0-scaled.jpg",
+    "Evan Asawaka": "https://kericonf.com/wp-content/uploads/2026/04/EvanAsakawa_v1.0-scaled.jpg",
+    "Ryan Hansen": "https://kericonf.com/wp-content/uploads/2026/04/RyanHansen_v1.0.jpeg"
+  },
+  "videos": [
+    {
+      "order": 1,
+      "day": "KERICONF26 Day 1",
+      "title": "State of the KERI Suite - Samuel Smith",
+      "path": "talks/Samuel Smith \uff5c State of the KERI Suite \uff5c KERI Conference 2026.mp4",
+      "duration": "50:10",
+      "subtitle": "talks/Samuel Smith \uff5c State of the KERI Suite \uff5c KERI Conference 2026.fixed.srt"
+    },
+    {
+      "order": 2,
+      "day": "KERICONF26 Day 1",
+      "title": "Open Verifiable Communications - Daniel Hardman",
+      "path": "talks/Daniel Hardman \uff5c Open Verifiable Communications \uff5c KERI Conference 2026.mp4",
+      "duration": "39:55",
+      "subtitle": "talks/Daniel Hardman \uff5c Open Verifiable Communications \uff5c KERI Conference 2026.fixed.srt",
+      "presentation": "slides/Daniel Hardman \uff5c Open Verifiable Communications \uff5c KERI Conference 2026.pdf"
+    },
+    {
+      "order": 3,
+      "day": "KERICONF26 Day 1",
+      "title": "Provenanting Patient's Medical Records - Scott Stuewe Mark Scrimshire Jared Jeffery",
+      "path": "talks/Scott Stuewe Mark Scrimshire Jared Jeffery \uff5c Provenanting Patient's Medical Records \uff5c KERI Conf 2026.mp4",
+      "duration": "35:40",
+      "subtitle": "talks/Scott Stuewe Mark Scrimshire Jared Jeffery \uff5c Provenanting Patient's Medical Records \uff5c KERI Conf 2026.fixed.srt"
+    },
+    {
+      "order": 4,
+      "day": "KERICONF26 Day 1",
+      "title": "The Landscape of SEDI - George McEwan",
+      "path": "talks/George McEwan \uff5c The Landscape of SEDI \uff5c KERI Conference 2026.mp4",
+      "duration": "38:35",
+      "subtitle": "talks/George McEwan \uff5c The Landscape of SEDI \uff5c KERI Conference 2026.fixed.srt",
+      "presentation": "slides/George McEwan \uff5c The Landscape of SEDI \uff5c KERI Conference 2026.pdf"
+    },
+    {
+      "order": 5,
+      "day": "KERICONF26 Day 1",
+      "title": "Contract Credentials & Verifiable Identity - Cole Davis",
+      "path": "talks/Cole Davis \uff5c Contract Credentials & Verifiable Identity \uff5c KERI Conference 2026.mp4",
+      "duration": "39:10",
+      "subtitle": "talks/Cole Davis \uff5c Contract Credentials & Verifiable Identity \uff5c KERI Conference 2026.fixed.srt",
+      "presentation": "slides/Cole Davis \uff5c Contract Credentials & Verifiable Identity \uff5c KERI Conference 2026.pdf"
+    },
+    {
+      "order": 6,
+      "day": "KERICONF26 Day 1",
+      "title": "Infrastructure for Security - Phil Feairheller",
+      "path": "talks/Phil Feairheller \uff5c Infrastructure for Security \uff5c Keri Conference 2026.mp4",
+      "duration": "41:15",
+      "subtitle": "talks/Phil Feairheller \uff5c Infrastructure for Security \uff5c Keri Conference 2026.fixed.srt"
+    },
+    {
+      "order": 7,
+      "day": "KERICONF26 Day 1",
+      "title": "Open KERI Infrastructure - Jay Alexander Elliot",
+      "path": "talks/Jay Alexander Elliot \uff5c Open KERI Infrastructure \uff5c KERI Conference 2026.mp4",
+      "duration": "42:50",
+      "subtitle": "talks/Jay Alexander Elliot \uff5c Open KERI Infrastructure \uff5c KERI Conference 2026.fixed.srt",
+      "presentation": "slides/Jay Alexander Elliot \uff5c Open KERI Infrastructure \uff5c KERI Conference 2026.pdf"
+    },
+    {
+      "order": 8,
+      "day": "KERICONF26 Day 1",
+      "title": "KRAM IT! with Ari - Ari Argoud",
+      "path": "talks/Ari Argoud \uff5c KRAM IT! with Ari \uff5c KERI Conference 2026.mp4",
+      "duration": "37:20",
+      "subtitle": "talks/Ari Argoud \uff5c KRAM IT! with Ari \uff5c KERI Conference 2026.fixed.srt"
+    },
+    {
+      "order": 9,
+      "day": "KERICONF26 Day 1",
+      "title": "Signify Security Architecture - Fergal O'Conner",
+      "path": "talks/Fergal O'Conner \uff5c Signify Security Architecture \uff5c KERI Conference 2026.mp4",
+      "duration": "37:45",
+      "subtitle": "talks/Fergal O'Conner \uff5c Signify Security Architecture \uff5c KERI Conference 2026.fixed.srt",
+      "presentation": "slides/Fergal O'Conner \uff5c Signify Security Architecture \uff5c KERI Conference 2026.pdf"
+    },
+    {
+      "order": 10,
+      "day": "KERICONF26 Day 1",
+      "title": "Witnesses & Watchers - Ryan Hansen",
+      "path": "talks/Ryan Hansen \uff5c Witnesses & Watchers \uff5c KERI Conference 2026.mp4",
+      "duration": "40:30",
+      "subtitle": "talks/Ryan Hansen \uff5c Witnesses & Watchers \uff5c KERI Conference 2026.fixed.srt"
+    },
+    {
+      "order": 11,
+      "day": "KERICONF26 Day 1",
+      "title": "FHIR and CMS - Jared Jefferey",
+      "path": "talks/Jared Jefferey \uff5c FHIR and CMS \uff5c KERI Conference 2026.mp4",
+      "duration": "38:25",
+      "subtitle": "talks/Jared Jefferey \uff5c FHIR and CMS \uff5c KERI Conference 2026.fixed.srt",
+      "presentation": "slides/Jared Jefferey \uff5c FHIR and CMS \uff5c KERI Conference 2026.pdf"
+    },
+    {
+      "order": 12,
+      "day": "KERICONF26 Day 1",
+      "title": "The Digital Identity Tradespace - Samuel Smith",
+      "path": "talks/Samuel Smith \uff5c The Digital Identity Tradespace \uff5c KERI Conference 2026.mp4",
+      "duration": "45:30",
+      "subtitle": "talks/Samuel Smith \uff5c The Digital Identity Tradespace \uff5c KERI Conference 2026.fixed.srt"
+    },
+    {
+      "order": 13,
+      "day": "KERICONF26 Day 1",
+      "title": "KERIA Tutorial - Kent Bull",
+      "path": "talks/Kent Bull \uff5c KERIA Tutorial \uff5c KERI Conference 2026.mp4",
+      "duration": "51:20",
+      "subtitle": "talks/Kent Bull \uff5c KERIA Tutorial \uff5c KERI Conference 2026.fixed.srt",
+      "presentation": "slides/Kent Bull \uff5c KERIA Tutorial \uff5c KERI Conference 2026.pdf"
+    },
+    {
+      "order": 14,
+      "day": "KERICONF26 Day 1",
+      "title": "How KERI Enables Better Private-Public Partnerships - George McEwan",
+      "path": "talks/George McEwan \uff5c How KERI Enables Better Private-Public Partnerships \uff5c KERI Conference 2026.mp4",
+      "duration": "44:20",
+      "subtitle": "talks/George McEwan \uff5c How KERI Enables Better Private-Public Partnerships \uff5c KERI Conference 2026.fixed.srt"
+    },
+    {
+      "order": 1,
+      "day": "KERICONF26 Day 2",
+      "title": "The Future of KERI - Samuel Smith",
+      "path": "talks/Samuel Smith \uff5c The Future of KERI \uff5c KERI Conference 2026.mp4",
+      "duration": "52:10",
+      "subtitle": "talks/Samuel Smith \uff5c The Future of KERI \uff5c KERI Conference 2026.fixed.srt"
+    },
+    {
+      "order": 2,
+      "day": "KERICONF26 Day 2",
+      "title": "ACDCs for Authorization - Phil Feairheller",
+      "path": "talks/Phil Feairheller \uff5c ACDCs for Authorization \uff5c KERI Conference 2026.mp4",
+      "duration": "36:15",
+      "subtitle": "talks/Phil Feairheller \uff5c ACDCs for Authorization \uff5c KERI Conference 2026.fixed.srt"
+    },
+    {
+      "order": 3,
+      "day": "KERICONF26 Day 2",
+      "title": "KERI Infrastructure & the 5 W's - Thomas Mayfield",
+      "path": "talks/Thomas Mayfield \uff5c KERI Infrastructure & the 5 W's \uff5c KERI Conference 2026.mp4",
+      "duration": "43:20",
+      "subtitle": "talks/Thomas Mayfield \uff5c KERI Infrastructure & the 5 W's \uff5c KERI Conference 2026.fixed.srt"
+    },
+    {
+      "order": 4,
+      "day": "KERICONF26 Day 2",
+      "title": "ACDCs for Enterprises - Alan Davies",
+      "path": "talks/Alan Davies \uff5c ACDCs for Enterprises \uff5c KERI Conference 2026.mp4",
+      "duration": "35:55",
+      "subtitle": "talks/Alan Davies \uff5c ACDCs for Enterprises \uff5c KERI Conference 2026.fixed.srt",
+      "presentation": "slides/Alan Davies \uff5c ACDCs for Enterprises \uff5c KERI Conference 2026.pdf"
+    },
+    {
+      "order": 5,
+      "day": "KERICONF26 Day 2",
+      "title": "KERI Bridge to the DID World - Jonathan Rayback",
+      "path": "talks/Jonathan Rayback \uff5c KERI Bridge to the DID World \uff5c KERI Conference 2026.mp4",
+      "duration": "41:35",
+      "subtitle": "talks/Jonathan Rayback \uff5c KERI Bridge to the DID World \uff5c KERI Conference 2026.fixed.srt",
+      "presentation": "slides/Jonathan Rayback \uff5c KERI Bridge to the DID World \uff5c KERI Conference 2026.pdf"
+    },
+    {
+      "order": 6,
+      "day": "KERICONF26 Day 2",
+      "title": "Mobile Wallet - Evan Asawaka",
+      "path": "talks/Evan Asawaka \uff5c Mobile Wallet \uff5c KERI Conference 2026.mp4",
+      "duration": "40:15",
+      "subtitle": "talks/Evan Asawaka \uff5c Mobile Wallet \uff5c KERI Conference 2026.fixed.srt",
+      "presentation": "slides/Evan Asawaka \uff5c Mobile Wallet \uff5c KERI Conference 2026.pdf"
+    },
+    {
+      "order": 7,
+      "day": "KERICONF26 Day 2",
+      "title": "Digital Identity Needs a Legal Foundation - Phil Windley",
+      "path": "talks/Phil Windley \uff5c Digital Identity Needs a Legal Foundation \uff5c KERI Conference 2026.mp4",
+      "duration": "43:10",
+      "subtitle": "talks/Phil Windley \uff5c Digital Identity Needs a Legal Foundation \uff5c KERI Conference 2026.fixed.srt"
+    },
+    {
+      "order": 8,
+      "day": "KERICONF26 Day 2",
+      "title": "KERIpy Async Architecture - Kent Bull",
+      "path": "talks/Kent Bull \uff5c KERIpy Async Architecture \uff5c KERI Conference 2026.mp4",
+      "duration": "43:30",
+      "subtitle": "talks/Kent Bull \uff5c KERIpy Async Architecture \uff5c KERI Conference 2026.fixed.srt",
+      "presentation": "slides/Kent Bull \uff5c KERIpy Async Architecture \uff5c KERI Conference 2026.pdf"
+    },
+    {
+      "order": 9,
+      "day": "KERICONF26 Day 2",
+      "title": "Secure Asset Transfer Protocol - Ned Smith",
+      "path": "talks/Ned Smith \uff5c Secure Asset Transfer Protocol \uff5c KERI Conference 2026.mp4",
+      "duration": "36:50",
+      "subtitle": "talks/Ned Smith \uff5c Secure Asset Transfer Protocol \uff5c KERI Conference 2026.fixed.srt"
+    },
+    {
+      "order": 10,
+      "day": "KERICONF26 Day 2",
+      "title": "Investigating the Game of Trust - Nicholas Racz",
+      "path": "talks/Nicholas Racz \uff5c Investigating the Game of Trust \uff5c KERI Conference 2026.mp4",
+      "duration": "39:15",
+      "subtitle": "talks/Nicholas Racz \uff5c Investigating the Game of Trust \uff5c KERI Conference 2026.fixed.srt"
+    },
+    {
+      "order": 11,
+      "day": "KERICONF26 Day 2",
+      "title": "Applying KERI to General Evidence Problems - Daniel Hardman",
+      "path": "talks/Daniel Hardman \uff5c Applying KERI to General Evidence Problems \uff5c KERI Conference 2026.mp4",
+      "duration": "39:45",
+      "subtitle": "talks/Daniel Hardman \uff5c Applying KERI to General Evidence Problems \uff5c KERI Conference 2026.fixed.srt",
+      "presentation": "slides/Daniel Hardman \uff5c Applying KERI to General Evidence Problems \uff5c KERI Conference 2026.pdf"
+    },
+    {
+      "order": 12,
+      "day": "KERICONF26 Day 2",
+      "title": "KERI Development & Deployment - Keanu Pahio",
+      "path": "talks/Keanu Pahio \uff5c KERI Developement & Deployment \uff5c KERI Conference 2026.mp4",
+      "duration": "48:15",
+      "subtitle": "talks/Keanu Pahio \uff5c KERI Developement & Deployment \uff5c KERI Conference 2026.fixed.srt",
+      "presentation": "slides/Keanu Pahio \uff5c KERI Developement & Deployment \uff5c KERI Conference 2026.pdf"
+    },
+    {
+      "order": 13,
+      "day": "KERICONF26 Day 2",
+      "title": "SPAC & TSP - Samuel Smith",
+      "path": "talks/Samuel Smith \uff5c SPAC & TSP \uff5c KERI Conference 2026.mp4",
+      "duration": "42:25",
+      "subtitle": "talks/Samuel Smith \uff5c SPAC & TSP \uff5c KERI Conference 2026.fixed.srt"
+    },
+    {
+      "order": 14,
+      "day": "KERICONF26 Day 2",
+      "title": "KERIA & Signify Path to Production - Fergal O'Connor",
+      "path": "talks/Fergal O'Connor \uff5c KERIA & Signify Path to Production \uff5c KERI Conference 2026.mp4",
+      "duration": "38:45",
+      "subtitle": "talks/Fergal O'Connor \uff5c KERIA & Signify Path to Production \uff5c KERI Conference 2026.fixed.srt",
+      "presentation": "slides/Fergal O'Connor \uff5c KERIA & Signify Path to Production \uff5c KERI Conference 2026.pdf"
+    },
+    {
+      "order": 15,
+      "day": "KERICONF26 Day 2",
+      "title": "What KERI allows us to do that we couldn't before - Ryan Hansen Panel",
+      "path": "talks/Ryan Hansen Pannel \uff5c What KERI allows us to do that we couldn't before \uff5c KERI Conference 2026.mp4",
+      "duration": "37:30",
+      "subtitle": "talks/Ryan Hansen Pannel \uff5c What KERI allows us to do that we couldn't before \uff5c KERI Conference 2026.fixed.srt"
+    },
+    {
+      "order": 1,
+      "day": "KERICONF26 Interviews",
+      "title": "Interview - Ari Argoud",
+      "path": "interviews/Ari-Argoud-Interview.mp4",
+      "duration": "1:04",
+      "subtitle": "interviews/Ari-Argoud-Interview.srt"
+    },
+    {
+      "order": 2,
+      "day": "KERICONF26 Interviews",
+      "title": "Interview - Cole Davis",
+      "path": "interviews/Cole-Davis-Interview.mp4",
+      "duration": "1:54",
+      "subtitle": "interviews/Cole-Davis-Interview.srt"
+    },
+    {
+      "order": 3,
+      "day": "KERICONF26 Interviews",
+      "title": "Interview - Daniel Hardman",
+      "path": "interviews/Daniel-Hardman-Interview.mp4",
+      "duration": "1:19",
+      "subtitle": "interviews/Daniel-Hardman-Interview.srt"
+    },
+    {
+      "order": 4,
+      "day": "KERICONF26 Interviews",
+      "title": "Interview - Fergal O'Connor",
+      "path": "interviews/Fergal-O'Connor.mp4",
+      "duration": "2:00",
+      "subtitle": "interviews/Fergal-O'Connor.srt"
+    },
+    {
+      "order": 5,
+      "day": "KERICONF26 Interviews",
+      "title": "Interview - Jared Jefferey",
+      "path": "interviews/Jared-Jefferey-Interview.mp4",
+      "duration": "3:01",
+      "subtitle": "interviews/Jared-Jefferey-Interview.srt"
+    },
+    {
+      "order": 6,
+      "day": "KERICONF26 Interviews",
+      "title": "Interview - Jonathan Rayback",
+      "path": "interviews/Jonathan-Rayback-Interview.mp4",
+      "duration": "1:29",
+      "subtitle": "interviews/Jonathan-Rayback-Interview.srt"
+    },
+    {
+      "order": 7,
+      "day": "KERICONF26 Interviews",
+      "title": "Interview - Keanu Pahio",
+      "path": "interviews/Keanu-Pahio-Interview.mp4",
+      "duration": "1:00",
+      "subtitle": "interviews/Keanu-Pahio-Interview.srt"
+    },
+    {
+      "order": 8,
+      "day": "KERICONF26 Interviews",
+      "title": "Interview - Kent Bull",
+      "path": "interviews/Kent-Bull-Interview.mp4",
+      "duration": "1:10",
+      "subtitle": "interviews/Kent-Bull-Interview.srt"
+    },
+    {
+      "order": 9,
+      "day": "KERICONF26 Interviews",
+      "title": "Interview - Ned Smith",
+      "path": "interviews/Ned-Smith-Interview.mp4",
+      "duration": "1:41",
+      "subtitle": "interviews/Ned-Smith-Interview.srt"
+    },
+    {
+      "order": 10,
+      "day": "KERICONF26 Interviews",
+      "title": "Interview - Nicholas Racz",
+      "path": "interviews/Nicholas-Racz-Interview.mp4",
+      "duration": "1:33",
+      "subtitle": "interviews/Nicholas-Racz-Interview.srt"
+    },
+    {
+      "order": 11,
+      "day": "KERICONF26 Interviews",
+      "title": "Interview - Phil Feairheller",
+      "path": "interviews/Phil-Feairheller-Interview.mp4",
+      "duration": "0:44",
+      "subtitle": "interviews/Phil-Feairheller-Interview.srt"
+    },
+    {
+      "order": 12,
+      "day": "KERICONF26 Interviews",
+      "title": "Interview - Phil Windley",
+      "path": "interviews/Phil-Windley-Interview.mp4",
+      "duration": "1:24",
+      "subtitle": "interviews/Phil-Windley-Interview.srt"
+    },
+    {
+      "order": 13,
+      "day": "KERICONF26 Interviews",
+      "title": "Interview - Ryan Hansen",
+      "path": "interviews/Ryan-Hansen-Interview.mp4",
+      "duration": "1:22",
+      "subtitle": "interviews/Ryan-Hansen-Interview.srt"
+    }
+  ]
+}

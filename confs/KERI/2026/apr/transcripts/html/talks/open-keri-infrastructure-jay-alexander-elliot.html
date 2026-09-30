@@ -1,0 +1,2238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open KERI Infrastructure - Jay Alexander Elliot — Transcript</title>
+  <meta name="description" content="Transcript: Open KERI Infrastructure - Jay Alexander Elliot (KERICONF26 Day 1 · 42:50)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #060b6f;
+      --muted: #2e3a7a;
+      --bg: #b1d1cf;
+      --panel: rgba(255, 255, 255, 0.55);
+      --accent: #986c32;
+      --link: #0450a8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Source Serif 4", Georgia, serif;
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(255,255,255,0.45), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 0%, rgba(152,108,50,0.12), transparent),
+        var(--bg);
+      color: var(--ink);
+      padding: 24px 16px 48px;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 44rem; margin: 0 auto; }
+    nav {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+    nav a { color: var(--link); }
+    nav a:hover { color: var(--ink); }
+    header {
+      background: var(--panel);
+      border: 1px solid rgba(6, 11, 111, 0.12);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      margin: 0 0 0.4rem;
+    }
+    .meta {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0 0 1rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .actions a {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--ink);
+      background: rgba(152, 108, 50, 0.18);
+      border: 1px solid rgba(152, 108, 50, 0.35);
+      border-radius: 8px;
+      padding: 0.55rem 0.9rem;
+    }
+    .actions a:hover { background: rgba(152, 108, 50, 0.28); }
+    .actions a.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+    .actions a.primary:hover { background: #0a1270; }
+    article {
+      background: var(--panel);
+      border: 1px solid rgba(6, 11, 111, 0.12);
+      border-radius: 10px;
+      padding: 1rem 1.25rem 1.5rem;
+    }
+    .cue {
+      display: grid;
+      grid-template-columns: 4.5rem 1fr;
+      gap: 0.65rem 0.85rem;
+      margin: 0;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(6, 11, 111, 0.08);
+    }
+    .cue:last-child { border-bottom: none; }
+    .cue-time {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      padding-top: 0.15rem;
+    }
+    .cue-time:hover { color: var(--ink); text-decoration: underline; }
+    .cue-text { font-size: 1.05rem; }
+    footer {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    @media (max-width: 520px) {
+      .cue { grid-template-columns: 1fr; gap: 0.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="../../../">KERI Conference April 2026 Videos</a>
+      · <a href="./">All transcripts</a>
+    </nav>
+    <header>
+      <h1>Open KERI Infrastructure - Jay Alexander Elliot</h1>
+      <p class="meta">KERICONF26 Day 1 · 42:50</p>
+      <div class="actions">
+        <a class="primary" href="../../../#open-keri-infrastructure-jay-alexander-elliot">Watch video</a>
+        <a href="./">All transcripts</a>
+        <a href="../../../">Video gallery</a>
+      </div>
+    </header>
+    <article>
+    <p class="cue" id="t0">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot">0:00</a>
+      <span class="cue-text">Jay Alexander Elliot ｜ Open KERI Infrastructure ｜ KERI Conference 2026</span>
+    </p>
+    <p class="cue" id="t3">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=3">0:03</a>
+      <span class="cue-text">This version of the Locksmith app is</span>
+    </p>
+    <p class="cue" id="t8">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=8">0:08</a>
+      <span class="cue-text">an open-source stripped down</span>
+    </p>
+    <p class="cue" id="t9">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=9">0:09</a>
+      <span class="cue-text">version of what healthKERI has. So, if</span>
+    </p>
+    <p class="cue" id="t11">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=11">0:11</a>
+      <span class="cue-text">you guys want to follow along, I have a</span>
+    </p>
+    <p class="cue" id="t13">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=13">0:13</a>
+      <span class="cue-text">open source repo. It's</span>
+    </p>
+    <p class="cue" id="t17">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=17">0:17</a>
+      <span class="cue-text">https://github.com/jaelliot/locksmith-demo</span>
+    </p>
+    <p class="cue" id="t24">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=24">0:24</a>
+      <span class="cue-text">and you can follow along. There's some</span>
+    </p>
+    <p class="cue" id="t25">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=25">0:25</a>
+      <span class="cue-text">instructions in the readme.</span>
+    </p>
+    <p class="cue" id="t37">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=37">0:37</a>
+      <span class="cue-text">Locksmith is the desktop wallet for</span>
+    </p>
+    <p class="cue" id="t41">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=41">0:41</a>
+      <span class="cue-text">KERI. This talk is about the</span>
+    </p>
+    <p class="cue" id="t41">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=41">0:41</a>
+      <span class="cue-text">controller side of the system where the</span>
+    </p>
+    <p class="cue" id="t42">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=42">0:42</a>
+      <span class="cue-text">keys stay local. Users manage their</span>
+    </p>
+    <p class="cue" id="t46">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=46">0:46</a>
+      <span class="cue-text">identifiers and control does not</span>
+    </p>
+    <p class="cue" id="t48">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=48">0:48</a>
+      <span class="cue-text">disappear into a single provider stack.</span>
+    </p>
+    <p class="cue" id="t53">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=53">0:53</a>
+      <span class="cue-text">users need a</span>
+    </p>
+    <p class="cue" id="t56">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=56">0:56</a>
+      <span class="cue-text">wallet surface where the keys in</span>
+    </p>
+    <p class="cue" id="t59">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=59">0:59</a>
+      <span class="cue-text">control.</span>
+    </p>
+    <p class="cue" id="t63">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=63">1:03</a>
+      <span class="cue-text">The trust</span>
+    </p>
+    <p class="cue" id="t65">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=65">1:05</a>
+      <span class="cue-text">root lives at the edge and non-hosted</span>
+    </p>
+    <p class="cue" id="t67">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=67">1:07</a>
+      <span class="cue-text">services.</span>
+    </p>
+    <p class="cue" id="t72">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=72">1:12</a>
+      <span class="cue-text">In KERI the controller is the</span>
+    </p>
+    <p class="cue" id="t74">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=74">1:14</a>
+      <span class="cue-text">part that actually controls the AID.</span>
+    </p>
+    <p class="cue" id="t77">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=77">1:17</a>
+      <span class="cue-text">That means that it manages the keys in</span>
+    </p>
+    <p class="cue" id="t80">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=80">1:20</a>
+      <span class="cue-text">the key event life cycle.</span>
+    </p>
+    <p class="cue" id="t84">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=84">1:24</a>
+      <span class="cue-text">If that user-facing wallet gets absorbed</span>
+    </p>
+    <p class="cue" id="t86">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=86">1:26</a>
+      <span class="cue-text">into one vertically integrated service</span>
+    </p>
+    <p class="cue" id="t87">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=87">1:27</a>
+      <span class="cue-text">stack, the system may still look open on</span>
+    </p>
+    <p class="cue" id="t90">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=90">1:30</a>
+      <span class="cue-text">paper, but it becomes less open in</span>
+    </p>
+    <p class="cue" id="t91">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=91">1:31</a>
+      <span class="cue-text">practice. That's why the wallet boundary</span>
+    </p>
+    <p class="cue" id="t93">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=93">1:33</a>
+      <span class="cue-text">matters is where the control actually</span>
+    </p>
+    <p class="cue" id="t95">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=95">1:35</a>
+      <span class="cue-text">lives.</span>
+    </p>
+    <p class="cue" id="t97">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=97">1:37</a>
+      <span class="cue-text">Many services describe themselves as</span>
+    </p>
+    <p class="cue" id="t100">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=100">1:40</a>
+      <span class="cue-text">open, but in practice, the wallet, the</span>
+    </p>
+    <p class="cue" id="t103">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=103">1:43</a>
+      <span class="cue-text">provider, and the integration path are</span>
+    </p>
+    <p class="cue" id="t106">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=106">1:46</a>
+      <span class="cue-text">all tied to the same stack. When that</span>
+    </p>
+    <p class="cue" id="t108">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=108">1:48</a>
+      <span class="cue-text">happens, builder choice starts to</span>
+    </p>
+    <p class="cue" id="t110">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=110">1:50</a>
+      <span class="cue-text">disappear for KERI to remain genuinely</span>
+    </p>
+    <p class="cue" id="t112">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=112">1:52</a>
+      <span class="cue-text">open. The wallet must remain separate,</span>
+    </p>
+    <p class="cue" id="t115">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=115">1:55</a>
+      <span class="cue-text">and that separation must be real and</span>
+    </p>
+    <p class="cue" id="t117">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=117">1:57</a>
+      <span class="cue-text">verifiable. So, with that in mind,</span>
+    </p>
+    <p class="cue" id="t119">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=119">1:59</a>
+      <span class="cue-text">here's where Locksmith sits in the</span>
+    </p>
+    <p class="cue" id="t121">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=121">2:01</a>
+      <span class="cue-text">stack.</span>
+    </p>
+    <p class="cue" id="t124">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=124">2:04</a>
+      <span class="cue-text">Locksmith sets the controller side</span>
+    </p>
+    <p class="cue" id="t127">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=127">2:07</a>
+      <span class="cue-text">wallet layer. Witnesses stay outside of</span>
+    </p>
+    <p class="cue" id="t129">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=129">2:09</a>
+      <span class="cue-text">it. The watchers stay outside of it. The</span>
+    </p>
+    <p class="cue" id="t132">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=132">2:12</a>
+      <span class="cue-text">connectors… the providers connect to</span>
+    </p>
+    <p class="cue" id="t134">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=134">2:14</a>
+      <span class="cue-text">it but they do not become the wallet.</span>
+    </p>
+    <p class="cue" id="t136">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=136">2:16</a>
+      <span class="cue-text">And by &quot;providers&quot; I mean the real</span>
+    </p>
+    <p class="cue" id="t138">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=138">2:18</a>
+      <span class="cue-text">external services, witness and watcher</span>
+    </p>
+    <p class="cue" id="t141">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=141">2:21</a>
+      <span class="cue-text">operators, credential services, workflow</span>
+    </p>
+    <p class="cue" id="t143">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=143">2:23</a>
+      <span class="cue-text">services, and other KERI-adjacent</span>
+    </p>
+    <p class="cue" id="t145">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=145">2:25</a>
+      <span class="cue-text">integrations.</span>
+    </p>
+    <p class="cue" id="t155">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=155">2:35</a>
+      <span class="cue-text">The first thing that Locksmith proves</span>
+    </p>
+    <p class="cue" id="t157">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=157">2:37</a>
+      <span class="cue-text">is the local state. It is a real local</span>
+    </p>
+    <p class="cue" id="t160">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=160">2:40</a>
+      <span class="cue-text">identity vault. It supports multiple</span>
+    </p>
+    <p class="cue" id="t163">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=163">2:43</a>
+      <span class="cue-text">vaults and local first storage and</span>
+    </p>
+    <p class="cue" id="t166">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=166">2:46</a>
+      <span class="cue-text">controller-owned state on disk. That</span>
+    </p>
+    <p class="cue" id="t168">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=168">2:48</a>
+      <span class="cue-text">matters because portability could come</span>
+    </p>
+    <p class="cue" id="t170">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=170">2:50</a>
+      <span class="cue-text">later. The first proof is local control.</span>
+    </p>
+    <p class="cue" id="t172">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=172">2:52</a>
+      <span class="cue-text">– What are you defining as portability here?</span>
+    </p>
+    <p class="cue" id="t173">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=173">2:53</a>
+      <span class="cue-text">You could deploy it to any</span>
+    </p>
+    <p class="cue" id="t178">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=178">2:58</a>
+      <span class="cue-text">location, I suppose?</span>
+    </p>
+    <p class="cue" id="t180">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=180">3:00</a>
+      <span class="cue-text">– Okay. Because you say state ownership</span>
+    </p>
+    <p class="cue" id="t182">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=182">3:02</a>
+      <span class="cue-text">for portability. I imagine that</span>
+    </p>
+    <p class="cue" id="t183">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=183">3:03</a>
+      <span class="cue-text">means the key state and everything</span>
+    </p>
+    <p class="cue" id="t185">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=185">3:05</a>
+      <span class="cue-text">necessary for like interacting with the</span>
+    </p>
+    <p class="cue" id="t187">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=187">3:07</a>
+      <span class="cue-text">service provider.</span>
+    </p>
+    <p class="cue" id="t189">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=189">3:09</a>
+      <span class="cue-text">Is that what you mean by state</span>
+    </p>
+    <p class="cue" id="t190">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=190">3:10</a>
+      <span class="cue-text">ownership?</span>
+    </p>
+    <p class="cue" id="t191">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=191">3:11</a>
+      <span class="cue-text">Yeah.</span>
+    </p>
+    <p class="cue" id="t196">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=196">3:16</a>
+      <span class="cue-text">The identifier</span>
+    </p>
+    <p class="cue" id="t204">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=204">3:24</a>
+      <span class="cue-text">credentials and real user workloads</span>
+    </p>
+    <p class="cue" id="t206">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=206">3:26</a>
+      <span class="cue-text">is where the wallet becomes real for the</span>
+    </p>
+    <p class="cue" id="t208">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=208">3:28</a>
+      <span class="cue-text">user. Locksmith is the desktop surface</span>
+    </p>
+    <p class="cue" id="t211">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=211">3:31</a>
+      <span class="cue-text">where someone can create and manage</span>
+    </p>
+    <p class="cue" id="t213">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=213">3:33</a>
+      <span class="cue-text">identifiers, track credential state, work</span>
+    </p>
+    <p class="cue" id="t215">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=215">3:35</a>
+      <span class="cue-text">with KERI operations through a usable</span>
+    </p>
+    <p class="cue" id="t219">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=219">3:39</a>
+      <span class="cue-text">interface. That is what the wallet</span>
+    </p>
+    <p class="cue" id="t222">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=222">3:42</a>
+      <span class="cue-text">layers for turning core KERI</span>
+    </p>
+    <p class="cue" id="t224">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=224">3:44</a>
+      <span class="cue-text">behavior into something a person could</span>
+    </p>
+    <p class="cue" id="t226">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=226">3:46</a>
+      <span class="cue-text">actually use.</span>
+    </p>
+    <p class="cue" id="t232">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=232">3:52</a>
+      <span class="cue-text">This is where the</span>
+    </p>
+    <p class="cue" id="t233">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=233">3:53</a>
+      <span class="cue-text">architecture stays open. Locksmith</span>
+    </p>
+    <p class="cue" id="t235">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=235">3:55</a>
+      <span class="cue-text">has a real plug-in boundary and code,</span>
+    </p>
+    <p class="cue" id="t237">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=237">3:57</a>
+      <span class="cue-text">providers sit behind that boundary</span>
+    </p>
+    <p class="cue" id="t239">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=239">3:59</a>
+      <span class="cue-text">rather than replace it. That means that</span>
+    </p>
+    <p class="cue" id="t241">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=241">4:01</a>
+      <span class="cue-text">the wallet can integrate with outside</span>
+    </p>
+    <p class="cue" id="t244">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=244">4:04</a>
+      <span class="cue-text">services without collapsing into</span>
+    </p>
+    <p class="cue" id="t245">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=245">4:05</a>
+      <span class="cue-text">infrastructure. What is real today is</span>
+    </p>
+    <p class="cue" id="t247">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=247">4:07</a>
+      <span class="cue-text">the boundary itself. What is in</span>
+    </p>
+    <p class="cue" id="t249">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=249">4:09</a>
+      <span class="cue-text">progress is the broader ecosystem around</span>
+    </p>
+    <p class="cue" id="t251">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=251">4:11</a>
+      <span class="cue-text">it. More provider side integrations</span>
+    </p>
+    <p class="cue" id="t254">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=254">4:14</a>
+      <span class="cue-text">and the KERI Foundation's work to carry</span>
+    </p>
+    <p class="cue" id="t256">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=256">4:16</a>
+      <span class="cue-text">that pattern through more</span>
+    </p>
+    <p class="cue" id="t258">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=258">4:18</a>
+      <span class="cue-text">completely. So the architecture for now</span>
+    </p>
+    <p class="cue" id="t261">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=261">4:21</a>
+      <span class="cue-text">is real, and the full provider</span>
+    </p>
+    <p class="cue" id="t264">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=264">4:24</a>
+      <span class="cue-text">story is currently being built.</span>
+    </p>
+    <p class="cue" id="t267">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=267">4:27</a>
+      <span class="cue-text">This is our architecture flow. The</span>
+    </p>
+    <p class="cue" id="t270">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=270">4:30</a>
+      <span class="cue-text">user signs and stores locally in the</span>
+    </p>
+    <p class="cue" id="t273">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=273">4:33</a>
+      <span class="cue-text">Locksmith vault. From there, the wallet</span>
+    </p>
+    <p class="cue" id="t274">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=274">4:34</a>
+      <span class="cue-text">can communicate with provider side</span>
+    </p>
+    <p class="cue" id="t276">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=276">4:36</a>
+      <span class="cue-text">services via the plug-in boundary.</span>
+    </p>
+    <p class="cue" id="t280">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=280">4:40</a>
+      <span class="cue-text">Separately, events go out to witnesses</span>
+    </p>
+    <p class="cue" id="t282">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=282">4:42</a>
+      <span class="cue-text">and watchers and receipts come back.</span>
+    </p>
+    <p class="cue" id="t284">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=284">4:44</a>
+      <span class="cue-text">Verifiers stay out of that path, which</span>
+    </p>
+    <p class="cue" id="t287">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=287">4:47</a>
+      <span class="cue-text">is the point. Verification</span>
+    </p>
+    <p class="cue" id="t290">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=290">4:50</a>
+      <span class="cue-text">stays available without turning the</span>
+    </p>
+    <p class="cue" id="t293">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=293">4:53</a>
+      <span class="cue-text">whole system into one provider-owned stack.</span>
+    </p>
+    <p class="cue" id="t297">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=297">4:57</a>
+      <span class="cue-text">if somebody wants implementation detail,</span>
+    </p>
+    <p class="cue" id="t300">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=300">5:00</a>
+      <span class="cue-text">I could go there, at the highest</span>
+    </p>
+    <p class="cue" id="t302">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=302">5:02</a>
+      <span class="cue-text">level that is the overall shape.</span>
+    </p>
+    <p class="cue" id="t308">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=308">5:08</a>
+      <span class="cue-text">Let me draw a clean line between what is</span>
+    </p>
+    <p class="cue" id="t312">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=312">5:12</a>
+      <span class="cue-text">real now, what is next. What is real</span>
+    </p>
+    <p class="cue" id="t314">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=314">5:14</a>
+      <span class="cue-text">now is the desktop KERI identity</span>
+    </p>
+    <p class="cue" id="t316">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=316">5:16</a>
+      <span class="cue-text">vault, local vault and the identifier</span>
+    </p>
+    <p class="cue" id="t319">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=319">5:19</a>
+      <span class="cue-text">workflows, a plug-in boundary encode and</span>
+    </p>
+    <p class="cue" id="t321">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=321">5:21</a>
+      <span class="cue-text">repeatable setup reset and launch</span>
+    </p>
+    <p class="cue" id="t323">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=323">5:23</a>
+      <span class="cue-text">evidence. What is next is the broader</span>
+    </p>
+    <p class="cue" id="t326">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=326">5:26</a>
+      <span class="cue-text">foundation plug-in follow through mobile</span>
+    </p>
+    <p class="cue" id="t328">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=328">5:28</a>
+      <span class="cue-text">and web portability and the browser</span>
+    </p>
+    <p class="cue" id="t331">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=331">5:31</a>
+      <span class="cue-text">adjacent work around that…</span>
+    </p>
+    <p class="cue" id="t337">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=337">5:37</a>
+      <span class="cue-text">I wanted the room to</span>
+    </p>
+    <p class="cue" id="t340">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=340">5:40</a>
+      <span class="cue-text">leave knowing exactly what the demo</span>
+    </p>
+    <p class="cue" id="t342">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=342">5:42</a>
+      <span class="cue-text">proof say and what it's still in</span>
+    </p>
+    <p class="cue" id="t343">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=343">5:43</a>
+      <span class="cue-text">progress.</span>
+    </p>
+    <p class="cue" id="t346">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=346">5:46</a>
+      <span class="cue-text">And then for getting started with the…</span>
+    </p>
+    <p class="cue" id="t348">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=348">5:48</a>
+      <span class="cue-text">[Can we ask question now or at the end?]</span>
+    </p>
+    <p class="cue" id="t350">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=350">5:50</a>
+      <span class="cue-text">[At the end]</span>
+    </p>
+    <p class="cue" id="t357">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=357">5:57</a>
+      <span class="cue-text">And then for getting started with</span>
+    </p>
+    <p class="cue" id="t358">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=358">5:58</a>
+      <span class="cue-text">the code I have a demo repo</span>
+    </p>
+    <p class="cue" id="t362">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=362">6:02</a>
+      <span class="cue-text">that I've forked and I have commands</span>
+    </p>
+    <p class="cue" id="t365">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=365">6:05</a>
+      <span class="cue-text">for Unix, it'll work on Mac OS or Linux and</span>
+    </p>
+    <p class="cue" id="t371">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=371">6:11</a>
+      <span class="cue-text">for Windows; that script is</span>
+    </p>
+    <p class="cue" id="t374">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=374">6:14</a>
+      <span class="cue-text">just a PowerShell script you could</span>
+    </p>
+    <p class="cue" id="t375">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=375">6:15</a>
+      <span class="cue-text">execute.</span>
+    </p>
+    <p class="cue" id="t378">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=378">6:18</a>
+      <span class="cue-text">Demo bridge.</span>
+    </p>
+    <p class="cue" id="t382">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=382">6:22</a>
+      <span class="cue-text">The Locksmith gives KERI a</span>
+    </p>
+    <p class="cue" id="t386">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=386">6:26</a>
+      <span class="cue-text">real control side wallet surface. I</span>
+    </p>
+    <p class="cue" id="t390">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=390">6:30</a>
+      <span class="cue-text">wanted to show the a smallest life path</span>
+    </p>
+    <p class="cue" id="t392">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=392">6:32</a>
+      <span class="cue-text">of this setup can honestly support.</span>
+    </p>
+    <p class="cue" id="t394">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=394">6:34</a>
+      <span class="cue-text">I'm not going to try to turn this into a</span>
+    </p>
+    <p class="cue" id="t396">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=396">6:36</a>
+      <span class="cue-text">full network demo is the…</span>
+    </p>
+    <p class="cue" id="t399">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=399">6:39</a>
+      <span class="cue-text">The work that we had to do to remove the</span>
+    </p>
+    <p class="cue" id="t402">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=402">6:42</a>
+      <span class="cue-text">the healthKERI code kind of</span>
+    </p>
+    <p class="cue" id="t405">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=405">6:45</a>
+      <span class="cue-text">made that part still a work in</span>
+    </p>
+    <p class="cue" id="t407">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=407">6:47</a>
+      <span class="cue-text">progress.</span>
+    </p>
+    <p class="cue" id="t414">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=414">6:54</a>
+      <span class="cue-text">So, in order to install this</span>
+    </p>
+    <p class="cue" id="t420">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=420">7:00</a>
+      <span class="cue-text">just run the script where it'll</span>
+    </p>
+    <p class="cue" id="t423">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=423">7:03</a>
+      <span class="cue-text">detect if something's</span>
+    </p>
+    <p class="cue" id="t424">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=424">7:04</a>
+      <span class="cue-text">ready there. If it is, it'll get</span>
+    </p>
+    <p class="cue" id="t426">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=426">7:06</a>
+      <span class="cue-text">rid of it and then it'll set up the</span>
+    </p>
+    <p class="cue" id="t429">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=429">7:09</a>
+      <span class="cue-text">environment and then I'll deploy it.</span>
+    </p>
+    <p class="cue" id="t452">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=452">7:32</a>
+      <span class="cue-text">– I came in late. This Locksmith</span>
+    </p>
+    <p class="cue" id="t455">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=455">7:35</a>
+      <span class="cue-text">is the wallet in KERI?</span>
+    </p>
+    <p class="cue" id="t457">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=457">7:37</a>
+      <span class="cue-text">– Yes.</span>
+    </p>
+    <p class="cue" id="t459">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=459">7:39</a>
+      <span class="cue-text">– What's the relation between</span>
+    </p>
+    <p class="cue" id="t461">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=461">7:41</a>
+      <span class="cue-text">Locksmith and KERIpy 1 that was in</span>
+    </p>
+    <p class="cue" id="t463">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=463">7:43</a>
+      <span class="cue-text">the session description? – The KERIpy 1</span>
+    </p>
+    <p class="cue" id="t467">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=467">7:47</a>
+      <span class="cue-text">is that this is the KERI</span>
+    </p>
+    <p class="cue" id="t470">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=470">7:50</a>
+      <span class="cue-text">Py one's just my fork or KERIPy is</span>
+    </p>
+    <p class="cue" id="t474">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=474">7:54</a>
+      <span class="cue-text">Wait,</span>
+    </p>
+    <p class="cue" id="t478">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=478">7:58</a>
+      <span class="cue-text">the other one's my fork</span>
+    </p>
+    <p class="cue" id="t544">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=544">9:04</a>
+      <span class="cue-text">Sorry. For whatever reason,</span>
+    </p>
+    <p class="cue" id="t550">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=550">9:10</a>
+      <span class="cue-text">I selected the wrong command.</span>
+    </p>
+    <p class="cue" id="t556">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=556">9:16</a>
+      <span class="cue-text">Python scripts demo day.</span>
+    </p>
+    <p class="cue" id="t561">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=561">9:21</a>
+      <span class="cue-text">Come on, please work.</span>
+    </p>
+    <p class="cue" id="t568">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=568">9:28</a>
+      <span class="cue-text">Sorry, this is taking a while.</span>
+    </p>
+    <p class="cue" id="t579">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=579">9:39</a>
+      <span class="cue-text">And then we could initialize</span>
+    </p>
+    <p class="cue" id="t582">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=582">9:42</a>
+      <span class="cue-text">a vault and</span>
+    </p>
+    <p class="cue" id="t583">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=583">9:43</a>
+      <span class="cue-text">a lot of this stuff is still work in</span>
+    </p>
+    <p class="cue" id="t586">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=586">9:46</a>
+      <span class="cue-text">progress. A lot of the functionality</span>
+    </p>
+    <p class="cue" id="t589">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=589">9:49</a>
+      <span class="cue-text">is</span>
+    </p>
+    <p class="cue" id="t590">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=590">9:50</a>
+      <span class="cue-text">not there because it was stripped out</span>
+    </p>
+    <p class="cue" id="t593">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=593">9:53</a>
+      <span class="cue-text">from the healthKERI wallet.</span>
+    </p>
+    <p class="cue" id="t597">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=597">9:57</a>
+      <span class="cue-text">When we have the full</span>
+    </p>
+    <p class="cue" id="t604">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=604">10:04</a>
+      <span class="cue-text">functionality built out, it'll have</span>
+    </p>
+    <p class="cue" id="t607">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=607">10:07</a>
+      <span class="cue-text">largely at parity with the</span>
+    </p>
+    <p class="cue" id="t610">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=610">10:10</a>
+      <span class="cue-text">healthKERI wallet</span>
+    </p>
+    <p class="cue" id="t612">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=612">10:12</a>
+      <span class="cue-text">and we could create our own identifiers.</span>
+    </p>
+    <p class="cue" id="t616">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=616">10:16</a>
+      <span class="cue-text">We could set the cryptographic</span>
+    </p>
+    <p class="cue" id="t617">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=617">10:17</a>
+      <span class="cue-text">strength. I don't have a remote</span>
+    </p>
+    <p class="cue" id="t619">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=619">10:19</a>
+      <span class="cue-text">identifier that I could connect to right now.</span>
+    </p>
+    <p class="cue" id="t623">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=623">10:23</a>
+      <span class="cue-text">Same thing for a group identifier.</span>
+    </p>
+    <p class="cue" id="t625">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=625">10:25</a>
+      <span class="cue-text">Issue a credential.</span>
+    </p>
+    <p class="cue" id="t628">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=628">10:28</a>
+      <span class="cue-text">No schemas to ..,</span>
+    </p>
+    <p class="cue" id="t632">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=632">10:32</a>
+      <span class="cue-text">I don't have anything for that</span>
+    </p>
+    <p class="cue" id="t633">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=633">10:33</a>
+      <span class="cue-text">yet.</span>
+    </p>
+    <p class="cue" id="t635">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=635">10:35</a>
+      <span class="cue-text">Add a schema.</span>
+    </p>
+    <p class="cue" id="t637">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=637">10:37</a>
+      <span class="cue-text">And set this. I could change</span>
+    </p>
+    <p class="cue" id="t643">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=643">10:43</a>
+      <span class="cue-text">the settings for the cryptographic</span>
+    </p>
+    <p class="cue" id="t646">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=646">10:46</a>
+      <span class="cue-text">Key strength settings or other stuff</span>
+    </p>
+    <p class="cue" id="t648">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=648">10:48</a>
+      <span class="cue-text">for the cryptography. But this is</span>
+    </p>
+    <p class="cue" id="t652">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=652">10:52</a>
+      <span class="cue-text">the open source version of the code</span>
+    </p>
+    <p class="cue" id="t654">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=654">10:54</a>
+      <span class="cue-text">that you guys can go and explore.</span>
+    </p>
+    <p class="cue" id="t657">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=657">10:57</a>
+      <span class="cue-text">And sorry, I'm just not good at</span>
+    </p>
+    <p class="cue" id="t659">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=659">10:59</a>
+      <span class="cue-text">public speaking. That's all I've</span>
+    </p>
+    <p class="cue" id="t662">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=662">11:02</a>
+      <span class="cue-text">got. What questions do you guys</span>
+    </p>
+    <p class="cue" id="t665">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=665">11:05</a>
+      <span class="cue-text">have?</span>
+    </p>
+    <p class="cue" id="t665">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=665">11:05</a>
+      <span class="cue-text">Yeah. So essentially is what you've</span>
+    </p>
+    <p class="cue" id="t668">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=668">11:08</a>
+      <span class="cue-text">showed us the KERI Foundation using the</span>
+    </p>
+    <p class="cue" id="t672">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=672">11:12</a>
+      <span class="cue-text">plug-in API with Locksmith to run</span>
+    </p>
+    <p class="cue" id="t674">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=674">11:14</a>
+      <span class="cue-text">against their own infrastructure.</span>
+    </p>
+    <p class="cue" id="t676">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=676">11:16</a>
+      <span class="cue-text">Yes.</span>
+    </p>
+    <p class="cue" id="t677">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=677">11:17</a>
+      <span class="cue-text">In this demo.</span>
+    </p>
+    <p class="cue" id="t678">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=678">11:18</a>
+      <span class="cue-text">That's not in this demo. Okay.</span>
+    </p>
+    <p class="cue" id="t686">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=686">11:26</a>
+      <span class="cue-text">So this is the open- source wallet that</span>
+    </p>
+    <p class="cue" id="t688">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=688">11:28</a>
+      <span class="cue-text">we got originally from healthKERI. We've</span>
+    </p>
+    <p class="cue" id="t689">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=689">11:29</a>
+      <span class="cue-text">debranded it. This is available now for</span>
+    </p>
+    <p class="cue" id="t692">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=692">11:32</a>
+      <span class="cue-text">anybody to go and fork this, download</span>
+    </p>
+    <p class="cue" id="t694">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=694">11:34</a>
+      <span class="cue-text">it, use it, build out more if you want</span>
+    </p>
+    <p class="cue" id="t696">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=696">11:36</a>
+      <span class="cue-text">other features if you want. The plugin</span>
+    </p>
+    <p class="cue" id="t698">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=698">11:38</a>
+      <span class="cue-text">itself is not shown here.</span>
+    </p>
+    <p class="cue" id="t701">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=701">11:41</a>
+      <span class="cue-text">You'll see that in my demo, but you and</span>
+    </p>
+    <p class="cue" id="t703">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=703">11:43</a>
+      <span class="cue-text">I are competing with each other. So now</span>
+    </p>
+    <p class="cue" id="t704">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=704">11:44</a>
+      <span class="cue-text">we're not</span>
+    </p>
+    <p class="cue" id="t705">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=705">11:45</a>
+      <span class="cue-text">now we're not gonna now you're not going</span>
+    </p>
+    <p class="cue" id="t707">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=707">11:47</a>
+      <span class="cue-text">to see it ever. Ah,</span>
+    </p>
+    <p class="cue" id="t714">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=714">11:54</a>
+      <span class="cue-text">thanks man. Hey Joseph, does so does this sorry this is a dumb</span>
+    </p>
+    <p class="cue" id="t718">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=718">11:58</a>
+      <span class="cue-text">question but does this wallet here have</span>
+    </p>
+    <p class="cue" id="t720">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=720">12:00</a>
+      <span class="cue-text">the KEL on in this whatever device is</span>
+    </p>
+    <p class="cue" id="t725">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=725">12:05</a>
+      <span class="cue-text">installing the wallet does is the KEL</span>
+    </p>
+    <p class="cue" id="t726">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=726">12:06</a>
+      <span class="cue-text">also there</span>
+    </p>
+    <p class="cue" id="t728">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=728">12:08</a>
+      <span class="cue-text">you're local</span>
+    </p>
+    <p class="cue" id="t729">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=729">12:09</a>
+      <span class="cue-text">yeah local</span>
+    </p>
+    <p class="cue" id="t729">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=729">12:09</a>
+      <span class="cue-text">yeah locally</span>
+    </p>
+    <p class="cue" id="t730">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=730">12:10</a>
+      <span class="cue-text">so this creates the manages the keys and</span>
+    </p>
+    <p class="cue" id="t733">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=733">12:13</a>
+      <span class="cue-text">the KEL</span>
+    </p>
+    <p class="cue" id="t734">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=734">12:14</a>
+      <span class="cue-text">in that environment</span>
+    </p>
+    <p class="cue" id="t735">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=735">12:15</a>
+      <span class="cue-text">and you publish the KEL to a witness</span>
+    </p>
+    <p class="cue" id="t737">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=737">12:17</a>
+      <span class="cue-text">yes to one or more witnesses right</span>
+    </p>
+    <p class="cue" id="t740">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=740">12:20</a>
+      <span class="cue-text">so you would configure the witness here</span>
+    </p>
+    <p class="cue" id="t742">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=742">12:22</a>
+      <span class="cue-text">Yeah, you'll see that in my demo if you</span>
+    </p>
+    <p class="cue" id="t744">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=744">12:24</a>
+      <span class="cue-text">come to my demo.</span>
+    </p>
+    <p class="cue" id="t745">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=745">12:25</a>
+      <span class="cue-text">When did you demo?</span>
+    </p>
+    <p class="cue" id="t747">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=747">12:27</a>
+      <span class="cue-text">3:15.</span>
+    </p>
+    <p class="cue" id="t748">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=748">12:28</a>
+      <span class="cue-text">It's Yeah, big</span>
+    </p>
+    <p class="cue" id="t752">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=752">12:32</a>
+      <span class="cue-text">– And then also the</span>
+    </p>
+    <p class="cue" id="t755">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=755">12:35</a>
+      <span class="cue-text">TEL stuff is that ..?</span>
+    </p>
+    <p class="cue" id="t756">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=756">12:36</a>
+      <span class="cue-text">No, that's ACDC related. We're not going</span>
+    </p>
+    <p class="cue" id="t758">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=758">12:38</a>
+      <span class="cue-text">to cover that in this.</span>
+    </p>
+    <p class="cue" id="t760">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=760">12:40</a>
+      <span class="cue-text">Would it be on his local ..,</span>
+    </p>
+    <p class="cue" id="t764">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=764">12:44</a>
+      <span class="cue-text">That's a good question. I don't know</span>
+    </p>
+    <p class="cue" id="t765">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=765">12:45</a>
+      <span class="cue-text">where theoretically, I guess probably,</span>
+    </p>
+    <p class="cue" id="t768">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=768">12:48</a>
+      <span class="cue-text">but I don't know that's a</span>
+    </p>
+    <p class="cue" id="t769">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=769">12:49</a>
+      <span class="cue-text">little bit outside of scope of</span>
+    </p>
+    <p class="cue" id="t772">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=772">12:52</a>
+      <span class="cue-text">dealt with yet.</span>
+    </p>
+    <p class="cue" id="t773">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=773">12:53</a>
+      <span class="cue-text">– I know they defined the TEL this</span>
+    </p>
+    <p class="cue" id="t774">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=774">12:54</a>
+      <span class="cue-text">morning, but I forgot what it stands</span>
+    </p>
+    <p class="cue" id="t776">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=776">12:56</a>
+      <span class="cue-text">for.</span>
+    </p>
+    <p class="cue" id="t776">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=776">12:56</a>
+      <span class="cue-text">[TEL = ] Transaction event log</span>
+    </p>
+    <p class="cue" id="t777">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=777">12:57</a>
+      <span class="cue-text">- And that's for the recipient to detect</span>
+    </p>
+    <p class="cue" id="t780">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=780">13:00</a>
+      <span class="cue-text">That's for the holder to detect if their</span>
+    </p>
+    <p class="cue" id="t782">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=782">13:02</a>
+      <span class="cue-text">credentials are being used in the non</span>
+    </p>
+    <p class="cue" id="t785">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=785">13:05</a>
+      <span class="cue-text">Not necessarily, TELs are</span>
+    </p>
+    <p class="cue" id="t788">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=788">13:08</a>
+      <span class="cue-text">specifically related to a different</span>
+    </p>
+    <p class="cue" id="t789">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=789">13:09</a>
+      <span class="cue-text">construct in the KERI ecosystem</span>
+    </p>
+    <p class="cue" id="t793">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=793">13:13</a>
+      <span class="cue-text">called ACDC, which is more about</span>
+    </p>
+    <p class="cue" id="t795">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=795">13:15</a>
+      <span class="cue-text">credential issuing.</span>
+    </p>
+    <p class="cue" id="t797">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=797">13:17</a>
+      <span class="cue-text">Yeah. So the benefit of the TEL you're</span>
+    </p>
+    <p class="cue" id="t800">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=800">13:20</a>
+      <span class="cue-text">publishing the transaction event so that</span>
+    </p>
+    <p class="cue" id="t801">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=801">13:21</a>
+      <span class="cue-text">you can</span>
+    </p>
+    <p class="cue" id="t802">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=802">13:22</a>
+      <span class="cue-text">I'm going to get anchored to the key</span>
+    </p>
+    <p class="cue" id="t804">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=804">13:24</a>
+      <span class="cue-text">event log</span>
+    </p>
+    <p class="cue" id="t805">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=805">13:25</a>
+      <span class="cue-text">I can't keep track of the state</span>
+    </p>
+    <p class="cue" id="t806">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=806">13:26</a>
+      <span class="cue-text">I think a good way is the KEL is the</span>
+    </p>
+    <p class="cue" id="t810">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=810">13:30</a>
+      <span class="cue-text">state of your keys and the TEL is the</span>
+    </p>
+    <p class="cue" id="t813">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=813">13:33</a>
+      <span class="cue-text">state of your credentials</span>
+    </p>
+    <p class="cue" id="t816">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=816">13:36</a>
+      <span class="cue-text">Question what the state of</span>
+    </p>
+    <p class="cue" id="t819">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=819">13:39</a>
+      <span class="cue-text">because they can be in multiple</span>
+    </p>
+    <p class="cue" id="t820">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=820">13:40</a>
+      <span class="cue-text">different kind of states depending on</span>
+    </p>
+    <p class="cue" id="t821">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=821">13:41</a>
+      <span class="cue-text">what the credential is ..,</span>
+    </p>
+    <p class="cue" id="t824">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=824">13:44</a>
+      <span class="cue-text">– Like revocation status state Yeah. Yeah.</span>
+    </p>
+    <p class="cue" id="t828">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=828">13:48</a>
+      <span class="cue-text">I would guess that in Phil's ACDC talk</span>
+    </p>
+    <p class="cue" id="t830">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=830">13:50</a>
+      <span class="cue-text">tomorrow morning, he'll cover this</span>
+    </p>
+    <p class="cue" id="t831">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=831">13:51</a>
+      <span class="cue-text">stuff.</span>
+    </p>
+    <p class="cue" id="t832">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=832">13:52</a>
+      <span class="cue-text">Tells everybody</span>
+    </p>
+    <p class="cue" id="t833">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=833">13:53</a>
+      <span class="cue-text">if he's doing one then. Yeah.</span>
+    </p>
+    <p class="cue" id="t834">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=834">13:54</a>
+      <span class="cue-text">Yeah. He's talking about ACDC tomorrow</span>
+    </p>
+    <p class="cue" id="t836">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=836">13:56</a>
+      <span class="cue-text">morning. So if you have more questions</span>
+    </p>
+    <p class="cue" id="t837">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=837">13:57</a>
+      <span class="cue-text">about that, he might actually have</span>
+    </p>
+    <p class="cue" id="t840">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=840">14:00</a>
+      <span class="cue-text">production use cases that you could</span>
+    </p>
+    <p class="cue" id="t842">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=842">14:02</a>
+      <span class="cue-text">guess.</span>
+    </p>
+    <p class="cue" id="t845">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=845">14:05</a>
+      <span class="cue-text">So about the repos again.</span>
+    </p>
+    <p class="cue" id="t848">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=848">14:08</a>
+      <span class="cue-text">So the Locksmith demo one is this one.</span>
+    </p>
+    <p class="cue" id="t851">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=851">14:11</a>
+      <span class="cue-text">And what's in the Locksmith one? That</span>
+    </p>
+    <p class="cue" id="t853">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=853">14:13</a>
+      <span class="cue-text">just that's the full healthKERI</span>
+    </p>
+    <p class="cue" id="t855">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=855">14:15</a>
+      <span class="cue-text">that's the</span>
+    </p>
+    <p class="cue" id="t856">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=856">14:16</a>
+      <span class="cue-text">healthKERI is proprietary.</span>
+    </p>
+    <p class="cue" id="t858">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=858">14:18</a>
+      <span class="cue-text">Yeah,</span>
+    </p>
+    <p class="cue" id="t859">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=859">14:19</a>
+      <span class="cue-text">we had to strip out all their fun</span>
+    </p>
+    <p class="cue" id="t861">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=861">14:21</a>
+      <span class="cue-text">features when they donated to us. But</span>
+    </p>
+    <p class="cue" id="t864">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=864">14:24</a>
+      <span class="cue-text">we still have like all the core KERI</span>
+    </p>
+    <p class="cue" id="t865">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=865">14:25</a>
+      <span class="cue-text">stuff like identify creation,</span>
+    </p>
+    <p class="cue" id="t869">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=869">14:29</a>
+      <span class="cue-text">There's support for like witnesses</span>
+    </p>
+    <p class="cue" id="t872">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=872">14:32</a>
+      <span class="cue-text">and watchers but in order to connect to</span>
+    </p>
+    <p class="cue" id="t874">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=874">14:34</a>
+      <span class="cue-text">witnesses and watchers you need to</span>
+    </p>
+    <p class="cue" id="t876">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=876">14:36</a>
+      <span class="cue-text">connect to a provider such as healthKERI</span>
+    </p>
+    <p class="cue" id="t879">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=879">14:39</a>
+      <span class="cue-text">through a plugin. So the KERI</span>
+    </p>
+    <p class="cue" id="t881">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=881">14:41</a>
+      <span class="cue-text">Foundation is going to create</span>
+    </p>
+    <p class="cue" id="t882">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=882">14:42</a>
+      <span class="cue-text">our own plugin, where you can</span>
+    </p>
+    <p class="cue" id="t884">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=884">14:44</a>
+      <span class="cue-text">connect to our infrastructure to get</span>
+    </p>
+    <p class="cue" id="t886">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=886">14:46</a>
+      <span class="cue-text">witnesses and watchers and then in</span>
+    </p>
+    <p class="cue" id="t889">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=889">14:49</a>
+      <span class="cue-text">theory you could also have, in the same</span>
+    </p>
+    <p class="cue" id="t891">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=891">14:51</a>
+      <span class="cue-text">UI, you can see KERI Foundations plugin</span>
+    </p>
+    <p class="cue" id="t893">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=893">14:53</a>
+      <span class="cue-text">and like healtKERI's plugin or any</span>
+    </p>
+    <p class="cue" id="t895">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=895">14:55</a>
+      <span class="cue-text">other provider who wants to create</span>
+    </p>
+    <p class="cue" id="t896">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=896">14:56</a>
+      <span class="cue-text">witnesses and watchers.</span>
+    </p>
+    <p class="cue" id="t898">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=898">14:58</a>
+      <span class="cue-text">[It can] provide infrastructure for you to</span>
+    </p>
+    <p class="cue" id="t901">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=901">15:01</a>
+      <span class="cue-text">So basically what you want is creating</span>
+    </p>
+    <p class="cue" id="t905">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=905">15:05</a>
+      <span class="cue-text">a vault</span>
+    </p>
+    <p class="cue" id="t908">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=908">15:08</a>
+      <span class="cue-text">Encryption storage right Yeah, it's just</span>
+    </p>
+    <p class="cue" id="t910">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=910">15:10</a>
+      <span class="cue-text">a place to store keys.</span>
+    </p>
+    <p class="cue" id="t911">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=911">15:11</a>
+      <span class="cue-text">Yeah, but it is like for per wallet</span>
+    </p>
+    <p class="cue" id="t913">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=913">15:13</a>
+      <span class="cue-text">you have multiple wallets. What is the</span>
+    </p>
+    <p class="cue" id="t914">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=914">15:14</a>
+      <span class="cue-text">reason for it?</span>
+    </p>
+    <p class="cue" id="t916">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=916">15:16</a>
+      <span class="cue-text">Just in case you wanted separation for</span>
+    </p>
+    <p class="cue" id="t918">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=918">15:18</a>
+      <span class="cue-text">some reason.</span>
+    </p>
+    <p class="cue" id="t918">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=918">15:18</a>
+      <span class="cue-text">It's like one password and bit warden.</span>
+    </p>
+    <p class="cue" id="t920">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=920">15:20</a>
+      <span class="cue-text">Most of these password managers have the</span>
+    </p>
+    <p class="cue" id="t922">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=922">15:22</a>
+      <span class="cue-text">similar idea of vaults where you can say</span>
+    </p>
+    <p class="cue" id="t923">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=923">15:23</a>
+      <span class="cue-text">this is my work vault. This is my</span>
+    </p>
+    <p class="cue" id="t925">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=925">15:25</a>
+      <span class="cue-text">personal vault.</span>
+    </p>
+    <p class="cue" id="t926">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=926">15:26</a>
+      <span class="cue-text">Okay.</span>
+    </p>
+    <p class="cue" id="t926">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=926">15:26</a>
+      <span class="cue-text">It's just applying the same belong to a</span>
+    </p>
+    <p class="cue" id="t928">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=928">15:28</a>
+      <span class="cue-text">specific vault.</span>
+    </p>
+    <p class="cue" id="t929">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=929">15:29</a>
+      <span class="cue-text">Yeah.</span>
+    </p>
+    <p class="cue" id="t930">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=930">15:30</a>
+      <span class="cue-text">So you can't move them across.</span>
+    </p>
+    <p class="cue" id="t933">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=933">15:33</a>
+      <span class="cue-text">Yeah. That's I don't know.</span>
+    </p>
+    <p class="cue" id="t935">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=935">15:35</a>
+      <span class="cue-text">I don't think you can move them across yet.</span>
+    </p>
+    <p class="cue" id="t936">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=936">15:36</a>
+      <span class="cue-text">Theoretically, I guess we could</span>
+    </p>
+    <p class="cue" id="t937">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=937">15:37</a>
+      <span class="cue-text">eventually I can understand</span>
+    </p>
+    <p class="cue" id="t940">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=940">15:40</a>
+      <span class="cue-text">I have them.</span>
+    </p>
+    <p class="cue" id="t941">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=941">15:41</a>
+      <span class="cue-text">Yeah.</span>
+    </p>
+    <p class="cue" id="t941">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=941">15:41</a>
+      <span class="cue-text">But here I'm trying to understand</span>
+    </p>
+    <p class="cue" id="t943">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=943">15:43</a>
+      <span class="cue-text">because they're very tightly coupled</span>
+    </p>
+    <p class="cue" id="t944">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=944">15:44</a>
+      <span class="cue-text">with ID, right? The credentials are very</span>
+    </p>
+    <p class="cue" id="t947">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=947">15:47</a>
+      <span class="cue-text">tightly coupled with ID.</span>
+    </p>
+    <p class="cue" id="t948">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=948">15:48</a>
+      <span class="cue-text">And when you have walls,</span>
+    </p>
+    <p class="cue" id="t950">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=950">15:50</a>
+      <span class="cue-text">I mean how would you move ..,</span>
+    </p>
+    <p class="cue" id="t952">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=952">15:52</a>
+      <span class="cue-text">you can't move the credentials across</span>
+    </p>
+    <p class="cue" id="t953">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=953">15:53</a>
+      <span class="cue-text">because different ID</span>
+    </p>
+    <p class="cue" id="t960">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=960">16:00</a>
+      <span class="cue-text">I would guess that you could probably ..,</span>
+    </p>
+    <p class="cue" id="t962">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=962">16:02</a>
+      <span class="cue-text">like if you created two vaults I have so</span>
+    </p>
+    <p class="cue" id="t964">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=964">16:04</a>
+      <span class="cue-text">I don't know. I'm guessing if you</span>
+    </p>
+    <p class="cue" id="t965">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=965">16:05</a>
+      <span class="cue-text">created like a local identifier in one</span>
+    </p>
+    <p class="cue" id="t967">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=967">16:07</a>
+      <span class="cue-text">vault, you could OOBI with it from</span>
+    </p>
+    <p class="cue" id="t969">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=969">16:09</a>
+      <span class="cue-text">another vault as a remote identifier so</span>
+    </p>
+    <p class="cue" id="t971">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=971">16:11</a>
+      <span class="cue-text">you could watch your own vaults. But I</span>
+    </p>
+    <p class="cue" id="t972">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=972">16:12</a>
+      <span class="cue-text">don't know why you want to do that.</span>
+    </p>
+    <p class="cue" id="t974">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=974">16:14</a>
+      <span class="cue-text">The I was looking at the KERI</span>
+    </p>
+    <p class="cue" id="t976">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=976">16:16</a>
+      <span class="cue-text">Foundation GitHub.</span>
+    </p>
+    <p class="cue" id="t978">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=978">16:18</a>
+      <span class="cue-text">There's 16 repositories and it looks</span>
+    </p>
+    <p class="cue" id="t980">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=980">16:20</a>
+      <span class="cue-text">like there's three different wallet</span>
+    </p>
+    <p class="cue" id="t981">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=981">16:21</a>
+      <span class="cue-text">implementations.</span>
+    </p>
+    <p class="cue" id="t982">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=982">16:22</a>
+      <span class="cue-text">There's the Fort Web</span>
+    </p>
+    <p class="cue" id="t985">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=985">16:25</a>
+      <span class="cue-text">the</span>
+    </p>
+    <p class="cue" id="t986">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=986">16:26</a>
+      <span class="cue-text">No, there's the I think those are just</span>
+    </p>
+    <p class="cue" id="t988">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=988">16:28</a>
+      <span class="cue-text">different deployment w targets.</span>
+    </p>
+    <p class="cue" id="t990">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=990">16:30</a>
+      <span class="cue-text">There's one for iOS, there's a web app,</span>
+    </p>
+    <p class="cue" id="t992">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=992">16:32</a>
+      <span class="cue-text">and one for Android. Yeah.</span>
+    </p>
+    <p class="cue" id="t995">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=995">16:35</a>
+      <span class="cue-text">Okay. But there's there's the fort</span>
+    </p>
+    <p class="cue" id="t997">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=997">16:37</a>
+      <span class="cue-text">for Android and fort for iOS and then</span>
+    </p>
+    <p class="cue" id="t999">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=999">16:39</a>
+      <span class="cue-text">there's the key the Locksmith. Are those</span>
+    </p>
+    <p class="cue" id="t1003">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1003">16:43</a>
+      <span class="cue-text">how are those related?</span>
+    </p>
+    <p class="cue" id="t1005">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1005">16:45</a>
+      <span class="cue-text">The Locksmith is just what we take</span>
+    </p>
+    <p class="cue" id="t1008">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1008">16:48</a>
+      <span class="cue-text">and deploy to the different targets.</span>
+    </p>
+    <p class="cue" id="t1011">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1011">16:51</a>
+      <span class="cue-text">Locksmith is desktop version.</span>
+    </p>
+    <p class="cue" id="t1013">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1013">16:53</a>
+      <span class="cue-text">Okay.</span>
+    </p>
+    <p class="cue" id="t1014">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1014">16:54</a>
+      <span class="cue-text">Well, the Fort Web and Locksmith are</span>
+    </p>
+    <p class="cue" id="t1018">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1018">16:58</a>
+      <span class="cue-text">they're they're they're both desktop</span>
+    </p>
+    <p class="cue" id="t1019">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1019">16:59</a>
+      <span class="cue-text">versions. They're just different</span>
+    </p>
+    <p class="cue" id="t1020">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1020">17:00</a>
+      <span class="cue-text">implementations of the desktop version.</span>
+    </p>
+    <p class="cue" id="t1023">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1023">17:03</a>
+      <span class="cue-text">Essentially, all of them are a wallet,</span>
+    </p>
+    <p class="cue" id="t1025">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1025">17:05</a>
+      <span class="cue-text">right? They're all the same. They're all</span>
+    </p>
+    <p class="cue" id="t1026">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1026">17:06</a>
+      <span class="cue-text">wallet. You make identifiers. You can</span>
+    </p>
+    <p class="cue" id="t1028">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1028">17:08</a>
+      <span class="cue-text">UI.</span>
+    </p>
+    <p class="cue" id="t1028">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1028">17:08</a>
+      <span class="cue-text">So, my question is, why would you pick</span>
+    </p>
+    <p class="cue" id="t1029">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1029">17:09</a>
+      <span class="cue-text">one versus the other?</span>
+    </p>
+    <p class="cue" id="t1030">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1030">17:10</a>
+      <span class="cue-text">Whatever platform you want to use it on.</span>
+    </p>
+    <p class="cue" id="t1032">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1032">17:12</a>
+      <span class="cue-text">Are</span>
+    </p>
+    <p class="cue" id="t1032">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1032">17:12</a>
+      <span class="cue-text">you trying to deploy to a desktop or to</span>
+    </p>
+    <p class="cue" id="t1033">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1033">17:13</a>
+      <span class="cue-text">an iOS?</span>
+    </p>
+    <p class="cue" id="t1034">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1034">17:14</a>
+      <span class="cue-text">But Locksmith is web.</span>
+    </p>
+    <p class="cue" id="t1036">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1036">17:16</a>
+      <span class="cue-text">No, lockmith is just desktop.</span>
+    </p>
+    <p class="cue" id="t1038">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1038">17:18</a>
+      <span class="cue-text">It's</span>
+    </p>
+    <p class="cue" id="t1038">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1038">17:18</a>
+      <span class="cue-text">Oh, this is native desktop.</span>
+    </p>
+    <p class="cue" id="t1039">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1039">17:19</a>
+      <span class="cue-text">Yeah, it's a PIDE 6 applic. Okay, that</span>
+    </p>
+    <p class="cue" id="t1042">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1042">17:22</a>
+      <span class="cue-text">makes sense. Are they coming from the</span>
+    </p>
+    <p class="cue" id="t1044">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1044">17:24</a>
+      <span class="cue-text">same?</span>
+    </p>
+    <p class="cue" id="t1045">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1045">17:25</a>
+      <span class="cue-text">It's multiplatform source bundle. It's</span>
+    </p>
+    <p class="cue" id="t1048">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1048">17:28</a>
+      <span class="cue-text">it's all it the web or yeah they</span>
+    </p>
+    <p class="cue" id="t1052">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1052">17:32</a>
+      <span class="cue-text">they all are getting deploy the same</span>
+    </p>
+    <p class="cue" id="t1054">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1054">17:34</a>
+      <span class="cue-text">stuff the same code is getting deployed</span>
+    </p>
+    <p class="cue" id="t1056">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1056">17:36</a>
+      <span class="cue-text">to all those all those different</span>
+    </p>
+    <p class="cue" id="t1057">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1057">17:37</a>
+      <span class="cue-text">platforms. So for web is just the</span>
+    </p>
+    <p class="cue" id="t1060">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1060">17:40</a>
+      <span class="cue-text">web SaaS</span>
+    </p>
+    <p class="cue" id="t1064">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1064">17:44</a>
+      <span class="cue-text">app of Fort</span>
+    </p>
+    <p class="cue" id="t1067">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1067">17:47</a>
+      <span class="cue-text">also have multiple local identifiers</span>
+    </p>
+    <p class="cue" id="t1068">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1068">17:48</a>
+      <span class="cue-text">right in a single one have multiple</span>
+    </p>
+    <p class="cue" id="t1071">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1071">17:51</a>
+      <span class="cue-text">local</span>
+    </p>
+    <p class="cue" id="t1072">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1072">17:52</a>
+      <span class="cue-text">yes</span>
+    </p>
+    <p class="cue" id="t1073">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1073">17:53</a>
+      <span class="cue-text">that's just talking about</span>
+    </p>
+    <p class="cue" id="t1076">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1076">17:56</a>
+      <span class="cue-text">issuing credential to many identifiers</span>
+    </p>
+    <p class="cue" id="t1078">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1078">17:58</a>
+      <span class="cue-text">some Josh was talking about</span>
+    </p>
+    <p class="cue" id="t1082">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1082">18:02</a>
+      <span class="cue-text">Evan be talking more about the web wall</span>
+    </p>
+    <p class="cue" id="t1084">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1084">18:04</a>
+      <span class="cue-text">tomorrow</span>
+    </p>
+    <p class="cue" id="t1086">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1086">18:06</a>
+      <span class="cue-text">or whatever you want.</span>
+    </p>
+    <p class="cue" id="t1088">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1088">18:08</a>
+      <span class="cue-text">Wow.</span>
+    </p>
+    <p class="cue" id="t1090">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1090">18:10</a>
+      <span class="cue-text">People have other things they want to</span>
+    </p>
+    <p class="cue" id="t1091">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1091">18:11</a>
+      <span class="cue-text">hear about</span>
+    </p>
+    <p class="cue" id="t1091">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1091">18:11</a>
+      <span class="cue-text">or whatever suggestions.</span>
+    </p>
+    <p class="cue" id="t1093">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1093">18:13</a>
+      <span class="cue-text">Basically, he's just going to stand up</span>
+    </p>
+    <p class="cue" id="t1095">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1095">18:15</a>
+      <span class="cue-text">there and let you ask him anything.</span>
+    </p>
+    <p class="cue" id="t1098">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1098">18:18</a>
+      <span class="cue-text">Ask me anything session with that.</span>
+    </p>
+    <p class="cue" id="t1100">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1100">18:20</a>
+      <span class="cue-text">Cool.</span>
+    </p>
+    <p class="cue" id="t1102">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1102">18:22</a>
+      <span class="cue-text">I think that's kind of it.</span>
+    </p>
+    <p class="cue" id="t1106">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1106">18:26</a>
+      <span class="cue-text">Do you guys have any other questions or</span>
+    </p>
+    <p class="cue" id="t1108">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1108">18:28</a>
+      <span class="cue-text">I guess we're kind of still kind of</span>
+    </p>
+    <p class="cue" id="t1110">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1110">18:30</a>
+      <span class="cue-text">pretty early</span>
+    </p>
+    <p class="cue" id="t1112">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1112">18:32</a>
+      <span class="cue-text">tomorrow.</span>
+    </p>
+    <p class="cue" id="t1120">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1120">18:40</a>
+      <span class="cue-text">Yeah, I guess I mean the question I have</span>
+    </p>
+    <p class="cue" id="t1121">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1121">18:41</a>
+      <span class="cue-text">that might be answered tomorrow probably</span>
+    </p>
+    <p class="cue" id="t1122">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1122">18:42</a>
+      <span class="cue-text">in your session.</span>
+    </p>
+    <p class="cue" id="t1124">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1124">18:44</a>
+      <span class="cue-text">Is it clear, based on</span>
+    </p>
+    <p class="cue" id="t1127">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1127">18:47</a>
+      <span class="cue-text">what code that's open source what a</span>
+    </p>
+    <p class="cue" id="t1130">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1130">18:50</a>
+      <span class="cue-text">provider has to do in order to do their</span>
+    </p>
+    <p class="cue" id="t1132">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1132">18:52</a>
+      <span class="cue-text">own plug-in implementation and what they</span>
+    </p>
+    <p class="cue" id="t1133">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1133">18:53</a>
+      <span class="cue-text">have to sort of implement on the</span>
+    </p>
+    <p class="cue" id="t1135">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1135">18:55</a>
+      <span class="cue-text">infrastructure side</span>
+    </p>
+    <p class="cue" id="t1138">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1138">18:58</a>
+      <span class="cue-text">for the plugin kind of. Yeah.</span>
+    </p>
+    <p class="cue" id="t1139">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1139">18:59</a>
+      <span class="cue-text">Yeah. Because I want to do I want I'm</span>
+    </p>
+    <p class="cue" id="t1141">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1141">19:01</a>
+      <span class="cue-text">going to do a blog about it and sort of</span>
+    </p>
+    <p class="cue" id="t1143">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1143">19:03</a>
+      <span class="cue-text">show people how to do it.</span>
+    </p>
+    <p class="cue" id="t1144">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1144">19:04</a>
+      <span class="cue-text">I can make my session how to make your</span>
+    </p>
+    <p class="cue" id="t1145">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1145">19:05</a>
+      <span class="cue-text">own plug-in demo.</span>
+    </p>
+    <p class="cue" id="t1146">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1146">19:06</a>
+      <span class="cue-text">Yeah, that'd be great.</span>
+    </p>
+    <p class="cue" id="t1148">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1148">19:08</a>
+      <span class="cue-text">Yeah, it's pretty cool. A good idea</span>
+    </p>
+    <p class="cue" id="t1150">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1150">19:10</a>
+      <span class="cue-text">because I will definitely be doing it.</span>
+    </p>
+    <p class="cue" id="t1151">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1151">19:11</a>
+      <span class="cue-text">I want to help other people learn too.</span>
+    </p>
+    <p class="cue" id="t1153">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1153">19:13</a>
+      <span class="cue-text">I mean it's it's all there in the repo</span>
+    </p>
+    <p class="cue" id="t1154">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1154">19:14</a>
+      <span class="cue-text">so you could obviously learn how it's</span>
+    </p>
+    <p class="cue" id="t1157">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1157">19:17</a>
+      <span class="cue-text">built but</span>
+    </p>
+    <p class="cue" id="t1158">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1158">19:18</a>
+      <span class="cue-text">I don't think we haven't done</span>
+    </p>
+    <p class="cue" id="t1159">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1159">19:19</a>
+      <span class="cue-text">anything formally yet to describe how to</span>
+    </p>
+    <p class="cue" id="t1161">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1161">19:21</a>
+      <span class="cue-text">build a plugin.</span>
+    </p>
+    <p class="cue" id="t1162">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1162">19:22</a>
+      <span class="cue-text">Okay.</span>
+    </p>
+    <p class="cue" id="t1163">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1163">19:23</a>
+      <span class="cue-text">So that would be a good thing.</span>
+    </p>
+    <p class="cue" id="t1164">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1164">19:24</a>
+      <span class="cue-text">There is yeah healthKERI shipped like a</span>
+    </p>
+    <p class="cue" id="t1166">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1166">19:26</a>
+      <span class="cue-text">plug-in based flask. So they basically</span>
+    </p>
+    <p class="cue" id="t1167">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1167">19:27</a>
+      <span class="cue-text">like define the set of functions</span>
+    </p>
+    <p class="cue" id="t1169">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1169">19:29</a>
+      <span class="cue-text">you need to define in order to make your</span>
+    </p>
+    <p class="cue" id="t1171">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1171">19:31</a>
+      <span class="cue-text">own plugin.</span>
+    </p>
+    <p class="cue" id="t1172">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1172">19:32</a>
+      <span class="cue-text">Awesome. Yeah,</span>
+    </p>
+    <p class="cue" id="t1174">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1174">19:34</a>
+      <span class="cue-text">that's what I want to know.</span>
+    </p>
+    <p class="cue" id="t1177">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1177">19:37</a>
+      <span class="cue-text">Time to go through that sort of thing</span>
+    </p>
+    <p class="cue" id="t1178">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1178">19:38</a>
+      <span class="cue-text">tomorrow.</span>
+    </p>
+    <p class="cue" id="t1180">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1180">19:40</a>
+      <span class="cue-text">Was interesting.</span>
+    </p>
+    <p class="cue" id="t1181">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1181">19:41</a>
+      <span class="cue-text">There are other open source KERI</span>
+    </p>
+    <p class="cue" id="t1182">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1182">19:42</a>
+      <span class="cue-text">wallets besides the Fort and Locksmith one,</span>
+    </p>
+    <p class="cue" id="t1185">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1185">19:45</a>
+      <span class="cue-text">isn't there?</span>
+    </p>
+    <p class="cue" id="t1186">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1186">19:46</a>
+      <span class="cue-text">Yeah. From so I'll talk a little bit</span>
+    </p>
+    <p class="cue" id="t1188">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1188">19:48</a>
+      <span class="cue-text">about this in my session, but there's</span>
+    </p>
+    <p class="cue" id="t1189">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1189">19:49</a>
+      <span class="cue-text">heavyweight wallets and lightweight</span>
+    </p>
+    <p class="cue" id="t1191">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1191">19:51</a>
+      <span class="cue-text">wallets. Lightweight or Signify wallets.</span>
+    </p>
+    <p class="cue" id="t1193">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1193">19:53</a>
+      <span class="cue-text">This is a heavyweight wallet. It's the</span>
+    </p>
+    <p class="cue" id="t1194">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1194">19:54</a>
+      <span class="cue-text">most complete one in the world by far.</span>
+    </p>
+    <p class="cue" id="t1197">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1197">19:57</a>
+      <span class="cue-text">Well, health KERI's is</span>
+    </p>
+    <p class="cue" id="t1199">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1199">19:59</a>
+      <span class="cue-text">Yeah, healthKERI's is I guess</span>
+    </p>
+    <p class="cue" id="t1200">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1200">20:00</a>
+      <span class="cue-text">this is sort of a stripped down</span>
+    </p>
+    <p class="cue" id="t1202">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1202">20:02</a>
+      <span class="cue-text">slightest. So I guess health carries is</span>
+    </p>
+    <p class="cue" id="t1205">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1205">20:05</a>
+      <span class="cue-text">the most complete and then this is</span>
+    </p>
+    <p class="cue" id="t1206">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1206">20:06</a>
+      <span class="cue-text">stripped-down version of but it's</span>
+    </p>
+    <p class="cue" id="t1208">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1208">20:08</a>
+      <span class="cue-text">the furthest of all</span>
+    </p>
+    <p class="cue" id="t1209">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1209">20:09</a>
+      <span class="cue-text">but that's your session tomorrow not</span>
+    </p>
+    <p class="cue" id="t1211">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1211">20:11</a>
+      <span class="cue-text">your session today.</span>
+    </p>
+    <p class="cue" id="t1212">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1212">20:12</a>
+      <span class="cue-text">No I have two sessions today. One is</span>
+    </p>
+    <p class="cue" id="t1214">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1214">20:14</a>
+      <span class="cue-text">the last one is on the KERIA stuff</span>
+    </p>
+    <p class="cue" id="t1217">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1217">20:17</a>
+      <span class="cue-text">about lightweight wall. The first one is</span>
+    </p>
+    <p class="cue" id="t1219">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1219">20:19</a>
+      <span class="cue-text">going to be on the GLEIF Root of Trust.</span>
+    </p>
+    <p class="cue" id="t1224">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1224">20:24</a>
+      <span class="cue-text">Cool. Wow.</span>
+    </p>
+    <p class="cue" id="t1224">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1224">20:24</a>
+      <span class="cue-text">Well thank you. Do you guys have any</span>
+    </p>
+    <p class="cue" id="t1227">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1227">20:27</a>
+      <span class="cue-text">other questions?</span>
+    </p>
+    <p class="cue" id="t1233">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1233">20:33</a>
+      <span class="cue-text">– Who wants to speedrun building a</span>
+    </p>
+    <p class="cue" id="t1234">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1234">20:34</a>
+      <span class="cue-text">provider</span>
+    </p>
+    <p class="cue" id="t1235">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1235">20:35</a>
+      <span class="cue-text">Right now?</span>
+    </p>
+    <p class="cue" id="t1236">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1236">20:36</a>
+      <span class="cue-text">Let's do it.</span>
+    </p>
+    <p class="cue" id="t1236">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1236">20:36</a>
+      <span class="cue-text">Evan can coach you through it.</span>
+    </p>
+    <p class="cue" id="t1239">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1239">20:39</a>
+      <span class="cue-text">All right.</span>
+    </p>
+    <p class="cue" id="t1240">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1240">20:40</a>
+      <span class="cue-text">I just copy our</span>
+    </p>
+    <p class="cue" id="t1248">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1248">20:48</a>
+      <span class="cue-text">Done; 40 minutes? No.</span>
+    </p>
+    <p class="cue" id="t1251">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1251">20:51</a>
+      <span class="cue-text">Sorry that this wasn't very long.</span>
+    </p>
+    <p class="cue" id="t1254">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1254">20:54</a>
+      <span class="cue-text">Good.</span>
+    </p>
+    <p class="cue" id="t1256">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1256">20:56</a>
+      <span class="cue-text">See,</span>
+    </p>
+    <p class="cue" id="t1259">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1259">20:59</a>
+      <span class="cue-text">We got a little time, Jay, you can</span>
+    </p>
+    <p class="cue" id="t1265">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1265">21:05</a>
+      <span class="cue-text">launch the iOS thing if you want.</span>
+    </p>
+    <p class="cue" id="t1273">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1273">21:13</a>
+      <span class="cue-text">Sure.</span>
+    </p>
+    <p class="cue" id="t1274">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1274">21:14</a>
+      <span class="cue-text">Just to show it.</span>
+    </p>
+    <p class="cue" id="t1276">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1276">21:16</a>
+      <span class="cue-text">Yep. So, this is the iOS app.</span>
+    </p>
+    <p class="cue" id="t1280">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1280">21:20</a>
+      <span class="cue-text">Suppose I should</span>
+    </p>
+    <p class="cue" id="t1284">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1284">21:24</a>
+      <span class="cue-text">So yeah, it's functionally speaking</span>
+    </p>
+    <p class="cue" id="t1290">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1290">21:30</a>
+      <span class="cue-text">just it's the same code just it's</span>
+    </p>
+    <p class="cue" id="t1295">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1295">21:35</a>
+      <span class="cue-text">deployed to a the mobile apps</span>
+    </p>
+    <p class="cue" id="t1298">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1298">21:38</a>
+      <span class="cue-text">are just wrappers that will run the</span>
+    </p>
+    <p class="cue" id="t1301">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1301">21:41</a>
+      <span class="cue-text">Locksmith code</span>
+    </p>
+    <p class="cue" id="t1303">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1303">21:43</a>
+      <span class="cue-text">and yeah it's just this functionally</span>
+    </p>
+    <p class="cue" id="t1306">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1306">21:46</a>
+      <span class="cue-text">the same experience on any of the</span>
+    </p>
+    <p class="cue" id="t1310">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1310">21:50</a>
+      <span class="cue-text">devices and that's right I have not</span>
+    </p>
+    <p class="cue" id="t1313">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1313">21:53</a>
+      <span class="cue-text">fixed this yet.</span>
+    </p>
+    <p class="cue" id="t1314">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1314">21:54</a>
+      <span class="cue-text">So, I'm noticing that this looks very</span>
+    </p>
+    <p class="cue" id="t1316">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1316">21:56</a>
+      <span class="cue-text">similar to the flat UI. It's And I know</span>
+    </p>
+    <p class="cue" id="t1319">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1319">21:59</a>
+      <span class="cue-text">it's Pyite 6.</span>
+    </p>
+    <p class="cue" id="t1321">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1321">22:01</a>
+      <span class="cue-text">Mhm.</span>
+    </p>
+    <p class="cue" id="t1322">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1322">22:02</a>
+      <span class="cue-text">Yeah. Well, healthKERI basically just</span>
+    </p>
+    <p class="cue" id="t1325">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1325">22:05</a>
+      <span class="cue-text">translated the flat app into Pyite 6.</span>
+    </p>
+    <p class="cue" id="t1327">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1327">22:07</a>
+      <span class="cue-text">Okay. So, the flat app is,</span>
+    </p>
+    <p class="cue" id="t1331">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1331">22:11</a>
+      <span class="cue-text">right? I just wondered if it was I guess</span>
+    </p>
+    <p class="cue" id="t1333">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1333">22:13</a>
+      <span class="cue-text">did they lift the CSS styling when they</span>
+    </p>
+    <p class="cue" id="t1336">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1336">22:16</a>
+      <span class="cue-text">This is CS. Yeah, I just I left it as</span>
+    </p>
+    <p class="cue" id="t1338">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1338">22:18</a>
+      <span class="cue-text">close as it to what it was.</span>
+    </p>
+    <p class="cue" id="t1342">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1342">22:22</a>
+      <span class="cue-text">Okay.</span>
+    </p>
+    <p class="cue" id="t1359">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1359">22:39</a>
+      <span class="cue-text">Good jokes.</span>
+    </p>
+    <p class="cue" id="t1360">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1360">22:40</a>
+      <span class="cue-text">Nice work.</span>
+    </p>
+    <p class="cue" id="t1361">
+      <a class="cue-time" href="../../../#open-keri-infrastructure-jay-alexander-elliot&amp;t=1361">22:41</a>
+      <span class="cue-text">Thank you.</span>
+    </p>
+    </article>
+    <footer>KERI Foundation • Conference Videos Collection</footer>
+  </div>
+</body>
+</html>

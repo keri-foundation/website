@@ -1,0 +1,325 @@
+#!/usr/bin/env node
+/**
+ * Helper for the conference galleries under confs/<ORG>/<YEAR>/<month>/.
+ *
+ * Usage:
+ *   node scripts/confs.mjs list
+ *   node scripts/confs.mjs sync-subtitles [--dry-run] [--conf KERI/2026/apr]...
+ *   node scripts/confs.mjs verify [--remote https://keri.foundation] [--conf KERI/2026/apr]...
+ *
+ * list            Print every conference id (ORG/YEAR/month) that has an index.json.
+ * sync-subtitles  Copy curated .srt files from the source folders listed in
+ *                 scripts/subtitle-sources.tsv into the conference folders. Only
+ *                 subtitles referenced by that conference's index.json are copied.
+ * verify          Check that every file referenced by index.json exists (media, mp3,
+ *                 subtitles, slides, posters, photos, transcript pages) and list files
+ *                 that nothing references. With --remote, also HEAD-request each file
+ *                 on the live site.
+ */
+
+import { readFile, readdir, stat, copyFile, mkdir } from "node:fs/promises";
+import { existsSync } from "node:fs";
+import { dirname, join, relative, resolve, sep } from "node:path";
+import { fileURLToPath } from "node:url";
+import { homedir } from "node:os";
+
+const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
+const SITE_ROOT = resolve(SCRIPT_DIR, "..");
+const CONFS_ROOT = join(SITE_ROOT, "confs");
+const SOURCES_FILE = join(SCRIPT_DIR, "subtitle-sources.tsv");
+
+const ORG_RE = /^[A-Za-z][A-Za-z0-9_-]*$/;
+const YEAR_RE = /^\d{4}$/;
+const IGNORED_FILES = new Set([".DS_Store", ".gitkeep", "index.html", "index.json"]);
+
+function parseArgs(argv) {
+  const opts = { command: argv[0], confs: [], dryRun: false, remote: null };
+  for (let i = 1; i < argv.length; i++) {
+    const a = argv[i];
+    if (a === "--conf") opts.confs.push(argv[++i].replace(/^\/+|\/+$/g, ""));
+    else if (a === "--dry-run" || a === "-n") opts.dryRun = true;
+    else if (a === "--remote") opts.remote = argv[++i].replace(/\/+$/, "");
+    else throw new Error(`Unknown argument: ${a}`);
+  }
+  return opts;
+}
+
+const toPosix = (p) => p.split(sep).join("/");
+
+async function isDir(p) {
+  try {
+    return (await stat(p)).isDirectory();
+  } catch {
+    return false;
+  }
+}
+
+async function findConferences() {
+  const ids = [];
+  for (const org of (await readdir(CONFS_ROOT)).sort()) {
+    if (!ORG_RE.test(org) || !(await isDir(join(CONFS_ROOT, org)))) continue;
+    for (const year of (await readdir(join(CONFS_ROOT, org))).sort()) {
+      if (!YEAR_RE.test(year) || !(await isDir(join(CONFS_ROOT, org, year)))) continue;
+      for (const month of (await readdir(join(CONFS_ROOT, org, year))).sort()) {
+        if (existsSync(join(CONFS_ROOT, org, year, month, "index.json"))) {
+          ids.push(`${org}/${year}/${month}`);
+        }
+      }
+    }
+  }
+  return ids;
+}
+
+async function selectedConferences(opts) {
+  const all = await findConferences();
+  if (!opts.confs.length) return all;
+  for (const id of opts.confs) {
+    if (!all.includes(id)) throw new Error(`Unknown conference: ${id} (known: ${all.join(", ")})`);
+  }
+  return opts.confs;
+}
+
+async function loadConfig(id) {
+  return JSON.parse(await readFile(join(CONFS_ROOT, id, "index.json"), "utf8"));
+}
+
+/** Same as generateVideoId() in index.html / generate-transcript-pages.mjs. */
+function generateVideoId(title) {
+  return String(title || "")
+    .toLowerCase()
+    .replace(/[^a-z0-9]/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
+function transcriptsDirOf(config) {
+  return typeof config.transcriptsDir === "string" ? config.transcriptsDir.replace(/\/+$/, "") : "";
+}
+
+function transcriptPageRel(config, video) {
+  const dir = transcriptsDirOf(config);
+  if (!dir || !video.subtitle) return null;
+  const id = generateVideoId(video.title);
+  if (!id) return null;
+  const section = String(video.subtitle).split("/").slice(-2, -1)[0];
+  return section ? `${dir}/${section}/${id}.html` : `${dir}/${id}.html`;
+}
+
+function isExternal(href) {
+  return /^(https?:)?\/\//i.test(href) || /^(mailto|tel):/i.test(href);
+}
+
+/** Every local asset referenced by a gallery config: [{ kind, label, href }]. */
+function collectRefs(config) {
+  const refs = [];
+  const add = (kind, label, href) => {
+    if (href && !isExternal(href)) refs.push({ kind, label, href: String(href) });
+  };
+
+  for (const item of config.page?.nav || []) {
+    const href = String(item.href || "");
+    if (href.startsWith("/confs/") || (href && !href.startsWith("/"))) add("nav", item.label, href);
+  }
+  if (config.promo) {
+    add("promo", "promo video", config.promo.src);
+    add("promo", "promo poster", config.promo.poster);
+  }
+  add("poster", "defaultPoster", config.defaultPoster);
+  for (const [name, src] of Object.entries(config.speakerPhotos || {})) add("photo", name, src);
+
+  const sections = new Set();
+  for (const v of config.videos || []) {
+    add("video", v.title, v.path);
+    add("audio", v.title, v.audio || (v.path ? String(v.path).replace(/\.mp4$/i, ".mp3") : ""));
+    add("subtitle", v.title, v.subtitle);
+    add("slides", v.title, v.presentation);
+    add("poster", v.title, v.poster);
+    const page = transcriptPageRel(config, v);
+    if (page) {
+      add("transcript", v.title, page);
+      sections.add(dirname(page));
+    }
+  }
+  for (const dir of sections) add("transcript", "listing", `${dir}/`);
+  return refs;
+}
+
+/** Map a reference to a path relative to the site root (e.g. confs/KERI/2026/apr/talks/x.mp4). */
+function siteRelative(id, href) {
+  const clean = href.split(/[?#]/)[0];
+  let rel = clean.startsWith("/") ? clean.slice(1) : `confs/${id}/${clean}`;
+  rel = toPosix(relative(SITE_ROOT, resolve(SITE_ROOT, rel)));
+  if (clean.endsWith("/") || clean === "") rel += "/index.html";
+  return rel.replace(/\/\/+/g, "/");
+}
+
+async function walkFiles(dir) {
+  const out = [];
+  for (const entry of await readdir(dir, { withFileTypes: true })) {
+    const abs = join(dir, entry.name);
+    if (entry.isDirectory()) out.push(...(await walkFiles(abs)));
+    else out.push(abs);
+  }
+  return out;
+}
+
+function encodePath(rel) {
+  return rel.split("/").map(encodeURIComponent).join("/");
+}
+
+async function headAll(urls, concurrency = 6) {
+  const results = new Map();
+  let next = 0;
+  async function worker() {
+    while (next < urls.length) {
+      const url = urls[next++];
+      try {
+        const res = await fetch(url, { method: "HEAD", redirect: "manual" });
+        results.set(url, res.status);
+      } catch (err) {
+        results.set(url, `error: ${err.cause?.code || err.message}`);
+      }
+    }
+  }
+  await Promise.all(Array.from({ length: concurrency }, worker));
+  return results;
+}
+
+async function cmdVerify(opts) {
+  let problems = 0;
+  for (const id of await selectedConferences(opts)) {
+    const config = await loadConfig(id);
+    const refs = collectRefs(config);
+    const confDir = join(CONFS_ROOT, id);
+    console.log(`\n== ${id}  (${(config.videos || []).length} videos, ${refs.length} local references)`);
+
+    const referenced = new Set();
+    const missing = [];
+    for (const ref of refs) {
+      const rel = siteRelative(id, ref.href);
+      referenced.add(rel);
+      if (!existsSync(join(SITE_ROOT, rel))) missing.push({ ...ref, rel });
+    }
+    for (const m of missing) console.log(`  MISSING ${m.kind.padEnd(10)} ${m.rel}   (${m.label})`);
+    problems += missing.length;
+
+    const transcriptsDir = transcriptsDirOf(config);
+    const unreferenced = (await walkFiles(confDir))
+      .map((abs) => toPosix(relative(SITE_ROOT, abs)))
+      .filter((rel) => !IGNORED_FILES.has(rel.split("/").pop()))
+      .filter((rel) => !referenced.has(rel))
+      .filter((rel) => !(transcriptsDir && rel.startsWith(`confs/${id}/${transcriptsDir}/`) && rel.endsWith(".html")));
+    for (const rel of unreferenced) console.log(`  unused  ${rel}`);
+
+    if (!missing.length) console.log("  all referenced files present locally");
+
+    if (opts.remote) {
+      const urls = [`${opts.remote}/confs/${id}/`, ...[...referenced].map((rel) => `${opts.remote}/${encodePath(rel)}`)];
+      const results = await headAll([...new Set(urls)]);
+      let bad = 0;
+      for (const [url, status] of results) {
+        if (status !== 200) {
+          bad++;
+          console.log(`  REMOTE ${status}  ${decodeURIComponent(url)}`);
+        }
+      }
+      console.log(bad ? `  remote: ${bad} of ${results.size} URLs not OK` : `  remote: all ${results.size} URLs return 200`);
+      problems += bad;
+    }
+  }
+  if (problems) {
+    console.log(`\n${problems} problem(s) found.`);
+    process.exit(1);
+  }
+  console.log("\nverify: OK");
+}
+
+async function readSources() {
+  if (!existsSync(SOURCES_FILE)) return [];
+  const lines = (await readFile(SOURCES_FILE, "utf8")).split("\n");
+  const sources = [];
+  for (const raw of lines) {
+    const line = raw.trim();
+    if (!line || line.startsWith("#")) continue;
+    const m = line.match(/^(\S+)\s+(.+)$/);
+    if (!m) throw new Error(`Bad line in ${SOURCES_FILE}: ${raw}`);
+    const target = m[1].replace(/^\/+|\/+$/g, "");
+    const source = m[2].trim().replace(/^~(?=\/)/, homedir());
+    const parts = target.split("/");
+    if (parts.length < 4) throw new Error(`Target must be ORG/YEAR/month/<folder>: ${target}`);
+    sources.push({ conf: parts.slice(0, 3).join("/"), folder: parts.slice(3).join("/"), source });
+  }
+  return sources;
+}
+
+async function sameContent(a, b) {
+  if (!existsSync(b)) return false;
+  const [x, y] = await Promise.all([readFile(a), readFile(b)]);
+  return x.equals(y);
+}
+
+async function cmdSyncSubtitles(opts) {
+  const confs = await selectedConferences(opts);
+  const sources = (await readSources()).filter((s) => confs.includes(s.conf));
+  if (!sources.length) {
+    console.log("No subtitle sources configured for the selected conference(s).");
+    return;
+  }
+  let copied = 0;
+  for (const { conf, folder, source } of sources) {
+    console.log(`\n== ${conf}/${folder}  ←  ${source}`);
+    if (!(await isDir(source))) {
+      console.log("  source folder not found, skipped");
+      continue;
+    }
+    const config = await loadConfig(conf);
+    const wanted = (config.videos || [])
+      .map((v) => v.subtitle)
+      .filter((s) => s && dirname(s) === folder)
+      .map((s) => s.slice(folder.length + 1));
+    let unchanged = 0;
+    for (const name of wanted) {
+      const src = join(source, name);
+      const dest = join(CONFS_ROOT, conf, folder, name);
+      if (!existsSync(src)) {
+        console.log(`  not in source: ${name}`);
+        continue;
+      }
+      if (await sameContent(src, dest)) {
+        unchanged++;
+        continue;
+      }
+      console.log(`  ${opts.dryRun ? "[dry-run] " : ""}${existsSync(dest) ? "update" : "new"}: ${name}`);
+      if (!opts.dryRun) {
+        await mkdir(dirname(dest), { recursive: true });
+        await copyFile(src, dest);
+      }
+      copied++;
+    }
+    console.log(`  ${unchanged} unchanged`);
+  }
+  console.log(`\nsync-subtitles: ${copied} file(s) ${opts.dryRun ? "would be " : ""}copied`);
+}
+
+async function main() {
+  const opts = parseArgs(process.argv.slice(2));
+  switch (opts.command) {
+    case "list":
+      for (const id of await selectedConferences(opts)) console.log(id);
+      break;
+    case "sync-subtitles":
+      await cmdSyncSubtitles(opts);
+      break;
+    case "verify":
+      await cmdVerify(opts);
+      break;
+    default:
+      console.log("Usage: node scripts/confs.mjs <list|sync-subtitles|verify> [--conf ORG/YEAR/month] [--dry-run] [--remote URL]");
+      process.exit(opts.command ? 1 : 0);
+  }
+}
+
+main().catch((err) => {
+  console.error(err.message || err);
+  process.exit(1);
+});

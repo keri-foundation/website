@@ -6,7 +6,7 @@
     "statusNotice": "",
     "subtitle": "Talks from the conference",
     "footer": "Conference Videos",
-    "searchPlaceholder": "Type to search across all talks…",
+    "searchPlaceholder": "Type to search across all talks\u2026",
     "searchLabel": "Search all transcripts",
     "nav": [
       {
@@ -50,9 +50,11 @@
   },
   "days": [
     "Day 1",
-    "Day 2"
+    "Day 2",
+    "Interviews"
   ],
-  "defaultPoster": "posters/default.jpg",
+  "transcriptsDir": "transcripts/html",
+  "defaultPoster": "promo/poster.jpg",
   "speakerPhotos": {
     "Speaker Name": "speaker-photos/Speaker-Name.jpg"
   },
@@ -62,11 +64,20 @@
       "day": "Day 1",
       "title": "Talk Title - Speaker Name",
       "speaker": "Speaker Name",
-      "path": "videos/Speaker-Name-Talk-Title.mp4",
+      "path": "talks/Speaker-Name-Talk-Title.mp4",
       "duration": "20:00",
-      "subtitle": "videos/Speaker-Name-Talk-Title.srt",
-      "presentation": "presentations/Speaker-Name-Talk-Title.pdf",
+      "subtitle": "talks/Speaker-Name-Talk-Title.srt",
+      "presentation": "slides/Speaker-Name-Talk-Title.pdf",
       "poster": "speaker-photos/Speaker-Name.jpg"
+    },
+    {
+      "order": 1,
+      "day": "Interviews",
+      "title": "Interview - Speaker Name",
+      "speaker": "Speaker Name",
+      "path": "interviews/Speaker-Name-Interview.mp4",
+      "duration": "1:30",
+      "subtitle": "interviews/Speaker-Name-Interview.srt"
     }
   ]
 }

@@ -1,0 +1,10 @@
+# Where curated subtitles come from, per conference folder.
+# Used by: scripts/deploy-confs.sh subtitles   (node scripts/confs.mjs sync-subtitles)
+#
+# <ORG>/<YEAR>/<month>/<folder>    <source directory on this machine>
+#
+# Only .srt files referenced by that conference's index.json are copied.
+# Conferences without a line here keep the .srt files that are already in place.
+
+KERI/2026/apr/talks         /path/to/CONF26-subtitles/subtitles
+KERI/2026/apr/interviews    /path/to/CONF26-subtitles/subtitles-interviews
