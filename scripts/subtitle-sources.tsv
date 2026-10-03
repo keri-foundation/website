@@ -3,8 +3,13 @@
 #
 # <ORG>/<YEAR>/<month>/<folder>    <source directory on this machine>
 #
-# Only .srt files referenced by that conference's index.json are copied.
+# Only .srt files referenced by that conference's index.json are copied
+# (video.subtitle and any video.subtitles.<lang> paths).
+# Source trees are searched recursively by basename. Gallery names may add a
+# session prefix (morning-|lunch-|afternoon-) that is stripped when matching
+# speaker-cut files in the subtitles repo (SEDI).
 # Conferences without a line here keep the .srt files that are already in place.
 
 KERI/2026/apr/talks         /path/to/CONF26-subtitles/subtitles
 KERI/2026/apr/interviews    /path/to/CONF26-subtitles/subtitles-interviews
+SEDI/2025/nov/talks         /path/to/subtitles/subtitles/SEDI/2025-11-SEDI

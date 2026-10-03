@@ -4,6 +4,7 @@
  *
  * Each talk with a subtitle becomes a page under a transcripts/ folder. Paths inside
  * those pages are relative to the gallery index.html so the tree can be moved later.
+ * Uses English (`subtitle` / `subtitles.en`); other language tracks are ignored here.
  *
  * Usage:
  *   node scripts/generate-transcript-pages.mjs \
@@ -118,6 +119,26 @@ function parseSrt(raw) {
 /** Normalize path separators; return posix-style relative path. */
 function toPosix(p) {
   return p.split(sep).join("/");
+}
+
+/** English (or first) subtitle path used for SEO transcript pages. */
+function primarySubtitlePath(video) {
+  if (video?.subtitles && typeof video.subtitles === "object") {
+    const en = video.subtitles.en;
+    if (typeof en === "string") return toPosix(en);
+    if (en && typeof en === "object" && en.src) return toPosix(String(en.src));
+  }
+  if (typeof video?.subtitle === "string") return toPosix(video.subtitle);
+  if (video?.subtitle && typeof video.subtitle === "object" && video.subtitle.src) {
+    return toPosix(String(video.subtitle.src));
+  }
+  if (video?.subtitles && typeof video.subtitles === "object") {
+    for (const value of Object.values(video.subtitles)) {
+      if (typeof value === "string") return toPosix(value);
+      if (value && typeof value === "object" && value.src) return toPosix(String(value.src));
+    }
+  }
+  return null;
 }
 
 /**
@@ -470,7 +491,8 @@ async function main() {
   let skipped = 0;
 
   for (const video of videos) {
-    if (!video.subtitle) {
+    const subtitleRel = primarySubtitlePath(video);
+    if (!subtitleRel) {
       skipped++;
       continue;
     }
@@ -482,7 +504,6 @@ async function main() {
       continue;
     }
 
-    const subtitleRel = toPosix(video.subtitle);
     const srtAbs = join(galleryDir, ...subtitleRel.split("/"));
     if (!existsSync(srtAbs)) {
       console.warn(`Missing SRT, skip: ${srtAbs}`);

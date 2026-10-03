@@ -167,7 +167,10 @@
       "title": "Cindy George",
       "path": "talks/morning-00-31-20--00-55-41-Cindy-George.mp4",
       "duration": "24:21",
-      "subtitle": "talks/morning-00-31-20--00-55-41-Cindy-George.srt"
+      "subtitle": "talks/morning-00-31-20--00-55-41-Cindy-George.srt",
+      "subtitles": {
+        "nl": "talks/morning-00-31-20--00-55-41-Cindy-George.nl.srt"
+      }
     },
     {
       "order": 4,
