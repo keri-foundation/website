@@ -3272,10 +3272,20 @@
                 captionLangPreference = normalizeLangCode(lang);
                 if (!syncUrl) return;
                 if (modalVideoId && videoModalOverlay && !videoModalOverlay.hidden) {
-                    const end = (typeof clipEndTime === 'number' && Number.isFinite(clipEndTime))
+                    // Preserve clip/share t&e. Using currentTime here used to rewrite t=
+                    // (often to 0 before seek finished) and drop the end bound.
+                    const { start, end } = getCurrentHashTimeRange();
+                    const activeClipStart = (typeof clipStartTime === 'number' && Number.isFinite(clipStartTime))
+                        ? clipStartTime
+                        : null;
+                    const activeClipEnd = (typeof clipEndTime === 'number' && Number.isFinite(clipEndTime))
                         ? clipEndTime
                         : null;
-                    updateVideoUrlForModal(modalVideoId, modalVideoEl?.currentTime ?? 0, end);
+                    const time = start !== null
+                        ? start
+                        : (activeClipStart !== null ? activeClipStart : (modalVideoEl?.currentTime ?? 0));
+                    const endTime = activeClipEnd !== null ? activeClipEnd : end;
+                    updateVideoUrlForModal(modalVideoId, time, endTime);
                     return;
                 }
                 syncLangSearchParam(captionLangPreference);
@@ -3853,15 +3863,8 @@
             }
 
             function buildShareUrl(videoId, startTime, endTime) {
-                let url = `${window.location.origin}${window.location.pathname}#${videoId}`;
-                const start = Math.floor(typeof startTime === 'number' ? startTime : 0);
-                if (start > 0 || (typeof endTime === 'number' && Number.isFinite(endTime))) {
-                    url += `&t=${Math.max(0, start)}`;
-                }
-                if (typeof endTime === 'number' && Number.isFinite(endTime) && endTime > start) {
-                    url += `&e=${Math.floor(endTime)}`;
-                }
-                return url;
+                // Reuse buildVideoHash so copied links keep lang= (and from=) in sync with the address bar.
+                return `${window.location.origin}${window.location.pathname}${window.location.search}${buildVideoHash(videoId, startTime, endTime)}`;
             }
 
             function copyShareUrl(url, pendingStart) {
