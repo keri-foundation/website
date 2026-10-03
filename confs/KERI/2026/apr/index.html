@@ -1419,8 +1419,14 @@
             --plyr-color-main: #5f7c2f;
         }
 
-        /* Plyr hides native WebKit captions so it can draw its own overlay.
-           iOS native fullscreen has no overlay, so unhide them there. */
+        /* Plyr draws its own caption overlay. Keep native tracks hidden so a
+           second language (e.g. English) cannot flash under Dutch on Chromium. */
+        .plyr--full-ui ::-webkit-media-text-track-container,
+        .plyr--full-ui video::-webkit-media-text-track-container {
+            display: none !important;
+        }
+
+        /* iOS native fullscreen has no Plyr overlay, so unhide native tracks there. */
         html.ios-native-fullscreen .plyr--full-ui ::-webkit-media-text-track-container,
         html.ios-native-fullscreen video::-webkit-media-text-track-container {
             display: block !important;
@@ -2270,25 +2276,38 @@
                     }
                     return;
                 }
-                // With multiple languages, only the active track may be showing.
+                // Only the active language may be showing; others must be disabled
+                // (not merely hidden) or Chromium/Firefox can flash their cues.
+                enforceActiveCaptionTrack(videoEl);
+            }
+
+            function enforceActiveCaptionTrack(videoEl, preferredLang) {
+                const tracks = videoEl?.textTracks;
+                if (!tracks) return;
                 const player = videoEl._plyrPlayer;
                 const want = String(
-                    player?.language || videoEl.dataset.preferredCaptionLang || 'en'
+                    preferredLang
+                    || player?.language
+                    || videoEl.dataset.preferredCaptionLang
+                    || 'en'
                 ).toLowerCase();
                 let matched = false;
                 for (let i = 0; i < tracks.length; i++) {
                     if (!isCaptionTextTrack(tracks[i])) continue;
                     const lang = String(tracks[i].language || '').toLowerCase();
-                    const next = lang === want ? 'showing' : 'hidden';
-                    if (lang === want) matched = true;
-                    if (tracks[i].mode !== next) tracks[i].mode = next;
+                    if (lang === want) {
+                        matched = true;
+                        // Keep cues available to Plyr without relying on other languages.
+                        if (tracks[i].mode !== 'showing') tracks[i].mode = 'showing';
+                    } else if (tracks[i].mode !== 'disabled') {
+                        tracks[i].mode = 'disabled';
+                    }
                 }
                 if (!matched) {
                     for (let i = 0; i < tracks.length; i++) {
-                        if (isCaptionTextTrack(tracks[i])) {
-                            tracks[i].mode = 'showing';
-                            break;
-                        }
+                        if (!isCaptionTextTrack(tracks[i])) continue;
+                        if (tracks[i].mode !== 'showing') tracks[i].mode = 'showing';
+                        break;
                     }
                 }
             }
@@ -2555,7 +2574,12 @@
                 const apply = () => {
                     try {
                         player.language = preferred.language || want || 'en';
+                        videoEl.dataset.preferredCaptionLang = String(player.language || want).toLowerCase();
+                        // Disable other languages before enabling captions so English
+                        // cues cannot flash between Dutch timestamps (Ubuntu/Chromium).
+                        enforceActiveCaptionTrack(videoEl, videoEl.dataset.preferredCaptionLang);
                         player.toggleCaptions(true);
+                        enforceActiveCaptionTrack(videoEl, videoEl.dataset.preferredCaptionLang);
                     } catch {
                         // Plyr may not be ready yet; ignore.
                     }
@@ -3389,6 +3413,7 @@
                         if (lang) {
                             videoEl.dataset.preferredCaptionLang = lang;
                             setCaptionLangPreference(lang);
+                            enforceActiveCaptionTrack(videoEl, lang);
                         }
                         updateCaptionGapNotice(videoEl);
                     });
@@ -3396,6 +3421,7 @@
                 if (videoEl.textTracks && videoEl.dataset.captionLangTrackBound !== 'true') {
                     videoEl.dataset.captionLangTrackBound = 'true';
                     videoEl.textTracks.addEventListener('change', () => {
+                        enforceActiveCaptionTrack(videoEl);
                         syncCaptionLangFromVideoEl(videoEl);
                         updateCaptionGapNotice(videoEl);
                     });
@@ -3410,7 +3436,12 @@
                     return;
                 }
                 videoEl.dataset.captionGapBound = 'true';
-                const onUpdate = () => updateCaptionGapNotice(videoEl);
+                const onUpdate = () => {
+                    // Plyr may flip inactive tracks back to "hidden" (still cue-active);
+                    // keep non-selected languages disabled so English cannot flash.
+                    enforceActiveCaptionTrack(videoEl);
+                    updateCaptionGapNotice(videoEl);
+                };
                 videoEl.addEventListener('timeupdate', onUpdate);
                 videoEl.addEventListener('seeked', onUpdate);
                 videoEl.addEventListener('play', onUpdate);
