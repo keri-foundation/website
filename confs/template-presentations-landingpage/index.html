@@ -1158,6 +1158,28 @@
             line-height: 1.6;
         }
 
+        .caption-gap-notice {
+            position: absolute;
+            left: 50%;
+            bottom: 4.5rem;
+            transform: translateX(-50%);
+            z-index: 6;
+            max-width: min(92%, 28rem);
+            padding: 0.45rem 0.85rem;
+            border-radius: 4px;
+            background: rgba(0, 0, 0, 0.75);
+            color: #fff;
+            font-size: 0.85rem;
+            line-height: 1.35;
+            text-align: center;
+            pointer-events: none;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35);
+        }
+
+        .caption-gap-notice[hidden] {
+            display: none !important;
+        }
+
         .video-modal-links {
             flex: 0 0 auto;
             padding: 10px 14px 14px;
@@ -1492,6 +1514,7 @@
 
         /* Cinematic split-tone on speaker posters only (while player is stopped) */
         .video-thumbnail {
+            position: relative;
             width: 100%;
             background: #accfce;
         }
@@ -2116,7 +2139,7 @@
             const plyrConfig = {
                 seekTime: 10,
                 controls: ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'duration', 'mute', 'volume', 'captions', 'settings', 'fullscreen'],
-                settings: ['speed'],
+                settings: ['captions', 'speed'],
                 speed: {
                     selected: 1,
                     options: [0.5, 0.75, 1, 1.25, 1.5, 1.75, 2]
@@ -2239,9 +2262,33 @@
             function setCaptionTracksMode(videoEl, mode) {
                 const tracks = videoEl?.textTracks;
                 if (!tracks) return;
+                if (mode !== 'showing') {
+                    for (let i = 0; i < tracks.length; i++) {
+                        if (isCaptionTextTrack(tracks[i]) && tracks[i].mode !== mode) {
+                            tracks[i].mode = mode;
+                        }
+                    }
+                    return;
+                }
+                // With multiple languages, only the active track may be showing.
+                const player = videoEl._plyrPlayer;
+                const want = String(
+                    player?.language || videoEl.dataset.preferredCaptionLang || 'en'
+                ).toLowerCase();
+                let matched = false;
                 for (let i = 0; i < tracks.length; i++) {
-                    if (isCaptionTextTrack(tracks[i]) && tracks[i].mode !== mode) {
-                        tracks[i].mode = mode;
+                    if (!isCaptionTextTrack(tracks[i])) continue;
+                    const lang = String(tracks[i].language || '').toLowerCase();
+                    const next = lang === want ? 'showing' : 'hidden';
+                    if (lang === want) matched = true;
+                    if (tracks[i].mode !== next) tracks[i].mode = next;
+                }
+                if (!matched) {
+                    for (let i = 0; i < tracks.length; i++) {
+                        if (isCaptionTextTrack(tracks[i])) {
+                            tracks[i].mode = 'showing';
+                            break;
+                        }
                     }
                 }
             }
@@ -2466,6 +2513,7 @@
                 enhanceOverlaidPlayToggle(player, plyrConfig.iconUrl);
                 attachMobilePlaybackRecovery(videoEl, player);
                 attachIosNativeCaptionBridge(videoEl, player);
+                bindCaptionLanguageUrlSync(videoEl);
                 if (options.filteredPoster !== false) {
                     attachFilteredPoster(videoEl);
                 }
@@ -2490,7 +2538,7 @@
                 return player;
             }
 
-            function syncPlyrCaptions(videoEl) {
+            function syncPlyrCaptions(videoEl, preferredLang) {
                 const player = videoEl && videoEl._plyrPlayer ? videoEl._plyrPlayer : null;
                 if (!player || !player.media) return;
 
@@ -2498,16 +2546,20 @@
                 const tracks = Array.from(media.textTracks).filter(track => track.kind === 'subtitles' || track.kind === 'captions');
                 if (!tracks.length) return;
 
-                const preferred = tracks.find(track => track.language === 'en') ?? tracks[0];
+                const want = preferredLang || videoEl.dataset.preferredCaptionLang || 'en';
+                const preferred = tracks.find(track => track.language === want)
+                    ?? tracks.find(track => track.language === 'en')
+                    ?? tracks[0];
                 if (!preferred) return;
 
                 const apply = () => {
                     try {
-                        player.language = preferred.language || 'en';
+                        player.language = preferred.language || want || 'en';
                         player.toggleCaptions(true);
                     } catch {
                         // Plyr may not be ready yet; ignore.
                     }
+                    updateCaptionGapNotice(videoEl);
                 };
 
                 apply();
@@ -3068,24 +3120,408 @@
                 }
             }
 
+            // ─────────────────────────────────────────────────────────────────────
+            //  Multi-language subtitles (optional). Legacy `subtitle` = English.
+            //  Optional `subtitles`: { "nl": "talks/foo.nl.srt" } or
+            //  { "nl": { "src": "…", "coverage": [{ "start": 420, "end": 480 }] } }
+            // ─────────────────────────────────────────────────────────────────────
+            const LANGUAGE_LABELS = {
+                en: 'English',
+                nl: 'Nederlands',
+                de: 'Deutsch',
+                fr: 'Français',
+                es: 'Español',
+                it: 'Italiano',
+                pt: 'Português',
+                ja: '日本語',
+                zh: '中文',
+                ko: '한국어',
+                ar: 'العربية',
+                hi: 'हिन्दी',
+                sv: 'Svenska',
+                da: 'Dansk',
+                no: 'Norsk',
+                fi: 'Suomi',
+                pl: 'Polski',
+                uk: 'Українська'
+            };
+
+            const captionTrackStore = {};
+            const captionTrackPromises = {};
+            const captionCoverageByVideo = new WeakMap();
+            // Merge cue gaps shorter than this into one coverage window so brief
+            // pauses between lines do not flash the "no translation" notice.
+            const CAPTION_COVERAGE_MERGE_GAP = 30;
+
+            function languageLabel(lang) {
+                const key = String(lang || '').toLowerCase();
+                return LANGUAGE_LABELS[key] || (key ? key.toUpperCase() : 'Unknown');
+            }
+
+            function normalizeSubtitleEntry(value) {
+                if (!value) return null;
+                if (typeof value === 'string') {
+                    return { src: value, coverage: null };
+                }
+                if (typeof value === 'object' && value.src) {
+                    const coverage = Array.isArray(value.coverage)
+                        ? value.coverage
+                            .map((r) => ({
+                                start: Number(r.start),
+                                end: Number(r.end)
+                            }))
+                            .filter((r) => Number.isFinite(r.start) && Number.isFinite(r.end) && r.end > r.start)
+                        : null;
+                    return { src: String(value.src), coverage: coverage && coverage.length ? coverage : null };
+                }
+                return null;
+            }
+
+            function subtitleTracks(video) {
+                const tracks = {};
+                if (!video) return tracks;
+                const legacy = normalizeSubtitleEntry(video.subtitle);
+                if (legacy) tracks.en = legacy;
+                if (video.subtitles && typeof video.subtitles === 'object') {
+                    for (const [lang, value] of Object.entries(video.subtitles)) {
+                        const entry = normalizeSubtitleEntry(value);
+                        const key = String(lang || '').toLowerCase();
+                        if (entry && key) tracks[key] = entry;
+                    }
+                }
+                return tracks;
+            }
+
+            function primarySubtitleLang(video) {
+                const tracks = subtitleTracks(video);
+                if (tracks.en) return 'en';
+                return Object.keys(tracks)[0] || null;
+            }
+
+            function primarySubtitleSrc(video) {
+                const lang = primarySubtitleLang(video);
+                return lang ? subtitleTracks(video)[lang].src : null;
+            }
+
+            function hasSubtitles(video) {
+                return Object.keys(subtitleTracks(video)).length > 0;
+            }
+
+            let captionLangPreference = null; // from ?lang= / #…&lang= or player choice
+
+            function normalizeLangCode(raw) {
+                if (!raw || typeof raw !== 'string') return null;
+                const match = raw.trim().toLowerCase().match(/^([a-z]{2,3})(?:-[a-z0-9]+)?$/i);
+                return match ? match[1].toLowerCase() : null;
+            }
+
+            function readCaptionLangFromLocation() {
+                const hash = window.location.hash;
+                if (hash && hash.length > 1) {
+                    const hashPart = hash.substring(1);
+                    const ampIndex = hashPart.indexOf('&');
+                    const queryStr = ampIndex === -1 ? '' : hashPart.substring(ampIndex + 1);
+                    const fromHash = parseHashQuery(queryStr).lang;
+                    if (fromHash) return fromHash;
+                }
+                try {
+                    return normalizeLangCode(new URLSearchParams(window.location.search).get('lang'));
+                } catch {
+                    return null;
+                }
+            }
+
+            function syncLangSearchParam(lang) {
+                try {
+                    const url = new URL(window.location.href);
+                    if (lang && lang !== 'en') url.searchParams.set('lang', lang);
+                    else url.searchParams.delete('lang');
+                    const next = `${url.pathname}${url.search}${url.hash}`;
+                    const cur = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+                    if (next !== cur) history.replaceState(null, '', next);
+                } catch {
+                    // Ignore URL sync failures.
+                }
+            }
+
+            function setCaptionLangPreference(lang, { syncUrl = true } = {}) {
+                captionLangPreference = normalizeLangCode(lang);
+                if (!syncUrl) return;
+                if (modalVideoId && videoModalOverlay && !videoModalOverlay.hidden) {
+                    const end = (typeof clipEndTime === 'number' && Number.isFinite(clipEndTime))
+                        ? clipEndTime
+                        : null;
+                    updateVideoUrlForModal(modalVideoId, modalVideoEl?.currentTime ?? 0, end);
+                    return;
+                }
+                syncLangSearchParam(captionLangPreference);
+            }
+
+            function preferredCaptionLanguage(tracks) {
+                // URL/player preference when available; otherwise English (full transcript).
+                const langs = Object.keys(tracks || {});
+                if (!langs.length) return null;
+                const want = captionLangPreference || readCaptionLangFromLocation();
+                if (want && langs.includes(want)) return want;
+                if (langs.includes('en')) return 'en';
+                return langs[0];
+            }
+
+            function coverageRangesFromCues(cues, mergeGap = CAPTION_COVERAGE_MERGE_GAP) {
+                if (!Array.isArray(cues) || !cues.length) return [];
+                const sorted = [...cues].sort((a, b) => a.start - b.start);
+                const ranges = [{ start: sorted[0].start, end: sorted[0].end }];
+                for (let i = 1; i < sorted.length; i++) {
+                    const cue = sorted[i];
+                    const last = ranges[ranges.length - 1];
+                    if (cue.start <= last.end + mergeGap) {
+                        last.end = Math.max(last.end, cue.end);
+                    } else {
+                        ranges.push({ start: cue.start, end: cue.end });
+                    }
+                }
+                return ranges;
+            }
+
+            function timeInCoverage(time, ranges) {
+                if (!Array.isArray(ranges) || !ranges.length) return false;
+                return ranges.some((r) => time >= r.start && time <= r.end);
+            }
+
+            function getActiveCaptionLanguage(videoEl) {
+                const player = videoEl && videoEl._plyrPlayer ? videoEl._plyrPlayer : null;
+                if (player && player.language) return String(player.language).toLowerCase();
+                const tracks = videoEl?.textTracks;
+                if (!tracks) return null;
+                for (let i = 0; i < tracks.length; i++) {
+                    const track = tracks[i];
+                    if ((track.kind === 'subtitles' || track.kind === 'captions') && track.mode === 'showing') {
+                        return String(track.language || '').toLowerCase() || null;
+                    }
+                }
+                return null;
+            }
+
+            function captionsAreEnabled(videoEl) {
+                const player = videoEl && videoEl._plyrPlayer ? videoEl._plyrPlayer : null;
+                if (player && typeof player.currentTrack === 'number') {
+                    return player.currentTrack >= 0;
+                }
+                const tracks = videoEl?.textTracks;
+                if (!tracks) return false;
+                for (let i = 0; i < tracks.length; i++) {
+                    const track = tracks[i];
+                    if ((track.kind === 'subtitles' || track.kind === 'captions') && track.mode === 'showing') {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
+            function ensureCaptionGapNotice(containerEl) {
+                if (!containerEl) return null;
+                let notice = containerEl.querySelector('.caption-gap-notice');
+                if (!notice) {
+                    notice = document.createElement('div');
+                    notice.className = 'caption-gap-notice';
+                    notice.hidden = true;
+                    notice.setAttribute('role', 'status');
+                    notice.setAttribute('aria-live', 'polite');
+                    containerEl.appendChild(notice);
+                }
+                return notice;
+            }
+
+            function updateCaptionGapNotice(videoEl) {
+                if (!videoEl) return;
+                const container = videoEl.closest('.video-modal-player, .video-thumbnail');
+                const notice = container ? ensureCaptionGapNotice(container) : null;
+                if (!notice) return;
+
+                const meta = captionCoverageByVideo.get(videoEl);
+                if (!meta || !captionsAreEnabled(videoEl)) {
+                    notice.hidden = true;
+                    return;
+                }
+
+                const activeLang = getActiveCaptionLanguage(videoEl);
+                const primaryLang = meta.primaryLang;
+                if (!activeLang || activeLang === primaryLang) {
+                    notice.hidden = true;
+                    return;
+                }
+
+                const ranges = meta.byLang?.[activeLang];
+                if (!ranges || !ranges.length) {
+                    notice.hidden = true;
+                    return;
+                }
+
+                const t = Number(videoEl.currentTime) || 0;
+                if (timeInCoverage(t, ranges)) {
+                    notice.hidden = true;
+                    return;
+                }
+
+                notice.textContent = `No ${languageLabel(activeLang)} translation for this part yet`;
+                notice.hidden = false;
+            }
+
+            function syncCaptionLangFromVideoEl(videoEl) {
+                const lang = normalizeLangCode(getActiveCaptionLanguage(videoEl));
+                if (!lang) return;
+                videoEl.dataset.preferredCaptionLang = lang;
+                // Always push to the URL when the active track language changes, including
+                // the case where preference was set but the first cold-load event was missed.
+                if (lang !== captionLangPreference || (lang !== 'en' && readCaptionLangFromLocation() !== lang)) {
+                    setCaptionLangPreference(lang);
+                }
+            }
+
+            function bindCaptionLanguageUrlSync(videoEl) {
+                if (!videoEl) return;
+                const player = videoEl._plyrPlayer;
+                if (player && typeof player.on === 'function' && videoEl.dataset.captionLangUrlBound !== 'true') {
+                    videoEl.dataset.captionLangUrlBound = 'true';
+                    player.on('languagechange', () => {
+                        // On cold loads Plyr can emit this before player.language is populated.
+                        const lang = normalizeLangCode(player.language) || normalizeLangCode(getActiveCaptionLanguage(videoEl));
+                        if (lang) {
+                            videoEl.dataset.preferredCaptionLang = lang;
+                            setCaptionLangPreference(lang);
+                        }
+                        updateCaptionGapNotice(videoEl);
+                    });
+                }
+                if (videoEl.textTracks && videoEl.dataset.captionLangTrackBound !== 'true') {
+                    videoEl.dataset.captionLangTrackBound = 'true';
+                    videoEl.textTracks.addEventListener('change', () => {
+                        syncCaptionLangFromVideoEl(videoEl);
+                        updateCaptionGapNotice(videoEl);
+                    });
+                }
+            }
+
+            function bindCaptionGapNotice(videoEl) {
+                if (!videoEl) return;
+                bindCaptionLanguageUrlSync(videoEl);
+                if (videoEl.dataset.captionGapBound === 'true') {
+                    updateCaptionGapNotice(videoEl);
+                    return;
+                }
+                videoEl.dataset.captionGapBound = 'true';
+                const onUpdate = () => updateCaptionGapNotice(videoEl);
+                videoEl.addEventListener('timeupdate', onUpdate);
+                videoEl.addEventListener('seeked', onUpdate);
+                videoEl.addEventListener('play', onUpdate);
+                const player = videoEl._plyrPlayer;
+                if (player && typeof player.on === 'function') {
+                    player.on('captionsenabled', () => {
+                        syncCaptionLangFromVideoEl(videoEl);
+                        onUpdate();
+                    });
+                    player.on('captionsdisabled', () => {
+                        const container = videoEl.closest('.video-modal-player, .video-thumbnail');
+                        const notice = container?.querySelector('.caption-gap-notice');
+                        if (notice) notice.hidden = true;
+                    });
+                }
+                onUpdate();
+            }
+
+            function srtToVttBlobUrl(rawSrt) {
+                const vtt = 'WEBVTT\n\n' + String(rawSrt || '')
+                    .replace(/\r\n/g, '\n').replace(/\r/g, '\n')
+                    .replace(/(\d{2}:\d{2}:\d{2}),(\d{3})/g, '$1.$2');
+                const blob = new Blob([vtt], { type: 'text/vtt' });
+                return URL.createObjectURL(blob);
+            }
+
+            function loadCaptionTrack(video, lang) {
+                const key = `${video.path}::${lang}`;
+                if (captionTrackPromises[key]) return captionTrackPromises[key];
+
+                const entry = subtitleTracks(video)[lang];
+                if (!entry?.src) {
+                    captionTrackPromises[key] = Promise.resolve(null);
+                    return captionTrackPromises[key];
+                }
+
+                if (!captionTrackStore[video.path]) captionTrackStore[video.path] = {};
+                captionTrackStore[video.path][lang] = {
+                    status: 'loading',
+                    cues: [],
+                    rawText: '',
+                    coverage: entry.coverage,
+                    src: entry.src,
+                    lang
+                };
+
+                captionTrackPromises[key] = fetch(entry.src)
+                    .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.text(); })
+                    .then(raw => {
+                        const cues = parseSrt(raw);
+                        const coverage = entry.coverage?.length
+                            ? entry.coverage
+                            : coverageRangesFromCues(cues);
+                        const track = {
+                            status: 'ready',
+                            rawText: raw,
+                            cues,
+                            coverage,
+                            src: entry.src,
+                            lang
+                        };
+                        captionTrackStore[video.path][lang] = track;
+                        return track;
+                    })
+                    .catch(() => {
+                        const track = {
+                            status: 'error',
+                            rawText: '',
+                            cues: [],
+                            coverage: entry.coverage || [],
+                            src: entry.src,
+                            lang
+                        };
+                        captionTrackStore[video.path][lang] = track;
+                        return track;
+                    });
+
+                return captionTrackPromises[key];
+            }
+
+            function loadAllCaptionTracks(video) {
+                const langs = Object.keys(subtitleTracks(video));
+                if (!langs.length) return Promise.resolve({});
+                return Promise.all(langs.map((lang) => loadCaptionTrack(video, lang)))
+                    .then(() => captionTrackStore[video.path] || {});
+            }
+
             function loadTranscript(video) {
                 const id = video.path;
                 // Return the existing promise so concurrent callers all wait for the same fetch
                 if (transcriptPromises[id]) return transcriptPromises[id];
-                transcriptStore[id] = { status: 'loading', cues: [], rawText: '' };
+                const lang = primarySubtitleLang(video);
+                if (!lang) {
+                    transcriptStore[id] = { status: 'error', cues: [], rawText: '' };
+                    transcriptPromises[id] = Promise.resolve(transcriptStore[id]);
+                    return transcriptPromises[id];
+                }
 
-                transcriptPromises[id] = fetch(video.subtitle)
-                    .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.text(); })
-                    .then(raw => {
-                        transcriptStore[id].rawText = raw;
-                        transcriptStore[id].cues = parseSrt(raw);
-                        transcriptStore[id].status = 'ready';
-                        return transcriptStore[id];
-                    })
-                    .catch(() => {
-                        transcriptStore[id].status = 'error';
-                        return transcriptStore[id];
-                    });
+                transcriptStore[id] = { status: 'loading', cues: [], rawText: '' };
+                transcriptPromises[id] = loadCaptionTrack(video, lang).then((track) => {
+                    if (!track || track.status !== 'ready') {
+                        transcriptStore[id] = { status: 'error', cues: [], rawText: '' };
+                    } else {
+                        transcriptStore[id] = {
+                            status: 'ready',
+                            cues: track.cues,
+                            rawText: track.rawText
+                        };
+                    }
+                    return transcriptStore[id];
+                });
                 return transcriptPromises[id];
             }
 
@@ -3100,33 +3536,65 @@
                         }
                     }
                 });
+                captionCoverageByVideo.delete(videoEl);
+                const container = videoEl.closest('.video-modal-player, .video-thumbnail');
+                const notice = container?.querySelector('.caption-gap-notice');
+                if (notice) notice.hidden = true;
             }
 
-            function attachVttTrack(videoEl, rawSrt) {
-                // Avoid adding duplicate tracks
-                if (videoEl.querySelector('track[data-keri-captions="true"]')) return;
-                const vtt = 'WEBVTT\n\n' + rawSrt
-                    .replace(/\r\n/g, '\n').replace(/\r/g, '\n')
-                    .replace(/(\d{2}:\d{2}:\d{2}),(\d{3})/g, '$1.$2');
-                const blob = new Blob([vtt], { type: 'text/vtt' });
-                const blobUrl = URL.createObjectURL(blob);
+            function attachVttTrack(videoEl, rawSrt, options = {}) {
+                const lang = String(options.lang || 'en').toLowerCase();
+                const existing = videoEl.querySelector(`track[data-keri-captions="true"][srclang="${lang}"]`);
+                if (existing) return existing;
+
+                const blobUrl = srtToVttBlobUrl(rawSrt);
                 const track = document.createElement('track');
                 // iOS native fullscreen shows kind=captions more reliably than subtitles.
                 track.kind = 'captions';
-                track.srclang = 'en';
-                track.label = 'English';
-                track.default = true;
+                track.srclang = lang;
+                track.label = options.label || languageLabel(lang);
+                track.default = Boolean(options.isDefault);
                 track.dataset.keriCaptions = 'true';
+                track.dataset.keriLang = lang;
                 track.dataset.blobUrl = blobUrl;
                 track.src = blobUrl;
                 const activate = () => {
-                    syncPlyrCaptions(videoEl);
+                    syncPlyrCaptions(videoEl, videoEl.dataset.preferredCaptionLang || lang);
                     if (videoEl.webkitDisplayingFullscreen) {
                         setCaptionTracksMode(videoEl, 'showing');
                     }
+                    updateCaptionGapNotice(videoEl);
                 };
                 track.addEventListener('load', activate, { once: true });
                 videoEl.appendChild(track);
+                return track;
+            }
+
+            function attachCaptionTracksForVideo(videoEl, video, store) {
+                if (!videoEl || !video || !store) return;
+                const tracks = subtitleTracks(video);
+                const langs = Object.keys(tracks);
+                if (!langs.length) return;
+
+                const preferred = preferredCaptionLanguage(tracks);
+                const primaryLang = primarySubtitleLang(video) || 'en';
+                videoEl.dataset.preferredCaptionLang = preferred || primaryLang;
+
+                const byLang = {};
+                for (const lang of langs) {
+                    const data = store[lang];
+                    if (!data || data.status !== 'ready' || !data.rawText) continue;
+                    attachVttTrack(videoEl, data.rawText, {
+                        lang,
+                        label: languageLabel(lang),
+                        isDefault: lang === preferred
+                    });
+                    byLang[lang] = data.coverage || coverageRangesFromCues(data.cues);
+                }
+
+                captionCoverageByVideo.set(videoEl, { primaryLang, byLang });
+                bindCaptionGapNotice(videoEl);
+                syncPlyrCaptions(videoEl, preferred || primaryLang);
             }
 
             // ─────────────────────────────────────────────────────────────────────
@@ -4003,7 +4471,7 @@
             }
 
             function openVideoModal(video, startTime, endTime) {
-                if (!video.subtitle) return;
+                if (!hasSubtitles(video)) return;
                 ensureVideoModal();
 
                 const sessionId = beginModalSession();
@@ -4079,9 +4547,9 @@
                 modalTranscriptBody.innerHTML = '<p class="transcript-loading">Loading transcript…</p>';
                 renderModalLinks(null);
 
-                loadTranscript(video).then(store => {
+                Promise.all([loadTranscript(video), loadAllCaptionTracks(video)]).then(([store, captionStore]) => {
                     if (modalSourceVideoPath !== video.path) return;
-                    if (store.rawText) attachVttTrack(modalVideoEl, store.rawText);
+                    attachCaptionTracksForVideo(modalVideoEl, video, captionStore);
                     populateModalTranscript(store, video.path, modalTranscriptSearchInput?.value ?? '');
                     renderModalLinks(store.rawText);
                 });
@@ -4157,10 +4625,11 @@
 
             /** Relative path to the static SEO transcript page (mirrors generate-transcript-pages.js). */
             function transcriptPagePath(video) {
-                if (!video?.subtitle) return null;
+                const primarySrc = primarySubtitleSrc(video);
+                if (!primarySrc) return null;
                 const id = generateVideoId(video);
                 if (!id) return null;
-                const sub = String(video.subtitle).replace(/\\/g, '/');
+                const sub = String(primarySrc).replace(/\\/g, '/');
                 if (transcriptsDir) {
                     // Section = folder holding the subtitle (talks/, interviews/, …).
                     const section = sub.split(/[?#]/)[0].split('/').slice(-2, -1)[0];
@@ -4221,6 +4690,10 @@
                 if (typeof endTime === 'number' && Number.isFinite(endTime) && endTime > t) {
                     hash += `&e=${Math.floor(endTime)}`;
                 }
+                const lang = captionLangPreference || readCaptionLangFromLocation();
+                if (lang && lang !== 'en') {
+                    hash += `&lang=${encodeURIComponent(lang)}`;
+                }
                 if (hashSourceUrl) {
                     hash += `&from=${encodeURIComponent(hashSourceUrl)}`;
                 }
@@ -4241,7 +4714,7 @@
             }
 
             function parseHashQuery(queryStr) {
-                const result = { start: null, end: null, from: null };
+                const result = { start: null, end: null, from: null, lang: null };
                 if (!queryStr) return result;
 
                 for (const param of queryStr.split('&')) {
@@ -4259,6 +4732,12 @@
                             result.from = decodeURIComponent(raw);
                         } catch {
                             result.from = raw;
+                        }
+                    } else if (key === 'lang') {
+                        try {
+                            result.lang = normalizeLangCode(decodeURIComponent(raw));
+                        } catch {
+                            result.lang = normalizeLangCode(raw);
                         }
                     }
                 }
@@ -4448,11 +4927,11 @@
                 metaDiv.appendChild(durSpan);
                 infoDiv.appendChild(metaDiv);
 
-                if (video.subtitle || video.presentation) {
+                if (hasSubtitles(video) || video.presentation) {
                     const actionsRow = document.createElement('div');
                     actionsRow.className = 'video-card-actions';
 
-                    if (video.subtitle) {
+                    if (hasSubtitles(video)) {
                         const modalBtn = document.createElement('button');
                         modalBtn.type = 'button';
                         modalBtn.className = 'open-video-modal-btn';
@@ -4535,6 +5014,7 @@
 
 
             async function initGallery(config) {
+                captionLangPreference = readCaptionLangFromLocation();
                 renderPageChrome(config.page, config.topClips);
                 renderPromo(config.promo);
 
@@ -4544,6 +5024,15 @@
                     : '';
                 videos.forEach((v) => {
                     if (v.subtitle) v.subtitle = resolveAssetUrl(v.subtitle);
+                    if (v.subtitles && typeof v.subtitles === 'object') {
+                        for (const [lang, entry] of Object.entries(v.subtitles)) {
+                            if (typeof entry === 'string') {
+                                v.subtitles[lang] = resolveAssetUrl(entry);
+                            } else if (entry && typeof entry === 'object' && entry.src) {
+                                v.subtitles[lang] = { ...entry, src: resolveAssetUrl(entry.src) };
+                            }
+                        }
+                    }
                     if (v.presentation) v.presentation = resolveAssetUrl(v.presentation);
                 });
                 speakerPhotos = Object.fromEntries(
@@ -4605,11 +5094,11 @@
                 function preloadNext() {
                     if (preloadIdx >= videos.length) return;
                     const v = videos[preloadIdx++];
-                    if (!v.subtitle) { preloadNext(); return; }  // skip instantly if no subtitle
-                    loadTranscript(v).then(store => {
+                    if (!hasSubtitles(v)) { preloadNext(); return; }  // skip instantly if no subtitle
+                    Promise.all([loadTranscript(v), loadAllCaptionTracks(v)]).then(([, captionStore]) => {
                         // Eagerly attach VTT to all videos so captions are ready on play
-                        if (store.rawText && videoElementMap[v.path]) {
-                            attachVttTrack(videoElementMap[v.path], store.rawText);
+                        if (videoElementMap[v.path]) {
+                            attachCaptionTracksForVideo(videoElementMap[v.path], v, captionStore);
                         }
                         setTimeout(preloadNext, 50);  // files are local — short stagger is enough
                     });
@@ -4658,7 +5147,7 @@
 
                     // Kick off (or reuse) loads for every video that has a subtitle file,
                     // then wait for all of them so results are never partial.
-                    const pending = videos.filter(v => v.subtitle).map(v => loadTranscript(v));
+                    const pending = videos.filter(v => hasSubtitles(v)).map(v => loadTranscript(v));
                     if (pending.length) {
                         searchStatus.textContent = 'Loading transcripts…';
                         searchStatus.setAttribute('aria-busy', 'true');
@@ -4673,7 +5162,7 @@
                     const matches = [];
 
                     for (const video of videos) {
-                        if (!video.subtitle) continue;
+                        if (!hasSubtitles(video)) continue;
                         const store = transcriptStore[video.path];
                         if (!store || store.status !== 'ready') continue;
                         const cues = store.cues;
@@ -4921,11 +5410,12 @@
                     const ampIndex = hashPart.indexOf('&');
                     const videoId = ampIndex === -1 ? hashPart : hashPart.substring(0, ampIndex);
                     const queryStr = ampIndex === -1 ? '' : hashPart.substring(ampIndex + 1);
-                    const { start: timestamp, end: endTimestamp, from } = parseHashQuery(queryStr);
+                    const { start: timestamp, end: endTimestamp, from, lang } = parseHashQuery(queryStr);
+                    if (lang) setCaptionLangPreference(lang, { syncUrl: false });
                     hashSourceUrl = resolveSourceUrl(from);
                     const video = findVideoById(videoId);
 
-                    if (video?.subtitle) {
+                    if (hasSubtitles(video)) {
                         openVideoModal(video, timestamp ?? 0, endTimestamp);
                         return;
                     }

@@ -10,7 +10,10 @@
  * list            Print every conference id (ORG/YEAR/month) that has an index.json.
  * sync-subtitles  Copy curated .srt files from the source folders listed in
  *                 scripts/subtitle-sources.tsv into the conference folders. Only
- *                 subtitles referenced by that conference's index.json are copied.
+ *                 subtitles referenced by that conference's index.json are copied
+ *                 (legacy `subtitle` plus optional `subtitles` language map).
+ *                 Sources are matched recursively by basename; SEDI gallery names
+ *                 may use morning-|lunch-|afternoon- prefixes stripped for lookup.
  * verify          Check that every file referenced by index.json exists (media, mp3,
  *                 subtitles, slides, posters, photos, transcript pages) and list files
  *                 that nothing references. With --remote, also HEAD-request each file
@@ -96,12 +99,43 @@ function transcriptsDirOf(config) {
   return typeof config.transcriptsDir === "string" ? config.transcriptsDir.replace(/\/+$/, "") : "";
 }
 
+/** Collect every subtitle path on a video (`subtitle` + optional `subtitles` map). */
+function collectSubtitlePaths(video) {
+  const paths = [];
+  const add = (value) => {
+    if (!value) return;
+    if (typeof value === "string") paths.push(value);
+    else if (typeof value === "object" && value.src) paths.push(String(value.src));
+  };
+  add(video?.subtitle);
+  if (video?.subtitles && typeof video.subtitles === "object") {
+    for (const value of Object.values(video.subtitles)) add(value);
+  }
+  return [...new Set(paths.map((p) => toPosix(String(p))))];
+}
+
+/** English (or first) subtitle path used for SEO transcript pages. */
+function primarySubtitlePath(video) {
+  if (video?.subtitles && typeof video.subtitles === "object") {
+    const en = video.subtitles.en;
+    if (typeof en === "string") return toPosix(en);
+    if (en && typeof en === "object" && en.src) return toPosix(String(en.src));
+  }
+  if (typeof video?.subtitle === "string") return toPosix(video.subtitle);
+  if (video?.subtitle && typeof video.subtitle === "object" && video.subtitle.src) {
+    return toPosix(String(video.subtitle.src));
+  }
+  const all = collectSubtitlePaths(video);
+  return all[0] || null;
+}
+
 function transcriptPageRel(config, video) {
   const dir = transcriptsDirOf(config);
-  if (!dir || !video.subtitle) return null;
+  const subtitle = primarySubtitlePath(video);
+  if (!dir || !subtitle) return null;
   const id = generateVideoId(video.title);
   if (!id) return null;
-  const section = String(video.subtitle).split("/").slice(-2, -1)[0];
+  const section = String(subtitle).split("/").slice(-2, -1)[0];
   return section ? `${dir}/${section}/${id}.html` : `${dir}/${id}.html`;
 }
 
@@ -131,7 +165,7 @@ function collectRefs(config) {
   for (const v of config.videos || []) {
     add("video", v.title, v.path);
     add("audio", v.title, v.audio || (v.path ? String(v.path).replace(/\.mp4$/i, ".mp3") : ""));
-    add("subtitle", v.title, v.subtitle);
+    for (const sub of collectSubtitlePaths(v)) add("subtitle", v.title, sub);
     add("slides", v.title, v.presentation);
     add("poster", v.title, v.poster);
     const page = transcriptPageRel(config, v);
@@ -258,6 +292,30 @@ async function sameContent(a, b) {
   return x.equals(y);
 }
 
+/** Index .srt files under a source tree by basename (first match wins). */
+async function indexSrtByBasename(root) {
+  const byBase = new Map();
+  for (const abs of await walkFiles(root)) {
+    if (!abs.toLowerCase().endsWith(".srt")) continue;
+    const base = abs.split(sep).pop();
+    if (base && !byBase.has(base)) byBase.set(base, abs);
+  }
+  return byBase;
+}
+
+/**
+ * Resolve a gallery subtitle filename to a source path.
+ * Exact basename first; then SEDI-style session prefixes
+ * (morning-|lunch-|afternoon-) stripped so
+ * morning-00-31-20--….nl.srt ← speakers/00-31-20--….nl.srt.
+ */
+function resolveSourceSrt(byBase, name) {
+  if (byBase.has(name)) return byBase.get(name);
+  const stripped = name.replace(/^(morning|lunch|afternoon)-/, "");
+  if (stripped !== name && byBase.has(stripped)) return byBase.get(stripped);
+  return null;
+}
+
 async function cmdSyncSubtitles(opts) {
   const confs = await selectedConferences(opts);
   const sources = (await readSources()).filter((s) => confs.includes(s.conf));
@@ -273,15 +331,18 @@ async function cmdSyncSubtitles(opts) {
       continue;
     }
     const config = await loadConfig(conf);
-    const wanted = (config.videos || [])
-      .map((v) => v.subtitle)
-      .filter((s) => s && dirname(s) === folder)
-      .map((s) => s.slice(folder.length + 1));
+    const wanted = [...new Set(
+      (config.videos || [])
+        .flatMap((v) => collectSubtitlePaths(v))
+        .filter((s) => s && dirname(s) === folder)
+        .map((s) => s.slice(folder.length + 1))
+    )];
+    const byBase = await indexSrtByBasename(source);
     let unchanged = 0;
     for (const name of wanted) {
-      const src = join(source, name);
+      const src = resolveSourceSrt(byBase, name);
       const dest = join(CONFS_ROOT, conf, folder, name);
-      if (!existsSync(src)) {
+      if (!src) {
         console.log(`  not in source: ${name}`);
         continue;
       }
