@@ -4969,8 +4969,8 @@
                         const modalBtn = document.createElement('button');
                         modalBtn.type = 'button';
                         modalBtn.className = 'open-video-modal-btn';
-                        modalBtn.setAttribute('aria-label', `Open ${video.title} with transcript`);
-                        modalBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg> Watch with transcript';
+                        modalBtn.setAttribute('aria-label', `Watch ${video.title} full screen`);
+                        modalBtn.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/></svg> Watch full screen';
                         modalBtn.addEventListener('click', (e) => {
                             e.stopPropagation();
                             openVideoModal(video, readClock(video.path));
