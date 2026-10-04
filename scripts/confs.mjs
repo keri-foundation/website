@@ -12,8 +12,7 @@
  *                 scripts/subtitle-sources.tsv into the conference folders. Only
  *                 subtitles referenced by that conference's index.json are copied
  *                 (legacy `subtitle` plus optional `subtitles` language map).
- *                 Sources are matched recursively by basename; SEDI gallery names
- *                 may use morning-|lunch-|afternoon- prefixes stripped for lookup.
+ *                 Sources are matched recursively by exact basename.
  * verify          Check that every file referenced by index.json exists (media, mp3,
  *                 subtitles, slides, posters, photos, transcript pages) and list files
  *                 that nothing references. With --remote, also HEAD-request each file
@@ -303,19 +302,6 @@ async function indexSrtByBasename(root) {
   return byBase;
 }
 
-/**
- * Resolve a gallery subtitle filename to a source path.
- * Exact basename first; then SEDI-style session prefixes
- * (morning-|lunch-|afternoon-) stripped so
- * morning-00-31-20--….nl.srt ← speakers/00-31-20--….nl.srt.
- */
-function resolveSourceSrt(byBase, name) {
-  if (byBase.has(name)) return byBase.get(name);
-  const stripped = name.replace(/^(morning|lunch|afternoon)-/, "");
-  if (stripped !== name && byBase.has(stripped)) return byBase.get(stripped);
-  return null;
-}
-
 async function cmdSyncSubtitles(opts) {
   const confs = await selectedConferences(opts);
   const sources = (await readSources()).filter((s) => confs.includes(s.conf));
@@ -340,7 +326,7 @@ async function cmdSyncSubtitles(opts) {
     const byBase = await indexSrtByBasename(source);
     let unchanged = 0;
     for (const name of wanted) {
-      const src = resolveSourceSrt(byBase, name);
+      const src = byBase.get(name) || null;
       const dest = join(CONFS_ROOT, conf, folder, name);
       if (!src) {
         console.log(`  not in source: ${name}`);
