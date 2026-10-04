@@ -37,6 +37,22 @@ confs/
 
 `index.json` → `transcriptsDir` (`transcripts/html`) tells both the gallery and the generator where HTML transcript pages live, for example `transcripts/html/talks/<video-id>.html`. Concatenated PDFs go under `transcripts/pdf/talks/`.
 
+## Monthly videos (`/vids/<YEAR>/<month>/`)
+
+Same gallery app as the conferences, for videos that are not part of a conference. The public path is `/vids/` so WordPress can keep `/videos/`.
+
+```text
+vids/2026/jul/                      → https://keri.foundation/vids/2026/jul/
+├── index.html                      gallery app (copy of the conference template)
+├── index.json                      page copy and video list
+├── talks/                          *.mp4 + *.mp3 + *.srt side by side
+└── transcripts/html/talks/         generated static transcript pages
+```
+
+The old standalone player redirects here:
+
+`/videos/sam-smith/Its-KERI-or-Surveillance/Its-KERI-or-Surveillance.html` → `/vids/2026/jul/#it-s-keri-or-surveillance-samuel-smith`
+
 ### New conference
 
 1. Create `confs/<ORG>/<YEAR>/<month>/` and copy `index.html` + `index.json` from `confs/template-presentations-landingpage/`.
@@ -52,7 +68,10 @@ scripts/deploy-confs.sh -n push          # preview what would be uploaded
 scripts/deploy-confs.sh deploy           # build + push (rsync --delete) + check the live site
 scripts/deploy-confs.sh check-remote     # HEAD-request every referenced file on keri.foundation
 scripts/deploy-confs.sh --conf SEDI/2025/nov push
+scripts/deploy-confs.sh --conf vids/2026/jul push
 ```
+
+`push` and `deploy` also upload `.htaccess`, which holds the redirects. A full push mirrors every `confs/<ORG>/` folder and the whole `vids/` tree. `--conf` limits the mirror to that one gallery; `.htaccess` is still uploaded.
 
 ### Legacy gallery URLs
 

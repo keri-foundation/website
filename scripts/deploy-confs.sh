@@ -1,11 +1,13 @@
 #!/bin/bash
 set -euo pipefail
 
-# Build and deploy the conference galleries under confs/<ORG>/<YEAR>/<month>/
-# (e.g. confs/KERI/2026/apr/, confs/SEDI/2025/nov/). The server mirrors the local tree.
+# Build and deploy galleries:
+#   confs/<ORG>/<YEAR>/<month>/   conferences (e.g. confs/KERI/2026/apr/)
+#   vids/<YEAR>/<month>/          monthly videos (e.g. vids/2026/jul/)
+# The server mirrors those trees. /videos/ is left for WordPress.
 #
 # The legacy tree confs/2026/ is never pushed or deleted by this script. Old gallery
-# entry URLs use simple "moved" index.html pages (not .htaccess redirects).
+# URLs redirect with rules in .htaccess, which this script uploads on push.
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SITE_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
@@ -28,19 +30,19 @@ usage() {
 Usage: scripts/deploy-confs.sh [options] <command>...
 
 Commands (run in the order given):
-  list            Show the conferences found under confs/<ORG>/<YEAR>/<month>/
-  subtitles       Copy curated .srt files from scripts/subtitle-sources.tsv (no-op when that file has no sources; edit SRTs in place under confs/)
+  list            Show galleries: confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/<month>/
+  subtitles       Copy curated .srt files from scripts/subtitle-sources.tsv (no-op when that file has no sources; edit SRTs in place under the gallery)
   transcripts     Regenerate the static transcript HTML pages from the .srt files
   verify          Check every file referenced by each index.json exists locally
   build           subtitles + transcripts + verify
-  push            Mirror the conference folders to the server (rsync --delete), including each gallery index.html and index.json
+  push            Mirror conference folders and vids/ to the server (rsync --delete), including each gallery index.html and index.json, plus .htaccess redirects
   check-remote    verify + HEAD-request every referenced file on the live site
   deploy          build + push + check-remote
   push-legacy-moved  Upload the "moved" index.html pages for old gallery URLs
 
 Options:
   -n, --dry-run   Show what would change; write nothing locally or remotely
-  --conf ID       Limit to one conference, e.g. --conf KERI/2026/apr (repeatable)
+  --conf ID       Limit to one gallery, e.g. --conf KERI/2026/apr or --conf vids/2026/jul (repeatable)
   -y, --yes       Do not ask for confirmation before changing the server
   -h, --help      Show this help
 
@@ -52,6 +54,7 @@ Examples:
   scripts/deploy-confs.sh -n push                   # preview upload
   scripts/deploy-confs.sh deploy                    # build, upload, check live site
   scripts/deploy-confs.sh --conf SEDI/2025/nov push
+  scripts/deploy-confs.sh --conf vids/2026/jul push
 EOF
 }
 
@@ -111,13 +114,20 @@ conferences() {
     run_node "$SCRIPT_DIR/confs.mjs" list
 }
 
-# What to mirror: the requested conference folders, or every <ORG>/ folder.
-push_targets() {
-    if [ ${#CONF_IDS[@]} -gt 0 ]; then
-        printf '%s\n' "${CONF_IDS[@]}"
-    else
-        conferences | cut -d/ -f1 | sort -u
-    fi
+# Local directory for a gallery id (KERI/2026/apr or vids/2026/jul).
+gallery_dir() {
+    case "$1" in
+        vids/*) printf '%s\n' "$SITE_ROOT/$1" ;;
+        *) printf '%s\n' "$CONFS/$1" ;;
+    esac
+}
+
+# Path under the server web root for a gallery id.
+gallery_remote_rel() {
+    case "$1" in
+        vids/*) printf '%s\n' "$1" ;;
+        *) printf '%s\n' "confs/$1" ;;
+    esac
 }
 
 step_list() {
@@ -134,7 +144,7 @@ step_transcripts() {
     local id
     for id in $(conferences); do
         echo "[$id]"
-        node "$SCRIPT_DIR/generate-transcript-pages.mjs" --config "$CONFS/$id/index.json" $(dry_flag)
+        node "$SCRIPT_DIR/generate-transcript-pages.mjs" --config "$(gallery_dir "$id")/index.json" $(dry_flag)
     done
 }
 
@@ -144,38 +154,71 @@ step_verify() {
 }
 
 step_push() {
-    echo "── Push to $REMOTE_HOST:$REMOTE_ROOT/confs/"
-    local targets=()
-    local t
-    while IFS= read -r t; do targets+=("$t"); done < <(push_targets)
-    echo "Mirroring (rsync --delete): ${targets[*]}"
+    echo "── Push to $REMOTE_HOST:$REMOTE_ROOT/"
+    local -a mirror_local=()
+    local -a mirror_remote=()
+
+    if [ ${#CONF_IDS[@]} -gt 0 ]; then
+        local id
+        for id in "${CONF_IDS[@]}"; do
+            mirror_local+=("$(gallery_dir "$id")/")
+            mirror_remote+=("$REMOTE_ROOT/$(gallery_remote_rel "$id")/")
+        done
+    else
+        local org
+        while IFS= read -r org; do
+            [ -n "$org" ] || continue
+            mirror_local+=("$CONFS/$org/")
+            mirror_remote+=("$REMOTE_ROOT/confs/$org/")
+        done < <(conferences | awk -F/ '$1 != "vids" { print $1 }' | sort -u)
+        if conferences | grep -q '^vids/'; then
+            mirror_local+=("$SITE_ROOT/vids/")
+            mirror_remote+=("$REMOTE_ROOT/vids/")
+        fi
+    fi
+
+    if [ ${#mirror_local[@]} -eq 0 ]; then
+        echo "No galleries to upload." >&2
+        exit 1
+    fi
+
+    echo "Mirroring (rsync --delete):"
+    local i
+    for i in "${!mirror_local[@]}"; do
+        echo "  ${mirror_local[$i]} → ${mirror_remote[$i]}"
+    done
 
     # Every gallery must have index.html + index.json; list them before upload.
-    local id
     local index_files=()
     for id in $(conferences); do
+        local dir
+        dir="$(gallery_dir "$id")"
+        local f
         for f in index.html index.json; do
-            if [ ! -f "$CONFS/$id/$f" ]; then
-                echo "Missing confs/$id/$f" >&2
+            if [ ! -f "$dir/$f" ]; then
+                echo "Missing $(gallery_remote_rel "$id")/$f" >&2
                 exit 1
             fi
-            index_files+=("confs/$id/$f")
+            index_files+=("$(gallery_remote_rel "$id")/$f")
         done
     done
     echo "Gallery indexes:"
     printf '  %s\n' "${index_files[@]}"
+    echo "Also uploading .htaccess (redirects)."
     confirm "Upload and mirror these folders to the server?"
 
     local rsync_opts=(-avz --delete --human-readable "${RSYNC_EXCLUDES[@]}")
     [ "$DRY_RUN" -eq 1 ] && rsync_opts+=(--dry-run)
 
-    for t in "${targets[@]}"; do
-        if [ ! -d "$CONFS/$t" ]; then
-            echo "Missing locally: confs/$t" >&2
+    for i in "${!mirror_local[@]}"; do
+        local src="${mirror_local[$i]}"
+        local dest="${mirror_remote[$i]}"
+        if [ ! -d "${src%/}" ]; then
+            echo "Missing locally: $src" >&2
             exit 1
         fi
-        [ "$DRY_RUN" -eq 1 ] || ssh "$REMOTE_HOST" "mkdir -p '$REMOTE_ROOT/confs/$t'"
-        rsync "${rsync_opts[@]}" "$CONFS/$t/" "$REMOTE_HOST:$REMOTE_ROOT/confs/$t/"
+        [ "$DRY_RUN" -eq 1 ] || ssh "$REMOTE_HOST" "mkdir -p '${dest%/}'"
+        rsync "${rsync_opts[@]}" "$src" "$REMOTE_HOST:$dest"
     done
 
     # Always push gallery indexes (ignore mtime) so a dry-run / transfer list
@@ -184,12 +227,20 @@ step_push() {
     local index_rsync=(-avz --ignore-times --human-readable)
     [ "$DRY_RUN" -eq 1 ] && index_rsync+=(--dry-run)
     for id in $(conferences); do
-        [ "$DRY_RUN" -eq 1 ] || ssh "$REMOTE_HOST" "mkdir -p '$REMOTE_ROOT/confs/$id'"
+        local dir rel
+        dir="$(gallery_dir "$id")"
+        rel="$(gallery_remote_rel "$id")"
+        [ "$DRY_RUN" -eq 1 ] || ssh "$REMOTE_HOST" "mkdir -p '$REMOTE_ROOT/$rel'"
         rsync "${index_rsync[@]}" \
-            "$CONFS/$id/index.html" \
-            "$CONFS/$id/index.json" \
-            "$REMOTE_HOST:$REMOTE_ROOT/confs/$id/"
+            "$dir/index.html" \
+            "$dir/index.json" \
+            "$REMOTE_HOST:$REMOTE_ROOT/$rel/"
     done
+
+    echo "── Site redirects (.htaccess)"
+    local ht_rsync=(-av --human-readable)
+    [ "$DRY_RUN" -eq 1 ] && ht_rsync+=(--dry-run)
+    rsync "${ht_rsync[@]}" "$SITE_ROOT/.htaccess" "$REMOTE_HOST:$REMOTE_ROOT/.htaccess"
 }
 
 step_check_remote() {
