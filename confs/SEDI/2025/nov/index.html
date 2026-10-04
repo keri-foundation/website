@@ -3146,8 +3146,8 @@
 
             // ─────────────────────────────────────────────────────────────────────
             //  Multi-language subtitles (optional). Legacy `subtitle` = English.
-            //  Optional `subtitles`: { "nl": "talks/foo.nl.srt" } or
-            //  { "nl": { "src": "…", "coverage": [{ "start": 420, "end": 480 }] } }
+            //  Optional `subtitles`: { "nl": "talks/foo.nl.srt" }
+            //  Partial tracks: coverage is derived from SRT cue timestamps.
             // ─────────────────────────────────────────────────────────────────────
             const LANGUAGE_LABELS = {
                 en: 'English',
@@ -3184,20 +3184,8 @@
 
             function normalizeSubtitleEntry(value) {
                 if (!value) return null;
-                if (typeof value === 'string') {
-                    return { src: value, coverage: null };
-                }
-                if (typeof value === 'object' && value.src) {
-                    const coverage = Array.isArray(value.coverage)
-                        ? value.coverage
-                            .map((r) => ({
-                                start: Number(r.start),
-                                end: Number(r.end)
-                            }))
-                            .filter((r) => Number.isFinite(r.start) && Number.isFinite(r.end) && r.end > r.start)
-                        : null;
-                    return { src: String(value.src), coverage: coverage && coverage.length ? coverage : null };
-                }
+                if (typeof value === 'string') return { src: value };
+                if (typeof value === 'object' && value.src) return { src: String(value.src) };
                 return null;
             }
 
@@ -3493,7 +3481,7 @@
                     status: 'loading',
                     cues: [],
                     rawText: '',
-                    coverage: entry.coverage,
+                    coverage: [],
                     src: entry.src,
                     lang
                 };
@@ -3502,14 +3490,11 @@
                     .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.text(); })
                     .then(raw => {
                         const cues = parseSrt(raw);
-                        const coverage = entry.coverage?.length
-                            ? entry.coverage
-                            : coverageRangesFromCues(cues);
                         const track = {
                             status: 'ready',
                             rawText: raw,
                             cues,
-                            coverage,
+                            coverage: coverageRangesFromCues(cues),
                             src: entry.src,
                             lang
                         };
@@ -3521,7 +3506,7 @@
                             status: 'error',
                             rawText: '',
                             cues: [],
-                            coverage: entry.coverage || [],
+                            coverage: [],
                             src: entry.src,
                             lang
                         };
@@ -5063,7 +5048,7 @@
                             if (typeof entry === 'string') {
                                 v.subtitles[lang] = resolveAssetUrl(entry);
                             } else if (entry && typeof entry === 'object' && entry.src) {
-                                v.subtitles[lang] = { ...entry, src: resolveAssetUrl(entry.src) };
+                                v.subtitles[lang] = resolveAssetUrl(entry.src);
                             }
                         }
                     }
