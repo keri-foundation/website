@@ -1,5 +1,9 @@
-# Where curated subtitles come from, per conference folder.
+# Optional external subtitle sources.
 # Used by: scripts/deploy-confs.sh subtitles   (node scripts/confs.mjs sync-subtitles)
+#
+# Curated .srt files are edited in place under confs/<ORG>/<YEAR>/<month>/.
+# Leave this file without source lines unless a conference is still maintained
+# in another directory and should be copied in before deploy.
 #
 # <ORG>/<YEAR>/<month>/<folder>    <source directory on this machine>
 #
@@ -7,9 +11,5 @@
 # (video.subtitle and any video.subtitles.<lang> paths).
 # Source trees are searched recursively by basename. Gallery names may add a
 # session prefix (morning-|lunch-|afternoon-) that is stripped when matching
-# speaker-cut files in the subtitles repo (SEDI).
+# speaker-cut files.
 # Conferences without a line here keep the .srt files that are already in place.
-
-KERI/2026/apr/talks         /Users/kor/webdev/Blockchain-Bird/KERI/CONF26-subtitles/subtitles
-KERI/2026/apr/interviews    /Users/kor/webdev/Blockchain-Bird/KERI/CONF26-subtitles/subtitles-interviews
-SEDI/2025/nov/talks         /Users/kor/webdev/Blockchain-Bird/KERI/subtitles/subtitles/SEDI/2025-11-SEDI

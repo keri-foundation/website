@@ -320,7 +320,7 @@ async function cmdSyncSubtitles(opts) {
   const confs = await selectedConferences(opts);
   const sources = (await readSources()).filter((s) => confs.includes(s.conf));
   if (!sources.length) {
-    console.log("No subtitle sources configured for the selected conference(s).");
+    console.log("Subtitles are edited in place under confs/ (no external sources).");
     return;
   }
   let copied = 0;

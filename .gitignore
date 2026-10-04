@@ -18,6 +18,9 @@
 !/scripts/
 !/scripts/**
 
+# Re-ignore install output under scripts/ (the un-ignore above would otherwise track it)
+/scripts/node_modules/
+
 # Local promo clips (must come after !/confs/** — .gitignore beats info/exclude)
 /confs/2026/videos/clips/
 /confs/2026/videos/.venv-clips
@@ -65,7 +68,15 @@
 
 # --- Documentation ---
 !/README.md
+!/README_SUBTITLES.md
 confs/2026/videos/KERICONF26/
 confs/2026/videos/KERICONF26-interviews/
 
 .DS_Store
+
+# YouTube uploader (local only; see scripts/YOUTUBE_UPLOADER_SETUP.md)
+.youtube-credentials.json
+.youtube-client-secret.json
+.youtube-upload-state.json
+.transcripts-build.html
+.chrome-profile/
