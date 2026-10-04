@@ -136,7 +136,7 @@ async function authorize(options = {}) {
   let needsAuthentication = true;
 
   if (!fs.existsSync(CLIENT_SECRET_PATH)) {
-    throw new Error(`Client secret not found at ${CLIENT_SECRET_PATH}. See YOUTUBE_UPLOADER_SETUP.md for setup instructions.`);
+    throw new Error(`Client secret not found at ${CLIENT_SECRET_PATH}. See README.md (YouTube uploader setup) for instructions.`);
   }
 
   const clientSecret = JSON.parse(fs.readFileSync(CLIENT_SECRET_PATH, 'utf-8'));

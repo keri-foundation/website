@@ -68,13 +68,12 @@
 
 # --- Documentation ---
 !/README.md
-!/README_SUBTITLES.md
 confs/2026/videos/KERICONF26/
 confs/2026/videos/KERICONF26-interviews/
 
 .DS_Store
 
-# YouTube uploader (local only; see scripts/YOUTUBE_UPLOADER_SETUP.md)
+# YouTube uploader (local only; see README.md)
 .youtube-credentials.json
 .youtube-client-secret.json
 .youtube-upload-state.json
