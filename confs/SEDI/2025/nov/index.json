@@ -170,15 +170,7 @@
       "subtitle": "talks/morning-00-31-20--00-55-41-Cindy-George.srt",
       "subtitles": {
         "nl": "talks/morning-00-31-20--00-55-41-Cindy-George.nl.srt",
-        "es": {
-          "src": "talks/morning-00-31-20--00-55-41-Cindy-George.07-14--08-51.es.srt",
-          "coverage": [
-            {
-              "start": 434,
-              "end": 531
-            }
-          ]
-        }
+        "es": "talks/morning-00-31-20--00-55-41-Cindy-George.07-14--08-51.es.srt"
       }
     },
     {
