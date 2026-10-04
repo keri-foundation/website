@@ -9,7 +9,5 @@
 #
 # Only .srt files referenced by that conference's index.json are copied
 # (video.subtitle and any video.subtitles.<lang> paths).
-# Source trees are searched recursively by basename. Gallery names may add a
-# session prefix (morning-|lunch-|afternoon-) that is stripped when matching
-# speaker-cut files.
+# Source trees are searched recursively by exact basename.
 # Conferences without a line here keep the .srt files that are already in place.
