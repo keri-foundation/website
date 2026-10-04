@@ -29,7 +29,7 @@ Usage: scripts/deploy-confs.sh [options] <command>...
 
 Commands (run in the order given):
   list            Show the conferences found under confs/<ORG>/<YEAR>/<month>/
-  subtitles       Copy curated .srt files into place (see scripts/subtitle-sources.tsv)
+  subtitles       Copy curated .srt files from scripts/subtitle-sources.tsv (no-op when that file has no sources; edit SRTs in place under confs/)
   transcripts     Regenerate the static transcript HTML pages from the .srt files
   verify          Check every file referenced by each index.json exists locally
   build           subtitles + transcripts + verify

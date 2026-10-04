@@ -1,0 +1,16 @@
+{
+  "name": "keri-foundation-scripts",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Transcript PDF, YouTube caption upload, and subtitle cleanup for keri.foundation.",
+  "type": "module",
+  "scripts": {
+    "build:pdf": "node build-transcript-pdf.js",
+    "upload": "bash upload-youtube-subs.sh",
+    "fix-rolling": "node remove-rolling-subtitles.js"
+  },
+  "dependencies": {
+    "googleapis": "^118.0.0",
+    "puppeteer-core": "^23.11.1"
+  }
+}

@@ -1,0 +1,4934 @@
+1
+00:00:00,480 --> 00:00:03,256
+Hello, my name is Samuel Smith. I'm
+
+2
+00:00:03,280 --> 00:00:06,456
+with the KERI Foundation. I'm also
+
+3
+00:00:06,480 --> 00:00:08,856
+the originator of the KERI suite of
+
+4
+00:00:08,880 --> 00:00:12,216
+protocols which are gaining adoption in
+
+5
+00:00:12,240 --> 00:00:16,216
+various sectors. I wanted to have a
+
+6
+00:00:16,240 --> 00:00:18,936
+discussion today about what I'm calling
+
+7
+00:00:18,960 --> 00:00:21,255
+the last best hope for individual
+
+8
+00:00:21,279 --> 00:00:23,736
+control digital ID in an AI world. And
+
+9
+00:00:23,760 --> 00:00:26,376
+it was prompted by the recent release by
+
+10
+00:00:26,400 --> 00:00:29,415
+the Five Eyes surveillance
+
+11
+00:00:29,439 --> 00:00:32,136
+conglomerate between those
+
+12
+00:00:32,160 --> 00:00:34,695
+countries about the cyber
+
+13
+00:00:34,719 --> 00:00:37,576
+cyber security threat that
+
+14
+00:00:37,600 --> 00:00:41,576
+foundational genAI models pose and
+
+15
+00:00:41,600 --> 00:00:44,616
+contrasting that with what KERI
+
+16
+00:00:44,640 --> 00:00:47,336
+provides and KERI stands for Key Event
+
+17
+00:00:47,360 --> 00:00:49,256
+Receipt Infrastructure.
+
+18
+00:00:49,280 --> 00:00:51,256
+It's a technical term but basically
+
+19
+00:00:51,280 --> 00:00:54,776
+it's a digital identity system that
+
+20
+00:00:54,800 --> 00:00:57,015
+retains individual control over their
+
+21
+00:00:57,039 --> 00:00:59,576
+identity which has some important
+
+22
+00:00:59,600 --> 00:01:01,576
+properties. So I want to talk about that
+
+23
+00:01:01,600 --> 00:01:03,736
+in more detail.
+
+24
+00:01:03,760 --> 00:01:08,056
+this is an excerpt from the report,
+
+25
+00:01:08,080 --> 00:01:11,736
+the link is there, from the NSA. It's
+
+26
+00:01:11,760 --> 00:01:15,016
+saying that frontier AI models are
+
+27
+00:01:15,040 --> 00:01:17,816
+anticipated to exceed current industry
+
+28
+00:01:17,840 --> 00:01:19,656
+expectations.
+
+29
+00:01:19,680 --> 00:01:25,735
+This is a very technically-worded
+
+30
+00:01:25,759 --> 00:01:29,735
+warning basically
+
+31
+00:01:29,759 --> 00:01:34,216
+in months not years these AI
+
+32
+00:01:34,240 --> 00:01:37,016
+models will overwhelm
+
+33
+00:01:37,040 --> 00:01:39,816
+any cyber security
+
+34
+00:01:39,840 --> 00:01:42,775
+capabilities of existing systems and so
+
+35
+00:01:42,799 --> 00:01:45,256
+they're basically telling everyone in
+
+36
+00:01:45,280 --> 00:01:48,455
+this article (it's a short article) you
+
+37
+00:01:48,479 --> 00:01:51,735
+need to change your stance. You need
+
+38
+00:01:51,759 --> 00:01:54,696
+to, change how you do things
+
+39
+00:01:54,720 --> 00:01:57,415
+because we can't guarantee that your
+
+40
+00:01:57,439 --> 00:02:00,296
+current security systems will survive
+
+41
+00:02:00,320 --> 00:02:01,816
+what's happening. And what is
+
+42
+00:02:01,840 --> 00:02:04,536
+happening is that certain foundation
+
+43
+00:02:04,560 --> 00:02:07,576
+models, Mythos for example is one were
+
+44
+00:02:07,600 --> 00:02:09,735
+developed to try to provide better cyber
+
+45
+00:02:09,759 --> 00:02:11,416
+security, but in the process of training
+
+46
+00:02:11,440 --> 00:02:14,295
+them to be better at detecting
+
+47
+00:02:14,319 --> 00:02:18,056
+exploits, they also became good at
+
+48
+00:02:18,080 --> 00:02:21,016
+exploiting exploits. And so that
+
+49
+00:02:21,040 --> 00:02:22,855
+means that
+
+50
+00:02:22,879 --> 00:02:25,816
+other less,
+
+51
+00:02:25,840 --> 00:02:28,536
+shall we say,
+
+52
+00:02:28,560 --> 00:02:31,496
+virtuous parties are building comparable
+
+53
+00:02:31,520 --> 00:02:34,136
+models. And once those are
+
+54
+00:02:34,160 --> 00:02:37,336
+available to cyber attackers, then
+
+55
+00:02:37,360 --> 00:02:40,376
+pretty much the current way that we do
+
+56
+00:02:40,400 --> 00:02:42,536
+digital identity, which is what digital
+
+57
+00:02:42,560 --> 00:02:46,215
+security is based on, will be broken
+
+58
+00:02:46,239 --> 00:02:50,056
+everywhere. And that's a problem. And
+
+59
+00:02:50,080 --> 00:02:51,816
+so we need to start doing something
+
+60
+00:02:51,840 --> 00:02:54,616
+about it. What that means is, is that we
+
+61
+00:02:54,640 --> 00:02:57,816
+actually have two paths forward.
+
+62
+00:02:57,840 --> 00:03:00,855
+The two paths are 1: AI based
+
+63
+00:03:00,879 --> 00:03:02,935
+digital identity and 2: KERI based digital
+
+64
+00:03:02,959 --> 00:03:04,536
+identity. When I say KERI I mean the
+
+65
+00:03:04,560 --> 00:03:05,896
+KERI suite of protocols. There's a
+
+66
+00:03:05,920 --> 00:03:07,176
+bunch of protocols bunch of different
+
+67
+00:03:07,200 --> 00:03:09,416
+things that are associated with KERI.
+
+68
+00:03:09,440 --> 00:03:11,495
+When I say AI based digital identity,
+
+69
+00:03:11,519 --> 00:03:14,536
+I'm talking about what the Five
+
+70
+00:03:14,560 --> 00:03:16,456
+Eyes Report recommended is that people
+
+71
+00:03:16,480 --> 00:03:19,736
+start using AI-based counter
+
+72
+00:03:19,760 --> 00:03:21,656
+measures, defensive measures. In other
+
+73
+00:03:21,680 --> 00:03:24,855
+words, it's like a
+
+74
+00:03:24,879 --> 00:03:28,536
+<i>spy versus spy</i> sort of thing
+
+75
+00:03:28,560 --> 00:03:31,096
+where both sides have AIs and
+
+76
+00:03:31,120 --> 00:03:33,096
+the AIs are working really hard to
+
+77
+00:03:33,120 --> 00:03:35,896
+either defend against cyber attack or to
+
+78
+00:03:35,920 --> 00:03:38,376
+engage in cyber
+
+79
+00:03:38,400 --> 00:03:41,176
+attacks. And so they're saying
+
+80
+00:03:41,200 --> 00:03:43,656
+everybody needs to start using AI to
+
+81
+00:03:43,680 --> 00:03:46,935
+defend themselves because the AI
+
+82
+00:03:46,959 --> 00:03:49,416
+attackers will be able to defeat your
+
+83
+00:03:49,440 --> 00:03:52,616
+current identity security systems and
+
+84
+00:03:52,640 --> 00:03:54,855
+that's a potential
+
+85
+00:03:54,879 --> 00:03:57,976
+problem. Now KERI, as we'll talk
+
+86
+00:03:58,000 --> 00:04:00,855
+about a little bit, was designed to be
+
+87
+00:04:00,879 --> 00:04:03,176
+highly resilient in this sort of
+
+88
+00:04:03,200 --> 00:04:06,616
+scenario. So what does an AI-based
+
+89
+00:04:06,640 --> 00:04:08,376
+digital identity look like? Well, it's a
+
+90
+00:04:08,400 --> 00:04:11,096
+digital persona that is derived from
+
+91
+00:04:11,120 --> 00:04:12,855
+continuous tracking and statistic
+
+92
+00:04:12,879 --> 00:04:14,775
+correlation of one's behavior and
+
+93
+00:04:14,799 --> 00:04:18,536
+biometrics expression. Basically, the AI
+
+94
+00:04:18,560 --> 00:04:20,296
+creates
+
+95
+00:04:20,320 --> 00:04:23,976
+a digital picture of
+
+96
+00:04:24,000 --> 00:04:26,455
+your behavior based on tracking and
+
+97
+00:04:26,479 --> 00:04:28,856
+correlating your behavior and then an
+
+98
+00:04:28,880 --> 00:04:31,576
+attacker has to impersonate
+
+99
+00:04:31,600 --> 00:04:34,376
+something that correlates better to
+
+100
+00:04:34,400 --> 00:04:36,056
+your behavior than your own
+
+101
+00:04:36,080 --> 00:04:38,615
+behavior. And so as long as your AI is
+
+102
+00:04:38,639 --> 00:04:40,296
+doing better job of correlating your
+
+103
+00:04:40,320 --> 00:04:44,296
+behavior and collecting those
+
+104
+00:04:44,320 --> 00:04:47,336
+signals called fraud signals
+
+105
+00:04:47,360 --> 00:04:51,016
+or anti-fraud signals then the AI can
+
+106
+00:04:51,040 --> 00:04:53,016
+say no it's you, and not an
+
+107
+00:04:53,040 --> 00:04:55,336
+impersonator, whereas the attacker
+
+108
+00:04:55,360 --> 00:04:57,175
+is saying no I can create an AI that can
+
+109
+00:04:57,199 --> 00:04:59,336
+impersonate you, can deep fake you, can
+
+110
+00:04:59,360 --> 00:05:01,976
+can make it look like it's you, and
+
+111
+00:05:02,000 --> 00:05:04,776
+so what happens is that everything that
+
+112
+00:05:04,800 --> 00:05:07,416
+you're protecting digital identity AI
+
+113
+00:05:07,440 --> 00:05:09,735
+learns how to do to better identify you,
+
+114
+00:05:09,759 --> 00:05:12,136
+the attacker will
+
+115
+00:05:12,160 --> 00:05:13,656
+eventually learn how to
+
+116
+00:05:13,680 --> 00:05:16,216
+better impersonate you. And so it's just
+
+117
+00:05:16,240 --> 00:05:18,296
+a continuous cycle. And the only way
+
+118
+00:05:18,320 --> 00:05:23,656
+that you win is if your protection AI
+
+119
+00:05:23,680 --> 00:05:25,895
+has as much information as it possibly
+
+120
+00:05:25,919 --> 00:05:28,376
+can have about your behavior so that it
+
+121
+00:05:28,400 --> 00:05:30,136
+can do a better job of creating a
+
+122
+00:05:30,160 --> 00:05:32,856
+digital persona that matches you. So if
+
+123
+00:05:32,880 --> 00:05:35,336
+that isn't scary from a privacy tracking
+
+124
+00:05:35,360 --> 00:05:37,735
+surveillance perspective, you don't
+
+125
+00:05:37,759 --> 00:05:39,735
+know what scary is because that is
+
+126
+00:05:39,759 --> 00:05:40,729
+pretty scary.
+
+127
+00:05:40,753 --> 00:05:44,536
+But that's what that looks like.
+
+128
+00:05:44,560 --> 00:05:47,895
+Whereas KERI is based on a
+
+129
+00:05:47,919 --> 00:05:50,056
+cryptographically-derived fault-tolerant
+
+130
+00:05:50,080 --> 00:05:53,496
+survivable ID (red.) and it's survivable to AI
+
+131
+00:05:53,520 --> 00:05:56,056
+cyber attack. We call it perpetual ID.
+
+132
+00:05:56,080 --> 00:05:59,656
+It isn't based on the
+
+133
+00:05:59,680 --> 00:06:02,296
+weak things that current
+
+134
+00:06:02,320 --> 00:06:04,856
+internet-based identity are based on
+
+135
+00:06:04,880 --> 00:06:06,856
+which are largely shared secrets. It's
+
+136
+00:06:06,880 --> 00:06:09,336
+not based on the weaknesses that are in
+
+137
+00:06:09,360 --> 00:06:12,295
+the DNS certificate authority system and
+
+138
+00:06:12,319 --> 00:06:15,496
+TLS and OAuth and OIDC and all of these
+
+139
+00:06:15,520 --> 00:06:17,015
+systems that we have developed
+
+140
+00:06:17,039 --> 00:06:18,455
+over the last 30 years that are now
+
+141
+00:06:18,479 --> 00:06:21,416
+vulnerable to AI cyber attacks.
+
+142
+00:06:21,440 --> 00:06:23,796
+It's a ground up new design that
+
+143
+00:06:23,821 --> 00:06:27,015
+is designed from the beginning to be
+
+144
+00:06:27,039 --> 00:06:29,976
+fault tolerant to survive attack to
+
+145
+00:06:30,000 --> 00:06:31,735
+be able to detect compromise and recover
+
+146
+00:06:31,759 --> 00:06:35,256
+from it. So it is designed
+
+147
+00:06:35,280 --> 00:06:37,735
+to be resilient to these these sorts of
+
+148
+00:06:37,759 --> 00:06:39,735
+attacks.
+
+149
+00:06:39,759 --> 00:06:42,376
+So what happens is that if you go
+
+150
+00:06:42,400 --> 00:06:44,776
+with AI-based identity you can get
+
+151
+00:06:44,800 --> 00:06:47,895
+protection but inevitably it's going to
+
+152
+00:06:47,919 --> 00:06:49,416
+be totally centralized with zero
+
+153
+00:06:49,440 --> 00:06:51,256
+privacy. Whereas if you go the KERI
+
+154
+00:06:51,280 --> 00:06:53,816
+route, it's fully decentralized with
+
+155
+00:06:53,840 --> 00:06:55,656
+best possible privacy. And that doesn't
+
+156
+00:06:55,680 --> 00:06:58,056
+mean that you have the privacy that
+
+157
+00:06:58,080 --> 00:06:59,575
+maybe you thought you could have. It
+
+158
+00:06:59,599 --> 00:07:01,656
+means it has the best privacy you
+
+159
+00:07:01,680 --> 00:07:04,455
+possibly can have given we're living in
+
+160
+00:07:04,479 --> 00:07:08,136
+this new AI environment where AIs are
+
+161
+00:07:08,160 --> 00:07:10,216
+consuming all of the data on the
+
+162
+00:07:10,240 --> 00:07:11,895
+internet and there have available to
+
+163
+00:07:11,919 --> 00:07:14,216
+them, data to correlate pretty
+
+164
+00:07:14,240 --> 00:07:16,696
+much anything about anything you do.
+
+165
+00:07:16,720 --> 00:07:18,536
+So we can talk about it in more detail
+
+166
+00:07:18,560 --> 00:07:20,936
+about what best possible privacy looks
+
+167
+00:07:20,960 --> 00:07:24,856
+like. So what we want to do is in
+
+168
+00:07:24,880 --> 00:07:26,936
+this discussion is answer some high-level
+
+169
+00:07:26,960 --> 00:07:29,536
+questions about what this means.
+
+170
+00:07:29,560 --> 00:07:32,295
+So these questions have topics and then
+
+171
+00:07:32,319 --> 00:07:33,496
+there's a question and then I'm going to
+
+172
+00:07:33,520 --> 00:07:36,216
+go into more detail on that. But
+
+173
+00:07:36,240 --> 00:07:39,015
+let's go back and remember we're talking
+
+174
+00:07:39,039 --> 00:07:41,256
+about AI-based digital identity which
+
+175
+00:07:41,280 --> 00:07:45,175
+NSA and the major security organizations
+
+176
+00:07:45,199 --> 00:07:48,136
+from the Five Eyes countries have said (implicitly, red)
+
+177
+00:07:48,160 --> 00:07:51,015
+“everyone needs to start adopting” or the
+
+178
+00:07:51,039 --> 00:07:52,856
+alternative is a KERI based digital
+
+179
+00:07:52,880 --> 00:07:54,136
+identity. KERI's not as well
+
+180
+00:07:54,160 --> 00:07:56,776
+known, so people don't know about it.
+
+181
+00:07:56,800 --> 00:07:58,216
+Although it's got some significant
+
+182
+00:07:58,240 --> 00:08:00,776
+adoption vectors, including one is called
+
+183
+00:08:00,800 --> 00:08:02,536
+State Endorsed Digital Identity (SEDI).
+
+184
+00:08:02,560 --> 00:08:03,816
+The other one's called Open Verifiable
+
+185
+00:08:03,840 --> 00:08:05,976
+Calling (OVC), which is getting rid
+
+186
+00:08:06,000 --> 00:08:10,615
+of spam in calling, and in the
+
+187
+00:08:10,639 --> 00:08:12,615
+healthcare sector, there's
+
+188
+00:08:12,639 --> 00:08:16,295
+work on using KERI for
+
+189
+00:08:16,319 --> 00:08:19,976
+patient ID. All of those are major
+
+190
+00:08:20,000 --> 00:08:24,056
+significant adoption vectors that
+
+191
+00:08:24,080 --> 00:08:26,936
+that could put KERI in a position to
+
+192
+00:08:26,960 --> 00:08:29,976
+be the last best hope for individual
+
+193
+00:08:30,000 --> 00:08:32,216
+identity because if we go down the AI
+
+194
+00:08:32,240 --> 00:08:34,536
+route, we may get security. It's an arms
+
+195
+00:08:34,560 --> 00:08:37,976
+race. It'll always be an arms race.
+
+196
+00:08:38,000 --> 00:08:39,656
+But we won't have any
+
+197
+00:08:39,680 --> 00:08:42,776
+semblance of user control or privacy.
+
+198
+00:08:42,800 --> 00:08:43,816
+So, let's talk about that.
+
+199
+00:08:47,620 --> 00:08:50,796
+The Five Eyes statement calls for AI
+
+200
+00:08:50,820 --> 00:08:53,596
+assisted defense. So the question is how
+
+201
+00:08:53,620 --> 00:08:55,676
+do we ensure AI remains subordinate to
+
+202
+00:08:55,700 --> 00:08:57,516
+humans, law, policy, and cryptographically
+
+203
+00:08:57,540 --> 00:08:59,116
+verifiable identity infrastructure
+
+204
+00:08:59,140 --> 00:09:00,636
+rather than becoming a de facto
+
+205
+00:09:00,660 --> 00:09:02,236
+authority.
+
+206
+00:09:04,100 --> 00:09:07,196
+Well the way that we ensure that is that we
+
+207
+00:09:07,220 --> 00:09:09,036
+need to have cryptographically
+
+208
+00:09:09,060 --> 00:09:10,875
+verifiable identity in the first place.
+
+209
+00:09:10,899 --> 00:09:13,116
+If we don't have that, then we can never
+
+210
+00:09:13,140 --> 00:09:14,956
+ensure that it doesn't become a de facto
+
+211
+00:09:14,980 --> 00:09:17,276
+authority because we can't tell what
+
+212
+00:09:17,300 --> 00:09:19,836
+it's doing. It's not transparent. It's
+
+213
+00:09:19,860 --> 00:09:23,276
+not observable. It's basically an AI and
+
+214
+00:09:23,300 --> 00:09:25,676
+that AI is going to make decisions about
+
+215
+00:09:25,700 --> 00:09:28,875
+who you are. And the
+
+216
+00:09:28,899 --> 00:09:30,875
+goal is to protect you from fraud,
+
+217
+00:09:30,899 --> 00:09:35,516
+but AIs themselves don't have any
+
+218
+00:09:35,540 --> 00:09:38,236
+inherent structure that allows them to
+
+219
+00:09:38,260 --> 00:09:40,156
+separate out what is sensitive
+
+220
+00:09:40,180 --> 00:09:42,956
+information and sensitive authority,
+
+221
+00:09:42,980 --> 00:09:44,875
+and sensitive things that it
+
+222
+00:09:44,899 --> 00:09:47,836
+should do or not do versus anything that
+
+223
+00:09:47,860 --> 00:09:52,956
+it's within its feature space or
+
+224
+00:09:52,980 --> 00:09:56,236
+weight space, based on the
+
+225
+00:09:56,260 --> 00:09:58,796
+the prompts that it's received and the
+
+226
+00:09:58,820 --> 00:10:00,556
+objectives that it's received and the
+
+227
+00:10:00,580 --> 00:10:03,596
+temperature by which it's deciding which
+
+228
+00:10:03,620 --> 00:10:06,796
+path to follow
+
+229
+00:10:06,820 --> 00:10:08,796
+and I can go into more detail but OWASP
+
+230
+00:10:08,820 --> 00:10:12,956
+recently released in March a 100-page
+
+231
+00:10:12,980 --> 00:10:15,356
+cyber security report on the new AI
+
+232
+00:10:15,380 --> 00:10:19,516
+threat and it is stark and because
+
+233
+00:10:19,540 --> 00:10:22,315
+the AI threat poses a threat
+
+234
+00:10:22,339 --> 00:10:24,476
+that hasn't ever existed before and there
+
+235
+00:10:24,500 --> 00:10:26,716
+aren't any
+
+236
+00:10:26,740 --> 00:10:29,435
+solutions for it. They say that in
+
+237
+00:10:29,459 --> 00:10:31,836
+the report. All you can do is to try to
+
+238
+00:10:31,860 --> 00:10:34,396
+mitigate it to some degree.
+
+239
+00:10:34,420 --> 00:10:37,116
+So, how we ensure it? First is:
+
+240
+00:10:37,140 --> 00:10:38,636
+we have to have
+
+241
+00:10:38,660 --> 00:10:40,636
+cryptographic verifiable identity
+
+242
+00:10:40,660 --> 00:10:44,236
+infrastructure. So that that is the
+
+243
+00:10:44,260 --> 00:10:46,396
+authority and individually
+
+244
+00:10:46,420 --> 00:10:49,836
+controlled. So what are the hardest
+
+245
+00:10:49,860 --> 00:10:52,236
+legal technical governance mechanisms
+
+246
+00:10:52,260 --> 00:10:54,636
+that are needed to ensure
+
+247
+00:10:54,660 --> 00:10:57,596
+that every significant AI action
+
+248
+00:10:57,620 --> 00:10:59,356
+remains attributable or accountable to
+
+249
+00:10:59,380 --> 00:11:01,516
+humans and organizations? Well, that
+
+250
+00:11:01,540 --> 00:11:04,315
+means that we have to build a regulatory
+
+251
+00:11:04,339 --> 00:11:07,036
+and a legal
+
+252
+00:11:07,060 --> 00:11:11,116
+bullwork for our individual rights.
+
+253
+00:11:11,140 --> 00:11:13,116
+The original Constitution of the United
+
+254
+00:11:13,140 --> 00:11:15,116
+States has a a couple of
+
+255
+00:11:15,140 --> 00:11:16,796
+amendments and the fourth and fifth
+
+256
+00:11:16,820 --> 00:11:19,196
+amendments, but those were written in an
+
+257
+00:11:19,220 --> 00:11:21,676
+age when there wasn't a digital realm
+
+258
+00:11:21,700 --> 00:11:25,036
+when pretty much everything
+
+259
+00:11:25,060 --> 00:11:27,995
+was on paper. Information was
+
+260
+00:11:28,019 --> 00:11:30,636
+disseminated on paper. We now have a
+
+261
+00:11:30,660 --> 00:11:34,156
+digital realm where information is
+
+262
+00:11:34,180 --> 00:11:37,676
+disseminated electronically. And the way
+
+263
+00:11:37,700 --> 00:11:40,396
+you protect yourself in the digital
+
+264
+00:11:40,420 --> 00:11:41,916
+realm and the way you protect your
+
+265
+00:11:41,940 --> 00:11:43,435
+identity, your information, your
+
+266
+00:11:43,459 --> 00:11:46,716
+presence is different
+
+267
+00:11:46,740 --> 00:11:49,755
+enough that we can't rely solely on
+
+268
+00:11:49,779 --> 00:11:51,916
+those two protections. We need to have
+
+269
+00:11:51,940 --> 00:11:54,636
+additional protections for that. And one
+
+270
+00:11:54,660 --> 00:11:56,476
+of those protections is called a “duty of
+
+271
+00:11:56,500 --> 00:11:59,196
+data loyalty”. It's probably the
+
+272
+00:11:59,220 --> 00:12:01,916
+best legal framework that's been
+
+273
+00:12:01,940 --> 00:12:03,276
+developed over the last few years.
+
+274
+00:12:03,300 --> 00:12:05,516
+There's some legal scholars that have
+
+275
+00:12:05,540 --> 00:12:07,356
+been working on it, written several
+
+276
+00:12:07,380 --> 00:12:10,636
+papers on it and the state of
+
+277
+00:12:10,660 --> 00:12:12,636
+Utah recently adopted it in the
+
+278
+00:12:12,660 --> 00:12:14,236
+legislation.
+
+279
+00:12:14,260 --> 00:12:16,796
+That requires that people who
+
+280
+00:12:16,820 --> 00:12:20,076
+process data about you must use that
+
+281
+00:12:20,100 --> 00:12:22,076
+data in a way that is in your best
+
+282
+00:12:22,100 --> 00:12:25,676
+interest. And that's the
+
+283
+00:12:25,700 --> 00:12:27,435
+start. And then you have to layer on top
+
+284
+00:12:27,459 --> 00:12:31,115
+of that a mechanism for people to be
+
+285
+00:12:31,139 --> 00:12:33,036
+in control of their identity to be able
+
+286
+00:12:33,060 --> 00:12:36,555
+to then express their preferences. And
+
+287
+00:12:36,579 --> 00:12:40,636
+it's not simply consent. It's actual
+
+288
+00:12:40,660 --> 00:12:45,115
+engaging in what
+
+289
+00:12:45,139 --> 00:12:47,995
+is in their best interest and attaching
+
+290
+00:12:48,019 --> 00:12:51,036
+to the use of that data what is
+
+291
+00:12:51,060 --> 00:12:53,196
+called chain-link confidentiality where
+
+292
+00:12:53,220 --> 00:12:57,115
+the where the terms and the follow
+
+293
+00:12:57,139 --> 00:12:58,875
+the data as it goes through the system
+
+294
+00:12:58,899 --> 00:13:01,356
+so that you have an ability to
+
+295
+00:13:01,380 --> 00:13:03,596
+enforce it so that it also includes
+
+296
+00:13:03,620 --> 00:13:06,315
+citizen enforcement or citizen recourse.
+
+297
+00:13:06,339 --> 00:13:08,396
+So there's several there's layers of
+
+298
+00:13:08,420 --> 00:13:10,156
+mechanisms that we need to put into
+
+299
+00:13:10,180 --> 00:13:12,236
+place and we're starting to do that in
+
+300
+00:13:12,260 --> 00:13:14,315
+some places. The state of Utah is
+
+301
+00:13:14,339 --> 00:13:16,315
+being a leader in it and there's a there
+
+302
+00:13:16,339 --> 00:13:19,435
+is a coalition of other states that
+
+303
+00:13:19,459 --> 00:13:21,276
+are looking at creating legislation the
+
+304
+00:13:21,300 --> 00:13:23,196
+same way that it gives us an opportunity
+
+305
+00:13:23,220 --> 00:13:25,435
+to be able to do that. But absent
+
+306
+00:13:25,459 --> 00:13:29,115
+that it's going to be very
+
+307
+00:13:29,139 --> 00:13:32,476
+difficult to stem the tide of what's
+
+308
+00:13:32,500 --> 00:13:35,115
+happening with AI and because of
+
+309
+00:13:35,139 --> 00:13:37,916
+the urgency it makes it all the more
+
+310
+00:13:37,940 --> 00:13:40,476
+problematic.
+
+311
+00:13:42,100 --> 00:13:46,875
+So the NSA's reports calls for
+
+312
+00:13:46,899 --> 00:13:49,276
+stronger identity and access controls.
+
+313
+00:13:49,300 --> 00:13:52,956
+Right. Well there's a problem
+
+314
+00:13:52,980 --> 00:13:54,156
+there.
+
+315
+00:13:54,180 --> 00:13:56,396
+the problem is what counts
+
+316
+00:13:56,420 --> 00:14:00,875
+as stronger, right? I mean, the
+
+317
+00:14:00,899 --> 00:14:03,276
+current controls and people have been
+
+318
+00:14:03,300 --> 00:14:06,156
+using them for years and
+
+319
+00:14:06,180 --> 00:14:08,476
+the and people keep strengthening them
+
+320
+00:14:08,500 --> 00:14:10,956
+and they keep adding to them, but
+
+321
+00:14:10,980 --> 00:14:14,156
+the AI can attack them in such
+
+322
+00:14:14,180 --> 00:14:17,836
+ a broad way now that they need
+
+323
+00:14:17,860 --> 00:14:20,156
+to be strengthened
+
+324
+00:14:20,180 --> 00:14:22,716
+in a way not ever done before.
+
+325
+00:14:22,740 --> 00:14:24,156
+It's like I guess you could say it's
+
+326
+00:14:24,180 --> 00:14:28,636
+like going from armor made
+
+327
+00:14:28,660 --> 00:14:31,916
+out of leather to armor made out
+
+328
+00:14:31,940 --> 00:14:36,076
+of steel, right? Like to go from
+
+329
+00:14:36,100 --> 00:14:38,236
+weak to strong, but you don't have the
+
+330
+00:14:38,260 --> 00:14:40,956
+ability to build steel armor yet. You
+
+331
+00:14:40,980 --> 00:14:42,636
+haven't invented steel. So, what do you
+
+332
+00:14:42,660 --> 00:14:44,796
+do?
+
+333
+00:14:44,820 --> 00:14:47,356
+So KERI was designed from the ground
+
+334
+00:14:47,380 --> 00:14:52,156
+up to not require an AI to defend
+
+335
+00:14:52,180 --> 00:14:54,716
+against an AI. It was designed to use
+
+336
+00:14:54,740 --> 00:14:57,115
+cryptography in the best possible way
+
+337
+00:14:57,139 --> 00:14:59,276
+that you can use cryptography
+
+338
+00:14:59,300 --> 00:15:01,836
+which requires key management
+
+339
+00:15:01,860 --> 00:15:04,315
+and it requires key management done in a
+
+340
+00:15:04,339 --> 00:15:05,836
+special way. And if you do key
+
+341
+00:15:05,860 --> 00:15:07,836
+management in that way,
+
+342
+00:15:07,860 --> 00:15:11,115
+then you can build a system
+
+343
+00:15:11,139 --> 00:15:13,196
+that is resilient to these sorts of attacks
+
+344
+00:15:13,220 --> 00:15:14,636
+because it doesn't have the
+
+345
+00:15:14,660 --> 00:15:16,636
+weaknesses which are built into the
+
+346
+00:15:16,660 --> 00:15:20,476
+current controls because of the
+
+347
+00:15:20,500 --> 00:15:22,716
+state of technology 30 years ago when
+
+348
+00:15:22,740 --> 00:15:24,236
+these systems were designed and then
+
+349
+00:15:24,260 --> 00:15:26,236
+they've been bolted on and added on and
+
+350
+00:15:26,260 --> 00:15:28,156
+modified but the core architecture
+
+351
+00:15:28,180 --> 00:15:30,875
+hasn't changed in 30 years whereas
+
+352
+00:15:30,899 --> 00:15:34,180
+KERI is a new architecture.
+
+353
+00:15:34,899 --> 00:15:37,916
+so this question
+
+354
+00:15:37,940 --> 00:15:39,995
+is which weaknesses in current
+
+355
+00:15:40,019 --> 00:15:41,755
+identity systems become most dangerous
+
+356
+00:15:41,779 --> 00:15:43,995
+when attackers can operate at AI speed
+
+357
+00:15:44,019 --> 00:15:50,555
+and scale. Well, most vulnerabilities
+
+358
+00:15:50,579 --> 00:15:54,796
+typically employ
+
+359
+00:15:54,820 --> 00:15:58,396
+a a combination of vulnerabilities. So
+
+360
+00:15:58,420 --> 00:16:01,356
+you might have an algorithmic
+
+361
+00:16:01,380 --> 00:16:03,596
+an infrastructure,
+
+362
+00:16:03,620 --> 00:16:07,115
+a software and an operating system
+
+363
+00:16:07,139 --> 00:16:11,596
+and a usage vulnerability that together
+
+364
+00:16:11,620 --> 00:16:14,235
+enable an attack. A recursive
+
+365
+00:16:14,259 --> 00:16:17,036
+privilege escalation attack often takes
+
+366
+00:16:17,060 --> 00:16:19,276
+advantages of multiple vulnerabilities
+
+367
+00:16:19,300 --> 00:16:21,596
+to be able to both move
+
+368
+00:16:21,620 --> 00:16:26,396
+vertically and horizontally in an
+
+369
+00:16:26,420 --> 00:16:29,196
+or in an access control organizational
+
+370
+00:16:29,220 --> 00:16:32,235
+space by exploiting different
+
+371
+00:16:32,259 --> 00:16:34,315
+different degrees of vulnerabilities.
+
+372
+00:16:34,339 --> 00:16:36,476
+And so it doesn't get to where it
+
+373
+00:16:36,500 --> 00:16:38,716
+wants to go all at once. It just
+
+374
+00:16:38,740 --> 00:16:41,276
+gradually works there because it finds
+
+375
+00:16:41,300 --> 00:16:44,396
+what's broken at each point and then
+
+376
+00:16:44,420 --> 00:16:48,476
+searches for the next exploit, right?
+
+377
+00:16:48,500 --> 00:16:51,836
+And with AI, they can search faster.
+
+378
+00:16:51,860 --> 00:16:55,196
+They can combine exploits faster
+
+379
+00:16:55,220 --> 00:16:56,555
+because they can search the whole space
+
+380
+00:16:56,579 --> 00:16:58,156
+and they go "Oh, wait..."
+
+381
+00:16:58,180 --> 00:17:00,716
+In fact, there was a recent paper, I think
+
+382
+00:17:00,740 --> 00:17:02,875
+last week, where they were able to
+
+383
+00:17:02,899 --> 00:17:07,116
+exploit the memory security model in
+
+384
+00:17:07,140 --> 00:17:09,996
+Apple's M5 architecture
+
+385
+00:17:10,020 --> 00:17:13,275
+through a combination of human and
+
+386
+00:17:13,299 --> 00:17:18,876
+machine AI analysis that the humans
+
+387
+00:17:18,900 --> 00:17:20,236
+could've never done on their own
+
+388
+00:17:20,260 --> 00:17:22,076
+because they just didn't have the
+
+389
+00:17:22,100 --> 00:17:24,236
+ability to analyze all of the possible
+
+390
+00:17:24,260 --> 00:17:25,915
+different things they could think about.
+
+391
+00:17:25,939 --> 00:17:28,795
+they didn't necessarily know how to
+
+392
+00:17:28,819 --> 00:17:30,556
+how to finish the exploit but with the
+
+393
+00:17:30,580 --> 00:17:33,275
+human guidance in combination
+
+394
+00:17:33,299 --> 00:17:36,716
+so AI speed and scale
+
+395
+00:17:36,740 --> 00:17:38,716
+is not just the AI itself it's fact the
+
+396
+00:17:38,740 --> 00:17:41,836
+attackers are human, the
+
+397
+00:17:41,860 --> 00:17:44,876
+most of these attacks are guided by
+
+398
+00:17:44,900 --> 00:17:47,275
+humans, either criminals or nation states,
+
+399
+00:17:47,299 --> 00:17:49,916
+that want to come after
+
+400
+00:17:49,940 --> 00:17:52,796
+critical or valuable infrastructure and
+
+401
+00:17:52,820 --> 00:17:55,356
+the AI just is a force multiplier for
+
+402
+00:17:55,380 --> 00:17:57,275
+for all of those types of attacks,
+
+403
+00:17:57,299 --> 00:17:59,196
+not júst, but is for sure a force
+
+404
+00:17:59,220 --> 00:18:02,476
+multiplier. And that means that
+
+405
+00:18:02,500 --> 00:18:07,596
+even hard to find unknown exploits
+
+406
+00:18:07,620 --> 00:18:09,356
+that are latent, that are in your system
+
+407
+00:18:09,380 --> 00:18:11,515
+are going to be exploited quickly, which
+
+408
+00:18:11,539 --> 00:18:13,356
+means that your system has to be
+
+409
+00:18:13,380 --> 00:18:16,076
+designed differently. It has to be
+
+410
+00:18:16,100 --> 00:18:17,916
+designed to be fault tolerant to be able
+
+411
+00:18:17,940 --> 00:18:20,956
+to survive even if it's exploited. And
+
+412
+00:18:20,980 --> 00:18:22,876
+so that is
+
+413
+00:18:22,900 --> 00:18:28,059
+a different approach to security.
+
+414
+00:18:28,179 --> 00:18:29,676
+So let's talk about that a little bit
+
+415
+00:18:29,700 --> 00:18:32,316
+more. Cyber resilience after breach
+
+416
+00:18:32,340 --> 00:18:34,716
+because that's the perfect segway.
+
+417
+00:18:34,740 --> 00:18:36,796
+The statement assumes breaches are
+
+418
+00:18:36,820 --> 00:18:38,395
+inevitable.
+
+419
+00:18:38,419 --> 00:18:40,316
+and the question is in a KERI-based
+
+420
+00:18:40,340 --> 00:18:42,155
+architecture what remains trustworthy
+
+421
+00:18:42,179 --> 00:18:44,716
+after servers databases cloud providers
+
+422
+00:18:44,740 --> 00:18:47,275
+certificate authorities are compromised?
+
+423
+00:18:47,299 --> 00:18:50,155
+Well, in a KERI-based architecture,
+
+424
+00:18:50,179 --> 00:18:52,636
+what remains trustworthy is that you
+
+425
+00:18:52,660 --> 00:18:56,556
+have built a a fault-tolerant mechanism
+
+426
+00:18:56,580 --> 00:18:58,876
+that enables you to recover to detect
+
+427
+00:18:58,900 --> 00:19:02,476
+and recover from compromise.
+
+428
+00:19:02,500 --> 00:19:06,076
+And so what happens is that you
+
+429
+00:19:06,100 --> 00:19:08,476
+you may not be able to anticipate
+
+430
+00:19:08,500 --> 00:19:12,476
+all of the ways that an attacker can
+
+431
+00:19:12,500 --> 00:19:14,796
+attack you. But if you have mechanisms
+
+432
+00:19:14,820 --> 00:19:17,916
+that allow you to detect compromise
+
+433
+00:19:17,940 --> 00:19:19,996
+and then a way to recover from
+
+434
+00:19:20,020 --> 00:19:23,596
+compromise in a timely fashion, then the
+
+435
+00:19:23,620 --> 00:19:26,316
+attacker doesn't have time to exploit
+
+436
+00:19:26,340 --> 00:19:29,356
+that compromise. And like in a <i>Recursive</i>
+
+437
+00:19:29,380 --> 00:19:31,596
+<i>Privilege Escalation Attack</i>,
+
+438
+00:19:31,620 --> 00:19:35,035
+usually it's a sequence of exploits that
+
+439
+00:19:35,059 --> 00:19:36,876
+take time. Now the time doesn't have to
+
+440
+00:19:36,900 --> 00:19:39,436
+be very long. It might be
+
+441
+00:19:39,460 --> 00:19:43,436
+hours or days, now
+
+442
+00:19:43,460 --> 00:19:46,155
+prior to AI, well the
+
+443
+00:19:46,179 --> 00:19:48,556
+current the average time for a breach to
+
+444
+00:19:48,580 --> 00:19:50,716
+get detected currently and I
+
+445
+00:19:50,740 --> 00:19:52,476
+guess that's no less what you know
+
+446
+00:19:52,500 --> 00:19:55,996
+and having an AI as a protector might
+
+447
+00:19:56,020 --> 00:19:57,676
+reduce that time because it's better
+
+448
+00:19:57,700 --> 00:19:59,596
+able to detect breaches, right? That's
+
+449
+00:19:59,620 --> 00:20:03,275
+that's the idea. is 6 months and then
+
+450
+00:20:03,299 --> 00:20:05,436
+90 days after that to contain the
+
+451
+00:20:05,460 --> 00:20:07,515
+breach. So it's nine months of time that
+
+452
+00:20:07,539 --> 00:20:11,436
+an attacker has to to exploit the
+
+453
+00:20:11,460 --> 00:20:13,035
+vulnerability that they've discovered.
+
+454
+00:20:13,059 --> 00:20:17,275
+So KERI is designed so that
+
+455
+00:20:17,299 --> 00:20:19,996
+the detection time is on the order
+
+456
+00:20:20,020 --> 00:20:22,076
+of seconds. It's network propagation
+
+457
+00:20:22,100 --> 00:20:26,476
+time. So that breaches that are
+
+458
+00:20:26,500 --> 00:20:28,155
+exploitable
+
+459
+00:20:28,179 --> 00:20:30,956
+must exhibit detectability. So the whole
+
+460
+00:20:30,980 --> 00:20:32,476
+system's designed around
+
+461
+00:20:32,500 --> 00:20:35,356
+detectability, right?
+
+462
+00:20:35,380 --> 00:20:38,556
+Everything exhibits as <i>duplicity</i>.
+
+463
+00:20:38,580 --> 00:20:41,035
+It's a duplicity evidence system. So for
+
+464
+00:20:41,059 --> 00:20:43,756
+an attacker to benefit, they have to do
+
+465
+00:20:43,780 --> 00:20:45,996
+something that exhibits as duplicity,
+
+466
+00:20:46,020 --> 00:20:48,155
+which then enables
+
+467
+00:20:48,179 --> 00:20:50,316
+the controller of the identity to
+
+468
+00:20:50,340 --> 00:20:53,596
+recover from that in a timely
+
+469
+00:20:53,620 --> 00:20:55,196
+fashion. Which doesn't mean
+
+470
+00:20:55,220 --> 00:20:57,035
+that there aren't successful attacks.
+
+471
+00:20:57,059 --> 00:21:00,076
+It means that the blast radius of
+
+472
+00:21:00,100 --> 00:21:03,196
+the attack is minimized.
+
+473
+00:21:03,220 --> 00:21:06,556
+In many cases the ROI to the attack or
+
+474
+00:21:06,580 --> 00:21:09,035
+the return on investment is negative. I
+
+475
+00:21:09,059 --> 00:21:11,196
+mean it costs more
+
+476
+00:21:11,220 --> 00:21:13,676
+to execute the attack than they get from it
+
+477
+00:21:13,700 --> 00:21:17,836
+because the attack is quickly
+
+478
+00:21:17,860 --> 00:21:22,316
+contained and recovered from.
+
+479
+00:21:22,340 --> 00:21:24,395
+So these systems that we currently use,
+
+480
+00:21:24,419 --> 00:21:26,155
+servers, database, cloud providers,
+
+481
+00:21:26,179 --> 00:21:27,676
+certificate authorities, they're all
+
+482
+00:21:27,700 --> 00:21:30,155
+based on an antiquated, outdated notion
+
+483
+00:21:30,179 --> 00:21:32,395
+of security and key management. And
+
+484
+00:21:32,419 --> 00:21:33,916
+those are really harsh terms. And I know
+
+485
+00:21:33,940 --> 00:21:34,956
+a lot of people in the industry don't
+
+486
+00:21:34,980 --> 00:21:36,395
+like it when I say things like that, but
+
+487
+00:21:36,419 --> 00:21:38,716
+they are. It's 30 years old. And you can
+
+488
+00:21:38,740 --> 00:21:40,796
+walk back the choices
+
+489
+00:21:40,820 --> 00:21:42,635
+and they were good choices 30 years ago
+
+490
+00:21:42,659 --> 00:21:44,956
+or even 20 years ago or even 10 years
+
+491
+00:21:44,980 --> 00:21:47,116
+ago. Not so much 10 years ago, but 20
+
+492
+00:21:47,140 --> 00:21:49,836
+years ago for sure. But at least in
+
+493
+00:21:49,860 --> 00:21:51,515
+the last 10 years we've had better
+
+494
+00:21:51,539 --> 00:21:54,076
+technology for key management and KERI
+
+495
+00:21:54,100 --> 00:21:56,716
+is based on understanding that if
+
+496
+00:21:56,740 --> 00:21:58,556
+you have better technology for key
+
+497
+00:21:58,580 --> 00:22:00,476
+management then you do different
+
+498
+00:22:00,500 --> 00:22:04,556
+things. All of these systems that
+
+499
+00:22:04,580 --> 00:22:10,076
+that use DNS, TLS, OAuth, OIDC-based
+
+500
+00:22:10,100 --> 00:22:13,515
+systems all use shared secrets
+
+501
+00:22:13,539 --> 00:22:15,676
+and shared secrets are inherently weak
+
+502
+00:22:15,700 --> 00:22:19,436
+and inherently contribute to
+
+503
+00:22:19,460 --> 00:22:21,836
+<i>recursive privilege escalation attacks</i>.
+
+504
+00:22:21,860 --> 00:22:25,756
+And so it's really just figuring out
+
+505
+00:22:25,780 --> 00:22:27,676
+different ways to to exploit those
+
+506
+00:22:27,700 --> 00:22:29,116
+shared secrets. KERI doesn't use
+
+507
+00:22:29,140 --> 00:22:31,196
+shared secrets. It doesn't have any.
+
+508
+00:22:31,220 --> 00:22:34,236
+And so the protection
+
+509
+00:22:34,260 --> 00:22:36,716
+mechanisms are
+
+510
+00:22:36,740 --> 00:22:38,556
+fundamentally different, right?
+
+511
+00:22:38,580 --> 00:22:40,635
+If you don't share something, then somebody
+
+512
+00:22:40,659 --> 00:22:43,116
+can't capture it and collect it, right?
+
+513
+00:22:43,140 --> 00:22:45,035
+It requires a different type of attack.
+
+514
+00:22:45,059 --> 00:22:46,635
+And even if they're successful in that
+
+515
+00:22:46,659 --> 00:22:49,515
+attack, if you have a recovery
+
+516
+00:22:49,539 --> 00:22:51,196
+mechanism,
+
+517
+00:22:51,220 --> 00:22:54,155
+then you can recover from it.
+
+518
+00:22:54,179 --> 00:22:55,836
+And so you don't spend your time
+
+519
+00:22:55,860 --> 00:22:58,635
+trying to build a tank that's impervious
+
+520
+00:22:58,659 --> 00:23:02,236
+to any sort of bomb. You spend your time
+
+521
+00:23:02,260 --> 00:23:06,476
+building a squadron of tanks
+
+522
+00:23:06,500 --> 00:23:07,996
+so that some of them can be
+
+523
+00:23:08,020 --> 00:23:10,236
+destroyed, but the squadron survives and
+
+524
+00:23:10,260 --> 00:23:12,476
+repairs itself and is able to continue
+
+525
+00:23:12,500 --> 00:23:13,676
+to operate. And that's what <i>fault</i>
+
+526
+00:23:13,700 --> 00:23:16,556
+<i>tolerant</i> means. So I use that
+
+527
+00:23:16,580 --> 00:23:18,316
+analogy. You know, you can build a tank
+
+528
+00:23:18,340 --> 00:23:19,916
+with armor thick enough that withstand
+
+529
+00:23:19,940 --> 00:23:22,316
+any shell, but then it stops being a
+
+530
+00:23:22,340 --> 00:23:24,155
+tank which is mobile, right? By
+
+531
+00:23:24,179 --> 00:23:26,236
+definition, tank must be mobile.
+
+532
+00:23:26,260 --> 00:23:28,556
+So it goes from a tank to a bunker,
+
+533
+00:23:28,580 --> 00:23:31,196
+right?
+
+534
+00:23:31,220 --> 00:23:34,155
+You have to make some trades. And
+
+535
+00:23:34,179 --> 00:23:36,395
+and the right trade in
+
+536
+00:23:36,419 --> 00:23:39,836
+an AI world is a fault-tolerant system,
+
+537
+00:23:39,860 --> 00:23:42,716
+not a a system that you have to
+
+538
+00:23:42,740 --> 00:23:45,916
+throw away and start over with every few
+
+539
+00:23:45,940 --> 00:23:49,356
+days or months because
+
+540
+00:23:49,380 --> 00:23:51,035
+you can't tell whether or not you've
+
+541
+00:23:51,059 --> 00:23:52,236
+been attacked or breached because
+
+542
+00:23:52,260 --> 00:23:55,356
+you have no mechanism for
+
+543
+00:23:55,380 --> 00:23:58,956
+detecting compromise.
+
+544
+00:24:03,059 --> 00:24:05,756
+So actually this question,
+
+545
+00:24:05,780 --> 00:24:07,756
+I sort of jumped again on it, but how
+
+546
+00:24:07,780 --> 00:24:09,515
+does KERI suite shift security from
+
+547
+00:24:09,539 --> 00:24:10,876
+protecting infrastructure protecting
+
+548
+00:24:10,900 --> 00:24:12,556
+secrets to reveal verifable truths and
+
+549
+00:24:12,580 --> 00:24:15,436
+provenance. So the idea in cryptography,
+
+550
+00:24:15,460 --> 00:24:18,956
+in <i>asymmetric</i> cryptography,
+
+551
+00:24:18,980 --> 00:24:21,116
+is that you have private keys and public
+
+552
+00:24:21,140 --> 00:24:23,676
+keys; and private keys are truly
+
+553
+00:24:23,700 --> 00:24:26,796
+private in that they're never shared.
+
+554
+00:24:26,820 --> 00:24:29,275
+The problem is that people who
+
+555
+00:24:29,299 --> 00:24:33,035
+want to have a digital identity have
+
+556
+00:24:33,059 --> 00:24:35,116
+to manage those private keys. And so
+
+557
+00:24:35,140 --> 00:24:36,956
+that was always viewed as too difficult
+
+558
+00:24:36,980 --> 00:24:39,275
+a problem to manage. And so we needed to
+
+559
+00:24:39,299 --> 00:24:41,035
+have identity providers that manage
+
+560
+00:24:41,059 --> 00:24:43,436
+private keys on our behalf, right? And
+
+561
+00:24:43,460 --> 00:24:45,596
+then the key management was
+
+562
+00:24:45,620 --> 00:24:47,596
+hidden from the system. So you have
+
+563
+00:24:47,620 --> 00:24:49,515
+identity providers and relying
+
+564
+00:24:49,539 --> 00:24:51,836
+parties and then you use usernames
+
+565
+00:24:51,860 --> 00:24:53,996
+and passwords or now <i>Pass Keys</i>
+
+566
+00:24:54,020 --> 00:24:55,596
+There's stronger things than usernames
+
+567
+00:24:55,620 --> 00:24:57,996
+and passwords, but you're still relying
+
+568
+00:24:58,020 --> 00:25:01,116
+on an identity provider for the
+
+569
+00:25:01,140 --> 00:25:07,699
+ultimate security of the system.
+And that ends up
+
+570
+00:25:07,700 --> 00:25:10,876
+looking like shared secrets, <i>bearer</i>
+
+571
+00:25:10,900 --> 00:25:13,356
+<i>tokens</i>, that the identity provider
+
+572
+00:25:13,380 --> 00:25:15,676
+distributes around to people to
+
+573
+00:25:15,700 --> 00:25:18,155
+entities to be able to engage in things
+
+574
+00:25:18,179 --> 00:25:21,836
+over secure channels,
+
+575
+00:25:21,860 --> 00:25:23,836
+right?  The secure channels
+
+576
+00:25:23,860 --> 00:25:26,236
+are protected with shared secrets. TLS,
+
+577
+00:25:26,260 --> 00:25:28,635
+you know, uses a Diffy-Helman key
+
+578
+00:25:28,659 --> 00:25:30,956
+exchange shared secret to
+
+579
+00:25:30,980 --> 00:25:32,796
+exchange an encryption key which is then
+
+580
+00:25:32,820 --> 00:25:36,476
+weakly authenticated by
+
+581
+00:25:36,500 --> 00:25:37,916
+encrypting something and then the other
+
+582
+00:25:37,940 --> 00:25:39,356
+side decrypts it and then sends it back
+
+583
+00:25:39,380 --> 00:25:41,676
+to you. But it's subject
+
+584
+00:25:41,700 --> 00:25:43,755
+to key-compromise <i>impersonation attacks</i>
+
+585
+00:25:43,779 --> 00:25:46,316
+and so anytime you start doing
+
+586
+00:25:46,340 --> 00:25:48,635
+things to avoid the hard problems of key
+
+587
+00:25:48,659 --> 00:25:50,316
+management, you end up weakening
+
+588
+00:25:50,340 --> 00:25:52,316
+security. KERI says "No, we're going
+
+589
+00:25:52,340 --> 00:25:54,476
+to build key management the right way."
+
+590
+00:25:54,500 --> 00:25:57,116
+"We're going to make it fault tolerant."
+
+591
+00:25:57,140 --> 00:25:58,956
+"And then we're going to
+
+592
+00:25:58,980 --> 00:26:01,996
+enable people to use it in a way
+
+593
+00:26:02,020 --> 00:26:06,716
+that requires too much effort
+
+594
+00:26:06,740 --> 00:26:10,716
+for the attack to be
+
+595
+00:26:10,740 --> 00:26:13,436
+successful." And KERI uses
+
+596
+00:26:13,460 --> 00:26:15,196
+<i>threshold</i> structures <i>multi-</i>
+
+597
+00:26:15,220 --> 00:26:18,476
+<i>signature</i>, <i>witness</i> pools, <i>watcher</i> pools
+
+598
+00:26:18,500 --> 00:26:21,596
+and delegated AIDs that are
+
+599
+00:26:21,620 --> 00:26:24,395
+hierarchical, so that you can build as
+
+600
+00:26:24,419 --> 00:26:28,876
+secure a system as you want; so that you
+
+601
+00:26:28,900 --> 00:26:30,956
+can tune the security to the value that
+
+602
+00:26:30,980 --> 00:26:32,716
+an attacker has to go for. So if it's
+
+603
+00:26:32,740 --> 00:26:34,876
+going after something really valuable,
+
+604
+00:26:34,900 --> 00:26:36,716
+then you layer on additional threshold
+
+605
+00:26:36,740 --> 00:26:41,436
+structures. And relative to the cost
+
+606
+00:26:41,460 --> 00:26:45,196
+of the resources to run a defensive
+
+607
+00:26:45,220 --> 00:26:47,035
+AI to protect your system, the
+
+608
+00:26:47,059 --> 00:26:49,755
+infrastructure for KERI is
+
+609
+00:26:49,779 --> 00:26:53,196
+trivally costly;
+
+610
+00:26:53,220 --> 00:26:57,116
+in comparison. So,
+
+611
+00:26:57,140 --> 00:26:59,596
+that's really the thing
+
+612
+00:26:59,620 --> 00:27:02,956
+that we're looking at.
+
+613
+00:27:05,480 --> 00:27:08,980
+Let's talk about privacy without
+
+614
+00:27:09,000 --> 00:27:11,296
+surveillance. Can strong
+
+615
+00:27:11,320 --> 00:27:13,376
+security, accountability, and resilience
+
+616
+00:27:13,400 --> 00:27:14,816
+be achieved without continuous
+
+617
+00:27:14,840 --> 00:27:17,296
+monitoring and surveillance? Right.
+
+618
+00:27:17,320 --> 00:27:21,376
+Well, it can.
+
+619
+00:27:21,400 --> 00:27:25,456
+Because what KERI does,
+
+620
+00:27:25,480 --> 00:27:27,856
+It says we're going to use
+
+621
+00:27:27,880 --> 00:27:33,456
+cryptography the way it was meant to be used.
+
+622
+00:27:33,480 --> 00:27:35,296
+Without explaining the KERI
+
+623
+00:27:35,320 --> 00:27:36,816
+protocol, which would take
+
+624
+00:27:36,840 --> 00:27:41,056
+too much time, it doesn't have the
+
+625
+00:27:41,080 --> 00:27:42,576
+weaknesses that our current shared-
+
+626
+00:27:42,600 --> 00:27:45,936
+secret based systems do, which are
+
+627
+00:27:45,960 --> 00:27:50,496
+vulnerable to exploit by AIs. AIs
+
+628
+00:27:50,520 --> 00:27:53,216
+can't brute force
+
+629
+00:27:53,240 --> 00:27:55,296
+a public key to get to a private key.
+
+630
+00:27:55,320 --> 00:27:57,856
+Now if I have a quantumcomputer that's
+
+631
+00:27:57,880 --> 00:27:59,296
+a different story but we now have
+
+632
+00:27:59,320 --> 00:28:02,255
+post-quantum public-private key
+
+633
+00:28:02,279 --> 00:28:05,296
+generation algorithms. And if your
+
+634
+00:28:05,320 --> 00:28:06,655
+system's cryptographically agile you
+
+635
+00:28:06,679 --> 00:28:08,655
+switch to them which KERI already is.
+
+636
+00:28:08,679 --> 00:28:12,736
+So that's a different problem.
+
+637
+00:28:12,760 --> 00:28:14,096
+so what they have to do is what's called
+
+638
+00:28:14,120 --> 00:28:15,775
+ a side-channel attack. They have to find
+
+639
+00:28:15,799 --> 00:28:19,056
+ a way to exploit through side channels.
+
+640
+00:28:19,080 --> 00:28:21,775
+ Whereas a shared secret multiple parties
+
+641
+00:28:21,799 --> 00:28:24,576
+have a copy of that secret.
+
+642
+00:28:24,600 --> 00:28:27,056
+So the types of side-
+
+643
+00:28:27,080 --> 00:28:29,696
+channel attacks that work are much
+
+644
+00:28:29,720 --> 00:28:33,375
+greater. If I've got a
+
+645
+00:28:33,399 --> 00:28:35,216
+KERI private key that's truly private,
+
+646
+00:28:35,240 --> 00:28:36,736
+it's never shared. It never has to be
+
+647
+00:28:36,760 --> 00:28:39,535
+shared. And even if that private key is
+
+648
+00:28:39,559 --> 00:28:41,775
+compromised, I can recover from it
+
+649
+00:28:41,799 --> 00:28:45,456
+through KERI's <i>pre-rotation</i> mechanism,
+
+650
+00:28:45,480 --> 00:28:47,856
+then an attacker doesn't gain much by
+
+651
+00:28:47,880 --> 00:28:50,096
+compromising my private keys. They have
+
+652
+00:28:50,120 --> 00:28:52,576
+to compromise much more and that
+
+653
+00:28:52,600 --> 00:28:55,696
+much more can be designed to be low
+
+654
+00:28:55,720 --> 00:28:58,895
+friction for the user but high cost to
+
+655
+00:28:58,919 --> 00:29:01,216
+the attacker in such a way that you
+
+656
+00:29:01,240 --> 00:29:04,976
+invert the resource expenditure.
+
+657
+00:29:05,000 --> 00:29:08,176
+So it's too expensive to succeed in an
+
+658
+00:29:08,200 --> 00:29:10,015
+attack against the KERI infrastructure
+
+659
+00:29:10,039 --> 00:29:11,856
+than what you gain for it because of the
+
+660
+00:29:11,880 --> 00:29:14,736
+the inherent distributed nature
+
+661
+00:29:14,760 --> 00:29:19,056
+and decentralized nature of its design.
+
+662
+00:29:19,080 --> 00:29:21,616
+and I'll go back to this word
+
+663
+00:29:21,640 --> 00:29:23,535
+<i>balance privacy </i>and how does KERI
+
+664
+00:29:23,559 --> 00:29:26,576
+balance privacy and accountability?
+
+665
+00:29:26,600 --> 00:29:28,255
+Security
+
+666
+00:29:28,279 --> 00:29:31,456
+requires secure attribution. You need
+
+667
+00:29:31,480 --> 00:29:34,655
+to know who's doing what.
+
+668
+00:29:34,679 --> 00:29:38,976
+But you also
+
+669
+00:29:39,000 --> 00:29:41,456
+want to be able to control what
+
+670
+00:29:41,480 --> 00:29:43,216
+context
+
+671
+00:29:43,240 --> 00:29:46,255
+people know about who's doing what. And
+
+672
+00:29:46,279 --> 00:29:48,416
+KERI does that. KERI
+
+673
+00:29:48,440 --> 00:29:50,096
+gives you the ability to have
+
+674
+00:29:50,120 --> 00:29:52,496
+identifiers that you use in specific
+
+675
+00:29:52,520 --> 00:29:54,576
+contexts that are not correlatable to
+
+676
+00:29:54,600 --> 00:29:56,496
+identifiers you use in other contexts.
+
+677
+00:29:56,520 --> 00:30:00,015
+But in each context, you have
+
+678
+00:30:00,039 --> 00:30:02,255
+perfectly secure attribution to all the
+
+679
+00:30:02,279 --> 00:30:04,576
+parties in the context. And what that
+
+680
+00:30:04,600 --> 00:30:07,535
+means is that you get rid of the
+
+681
+00:30:07,559 --> 00:30:10,496
+main source of fraud which is
+
+682
+00:30:10,520 --> 00:30:12,895
+impersonation attacks which deep
+
+683
+00:30:12,919 --> 00:30:15,135
+fakes all of those things because every
+
+684
+00:30:15,159 --> 00:30:18,576
+participant must be accountable in that
+
+685
+00:30:18,600 --> 00:30:21,296
+context. They can't
+
+686
+00:30:21,320 --> 00:30:23,135
+pretend to be somebody else
+
+687
+00:30:23,159 --> 00:30:25,296
+because you can challenge them and they
+
+688
+00:30:25,320 --> 00:30:26,895
+have to prove that link. So if it's an AI,
+
+689
+00:30:26,919 --> 00:30:29,616
+that's an agent working on behalf of
+
+690
+00:30:29,640 --> 00:30:33,296
+somebody, you can challenge
+
+691
+00:30:33,320 --> 00:30:34,816
+all the way back to that person. If
+
+692
+00:30:34,840 --> 00:30:37,535
+you're using KERI and that
+
+693
+00:30:37,559 --> 00:30:39,696
+person is delegating authority to an
+
+694
+00:30:39,720 --> 00:30:42,416
+agentic AI, then you can
+
+695
+00:30:42,440 --> 00:30:44,655
+always establish the chain of authority,
+
+696
+00:30:44,679 --> 00:30:46,976
+right? So accountability comes
+
+697
+00:30:47,000 --> 00:30:50,496
+from chains of accountability or
+
+698
+00:30:50,520 --> 00:30:51,856
+chains of authority or chains of
+
+699
+00:30:51,880 --> 00:30:55,535
+provenence or chains of custody.
+
+700
+00:30:55,559 --> 00:30:58,336
+and KERI inherently is designed
+
+701
+00:30:58,360 --> 00:31:01,216
+to support those sorts of structures.
+
+702
+00:31:01,240 --> 00:31:03,696
+Whereas most security systems are flat.
+
+703
+00:31:03,720 --> 00:31:06,336
+They don't have this hierarchy that
+
+704
+00:31:06,360 --> 00:31:08,816
+enables you to establish these
+
+705
+00:31:08,840 --> 00:31:11,296
+delegations that are strongly
+
+706
+00:31:11,320 --> 00:31:13,216
+cryptographically-verifiably chained
+
+707
+00:31:13,240 --> 00:31:18,015
+together.
+
+708
+00:31:18,039 --> 00:31:19,936
+privacy without surveillance. What is
+
+709
+00:31:19,960 --> 00:31:21,696
+the minimum amount of data disclosure
+
+710
+00:31:21,720 --> 00:31:23,456
+needed to achieve accountability without
+
+711
+00:31:23,480 --> 00:31:26,176
+creating surveillance society?
+
+712
+00:31:26,200 --> 00:31:29,696
+That's an interesting question.
+
+713
+00:31:29,720 --> 00:31:31,296
+Basically,
+
+714
+00:31:31,320 --> 00:31:33,696
+in each context, each transaction, each
+
+715
+00:31:33,720 --> 00:31:36,816
+application, the minimum is different
+
+716
+00:31:36,840 --> 00:31:40,895
+because for high-stakes transactions,
+
+717
+00:31:40,919 --> 00:31:43,216
+where there's high value,
+
+718
+00:31:43,240 --> 00:31:46,416
+usually the amount of trust required
+
+719
+00:31:46,440 --> 00:31:48,736
+amongst the parties is higher. That
+
+720
+00:31:48,760 --> 00:31:50,895
+means they need to be able to better
+
+721
+00:31:50,919 --> 00:31:52,416
+predict
+
+722
+00:31:52,440 --> 00:31:55,056
+the outcome and the behavior of the
+
+723
+00:31:55,080 --> 00:31:58,015
+participants to that interaction.
+
+724
+00:31:58,039 --> 00:32:00,736
+For low-stakes interactions, the
+
+725
+00:32:00,760 --> 00:32:03,616
+amount is much less. So you need a
+
+726
+00:32:03,640 --> 00:32:07,135
+system that gives you enough for
+
+727
+00:32:07,159 --> 00:32:09,535
+the highest transactions
+
+728
+00:32:09,559 --> 00:32:12,255
+but still allows you to tune it for
+
+729
+00:32:12,279 --> 00:32:14,255
+the lowest-stakes transactions and
+
+730
+00:32:14,279 --> 00:32:17,775
+KERI does that. But how do you
+
+731
+00:32:17,799 --> 00:32:19,456
+not create a
+
+732
+00:32:19,480 --> 00:32:21,856
+surveillance society? Well,
+
+733
+00:32:21,880 --> 00:32:24,336
+everybody in that transaction has to
+
+734
+00:32:24,360 --> 00:32:28,576
+have balanced obligations,
+
+735
+00:32:28,600 --> 00:32:32,015
+right? How do you need it to achieve
+
+736
+00:32:32,039 --> 00:32:33,456
+accountability without creating
+
+737
+00:32:33,480 --> 00:32:36,176
+surveillance? Well, if the surveillors
+
+738
+00:32:36,200 --> 00:32:38,015
+are accountable,
+
+739
+00:32:38,039 --> 00:32:40,576
+then the people being surveilled will
+
+740
+00:32:40,600 --> 00:32:43,456
+have recourse against the surveillance.
+
+741
+00:32:43,480 --> 00:32:46,655
+And this a change in
+
+742
+00:32:46,679 --> 00:32:50,096
+philosophy. It's been for the last 15
+
+743
+00:32:50,120 --> 00:32:51,296
+years that I've been working in this
+
+744
+00:32:51,320 --> 00:32:53,456
+space, we were hoping
+
+745
+00:32:53,480 --> 00:32:54,976
+that there were technological means
+
+746
+00:32:55,000 --> 00:32:56,976
+where you could hide. Well, basically
+
+747
+00:32:57,000 --> 00:32:59,456
+you could engage in transactions and
+
+748
+00:32:59,480 --> 00:33:01,375
+hide from surveillance. And that's not
+
+749
+00:33:01,399 --> 00:33:05,216
+true. With AI, there's no hiding.
+
+750
+00:33:05,240 --> 00:33:06,976
+If the data is on the internet, it's going
+
+751
+00:33:07,000 --> 00:33:08,816
+to be correlated. Even the smallest
+
+752
+00:33:08,840 --> 00:33:11,456
+signal is correlatable given
+
+753
+00:33:11,480 --> 00:33:14,495
+enough coverage; and AIs have
+
+754
+00:33:14,519 --> 00:33:15,936
+enough coverage, right? People are
+
+755
+00:33:15,960 --> 00:33:20,255
+building AI data centers
+
+756
+00:33:20,279 --> 00:33:21,856
+that are going to consume a
+
+757
+00:33:21,880 --> 00:33:23,775
+significant fraction of the world's
+
+758
+00:33:23,799 --> 00:33:26,336
+global electrical production and what do
+
+759
+00:33:26,360 --> 00:33:27,535
+they do? They correlate, they're
+
+760
+00:33:27,559 --> 00:33:29,135
+correlation machines and they consume
+
+761
+00:33:29,159 --> 00:33:30,976
+all the possible data that you can give
+
+762
+00:33:31,000 --> 00:33:32,816
+them and correlate everything so
+
+763
+00:33:32,840 --> 00:33:35,135
+that every point of information
+
+764
+00:33:35,159 --> 00:33:38,096
+becomes a correlatable signal that
+
+765
+00:33:38,120 --> 00:33:41,135
+results in something that is
+
+766
+00:33:41,159 --> 00:33:43,216
+actionable. So you're not going to
+
+767
+00:33:43,240 --> 00:33:45,216
+stop the correlation. What you can stop
+
+768
+00:33:45,240 --> 00:33:47,535
+is the <i>exploitation</i> of the correlation
+
+769
+00:33:47,559 --> 00:33:49,775
+and that means putting accountability on
+
+770
+00:33:49,799 --> 00:33:52,495
+the exploiters.
+
+771
+00:33:52,519 --> 00:33:56,096
+That requires a
+
+772
+00:33:56,120 --> 00:33:59,696
+slightly different ,well, a profoundly
+
+773
+00:33:59,720 --> 00:34:04,096
+different legal and regulatory
+
+774
+00:34:04,120 --> 00:34:06,655
+approach. But from an identity point of
+
+775
+00:34:06,679 --> 00:34:09,775
+view, it requires understanding that
+
+776
+00:34:09,799 --> 00:34:12,015
+that hiding isn't how you
+
+777
+00:34:12,039 --> 00:34:15,776
+do it. You can partition contexts so
+
+778
+00:34:15,800 --> 00:34:19,375
+that you can keep the
+
+779
+00:34:19,399 --> 00:34:21,776
+interaction space from leaking out too
+
+780
+00:34:21,800 --> 00:34:24,736
+fast, but it will leak. No matter what
+
+781
+00:34:24,760 --> 00:34:26,895
+you do, it will leak. But what you want
+
+782
+00:34:26,919 --> 00:34:29,135
+to be able to do is make your ability to
+
+783
+00:34:29,159 --> 00:34:32,256
+enforce the exploitation or
+
+784
+00:34:32,280 --> 00:34:34,736
+misuse of that data stronger. And that
+
+785
+00:34:34,760 --> 00:34:37,936
+and so contextually,
+
+786
+00:34:37,960 --> 00:34:40,736
+Contextually-specific identifiers
+
+787
+00:34:40,760 --> 00:34:43,536
+can be used to remove plausible
+
+788
+00:34:43,560 --> 00:34:46,416
+deniability by the other parties to
+
+789
+00:34:46,440 --> 00:34:49,456
+those transactions. So there's
+
+790
+00:34:49,480 --> 00:34:53,776
+some specific things we can do.
+
+791
+00:34:53,800 --> 00:34:59,296
+We're left with a stark choice.
+
+792
+00:34:59,320 --> 00:35:01,936
+If frontier AI reaches superhuman
+
+793
+00:35:01,960 --> 00:35:03,696
+offensive cyber capability, do our
+
+794
+00:35:03,720 --> 00:35:05,376
+choices become increasingly stark? They
+
+795
+00:35:05,400 --> 00:35:07,856
+they do. In fact, a lot of the
+
+796
+00:35:07,880 --> 00:35:09,216
+discussions I've been having over the
+
+797
+00:35:09,240 --> 00:35:10,736
+last few years are often in the
+
+798
+00:35:10,760 --> 00:35:12,815
+decentralized identity space, and
+
+799
+00:35:12,839 --> 00:35:15,776
+they're usually discussions about, well,
+
+800
+00:35:15,800 --> 00:35:17,536
+we want to weaken security, so
+
+801
+00:35:17,560 --> 00:35:19,216
+we can get privacy. We're willing to
+
+802
+00:35:19,240 --> 00:35:20,815
+make trade-offs along those lines. And I
+
+803
+00:35:20,839 --> 00:35:22,496
+I've always said you can't weaken
+
+804
+00:35:22,520 --> 00:35:24,656
+security. If you weaken security, if you
+
+805
+00:35:24,680 --> 00:35:26,095
+give up security for privacy, then you
+
+806
+00:35:26,119 --> 00:35:28,896
+get neither. And now that's become
+
+807
+00:35:28,920 --> 00:35:32,095
+obvious. It's sort of like: now, if you
+
+808
+00:35:32,119 --> 00:35:36,896
+want security at all,
+
+809
+00:35:36,920 --> 00:35:40,416
+it's really hard. And
+
+810
+00:35:40,440 --> 00:35:42,256
+if you don't have security, then you
+
+811
+00:35:42,280 --> 00:35:43,616
+have nothing. Because if you can be
+
+812
+00:35:43,640 --> 00:35:45,696
+impersonated
+
+813
+00:35:45,720 --> 00:35:49,216
+at will by an AI,
+
+814
+00:35:49,240 --> 00:35:51,216
+then you have no identity. And
+
+815
+00:35:51,240 --> 00:35:52,656
+therefore, you have nothing that's
+
+816
+00:35:52,680 --> 00:35:55,616
+private, right? Because I can't
+
+817
+00:35:55,640 --> 00:35:57,696
+assume that anything that I do can be
+
+818
+00:35:57,720 --> 00:36:01,296
+kept private if an AI can impersonate me
+
+819
+00:36:01,320 --> 00:36:03,536
+and prove to the rest of the world that
+
+820
+00:36:03,560 --> 00:36:06,335
+it was me that did it.
+
+821
+00:36:06,359 --> 00:36:08,176
+Basically, what does that mean? See,
+
+822
+00:36:08,200 --> 00:36:09,936
+people think about privacy as well, I
+
+823
+00:36:09,960 --> 00:36:11,776
+can do things that nobody else can do
+
+824
+00:36:11,800 --> 00:36:15,136
+and nobody knows about. But if
+
+825
+00:36:15,160 --> 00:36:19,136
+someone can attribute to me, behavior
+
+826
+00:36:19,160 --> 00:36:22,736
+that I didn't do and I can't disprove it
+
+827
+00:36:22,760 --> 00:36:24,896
+and I then suffer the consequences of
+
+828
+00:36:24,920 --> 00:36:27,936
+it, what does that mean in terms of
+
+829
+00:36:27,960 --> 00:36:29,856
+me having any sort of private life? It
+
+830
+00:36:29,880 --> 00:36:32,335
+means I don't, it means my life is governed
+
+831
+00:36:32,359 --> 00:36:35,136
+and determined by outside forces. My
+
+832
+00:36:35,160 --> 00:36:38,736
+<i>locus of control</i> is zero and
+
+833
+00:36:38,760 --> 00:36:40,575
+so privacy is meaningless when
+
+834
+00:36:40,599 --> 00:36:42,896
+when your locus of control is zero.
+
+835
+00:36:42,920 --> 00:36:44,095
+What does it mean? It doesn't mean
+
+836
+00:36:44,119 --> 00:36:46,016
+anything. You're you're essentially a
+
+837
+00:36:46,040 --> 00:36:49,536
+serf or a slave or a
+
+838
+00:36:49,560 --> 00:36:52,335
+minion of the forces that control
+
+839
+00:36:52,359 --> 00:36:55,856
+your identity. So it starts
+
+840
+00:36:55,880 --> 00:36:57,856
+with control. You have to have
+
+841
+00:36:57,880 --> 00:37:00,976
+control before you can have privacy.
+
+842
+00:37:01,000 --> 00:37:05,536
+And so the stark choice is
+
+843
+00:37:05,560 --> 00:37:08,016
+you need to have security before you can
+
+844
+00:37:08,040 --> 00:37:10,335
+have privacy and you can either have
+
+845
+00:37:10,359 --> 00:37:13,616
+security that has zero privacy which is
+
+846
+00:37:13,640 --> 00:37:16,496
+which is an AI-based identity system
+
+847
+00:37:16,520 --> 00:37:19,055
+because it requires total continuous
+
+848
+00:37:19,079 --> 00:37:20,656
+monitoring and surveillance and be able
+
+849
+00:37:20,680 --> 00:37:22,416
+to do a better job at correlating your
+
+850
+00:37:22,440 --> 00:37:24,575
+behavior to create your digital persona
+
+851
+00:37:24,599 --> 00:37:26,976
+than the cyber attackers are doing to
+
+852
+00:37:27,000 --> 00:37:29,456
+impersonate your persona. Or you use
+
+853
+00:37:29,480 --> 00:37:32,256
+KERI which is based on a
+
+854
+00:37:32,280 --> 00:37:34,496
+cryptographically-verifiable identity
+
+855
+00:37:34,520 --> 00:37:36,176
+that's fault tolerant, uses key
+
+856
+00:37:36,200 --> 00:37:37,616
+management provenance and
+
+857
+00:37:37,640 --> 00:37:40,095
+accountability. So it doesn't solve the
+
+858
+00:37:40,119 --> 00:37:41,536
+privacy problem the same way that you
+
+859
+00:37:41,560 --> 00:37:43,376
+might think but it does solve it in the
+
+860
+00:37:43,400 --> 00:37:45,456
+only way possible in today's
+
+861
+00:37:45,480 --> 00:37:49,136
+environment.
+
+862
+00:37:49,160 --> 00:37:51,536
+Why is there no stable middle ground? I
+
+863
+00:37:51,560 --> 00:37:54,896
+think I just answered that. If AI-
+
+864
+00:37:54,920 --> 00:37:58,896
+cyber-based attack mechanisms can defeat
+
+865
+00:37:58,920 --> 00:38:02,176
+conventional security, based on shared
+
+866
+00:38:02,200 --> 00:38:06,416
+secrets, not KERI, then there is no
+
+867
+00:38:06,440 --> 00:38:09,296
+privacy. It's total surveillance in
+
+868
+00:38:09,320 --> 00:38:11,776
+order for you to have any possibility of
+
+869
+00:38:11,800 --> 00:38:15,376
+having any sort of value in your life.
+
+870
+00:38:15,400 --> 00:38:18,656
+Otherwise, you can't
+
+871
+00:38:18,680 --> 00:38:20,256
+do anything on the
+
+872
+00:38:20,280 --> 00:38:22,496
+internet. You have to go off-grid.
+
+873
+00:38:22,520 --> 00:38:24,575
+Totally off-grid. Like off-grid in a way
+
+874
+00:38:24,599 --> 00:38:28,736
+that would be for most people a
+
+875
+00:38:28,760 --> 00:38:34,240
+horrible life.
+
+876
+00:38:34,940 --> 00:38:37,316
+This is an interesting question. As
+
+877
+00:38:37,340 --> 00:38:38,996
+AI capabilities increase, why does
+
+878
+00:38:39,020 --> 00:38:40,275
+continuous tracking or surveillance
+
+879
+00:38:40,299 --> 00:38:42,436
+based trust become less sustainable than
+
+880
+00:38:42,460 --> 00:38:44,916
+cryptographically-verifiable trust? The
+
+881
+00:38:44,940 --> 00:38:47,156
+reason it becomes less sustainable is
+
+882
+00:38:47,180 --> 00:38:51,316
+that it's a never-ending arms race.
+
+883
+00:38:51,340 --> 00:38:57,396
+The information that's electronic, once it leaks
+
+884
+00:38:57,420 --> 00:39:00,755
+out, it never goes away.
+
+885
+00:39:00,779 --> 00:39:03,316
+And it enables correlation to be all
+
+886
+00:39:03,340 --> 00:39:04,596
+that much better. The correlation
+
+887
+00:39:04,620 --> 00:39:07,476
+algorithms, the tracking algorithms,
+
+888
+00:39:07,500 --> 00:39:11,076
+target tracking. You can think
+
+889
+00:39:11,100 --> 00:39:15,076
+of as there's a feature space and if I'm
+
+890
+00:39:15,100 --> 00:39:16,755
+tracking something, it's moving through
+
+891
+00:39:16,779 --> 00:39:18,436
+that feature space. Now, in the physical
+
+892
+00:39:18,460 --> 00:39:20,676
+world, that feature space might be,
+
+893
+00:39:20,700 --> 00:39:23,476
+latitude, longitude,
+
+894
+00:39:23,500 --> 00:39:26,676
+altitude and time, right? And
+
+895
+00:39:26,700 --> 00:39:30,596
+then you got velocity, acceleration, all of those things, right?
+
+896
+00:39:30,620 --> 00:39:34,116
+But in identity world,
+
+897
+00:39:34,140 --> 00:39:36,196
+the feature space has to do with
+
+898
+00:39:36,220 --> 00:39:38,035
+things like "when you logged in, to where
+
+899
+00:39:38,059 --> 00:39:39,716
+did you log in, what did you do, what
+
+900
+00:39:39,740 --> 00:39:42,676
+did you say, what time was it,
+
+901
+00:39:42,700 --> 00:39:44,836
+what browser did you use, what device
+
+902
+00:39:44,860 --> 00:39:47,636
+did you use, what protocol did you use?'
+
+903
+00:39:47,660 --> 00:39:50,275
+All of those are features that can
+
+904
+00:39:50,299 --> 00:39:53,636
+be used to create a digital fingerprint
+
+905
+00:39:53,660 --> 00:39:56,755
+that then can be tracked as you
+
+906
+00:39:56,779 --> 00:39:59,795
+move through that space. And so it forms
+
+907
+00:39:59,819 --> 00:40:03,076
+a trajectory of your behavior. And the
+
+908
+00:40:03,100 --> 00:40:04,596
+more information you have, the more
+
+909
+00:40:04,620 --> 00:40:07,156
+high fidelity that trajectory is. People
+
+910
+00:40:07,180 --> 00:40:08,996
+call it a digital twin. So they're
+
+911
+00:40:09,020 --> 00:40:10,676
+creating a digital twin. And they want
+
+912
+00:40:10,700 --> 00:40:12,755
+that digital twin to be as close to you
+
+913
+00:40:12,779 --> 00:40:15,076
+as possible so that somebody can't
+
+914
+00:40:15,100 --> 00:40:18,116
+create a digital twin that is not yours.
+
+915
+00:40:18,140 --> 00:40:20,676
+And your AI that's working on
+
+916
+00:40:20,700 --> 00:40:22,755
+your behalf can tell the difference.
+
+917
+00:40:22,779 --> 00:40:24,275
+Right? Well, that means that
+
+918
+00:40:24,299 --> 00:40:28,275
+increasingly, as AIs gain access to
+
+919
+00:40:28,299 --> 00:40:30,356
+more and more information, as more and
+
+920
+00:40:30,380 --> 00:40:32,356
+more of our society and more and more of
+
+921
+00:40:32,380 --> 00:40:36,596
+what we do becomes AI enabled, then the
+
+922
+00:40:36,620 --> 00:40:38,836
+information available to both track you
+
+923
+00:40:38,860 --> 00:40:42,116
+and impersonate you increases. So,
+
+924
+00:40:42,140 --> 00:40:44,596
+what happens is the pervasiveness will
+
+925
+00:40:44,620 --> 00:40:47,716
+always go to maximal, right?
+
+926
+00:40:47,740 --> 00:40:51,156
+There's no other approach and
+
+927
+00:40:51,180 --> 00:40:55,876
+maximal means high resource, I
+
+928
+00:40:55,900 --> 00:40:57,636
+mean we're already talking about that
+
+929
+00:40:57,660 --> 00:40:59,396
+most of the world's electricity being
+
+930
+00:40:59,420 --> 00:41:01,876
+consumed by AIs. Well it's only going
+
+931
+00:41:01,900 --> 00:41:04,596
+to get more as time goes on
+
+932
+00:41:04,620 --> 00:41:06,515
+it doesn't get less it gets
+
+933
+00:41:06,539 --> 00:41:08,995
+more, whereas cryptographically
+
+934
+00:41:09,019 --> 00:41:10,515
+verifiable trust is based on a
+
+935
+00:41:10,539 --> 00:41:13,795
+completely different set of constraints
+
+936
+00:41:13,819 --> 00:41:15,316
+that have to do with what's called
+
+937
+00:41:15,340 --> 00:41:18,116
+computational infeasibility
+
+938
+00:41:18,140 --> 00:41:20,755
+and exposure. And if you don't
+
+939
+00:41:20,779 --> 00:41:22,836
+expose something, so that it can't be
+
+940
+00:41:22,860 --> 00:41:25,316
+collected, if it's a true private
+
+941
+00:41:25,340 --> 00:41:28,676
+piece of information and you can
+
+942
+00:41:28,700 --> 00:41:32,035
+prove something publicly without
+
+943
+00:41:32,059 --> 00:41:33,876
+disclosing the private thing, that's
+
+944
+00:41:33,900 --> 00:41:35,476
+what a digital signature does. There's
+
+945
+00:41:35,500 --> 00:41:37,156
+various types of proofs and you can
+
+946
+00:41:37,180 --> 00:41:41,076
+prove that indefinitely or
+
+947
+00:41:41,100 --> 00:41:42,995
+perpetually. So you have perpetually
+
+948
+00:41:43,019 --> 00:41:45,396
+verifiable proofs. Then you have the
+
+949
+00:41:45,420 --> 00:41:50,275
+foundation for a security system that
+
+950
+00:41:50,299 --> 00:41:52,755
+maintains the security without getting
+
+951
+00:41:52,779 --> 00:41:54,436
+more expensive over time. In fact, it
+
+952
+00:41:54,460 --> 00:41:56,035
+gets less expensive over time because
+
+953
+00:41:56,059 --> 00:41:58,515
+most of the cost is really reducing
+
+954
+00:41:58,539 --> 00:42:01,156
+user interface friction. We're in
+
+955
+00:42:01,180 --> 00:42:02,515
+the early days of reducing user
+
+956
+00:42:02,539 --> 00:42:04,515
+interface friction. So that
+
+957
+00:42:04,539 --> 00:42:06,515
+becomes a perfectly scalable system
+
+958
+00:42:06,539 --> 00:42:10,420
+relative to the alternative
+
+959
+00:42:12,029 --> 00:42:14,406
+Keeping humans digitally free as
+
+960
+00:42:14,430 --> 00:42:16,646
+AI becomes the dominant interface to the
+
+961
+00:42:16,670 --> 00:42:18,966
+digital world. How must KERI be applied
+
+962
+00:42:18,990 --> 00:42:21,206
+to AI itself so that people remain
+
+963
+00:42:21,230 --> 00:42:22,886
+digitally free rather than becoming
+
+964
+00:42:22,910 --> 00:42:24,726
+exploitable, surveilled, tracked,
+
+965
+00:42:24,750 --> 00:42:28,005
+manipulated or controlled? Well, we want
+
+966
+00:42:28,029 --> 00:42:30,086
+AI to work on our behalf. We want the
+
+967
+00:42:30,110 --> 00:42:32,886
+best of both worlds. We want AI that
+
+968
+00:42:32,910 --> 00:42:35,446
+does what we tell it to do, when we tell
+
+969
+00:42:35,470 --> 00:42:37,285
+it to do it, to the extent we tell it to
+
+970
+00:42:37,309 --> 00:42:39,606
+do it. And for that, we need to be able
+
+971
+00:42:39,630 --> 00:42:42,806
+to have strong delegation
+
+972
+00:42:42,830 --> 00:42:46,646
+and have enforcement mechanisms
+
+973
+00:42:46,670 --> 00:42:49,285
+where we can publish to other AIs that
+
+974
+00:42:49,309 --> 00:42:52,646
+says "Our AI is only supposed to do this."
+
+975
+00:42:52,670 --> 00:42:54,566
+These are the rules. You can verify what
+
+976
+00:42:54,590 --> 00:42:56,486
+it's supposed to do. When it doesn't
+
+977
+00:42:56,510 --> 00:43:03,446
+then you cannot trust my AI.
+
+978
+00:43:03,470 --> 00:43:05,525
+And so there are people
+
+979
+00:43:05,549 --> 00:43:08,806
+talking about reputation
+
+980
+00:43:08,830 --> 00:43:10,966
+systems for AIs but those reputation
+
+981
+00:43:10,990 --> 00:43:14,406
+systems have to be managed in a way that
+
+982
+00:43:14,430 --> 00:43:16,646
+humans control and we can do that with
+
+983
+00:43:16,670 --> 00:43:19,846
+KERI. If you have
+
+984
+00:43:19,870 --> 00:43:21,285
+identity systems that allow secure
+
+985
+00:43:21,309 --> 00:43:23,285
+attribution that are not based on
+
+986
+00:43:23,309 --> 00:43:25,206
+correlation-tracking mechanism but are
+
+987
+00:43:25,230 --> 00:43:27,206
+based on cryptographic mechanisms. Then
+
+988
+00:43:27,230 --> 00:43:29,446
+you can build delegation mechanisms and
+
+989
+00:43:29,470 --> 00:43:31,765
+authorization mechanisms that are
+
+990
+00:43:31,789 --> 00:43:33,525
+fundamentally different in structure.
+
+991
+00:43:33,549 --> 00:43:36,245
+They break this flat weight
+
+992
+00:43:36,269 --> 00:43:38,886
+space constraint that AI has right now
+
+993
+00:43:38,910 --> 00:43:41,446
+that makes it impossible to secure AI
+
+994
+00:43:41,470 --> 00:43:43,206
+because everything's in the same
+
+995
+00:43:43,230 --> 00:43:45,765
+weight space to where you can actually
+
+996
+00:43:45,789 --> 00:43:47,686
+partition or segment the weight space
+
+997
+00:43:47,710 --> 00:43:49,846
+into things that are delegable and
+
+998
+00:43:49,870 --> 00:43:52,806
+things that aren't.
+
+999
+00:43:52,830 --> 00:43:54,486
+Should AI be trusted to protect human
+
+1000
+00:43:54,510 --> 00:43:56,086
+freedom or should AI itself be
+
+1001
+00:43:56,110 --> 00:43:57,206
+constrained by cryptographically
+
+1002
+00:43:57,230 --> 00:43:59,126
+variable trust architecture that keeps
+
+1003
+00:43:59,150 --> 00:44:01,206
+ultimate authority with people? Well,
+
+1004
+00:44:01,230 --> 00:44:02,646
+there are a lot of people who are
+
+1005
+00:44:02,670 --> 00:44:04,726
+talking about the fact that AI can't be
+
+1006
+00:44:04,750 --> 00:44:07,846
+trusted and doom and gloom for
+
+1007
+00:44:07,870 --> 00:44:10,406
+society once an AI becomes smart enough.
+
+1008
+00:44:10,430 --> 00:44:13,206
+I think, I spent 20
+
+1009
+00:44:13,230 --> 00:44:15,606
+years doing research in AI systems. In
+
+1010
+00:44:15,630 --> 00:44:18,326
+fact, I did that for the early part of
+
+1011
+00:44:18,350 --> 00:44:20,005
+my career before I started working on
+
+1012
+00:44:20,029 --> 00:44:23,525
+digital identity. And yeah, we can
+
+1013
+00:44:23,549 --> 00:44:26,966
+build we can build transparent AIs
+
+1014
+00:44:26,990 --> 00:44:29,045
+that only do things that we allow
+
+1015
+00:44:29,069 --> 00:44:31,926
+them to do if we architect them
+
+1016
+00:44:31,950 --> 00:44:33,525
+differently. That doesn't mean that we
+
+1017
+00:44:33,549 --> 00:44:37,525
+have to throw away generative AI.
+
+1018
+00:44:37,549 --> 00:44:40,646
+We just have to partition
+
+1019
+00:44:40,670 --> 00:44:43,765
+the space in which it
+
+1020
+00:44:43,789 --> 00:44:46,005
+operates so that it's one thing to have
+
+1021
+00:44:46,029 --> 00:44:49,446
+a generative AI that understands
+
+1022
+00:44:49,470 --> 00:44:51,606
+natural language. It's another thing to
+
+1023
+00:44:51,630 --> 00:44:56,005
+have a generative AI that you allow to
+
+1024
+00:44:56,029 --> 00:44:58,245
+to do things on your behalf; that's an
+
+1025
+00:44:58,269 --> 00:45:00,726
+agent. So we can have a gentic AI that
+
+1026
+00:45:00,750 --> 00:45:03,846
+is controlled but uses you know
+
+1027
+00:45:03,870 --> 00:45:05,926
+interfaces and that means that the
+
+1028
+00:45:05,950 --> 00:45:10,486
+the interface layer has to have
+
+1029
+00:45:10,510 --> 00:45:12,086
+safety jackets and when I used to do
+
+1030
+00:45:12,110 --> 00:45:14,806
+work with autonomous vehicle systems
+
+1031
+00:45:14,830 --> 00:45:16,486
+most of the code we wrote were safety
+
+1032
+00:45:16,510 --> 00:45:18,726
+jackets to keep the autonomous vehicle
+
+1033
+00:45:18,750 --> 00:45:22,326
+alive and well and safe and to
+
+1034
+00:45:22,350 --> 00:45:25,446
+keep it from doing bad things. But we
+
+1035
+00:45:25,470 --> 00:45:28,166
+sort of forgotten about that.
+
+1036
+00:45:28,190 --> 00:45:30,486
+People are worried about
+
+1037
+00:45:30,510 --> 00:45:32,005
+that. I mean a lot of people are trying
+
+1038
+00:45:32,029 --> 00:45:34,886
+to build those but they're building it
+
+1039
+00:45:34,910 --> 00:45:37,686
+with systems that
+
+1040
+00:45:37,710 --> 00:45:40,886
+they're using the same AI for, to secure
+
+1041
+00:45:40,910 --> 00:45:44,245
+the safety jackets and you
+
+1042
+00:45:44,269 --> 00:45:46,166
+can't do that. The safety jackets has to
+
+1043
+00:45:46,190 --> 00:45:48,806
+be foundationally different in nature
+
+1044
+00:45:48,830 --> 00:45:50,646
+from a computational point of view.
+
+1045
+00:45:50,670 --> 00:45:54,806
+And if you do that, then you have a chance.
+
+1046
+00:45:54,830 --> 00:45:56,486
+What would a world look like where every
+
+1047
+00:45:56,510 --> 00:45:57,926
+AI agent operates under
+
+1048
+00:45:57,950 --> 00:45:59,606
+cryptographically-verified authority by
+
+1049
+00:45:59,630 --> 00:46:01,206
+delegation and thus accountability?
+
+1050
+00:46:01,230 --> 00:46:02,966
+Well, it'd be the best of both worlds.
+
+1051
+00:46:02,990 --> 00:46:05,686
+We would be able to have AI
+
+1052
+00:46:05,710 --> 00:46:08,406
+help us be a force multiplier for us
+
+1053
+00:46:08,430 --> 00:46:11,606
+without worried about the AI hurting us.
+
+1054
+00:46:11,630 --> 00:46:16,166
+There's always going to be
+
+1055
+00:46:16,190 --> 00:46:19,285
+edge cases where people will make
+
+1056
+00:46:19,309 --> 00:46:22,486
+mistakes and AIs will be able to exploit
+
+1057
+00:46:22,510 --> 00:46:24,726
+things, but it won't be this
+
+1058
+00:46:24,750 --> 00:46:27,126
+Armageddon kind of situation that we're
+
+1059
+00:46:27,150 --> 00:46:29,765
+facing right now. The race against
+
+1060
+00:46:29,789 --> 00:46:32,406
+time. If frontier AI is advancing on
+
+1061
+00:46:32,430 --> 00:46:34,005
+time scale, months rather than years,
+
+1062
+00:46:34,029 --> 00:46:35,846
+how quickly can society realistically
+
+1063
+00:46:35,870 --> 00:46:37,846
+deploy either of these features at
+
+1064
+00:46:37,870 --> 00:46:40,806
+global scale? Well, the stark
+
+1065
+00:46:40,830 --> 00:46:42,245
+reality is the only thing that you're
+
+1066
+00:46:42,269 --> 00:46:43,606
+going to be able to deploy at global
+
+1067
+00:46:43,630 --> 00:46:47,525
+scale today is AI because AI is already
+
+1068
+00:46:47,549 --> 00:46:50,486
+deployed at a global scale, right?
+
+1069
+00:46:50,510 --> 00:46:52,486
+But that doesn't mean that you
+
+1070
+00:46:52,510 --> 00:46:55,926
+can't switch to KERI as it becomes
+
+1071
+00:46:55,950 --> 00:46:57,765
+available to you, right? You can always
+
+1072
+00:46:57,789 --> 00:46:59,606
+make the choice to say "you know what?,
+
+1073
+00:46:59,630 --> 00:47:01,926
+I've been using this digital persona
+
+1074
+00:47:01,950 --> 00:47:05,045
+AI, but I want to switch to using
+
+1075
+00:47:05,069 --> 00:47:07,926
+cryptographically-verifiable human ...,
+
+1076
+00:47:07,950 --> 00:47:10,486
+individual-controlled identity
+
+1077
+00:47:10,510 --> 00:47:13,686
+system." And so there, as I mentioned
+
+1078
+00:47:13,710 --> 00:47:15,045
+early in the talk, there are adoption
+
+1079
+00:47:15,069 --> 00:47:16,886
+vectors. People are spending resources,
+
+1080
+00:47:16,910 --> 00:47:19,926
+but nowhere near the amount of resources
+
+1081
+00:47:19,950 --> 00:47:22,886
+going into AI systems, into AI
+
+1082
+00:47:22,910 --> 00:47:24,966
+identity system. If we had a fraction of
+
+1083
+00:47:24,990 --> 00:47:27,126
+that spend going into KERI, KERI
+
+1084
+00:47:27,150 --> 00:47:29,686
+would already be available. But
+
+1085
+00:47:29,710 --> 00:47:32,726
+we're looking at rolling out KERI for
+
+1086
+00:47:32,750 --> 00:47:34,486
+the State Endorsed Digital Identity (SEDI)
+
+1087
+00:47:34,510 --> 00:47:37,366
+initiative in the next
+
+1088
+00:47:37,390 --> 00:47:39,366
+12 months. So, we're really close and
+
+1089
+00:47:39,390 --> 00:47:40,726
+like I said, they're already using
+
+1090
+00:47:40,750 --> 00:47:44,646
+KERI in the early adoption in
+
+1091
+00:47:44,670 --> 00:47:53,686
+the telecom sector and the healthcare sector.
+
+1092
+00:47:53,710 --> 00:47:56,005
+So the seed has been planted.
+
+1093
+00:47:55,879 --> 00:47:57,296
+We've got shoots growing out of
+
+1094
+00:47:57,320 --> 00:47:58,576
+ground but those shoots can grow
+
+1095
+00:47:58,600 --> 00:48:00,895
+exponentially fast. All they need is
+
+1096
+00:48:00,919 --> 00:48:05,936
+sunlight, water and soil and
+
+1097
+00:48:05,960 --> 00:48:08,656
+resources. So we just need resources and
+
+1098
+00:48:08,680 --> 00:48:11,536
+and the adoption can go much faster.
+
+1099
+00:48:11,560 --> 00:48:13,536
+Once adopted, then it becomes a bulwark
+
+1100
+00:48:13,560 --> 00:48:16,176
+against future encroachment. So, we
+
+1101
+00:48:16,200 --> 00:48:19,375
+get off the
+
+1102
+00:48:19,399 --> 00:48:21,936
+arms race. We stop being in a
+
+1103
+00:48:21,960 --> 00:48:23,936
+resource arms race. We do a one-time
+
+1104
+00:48:23,960 --> 00:48:25,855
+spend to convert to KERI and then we
+
+1105
+00:48:25,879 --> 00:48:27,615
+don't have to keep spending
+
+1106
+00:48:27,639 --> 00:48:32,080
+and spending to protect ourselves.
+
+1107
+00:48:32,119 --> 00:48:34,095
+Which approach can be deployed more
+
+1108
+00:48:34,119 --> 00:48:35,936
+quickly, more safely, more humanely
+
+1109
+00:48:35,960 --> 00:48:37,776
+at planetary scale? Well,
+
+1110
+00:48:37,800 --> 00:48:41,135
+that's a trick question.
+
+1111
+00:48:41,159 --> 00:48:44,095
+Certainly, more safely and more
+
+1112
+00:48:44,119 --> 00:48:48,895
+humanely, KERI. More quickly? Not today
+
+1113
+00:48:48,919 --> 00:48:51,855
+but five years from now, possibly,
+
+1114
+00:48:51,879 --> 00:48:57,135
+because you don't have to every five years
+
+1115
+00:48:57,159 --> 00:49:00,176
+double the number of
+
+1116
+00:49:00,200 --> 00:49:02,895
+servers that you have running in AI
+
+1117
+00:49:02,919 --> 00:49:05,216
+data centers you don't have to fill
+
+1118
+00:49:05,240 --> 00:49:08,816
+space with AI data centers and able
+
+1119
+00:49:08,840 --> 00:49:11,536
+to keep up with the arms race. So yeah,
+
+1120
+00:49:11,560 --> 00:49:14,976
+so on a 5-year time frame, if quick
+
+1121
+00:49:15,000 --> 00:49:17,855
+is 5 years, then KERI definitely
+
+1122
+00:49:17,879 --> 00:49:21,855
+is the only viable choice.
+
+1123
+00:49:21,879 --> 00:49:24,576
+What are the biggest technical economic
+
+1124
+00:49:24,600 --> 00:49:25,855
+political and adoption barriers to
+
+1125
+00:49:25,879 --> 00:49:28,416
+deploying SEDI/KERISuite fast enough to become
+
+1126
+00:49:28,440 --> 00:49:30,576
+a viable alternative before surveillance-
+
+1127
+00:49:30,600 --> 00:49:33,855
+based systems become entrenched? Well,
+
+1128
+00:49:33,879 --> 00:49:36,016
+one is just people don't know about it.
+
+1129
+00:49:36,040 --> 00:49:37,855
+so they don't know to that it's
+
+1130
+00:49:37,879 --> 00:49:40,176
+that actually is a viable choice. The
+
+1131
+00:49:40,200 --> 00:49:43,135
+other is that society is filled
+
+1132
+00:49:43,159 --> 00:49:44,816
+with lots of people who are unaware of
+
+1133
+00:49:44,840 --> 00:49:47,936
+this threat and so they still think that
+
+1134
+00:49:47,960 --> 00:49:51,456
+old systems are the way to go and so
+
+1135
+00:49:51,480 --> 00:49:56,976
+they're sort of having the
+
+1136
+00:49:57,000 --> 00:49:59,375
+old fashioned arguments.
+
+1137
+00:49:59,399 --> 00:50:00,656
+It's like they're moving
+
+1138
+00:50:00,680 --> 00:50:02,656
+moving the deck shows on the
+
+1139
+00:50:02,680 --> 00:50:04,736
+Titanic, right? The Titanic's going
+
+1140
+00:50:04,760 --> 00:50:06,976
+down. It's going to go down in an hour,
+
+1141
+00:50:07,000 --> 00:50:09,216
+right?
+
+1142
+00:50:09,240 --> 00:50:11,776
+As soon as the whole breaches
+
+1143
+00:50:11,800 --> 00:50:14,256
+and it cracks in half, it's gone, right?
+
+1144
+00:50:14,280 --> 00:50:16,496
+But you have this sense that "Oh
+
+1145
+00:50:16,520 --> 00:50:19,375
+well, it's still floating, so we've got
+
+1146
+00:50:19,399 --> 00:50:21,855
+time, right? We've got time,
+
+1147
+00:50:21,879 --> 00:50:24,816
+and there's no rush." And the fact
+
+1148
+00:50:24,840 --> 00:50:26,095
+of the matter is you don't have
+
+1149
+00:50:26,119 --> 00:50:29,296
+time, which means that you should stop
+
+1150
+00:50:29,320 --> 00:50:31,776
+worrying about anything other than these
+
+1151
+00:50:31,800 --> 00:50:33,696
+two alternatives. And if you stop
+
+1152
+00:50:33,720 --> 00:50:35,615
+worrying about all the alternatives
+
+1153
+00:50:35,639 --> 00:50:38,016
+but these two, then it becomes pretty
+
+1154
+00:50:38,040 --> 00:50:40,576
+clear where for most people
+
+1155
+00:50:40,600 --> 00:50:44,335
+that care about this stuff
+
+1156
+00:50:44,359 --> 00:50:46,416
+where their effort should go that
+
+1157
+00:50:46,440 --> 00:50:48,176
+they should be helping ..., because nothing
+
+1158
+00:50:48,200 --> 00:50:50,256
+else is good enough
+
+1159
+00:50:50,280 --> 00:50:52,976
+besides KERI. There are lots of "KERI light"
+
+1160
+00:50:53,000 --> 00:50:56,416
+or partial KERI or they
+
+1161
+00:50:56,440 --> 00:50:58,416
+do some of KERI but not all of KERI
+
+1162
+00:50:58,440 --> 00:51:00,656
+stuff out there. And the problem is
+
+1163
+00:51:00,680 --> 00:51:02,976
+that those systems aren't good enough
+
+1164
+00:51:03,000 --> 00:51:04,416
+because they leave out important things
+
+1165
+00:51:04,440 --> 00:51:06,335
+you need to protect against the AI
+
+1166
+00:51:06,359 --> 00:51:08,736
+threat. So they're half measures,
+
+1167
+00:51:08,760 --> 00:51:10,095
+right? And half measures aren't good
+
+1168
+00:51:10,119 --> 00:51:12,496
+enough, right? No more half measures.
+
+1169
+00:51:12,520 --> 00:51:15,135
+We use that motto
+
+1170
+00:51:15,159 --> 00:51:17,296
+If you care about security, you can't do
+
+1171
+00:51:17,320 --> 00:51:19,615
+half measures. `You're either
+
+1172
+00:51:19,639 --> 00:51:22,496
+sufficiently secure or you're wiped
+
+1173
+00:51:22,520 --> 00:51:26,256
+out.` So that's the alternative.
+
+1174
+00:51:26,280 --> 00:51:28,416
+And I have this picture that I got
+
+1175
+00:51:28,440 --> 00:51:31,936
+from Chris Bramwell who's working on
+
+1176
+00:51:31,960 --> 00:51:34,895
+this SEDI for the State of Utah.
+
+1177
+00:51:34,919 --> 00:51:38,256
+SEDI: the last best hope against
+
+1178
+00:51:38,280 --> 00:51:42,256
+AI. So it shows SEDI as a warrior,
+
+1179
+00:51:42,280 --> 00:51:44,816
+The knight to fight the
+
+1180
+00:51:44,840 --> 00:51:51,696
+AI scourge of identity. Not that AI
+
+1181
+00:51:51,720 --> 00:51:55,536
+is inherently evil. It's just that the
+
+1182
+00:51:55,560 --> 00:51:57,936
+the only solution that an AI-based
+
+1183
+00:51:57,960 --> 00:52:01,056
+identity gives us is a centralized,
+
+1184
+00:52:01,080 --> 00:52:04,176
+identity that requires maximal
+
+1185
+00:52:04,200 --> 00:52:06,656
+surveillance. It's basically you need
+
+1186
+00:52:06,680 --> 00:52:08,895
+to be continuously surveilled, so that it
+
+1187
+00:52:08,919 --> 00:52:12,256
+can build a high-fidelity persona of
+
+1188
+00:52:12,280 --> 00:52:15,776
+you that is better than the
+
+1189
+00:52:15,800 --> 00:52:18,256
+attacker's AI, who is also continuously
+
+1190
+00:52:18,280 --> 00:52:21,456
+surveilling you, trying to build a
+
+1191
+00:52:21,480 --> 00:52:23,855
+ sufficiently-high fidelity that
+
+1192
+00:52:23,879 --> 00:52:26,016
+it can steal your
+
+1193
+00:52:26,040 --> 00:52:30,416
+identity and exploit you. And
+
+1194
+00:52:30,440 --> 00:52:32,656
+that's a stark choice. Neither of those
+
+1195
+00:52:32,680 --> 00:52:34,335
+are good, right? Neither of those
+
+1196
+00:52:34,359 --> 00:52:36,176
+are where we want to end up. We want to
+
+1197
+00:52:36,200 --> 00:52:38,816
+get off that train. KERI is
+
+1198
+00:52:38,840 --> 00:52:41,696
+is a path to get off that train.
+
+1199
+00:52:41,720 --> 00:52:43,855
+I hope this has been helpful. I hope
+
+1200
+00:52:43,879 --> 00:52:46,576
+that if you're worried,
+
+1201
+00:52:46,600 --> 00:52:49,056
+if you're <i>only</i> worried, then
+
+1202
+00:52:49,080 --> 00:52:50,656
+you're not taking this seriously
+
+1203
+00:52:50,680 --> 00:52:56,895
+enough. You should be
+
+1204
+00:52:56,919 --> 00:53:01,135
+worried like you've never been
+
+1205
+00:53:01,159 --> 00:53:03,936
+before about the future of digital
+
+1206
+00:53:03,960 --> 00:53:07,536
+identity. Given how fast the
+
+1207
+00:53:07,560 --> 00:53:11,375
+frontier AI models are growing in their
+
+1208
+00:53:11,399 --> 00:53:14,176
+ability to exploit current digital
+
+1209
+00:53:14,200 --> 00:53:15,696
+identity systems which all
+
+1210
+00:53:15,720 --> 00:53:17,696
+security systems are foundationally
+
+1211
+00:53:17,720 --> 00:53:19,696
+based on digital identity systems.
+
+1212
+00:53:19,720 --> 00:53:22,656
+You use digital identity security
+
+1213
+00:53:22,680 --> 00:53:24,095
+overlay for everything else that you're
+
+1214
+00:53:24,119 --> 00:53:26,256
+doing. If those are breakable,
+
+1215
+00:53:26,280 --> 00:53:31,936
+then we're looking at an impending
+
+1216
+00:53:31,960 --> 00:53:37,056
+catastrophe. What's
+
+1217
+00:53:37,080 --> 00:53:38,656
+going to end up happening is people are
+
+1218
+00:53:38,680 --> 00:53:41,615
+just going to adopt the easy path
+
+1219
+00:53:41,639 --> 00:53:47,375
+which is adopt AI-based
+
+1220
+00:53:47,399 --> 00:53:50,976
+digital identity.
+
+1221
+00:53:51,000 --> 00:53:53,296
+That would be a bad choice for
+
+1222
+00:53:53,320 --> 00:53:55,296
+us. Maybe in the short run it's the
+
+1223
+00:53:55,320 --> 00:53:56,736
+only choice available to us because
+
+1224
+00:53:56,760 --> 00:53:59,375
+KERI isn't universally available.
+
+1225
+00:53:59,399 --> 00:54:06,736
+It's still a chute in the ground. Not
+
+1226
+00:54:06,760 --> 00:54:09,135
+not a whole field of
+
+1227
+00:54:09,159 --> 00:54:11,536
+plants. But it could be a whole
+
+1228
+00:54:11,560 --> 00:54:14,176
+field of plants in the next
+
+1229
+00:54:14,200 --> 00:54:16,416
+couple of years. Not in the next
+
+1230
+00:54:16,440 --> 00:54:17,776
+couple of months, not unless
+
+1231
+00:54:17,800 --> 00:54:19,375
+a bunch of resources get thrown at it,
+
+1232
+00:54:19,399 --> 00:54:21,407
+which I don't think is going to happen.
+
+1233
+00:54:21,431 --> 00:54:25,180
+Video: Sam and Caleb Smith
+Subtitles: Henk van Cann and Kor Dwarshuis
+

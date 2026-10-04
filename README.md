@@ -43,7 +43,7 @@ confs/
 1. Create `confs/<ORG>/<YEAR>/<month>/` and copy `index.html` + `index.json` from `confs/template-presentations-landingpage/`.
 2. Add media to `talks/` (and `interviews/`, `slides/`, … when present) and fill in `index.json`.
 3. Adjust the static transcript links (`<nav class="seo-transcript-links">`) in `index.html`.
-4. Optional: add a subtitle source line in `scripts/subtitle-sources.tsv`.
+4. Edit `.srt` files in that conference folder. `scripts/subtitle-sources.tsv` is only for an optional copy from somewhere else.
 
 ### Build and deploy
 
@@ -64,31 +64,19 @@ Old gallery entry paths keep a small static `index.html` with one link to the ne
 
 Old media under `/confs/2026/videos/` may still answer at their old URLs until that tree is removed. Loose videos there with no new home yet: Introduction to KERI, KSWG.
 
-## Legacy: fetching conference subtitles
+## Subtitles and scripts
 
-Subtitle files can be fetched dynamically from the `keri-foundation/CONF26-subtitles` GitHub repository.
+This repository is the only place conference subtitles are edited. Files live next to the media, for example `confs/KERI/2026/apr/talks/*.fixed.srt`. `scripts/deploy-confs.sh build` regenerates the static transcript HTML from those files.
 
-From the repo root, run:
+Tools in `scripts/` (install once with `npm install` inside `scripts/`):
 
-    node confs/2026/videos/fetch-subtitles.js
+    node scripts/build-transcript-pdf.js KERI/2026/apr
+    node scripts/remove-rolling-subtitles.js confs/KERI/2026/apr/talks
+    bash scripts/upload-youtube-subs.sh 'PLAYLIST_URL' confs/KERI/2026/apr/talks
+    bash scripts/fetch.sh          # pull the live site into this checkout
+    python3 scripts/generate_policy_brief_pdf.py
 
-This will create and update `confs/2026/videos/KERICONF26/subtitles/` with all `.srt` files currently present in the GitHub `subtitles/` folder.
+YouTube OAuth setup: `scripts/YOUTUBE_UPLOADER_SETUP.md`. Caption drafts still come from the separate subtitle machine, not from this repo.
 
-If you hit GitHub API rate limits, set a `GITHUB_TOKEN` environment variable before running the script.
-
-## Legacy: static transcript HTML (SEO)
-
-Talk transcripts for search engines are generated as separate HTML pages (not via the gallery JavaScript). Generation lives in the `CONF26-subtitles` repo:
-
-    cd /path/to/CONF26-subtitles
-    npm run build:transcript-pages   # local HTML only
-    npm run deploy:subtitles         # .srt + transcript HTML → local mirror + live server
-
-Generated trees:
-
-- `confs/2026/videos/KERICONF26/transcripts/`
-- `confs/2026/videos/KERICONF26-interviews/transcripts/`
-- `confs/2026/videos/SEDI/2025-11-SEDI/transcripts/`
-
-The gallery `index.html` template is independent: redeploy it only when the app changes. Transcript pages regenerate whenever subtitle content is deployed.
+Unpublished extras that are not on a gallery live under `confs/_archive/` (not deployed).
 
