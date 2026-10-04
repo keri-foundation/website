@@ -99,22 +99,7 @@ async function collectSrtFiles(eventDir) {
   }
 
   await walk(eventDir);
-  return preferEditedTranscripts(files);
-}
-
-function preferEditedTranscripts(files) {
-  const chosen = new Map();
-  for (const path of files) {
-    const name = basename(path);
-    const isFixed = /\.fixed\.srt$/i.test(name);
-    const stem = name.replace(/\.fixed\.srt$/i, "").replace(/\.srt$/i, "");
-    const key = join(dirname(path), stem);
-    const prev = chosen.get(key);
-    if (!prev || (isFixed && !prev.fixed)) {
-      chosen.set(key, { path, fixed: isFixed });
-    }
-  }
-  return [...chosen.values()].map((v) => v.path);
+  return files;
 }
 
 // ─── Event / PROGRAM.md metadata ────────────────────────────────────────────
@@ -274,7 +259,7 @@ function formatTimestamp(seconds) {
 const SEP = "｜"; // fullwidth vertical line used in conference filenames
 
 function stripSrtExtension(filename) {
-  return filename.replace(/\.fixed\.srt$/i, "").replace(/\.srt$/i, "");
+  return filename.replace(/\.srt$/i, "");
 }
 
 function sessionFromPath(filePath, eventDir) {

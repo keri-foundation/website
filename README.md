@@ -68,7 +68,7 @@ Deep links (talk media, subtitles, transcripts, slides, promo) are mapped the sa
 Curated captions for the conference galleries live in this repository, next to the videos:
 
 ```text
-confs/KERI/2026/apr/talks/          *.fixed.srt
+confs/KERI/2026/apr/talks/          *.srt
 confs/KERI/2026/apr/interviews/     *.srt
 confs/SEDI/2025/nov/talks/          morning-|lunch-|afternoon-*.srt
 ```
@@ -83,7 +83,7 @@ cd /Users/kor/webdev/Blockchain-Bird/KERI/KERI-subtitle-machine
 # http://127.0.0.1:8765 — drop .mp4 files; captions land in that project’s output/
 ```
 
-Copy a finished draft into the matching `confs/…` folder, clean it up, and for KERI talks keep the `*.fixed.srt` name the gallery already references.
+Copy a finished draft into the matching `confs/…` folder and clean it up. Keep the `.srt` name the gallery already references.
 
 [Subtitle Edit](https://subtitleedit.github.io/subtitleedit/) is a fine editor.
 
@@ -240,7 +240,7 @@ From the kerifoundation repo root (after `npm install` in `scripts/`):
 bash scripts/upload-youtube-subs.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks
 
 # One file
-bash scripts/upload-youtube-subs.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks --file 'Video Title.fixed.srt'
+bash scripts/upload-youtube-subs.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks --file 'Video Title.srt'
 
 # Force OAuth re-consent
 bash scripts/upload-youtube-subs.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks --reauth
@@ -249,7 +249,7 @@ bash scripts/upload-youtube-subs.sh 'https://www.youtube.com/playlist?list=PLxxx
 ### How it works
 
 1. Fetches all videos from the YouTube playlist
-2. For each video, searches for a matching `.fixed.srt` (or `.srt`) file in the directory you passed
+2. For each video, searches for a matching `.srt` file in the directory you passed
 3. Matches by video title
 4. Uploads the subtitle file to the video
 5. If a subtitle already exists, it updates it
@@ -271,10 +271,10 @@ bash scripts/upload-youtube-subs.sh 'https://www.youtube.com/playlist?list=PLxxx
 - Use the full URL: `https://www.youtube.com/playlist?list=PLAYLIST_ID`
 - You can copy this from your browser address bar
 
-**"No matching .fixed.srt file"**
+**"No matching .srt file"**
 
 - Make sure the video title in the subtitle filename matches the YouTube video title exactly
-- Edited subtitle files live next to the videos, for example `confs/KERI/2026/apr/talks/*.fixed.srt`
+- Edited subtitle files live next to the videos, for example `confs/KERI/2026/apr/talks/*.srt`
 
 **Authentication issues**
 

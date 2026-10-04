@@ -44,7 +44,7 @@ done
 if [ -z "$PLAYLIST_URL" ] || [ -z "$FIXED_DIR" ]; then
   echo "Usage:"
   echo "  bash scripts/upload-youtube-subs.sh PLAYLIST_URL SRT_DIR"
-  echo "  bash scripts/upload-youtube-subs.sh PLAYLIST_URL SRT_DIR --file 'Video Title.fixed.srt'"
+  echo "  bash scripts/upload-youtube-subs.sh PLAYLIST_URL SRT_DIR --file 'Video Title.srt'"
   echo "  bash scripts/upload-youtube-subs.sh PLAYLIST_URL SRT_DIR --force"
   echo "  bash scripts/upload-youtube-subs.sh PLAYLIST_URL SRT_DIR --reauth"
   echo "Example:"
