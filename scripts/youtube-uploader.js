@@ -314,28 +314,20 @@ function titlesMatch(left, right) {
 }
 
 function subtitleTitleFromPath(subtitlePath) {
-  const fileName = path.basename(subtitlePath);
-  return fileName
-    .replace(/\.en\.fixed\.srt$/, '')
-    .replace(/\.fixed\.srt$/, '')
-    .replace(/\.srt$/, '');
+  return path.basename(subtitlePath).replace(/\.srt$/i, '');
 }
 
 function findSubtitleFile(videoTitle, fixedDir) {
   const files = fs.readdirSync(fixedDir);
 
   for (const file of files) {
-    if (file.endsWith('.fixed.srt')) {
-      // Extract title from filename (remove .fixed.srt and any .en suffix)
-      const filenameTitle = file
-        .replace(/\.en\.fixed\.srt$/, '')
-        .replace(/\.fixed\.srt$/, '')
-      ;
+    if (!file.toLowerCase().endsWith('.srt')) continue;
+    // Language tracks such as foo.nl.srt are not the default English captions.
+    if (/\.[a-z]{2}\.srt$/i.test(file)) continue;
 
-      // Match using exact and relaxed comparison to handle punctuation variations.
-      if (titlesMatch(videoTitle, filenameTitle)) {
-        return path.join(fixedDir, file);
-      }
+    const filenameTitle = file.replace(/\.srt$/i, '');
+    if (titlesMatch(videoTitle, filenameTitle)) {
+      return path.join(fixedDir, file);
     }
   }
 
@@ -472,7 +464,7 @@ async function uploadPlaylistSubtitles(youtube, videos, fixedDir, state, options
     const subtitlePath = findSubtitleFile(video.title, fixedDir);
 
     if (!subtitlePath) {
-      console.log(`⊘ Skipped: ${video.title} (no matching .fixed.srt file)\n`);
+      console.log(`⊘ Skipped: ${video.title} (no matching .srt file)\n`);
       counts.skippedCount++;
       continue;
     }
@@ -582,7 +574,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   if (!playlistUrl) {
     console.error('Usage: node scripts/youtube-uploader.js <playlist-url> <srt-dir> [--file <subtitle-file>] [--force] [--reauth]');
     console.error('Example: node scripts/youtube-uploader.js "https://www.youtube.com/playlist?list=PLxxx" confs/KERI/2026/apr/talks');
-    console.error('Example: bash scripts/upload-youtube-subs.sh "https://www.youtube.com/playlist?list=PLxxx" confs/KERI/2026/apr/talks --file "Talk Title.fixed.srt"');
+    console.error('Example: bash scripts/upload-youtube-subs.sh "https://www.youtube.com/playlist?list=PLxxx" confs/KERI/2026/apr/talks --file "Talk Title.srt"');
     process.exit(1);
   }
 
