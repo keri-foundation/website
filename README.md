@@ -1,12 +1,12 @@
 # General information
 
-This repo contains information about and backups of <https://keri.foundation>.
+This repo contains information about and backups of [https://keri.foundation](https://keri.foundation).
 
 The repository does not include the full WordPress core files. It includes the site database export backup in ZIP format, password-protected.
 
 ## Managing the website
 
-Go to https://hpanel.hostinger.com/websites/keri.foundation
+Go to [https://hpanel.hostinger.com/websites/keri.foundation](https://hpanel.hostinger.com/websites/keri.foundation)
 
 ## Conference galleries (`/confs/<ORG>/<YEAR>/<month>/`)
 
@@ -32,8 +32,7 @@ confs/
 │   └── transcripts/
 │       ├── html/talks/
 │       └── pdf/talks/
-├── template-presentations-landingpage/   generic starting point for a new conference
-└── 2026/videos/                    legacy layout, kept until the new layout is live
+└── template-presentations-landingpage/   generic starting point for a new conference
 ```
 
 `index.json` → `transcriptsDir` (`transcripts/html`) tells both the gallery and the generator where HTML transcript pages live, for example `transcripts/html/talks/<video-id>.html`. Concatenated PDFs go under `transcripts/pdf/talks/`.
@@ -57,16 +56,12 @@ scripts/deploy-confs.sh --conf SEDI/2025/nov push
 
 ### Legacy gallery URLs
 
-Old gallery entry paths keep a small static `index.html` with one link to the new location (no `.htaccess` redirects — LiteSpeed often ignored those):
+Old paths under `/confs/2026/videos/` are redirected with 301 rules in `.htaccess` (not separate “moved” HTML pages). Examples:
 
 - `/confs/2026/videos/` → `/confs/KERI/2026/apr/`
 - `/confs/2026/videos/SEDI/2025-11-SEDI/` → `/confs/SEDI/2025/nov/`
 
-```bash
-scripts/deploy-confs.sh push-legacy-moved   # upload those two index.html pages
-```
-
-Old media under `/confs/2026/videos/` may still answer at their old URLs until that tree is removed. Loose videos there with no new home yet: Introduction to KERI, KSWG.
+Deep links (talk media, subtitles, transcripts, slides, promo) are mapped the same way. The local `confs/2026/` tree is gone; keep the `.htaccess` rules until those old bookmarks can be retired.
 
 ## Subtitles
 
@@ -196,23 +191,23 @@ To upload fixed subtitles to YouTube, you need to set up OAuth2 credentials from
 1. Go to [Google Cloud Console](https://console.cloud.google.com/)
 2. Create a new project (or use an existing one)
 3. Enable the **YouTube Data API v3**:
-   - Go to "APIs & Services" → "Library"
-   - Search for "YouTube Data API"
-   - Click "Enable"
+  - Go to "APIs & Services" → "Library"
+  - Search for "YouTube Data API"
+  - Click "Enable"
 
 ### Step 2: Create OAuth2 Credentials
 
 1. Go to "APIs & Services" → "Credentials"
 2. Click "Create Credentials" → "OAuth 2.0 Client IDs"
 3. If prompted, configure the OAuth consent screen first:
-   - User Type: External
-   - Add your email as a test user
+  - User Type: External
+  - Add your email as a test user
 4. For Application type, select **"Desktop application"**
 5. Click "Create"
 6. Download the OAuth client JSON (Google's UI varies):
-   - In the success popup after creating the client, click **Download JSON**
-   - Or in the Credentials list, find your OAuth client and click the download icon at the far right
-   - Or open the client details and use **Download JSON** there
+  - In the success popup after creating the client, click **Download JSON**
+  - Or in the Credentials list, find your OAuth client and click the download icon at the far right
+  - Or open the client details and use **Download JSON** there
 7. Save the downloaded file as `.youtube-client-secret.json` in the kerifoundation repo root (gitignored)
 
 ### Step 3: First upload
