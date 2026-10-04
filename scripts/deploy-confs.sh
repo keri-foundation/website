@@ -33,7 +33,7 @@ Commands (run in the order given):
   transcripts     Regenerate the static transcript HTML pages from the .srt files
   verify          Check every file referenced by each index.json exists locally
   build           subtitles + transcripts + verify
-  push            Mirror the conference folders to the server (rsync --delete)
+  push            Mirror the conference folders to the server (rsync --delete), including each gallery index.html and index.json
   check-remote    verify + HEAD-request every referenced file on the live site
   deploy          build + push + check-remote
   push-legacy-moved  Upload the "moved" index.html pages for old gallery URLs
@@ -149,6 +149,21 @@ step_push() {
     local t
     while IFS= read -r t; do targets+=("$t"); done < <(push_targets)
     echo "Mirroring (rsync --delete): ${targets[*]}"
+
+    # Every gallery must have index.html + index.json; list them before upload.
+    local id
+    local index_files=()
+    for id in $(conferences); do
+        for f in index.html index.json; do
+            if [ ! -f "$CONFS/$id/$f" ]; then
+                echo "Missing confs/$id/$f" >&2
+                exit 1
+            fi
+            index_files+=("confs/$id/$f")
+        done
+    done
+    echo "Gallery indexes:"
+    printf '  %s\n' "${index_files[@]}"
     confirm "Upload and mirror these folders to the server?"
 
     local rsync_opts=(-avz --delete --human-readable "${RSYNC_EXCLUDES[@]}")
@@ -161,6 +176,19 @@ step_push() {
         fi
         [ "$DRY_RUN" -eq 1 ] || ssh "$REMOTE_HOST" "mkdir -p '$REMOTE_ROOT/confs/$t'"
         rsync "${rsync_opts[@]}" "$CONFS/$t/" "$REMOTE_HOST:$REMOTE_ROOT/confs/$t/"
+    done
+
+    # Always push gallery indexes (ignore mtime) so a dry-run / transfer list
+    # shows them even when the rest of the tree was unchanged.
+    echo "── Gallery index.html / index.json"
+    local index_rsync=(-avz --ignore-times --human-readable)
+    [ "$DRY_RUN" -eq 1 ] && index_rsync+=(--dry-run)
+    for id in $(conferences); do
+        [ "$DRY_RUN" -eq 1 ] || ssh "$REMOTE_HOST" "mkdir -p '$REMOTE_ROOT/confs/$id'"
+        rsync "${index_rsync[@]}" \
+            "$CONFS/$id/index.html" \
+            "$CONFS/$id/index.json" \
+            "$REMOTE_HOST:$REMOTE_ROOT/confs/$id/"
     done
 }
 
