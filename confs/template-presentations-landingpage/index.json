@@ -26,6 +26,16 @@
         "icon": "youtube",
         "prefix": "All videos on YouTube:"
       }
+    ],
+    "transcriptLinks": [
+      {
+        "label": "Talk transcripts",
+        "href": "transcripts/html/talks/"
+      },
+      {
+        "label": "Interview transcripts",
+        "href": "transcripts/html/interviews/"
+      }
     ]
   },
   "promo": {

@@ -92,8 +92,7 @@
             border: 0;
         }
 
-        /* Static crawl links — must stay in raw HTML (not JS) for non-JS indexers.
-           Adjust href(s) per gallery when copying this template. */
+        /* Transcript index links — labels/hrefs come from page.transcriptLinks in index.json. */
         .seo-transcript-links {
             margin: 0 0 10px;
             padding: 6px 10px;
@@ -2095,10 +2094,7 @@
 
 <body>
     <a class="skip-link" href="#mainContent">Skip to main content</a>
-    <!-- Static crawl entry into <transcriptsDir>/<section>/ (edit hrefs when deploying a new gallery). -->
-    <nav class="seo-transcript-links" aria-label="Transcript indexes">
-        <a href="transcripts/html/talks/">Conference talk transcripts</a><span class="sep" aria-hidden="true">·</span><a href="transcripts/html/interviews/">Interview transcripts</a>
-    </nav>
+    <nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Transcript indexes" hidden></nav>
     <header id="galleryHeader"></header>
 
     <main id="mainContent">
@@ -2754,10 +2750,46 @@
 
             const YOUTUBE_ICON = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiA4djggbC00LTIuNXYtMy4yTDggMTJ6Ii8+PC9zdmc+';
 
+            function renderTranscriptLinks(page) {
+                const nav = document.getElementById('seoTranscriptLinks');
+                if (!nav) return;
+
+                nav.replaceChildren();
+                const links = Array.isArray(page && page.transcriptLinks) ? page.transcriptLinks : [];
+                const valid = links.filter((item) =>
+                    item
+                    && typeof item.href === 'string'
+                    && item.href.trim()
+                    && typeof item.label === 'string'
+                    && item.label.trim()
+                );
+                if (!valid.length) {
+                    nav.hidden = true;
+                    return;
+                }
+
+                valid.forEach((item, i) => {
+                    if (i > 0) {
+                        const sep = document.createElement('span');
+                        sep.className = 'sep';
+                        sep.setAttribute('aria-hidden', 'true');
+                        sep.textContent = '\u00B7';
+                        nav.appendChild(sep);
+                    }
+                    const a = document.createElement('a');
+                    a.href = item.href.trim();
+                    a.textContent = item.label.trim();
+                    nav.appendChild(a);
+                });
+                nav.hidden = false;
+            }
+
             function renderPageChrome(page, topClipsConfig) {
                 if (!page) return;
 
                 if (page.title) document.title = page.title;
+
+                renderTranscriptLinks(page);
 
                 const header = document.getElementById('galleryHeader');
                 if (header) {

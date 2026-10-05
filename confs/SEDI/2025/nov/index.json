@@ -24,6 +24,12 @@
         "href": "transcripts/pdf/talks/2025-11-SEDI-Transcripts.pdf",
         "external": false
       }
+    ],
+    "transcriptLinks": [
+      {
+        "label": "All transcripts",
+        "href": "transcripts/html/talks/"
+      }
     ]
   },
   "topClips": {
