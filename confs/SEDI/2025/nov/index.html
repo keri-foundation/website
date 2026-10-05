@@ -2203,15 +2203,6 @@
     <header id="galleryHeader"></header>
 
     <main id="mainContent">
-        <section class="audience-filter" id="audienceFilter" hidden>
-            <h2 id="audienceFilterLabel">Target group</h2>
-            <p class="audience-filter-hint" id="audienceFilterHint">Choose a group to see only the videos meant for
-                them. A video can belong to more than one group.</p>
-            <div class="audience-filter-options" id="audienceFilterOptions" role="group" aria-label="Target groups">
-            </div>
-            <p class="audience-filter-status" id="audienceFilterStatus" role="status" aria-live="polite"></p>
-        </section>
-
         <div class="featured-media" id="featuredMedia">
             <section class="promo-section" id="promoSection" hidden aria-labelledby="promoTitle">
                 <h2 class="promo-title" id="promoTitle" hidden>Promo video</h2>
@@ -2236,6 +2227,15 @@
                 </div>
             </section>
         </div>
+
+        <section class="audience-filter" id="audienceFilter" hidden>
+            <h2 id="audienceFilterLabel">Target group</h2>
+            <p class="audience-filter-hint" id="audienceFilterHint">Choose a group to see only the videos meant for
+                them. A video can belong to more than one group.</p>
+            <div class="audience-filter-options" id="audienceFilterOptions" role="group" aria-label="Target groups">
+            </div>
+            <p class="audience-filter-status" id="audienceFilterStatus" role="status" aria-live="polite"></p>
+        </section>
 
         <search class="search-section" aria-labelledby="searchLabel">
             <label for="transcriptSearch" id="searchLabel">Search all transcripts</label>
