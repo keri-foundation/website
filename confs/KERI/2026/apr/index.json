@@ -185,8 +185,8 @@
       "label": "Legal Professional"
     },
     {
-      "id": "concerned-citizen",
-      "label": "Concerned Citizen"
+      "id": "general-citizen",
+      "label": "General Citizen"
     }
   ],
   "videos": [
@@ -210,7 +210,7 @@
         "developer",
         "policymaker",
         "legal-professional",
-        "concerned-citizen"
+        "general-citizen"
       ],
       "path": "talks/Daniel Hardman \uff5c Open Verifiable Communications \uff5c KERI Conference 2026.mp4",
       "duration": "39:55",
@@ -224,7 +224,7 @@
       "targetGroups": [
         "developer",
         "policymaker",
-        "concerned-citizen"
+        "general-citizen"
       ],
       "path": "talks/Scott Stuewe Mark Scrimshire Jared Jeffery \uff5c Provenanting Patient's Medical Records \uff5c KERI Conf 2026.mp4",
       "duration": "35:40",
@@ -237,7 +237,7 @@
       "targetGroups": [
         "policymaker",
         "legal-professional",
-        "concerned-citizen"
+        "general-citizen"
       ],
       "path": "talks/George McEwan \uff5c The Landscape of SEDI \uff5c KERI Conference 2026.mp4",
       "duration": "38:35",
@@ -357,7 +357,7 @@
       "title": "How KERI Enables Better Private-Public Partnerships - George McEwan",
       "targetGroups": [
         "policymaker",
-        "concerned-citizen"
+        "general-citizen"
       ],
       "path": "talks/George McEwan \uff5c How KERI Enables Better Private-Public Partnerships \uff5c KERI Conference 2026.mp4",
       "duration": "44:20",
@@ -370,7 +370,7 @@
       "targetGroups": [
         "developer",
         "policymaker",
-        "concerned-citizen"
+        "general-citizen"
       ],
       "path": "talks/Samuel Smith \uff5c The Future of KERI \uff5c KERI Conference 2026.mp4",
       "duration": "52:10",
@@ -383,7 +383,7 @@
       "targetGroups": [
         "developer",
         "policymaker",
-        "concerned-citizen"
+        "general-citizen"
       ],
       "path": "talks/Phil Feairheller \uff5c ACDCs for Authorization \uff5c KERI Conference 2026.mp4",
       "duration": "36:15",
@@ -396,7 +396,7 @@
       "targetGroups": [
         "developer",
         "policymaker",
-        "concerned-citizen"
+        "general-citizen"
       ],
       "path": "talks/Thomas Mayfield \uff5c KERI Infrastructure & the 5 W's \uff5c KERI Conference 2026.mp4",
       "duration": "43:20",
@@ -409,7 +409,7 @@
       "targetGroups": [
         "developer",
         "policymaker",
-        "concerned-citizen"
+        "general-citizen"
       ],
       "path": "talks/Alan Davies \uff5c ACDCs for Enterprises \uff5c KERI Conference 2026.mp4",
       "duration": "35:55",
@@ -447,7 +447,7 @@
       "targetGroups": [
         "policymaker",
         "legal-professional",
-        "concerned-citizen"
+        "general-citizen"
       ],
       "path": "talks/Phil Windley \uff5c Digital Identity Needs a Legal Foundation \uff5c KERI Conference 2026.mp4",
       "duration": "43:10",
@@ -483,7 +483,7 @@
       "title": "Investigating the Game of Trust - Nicholas Racz",
       "targetGroups": [
         "policymaker",
-        "concerned-citizen"
+        "general-citizen"
       ],
       "path": "talks/Nicholas Racz \uff5c Investigating the Game of Trust \uff5c KERI Conference 2026.mp4",
       "duration": "39:15",
@@ -522,7 +522,7 @@
         "developer",
         "policymaker",
         "legal-professional",
-        "concerned-citizen"
+        "general-citizen"
       ],
       "path": "talks/Samuel Smith \uff5c SPAC & TSP \uff5c KERI Conference 2026.mp4",
       "duration": "42:25",
@@ -547,7 +547,7 @@
       "targetGroups": [
         "developer",
         "policymaker",
-        "concerned-citizen"
+        "general-citizen"
       ],
       "path": "talks/Ryan Hansen Pannel \uff5c What KERI allows us to do that we couldn't before \uff5c KERI Conference 2026.mp4",
       "duration": "37:30",
@@ -584,7 +584,7 @@
       "targetGroups": [
         "policymaker",
         "legal-professional",
-        "concerned-citizen"
+        "general-citizen"
       ],
       "path": "interviews/Daniel-Hardman-Interview.mp4",
       "duration": "1:19",
@@ -688,7 +688,7 @@
       "targetGroups": [
         "policymaker",
         "legal-professional",
-        "concerned-citizen"
+        "general-citizen"
       ],
       "path": "interviews/Phil-Windley-Interview.mp4",
       "duration": "1:24",
