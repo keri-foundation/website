@@ -4,7 +4,7 @@
  *
  * Each talk with a subtitle becomes a page under a transcripts/ folder. Paths inside
  * those pages are relative to the gallery index.html so the tree can be moved later.
- * Uses English (`subtitle` / `subtitles.en`); other language tracks are ignored here.
+ * Uses English (`subtitle`); sibling language tracks (`foo.nl.srt`) are ignored here.
  *
  * Usage:
  *   node scripts/generate-transcript-pages.mjs \

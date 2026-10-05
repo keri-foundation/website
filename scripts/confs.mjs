@@ -12,7 +12,8 @@
  * sync-subtitles  Copy curated .srt files from the source folders listed in
  *                 scripts/subtitle-sources.tsv into the conference folders. Only
  *                 subtitles referenced by that conference's index.json are copied
- *                 (legacy `subtitle` plus optional `subtitles` language map).
+ *                 (English `subtitle`, optional `subtitles` map, plus sibling
+ *                 language files `foo.nl.srt` next to `foo.srt` in the source).
  *                 Sources are matched recursively by exact basename.
  * verify          Check that every file referenced by index.json exists (media, mp3,
  *                 subtitles, slides, posters, photos, transcript pages) and list files
@@ -21,8 +22,8 @@
  */
 
 import { readFile, readdir, stat, copyFile, mkdir } from "node:fs/promises";
-import { existsSync } from "node:fs";
-import { dirname, join, relative, resolve, sep } from "node:path";
+import { existsSync, readdirSync } from "node:fs";
+import { basename, dirname, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { homedir } from "node:os";
 
@@ -126,8 +127,51 @@ function transcriptsDirOf(config) {
   return typeof config.transcriptsDir === "string" ? config.transcriptsDir.replace(/\/+$/, "") : "";
 }
 
-/** Collect every subtitle path on a video (`subtitle` + optional `subtitles` map). */
-function collectSubtitlePaths(video) {
+/** True for language-tagged names like `foo.nl.srt` (not the English `foo.srt`). */
+function isLanguageSubtitleBasename(name) {
+  return /\.[a-z]{2,3}\.srt$/i.test(String(name || ""));
+}
+
+/** Escape a string for use inside a RegExp character class / pattern. */
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+}
+
+/**
+ * Sibling language tracks next to an English subtitle: `foo.srt` → `foo.nl.srt`.
+ * Only paths that exist under `confDir` are returned.
+ */
+function discoverLanguageSubtitlePaths(englishRel, confDir) {
+  const en = toPosix(String(englishRel || ""));
+  if (!confDir || !en || !/\.srt$/i.test(en)) return [];
+  const fileName = basename(en);
+  if (isLanguageSubtitleBasename(fileName)) return [];
+  const folder = dirname(en);
+  const stem = fileName.replace(/\.srt$/i, "");
+  const langRe = new RegExp(`^${escapeRegExp(stem)}\\.([a-z]{2,3})\\.srt$`, "i");
+  const absDir = join(confDir, folder === "." ? "" : folder);
+  if (!existsSync(absDir)) return [];
+  try {
+    return readdirSync(absDir)
+      .filter((name) => langRe.test(name))
+      .map((name) => toPosix(folder === "." ? name : `${folder}/${name}`))
+      .sort();
+  } catch {
+    return [];
+  }
+}
+
+/** From an English basename, find `foo.nl.srt` / `foo.es.srt` keys in a basename index. */
+function languageSiblingBasenames(englishBasename, byBase) {
+  const name = String(englishBasename || "");
+  if (!name || isLanguageSubtitleBasename(name)) return [];
+  const stem = name.replace(/\.srt$/i, "");
+  const langRe = new RegExp(`^${escapeRegExp(stem)}\\.([a-z]{2,3})\\.srt$`, "i");
+  return [...byBase.keys()].filter((base) => langRe.test(base)).sort();
+}
+
+/** Collect every subtitle path on a video (`subtitle` + optional `subtitles` map + siblings). */
+function collectSubtitlePaths(video, confDir = null) {
   const paths = [];
   const add = (value) => {
     if (!value) return;
@@ -137,6 +181,14 @@ function collectSubtitlePaths(video) {
   add(video?.subtitle);
   if (video?.subtitles && typeof video.subtitles === "object") {
     for (const value of Object.values(video.subtitles)) add(value);
+  }
+  const english = typeof video?.subtitle === "string"
+    ? video.subtitle
+    : (video?.subtitle && typeof video.subtitle === "object" && video.subtitle.src
+      ? String(video.subtitle.src)
+      : null);
+  if (english) {
+    for (const sibling of discoverLanguageSubtitlePaths(english, confDir)) add(sibling);
   }
   return [...new Set(paths.map((p) => toPosix(String(p))))];
 }
@@ -171,7 +223,7 @@ function isExternal(href) {
 }
 
 /** Every local asset referenced by a gallery config: [{ kind, label, href }]. */
-function collectRefs(config) {
+function collectRefs(config, confDir = null) {
   const refs = [];
   const add = (kind, label, href) => {
     if (href && !isExternal(href)) refs.push({ kind, label, href: String(href) });
@@ -194,7 +246,7 @@ function collectRefs(config) {
   for (const v of config.videos || []) {
     add("video", v.title, v.path);
     add("audio", v.title, v.audio || (v.path ? String(v.path).replace(/\.mp4$/i, ".mp3") : ""));
-    for (const sub of collectSubtitlePaths(v)) add("subtitle", v.title, sub);
+    for (const sub of collectSubtitlePaths(v, confDir)) add("subtitle", v.title, sub);
     add("slides", v.title, v.presentation);
     add("poster", v.title, v.poster);
     const page = transcriptPageRel(config, v);
@@ -252,8 +304,8 @@ async function cmdVerify(opts) {
   let problems = 0;
   for (const id of await selectedConferences(opts)) {
     const config = await loadConfig(id);
-    const refs = collectRefs(config);
     const confDir = galleryDir(id);
+    const refs = collectRefs(config, confDir);
     console.log(`\n== ${id}  (${(config.videos || []).length} videos, ${refs.length} local references)`);
 
     const referenced = new Set();
@@ -347,15 +399,20 @@ async function cmdSyncSubtitles(opts) {
       continue;
     }
     const config = await loadConfig(conf);
-    const wanted = [...new Set(
+    const byBase = await indexSrtByBasename(source);
+    const wanted = new Set(
       (config.videos || [])
         .flatMap((v) => collectSubtitlePaths(v))
         .filter((s) => s && dirname(s) === folder)
         .map((s) => s.slice(folder.length + 1))
-    )];
-    const byBase = await indexSrtByBasename(source);
+    );
+    // Also pull sibling language tracks (`foo.nl.srt`) present in the source tree.
+    for (const name of [...wanted]) {
+      if (isLanguageSubtitleBasename(name)) continue;
+      for (const sibling of languageSiblingBasenames(name, byBase)) wanted.add(sibling);
+    }
     let unchanged = 0;
-    for (const name of wanted) {
+    for (const name of [...wanted].sort()) {
       const src = byBase.get(name) || null;
       const dest = join(galleryDir(conf), folder, name);
       if (!src) {
