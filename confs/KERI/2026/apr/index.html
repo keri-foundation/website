@@ -5036,6 +5036,7 @@
             }
 
             function labelsForVideo(video) {
+                if (!audienceCatalog.length) return [];
                 const ids = videoAudienceIds(video);
                 const labels = [];
                 audienceCatalog.forEach((group) => {
