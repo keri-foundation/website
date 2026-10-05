@@ -42,6 +42,16 @@
         "href": "/confs/SEDI/2025/nov/",
         "external": false
       }
+    ],
+    "transcriptLinks": [
+      {
+        "label": "Conference talk transcripts",
+        "href": "transcripts/html/talks/"
+      },
+      {
+        "label": "Interview transcripts",
+        "href": "transcripts/html/interviews/"
+      }
     ]
   },
   "promo": {
