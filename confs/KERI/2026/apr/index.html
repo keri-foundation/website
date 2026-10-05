@@ -3449,15 +3449,33 @@
                 notice.hidden = false;
             }
 
+            // Card/thumbnail players also emit languagechange when captions attach.
+            // While the modal is open, only the modal player may own the URL lang=
+            // (otherwise a late English attach on the card clears &lang=nl).
+            function shouldSyncCaptionLangToUrl(videoEl) {
+                if (!videoEl) return false;
+                if (modalVideoEl && videoModalOverlay && !videoModalOverlay.hidden) {
+                    return videoEl === modalVideoEl;
+                }
+                return true;
+            }
+
             function syncCaptionLangFromVideoEl(videoEl) {
                 const lang = normalizeLangCode(getActiveCaptionLanguage(videoEl));
                 if (!lang) return;
                 videoEl.dataset.preferredCaptionLang = lang;
-                // Always push to the URL when the active track language changes, including
-                // the case where preference was set but the first cold-load event was missed.
-                if (lang !== captionLangPreference || (lang !== 'en' && readCaptionLangFromLocation() !== lang)) {
-                    setCaptionLangPreference(lang);
-                }
+                if (!shouldSyncCaptionLangToUrl(videoEl)) return;
+                // Debounce with languagechange so transient English track flips do not
+                // clear &lang=nl from the URL.
+                clearTimeout(videoEl._captionLangUrlTimer);
+                videoEl._captionLangUrlTimer = setTimeout(() => {
+                    const settled = normalizeLangCode(getActiveCaptionLanguage(videoEl))
+                        || normalizeLangCode(videoEl._plyrPlayer?.language);
+                    if (!settled) return;
+                    if (settled !== captionLangPreference || (settled !== 'en' && readCaptionLangFromLocation() !== settled)) {
+                        setCaptionLangPreference(settled);
+                    }
+                }, 50);
             }
 
             function bindCaptionLanguageUrlSync(videoEl) {
@@ -3470,7 +3488,16 @@
                         const lang = normalizeLangCode(player.language) || normalizeLangCode(getActiveCaptionLanguage(videoEl));
                         if (lang) {
                             videoEl.dataset.preferredCaptionLang = lang;
-                            setCaptionLangPreference(lang);
+                            if (shouldSyncCaptionLangToUrl(videoEl)) {
+                                // Plyr often emits a transient English languagechange while
+                                // switching tracks; debounce so URL lang= does not flicker off.
+                                clearTimeout(videoEl._captionLangUrlTimer);
+                                videoEl._captionLangUrlTimer = setTimeout(() => {
+                                    const settled = normalizeLangCode(player.language)
+                                        || normalizeLangCode(getActiveCaptionLanguage(videoEl));
+                                    if (settled) setCaptionLangPreference(settled);
+                                }, 50);
+                            }
                             enforceActiveCaptionTrack(videoEl, lang);
                         }
                         updateCaptionGapNotice(videoEl);
