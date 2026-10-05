@@ -36,6 +36,9 @@
     "July 2026"
   ],
   "transcriptsDir": "transcripts/html",
+  "speakerPhotos": {
+    "Samuel Smith": "https://kericonf.com/wp-content/uploads/2025/11/Samuel-Smith.jpg"
+  },
   "videos": [
     {
       "order": 1,
