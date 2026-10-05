@@ -544,9 +544,31 @@
             border-color: transparent;
         }
 
+        /* ── Promo + top clips: side-by-side when both present ── */
+        .featured-media {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+            align-items: stretch;
+        }
+
+        /* Collapse the wrapper when neither promo nor clips is shown */
+        .featured-media:not(:has(> :not([hidden]))) {
+            display: none;
+            margin: 0;
+        }
+
+        @media (min-width: 900px) {
+            .featured-media:has(> .promo-section:not([hidden])):has(> .top-clips-section:not([hidden])) {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
         /* ── Optional promo movie (omit promo from index.json to hide) ── */
         .promo-section {
-            margin-bottom: 30px;
+            margin: 0;
+            min-width: 0;
             background: rgba(255, 255, 255, 0.35);
             border-radius: 8px;
             padding: 20px 24px 24px;
@@ -572,12 +594,17 @@
 
         .promo-player {
             position: relative;
+            width: 100%;
             max-width: 960px;
             margin: 0 auto;
             background: #000;
             border-radius: 8px;
             overflow: hidden;
             border: 1px solid rgba(6, 11, 111, 0.2);
+        }
+
+        .featured-media:has(> .promo-section:not([hidden])):has(> .top-clips-section:not([hidden])) .promo-player {
+            max-width: none;
         }
 
         .promo-player .plyr {
@@ -591,11 +618,16 @@
 
         /* ── Top ten clips ── */
         .top-clips-section {
-            margin-bottom: 30px;
+            margin: 0;
+            min-width: 0;
             background: rgba(255, 255, 255, 0.35);
             border-radius: 8px;
             padding: 20px 24px 14px;
             border: 1px solid rgba(6, 11, 111, 0.12);
+        }
+
+        .top-clips-section[hidden] {
+            display: none !important;
         }
 
         .top-clips-header {
@@ -2100,23 +2132,27 @@
     <main id="mainContent">
         <section class="audience-filter" id="audienceFilter" hidden>
             <h2 id="audienceFilterLabel">Target group</h2>
-            <p class="audience-filter-hint" id="audienceFilterHint">Choose a group to see only the videos meant for them. A video can belong to more than one group.</p>
-            <div class="audience-filter-options" id="audienceFilterOptions" role="group" aria-label="Target groups"></div>
+            <p class="audience-filter-hint" id="audienceFilterHint">Choose a group to see only the videos meant for
+                them. A video can belong to more than one group.</p>
+            <div class="audience-filter-options" id="audienceFilterOptions" role="group" aria-label="Target groups">
+            </div>
             <p class="audience-filter-status" id="audienceFilterStatus" role="status" aria-live="polite"></p>
         </section>
 
-        <section class="promo-section" id="promoSection" hidden aria-labelledby="promoTitle">
-            <h2 class="promo-title" id="promoTitle" hidden>Promo video</h2>
-            <div class="promo-player" id="promoPlayer"></div>
-        </section>
+        <div class="featured-media" id="featuredMedia">
+            <section class="promo-section" id="promoSection" hidden aria-labelledby="promoTitle">
+                <h2 class="promo-title" id="promoTitle" hidden>Promo video</h2>
+                <div class="promo-player" id="promoPlayer"></div>
+            </section>
 
-        <section class="top-clips-section" id="topClipsSection" hidden aria-labelledby="topClipsTitle">
-            <div class="top-clips-header">
-                <h2 id="topClipsTitle">Top Clips</h2>
-                <p class="top-clips-sub" id="topClipsSubtitle"></p>
-            </div>
-            <ol class="top-clips-row" id="topClipsRow"></ol>
-        </section>
+            <section class="top-clips-section" id="topClipsSection" hidden aria-labelledby="topClipsTitle">
+                <div class="top-clips-header">
+                    <h2 id="topClipsTitle">Top Clips</h2>
+                    <p class="top-clips-sub" id="topClipsSubtitle"></p>
+                </div>
+                <ol class="top-clips-row" id="topClipsRow"></ol>
+            </section>
+        </div>
 
         <search class="search-section" aria-labelledby="searchLabel">
             <label for="transcriptSearch" id="searchLabel">Search all transcripts</label>
