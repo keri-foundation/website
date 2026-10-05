@@ -652,6 +652,79 @@
             margin: 0;
         }
 
+        .top-clips-scroller {
+            position: relative;
+            min-width: 0;
+        }
+
+        .top-clips-scroller.has-more-right::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            right: 0;
+            bottom: 12px;
+            width: 3.25rem;
+            pointer-events: none;
+            z-index: 2;
+            background: linear-gradient(to left,
+                    rgba(255, 255, 255, 0.72) 0%,
+                    rgba(255, 255, 255, 0.28) 45%,
+                    transparent 100%);
+        }
+
+        .top-clips-more {
+            position: absolute;
+            top: calc(50% - 6px);
+            right: 6px;
+            z-index: 3;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2.4rem;
+            height: 2.4rem;
+            padding: 0;
+            border: 2px solid rgba(255, 255, 255, 0.85);
+            border-radius: 50%;
+            background: #060b6f;
+            color: #fff;
+            box-shadow: 0 6px 18px rgba(6, 11, 111, 0.4);
+            cursor: pointer;
+            transform: translateY(-50%);
+            transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+        }
+
+        .top-clips-more[hidden] {
+            display: none !important;
+        }
+
+        .top-clips-more:hover,
+        .top-clips-more:focus-visible {
+            background: #986c32;
+            box-shadow: 0 8px 22px rgba(6, 11, 111, 0.45);
+            transform: translateY(-50%) scale(1.06);
+        }
+
+        .top-clips-more:focus-visible {
+            outline: 2px solid #986c32;
+            outline-offset: 3px;
+        }
+
+        .top-clips-more svg {
+            display: block;
+            margin-left: 2px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .top-clips-more {
+                transition: none;
+            }
+
+            .top-clips-more:hover,
+            .top-clips-more:focus-visible {
+                transform: translateY(-50%);
+            }
+        }
+
         .top-clips-row {
             display: grid;
             grid-auto-flow: column;
@@ -2150,7 +2223,17 @@
                     <h2 id="topClipsTitle">Top Clips</h2>
                     <p class="top-clips-sub" id="topClipsSubtitle"></p>
                 </div>
-                <ol class="top-clips-row" id="topClipsRow"></ol>
+                <div class="top-clips-scroller" id="topClipsScroller">
+                    <ol class="top-clips-row" id="topClipsRow"></ol>
+                    <button type="button" class="top-clips-more" id="topClipsMore" hidden
+                        aria-controls="topClipsRow" aria-label="Scroll to more clips" title="More clips">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"
+                            stroke-linejoin="round" aria-hidden="true">
+                            <path d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                </div>
             </section>
         </div>
 
@@ -5131,6 +5214,38 @@
                 if (next !== current) history.replaceState(null, '', next);
             }
 
+            function updateTopClipsMoreHint() {
+                const row = document.getElementById('topClipsRow');
+                const scroller = document.getElementById('topClipsScroller');
+                const moreBtn = document.getElementById('topClipsMore');
+                if (!row || !scroller || !moreBtn) return;
+
+                const maxScroll = row.scrollWidth - row.clientWidth;
+                const hasMore = maxScroll > 4 && row.scrollLeft < maxScroll - 4;
+                scroller.classList.toggle('has-more-right', hasMore);
+                moreBtn.hidden = !hasMore;
+            }
+
+            function bindTopClipsMoreHint() {
+                const row = document.getElementById('topClipsRow');
+                const moreBtn = document.getElementById('topClipsMore');
+                if (!row || row.dataset.moreHintBound === '1') return;
+                row.dataset.moreHintBound = '1';
+
+                row.addEventListener('scroll', updateTopClipsMoreHint, { passive: true });
+                window.addEventListener('resize', updateTopClipsMoreHint);
+                if (typeof ResizeObserver === 'function') {
+                    new ResizeObserver(updateTopClipsMoreHint).observe(row);
+                }
+
+                if (moreBtn) {
+                    moreBtn.addEventListener('click', () => {
+                        const step = Math.max(row.clientWidth * 0.7, 15.5 * 16);
+                        row.scrollBy({ left: step, behavior: motionSafeBehavior() });
+                    });
+                }
+            }
+
             function applyAudienceFilter() {
                 let shown = 0;
                 document.querySelectorAll('#videoContainer .day-section').forEach((section) => {
@@ -5168,6 +5283,7 @@
                 if (clipSection && clipRow && topClips.length) {
                     clipSection.hidden = !clipRow.querySelector('li:not([hidden])');
                 }
+                requestAnimationFrame(updateTopClipsMoreHint);
 
                 const status = document.getElementById('audienceFilterStatus');
                 if (status) {
@@ -5824,6 +5940,8 @@
                     const section = row.closest('.top-clips-section');
                     if (section) section.hidden = row.children.length === 0;
                     applyAudienceFilter();
+                    bindTopClipsMoreHint();
+                    requestAnimationFrame(updateTopClipsMoreHint);
                 }
 
                 renderTopClips();
