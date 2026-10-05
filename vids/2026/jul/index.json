@@ -38,11 +38,7 @@
       "speaker": "Samuel Smith",
       "path": "talks/Its-KERI-or-Surveillance.mp4",
       "duration": "54:25",
-      "subtitle": "talks/Its-KERI-or-Surveillance.srt",
-      "subtitles": {
-        "nl": "talks/Its-KERI-or-Surveillance.nl.srt",
-        "es": "talks/Its-KERI-or-Surveillance.es.srt"
-      }
+      "subtitle": "talks/Its-KERI-or-Surveillance.srt"
     }
   ]
 }

@@ -92,7 +92,8 @@ async function collectSrtFiles(eventDir) {
       const path = join(dir, entry.name);
       if (entry.isDirectory()) {
         await walk(path);
-      } else if (/\.srt$/i.test(entry.name)) {
+      } else if (/\.srt$/i.test(entry.name) && !/\.[a-z]{2,3}\.srt$/i.test(entry.name)) {
+        // Skip language tracks such as foo.nl.srt; English is foo.srt.
         files.push(path);
       }
     }
