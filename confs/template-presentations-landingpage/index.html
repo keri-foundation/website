@@ -551,6 +551,9 @@
             gap: 20px;
             margin-bottom: 30px;
             align-items: stretch;
+            min-width: 0;
+            width: 100%;
+            max-width: 100%;
         }
 
         /* Collapse the wrapper when neither promo nor clips is shown */
@@ -620,6 +623,7 @@
         .top-clips-section {
             margin: 0;
             min-width: 0;
+            max-width: 100%;
             background: rgba(255, 255, 255, 0.35);
             border-radius: 8px;
             padding: 20px 24px 14px;
@@ -655,6 +659,8 @@
         .top-clips-scroller {
             position: relative;
             min-width: 0;
+            max-width: 100%;
+            overflow: hidden;
         }
 
         .top-clips-scroller.has-more-right::after {
@@ -691,6 +697,8 @@
             cursor: pointer;
             transform: translateY(-50%);
             transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
 
         .top-clips-more[hidden] {
@@ -726,14 +734,17 @@
         }
 
         .top-clips-row {
-            display: grid;
-            grid-auto-flow: column;
-            grid-auto-columns: 15.5rem;
+            display: flex;
+            flex-wrap: nowrap;
             gap: 14px;
             overflow-x: auto;
+            overflow-y: hidden;
+            overscroll-behavior-x: contain;
+            -webkit-overflow-scrolling: touch;
             scroll-snap-type: x proximity;
             padding: 4px 2px 12px;
             margin: 0;
+            max-width: 100%;
             list-style: none;
             scrollbar-width: thin;
             scrollbar-color: rgba(6, 11, 111, 0.35) transparent;
@@ -749,6 +760,8 @@
         }
 
         .top-clips-row>li {
+            flex: 0 0 15.5rem;
+            width: 15.5rem;
             scroll-snap-align: start;
             min-height: 19rem;
         }
@@ -881,8 +894,9 @@
         }
 
         @media (max-width: 480px) {
-            .top-clips-row {
-                grid-auto-columns: 82vw;
+            .top-clips-row>li {
+                flex-basis: min(82vw, 18rem);
+                width: min(82vw, 18rem);
             }
 
             .top-clips-row>li,
@@ -5220,28 +5234,48 @@
                 const moreBtn = document.getElementById('topClipsMore');
                 if (!row || !scroller || !moreBtn) return;
 
-                const maxScroll = row.scrollWidth - row.clientWidth;
+                const maxScroll = Math.max(0, row.scrollWidth - row.clientWidth);
                 const hasMore = maxScroll > 4 && row.scrollLeft < maxScroll - 4;
                 scroller.classList.toggle('has-more-right', hasMore);
                 moreBtn.hidden = !hasMore;
             }
 
+            function scheduleTopClipsMoreHint() {
+                requestAnimationFrame(() => {
+                    requestAnimationFrame(updateTopClipsMoreHint);
+                });
+            }
+
             function bindTopClipsMoreHint() {
                 const row = document.getElementById('topClipsRow');
+                const scroller = document.getElementById('topClipsScroller');
                 const moreBtn = document.getElementById('topClipsMore');
                 if (!row || row.dataset.moreHintBound === '1') return;
                 row.dataset.moreHintBound = '1';
 
                 row.addEventListener('scroll', updateTopClipsMoreHint, { passive: true });
-                window.addEventListener('resize', updateTopClipsMoreHint);
+                window.addEventListener('resize', scheduleTopClipsMoreHint);
+                window.addEventListener('orientationchange', scheduleTopClipsMoreHint);
                 if (typeof ResizeObserver === 'function') {
-                    new ResizeObserver(updateTopClipsMoreHint).observe(row);
+                    const observer = new ResizeObserver(scheduleTopClipsMoreHint);
+                    observer.observe(row);
+                    if (scroller) observer.observe(scroller);
                 }
 
                 if (moreBtn) {
-                    moreBtn.addEventListener('click', () => {
-                        const step = Math.max(row.clientWidth * 0.7, 15.5 * 16);
-                        row.scrollBy({ left: step, behavior: motionSafeBehavior() });
+                    moreBtn.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        const card = row.querySelector('li:not([hidden])');
+                        const cardWidth = card ? card.getBoundingClientRect().width : 0;
+                        const step = Math.max(cardWidth + 14, Math.round(row.clientWidth * 0.75), 160);
+                        const maxScroll = Math.max(0, row.scrollWidth - row.clientWidth);
+                        const nextLeft = Math.min(row.scrollLeft + step, maxScroll);
+                        if (typeof row.scrollTo === 'function') {
+                            row.scrollTo({ left: nextLeft, behavior: motionSafeBehavior() });
+                        } else {
+                            row.scrollLeft = nextLeft;
+                        }
+                        scheduleTopClipsMoreHint();
                     });
                 }
             }
@@ -5283,7 +5317,7 @@
                 if (clipSection && clipRow && topClips.length) {
                     clipSection.hidden = !clipRow.querySelector('li:not([hidden])');
                 }
-                requestAnimationFrame(updateTopClipsMoreHint);
+                requestAnimationFrame(scheduleTopClipsMoreHint);
 
                 const status = document.getElementById('audienceFilterStatus');
                 if (status) {
@@ -5941,7 +5975,7 @@
                     if (section) section.hidden = row.children.length === 0;
                     applyAudienceFilter();
                     bindTopClipsMoreHint();
-                    requestAnimationFrame(updateTopClipsMoreHint);
+                    scheduleTopClipsMoreHint();
                 }
 
                 renderTopClips();
