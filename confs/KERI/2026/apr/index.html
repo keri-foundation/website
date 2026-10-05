@@ -127,6 +127,94 @@
             margin: 0 0 8px;
         }
 
+        .audience-filter {
+            margin: 0 0 24px;
+            background: rgba(255, 255, 255, 0.35);
+            border-radius: 8px;
+            padding: 20px 24px;
+            border: 1px solid rgba(6, 11, 111, 0.12);
+            text-align: center;
+        }
+
+        .audience-filter h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .audience-filter-hint {
+            color: #2e3a7a;
+            font-size: 0.95rem;
+            max-width: 40rem;
+            margin: 0 auto 14px;
+            line-height: 1.45;
+        }
+
+        .audience-filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .audience-filter-options button {
+            font: inherit;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: #060b6f;
+            background: rgba(255, 255, 255, 0.55);
+            border: 1px solid rgba(6, 11, 111, 0.18);
+            border-radius: 999px;
+            padding: 8px 16px;
+            cursor: pointer;
+        }
+
+        .audience-filter-options button:hover {
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        .audience-filter-options button[aria-pressed="true"] {
+            background: #060b6f;
+            color: #fff;
+            border-color: #060b6f;
+        }
+
+        .audience-filter-options button:focus-visible {
+            outline: 2px solid #986c32;
+            outline-offset: 2px;
+        }
+
+        .audience-filter-status {
+            margin-top: 12px;
+            font-size: 0.9rem;
+            color: #2e3a7a;
+            min-height: 1.2em;
+        }
+
+        .video-audiences {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin: -2px 0 10px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .video-audiences li {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            color: #060b6f;
+            background: rgba(6, 11, 111, 0.08);
+            border-radius: 999px;
+            padding: 3px 8px;
+        }
+
+        .video-card.audience-hidden,
+        .day-section.audience-empty {
+            display: none;
+        }
+
         header {
             text-align: center;
             padding: 30px 0;
@@ -1986,7 +2074,8 @@
                 font-size: 1.8rem;
             }
 
-            .search-section {
+            .search-section,
+            .audience-filter {
                 padding: 16px;
             }
 
@@ -2013,6 +2102,13 @@
     <header id="galleryHeader"></header>
 
     <main id="mainContent">
+        <section class="audience-filter" id="audienceFilter" hidden>
+            <h2 id="audienceFilterLabel">Target group</h2>
+            <p class="audience-filter-hint" id="audienceFilterHint">Choose a group to see only the videos meant for them. A video can belong to more than one group.</p>
+            <div class="audience-filter-options" id="audienceFilterOptions" role="group" aria-label="Target groups"></div>
+            <p class="audience-filter-status" id="audienceFilterStatus" role="status" aria-live="polite"></p>
+        </section>
+
         <section class="promo-section" id="promoSection" hidden aria-labelledby="promoTitle">
             <h2 class="promo-title" id="promoTitle" hidden>Promo video</h2>
             <div class="promo-player" id="promoPlayer"></div>
@@ -2072,6 +2168,8 @@
             let dayOrder = [];
             let topClips = [];
             let promoVideoEl = null;
+            let audienceCatalog = [];
+            let activeAudience = '';
 
             function prefersReducedMotion() {
                 return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -4907,6 +5005,118 @@
                 modalSourceLink.hidden = false;
             }
 
+            function normalizeTargetGroups(raw) {
+                if (!Array.isArray(raw)) return [];
+                const seen = new Set();
+                const groups = [];
+                raw.forEach((item) => {
+                    if (!item || typeof item.id !== 'string' || typeof item.label !== 'string') return;
+                    const id = item.id.trim();
+                    const label = item.label.trim();
+                    if (!id || !label || seen.has(id)) return;
+                    seen.add(id);
+                    groups.push({ id, label });
+                });
+                return groups;
+            }
+
+            function videoAudienceIds(video) {
+                if (!video || !Array.isArray(video.targetGroups)) return [];
+                return video.targetGroups.filter((id) => typeof id === 'string' && id.trim());
+            }
+
+            function videoMatchesAudience(video) {
+                if (!activeAudience) return true;
+                return videoAudienceIds(video).includes(activeAudience);
+            }
+
+            function audienceLabel(id) {
+                const group = audienceCatalog.find((entry) => entry.id === id);
+                return group ? group.label : id;
+            }
+
+            function labelsForVideo(video) {
+                const ids = videoAudienceIds(video);
+                const labels = [];
+                audienceCatalog.forEach((group) => {
+                    if (ids.includes(group.id)) labels.push(group.label);
+                });
+                ids.forEach((id) => {
+                    if (!audienceCatalog.some((group) => group.id === id)) labels.push(id);
+                });
+                return labels;
+            }
+
+            function readAudienceFromUrl() {
+                const id = new URLSearchParams(window.location.search).get('audience');
+                if (id && audienceCatalog.some((group) => group.id === id)) return id;
+                return '';
+            }
+
+            function writeAudienceToUrl(id) {
+                const url = new URL(window.location.href);
+                if (id) url.searchParams.set('audience', id);
+                else url.searchParams.delete('audience');
+                const next = `${url.pathname}${url.search}${url.hash}`;
+                const current = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+                if (next !== current) history.replaceState(null, '', next);
+            }
+
+            function applyAudienceFilter() {
+                let shown = 0;
+                document.querySelectorAll('#videoContainer .day-section').forEach((section) => {
+                    let visible = 0;
+                    section.querySelectorAll('.video-card').forEach((card) => {
+                        const video = videos.find((entry) => generateVideoId(entry) === card.id);
+                        const match = !!(video && videoMatchesAudience(video));
+                        card.classList.toggle('audience-hidden', !match);
+                        if (!match) {
+                            card.querySelectorAll('video, audio').forEach((el) => el.pause());
+                        } else {
+                            visible += 1;
+                            shown += 1;
+                        }
+                    });
+                    section.classList.toggle('audience-empty', visible === 0);
+                });
+
+                let visibleClipRank = 0;
+                document.querySelectorAll('#topClipsRow > li').forEach((item) => {
+                    const video = videos.find((entry) => entry.path === item.dataset.videoPath);
+                    item.hidden = !(video && videoMatchesAudience(video));
+                    if (item.hidden) return;
+                    visibleClipRank += 1;
+                    const rankEl = item.querySelector('.top-clip-rank');
+                    if (rankEl) rankEl.textContent = String(visibleClipRank);
+                    const clipBtn = item.querySelector('.top-clip-card');
+                    if (clipBtn) {
+                        const label = clipBtn.getAttribute('aria-label') || '';
+                        clipBtn.setAttribute('aria-label', label.replace(/Play clip \d+:/, `Play clip ${visibleClipRank}:`));
+                    }
+                });
+                const clipSection = document.getElementById('topClipsSection');
+                const clipRow = document.getElementById('topClipsRow');
+                if (clipSection && clipRow && topClips.length) {
+                    clipSection.hidden = !clipRow.querySelector('li:not([hidden])');
+                }
+
+                const status = document.getElementById('audienceFilterStatus');
+                if (status) {
+                    if (!activeAudience) {
+                        status.textContent = `Showing all ${videos.length} videos`;
+                    } else {
+                        const label = audienceLabel(activeAudience);
+                        status.textContent = shown === 1
+                            ? `Showing 1 video for ${label}`
+                            : `Showing ${shown} videos for ${label}`;
+                    }
+                }
+
+                document.querySelectorAll('#audienceFilterOptions button').forEach((btn) => {
+                    btn.setAttribute('aria-pressed', String((btn.dataset.audience || '') === activeAudience));
+                });
+            }
+
             // ─────────────────────────────────────────────────────────────────────
             //  Build a video card
             // ─────────────────────────────────────────────────────────────────────
@@ -5022,6 +5232,19 @@
                 titleEl.appendChild(titleText);
                 infoDiv.appendChild(titleEl);
 
+                const audienceLabels = labelsForVideo(video);
+                if (audienceLabels.length) {
+                    const audienceList = document.createElement('ul');
+                    audienceList.className = 'video-audiences';
+                    audienceList.setAttribute('aria-label', 'Target groups');
+                    audienceLabels.forEach((label) => {
+                        const item = document.createElement('li');
+                        item.textContent = label;
+                        audienceList.appendChild(item);
+                    });
+                    infoDiv.appendChild(audienceList);
+                }
+
                 const metaDiv = document.createElement('div');
                 metaDiv.className = 'video-meta';
                 const durSpan = document.createElement('span');
@@ -5127,6 +5350,8 @@
                 renderPromo(config.promo);
 
                 videos = Array.isArray(config.videos) ? config.videos : [];
+                audienceCatalog = normalizeTargetGroups(config.targetGroups);
+                activeAudience = readAudienceFromUrl();
                 transcriptsDir = typeof config.transcriptsDir === 'string'
                     ? config.transcriptsDir.replace(/\/+$/, '')
                     : '';
@@ -5270,6 +5495,7 @@
                     const matches = [];
 
                     for (const video of videos) {
+                        if (!videoMatchesAudience(video)) continue;
                         if (!hasSubtitles(video)) continue;
                         const store = transcriptStore[video.path];
                         if (!store || store.status !== 'ready') continue;
@@ -5431,6 +5657,30 @@
                     searchInput.focus();
                 });
 
+                const audienceSection = document.getElementById('audienceFilter');
+                const audienceOptions = document.getElementById('audienceFilterOptions');
+                if (audienceSection && audienceOptions && audienceCatalog.length) {
+                    audienceSection.hidden = false;
+                    const choices = [{ id: '', label: 'All videos' }, ...audienceCatalog];
+                    choices.forEach((choice) => {
+                        const btn = document.createElement('button');
+                        btn.type = 'button';
+                        btn.dataset.audience = choice.id;
+                        btn.textContent = choice.label;
+                        btn.setAttribute('aria-pressed', String(choice.id === activeAudience));
+                        btn.addEventListener('click', () => {
+                            if (activeAudience === choice.id) return;
+                            activeAudience = choice.id;
+                            writeAudienceToUrl(choice.id);
+                            applyAudienceFilter();
+                            const query = searchInput.value.trim();
+                            if (query.length >= 2) runSearch(query);
+                        });
+                        audienceOptions.appendChild(btn);
+                    });
+                    applyAudienceFilter();
+                }
+
                 // ─────────────────────────────────────────────────────────────────────
                 //  Top ten clips — short teaser fragments that open in the clip player
                 // ─────────────────────────────────────────────────────────────────────
@@ -5444,6 +5694,7 @@
                         if (!video) return;
 
                         const item = document.createElement('li');
+                        item.dataset.videoPath = video.path;
 
                         const card = document.createElement('button');
                         card.type = 'button';
@@ -5503,6 +5754,7 @@
 
                     const section = row.closest('.top-clips-section');
                     if (section) section.hidden = row.children.length === 0;
+                    applyAudienceFilter();
                 }
 
                 renderTopClips();
