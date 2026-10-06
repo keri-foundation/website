@@ -1632,6 +1632,15 @@
             animation: cue-position-flash 10s ease-out forwards;
         }
 
+        .video-modal-transcript-body .cue-line.is-live-cue {
+            background: rgba(255, 229, 102, 0.55);
+            box-shadow: inset 3px 0 0 #986c32;
+        }
+
+        .video-modal-transcript-body .cue-line.is-live-cue:hover {
+            background: rgba(255, 229, 102, 0.75);
+        }
+
         .video-modal-transcript-body .cue-time {
             font-size: 1rem;
             padding: 3px 10px;
@@ -3840,6 +3849,7 @@
                             enforceActiveCaptionTrack(videoEl, lang);
                         }
                         updateCaptionGapNotice(videoEl);
+                        if (videoEl === modalVideoEl) scheduleModalTranscriptLanguageRefresh();
                     });
                 }
                 if (videoEl.textTracks && videoEl.dataset.captionLangTrackBound !== 'true') {
@@ -3874,6 +3884,7 @@
                     player.on('captionsenabled', () => {
                         syncCaptionLangFromVideoEl(videoEl);
                         onUpdate();
+                        if (videoEl === modalVideoEl) scheduleModalTranscriptLanguageRefresh();
                     });
                     player.on('captionsdisabled', () => {
                         const container = videoEl.closest('.video-modal-player, .video-thumbnail');
@@ -4014,6 +4025,7 @@
                 track.src = blobUrl;
                 const activate = () => {
                     syncPlyrCaptions(videoEl, videoEl.dataset.preferredCaptionLang || lang);
+                    bindCaptionCueFollow(videoEl, track.track);
                     if (videoEl.webkitDisplayingFullscreen) {
                         setCaptionTracksMode(videoEl, 'showing');
                     }
@@ -4059,6 +4071,7 @@
                 btn.type = 'button';
                 btn.className = 'cue-line';
                 btn.dataset.cueStart = String(cue.start);
+                btn.dataset.cueEnd = String(cue.end);
                 btn.setAttribute('aria-label', `Play from ${cue.startLabel}: ${cue.text}`);
 
                 const timeSpan = document.createElement('span');
@@ -4105,6 +4118,12 @@
             let modalTranscriptVideoPath = null;
             let modalTranscriptSearchTimer = null;
             let modalTranscriptPlainView = false;
+            let modalTranscriptLang = null;
+            let modalTranscriptLangTimer = null;
+            let modalTranscriptLiveKey = '';
+            let modalTranscriptUserScrolled = false;
+            let modalTranscriptScrollLock = 0;
+            const captionCueFollowTracks = new WeakSet();
             let modalLinksSection = null;
             let modalTitleEl = null;
             let modalCopyBtn = null;
@@ -4399,16 +4418,206 @@
                 return { panel, content };
             }
 
-            function scrollElementIntoContainer(container, element) {
+            function scrollElementIntoContainer(container, element, behavior = motionSafeBehavior()) {
                 const containerRect = container.getBoundingClientRect();
                 const elementRect = element.getBoundingClientRect();
                 const relativeTop = elementRect.top - containerRect.top + container.scrollTop;
                 const targetTop = relativeTop - (container.clientHeight / 2) + (element.clientHeight / 2);
-                container.scrollTo({ top: Math.max(0, targetTop), behavior: motionSafeBehavior() });
+                const token = ++modalTranscriptScrollLock;
+                container.scrollTo({ top: Math.max(0, targetTop), behavior });
+                const release = () => {
+                    if (modalTranscriptScrollLock === token) modalTranscriptScrollLock = 0;
+                };
+                if (behavior === 'smooth') {
+                    container.addEventListener('scrollend', release, { once: true });
+                    setTimeout(release, 800);
+                } else {
+                    requestAnimationFrame(() => requestAnimationFrame(release));
+                }
+            }
+
+            function resetModalTranscriptFollow() {
+                clearTimeout(modalTranscriptLangTimer);
+                modalTranscriptLangTimer = null;
+                modalTranscriptLang = null;
+                modalTranscriptLiveKey = '';
+                modalTranscriptUserScrolled = false;
+                modalTranscriptScrollLock = 0;
+            }
+
+            function bindCaptionCueFollow(videoEl, textTrack) {
+                if (!videoEl || !textTrack || captionCueFollowTracks.has(textTrack)) return;
+                captionCueFollowTracks.add(textTrack);
+                textTrack.addEventListener('cuechange', () => {
+                    if (videoEl === modalVideoEl) followModalTranscriptCaption();
+                });
+            }
+
+            function getShowingTrackActiveCues(videoEl) {
+                const tracks = videoEl?.textTracks;
+                if (!tracks) return { ready: false, cues: [] };
+                const want = String(
+                    videoEl._plyrPlayer?.language
+                    || videoEl.dataset.preferredCaptionLang
+                    || ''
+                ).toLowerCase();
+                for (let i = 0; i < tracks.length; i++) {
+                    const track = tracks[i];
+                    if (!isCaptionTextTrack(track) || track.mode === 'disabled') continue;
+                    const lang = String(track.language || '').toLowerCase();
+                    if (want && lang && lang !== want) continue;
+                    if (!track.cues || !track.cues.length) return { ready: false, cues: [] };
+                    return { ready: true, cues: track.activeCues ? Array.from(track.activeCues) : [] };
+                }
+                return { ready: false, cues: [] };
+            }
+
+            function findModalCueLineByStart(start) {
+                if (!modalTranscriptBody || !Number.isFinite(start)) return null;
+                const lines = modalTranscriptBody.querySelectorAll('.cue-line[data-cue-start]');
+                let best = null;
+                let bestDelta = 0.2;
+                for (const line of lines) {
+                    const value = Number.parseFloat(line.dataset.cueStart);
+                    if (!Number.isFinite(value)) continue;
+                    const delta = Math.abs(value - start);
+                    if (delta < bestDelta) {
+                        best = line;
+                        bestDelta = delta;
+                        if (delta === 0) break;
+                    }
+                }
+                return best;
+            }
+
+            function modalCueLinesCoveringTime(time) {
+                if (!modalTranscriptBody || !Number.isFinite(time)) return [];
+                const lines = modalTranscriptBody.querySelectorAll('.cue-line[data-cue-start]');
+                const hits = [];
+                for (const line of lines) {
+                    const start = Number.parseFloat(line.dataset.cueStart);
+                    const end = Number.parseFloat(line.dataset.cueEnd);
+                    if (Number.isFinite(start) && Number.isFinite(end) && time >= start && time < end) {
+                        hits.push(line);
+                    }
+                }
+                return hits;
+            }
+
+            function isCueComfortablyVisible(container, element) {
+                const containerRect = container.getBoundingClientRect();
+                const elementRect = element.getBoundingClientRect();
+                if (!containerRect.height || !elementRect.height) return false;
+                const topLimit = containerRect.top + containerRect.height * 0.12;
+                const bottomLimit = containerRect.bottom - containerRect.height * 0.18;
+                return elementRect.top >= topLimit && elementRect.bottom <= bottomLimit;
+            }
+
+            function setLiveCueLines(lines, { scroll = false, force = false } = {}) {
+                if (!modalTranscriptBody) return;
+                const next = new Set(lines);
+                modalTranscriptBody.querySelectorAll('.cue-line.is-live-cue').forEach((el) => {
+                    if (next.has(el)) return;
+                    el.classList.remove('is-live-cue');
+                    el.removeAttribute('aria-current');
+                });
+                lines.forEach((el) => {
+                    el.classList.add('is-live-cue');
+                    el.setAttribute('aria-current', 'true');
+                });
+                const target = lines[0];
+                if (!scroll || !target) return;
+                if (!force && isCueComfortablyVisible(modalTranscriptBody, target)) return;
+                scrollElementIntoContainer(modalTranscriptBody, target, force ? motionSafeBehavior() : 'auto');
+            }
+
+            function followModalTranscriptCaption({ forceScroll = false } = {}) {
+                if (!modalVideoEl || !modalTranscriptBody) return;
+                if (!videoModalOverlay || videoModalOverlay.hidden) return;
+                if (modalTranscriptPlainView) return;
+                if ((modalTranscriptSearchInput?.value || '').trim()) return;
+
+                const active = getShowingTrackActiveCues(modalVideoEl);
+                let lines = [];
+                if (active.ready) {
+                    const seen = new Set();
+                    for (const cue of active.cues) {
+                        const line = findModalCueLineByStart(cue.startTime);
+                        if (line && !seen.has(line)) {
+                            seen.add(line);
+                            lines.push(line);
+                        }
+                    }
+                    // Caption is showing, but the transcript is still in another language.
+                    if (active.cues.length && !lines.length) return;
+                } else {
+                    lines = modalCueLinesCoveringTime(modalVideoEl.currentTime || 0);
+                }
+
+                const key = lines.map((line) => line.dataset.cueStart).join('|');
+                if (!lines.length) {
+                    if (!modalTranscriptLiveKey) return;
+                    modalTranscriptLiveKey = '';
+                    setLiveCueLines([], { scroll: false });
+                    return;
+                }
+                if (!forceScroll && key === modalTranscriptLiveKey) return;
+                modalTranscriptLiveKey = key;
+                setLiveCueLines(lines, {
+                    scroll: forceScroll || !modalTranscriptUserScrolled,
+                    force: forceScroll
+                });
+            }
+
+            function captionTrackForModal(lang) {
+                if (!modalSourceVideoPath || !lang) return null;
+                const track = captionTrackStore[modalSourceVideoPath]?.[lang];
+                if (!track || track.status !== 'ready' || !track.cues.length) return null;
+                return track;
+            }
+
+            function scheduleModalTranscriptLanguageRefresh() {
+                const sessionId = modalSessionId;
+                clearTimeout(modalTranscriptLangTimer);
+                modalTranscriptLangTimer = setTimeout(() => {
+                    if (sessionId !== modalSessionId) return;
+                    applyModalTranscriptLanguage();
+                }, 120);
+            }
+
+            function applyModalTranscriptLanguage() {
+                if (!modalVideoEl || !modalSourceVideoPath) return;
+                if (!videoModalOverlay || videoModalOverlay.hidden) return;
+                const lang = normalizeLangCode(getActiveCaptionLanguage(modalVideoEl))
+                    || normalizeLangCode(modalVideoEl.dataset.preferredCaptionLang);
+                if (!lang) return;
+                const track = captionTrackForModal(lang);
+                if (!track) {
+                    followModalTranscriptCaption();
+                    return;
+                }
+                if (lang !== modalTranscriptLang) {
+                    modalTranscriptLang = lang;
+                    modalTranscriptUserScrolled = false;
+                    modalTranscriptLiveKey = '';
+                    populateModalTranscript(track, modalSourceVideoPath, modalTranscriptSearchInput?.value ?? '');
+                    return;
+                }
+                followModalTranscriptCaption();
             }
 
             function scrollModalTranscriptToCurrentTime() {
                 if (!modalVideoEl || !modalTranscriptBody) return;
+                modalTranscriptUserScrolled = false;
+
+                const active = getShowingTrackActiveCues(modalVideoEl);
+                const covering = modalCueLinesCoveringTime(modalVideoEl.currentTime || 0);
+                if (active.cues.length || covering.length) {
+                    followModalTranscriptCaption({ forceScroll: true });
+                    const line = modalTranscriptBody.querySelector('.cue-line.is-live-cue');
+                    if (line) flashModalTranscriptCue(line);
+                    return;
+                }
 
                 const time = modalVideoEl.currentTime;
                 const cueLines = modalTranscriptBody.querySelectorAll('.cue-line[data-cue-start]');
@@ -4610,8 +4819,10 @@
                 prepareVideoElement(modalVideoEl);
                 modalVideoEl.addEventListener('play', () => pauseAllVideos(modalVideoEl));
                 modalVideoEl.addEventListener('timeupdate', () => {
-                    if (!modalSourceVideoPath || !shouldAcceptMediaTime(modalSourceVideoPath, modalVideoEl.currentTime)) return;
-                    rememberClock(modalSourceVideoPath, modalVideoEl.currentTime);
+                    if (modalSourceVideoPath && shouldAcceptMediaTime(modalSourceVideoPath, modalVideoEl.currentTime)) {
+                        rememberClock(modalSourceVideoPath, modalVideoEl.currentTime);
+                    }
+                    followModalTranscriptCaption();
                 });
                 modalVideoEl.addEventListener('pause', () => {
                     if (modalSourceVideoPath && shouldAcceptMediaTime(modalSourceVideoPath, modalVideoEl.currentTime)) {
@@ -4620,6 +4831,7 @@
                 });
                 modalVideoEl.addEventListener('seeked', () => {
                     if (modalSourceVideoPath) rememberClock(modalSourceVideoPath, modalVideoEl.currentTime);
+                    followModalTranscriptCaption();
                 });
 
                 const source = document.createElement('source');
@@ -4662,7 +4874,8 @@
                 modalTranscriptSyncBtn.type = 'button';
                 modalTranscriptSyncBtn.className = 'video-modal-transcript-sync-btn';
                 modalTranscriptSyncBtn.textContent = 'Go to current position';
-                modalTranscriptSyncBtn.setAttribute('aria-label', 'Scroll transcript to the subtitle at the current playback position');
+                modalTranscriptSyncBtn.title = 'Jump to the subtitle currently shown and follow it';
+                modalTranscriptSyncBtn.setAttribute('aria-label', 'Scroll the transcript to the subtitle currently shown under the video and keep following it');
                 modalTranscriptSyncBtn.disabled = true;
                 modalTranscriptSyncBtn.addEventListener('click', scrollModalTranscriptToCurrentTime);
 
@@ -4708,6 +4921,21 @@
 
                 modalTranscriptBody = document.createElement('div');
                 modalTranscriptBody.className = 'video-modal-transcript-body';
+                modalTranscriptBody.addEventListener('scroll', () => {
+                    if (modalTranscriptScrollLock) return;
+                    modalTranscriptUserScrolled = true;
+                }, { passive: true });
+                modalTranscriptBody.addEventListener('wheel', () => {
+                    modalTranscriptUserScrolled = true;
+                }, { passive: true });
+                modalTranscriptBody.addEventListener('touchmove', () => {
+                    modalTranscriptUserScrolled = true;
+                }, { passive: true });
+                modalTranscriptBody.addEventListener('keydown', (e) => {
+                    if (['ArrowDown', 'ArrowUp', 'PageDown', 'PageUp', 'Home', 'End', ' '].includes(e.key)) {
+                        modalTranscriptUserScrolled = true;
+                    }
+                });
 
                 transcriptSection.appendChild(transcriptToolbar);
                 transcriptSection.appendChild(modalTranscriptBody);
@@ -4803,7 +5031,12 @@
             function populateModalTranscript(store, videoPath, query = '') {
                 modalTranscriptStore = store;
                 modalTranscriptVideoPath = videoPath;
+                modalTranscriptLiveKey = '';
+                const transcriptDomToken = ++modalTranscriptScrollLock;
                 modalTranscriptBody.innerHTML = '';
+                setTimeout(() => {
+                    if (modalTranscriptScrollLock === transcriptDomToken) modalTranscriptScrollLock = 0;
+                }, 80);
                 modalTranscriptBody.removeAttribute('role');
 
                 if (!store || store.status !== 'ready' || !store.cues.length) {
@@ -4888,7 +5121,11 @@
                 if (normalizedQuery && matchingCues.length) {
                     const firstLine = modalTranscriptBody.querySelector('.cue-line');
                     if (firstLine) scrollElementIntoContainer(modalTranscriptBody, firstLine);
+                    return;
                 }
+
+                modalTranscriptUserScrolled = false;
+                requestAnimationFrame(() => followModalTranscriptCaption({ forceScroll: true }));
             }
 
             function runModalTranscriptSearch() {
@@ -4984,6 +5221,7 @@
                 modalVideoEl.setAttribute('aria-label', video.title);
                 updateModalSourceLink();
                 clearModalTranscriptSearch();
+                resetModalTranscriptFollow();
                 modalTranscriptStore = null;
                 modalTranscriptVideoPath = null;
                 modalTranscriptPlainView = false;
@@ -4997,7 +5235,13 @@
                 Promise.all([loadTranscript(video), loadAllCaptionTracks(video)]).then(([store, captionStore]) => {
                     if (modalSourceVideoPath !== video.path) return;
                     attachCaptionTracksForVideo(modalVideoEl, video, captionStore);
-                    populateModalTranscript(store, video.path, modalTranscriptSearchInput?.value ?? '');
+                    const lang = normalizeLangCode(modalVideoEl.dataset.preferredCaptionLang)
+                        || preferredCaptionLanguage(subtitleTracks(video))
+                        || primarySubtitleLang(video);
+                    const track = lang ? captionStore?.[lang] : null;
+                    const displayStore = (track && track.status === 'ready' && track.cues.length) ? track : store;
+                    modalTranscriptLang = (displayStore === track) ? lang : (primarySubtitleLang(video) || null);
+                    populateModalTranscript(displayStore, video.path, modalTranscriptSearchInput?.value ?? '');
                     renderModalLinks(store.rawText);
                 });
 
@@ -5041,6 +5285,7 @@
                     modalTranscriptStore = null;
                     modalTranscriptVideoPath = null;
                     modalTranscriptPlainView = false;
+                    resetModalTranscriptFollow();
                     updateModalTranscriptViewBtn();
                     clearModalTranscriptSearch();
                     clearVideoUrlHash();
