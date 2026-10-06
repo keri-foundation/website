@@ -2,13 +2,13 @@
 # Used by: scripts/deploy-confs.sh subtitles   (node scripts/confs.mjs sync-subtitles)
 #
 # Curated .srt files are edited in place under each gallery
-# (confs/<ORG>/<YEAR>/<month>/ or vids/<YEAR>/<month>/).
+# (confs/<ORG>/<YEAR>/<month>/ or vids/<YEAR>/).
 # Leave this file without source lines unless a gallery is still maintained
 # in another directory and should be copied in before deploy.
 #
 # <gallery id>/<folder>    <source directory on this machine>
 #   KERI/2026/apr/talks    /path/to/srts
-#   vids/2026/jul/talks    /path/to/srts
+#   vids/2026/talks        /path/to/srts
 #
 # Only .srt files referenced by that conference's index.json are copied
 # (video.subtitle and any video.subtitles.<lang> paths).

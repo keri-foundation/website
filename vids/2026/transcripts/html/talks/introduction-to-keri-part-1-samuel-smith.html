@@ -1,0 +1,2110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to KERI Part 1 - Samuel Smith — Transcript</title>
+  <meta name="description" content="Transcript: Introduction to KERI Part 1 - Samuel Smith (May 2026 · 49:10)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #060b6f;
+      --muted: #2e3a7a;
+      --bg: #b1d1cf;
+      --panel: rgba(255, 255, 255, 0.55);
+      --accent: #986c32;
+      --link: #0450a8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Source Serif 4", Georgia, serif;
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(255,255,255,0.45), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 0%, rgba(152,108,50,0.12), transparent),
+        var(--bg);
+      color: var(--ink);
+      padding: 24px 16px 48px;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 44rem; margin: 0 auto; }
+    nav {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+    nav a { color: var(--link); }
+    nav a:hover { color: var(--ink); }
+    header {
+      background: var(--panel);
+      border: 1px solid rgba(6, 11, 111, 0.12);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      margin: 0 0 0.4rem;
+    }
+    .meta {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0 0 1rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .actions a {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--ink);
+      background: rgba(152, 108, 50, 0.18);
+      border: 1px solid rgba(152, 108, 50, 0.35);
+      border-radius: 8px;
+      padding: 0.55rem 0.9rem;
+    }
+    .actions a:hover { background: rgba(152, 108, 50, 0.28); }
+    .actions a.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+    .actions a.primary:hover { background: #0a1270; }
+    article {
+      background: var(--panel);
+      border: 1px solid rgba(6, 11, 111, 0.12);
+      border-radius: 10px;
+      padding: 1rem 1.25rem 1.5rem;
+    }
+    .cue {
+      display: grid;
+      grid-template-columns: 4.5rem 1fr;
+      gap: 0.65rem 0.85rem;
+      margin: 0;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(6, 11, 111, 0.08);
+    }
+    .cue:last-child { border-bottom: none; }
+    .cue-time {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      padding-top: 0.15rem;
+    }
+    .cue-time:hover { color: var(--ink); text-decoration: underline; }
+    .cue-text { font-size: 1.05rem; }
+    footer {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    @media (max-width: 520px) {
+      .cue { grid-template-columns: 1fr; gap: 0.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="../../../">2026 Videos</a>
+      · <a href="./">All transcripts</a>
+    </nav>
+    <header>
+      <h1>Introduction to KERI Part 1 - Samuel Smith</h1>
+      <p class="meta">May 2026 · 49:10</p>
+      <div class="actions">
+        <a class="primary" href="../../../#introduction-to-keri-part-1-samuel-smith">Watch video</a>
+        <a href="./">All transcripts</a>
+        <a href="../../../">Video gallery</a>
+      </div>
+    </header>
+    <article>
+    <p class="cue" id="t6">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=6">0:06</a>
+      <span class="cue-text">Welcome. My name is Samuel Smith. I'm the creator of the KERI suite of protocols.</span>
+    </p>
+    <p class="cue" id="t15">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=15">0:15</a>
+      <span class="cue-text">And this video is a tutorial talking about KERI from a high level. KERI stands for</span>
+    </p>
+    <p class="cue" id="t22">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=22">0:22</a>
+      <span class="cue-text">Key Event Receipt Infrastructure. It's been in development for several years now.</span>
+    </p>
+    <p class="cue" id="t28">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=28">0:28</a>
+      <span class="cue-text">And you can think of it and as a secure identifier overlay as a trust spanning</span>
+    </p>
+    <p class="cue" id="t34">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=34">0:34</a>
+      <span class="cue-text">layer for the internet. So, we're going to talk about what that means today. For</span>
+    </p>
+    <p class="cue" id="t40">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=40">0:40</a>
+      <span class="cue-text">resources, you can go to the website KERI .one. Should be easy to remember. Look at</span>
+    </p>
+    <p class="cue" id="t47">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=47">0:47</a>
+      <span class="cue-text">the resources page. There is an active KERI community with various standards and</span>
+    </p>
+    <p class="cue" id="t54">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=54">0:54</a>
+      <span class="cue-text">specifications. You can find the code, which is is Apache 2 licensed at the Web</span>
+    </p>
+    <p class="cue" id="t63">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=63">1:03</a>
+      <span class="cue-text">of Trust GitHub repo. The Trust Over IP Foundation, which is a member of the Linux</span>
+    </p>
+    <p class="cue" id="t69">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=69">1:09</a>
+      <span class="cue-text">Foundation's decentralized trust organization, governs the specifications</span>
+    </p>
+    <p class="cue" id="t76">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=76">1:16</a>
+      <span class="cue-text">for the relevant protocols. These are licensed using the Open Web Foundation</span>
+    </p>
+    <p class="cue" id="t82">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=82">1:22</a>
+      <span class="cue-text">license, which is a freely licensed open specification license. And you can find</span>
+    </p>
+    <p class="cue" id="t89">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=89">1:29</a>
+      <span class="cue-text">meetings there and there are a couple of links for that. The motivation for KERI</span>
+    </p>
+    <p class="cue" id="t95">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=95">1:35</a>
+      <span class="cue-text">came from years of working with protocols. I started life as an academic, did a lot</span>
+    </p>
+    <p class="cue" id="t102">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=102">1:42</a>
+      <span class="cue-text">of work with AI and autonomous vehicle systems back in the 90s. Started working</span>
+    </p>
+    <p class="cue" id="t112">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=112">1:52</a>
+      <span class="cue-text">with protocols in the Internet of Things also back in the 90s. And later in my</span>
+    </p>
+    <p class="cue" id="t119">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=119">1:59</a>
+      <span class="cue-text">career, started working on cloud-based automation systems and was confronted with</span>
+    </p>
+    <p class="cue" id="t125">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=125">2:05</a>
+      <span class="cue-text">the problem that the internet did not have a really good security system. And if you</span>
+    </p>
+    <p class="cue" id="t135">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=135">2:15</a>
+      <span class="cue-text">think about it, the internet has lots of problems today and they're getting worse.</span>
+    </p>
+    <p class="cue" id="t141">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=141">2:21</a>
+      <span class="cue-text">And so this idea that the internet was broken in can be traced back to the fact</span>
+    </p>
+    <p class="cue" id="t147">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=147">2:27</a>
+      <span class="cue-text">that the internet never had a security layer. If you look at the comparison of</span>
+    </p>
+    <p class="cue" id="t152">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=152">2:32</a>
+      <span class="cue-text">the OSI model and the IP model, the layers where you do authentication are in the</span>
+    </p>
+    <p class="cue" id="t159">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=159">2:39</a>
+      <span class="cue-text">presentation and session layers and the IP protocol doesn't have those layers. The</span>
+    </p>
+    <p class="cue" id="t166">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=166">2:46</a>
+      <span class="cue-text">result is that instead we use bolt-on security systems or sometimes called</span>
+    </p>
+    <p class="cue" id="t173">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=173">2:53</a>
+      <span class="cue-text">security overlays These are commonly known as domain name systems, certificate</span>
+    </p>
+    <p class="cue" id="t179">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=179">2:59</a>
+      <span class="cue-text">authorities, openID connect, OAuth, various types of systems that provide</span>
+    </p>
+    <p class="cue" id="t186">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=186">3:06</a>
+      <span class="cue-text">security. And that security is based on what was a good idea 20 or 30 years ago</span>
+    </p>
+    <p class="cue" id="t195">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=195">3:15</a>
+      <span class="cue-text">when it was created, but now is no longer such a good idea. And so KERI is about</span>
+    </p>
+    <p class="cue" id="t201">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=201">3:21</a>
+      <span class="cue-text">reimagining what the internet would look like if we had a security layer that</span>
+    </p>
+    <p class="cue" id="t207">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=207">3:27</a>
+      <span class="cue-text">actually worked.</span>
+    </p>
+    <p class="cue" id="t211">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=211">3:31</a>
+      <span class="cue-text">The idea can be traced back to something called a spanning layer. So, the internet</span>
+    </p>
+    <p class="cue" id="t218">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=218">3:38</a>
+      <span class="cue-text">in its early days wasn't viewed by everyone as something that was going to be</span>
+    </p>
+    <p class="cue" id="t225">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=225">3:45</a>
+      <span class="cue-text">universal. It was an experimental protocol. But very quickly, relatively</span>
+    </p>
+    <p class="cue" id="t231">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=231">3:51</a>
+      <span class="cue-text">speaking, it dominated all of the other communication protocols and became the</span>
+    </p>
+    <p class="cue" id="t237">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=237">3:57</a>
+      <span class="cue-text">dominant protocol for the whole world. And one of the analyses as to why that</span>
+    </p>
+    <p class="cue" id="t247">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=247">4:07</a>
+      <span class="cue-text">happened is that the internet had a spanning layer and that spanning layer</span>
+    </p>
+    <p class="cue" id="t253">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=253">4:13</a>
+      <span class="cue-text">made it possible for the internet protocol to grow in a way that allowed it to</span>
+    </p>
+    <p class="cue" id="t262">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=262">4:22</a>
+      <span class="cue-text">subsume all the other protocols and provide all the services. And that what</span>
+    </p>
+    <p class="cue" id="t265">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=265">4:25</a>
+      <span class="cue-text">that spanning layer in the internet is the IPv4 for, you know, IP version 4 and now</span>
+    </p>
+    <p class="cue" id="t271">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=271">4:31</a>
+      <span class="cue-text">we have IPv6. But originally this is the diagram that was used to demonstrate that</span>
+    </p>
+    <p class="cue" id="t278">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=278">4:38</a>
+      <span class="cue-text">there was something called a spanning layer. And if you think about it, it looks</span>
+    </p>
+    <p class="cue" id="t282">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=282">4:42</a>
+      <span class="cue-text">like an hourglass and the waist of the hourglass is the IP layer. This is the</span>
+    </p>
+    <p class="cue" id="t286">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=286">4:46</a>
+      <span class="cue-text">addressing layer. Everything above that layer uses the same address and everything</span>
+    </p>
+    <p class="cue" id="t292">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=292">4:52</a>
+      <span class="cue-text">below that provides support for that addressing layer and that feature of the</span>
+    </p>
+    <p class="cue" id="t297">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=297">4:57</a>
+      <span class="cue-text">spanning layer. And you can look at some of the papers that have been written about</span>
+    </p>
+    <p class="cue" id="t301">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=301">5:01</a>
+      <span class="cue-text">that is reputed to be the reason one of the reasons the internet became so</span>
+    </p>
+    <p class="cue" id="t308">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=308">5:08</a>
+      <span class="cue-text">successful as a protocol. The problem that we've had is that because the spanning</span>
+    </p>
+    <p class="cue" id="t315">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=315">5:15</a>
+      <span class="cue-text">layer of the internet did not have any security built into it, it didn't have a</span>
+    </p>
+    <p class="cue" id="t319">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=319">5:19</a>
+      <span class="cue-text">trust basis. What has happened is that we now have what I call platform lock trust.</span>
+    </p>
+    <p class="cue" id="t325">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=325">5:25</a>
+      <span class="cue-text">In order to have trust, you have this IP spanning layer and then you have supports</span>
+    </p>
+    <p class="cue" id="t330">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=330">5:30</a>
+      <span class="cue-text">for it. And then you have applications built on top of the spanning layer, but</span>
+    </p>
+    <p class="cue" id="t334">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=334">5:34</a>
+      <span class="cue-text">they don't have trust in them. And then you bolt on trust above those. And so what</span>
+    </p>
+    <p class="cue" id="t340">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=340">5:40</a>
+      <span class="cue-text">you get is trust domain based segmentation of the upper layers. And so you don't have</span>
+    </p>
+    <p class="cue" id="t349">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=349">5:49</a>
+      <span class="cue-text">trust across those those walled gardens or columns above that. And so you don't have</span>
+    </p>
+    <p class="cue" id="t360">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=360">6:00</a>
+      <span class="cue-text">trust that spans the internet. It just spans a given platform. So you get a</span>
+    </p>
+    <p class="cue" id="t366">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=366">6:06</a>
+      <span class="cue-text">bifurcated internet trust map. There's no trust spanning layer in the current</span>
+    </p>
+    <p class="cue" id="t371">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=371">6:11</a>
+      <span class="cue-text">internet. And you might think of this as like, you know, different platforms that</span>
+    </p>
+    <p class="cue" id="t377">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=377">6:17</a>
+      <span class="cue-text">have different trust bases or, you know, and often trust is the identity system,</span>
+    </p>
+    <p class="cue" id="t383">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=383">6:23</a>
+      <span class="cue-text">right? So you have a Facebook identity system and within Facebook you have trust</span>
+    </p>
+    <p class="cue" id="t388">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=388">6:28</a>
+      <span class="cue-text">and on Google you have its identity systems and within Google you have trust</span>
+    </p>
+    <p class="cue" id="t392">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=392">6:32</a>
+      <span class="cue-text">and you might have other platforms like blockchains that have trust within their</span>
+    </p>
+    <p class="cue" id="t398">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=398">6:38</a>
+      <span class="cue-text">trust domain but they're not interoperable. You can't move trust</span>
+    </p>
+    <p class="cue" id="t403">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=403">6:43</a>
+      <span class="cue-text">between those trust domains. So the basis of the spanning layer, there's a really</span>
+    </p>
+    <p class="cue" id="t411">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=411">6:51</a>
+      <span class="cue-text">well-written paper that talks about the hourglass approach to building protocols</span>
+    </p>
+    <p class="cue" id="t418">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=418">6:58</a>
+      <span class="cue-text">where you have a spanning layer. And so we feel that that's the right approach, but</span>
+    </p>
+    <p class="cue" id="t423">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=423">7:03</a>
+      <span class="cue-text">we just need to have a trust spanning layer. And we don't want to reinvent a new</span>
+    </p>
+    <p class="cue" id="t428">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=428">7:08</a>
+      <span class="cue-text">internet that would be ludicrous, but we want to allow the internet to remain the</span>
+    </p>
+    <p class="cue" id="t436">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=436">7:16</a>
+      <span class="cue-text">internet, but add a spanning layer that allows trust. So there's not locked to</span>
+    </p>
+    <p class="cue" id="t441">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=441">7:21</a>
+      <span class="cue-text">different platforms. And so our solution we call a waste and a neck is we have the</span>
+    </p>
+    <p class="cue" id="t447">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=447">7:27</a>
+      <span class="cue-text">IP spanning layer, which is the waste, and then we add a trust spanning layer that is</span>
+    </p>
+    <p class="cue" id="t451">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=451">7:31</a>
+      <span class="cue-text">the neck. And if all trust spanned applications use the same trust spanning</span>
+    </p>
+    <p class="cue" id="t457">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=457">7:37</a>
+      <span class="cue-text">layer, then they'll have interoperability in terms of their trust. And so you can</span>
+    </p>
+    <p class="cue" id="t461">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=461">7:41</a>
+      <span class="cue-text">still have platforms, you can still have all the protocols down below, but if you</span>
+    </p>
+    <p class="cue" id="t466">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=466">7:46</a>
+      <span class="cue-text">want to have applications that span trust, where trust spans across the applications,</span>
+    </p>
+    <p class="cue" id="t472">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=472">7:52</a>
+      <span class="cue-text">then we want to have a trust spanning layer. So that's the design goal of KERI.</span>
+    </p>
+    <p class="cue" id="t476">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=476">7:56</a>
+      <span class="cue-text">So I've used the term trust basis or trust domain a lot. And so I just want to define</span>
+    </p>
+    <p class="cue" id="t483">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=483">8:03</a>
+      <span class="cue-text">it so that you understand what I'm talking about. A trust basis is the set of trust</span>
+    </p>
+    <p class="cue" id="t487">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=487">8:07</a>
+      <span class="cue-text">roots. And when we talk about systems design, we talk about things like roots of</span>
+    </p>
+    <p class="cue" id="t491">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=491">8:11</a>
+      <span class="cue-text">trust, things that you can rely on that have certain well-defined properties. And</span>
+    </p>
+    <p class="cue" id="t498">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=498">8:18</a>
+      <span class="cue-text">then based on those things, you can build other services and functions on top of</span>
+    </p>
+    <p class="cue" id="t503">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=503">8:23</a>
+      <span class="cue-text">that. So we talk about a trust basis and then a trust domain is the ecosystems of</span>
+    </p>
+    <p class="cue" id="t510">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=510">8:30</a>
+      <span class="cue-text">interactions that rely on a given trust basis. So for a trust spanning layer, we</span>
+    </p>
+    <p class="cue" id="t516">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=516">8:36</a>
+      <span class="cue-text">would need to have everything above that rely on the trust basis that is the</span>
+    </p>
+    <p class="cue" id="t523">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=523">8:43</a>
+      <span class="cue-text">spanning layer. And so KERI is about defining what that looks like. So, the</span>
+    </p>
+    <p class="cue" id="t529">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=529">8:49</a>
+      <span class="cue-text">basic idea of KERI, and we'll go back into this in more detail, but the idea is that</span>
+    </p>
+    <p class="cue" id="t537">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=537">8:57</a>
+      <span class="cue-text">we can define an identifier system security overlay. It's a new type of</span>
+    </p>
+    <p class="cue" id="t541">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=541">9:01</a>
+      <span class="cue-text">overlay that acts as the trust spanning layer. So, you have infrastructure that</span>
+    </p>
+    <p class="cue" id="t547">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=547">9:07</a>
+      <span class="cue-text">sits below the secure identifier overlay or the secure identity overlay. And then</span>
+    </p>
+    <p class="cue" id="t554">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=554">9:14</a>
+      <span class="cue-text">you have a trust domain that sits above that. And the spanning layer is that</span>
+    </p>
+    <p class="cue" id="t561">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=561">9:21</a>
+      <span class="cue-text">overlay. Now, when people look at KERI, often they look at it and it's difficult</span>
+    </p>
+    <p class="cue" id="t566">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=566">9:26</a>
+      <span class="cue-text">to understand. And one of the reasons that KERI is difficult to understand is that we</span>
+    </p>
+    <p class="cue" id="t571">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=571">9:31</a>
+      <span class="cue-text">call it the platypus of the identity space. And the reason for that is if you</span>
+    </p>
+    <p class="cue" id="t575">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=575">9:35</a>
+      <span class="cue-text">look at the platypus, it's a very interesting animal. It's difficult to</span>
+    </p>
+    <p class="cue" id="t580">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=580">9:40</a>
+      <span class="cue-text">classify because it has a unique combination of features not found</span>
+    </p>
+    <p class="cue" id="t585">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=585">9:45</a>
+      <span class="cue-text">elsewhere in nature. or at least not in that combination. For example, because it</span>
+    </p>
+    <p class="cue" id="t590">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=590">9:50</a>
+      <span class="cue-text">has milk, a platypus looks like a mammal, but it also lays eggs, so it looks like a</span>
+    </p>
+    <p class="cue" id="t595">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=595">9:55</a>
+      <span class="cue-text">reptile. It has a bill, so it looks like a bird. It has electrolocation, so it looks</span>
+    </p>
+    <p class="cue" id="t602">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=602">10:02</a>
+      <span class="cue-text">like a ray. And it has venom, so it looks like a snake. And so if you approach a</span>
+    </p>
+    <p class="cue" id="t610">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=610">10:10</a>
+      <span class="cue-text">platypus from the mindset that every identity system has to look like a mammal,</span>
+    </p>
+    <p class="cue" id="t615">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=615">10:15</a>
+      <span class="cue-text">it will be confusing. Or if you approach it from any of the other viewpoints. So</span>
+    </p>
+    <p class="cue" id="t623">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=623">10:23</a>
+      <span class="cue-text">KERI is best approached from the fact that it is truly unique in many important ways.</span>
+    </p>
+    <p class="cue" id="t630">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=630">10:30</a>
+      <span class="cue-text">So KERI deconstructs what many people are familiar with in identity and security</span>
+    </p>
+    <p class="cue" id="t637">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=637">10:37</a>
+      <span class="cue-text">systems to create a novel combination of properties that solve what we call the</span>
+    </p>
+    <p class="cue" id="t643">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=643">10:43</a>
+      <span class="cue-text">universal secure attribution problem. And we'll go into that in more detail. If you</span>
+    </p>
+    <p class="cue" id="t647">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=647">10:47</a>
+      <span class="cue-text">think about a system design trade space, you can have lots of puzzle pieces that</span>
+    </p>
+    <p class="cue" id="t652">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=652">10:52</a>
+      <span class="cue-text">you can put together and there's lots that one can select from. But KERI carefully</span>
+    </p>
+    <p class="cue" id="t657">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=657">10:57</a>
+      <span class="cue-text">selected a subset and left certain things out that it didn't need so that it got the</span>
+    </p>
+    <p class="cue" id="t664">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=664">11:04</a>
+      <span class="cue-text">properties that it did need to solve the problem and the problem of a trust</span>
+    </p>
+    <p class="cue" id="t670">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=670">11:10</a>
+      <span class="cue-text">spanning layer requires solving the problem of universal secure attribution.</span>
+    </p>
+    <p class="cue" id="t675">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=675">11:15</a>
+      <span class="cue-text">And if you think about it, if I want a trust spanning layer, then I have to be</span>
+    </p>
+    <p class="cue" id="t681">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=681">11:21</a>
+      <span class="cue-text">able to do something universally. So KERI is a well-fit-together puzzle where the</span>
+    </p>
+    <p class="cue" id="t688">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=688">11:28</a>
+      <span class="cue-text">pieces are carefully designed to match that trade space. So let's step back a</span>
+    </p>
+    <p class="cue" id="t695">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=695">11:35</a>
+      <span class="cue-text">little bit because we've talked about the internet. Let's talk about each individual</span>
+    </p>
+    <p class="cue" id="t701">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=701">11:41</a>
+      <span class="cue-text">person. Why should I care about having a trust spanning layer on the internet. Why</span>
+    </p>
+    <p class="cue" id="t707">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=707">11:47</a>
+      <span class="cue-text">should it matter to me? The fundamental idea that KERI tries to solve is to enable</span>
+    </p>
+    <p class="cue" id="t714">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=714">11:54</a>
+      <span class="cue-text">entities, both natural persons and legal entities of all types, to retake control</span>
+    </p>
+    <p class="cue" id="t721">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=721">12:01</a>
+      <span class="cue-text">of our data and the value of that data. And if you think about the internet and</span>
+    </p>
+    <p class="cue" id="t727">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=727">12:07</a>
+      <span class="cue-text">how it's evolved, most of the value of the data on the internet is not controlled by</span>
+    </p>
+    <p class="cue" id="t731">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=731">12:11</a>
+      <span class="cue-text">the individuals that source the data or or subjects of the data, but they're</span>
+    </p>
+    <p class="cue" id="t736">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=736">12:16</a>
+      <span class="cue-text">controlled by large internet companies, super aggregators, super data correlators.</span>
+    </p>
+    <p class="cue" id="t743">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=743">12:23</a>
+      <span class="cue-text">They control the value of the internet. People gain a lot of value of</span>
+    </p>
+    <p class="cue" id="t747">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=747">12:27</a>
+      <span class="cue-text">interactions, but many of those interactions are designed to maximize</span>
+    </p>
+    <p class="cue" id="t752">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=752">12:32</a>
+      <span class="cue-text">engagement and often engagement is maximized through rage or other deplorable</span>
+    </p>
+    <p class="cue" id="t761">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=761">12:41</a>
+      <span class="cue-text">human type interactions. And so we want to have high value interactions on the</span>
+    </p>
+    <p class="cue" id="t770">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=770">12:50</a>
+      <span class="cue-text">internet that are valuable to the people interacting. They're not being exploited.</span>
+    </p>
+    <p class="cue" id="t775">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=775">12:55</a>
+      <span class="cue-text">So when you think about building a system, you think about, well, how do I build</span>
+    </p>
+    <p class="cue" id="t779">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=779">12:59</a>
+      <span class="cue-text">something? What are my tools? What are the toolkits available to me? And so if my</span>
+    </p>
+    <p class="cue" id="t784">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=784">13:04</a>
+      <span class="cue-text">toolkit, and these are tools from my tool chest in the garage, these are all</span>
+    </p>
+    <p class="cue" id="t789">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=789">13:09</a>
+      <span class="cue-text">hammers, various types of hammers. and they work really well with nails. If I</span>
+    </p>
+    <p class="cue" id="t796">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=796">13:16</a>
+      <span class="cue-text">have a set of screws, those hammers aren't very useful. I need a different toolkit. I</span>
+    </p>
+    <p class="cue" id="t800">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=800">13:20</a>
+      <span class="cue-text">need screwdrivers. So we need to figure out what our toolkit is because actually</span>
+    </p>
+    <p class="cue" id="t805">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=805">13:25</a>
+      <span class="cue-text">in security systems, we don't have a choice of toolkits. We've got one. So what</span>
+    </p>
+    <p class="cue" id="t813">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=813">13:33</a>
+      <span class="cue-text">we have to do is we have to figure out how to make it work with that one toolkit and</span>
+    </p>
+    <p class="cue" id="t818">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=818">13:38</a>
+      <span class="cue-text">we have to be able to build our systems with just one So if our toolkit is</span>
+    </p>
+    <p class="cue" id="t824">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=824">13:44</a>
+      <span class="cue-text">screwdrivers, we've got to build everything with screws. If our toolkit is</span>
+    </p>
+    <p class="cue" id="t827">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=827">13:47</a>
+      <span class="cue-text">hammers, we have to build everything with nails. So there's really only one set of</span>
+    </p>
+    <p class="cue" id="t830">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=830">13:50</a>
+      <span class="cue-text">tools for truly secure data control. We only have one. And so we have to figure</span>
+    </p>
+    <p class="cue" id="t835">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=835">13:55</a>
+      <span class="cue-text">out how to best use that one. And I would say that the existing internet security</span>
+    </p>
+    <p class="cue" id="t842">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=842">14:02</a>
+      <span class="cue-text">systems don't do a really good job of the existing toolkit. Now, fair enough to say</span>
+    </p>
+    <p class="cue" id="t850">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=850">14:10</a>
+      <span class="cue-text">that 20 years ago, ago, the toolkit was even worse than it is now. They had fewer</span>
+    </p>
+    <p class="cue" id="t856">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=856">14:16</a>
+      <span class="cue-text">tools and they did the best they could with the set of tools they had then. But</span>
+    </p>
+    <p class="cue" id="t861">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=861">14:21</a>
+      <span class="cue-text">we have better tools now, but it's still of the same type of tools and we could do</span>
+    </p>
+    <p class="cue" id="t867">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=867">14:27</a>
+      <span class="cue-text">better than they did. And so KERI is about recognizing that the tools have gotten</span>
+    </p>
+    <p class="cue" id="t872">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=872">14:32</a>
+      <span class="cue-text">enough better that we can do significantly better in our toolkit. And those tools are</span>
+    </p>
+    <p class="cue" id="t878">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=878">14:38</a>
+      <span class="cue-text">entropy-derived tools. So these are primarily cryptographic one-way functions.</span>
+    </p>
+    <p class="cue" id="t883">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=883">14:43</a>
+      <span class="cue-text">So these are things like cryptographic strength pseudorandom number generators,</span>
+    </p>
+    <p class="cue" id="t887">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=887">14:47</a>
+      <span class="cue-text">hashes or digests, the ECC key pair generation algorithms, digital signatures,</span>
+    </p>
+    <p class="cue" id="t895">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=895">14:55</a>
+      <span class="cue-text">encryption. Now, in a few years, we're going to have to add another set of tools</span>
+    </p>
+    <p class="cue" id="t901">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=901">15:01</a>
+      <span class="cue-text">because quantum computers are going to provide the ability to tax ECC key pair</span>
+    </p>
+    <p class="cue" id="t907">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=907">15:07</a>
+      <span class="cue-text">generation. And so we need to have post -quantum key pair generation algorithms,</span>
+    </p>
+    <p class="cue" id="t913">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=913">15:13</a>
+      <span class="cue-text">which NIST has now approved. So it has to be on a roadmap. But for today, we can</span>
+    </p>
+    <p class="cue" id="t921">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=921">15:21</a>
+      <span class="cue-text">just focus and KERI was designed five years ago. So we can focus on that, but</span>
+    </p>
+    <p class="cue" id="t928">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=928">15:28</a>
+      <span class="cue-text">KERI is cryptographically agile. So KERI doesn't have already has a migration path</span>
+    </p>
+    <p class="cue" id="t932">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=932">15:32</a>
+      <span class="cue-text">to be post-quantum secure. So let's talk a little bit about the economics of data. As</span>
+    </p>
+    <p class="cue" id="t939">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=939">15:39</a>
+      <span class="cue-text">I said, we want to we want to be able to retake control of our data</span>
+    </p>
+    <p class="cue" id="t946">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=946">15:46</a>
+      <span class="cue-text">and its value. So when you think about economics, it's about value, right? And</span>
+    </p>
+    <p class="cue" id="t954">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=954">15:54</a>
+      <span class="cue-text">it's about the creation and capture of value. And creation and capture looks like</span>
+    </p>
+    <p class="cue" id="t960">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=960">16:00</a>
+      <span class="cue-text">extraction, exchange, and exploitation, both in bad and good ways. And so if we</span>
+    </p>
+    <p class="cue" id="t967">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=967">16:07</a>
+      <span class="cue-text">want to take control over the value of our data, data, then we need some way to</span>
+    </p>
+    <p class="cue" id="t973">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=973">16:13</a>
+      <span class="cue-text">secure that control. So the goal is control over the value. And there are two</span>
+    </p>
+    <p class="cue" id="t978">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=978">16:18</a>
+      <span class="cue-text">types of value. There are its, these are atoms. People are built out of atoms. So</span>
+    </p>
+    <p class="cue" id="t984">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=984">16:24</a>
+      <span class="cue-text">you can think of people as value of people as also atoms. We have things built out of</span>
+    </p>
+    <p class="cue" id="t991">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=991">16:31</a>
+      <span class="cue-text">atoms, buildings, cars, things. And to secure those atoms, we have something</span>
+    </p>
+    <p class="cue" id="t999">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=999">16:39</a>
+      <span class="cue-text">called physical security. And there are lots of physical security systems and</span>
+    </p>
+    <p class="cue" id="t1003">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1003">16:43</a>
+      <span class="cue-text">tools for physical security. And for the most part, it's pretty difficult to attack</span>
+    </p>
+    <p class="cue" id="t1011">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1011">16:51</a>
+      <span class="cue-text">physical security. It usually involves putting</span>
+    </p>
+    <p class="cue" id="t1018">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1018">16:58</a>
+      <span class="cue-text">lives at risk to ultimately gain physical control over atoms that are protected.</span>
+    </p>
+    <p class="cue" id="t1026">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1026">17:06</a>
+      <span class="cue-text">Physical security is largely a solved problem. The other type of value are bits.</span>
+    </p>
+    <p class="cue" id="t1031">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1031">17:11</a>
+      <span class="cue-text">This is information value. And the problem with information is that it's digital and</span>
+    </p>
+    <p class="cue" id="t1038">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1038">17:18</a>
+      <span class="cue-text">can be copied. So you have documents, you have places to store data, but you can</span>
+    </p>
+    <p class="cue" id="t1045">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1045">17:25</a>
+      <span class="cue-text">copy information at will indefinitely without losing any of its fidelity.</span>
+    </p>
+    <p class="cue" id="t1052">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1052">17:32</a>
+      <span class="cue-text">Whereas we don't yet know how to copy atoms. We don't yet know how to clone</span>
+    </p>
+    <p class="cue" id="t1055">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1055">17:35</a>
+      <span class="cue-text">people. It requires new atoms. You can build things that look like old things,</span>
+    </p>
+    <p class="cue" id="t1062">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1062">17:42</a>
+      <span class="cue-text">but they're different things. And the cost of building them is high. Whereas</span>
+    </p>
+    <p class="cue" id="t1069">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1069">17:49</a>
+      <span class="cue-text">information, to make a digital copy of information, the cost is extremely low.</span>
+    </p>
+    <p class="cue" id="t1077">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1077">17:57</a>
+      <span class="cue-text">And so information security is by nature a different type of security because we</span>
+    </p>
+    <p class="cue" id="t1083">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1083">18:03</a>
+      <span class="cue-text">can't have a single copy that we protect physically. We have multiple copies. And</span>
+    </p>
+    <p class="cue" id="t1089">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1089">18:09</a>
+      <span class="cue-text">once those copies leak out, then they're everywhere. So, and then the question is,</span>
+    </p>
+    <p class="cue" id="t1096">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1096">18:16</a>
+      <span class="cue-text">you know, what does that look like? You know, from the standpoint of people, you</span>
+    </p>
+    <p class="cue" id="t1102">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1102">18:22</a>
+      <span class="cue-text">know, how do people control, you know, how do we have information security? So, we</span>
+    </p>
+    <p class="cue" id="t1112">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1112">18:32</a>
+      <span class="cue-text">want control over value. We have the two types of security. And the one thing that</span>
+    </p>
+    <p class="cue" id="t1118">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1118">18:38</a>
+      <span class="cue-text">we have, in our toolkit, and remember I said they're entropy-derived tools, is</span>
+    </p>
+    <p class="cue" id="t1123">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1123">18:43</a>
+      <span class="cue-text">that we can have digital uniqueness. It's a very narrow type of digital uniqueness</span>
+    </p>
+    <p class="cue" id="t1129">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1129">18:49</a>
+      <span class="cue-text">and it's called entropy. And basically we can create numbers that are derived</span>
+    </p>
+    <p class="cue" id="t1139">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1139">18:59</a>
+      <span class="cue-text">randomly such that somebody can't guess the number as long as the number is kept</span>
+    </p>
+    <p class="cue" id="t1145">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1145">19:05</a>
+      <span class="cue-text">secret. So if we don't share the number, they can't guess it. And that is the only</span>
+    </p>
+    <p class="cue" id="t1150">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1150">19:10</a>
+      <span class="cue-text">security that we have. Everything else is one-way functions that try to preserve</span>
+    </p>
+    <p class="cue" id="t1155">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1155">19:15</a>
+      <span class="cue-text">that original entropy, that original level of cryptographic security that says they</span>
+    </p>
+    <p class="cue" id="t1161">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1161">19:21</a>
+      <span class="cue-text">can't guess the number. And so that's not a very rich tool set. So now how do we</span>
+    </p>
+    <p class="cue" id="t1170">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1170">19:30</a>
+      <span class="cue-text">control things? Well, we as people, we are its. We want to control bits. How do we do</span>
+    </p>
+    <p class="cue" id="t1179">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1179">19:39</a>
+      <span class="cue-text">that? Well, the way we do that is that we create cryptographic pseudonymous</span>
+    </p>
+    <p class="cue" id="t1184">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1184">19:44</a>
+      <span class="cue-text">identifiers that are derived from entropy and we build a mechanism that allows us to</span>
+    </p>
+    <p class="cue" id="t1193">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1193">19:53</a>
+      <span class="cue-text">prove that we control those identifiers. We're not talking about all the</span>
+    </p>
+    <p class="cue" id="t1199">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1199">19:59</a>
+      <span class="cue-text">information in the world. We're talking about just identifiers. We can control</span>
+    </p>
+    <p class="cue" id="t1204">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1204">20:04</a>
+      <span class="cue-text">identifiers. And if we can control identifiers, And then if we have a way to</span>
+    </p>
+    <p class="cue" id="t1211">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1211">20:11</a>
+      <span class="cue-text">make attribution to information to an identifier, then we can at least assert</span>
+    </p>
+    <p class="cue" id="t1216">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1216">20:16</a>
+      <span class="cue-text">that the source of the information came from the person or entity that controlled</span>
+    </p>
+    <p class="cue" id="t1225">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1225">20:25</a>
+      <span class="cue-text">the identifier. That still doesn't sound very satisfying, but that is all we have.</span>
+    </p>
+    <p class="cue" id="t1230">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1230">20:30</a>
+      <span class="cue-text">So, we have to build from that. So, let's think about it again. to retake control of</span>
+    </p>
+    <p class="cue" id="t1237">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1237">20:37</a>
+      <span class="cue-text">our data, we will first retake control of our identifiers. Now, this is where the</span>
+    </p>
+    <p class="cue" id="t1242">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1242">20:42</a>
+      <span class="cue-text">internet falls down. If you have a domain name, you're renting it. You don't own it.</span>
+    </p>
+    <p class="cue" id="t1251">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1251">20:51</a>
+      <span class="cue-text">You're renting it from a service provider. There's a limited number of those domain</span>
+    </p>
+    <p class="cue" id="t1258">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1258">20:58</a>
+      <span class="cue-text">names, so they're a scarce resource. And so nobody can own it. They just rent it.</span>
+    </p>
+    <p class="cue" id="t1264">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1264">21:04</a>
+      <span class="cue-text">All right. Now, you can maintain rental control indefinitely, but it's still not</span>
+    </p>
+    <p class="cue" id="t1272">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1272">21:12</a>
+      <span class="cue-text">yours. If you create an account on some social networking site like Facebook and</span>
+    </p>
+    <p class="cue" id="t1282">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1282">21:22</a>
+      <span class="cue-text">you get an account there, you don't own that account. Facebook owns that account.</span>
+    </p>
+    <p class="cue" id="t1287">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1287">21:27</a>
+      <span class="cue-text">You can create a username and a password, but you don't own what's on that account.</span>
+    </p>
+    <p class="cue" id="t1296">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1296">21:36</a>
+      <span class="cue-text">And that username and password, they can at any point in time say, we don't want</span>
+    </p>
+    <p class="cue" id="t1301">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1301">21:41</a>
+      <span class="cue-text">you on our account and they can remove you from the account. And so you don't have</span>
+    </p>
+    <p class="cue" id="t1305">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1305">21:45</a>
+      <span class="cue-text">control over the data and you don't have control over the identifier. So since the</span>
+    </p>
+    <p class="cue" id="t1312">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1312">21:52</a>
+      <span class="cue-text">only thing that we can have information security over are group graphically</span>
+    </p>
+    <p class="cue" id="t1318">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1318">21:58</a>
+      <span class="cue-text">derived identifiers, we must first retake control of our identifiers. So that's what</span>
+    </p>
+    <p class="cue" id="t1325">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1325">22:05</a>
+      <span class="cue-text">KERI does. KERI says, we're going to develop a system where each individual</span>
+    </p>
+    <p class="cue" id="t1329">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1329">22:09</a>
+      <span class="cue-text">controls their identifiers and hence their identity. When we talk about identity,</span>
+    </p>
+    <p class="cue" id="t1336">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1336">22:16</a>
+      <span class="cue-text">we're going to narrowly think of it as identifier plus attributes and anything</span>
+    </p>
+    <p class="cue" id="t1342">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1342">22:22</a>
+      <span class="cue-text">that can be securely attributed to that identifier. That's the identity. So it's a</span>
+    </p>
+    <p class="cue" id="t1349">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1349">22:29</a>
+      <span class="cue-text">very narrow definition, but it's the only definition that actually works. If we</span>
+    </p>
+    <p class="cue" id="t1353">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1353">22:33</a>
+      <span class="cue-text">define it more broadly, then we don't have control over it. And so there's lots of</span>
+    </p>
+    <p class="cue" id="t1357">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1357">22:37</a>
+      <span class="cue-text">differences in identity. So I tend to avoid identity in general. And when I say</span>
+    </p>
+    <p class="cue" id="t1362">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1362">22:42</a>
+      <span class="cue-text">identity, I really mean an identifier system security overlay, or I might call</span>
+    </p>
+    <p class="cue" id="t1366">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1366">22:46</a>
+      <span class="cue-text">it an identity system security overlay, but it's really about the identifiers. So</span>
+    </p>
+    <p class="cue" id="t1371">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1371">22:51</a>
+      <span class="cue-text">identifier uniqueness comes from captured entropy. Anybody can capture entropy of</span>
+    </p>
+    <p class="cue" id="t1376">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1376">22:56</a>
+      <span class="cue-text">sufficient strength that there is no ability to attack it. Even a quantum</span>
+    </p>
+    <p class="cue" id="t1382">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1382">23:02</a>
+      <span class="cue-text">computer can't take that away from you if you do it right. So what we create are</span>
+    </p>
+    <p class="cue" id="t1390">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1390">23:10</a>
+      <span class="cue-text">cryptographic pseudonymous identifiers. Those are the types of identifiers. We</span>
+    </p>
+    <p class="cue" id="t1394">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1394">23:14</a>
+      <span class="cue-text">call those cryptonyms. That's short for cryptographic pseudonym. And the hard</span>
+    </p>
+    <p class="cue" id="t1401">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1401">23:21</a>
+      <span class="cue-text">problem is how do we provide provable perpetual control over that cryptonym?</span>
+    </p>
+    <p class="cue" id="t1407">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1407">23:27</a>
+      <span class="cue-text">That's the hard problem KERI solves. It's not ephemeral, not temporary, but</span>
+    </p>
+    <p class="cue" id="t1412">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1412">23:32</a>
+      <span class="cue-text">perpetual control over a cryptonet. If you don't control your identifier in</span>
+    </p>
+    <p class="cue" id="t1418">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1418">23:38</a>
+      <span class="cue-text">perpetuity, then it's not a very useful identifier.</span>
+    </p>
+    <p class="cue" id="t1424">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1424">23:44</a>
+      <span class="cue-text">Now, I want to go from the identifier to the data. If we have the ability to have</span>
+    </p>
+    <p class="cue" id="t1432">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1432">23:52</a>
+      <span class="cue-text">provable control over identifier, what we would like to do is we like to have</span>
+    </p>
+    <p class="cue" id="t1437">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1437">23:57</a>
+      <span class="cue-text">control over data associated with that identifier. So the first thing we want,</span>
+    </p>
+    <p class="cue" id="t1443">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1443">24:03</a>
+      <span class="cue-text">and I call this the four A's of secure data control or A raise to the fourth</span>
+    </p>
+    <p class="cue" id="t1447">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1447">24:07</a>
+      <span class="cue-text">power data, right? So we need an author of the data, the creator, the source of</span>
+    </p>
+    <p class="cue" id="t1452">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1452">24:12</a>
+      <span class="cue-text">truth, the root of trust for that data. And that imbues the author is the only one</span>
+    </p>
+    <p class="cue" id="t1457">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1457">24:17</a>
+      <span class="cue-text">with the authority to control that data, right? So authorship and authority are if</span>
+    </p>
+    <p class="cue" id="t1464">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1464">24:24</a>
+      <span class="cue-text">you can establish that, then you've created the basis of secure secure</span>
+    </p>
+    <p class="cue" id="t1469">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1469">24:29</a>
+      <span class="cue-text">control. Now you need to be able to authenticate any action that you perform.</span>
+    </p>
+    <p class="cue" id="t1476">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1476">24:36</a>
+      <span class="cue-text">So if you create data, you need to be able to prove to somebody else that the origin</span>
+    </p>
+    <p class="cue" id="t1480">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1480">24:40</a>
+      <span class="cue-text">of that data was from you, the author, right? So you need to be able to do secure</span>
+    </p>
+    <p class="cue" id="t1486">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1486">24:46</a>
+      <span class="cue-text">attribution. You need to be able to provenance the data. When we talk about</span>
+    </p>
+    <p class="cue" id="t1491">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1491">24:51</a>
+      <span class="cue-text">provenancing a painting, right? What's the provenance of a masterpiece? Well, the way</span>
+    </p>
+    <p class="cue" id="t1500">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1500">25:00</a>
+      <span class="cue-text">you provenance it is that you trace the ownership of that painting back to the</span>
+    </p>
+    <p class="cue" id="t1506">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1506">25:06</a>
+      <span class="cue-text">original painter, the original author of the painting, the painter. If you don't</span>
+    </p>
+    <p class="cue" id="t1513">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1513">25:13</a>
+      <span class="cue-text">have a chain of custody of that painting all the way to the present day, then you</span>
+    </p>
+    <p class="cue" id="t1519">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1519">25:19</a>
+      <span class="cue-text">can't securely establish that the painting is not a forgery. It may be a forgery.</span>
+    </p>
+    <p class="cue" id="t1525">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1525">25:25</a>
+      <span class="cue-text">Forgers are really good. You can look at the painting and you go, well, it doesn't</span>
+    </p>
+    <p class="cue" id="t1530">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1530">25:30</a>
+      <span class="cue-text">appear to be a forgery. There's no obvious things that make it a forgery. So that's a</span>
+    </p>
+    <p class="cue" id="t1536">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1536">25:36</a>
+      <span class="cue-text">good sign that it might be authentic. But without the provenance, the chain of</span>
+    </p>
+    <p class="cue" id="t1541">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1541">25:41</a>
+      <span class="cue-text">custody all the way back to the painter, you don't know for sure that it's an</span>
+    </p>
+    <p class="cue" id="t1547">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1547">25:47</a>
+      <span class="cue-text">authentic painting. So we want provable origin. We want provenance. We want secure</span>
+    </p>
+    <p class="cue" id="t1554">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1554">25:54</a>
+      <span class="cue-text">attribution. And then if we've created data that we can prove is sourced from us,</span>
+    </p>
+    <p class="cue" id="t1563">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1563">26:03</a>
+      <span class="cue-text">then we want to be able to control what happens to that data. And that means</span>
+    </p>
+    <p class="cue" id="t1569">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1569">26:09</a>
+      <span class="cue-text">authorized the use of that data, give permissions, consent. It establishes what</span>
+    </p>
+    <p class="cue" id="t1577">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1577">26:17</a>
+      <span class="cue-text">people call a loci of control for the data. That is the domain over which you</span>
+    </p>
+    <p class="cue" id="t1585">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1585">26:25</a>
+      <span class="cue-text">have control. So if the data is in your loci of control and you maintain that loci</span>
+    </p>
+    <p class="cue" id="t1591">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1591">26:31</a>
+      <span class="cue-text">of control, then you have control over the data. And so you need mechanisms to</span>
+    </p>
+    <p class="cue" id="t1596">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1596">26:36</a>
+      <span class="cue-text">authorize the use of that data or what happens with the data or anything else.</span>
+    </p>
+    <p class="cue" id="t1603">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1603">26:43</a>
+      <span class="cue-text">And then finally, a property that is not cryptographic at all is authoritative. For</span>
+    </p>
+    <p class="cue" id="t1610">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1610">26:50</a>
+      <span class="cue-text">data to have value, it must have</span>
+    </p>
+    <p class="cue" id="t1618">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1618">26:58</a>
+      <span class="cue-text">a creator, it must have a provable origin, the use of it must be authorized, but the</span>
+    </p>
+    <p class="cue" id="t1625">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1625">27:05</a>
+      <span class="cue-text">data also has to be authoritative. It has to be credible, accurate, reputable. And</span>
+    </p>
+    <p class="cue" id="t1630">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1630">27:10</a>
+      <span class="cue-text">so we need mechanisms for that which we can bootstrap on top of the other three.</span>
+    </p>
+    <p class="cue" id="t1635">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1635">27:15</a>
+      <span class="cue-text">Let's now go back to the trust basis of humanity when we interact as humans and</span>
+    </p>
+    <p class="cue" id="t1642">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1642">27:22</a>
+      <span class="cue-text">think about how we interact as humans because we're built really well for those</span>
+    </p>
+    <p class="cue" id="t1647">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1647">27:27</a>
+      <span class="cue-text">sorts of interactions. Our brains and our senses and how we function, our culture is</span>
+    </p>
+    <p class="cue" id="t1654">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1654">27:34</a>
+      <span class="cue-text">all has been designed to enable us to function really well with the human trust</span>
+    </p>
+    <p class="cue" id="t1661">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1661">27:41</a>
+      <span class="cue-text">basis. And in the human trust basis, we interact with people in person. We see</span>
+    </p>
+    <p class="cue" id="t1668">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1668">27:48</a>
+      <span class="cue-text">them, we touch them, we hear them with our physical senses. And over time, we get to</span>
+    </p>
+    <p class="cue" id="t1674">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1674">27:54</a>
+      <span class="cue-text">know people from those in-person interactions. And so that knowledge,</span>
+    </p>
+    <p class="cue" id="t1680">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1680">28:00</a>
+      <span class="cue-text">right, that we as a human can know other people means that we can then trust them.</span>
+    </p>
+    <p class="cue" id="t1686">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1686">28:06</a>
+      <span class="cue-text">And how we trust them is based on those physical interactions, right? As humans,</span>
+    </p>
+    <p class="cue" id="t1693">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1693">28:13</a>
+      <span class="cue-text">we're interacting. And so we build the ability to trust other people and to trust</span>
+    </p>
+    <p class="cue" id="t1701">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1701">28:21</a>
+      <span class="cue-text">what they say and what they do, right? And it doesn't mean that we aren't fooled or</span>
+    </p>
+    <p class="cue" id="t1707">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1707">28:27</a>
+      <span class="cue-text">tricked or people don't lie. All of those things happen. But we have a mechanism by</span>
+    </p>
+    <p class="cue" id="t1712">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1712">28:32</a>
+      <span class="cue-text">which we operate fairly well that works pretty well, has worked pretty well</span>
+    </p>
+    <p class="cue" id="t1717">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1717">28:37</a>
+      <span class="cue-text">throughout history. And we have lots of institutions that bulwark that human trust</span>
+    </p>
+    <p class="cue" id="t1725">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1725">28:45</a>
+      <span class="cue-text">basis. The problem is, is on the internet, we can't really know somebody human use in</span>
+    </p>
+    <p class="cue" id="t1732">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1732">28:52</a>
+      <span class="cue-text">the human trust basis because we don't interact with them physically. We don't</span>
+    </p>
+    <p class="cue" id="t1735">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1735">28:55</a>
+      <span class="cue-text">see them with our senses. We don't touch them. So we can't really trust what comes</span>
+    </p>
+    <p class="cue" id="t1742">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1742">29:02</a>
+      <span class="cue-text">over the internet because for all we know, the bits that came over the internet</span>
+    </p>
+    <p class="cue" id="t1748">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1748">29:08</a>
+      <span class="cue-text">didn't come from a real person or didn't come from the person that said they came</span>
+    </p>
+    <p class="cue" id="t1752">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1752">29:12</a>
+      <span class="cue-text">with. They could have come from somebody else or they could have come from an AI or</span>
+    </p>
+    <p class="cue" id="t1758">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1758">29:18</a>
+      <span class="cue-text">for a bot or from a dog for all that matters, right? It is a much more</span>
+    </p>
+    <p class="cue" id="t1764">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1764">29:24</a>
+      <span class="cue-text">difficult problem and we don't have the tooling as humans to do that. We have to</span>
+    </p>
+    <p class="cue" id="t1769">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1769">29:29</a>
+      <span class="cue-text">use different tools. So we have to be able to switch from a human trust basis to the</span>
+    </p>
+    <p class="cue" id="t1777">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1777">29:37</a>
+      <span class="cue-text">only tool that we have for information security, which is a cryptographic trust</span>
+    </p>
+    <p class="cue" id="t1781">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1781">29:41</a>
+      <span class="cue-text">basis. For those of you who don't like cryptography, this is probably not the</span>
+    </p>
+    <p class="cue" id="t1785">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1785">29:45</a>
+      <span class="cue-text">thing you really wanted to hear. But a cryptographic trust base is the only one</span>
+    </p>
+    <p class="cue" id="t1789">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1789">29:49</a>
+      <span class="cue-text">that we have. And to the extent that we can use a cryptographic trust basis, then</span>
+    </p>
+    <p class="cue" id="t1794">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1794">29:54</a>
+      <span class="cue-text">we can have really strong information security. To the extent that we use other</span>
+    </p>
+    <p class="cue" id="t1799">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1799">29:59</a>
+      <span class="cue-text">trust bases, then we're not going to have strong information security. So one of the</span>
+    </p>
+    <p class="cue" id="t1806">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1806">30:06</a>
+      <span class="cue-text">goals of KERI is to provide strong information security without requiring</span>
+    </p>
+    <p class="cue" id="t1812">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1812">30:12</a>
+      <span class="cue-text">everybody to know anything about cryptography. You just need to know the</span>
+    </p>
+    <p class="cue" id="t1816">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1816">30:16</a>
+      <span class="cue-text">best practice for using it and hopefully all the tooling under the hood hides all</span>
+    </p>
+    <p class="cue" id="t1821">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1821">30:21</a>
+      <span class="cue-text">the cryptography from the person. You know, this tutorial is to lead up to for</span>
+    </p>
+    <p class="cue" id="t1825">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1825">30:25</a>
+      <span class="cue-text">people to get to understand KERI at increasing levels of depth. So this is</span>
+    </p>
+    <p class="cue" id="t1830">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1830">30:30</a>
+      <span class="cue-text">really high level theoretical abstract, but we're going to start going deeper as</span>
+    </p>
+    <p class="cue" id="t1836">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1836">30:36</a>
+      <span class="cue-text">we get further along. So one of the problems we have to recognize is that</span>
+    </p>
+    <p class="cue" id="t1841">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1841">30:41</a>
+      <span class="cue-text">cryptography has limitations. For example, one of the cryptographic tools that we use</span>
+    </p>
+    <p class="cue" id="t1846">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1846">30:46</a>
+      <span class="cue-text">heavily is a verifiable digital signature. And it depends on something called a</span>
+    </p>
+    <p class="cue" id="t1851">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1851">30:51</a>
+      <span class="cue-text">cryptographic public-private key pair. It's also called asymmetric crypto. So</span>
+    </p>
+    <p class="cue" id="t1856">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1856">30:56</a>
+      <span class="cue-text">with a digital signature, you can take a statement. This is a digital statement.</span>
+    </p>
+    <p class="cue" id="t1861">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1861">31:01</a>
+      <span class="cue-text">You sign it with a private key and you can verify it with a public key. This makes it</span>
+    </p>
+    <p class="cue" id="t1865">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1865">31:05</a>
+      <span class="cue-text">very useful for communicating over the internet. And it enables the strongest</span>
+    </p>
+    <p class="cue" id="t1873">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1873">31:13</a>
+      <span class="cue-text">form of security because you're not sharing a secret. And what does that mean?</span>
+    </p>
+    <p class="cue" id="t1878">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1878">31:18</a>
+      <span class="cue-text">mean? Well, with a digital signature, any signed statement is non-reputable by the</span>
+    </p>
+    <p class="cue" id="t1884">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1884">31:24</a>
+      <span class="cue-text">controller who signed it. What we mean by controller is the individual entity or</span>
+    </p>
+    <p class="cue" id="t1889">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1889">31:29</a>
+      <span class="cue-text">natural person that controls the private key, right? Because in order to sign it,</span>
+    </p>
+    <p class="cue" id="t1894">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1894">31:34</a>
+      <span class="cue-text">you have to have the private key. So, what does non-reputable mean? It means the</span>
+    </p>
+    <p class="cue" id="t1899">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1899">31:39</a>
+      <span class="cue-text">signer cannot plausibly deny that they created the verifiable signature.</span>
+    </p>
+    <p class="cue" id="t1904">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1904">31:44</a>
+      <span class="cue-text">Therefore, we may only verify the controller of the private key and we call</span>
+    </p>
+    <p class="cue" id="t1909">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1909">31:49</a>
+      <span class="cue-text">this the who that made the statement. So the author, right? But not the veracity of</span>
+    </p>
+    <p class="cue" id="t1915">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1915">31:55</a>
+      <span class="cue-text">the statement. We can't use cryptography to prove the veracity or accuracy or truth</span>
+    </p>
+    <p class="cue" id="t1921">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1921">32:01</a>
+      <span class="cue-text">of a statement. And that's the what, right? But we can prove the who to at</span>
+    </p>
+    <p class="cue" id="t1928">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1928">32:08</a>
+      <span class="cue-text">least the level of plausible deniability. Okay. In order for that to occur, the</span>
+    </p>
+    <p class="cue" id="t1935">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1935">32:15</a>
+      <span class="cue-text">assumption is that the private keys behind a digital signature, the private key or</span>
+    </p>
+    <p class="cue" id="t1940">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1940">32:20</a>
+      <span class="cue-text">keys are truly private, never shared, right? And that the signing, the act of</span>
+    </p>
+    <p class="cue" id="t1947">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1947">32:27</a>
+      <span class="cue-text">signing reflects the signer's true intent. And we call this these two things</span>
+    </p>
+    <p class="cue" id="t1952">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1952">32:32</a>
+      <span class="cue-text">together, the signing infrastructure. And we say the signing infrastructure was not</span>
+    </p>
+    <p class="cue" id="t1956">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1956">32:36</a>
+      <span class="cue-text">compromised. So, for example, if somebody steals your private key, then they can</span>
+    </p>
+    <p class="cue" id="t1962">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1962">32:42</a>
+      <span class="cue-text">sign stuff and impersonate you. They can say they are who you are and somebody</span>
+    </p>
+    <p class="cue" id="t1970">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1970">32:50</a>
+      <span class="cue-text">trying verifying it will say, well, it verifies, therefore it must have been</span>
+    </p>
+    <p class="cue" id="t1975">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1975">32:55</a>
+      <span class="cue-text">signed by the private key. And so if the private key has been stolen, then you lose</span>
+    </p>
+    <p class="cue" id="t1981">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1981">33:01</a>
+      <span class="cue-text">non-repudiation because now anybody, whoever, multiple people now have that</span>
+    </p>
+    <p class="cue" id="t1985">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1985">33:05</a>
+      <span class="cue-text">private key. Correspondingly, if I have a computer or a device that uses the private</span>
+    </p>
+    <p class="cue" id="t1995">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=1995">33:15</a>
+      <span class="cue-text">key to create the digital signature, I have to have some way of inputting to that</span>
+    </p>
+    <p class="cue" id="t2002">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2002">33:22</a>
+      <span class="cue-text">device something to be signed. And so that digital artifact that I input to be</span>
+    </p>
+    <p class="cue" id="t2008">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2008">33:28</a>
+      <span class="cue-text">signed, if somebody is able to input something to be signed and I permit that</span>
+    </p>
+    <p class="cue" id="t2015">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2015">33:35</a>
+      <span class="cue-text">signature to happen, maybe it's on my device and they get it onto my device and</span>
+    </p>
+    <p class="cue" id="t2019">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2019">33:39</a>
+      <span class="cue-text">they tricked me into signing it, then now I've signed something that I didn't intend</span>
+    </p>
+    <p class="cue" id="t2025">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2025">33:45</a>
+      <span class="cue-text">to sign. And so that's another type of compromise. So the assumption is that</span>
+    </p>
+    <p class="cue" id="t2031">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2031">33:51</a>
+      <span class="cue-text">either the keys or the signing or the act of signing has not been compromised. If</span>
+    </p>
+    <p class="cue" id="t2038">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2038">33:58</a>
+      <span class="cue-text">that is true, then digital signatures provide non-repudiation to the signer. And</span>
+    </p>
+    <p class="cue" id="t2045">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2045">34:05</a>
+      <span class="cue-text">that gives you a cryptographic basis for securely attributing a statement that has</span>
+    </p>
+    <p class="cue" id="t2053">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2053">34:13</a>
+      <span class="cue-text">an attached signature to the controller of the private key as a source of that</span>
+    </p>
+    <p class="cue" id="t2057">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2057">34:17</a>
+      <span class="cue-text">statement. So with cryptography alone, we cannot trust what was said. It doesn't</span>
+    </p>
+    <p class="cue" id="t2065">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2065">34:25</a>
+      <span class="cue-text">provide that. We have to use it to other mechanisms in concert with cryptography,</span>
+    </p>
+    <p class="cue" id="t2072">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2072">34:32</a>
+      <span class="cue-text">but we can say something about who said it. We can only detect if the signer is</span>
+    </p>
+    <p class="cue" id="t2078">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2078">34:38</a>
+      <span class="cue-text">being inconsistent or duplicitous. So what that says is if you don't know what was</span>
+    </p>
+    <p class="cue" id="t2084">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2084">34:44</a>
+      <span class="cue-text">the statement is true or false, but you do know that the signer made the statement.</span>
+    </p>
+    <p class="cue" id="t2091">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2091">34:51</a>
+      <span class="cue-text">They're basically saying, I say this. So someone could say the sky is green or they</span>
+    </p>
+    <p class="cue" id="t2097">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2097">34:57</a>
+      <span class="cue-text">could say the sky is blue. Well, if they're consistent and they always say the</span>
+    </p>
+    <p class="cue" id="t2101">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2101">35:01</a>
+      <span class="cue-text">sky is green, they may be wrong, they may be misinformed, they may be delusional,</span>
+    </p>
+    <p class="cue" id="t2108">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2108">35:08</a>
+      <span class="cue-text">but they're not being inconsistent, they're not being duplicitous. If on the</span>
+    </p>
+    <p class="cue" id="t2113">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2113">35:13</a>
+      <span class="cue-text">other hand, they say the sky is blue one day and the sky is green another day,</span>
+    </p>
+    <p class="cue" id="t2118">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2118">35:18</a>
+      <span class="cue-text">they're not consistent. Or if they say the sky is green to a set of people and the</span>
+    </p>
+    <p class="cue" id="t2122">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2122">35:22</a>
+      <span class="cue-text">sky is blue to a German set of people, they're being duplicitous. And if they</span>
+    </p>
+    <p class="cue" id="t2127">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2127">35:27</a>
+      <span class="cue-text">sign both those statements and you produce a statement that says the sky is green and</span>
+    </p>
+    <p class="cue" id="t2132">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2132">35:32</a>
+      <span class="cue-text">the statement that says the sky is blue and you see both statements, you verify</span>
+    </p>
+    <p class="cue" id="t2136">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2136">35:36</a>
+      <span class="cue-text">both of them, now you have provable duplicity or provable inconsistency</span>
+    </p>
+    <p class="cue" id="t2141">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2141">35:41</a>
+      <span class="cue-text">depending on how you think about it. And therefore, you have reason not to trust</span>
+    </p>
+    <p class="cue" id="t2145">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2145">35:45</a>
+      <span class="cue-text">the signer. But if you never see inconsistency or duplicity in all of the</span>
+    </p>
+    <p class="cue" id="t2151">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2151">35:51</a>
+      <span class="cue-text">signer sign statements, then you may be able to trust that signer. At least you</span>
+    </p>
+    <p class="cue" id="t2156">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2156">35:56</a>
+      <span class="cue-text">know that they're not being inconsistent. They're not being duplicitous. They still</span>
+    </p>
+    <p class="cue" id="t2161">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2161">36:01</a>
+      <span class="cue-text">may be delusional or they still may be malicious and be a liar, but they're a</span>
+    </p>
+    <p class="cue" id="t2165">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2165">36:05</a>
+      <span class="cue-text">really good liar because they always use the same lie. And that's something. That's</span>
+    </p>
+    <p class="cue" id="t2172">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2172">36:12</a>
+      <span class="cue-text">not nothing. That's really, really valuable on the internet because then we</span>
+    </p>
+    <p class="cue" id="t2178">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2178">36:18</a>
+      <span class="cue-text">can use other mechanisms to hold them accountable for the veracity of their</span>
+    </p>
+    <p class="cue" id="t2184">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2184">36:24</a>
+      <span class="cue-text">statements. And those other mechanisms now are mechanisms that are already</span>
+    </p>
+    <p class="cue" id="t2190">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2190">36:30</a>
+      <span class="cue-text">established. We have all sorts of legal, regulatory, and economic mechanisms and</span>
+    </p>
+    <p class="cue" id="t2196">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2196">36:36</a>
+      <span class="cue-text">incentives that we can apply to incentivize people to have veracity in</span>
+    </p>
+    <p class="cue" id="t2204">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2204">36:44</a>
+      <span class="cue-text">what they say. And those incentives are enforceable if we can prove who said it</span>
+    </p>
+    <p class="cue" id="t2212">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2212">36:52</a>
+      <span class="cue-text">and that a given person or entity said something. And so we start there and then</span>
+    </p>
+    <p class="cue" id="t2221">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2221">37:01</a>
+      <span class="cue-text">we can finish with stuff that isn't cryptographic, but we can't get there over</span>
+    </p>
+    <p class="cue" id="t2226">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2226">37:06</a>
+      <span class="cue-text">the internet without the cryptography because over the internet, it's just data.</span>
+    </p>
+    <p class="cue" id="t2231">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2231">37:11</a>
+      <span class="cue-text">It's not its. So what makes KERI possible? KERI was not possible 20 years ago. It was</span>
+    </p>
+    <p class="cue" id="t2241">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2241">37:21</a>
+      <span class="cue-text">possible probably only 10 years ago. And actually the development of KERI, I</span>
+    </p>
+    <p class="cue" id="t2247">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2247">37:27</a>
+      <span class="cue-text">started working in this space heavily in 2015. It was possible a few years before</span>
+    </p>
+    <p class="cue" id="t2252">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2252">37:32</a>
+      <span class="cue-text">that, but not likely. And KERI was a result of five years of trying to solve</span>
+    </p>
+    <p class="cue" id="t2258">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2258">37:38</a>
+      <span class="cue-text">the secure attribution problem and failing. and then learning from all my</span>
+    </p>
+    <p class="cue" id="t2263">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2263">37:43</a>
+      <span class="cue-text">mistakes. And then in 2019, I wrote the first KERI white paper and 2020, the</span>
+    </p>
+    <p class="cue" id="t2272">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2272">37:52</a>
+      <span class="cue-text">second edition of the KERI white paper, which is largely the KERI we see today.</span>
+    </p>
+    <p class="cue" id="t2276">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2276">37:56</a>
+      <span class="cue-text">And since then, we've been building on that. So what happened in, you know,</span>
+    </p>
+    <p class="cue" id="t2283">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2283">38:03</a>
+      <span class="cue-text">between 20, before 2015 and after 2015? Well, then before 2015, it was generally</span>
+    </p>
+    <p class="cue" id="t2291">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2291">38:11</a>
+      <span class="cue-text">considered by everyone that users could not manage private keys. What I mean by</span>
+    </p>
+    <p class="cue" id="t2296">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2296">38:16</a>
+      <span class="cue-text">cryptographic keys, to manage them, to store them, create them, not lose them,</span>
+    </p>
+    <p class="cue" id="t2302">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2302">38:22</a>
+      <span class="cue-text">use them to sign things. That was too hard. In fact, the DNS certificate</span>
+    </p>
+    <p class="cue" id="t2307">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2307">38:27</a>
+      <span class="cue-text">authority system and the federated identity, OIDC, OAuth, all of those</span>
+    </p>
+    <p class="cue" id="t2312">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2312">38:32</a>
+      <span class="cue-text">systems are based on the idea that the average user can't manage private keys. So</span>
+    </p>
+    <p class="cue" id="t2321">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2321">38:41</a>
+      <span class="cue-text">we get federated identity largely with things called IDPs or identity providers.</span>
+    </p>
+    <p class="cue" id="t2328">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2328">38:48</a>
+      <span class="cue-text">Identity providers are enterprises or institutions or entities that have the</span>
+    </p>
+    <p class="cue" id="t2336">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2336">38:56</a>
+      <span class="cue-text">capability, they have the education, they have the technical know-how to manage</span>
+    </p>
+    <p class="cue" id="t2340">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2340">39:00</a>
+      <span class="cue-text">private keys. And everybody else is a relying party because they're not managing</span>
+    </p>
+    <p class="cue" id="t2344">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2344">39:04</a>
+      <span class="cue-text">private keys. So we built a system based on this assumption, the impossibility of</span>
+    </p>
+    <p class="cue" id="t2351">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2351">39:11</a>
+      <span class="cue-text">user-managed private keys. It doesn't work very well anymore. Now, post-2015, we have</span>
+    </p>
+    <p class="cue" id="t2356">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2356">39:16</a>
+      <span class="cue-text">mobile devices. We have mobile phones that are essentially supercomputers in your</span>
+    </p>
+    <p class="cue" id="t2363">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2363">39:23</a>
+      <span class="cue-text">pocket that have devices and, you know, hardware security modules, multi-factor</span>
+    </p>
+    <p class="cue" id="t2369">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2369">39:29</a>
+      <span class="cue-text">authentication, secure boots, secure enclaves, password management apps. And a</span>
+    </p>
+    <p class="cue" id="t2375">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2375">39:35</a>
+      <span class="cue-text">lot of that was actually a result of all of the excitement over blockchain that</span>
+    </p>
+    <p class="cue" id="t2381">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2381">39:41</a>
+      <span class="cue-text">started in the big inflection point, I would say, is 2015. That all of a sudden</span>
+    </p>
+    <p class="cue" id="t2388">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2388">39:48</a>
+      <span class="cue-text">now, because all of blockchains and cryptocurrencies are based on users</span>
+    </p>
+    <p class="cue" id="t2392">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2392">39:52</a>
+      <span class="cue-text">managing private keys. And so users were forced to figure out how to manage them</span>
+    </p>
+    <p class="cue" id="t2396">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2396">39:56</a>
+      <span class="cue-text">and people were forced to develop tooling to manage private keys. And so that</span>
+    </p>
+    <p class="cue" id="t2401">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2401">40:01</a>
+      <span class="cue-text">generated a whole bunch of effort that resulted in private key management. So</span>
+    </p>
+    <p class="cue" id="t2407">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2407">40:07</a>
+      <span class="cue-text">when it came to solving the identity problem and creating a trust spending</span>
+    </p>
+    <p class="cue" id="t2412">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2412">40:12</a>
+      <span class="cue-text">layer, I could say, well, I can assume that users can manage private keys. So I</span>
+    </p>
+    <p class="cue" id="t2417">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2417">40:17</a>
+      <span class="cue-text">can assume that people can control identifiers that are cryptographically</span>
+    </p>
+    <p class="cue" id="t2421">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2421">40:21</a>
+      <span class="cue-text">derived from private keys and therefore they can use those private keys to do</span>
+    </p>
+    <p class="cue" id="t2425">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2425">40:25</a>
+      <span class="cue-text">secure provenance of those identifiers. So now I have the ability to do that. So 2015</span>
+    </p>
+    <p class="cue" id="t2431">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2431">40:31</a>
+      <span class="cue-text">practical user managed private keys. And since 2015 15, it's gotten even more</span>
+    </p>
+    <p class="cue" id="t2436">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2436">40:36</a>
+      <span class="cue-text">practical. I mean, the user experiences has gotten much, much better. People now</span>
+    </p>
+    <p class="cue" id="t2441">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2441">40:41</a>
+      <span class="cue-text">regularly use passkeys, which under the hood are just public-private key pairs.</span>
+    </p>
+    <p class="cue" id="t2445">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2445">40:45</a>
+      <span class="cue-text">This is something that we shouldn't say anymore, that we can't build identity</span>
+    </p>
+    <p class="cue" id="t2451">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2451">40:51</a>
+      <span class="cue-text">systems where the basis of the identity system is on an outdated assumption, the</span>
+    </p>
+    <p class="cue" id="t2459">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2459">40:59</a>
+      <span class="cue-text">assumption that users can't manage private keys. That's outdated. We can build them</span>
+    </p>
+    <p class="cue" id="t2463">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2463">41:03</a>
+      <span class="cue-text">in And we have devices that do that. So then we had to settle for good enough</span>
+    </p>
+    <p class="cue" id="t2470">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2470">41:10</a>
+      <span class="cue-text">security from federated identity. And federated identity has lots of security</span>
+    </p>
+    <p class="cue" id="t2474">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2474">41:14</a>
+      <span class="cue-text">problems. Primarily because it's based on shared secrets. And shared secrets are</span>
+    </p>
+    <p class="cue" id="t2480">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2480">41:20</a>
+      <span class="cue-text">reputable. And now those shared secrets are phishable or spirit phishable or any</span>
+    </p>
+    <p class="cue" id="t2487">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2487">41:27</a>
+      <span class="cue-text">number of attacks. And so, you know, a shared secret is a password. A shared</span>
+    </p>
+    <p class="cue" id="t2493">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2493">41:33</a>
+      <span class="cue-text">secret is a OAuth bearer token. Shared secret is a TLS exchanged cryptographic</span>
+    </p>
+    <p class="cue" id="t2501">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2501">41:41</a>
+      <span class="cue-text">key that is used to do a TLS handshake to provide what is called authcrypt. It's a</span>
+    </p>
+    <p class="cue" id="t2507">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2507">41:47</a>
+      <span class="cue-text">weak authentication mechanism that's reputable and we shouldn't use anymore.</span>
+    </p>
+    <p class="cue" id="t2511">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2511">41:51</a>
+      <span class="cue-text">But the whole internet is based on it. So that meant that with good enough security,</span>
+    </p>
+    <p class="cue" id="t2516">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2516">41:56</a>
+      <span class="cue-text">you have to have secure sessions. You ended up with perimeter security with VPNs</span>
+    </p>
+    <p class="cue" id="t2521">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2521">42:01</a>
+      <span class="cue-text">that also use shared secrets because you Every user of the VPN is using the same</span>
+    </p>
+    <p class="cue" id="t2527">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2527">42:07</a>
+      <span class="cue-text">private key because the IT admin is sending out the same client certificate to</span>
+    </p>
+    <p class="cue" id="t2532">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2532">42:12</a>
+      <span class="cue-text">all of the users. Now we can have identity based on user managed private keys. And</span>
+    </p>
+    <p class="cue" id="t2539">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2539">42:19</a>
+      <span class="cue-text">that means we can have a difference in security that is different in class</span>
+    </p>
+    <p class="cue" id="t2543">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2543">42:23</a>
+      <span class="cue-text">because we don't have to ever use shared secrets ever again. And KERI is that. KERI</span>
+    </p>
+    <p class="cue" id="t2550">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2550">42:30</a>
+      <span class="cue-text">is a protocol designed to maximize that. So let's talk about private key</span>
+    </p>
+    <p class="cue" id="t2555">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2555">42:35</a>
+      <span class="cue-text">management. What that means is that you have controlling keys. You have key pairs</span>
+    </p>
+    <p class="cue" id="t2562">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2562">42:42</a>
+      <span class="cue-text">for a digital signature. The controlling keys are the private keys. You create an</span>
+    </p>
+    <p class="cue" id="t2567">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2567">42:47</a>
+      <span class="cue-text">identifier. We haven't said how we create the identifier. We'll get into that. But</span>
+    </p>
+    <p class="cue" id="t2571">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2571">42:51</a>
+      <span class="cue-text">abstractly, you create an identifier from those controlling keys. You now have data</span>
+    </p>
+    <p class="cue" id="t2577">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2577">42:57</a>
+      <span class="cue-text">and you use that identifier and some cryptography, namely digital signatures,</span>
+    </p>
+    <p class="cue" id="t2583">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2583">43:03</a>
+      <span class="cue-text">to establish secure authorship or attribution over that data. The problem is</span>
+    </p>
+    <p class="cue" id="t2591">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2591">43:11</a>
+      <span class="cue-text">that the continued use of private keys expose them to what are called side</span>
+    </p>
+    <p class="cue" id="t2595">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2595">43:15</a>
+      <span class="cue-text">channel attacks. What that means is that they're not actually attacking side</span>
+    </p>
+    <p class="cue" id="t2601">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2601">43:21</a>
+      <span class="cue-text">channel means they're not directly attacking the digital signature. The</span>
+    </p>
+    <p class="cue" id="t2604">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2604">43:24</a>
+      <span class="cue-text">digital signing algorithm, if you're using elliptic cryptography, especially the most</span>
+    </p>
+    <p class="cue" id="t2610">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2610">43:30</a>
+      <span class="cue-text">secure ones like ED25519, It has been secure for the last 20 years. And multiple</span>
+    </p>
+    <p class="cue" id="t2618">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2618">43:38</a>
+      <span class="cue-text">Moore's laws increases in computing power have not materially weakened the security</span>
+    </p>
+    <p class="cue" id="t2623">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2623">43:43</a>
+      <span class="cue-text">of those digital signatures. So elliptic curve digital signatures are secure. Now,</span>
+    </p>
+    <p class="cue" id="t2628">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2628">43:48</a>
+      <span class="cue-text">when quantum computers come around, that won't be true anymore, but we already have</span>
+    </p>
+    <p class="cue" id="t2633">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2633">43:53</a>
+      <span class="cue-text">new cryptographic algorithms that replace ECC that give us the same thing as just</span>
+    </p>
+    <p class="cue" id="t2638">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2638">43:58</a>
+      <span class="cue-text">the key sizes are bigger and take more computation. But it's still not vulnerable</span>
+    </p>
+    <p class="cue" id="t2643">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2643">44:03</a>
+      <span class="cue-text">to direct attack. A side channel attack means you're not breaking the crypto,</span>
+    </p>
+    <p class="cue" id="t2649">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2649">44:09</a>
+      <span class="cue-text">you're breaking the key management infrastructure and you're breaking the</span>
+    </p>
+    <p class="cue" id="t2653">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2653">44:13</a>
+      <span class="cue-text">signing infrastructure. And so the more you use private keys, the more you use</span>
+    </p>
+    <p class="cue" id="t2659">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2659">44:19</a>
+      <span class="cue-text">your signing infrastructure, the more likely an attacker is to figure out how to</span>
+    </p>
+    <p class="cue" id="t2663">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2663">44:23</a>
+      <span class="cue-text">break your use of it, not the cryptographic algorithm, but the way you</span>
+    </p>
+    <p class="cue" id="t2668">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2668">44:28</a>
+      <span class="cue-text">use it and the systems you use it on. And so what has happened is what happens then</span>
+    </p>
+    <p class="cue" id="t2674">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2674">44:34</a>
+      <span class="cue-text">is that practically speaking, the keys become weak from exposure. The more you</span>
+    </p>
+    <p class="cue" id="t2681">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2681">44:41</a>
+      <span class="cue-text">expose them, the higher the likelihood that one of these side channel attacks</span>
+    </p>
+    <p class="cue" id="t2685">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2685">44:45</a>
+      <span class="cue-text">will be successful. So the way to manage that, so this is the hard problem with key</span>
+    </p>
+    <p class="cue" id="t2691">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2691">44:51</a>
+      <span class="cue-text">management, is that your private keys need to be revoked and replaced with new</span>
+    </p>
+    <p class="cue" id="t2696">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2696">44:56</a>
+      <span class="cue-text">private keys. The short term we use that for that is to rotate your keys. You</span>
+    </p>
+    <p class="cue" id="t2701">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2701">45:01</a>
+      <span class="cue-text">rotate from an old set of keys to a new set of keys. And the new set of keys give</span>
+    </p>
+    <p class="cue" id="t2707">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2707">45:07</a>
+      <span class="cue-text">you a fresh start that haven't been exposed to CIDESHILL attack. And so now</span>
+    </p>
+    <p class="cue" id="t2711">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2711">45:11</a>
+      <span class="cue-text">the attacker has to start over, right? He has to do whatever to try to compromise</span>
+    </p>
+    <p class="cue" id="t2715">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2715">45:15</a>
+      <span class="cue-text">your system. And so if you rotate them often enough, you can stay ahead of the</span>
+    </p>
+    <p class="cue" id="t2721">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2721">45:21</a>
+      <span class="cue-text">attacker in general. Not always, but that's the general practical thing. The</span>
+    </p>
+    <p class="cue" id="t2728">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2728">45:28</a>
+      <span class="cue-text">problem is most systems that are based on public key, if PKI stands for public key</span>
+    </p>
+    <p class="cue" id="t2735">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2735">45:35</a>
+      <span class="cue-text">infrastructure for the PKI system is based on public keys, you must reestablish the</span>
+    </p>
+    <p class="cue" id="t2741">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2741">45:41</a>
+      <span class="cue-text">root of trust with each rotation because the root of trust is based on the public</span>
+    </p>
+    <p class="cue" id="t2747">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2747">45:47</a>
+      <span class="cue-text">key, not an identifier that persists, but the public key. So you throw away the</span>
+    </p>
+    <p class="cue" id="t2753">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2753">45:53</a>
+      <span class="cue-text">public key when you rotate it. Now you have to create a new public key and you</span>
+    </p>
+    <p class="cue" id="t2757">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2757">45:57</a>
+      <span class="cue-text">have to redo all of the work you have to do to reestablish the root of trust of</span>
+    </p>
+    <p class="cue" id="t2761">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2761">46:01</a>
+      <span class="cue-text">that public key as being authoritative for a given person or entity. That means the</span>
+    </p>
+    <p class="cue" id="t2768">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2768">46:08</a>
+      <span class="cue-text">identifier is how you link that person to whatever it is that you want to security</span>
+    </p>
+    <p class="cue" id="t2777">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2777">46:17</a>
+      <span class="cue-text">attribute. And if you throw the identifier away, which is the public key, then you</span>
+    </p>
+    <p class="cue" id="t2781">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2781">46:21</a>
+      <span class="cue-text">have to reestablish all of the reputation. All of that has to be reestablished. When</span>
+    </p>
+    <p class="cue" id="t2786">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2786">46:26</a>
+      <span class="cue-text">you have a compromise, you break the chain of trust of control over the identifier.</span>
+    </p>
+    <p class="cue" id="t2792">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2792">46:32</a>
+      <span class="cue-text">So if the private key is compromised, then the public key, the provenance is gone,</span>
+    </p>
+    <p class="cue" id="t2796">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2796">46:36</a>
+      <span class="cue-text">everything's gone. So you go, well, wow, that's really hard, right? I have to do</span>
+    </p>
+    <p class="cue" id="t2801">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2801">46:41</a>
+      <span class="cue-text">private key management if I want, if I, you know, to be able to do cryptography.</span>
+    </p>
+    <p class="cue" id="t2807">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2807">46:47</a>
+      <span class="cue-text">But now the hard problem is not the cryptography. The hard problem is the</span>
+    </p>
+    <p class="cue" id="t2811">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2811">46:51</a>
+      <span class="cue-text">management of your private keys, right? So key compromised recovery is how you fix</span>
+    </p>
+    <p class="cue" id="t2819">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2819">46:59</a>
+      <span class="cue-text">this problem. You need a mechanism that despite your key management breaking down,</span>
+    </p>
+    <p class="cue" id="t2826">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2826">47:06</a>
+      <span class="cue-text">can you regain control? Can you recover from that? So the hard problem of private</span>
+    </p>
+    <p class="cue" id="t2833">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2833">47:13</a>
+      <span class="cue-text">key management is key rotation with key compromise recovery, right? So that even</span>
+    </p>
+    <p class="cue" id="t2841">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2841">47:21</a>
+      <span class="cue-text">if your private keys are compromised or your signing infrastructure is</span>
+    </p>
+    <p class="cue" id="t2845">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2845">47:25</a>
+      <span class="cue-text">compromised, that you can recover control over an identifier that persists despite</span>
+    </p>
+    <p class="cue" id="t2850">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2850">47:30</a>
+      <span class="cue-text">key rotation. KERI solves this hard problem. Until KERI came along, nobody</span>
+    </p>
+    <p class="cue" id="t2855">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2855">47:35</a>
+      <span class="cue-text">solved this problem. The other people have now copied KERI and some parts of KERI.</span>
+    </p>
+    <p class="cue" id="t2860">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2860">47:40</a>
+      <span class="cue-text">But in terms of a full system that solves this hard problem, as far as I know, KERI</span>
+    </p>
+    <p class="cue" id="t2866">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2866">47:46</a>
+      <span class="cue-text">is still the only protocol on the planet that is public and open source and open</span>
+    </p>
+    <p class="cue" id="t2872">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2872">47:52</a>
+      <span class="cue-text">standard. There may be proprietary ones that I don't know about, but of all the</span>
+    </p>
+    <p class="cue" id="t2876">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2876">47:56</a>
+      <span class="cue-text">public ones, it's the only one that I know about. That's the end of this discussion.</span>
+    </p>
+    <p class="cue" id="t2879">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2879">47:59</a>
+      <span class="cue-text">So hopefully I've whet your appetite for understanding what KERI does because I</span>
+    </p>
+    <p class="cue" id="t2885">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2885">48:05</a>
+      <span class="cue-text">basically told you how KERI solves the hard problem with key management. And if</span>
+    </p>
+    <p class="cue" id="t2890">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2890">48:10</a>
+      <span class="cue-text">we don't solve the hard problem with key management, then we can't control our</span>
+    </p>
+    <p class="cue" id="t2894">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2894">48:14</a>
+      <span class="cue-text">identifiers on the internet, which means we can't control our data and we can't</span>
+    </p>
+    <p class="cue" id="t2898">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2898">48:18</a>
+      <span class="cue-text">control value of our data. So if we really want to control the value of our data on</span>
+    </p>
+    <p class="cue" id="t2904">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2904">48:24</a>
+      <span class="cue-text">the internet, we need to control our identifiers and we need to do key</span>
+    </p>
+    <p class="cue" id="t2907">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2907">48:27</a>
+      <span class="cue-text">management to do that and to do that we need KERI. So I hope that's sufficient</span>
+    </p>
+    <p class="cue" id="t2913">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2913">48:33</a>
+      <span class="cue-text">motivation. Thank you and remember to go back up to the first slide has links where</span>
+    </p>
+    <p class="cue" id="t2920">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2920">48:40</a>
+      <span class="cue-text">you can go do some more research and look for additional tutorials on this topic.</span>
+    </p>
+    <p class="cue" id="t2928">
+      <a class="cue-time" href="../../../#introduction-to-keri-part-1-samuel-smith&amp;t=2928">48:48</a>
+      <span class="cue-text">week.</span>
+    </p>
+    </article>
+    <footer>KERI Foundation • Videos</footer>
+  </div>
+</body>
+</html>

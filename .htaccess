@@ -61,8 +61,10 @@ RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/pdf/([^/]+)$ /confs/SEDI/2025/n
 # END conf redirects
 
 # BEGIN vids redirects
-# Standalone player moved into the July 2026 gallery. /videos/ stays with WordPress.
-RewriteRule ^videos/sam-smith/Its-KERI-or-Surveillance/Its-KERI-or-Surveillance\.html$ /vids/2026/jul/#it-s-keri-or-surveillance-samuel-smith [R=301,L,NE]
+# Standalone player moved into the 2026 gallery. /videos/ stays with WordPress.
+RewriteRule ^videos/sam-smith/Its-KERI-or-Surveillance/Its-KERI-or-Surveillance\.html$ /vids/2026/#it-s-keri-or-surveillance-samuel-smith [R=301,L,NE]
+# Former monthly path now lives at the year gallery.
+RewriteRule ^vids/2026/jul(?:/(.*))?$ /vids/2026/$1 [R=301,L,NE]
 # END vids redirects
 
 

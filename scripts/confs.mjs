@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Helper for the galleries under confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/<month>/.
+ * Helper for the galleries under confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/.
  *
  * Usage:
  *   node scripts/confs.mjs list
@@ -8,7 +8,7 @@
  *   node scripts/confs.mjs verify [--remote https://keri.foundation] [--conf KERI/2026/apr]...
  *
  * list            Print every gallery id that has an index.json.
- *                 Conferences are ORG/YEAR/month. Monthly videos are vids/YEAR/month.
+ *                 Conferences are ORG/YEAR/month. Video galleries are vids/YEAR.
  * sync-subtitles  Copy curated .srt files from the source folders listed in
  *                 scripts/subtitle-sources.tsv into the conference folders. Only
  *                 subtitles referenced by that conference's index.json are copied
@@ -63,7 +63,7 @@ function isVidsGallery(id) {
   return id.startsWith("vids/");
 }
 
-/** Absolute directory of a gallery (confs/ORG/YEAR/month or vids/YEAR/month). */
+/** Absolute directory of a gallery (confs/ORG/YEAR/month or vids/YEAR). */
 function galleryDir(id) {
   return isVidsGallery(id) ? join(SITE_ROOT, id) : join(CONFS_ROOT, id);
 }
@@ -91,10 +91,8 @@ async function findConferences() {
   if (await isDir(VIDS_ROOT)) {
     for (const year of (await readdir(VIDS_ROOT)).sort()) {
       if (!YEAR_RE.test(year) || !(await isDir(join(VIDS_ROOT, year)))) continue;
-      for (const month of (await readdir(join(VIDS_ROOT, year))).sort()) {
-        if (existsSync(join(VIDS_ROOT, year, month, "index.json"))) {
-          ids.push(`vids/${year}/${month}`);
-        }
+      if (existsSync(join(VIDS_ROOT, year, "index.json"))) {
+        ids.push(`vids/${year}`);
       }
     }
   }
@@ -361,8 +359,21 @@ async function readSources() {
     const target = m[1].replace(/^\/+|\/+$/g, "");
     const source = m[2].trim().replace(/^~(?=\/)/, homedir());
     const parts = target.split("/");
-    if (parts.length < 4) throw new Error(`Target must be <gallery id>/<folder> (e.g. KERI/2026/apr/talks or vids/2026/jul/talks): ${target}`);
-    sources.push({ conf: parts.slice(0, 3).join("/"), folder: parts.slice(3).join("/"), source });
+    let conf;
+    let folder;
+    if (parts[0] === "vids") {
+      if (parts.length < 3 || !YEAR_RE.test(parts[1])) {
+        throw new Error(`Target must be vids/<YEAR>/<folder> (e.g. vids/2026/talks): ${target}`);
+      }
+      conf = parts.slice(0, 2).join("/");
+      folder = parts.slice(2).join("/");
+    } else if (parts.length < 4) {
+      throw new Error(`Target must be <gallery id>/<folder> (e.g. KERI/2026/apr/talks or vids/2026/talks): ${target}`);
+    } else {
+      conf = parts.slice(0, 3).join("/");
+      folder = parts.slice(3).join("/");
+    }
+    sources.push({ conf, folder, source });
   }
   return sources;
 }
@@ -448,7 +459,7 @@ async function main() {
       await cmdVerify(opts);
       break;
     default:
-      console.log("Usage: node scripts/confs.mjs <list|sync-subtitles|verify> [--conf ORG/YEAR/month|vids/YEAR/month] [--dry-run] [--remote URL]");
+      console.log("Usage: node scripts/confs.mjs <list|sync-subtitles|verify> [--conf ORG/YEAR/month|vids/YEAR] [--dry-run] [--remote URL]");
       process.exit(opts.command ? 1 : 0);
   }
 }

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Introduction to KERI - Samuel Smith — Transcript</title>
+  <meta name="description" content="Transcript: Introduction to KERI - Samuel Smith (January 2024 · 10:57)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #060b6f;
+      --muted: #2e3a7a;
+      --bg: #b1d1cf;
+      --panel: rgba(255, 255, 255, 0.55);
+      --accent: #986c32;
+      --link: #0450a8;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Source Serif 4", Georgia, serif;
+      background:
+        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(255,255,255,0.45), transparent),
+        radial-gradient(ellipse 60% 40% at 100% 0%, rgba(152,108,50,0.12), transparent),
+        var(--bg);
+      color: var(--ink);
+      padding: 24px 16px 48px;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 44rem; margin: 0 auto; }
+    nav {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+    nav a { color: var(--link); }
+    nav a:hover { color: var(--ink); }
+    header {
+      background: var(--panel);
+      border: 1px solid rgba(6, 11, 111, 0.12);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    h1 {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      margin: 0 0 0.4rem;
+    }
+    .meta {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0 0 1rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .actions a {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--ink);
+      background: rgba(152, 108, 50, 0.18);
+      border: 1px solid rgba(152, 108, 50, 0.35);
+      border-radius: 8px;
+      padding: 0.55rem 0.9rem;
+    }
+    .actions a:hover { background: rgba(152, 108, 50, 0.28); }
+    .actions a.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+    .actions a.primary:hover { background: #0a1270; }
+    article {
+      background: var(--panel);
+      border: 1px solid rgba(6, 11, 111, 0.12);
+      border-radius: 10px;
+      padding: 1rem 1.25rem 1.5rem;
+    }
+    .cue {
+      display: grid;
+      grid-template-columns: 4.5rem 1fr;
+      gap: 0.65rem 0.85rem;
+      margin: 0;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(6, 11, 111, 0.08);
+    }
+    .cue:last-child { border-bottom: none; }
+    .cue-time {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      padding-top: 0.15rem;
+    }
+    .cue-time:hover { color: var(--ink); text-decoration: underline; }
+    .cue-text { font-size: 1.05rem; }
+    footer {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      margin-top: 2rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    @media (max-width: 520px) {
+      .cue { grid-template-columns: 1fr; gap: 0.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="../../../">2024 Videos</a>
+      · <a href="./">All transcripts</a>
+    </nav>
+    <header>
+      <h1>Introduction to KERI - Samuel Smith</h1>
+      <p class="meta">January 2024 · 10:57</p>
+      <div class="actions">
+        <a class="primary" href="../../../#introduction-to-keri-samuel-smith">Watch video</a>
+        <a href="./">All transcripts</a>
+        <a href="../../../">Video gallery</a>
+      </div>
+    </header>
+    <article>
+    <p class="cue" id="t0">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith">0:00</a>
+      <span class="cue-text">This is an introduction to KERI, the Key Event Receipt Infrastructure.</span>
+    </p>
+    <p class="cue" id="t8">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=8">0:08</a>
+      <span class="cue-text">My name is Samuel Smith and I am the inventor of KERI. The reason I invented</span>
+    </p>
+    <p class="cue" id="t13">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=13">0:13</a>
+      <span class="cue-text">KERI is because the internet is broken and I wanted to solve it. And so the problem</span>
+    </p>
+    <p class="cue" id="t19">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=19">0:19</a>
+      <span class="cue-text">that KERI solves is called the universal secure attribution problem. Okay, what do</span>
+    </p>
+    <p class="cue" id="t24">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=24">0:24</a>
+      <span class="cue-text">we mean by universal secure attribution problem? Well, universal means everywhere.</span>
+    </p>
+    <p class="cue" id="t30">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=30">0:30</a>
+      <span class="cue-text">We want it to be solved everywhere. And secure means do it in a way that can't be</span>
+    </p>
+    <p class="cue" id="t39">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=39">0:39</a>
+      <span class="cue-text">hacked or forged or impersonated or attacked in the normal way that we get</span>
+    </p>
+    <p class="cue" id="t47">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=47">0:47</a>
+      <span class="cue-text">attacked on the internet. Attribution means assigning a communication to its</span>
+    </p>
+    <p class="cue" id="t53">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=53">0:53</a>
+      <span class="cue-text">source. We want to attribute where something came from to its source. We know</span>
+    </p>
+    <p class="cue" id="t58">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=58">0:58</a>
+      <span class="cue-text">who's sending it to us. And so the problem is, how do we do that everywhere on the</span>
+    </p>
+    <p class="cue" id="t64">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=64">1:04</a>
+      <span class="cue-text">internet in a secure way so that we know who's sending us information? So that</span>
+    </p>
+    <p class="cue" id="t69">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=69">1:09</a>
+      <span class="cue-text">doesn't mean we want to enable anybody to track everybody's conversations. We want</span>
+    </p>
+    <p class="cue" id="t76">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=76">1:16</a>
+      <span class="cue-text">to do it in a privacy protecting way. So that poses additional challenges. But</span>
+    </p>
+    <p class="cue" id="t83">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=83">1:23</a>
+      <span class="cue-text">first we have to get the security down. Many people approach this problem and they</span>
+    </p>
+    <p class="cue" id="t88">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=88">1:28</a>
+      <span class="cue-text">sacrifice security. And if you sacrifice the security, then you don't have privacy</span>
+    </p>
+    <p class="cue" id="t93">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=93">1:33</a>
+      <span class="cue-text">either. So, what we want to do is solve all of these problems at the same time in</span>
+    </p>
+    <p class="cue" id="t97">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=97">1:37</a>
+      <span class="cue-text">a very integrated, elegant, simple way. Let's talk about what it means. Secure</span>
+    </p>
+    <p class="cue" id="t105">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=105">1:45</a>
+      <span class="cue-text">attribution is another way of saying we want to establish the authorship of data,</span>
+    </p>
+    <p class="cue" id="t111">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=111">1:51</a>
+      <span class="cue-text">any and all data sent over the internet, any and all documents, things like</span>
+    </p>
+    <p class="cue" id="t115">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=115">1:55</a>
+      <span class="cue-text">credentials, entitlements, authorizations. We want to be able to say that we can</span>
+    </p>
+    <p class="cue" id="t122">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=122">2:02</a>
+      <span class="cue-text">securely attribute who's doing what in a privacy-preserving way. And I keep saying</span>
+    </p>
+    <p class="cue" id="t128">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=128">2:08</a>
+      <span class="cue-text">privacy because I don't want to give the false impression that we're trying to</span>
+    </p>
+    <p class="cue" id="t132">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=132">2:12</a>
+      <span class="cue-text">build this universal tracking system. The hard problem is to be able to do this all</span>
+    </p>
+    <p class="cue" id="t138">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=138">2:18</a>
+      <span class="cue-text">in a way that keeps confidentiality and privacy along with secure attribution.</span>
+    </p>
+    <p class="cue" id="t146">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=146">2:26</a>
+      <span class="cue-text">That's always been the hard problem. So to restate, the problem is we want to have</span>
+    </p>
+    <p class="cue" id="t152">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=152">2:32</a>
+      <span class="cue-text">verifiable secure attribution of any communications to its source. Now I added</span>
+    </p>
+    <p class="cue" id="t158">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=158">2:38</a>
+      <span class="cue-text">the word verifiable. What does verifiable mean? It means that if we're receiving</span>
+    </p>
+    <p class="cue" id="t162">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=162">2:42</a>
+      <span class="cue-text">information, we need some way to verify where it came from. When I say verify, it</span>
+    </p>
+    <p class="cue" id="t168">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=168">2:48</a>
+      <span class="cue-text">means in a cryptographic sense. It means doing it without having to trust any third</span>
+    </p>
+    <p class="cue" id="t174">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=174">2:54</a>
+      <span class="cue-text">party. I don't want to have to trust somebody else to verify what somebody that</span>
+    </p>
+    <p class="cue" id="t180">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=180">3:00</a>
+      <span class="cue-text">I want to communicate with in a private confidential way says. I need to be able</span>
+    </p>
+    <p class="cue" id="t185">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=185">3:05</a>
+      <span class="cue-text">to do it by myself. If I have to trust someone, then the security of whoever I'm</span>
+    </p>
+    <p class="cue" id="t191">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=191">3:11</a>
+      <span class="cue-text">trusting now becomes something I have to worry about. And that is a problem.</span>
+    </p>
+    <p class="cue" id="t197">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=197">3:17</a>
+      <span class="cue-text">Another way of looking at secure attribution is to say that we want to have</span>
+    </p>
+    <p class="cue" id="t203">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=203">3:23</a>
+      <span class="cue-text">provenance of any data by anyone, to anyone, from anyone. And so a way we can</span>
+    </p>
+    <p class="cue" id="t212">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=212">3:32</a>
+      <span class="cue-text">describe that is as authentic data. And then we want authentic data provenance.</span>
+    </p>
+    <p class="cue" id="t217">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=217">3:37</a>
+      <span class="cue-text">Authentic has two meanings. It means like true to yourself, like you're being</span>
+    </p>
+    <p class="cue" id="t222">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=222">3:42</a>
+      <span class="cue-text">authentic. That's not the meaning of authentic we're using here. We're meaning</span>
+    </p>
+    <p class="cue" id="t226">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=226">3:46</a>
+      <span class="cue-text">authentic as you can attribute it to its source. Who painted that painting is an</span>
+    </p>
+    <p class="cue" id="t232">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=232">3:52</a>
+      <span class="cue-text">authentic painting, right? As opposed to when something's not authentic. It means</span>
+    </p>
+    <p class="cue" id="t237">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=237">3:57</a>
+      <span class="cue-text">it was forged or somebody was impersonated. Somebody sends you</span>
+    </p>
+    <p class="cue" id="t243">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=243">4:03</a>
+      <span class="cue-text">information and they say it came from Joe when it really came from Sue. And so the</span>
+    </p>
+    <p class="cue" id="t250">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=250">4:10</a>
+      <span class="cue-text">whole problem is back to the same thing. We need to securely attribute the source</span>
+    </p>
+    <p class="cue" id="t256">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=256">4:16</a>
+      <span class="cue-text">of information. So what do I mean by provenance? We often hear the term</span>
+    </p>
+    <p class="cue" id="t261">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=261">4:21</a>
+      <span class="cue-text">provenance when we talk about like a painting, like fine art, right? Was it</span>
+    </p>
+    <p class="cue" id="t266">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=266">4:26</a>
+      <span class="cue-text">painted by Rembrandt? And how do you know it was painted by Rembrandt? Well, one way</span>
+    </p>
+    <p class="cue" id="t271">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=271">4:31</a>
+      <span class="cue-text">that you would provenance it is that you would establish a chain of custody of that</span>
+    </p>
+    <p class="cue" id="t278">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=278">4:38</a>
+      <span class="cue-text">painting from Rembrandt to whoever Rembrandt sold or gave the painting to</span>
+    </p>
+    <p class="cue" id="t283">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=283">4:43</a>
+      <span class="cue-text">whoever sold or gave the painting and so on. And if you can follow that chain of</span>
+    </p>
+    <p class="cue" id="t289">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=289">4:49</a>
+      <span class="cue-text">custody to the present owner or holder of that painting, then you can say, yeah, it</span>
+    </p>
+    <p class="cue" id="t294">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=294">4:54</a>
+      <span class="cue-text">came from Rembrandt. So if we can solve data provenance, then we can solve many of</span>
+    </p>
+    <p class="cue" id="t302">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=302">5:02</a>
+      <span class="cue-text">the security problems on the internet because most of them come from the fact</span>
+    </p>
+    <p class="cue" id="t308">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=308">5:08</a>
+      <span class="cue-text">that we can't solve data provenance. We don't have universal secure attribution.</span>
+    </p>
+    <p class="cue" id="t314">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=314">5:14</a>
+      <span class="cue-text">And because we don't have universal secure attribution, people can forge things.</span>
+    </p>
+    <p class="cue" id="t319">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=319">5:19</a>
+      <span class="cue-text">People can impersonate things. Well, when we send data over the internet, we have a</span>
+    </p>
+    <p class="cue" id="t324">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=324">5:24</a>
+      <span class="cue-text">similar problem. Somebody sends a message. It gets sent to some server in the cloud</span>
+    </p>
+    <p class="cue" id="t330">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=330">5:30</a>
+      <span class="cue-text">who then sends it to another server, who routes it to another server, who routes it</span>
+    </p>
+    <p class="cue" id="t334">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=334">5:34</a>
+      <span class="cue-text">to another server, and then it ends up in your inbox. And you go, did it come from</span>
+    </p>
+    <p class="cue" id="t340">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=340">5:40</a>
+      <span class="cue-text">where it said it came from? Anybody that was in the path could have intercepted it,</span>
+    </p>
+    <p class="cue" id="t346">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=346">5:46</a>
+      <span class="cue-text">spoofed it, done something to it, and then it shows up in your box and it says, oh</span>
+    </p>
+    <p class="cue" id="t350">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=350">5:50</a>
+      <span class="cue-text">yeah, this came from Sue, but it really came from Bob. So provenance is about</span>
+    </p>
+    <p class="cue" id="t356">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=356">5:56</a>
+      <span class="cue-text">establishing secure attribution even though the data traverses multiple hosts</span>
+    </p>
+    <p class="cue" id="t364">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=364">6:04</a>
+      <span class="cue-text">or servers on the internet. It didn't come directly to us. It wasn't given to us in</span>
+    </p>
+    <p class="cue" id="t368">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=368">6:08</a>
+      <span class="cue-text">person. It came over the internet and the internet is public. The internet is public</span>
+    </p>
+    <p class="cue" id="t373">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=373">6:13</a>
+      <span class="cue-text">infrastructure. It's public, which means that lots of people have the ability to</span>
+    </p>
+    <p class="cue" id="t378">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=378">6:18</a>
+      <span class="cue-text">see what you're sending or to change what you're sending or to mess with it. And</span>
+    </p>
+    <p class="cue" id="t382">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=382">6:22</a>
+      <span class="cue-text">many of the attacks on the internet come from the fact that it's public</span>
+    </p>
+    <p class="cue" id="t385">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=385">6:25</a>
+      <span class="cue-text">infrastructure and therefore publicly accessible for attackers to attack. So we</span>
+    </p>
+    <p class="cue" id="t391">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=391">6:31</a>
+      <span class="cue-text">want to solve this secure attribution problem. Let's dig a little deeper. On the</span>
+    </p>
+    <p class="cue" id="t395">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=395">6:35</a>
+      <span class="cue-text">internet, we're just sending information. Data is information. It's just bits. Now</span>
+    </p>
+    <p class="cue" id="t401">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=401">6:41</a>
+      <span class="cue-text">we talked about chain of custody. When we normally think of chain of custody, we</span>
+    </p>
+    <p class="cue" id="t405">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=405">6:45</a>
+      <span class="cue-text">think of a physical item. So I'll call it those its. They're atoms. So if I actually</span>
+    </p>
+    <p class="cue" id="t410">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=410">6:50</a>
+      <span class="cue-text">have a painting, there's only one of them. And it takes a lot of work to copy that</span>
+    </p>
+    <p class="cue" id="t414">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=414">6:54</a>
+      <span class="cue-text">painting. And if I have two, then I have a problem because somebody made a copy. How</span>
+    </p>
+    <p class="cue" id="t420">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=420">7:00</a>
+      <span class="cue-text">do you tell the original from the copy? Well, if the copy is done really, really</span>
+    </p>
+    <p class="cue" id="t425">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=425">7:05</a>
+      <span class="cue-text">well, just looking at the two, you can't tell the original from the copy. That's</span>
+    </p>
+    <p class="cue" id="t429">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=429">7:09</a>
+      <span class="cue-text">why you have to have a chain of custody. You say the original was in possession of</span>
+    </p>
+    <p class="cue" id="t434">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=434">7:14</a>
+      <span class="cue-text">somebody and they gave it to somebody else and they gave it to somebody else. And the</span>
+    </p>
+    <p class="cue" id="t440">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=440">7:20</a>
+      <span class="cue-text">copy was never in their possession. possession. So you know it's a copy</span>
+    </p>
+    <p class="cue" id="t444">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=444">7:24</a>
+      <span class="cue-text">because it wasn't part of the chain of custody. That works for atoms. It doesn't</span>
+    </p>
+    <p class="cue" id="t449">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=449">7:29</a>
+      <span class="cue-text">work for information bits. So we have a harder problem to provenance data</span>
+    </p>
+    <p class="cue" id="t454">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=454">7:34</a>
+      <span class="cue-text">information. So we have to use cryptography to do that. One of the first</span>
+    </p>
+    <p class="cue" id="t458">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=458">7:38</a>
+      <span class="cue-text">things we do with cryptography is that we give an identifier to the source. The</span>
+    </p>
+    <p class="cue" id="t465">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=465">7:45</a>
+      <span class="cue-text">source now has an identifier. That identifier is an electronic identifier.</span>
+    </p>
+    <p class="cue" id="t470">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=470">7:50</a>
+      <span class="cue-text">It's more information. It's more bits. To make the ability to security attribute to</span>
+    </p>
+    <p class="cue" id="t476">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=476">7:56</a>
+      <span class="cue-text">a source, that identifier needs to be unique. And in order to have universal</span>
+    </p>
+    <p class="cue" id="t482">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=482">8:02</a>
+      <span class="cue-text">secure attribution, that identifier needs to be universally unique. There can only</span>
+    </p>
+    <p class="cue" id="t487">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=487">8:07</a>
+      <span class="cue-text">be one in the whole universe. The only way that we can guarantee your universally</span>
+    </p>
+    <p class="cue" id="t493">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=493">8:13</a>
+      <span class="cue-text">unique identifiers is to use cryptography or to use some trusted third party who</span>
+    </p>
+    <p class="cue" id="t501">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=501">8:21</a>
+      <span class="cue-text">creates them. Well, we don't want to have to rely on a trusted third party, so the</span>
+    </p>
+    <p class="cue" id="t507">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=507">8:27</a>
+      <span class="cue-text">identifiers must be cryptographic in nature. So, let's suppose that we have a</span>
+    </p>
+    <p class="cue" id="t511">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=511">8:31</a>
+      <span class="cue-text">system for generating cryptographic identifiers. Now, we must be able to prove</span>
+    </p>
+    <p class="cue" id="t518">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=518">8:38</a>
+      <span class="cue-text">who controls that identifier, and we have to do it in a verifiable way without</span>
+    </p>
+    <p class="cue" id="t522">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=522">8:42</a>
+      <span class="cue-text">trusting the third party. If I have a cryptographic identifier and a way to</span>
+    </p>
+    <p class="cue" id="t528">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=528">8:48</a>
+      <span class="cue-text">verifiably prove controller over that identifier, then I have what is called a</span>
+    </p>
+    <p class="cue" id="t534">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=534">8:54</a>
+      <span class="cue-text">root of trust. I have the ability now to attribute data to that identifier where</span>
+    </p>
+    <p class="cue" id="t541">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=541">9:01</a>
+      <span class="cue-text">that identifier is the source of that data. So, I now have constructed the basic</span>
+    </p>
+    <p class="cue" id="t546">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=546">9:06</a>
+      <span class="cue-text">problem. The way that I can control an identifier or prove control of an</span>
+    </p>
+    <p class="cue" id="t553">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=553">9:13</a>
+      <span class="cue-text">identifier is to use what we call cryptographic keys. And the specific type</span>
+    </p>
+    <p class="cue" id="t557">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=557">9:17</a>
+      <span class="cue-text">of key that we use belongs to something called a public key pair or a public</span>
+    </p>
+    <p class="cue" id="t564">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=564">9:24</a>
+      <span class="cue-text">private key pair where I have a public key and a private key. That is going to be in</span>
+    </p>
+    <p class="cue" id="t570">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=570">9:30</a>
+      <span class="cue-text">a completely new subject to talk about the basics of public private key pairs. But</span>
+    </p>
+    <p class="cue" id="t577">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=577">9:37</a>
+      <span class="cue-text">what we've done is set up the core idea of how we get to universally secure</span>
+    </p>
+    <p class="cue" id="t581">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=581">9:41</a>
+      <span class="cue-text">attribution. And we haven't even really talked about how KERI does it, but I've</span>
+    </p>
+    <p class="cue" id="t586">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=586">9:46</a>
+      <span class="cue-text">given you an introduction to the hard problem. The hard problem is universal</span>
+    </p>
+    <p class="cue" id="t591">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=591">9:51</a>
+      <span class="cue-text">secure attribution. Follow along to learn more. Leave any questions in the comments.</span>
+    </p>
+    <p class="cue" id="t597">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=597">9:57</a>
+      <span class="cue-text">Thank you.</span>
+    </p>
+    <p class="cue" id="t627">
+      <a class="cue-time" href="../../../#introduction-to-keri-samuel-smith&amp;t=627">10:27</a>
+      <span class="cue-text">Thank you.</span>
+    </p>
+    </article>
+    <footer>KERI Foundation • Videos</footer>
+  </div>
+</body>
+</html>
