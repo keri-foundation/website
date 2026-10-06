@@ -54,6 +54,7 @@ $ignoreExt = [
 ];
 $ignoreNames = [
     '.htaccess', 'header.html', 'readme.html', 'autoindex.php', 'index.php', '.ds_store',
+    'template-presentations-landingpage',
 ];
 
 $entries = @scandir($path);
