@@ -1,8 +1,16 @@
 # General information
 
-This repo contains information about and backups of [https://keri.foundation](https://keri.foundation).
+[https://keri.foundation](https://keri.foundation) runs as a WordPress site on a remote host (Hostinger). This repository tracks the parts of that site that are versioned here; it does **not** include WordPress core. A password-protected database export ZIP may also be present at the repo root.
 
-The repository does not include the full WordPress core files. It includes the site database export backup in ZIP format, password-protected.
+Three trees matter most:
+
+| Path | Role |
+| ---- | ---- |
+| `custom/` | WordPress look-and-feel and page scripts served from the live document root |
+| `confs/` | Conference galleries: videos, audio, subtitles, slides, promo, and generated transcripts |
+| `vids/` | Yearly (non-conference) video galleries: same media + subtitle + transcript layout |
+
+Details for each are in the sections below.
 
 ## Managing the website
 
