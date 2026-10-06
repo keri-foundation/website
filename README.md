@@ -14,6 +14,8 @@ One folder per conference; the server mirrors this tree. A folder that is missin
 
 ```text
 confs/
+├── .htaccess                       directory listing rewrite (see below)
+├── index.php                       styled folder browser for bare dirs
 ├── KERI/2026/apr/                  → https://keri.foundation/confs/KERI/2026/apr/
 │   ├── index.html                  gallery app (copy of the template)
 │   ├── index.json                  page copy, video list, paths
@@ -42,11 +44,14 @@ confs/
 Same gallery app as the conferences, for videos that are not part of a conference. The public path is `/vids/` so WordPress can keep `/videos/`.
 
 ```text
-vids/2026/jul/                      → https://keri.foundation/vids/2026/jul/
-├── index.html                      gallery app (copy of the conference template)
-├── index.json                      page copy and video list
-├── talks/                          *.mp4 + *.mp3 + *.srt side by side
-└── transcripts/html/talks/         generated static transcript pages
+vids/
+├── .htaccess                       directory listing rewrite (see below)
+├── index.php                       styled folder browser for bare dirs
+└── 2026/jul/                       → https://keri.foundation/vids/2026/jul/
+    ├── index.html                  gallery app (copy of the conference template)
+    ├── index.json                  page copy and video list
+    ├── talks/                      *.mp4 + *.mp3 + *.srt side by side
+    └── transcripts/html/talks/     generated static transcript pages
 ```
 
 The old standalone player redirects here:
@@ -71,7 +76,28 @@ scripts/deploy-confs.sh --conf SEDI/2025/nov push
 scripts/deploy-confs.sh --conf vids/2026/jul push
 ```
 
-`push` and `deploy` also upload `.htaccess`, which holds the redirects. A full push mirrors every `confs/<ORG>/` folder and the whole `vids/` tree. `--conf` limits the mirror to that one gallery; `.htaccess` is still uploaded.
+`push` and `deploy` also upload the site-root `.htaccess` (redirects), plus `confs/.htaccess` and `confs/index.php`. A full push mirrors every `confs/<ORG>/` folder and the whole `vids/` tree (so `vids/.htaccess` and `vids/index.php` ride along with that mirror). `--conf` limits the gallery mirror; site-root and `confs/` listing files are still uploaded.
+
+### Directory listings (`/confs/`, `/vids/`)
+
+Hostinger runs **LiteSpeed**, not Apache. LiteSpeed’s built-in autoindex HTML-escapes `HEADER.html` and ignores `AutoIndexUri` in `.htaccess`, so Apache-style `HeaderName` / fancy indexing cannot style these trees.
+
+Instead each tree root has:
+
+| File | Role |
+| ---- | ---- |
+| `.htaccess` | `Options -Indexes`, `DirectoryIndex index.html index.php`, rewrite bare subdirs to `index.php?path=…` |
+| `index.php` | Dark-themed folder list (dirs first; media/config file types hidden) |
+
+`RewriteBase` must match the public URL of that tree (`/confs/` or `/vids/`). The PHP script derives link prefixes from its location under `DOCUMENT_ROOT`, so the same `index.php` works in either tree—only `.htaccess`’s `RewriteBase` must differ.
+
+Behaviour:
+
+- A directory **with** `index.html` (a gallery) or its own `index.php` is left alone.
+- A bare directory (e.g. `/confs/`, `/confs/KERI/`, `/vids/2026/`) is rewritten to that tree’s `index.php`.
+- Entries named in the script’s ignore list are omitted (including `template-presentations-landingpage` under `confs/`).
+
+Do not rely on `HEADER.html` or LiteSpeed `AutoIndexUri` on this host.
 
 ### Legacy gallery URLs
 
