@@ -1,21 +1,29 @@
 <?php
 /**
- * Directory listing for /confs/ on Hostinger/LiteSpeed.
+ * Directory listing for a media tree root (confs/ or vids/) on Hostinger/LiteSpeed.
  *
- * LiteSpeed HTML-escapes HEADER.html and ignores AutoIndexUri in .htaccess,
- * so bare directories are rewritten here (see .htaccess) or served via
- * DirectoryIndex when this file lives in the requested folder.
+ * LiteSpeed HTML-escapes HEADER.html and ignores AutoIndexUri, so bare
+ * directories are rewritten here (see .htaccess) or served via DirectoryIndex.
+ * URI prefix is derived from this file's location under DOCUMENT_ROOT.
  */
 
 declare(strict_types=1);
 
-$confsRoot = realpath(__DIR__);
-if ($confsRoot === false) {
+$treeRoot = realpath(__DIR__);
+$docRoot = realpath($_SERVER['DOCUMENT_ROOT'] ?? '') ?: '';
+if ($treeRoot === false || $docRoot === '' || strpos($treeRoot, $docRoot) !== 0) {
     http_response_code(500);
     header('Content-Type: text/plain; charset=UTF-8');
     echo "Server misconfiguration.\n";
     exit;
 }
+
+$uriBase = substr($treeRoot, strlen($docRoot));
+$uriBase = str_replace(DIRECTORY_SEPARATOR, '/', $uriBase);
+if ($uriBase === '' || $uriBase[0] !== '/') {
+    $uriBase = '/' . $uriBase;
+}
+$uriBase = rtrim($uriBase, '/') . '/';
 
 $rel = isset($_GET['path']) ? (string) $_GET['path'] : '';
 $rel = str_replace('\\', '/', $rel);
@@ -28,16 +36,15 @@ if (strpos($rel, '..') !== false) {
     exit;
 }
 
-$path = $rel === '' ? $confsRoot : $confsRoot . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $rel);
+$path = $rel === '' ? $treeRoot : $treeRoot . DIRECTORY_SEPARATOR . str_replace('/', DIRECTORY_SEPARATOR, $rel);
 $real = realpath($path);
-if ($real === false || !is_dir($real) || strpos($real, $confsRoot) !== 0) {
+if ($real === false || !is_dir($real)) {
     http_response_code(404);
     header('Content-Type: text/plain; charset=UTF-8');
     echo "Directory not found.\n";
     exit;
 }
-// Ensure we stay inside confs/ even for edge realpath cases (e.g. confs vs confs-backup)
-if ($real !== $confsRoot && strpos($real, $confsRoot . DIRECTORY_SEPARATOR) !== 0) {
+if ($real !== $treeRoot && strpos($real, $treeRoot . DIRECTORY_SEPARATOR) !== 0) {
     http_response_code(403);
     header('Content-Type: text/plain; charset=UTF-8');
     echo "Forbidden.\n";
@@ -45,7 +52,7 @@ if ($real !== $confsRoot && strpos($real, $confsRoot . DIRECTORY_SEPARATOR) !== 
 }
 
 $path = $real;
-$uriPath = '/confs/' . ($rel === '' ? '' : $rel . '/');
+$uriPath = $uriBase . ($rel === '' ? '' : $rel . '/');
 
 $ignoreExt = [
     'png', 'jpg', 'jpeg', 'gif', 'svg', 'ico', 'css', 'js',

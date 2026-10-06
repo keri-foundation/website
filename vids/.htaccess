@@ -1,0 +1,15 @@
+# Hostinger/LiteSpeed ignores AutoIndexUri and HTML-escapes HEADER.html.
+# Serve a real PHP index instead, and rewrite bare subdirs to it.
+Options -Indexes
+DirectoryIndex index.html index.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /vids/
+
+# Directories that already have index.html / index.php keep those.
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.html !-f
+RewriteCond %{REQUEST_FILENAME}/index.php !-f
+RewriteRule ^(.*)$ index.php?path=$1 [L,QSA]
+</IfModule>
