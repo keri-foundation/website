@@ -8,6 +8,44 @@ The repository does not include the full WordPress core files. It includes the s
 
 Go to [https://hpanel.hostinger.com/](https://hpanel.hostinger.com/)
 
+## Site customizations (`/custom/`)
+
+WordPress look-and-feel and small page behaviors that sit outside the theme. The live site serves this tree from the document root (`https://keri.foundation/custom/`). It layers on Twenty Twenty-Five: a stylesheet, a few page scripts, and one shortcode.
+
+```text
+custom/
+├── css/
+│   ├── index.css                 stylesheet entry point
+│   ├── _variables.css            design tokens (colors, type, spacing)
+│   ├── _logo.css                 header logo size
+│   ├── _base.css                 theme overrides
+│   ├── _base.extra.css           page background and header
+│   ├── _typography.css
+│   ├── _forms.css                WPForms and Contact Form 7
+│   ├── _updates.css              announcement / update tables
+│   ├── _mobile-menu.css          responsive navigation
+│   ├── _layout.css               present; not imported by index.css
+│   ├── _blocks.css               present; import commented out
+│   └── _components.css           present; import commented out
+├── js/
+│   ├── index.js                  calls the modules below
+│   └── modules/
+│       ├── countdown.js          countdown on elements with class "countdown"
+│       ├── tables-font-size-resizer.js
+│       └── tables-show-hide-rows-and-columns.js
+└── kc-banner-shortcode.php       [kc_banner] shortcode
+```
+
+`css/index.css` is the file that gets loaded. It imports the partials above, plus menu icons from `https://kericonf.com/custom/css/_menu-icons.css`. `_layout.css`, `_blocks.css`, and `_components.css` are in the folder but are not part of that stylesheet (`_blocks.css` and `_components.css` are commented out in `index.css`).
+
+`js/index.js` exports `initialize()`, which wires up:
+
+- show/hide controls on table rows and columns (state kept in `localStorage`)
+- a font-size control for those tables
+- a countdown (21 April 2026, 22:00) prepended to any element with class `countdown`
+
+`kc-banner-shortcode.php` registers `[kc_banner]`. The shortcode shows a banner preview, the escaped HTML, and a copy button. Install it by copying the file to `wp-content/plugins/kc-banner/kc-banner.php` and activating the plugin, or by pasting the functions into the theme’s `functions.php`.
+
 ## Conference galleries (`/confs/<ORG>/<YEAR>/<month>/`)
 
 One folder per conference; the server mirrors this tree. A folder that is missing simply means that part does not exist for that conference (e.g. SEDI 2025 has no interviews).
