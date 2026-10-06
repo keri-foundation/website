@@ -241,6 +241,19 @@ step_push() {
     local ht_rsync=(-av --human-readable)
     [ "$DRY_RUN" -eq 1 ] && ht_rsync+=(--dry-run)
     rsync "${ht_rsync[@]}" "$SITE_ROOT/.htaccess" "$REMOTE_HOST:$REMOTE_ROOT/.htaccess"
+
+    echo "── confs/ directory index (.htaccess, index.php)"
+    local confs_index_rsync=(-av --human-readable)
+    [ "$DRY_RUN" -eq 1 ] && confs_index_rsync+=(--dry-run)
+    [ "$DRY_RUN" -eq 1 ] || ssh "$REMOTE_HOST" "mkdir -p '$REMOTE_ROOT/confs'"
+    rsync "${confs_index_rsync[@]}" \
+        "$CONFS/.htaccess" \
+        "$CONFS/index.php" \
+        "$REMOTE_HOST:$REMOTE_ROOT/confs/"
+    # Drop leftovers from the earlier HEADER.html / AutoIndexUri approach.
+    if [ "$DRY_RUN" -eq 0 ]; then
+        ssh "$REMOTE_HOST" "rm -f '$REMOTE_ROOT/confs/HEADER.html' '$REMOTE_ROOT/confs/autoindex.php'"
+    fi
 }
 
 step_check_remote() {
