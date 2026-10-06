@@ -1,0 +1,537 @@
+1
+00:00:00,000 --> 00:00:05,240
+Dies ist eine Einführung in KERI, die „Key
+Event Receipt Infrastructure“.
+
+2
+00:00:08,500 --> 00:00:13,120
+Mein Name ist Samuel Smith und ich bin der
+Erfinder von KERI. Der Grund, warum ich
+
+3
+00:00:13,120 --> 00:00:19,040
+KERI erfunden habe, ist, dass das Internet nicht funktioniert und
+ich dieses Problem lösen wollte. Das Problem,
+
+4
+00:00:19,040 --> 00:00:24,360
+das KERI löst, wird als das universelle
+Problem der sicheren Zuordnung bezeichnet. Okay, was
+
+5
+00:00:24,360 --> 00:00:30,060
+verstehen wir unter dem universellen Problem der sicheren Zuordnung
+? Nun, „universell“ bedeutet „überall“.
+
+6
+00:00:30,360 --> 00:00:39,220
+Wir wollen, dass es überall gelöst wird. Und
+„sicher“ bedeutet, dass es so geschieht, dass es nicht
+
+7
+00:00:39,220 --> 00:00:47,420
+gehackt, gefälscht, nachahmbar oder
+auf die übliche Art und Weise angegriffen werden kann, wie wir
+
+8
+00:00:47,420 --> 00:00:53,720
+im Internet angegriffen werden. Zuordnung
+bedeutet, eine Kommunikation ihrer
+
+9
+00:00:53,720 --> 00:00:58,420
+Quelle zuzuordnen. Wir wollen die Herkunft
+einer Nachricht ihrer Quelle zuordnen. Wir wissen,
+
+10
+00:00:58,420 --> 00:01:04,980
+wer sie uns sendet. Das Problem ist also:
+Wie schaffen wir das überall im
+
+11
+00:01:04,980 --> 00:01:09,960
+Internet auf sichere Weise tun, damit wir wissen,
+wer uns Informationen sendet? Das
+
+12
+00:01:09,960 --> 00:01:16,840
+bedeutet jedoch nicht, dass wir es irgendjemandem ermöglichen wollen,
+die Gespräche aller zu verfolgen. Wir wollen
+
+13
+00:01:16,840 --> 00:01:23,520
+dies auf eine Weise tun, die die Privatsphäre schützt. Das
+stellt uns vor zusätzliche Herausforderungen. Aber
+
+14
+00:01:23,520 --> 00:01:28,700
+zuerst müssen wir die Sicherheit gewährleisten.
+Viele Menschen gehen dieses Problem an und
+
+15
+00:01:28,700 --> 00:01:33,100
+opfern dabei die Sicherheit. Und wenn man
+die Sicherheit opfert, dann hat man auch keine Privatsphäre
+
+16
+00:01:33,100 --> 00:01:37,900
+mehr. Was wir also tun wollen, ist,
+all diese Probleme gleichzeitig auf
+
+17
+00:01:37,900 --> 00:01:45,320
+eine sehr integrierte, elegante und einfache Weise zu lösen.
+Lassen Sie uns darüber sprechen, was das bedeutet. Sichere
+
+18
+00:01:45,320 --> 00:01:51,440
+Zuschreibung ist eine andere Art zu sagen, dass wir
+die Urheberschaft von Daten feststellen wollen,
+
+19
+00:01:51,660 --> 00:01:55,900
+aller Daten, die über das Internet gesendet werden,
+aller Dokumente, Dinge wie
+
+20
+00:01:55,900 --> 00:02:02,720
+Zugangsdaten, Berechtigungen, Autorisierungen.
+Wir wollen in der Lage sein zu sagen, dass wir
+
+21
+00:02:02,720 --> 00:02:08,700
+sicher zuordnen können, wer was tut, und zwar auf eine
+datenschutzkonforme Weise. Und ich spreche immer wieder von
+
+22
+00:02:08,700 --> 00:02:12,760
+Datenschutz, weil ich nicht den
+falschen Eindruck erwecken möchte, dass wir versuchen,
+
+23
+00:02:12,760 --> 00:02:18,180
+ein universelles Tracking-System aufzubauen. Das
+schwierige Problem besteht darin, all dies
+
+24
+00:02:18,180 --> 00:02:26,200
+auf eine Weise zu erreichen, die Vertraulichkeit und
+Privatsphäre bei gleichzeitiger sicherer Zuordnung gewährleistet.
+
+25
+00:02:26,200 --> 00:02:32,020
+Das war schon immer das schwierige Problem. Um
+es noch einmal zu formulieren: Das Problem ist, dass wir eine
+
+26
+00:02:32,020 --> 00:02:38,440
+eine überprüfbare, sichere Zuordnung jeder
+Kommunikation zu ihrer Quelle haben wollen. Nun habe ich
+
+27
+00:02:38,440 --> 00:02:42,680
+das Wort „überprüfbar“ hinzugefügt. Was bedeutet „überprüfbar“?
+Es bedeutet, dass wir, wenn wir
+
+28
+00:02:42,680 --> 00:02:48,820
+Informationen erhalten, brauchen wir eine Möglichkeit, zu überprüfen,
+woher sie stammen. Wenn ich „überprüfen“ sage, meine ich das
+
+29
+00:02:48,820 --> 00:02:54,280
+im kryptografischen Sinne. Das bedeutet,
+dass wir dies tun, ohne einer dritten
+
+30
+00:02:54,280 --> 00:03:00,180
+Partei vertrauen zu müssen. Ich möchte nicht darauf angewiesen sein,
+jemand anderem zu vertrauen, um zu überprüfen, was jemand, mit dem
+
+31
+00:03:00,180 --> 00:03:05,480
+mit dem ich auf private,
+vertrauliche Weise kommunizieren möchte, sagt. Ich muss in der Lage sein,
+
+32
+00:03:05,480 --> 00:03:11,680
+das selbst zu tun. Wenn ich jemandem vertrauen muss,
+dann wird die Sicherheit der Person, der ich
+
+33
+00:03:11,680 --> 00:03:16,600
+jetzt vertraue, wird zu etwas, worüber ich mir
+Sorgen machen muss. Und das ist ein Problem.
+
+34
+00:03:17,300 --> 00:03:23,980
+Eine andere Sichtweise auf sichere
+Zuordnung ist, dass wir
+
+35
+00:03:23,980 --> 00:03:32,140
+die Herkunft aller Daten von jedem, an
+jeden und von jedem nachweisen können. Und so können wir
+
+36
+00:03:32,140 --> 00:03:37,540
+das als authentische Daten beschreiben. Und
+dann wollen wir eine authentische Datenherkunft.
+
+37
+00:03:37,960 --> 00:03:42,740
+„Authentisch“ hat zwei Bedeutungen. Es bedeutet zum einen,
+sich selbst treu zu sein, also
+
+38
+00:03:42,740 --> 00:03:46,940
+authentisch ist. Das ist nicht die Bedeutung von
+„authentisch“, die wir hier verwenden. Wir meinen
+
+39
+00:03:46,940 --> 00:03:52,820
+„authentisch“ in dem Sinne, dass man es seiner
+Quelle zuordnen kann. Wer dieses Gemälde gemalt hat, ist ein
+
+40
+00:03:52,820 --> 00:03:57,720
+authentisches Gemälde, oder? Im Gegensatz dazu,
+wenn etwas nicht authentisch ist. Das bedeutet,
+
+41
+00:03:57,720 --> 00:04:03,600
+dass es gefälscht wurde oder sich jemand
+als jemand anderes ausgegeben hat. Jemand schickt dir
+
+42
+00:04:03,600 --> 00:04:10,400
+Informationen und behauptet, sie stammten von Joe,
+obwohl sie in Wirklichkeit von Sue stammen. Und so
+
+43
+00:04:10,400 --> 00:04:16,260
+kommt das ganze Problem wieder auf dasselbe zurück.
+Wir müssen die Quelle
+
+44
+00:04:16,260 --> 00:04:21,460
+der Informationen sicher zuordnen können. Was meine ich also mit
+Herkunft? Wir hören oft den Begriff
+
+45
+00:04:21,460 --> 00:04:26,300
+Herkunft, wenn wir über ein
+Gemälde oder ein Kunstwerk sprechen, oder? Wurde es
+
+46
+00:04:26,300 --> 00:04:31,900
+von Rembrandt gemalt? Und woher weiß man,
+dass es von Rembrandt gemalt wurde? Nun, eine Möglichkeit,
+
+47
+00:04:31,900 --> 00:04:38,080
+, die Herkunft zu bestimmen, besteht darin, dass man
+eine Besitzkette dieses
+
+48
+00:04:38,080 --> 00:04:43,200
+Gemäldes von Rembrandt bis zu demjenigen nachzuweisen,
+Rembrandt das Gemälde verkauft oder verschenkt hat,
+
+49
+00:04:43,200 --> 00:04:49,300
+bis hin zu demjenigen, der das Gemälde verkauft oder verschenkt hat, und so
+weiter. Und wenn man diese Kette der
+
+50
+00:04:49,300 --> 00:04:54,820
+Besitzverhältnisse bis zum heutigen Eigentümer oder Besitzer
+dieses Gemäldes zurückverfolgen, dann kann man sagen: Ja, es
+
+51
+00:04:54,820 --> 00:05:02,640
+stammt von Rembrandt. Wenn wir also das Problem der
+Datenherkunft lösen können, dann können wir viele der
+
+52
+00:05:02,640 --> 00:05:08,420
+Sicherheitsprobleme im Internet lösen,
+denn die meisten davon rühren daher,
+
+53
+00:05:08,420 --> 00:05:14,700
+dass wir die Datenherkunft nicht klären können. Wir
+verfügen über keine universelle, sichere Zuordnung.
+
+54
+00:05:14,980 --> 00:05:19,400
+Und weil wir keine universelle, sichere
+Zuordnung haben, können Menschen Dinge fälschen.
+
+55
+00:05:19,540 --> 00:05:24,280
+Leute können sich als etwas anderes ausgeben. Nun, wenn
+wir Daten über das Internet versenden, haben wir ein
+
+56
+00:05:24,280 --> 00:05:30,260
+ähnliches Problem. Jemand sendet eine Nachricht.
+Sie wird an einen Server in der Cloud gesendet
+
+57
+00:05:30,260 --> 00:05:34,680
+der sie dann an einen anderen Server weiterleitet, der
+sie an einen weiteren Server weiterleitet, der sie
+
+58
+00:05:34,680 --> 00:05:40,360
+an einen weiteren Server weiterleitet, und schließlich landet sie in
+deinem Posteingang. Und du fragst dich: Kam sie wirklich von
+
+59
+00:05:40,360 --> 00:05:45,400
+dort, wo angegeben war, dass sie herkommt? Jeder, der
+auf dem Weg lag, hätte sie abfangen können,
+
+60
+00:05:46,000 --> 00:05:50,920
+die Absenderadresse fälschen, etwas damit anstellen und dann
+taucht es in deinem Posteingang auf und es heißt: „Oh,
+
+61
+00:05:50,920 --> 00:05:56,340
+ja, das kam von Sue, aber eigentlich
+kam es von Bob.“ Bei der Herkunft geht es also darum,
+
+62
+00:05:56,340 --> 00:06:04,240
+darum, eine sichere Zuordnung herzustellen, auch
+wenn die Daten mehrere Hosts
+
+63
+00:06:04,240 --> 00:06:08,980
+oder Server im Internet durchlaufen. Es kam nicht
+direkt zu uns. Sie wurden uns nicht
+
+64
+00:06:08,980 --> 00:06:13,820
+persönlich übergeben. Sie kamen über das Internet, und das
+Internet ist öffentlich. Das Internet ist eine öffentliche
+
+65
+00:06:13,820 --> 00:06:18,520
+Infrastruktur. Es ist öffentlich, was bedeutet,
+dass viele Menschen die Möglichkeit haben,
+
+66
+00:06:18,520 --> 00:06:22,720
+zu sehen, was man sendet, oder zu verändern, was
+man sendet, oder sich darin einzumischen. Und
+
+67
+00:06:22,720 --> 00:06:25,820
+viele der Angriffe im Internet rühren
+daher, dass es sich um eine öffentliche
+
+68
+00:06:25,820 --> 00:06:31,000
+Infrastruktur handelt und somit öffentlich
+zugänglich für Angreifer ist. Deshalb
+
+69
+00:06:31,000 --> 00:06:35,880
+wollen dieses Problem der sicheren Zuordnung
+lösen. Gehen wir etwas tiefer ins Detail. Im
+
+70
+00:06:35,880 --> 00:06:41,740
+Internet versenden wir lediglich Informationen.
+Daten sind Informationen. Es sind einfach nur Bits. Nun
+
+71
+00:06:41,740 --> 00:06:45,620
+haben wir über die Nachverfolgbarkeitskette gesprochen. Wenn wir
+normalerweise an eine Nachverfolgbarkeitskette denken,
+
+72
+00:06:45,620 --> 00:06:50,540
+an einen physischen Gegenstand. Ich nenne sie also
+„diese Dinger“. Es sind Atome. Wenn ich also tatsächlich
+
+73
+00:06:50,540 --> 00:06:54,440
+ein Gemälde habe, gibt es nur ein Exemplar davon.
+Und es ist sehr aufwendig, dieses
+
+74
+00:06:54,440 --> 00:07:00,420
+Gemälde zu kopieren. Und wenn ich zwei davon habe, dann habe ich ein
+Problem, weil jemand eine Kopie angefertigt hat. Wie
+
+75
+00:07:00,420 --> 00:07:05,380
+unterscheidet man das Original von der Kopie?
+Nun, wenn die Kopie wirklich, wirklich
+
+76
+00:07:05,380 --> 00:07:09,880
+gut gemacht ist, kann man allein durch Betrachten der beiden
+das Original nicht von der Kopie unterscheiden. Deshalb
+
+77
+00:07:09,880 --> 00:07:14,520
+braucht man eine Nachweiskette.
+Man sagt, das Original befand sich im Besitz von
+
+78
+00:07:14,520 --> 00:07:20,640
+jemandem, und dieser hat es an jemand anderen weitergegeben,
+und dieser wiederum an jemand anderen. Und das
+
+79
+00:07:20,640 --> 00:07:24,900
+Kopie war nie in dessen Besitz.
+Besitz. Man weiß also, dass es sich um eine Kopie handelt,
+
+80
+00:07:24,900 --> 00:07:29,180
+weil sie nicht Teil der Nachweiskette war.
+Das funktioniert bei Atomen. Bei
+
+81
+00:07:29,180 --> 00:07:34,500
+bei Informationsbits. Wir stehen also vor einem
+schwierigeren Problem bei der Herkunftsnachweis von Daten
+
+82
+00:07:34,500 --> 00:07:38,560
+Informationen. Deshalb müssen wir
+Kryptografie einsetzen, um dies zu erreichen. Eine der ersten
+
+83
+00:07:38,560 --> 00:07:45,600
+Maßnahmen, die wir mit Kryptografie ergreifen, ist, dass wir
+der Quelle eine Kennung zuweisen. Die
+
+84
+00:07:45,600 --> 00:07:49,780
+Quelle verfügt nun über eine Kennung. Diese
+Kennung ist eine elektronische Kennung.
+
+85
+00:07:50,000 --> 00:07:56,980
+Es sind mehr Informationen. Es sind mehr Bits. Um
+die Zuordnung einer Quelle sicher vornehmen zu können,
+
+86
+00:07:56,980 --> 00:08:02,140
+muss diese Kennung
+eindeutig sein. Und um eine universell
+
+87
+00:08:02,140 --> 00:08:07,660
+sichere Zuordnung zu gewährleisten, muss diese Kennung
+universell eindeutig sein. Es darf nur
+
+88
+00:08:07,660 --> 00:08:13,940
+im gesamten Universum einzigartig ist. Die einzige Möglichkeit,
+wie wir die universelle Einzigartigkeit
+
+89
+00:08:13,940 --> 00:08:21,340
+eindeutige Identifikatoren garantieren können, besteht darin, Kryptografie zu nutzen
+oder einen vertrauenswürdigen Dritten einzuschalten, der
+
+90
+00:08:21,340 --> 00:08:27,100
+diese erstellt. Nun wollen wir uns aber nicht
+auf einen vertrauenswürdigen Dritten verlassen müssen, daher müssen die
+
+91
+00:08:27,100 --> 00:08:31,840
+Identifikatoren müssen kryptografischer
+Natur sein. Nehmen wir also an, wir haben ein
+
+92
+00:08:31,840 --> 00:08:38,100
+System zur Generierung kryptografischer
+Identifikatoren. Nun müssen wir nachweisen können,
+
+93
+00:08:38,100 --> 00:08:42,700
+nachweisen zu können, wer diesen Identifikator kontrolliert, und wir müssen
+dies auf überprüfbare Weise tun, ohne
+
+94
+00:08:42,700 --> 00:08:48,740
+einem Dritten zu vertrauen. Wenn ich über einen
+kryptografischen Identifikator und eine Möglichkeit verfüge,
+
+95
+00:08:48,740 --> 00:08:54,700
+die Kontrolle über diesen
+Identifikator nachweisbar zu belegen, dann habe ich das, was man eine
+
+96
+00:08:54,700 --> 00:09:01,800
+Vertrauenswurzel. Ich habe nun die Möglichkeit,
+Daten diesem Identifikator zuzuordnen, wobei
+
+97
+00:09:01,800 --> 00:09:06,900
+dieser Identifikator die Quelle dieser
+Daten ist. Damit habe ich nun die grundlegende
+
+98
+00:09:06,900 --> 00:09:13,080
+Problem geschaffen. Die Art und Weise, wie ich die Kontrolle über einen
+Identifikator ausüben oder die Kontrolle über einen
+
+99
+00:09:13,080 --> 00:09:17,960
+Identifikator nachweisen kann, besteht darin, sogenannte
+kryptografische Schlüssel zu verwenden. Und die spezifische Art
+
+100
+00:09:17,960 --> 00:09:24,240
+Schlüssel, den wir verwenden, gehört zu etwas,
+das man ein öffentliches Schlüsselpaar oder ein
+
+101
+00:09:24,240 --> 00:09:30,380
+privates Schlüsselpaar nennt, wobei ich einen öffentlichen Schlüssel
+und einen privaten Schlüssel habe. Das wird ein
+
+102
+00:09:30,380 --> 00:09:37,140
+völlig neues Thema sein, bei dem wir die
+Grundlagen von öffentlichen und privaten Schlüsselpaaren besprechen. Aber
+
+103
+00:09:37,140 --> 00:09:41,820
+haben wir die Kernidee dargelegt,
+wie wir zu einer universell sicheren
+
+104
+00:09:41,820 --> 00:09:46,220
+Zuschreibung gelangen. Und wir haben noch nicht einmal wirklich
+darüber gesprochen, wie KERI das macht, aber ich habe
+
+105
+00:09:46,220 --> 00:09:51,180
+einen Einblick in das schwierige
+Problem gegeben. Das schwierige Problem ist die universell
+
+106
+00:09:51,180 --> 00:09:56,900
+sichere Zuordnung. Schaut weiter zu, um
+mehr zu erfahren. Hinterlasst eure Fragen in den Kommentaren.
+
+107
+00:09:57,860 --> 00:09:58,100
+Vielen Dank.
+
+108
+00:10:27,780 --> 00:10:28,500
+Vielen Dank.

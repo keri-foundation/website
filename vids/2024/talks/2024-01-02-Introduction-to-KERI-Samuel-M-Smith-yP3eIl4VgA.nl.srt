@@ -1,0 +1,537 @@
+1
+00:00:00,000 --> 00:00:05,240
+Dit is een inleiding tot KERI, de Key
+Event Receipt Infrastructure.
+
+2
+00:00:08,500 --> 00:00:13,120
+Mijn naam is Samuel Smith en ik ben de
+uitvinder van KERI. De reden waarom ik
+
+3
+00:00:13,120 --> 00:00:19,040
+KERI heb uitgevonden, is omdat het internet niet goed
+functioneert en ik dat wilde oplossen. Het probleem
+
+4
+00:00:19,040 --> 00:00:24,360
+dat KERI oplost, heet het universele
+beveiligde attributieprobleem. Oké, wat
+
+5
+00:00:24,360 --> 00:00:30,060
+bedoelen we met het universele beveiligde attributieprobleem?
+Nou, universeel betekent overal.
+
+6
+00:00:30,360 --> 00:00:39,220
+We willen dat het overal wordt opgelost. En ‘veilig’ betekent
+dat het op zo’n manier moet gebeuren dat het niet kan worden
+
+7
+00:00:39,220 --> 00:00:47,420
+gehackt, vervalst, nagebootst of
+aangevallen kan worden op de gebruikelijke manier waarop we
+
+8
+00:00:47,420 --> 00:00:53,720
+op het internet worden aangevallen. Toeschrijving
+betekent het toewijzen van een communicatie aan de
+
+9
+00:00:53,720 --> 00:00:58,420
+bron. We willen de herkomst van
+iets toeschrijven aan de bron. We weten
+
+10
+00:00:58,420 --> 00:01:04,980
+wie het naar ons verstuurt. En dus is het probleem
+: hoe doen we dat overal op het
+
+11
+00:01:04,980 --> 00:01:09,960
+internet op een veilige manier, zodat we weten
+wie ons informatie stuurt? Dat
+
+12
+00:01:09,960 --> 00:01:16,840
+betekent niet dat we iedereen in staat willen stellen
+om ieders gesprekken te volgen. We willen
+
+13
+00:01:16,840 --> 00:01:23,520
+dit doen op een manier die de privacy beschermt. Dat
+brengt dus extra uitdagingen met zich mee. Maar
+
+14
+00:01:23,520 --> 00:01:28,700
+eerst moeten we de beveiliging op orde krijgen.
+Veel mensen pakken dit probleem aan en
+
+15
+00:01:28,700 --> 00:01:33,100
+offeren daarbij de beveiliging op. En als je
+de beveiliging opoffert, dan heb je ook geen privacy
+
+16
+00:01:33,100 --> 00:01:37,900
+meer. Wat we dus willen doen, is
+al deze problemen tegelijkertijd oplossen op
+
+17
+00:01:37,900 --> 00:01:45,320
+een zeer geïntegreerde, elegante en eenvoudige manier.
+Laten we het hebben over wat dat betekent. Veilige
+
+18
+00:01:45,320 --> 00:01:51,440
+attributie is een andere manier om te zeggen dat we
+het auteurschap van gegevens willen vaststellen,
+
+19
+00:01:51,660 --> 00:01:55,900
+alle gegevens die via het internet worden verzonden,
+alle documenten, zaken als
+
+20
+00:01:55,900 --> 00:02:02,720
+inloggegevens, rechten en machtigingen.
+We willen kunnen zeggen dat we
+
+21
+00:02:02,720 --> 00:02:08,700
+op een veilige manier kunnen vaststellen wie wat doet, op een
+manier die de privacy waarborgt. En ik blijf het woord
+
+22
+00:02:08,700 --> 00:02:12,760
+‘privacy’ gebruiken, omdat ik niet de
+verkeerde indruk wil wekken dat we proberen
+
+23
+00:02:12,760 --> 00:02:18,180
+dit universele volgsysteem willen opzetten. Het
+moeilijke probleem is om dit allemaal te kunnen doen
+
+24
+00:02:18,180 --> 00:02:26,200
+op een manier die vertrouwelijkheid en
+privacy waarborgt, in combinatie met betrouwbare toewijzing.
+
+25
+00:02:26,200 --> 00:02:32,020
+Dat is altijd al het moeilijke probleem geweest. Dus om
+het nog eens te herhalen: het probleem is dat we
+
+26
+00:02:32,020 --> 00:02:38,440
+verifieerbare, veilige toewijzing van elke
+communicatie aan de bron. Ik heb nu
+
+27
+00:02:38,440 --> 00:02:42,680
+het woord ‘verifieerbaar’ toegevoegd. Wat betekent 
+‘verifieerbaar’? Het betekent dat als we
+
+28
+00:02:42,680 --> 00:02:48,820
+informatie ontvangen, we een manier nodig hebben om te verifiëren
+waar die vandaan komt. Als ik ‘verifiëren’ zeg,
+
+29
+00:02:48,820 --> 00:02:54,280
+bedoel ik dat in cryptografische zin. Het betekent
+dat we dit moeten doen zonder op een derde
+
+30
+00:02:54,280 --> 00:03:00,180
+partij te hoeven vertrouwen. Ik wil niet op iemand
+anders hoeven vertrouwen om te verifiëren wat iemand met wie
+
+31
+00:03:00,180 --> 00:03:05,480
+ik op een privé, vertrouwelijke manier wil 
+communiceren, zegt. Ik moet in staat zijn
+
+32
+00:03:05,480 --> 00:03:11,680
+om het zelf te doen. Als ik iemand moet vertrouwen,
+dan wordt de veiligheid van degene die ik
+
+33
+00:03:11,680 --> 00:03:16,600
+nu vertrouw, wordt iets waar ik me
+zorgen over moet maken. En dat is een probleem.
+
+34
+00:03:17,300 --> 00:03:23,980
+Een andere manier om naar veilige
+toewijzing te kijken, is te zeggen dat we
+
+35
+00:03:23,980 --> 00:03:32,140
+de herkomst van alle gegevens willen weten, van wie dan ook, aan
+wie dan ook, afkomstig van wie dan ook. En een manier waarop we
+
+36
+00:03:32,140 --> 00:03:37,540
+dat kunnen omschrijven, is als authentieke gegevens. En
+verder willen we authentieke gegevensherkomst.
+
+37
+00:03:37,960 --> 00:03:42,740
+‘Authentiek’ heeft twee betekenissen. Het
+betekent bijvoorbeeld trouw aan jezelf, alsof je
+
+38
+00:03:42,740 --> 00:03:46,940
+authentiek bent. Dat is niet de betekenis van
+‘authentiek’ die we hier gebruiken. We bedoelen
+
+39
+00:03:46,940 --> 00:03:52,820
+‘authentiek’ in de zin dat je het kunt herleiden tot de
+bron. Wie dat schilderij heeft geschilderd, is een
+
+40
+00:03:52,820 --> 00:03:57,720
+authentiek schilderij, toch? In tegenstelling tot
+wanneer iets niet authentiek is. Dat betekent
+
+41
+00:03:57,720 --> 00:04:03,600
+dat het vervalst is of dat iemand zich
+voor iemand anders heeft uitgegeven. Iemand stuurt je
+
+42
+00:04:03,600 --> 00:04:10,400
+informatie en zegt dat die van Joe komt, terwijl die
+in werkelijkheid van Sue afkomstig is. En dus komt het
+
+43
+00:04:10,400 --> 00:04:16,260
+hele probleem weer op hetzelfde neer.
+We moeten de bron
+
+44
+00:04:16,260 --> 00:04:21,460
+aan informatie. Wat bedoel ik dan precies met
+herkomst? We horen de term vaak
+
+45
+00:04:21,460 --> 00:04:26,300
+herkomst als we het hebben over bijvoorbeeld een
+schilderij, of beeldende kunst, toch? Is het
+
+46
+00:04:26,300 --> 00:04:31,900
+geschilderd door Rembrandt? En hoe weet je
+dat het door Rembrandt is geschilderd? Nou, een manier
+
+47
+00:04:31,900 --> 00:04:38,080
+om de herkomst vast te stellen, is dat je
+een bewaar- en eigendomsketen van dat
+
+48
+00:04:38,080 --> 00:04:43,200
+schilderij vaststelt, van Rembrandt tot degene
+Rembrandt het schilderij aan heeft verkocht of geschonken
+
+49
+00:04:43,200 --> 00:04:49,300
+aan wie het schilderij vervolgens heeft verkocht of
+geschonken, enzovoort. En als je die keten van
+
+50
+00:04:49,300 --> 00:04:54,820
+bezit tot aan de huidige eigenaar of bezitter van
+dat schilderij, dan kun je zeggen: ja, het
+
+51
+00:04:54,820 --> 00:05:02,640
+is afkomstig van Rembrandt. Dus als we de herkomst van
+gegevens kunnen achterhalen, dan kunnen we veel van
+
+52
+00:05:02,640 --> 00:05:08,420
+beveiligingsproblemen op het internet oplossen,
+omdat de meeste daarvan voortkomen uit het feit
+
+53
+00:05:08,420 --> 00:05:14,700
+dat we de herkomst van gegevens niet kunnen achterhalen. We
+hebben geen universele, veilige toeschrijving.
+
+54
+00:05:14,980 --> 00:05:19,400
+En omdat we geen universele, veilige
+toewijzing hebben, kunnen mensen dingen vervalsen.
+
+55
+00:05:19,540 --> 00:05:24,280
+Mensen kunnen zich voordoen als iets anders. Welnu, wanneer
+we gegevens via het internet versturen, hebben we een
+
+56
+00:05:24,280 --> 00:05:30,260
+soortgelijk probleem. Iemand verstuurt een bericht.
+Het wordt naar een server in de cloud gestuurd
+
+57
+00:05:30,260 --> 00:05:34,680
+die het vervolgens naar een andere server stuurt, die
+het doorstuurt naar weer een andere server, die het
+
+58
+00:05:34,680 --> 00:05:40,360
+naar nog een andere server stuurt, en uiteindelijk belandt het in
+je inbox. En dan vraag je je af: kwam het echt van
+
+59
+00:05:40,360 --> 00:05:45,400
+daar waar het volgens de afzender vandaan kwam? Iedereen die
+op het traject zat, had het kunnen onderscheppen,
+
+60
+00:05:46,000 --> 00:05:50,920
+de afzender vervalsen, er iets mee doen, en dan
+duikt het op in je inbox en staat er: oh
+
+61
+00:05:50,920 --> 00:05:56,340
+ja, dit kwam van Sue, maar het kwam eigenlijk
+van Bob. Herkomst gaat dus over
+
+62
+00:05:56,340 --> 00:06:04,240
+het vaststellen van een betrouwbare herkomst, zelfs
+al passeert de data meerdere hosts
+
+63
+00:06:04,240 --> 00:06:08,980
+of servers op het internet. Het is niet
+rechtstreeks naar ons gestuurd. Het is ons niet persoonlijk
+
+64
+00:06:08,980 --> 00:06:13,820
+overhandigd. Het kwam via het internet en het
+internet is openbaar. Het internet is een openbare
+
+65
+00:06:13,820 --> 00:06:18,520
+infrastructuur. Het is openbaar, wat betekent
+dat veel mensen de mogelijkheid hebben om
+
+66
+00:06:18,520 --> 00:06:22,720
+te zien wat je verstuurt, of om te veranderen wat
+je verstuurt, of ermee te knoeien. En
+
+67
+00:06:22,720 --> 00:06:25,820
+veel van de aanvallen op het internet komen
+voort uit het feit dat het een openbare
+
+68
+00:06:25,820 --> 00:06:31,000
+infrastructuur is en daardoor openbaar
+toegankelijk is voor aanvallers. Dus we
+
+69
+00:06:31,000 --> 00:06:35,880
+willen dit probleem van veilige toeschrijving
+oplossen. Laten we er wat dieper op ingaan. Op het
+
+70
+00:06:35,880 --> 00:06:41,740
+internet versturen we gewoon informatie.
+Gegevens zijn informatie. Het zijn gewoon bits. Nu
+
+71
+00:06:41,740 --> 00:06:45,620
+hebben we het gehad over de bewakingsketen. Als we
+normaal gesproken aan een bewakingsketen denken,
+
+72
+00:06:45,620 --> 00:06:50,540
+aan een fysiek voorwerp. Dus ik noem het
+die ‘its’. Het zijn atomen. Dus als ik daadwerkelijk
+
+73
+00:06:50,540 --> 00:06:54,440
+een schilderij heb, is er maar één exemplaar van.
+En het kost veel werk om dat
+
+74
+00:06:54,440 --> 00:07:00,420
+schilderij te kopiëren. En als ik er twee heb, dan heb ik een
+probleem, want iemand heeft een kopie gemaakt. Hoe
+
+75
+00:07:00,420 --> 00:07:05,380
+kun je het origineel van de kopie onderscheiden?
+Nou, als de kopie echt heel, heel
+
+76
+00:07:05,380 --> 00:07:09,880
+goed is gemaakt, kun je, als je alleen naar de twee kijkt, het
+origineel niet van de kopie onderscheiden. Daarom
+
+77
+00:07:09,880 --> 00:07:14,520
+moet je een bewakingsketen hebben.
+Je zegt dat het origineel in het bezit was van
+
+78
+00:07:14,520 --> 00:07:20,640
+iemand en dat die het aan iemand anders heeft gegeven
+en die het weer aan iemand anders heeft gegeven. En het
+
+79
+00:07:20,640 --> 00:07:24,900
+kopie was nooit in hun bezit.
+bezit. Dus je weet dat het een kopie is
+
+80
+00:07:24,900 --> 00:07:29,180
+omdat het geen deel uitmaakte van de
+bewaarketen. Dat werkt voor atomen. Het werkt niet
+
+81
+00:07:29,180 --> 00:07:34,500
+voor informatiebits. We hebben dus een
+moeilijker probleem om de herkomst van gegevens
+
+82
+00:07:34,500 --> 00:07:38,560
+te achterhalen. Daarom moeten we
+cryptografie gebruiken om dat te doen. Een van de eerste
+
+83
+00:07:38,560 --> 00:07:45,600
+dingen die we met cryptografie doen, is dat we
+een identificatiecode aan de bron toekennen. De
+
+84
+00:07:45,600 --> 00:07:49,780
+bron heeft nu een identificatiecode. Die
+identificatiecode is een elektronische identificatiecode.
+
+85
+00:07:50,000 --> 00:07:56,980
+Het is meer informatie. Het zijn meer bits. Om de mogelijkheid
+te creëren om beveiligingskenmerken toe te kennen aan
+
+86
+00:07:56,980 --> 00:08:02,140
+een bron, moet die identificatiecode
+uniek zijn. En om universele
+
+87
+00:08:02,140 --> 00:08:07,660
+Voor een betrouwbare toewijzing moet die identificatiecode
+universeel uniek zijn. Er mag er slechts
+
+88
+00:08:07,660 --> 00:08:13,940
+één van zijn in het hele universum. De enige manier
+waarop we kunnen garanderen dat je unieke
+
+89
+00:08:13,940 --> 00:08:21,340
+unieke identificatiecodes te garanderen, is door cryptografie te
+gebruiken of door een vertrouwde derde partij in te schakelen die
+
+90
+00:08:21,340 --> 00:08:27,100
+ze aanmaakt. Nou, we willen niet
+afhankelijk zijn van een vertrouwde derde partij, dus de
+
+91
+00:08:27,100 --> 00:08:31,840
+identificatiegegevens moeten cryptografisch van
+aard zijn. Laten we dus aannemen dat we een
+
+92
+00:08:31,840 --> 00:08:38,100
+systeem hebben voor het genereren van cryptografische
+identificatiegegevens. Nu moeten we kunnen aantonen
+
+93
+00:08:38,100 --> 00:08:42,700
+wie die identificatiegegevens beheert, en we moeten
+dat op een verifieerbare manier doen zonder
+
+94
+00:08:42,700 --> 00:08:48,740
+op een derde partij te vertrouwen. Als ik een
+cryptografische identificatiecode heb en een manier om
+
+95
+00:08:48,740 --> 00:08:54,700
+op verifieerbare wijze te bewijzen dat ik de beheerder ben van die
+identificatie, dan beschik ik over wat een
+
+96
+00:08:54,700 --> 00:09:01,800
+‘root of trust’ wordt genoemd. Ik heb nu de mogelijkheid om
+gegevens aan die identificatie toe te schrijven, waarbij
+
+97
+00:09:01,800 --> 00:09:06,900
+die identificatiecode de bron van die
+gegevens is. Ik heb nu dus het basis
+
+98
+00:09:06,900 --> 00:09:13,080
+probleem geformuleerd. De manier waarop ik controle kan
+uitoefenen over een identificatie of de controle over een
+
+99
+00:09:13,080 --> 00:09:17,960
+identificatie kan aantonen, is door gebruik te maken van wat we
+cryptografische sleutels noemen. En het specifieke type
+
+100
+00:09:17,960 --> 00:09:24,240
+sleutel dat we gebruiken, behoort tot wat
+een openbaar sleutelpaar of een openbaar
+
+101
+00:09:24,240 --> 00:09:30,380
+privé-sleutelpaar wordt genoemd, waarbij ik een openbare sleutel
+en een privésleutel heb. Dat wordt een
+
+102
+00:09:30,380 --> 00:09:37,140
+geheel nieuw onderwerp om de
+basisprincipes van openbare- en privésleutelparen te bespreken. Maar
+
+103
+00:09:37,140 --> 00:09:41,820
+hebben we het kernidee uiteengezet van
+hoe we tot universeel veilige
+
+104
+00:09:41,820 --> 00:09:46,220
+attributie komen. En we hebben nog niet eens echt
+besproken hoe KERI dit doet, maar ik heb
+
+105
+00:09:46,220 --> 00:09:51,180
+jullie al een inleiding gegeven over het moeilijke
+probleem. Het moeilijke probleem is universele
+
+106
+00:09:51,180 --> 00:09:56,900
+veilige attributie. Blijf kijken om
+meer te leren. Stel eventuele vragen in de reacties.
+
+107
+00:09:57,860 --> 00:09:58,100
+Bedankt.
+
+108
+00:10:27,780 --> 00:10:28,500
+Bedankt.

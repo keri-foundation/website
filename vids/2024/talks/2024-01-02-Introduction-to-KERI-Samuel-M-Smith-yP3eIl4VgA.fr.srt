@@ -1,0 +1,539 @@
+1
+00:00:00,000 --> 00:00:05,240
+Voici une présentation de KERI, l'infrastructure
+de réception d'événements clés.
+
+2
+00:00:08,500 --> 00:00:13,120
+Je m’appelle Samuel Smith et je suis l’
+inventeur de KERI. Si j’ai inventé
+
+3
+00:00:13,120 --> 00:00:19,040
+KERI, c’est parce qu’Internet ne fonctionne pas correctement et que
+je voulais y remédier. Le problème
+
+4
+00:00:19,040 --> 00:00:24,360
+que KERI résout s’appelle le
+problème de l’attribution sécurisée universelle. Bon, qu’entend-on
+
+5
+00:00:24,360 --> 00:00:30,060
+par « problème de l’attribution sécurisée universelle » ?
+Eh bien, « universel » signifie « partout ».
+
+6
+00:00:30,360 --> 00:00:39,220
+Nous voulons qu’il soit résolu partout. Et
+« sécurisé » signifie qu’il faut le faire de manière à ce qu’il ne puisse pas être
+
+7
+00:00:39,220 --> 00:00:47,420
+piratée, falsifiée, usurpée ou
+attaquée de la manière habituelle dont nous sommes
+
+8
+00:00:47,420 --> 00:00:53,720
+attaqués sur Internet. L’attribution
+signifie attribuer une communication à sa
+
+9
+00:00:53,720 --> 00:00:58,420
+source. Nous voulons attribuer la provenance
+d’une information à sa source. Nous savons
+
+10
+00:00:58,420 --> 00:01:04,980
+qui nous l’envoie. Le problème est donc
+de savoir comment faire cela partout sur
+
+11
+00:01:04,980 --> 00:01:09,960
+Internet de manière sécurisée afin de savoir
+qui nous envoie des informations ? Cela
+
+12
+00:01:09,960 --> 00:01:16,840
+ne signifie pas pour autant que nous souhaitons permettre à n’importe qui de
+suivre les conversations de tout le monde. Nous voulons
+
+13
+00:01:16,840 --> 00:01:23,520
+le faire tout en protégeant la vie privée. Cela
+pose donc des défis supplémentaires. Mais
+
+14
+00:01:23,520 --> 00:01:28,700
+nous devons d’abord assurer la sécurité.
+Beaucoup de gens abordent ce problème et
+
+15
+00:01:28,700 --> 00:01:33,100
+sacrifient la sécurité. Et si vous sacrifiez
+la sécurité, alors vous n’avez plus de vie privée
+
+16
+00:01:33,100 --> 00:01:37,900
+non plus. Ce que nous voulons donc faire, c’est résoudre
+tous ces problèmes en même temps d’une
+
+17
+00:01:37,900 --> 00:01:45,320
+manière très intégrée, élégante et simple.
+Voyons ce que cela signifie. L’attribution sécurisée
+
+18
+00:01:45,320 --> 00:01:51,440
+l’attribution sécurisée est une autre façon de dire que nous
+voulons établir la paternité des données,
+
+19
+00:01:51,660 --> 00:01:55,900
+toutes les données transmises sur Internet,
+tous les documents, ainsi que des éléments tels que
+
+20
+00:01:55,900 --> 00:02:02,720
+les identifiants, les droits d’accès, les autorisations.
+Nous voulons pouvoir affirmer que nous sommes en mesure de
+
+21
+00:02:02,720 --> 00:02:08,700
+identifier de manière sécurisée qui fait quoi, tout en
+préservant la vie privée. Et je ne cesse de parler de
+
+22
+00:02:08,700 --> 00:02:12,760
+vie privée, car je ne veux pas donner la
+fausse impression que nous essayons de
+
+23
+00:02:12,760 --> 00:02:18,180
+mettre en place ce système de suivi universel. Le
+véritable défi consiste à parvenir à tout cela
+
+24
+00:02:18,180 --> 00:02:26,200
+tout en préservant la confidentialité et la
+vie privée, tout en garantissant une attribution sécurisée.
+
+25
+00:02:26,200 --> 00:02:32,020
+Cela a toujours été le problème épineux. Donc, pour
+résumer, le problème est que nous voulons disposer d’une
+
+26
+00:02:32,020 --> 00:02:38,440
+une attribution sécurisée et vérifiable de toute
+communication à sa source. J’ai ajouté
+
+27
+00:02:38,440 --> 00:02:42,680
+le mot « vérifiable ». Que signifie « vérifiable » ?
+Cela signifie que si nous recevons
+
+28
+00:02:42,680 --> 00:02:48,820
+des informations, nous avons besoin d’un moyen de vérifier
+d’où elles proviennent. Quand je dis « vérifier », cela
+
+29
+00:02:48,820 --> 00:02:54,280
+signifie d’un point de vue cryptographique. Cela signifie
+le faire sans avoir à faire confiance à un tiers
+
+30
+00:02:54,280 --> 00:03:00,180
+. Je ne veux pas avoir à faire confiance
+à quelqu’un d’autre pour vérifier ce que dit la personne avec laquelle
+
+31
+00:03:00,180 --> 00:03:05,480
+avec qui je souhaite communiquer de manière
+privée et confidentielle. Je dois être capable
+
+32
+00:03:05,480 --> 00:03:11,680
+de le faire moi-même. Si je dois faire confiance
+à quelqu’un, alors la sécurité de la personne à qui je
+
+33
+00:03:11,680 --> 00:03:16,600
+de confiance devient alors une source de
+souci. Et c’est un problème.
+
+34
+00:03:17,300 --> 00:03:23,980
+Une autre façon d’envisager l’attribution sécurisée
+consiste à dire que nous voulons disposer
+
+35
+00:03:23,980 --> 00:03:32,140
+la traçabilité de toutes les données, par n’importe qui, à
+destination de n’importe qui, provenant de n’importe qui. Et donc, une façon de
+
+36
+00:03:32,140 --> 00:03:37,540
+décrire cela, c’est de parler de données authentiques. Et
+ensuite, nous voulons une provenance authentique des données.
+
+37
+00:03:37,960 --> 00:03:42,740
+Le terme « authentique » a deux sens. Il signifie d’une part
+« fidèle à soi-même », c’est-à-dire que l’on est
+
+38
+00:03:42,740 --> 00:03:46,940
+authentique. Ce n’est pas le sens du
+mot « authentique » que nous utilisons ici. Nous entendons par là
+
+39
+00:03:46,940 --> 00:03:52,820
+« authentique » dans le sens où l’on peut l’attribuer à sa
+source. Savoir qui a peint ce tableau est une
+
+40
+00:03:52,820 --> 00:03:57,720
+tableau authentique, n’est-ce pas ? Par opposition à
+lorsque quelque chose n’est pas authentique. Cela signifie
+
+41
+00:03:57,720 --> 00:04:03,600
+qu’il s’agit d’un faux ou que quelqu’un s’est
+fait passer pour quelqu’un d’autre. Quelqu’un vous envoie
+
+42
+00:04:03,600 --> 00:04:10,400
+des informations en prétendant qu’elles proviennent de Joe
+alors qu’elles viennent en réalité de Sue. Et donc, le
+
+43
+00:04:10,400 --> 00:04:16,260
+problème revient toujours au même point.
+Nous devons attribuer de manière sécurisée la source
+
+44
+00:04:16,260 --> 00:04:21,460
+de l’information. Alors, qu’est-ce que j’entends par
+« provenance » ? On entend souvent ce terme
+
+45
+00:04:21,460 --> 00:04:26,300
+la provenance, quand on parle par exemple d’un
+tableau, d’une œuvre d’art, n’est-ce pas ? Est-ce que c’était
+
+46
+00:04:26,300 --> 00:04:31,900
+peinte par Rembrandt ? Et comment sait-on
+qu’elle a été peinte par Rembrandt ? Eh bien, l’une des façons
+
+47
+00:04:31,900 --> 00:04:38,080
+de déterminer la provenance consiste à
+établir une chaîne de transmission de ce
+
+48
+00:04:38,080 --> 00:04:43,200
+tableau, de Rembrandt à la personne à qui
+à qui Rembrandt a vendu ou donné le tableau,
+
+49
+00:04:43,200 --> 00:04:49,300
+à qui ce dernier a vendu ou donné le tableau, et ainsi
+de suite. Et si vous parvenez à retracer cette chaîne de
+
+50
+00:04:49,300 --> 00:04:54,820
+de possession jusqu’au propriétaire ou détenteur actuel de
+ce tableau, alors on peut affirmer que oui, il
+
+51
+00:04:54,820 --> 00:05:02,640
+provient de Rembrandt. Ainsi, si nous parvenons à résoudre
+la question de la provenance des données, nous pourrons alors résoudre bon nombre des
+
+52
+00:05:02,640 --> 00:05:08,420
+problèmes de sécurité sur Internet,
+car la plupart d’entre eux découlent du fait
+
+53
+00:05:08,420 --> 00:05:14,700
+que nous ne parvenons pas à résoudre la question de la provenance des données. Nous
+ne disposons pas d’un système universel d’attribution sécurisée.
+
+54
+00:05:14,980 --> 00:05:19,400
+Et comme nous ne disposons pas d’un système universel et sécurisé
+d’attribution, les gens peuvent falsifier des informations.
+
+55
+00:05:19,540 --> 00:05:24,280
+Les gens peuvent usurper l’identité d’autres entités. Eh bien, lorsque
+nous envoyons des données sur Internet, nous sommes confrontés à un
+
+56
+00:05:24,280 --> 00:05:30,260
+problème similaire. Quelqu’un envoie un message.
+Celui-ci est transmis à un serveur dans le cloud
+
+57
+00:05:30,260 --> 00:05:34,680
+qui le transmet ensuite à un autre serveur, qui
+le redirige vers un autre serveur, qui le redirige
+
+58
+00:05:34,680 --> 00:05:40,360
+vers un autre serveur, et il finit par arriver dans
+votre boîte de réception. Et vous vous demandez : est-ce qu’il vient bien de
+
+59
+00:05:40,360 --> 00:05:45,400
+là d’où il est censé provenir ? N’importe qui
+se trouvant sur le chemin aurait pu l’intercepter,
+
+60
+00:05:46,000 --> 00:05:50,920
+l’usurpé, y avoir apporté des modifications, puis
+il apparaît dans votre boîte et on se dit : « Oh,
+
+61
+00:05:50,920 --> 00:05:56,340
+oui, ça vient de Sue, mais en réalité,
+ça vient de Bob. » La provenance consiste donc à
+
+62
+00:05:56,340 --> 00:06:04,240
+garantir une attribution fiable même
+si les données transitent par plusieurs hôtes
+
+63
+00:06:04,240 --> 00:06:08,980
+ou serveurs sur Internet. Ça ne nous est pas parvenu
+directement. On ne nous l’a pas remise en
+
+64
+00:06:08,980 --> 00:06:13,820
+personne. Elle est arrivée par Internet et
+Internet est public. Internet est une
+
+65
+00:06:13,820 --> 00:06:18,520
+infrastructure publique. Elle est publique, ce qui signifie
+que beaucoup de gens ont la possibilité de
+
+66
+00:06:18,520 --> 00:06:22,720
+voir ce que vous envoyez, de modifier ce que
+vous envoyez ou d’y mettre le désordre. Et
+
+67
+00:06:22,720 --> 00:06:25,820
+bon nombre d’attaques sur Internet proviennent
+du fait qu’il s’agit d’une
+
+68
+00:06:25,820 --> 00:06:31,000
+infrastructure publique et donc accessible au grand public,
+ce qui permet aux pirates de l’attaquer. Nous
+
+69
+00:06:31,000 --> 00:06:35,880
+voulons résoudre ce problème d’attribution sécurisée
+. Approfondissons un peu la question. Sur
+
+70
+00:06:35,880 --> 00:06:41,740
+Internet, nous ne faisons qu’envoyer des informations.
+Les données, ce sont des informations. Ce ne sont que des bits. Or,
+
+71
+00:06:41,740 --> 00:06:45,620
+nous avons parlé de la chaîne de traçabilité. Quand on
+pense habituellement à la chaîne de traçabilité, on
+
+72
+00:06:45,620 --> 00:06:50,540
+à un objet physique. Je vais donc les appeler
+« ces trucs ». Ce sont des atomes. Donc, si j’ai réellement
+
+73
+00:06:50,540 --> 00:06:54,440
+un tableau, il n’y en a qu’un seul.
+Et cela demande beaucoup de travail de copier ce
+
+74
+00:06:54,440 --> 00:07:00,420
+tableau. Et si j’en ai deux, alors j’ai un
+problème, car quelqu’un en a fait une copie. Comment
+
+75
+00:07:00,420 --> 00:07:05,380
+distinguer l’original de la copie ?
+Eh bien, si la copie est vraiment, vraiment
+
+76
+00:07:05,380 --> 00:07:09,880
+bien, rien qu’en regardant les deux, on ne peut pas
+distinguer l’original de la copie. C’est
+
+77
+00:07:09,880 --> 00:07:14,520
+pourquoi il faut disposer d’une chaîne de traçabilité.
+Vous dites que l’original était en possession de
+
+78
+00:07:14,520 --> 00:07:20,640
+quelqu’un, qui l’a donné à quelqu’un d’autre,
+qui l’a donné à quelqu’un d’autre encore. Et la
+
+79
+00:07:20,640 --> 00:07:24,900
+copie n’a jamais été en sa possession.
+possession. Vous savez donc qu’il s’agit d’une copie
+
+80
+00:07:24,900 --> 00:07:29,180
+car elle ne faisait pas partie de la chaîne de
+transmission. Cela fonctionne pour les atomes. Cela ne
+
+81
+00:07:29,180 --> 00:07:34,500
+fonctionne pas pour les bits d’information. Nous sommes donc confrontés à un
+problème plus complexe pour établir la provenance des données
+
+82
+00:07:34,500 --> 00:07:38,560
+d’information. Nous devons donc recourir à la
+cryptographie pour y parvenir. L’une des premières
+
+83
+00:07:38,560 --> 00:07:45,600
+choses que nous faisons avec la cryptographie, c’est d’
+attribuer un identifiant à la source. La
+
+84
+00:07:45,600 --> 00:07:49,780
+source dispose désormais d’un identifiant. Cet
+identifiant est un identifiant électronique.
+
+85
+00:07:50,000 --> 00:07:56,980
+C’est davantage d’informations. Ce sont davantage de bits. Pour
+permettre d’attribuer de manière sécurisée
+
+86
+00:07:56,980 --> 00:08:02,140
+une source, cet identifiant doit être
+unique. Et pour garantir une attribution
+
+87
+00:08:02,140 --> 00:08:07,660
+sécurisée à l’échelle universelle, cet identifiant doit
+être universellement unique. Il ne peut y en avoir qu’
+
+88
+00:08:07,660 --> 00:08:13,940
+soit unique dans tout l'univers. La seule façon
+de garantir l'unicité de vos
+
+89
+00:08:13,940 --> 00:08:21,340
+identifiants uniques est d’utiliser la cryptographie
+ou de faire appel à un tiers de confiance qui
+
+90
+00:08:21,340 --> 00:08:27,100
+les crée. Or, nous ne voulons pas avoir
+à dépendre d’un tiers de confiance, donc les
+
+91
+00:08:27,100 --> 00:08:31,840
+identifiants doivent être de nature
+cryptographique. Supposons donc que nous disposions d’un
+
+92
+00:08:31,840 --> 00:08:38,100
+système permettant de générer des identifiants
+cryptographiques. Nous devons alors être en mesure de prouver
+
+93
+00:08:38,100 --> 00:08:42,700
+qui contrôle cet identifiant, et nous devons
+le faire de manière vérifiable sans
+
+94
+00:08:42,700 --> 00:08:48,740
+faire confiance à un tiers. Si je dispose d’un
+identifiant cryptographique et d’un moyen de
+
+95
+00:08:48,740 --> 00:08:54,700
+prouver de manière vérifiable que je contrôle cet
+identifiant, alors je dispose de ce qu’on appelle une
+
+96
+00:08:54,700 --> 00:09:01,800
+racine de confiance. Je suis désormais en mesure d’
+attribuer des données à cet identifiant,
+
+97
+00:09:01,800 --> 00:09:06,900
+cet identifiant étant la source de ces
+données. J’ai donc désormais mis en place le
+
+98
+00:09:06,900 --> 00:09:13,080
+problème. La manière dont je peux contrôler un
+identifiant ou prouver que je contrôle un
+
+99
+00:09:13,080 --> 00:09:17,960
+identifiant consiste à utiliser ce que l’on appelle
+des clés cryptographiques. Et le type spécifique
+
+100
+00:09:17,960 --> 00:09:24,240
+de clé que nous utilisons appartient à ce qu’on
+appelle une paire de clés publique ou une
+
+101
+00:09:24,240 --> 00:09:30,380
+paire de clés privée, où je dispose d’une clé publique
+et d’une clé privée. Ce sera l’objet d’un
+
+102
+00:09:30,380 --> 00:09:37,140
+tout nouveau sujet consacré aux
+principes de base des paires de clés publiques-privées. Mais
+
+103
+00:09:37,140 --> 00:09:41,820
+ce que nous avons fait, c’est poser les bases de
+la manière dont on parvient à une attribution
+universellement sécurisée
+
+104
+00:09:41,820 --> 00:09:46,220
+. Et nous n’avons même pas vraiment
+parlé de la manière dont KERI s’y prend, mais je vous ai
+
+105
+00:09:46,220 --> 00:09:51,180
+vous ai donné un aperçu de ce
+problème épineux. Le problème épineux, c’est l’
+
+106
+00:09:51,180 --> 00:09:56,900
+attribution universellement sécurisée. Suivez la vidéo pour en savoir
+plus. Posez vos questions dans les commentaires.
+
+107
+00:09:57,860 --> 00:09:58,100
+Merci.
+
+108
+00:10:27,780 --> 00:10:28,500
+Merci.
+

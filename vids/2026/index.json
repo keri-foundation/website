@@ -1,17 +1,22 @@
 {
   "page": {
-    "title": "July 2026 Videos",
-    "heading": "July 2026 Videos",
-    "headingHref": "/vids/2026/jul/",
+    "title": "2026 Videos",
+    "heading": "2026 Videos",
+    "headingHref": "/vids/2026/",
     "statusNotice": "",
-    "subtitle": "Samuel Smith on why the choice is KERI or surveillance",
+    "subtitle": "Samuel Smith introduces KERI, and why the choice is KERI or surveillance",
     "footer": "KERI Foundation • Videos",
-    "searchPlaceholder": "Type to search this talk…",
-    "searchLabel": "Search transcript",
+    "searchPlaceholder": "Type to search these talks…",
+    "searchLabel": "Search transcripts",
     "nav": [
       {
         "label": "Home",
         "href": "/",
+        "external": false
+      },
+      {
+        "label": "2024 Videos",
+        "href": "/vids/2024/",
         "external": false
       },
       {
@@ -33,6 +38,7 @@
     ]
   },
   "days": [
+    "May 2026",
     "July 2026"
   ],
   "transcriptsDir": "transcripts/html",
@@ -42,6 +48,15 @@
   "videos": [
     {
       "order": 1,
+      "day": "May 2026",
+      "title": "Introduction to KERI Part 1 - Samuel Smith",
+      "speaker": "Samuel Smith",
+      "path": "talks/2026-05-05-Introduction-to-KERI-Part-1-XYohZTh3yEw.mp4",
+      "duration": "49:10",
+      "subtitle": "talks/2026-05-05-Introduction-to-KERI-Part-1-XYohZTh3yEw.srt"
+    },
+    {
+      "order": 2,
       "day": "July 2026",
       "title": "It's KERI or Surveillance - Samuel Smith",
       "speaker": "Samuel Smith",

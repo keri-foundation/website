@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Build and deploy galleries:
 #   confs/<ORG>/<YEAR>/<month>/   conferences (e.g. confs/KERI/2026/apr/)
-#   vids/<YEAR>/<month>/          monthly videos (e.g. vids/2026/jul/)
+#   vids/<YEAR>/                  yearly videos (e.g. vids/2026/)
 # The server mirrors those trees. /videos/ is left for WordPress.
 #
 # The legacy tree confs/2026/ is never pushed or deleted by this script. Old gallery
@@ -30,19 +30,19 @@ usage() {
 Usage: scripts/deploy-confs.sh [options] <command>...
 
 Commands (run in the order given):
-  list            Show galleries: confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/<month>/
+  list            Show galleries: confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/
   subtitles       Copy curated .srt files from scripts/subtitle-sources.tsv (no-op when that file has no sources; edit SRTs in place under the gallery)
   transcripts     Regenerate the static transcript HTML pages from the .srt files
   verify          Check every file referenced by each index.json exists locally
   build           subtitles + transcripts + verify
-  push            Mirror conference folders and vids/ to the server (rsync --delete), including each gallery index.html and index.json, plus .htaccess redirects
+  push            Mirror conference folders and vids/ to the server (rsync --delete), then re-upload every index.html and index.json, plus .htaccess redirects
   check-remote    verify + HEAD-request every referenced file on the live site
   deploy          build + push + check-remote
   push-legacy-moved  Upload the "moved" index.html pages for old gallery URLs
 
 Options:
   -n, --dry-run   Show what would change; write nothing locally or remotely
-  --conf ID       Limit to one gallery, e.g. --conf KERI/2026/apr or --conf vids/2026/jul (repeatable)
+  --conf ID       Limit to one gallery, e.g. --conf KERI/2026/apr or --conf vids/2026 (repeatable)
   -y, --yes       Do not ask for confirmation before changing the server
   -h, --help      Show this help
 
@@ -54,7 +54,7 @@ Examples:
   scripts/deploy-confs.sh -n push                   # preview upload
   scripts/deploy-confs.sh deploy                    # build, upload, check live site
   scripts/deploy-confs.sh --conf SEDI/2025/nov push
-  scripts/deploy-confs.sh --conf vids/2026/jul push
+  scripts/deploy-confs.sh --conf vids/2026 push
 EOF
 }
 
@@ -114,7 +114,7 @@ conferences() {
     run_node "$SCRIPT_DIR/confs.mjs" list
 }
 
-# Local directory for a gallery id (KERI/2026/apr or vids/2026/jul).
+# Local directory for a gallery id (KERI/2026/apr or vids/2026).
 gallery_dir() {
     case "$1" in
         vids/*) printf '%s\n' "$SITE_ROOT/$1" ;;
@@ -188,8 +188,9 @@ step_push() {
         echo "  ${mirror_local[$i]} → ${mirror_remote[$i]}"
     done
 
-    # Every gallery must have index.html + index.json; list them before upload.
-    local index_files=()
+    # Every gallery root must have both files. Nested indexes (transcript
+    # listings) are included in the re-upload below.
+    local id
     for id in $(conferences); do
         local dir
         dir="$(gallery_dir "$id")"
@@ -199,11 +200,20 @@ step_push() {
                 echo "Missing $(gallery_remote_rel "$id")/$f" >&2
                 exit 1
             fi
-            index_files+=("$(gallery_remote_rel "$id")/$f")
         done
     done
-    echo "Gallery indexes:"
-    printf '  %s\n' "${index_files[@]}"
+    echo "Re-uploading every index.html and index.json (rsync --ignore-times, same excludes, no --delete):"
+    local src rel
+    for src in "${mirror_local[@]}"; do
+        if [ ! -d "${src%/}" ]; then
+            echo "Missing locally: $src" >&2
+            exit 1
+        fi
+        while IFS= read -r rel; do
+            [ -n "$rel" ] || continue
+            echo "  $rel"
+        done < <(cd "$SITE_ROOT" && find "${src#"$SITE_ROOT"/}" -type f \( -name 'index.html' -o -name 'index.json' \) | sort)
+    done
     echo "Also uploading .htaccess (redirects)."
     confirm "Upload and mirror these folders to the server?"
 
@@ -221,20 +231,22 @@ step_push() {
         rsync "${rsync_opts[@]}" "$src" "$REMOTE_HOST:$dest"
     done
 
-    # Always push gallery indexes (ignore mtime) so a dry-run / transfer list
-    # shows them even when the rest of the tree was unchanged.
-    echo "── Gallery index.html / index.json"
-    local index_rsync=(-avz --ignore-times --human-readable)
+    # Re-upload every index.html and index.json under each mirrored tree.
+    # rsync include rules select those names at any depth. --ignore-times
+    # forces the transfer even when size and mtime already match. This pass
+    # does not use --delete: that would remove every file the filters skip.
+    echo "── index.html / index.json"
+    local index_rsync=(
+        -avz --ignore-times --human-readable --prune-empty-dirs
+        "${RSYNC_EXCLUDES[@]}"
+        --include='*/'
+        --include='index.html'
+        --include='index.json'
+        --exclude='*'
+    )
     [ "$DRY_RUN" -eq 1 ] && index_rsync+=(--dry-run)
-    for id in $(conferences); do
-        local dir rel
-        dir="$(gallery_dir "$id")"
-        rel="$(gallery_remote_rel "$id")"
-        [ "$DRY_RUN" -eq 1 ] || ssh "$REMOTE_HOST" "mkdir -p '$REMOTE_ROOT/$rel'"
-        rsync "${index_rsync[@]}" \
-            "$dir/index.html" \
-            "$dir/index.json" \
-            "$REMOTE_HOST:$REMOTE_ROOT/$rel/"
+    for i in "${!mirror_local[@]}"; do
+        rsync "${index_rsync[@]}" "${mirror_local[$i]}" "$REMOTE_HOST:${mirror_remote[$i]}"
     done
 
     echo "── Site redirects (.htaccess)"

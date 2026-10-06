@@ -1,0 +1,538 @@
+1
+00:00:00,000 --> 00:00:05,240
+This is an introduction to KERI, the Key
+Event Receipt Infrastructure.
+
+2
+00:00:08,500 --> 00:00:13,120
+My name is Samuel Smith and I am the
+inventor of KERI. The reason I invented
+
+3
+00:00:13,120 --> 00:00:19,040
+KERI is because the internet is broken and
+I wanted to solve it. And so the problem
+
+4
+00:00:19,040 --> 00:00:24,360
+that KERI solves is called the universal
+secure attribution problem. Okay, what do
+
+5
+00:00:24,360 --> 00:00:30,060
+we mean by universal secure attribution
+problem? Well, universal means everywhere.
+
+6
+00:00:30,360 --> 00:00:39,220
+We want it to be solved everywhere. And
+secure means do it in a way that can't be
+
+7
+00:00:39,220 --> 00:00:47,420
+hacked or forged or impersonated or
+attacked in the normal way that we get
+
+8
+00:00:47,420 --> 00:00:53,720
+attacked on the internet. Attribution
+means assigning a communication to its
+
+9
+00:00:53,720 --> 00:00:58,420
+source. We want to attribute where
+something came from to its source. We know
+
+10
+00:00:58,420 --> 00:01:04,980
+who's sending it to us. And so the problem
+is, how do we do that everywhere on the
+
+11
+00:01:04,980 --> 00:01:09,960
+internet in a secure way so that we know
+who's sending us information? So that
+
+12
+00:01:09,960 --> 00:01:16,840
+doesn't mean we want to enable anybody to
+track everybody's conversations. We want
+
+13
+00:01:16,840 --> 00:01:23,520
+to do it in a privacy protecting way. So
+that poses additional challenges. But
+
+14
+00:01:23,520 --> 00:01:28,700
+first we have to get the security down.
+Many people approach this problem and they
+
+15
+00:01:28,700 --> 00:01:33,100
+sacrifice security. And if you sacrifice
+the security, then you don't have privacy
+
+16
+00:01:33,100 --> 00:01:37,900
+either. So, what we want to do is solve
+all of these problems at the same time in
+
+17
+00:01:37,900 --> 00:01:45,320
+a very integrated, elegant, simple way.
+Let's talk about what it means. Secure
+
+18
+00:01:45,320 --> 00:01:51,440
+attribution is another way of saying we
+want to establish the authorship of data,
+
+19
+00:01:51,660 --> 00:01:55,900
+any and all data sent over the internet,
+any and all documents, things like
+
+20
+00:01:55,900 --> 00:02:02,720
+credentials, entitlements, authorizations.
+We want to be able to say that we can
+
+21
+00:02:02,720 --> 00:02:08,700
+securely attribute who's doing what in a
+privacy-preserving way. And I keep saying
+
+22
+00:02:08,700 --> 00:02:12,760
+privacy because I don't want to give the
+false impression that we're trying to
+
+23
+00:02:12,760 --> 00:02:18,180
+build this universal tracking system. The
+hard problem is to be able to do this all
+
+24
+00:02:18,180 --> 00:02:26,200
+in a way that keeps confidentiality and
+privacy along with secure attribution.
+
+25
+00:02:26,200 --> 00:02:32,020
+That's always been the hard problem. So to
+restate, the problem is we want to have
+
+26
+00:02:32,020 --> 00:02:38,440
+verifiable secure attribution of any
+communications to its source. Now I added
+
+27
+00:02:38,440 --> 00:02:42,680
+the word verifiable. What does verifiable
+mean? It means that if we're receiving
+
+28
+00:02:42,680 --> 00:02:48,820
+information, we need some way to verify
+where it came from. When I say verify, it
+
+29
+00:02:48,820 --> 00:02:54,280
+means in a cryptographic sense. It means
+doing it without having to trust any third
+
+30
+00:02:54,280 --> 00:03:00,180
+party. I don't want to have to trust
+somebody else to verify what somebody that
+
+31
+00:03:00,180 --> 00:03:05,480
+I want to communicate with in a private
+confidential way says. I need to be able
+
+32
+00:03:05,480 --> 00:03:11,680
+to do it by myself. If I have to trust
+someone, then the security of whoever I'm
+
+33
+00:03:11,680 --> 00:03:16,600
+trusting now becomes something I have to
+worry about. And that is a problem.
+
+34
+00:03:17,300 --> 00:03:23,980
+Another way of looking at secure
+attribution is to say that we want to have
+
+35
+00:03:23,980 --> 00:03:32,140
+provenance of any data by anyone, to
+anyone, from anyone. And so a way we can
+
+36
+00:03:32,140 --> 00:03:37,540
+describe that is as authentic data. And
+then we want authentic data provenance.
+
+37
+00:03:37,960 --> 00:03:42,740
+Authentic has two meanings. It means like
+true to yourself, like you're being
+
+38
+00:03:42,740 --> 00:03:46,940
+authentic. That's not the meaning of
+authentic we're using here. We're meaning
+
+39
+00:03:46,940 --> 00:03:52,820
+authentic as you can attribute it to its
+source. Who painted that painting is an
+
+40
+00:03:52,820 --> 00:03:57,720
+authentic painting, right? As opposed to
+when something's not authentic. It means
+
+41
+00:03:57,720 --> 00:04:03,600
+it was forged or somebody was
+impersonated. Somebody sends you
+
+42
+00:04:03,600 --> 00:04:10,400
+information and they say it came from Joe
+when it really came from Sue. And so the
+
+43
+00:04:10,400 --> 00:04:16,260
+whole problem is back to the same thing.
+We need to securely attribute the source
+
+44
+00:04:16,260 --> 00:04:21,460
+of information. So what do I mean by
+provenance? We often hear the term
+
+45
+00:04:21,460 --> 00:04:26,300
+provenance when we talk about like a
+painting, like fine art, right? Was it
+
+46
+00:04:26,300 --> 00:04:31,900
+painted by Rembrandt? And how do you know
+it was painted by Rembrandt? Well, one way
+
+47
+00:04:31,900 --> 00:04:38,080
+that you would provenance it is that you
+would establish a chain of custody of that
+
+48
+00:04:38,080 --> 00:04:43,200
+painting from Rembrandt to whoever
+Rembrandt sold or gave the painting to
+
+49
+00:04:43,200 --> 00:04:49,300
+whoever sold or gave the painting and so
+on. And if you can follow that chain of
+
+50
+00:04:49,300 --> 00:04:54,820
+custody to the present owner or holder of
+that painting, then you can say, yeah, it
+
+51
+00:04:54,820 --> 00:05:02,640
+came from Rembrandt. So if we can solve
+data provenance, then we can solve many of
+
+52
+00:05:02,640 --> 00:05:08,420
+the security problems on the internet
+because most of them come from the fact
+
+53
+00:05:08,420 --> 00:05:14,700
+that we can't solve data provenance. We
+don't have universal secure attribution.
+
+54
+00:05:14,980 --> 00:05:19,400
+And because we don't have universal secure
+attribution, people can forge things.
+
+55
+00:05:19,540 --> 00:05:24,280
+People can impersonate things. Well, when
+we send data over the internet, we have a
+
+56
+00:05:24,280 --> 00:05:30,260
+similar problem. Somebody sends a message.
+It gets sent to some server in the cloud
+
+57
+00:05:30,260 --> 00:05:34,680
+who then sends it to another server, who
+routes it to another server, who routes it
+
+58
+00:05:34,680 --> 00:05:40,360
+to another server, and then it ends up in
+your inbox. And you go, did it come from
+
+59
+00:05:40,360 --> 00:05:45,400
+where it said it came from? Anybody that
+was in the path could have intercepted it,
+
+60
+00:05:46,000 --> 00:05:50,920
+spoofed it, done something to it, and then
+it shows up in your box and it says, oh
+
+61
+00:05:50,920 --> 00:05:56,340
+yeah, this came from Sue, but it really
+came from Bob. So provenance is about
+
+62
+00:05:56,340 --> 00:06:04,240
+establishing secure attribution even
+though the data traverses multiple hosts
+
+63
+00:06:04,240 --> 00:06:08,980
+or servers on the internet. It didn't come
+directly to us. It wasn't given to us in
+
+64
+00:06:08,980 --> 00:06:13,820
+person. It came over the internet and the
+internet is public. The internet is public
+
+65
+00:06:13,820 --> 00:06:18,520
+infrastructure. It's public, which means
+that lots of people have the ability to
+
+66
+00:06:18,520 --> 00:06:22,720
+see what you're sending or to change what
+you're sending or to mess with it. And
+
+67
+00:06:22,720 --> 00:06:25,820
+many of the attacks on the internet come
+from the fact that it's public
+
+68
+00:06:25,820 --> 00:06:31,000
+infrastructure and therefore publicly
+accessible for attackers to attack. So we
+
+69
+00:06:31,000 --> 00:06:35,880
+want to solve this secure attribution
+problem. Let's dig a little deeper. On the
+
+70
+00:06:35,880 --> 00:06:41,740
+internet, we're just sending information.
+Data is information. It's just bits. Now
+
+71
+00:06:41,740 --> 00:06:45,620
+we talked about chain of custody. When we
+normally think of chain of custody, we
+
+72
+00:06:45,620 --> 00:06:50,540
+think of a physical item. So I'll call it
+those its. They're atoms. So if I actually
+
+73
+00:06:50,540 --> 00:06:54,440
+have a painting, there's only one of them.
+And it takes a lot of work to copy that
+
+74
+00:06:54,440 --> 00:07:00,420
+painting. And if I have two, then I have a
+problem because somebody made a copy. How
+
+75
+00:07:00,420 --> 00:07:05,380
+do you tell the original from the copy?
+Well, if the copy is done really, really
+
+76
+00:07:05,380 --> 00:07:09,880
+well, just looking at the two, you can't
+tell the original from the copy. That's
+
+77
+00:07:09,880 --> 00:07:14,520
+why you have to have a chain of custody.
+You say the original was in possession of
+
+78
+00:07:14,520 --> 00:07:20,640
+somebody and they gave it to somebody else
+and they gave it to somebody else. And the
+
+79
+00:07:20,640 --> 00:07:24,900
+copy was never in their possession.
+possession. So you know it's a copy
+
+80
+00:07:24,900 --> 00:07:29,180
+because it wasn't part of the chain of
+custody. That works for atoms. It doesn't
+
+81
+00:07:29,180 --> 00:07:34,500
+work for information bits. So we have a
+harder problem to provenance data
+
+82
+00:07:34,500 --> 00:07:38,560
+information. So we have to use
+cryptography to do that. One of the first
+
+83
+00:07:38,560 --> 00:07:45,600
+things we do with cryptography is that we
+give an identifier to the source. The
+
+84
+00:07:45,600 --> 00:07:49,780
+source now has an identifier. That
+identifier is an electronic identifier.
+
+85
+00:07:50,000 --> 00:07:56,980
+It's more information. It's more bits. To
+make the ability to security attribute to
+
+86
+00:07:56,980 --> 00:08:02,140
+a source, that identifier needs to be
+unique. And in order to have universal
+
+87
+00:08:02,140 --> 00:08:07,660
+secure attribution, that identifier needs
+to be universally unique. There can only
+
+88
+00:08:07,660 --> 00:08:13,940
+be one in the whole universe. The only way
+that we can guarantee your universally
+
+89
+00:08:13,940 --> 00:08:21,340
+unique identifiers is to use cryptography
+or to use some trusted third party who
+
+90
+00:08:21,340 --> 00:08:27,100
+creates them. Well, we don't want to have
+to rely on a trusted third party, so the
+
+91
+00:08:27,100 --> 00:08:31,840
+identifiers must be cryptographic in
+nature. So, let's suppose that we have a
+
+92
+00:08:31,840 --> 00:08:38,100
+system for generating cryptographic
+identifiers. Now, we must be able to prove
+
+93
+00:08:38,100 --> 00:08:42,700
+who controls that identifier, and we have
+to do it in a verifiable way without
+
+94
+00:08:42,700 --> 00:08:48,740
+trusting the third party. If I have a
+cryptographic identifier and a way to
+
+95
+00:08:48,740 --> 00:08:54,700
+verifiably prove controller over that
+identifier, then I have what is called a
+
+96
+00:08:54,700 --> 00:09:01,800
+root of trust. I have the ability now to
+attribute data to that identifier where
+
+97
+00:09:01,800 --> 00:09:06,900
+that identifier is the source of that
+data. So, I now have constructed the basic
+
+98
+00:09:06,900 --> 00:09:13,080
+problem. The way that I can control an
+identifier or prove control of an
+
+99
+00:09:13,080 --> 00:09:17,960
+identifier is to use what we call
+cryptographic keys. And the specific type
+
+100
+00:09:17,960 --> 00:09:24,240
+of key that we use belongs to something
+called a public key pair or a public
+
+101
+00:09:24,240 --> 00:09:30,380
+private key pair where I have a public key
+and a private key. That is going to be in
+
+102
+00:09:30,380 --> 00:09:37,140
+a completely new subject to talk about the
+basics of public private key pairs. But
+
+103
+00:09:37,140 --> 00:09:41,820
+what we've done is set up the core idea of
+how we get to universally secure
+
+104
+00:09:41,820 --> 00:09:46,220
+attribution. And we haven't even really
+talked about how KERI does it, but I've
+
+105
+00:09:46,220 --> 00:09:51,180
+given you an introduction to the hard
+problem. The hard problem is universal
+
+106
+00:09:51,180 --> 00:09:56,900
+secure attribution. Follow along to learn
+more. Leave any questions in the comments.
+
+107
+00:09:57,860 --> 00:09:58,100
+Thank you.
+
+108
+00:10:27,780 --> 00:10:28,500
+Thank you.
+

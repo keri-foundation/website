@@ -39,7 +39,7 @@ confs/
 
 `index.json` → `transcriptsDir` (`transcripts/html`) tells both the gallery and the generator where HTML transcript pages live, for example `transcripts/html/talks/<video-id>.html`. Concatenated PDFs go under `transcripts/pdf/talks/`.
 
-## Monthly videos (`/vids/<YEAR>/<month>/`)
+## Yearly videos (`/vids/<YEAR>/`)
 
 Same gallery app as the conferences, for videos that are not part of a conference. The public path is `/vids/` so WordPress can keep `/videos/`.
 
@@ -47,16 +47,23 @@ Same gallery app as the conferences, for videos that are not part of a conferenc
 vids/
 ├── .htaccess                       directory listing rewrite (see below)
 ├── index.php                       styled folder browser for bare dirs
-└── 2026/jul/                       → https://keri.foundation/vids/2026/jul/
-    ├── index.html                  gallery app (copy of the conference template)
-    ├── index.json                  page copy and video list
-    ├── talks/                      *.mp4 + *.mp3 + *.srt side by side
-    └── transcripts/html/talks/     generated static transcript pages
+├── 2024/                           → https://keri.foundation/vids/2024/
+│   ├── index.html                  gallery app (copy of the conference template)
+│   ├── index.json                  page copy and video list
+│   ├── talks/                      *.mp4 + *.mp3 + *.srt side by side
+│   └── transcripts/html/talks/     generated static transcript pages
+└── 2026/                           → https://keri.foundation/vids/2026/
+    ├── index.html
+    ├── index.json
+    ├── talks/
+    └── transcripts/html/talks/
 ```
 
 The old standalone player redirects here:
 
-`/videos/sam-smith/Its-KERI-or-Surveillance/Its-KERI-or-Surveillance.html` → `/vids/2026/jul/#it-s-keri-or-surveillance-samuel-smith`
+`/videos/sam-smith/Its-KERI-or-Surveillance/Its-KERI-or-Surveillance.html` → `/vids/2026/#it-s-keri-or-surveillance-samuel-smith`
+
+`/vids/2026/jul/` redirects to `/vids/2026/`.
 
 ### New conference
 
@@ -73,7 +80,7 @@ scripts/deploy-confs.sh -n push          # preview what would be uploaded
 scripts/deploy-confs.sh deploy           # build + push (rsync --delete) + check the live site
 scripts/deploy-confs.sh check-remote     # HEAD-request every referenced file on keri.foundation
 scripts/deploy-confs.sh --conf SEDI/2025/nov push
-scripts/deploy-confs.sh --conf vids/2026/jul push
+scripts/deploy-confs.sh --conf vids/2026 push
 ```
 
 `push` and `deploy` also upload the site-root `.htaccess` (redirects), plus `confs/.htaccess` and `confs/index.php`. A full push mirrors every `confs/<ORG>/` folder and the whole `vids/` tree (so `vids/.htaccess` and `vids/index.php` ride along with that mirror). `--conf` limits the gallery mirror; site-root and `confs/` listing files are still uploaded.
@@ -94,7 +101,7 @@ Instead each tree root has:
 Behaviour:
 
 - A directory **with** `index.html` (a gallery) or its own `index.php` is left alone.
-- A bare directory (e.g. `/confs/`, `/confs/KERI/`, `/vids/2026/`) is rewritten to that tree’s `index.php`.
+- A bare directory (e.g. `/confs/`, `/confs/KERI/`, `/vids/`) is rewritten to that tree’s `index.php`.
 - Entries named in the script’s ignore list are omitted (including `template-presentations-landingpage` under `confs/`).
 
 Do not rely on `HEADER.html` or LiteSpeed `AutoIndexUri` on this host.

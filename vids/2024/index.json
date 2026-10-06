@@ -1,0 +1,58 @@
+{
+  "page": {
+    "title": "2024 Videos",
+    "heading": "2024 Videos",
+    "headingHref": "/vids/2024/",
+    "statusNotice": "",
+    "subtitle": "Samuel Smith introduces KERI, the Key Event Receipt Infrastructure",
+    "footer": "KERI Foundation • Videos",
+    "searchPlaceholder": "Type to search this talk…",
+    "searchLabel": "Search transcript",
+    "nav": [
+      {
+        "label": "Home",
+        "href": "/",
+        "external": false
+      },
+      {
+        "label": "2026 Videos",
+        "href": "/vids/2026/",
+        "external": false
+      },
+      {
+        "label": "KERI Conference April 2026",
+        "href": "/confs/KERI/2026/apr/",
+        "external": false
+      },
+      {
+        "label": "SEDI Summit November 2025",
+        "href": "/confs/SEDI/2025/nov/",
+        "external": false
+      }
+    ],
+    "transcriptLinks": [
+      {
+        "label": "Talk transcripts",
+        "href": "transcripts/html/talks/"
+      }
+    ]
+  },
+  "days": [
+    "January 2024"
+  ],
+  "transcriptsDir": "transcripts/html",
+  "speakerPhotos": {
+    "Samuel Smith": "https://kericonf.com/wp-content/uploads/2025/11/Samuel-Smith.jpg"
+  },
+  "videos": [
+    {
+      "order": 1,
+      "day": "January 2024",
+      "title": "Introduction to KERI - Samuel Smith",
+      "speaker": "Samuel Smith",
+      "path": "talks/2024-01-02-Introduction-to-KERI-Samuel-M-Smith-yP3eIl4VgA.mp4",
+      "duration": "10:57",
+      "subtitle": "talks/2024-01-02-Introduction-to-KERI-Samuel-M-Smith-yP3eIl4VgA.srt"
+    }
+  ]
+}
