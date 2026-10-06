@@ -127,12 +127,17 @@
         }
 
         .audience-filter {
-            margin: 0 0 24px;
+            margin: 0;
+            min-width: 0;
             background: rgba(255, 255, 255, 0.35);
             border-radius: 8px;
             padding: 20px 24px;
             border: 1px solid rgba(6, 11, 111, 0.12);
             text-align: center;
+        }
+
+        .audience-filter[hidden] {
+            display: none !important;
         }
 
         .audience-filter h2 {
@@ -266,20 +271,28 @@
         /* ── Search bar ── */
         .search-section {
             display: block;
-            margin-bottom: 30px;
+            min-width: 0;
             background: rgba(255, 255, 255, 0.35);
             border-radius: 8px;
             padding: 20px 24px;
             border: 1px solid rgba(6, 11, 111, 0.12);
         }
 
-        .search-section label {
+        .search-bar {
+            min-width: 0;
+        }
+
+        .search-bar label {
             display: block;
             font-size: 1rem;
             font-weight: 600;
             margin-bottom: 10px;
             letter-spacing: 0.04em;
             color: #060b6f;
+        }
+
+        .search-output {
+            min-width: 0;
         }
 
         .search-wrapper {
@@ -542,6 +555,63 @@
         .search-result-group .search-result:focus-visible {
             background: rgba(177, 209, 207, 0.12);
             border-color: transparent;
+        }
+
+        /* ── Search bar + target groups 50/50; results full width below ── */
+        .browse-tools {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            margin-bottom: 30px;
+            align-items: start;
+            min-width: 0;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        /* Small screens: target groups first, search bar+results as one block */
+        .browse-tools .audience-filter {
+            order: 1;
+        }
+
+        .browse-tools .search-section {
+            order: 2;
+        }
+
+        @media (min-width: 900px) {
+            /* Large screens: bar and results become separate grid items */
+            .search-section {
+                display: contents;
+                background: none;
+                border: none;
+                padding: 0;
+            }
+
+            .search-bar {
+                background: rgba(255, 255, 255, 0.35);
+                border-radius: 8px;
+                padding: 20px 24px;
+                border: 1px solid rgba(6, 11, 111, 0.12);
+            }
+
+            .browse-tools:has(> .audience-filter:not([hidden])) {
+                grid-template-columns: 1fr 1fr;
+                grid-template-areas:
+                    "search-bar audience"
+                    "search-output search-output";
+            }
+
+            .browse-tools:has(> .audience-filter:not([hidden])) .search-bar {
+                grid-area: search-bar;
+            }
+
+            .browse-tools:has(> .audience-filter:not([hidden])) .audience-filter {
+                grid-area: audience;
+            }
+
+            .browse-tools:has(> .audience-filter:not([hidden])) .search-output {
+                grid-area: search-output;
+            }
         }
 
         /* ── Promo + top clips: side-by-side when both present ── */
@@ -2242,27 +2312,33 @@
             </section>
         </div>
 
-        <section class="audience-filter" id="audienceFilter" hidden>
-            <h2 id="audienceFilterLabel">Target group</h2>
-            <p class="audience-filter-hint" id="audienceFilterHint">Choose a group to see only the videos meant for
-                them. A video can belong to more than one group.</p>
-            <div class="audience-filter-options" id="audienceFilterOptions" role="group" aria-label="Target groups">
-            </div>
-            <p class="audience-filter-status" id="audienceFilterStatus" role="status" aria-live="polite"></p>
-        </section>
+        <div class="browse-tools" id="browseTools">
+            <search class="search-section" aria-labelledby="searchLabel">
+                <div class="search-bar">
+                    <label for="transcriptSearch" id="searchLabel">Search all transcripts</label>
+                    <div class="search-wrapper">
+                        <input type="search" id="transcriptSearch" placeholder="Type to search…" autocomplete="off"
+                            spellcheck="false" enterkeyhint="search" aria-describedby="searchStatus">
+                        <button id="searchToggleAll" type="button" aria-expanded="true" aria-controls="searchResults"
+                            title="Collapse or expand all result groups" disabled>Toggle All</button>
+                        <button id="searchClear" type="button" aria-label="Clear search">Clear</button>
+                    </div>
+                </div>
+                <div class="search-output">
+                    <p id="searchStatus" role="status" aria-live="polite"></p>
+                    <div id="searchResults"></div>
+                </div>
+            </search>
 
-        <search class="search-section" aria-labelledby="searchLabel">
-            <label for="transcriptSearch" id="searchLabel">Search all transcripts</label>
-            <div class="search-wrapper">
-                <input type="search" id="transcriptSearch" placeholder="Type to search…" autocomplete="off"
-                    spellcheck="false" enterkeyhint="search" aria-describedby="searchStatus">
-                <button id="searchToggleAll" type="button" aria-expanded="true" aria-controls="searchResults"
-                    title="Collapse or expand all result groups" disabled>Toggle All</button>
-                <button id="searchClear" type="button" aria-label="Clear search">Clear</button>
-            </div>
-            <p id="searchStatus" role="status" aria-live="polite"></p>
-            <div id="searchResults"></div>
-        </search>
+            <section class="audience-filter" id="audienceFilter" hidden>
+                <h2 id="audienceFilterLabel">Target group</h2>
+                <p class="audience-filter-hint" id="audienceFilterHint">Choose a group to see only the videos meant for
+                    them. A video can belong to more than one group.</p>
+                <div class="audience-filter-options" id="audienceFilterOptions" role="group" aria-label="Target groups">
+                </div>
+                <p class="audience-filter-status" id="audienceFilterStatus" role="status" aria-live="polite"></p>
+            </section>
+        </div>
 
         <div class="gallery-toolbar">
             <button id="toggleAllVideos" type="button" aria-pressed="false"
