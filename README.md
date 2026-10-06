@@ -7,10 +7,10 @@ Three trees matter most:
 | Path | Role |
 | ---- | ---- |
 | `custom/` | WordPress look-and-feel and page scripts served from the live document root |
-| `confs/` | Conference galleries: videos, audio, subtitles, slides, promo, and generated transcripts |
-| `vids/` | Yearly (non-conference) video galleries: same media + subtitle + transcript layout |
+| `confs/` | Non-WordPress: conference galleries (videos, audio, subtitles, slides, promo, transcripts) |
+| `vids/` | Non-WordPress: yearly (non-conference) video galleries (same media + subtitle + transcript layout) |
 
-Details for each are in the sections below.
+`custom/` belongs to the WordPress site. `confs/` and `vids/` are separate static trees next to WordPress; they are not pages, posts, or theme code.
 
 ## Managing the website
 
