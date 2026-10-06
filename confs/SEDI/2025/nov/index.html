@@ -406,7 +406,8 @@
             letter-spacing: 0.03em;
         }
 
-        .search-result-time {
+        .search-result-time,
+        .search-result-lang {
             font-size: 0.75rem;
             background: rgba(6, 11, 111, 0.08);
             color: #2e3a7a;
@@ -415,6 +416,12 @@
             white-space: nowrap;
             flex: none;
             margin-bottom: 0;
+        }
+
+        .search-result-lang {
+            color: #036b64;
+            font-weight: 700;
+            letter-spacing: 0.03em;
         }
 
         .search-result-text {
@@ -1641,11 +1648,19 @@
             background: rgba(255, 229, 102, 0.75);
         }
 
-        .video-modal-transcript-body .cue-time {
+        .video-modal-transcript-body .cue-time,
+        .video-modal-transcript-body .cue-lang {
             font-size: 1rem;
             padding: 3px 10px;
             color: #036b64;
             background: rgba(6, 11, 111, 0.08);
+        }
+
+        .video-modal-transcript-body .cue-lang {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            white-space: nowrap;
         }
 
         .video-modal-transcript-body .cue-text {
@@ -1668,6 +1683,15 @@
             line-height: 1.75;
             color: #1a1a2e;
             white-space: pre-wrap;
+        }
+
+        .video-modal-transcript-body .transcript-plain-lang {
+            margin: 16px 4px 0;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            color: #036b64;
         }
 
         .video-modal-transcript-body .transcript-plain mark {
@@ -3817,6 +3841,7 @@
                 // clear &lang=nl from the URL.
                 clearTimeout(videoEl._captionLangUrlTimer);
                 videoEl._captionLangUrlTimer = setTimeout(() => {
+                    if (!shouldSyncCaptionLangToUrl(videoEl)) return;
                     const settled = normalizeLangCode(getActiveCaptionLanguage(videoEl))
                         || normalizeLangCode(videoEl._plyrPlayer?.language);
                     if (!settled) return;
@@ -3841,6 +3866,7 @@
                                 // switching tracks; debounce so URL lang= does not flicker off.
                                 clearTimeout(videoEl._captionLangUrlTimer);
                                 videoEl._captionLangUrlTimer = setTimeout(() => {
+                                    if (!shouldSyncCaptionLangToUrl(videoEl)) return;
                                     const settled = normalizeLangCode(player.language)
                                         || normalizeLangCode(getActiveCaptionLanguage(videoEl));
                                     if (settled) setCaptionLangPreference(settled);
@@ -4066,13 +4092,19 @@
             // ─────────────────────────────────────────────────────────────────────
             //  Cue line element (shared by accordion and search results)
             // ─────────────────────────────────────────────────────────────────────
-            function makeCueLine(cue, videoPath, highlightQuery, targetVideoEl) {
+            function makeCueLine(cue, videoPath, highlightQuery, targetVideoEl, lang) {
                 const btn = document.createElement('button');
                 btn.type = 'button';
                 btn.className = 'cue-line';
                 btn.dataset.cueStart = String(cue.start);
                 btn.dataset.cueEnd = String(cue.end);
-                btn.setAttribute('aria-label', `Play from ${cue.startLabel}: ${cue.text}`);
+                const langName = lang ? languageLabel(lang) : '';
+                btn.setAttribute(
+                    'aria-label',
+                    langName
+                        ? `Play from ${cue.startLabel} (${langName}): ${cue.text}`
+                        : `Play from ${cue.startLabel}: ${cue.text}`
+                );
 
                 const timeSpan = document.createElement('span');
                 timeSpan.className = 'cue-time';
@@ -4088,6 +4120,13 @@
                 }
 
                 btn.appendChild(timeSpan);
+                if (langName) {
+                    const langSpan = document.createElement('span');
+                    langSpan.className = 'cue-lang';
+                    langSpan.textContent = langName;
+                    langSpan.setAttribute('aria-hidden', 'true');
+                    btn.appendChild(langSpan);
+                }
                 btn.appendChild(textSpan);
 
                 const seek = () => {
@@ -4576,6 +4615,31 @@
                 return track;
             }
 
+            function readyCaptionTracks(videoPath) {
+                const byLang = captionTrackStore[videoPath] || {};
+                return Object.keys(byLang)
+                    .filter((lang) => byLang[lang]?.status === 'ready' && byLang[lang].cues?.length)
+                    .sort((a, b) => {
+                        if (a === 'en') return -1;
+                        if (b === 'en') return 1;
+                        return a.localeCompare(b);
+                    })
+                    .map((lang) => ({ lang, cues: byLang[lang].cues }));
+            }
+
+            function transcriptSearchHits(videoPath, normalizedQuery) {
+                const hits = [];
+                for (const source of readyCaptionTracks(videoPath)) {
+                    source.cues.forEach((cue, index) => {
+                        if (cue.text.toLowerCase().includes(normalizedQuery)) {
+                            hits.push({ cue, index, lang: source.lang, cues: source.cues });
+                        }
+                    });
+                }
+                hits.sort((a, b) => a.cue.start - b.cue.start || a.lang.localeCompare(b.lang));
+                return hits;
+            }
+
             function scheduleModalTranscriptLanguageRefresh() {
                 const sessionId = modalSessionId;
                 clearTimeout(modalTranscriptLangTimer);
@@ -5057,11 +5121,24 @@
 
                 const trimmedQuery = query.trim();
                 const normalizedQuery = trimmedQuery.toLowerCase();
-                const matchingCues = normalizedQuery
-                    ? store.cues.filter(cue => cue.text.toLowerCase().includes(normalizedQuery))
-                    : store.cues;
+                const currentLang = modalTranscriptLang || 'en';
+                let matchingHits;
+                if (!normalizedQuery) {
+                    matchingHits = store.cues.map((cue, index) => ({ cue, index, lang: null, cues: store.cues }));
+                } else if (readyCaptionTracks(videoPath).length) {
+                    matchingHits = transcriptSearchHits(videoPath, normalizedQuery);
+                } else {
+                    matchingHits = [];
+                    store.cues.forEach((cue, index) => {
+                        if (cue.text.toLowerCase().includes(normalizedQuery)) {
+                            matchingHits.push({ cue, index, lang: null, cues: store.cues });
+                        }
+                    });
+                }
+                const langsInHits = new Set(matchingHits.map((hit) => hit.lang).filter(Boolean));
+                const showLang = langsInHits.size > 1;
 
-                if (normalizedQuery && !matchingCues.length) {
+                if (normalizedQuery && !matchingHits.length) {
                     setModalTranscriptSyncEnabled(false);
                     const empty = document.createElement('p');
                     empty.className = 'transcript-loading';
@@ -5083,16 +5160,34 @@
                         plain.textContent = fullText;
                     }
                     modalTranscriptBody.appendChild(plain);
+                    if (normalizedQuery) {
+                        const extras = new Map();
+                        for (const hit of matchingHits) {
+                            if (!hit.lang || hit.lang === currentLang) continue;
+                            if (!extras.has(hit.lang)) extras.set(hit.lang, []);
+                            extras.get(hit.lang).push(hit.cue);
+                        }
+                        for (const [lang, cues] of extras) {
+                            const heading = document.createElement('p');
+                            heading.className = 'transcript-plain-lang';
+                            heading.textContent = languageLabel(lang);
+                            const extra = document.createElement('p');
+                            extra.className = 'transcript-plain';
+                            extra.innerHTML = highlightMatch(concatenateCueTexts(cues), trimmedQuery);
+                            modalTranscriptBody.appendChild(heading);
+                            modalTranscriptBody.appendChild(extra);
+                        }
+                    }
                     setModalTranscriptSyncEnabled(false);
 
                     if (modalTranscriptSearchStatus) {
                         modalTranscriptSearchStatus.textContent = normalizedQuery
-                            ? `${matchingCues.length} match${matchingCues.length === 1 ? '' : 'es'}`
+                            ? `${matchingHits.length} match${matchingHits.length === 1 ? '' : 'es'}`
                             : '';
                     }
 
                     if (normalizedQuery) {
-                        const firstMark = plain.querySelector('mark');
+                        const firstMark = modalTranscriptBody.querySelector('mark');
                         if (firstMark) scrollElementIntoContainer(modalTranscriptBody, firstMark);
                     }
                     return;
@@ -5101,12 +5196,13 @@
                 modalTranscriptBody.setAttribute('role', 'region');
                 modalTranscriptBody.setAttribute('aria-label', 'Transcript cues');
                 const frag = document.createDocumentFragment();
-                for (const cue of matchingCues) {
+                for (const hit of matchingHits) {
                     frag.appendChild(makeCueLine(
-                        cue,
+                        hit.cue,
                         videoPath,
                         normalizedQuery ? trimmedQuery : null,
-                        modalVideoEl
+                        modalVideoEl,
+                        showLang ? hit.lang : null
                     ));
                 }
                 modalTranscriptBody.appendChild(frag);
@@ -5114,11 +5210,11 @@
 
                 if (modalTranscriptSearchStatus) {
                     modalTranscriptSearchStatus.textContent = normalizedQuery
-                        ? `${matchingCues.length} match${matchingCues.length === 1 ? '' : 'es'}`
+                        ? `${matchingHits.length} match${matchingHits.length === 1 ? '' : 'es'}`
                         : '';
                 }
 
-                if (normalizedQuery && matchingCues.length) {
+                if (normalizedQuery && matchingHits.length) {
                     const firstLine = modalTranscriptBody.querySelector('.cue-line');
                     if (firstLine) scrollElementIntoContainer(modalTranscriptBody, firstLine);
                     return;
@@ -5157,6 +5253,7 @@
             function openVideoModal(video, startTime, endTime) {
                 if (!hasSubtitles(video)) return;
                 ensureVideoModal();
+                const openedCaptionLang = captionLangPreference;
 
                 const sessionId = beginModalSession();
                 modalPreviousFocus = document.activeElement;
@@ -5234,15 +5331,19 @@
 
                 Promise.all([loadTranscript(video), loadAllCaptionTracks(video)]).then(([store, captionStore]) => {
                     if (modalSourceVideoPath !== video.path) return;
+                    if (openedCaptionLang) captionLangPreference = openedCaptionLang;
                     attachCaptionTracksForVideo(modalVideoEl, video, captionStore);
-                    const lang = normalizeLangCode(modalVideoEl.dataset.preferredCaptionLang)
-                        || preferredCaptionLanguage(subtitleTracks(video))
-                        || primarySubtitleLang(video);
+                    const lang = (openedCaptionLang && captionStore?.[openedCaptionLang]?.status === 'ready')
+                        ? openedCaptionLang
+                        : (normalizeLangCode(modalVideoEl.dataset.preferredCaptionLang)
+                            || preferredCaptionLanguage(subtitleTracks(video))
+                            || primarySubtitleLang(video));
                     const track = lang ? captionStore?.[lang] : null;
                     const displayStore = (track && track.status === 'ready' && track.cues.length) ? track : store;
                     modalTranscriptLang = (displayStore === track) ? lang : (primarySubtitleLang(video) || null);
                     populateModalTranscript(displayStore, video.path, modalTranscriptSearchInput?.value ?? '');
                     renderModalLinks(store.rawText);
+                    updateVideoUrlForModal(modalVideoId, time, hasClipEnd ? endTime : null);
                 });
 
                 videoModalOverlay.hidden = false;
@@ -6018,9 +6119,8 @@
                         return;
                     }
 
-                    // Kick off (or reuse) loads for every video that has a subtitle file,
-                    // then wait for all of them so results are never partial.
-                    const pending = videos.filter(v => hasSubtitles(v)).map(v => loadTranscript(v));
+                    // Load every subtitle file, including translations, before searching.
+                    const pending = videos.filter(v => hasSubtitles(v)).map(v => loadAllCaptionTracks(v));
                     if (pending.length) {
                         searchStatus.textContent = 'Loading transcripts…';
                         searchStatus.setAttribute('aria-busy', 'true');
@@ -6037,15 +6137,11 @@
                     for (const video of videos) {
                         if (!videoMatchesAudience(video)) continue;
                         if (!hasSubtitles(video)) continue;
-                        const store = transcriptStore[video.path];
-                        if (!store || store.status !== 'ready') continue;
-                        const cues = store.cues;
-                        for (let cueIndex = 0; cueIndex < cues.length; cueIndex++) {
-                            const cue = cues[cueIndex];
-                            if (cue.text.toLowerCase().includes(q)) {
-                                matches.push({ video, cue, index: cueIndex });
-                                if (matches.length >= MAX_RESULTS) break;
-                            }
+                        const hits = transcriptSearchHits(video.path, q);
+                        hits.sort((a, b) => a.cue.start - b.cue.start || a.lang.localeCompare(b.lang));
+                        for (const hit of hits) {
+                            matches.push({ video, ...hit });
+                            if (matches.length >= MAX_RESULTS) break;
                         }
                         if (matches.length >= MAX_RESULTS) break;
                     }
@@ -6065,11 +6161,11 @@
                         `${truncated ? MAX_RESULTS + '+' : matches.length} result${matches.length !== 1 ? 's' : ''}`;
 
                     const groupsByVideoPath = {};
-                    for (const { video, cue, index } of matches) {
-                        if (!groupsByVideoPath[video.path]) {
-                            groupsByVideoPath[video.path] = { video, cues: [] };
+                    for (const match of matches) {
+                        if (!groupsByVideoPath[match.video.path]) {
+                            groupsByVideoPath[match.video.path] = { video: match.video, cues: [] };
                         }
-                        groupsByVideoPath[video.path].cues.push({ cue, index });
+                        groupsByVideoPath[match.video.path].cues.push(match);
                     }
 
                     const frag = document.createDocumentFragment();
@@ -6123,9 +6219,12 @@
                             const item = document.createElement('button');
                             item.type = 'button';
                             item.className = 'search-result';
+                            const langName = cueMatch.lang ? languageLabel(cueMatch.lang) : '';
                             item.setAttribute(
                                 'aria-label',
-                                `${video.title}, ${cueMatch.cue.startLabel}: ${cueMatch.cue.text}`
+                                langName
+                                    ? `${video.title}, ${langName}, ${cueMatch.cue.startLabel}: ${cueMatch.cue.text}`
+                                    : `${video.title}, ${cueMatch.cue.startLabel}: ${cueMatch.cue.text}`
                             );
 
                             const timeEl = document.createElement('span');
@@ -6133,19 +6232,25 @@
                             timeEl.textContent = cueMatch.cue.startLabel;
                             timeEl.setAttribute('aria-hidden', 'true');
 
+                            const langEl = document.createElement('span');
+                            langEl.className = 'search-result-lang';
+                            langEl.textContent = langName;
+                            langEl.setAttribute('aria-hidden', 'true');
+
                             const textEl = document.createElement('span');
                             textEl.className = 'search-result-text';
-                            const store = transcriptStore[video.path];
-                            textEl.innerHTML = store && store.cues
-                                ? createSearchResultContextHTML(store.cues, cueMatch.index, query)
+                            textEl.innerHTML = cueMatch.cues
+                                ? createSearchResultContextHTML(cueMatch.cues, cueMatch.index, query)
                                 : highlightMatch(cueMatch.cue.text, query);
                             textEl.setAttribute('aria-hidden', 'true');
 
                             item.appendChild(timeEl);
+                            if (langName) item.appendChild(langEl);
                             item.appendChild(textEl);
 
                             const activateSearchResult = () => {
                                 setAllCardsCondensed(false);
+                                if (cueMatch.lang) setCaptionLangPreference(cueMatch.lang, { syncUrl: false });
                                 openVideoModal(video, cueMatch.cue.start);
                             };
                             item.addEventListener('click', activateSearchResult);
