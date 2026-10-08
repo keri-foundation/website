@@ -195,7 +195,7 @@ Install once with `npm install` inside `scripts/`:
 node scripts/build-transcript-pdf.js KERI/2026/apr
 node scripts/remove-rolling-subtitles.js confs/KERI/2026/apr/talks
 bash scripts/upload-youtube-subs.sh 'PLAYLIST_URL' confs/KERI/2026/apr/talks
-bash scripts/fetch.sh          # pull the live site into this checkout
+bash scripts/fetch-wordpress.sh  # pull live WordPress (not confs/ or vids/)
 python3 scripts/generate_policy_brief_pdf.py
 ```
 

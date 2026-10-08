@@ -62,7 +62,7 @@
 *.pdf
 
 # --- Utility scripts & misc data ---
-# !/fetch.sh
+# !/fetch-wordpress.sh
 # !/various/
 # !/various/**
 
