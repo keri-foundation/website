@@ -1,0 +1,823 @@
+1
+00:00:00,000 --> 00:00:04,400
+Soy el director de la Oficina de Protección de
+Datos de Utah, dependiente del Departamento de
+
+2
+00:00:04,400 --> 00:00:10,600
+Operaciones Gubernamentales. Quiero dar las gracias
+al Instituto Herbert de Política Pública, al
+
+3
+00:00:10,600 --> 00:00:14,940
+Departamento de Operaciones Gubernamentales y a
+la Asamblea Legislativa de Utah por su ayuda para
+
+4
+00:00:14,940 --> 00:00:21,800
+organizar este evento, así como a la UVU por
+permitirnos utilizar sus instalaciones. Yo
+
+5
+00:00:21,800 --> 00:00:26,500
+también quiero dar las gracias a la UVU. Hemos contado con
+muchos empleados, estudiantes y becarios que han ayudado a
+
+6
+00:00:26,500 --> 00:00:30,760
+organizar este evento durante los últimos
+meses, por lo que no podríamos haberlo hecho sin
+
+7
+00:00:30,760 --> 00:00:36,280
+el esfuerzo que han dedicado. Y quiero
+daros las gracias a todos por venir a
+
+8
+00:00:36,280 --> 00:00:41,040
+Utah para participar en este evento. Nos
+hemos reflexionado mucho sobre cómo podríamos
+
+9
+00:00:41,040 --> 00:00:46,260
+organizar realmente un evento que propiciara un cambio.
+Y pensamos en limitar a organizar un evento virtual
+
+10
+00:00:46,260 --> 00:00:51,880
+y sabíamos que iba a hacer falta mucha
+pasión y mucho trabajo para llevar a cabo
+
+11
+00:00:51,880 --> 00:00:56,180
+lo que vamos a proponer hoy. Así
+que era importante ver quién podía
+
+12
+00:00:56,180 --> 00:01:01,080
+pudieran venir en persona y que se preocuparan
+más por ello para ayudarnos a construir lo que
+
+13
+00:01:01,080 --> 00:01:06,320
+vamos a proponer. Así que os doy las gracias a todos
+por venir. Los que proceden de los estados: tenemos
+
+14
+00:01:06,320 --> 00:01:13,000
+representados a 12 estados. Los que proceden
+del ámbito académico, los de organismos del
+
+15
+00:01:13,000 --> 00:01:17,420
+poder ejecutivo y los legisladores. Creo
+que tenemos más de una docena de empresas
+
+16
+00:01:17,420 --> 00:01:21,740
+representadas. Contamos con ciudadanos preocupados.
+Contamos con grupos de interés privados. Contamos con
+
+17
+00:01:21,740 --> 00:01:27,720
+la ACLU nacional. Así que tenemos
+el inicio de lo que creo que va a ser un
+
+18
+00:01:27,720 --> 00:01:28,620
+consorcio realmente magnífico.
+
+19
+00:01:32,040 --> 00:01:39,100
+Ahora bien, el objetivo de hoy es sencillo. Os hemos
+invitado a todos a venir aquí, en primer lugar,
+
+20
+00:01:39,340 --> 00:01:46,000
+para que os informéis sobre un tema muy
+complejo: la identidad digital. La segunda
+
+21
+00:01:46,000 --> 00:01:51,680
+razón por la que os hemos invitado es para ayudaros
+a comprender el problema y lo que creemos que
+
+22
+00:01:51,680 --> 00:01:57,400
+es una oportunidad realmente grande para que Estados
+Unidos tome la iniciativa. Y la tercera y última razón
+
+23
+00:01:57,400 --> 00:02:02,340
+por la que os hemos invitado aquí
+hoy es para invitaros a uniros al SEDI
+
+24
+00:02:02,340 --> 00:02:06,920
+, el consorcio de identidad digital respaldado
+por el Estado, para que podamos avanzar
+
+25
+00:02:06,920 --> 00:02:14,940
+y trabajar juntos en lo que creemos que es una gran
+oportunidad para Estados Unidos. Ahora bien, yo
+
+26
+00:02:14,940 --> 00:02:20,840
+soy optimista por naturaleza y me siento muy optimista
+respecto a la identidad digital si lo hacemos
+
+27
+00:02:20,840 --> 00:02:25,760
+bien. Y creo que podemos desarrollar una
+tecnología que refleje los valores estadounidenses,
+
+28
+00:02:26,260 --> 00:02:30,660
+que proteja las libertades, fortalezca a las
+familias y fomente la confianza en el mundo digital
+
+29
+00:02:30,660 --> 00:02:38,420
+. Pero también soy realista en cuanto a por qué
+es necesario este esfuerzo. Me preocupa mucho
+
+30
+00:02:38,420 --> 00:02:43,200
+algo de lo que veo que está ocurriendo
+no solo en Estados Unidos, sino lo que está
+
+31
+00:02:43,200 --> 00:02:47,120
+está ocurriendo en todo el mundo. Hay muchos
+de vosotros en esta sala que habéis expresado
+
+32
+00:02:47,120 --> 00:02:51,220
+esas mismas preocupaciones. Por
+eso el diputado Cutler y el senador
+
+33
+00:02:51,220 --> 00:02:56,240
+Kullimore han presentado el proyecto de ley del Senado n.º
+260 en esta última sesión, el primer proyecto de ley sobre
+
+34
+00:02:56,240 --> 00:03:00,280
+sobre identidad digital en el estado y en todo el
+país para empezar a abordar estas preocupaciones.
+
+35
+00:03:00,680 --> 00:03:07,520
+Así que quiero compartir con vosotros algunas de
+nuestras preocupaciones. Me preocupan mis hijos y
+
+36
+00:03:07,520 --> 00:03:13,980
+vuestros hijos, que pueden interactuar en Internet,
+en los videojuegos y en las redes sociales, y que no
+
+37
+00:03:13,980 --> 00:03:19,060
+saben —y nosotros tampoco sabemos— si las personas
+con las que están interactuando son realmente quienes
+
+38
+00:03:19,060 --> 00:03:26,000
+dicen ser. Me preocupan mis y
+vuestros padres y abuelos mayores, que
+
+39
+00:03:26,000 --> 00:03:31,920
+siguen siendo víctimas de personas
+que se hacen pasar por familiares
+
+40
+00:03:31,920 --> 00:03:40,340
+en apuros. Me preocupan los jóvenes
+que se enfrentan a la explotación y
+
+41
+00:03:40,340 --> 00:03:46,560
+la sextorsión en Internet. Este es uno de los
+delitos que más rápido crece en Estados Unidos y en
+
+42
+00:03:46,560 --> 00:03:52,660
+Utah que afecta a nuestros jóvenes. Se ven empujados
+a la desesperación e incluso al suicidio en un
+
+43
+00:03:52,660 --> 00:03:58,960
+mundo en el que el anonimato y la manipulación
+coexisten sin protección. Me preocupa
+
+44
+00:03:58,960 --> 00:04:05,200
+de que el fraude facilitado por el robo de identidad y
+la suplantación de identidad esté costando ahora a los
+
+45
+00:04:05,200 --> 00:04:12,560
+cientos de miles de millones de dólares al
+año. Me preocupa que los algoritmos basados
+
+46
+00:04:12,560 --> 00:04:18,660
+en la elaboración de perfiles y la puntuación estén influyendo
+en nuestro comportamiento y moldeando silenciosamente el
+
+47
+00:04:18,660 --> 00:04:25,280
+concepto mismo de libertad y libre albedrío.
+Me preocupa que el libre mercado se esté
+
+48
+00:04:25,280 --> 00:04:30,420
+distorsionando, que quienes controlan los datos
+personales estén facilitando prácticas monopolísticas
+
+49
+00:04:30,420 --> 00:04:38,620
+que maximiza la explotación de las personas
+con fines lucrativos, en lugar de impulsar
+
+50
+00:04:38,620 --> 00:04:46,240
+un mercado libre basado en la competencia
+y los mejores precios. Me preocupa que los
+
+51
+00:04:46,240 --> 00:04:51,360
+se produzcan ataques estatales contra los futuros
+sistemas de identidad digital y debemos dar por hecho
+
+52
+00:04:51,360 --> 00:04:58,380
+que la identidad digital se verá comprometida. Me preocupa que
+los sistemas de identidad digital patrocinados por el gobierno
+
+53
+00:04:58,380 --> 00:05:03,200
+tanto en Estados Unidos
+como en el resto del mundo
+
+54
+00:05:03,200 --> 00:05:10,500
+capaces de rastrear,
+vigilar y controlar. Me
+
+55
+00:05:10,500 --> 00:05:15,800
+me preocupa que los gobiernos, las empresas y los
+expertos en tecnología se estén apresurando a crear
+
+56
+00:05:15,800 --> 00:05:21,380
+sistemas de identidad digital que
+sean obligatorios y exigidos, y que estos
+
+57
+00:05:21,380 --> 00:05:24,560
+se estén creando sin la gobernanza
+integral, los marcos normativos
+
+58
+00:05:24,560 --> 00:05:32,160
+y las protecciones necesarias para salvaguardar
+los derechos individuales. Y lo que más me preocupa
+
+59
+00:05:32,160 --> 00:05:37,280
+de que, en las democracias de todo el mundo,
+los sistemas de identidad digital se estén
+
+60
+00:05:37,280 --> 00:05:42,120
+diseñando e implementando de formas contrarias
+a los principios fundamentales de los
+
+61
+00:05:42,120 --> 00:05:47,860
+fundacionales. Y es que las personas tienen
+derechos individuales inalienables que
+
+62
+00:05:47,860 --> 00:05:53,780
+les son conferidos de forma innata,
+incluida la identidad. El Gobierno no
+
+63
+00:05:53,780 --> 00:05:59,600
+otorgar la identidad. El Gobierno no crea la
+identidad. Y cualquier sistema de identidad
+
+64
+00:05:59,600 --> 00:06:03,860
+basado en la premisa de que el Gobierno
+te la otorga significa que también puede
+
+65
+00:06:03,860 --> 00:06:10,620
+quitártela, lo cual va en contra de este
+principio fundacional. Así que la verdad es que
+
+66
+00:06:10,620 --> 00:06:15,900
+hoy en día no hay confianza en el mundo
+digital. No sabemos quién o qué es real.
+
+67
+00:06:16,280 --> 00:06:23,660
+No lo sabemos. Tú no controlas tu identidad
+digital. Los nombres de usuario, las contraseñas,
+
+68
+00:06:24,660 --> 00:06:29,780
+incluso el carné de conducir móvil te lo pueden quitar.
+Pueden verse comprometidos. Actualmente no existe
+
+69
+00:06:29,780 --> 00:06:34,660
+ninguna estrategia nacional sobre identidad
+digital y sabemos que hay muchas personas,
+
+70
+00:06:35,180 --> 00:06:39,360
+tanto extranjeros como en el extranjero, a quienes
+les encantaría controlar tu identidad digital y
+
+71
+00:06:39,360 --> 00:06:45,480
+comprometerla para su propio beneficio. Así que el
+dilema al que nos enfrentamos es que, si no hacemos
+
+72
+00:06:45,480 --> 00:06:50,680
+nada, nos quedaremos con un sistema
+creado por otros que no comparten nuestros
+
+73
+00:06:50,680 --> 00:06:55,320
+mismos valores. Pero esto no es el final de
+la historia. Es la razón por la que estamos
+
+74
+00:06:55,320 --> 00:07:01,600
+aquí. Todos los que estamos en esta sala estamos
+en posición de influir. Algunos de vosotros tenéis
+
+75
+00:07:01,600 --> 00:07:06,540
+el poder de promulgar leyes. Algunos de
+vosotros tenéis el poder de crear y dictar
+
+76
+00:07:06,540 --> 00:07:10,980
+políticas públicas. Algunos de vosotros tenéis el poder
+de crear tecnología. Algunos de vosotros tenéis el
+
+77
+00:07:10,980 --> 00:07:15,300
+poder de financiar nuevas empresas para crear las
+soluciones que necesitamos. Algunos de vosotros tenéis
+
+78
+00:07:15,300 --> 00:07:19,560
+el poder de crear marcos de gobernanza. Y
+algunos de vosotros tenéis el poder de crear
+
+79
+00:07:19,560 --> 00:07:23,220
+normas. Y algunos de vosotros simplemente tenéis
+el poder de plantear vuestras inquietudes y crear
+
+80
+00:07:23,220 --> 00:07:28,000
+problemas al resto de nosotros, algo que
+necesitamos. Así que todos tenéis algo que aportar
+
+81
+00:07:28,000 --> 00:07:32,340
+que es necesario para crear la solución
+necesaria para abordar nuestras preocupaciones y
+
+82
+00:07:32,340 --> 00:07:37,780
+crear una mejor identidad digital. Así pues, hay un
+camino, un camino a seguir, que pasa por construir
+
+83
+00:07:37,780 --> 00:07:43,540
+la identidad digital de una manera que dé
+prioridad a los derechos y a la dignidad. En esto
+
+84
+00:07:43,540 --> 00:07:50,700
+en lo que consiste la identidad digital respaldada
+por el Estado. Así que quiero que imaginéis, por un
+
+85
+00:07:50,700 --> 00:07:56,760
+minuto, un futuro. Un futuro dentro de 10
+años, después de haber trabajado muy duro.
+
+86
+00:07:56,900 --> 00:08:02,380
+Tenemos que ponernos de acuerdo hoy y en futuras
+cumbres en cuál va a ser ese trabajo. Pero
+
+87
+00:08:02,380 --> 00:08:06,180
+un futuro en el que nuestros temores sobre el
+robo de identidad digital, la manipulación,
+
+88
+00:08:06,760 --> 00:08:12,860
+la suplantación de identidad, la explotación y la pérdida
+de control hayan sido sustituidos por la confianza y
+
+89
+00:08:12,860 --> 00:08:18,760
+autenticidad. Donde los padres saben que sus
+hijos están seguros en Internet. Donde nuestros
+
+90
+00:08:18,760 --> 00:08:23,720
+mayores están protegidos contra las estafas y la
+suplantación de identidad, donde existe la confianza de que
+
+91
+00:08:23,720 --> 00:08:28,700
+el Gobierno protege vuestra identidad digital y
+vuestros derechos por encima de cualquier otro
+
+92
+00:08:28,700 --> 00:08:36,000
+interés. Ese es el mundo que necesitamos que todos vosotros
+ayudéis a crear. Así pues, a través del consorcio SEDI
+
+93
+00:08:36,000 --> 00:08:40,660
+que proponemos y al que os
+invitamos a uniros hoy, los estados
+
+94
+00:08:40,660 --> 00:08:46,540
+colaborarán para definir un modelo estadounidense
+de identidad digital, uno que proteja
+
+95
+00:08:46,540 --> 00:08:52,100
+a los ciudadanos y, en lugar de importar
+normas basadas en la vigilancia y el control
+
+96
+00:08:52,100 --> 00:08:59,020
+y tecnología del extranjero, exportaremos la
+libertad por diseño, demostrando que la privacidad,
+
+97
+00:08:59,740 --> 00:09:05,980
+la seguridad, la protección de los derechos y
+la protección de los derechos individuales y
+
+98
+00:09:05,980 --> 00:09:12,340
+la innovación pueden coexistir. Los beneficios
+y las capacidades de SEDI serán profundos. Esto
+
+99
+00:09:12,340 --> 00:09:16,400
+proporcionará la base para que las
+personas y las empresas obtengan valor
+
+100
+00:09:16,400 --> 00:09:22,380
+y utilidad para el mercado libre, con el fin de
+crear soluciones nuevas e innovadoras. Sabemos
+
+101
+00:09:22,380 --> 00:09:26,820
+que habrá nuevas soluciones para la verificación
+de la identidad. Habrá nuevas soluciones para
+
+102
+00:09:26,820 --> 00:09:31,700
+sustituir los nombres de usuario y las contraseñas.
+Imagina que no tuvieras que preocuparte
+
+103
+00:09:31,700 --> 00:09:36,200
+de que tus contraseñas puedan verse comprometidas.
+Habrá nuevas soluciones para el consentimiento
+
+104
+00:09:36,200 --> 00:09:40,200
+y la gestión, así como acuerdos que las
+personas puedan controlar. Habrá nuevas
+
+105
+00:09:40,200 --> 00:09:45,300
+soluciones para la delegación, que permitan a
+las familias, los tutores y las organizaciones
+
+106
+00:09:45,300 --> 00:09:51,180
+actuar de forma segura en nombre de las personas
+vulnerables y de aquellos a quienes atienden. Habrá
+
+107
+00:09:51,180 --> 00:09:56,200
+soluciones para la IA agentiva, en las que la inteligencia
+artificial opera con vuestra autorización explícita
+
+108
+00:09:56,200 --> 00:10:01,000
+y no en vuestro lugar, ampliando
+vuestra capacidad de acción en lugar de
+
+109
+00:10:01,000 --> 00:10:06,260
+sustituirla. Probablemente muchos de vosotros
+os estáis preguntando: ¿cómo podríamos pasar del
+
+110
+00:10:06,260 --> 00:10:12,400
+estado actual a ese estado futuro? Y lo hacemos de la
+misma forma en que se hacen todas las grandes cosas
+
+111
+00:10:12,400 --> 00:10:17,600
+se han logrado. Y tenemos que hacerlo juntos. Tenemos que
+elaborar un plan. Tenemos que ponernos de acuerdo sobre
+
+112
+00:10:17,600 --> 00:10:23,100
+nuestros valores. Tenemos que crear una
+estructura. Tenemos que arremangarnos. Y luego,
+
+113
+00:10:23,620 --> 00:10:27,520
+como les gusta decir a mis hijos adolescentes y a los
+más pequeños, tenemos que darlo todo. Vamos a tener
+
+114
+00:10:27,520 --> 00:10:31,420
+salir ahí fuera y ponernos manos a la obra para
+que esto sea una realidad. Y nos va a llevar
+
+115
+00:10:31,420 --> 00:10:36,200
+mucho tiempo. Y es en el marco del consorcio
+SEDI donde podremos recoger los frutos de todo
+
+116
+00:10:36,200 --> 00:10:40,400
+este trabajo que estamos a punto de realizar
+y compartirlos con todos los demás para que
+
+117
+00:10:40,400 --> 00:10:44,060
+puedan seguir nuestros pasos. Sabemos
+que no todo el mundo va a poder hacerlo. No
+
+118
+00:10:44,060 --> 00:10:48,600
+contamos aquí con los 50 estados. No todo el mundo
+dispone de la financiación necesaria, pero somos
+
+119
+00:10:48,600 --> 00:10:53,180
+entidades públicas. Podemos crearlo y podemos
+entregárselo por el bien de todos. Así que
+
+120
+00:10:53,180 --> 00:10:56,120
+el trabajo que vamos a realizar
+va a incluir marcos de gobernanza
+
+121
+00:10:56,120 --> 00:11:02,100
+integrales, legislación modelo, resoluciones,
+órdenes ejecutivas, definición de
+
+122
+00:11:02,100 --> 00:11:08,060
+los requisitos de la SEDI, controles tecnológicos y normativos,
+programas de conformidad, solicitudes de información (RFI) y
+
+123
+00:11:08,060 --> 00:11:11,860
+solicitudes de propuestas (RFP). Tendremos que realizar
+evaluaciones de seguridad. Vamos a tener que mantener
+
+124
+00:11:11,860 --> 00:11:15,580
+un diálogo continuo con los grupos de defensa de los
+derechos civiles y los organismos de control. Vamos a tener
+
+125
+00:11:15,580 --> 00:11:17,900
+que haya una transparencia absoluta
+y vamos a tener que garantizar una
+
+126
+00:11:17,900 --> 00:11:19,320
+transparencia y vamos a tener
+que hacer mucho, mucho más
+
+127
+00:11:19,320 --> 00:11:24,600
+para que el mercado de la identidad digital
+en Estados Unidos se ajuste a lo que van a ser
+
+128
+00:11:24,600 --> 00:11:25,880
+las normas SEDI.
+
+129
+00:11:34,480 --> 00:11:39,920
+Así que hoy estáis aquí para aprender
+sobre la identidad digital y algunos de los
+
+130
+00:11:39,920 --> 00:11:44,740
+principios que guiarán la creación de una identidad
+digital respaldada por el Estado. Comprenderéis
+
+131
+00:11:44,740 --> 00:11:48,380
+las preocupaciones y las oportunidades
+que se nos presentan, y espero que
+
+132
+00:11:48,380 --> 00:11:54,240
+aceptéis nuestra invitación para uniros a nosotros.
+Pero, para terminar, os voy a enseñar solo una de
+
+133
+00:11:54,240 --> 00:11:58,760
+los principios fundamentales y los requisitos de
+la identidad digital avalada por el Estado. Este
+
+134
+00:11:58,760 --> 00:12:03,520
+es el primero que identificamos cuando se redactó
+el proyecto de ley del Senado n.º 260. Y esta
+
+135
+00:12:03,520 --> 00:12:07,380
+es probablemente la diferencia más esencial
+y fundamental en comparación con lo que
+
+136
+00:12:07,380 --> 00:12:13,140
+se está produciendo en el resto del mundo.
+La identidad pertenece a la persona, no
+
+137
+00:12:13,140 --> 00:12:18,960
+al Gobierno. El papel del gobierno no
+es crear ni controlar la identidad, sino
+
+138
+00:12:18,960 --> 00:12:25,460
+respaldarla y protegerla como una cuestión
+de confianza pública. SEDI reconoce que es
+
+139
+00:12:25,460 --> 00:12:31,960
+función del Estado de actuar como
+un avalista de confianza, verificando la
+
+140
+00:12:31,960 --> 00:12:38,800
+identidad digital de una persona y, a continuación,
+emitiendo una credencial avalada vinculada matemáticamente
+
+141
+00:12:38,800 --> 00:12:45,640
+a un identificador digital que solo las
+personas controlan. El Estado no crea
+
+142
+00:12:45,640 --> 00:12:52,440
+el identificador individual ni puede revocarlo.
+El Estado simplemente certifica que la
+
+143
+00:12:52,440 --> 00:12:57,220
+persona es quien dice ser y, a continuación,
+proporciona una credencial que permite al
+
+144
+00:12:57,220 --> 00:13:02,960
+a la persona a decir al mundo que «yo
+soy yo», y el mundo lo aceptará porque
+
+145
+00:13:02,960 --> 00:13:08,180
+ha sido avalado y respaldado por el Estado.
+El Estado no tendrá control ni capacidad
+
+146
+00:13:08,180 --> 00:13:14,440
+para vigilar o rastrear el uso,
+y el Estado no podrá retirar el
+
+147
+00:13:14,440 --> 00:13:21,380
+identificador digital subyacente. El Estado no tiene
+competencia para retirar la identidad digital de nadie.
+
+148
+00:13:22,100 --> 00:13:27,440
+Dicho esto, nos espera un día muy
+ajetreado. Se trata principalmente de
+
+149
+00:13:27,440 --> 00:13:34,740
+formación introductoria. Va a ser una
+sesión muy dinámica para que podáis
+
+150
+00:13:34,740 --> 00:13:39,020
+obtener información. Habrá un par de sesiones de trabajo
+en grupos a lo largo del día en las que podréis plantear
+
+151
+00:13:39,020 --> 00:13:43,200
+preguntas, así como participar y aprender
+qué significa ayudar a definir políticas
+
+152
+00:13:43,200 --> 00:13:47,000
+y controles técnicos. Vamos a terminar al final de
+la jornada con un debate de una hora de duración
+
+153
+00:13:47,000 --> 00:13:52,860
+sobre cómo podemos avanzar realmente
+juntos como estados. Esta mañana,
+
+154
+00:13:53,440 --> 00:13:57,760
+el programa consistirá en que Ryan
+Hurst nos hablará y os informará sobre
+
+155
+00:13:57,760 --> 00:14:03,600
+qué es la identidad digital. A continuación,
+Cindy George nos hablará sobre la
+
+156
+00:14:03,600 --> 00:14:08,820
+experiencia familiar con la sextorsión y la
+suplantación de identidad, y el impacto que ha tenido en
+
+157
+00:14:08,820 --> 00:14:13,200
+ellos tras el suicidio de su hijo. A continuación, contaremos con
+una mesa redonda legislativa en la que participarán el senador
+
+158
+00:14:13,200 --> 00:14:16,660
+Kullimore, el diputado
+Cutler, el diputado Chevrier y
+
+159
+00:14:16,660 --> 00:14:20,860
+el diputado Shepherd para debatir con
+ustedes la importancia de esta labor, por qué
+
+160
+00:14:20,860 --> 00:14:24,820
+la apoyan y por qué deberían formar parte
+del consorcio. A continuación, escucharemos
+
+161
+00:14:24,820 --> 00:14:28,580
+a Daniel Hardman, quien nos hablará
+sobre la situación actual del mercado de la
+
+162
+00:14:28,580 --> 00:14:34,140
+identidad digital. Phil Windley explicará por qué
+Utah es el primer estado en adoptar formalmente
+
+163
+00:14:34,140 --> 00:14:39,840
+adoptar el enfoque de identidad descentralizada
+o en primera persona. Y Joe Jackson os
+
+164
+00:14:39,840 --> 00:14:44,140
+te explicará por qué estamos avanzando con la compatibilidad
+con versiones anteriores para ayudar a que todo el
+
+165
+00:14:44,140 --> 00:14:48,100
+mercado avance. Dicho esto, Ryan,
+te invito a subir al escenario. Gracias.
+
