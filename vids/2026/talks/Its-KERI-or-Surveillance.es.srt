@@ -1,14 +1,17 @@
 1
 00:00:00,480 --> 00:00:03,256
-Hola, me llamo Samuel Smith. Formo parte
+Hola, me llamo Samuel
+Smith. Formo parte
 
 2
 00:00:03,280 --> 00:00:06,456
-de la Fundación KERI. También soy
+de la Fundación
+KERI. También soy
 
 3
 00:00:06,480 --> 00:00:08,856
-el creador del conjunto de protocolos KERI,
+el creador del conjunto
+de protocolos KERI,
 
 4
 00:00:08,880 --> 00:00:12,216
@@ -16,7 +19,8 @@ que están ganando adeptos en
 
 5
 00:00:12,240 --> 00:00:16,216
-diversos sectores. Hoy quería mantener un
+diversos sectores.
+Hoy quería mantener un
 
 6
 00:00:16,240 --> 00:00:18,936
@@ -24,19 +28,23 @@ debate sobre lo que denomino
 
 7
 00:00:18,960 --> 00:00:21,255
-la última y mejor esperanza para el
+la última y mejor
+esperanza para el
 
 8
 00:00:21,279 --> 00:00:23,736
-control individual de la identidad digital en un mundo dominado por la IA. Y
+control individual de la identidad
+digital en un mundo dominado por la IA. Y
 
 9
 00:00:23,760 --> 00:00:26,376
-ha surgido a raíz de la reciente publicación por parte de
+ha surgido a raíz de la
+reciente publicación por parte de
 
 10
 00:00:26,400 --> 00:00:29,415
-el conglomerado de vigilancia de los «Five Eyes»
+el conglomerado de
+vigilancia de los «Five Eyes»
 
 11
 00:00:29,439 --> 00:00:32,136
@@ -48,19 +56,23 @@ países sobre la amenaza de
 
 13
 00:00:34,719 --> 00:00:37,576
-que plantean los modelos fundamentales de IA general y
+que plantean los modelos
+fundamentales de IA general y
 
 14
 00:00:37,600 --> 00:00:41,576
-contrastarlo con lo que ofrece KERI
+contrastarlo con
+lo que ofrece KERI
 
 15
 00:00:41,600 --> 00:00:44,616
-y KERI son las siglas de Key Event
+y KERI son las
+siglas de Key Event
 
 16
 00:00:44,640 --> 00:00:47,336
-ofrece, siendo KERI el acrónimo de Key Event
+ofrece, siendo KERI el
+acrónimo de Key Event
 
 17
 00:00:47,360 --> 00:00:49,256
@@ -68,15 +80,18 @@ Receipt Infrastructure.
 
 18
 00:00:49,280 --> 00:00:51,256
-Es un término técnico, pero básicamente
+Es un término técnico,
+pero básicamente
 
 19
 00:00:51,280 --> 00:00:54,776
-es un sistema de identidad digital que
+es un sistema de
+identidad digital que
 
 20
 00:00:54,800 --> 00:00:57,015
-permite a las personas mantener el control sobre su
+permite a las personas
+mantener el control sobre su
 
 21
 00:00:57,039 --> 00:00:59,576
@@ -84,7 +99,8 @@ identidad, la cual tiene algunas
 
 22
 00:00:59,600 --> 00:01:01,576
-propiedades. Así que quiero hablar de eso
+propiedades. Así que
+quiero hablar de eso
 
 23
 00:01:01,600 --> 00:01:03,736
@@ -96,15 +112,18 @@ Este es un extracto del informe,
 
 25
 00:01:08,080 --> 00:01:11,736
-el enlace está ahí, de la NSA. Dice
+el enlace está ahí,
+de la NSA. Dice
 
 26
 00:01:11,760 --> 00:01:15,016
-que se prevé que los modelos de IA de Frontier
+que se prevé que los
+modelos de IA de Frontier
 
 27
 00:01:15,040 --> 00:01:17,816
-superen las expectativas actuales del sector
+superen las expectativas
+actuales del sector
 
 28
 00:01:17,840 --> 00:01:19,656
@@ -112,7 +131,8 @@ del sector.
 
 29
 00:01:19,680 --> 00:01:25,735
-Se trata de una advertencia redactada en términos muy técnicos
+Se trata de una advertencia
+redactada en términos muy técnicos
 
 30
 00:01:25,759 --> 00:01:29,735
@@ -120,7 +140,8 @@ que, básicamente,
 
 31
 00:01:29,759 --> 00:01:34,216
-en cuestión de meses, no de años, estos modelos de IA
+en cuestión de meses, no
+de años, estos modelos de IA
 
 32
 00:01:34,240 --> 00:01:37,016
@@ -128,67 +149,83 @@ nos desbordarán
 
 33
 00:01:37,040 --> 00:01:39,816
-cualquier capacidad de ciberseguridad
+cualquier capacidad
+de ciberseguridad
 
 34
 00:01:39,840 --> 00:01:42,775
-de los sistemas existentes y, por lo tanto,
+de los sistemas
+existentes y, por lo tanto,
 
 35
 00:01:42,799 --> 00:01:45,256
-básicamente le están diciendo a todo el mundo en
+básicamente le están
+diciendo a todo el mundo en
 
 36
 00:01:45,280 --> 00:01:48,455
-este artículo (es un artículo breve) que
+este artículo (es un
+artículo breve) que
 
 37
 00:01:48,479 --> 00:01:51,735
-tienes que cambiar de postura. Tienes que
+tienes que cambiar
+de postura. Tienes que
 
 38
 00:01:51,759 --> 00:01:54,696
-cambiar tu forma de hacer las cosas
+cambiar tu forma
+de hacer las cosas
 
 39
 00:01:54,720 --> 00:01:57,415
-porque no podemos garantizar que tus
+porque no podemos
+garantizar que tus
 
 40
 00:01:57,439 --> 00:02:00,296
-sistemas de seguridad actuales vayan a resistir
+sistemas de seguridad
+actuales vayan a resistir
 
 41
 00:02:00,320 --> 00:02:01,816
-lo que está pasando. Y lo que está
+lo que está pasando.
+Y lo que está
 
 42
 00:02:01,840 --> 00:02:04,536
-pasando es que ciertos modelos básicos
+pasando es que
+ciertos modelos básicos
 
 43
 00:02:04,560 --> 00:02:07,576
-modelos, como por ejemplo Mythos, que fue
+modelos, como por
+ejemplo Mythos, que fue
 
 44
 00:02:07,600 --> 00:02:09,735
-desarrollados para intentar ofrecer una mejor
+desarrollados para
+intentar ofrecer una mejor
 
 45
 00:02:09,759 --> 00:02:11,416
-seguridad cibernética, pero durante el proceso de formación
+seguridad cibernética, pero
+durante el proceso de formación
 
 46
 00:02:11,440 --> 00:02:14,295
-para que fueran más eficaces a la hora de detectar
+para que fueran más
+eficaces a la hora de detectar
 
 47
 00:02:14,319 --> 00:02:18,056
-vulnerabilidades, también se volvieron expertos en
+vulnerabilidades, también
+se volvieron expertos en
 
 48
 00:02:18,080 --> 00:02:21,016
-aprovechar las vulnerabilidades. Y eso
+aprovechar las
+vulnerabilidades. Y eso
 
 49
 00:02:21,040 --> 00:02:22,855
@@ -204,7 +241,8 @@ por así decirlo,
 
 52
 00:02:28,560 --> 00:02:31,496
-las partes honradas están creando modelos comparables
+las partes honradas están
+creando modelos comparables
 
 53
 00:02:31,520 --> 00:02:34,136
@@ -212,23 +250,28 @@ las partes honradas están creando modelos comparables
 
 54
 00:02:34,160 --> 00:02:37,336
-estén al alcance de los ciberatacantes, entonces
+estén al alcance de los
+ciberatacantes, entonces
 
 55
 00:02:37,360 --> 00:02:40,376
-prácticamente la forma actual en que gestionamos
+prácticamente la forma
+actual en que gestionamos
 
 56
 00:02:40,400 --> 00:02:42,536
-la identidad digital —en la que se basa la
+la identidad digital
+—en la que se basa la
 
 57
 00:02:42,560 --> 00:02:46,215
-seguridad digital— quedará comprometida
+seguridad digital—
+quedará comprometida
 
 58
 00:02:46,239 --> 00:02:50,056
-en todas partes. Y eso es un problema. Por eso
+en todas partes. Y eso
+es un problema. Por eso
 
 59
 00:02:50,080 --> 00:02:51,816
@@ -236,31 +279,38 @@ tenemos que empezar a hacer algo
 
 60
 00:02:51,840 --> 00:02:54,616
-al respecto. Lo que esto significa es que
+al respecto. Lo que
+esto significa es que
 
 61
 00:02:54,640 --> 00:02:57,816
-en realidad tenemos dos caminos a seguir.
+en realidad tenemos
+dos caminos a seguir.
 
 62
 00:02:57,840 --> 00:03:00,855
-Los dos caminos son: 1) la identidad digital basada en la IA
+Los dos caminos son: 1) la
+identidad digital basada en la IA
 
 63
 00:03:00,879 --> 00:03:02,935
-y 2) la identidad digital basada en KERI
+y 2) la identidad
+digital basada en KERI
 
 64
 00:03:02,959 --> 00:03:04,536
-. Cuando digo KERI, me refiero al
+. Cuando digo
+KERI, me refiero al
 
 65
 00:03:04,560 --> 00:03:05,896
-conjunto de protocolos KERI. Hay un
+conjunto de protocolos
+KERI. Hay un
 
 66
 00:03:05,920 --> 00:03:07,176
-un montón de protocolos, un montón de cosas diferentes
+un montón de protocolos,
+un montón de cosas diferentes
 
 67
 00:03:07,200 --> 00:03:09,416
@@ -268,11 +318,13 @@ relacionadas con KERI.
 
 68
 00:03:09,440 --> 00:03:11,495
-Cuando hablo de identidad digital basada en la IA,
+Cuando hablo de identidad
+digital basada en la IA,
 
 69
 00:03:11,519 --> 00:03:14,536
-me refiero a lo que el Informe «Five
+me refiero a lo que
+el Informe «Five
 
 70
 00:03:14,560 --> 00:03:16,456
@@ -280,7 +332,8 @@ Eyes» recomendaba: que la gente
 
 71
 00:03:16,480 --> 00:03:19,736
-empiece a utilizar medidas basadas en la IA,
+empiece a utilizar
+medidas basadas en la IA,
 
 72
 00:03:19,760 --> 00:03:21,656
@@ -296,15 +349,18 @@ palabras, es como una
 
 75
 00:03:28,560 --> 00:03:31,096
-en el que ambas partes tienen IA y
+en el que ambas
+partes tienen IA y
 
 76
 00:03:31,120 --> 00:03:33,096
-las IA se esfuerzan al máximo para
+las IA se esfuerzan
+al máximo para
 
 77
 00:03:33,120 --> 00:03:35,896
-defenderse de los ciberataques o para
+defenderse de los
+ciberataques o para
 
 78
 00:03:35,920 --> 00:03:38,376
@@ -316,11 +372,13 @@ lanzar ciberataques
 
 80
 00:03:41,200 --> 00:03:43,656
-que todo el mundo tiene que empezar a utilizar la IA para
+que todo el mundo tiene que
+empezar a utilizar la IA para
 
 81
 00:03:43,680 --> 00:03:46,935
-defenderse, porque los atacantes que utilizan la IA
+defenderse, porque los
+atacantes que utilizan la IA
 
 82
 00:03:46,959 --> 00:03:49,416
@@ -328,7 +386,8 @@ los atacantes podrán burlar tus
 
 83
 00:03:49,440 --> 00:03:52,616
-sistemas actuales de seguridad de identidad y
+sistemas actuales de
+seguridad de identidad y
 
 84
 00:03:52,640 --> 00:03:54,855
@@ -336,11 +395,13 @@ eso supone un posible
 
 85
 00:03:54,879 --> 00:03:57,976
-problema. Ahora bien, KERI, como veremos
+problema. Ahora bien,
+KERI, como veremos
 
 86
 00:03:58,000 --> 00:04:00,855
-más adelante, fue diseñado para ser
+más adelante, fue
+diseñado para ser
 
 87
 00:04:00,879 --> 00:04:03,176
@@ -348,15 +409,18 @@ muy resistente ante este tipo de
 
 88
 00:04:03,200 --> 00:04:06,616
-escenario. Entonces, ¿cómo es una
+escenario. Entonces,
+¿cómo es una
 
 89
 00:04:06,640 --> 00:04:08,376
-identidad digital basada en la IA? Bueno, es una
+identidad digital basada
+en la IA? Bueno, es una
 
 90
 00:04:08,400 --> 00:04:11,096
-personalidad digital que se deriva de
+personalidad digital
+que se deriva de
 
 91
 00:04:11,120 --> 00:04:12,855
@@ -364,11 +428,13 @@ un seguimiento continuo y una
 
 92
 00:04:12,879 --> 00:04:14,775
-del comportamiento de una persona y
+del comportamiento
+de una persona y
 
 93
 00:04:14,799 --> 00:04:18,536
-sus datos biométricos. Básicamente, la IA
+sus datos biométricos.
+Básicamente, la IA
 
 94
 00:04:18,560 --> 00:04:20,296
@@ -380,19 +446,23 @@ una imagen digital de
 
 96
 00:04:24,000 --> 00:04:26,455
-tu comportamiento basándose en el seguimiento y la
+tu comportamiento basándose
+en el seguimiento y la
 
 97
 00:04:26,479 --> 00:04:28,856
-correlación de tu comportamiento y, a continuación, un
+correlación de tu comportamiento
+y, a continuación, un
 
 98
 00:04:28,880 --> 00:04:31,576
-un atacante tiene que hacerse pasar por
+un atacante tiene
+que hacerse pasar por
 
 99
 00:04:31,600 --> 00:04:34,376
-algo que se corresponda mejor con
+algo que se
+corresponda mejor con
 
 100
 00:04:34,400 --> 00:04:36,056
@@ -400,11 +470,13 @@ tu comportamiento que tu propio
 
 101
 00:04:36,080 --> 00:04:38,615
-comportamiento. Y así, siempre que tu IA sea
+comportamiento. Y así,
+siempre que tu IA sea
 
 102
 00:04:38,639 --> 00:04:40,296
-haga un mejor trabajo a la hora de correlacionar tu
+haga un mejor trabajo a
+la hora de correlacionar tu
 
 103
 00:04:40,320 --> 00:04:44,296
@@ -412,11 +484,13 @@ comportamiento y recopilar esas
 
 104
 00:04:44,320 --> 00:04:47,336
-señales denominadas «señales de fraude»
+señales denominadas
+«señales de fraude»
 
 105
 00:04:47,360 --> 00:04:51,016
-o «señales antifraude», entonces la IA puede
+o «señales antifraude»,
+entonces la IA puede
 
 106
 00:04:51,040 --> 00:04:53,016
@@ -424,27 +498,33 @@ decir: «No, eres tú, y no un
 
 107
 00:04:53,040 --> 00:04:55,336
-suplantador», mientras que el atacante
+suplantador»,
+mientras que el atacante
 
 108
 00:04:55,360 --> 00:04:57,175
-dice: «No, puedo crear una IA capaz de
+dice: «No, puedo
+crear una IA capaz de
 
 109
 00:04:57,199 --> 00:04:59,336
-suplantarte, crear un deepfake de ti, puede
+suplantarte, crear un
+deepfake de ti, puede
 
 110
 00:04:59,360 --> 00:05:01,976
-puede hacer que parezca que eres tú, y
+puede hacer que
+parezca que eres tú, y
 
 111
 00:05:02,000 --> 00:05:04,776
-así que lo que ocurre es que todo lo que
+así que lo que ocurre
+es que todo lo que
 
 112
 00:05:04,800 --> 00:05:07,416
-proteges, la IA de identidad digital
+proteges, la IA
+de identidad digital
 
 113
 00:05:07,440 --> 00:05:09,735
@@ -460,23 +540,28 @@ aprendiendo cómo
 
 116
 00:05:13,680 --> 00:05:16,216
-suplantar mejor tu identidad. Así que es simplemente
+suplantar mejor tu identidad.
+Así que es simplemente
 
 117
 00:05:16,240 --> 00:05:18,296
-un ciclo continuo. Y la única forma
+un ciclo continuo.
+Y la única forma
 
 118
 00:05:18,320 --> 00:05:23,656
-de que ganes es que tu IA de protección
+de que ganes es que
+tu IA de protección
 
 119
 00:05:23,680 --> 00:05:25,895
-tenga toda la información posible
+tenga toda la
+información posible
 
 120
 00:05:25,919 --> 00:05:28,376
-pueda tener sobre tu comportamiento, de modo que
+pueda tener sobre tu
+comportamiento, de modo que
 
 121
 00:05:28,400 --> 00:05:30,136
@@ -484,19 +569,23 @@ pueda crear mejor una
 
 122
 00:05:30,160 --> 00:05:32,856
-perfil digital que se ajuste a ti. Así que si
+perfil digital que se
+ajuste a ti. Así que si
 
 123
 00:05:32,880 --> 00:05:35,336
-eso no te da miedo desde el punto de vista de la privacidad y la vigilancia
+eso no te da miedo desde el punto
+de vista de la privacidad y la vigilancia
 
 124
 00:05:35,360 --> 00:05:37,735
-perspectiva de la vigilancia, es que no
+perspectiva de la
+vigilancia, es que no
 
 125
 00:05:37,759 --> 00:05:39,735
-sabes lo que es dar miedo, porque eso es
+sabes lo que es dar
+miedo, porque eso es
 
 126
 00:05:39,759 --> 00:05:40,729
@@ -512,7 +601,8 @@ Mientras que KERI se basa en una
 
 129
 00:05:47,919 --> 00:05:50,056
-identidad tolerante a fallos derivada criptográficamente
+identidad tolerante a fallos
+derivada criptográficamente
 
 130
 00:05:50,080 --> 00:05:53,496
@@ -520,7 +610,8 @@ identidad tolerante a fallos derivada criptográficamente
 
 131
 00:05:53,520 --> 00:05:56,056
-ciberataque. Lo llamamos «identidad perpetua».
+ciberataque. Lo llamamos
+«identidad perpetua».
 
 132
 00:05:56,080 --> 00:05:59,656
@@ -528,7 +619,8 @@ No se basa en los
 
 133
 00:05:59,680 --> 00:06:02,296
-elementos débiles en los que se basan las actuales
+elementos débiles en los
+que se basan las actuales
 
 134
 00:06:02,320 --> 00:06:04,856
@@ -536,15 +628,18 @@ identidades basadas en Internet,
 
 135
 00:06:04,880 --> 00:06:06,856
-que son, en gran medida, secretos compartidos. No se
+que son, en gran medida,
+secretos compartidos. No se
 
 136
 00:06:06,880 --> 00:06:09,336
-basa en las debilidades que presenta
+basa en las
+debilidades que presenta
 
 137
 00:06:09,360 --> 00:06:12,295
-el sistema de autoridad de certificación del DNS y
+el sistema de autoridad
+de certificación del DNS y
 
 138
 00:06:12,319 --> 00:06:15,496
@@ -556,35 +651,43 @@ sistemas que hemos desarrollado
 
 140
 00:06:17,039 --> 00:06:18,455
-durante los últimos 30 años y que ahora son
+durante los últimos 30
+años y que ahora son
 
 141
 00:06:18,479 --> 00:06:21,416
-vulnerables a los ciberataques basados en IA.
+vulnerables a los
+ciberataques basados en IA.
 
 142
 00:06:21,440 --> 00:06:23,796
-Se trata de un diseño totalmente nuevo que
+Se trata de un diseño
+totalmente nuevo que
 
 143
 00:06:23,821 --> 00:06:27,015
-ha sido concebido desde el principio para ser
+ha sido concebido
+desde el principio para ser
 
 144
 00:06:27,039 --> 00:06:29,976
-tolerante a fallos, con el fin de resistir los ataques y
+tolerante a fallos, con el
+fin de resistir los ataques y
 
 145
 00:06:30,000 --> 00:06:31,735
-ser capaz de detectar una intrusión y recuperarse
+ser capaz de detectar
+una intrusión y recuperarse
 
 146
 00:06:31,759 --> 00:06:35,256
-de ella. Por lo tanto, está diseñado
+de ella. Por lo
+tanto, está diseñado
 
 147
 00:06:35,280 --> 00:06:37,735
-para ser resistente a este tipo de
+para ser resistente
+a este tipo de
 
 148
 00:06:37,759 --> 00:06:39,735
@@ -592,51 +695,63 @@ ataques.
 
 149
 00:06:39,759 --> 00:06:42,376
-Así que lo que ocurre es que, si optas
+Así que lo que
+ocurre es que, si optas
 
 150
 00:06:42,400 --> 00:06:44,776
-por una identidad basada en la IA, puedes obtener
+por una identidad basada
+en la IA, puedes obtener
 
 151
 00:06:44,800 --> 00:06:47,895
-protección, pero, inevitablemente, va a
+protección, pero,
+inevitablemente, va a
 
 152
 00:06:47,919 --> 00:06:49,416
-sería totalmente centralizada y sin
+sería totalmente
+centralizada y sin
 
 153
 00:06:49,440 --> 00:06:51,256
-privacidad. En cambio, si optas por la ruta de KERI
+privacidad. En cambio, si
+optas por la ruta de KERI
 
 154
 00:06:51,280 --> 00:06:53,816
-, está totalmente descentralizada y ofrece
+, está totalmente
+descentralizada y ofrece
 
 155
 00:06:53,840 --> 00:06:55,656
-la mejor privacidad posible. Y eso no
+la mejor privacidad
+posible. Y eso no
 
 156
 00:06:55,680 --> 00:06:58,056
-significa que tengas la privacidad que
+significa que tengas
+la privacidad que
 
 157
 00:06:58,080 --> 00:06:59,575
-quizá pensabas que podrías tener. Significa
+quizá pensabas que
+podrías tener. Significa
 
 158
 00:06:59,599 --> 00:07:01,656
-que ofrece la mejor privacidad que
+que ofrece la
+mejor privacidad que
 
 159
 00:07:01,680 --> 00:07:04,455
-puedes tener, teniendo en cuenta que vivimos en
+puedes tener, teniendo
+en cuenta que vivimos en
 
 160
 00:07:04,479 --> 00:07:08,136
-este nuevo entorno de IA en el que las IA están
+este nuevo entorno de
+IA en el que las IA están
 
 161
 00:07:08,160 --> 00:07:10,216
@@ -644,11 +759,13 @@ consumen todos los datos de
 
 162
 00:07:10,240 --> 00:07:11,895
-Internet y tienen a su disposición
+Internet y tienen
+a su disposición
 
 163
 00:07:11,919 --> 00:07:14,216
-ellos, datos para correlacionar prácticamente
+ellos, datos para
+correlacionar prácticamente
 
 164
 00:07:14,240 --> 00:07:16,696
@@ -656,19 +773,23 @@ cualquier cosa que hagas.
 
 165
 00:07:16,720 --> 00:07:18,536
-Así que podemos hablar de ello con más detalle
+Así que podemos hablar
+de ello con más detalle
 
 166
 00:07:18,560 --> 00:07:20,936
-sobre cómo sería la mejor privacidad posible
+sobre cómo sería la
+mejor privacidad posible
 
 167
 00:07:20,960 --> 00:07:24,856
-. Así que lo que queremos hacer en
+. Así que lo que
+queremos hacer en
 
 168
 00:07:24,880 --> 00:07:26,936
-este debate es responder a algunas preguntas generales
+este debate es responder a
+algunas preguntas generales
 
 169
 00:07:26,960 --> 00:07:29,536
@@ -676,47 +797,58 @@ sobre lo que esto significa.
 
 170
 00:07:29,560 --> 00:07:32,295
-Estas preguntas se agrupan por temas y, a continuación,
+Estas preguntas se agrupan
+por temas y, a continuación,
 
 171
 00:07:32,319 --> 00:07:33,496
-hay una pregunta y, a continuación, voy a
+hay una pregunta y,
+a continuación, voy a
 
 172
 00:07:33,520 --> 00:07:36,216
-profundicemos un poco más en eso. Pero
+profundicemos un
+poco más en eso. Pero
 
 173
 00:07:36,240 --> 00:07:39,015
-vamos a retroceder un poco y recordar que estamos hablando
+vamos a retroceder un poco y
+recordar que estamos hablando
 
 174
 00:07:39,039 --> 00:07:41,256
-de la identidad digital basada en la IA, sobre la que
+de la identidad digital
+basada en la IA, sobre la que
 
 175
 00:07:41,280 --> 00:07:45,175
-la NSA y las principales organizaciones de seguridad
+la NSA y las principales
+organizaciones de seguridad
 
 176
 00:07:45,199 --> 00:07:48,136
-de los países de los «Cinco Ojos» han afirmado (implícitamente, nota del editor)
+de los países de los «Cinco Ojos» han
+afirmado (implícitamente, nota del editor)
 
 177
 00:07:48,160 --> 00:07:51,015
-«todo el mundo tiene que empezar a adoptarla» o la
+«todo el mundo tiene que
+empezar a adoptarla» o la
 
 178
 00:07:51,039 --> 00:07:52,856
-alternativa es una identidad digital basada en KERI
+alternativa es una identidad
+digital basada en KERI
 
 179
 00:07:52,880 --> 00:07:54,136
-identidad basada en KERI. KERI no es tan
+identidad basada en
+KERI. KERI no es tan
 
 180
 00:07:54,160 --> 00:07:56,776
-conocido, así que la gente no sabe nada de él.
+conocido, así que la
+gente no sabe nada de él.
 
 181
 00:07:56,800 --> 00:07:58,216
@@ -724,11 +856,13 @@ Aunque cuenta con algunos
 
 182
 00:07:58,240 --> 00:08:00,776
-vectores de adopción significativos, entre los que se incluye uno denominado
+vectores de adopción significativos,
+entre los que se incluye uno denominado
 
 183
 00:08:00,800 --> 00:08:02,536
-Identidad Digital Avalada por el Estado (SEDI).
+Identidad Digital Avalada
+por el Estado (SEDI).
 
 184
 00:08:02,560 --> 00:08:03,816
@@ -740,7 +874,8 @@ Calling (OVC), que está acabando
 
 186
 00:08:06,000 --> 00:08:10,615
-con el spam en las llamadas, y en el
+con el spam en
+las llamadas, y en el
 
 187
 00:08:10,639 --> 00:08:12,615
@@ -748,35 +883,43 @@ sector sanitario, se está
 
 188
 00:08:12,639 --> 00:08:16,295
-trabajando en el uso de KERI para
+trabajando en el
+uso de KERI para
 
 189
 00:08:16,319 --> 00:08:19,976
-identificación de pacientes. Todos ellos son importantes
+identificación de pacientes.
+Todos ellos son importantes
 
 190
 00:08:20,000 --> 00:08:24,056
-vectores de adopción significativos que
+vectores de adopción
+significativos que
 
 191
 00:08:24,080 --> 00:08:26,936
-podrían situar a KERI en una posición en la que
+podrían situar a KERI
+en una posición en la que
 
 192
 00:08:26,960 --> 00:08:29,976
-será la última y mejor esperanza para la
+será la última y mejor
+esperanza para la
 
 193
 00:08:30,000 --> 00:08:32,216
-identidad individual, porque si seguimos por la vía de la IA
+identidad individual, porque
+si seguimos por la vía de la IA
 
 194
 00:08:32,240 --> 00:08:34,536
-, puede que consigamos seguridad. Es una carrera de
+, puede que consigamos
+seguridad. Es una carrera de
 
 195
 00:08:34,560 --> 00:08:37,976
-armamento. Siempre será una carrera de armamento.
+armamento. Siempre será
+una carrera de armamento.
 
 196
 00:08:38,000 --> 00:08:39,656
@@ -784,7 +927,8 @@ Pero no tendremos ni
 
 197
 00:08:39,680 --> 00:08:42,776
-apariencia de control por parte del usuario ni de privacidad.
+apariencia de control por parte
+del usuario ni de privacidad.
 
 198
 00:08:42,800 --> 00:08:43,816
@@ -792,19 +936,23 @@ Así que hablemos de eso.
 
 199
 00:08:47,620 --> 00:08:50,796
-La declaración de los «Cinco Ojos» aboga por una defensa
+La declaración de los «Cinco
+Ojos» aboga por una defensa
 
 200
 00:08:50,820 --> 00:08:53,596
-asistida por IA. Así pues, la pregunta es cómo
+asistida por IA. Así
+pues, la pregunta es cómo
 
 201
 00:08:53,620 --> 00:08:55,676
-nos aseguramos de que la IA siga estando subordinada a
+nos aseguramos de que la
+IA siga estando subordinada a
 
 202
 00:08:55,700 --> 00:08:57,516
-los seres humanos, la ley, las políticas y una infraestructura de identidad
+los seres humanos, la ley, las políticas
+y una infraestructura de identidad
 
 203
 00:08:57,540 --> 00:08:59,116
@@ -812,7 +960,8 @@ verificable criptográficamente
 
 204
 00:08:59,140 --> 00:09:00,636
-en lugar de convertirse en una autoridad
+en lugar de convertirse
+en una autoridad
 
 205
 00:09:00,660 --> 00:09:02,236
@@ -820,39 +969,48 @@ de facto.
 
 206
 00:09:04,100 --> 00:09:07,196
-Pues bien, la forma en que nos aseguramos de ello es que
+Pues bien, la forma en que
+nos aseguramos de ello es que
 
 207
 00:09:07,220 --> 00:09:09,036
-necesitamos contar con una identidad verificable
+necesitamos contar con
+una identidad verificable
 
 208
 00:09:09,060 --> 00:09:10,875
-verificable desde el punto de vista criptográfico.
+verificable desde el
+punto de vista criptográfico.
 
 209
 00:09:10,899 --> 00:09:13,116
-Si no contamos con eso, nunca podremos
+Si no contamos con
+eso, nunca podremos
 
 210
 00:09:13,140 --> 00:09:14,956
-asegurarnos de que no se convierta en una autoridad
+asegurarnos de que no se
+convierta en una autoridad
 
 211
 00:09:14,980 --> 00:09:17,276
-de facto, porque no podemos saber qué
+de facto, porque no
+podemos saber qué
 
 212
 00:09:17,300 --> 00:09:19,836
-está haciendo. No es transparente. Es
+está haciendo. No
+es transparente. Es
 
 213
 00:09:19,860 --> 00:09:23,276
-no es observable. Básicamente es una IA y
+no es observable.
+Básicamente es una IA y
 
 214
 00:09:23,300 --> 00:09:25,676
-esa IA va a tomar decisiones sobre
+esa IA va a tomar
+decisiones sobre
 
 215
 00:09:25,700 --> 00:09:28,875
@@ -860,15 +1018,18 @@ quién eres. Y el
 
 216
 00:09:28,899 --> 00:09:30,875
-objetivo es protegerte del fraude,
+objetivo es
+protegerte del fraude,
 
 217
 00:09:30,899 --> 00:09:35,516
-pero las propias IA no tienen ninguna
+pero las propias IA
+no tienen ninguna
 
 218
 00:09:35,540 --> 00:09:38,236
-estructura inherente que les permita
+estructura inherente
+que les permita
 
 219
 00:09:38,260 --> 00:09:40,156
@@ -876,7 +1037,8 @@ distinguir entre lo que es
 
 220
 00:09:40,180 --> 00:09:42,956
-información sensible y autoridad sensible,
+información sensible
+y autoridad sensible,
 
 221
 00:09:42,980 --> 00:09:44,875
@@ -884,19 +1046,23 @@ y las acciones sensibles que
 
 222
 00:09:44,899 --> 00:09:47,836
-debe o no debe realizar, frente a cualquier cosa que
+debe o no debe realizar,
+frente a cualquier cosa que
 
 223
 00:09:47,860 --> 00:09:52,956
-se encuentre dentro de su espacio de características o
+se encuentre dentro de su
+espacio de características o
 
 224
 00:09:52,980 --> 00:09:56,236
-espacio de pesos, basándose en las
+espacio de pesos,
+basándose en las
 
 225
 00:09:56,260 --> 00:09:58,796
-indicaciones que ha recibido y los
+indicaciones que
+ha recibido y los
 
 226
 00:09:58,820 --> 00:10:00,556
@@ -904,7 +1070,8 @@ objetivos que ha recibido y la
 
 227
 00:10:00,580 --> 00:10:03,596
-temperatura en función de la cual decide qué
+temperatura en función
+de la cual decide qué
 
 228
 00:10:03,620 --> 00:10:06,796
@@ -912,11 +1079,13 @@ ruta seguir
 
 229
 00:10:06,820 --> 00:10:08,796
-y podría entrar en más detalles, pero OWASP
+y podría entrar en más
+detalles, pero OWASP
 
 230
 00:10:08,820 --> 00:10:12,956
-publicó recientemente, en marzo, un informe de 100 páginas
+publicó recientemente, en
+marzo, un informe de 100 páginas
 
 231
 00:10:12,980 --> 00:10:15,356
@@ -932,7 +1101,8 @@ la IA supone una amenaza
 
 234
 00:10:22,339 --> 00:10:24,476
-que nunca ha existido antes y para el que
+que nunca ha existido
+antes y para el que
 
 235
 00:10:24,500 --> 00:10:26,716
@@ -940,11 +1110,13 @@ no hay ninguna
 
 236
 00:10:26,740 --> 00:10:29,435
-soluciones para ello. Eso es lo que dicen en
+soluciones para ello.
+Eso es lo que dicen en
 
 237
 00:10:29,459 --> 00:10:31,836
-el informe. Lo único que se puede hacer es intentar
+el informe. Lo único que
+se puede hacer es intentar
 
 238
 00:10:31,860 --> 00:10:34,396
@@ -952,7 +1124,8 @@ mitigarlo en cierta medida.
 
 239
 00:10:34,420 --> 00:10:37,116
-Entonces, ¿cómo lo garantizamos? Lo primero es:
+Entonces, ¿cómo lo
+garantizamos? Lo primero es:
 
 240
 00:10:37,140 --> 00:10:38,636
@@ -960,23 +1133,28 @@ tenemos que disponer de
 
 241
 00:10:38,660 --> 00:10:40,636
-una identidad verificable criptográficamente
+una identidad verificable
+criptográficamente
 
 242
 00:10:40,660 --> 00:10:44,236
-infraestructura. De modo que esa es la
+infraestructura. De
+modo que esa es la
 
 243
 00:10:44,260 --> 00:10:46,396
-autoridad y está controlada de forma individual
+autoridad y está controlada
+de forma individual
 
 244
 00:10:46,420 --> 00:10:49,836
-controlados. Entonces, ¿cuáles son los mecanismos de gobernanza
+controlados. Entonces, ¿cuáles
+son los mecanismos de gobernanza
 
 245
 00:10:49,860 --> 00:10:52,236
-técnicos y jurídicos más complejos
+técnicos y jurídicos
+más complejos
 
 246
 00:10:52,260 --> 00:10:54,636
@@ -984,19 +1162,23 @@ que se necesitan para garantizar
 
 247
 00:10:54,660 --> 00:10:57,596
-que toda acción significativa de la IA
+que toda acción
+significativa de la IA
 
 248
 00:10:57,620 --> 00:10:59,356
-siga siendo atribuible o responsable ante
+siga siendo atribuible
+o responsable ante
 
 249
 00:10:59,380 --> 00:11:01,516
-los seres humanos y las organizaciones? Bueno, eso
+los seres humanos y las
+organizaciones? Bueno, eso
 
 250
 00:11:01,540 --> 00:11:04,315
-significa que tenemos que crear un marco regulador
+significa que tenemos que
+crear un marco regulador
 
 251
 00:11:04,339 --> 00:11:07,036
@@ -1004,11 +1186,13 @@ y un marco jurídico
 
 252
 00:11:07,060 --> 00:11:11,116
-sólido para nuestros derechos individuales.
+sólido para nuestros
+derechos individuales.
 
 253
 00:11:11,140 --> 00:11:13,116
-La Constitución original de los Estados
+La Constitución
+original de los Estados
 
 254
 00:11:13,140 --> 00:11:15,116
@@ -1016,15 +1200,18 @@ Unidos cuenta con un par de
 
 255
 00:11:15,140 --> 00:11:16,796
-enmiendas, y la cuarta y la quinta
+enmiendas, y la
+cuarta y la quinta
 
 256
 00:11:16,820 --> 00:11:19,196
-enmiendas, pero esas se redactaron en una
+enmiendas, pero esas
+se redactaron en una
 
 257
 00:11:19,220 --> 00:11:21,676
-época en la que aún no existía el mundo digital
+época en la que aún no
+existía el mundo digital
 
 258
 00:11:21,700 --> 00:11:25,036
@@ -1032,23 +1219,28 @@ en la que prácticamente todo
 
 259
 00:11:25,060 --> 00:11:27,995
-estaba en papel. La información se
+estaba en papel.
+La información se
 
 260
 00:11:28,019 --> 00:11:30,636
-se difundía en papel. Ahora tenemos un
+se difundía en papel.
+Ahora tenemos un
 
 261
 00:11:30,660 --> 00:11:34,156
-mundo digital en el que la información se
+mundo digital en el
+que la información se
 
 262
 00:11:34,180 --> 00:11:37,676
-se difunde electrónicamente. Y la forma
+se difunde
+electrónicamente. Y la forma
 
 263
 00:11:37,700 --> 00:11:40,396
-en que te proteges en el ámbito digital
+en que te proteges
+en el ámbito digital
 
 264
 00:11:40,420 --> 00:11:41,916
@@ -1060,27 +1252,33 @@ identidad, tu información y tu
 
 266
 00:11:43,459 --> 00:11:46,716
-presencia es lo suficientemente diferente
+presencia es lo
+suficientemente diferente
 
 267
 00:11:46,740 --> 00:11:49,755
-como para que no podamos confiar únicamente en
+como para que no podamos
+confiar únicamente en
 
 268
 00:11:49,779 --> 00:11:51,916
-esas dos garantías. Necesitamos contar con
+esas dos garantías.
+Necesitamos contar con
 
 269
 00:11:51,940 --> 00:11:54,636
-garantías adicionales para ello. Y una
+garantías adicionales
+para ello. Y una
 
 270
 00:11:54,660 --> 00:11:56,476
-de esas protecciones se denomina «deber de
+de esas protecciones
+se denomina «deber de
 
 271
 00:11:56,500 --> 00:11:59,196
-lealtad de datos». Probablemente sea el
+lealtad de datos».
+Probablemente sea el
 
 272
 00:11:59,220 --> 00:12:01,916
@@ -1088,7 +1286,8 @@ mejor marco jurídico que se ha
 
 273
 00:12:01,940 --> 00:12:03,276
-desarrollado en los últimos años.
+desarrollado en
+los últimos años.
 
 274
 00:12:03,300 --> 00:12:05,516
@@ -1096,15 +1295,18 @@ Hay algunos juristas que han
 
 275
 00:12:05,540 --> 00:12:07,356
-trabajado en ello, han escrito varios
+trabajado en ello,
+han escrito varios
 
 276
 00:12:07,380 --> 00:12:10,636
-artículos al respecto y sobre la situación de
+artículos al respecto
+y sobre la situación de
 
 277
 00:12:10,660 --> 00:12:12,636
-Utah lo ha incorporado recientemente en la
+Utah lo ha incorporado
+recientemente en la
 
 278
 00:12:12,660 --> 00:12:14,236
@@ -1116,11 +1318,13 @@ Esto exige que las personas que
 
 280
 00:12:16,820 --> 00:12:20,076
-traten datos sobre ti deben utilizar esos
+traten datos sobre
+ti deben utilizar esos
 
 281
 00:12:20,100 --> 00:12:22,076
-datos de una forma que redunde en tu
+datos de una forma
+que redunde en tu
 
 282
 00:12:22,100 --> 00:12:25,676
@@ -1128,15 +1332,18 @@ mejor interés. Y ese es el
 
 283
 00:12:25,700 --> 00:12:27,435
-punto de partida. Y luego hay que añadir a eso
+punto de partida. Y
+luego hay que añadir a eso
 
 284
 00:12:27,459 --> 00:12:31,115
-un mecanismo para que las personas puedan
+un mecanismo para
+que las personas puedan
 
 285
 00:12:31,139 --> 00:12:33,036
-tener el control de su identidad para poder
+tener el control de su
+identidad para poder
 
 286
 00:12:33,060 --> 00:12:36,555
@@ -1144,7 +1351,8 @@ expresar así sus preferencias. Y
 
 287
 00:12:36,579 --> 00:12:40,636
-no se trata simplemente de dar su consentimiento. Se trata de
+no se trata simplemente de dar
+su consentimiento. Se trata de
 
 288
 00:12:40,660 --> 00:12:45,115
@@ -1152,7 +1360,8 @@ participar activamente en lo que
 
 289
 00:12:45,139 --> 00:12:47,995
-redunda en su propio interés y vincular
+redunda en su propio
+interés y vincular
 
 290
 00:12:48,019 --> 00:12:51,036
@@ -1160,7 +1369,8 @@ al uso de esos datos lo que se
 
 291
 00:12:51,060 --> 00:12:53,196
-se denomina «confidencialidad en cadena», en la que
+se denomina «confidencialidad
+en cadena», en la que
 
 292
 00:12:53,220 --> 00:12:57,115
@@ -1168,19 +1378,23 @@ los términos y el seguimiento
 
 293
 00:12:57,139 --> 00:12:58,875
-los datos a medida que pasan por el sistema
+los datos a medida
+que pasan por el sistema
 
 294
 00:12:58,899 --> 00:13:01,356
-de modo que se tenga la capacidad de
+de modo que se
+tenga la capacidad de
 
 295
 00:13:01,380 --> 00:13:03,596
-hacerlo cumplir de tal forma que también incluya
+hacerlo cumplir de tal
+forma que también incluya
 
 296
 00:13:03,620 --> 00:13:06,315
-la participación de los ciudadanos en su cumplimiento o su derecho de recurso.
+la participación de los ciudadanos en
+su cumplimiento o su derecho de recurso.
 
 297
 00:13:06,339 --> 00:13:08,396
@@ -1188,35 +1402,43 @@ Así que hay varios niveles de
 
 298
 00:13:08,420 --> 00:13:10,156
-mecanismos que tenemos que poner en
+mecanismos que
+tenemos que poner en
 
 299
 00:13:10,180 --> 00:13:12,236
-marcha y estamos empezando a hacerlo en
+marcha y estamos
+empezando a hacerlo en
 
 300
 00:13:12,260 --> 00:13:14,315
-algunos lugares. El estado de Utah está
+algunos lugares. El
+estado de Utah está
 
 301
 00:13:14,339 --> 00:13:16,315
-liderando esta iniciativa y existe una
+liderando esta
+iniciativa y existe una
 
 302
 00:13:16,339 --> 00:13:19,435
-una coalición de otros estados que
+una coalición de
+otros estados que
 
 303
 00:13:19,459 --> 00:13:21,276
-están estudiando la posibilidad de elaborar una legislación de la
+están estudiando la posibilidad
+de elaborar una legislación de la
 
 304
 00:13:21,300 --> 00:13:23,196
-mismo modo que nos brinda la oportunidad
+mismo modo que nos
+brinda la oportunidad
 
 305
 00:13:23,220 --> 00:13:25,435
-de poder hacerlo. Pero, a falta de
+de poder hacerlo.
+Pero, a falta de
 
 306
 00:13:25,459 --> 00:13:29,115
@@ -1224,7 +1446,8 @@ va a ser muy
 
 307
 00:13:29,139 --> 00:13:32,476
-difícil frenar la oleada de lo que está
+difícil frenar la
+oleada de lo que está
 
 308
 00:13:32,500 --> 00:13:35,115
@@ -1232,7 +1455,8 @@ ocurriendo con la IA y, debido a
 
 309
 00:13:35,139 --> 00:13:37,916
-la urgencia, esto lo hace aún más
+la urgencia, esto
+lo hace aún más
 
 310
 00:13:37,940 --> 00:13:40,476
@@ -1240,11 +1464,13 @@ problemático.
 
 311
 00:13:42,100 --> 00:13:46,875
-Por eso, los informes de la NSA reclaman
+Por eso, los informes
+de la NSA reclaman
 
 312
 00:13:46,899 --> 00:13:49,276
-unos controles de identidad y acceso más estrictos.
+unos controles de identidad
+y acceso más estrictos.
 
 313
 00:13:49,300 --> 00:13:52,956
@@ -1260,11 +1486,13 @@ El problema es qué se considera
 
 316
 00:13:56,420 --> 00:14:00,875
-más fuertes, ¿no? Quiero decir, los
+más fuertes, ¿no?
+Quiero decir, los
 
 317
 00:14:00,899 --> 00:14:03,276
-controles actuales y la gente lleva
+controles actuales
+y la gente lleva
 
 318
 00:14:03,300 --> 00:14:06,156
@@ -1292,11 +1520,13 @@ reforzarlas
 
 324
 00:14:20,180 --> 00:14:22,716
-de una forma nunca vista hasta ahora.
+de una forma nunca
+vista hasta ahora.
 
 325
 00:14:22,740 --> 00:14:24,156
-Es como si, supongo, se pudiera decir que es
+Es como si, supongo,
+se pudiera decir que es
 
 326
 00:14:24,180 --> 00:14:28,636
@@ -1312,15 +1542,18 @@ de acero, ¿no? Es como pasar de
 
 329
 00:14:36,100 --> 00:14:38,236
-lo débil a lo fuerte, pero aún no tienes la
+lo débil a lo fuerte,
+pero aún no tienes la
 
 330
 00:14:38,260 --> 00:14:40,956
-capacidad para fabricar armaduras de acero todavía. Tú
+capacidad para fabricar
+armaduras de acero todavía. Tú
 
 331
 00:14:40,980 --> 00:14:42,636
-aún no has inventado el acero. Entonces, ¿qué
+aún no has inventado
+el acero. Entonces, ¿qué
 
 332
 00:14:42,660 --> 00:14:44,796
@@ -1328,35 +1561,43 @@ haces?
 
 333
 00:14:44,820 --> 00:14:47,356
-Así que KERI se diseñó desde cero
+Así que KERI se
+diseñó desde cero
 
 334
 00:14:47,380 --> 00:14:52,156
-para no necesitar una IA que lo defendiera
+para no necesitar una
+IA que lo defendiera
 
 335
 00:14:52,180 --> 00:14:54,716
-frente a otra IA. Se diseñó para utilizar
+frente a otra IA. Se
+diseñó para utilizar
 
 336
 00:14:54,740 --> 00:14:57,115
-la criptografía de la mejor manera posible
+la criptografía de la
+mejor manera posible
 
 337
 00:14:57,139 --> 00:14:59,276
-para que puedas utilizar la criptografía
+para que puedas
+utilizar la criptografía
 
 338
 00:14:59,300 --> 00:15:01,836
-lo cual requiere una gestión de claves
+lo cual requiere una
+gestión de claves
 
 339
 00:15:01,860 --> 00:15:04,315
-y exige que dicha gestión de claves se realice de una
+y exige que dicha gestión
+de claves se realice de una
 
 340
 00:15:04,339 --> 00:15:05,836
-forma especial. Y si gestionas las claves
+forma especial. Y si
+gestionas las claves
 
 341
 00:15:05,860 --> 00:15:07,836
@@ -1364,11 +1605,13 @@ de esa manera,
 
 342
 00:15:07,860 --> 00:15:11,115
-entonces se puede crear un sistema
+entonces se puede
+crear un sistema
 
 343
 00:15:11,139 --> 00:15:13,196
-que sea resistente a este tipo de ataques
+que sea resistente a
+este tipo de ataques
 
 344
 00:15:13,220 --> 00:15:14,636
@@ -1376,7 +1619,8 @@ porque no presenta las
 
 345
 00:15:14,660 --> 00:15:16,636
-debilidades que están incorporadas en los
+debilidades que están
+incorporadas en los
 
 346
 00:15:16,660 --> 00:15:20,476
@@ -1384,23 +1628,28 @@ controles actuales debido al
 
 347
 00:15:20,500 --> 00:15:22,716
-estado de la tecnología de hace 30 años, cuando
+estado de la tecnología
+de hace 30 años, cuando
 
 348
 00:15:22,740 --> 00:15:24,236
-se diseñaron estos sistemas y, posteriormente,
+se diseñaron estos
+sistemas y, posteriormente,
 
 349
 00:15:24,260 --> 00:15:26,236
-se les han ido incorporando y añadiendo elementos, y
+se les han ido incorporando
+y añadiendo elementos, y
 
 350
 00:15:26,260 --> 00:15:28,156
-modificados, pero la arquitectura central
+modificados, pero
+la arquitectura central
 
 351
 00:15:28,180 --> 00:15:30,875
-no ha cambiado en 30 años, mientras que
+no ha cambiado en
+30 años, mientras que
 
 352
 00:15:30,899 --> 00:15:34,180
@@ -1412,19 +1661,23 @@ así que la pregunta
 
 354
 00:15:37,940 --> 00:15:39,995
-es: ¿qué vulnerabilidades de los actuales
+es: ¿qué vulnerabilidades
+de los actuales
 
 355
 00:15:40,019 --> 00:15:41,755
-sistemas de identidad se vuelven más peligrosas
+sistemas de identidad
+se vuelven más peligrosas
 
 356
 00:15:41,779 --> 00:15:43,995
-cuando los atacantes pueden actuar a la velocidad
+cuando los atacantes
+pueden actuar a la velocidad
 
 357
 00:15:44,019 --> 00:15:50,555
-y a la escala de la IA. Pues bien, la mayoría de las vulnerabilidades
+y a la escala de la IA. Pues bien,
+la mayoría de las vulnerabilidades
 
 358
 00:15:50,579 --> 00:15:54,796
@@ -1432,11 +1685,13 @@ suelen recurrir
 
 359
 00:15:54,820 --> 00:15:58,396
-a una combinación de vulnerabilidades. Así que
+a una combinación de
+vulnerabilidades. Así que
 
 360
 00:15:58,420 --> 00:16:01,356
-puede que haya una vulnerabilidad algorítmica
+puede que haya una
+vulnerabilidad algorítmica
 
 361
 00:16:01,380 --> 00:16:03,596
@@ -1444,23 +1699,28 @@ en una infraestructura,
 
 362
 00:16:03,620 --> 00:16:07,115
-un software y un sistema operativo
+un software y un
+sistema operativo
 
 363
 00:16:07,139 --> 00:16:11,596
-y una vulnerabilidad de uso que, en conjunto,
+y una vulnerabilidad
+de uso que, en conjunto,
 
 364
 00:16:11,620 --> 00:16:14,235
-permite llevar a cabo un ataque. Un ataque recursivo
+permite llevar a cabo un
+ataque. Un ataque recursivo
 
 365
 00:16:14,259 --> 00:16:17,036
-de escalada de privilegios suele aprovechar
+de escalada de
+privilegios suele aprovechar
 
 366
 00:16:17,060 --> 00:16:19,276
-aprovecha múltiples vulnerabilidades
+aprovecha múltiples
+vulnerabilidades
 
 367
 00:16:19,300 --> 00:16:21,596
@@ -1468,11 +1728,13 @@ para poder desplazarse
 
 368
 00:16:21,620 --> 00:16:26,396
-vertical como horizontalmente en un
+vertical como
+horizontalmente en un
 
 369
 00:16:26,420 --> 00:16:29,196
-o en una estructura de control de acceso
+o en una estructura
+de control de acceso
 
 370
 00:16:29,220 --> 00:16:32,235
@@ -1488,15 +1750,18 @@ Y así no llega a donde
 
 373
 00:16:36,500 --> 00:16:38,716
-quiere llegar de golpe. Simplemente
+quiere llegar de
+golpe. Simplemente
 
 374
 00:16:38,740 --> 00:16:41,276
-va avanzando poco a poco porque encuentra
+va avanzando poco a
+poco porque encuentra
 
 375
 00:16:41,300 --> 00:16:44,396
-lo que falla en cada punto y luego
+lo que falla en
+cada punto y luego
 
 376
 00:16:44,420 --> 00:16:48,476
@@ -1504,15 +1769,18 @@ busca el siguiente exploit, ¿no?
 
 377
 00:16:48,500 --> 00:16:51,836
-Y con la IA, pueden buscar más rápido.
+Y con la IA, pueden
+buscar más rápido.
 
 378
 00:16:51,860 --> 00:16:55,196
-Pueden combinar vulnerabilidades más rápido
+Pueden combinar
+vulnerabilidades más rápido
 
 379
 00:16:55,220 --> 00:16:56,555
-porque pueden buscar en todo el espacio
+porque pueden buscar
+en todo el espacio
 
 380
 00:16:56,579 --> 00:16:58,156
@@ -1520,15 +1788,18 @@ y dicen: «Oh, espera...»
 
 381
 00:16:58,180 --> 00:17:00,716
-De hecho, creo que se publicó un artículo recientemente
+De hecho, creo que se
+publicó un artículo recientemente
 
 382
 00:17:00,740 --> 00:17:02,875
-la semana pasada, en el que lograron
+la semana pasada,
+en el que lograron
 
 383
 00:17:02,899 --> 00:17:07,116
-aprovechar el modelo de seguridad de la memoria en
+aprovechar el modelo de
+seguridad de la memoria en
 
 384
 00:17:07,140 --> 00:17:09,996
@@ -1536,15 +1807,18 @@ la arquitectura M5 de Apple
 
 385
 00:17:10,020 --> 00:17:13,275
-gracias a una combinación de análisis de IA realizado por humanos y
+gracias a una combinación de
+análisis de IA realizado por humanos y
 
 386
 00:17:13,299 --> 00:17:18,876
-por máquinas, algo que los humanos
+por máquinas, algo
+que los humanos
 
 387
 00:17:18,900 --> 00:17:20,236
-nunca habrían podido hacer por sí mismos
+nunca habrían podido
+hacer por sí mismos
 
 388
 00:17:20,260 --> 00:17:22,076
@@ -1552,11 +1826,13 @@ porque simplemente no tenían la
 
 389
 00:17:22,100 --> 00:17:24,236
-capacidad para analizar todas las posibles
+capacidad para analizar
+todas las posibles
 
 390
 00:17:24,260 --> 00:17:25,915
-cosas diferentes en las que podían pensar.
+cosas diferentes en
+las que podían pensar.
 
 391
 00:17:25,939 --> 00:17:28,795
@@ -1564,19 +1840,23 @@ no sabían necesariamente cómo
 
 392
 00:17:28,819 --> 00:17:30,556
-cómo llevar a cabo el exploit, pero con la
+cómo llevar a cabo
+el exploit, pero con la
 
 393
 00:17:30,580 --> 00:17:33,275
-orientación humana en combinación
+orientación humana
+en combinación
 
 394
 00:17:33,299 --> 00:17:36,716
-la velocidad y la escala de la IA
+la velocidad y
+la escala de la IA
 
 395
 00:17:36,740 --> 00:17:38,716
-no se refieren solo a la propia IA, sino al hecho de que
+no se refieren solo a la
+propia IA, sino al hecho de que
 
 396
 00:17:38,740 --> 00:17:41,836
@@ -1584,11 +1864,13 @@ los atacantes son humanos, la
 
 397
 00:17:41,860 --> 00:17:44,876
-la mayoría de estos ataques están dirigidos por
+la mayoría de estos
+ataques están dirigidos por
 
 398
 00:17:44,900 --> 00:17:47,275
-seres humanos, ya sean delincuentes o Estados,
+seres humanos, ya sean
+delincuentes o Estados,
 
 399
 00:17:47,299 --> 00:17:49,916
@@ -1596,11 +1878,13 @@ que quieren atacar
 
 400
 00:17:49,940 --> 00:17:52,796
-infraestructuras críticas o valiosas y
+infraestructuras
+críticas o valiosas y
 
 401
 00:17:52,820 --> 00:17:55,356
-la IA no es más que un multiplicador de fuerza para
+la IA no es más que un
+multiplicador de fuerza para
 
 402
 00:17:55,380 --> 00:17:57,275
@@ -1612,35 +1896,43 @@ no solo, sino que sin duda es un
 
 404
 00:17:59,220 --> 00:18:02,476
-multiplicador de fuerza. Y eso significa que
+multiplicador de fuerza.
+Y eso significa que
 
 405
 00:18:02,500 --> 00:18:07,596
-incluso los exploits desconocidos y difíciles de encontrar
+incluso los exploits desconocidos
+y difíciles de encontrar
 
 406
 00:18:07,620 --> 00:18:09,356
-que están latentes, que se encuentran en tu sistema
+que están latentes, que
+se encuentran en tu sistema
 
 407
 00:18:09,380 --> 00:18:11,515
-van a ser explotadas rápidamente, lo que
+van a ser explotadas
+rápidamente, lo que
 
 408
 00:18:11,539 --> 00:18:13,356
-significa que tu sistema tiene que estar
+significa que tu
+sistema tiene que estar
 
 409
 00:18:13,380 --> 00:18:16,076
-diseñado de otra manera. Tiene que estar
+diseñado de otra
+manera. Tiene que estar
 
 410
 00:18:16,100 --> 00:18:17,916
-diseñado para ser tolerante a fallos, de modo que pueda
+diseñado para ser tolerante
+a fallos, de modo que pueda
 
 411
 00:18:17,940 --> 00:18:20,956
-sobrevivir incluso si es objeto de un ataque. Y
+sobrevivir incluso si es
+objeto de un ataque. Y
 
 412
 00:18:20,980 --> 00:18:22,876
@@ -1648,7 +1940,8 @@ así que eso es
 
 413
 00:18:22,900 --> 00:18:28,059
-un enfoque diferente de la seguridad.
+un enfoque diferente
+de la seguridad.
 
 414
 00:18:28,179 --> 00:18:29,676
@@ -1656,15 +1949,18 @@ Hablemos un poco
 
 415
 00:18:29,700 --> 00:18:32,316
-más de ello. La ciberresiliencia tras una brecha de seguridad
+más de ello. La ciberresiliencia
+tras una brecha de seguridad
 
 416
 00:18:32,340 --> 00:18:34,716
-porque es la transición perfecta.
+porque es la
+transición perfecta.
 
 417
 00:18:34,740 --> 00:18:36,796
-La afirmación da por hecho que las brechas de seguridad son
+La afirmación da por hecho
+que las brechas de seguridad son
 
 418
 00:18:36,820 --> 00:18:38,395
@@ -1672,7 +1968,8 @@ inevitables.
 
 419
 00:18:38,419 --> 00:18:40,316
-y la cuestión es que, en una arquitectura basada en KERI,
+y la cuestión es que, en una
+arquitectura basada en KERI,
 
 420
 00:18:40,340 --> 00:18:42,155
@@ -1680,27 +1977,33 @@ qué sigue siendo fiable
 
 421
 00:18:42,179 --> 00:18:44,716
-una vez que los servidores, las bases de datos y los proveedores de servicios en la nube
+una vez que los servidores, las bases de datos
+y los proveedores de servicios en la nube
 
 422
 00:18:44,740 --> 00:18:47,275
-las autoridades de certificación se vean comprometidas?
+las autoridades de certificación
+se vean comprometidas?
 
 423
 00:18:47,299 --> 00:18:50,155
-Bueno, en una arquitectura basada en KERI,
+Bueno, en una arquitectura
+basada en KERI,
 
 424
 00:18:50,179 --> 00:18:52,636
-lo que sigue siendo fiable es que
+lo que sigue
+siendo fiable es que
 
 425
 00:18:52,660 --> 00:18:56,556
-haya creado un mecanismo tolerante a fallos
+haya creado un
+mecanismo tolerante a fallos
 
 426
 00:18:56,580 --> 00:18:58,876
-que te permite recuperarte y detectar
+que te permite
+recuperarte y detectar
 
 427
 00:18:58,900 --> 00:19:02,476
@@ -1712,47 +2015,58 @@ Y lo que ocurre es que
 
 429
 00:19:06,100 --> 00:19:08,476
-puede que no seas capaz de prever
+puede que no seas
+capaz de prever
 
 430
 00:19:08,500 --> 00:19:12,476
-todas las formas en que un atacante puede
+todas las formas en
+que un atacante puede
 
 431
 00:19:12,500 --> 00:19:14,796
-atacarte. Pero si dispones de mecanismos
+atacarte. Pero si
+dispones de mecanismos
 
 432
 00:19:14,820 --> 00:19:17,916
-que te permitan detectar una intrusión
+que te permitan
+detectar una intrusión
 
 433
 00:19:17,940 --> 00:19:19,996
-y, a continuación, una forma de recuperarte de
+y, a continuación, una
+forma de recuperarte de
 
 434
 00:19:20,020 --> 00:19:23,596
-esa vulneración de forma oportuna, entonces el
+esa vulneración de forma
+oportuna, entonces el
 
 435
 00:19:23,620 --> 00:19:26,316
-el atacante no tendrá tiempo de aprovechar
+el atacante no tendrá
+tiempo de aprovechar
 
 436
 00:19:26,340 --> 00:19:29,356
-esa vulnerabilización. Y al igual que en un <i>ataque recursivo</i>
+esa vulnerabilización. Y al
+igual que en un <i>ataque recursivo</i>
 
 437
 00:19:29,380 --> 00:19:31,596
-<i>ataque de escalada de privilegios</i>,
+<i>ataque de escalada
+de privilegios</i>,
 
 438
 00:19:31,620 --> 00:19:35,035
-suele tratarse de una secuencia de exploits que
+suele tratarse de una
+secuencia de exploits que
 
 439
 00:19:35,059 --> 00:19:36,876
-lleva tiempo. Ahora bien, el tiempo no tiene por qué
+lleva tiempo. Ahora bien,
+el tiempo no tiene por qué
 
 440
 00:19:36,900 --> 00:19:39,436
@@ -1768,7 +2082,8 @@ antes de la IA, bueno, el
 
 443
 00:19:46,179 --> 00:19:48,556
-en la actualidad, el tiempo medio que tarda en
+en la actualidad, el
+tiempo medio que tarda en
 
 444
 00:19:48,580 --> 00:19:50,716
@@ -1776,23 +2091,28 @@ detectarse una brecha, y yo
 
 445
 00:19:50,740 --> 00:19:52,476
-supongo que no es menos de lo que ya sabes
+supongo que no es
+menos de lo que ya sabes
 
 446
 00:19:52,500 --> 00:19:55,996
-y contar con una IA como protectora podría
+y contar con una IA
+como protectora podría
 
 447
 00:19:56,020 --> 00:19:57,676
-reducir ese tiempo, porque es mejor
+reducir ese tiempo,
+porque es mejor
 
 448
 00:19:57,700 --> 00:19:59,596
-capaz de detectar infracciones, ¿verdad? Esa es
+capaz de detectar
+infracciones, ¿verdad? Esa es
 
 449
 00:19:59,620 --> 00:20:03,275
-la idea. Son 6 meses y, a continuación,
+la idea. Son 6 meses
+y, a continuación,
 
 450
 00:20:03,299 --> 00:20:05,436
@@ -1800,31 +2120,38 @@ la idea. Son 6 meses y, a continuación,
 
 451
 00:20:05,460 --> 00:20:07,515
-brecha. Así que son nueve meses de tiempo que
+brecha. Así que son
+nueve meses de tiempo que
 
 452
 00:20:07,539 --> 00:20:11,436
-dispone un atacante para aprovechar la
+dispone un atacante
+para aprovechar la
 
 453
 00:20:11,460 --> 00:20:13,035
-vulnerabilidad que ha descubierto.
+vulnerabilidad
+que ha descubierto.
 
 454
 00:20:13,059 --> 00:20:17,275
-Por eso, KERI está diseñado para que
+Por eso, KERI está
+diseñado para que
 
 455
 00:20:17,299 --> 00:20:19,996
-el tiempo de detección sea del orden de
+el tiempo de detección
+sea del orden de
 
 456
 00:20:20,020 --> 00:20:22,076
-de segundos. Es el tiempo de propagación
+de segundos. Es el
+tiempo de propagación
 
 457
 00:20:22,100 --> 00:20:26,476
-por la red. De modo que las brechas que son
+por la red. De modo
+que las brechas que son
 
 458
 00:20:26,500 --> 00:20:28,155
@@ -1832,7 +2159,8 @@ explotables
 
 459
 00:20:28,179 --> 00:20:30,956
-deben ser detectables. Por lo tanto, todo el
+deben ser detectables.
+Por lo tanto, todo el
 
 460
 00:20:30,980 --> 00:20:32,476
@@ -1844,19 +2172,23 @@ la detectabilidad, ¿verdad?
 
 462
 00:20:35,380 --> 00:20:38,556
-Todo se manifiesta como <i>duplicidad</i>.
+Todo se manifiesta
+como <i>duplicidad</i>.
 
 463
 00:20:38,580 --> 00:20:41,035
-Es un sistema de pruebas de duplicidad. Así que, para que
+Es un sistema de pruebas de
+duplicidad. Así que, para que
 
 464
 00:20:41,059 --> 00:20:43,756
-que un atacante se beneficie, tiene que hacer
+que un atacante se
+beneficie, tiene que hacer
 
 465
 00:20:43,780 --> 00:20:45,996
-algo que se manifieste como duplicidad,
+algo que se manifieste
+como duplicidad,
 
 466
 00:20:46,020 --> 00:20:48,155
@@ -1868,19 +2200,23 @@ al controlador de la identidad
 
 468
 00:20:50,340 --> 00:20:53,596
-recuperarse de ello de manera oportuna
+recuperarse de ello
+de manera oportuna
 
 469
 00:20:53,620 --> 00:20:55,196
-de esta forma. Lo cual no significa
+de esta forma.
+Lo cual no significa
 
 470
 00:20:55,220 --> 00:20:57,035
-que no haya ataques que tengan éxito.
+que no haya ataques
+que tengan éxito.
 
 471
 00:20:57,059 --> 00:21:00,076
-Significa que el radio de impacto del
+Significa que el
+radio de impacto del
 
 472
 00:21:00,100 --> 00:21:03,196
@@ -1888,11 +2224,13 @@ ataque se reduce al mínimo.
 
 473
 00:21:03,220 --> 00:21:06,556
-En muchos casos, el ROI del ataque o
+En muchos casos,
+el ROI del ataque o
 
 474
 00:21:06,580 --> 00:21:09,035
-el retorno de la inversión es negativo. Yo
+el retorno de la
+inversión es negativo. Yo
 
 475
 00:21:09,059 --> 00:21:11,196
@@ -1900,7 +2238,8 @@ me refiero a que cuesta más
 
 476
 00:21:11,220 --> 00:21:13,676
-llevar a cabo el ataque de lo que se obtiene con él
+llevar a cabo el ataque
+de lo que se obtiene con él
 
 477
 00:21:13,700 --> 00:21:17,836
@@ -1908,31 +2247,38 @@ porque el ataque se
 
 478
 00:21:17,860 --> 00:21:22,316
-contener y se recupera rápidamente.
+contener y se
+recupera rápidamente.
 
 479
 00:21:22,340 --> 00:21:24,395
-Así pues, estos sistemas que utilizamos actualmente,
+Así pues, estos sistemas
+que utilizamos actualmente,
 
 480
 00:21:24,419 --> 00:21:26,155
-servidores, bases de datos, proveedores de servicios en la nube,
+servidores, bases de datos,
+proveedores de servicios en la nube,
 
 481
 00:21:26,179 --> 00:21:27,676
-autoridades de certificación, todos ellos
+autoridades de
+certificación, todos ellos
 
 482
 00:21:27,700 --> 00:21:30,155
-se basan en una noción anticuada y obsoleta
+se basan en una noción
+anticuada y obsoleta
 
 483
 00:21:30,179 --> 00:21:32,395
-sobre seguridad y gestión de claves. Y
+sobre seguridad y
+gestión de claves. Y
 
 484
 00:21:32,419 --> 00:21:33,916
-esas son palabras muy duras. Y sé que
+esas son palabras
+muy duras. Y sé que
 
 485
 00:21:33,940 --> 00:21:34,956
@@ -1940,7 +2286,8 @@ que a mucha gente del sector no
 
 486
 00:21:34,980 --> 00:21:36,395
-le gusta que diga cosas así, pero
+le gusta que diga
+cosas así, pero
 
 487
 00:21:36,419 --> 00:21:38,716
@@ -1952,27 +2299,33 @@ revisar las decisiones
 
 489
 00:21:40,820 --> 00:21:42,635
-y fueron buenas decisiones hace 30 años
+y fueron buenas
+decisiones hace 30 años
 
 490
 00:21:42,659 --> 00:21:44,956
-o incluso hace 20 años, o incluso hace 10
+o incluso hace 20
+años, o incluso hace 10
 
 491
 00:21:44,980 --> 00:21:47,116
-años. No tanto hace 10 años, sino hace 20
+años. No tanto hace
+10 años, sino hace 20
 
 492
 00:21:47,140 --> 00:21:49,836
-hace 20 años, sin duda. Pero al menos en
+hace 20 años, sin
+duda. Pero al menos en
 
 493
 00:21:49,860 --> 00:21:51,515
-los últimos 10 años hemos tenido mejores
+los últimos 10 años
+hemos tenido mejores
 
 494
 00:21:51,539 --> 00:21:54,076
-tecnología para la gestión de claves y el KERI
+tecnología para la
+gestión de claves y el KERI
 
 495
 00:21:54,100 --> 00:21:56,716
@@ -1980,11 +2333,13 @@ se basa en comprender que si
 
 496
 00:21:56,740 --> 00:21:58,556
-se dispone de una mejor tecnología para la
+se dispone de una
+mejor tecnología para la
 
 497
 00:21:58,580 --> 00:22:00,476
-gestión de claves, entonces se hacen las cosas de forma diferente
+gestión de claves, entonces se
+hacen las cosas de forma diferente
 
 498
 00:22:00,500 --> 00:22:04,556
@@ -1992,7 +2347,8 @@ cosas. Todos estos sistemas que
 
 499
 00:22:04,580 --> 00:22:10,076
-utilizan DNS, TLS, OAuth, sistemas basados en OIDC
+utilizan DNS, TLS, OAuth,
+sistemas basados en OIDC
 
 500
 00:22:10,100 --> 00:22:13,515
@@ -2000,35 +2356,43 @@ utilizan secretos compartidos
 
 501
 00:22:13,539 --> 00:22:15,676
-y los secretos compartidos son intrínsecamente débiles
+y los secretos compartidos
+son intrínsecamente débiles
 
 502
 00:22:15,700 --> 00:22:19,436
-y contribuyen de forma inherente a
+y contribuyen de
+forma inherente a
 
 503
 00:22:19,460 --> 00:22:21,836
-<i>ataques recursivos de escalada de privilegios</i>.
+<i>ataques recursivos de
+escalada de privilegios</i>.
 
 504
 00:22:21,860 --> 00:22:25,756
-Así que, en realidad, solo se trata de descubrir
+Así que, en realidad,
+solo se trata de descubrir
 
 505
 00:22:25,780 --> 00:22:27,676
-diferentes formas de explotar esos
+diferentes formas
+de explotar esos
 
 506
 00:22:27,700 --> 00:22:29,116
-secretos compartidos. KERI no utiliza
+secretos compartidos.
+KERI no utiliza
 
 507
 00:22:29,140 --> 00:22:31,196
-secretos compartidos. No tiene ninguno.
+secretos compartidos.
+No tiene ninguno.
 
 508
 00:22:31,220 --> 00:22:34,236
-Y por eso los mecanismos de protección
+Y por eso los
+mecanismos de protección
 
 509
 00:22:34,260 --> 00:22:36,716
@@ -2036,19 +2400,23 @@ son
 
 510
 00:22:36,740 --> 00:22:38,556
-fundamentalmente diferentes, ¿verdad?
+fundamentalmente
+diferentes, ¿verdad?
 
 511
 00:22:38,580 --> 00:22:40,635
-Si no compartes algo, entonces nadie
+Si no compartes
+algo, entonces nadie
 
 512
 00:22:40,659 --> 00:22:43,116
-puede capturarlo ni recopilarlo, ¿verdad?
+puede capturarlo ni
+recopilarlo, ¿verdad?
 
 513
 00:22:43,140 --> 00:22:45,035
-Requiere un tipo diferente de ataque.
+Requiere un tipo
+diferente de ataque.
 
 514
 00:22:45,059 --> 00:22:46,635
@@ -2056,7 +2424,8 @@ E incluso si tienen éxito en ese
 
 515
 00:22:46,659 --> 00:22:49,515
-ataque, si dispones de un mecanismo
+ataque, si dispones
+de un mecanismo
 
 516
 00:22:49,539 --> 00:22:51,196
@@ -2064,7 +2433,8 @@ de recuperación,
 
 517
 00:22:51,220 --> 00:22:54,155
-entonces podrás recuperarte de él.
+entonces podrás
+recuperarte de él.
 
 518
 00:22:54,179 --> 00:22:55,836
@@ -2072,31 +2442,38 @@ Y así no pierdes el tiempo
 
 519
 00:22:55,860 --> 00:22:58,635
-intentando construir un tanque que sea a prueba de
+intentando construir un
+tanque que sea a prueba de
 
 520
 00:22:58,659 --> 00:23:02,236
-cualquier tipo de bomba. Dedicas tu tiempo
+cualquier tipo de
+bomba. Dedicas tu tiempo
 
 521
 00:23:02,260 --> 00:23:06,476
-en formar una escuadra de tanques
+en formar una
+escuadra de tanques
 
 522
 00:23:06,500 --> 00:23:07,996
-para que algunos de ellos puedan quedar
+para que algunos de
+ellos puedan quedar
 
 523
 00:23:08,020 --> 00:23:10,236
-destruidos, pero la escuadra sobrevive y
+destruidos, pero la
+escuadra sobrevive y
 
 524
 00:23:10,260 --> 00:23:12,476
-se repara a sí misma y es capaz de seguir
+se repara a sí misma
+y es capaz de seguir
 
 525
 00:23:12,500 --> 00:23:13,676
-a funcionar. Y eso es lo que significa <i>resistente a fallos</i>
+a funcionar. Y eso es lo que
+significa <i>resistente a fallos</i>
 
 526
 00:23:13,700 --> 00:23:16,556
@@ -2104,27 +2481,33 @@ a funcionar. Y eso es lo que significa <i>resistente a fallos</i>
 
 527
 00:23:16,580 --> 00:23:18,316
-analogía. Ya sabes, se puede construir un tanque
+analogía. Ya sabes, se
+puede construir un tanque
 
 528
 00:23:18,340 --> 00:23:19,916
-con un blindaje lo suficientemente grueso como para resistir
+con un blindaje lo suficientemente
+grueso como para resistir
 
 529
 00:23:19,940 --> 00:23:22,316
-cualquier proyectil, pero entonces deja de ser un
+cualquier proyectil, pero
+entonces deja de ser un
 
 530
 00:23:22,340 --> 00:23:24,155
-tanque que sea móvil, ¿verdad? Según
+tanque que sea
+móvil, ¿verdad? Según
 
 531
 00:23:24,179 --> 00:23:26,236
-definición, un tanque debe ser móvil.
+definición, un tanque
+debe ser móvil.
 
 532
 00:23:26,260 --> 00:23:28,556
-Así que pasa de ser un tanque a un búnker,
+Así que pasa de ser
+un tanque a un búnker,
 
 533
 00:23:28,580 --> 00:23:31,196
@@ -2132,7 +2515,8 @@ Así que pasa de ser un tanque a un búnker,
 
 534
 00:23:31,220 --> 00:23:34,155
-Hay que hacer algunas concesiones. Y
+Hay que hacer
+algunas concesiones. Y
 
 535
 00:23:34,179 --> 00:23:36,395
@@ -2140,7 +2524,8 @@ la concesión adecuada en
 
 536
 00:23:36,419 --> 00:23:39,836
-un mundo de IA es un sistema tolerante a fallos,
+un mundo de IA es un
+sistema tolerante a fallos,
 
 537
 00:23:39,860 --> 00:23:42,716
@@ -2148,7 +2533,8 @@ no un sistema que tengas que
 
 538
 00:23:42,740 --> 00:23:45,916
-descartar y empezar de cero cada pocos
+descartar y empezar
+de cero cada pocos
 
 539
 00:23:45,940 --> 00:23:49,356
@@ -2160,11 +2546,13 @@ no puedes saber si has
 
 541
 00:23:51,059 --> 00:23:52,236
-sido objeto de un ataque o una intrusión porque
+sido objeto de un ataque
+o una intrusión porque
 
 542
 00:23:52,260 --> 00:23:55,356
-no dispones de ningún mecanismo para
+no dispones de
+ningún mecanismo para
 
 543
 00:23:55,380 --> 00:23:58,956
@@ -2172,27 +2560,33 @@ detectar una intrusión.
 
 544
 00:24:03,059 --> 00:24:05,756
-Así que, en realidad, esta pregunta,
+Así que, en realidad,
+esta pregunta,
 
 545
 00:24:05,780 --> 00:24:07,756
-me he adelantado de nuevo, pero ¿cómo
+me he adelantado
+de nuevo, pero ¿cómo
 
 546
 00:24:07,780 --> 00:24:09,515
-¿cómo consigue la suite KERI cambiar el enfoque de la seguridad de
+¿cómo consigue la suite KERI
+cambiar el enfoque de la seguridad de
 
 547
 00:24:09,539 --> 00:24:10,876
-la protección de la infraestructura a la protección de
+la protección de la
+infraestructura a la protección de
 
 548
 00:24:10,900 --> 00:24:12,556
-secretos a revelar verdades verificables y
+secretos a revelar
+verdades verificables y
 
 549
 00:24:12,580 --> 00:24:15,436
-la procedencia. Así que la idea en criptografía,
+la procedencia. Así que
+la idea en criptografía,
 
 550
 00:24:15,460 --> 00:24:18,956
@@ -2200,96 +2594,118 @@ en la <i>criptografía asimétrica</i>,
 
 551
 00:24:18,980 --> 00:24:21,116
-es que se dispone de claves privadas y públicas
+es que se dispone de
+claves privadas y públicas
 
 552
 00:24:21,140 --> 00:24:23,676
-; y las claves privadas son verdaderamente
+; y las claves privadas
+son verdaderamente
 
 553
 00:24:23,700 --> 00:24:26,796
-privadas, en el sentido de que nunca se comparten.
+privadas, en el sentido de
+que nunca se comparten.
 
 554
 00:24:26,820 --> 00:24:29,275
-El problema es que las personas que
+El problema es que
+las personas que
 
 555
 00:24:29,299 --> 00:24:33,035
-quieren tener una identidad digital tienen
+quieren tener una
+identidad digital tienen
 
 556
 00:24:33,059 --> 00:24:35,116
-que gestionar esas claves privadas. Y por eso
+que gestionar esas
+claves privadas. Y por eso
 
 557
 00:24:35,140 --> 00:24:36,956
-eso siempre se ha considerado un problema
+eso siempre se ha
+considerado un problema
 
 558
 00:24:36,980 --> 00:24:39,275
-demasiado difícil de gestionar. Por eso necesitábamos
+demasiado difícil de gestionar.
+Por eso necesitábamos
 
 559
 00:24:39,299 --> 00:24:41,035
-contar con proveedores de identidad que gestionaran
+contar con proveedores
+de identidad que gestionaran
 
 560
 00:24:41,059 --> 00:24:43,436
-las claves privadas en nuestro nombre, ¿verdad? Y
+las claves privadas en
+nuestro nombre, ¿verdad? Y
 
 561
 00:24:43,460 --> 00:24:45,596
-entonces la gestión de claves quedaba
+entonces la gestión
+de claves quedaba
 
 562
 00:24:45,620 --> 00:24:47,596
-oculta al sistema. Así que tienes
+oculta al sistema.
+Así que tienes
 
 563
 00:24:47,620 --> 00:24:49,515
-proveedores de identidad y entidades
+proveedores de
+identidad y entidades
 
 564
 00:24:49,539 --> 00:24:51,836
-confiables, y luego utilizas nombres de usuario
+confiables, y luego
+utilizas nombres de usuario
 
 565
 00:24:51,860 --> 00:24:53,996
-y contraseñas o, ahora, <i>claves de acceso</i>
+y contraseñas o,
+ahora, <i>claves de acceso</i>
 
 566
 00:24:54,020 --> 00:24:55,596
-Hay cosas más seguras que los nombres de usuario
+Hay cosas más seguras
+que los nombres de usuario
 
 567
 00:24:55,620 --> 00:24:57,996
-y las contraseñas, pero sigues dependiendo
+y las contraseñas,
+pero sigues dependiendo
 
 568
 00:24:58,020 --> 00:25:01,116
-de un proveedor de identidad para la
+de un proveedor
+de identidad para la
 
 569
 00:25:01,140 --> 00:25:07,699
-seguridad definitiva del sistema.
-Y eso acaba
+seguridad definitiva
+del sistema. Y eso acaba
 
 570
 00:25:07,700 --> 00:25:10,876
-pareciendo secretos compartidos, <i>tokens de portador</i>
+pareciendo secretos
+compartidos, <i>tokens de portador</i>
 
 571
 00:25:10,900 --> 00:25:13,356
-<i>tokens</i>, que el proveedor de identidad
+<i>tokens</i>, que el
+proveedor de identidad
 
 572
 00:25:13,380 --> 00:25:15,676
-distribuye entre las personas para que
+distribuye entre las
+personas para que
 
 573
 00:25:15,700 --> 00:25:18,155
-entidades para que puedan realizar acciones
+entidades para que
+puedan realizar acciones
 
 574
 00:25:18,179 --> 00:25:21,836
@@ -2301,27 +2717,33 @@ a través de canales seguros,
 
 576
 00:25:23,860 --> 00:25:26,236
-están protegidos con secretos compartidos. TLS,
+están protegidos con
+secretos compartidos. TLS,
 
 577
 00:25:26,260 --> 00:25:28,635
-ya sabes, utiliza una clave Diffie-Hellman
+ya sabes, utiliza una
+clave Diffie-Hellman
 
 578
 00:25:28,659 --> 00:25:30,956
-intercambio de secretos compartidos para
+intercambio de secretos
+compartidos para
 
 579
 00:25:30,980 --> 00:25:32,796
-intercambiar una clave de cifrado que luego
+intercambiar una clave
+de cifrado que luego
 
 580
 00:25:32,820 --> 00:25:36,476
-autenticada de forma débil mediante
+autenticada de
+forma débil mediante
 
 581
 00:25:36,500 --> 00:25:37,916
-el cifrado de algo y, a continuación, la otra
+el cifrado de algo y,
+a continuación, la otra
 
 582
 00:25:37,940 --> 00:25:39,356
@@ -2333,31 +2755,38 @@ a ti. Pero está sujeto
 
 584
 00:25:41,700 --> 00:25:43,755
-a que se produzcan <i>ataques de suplantación de identidad</i>
+a que se produzcan <i>ataques
+de suplantación de identidad</i>
 
 585
 00:25:43,779 --> 00:25:46,316
-y, por eso, cada vez que empiezas a hacer
+y, por eso, cada vez
+que empiezas a hacer
 
 586
 00:25:46,340 --> 00:25:48,635
-cosas para evitar los problemas complejos de la
+cosas para evitar los
+problemas complejos de la
 
 587
 00:25:48,659 --> 00:25:50,316
-gestión de claves, acabas debilitando
+gestión de claves,
+acabas debilitando
 
 588
 00:25:50,340 --> 00:25:52,316
-la seguridad. KERI dice: «No, vamos
+la seguridad. KERI
+dice: «No, vamos
 
 589
 00:25:52,340 --> 00:25:54,476
-a implementar la gestión de claves como es debido».
+a implementar la gestión
+de claves como es debido».
 
 590
 00:25:54,500 --> 00:25:57,116
-«Vamos a hacer que sea tolerante a fallos».
+«Vamos a hacer que
+sea tolerante a fallos».
 
 591
 00:25:57,140 --> 00:25:58,956
@@ -2365,7 +2794,8 @@ a implementar la gestión de claves como es debido».
 
 592
 00:25:58,980 --> 00:26:01,996
-permitir que la gente lo utilice de una forma
+permitir que la gente
+lo utilice de una forma
 
 593
 00:26:02,020 --> 00:26:06,716
@@ -2385,7 +2815,8 @@ tenga éxito». Y KERI utiliza
 
 597
 00:26:15,220 --> 00:26:18,476
-<i>firma</i>, grupos de <i>testigos</i>, grupos de <i>observadores</i>
+<i>firma</i>, grupos de <i>testigos</i>,
+grupos de <i>observadores</i>
 
 598
 00:26:18,500 --> 00:26:21,596
@@ -2393,19 +2824,23 @@ y AID delegados que son
 
 599
 00:26:21,620 --> 00:26:24,395
-jerárquicos, de modo que puedas crear un sistema tan
+jerárquicos, de modo que
+puedas crear un sistema tan
 
 600
 00:26:24,419 --> 00:26:28,876
-seguro como desees; de modo que puedas
+seguro como desees;
+de modo que puedas
 
 601
 00:26:28,900 --> 00:26:30,956
-puedas ajustar la seguridad al nivel que
+puedas ajustar la
+seguridad al nivel que
 
 602
 00:26:30,980 --> 00:26:32,716
-un atacante tenga que alcanzar. Así que si
+un atacante tenga
+que alcanzar. Así que si
 
 603
 00:26:32,740 --> 00:26:34,876
@@ -2413,15 +2848,18 @@ busca algo realmente valioso,
 
 604
 00:26:34,900 --> 00:26:36,716
-entonces se añaden umbrales adicionales
+entonces se añaden
+umbrales adicionales
 
 605
 00:26:36,740 --> 00:26:41,436
-estructuras. Y en relación con el coste
+estructuras. Y en
+relación con el coste
 
 606
 00:26:41,460 --> 00:26:45,196
-de los recursos necesarios para ejecutar una
+de los recursos necesarios
+para ejecutar una
 
 607
 00:26:45,220 --> 00:26:47,035
@@ -2457,7 +2895,8 @@ vigilancia. ¿Se pueden
 
 615
 00:27:11,320 --> 00:27:13,376
-lograr una seguridad sólida, la rendición de cuentas y la resiliencia
+lograr una seguridad sólida, la
+rendición de cuentas y la resiliencia
 
 616
 00:27:13,400 --> 00:27:14,816
@@ -2481,11 +2920,13 @@ es decir que vamos a utilizar
 
 621
 00:27:27,880 --> 00:27:33,456
-la criptografía tal y como se concibió que se utilizara.
+la criptografía tal y como
+se concibió que se utilizara.
 
 622
 00:27:33,480 --> 00:27:35,296
-Sin explicar el protocolo de KERI,
+Sin explicar el
+protocolo de KERI,
 
 623
 00:27:35,320 --> 00:27:36,816
@@ -2493,11 +2934,13 @@ protocolo KERI, lo cual llevaría
 
 624
 00:27:36,840 --> 00:27:41,056
-demasiado tiempo, no cuenta con las
+demasiado tiempo,
+no cuenta con las
 
 625
 00:27:41,080 --> 00:27:42,576
-puntos débiles que tienen nuestros actuales sistemas basados en
+puntos débiles que tienen nuestros
+actuales sistemas basados en
 
 626
 00:27:42,600 --> 00:27:45,936
@@ -2505,27 +2948,33 @@ secretos compartidos, que son
 
 627
 00:27:45,960 --> 00:27:50,496
-vulnerables a los ataques de las IA. Las IA
+vulnerables a los
+ataques de las IA. Las IA
 
 628
 00:27:50,520 --> 00:27:53,216
-no pueden aplicar un ataque de fuerza bruta
+no pueden aplicar un
+ataque de fuerza bruta
 
 629
 00:27:53,240 --> 00:27:55,296
-una clave pública para obtener una clave privada.
+una clave pública para
+obtener una clave privada.
 
 630
 00:27:55,320 --> 00:27:57,856
-Ahora bien, si tengo un ordenador cuántico que es
+Ahora bien, si tengo un
+ordenador cuántico que es
 
 631
 00:27:57,880 --> 00:27:59,296
-otra historia, pero ahora disponemos de
+otra historia, pero
+ahora disponemos de
 
 632
 00:27:59,320 --> 00:28:02,255
-algoritmos de generación de claves pública y privada
+algoritmos de generación
+de claves pública y privada
 
 633
 00:28:02,279 --> 00:28:05,296
@@ -2533,35 +2982,43 @@ algoritmos de generación de claves pública y privada
 
 634
 00:28:05,320 --> 00:28:06,655
-sistema es criptográficamente ágil,
+sistema es
+criptográficamente ágil,
 
 635
 00:28:06,679 --> 00:28:08,655
-cambiar a ellas, algo que KERI ya está haciendo.
+cambiar a ellas, algo que
+KERI ya está haciendo.
 
 636
 00:28:08,679 --> 00:28:12,736
-Así que ese es un problema diferente.
+Así que ese es un
+problema diferente.
 
 637
 00:28:12,760 --> 00:28:14,096
-Así que lo que tienen que hacer es lo que se denomina
+Así que lo que tienen que
+hacer es lo que se denomina
 
 638
 00:28:14,120 --> 00:28:15,775
- un ataque de canal lateral. Tienen que encontrar
+un ataque de canal
+lateral. Tienen que encontrar
 
 639
 00:28:15,799 --> 00:28:19,056
-una forma de aprovechar los canales laterales.
+una forma de aprovechar
+los canales laterales.
 
 640
 00:28:19,080 --> 00:28:21,775
-Mientras que, en el caso de un secreto compartido entre varias partes,
+Mientras que, en el caso de un
+secreto compartido entre varias partes,
 
 641
 00:28:21,799 --> 00:28:24,576
-cada una de ellas tiene una copia de ese secreto.
+cada una de ellas tiene
+una copia de ese secreto.
 
 642
 00:28:24,600 --> 00:28:27,056
@@ -2569,7 +3026,8 @@ Así que los tipos de ataques de
 
 643
 00:28:27,080 --> 00:28:29,696
-canal lateral que funcionan son mucho
+canal lateral que
+funcionan son mucho
 
 644
 00:28:29,720 --> 00:28:33,375
@@ -2577,31 +3035,38 @@ mayores. Si tengo una
 
 645
 00:28:33,399 --> 00:28:35,216
-clave privada KERI que sea verdaderamente privada,
+clave privada KERI que
+sea verdaderamente privada,
 
 646
 00:28:35,240 --> 00:28:36,736
-nunca se comparte. Nunca tiene que
+nunca se comparte.
+Nunca tiene que
 
 647
 00:28:36,760 --> 00:28:39,535
-compartirse. E incluso si esa clave privada se
+compartirse. E incluso
+si esa clave privada se
 
 648
 00:28:39,559 --> 00:28:41,775
-se viera comprometida, puedo recuperarme
+se viera comprometida,
+puedo recuperarme
 
 649
 00:28:41,799 --> 00:28:45,456
-gracias al mecanismo de <i>pre-rotación</i> de KERI,
+gracias al mecanismo
+de <i>pre-rotación</i> de KERI,
 
 650
 00:28:45,480 --> 00:28:47,856
-por lo que un atacante no sacaría mucho provecho de
+por lo que un atacante no
+sacaría mucho provecho de
 
 651
 00:28:47,880 --> 00:28:50,096
-comprometer mis claves privadas. Tendrían que
+comprometer mis claves
+privadas. Tendrían que
 
 652
 00:28:50,120 --> 00:28:52,576
@@ -2609,15 +3074,18 @@ comprometer mucho más y eso
 
 653
 00:28:52,600 --> 00:28:55,696
-se puede diseñar para que suponga una baja
+se puede diseñar para
+que suponga una baja
 
 654
 00:28:55,720 --> 00:28:58,895
-fricción para el usuario, pero con un alto coste para
+fricción para el usuario,
+pero con un alto coste para
 
 655
 00:28:58,919 --> 00:29:01,216
-el atacante, de tal manera que se
+el atacante, de
+tal manera que se
 
 656
 00:29:01,240 --> 00:29:04,976
@@ -2625,23 +3093,28 @@ invierta el gasto de recursos.
 
 657
 00:29:05,000 --> 00:29:08,176
-Así pues, resulta demasiado costoso tener éxito en un
+Así pues, resulta demasiado
+costoso tener éxito en un
 
 658
 00:29:08,200 --> 00:29:10,015
-ataque contra la infraestructura de KERI
+ataque contra la
+infraestructura de KERI
 
 659
 00:29:10,039 --> 00:29:11,856
-que lo que se obtiene a cambio, debido a que
+que lo que se obtiene
+a cambio, debido a que
 
 660
 00:29:11,880 --> 00:29:14,736
-la naturaleza distribuida inherente
+la naturaleza
+distribuida inherente
 
 661
 00:29:14,760 --> 00:29:19,056
-y la naturaleza descentralizada de su diseño.
+y la naturaleza
+descentralizada de su diseño.
 
 662
 00:29:19,080 --> 00:29:21,616
@@ -2649,11 +3122,13 @@ Y volveré sobre esta expresión
 
 663
 00:29:21,640 --> 00:29:23,535
-<i>equilibrar la privacidad </i>y ¿cómo consigue KERI
+<i>equilibrar la privacidad </i>
+y ¿cómo consigue KERI
 
 664
 00:29:23,559 --> 00:29:26,576
-equilibrar la privacidad y la rendición de cuentas?
+equilibrar la privacidad y
+la rendición de cuentas?
 
 665
 00:29:26,600 --> 00:29:28,255
@@ -2661,7 +3136,8 @@ Seguridad
 
 666
 00:29:28,279 --> 00:29:31,456
-requiere una atribución segura. Es necesario
+requiere una atribución
+segura. Es necesario
 
 667
 00:29:31,480 --> 00:29:34,655
@@ -2681,7 +3157,8 @@ contexto
 
 671
 00:29:43,240 --> 00:29:46,255
-la gente sepa quién está haciendo qué. Y
+la gente sepa quién
+está haciendo qué. Y
 
 672
 00:29:46,279 --> 00:29:48,416
@@ -2689,11 +3166,13 @@ KERI se encarga de eso. KERI
 
 673
 00:29:48,440 --> 00:29:50,096
-te ofrece la posibilidad de disponer de
+te ofrece la posibilidad
+de disponer de
 
 674
 00:29:50,120 --> 00:29:52,496
-identificadores que puedes utilizar en
+identificadores que
+puedes utilizar en
 
 675
 00:29:52,520 --> 00:29:54,576
@@ -2701,19 +3180,23 @@ que no se pueden relacionar con
 
 676
 00:29:54,600 --> 00:29:56,496
-los identificadores que utilizas en otros contextos.
+los identificadores que
+utilizas en otros contextos.
 
 677
 00:29:56,520 --> 00:30:00,015
-Pero en cada contexto, dispones de
+Pero en cada
+contexto, dispones de
 
 678
 00:30:00,039 --> 00:30:02,255
-una atribución perfectamente segura a todas las
+una atribución perfectamente
+segura a todas las
 
 679
 00:30:02,279 --> 00:30:04,576
-partes implicadas en el contexto. Y lo que eso
+partes implicadas en
+el contexto. Y lo que eso
 
 680
 00:30:04,600 --> 00:30:07,535
@@ -2721,19 +3204,23 @@ significa es que te libras de la
 
 681
 00:30:07,559 --> 00:30:10,496
-principal fuente de fraude, que es
+principal fuente
+de fraude, que es
 
 682
 00:30:10,520 --> 00:30:12,895
-ataques de suplantación de identidad que, en profundidad,
+ataques de suplantación de
+identidad que, en profundidad,
 
 683
 00:30:12,919 --> 00:30:15,135
-falsifican todos esos datos porque cada
+falsifican todos esos
+datos porque cada
 
 684
 00:30:15,159 --> 00:30:18,576
-participante debe rendir cuentas en ese
+participante debe
+rendir cuentas en ese
 
 685
 00:30:18,600 --> 00:30:21,296
@@ -2745,15 +3232,18 @@ hacerse pasar por otra persona
 
 687
 00:30:23,159 --> 00:30:25,296
-porque se les puede cuestionar y ellos
+porque se les puede
+cuestionar y ellos
 
 688
 00:30:25,320 --> 00:30:26,895
-tienen que demostrar esa relación. Así que, si se trata de una IA,
+tienen que demostrar esa relación.
+Así que, si se trata de una IA,
 
 689
 00:30:26,919 --> 00:30:29,616
-eso es un agente que actúa en nombre de
+eso es un agente que
+actúa en nombre de
 
 690
 00:30:29,640 --> 00:30:33,296
@@ -2769,43 +3259,53 @@ estás utilizando KERI y esa
 
 693
 00:30:37,559 --> 00:30:39,696
-persona está delegando autoridad a una
+persona está delegando
+autoridad a una
 
 694
 00:30:39,720 --> 00:30:42,416
-IA agentiva, entonces siempre puedes
+IA agentiva, entonces
+siempre puedes
 
 695
 00:30:42,440 --> 00:30:44,655
-establecer la cadena de autoridad,
+establecer la
+cadena de autoridad,
 
 696
 00:30:44,679 --> 00:30:46,976
-¿verdad? Así pues, la responsabilidad proviene
+¿verdad? Así pues, la
+responsabilidad proviene
 
 697
 00:30:47,000 --> 00:30:50,496
-de las cadenas de responsabilidad o
+de las cadenas de
+responsabilidad o
 
 698
 00:30:50,520 --> 00:30:51,856
-de las cadenas de autoridad, de las cadenas de
+de las cadenas de
+autoridad, de las cadenas de
 
 699
 00:30:51,880 --> 00:30:55,535
-procedencia o de las cadenas de custodia.
+procedencia o de las
+cadenas de custodia.
 
 700
 00:30:55,559 --> 00:30:58,336
-y KERI está diseñado de forma inherente
+y KERI está diseñado
+de forma inherente
 
 701
 00:30:58,360 --> 00:31:01,216
-para dar soporte a ese tipo de estructuras.
+para dar soporte a
+ese tipo de estructuras.
 
 702
 00:31:01,240 --> 00:31:03,696
-Mientras que la mayoría de los sistemas de seguridad son planos.
+Mientras que la mayoría de los
+sistemas de seguridad son planos.
 
 703
 00:31:03,720 --> 00:31:06,336
@@ -2817,11 +3317,13 @@ te permite establecer esas
 
 705
 00:31:08,840 --> 00:31:11,296
-delegaciones que están fuertemente
+delegaciones que
+están fuertemente
 
 706
 00:31:11,320 --> 00:31:13,216
-encadenadas de forma criptográficamente verificable
+encadenadas de forma
+criptográficamente verificable
 
 707
 00:31:13,240 --> 00:31:18,015
@@ -2829,19 +3331,23 @@ entre sí.
 
 708
 00:31:18,039 --> 00:31:19,936
-privacidad sin vigilancia. ¿Qué es
+privacidad sin
+vigilancia. ¿Qué es
 
 709
 00:31:19,960 --> 00:31:21,696
-la cantidad mínima de divulgación de datos
+la cantidad mínima
+de divulgación de datos
 
 710
 00:31:21,720 --> 00:31:23,456
-necesaria para lograr la rendición de cuentas sin
+necesaria para lograr la
+rendición de cuentas sin
 
 711
 00:31:23,480 --> 00:31:26,176
-crear una sociedad de vigilancia?
+crear una sociedad
+de vigilancia?
 
 712
 00:31:26,200 --> 00:31:29,696
@@ -2853,15 +3359,18 @@ Básicamente,
 
 714
 00:31:31,320 --> 00:31:33,696
-en cada contexto, cada transacción, cada
+en cada contexto,
+cada transacción, cada
 
 715
 00:31:33,720 --> 00:31:36,816
-aplicación, el mínimo es diferente
+aplicación, el
+mínimo es diferente
 
 716
 00:31:36,840 --> 00:31:40,895
-porque en las transacciones de alto riesgo,
+porque en las
+transacciones de alto riesgo,
 
 717
 00:31:40,919 --> 00:31:43,216
@@ -2869,7 +3378,8 @@ en las que hay un valor elevado,
 
 718
 00:31:43,240 --> 00:31:46,416
-normalmente el nivel de confianza necesario
+normalmente el nivel
+de confianza necesario
 
 719
 00:31:46,440 --> 00:31:48,736
@@ -2877,7 +3387,8 @@ entre las partes es mayor. Eso
 
 720
 00:31:48,760 --> 00:31:50,895
-significa que deben ser capaces de
+significa que deben
+ser capaces de
 
 721
 00:31:50,919 --> 00:31:52,416
@@ -2885,23 +3396,28 @@ predecir mejor
 
 722
 00:31:52,440 --> 00:31:55,056
-el resultado y el comportamiento de los
+el resultado y el
+comportamiento de los
 
 723
 00:31:55,080 --> 00:31:58,015
-participantes en dicha interacción.
+participantes en
+dicha interacción.
 
 724
 00:31:58,039 --> 00:32:00,736
-En el caso de las interacciones de bajo riesgo, el
+En el caso de las
+interacciones de bajo riesgo, el
 
 725
 00:32:00,760 --> 00:32:03,616
-la cantidad es mucho menor. Por eso necesitas un
+la cantidad es mucho
+menor. Por eso necesitas un
 
 726
 00:32:03,640 --> 00:32:07,135
-sistema que te proporcione lo suficiente para
+sistema que te proporcione
+lo suficiente para
 
 727
 00:32:07,159 --> 00:32:09,535
@@ -2909,15 +3425,18 @@ las transacciones de mayor valor
 
 728
 00:32:09,559 --> 00:32:12,255
-pero que, al mismo tiempo, te permita ajustarlo para
+pero que, al mismo tiempo,
+te permita ajustarlo para
 
 729
 00:32:12,279 --> 00:32:14,255
-las transacciones de menor cuantía y
+las transacciones
+de menor cuantía y
 
 730
 00:32:14,279 --> 00:32:17,775
-KERI hace eso. Pero, ¿cómo se hace para
+KERI hace eso. Pero,
+¿cómo se hace para
 
 731
 00:32:17,799 --> 00:32:19,456
@@ -2925,11 +3444,13 @@ no crear una
 
 732
 00:32:19,480 --> 00:32:21,856
-sociedad de la vigilancia? Bueno,
+sociedad de la
+vigilancia? Bueno,
 
 733
 00:32:21,880 --> 00:32:24,336
-todos los participantes en esa transacción tienen que
+todos los participantes en
+esa transacción tienen que
 
 734
 00:32:24,360 --> 00:32:28,576
@@ -2937,15 +3458,18 @@ tener obligaciones equilibradas,
 
 735
 00:32:28,600 --> 00:32:32,015
-¿verdad? ¿Cómo crees que se puede lograr
+¿verdad? ¿Cómo crees
+que se puede lograr
 
 736
 00:32:32,039 --> 00:32:33,456
-la rendición de cuentas sin crear
+la rendición de
+cuentas sin crear
 
 737
 00:32:33,480 --> 00:32:36,176
-vigilancia? Bueno, si los que vigilan
+vigilancia? Bueno,
+si los que vigilan
 
 738
 00:32:36,200 --> 00:32:38,015
@@ -2957,7 +3481,8 @@ entonces las personas vigiladas
 
 740
 00:32:40,600 --> 00:32:43,456
-tendrán un recurso contra la vigilancia.
+tendrán un recurso
+contra la vigilancia.
 
 741
 00:32:43,480 --> 00:32:46,655
@@ -2977,11 +3502,13 @@ años trabajando en este
 
 745
 00:32:53,480 --> 00:32:54,976
-que existieran medios tecnológicos
+que existieran
+medios tecnológicos
 
 746
 00:32:55,000 --> 00:32:56,976
-en los que pudieras esconderte. Bueno, básicamente
+en los que pudieras
+esconderte. Bueno, básicamente
 
 747
 00:32:57,000 --> 00:32:59,456
@@ -2989,19 +3516,23 @@ podrías realizar transacciones y
 
 748
 00:32:59,480 --> 00:33:01,375
-escapar a la vigilancia. Y eso no es
+escapar a la
+vigilancia. Y eso no es
 
 749
 00:33:01,399 --> 00:33:05,216
-cierto. Con la IA, no hay forma de esconderse.
+cierto. Con la IA, no
+hay forma de esconderse.
 
 750
 00:33:05,240 --> 00:33:06,976
-Si los datos están en Internet, van a
+Si los datos están
+en Internet, van a
 
 751
 00:33:07,000 --> 00:33:08,816
-a ser correlacionados. Incluso la señal más pequeña
+a ser correlacionados.
+Incluso la señal más pequeña
 
 752
 00:33:08,840 --> 00:33:11,456
@@ -3013,11 +3544,13 @@ de cobertura; y las IA tienen
 
 754
 00:33:14,519 --> 00:33:15,936
-suficiente cobertura, ¿verdad? La gente está
+suficiente cobertura,
+¿verdad? La gente está
 
 755
 00:33:15,960 --> 00:33:20,255
-construyendo centros de datos de IA
+construyendo
+centros de datos de IA
 
 756
 00:33:20,279 --> 00:33:21,856
@@ -3029,19 +3562,23 @@ fracción significativa de la
 
 758
 00:33:23,799 --> 00:33:26,336
-producción eléctrica mundial, ¿y qué
+producción eléctrica
+mundial, ¿y qué
 
 759
 00:33:26,360 --> 00:33:27,535
-hacen? Establecen correlaciones, son
+hacen? Establecen
+correlaciones, son
 
 760
 00:33:27,559 --> 00:33:29,135
-máquinas de correlación y consumen
+máquinas de
+correlación y consumen
 
 761
 00:33:29,159 --> 00:33:30,976
-todos los datos posibles que se les puedan proporcionar
+todos los datos posibles que
+se les puedan proporcionar
 
 762
 00:33:31,000 --> 00:33:32,816
@@ -3053,7 +3590,8 @@ cada dato
 
 764
 00:33:35,159 --> 00:33:38,096
-se convierta en una señal correlacionable que
+se convierta en una
+señal correlacionable que
 
 765
 00:33:38,120 --> 00:33:41,135
@@ -3065,15 +3603,18 @@ aplicable. Así que no vas a
 
 767
 00:33:43,240 --> 00:33:45,216
-detener la correlación. Lo que sí puedes detener
+detener la correlación.
+Lo que sí puedes detener
 
 768
 00:33:45,240 --> 00:33:47,535
-es el <i>aprovechamiento</i> de la correlación
+es el <i>aprovechamiento</i>
+de la correlación
 
 769
 00:33:47,559 --> 00:33:49,775
-y eso significa hacer que rindan cuentas
+y eso significa hacer
+que rindan cuentas
 
 770
 00:33:49,799 --> 00:33:52,495
@@ -3085,7 +3626,8 @@ Eso requiere un
 
 772
 00:33:56,120 --> 00:33:59,696
-en cierto modo diferente, bueno, un enfoque
+en cierto modo diferente,
+bueno, un enfoque
 
 773
 00:33:59,720 --> 00:34:04,096
@@ -3093,7 +3635,8 @@ jurídico y normativo
 
 774
 00:34:04,120 --> 00:34:06,655
-enfoque. Pero desde el punto de vista de la identidad,
+enfoque. Pero desde el
+punto de vista de la identidad,
 
 775
 00:34:06,679 --> 00:34:09,775
@@ -3105,7 +3648,8 @@ que ocultarse no es la forma de
 
 777
 00:34:12,039 --> 00:34:15,776
-hacerlo. Puedes separar los contextos para
+hacerlo. Puedes
+separar los contextos para
 
 778
 00:34:15,800 --> 00:34:19,375
@@ -3113,19 +3657,23 @@ puedas evitar que el
 
 779
 00:34:19,399 --> 00:34:21,776
-espacio de interacción se escape demasiado
+espacio de interacción
+se escape demasiado
 
 780
 00:34:21,800 --> 00:34:24,736
-rápido, pero se escapará. Hagas lo que
+rápido, pero se
+escapará. Hagas lo que
 
 781
 00:34:24,760 --> 00:34:26,895
-hagas, se escapará. Pero lo que quieres
+hagas, se escapará.
+Pero lo que quieres
 
 782
 00:34:26,919 --> 00:34:29,135
-es poder hacer que tu capacidad para
+es poder hacer que
+tu capacidad para
 
 783
 00:34:29,159 --> 00:34:32,256
@@ -3133,23 +3681,28 @@ imponer el uso indebido o
 
 784
 00:34:32,280 --> 00:34:34,736
-uso indebido de esos datos. Y eso
+uso indebido de
+esos datos. Y eso
 
 785
 00:34:34,760 --> 00:34:37,936
-y, por lo tanto, en función del contexto,
+y, por lo tanto, en
+función del contexto,
 
 786
 00:34:37,960 --> 00:34:40,736
-Los identificadores específicos del contexto
+Los identificadores
+específicos del contexto
 
 787
 00:34:40,760 --> 00:34:43,536
-pueden utilizarse para eliminar la
+pueden utilizarse
+para eliminar la
 
 788
 00:34:43,560 --> 00:34:46,416
-posibilidades de negación por parte de las otras partes implicadas en
+posibilidades de negación por
+parte de las otras partes implicadas en
 
 789
 00:34:46,440 --> 00:34:49,456
@@ -3157,39 +3710,48 @@ esas transacciones. Así que hay
 
 790
 00:34:49,480 --> 00:34:53,776
-algunas cosas concretas que podemos hacer.
+algunas cosas concretas
+que podemos hacer.
 
 791
 00:34:53,800 --> 00:34:59,296
-Nos encontramos ante una difícil elección.
+Nos encontramos
+ante una difícil elección.
 
 792
 00:34:59,320 --> 00:35:01,936
-Si la IA de vanguardia alcanza una
+Si la IA de vanguardia
+alcanza una
 
 793
 00:35:01,960 --> 00:35:03,696
-capacidad cibernética ofensiva sobrehumana, ¿nuestras
+capacidad cibernética ofensiva
+sobrehumana, ¿nuestras
 
 794
 00:35:03,720 --> 00:35:05,376
-decisiones se vuelven cada vez más difíciles? Sí,
+decisiones se vuelven
+cada vez más difíciles? Sí,
 
 795
 00:35:05,400 --> 00:35:07,856
-sí lo harán. De hecho, muchas de las
+sí lo harán. De
+hecho, muchas de las
 
 796
 00:35:07,880 --> 00:35:09,216
-conversaciones que he mantenido en los
+conversaciones que
+he mantenido en los
 
 797
 00:35:09,240 --> 00:35:10,736
-últimos años suelen tener lugar en el
+últimos años suelen
+tener lugar en el
 
 798
 00:35:10,760 --> 00:35:12,815
-ámbito de la identidad descentralizada, y
+ámbito de la identidad
+descentralizada, y
 
 799
 00:35:12,839 --> 00:35:15,776
@@ -3197,39 +3759,48 @@ suelen ser debates sobre, bueno,
 
 800
 00:35:15,800 --> 00:35:17,536
-que queremos reducir la seguridad, para que
+que queremos reducir
+la seguridad, para que
 
 801
 00:35:17,560 --> 00:35:19,216
-podamos conseguir privacidad. Estamos dispuestos a
+podamos conseguir
+privacidad. Estamos dispuestos a
 
 802
 00:35:19,240 --> 00:35:20,815
-aceptar concesiones en ese sentido. Y yo
+aceptar concesiones
+en ese sentido. Y yo
 
 803
 00:35:20,839 --> 00:35:22,496
-siempre he dicho que no se puede debilitar
+siempre he dicho que
+no se puede debilitar
 
 804
 00:35:22,520 --> 00:35:24,656
-la seguridad. Si se debilita la seguridad, si se
+la seguridad. Si se
+debilita la seguridad, si se
 
 805
 00:35:24,680 --> 00:35:26,095
-sacrificas la seguridad a cambio de la privacidad, entonces
+sacrificas la seguridad a
+cambio de la privacidad, entonces
 
 806
 00:35:26,119 --> 00:35:28,896
-no consigues ninguna de las dos. Y ahora eso se ha vuelto
+no consigues ninguna de las
+dos. Y ahora eso se ha vuelto
 
 807
 00:35:28,920 --> 00:35:32,095
-evidente. Es algo así como: ahora, si
+evidente. Es algo
+así como: ahora, si
 
 808
 00:35:32,119 --> 00:35:36,896
-quieres seguridad de alguna manera,
+quieres seguridad
+de alguna manera,
 
 809
 00:35:36,920 --> 00:35:40,416
@@ -3241,7 +3812,8 @@ Si no tienes seguridad, entonces
 
 811
 00:35:42,280 --> 00:35:43,616
-no tienes nada. Porque si te pueden
+no tienes nada.
+Porque si te pueden
 
 812
 00:35:43,640 --> 00:35:45,696
@@ -3257,23 +3829,28 @@ entonces no tienes identidad. Y
 
 815
 00:35:51,240 --> 00:35:52,656
-por lo tanto, no tienes nada que sea
+por lo tanto, no
+tienes nada que sea
 
 816
 00:35:52,680 --> 00:35:55,616
-privado, ¿verdad? Porque no puedo
+privado, ¿verdad?
+Porque no puedo
 
 817
 00:35:55,640 --> 00:35:57,696
-dar por sentado que nada de lo que haga pueda
+dar por sentado que
+nada de lo que haga pueda
 
 818
 00:35:57,720 --> 00:36:01,296
-se mantenga en privado si una IA puede suplantarme
+se mantenga en privado si
+una IA puede suplantarme
 
 819
 00:36:01,320 --> 00:36:03,536
-y demostrar al resto del mundo que
+y demostrar al
+resto del mundo que
 
 820
 00:36:03,560 --> 00:36:06,335
@@ -3281,47 +3858,58 @@ fui yo quien lo hizo.
 
 821
 00:36:06,359 --> 00:36:08,176
-En definitiva, ¿qué significa eso? Verás,
+En definitiva, ¿qué
+significa eso? Verás,
 
 822
 00:36:08,200 --> 00:36:09,936
-la gente también piensa en la privacidad, yo
+la gente también piensa
+en la privacidad, yo
 
 823
 00:36:09,960 --> 00:36:11,776
-puedo hacer cosas que nadie más puede hacer
+puedo hacer cosas que
+nadie más puede hacer
 
 824
 00:36:11,800 --> 00:36:15,136
-y de las que nadie tiene conocimiento. Pero si
+y de las que nadie tiene
+conocimiento. Pero si
 
 825
 00:36:15,160 --> 00:36:19,136
-alguien puede atribuirme un comportamiento
+alguien puede atribuirme
+un comportamiento
 
 826
 00:36:19,160 --> 00:36:22,736
-que yo no he tenido y que no puedo desmentir
+que yo no he tenido y
+que no puedo desmentir
 
 827
 00:36:22,760 --> 00:36:24,896
-y luego sufro las consecuencias de
+y luego sufro las
+consecuencias de
 
 828
 00:36:24,920 --> 00:36:27,936
-ello, ¿qué significa eso en cuanto a
+ello, ¿qué significa
+eso en cuanto a
 
 829
 00:36:27,960 --> 00:36:29,856
-mi posibilidad de tener algún tipo de vida privada? Si
+mi posibilidad de tener
+algún tipo de vida privada? Si
 
 830
 00:36:29,880 --> 00:36:32,335
-significa que no la tengo, significa que mi vida está controlada
+significa que no la tengo,
+significa que mi vida está controlada
 
 831
 00:36:32,359 --> 00:36:35,136
-y viene determinada por fuerzas externas. Mi
+y viene determinada
+por fuerzas externas. Mi
 
 832
 00:36:35,160 --> 00:36:38,736
@@ -3329,7 +3917,8 @@ y viene determinada por fuerzas externas. Mi
 
 833
 00:36:38,760 --> 00:36:40,575
-por lo que la privacidad carece de sentido cuando
+por lo que la privacidad
+carece de sentido cuando
 
 834
 00:36:40,599 --> 00:36:42,896
@@ -3349,11 +3938,13 @@ siervo, un esclavo o un
 
 838
 00:36:49,560 --> 00:36:52,335
-secuaz de las fuerzas que controlan
+secuaz de las
+fuerzas que controlan
 
 839
 00:36:52,359 --> 00:36:55,856
-tu identidad. Así que todo empieza
+tu identidad. Así
+que todo empieza
 
 840
 00:36:55,880 --> 00:36:57,856
@@ -3361,27 +3952,33 @@ por el control. Tienes que tener
 
 841
 00:36:57,880 --> 00:37:00,976
-control antes de poder tener privacidad.
+control antes de
+poder tener privacidad.
 
 842
 00:37:01,000 --> 00:37:05,536
-Así pues, la disyuntiva es clara:
+Así pues, la
+disyuntiva es clara:
 
 843
 00:37:05,560 --> 00:37:08,016
-necesitas tener seguridad antes de poder
+necesitas tener
+seguridad antes de poder
 
 844
 00:37:08,040 --> 00:37:10,335
-tener privacidad, y puedes optar por tener
+tener privacidad, y
+puedes optar por tener
 
 845
 00:37:10,359 --> 00:37:13,616
-seguridad que no ofrezca ninguna privacidad, que es
+seguridad que no ofrezca
+ninguna privacidad, que es
 
 846
 00:37:13,640 --> 00:37:16,496
-un sistema de identidad basado en la IA
+un sistema de
+identidad basado en la IA
 
 847
 00:37:16,520 --> 00:37:19,055
@@ -3389,7 +3986,8 @@ porque requiere una
 
 848
 00:37:19,079 --> 00:37:20,656
-supervisión y vigilancia totales y continuas, y ser capaz
+supervisión y vigilancia
+totales y continuas, y ser capaz
 
 849
 00:37:20,680 --> 00:37:22,416
@@ -3397,15 +3995,18 @@ correlacionar mejor tu
 
 850
 00:37:22,440 --> 00:37:24,575
-comportamiento para crear tu perfil digital
+comportamiento para
+crear tu perfil digital
 
 851
 00:37:24,599 --> 00:37:26,976
-mejor que lo que hacen los ciberatacantes para
+mejor que lo que hacen
+los ciberatacantes para
 
 852
 00:37:27,000 --> 00:37:29,456
-suplantar tu identidad. O bien utilizas
+suplantar tu identidad.
+O bien utilizas
 
 853
 00:37:29,480 --> 00:37:32,256
@@ -3413,27 +4014,33 @@ KERI, que se basa en una
 
 854
 00:37:32,280 --> 00:37:34,496
-identidad verificable criptográficamente
+identidad verificable
+criptográficamente
 
 855
 00:37:34,520 --> 00:37:36,176
-que es tolerante a fallos, utiliza la
+que es tolerante
+a fallos, utiliza la
 
 856
 00:37:36,200 --> 00:37:37,616
-gestión de claves, la procedencia y la
+gestión de claves,
+la procedencia y la
 
 857
 00:37:37,640 --> 00:37:40,095
-la rendición de cuentas. Así que no resuelve el
+la rendición de cuentas.
+Así que no resuelve el
 
 858
 00:37:40,119 --> 00:37:41,536
-problema de privacidad tal y como uno
+problema de privacidad
+tal y como uno
 
 859
 00:37:41,560 --> 00:37:43,376
-podrías pensar, pero sí lo resuelve de la
+podrías pensar, pero
+sí lo resuelve de la
 
 860
 00:37:43,400 --> 00:37:45,456
@@ -3445,11 +4052,13 @@ entorno actual.
 
 862
 00:37:49,160 --> 00:37:51,536
-¿Por qué no hay un término medio estable? Creo que
+¿Por qué no hay un término
+medio estable? Creo que
 
 863
 00:37:51,560 --> 00:37:54,896
-creo que acabo de responder a eso. Si los mecanismos de ataque basados en la IA
+creo que acabo de responder a eso. Si
+los mecanismos de ataque basados en la IA
 
 864
 00:37:54,920 --> 00:37:58,896
@@ -3457,7 +4066,8 @@ cibernéticos pueden derrotar
 
 865
 00:37:58,920 --> 00:38:02,176
-la seguridad convencional, basada en secretos compartidos
+la seguridad convencional,
+basada en secretos compartidos
 
 866
 00:38:02,200 --> 00:38:06,416
@@ -3465,7 +4075,8 @@ y no en el KERI, entonces no hay
 
 867
 00:38:06,440 --> 00:38:09,296
-privacidad. Es una vigilancia total para
+privacidad. Es una
+vigilancia total para
 
 868
 00:38:09,320 --> 00:38:11,776
@@ -3473,7 +4084,8 @@ que tengas alguna posibilidad de
 
 869
 00:38:11,800 --> 00:38:15,376
-que tu vida tenga algún tipo de valor.
+que tu vida tenga
+algún tipo de valor.
 
 870
 00:38:15,400 --> 00:38:18,656
@@ -3485,15 +4097,18 @@ hacer nada en
 
 872
 00:38:20,280 --> 00:38:22,496
-Internet. Tienes que desconectarte por completo.
+Internet. Tienes que
+desconectarte por completo.
 
 873
 00:38:22,520 --> 00:38:24,575
-Totalmente desconectado. Tan desconectado que, en cierto modo,
+Totalmente desconectado. Tan
+desconectado que, en cierto modo,
 
 874
 00:38:24,599 --> 00:38:28,736
-para la mayoría de la gente sería una
+para la mayoría de
+la gente sería una
 
 875
 00:38:28,760 --> 00:38:34,240
@@ -3501,35 +4116,43 @@ vida horrible.
 
 876
 00:38:34,940 --> 00:38:37,316
-Es una pregunta interesante. A medida que
+Es una pregunta
+interesante. A medida que
 
 877
 00:38:37,340 --> 00:38:38,996
-aumentan las capacidades de la IA, ¿por qué
+aumentan las capacidades
+de la IA, ¿por qué
 
 878
 00:38:39,020 --> 00:38:40,275
-el seguimiento o la vigilancia continuos
+el seguimiento o la
+vigilancia continuos
 
 879
 00:38:40,299 --> 00:38:42,436
-basada en el seguimiento continuo o la vigilancia se vuelve menos sostenible que
+basada en el seguimiento continuo o la
+vigilancia se vuelve menos sostenible que
 
 880
 00:38:42,460 --> 00:38:44,916
-la confianza verificable criptográficamente? La
+la confianza verificable
+criptográficamente? La
 
 881
 00:38:44,940 --> 00:38:47,156
-razón por la que resulta menos sostenible es
+razón por la que resulta
+menos sostenible es
 
 882
 00:38:47,180 --> 00:38:51,316
-que se trata de una carrera armamentística sin fin.
+que se trata de una carrera
+armamentística sin fin.
 
 883
 00:38:51,340 --> 00:38:57,396
-La información electrónica, una vez que se filtra
+La información electrónica,
+una vez que se filtra
 
 884
 00:38:57,420 --> 00:39:00,755
@@ -3545,27 +4168,33 @@ mucho mejor. La correlación
 
 887
 00:39:04,620 --> 00:39:07,476
-algoritmos, los algoritmos de seguimiento,
+algoritmos, los
+algoritmos de seguimiento,
 
 888
 00:39:07,500 --> 00:39:11,076
-seguimiento de objetivos. Puedes pensar
+seguimiento de
+objetivos. Puedes pensar
 
 889
 00:39:11,100 --> 00:39:15,076
-ya que hay un espacio de características y, si estoy
+ya que hay un espacio de
+características y, si estoy
 
 890
 00:39:15,100 --> 00:39:16,755
-rastreando algo, este se mueve a través
+rastreando algo, este
+se mueve a través
 
 891
 00:39:16,779 --> 00:39:18,436
-ese espacio de características. Ahora bien, en el mundo físico
+ese espacio de características.
+Ahora bien, en el mundo físico
 
 892
 00:39:18,460 --> 00:39:20,676
-, ese espacio de características podría ser,
+, ese espacio de
+características podría ser,
 
 893
 00:39:20,700 --> 00:39:23,476
@@ -3573,23 +4202,28 @@ la latitud, la longitud,
 
 894
 00:39:23,500 --> 00:39:26,676
-la altitud y el tiempo, ¿verdad? Y
+la altitud y el
+tiempo, ¿verdad? Y
 
 895
 00:39:26,700 --> 00:39:30,596
-y luego están la velocidad, la aceleración y todas esas cosas, ¿verdad?
+y luego están la velocidad, la
+aceleración y todas esas cosas, ¿verdad?
 
 896
 00:39:30,620 --> 00:39:34,116
-Pero en el mundo de la identidad,
+Pero en el mundo
+de la identidad,
 
 897
 00:39:34,140 --> 00:39:36,196
-el espacio de características tiene que ver con
+el espacio de características
+tiene que ver con
 
 898
 00:39:36,220 --> 00:39:38,035
-cosas como «cuándo iniciaste sesión, dónde
+cosas como «cuándo
+iniciaste sesión, dónde
 
 899
 00:39:38,059 --> 00:39:39,716
@@ -3601,31 +4235,38 @@ dijiste, qué hora era,
 
 901
 00:39:42,700 --> 00:39:44,836
-qué navegador utilizaste, qué dispositivo
+qué navegador
+utilizaste, qué dispositivo
 
 902
 00:39:44,860 --> 00:39:47,636
-utilizaste, qué protocolo utilizaste?»
+utilizaste, qué
+protocolo utilizaste?»
 
 903
 00:39:47,660 --> 00:39:50,275
-Todas esas son características que pueden
+Todas esas son
+características que pueden
 
 904
 00:39:50,299 --> 00:39:53,636
-utilizarse para crear una huella digital
+utilizarse para crear
+una huella digital
 
 905
 00:39:53,660 --> 00:39:56,755
-que luego puede rastrearse a medida que
+que luego puede
+rastrearse a medida que
 
 906
 00:39:56,779 --> 00:39:59,795
-te desplazas por ese espacio. Y así se forma
+te desplazas por ese
+espacio. Y así se forma
 
 907
 00:39:59,819 --> 00:40:03,076
-una trayectoria de tu comportamiento. Y cuanta
+una trayectoria de tu
+comportamiento. Y cuanta
 
 908
 00:40:03,100 --> 00:40:04,596
@@ -3633,27 +4274,33 @@ más información se tenga, mayor
 
 909
 00:40:04,620 --> 00:40:07,156
-mayor será la fidelidad de esa trayectoria. La gente
+mayor será la fidelidad
+de esa trayectoria. La gente
 
 910
 00:40:07,180 --> 00:40:08,996
-lo llama «gemelo digital». Así que están
+lo llama «gemelo
+digital». Así que están
 
 911
 00:40:09,020 --> 00:40:10,676
-creando un gemelo digital. Y quieren
+creando un gemelo
+digital. Y quieren
 
 912
 00:40:10,700 --> 00:40:12,755
-que ese gemelo digital se parezca lo más posible a ti
+que ese gemelo digital se
+parezca lo más posible a ti
 
 913
 00:40:12,779 --> 00:40:15,076
-como sea posible, para que nadie pueda
+como sea posible,
+para que nadie pueda
 
 914
 00:40:15,100 --> 00:40:18,116
-crear un gemelo digital que no sea el tuyo.
+crear un gemelo digital
+que no sea el tuyo.
 
 915
 00:40:18,140 --> 00:40:20,676
@@ -3661,43 +4308,53 @@ Y tu IA, que trabaja
 
 916
 00:40:20,700 --> 00:40:22,755
-en tu nombre, puede distinguir la diferencia.
+en tu nombre, puede
+distinguir la diferencia.
 
 917
 00:40:22,779 --> 00:40:24,275
-¿Verdad? Bueno, eso significa que
+¿Verdad? Bueno,
+eso significa que
 
 918
 00:40:24,299 --> 00:40:28,275
-cada vez más, a medida que las IA tengan acceso a
+cada vez más, a medida
+que las IA tengan acceso a
 
 919
 00:40:28,299 --> 00:40:30,356
-más y más información, a medida que más y
+más y más información,
+a medida que más y
 
 920
 00:40:30,380 --> 00:40:32,356
-más aspectos de nuestra sociedad y cada vez más de
+más aspectos de nuestra
+sociedad y cada vez más de
 
 921
 00:40:32,380 --> 00:40:36,596
-lo que hacemos pasa a estar impulsado por la IA, entonces la
+lo que hacemos pasa a estar
+impulsado por la IA, entonces la
 
 922
 00:40:36,620 --> 00:40:38,836
-información disponible tanto para rastrearte
+información disponible
+tanto para rastrearte
 
 923
 00:40:38,860 --> 00:40:42,116
-y suplantar tu identidad aumenta. Así que,
+y suplantar tu identidad
+aumenta. Así que,
 
 924
 00:40:42,140 --> 00:40:44,596
-lo que ocurre es que la omnipresencia
+lo que ocurre es
+que la omnipresencia
 
 925
 00:40:44,620 --> 00:40:47,716
-siempre alcance su máximo, ¿verdad?
+siempre alcance su
+máximo, ¿verdad?
 
 926
 00:40:47,740 --> 00:40:51,156
@@ -3705,23 +4362,28 @@ No hay otro enfoque y
 
 927
 00:40:51,180 --> 00:40:55,876
-«máximo» significa un gran consumo de recursos, es
+«máximo» significa un gran
+consumo de recursos, es
 
 928
 00:40:55,900 --> 00:40:57,636
-decir que ya estamos hablando de que
+decir que ya estamos
+hablando de que
 
 929
 00:40:57,660 --> 00:40:59,396
-la mayor parte de la electricidad del mundo la
+la mayor parte de la
+electricidad del mundo la
 
 930
 00:40:59,420 --> 00:41:01,876
-consumen las IA. Bueno, solo va a
+consumen las IA.
+Bueno, solo va a
 
 931
 00:41:01,900 --> 00:41:04,596
-a aumentar con el paso del tiempo
+a aumentar con
+el paso del tiempo
 
 932
 00:41:04,620 --> 00:41:06,515
@@ -3733,15 +4395,18 @@ más, mientras que la confianza
 
 934
 00:41:09,019 --> 00:41:10,515
-verificable criptográficamente se basa en un
+verificable criptográficamente
+se basa en un
 
 935
 00:41:10,539 --> 00:41:13,795
-conjunto de restricciones completamente diferente
+conjunto de restricciones
+completamente diferente
 
 936
 00:41:13,819 --> 00:41:15,316
-que tiene que ver con lo que se denomina
+que tiene que ver con
+lo que se denomina
 
 937
 00:41:15,340 --> 00:41:18,116
@@ -3753,11 +4418,13 @@ y la exposición. Y si no
 
 939
 00:41:20,779 --> 00:41:22,836
-exponer algo, de modo que no pueda ser
+exponer algo, de
+modo que no pueda ser
 
 940
 00:41:22,860 --> 00:41:25,316
-recogido, si se trata de un dato verdaderamente privado
+recogido, si se trata de un
+dato verdaderamente privado
 
 941
 00:41:25,340 --> 00:41:28,676
@@ -3769,23 +4436,28 @@ demostrar algo públicamente sin
 
 943
 00:41:32,059 --> 00:41:33,876
-revelar la información privada, eso es
+revelar la información
+privada, eso es
 
 944
 00:41:33,900 --> 00:41:35,476
-lo que hace una firma digital. Existen
+lo que hace una
+firma digital. Existen
 
 945
 00:41:35,500 --> 00:41:37,156
-varios tipos de pruebas y se puede
+varios tipos de
+pruebas y se puede
 
 946
 00:41:37,180 --> 00:41:41,076
-demostrarlo de forma indefinida o
+demostrarlo de
+forma indefinida o
 
 947
 00:41:41,100 --> 00:41:42,995
-de forma perpetua. Así que se dispone de pruebas verificables de forma perpetua
+de forma perpetua. Así que se dispone
+de pruebas verificables de forma perpetua
 
 948
 00:41:43,019 --> 00:41:45,396
@@ -3793,91 +4465,113 @@ de forma perpetua. Así que se dispone de pruebas verificables de forma perpetua
 
 949
 00:41:45,420 --> 00:41:50,275
-base para un sistema de seguridad que
+base para un sistema
+de seguridad que
 
 950
 00:41:50,299 --> 00:41:52,755
-mantenga la seguridad sin volverse
+mantenga la
+seguridad sin volverse
 
 951
 00:41:52,779 --> 00:41:54,436
-más caro con el paso del tiempo. De hecho,
+más caro con el paso
+del tiempo. De hecho,
 
 952
 00:41:54,460 --> 00:41:56,035
-se vuelve más barato con el tiempo porque
+se vuelve más barato
+con el tiempo porque
 
 953
 00:41:56,059 --> 00:41:58,515
-la mayor parte del coste consiste, en realidad, en reducir
+la mayor parte del coste
+consiste, en realidad, en reducir
 
 954
 00:41:58,539 --> 00:42:01,156
-la fricción en la interfaz de usuario. Nos encontramos en
+la fricción en la interfaz de
+usuario. Nos encontramos en
 
 955
 00:42:01,180 --> 00:42:02,515
-los inicios de la reducción de la
+los inicios de la
+reducción de la
 
 956
 00:42:02,539 --> 00:42:04,515
-fricción en la interfaz de usuario. Así que
+fricción en la interfaz
+de usuario. Así que
 
 957
 00:42:04,539 --> 00:42:06,515
-se convierta en un sistema perfectamente escalable
+se convierta en un sistema
+perfectamente escalable
 
 958
 00:42:06,539 --> 00:42:10,420
-en comparación con la alternativa
+en comparación
+con la alternativa
 
 959
 00:42:12,029 --> 00:42:14,406
-Mantener a los seres humanos libres digitalmente a medida que
+Mantener a los seres humanos
+libres digitalmente a medida que
 
 960
 00:42:14,430 --> 00:42:16,646
-la IA se convierte en la interfaz dominante del
+la IA se convierte en
+la interfaz dominante del
 
 961
 00:42:16,670 --> 00:42:18,966
-mundo digital. ¿Cómo debe aplicarse el KERI
+mundo digital. ¿Cómo
+debe aplicarse el KERI
 
 962
 00:42:18,990 --> 00:42:21,206
-a la propia IA para que las personas sigan siendo
+a la propia IA para que
+las personas sigan siendo
 
 963
 00:42:21,230 --> 00:42:22,886
-digitalmente libres en lugar de convertirse en
+digitalmente libres en
+lugar de convertirse en
 
 964
 00:42:22,910 --> 00:42:24,726
-objeto de explotación, vigilancia, seguimiento,
+objeto de explotación,
+vigilancia, seguimiento,
 
 965
 00:42:24,750 --> 00:42:28,005
-manipulación o control? Pues bien, queremos
+manipulación o control?
+Pues bien, queremos
 
 966
 00:42:28,029 --> 00:42:30,086
-que la IA trabaje en nuestro beneficio. Queremos lo
+que la IA trabaje en nuestro
+beneficio. Queremos lo
 
 967
 00:42:30,110 --> 00:42:32,886
-mejor de ambos mundos. Queremos una IA que
+mejor de ambos mundos.
+Queremos una IA que
 
 968
 00:42:32,910 --> 00:42:35,446
-haga lo que le digamos que haga, cuando le digamos
+haga lo que le digamos
+que haga, cuando le digamos
 
 969
 00:42:35,470 --> 00:42:37,285
-que lo haga, en la medida en que le digamos que
+que lo haga, en la medida
+en que le digamos que
 
 970
 00:42:37,309 --> 00:42:39,606
-que lo haga. Y para ello, necesitamos poder
+que lo haga. Y para
+ello, necesitamos poder
 
 971
 00:42:39,630 --> 00:42:42,806
@@ -3885,27 +4579,33 @@ contar con una delegación sólida
 
 972
 00:42:42,830 --> 00:42:46,646
-y disponer de mecanismos de cumplimiento
+y disponer de mecanismos
+de cumplimiento
 
 973
 00:42:46,670 --> 00:42:49,285
-mediante los cuales podamos comunicar a otras IA que
+mediante los cuales podamos
+comunicar a otras IA que
 
 974
 00:42:49,309 --> 00:42:52,646
-dice: «Se supone que nuestra IA solo debe hacer esto».
+dice: «Se supone que nuestra
+IA solo debe hacer esto».
 
 975
 00:42:52,670 --> 00:42:54,566
-Estas son las reglas. Podéis verificar lo que
+Estas son las reglas.
+Podéis verificar lo que
 
 976
 00:42:54,590 --> 00:42:56,486
-se supone que debe hacer. Cuando no lo haga
+se supone que debe
+hacer. Cuando no lo haga
 
 977
 00:42:56,510 --> 00:43:03,446
-entonces no podéis confiar en mi IA.
+entonces no podéis
+confiar en mi IA.
 
 978
 00:43:03,470 --> 00:43:05,525
@@ -3913,19 +4613,23 @@ Y por eso hay gente
 
 979
 00:43:05,549 --> 00:43:08,806
-que habla de sistemas de reputación
+que habla de
+sistemas de reputación
 
 980
 00:43:08,830 --> 00:43:10,966
-para las IA, pero esos sistemas de reputación
+para las IA, pero esos
+sistemas de reputación
 
 981
 00:43:10,990 --> 00:43:14,406
-tienen que gestionarse de tal forma que
+tienen que gestionarse
+de tal forma que
 
 982
 00:43:14,430 --> 00:43:16,646
-los humanos tengan el control, y podemos hacerlo con
+los humanos tengan el
+control, y podemos hacerlo con
 
 983
 00:43:16,670 --> 00:43:19,846
@@ -3933,59 +4637,73 @@ KERI. Si se dispone de
 
 984
 00:43:19,870 --> 00:43:21,285
-sistemas de identidad que permitan una
+sistemas de identidad
+que permitan una
 
 985
 00:43:21,309 --> 00:43:23,285
-atribución segura que no se basen en
+atribución segura
+que no se basen en
 
 986
 00:43:23,309 --> 00:43:25,206
-mecanismos de seguimiento por correlación, sino que se
+mecanismos de seguimiento
+por correlación, sino que se
 
 987
 00:43:25,230 --> 00:43:27,206
-basan en mecanismos criptográficos. Entonces
+basan en mecanismos
+criptográficos. Entonces
 
 988
 00:43:27,230 --> 00:43:29,446
-se pueden crear mecanismos de delegación y
+se pueden crear
+mecanismos de delegación y
 
 989
 00:43:29,470 --> 00:43:31,765
-mecanismos de autorización que son
+mecanismos de
+autorización que son
 
 990
 00:43:31,789 --> 00:43:33,525
-fundamentalmente diferentes en su estructura.
+fundamentalmente
+diferentes en su estructura.
 
 991
 00:43:33,549 --> 00:43:36,245
-Rompen esta restricción de espacio
+Rompen esta
+restricción de espacio
 
 992
 00:43:36,269 --> 00:43:38,886
-de peso fijo a la que se enfrenta actualmente la IA
+de peso fijo a la que se
+enfrenta actualmente la IA
 
 993
 00:43:38,910 --> 00:43:41,446
-y que hace imposible proteger la IA
+y que hace imposible
+proteger la IA
 
 994
 00:43:41,470 --> 00:43:43,206
-porque todo se encuentra en el mismo
+porque todo se
+encuentra en el mismo
 
 995
 00:43:43,230 --> 00:43:45,765
-espacio de pesos, hasta el punto de que, en realidad,
+espacio de pesos, hasta
+el punto de que, en realidad,
 
 996
 00:43:45,789 --> 00:43:47,686
-dividir o segmentar el espacio de pesos
+dividir o segmentar
+el espacio de pesos
 
 997
 00:43:47,710 --> 00:43:49,846
-en elementos que sean delegables y
+en elementos que
+sean delegables y
 
 998
 00:43:49,870 --> 00:43:52,806
@@ -3993,15 +4711,18 @@ cosas que no lo son.
 
 999
 00:43:52,830 --> 00:43:54,486
-¿Debería confiarse en la IA para proteger la
+¿Debería confiarse
+en la IA para proteger la
 
 1000
 00:43:54,510 --> 00:43:56,086
-libertad humana o debería la propia IA estar
+libertad humana o
+debería la propia IA estar
 
 1001
 00:43:56,110 --> 00:43:57,206
-limitada por una arquitectura de confianza
+limitada por una
+arquitectura de confianza
 
 1002
 00:43:57,230 --> 00:43:59,126
@@ -4009,7 +4730,8 @@ que mantenga
 
 1003
 00:43:59,150 --> 00:44:01,206
-la autoridad última en manos de las personas? Bueno,
+la autoridad última en manos
+de las personas? Bueno,
 
 1004
 00:44:01,230 --> 00:44:02,646
@@ -4017,15 +4739,18 @@ hay mucha gente que está
 
 1005
 00:44:02,670 --> 00:44:04,726
-hablando de que la IA no puede ser
+hablando de que
+la IA no puede ser
 
 1006
 00:44:04,750 --> 00:44:07,846
-de confianza y que se avecina un futuro sombrío para
+de confianza y que se
+avecina un futuro sombrío para
 
 1007
 00:44:07,870 --> 00:44:10,406
-la sociedad una vez que la IA sea lo suficientemente inteligente.
+la sociedad una vez que la IA
+sea lo suficientemente inteligente.
 
 1008
 00:44:10,430 --> 00:44:13,206
@@ -4033,19 +4758,23 @@ Creo que pasé 20
 
 1009
 00:44:13,230 --> 00:44:15,606
-años investigando en sistemas de IA. De
+años investigando
+en sistemas de IA. De
 
 1010
 00:44:15,630 --> 00:44:18,326
-de hecho, me dediqué a ello durante la primera parte de
+de hecho, me dediqué a ello
+durante la primera parte de
 
 1011
 00:44:18,350 --> 00:44:20,005
-mi carrera, antes de empezar a trabajar en
+mi carrera, antes de
+empezar a trabajar en
 
 1012
 00:44:20,029 --> 00:44:23,525
-la identidad digital. Y sí, podemos
+la identidad digital.
+Y sí, podemos
 
 1013
 00:44:23,549 --> 00:44:26,966
@@ -4053,7 +4782,8 @@ crear IA transparentes
 
 1014
 00:44:26,990 --> 00:44:29,045
-que solo hagan lo que les permitamos
+que solo hagan lo
+que les permitamos
 
 1015
 00:44:29,069 --> 00:44:31,926
@@ -4061,11 +4791,13 @@ hacer si las diseñamos
 
 1016
 00:44:31,950 --> 00:44:33,525
-de forma diferente. Eso no significa que
+de forma diferente.
+Eso no significa que
 
 1017
 00:44:33,549 --> 00:44:37,525
-tengamos que descartar la IA generativa.
+tengamos que descartar
+la IA generativa.
 
 1018
 00:44:37,549 --> 00:44:40,646
@@ -4077,7 +4809,8 @@ el espacio en el que
 
 1020
 00:44:43,789 --> 00:44:46,005
-funciona de tal manera que una cosa es tener
+funciona de tal manera
+que una cosa es tener
 
 1021
 00:44:46,029 --> 00:44:49,446
@@ -4085,59 +4818,73 @@ una IA generativa que comprenda
 
 1022
 00:44:49,470 --> 00:44:51,606
-el lenguaje natural. Y otra cosa muy distinta es
+el lenguaje natural. Y
+otra cosa muy distinta es
 
 1023
 00:44:51,630 --> 00:44:56,005
-tener una IA generativa a la que permitas
+tener una IA generativa
+a la que permitas
 
 1024
 00:44:56,029 --> 00:44:58,245
-haga cosas en tu nombre; eso es un
+haga cosas en tu
+nombre; eso es un
 
 1025
 00:44:58,269 --> 00:45:00,726
-agente. Así que podemos tener una IA generativa que
+agente. Así que podemos
+tener una IA generativa que
 
 1026
 00:45:00,750 --> 00:45:03,846
-esté controlada pero que utilice, ya sabes,
+esté controlada pero
+que utilice, ya sabes,
 
 1027
 00:45:03,870 --> 00:45:05,926
-interfaces, y eso significa que la
+interfaces, y eso
+significa que la
 
 1028
 00:45:05,950 --> 00:45:10,486
-la capa de interfaz tiene que contar con
+la capa de interfaz
+tiene que contar con
 
 1029
 00:45:10,510 --> 00:45:12,086
-medidas de seguridad y, cuando solía trabajar
+medidas de seguridad
+y, cuando solía trabajar
 
 1030
 00:45:12,110 --> 00:45:14,806
-trabajar con sistemas de vehículos autónomos,
+trabajar con sistemas
+de vehículos autónomos,
 
 1031
 00:45:14,830 --> 00:45:16,486
-la mayor parte del código que escribíamos eran
+la mayor parte del código
+que escribíamos eran
 
 1032
 00:45:16,510 --> 00:45:18,726
-para mantener el vehículo autónomo
+para mantener el
+vehículo autónomo
 
 1033
 00:45:18,750 --> 00:45:22,326
-en buen estado, sano y salvo, y para
+en buen estado,
+sano y salvo, y para
 
 1034
 00:45:22,350 --> 00:45:25,446
-evitar que hiciera cosas malas. Pero nos
+evitar que hiciera
+cosas malas. Pero nos
 
 1035
 00:45:25,470 --> 00:45:28,166
-habíamos olvidado un poco de eso.
+habíamos olvidado
+un poco de eso.
 
 1036
 00:45:28,190 --> 00:45:30,486
@@ -4145,7 +4892,8 @@ A la gente le preocupa
 
 1037
 00:45:30,510 --> 00:45:32,005
-eso. Quiero decir que mucha gente está intentando
+eso. Quiero decir que
+mucha gente está intentando
 
 1038
 00:45:32,029 --> 00:45:34,886
@@ -4157,31 +4905,38 @@ con sistemas que
 
 1040
 00:45:37,710 --> 00:45:40,886
-utilizan la misma IA para garantizar
+utilizan la misma
+IA para garantizar
 
 1041
 00:45:40,910 --> 00:45:44,245
-la seguridad de los chalecos salvavidas y tú
+la seguridad de los
+chalecos salvavidas y tú
 
 1042
 00:45:44,269 --> 00:45:46,166
-no puedes hacer eso. Los chalecos de seguridad tienen que
+no puedes hacer eso. Los
+chalecos de seguridad tienen que
 
 1043
 00:45:46,190 --> 00:45:48,806
-ser de naturaleza fundamentalmente diferente
+ser de naturaleza
+fundamentalmente diferente
 
 1044
 00:45:48,830 --> 00:45:50,646
-desde un punto de vista computacional.
+desde un punto de
+vista computacional.
 
 1045
 00:45:50,670 --> 00:45:54,806
-Y si haces eso, entonces tienes una oportunidad.
+Y si haces eso, entonces
+tienes una oportunidad.
 
 1046
 00:45:54,830 --> 00:45:56,486
-¿Cómo sería un mundo en el que cada
+¿Cómo sería un
+mundo en el que cada
 
 1047
 00:45:56,510 --> 00:45:57,926
@@ -4189,15 +4944,18 @@ agente de IA actuara bajo
 
 1048
 00:45:57,950 --> 00:45:59,606
-una autoridad verificada criptográficamente mediante
+una autoridad verificada
+criptográficamente mediante
 
 1049
 00:45:59,630 --> 00:46:01,206
-delegación y, por tanto, rendición de cuentas?
+delegación y, por tanto,
+rendición de cuentas?
 
 1050
 00:46:01,230 --> 00:46:02,966
-Bueno, sería lo mejor de ambos mundos.
+Bueno, sería lo mejor
+de ambos mundos.
 
 1051
 00:46:02,990 --> 00:46:05,686
@@ -4205,11 +4963,13 @@ Podríamos contar con la IA
 
 1052
 00:46:05,710 --> 00:46:08,406
-para que nos ayudara a multiplicar nuestra fuerza
+para que nos ayudara a
+multiplicar nuestra fuerza
 
 1053
 00:46:08,430 --> 00:46:11,606
-sin tener que preocuparnos de que la IA nos hiciera daño.
+sin tener que preocuparnos
+de que la IA nos hiciera daño.
 
 1054
 00:46:11,630 --> 00:46:16,166
@@ -4217,39 +4977,48 @@ Siempre habrá
 
 1055
 00:46:16,190 --> 00:46:19,285
-casos extremos en los que las personas cometerán
+casos extremos en los
+que las personas cometerán
 
 1056
 00:46:19,309 --> 00:46:22,486
-errores y las IA podrán aprovecharse
+errores y las IA
+podrán aprovecharse
 
 1057
 00:46:22,510 --> 00:46:24,726
-de ciertas cosas, pero no será esta
+de ciertas cosas,
+pero no será esta
 
 1058
 00:46:24,750 --> 00:46:27,126
-situación tipo Armagedón a la que nos
+situación tipo
+Armagedón a la que nos
 
 1059
 00:46:27,150 --> 00:46:29,765
-enfrentamos ahora mismo. La carrera contra
+enfrentamos ahora
+mismo. La carrera contra
 
 1060
 00:46:29,789 --> 00:46:32,406
-tiempo. Si la IA de vanguardia avanza a una
+tiempo. Si la IA de
+vanguardia avanza a una
 
 1061
 00:46:32,430 --> 00:46:34,005
-escala temporal de meses en lugar de años,
+escala temporal de
+meses en lugar de años,
 
 1062
 00:46:34,029 --> 00:46:35,846
-¿con qué rapidez puede la sociedad, de forma realista,
+¿con qué rapidez puede la
+sociedad, de forma realista,
 
 1063
 00:46:35,870 --> 00:46:37,846
-implementar cualquiera de estas características a
+implementar cualquiera
+de estas características a
 
 1064
 00:46:37,870 --> 00:46:40,806
@@ -4261,15 +5030,18 @@ realidad es que lo único que
 
 1066
 00:46:42,269 --> 00:46:43,606
-vas a poder implementar a escala global
+vas a poder implementar
+a escala global
 
 1067
 00:46:43,630 --> 00:46:47,525
-hoy en día es la IA, porque la IA ya está
+hoy en día es la IA,
+porque la IA ya está
 
 1068
 00:46:47,549 --> 00:46:50,486
-implementada a escala global, ¿verdad?
+implementada a
+escala global, ¿verdad?
 
 1069
 00:46:50,510 --> 00:46:52,486
@@ -4277,11 +5049,13 @@ Pero eso no significa que
 
 1070
 00:46:52,510 --> 00:46:55,926
-no puedas pasarte a KERI en cuanto esté
+no puedas pasarte a
+KERI en cuanto esté
 
 1071
 00:46:55,950 --> 00:46:57,765
-disponible para ti, ¿verdad? Siempre puedes
+disponible para ti,
+¿verdad? Siempre puedes
 
 1072
 00:46:57,789 --> 00:46:59,606
@@ -4289,7 +5063,8 @@ decidir decir: «¿Sabes qué?
 
 1073
 00:46:59,630 --> 00:47:01,926
-He estado utilizando esta identidad digital
+He estado utilizando
+esta identidad digital
 
 1074
 00:47:01,950 --> 00:47:05,045
@@ -4297,11 +5072,13 @@ IA, pero quiero pasar a utilizar
 
 1075
 00:47:05,069 --> 00:47:07,926
-una identidad humana verificable criptográficamente...,
+una identidad humana
+verificable criptográficamente...,
 
 1076
 00:47:07,950 --> 00:47:10,486
-identidad controlada por el propio individuo
+identidad controlada
+por el propio individuo
 
 1077
 00:47:10,510 --> 00:47:13,686
@@ -4309,23 +5086,28 @@ identidad controlada por el propio individuo
 
 1078
 00:47:13,710 --> 00:47:15,045
-al principio de la charla, existen vías de adopción
+al principio de la charla,
+existen vías de adopción
 
 1079
 00:47:15,069 --> 00:47:16,886
-. La gente está invirtiendo recursos,
+. La gente está
+invirtiendo recursos,
 
 1080
 00:47:16,910 --> 00:47:19,926
-pero ni de lejos la cantidad de recursos
+pero ni de lejos la
+cantidad de recursos
 
 1081
 00:47:19,950 --> 00:47:22,886
-que se destinan a los sistemas de IA, al
+que se destinan a
+los sistemas de IA, al
 
 1082
 00:47:22,910 --> 00:47:24,966
-sistema de identidad. Si tuviéramos una fracción de
+sistema de identidad. Si
+tuviéramos una fracción de
 
 1083
 00:47:24,990 --> 00:47:27,126
@@ -4337,11 +5119,13 @@ ya estaría disponible. Pero
 
 1085
 00:47:29,710 --> 00:47:32,726
-tenemos previsto poner en marcha el KERI para
+tenemos previsto poner
+en marcha el KERI para
 
 1086
 00:47:32,750 --> 00:47:34,486
-la iniciativa de Identidad Digital Avalada por el Estado (SEDI)
+la iniciativa de Identidad Digital
+Avalada por el Estado (SEDI)
 
 1087
 00:47:34,510 --> 00:47:37,366
@@ -4349,23 +5133,28 @@ en los próximos
 
 1088
 00:47:37,390 --> 00:47:39,366
-12 meses. Así que estamos muy cerca y
+12 meses. Así que
+estamos muy cerca y
 
 1089
 00:47:39,390 --> 00:47:40,726
-Como ya he dicho, ya están utilizando
+Como ya he dicho,
+ya están utilizando
 
 1090
 00:47:40,750 --> 00:47:44,646
-KERI en la fase de adopción temprana en
+KERI en la fase de
+adopción temprana en
 
 1091
 00:47:44,670 --> 00:47:53,686
-el sector de las telecomunicaciones y el sector sanitario.
+el sector de las telecomunicaciones
+y el sector sanitario.
 
 1092
 00:47:53,710 --> 00:47:56,005
-Así que la semilla ya se ha plantado.
+Así que la semilla
+ya se ha plantado.
 
 1093
 00:47:55,879 --> 00:47:57,296
@@ -4373,11 +5162,13 @@ Ya tenemos brotes que crecen del
 
 1094
 00:47:57,320 --> 00:47:58,576
-suelo, pero esos brotes pueden crecer
+suelo, pero esos
+brotes pueden crecer
 
 1095
 00:47:58,600 --> 00:48:00,895
-a una velocidad exponencial. Lo único que necesitan es
+a una velocidad exponencial.
+Lo único que necesitan es
 
 1096
 00:48:00,919 --> 00:48:05,936
@@ -4385,19 +5176,23 @@ luz solar, agua y tierra, y
 
 1097
 00:48:05,960 --> 00:48:08,656
-recursos. Así que solo necesitamos recursos y
+recursos. Así que solo
+necesitamos recursos y
 
 1098
 00:48:08,680 --> 00:48:11,536
-la adopción puede ser mucho más rápida.
+la adopción puede
+ser mucho más rápida.
 
 1099
 00:48:11,560 --> 00:48:13,536
-Una vez adoptada, se convierte en un baluarte
+Una vez adoptada, se
+convierte en un baluarte
 
 1100
 00:48:13,560 --> 00:48:16,176
-contra futuras invasiones. Así que, nosotros
+contra futuras invasiones.
+Así que, nosotros
 
 1101
 00:48:16,200 --> 00:48:19,375
@@ -4405,19 +5200,23 @@ salimos de la
 
 1102
 00:48:19,399 --> 00:48:21,936
-carrera armamentística. Dejamos de estar en una
+carrera armamentística.
+Dejamos de estar en una
 
 1103
 00:48:21,960 --> 00:48:23,936
-carrera armamentística por los recursos. Realizamos un gasto único
+carrera armamentística por los
+recursos. Realizamos un gasto único
 
 1104
 00:48:23,960 --> 00:48:25,855
-para pasar a la KERI y, a continuación,
+para pasar a la KERI
+y, a continuación,
 
 1105
 00:48:25,879 --> 00:48:27,615
-ya no tendremos que seguir gastando
+ya no tendremos
+que seguir gastando
 
 1106
 00:48:27,639 --> 00:48:32,080
@@ -4425,7 +5224,8 @@ y gastando para protegernos.
 
 1107
 00:48:32,119 --> 00:48:34,095
-¿Qué enfoque se puede aplicar de forma más
+¿Qué enfoque se puede
+aplicar de forma más
 
 1108
 00:48:34,119 --> 00:48:35,936
@@ -4441,19 +5241,23 @@ esa es una pregunta con trampa.
 
 1111
 00:48:41,159 --> 00:48:44,095
-Sin duda, de forma más segura y más
+Sin duda, de forma
+más segura y más
 
 1112
 00:48:44,119 --> 00:48:48,895
-humana, KERI. ¿Más rápido? Hoy no
+humana, KERI.
+¿Más rápido? Hoy no
 
 1113
 00:48:48,919 --> 00:48:51,855
-pero dentro de cinco años, posiblemente,
+pero dentro de cinco
+años, posiblemente,
 
 1114
 00:48:51,879 --> 00:48:57,135
-porque no hace falta hacerlo cada cinco años
+porque no hace falta
+hacerlo cada cinco años
 
 1115
 00:48:57,159 --> 00:49:00,176
@@ -4461,27 +5265,33 @@ duplicar el número de
 
 1116
 00:49:00,200 --> 00:49:02,895
-servidores que tienes en funcionamiento en IA
+servidores que tienes
+en funcionamiento en IA
 
 1117
 00:49:02,919 --> 00:49:05,216
-centros de datos que no tienes que llenar
+centros de datos que
+no tienes que llenar
 
 1118
 00:49:05,240 --> 00:49:08,816
-espacio con centros de datos de IA y ser capaz
+espacio con centros de
+datos de IA y ser capaz
 
 1119
 00:49:08,840 --> 00:49:11,536
-mantener el ritmo de la carrera armamentística. Así que sí,
+mantener el ritmo de la carrera
+armamentística. Así que sí,
 
 1120
 00:49:11,560 --> 00:49:14,976
-por lo tanto, en un plazo de 5 años, si el plazo
+por lo tanto, en un plazo
+de 5 años, si el plazo
 
 1121
 00:49:15,000 --> 00:49:17,855
-son cinco años, entonces KERI es sin duda
+son cinco años,
+entonces KERI es sin duda
 
 1122
 00:49:17,879 --> 00:49:21,855
@@ -4489,7 +5299,8 @@ la única opción viable.
 
 1123
 00:49:21,879 --> 00:49:24,576
-¿Cuáles son los principales obstáculos técnicos, económicos,
+¿Cuáles son los principales
+obstáculos técnicos, económicos,
 
 1124
 00:49:24,600 --> 00:49:25,855
@@ -4497,19 +5308,23 @@ políticos y de adopción para
 
 1125
 00:49:25,879 --> 00:49:28,416
-implementar SEDI/KERISuite con la rapidez suficiente para que se convierta
+implementar SEDI/KERISuite con la
+rapidez suficiente para que se convierta
 
 1126
 00:49:28,440 --> 00:49:30,576
-en una alternativa viable antes de que los sistemas basados en la vigilancia
+en una alternativa viable antes de
+que los sistemas basados en la vigilancia
 
 1127
 00:49:30,600 --> 00:49:33,855
-se afiancen los sistemas basados en la vigilancia? Bueno,
+se afiancen los sistemas
+basados en la vigilancia? Bueno,
 
 1128
 00:49:33,879 --> 00:49:36,016
-una de ellas es simplemente que la gente no lo conoce.
+una de ellas es simplemente
+que la gente no lo conoce.
 
 1129
 00:49:36,040 --> 00:49:37,855
@@ -4517,27 +5332,33 @@ por lo que no saben que
 
 1130
 00:49:37,879 --> 00:49:40,176
-en realidad es una opción viable. La
+en realidad es una
+opción viable. La
 
 1131
 00:49:40,200 --> 00:49:43,135
-otra es que la sociedad está llena
+otra es que la
+sociedad está llena
 
 1132
 00:49:43,159 --> 00:49:44,816
-de mucha gente que no es consciente de
+de mucha gente que
+no es consciente de
 
 1133
 00:49:44,840 --> 00:49:47,936
-esta amenaza y, por eso, siguen pensando que
+esta amenaza y, por
+eso, siguen pensando que
 
 1134
 00:49:47,960 --> 00:49:51,456
-los sistemas antiguos son la solución y, por eso,
+los sistemas antiguos
+son la solución y, por eso,
 
 1135
 00:49:51,480 --> 00:49:56,976
-están manteniendo, en cierto modo, los
+están manteniendo,
+en cierto modo, los
 
 1136
 00:49:57,000 --> 00:49:59,375
@@ -4545,19 +5366,23 @@ argumentos anticuados.
 
 1137
 00:49:59,399 --> 00:50:00,656
-Es como si estuvieran trasladando
+Es como si
+estuvieran trasladando
 
 1138
 00:50:00,680 --> 00:50:02,656
-trasladando los programas de la cubierta al
+trasladando los
+programas de la cubierta al
 
 1139
 00:50:02,680 --> 00:50:04,736
-Titanic, ¿verdad? El Titanic se está
+Titanic, ¿verdad?
+El Titanic se está
 
 1140
 00:50:04,760 --> 00:50:06,976
-a hundirse. Se va a hundir en una hora,
+a hundirse. Se va a
+hundir en una hora,
 
 1141
 00:50:07,000 --> 00:50:09,216
@@ -4569,15 +5394,18 @@ En cuanto se rompa por completo
 
 1143
 00:50:11,800 --> 00:50:14,256
-y se parta por la mitad, ya no estará, ¿verdad?
+y se parta por la mitad,
+ya no estará, ¿verdad?
 
 1144
 00:50:14,280 --> 00:50:16,496
-Pero tienes esa sensación de que «Oh,
+Pero tienes esa
+sensación de que «Oh,
 
 1145
 00:50:16,520 --> 00:50:19,375
-bueno, sigue flotando, así que tenemos
+bueno, sigue flotando,
+así que tenemos
 
 1146
 00:50:19,399 --> 00:50:21,855
@@ -4593,11 +5421,13 @@ es que no tienes
 
 1149
 00:50:26,119 --> 00:50:29,296
-tiempo, lo que significa que deberías dejar de
+tiempo, lo que significa
+que deberías dejar de
 
 1150
 00:50:29,320 --> 00:50:31,776
-preocuparte por nada más que por estas
+preocuparte por nada
+más que por estas
 
 1151
 00:50:31,800 --> 00:50:33,696
@@ -4605,15 +5435,18 @@ dos alternativas. Y si dejas de
 
 1152
 00:50:33,720 --> 00:50:35,615
-preocuparte por todas las alternativas
+preocuparte por
+todas las alternativas
 
 1153
 00:50:35,639 --> 00:50:38,016
-excepto estas dos, entonces queda bastante
+excepto estas dos,
+entonces queda bastante
 
 1154
 00:50:38,040 --> 00:50:40,576
-claro que, para la mayoría de la gente
+claro que, para la
+mayoría de la gente
 
 1155
 00:50:40,600 --> 00:50:44,335
@@ -4621,11 +5454,13 @@ a quienes les importa este tema
 
 1156
 00:50:44,359 --> 00:50:46,416
-dónde deben centrar sus esfuerzos, ya que
+dónde deben centrar
+sus esfuerzos, ya que
 
 1157
 00:50:46,440 --> 00:50:48,176
-deberían estar ayudando..., porque nada
+deberían estar
+ayudando..., porque nada
 
 1158
 00:50:48,200 --> 00:50:50,256
@@ -4633,7 +5468,8 @@ más es lo suficientemente bueno
 
 1159
 00:50:50,280 --> 00:50:52,976
-aparte de KERI. Hay muchas «versiones light de KERI»
+aparte de KERI. Hay muchas
+«versiones light de KERI»
 
 1160
 00:50:53,000 --> 00:50:56,416
@@ -4641,23 +5477,28 @@ o un KERI parcial, o bien
 
 1161
 00:50:56,440 --> 00:50:58,416
-hacen parte del KERI, pero no todo el KERI
+hacen parte del KERI,
+pero no todo el KERI
 
 1162
 00:50:58,440 --> 00:51:00,656
-cosas que hay por ahí. Y el problema es
+cosas que hay por
+ahí. Y el problema es
 
 1163
 00:51:00,680 --> 00:51:02,976
-que esos sistemas no son lo suficientemente buenos
+que esos sistemas no son
+lo suficientemente buenos
 
 1164
 00:51:03,000 --> 00:51:04,416
-porque omiten aspectos importantes
+porque omiten
+aspectos importantes
 
 1165
 00:51:04,440 --> 00:51:06,335
-necesarios para protegerse contra la amenaza de la IA
+necesarios para protegerse
+contra la amenaza de la IA
 
 1166
 00:51:06,359 --> 00:51:08,736
@@ -4665,11 +5506,13 @@ necesarios para protegerse contra la amenaza de la IA
 
 1167
 00:51:08,760 --> 00:51:10,095
-¿verdad? Y las medidas a medias no son
+¿verdad? Y las
+medidas a medias no son
 
 1168
 00:51:10,119 --> 00:51:12,496
-, ¿verdad? Se acabaron las medias tintas.
+, ¿verdad? Se acabaron
+las medias tintas.
 
 1169
 00:51:12,520 --> 00:51:15,135
@@ -4677,7 +5520,8 @@ Utilizamos ese lema
 
 1170
 00:51:15,159 --> 00:51:17,296
-Si te importa la seguridad, no puedes tomar
+Si te importa la
+seguridad, no puedes tomar
 
 1171
 00:51:17,320 --> 00:51:19,615
@@ -4685,31 +5529,38 @@ medidas a medias. «O estás
 
 1172
 00:51:19,639 --> 00:51:22,496
-lo suficientemente seguro o te borran
+lo suficientemente
+seguro o te borran
 
 1173
 00:51:22,520 --> 00:51:26,256
-del mapa». Esa es la alternativa.
+del mapa». Esa
+es la alternativa.
 
 1174
 00:51:26,280 --> 00:51:28,416
-Y tengo esta imagen que me ha enviado
+Y tengo esta imagen
+que me ha enviado
 
 1175
 00:51:28,440 --> 00:51:31,936
-Chris Bramwell, que está trabajando en
+Chris Bramwell, que
+está trabajando en
 
 1176
 00:51:31,960 --> 00:51:34,895
-este SEDI para el estado de Utah.
+este SEDI para
+el estado de Utah.
 
 1177
 00:51:34,919 --> 00:51:38,256
-SEDI: la última y mejor esperanza contra
+SEDI: la última y
+mejor esperanza contra
 
 1178
 00:51:38,280 --> 00:51:42,256
-la IA. Así que muestra a SEDI como un guerrero,
+la IA. Así que muestra a
+SEDI como un guerrero,
 
 1179
 00:51:42,280 --> 00:51:44,816
@@ -4717,15 +5568,18 @@ el caballero que lucha contra el
 
 1180
 00:51:44,840 --> 00:51:51,696
-azote de la IA que atenta contra la identidad. No es que la IA
+azote de la IA que atenta contra
+la identidad. No es que la IA
 
 1181
 00:51:51,720 --> 00:51:55,536
-sea intrínsecamente malvada. Es solo que la
+sea intrínsecamente
+malvada. Es solo que la
 
 1182
 00:51:55,560 --> 00:51:57,936
-la única solución que nos ofrece una identidad basada en la IA
+la única solución que nos ofrece
+una identidad basada en la IA
 
 1183
 00:51:57,960 --> 00:52:01,056
@@ -4737,15 +5591,18 @@ que requiere la máxima
 
 1185
 00:52:04,200 --> 00:52:06,656
-vigilancia. Básicamente, es necesario
+vigilancia. Básicamente,
+es necesario
 
 1186
 00:52:06,680 --> 00:52:08,895
-estar vigilado continuamente, para que
+estar vigilado
+continuamente, para que
 
 1187
 00:52:08,919 --> 00:52:12,256
-pueda construir un perfil de alta fidelidad de
+pueda construir un
+perfil de alta fidelidad de
 
 1188
 00:52:12,280 --> 00:52:15,776
@@ -4753,7 +5610,8 @@ ti que sea mejor que la
 
 1189
 00:52:15,800 --> 00:52:18,256
-IA del atacante, que también está continuamente
+IA del atacante, que
+también está continuamente
 
 1190
 00:52:18,280 --> 00:52:21,456
@@ -4761,7 +5619,8 @@ te vigila, intentando crear un
 
 1191
 00:52:21,480 --> 00:52:23,855
- fidelidad lo suficientemente alta como para
+fidelidad lo suficientemente
+alta como para
 
 1192
 00:52:23,879 --> 00:52:26,016
@@ -4769,19 +5628,23 @@ poder robarte tu
 
 1193
 00:52:26,040 --> 00:52:30,416
-identidad y aprovecharse de ti. Y
+identidad y
+aprovecharse de ti. Y
 
 1194
 00:52:30,440 --> 00:52:32,656
-esa es una elección difícil. Ninguna de esas
+esa es una elección
+difícil. Ninguna de esas
 
 1195
 00:52:32,680 --> 00:52:34,335
-opciones es buena, ¿verdad? Ninguna de esas
+opciones es buena,
+¿verdad? Ninguna de esas
 
 1196
 00:52:34,359 --> 00:52:36,176
-es donde queremos acabar. Queremos
+es donde queremos
+acabar. Queremos
 
 1197
 00:52:36,200 --> 00:52:38,816
@@ -4789,11 +5652,13 @@ bajarnos de ese tren. KERI es
 
 1198
 00:52:38,840 --> 00:52:41,696
-es un camino para bajarnos de ese tren.
+es un camino para
+bajarnos de ese tren.
 
 1199
 00:52:41,720 --> 00:52:43,855
-Espero que esto te haya servido de ayuda. Espero
+Espero que esto te haya
+servido de ayuda. Espero
 
 1200
 00:52:43,879 --> 00:52:46,576
@@ -4801,7 +5666,8 @@ que, si estás preocupado,
 
 1201
 00:52:46,600 --> 00:52:49,056
-si <isolo</i> estás preocupado, entonces
+si <isolo</i> estás
+preocupado, entonces
 
 1202
 00:52:49,080 --> 00:52:50,656
@@ -4813,51 +5679,63 @@ lo suficiente. Deberías estar
 
 1204
 00:52:56,919 --> 00:53:01,135
-preocupado como nunca lo has estado
+preocupado como
+nunca lo has estado
 
 1205
 00:53:01,159 --> 00:53:03,936
-antes por el futuro de la identidad digital
+antes por el futuro
+de la identidad digital
 
 1206
 00:53:03,960 --> 00:53:07,536
-identidad digital. Teniendo en cuenta la rapidez con la que
+identidad digital. Teniendo
+en cuenta la rapidez con la que
 
 1207
 00:53:07,560 --> 00:53:11,375
-crecen los modelos de IA de vanguardia en su
+crecen los modelos de
+IA de vanguardia en su
 
 1208
 00:53:11,399 --> 00:53:14,176
-capacidad para explotar los actuales
+capacidad para
+explotar los actuales
 
 1209
 00:53:14,200 --> 00:53:15,696
-sistemas de identidad digital, todos los cuales
+sistemas de identidad
+digital, todos los cuales
 
 1210
 00:53:15,720 --> 00:53:17,696
-sistemas de seguridad se basan fundamentalmente
+sistemas de seguridad se
+basan fundamentalmente
 
 1211
 00:53:17,720 --> 00:53:19,696
-en sistemas de identidad digital.
+en sistemas de
+identidad digital.
 
 1212
 00:53:19,720 --> 00:53:22,656
-Se utiliza la seguridad de la identidad digital
+Se utiliza la seguridad
+de la identidad digital
 
 1213
 00:53:22,680 --> 00:53:24,095
-como capa protectora para todo lo demás que
+como capa protectora
+para todo lo demás que
 
 1214
 00:53:24,119 --> 00:53:26,256
-haces. Si esas se pueden vulnerar,
+haces. Si esas se
+pueden vulnerar,
 
 1215
 00:53:26,280 --> 00:53:31,936
-entonces nos enfrentamos a una inminente
+entonces nos enfrentamos
+a una inminente
 
 1216
 00:53:31,960 --> 00:53:37,056
@@ -4865,11 +5743,13 @@ catástrofe inminente. Lo que
 
 1217
 00:53:37,080 --> 00:53:38,656
-va a acabar pasando es que la gente
+va a acabar pasando
+es que la gente
 
 1218
 00:53:38,680 --> 00:53:41,615
-simplemente optarán por el camino más fácil,
+simplemente optarán
+por el camino más fácil,
 
 1219
 00:53:41,639 --> 00:53:47,375
@@ -4877,7 +5757,8 @@ que consiste en adoptar una
 
 1220
 00:53:47,399 --> 00:53:50,976
-identidad digital basada en la IA.
+identidad digital
+basada en la IA.
 
 1221
 00:53:51,000 --> 00:53:53,296
@@ -4885,19 +5766,23 @@ Esa sería una mala elección para
 
 1222
 00:53:53,320 --> 00:53:55,296
-nosotros. Quizá a corto plazo sea la
+nosotros. Quizá a
+corto plazo sea la
 
 1223
 00:53:55,320 --> 00:53:56,736
-única opción de la que disponemos porque
+única opción de la
+que disponemos porque
 
 1224
 00:53:56,760 --> 00:53:59,375
-KERI no está disponible en todas partes.
+KERI no está disponible
+en todas partes.
 
 1225
 00:53:59,399 --> 00:54:06,736
-Sigue siendo una rampa en el suelo. No
+Sigue siendo una
+rampa en el suelo. No
 
 1226
 00:54:06,760 --> 00:54:09,135
@@ -4921,13 +5806,16 @@ próximos meses, a menos que
 
 1231
 00:54:17,800 --> 00:54:19,375
-se destinen un montón de recursos a ello,
+se destinen un montón
+de recursos a ello,
 
 1232
 00:54:19,399 --> 00:54:21,407
-lo cual no creo que vaya a suceder.
+lo cual no creo
+que vaya a suceder.
 
 1233
 00:54:21,431 --> 00:54:25,180
-Vídeo: Sam y Caleb Smith
-Subtítulos: Henk van Cann y Kor Dwarshuis
+Vídeo: Sam y Caleb Smith Subtítulos:
+Henk van Cann y Kor Dwarshuis
+
