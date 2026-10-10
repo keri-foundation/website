@@ -267,3 +267,130 @@ tbody td .table-toggle-icon:hover {
         transform: none;
     }
 }
+
+/* ----------------------------------------
+   LATEST POSTS AS UPDATE CARDS
+   ----------------------------------------
+
+   The Latest Posts block stays a list. Each item is painted
+   like one column of the wide update table: the title is the
+   header, the excerpt is the body.
+   ---------------------------------------- */
+
+.entry-content > .wp-block-latest-posts.is-grid {
+    list-style: none;
+    /* Horizontal space between cards. No row gap, so a title sits flush on its excerpt. */
+    column-gap: var(--academic-space-4);
+    row-gap: 0;
+    margin-top: var(--academic-space-8);
+    margin-bottom: var(--academic-space-8);
+    align-items: stretch;
+}
+
+.entry-content > .wp-block-latest-posts.is-grid > li {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    list-style: none;
+}
+
+/* Share one header row and one body row, the way table cells do. */
+@supports (grid-template-rows: subgrid) {
+    .entry-content > .wp-block-latest-posts.is-grid > li {
+        display: grid;
+        grid-template-rows: subgrid;
+        grid-row: span 2;
+    }
+}
+
+.entry-content > .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-date {
+    display: none;
+}
+
+.entry-content > .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    background: var(--academic-accent-muted);
+    color: var(--academic-text-primary);
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-base);
+    font-weight: var(--academic-weight-semibold);
+    line-height: var(--academic-leading-relaxed);
+    text-align: left;
+    text-decoration: none;
+    padding: var(--academic-space-4) var(--academic-space-5);
+    border-radius: var(--academic-radius-md) var(--academic-radius-md) 0 0;
+    min-height: calc(3 * 1em * var(--academic-leading-relaxed));
+}
+
+.entry-content > .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title:hover,
+.entry-content > .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title:focus {
+    color: var(--academic-text-primary);
+    text-decoration: none;
+}
+
+.entry-content > .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-excerpt {
+    flex: 1 1 auto;
+    box-sizing: border-box;
+    /* Separates stacked rows of cards. The title above stays flush. */
+    margin: 0 0 var(--academic-space-4);
+    background: var(--academic-white);
+    color: var(--academic-text-primary);
+    font-family: var(--academic-font-sans);
+    font-size: var(--academic-text-base);
+    font-weight: var(--academic-weight-normal);
+    line-height: var(--academic-leading-relaxed);
+    text-align: left;
+    padding: calc(var(--academic-space-5) + 4px);
+    border-radius: 0 0 var(--academic-radius-md) var(--academic-radius-md);
+    box-shadow: var(--academic-shadow-sm);
+}
+
+.entry-content > .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-excerpt a {
+    color: var(--academic-accent);
+    text-decoration: none;
+    font-weight: var(--academic-weight-medium);
+    border-bottom: 1px solid transparent;
+    transition: border-color var(--academic-transition-fast), color var(--academic-transition-fast);
+}
+
+.entry-content > .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-excerpt a:hover,
+.entry-content > .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-excerpt a:focus {
+    color: var(--academic-accent-dark);
+    border-bottom-color: var(--academic-accent);
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .entry-content > .wp-block-latest-posts.is-layout-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .entry-content > .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title {
+        font-size: var(--academic-text-md);
+        min-height: 0;
+    }
+
+    .entry-content > .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-excerpt {
+        font-size: var(--academic-text-sm);
+        padding: var(--academic-space-4);
+    }
+}
+
+@media (max-width: 480px) {
+    .entry-content > .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title {
+        font-size: var(--academic-text-base);
+        padding: var(--academic-space-3) var(--academic-space-4);
+    }
+
+    .entry-content > .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-excerpt {
+        font-size: var(--academic-text-sm);
+        padding: var(--academic-space-3);
+    }
+}
