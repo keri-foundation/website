@@ -38,6 +38,11 @@
         "icon": "youtube"
       },
       {
+        "label": "All Transcripts (PDF)",
+        "href": "transcripts/pdf/talks/KERI-2026-apr-Transcripts.pdf",
+        "external": false
+      },
+      {
         "label": "SEDI nov 2025",
         "href": "/confs/SEDI/2025/nov/",
         "external": false
