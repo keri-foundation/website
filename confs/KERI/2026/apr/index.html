@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <!--
-  Presentations landing page (self-contained).
-  Copy this file into a conference folder that also has index.json.
-  Page copy, videos, and posters come from index.json in the same folder.
+  Shared presentations landing page (self-contained shell).
+  deploy-confs.sh copies this file into every gallery on build / landing-pages.
+  Page copy, videos, and posters come from that gallery's index.json.
 -->
 
 <head>
@@ -19,6 +19,8 @@
     <style>
         :root {
             --heading-font: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+            /* Mild shared tone so posters/images read as one set (dwarshuis-cms, nudged up for headshots) */
+            --media-tone: brightness(1.02) contrast(0.92) saturate(0.72) sepia(0.16);
         }
 
         * {
@@ -692,8 +694,7 @@
         }
 
         .promo-player .plyr__poster {
-            background-size: cover;
-            background-position: center;
+            display: none !important;
         }
 
         /* ── Top ten clips ── */
@@ -1775,10 +1776,6 @@
             pointer-events: auto;
         }
 
-        .video-modal-player .plyr__poster {
-            pointer-events: none;
-        }
-
         .plyr__overlay-controls .plyr__control--overlaid {
             position: static;
             top: auto;
@@ -1827,7 +1824,7 @@
             left: 0;
         }
 
-        /* Cinematic split-tone on speaker posters only (while player is stopped) */
+        /* Mild media-tone on posters/images only (while player is stopped) */
         .video-thumbnail {
             position: relative;
             width: 100%;
@@ -1842,7 +1839,8 @@
         }
 
         /* Plyr duplicates the poster; we render our own filtered copy instead */
-        .video-thumbnail .plyr__poster {
+        .video-thumbnail .plyr__poster,
+        .video-modal-player .plyr__poster {
             display: none !important;
         }
 
@@ -1850,7 +1848,9 @@
             pointer-events: none;
         }
 
-        .video-thumbnail .video-poster-filter-wrap {
+        .video-thumbnail .video-poster-filter-wrap,
+        .video-modal-player .video-poster-filter-wrap,
+        .promo-player .video-poster-filter-wrap {
             position: absolute;
             inset: 0;
             width: 100%;
@@ -1860,32 +1860,29 @@
             transition: opacity 0.2s ease, visibility 0.2s ease;
         }
 
-        .video-thumbnail .video-poster-filter {
+        .video-thumbnail .video-poster-filter,
+        .video-modal-player .video-poster-filter,
+        .promo-player .video-poster-filter {
             width: 100%;
             height: 100%;
             display: block;
             object-fit: contain;
             object-position: center;
-            filter: saturate(1.45) contrast(1.2) brightness(0.84) sepia(0.32) hue-rotate(-18deg);
-            transition: filter 0.45s ease;
+            filter: var(--media-tone);
+            transition: filter 0.2s ease;
         }
 
-        .video-thumbnail .video-poster-filter-wrap::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(145deg,
-                    rgba(6, 11, 111, 0.35) 0%,
-                    transparent 45%,
-                    rgba(152, 108, 50, 0.28) 100%);
-            mix-blend-mode: soft-light;
+        .promo-player .video-poster-filter {
+            object-fit: cover;
         }
 
         .video-card:hover .video-thumbnail .plyr.plyr--stopped .video-poster-filter {
-            filter: saturate(1.55) contrast(1.24) brightness(0.88) sepia(0.26) hue-rotate(-14deg);
+            filter: none;
         }
 
-        .video-thumbnail .plyr:not(.plyr--stopped) .video-poster-filter-wrap {
+        .video-thumbnail .plyr:not(.plyr--stopped) .video-poster-filter-wrap,
+        .video-modal-player .plyr:not(.plyr--stopped) .video-poster-filter-wrap,
+        .promo-player .plyr:not(.plyr--stopped) .video-poster-filter-wrap {
             opacity: 0;
             visibility: hidden;
         }
@@ -3161,7 +3158,7 @@
 
                 promoVideoEl = videoEl;
                 videoEl.addEventListener('play', () => pauseAllVideos(videoEl));
-                initPlyrVideo(videoEl, { filteredPoster: false });
+                initPlyrVideo(videoEl);
                 section.hidden = false;
             }
 
