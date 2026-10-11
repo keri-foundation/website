@@ -15,6 +15,11 @@
         "external": false
       },
       {
+        "label": "All Transcripts (PDF)",
+        "href": "transcripts/pdf/talks/vids-2024-Transcripts.pdf",
+        "external": false
+      },
+      {
         "label": "2026 Videos",
         "href": "/vids/2026/",
         "external": false
