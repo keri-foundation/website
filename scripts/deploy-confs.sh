@@ -33,8 +33,9 @@ Commands (run in the order given):
   list            Show galleries: confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/
   subtitles       Copy curated .srt files from scripts/subtitle-sources.tsv (no-op when that file has no sources; edit SRTs in place under the gallery)
   transcripts     Regenerate the static transcript HTML pages from the .srt files
+  pdfs            Build concatenated transcript PDFs under each gallery's transcripts/pdf/
   verify          Check every file referenced by each index.json exists locally
-  build           subtitles + transcripts + verify
+  build           subtitles + transcripts + pdfs + verify
   push            Mirror conference folders and vids/ to the server (rsync --delete), then re-upload every index.html and index.json, plus .htaccess redirects
   check-remote    verify + HEAD-request every referenced file on the live site
   deploy          build + push + check-remote
@@ -145,6 +146,15 @@ step_transcripts() {
     for id in $(conferences); do
         echo "[$id]"
         node "$SCRIPT_DIR/generate-transcript-pages.mjs" --config "$(gallery_dir "$id")/index.json" $(dry_flag)
+    done
+}
+
+step_pdfs() {
+    echo "── Transcript PDFs"
+    local id
+    for id in $(conferences); do
+        echo "[$id]"
+        node "$SCRIPT_DIR/build-transcript-pdf.js" "$id" $(dry_flag)
     done
 }
 
@@ -305,12 +315,13 @@ for cmd in "${COMMANDS[@]}"; do
         list) step_list ;;
         subtitles) step_subtitles ;;
         transcripts) step_transcripts ;;
+        pdfs) step_pdfs ;;
         verify) step_verify ;;
-        build) step_subtitles; step_transcripts; step_verify ;;
+        build) step_subtitles; step_transcripts; step_pdfs; step_verify ;;
         push) step_push ;;
         check-remote) step_check_remote ;;
         deploy)
-            step_subtitles; step_transcripts; step_verify; step_push
+            step_subtitles; step_transcripts; step_pdfs; step_verify; step_push
             [ "$DRY_RUN" -eq 1 ] || step_check_remote
             ;;
         push-legacy-moved) step_push_legacy_moved ;;

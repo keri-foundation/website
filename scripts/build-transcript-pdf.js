@@ -3,7 +3,7 @@
  * Build a designed PDF of transcripts from the `.srt` files in one event folder.
  *
  * Pipeline:
- *   1. Resolve an event directory from a slug (e.g. `2025-11-SEDI`)
+ *   1. Resolve a gallery directory (confs/<ORG>/<YEAR>/<month> or vids/<YEAR>)
  *   2. Recursively collect every `*.srt` file in that directory
  *   3. Parse SRT cues and group them into readable paragraphs
  *   4. Render an HTML document with a cover page, table of contents,
@@ -14,12 +14,14 @@
  * Usage:
  *   node scripts/build-transcript-pdf.js KERI/2026/apr [--open]
  *   node scripts/build-transcript-pdf.js SEDI/2025/nov [--open]
+ *   node scripts/build-transcript-pdf.js vids/2026 [--open]
  *
- * Output:
- *   {ORG}-{YEAR}-{month}-Transcripts.pdf  (in the repo root; *.pdf is gitignored)
+ * Output (under the gallery):
+ *   transcripts/pdf/talks/{slug-with-dashes}-Transcripts.pdf
+ *   If index.json nav already links a transcripts/pdf/*.pdf, that path is used.
  */
 
-import { readFile, readdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
 import { existsSync, statSync } from "node:fs";
 import { basename, dirname, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -27,6 +29,7 @@ import puppeteer from "puppeteer-core";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const CONFS_DIR = join(ROOT, "confs");
+const VIDS_DIR = join(ROOT, "vids");
 
 const BOM = "\uFEFF";
 const TIMESTAMP_RE = /^(\d{2}:\d{2}:\d{2},\d{3})\s*-->\s*(\d{2}:\d{2}:\d{2},\d{3})/;
@@ -48,12 +51,15 @@ function parseArgs(argv) {
   return {
     slug: positional[0] ?? "",
     openAfter: flags.has("--open"),
+    dryRun: flags.has("--dry-run"),
   };
 }
 
 function usage() {
-  console.error("Usage: node scripts/build-transcript-pdf.js <ORG/YEAR/month> [--open]");
-  console.error("Example: node scripts/build-transcript-pdf.js KERI/2026/apr");
+  console.error("Usage: node scripts/build-transcript-pdf.js <gallery-id> [--open] [--dry-run]");
+  console.error("Examples:");
+  console.error("  node scripts/build-transcript-pdf.js KERI/2026/apr");
+  console.error("  node scripts/build-transcript-pdf.js vids/2026");
 }
 
 // ─── Event directory ────────────────────────────────────────────────────────
@@ -67,17 +73,19 @@ function isDirectory(path) {
 }
 
 async function findEventDir(slug) {
+  const normalized = slug.replace(/^\/+|\/+$/g, "");
   const candidates = [
     resolve(slug),
-    resolve(ROOT, slug),
-    join(CONFS_DIR, slug),
+    resolve(ROOT, normalized),
+    join(CONFS_DIR, normalized),
+    normalized.startsWith("vids/") ? join(ROOT, normalized) : join(VIDS_DIR, normalized),
   ];
   for (const candidate of candidates) {
     if (isDirectory(candidate)) return candidate;
   }
 
   throw new Error(
-    `Could not find a conference directory "${slug}". Example: KERI/2026/apr (under ${CONFS_DIR}).`
+    `Could not find a gallery directory "${slug}". Examples: KERI/2026/apr (under ${CONFS_DIR}) or vids/2026.`
   );
 }
 
@@ -118,6 +126,11 @@ function eventFromSlug(slug) {
     const year = conf[2];
     const month = MONTHS[conf[3].toLowerCase()] || conf[3];
     return { slug, year, shortName: org, name: `${org} ${month} ${year}`, date: "" };
+  }
+  const vids = slug.match(/^vids\/(\d{4})$/i);
+  if (vids) {
+    const year = vids[1];
+    return { slug, year, shortName: `${year} Videos`, name: `${year} Videos`, date: "" };
   }
   const match = slug.match(/^(\d{4})(?:-(\d{2}))?-([A-Za-z0-9][A-Za-z0-9-]*)$/);
   if (!match) {
@@ -182,19 +195,66 @@ function parseProgram(text) {
 async function loadEventMeta(eventDir, slug) {
   const event = eventFromSlug(slug);
   const programPath = join(eventDir, "PROGRAM.md");
-  if (!existsSync(programPath)) return { ...event, byStem: new Map() };
+  if (existsSync(programPath)) {
+    const program = parseProgram(await readFile(programPath, "utf8"));
+    if (program.eventName) event.name = program.eventName;
+    if (program.date) event.date = program.date;
 
-  const program = parseProgram(await readFile(programPath, "utf8"));
-  if (program.eventName) event.name = program.eventName;
-  if (program.date) event.date = program.date;
+    const acronym = program.eventName.match(/\(([A-Z][A-Z0-9]+)\)/)?.[1];
+    if (acronym) {
+      const after = program.eventName.replace(/.*\)\s*/, "").trim();
+      event.shortName = after ? `${acronym} ${after}` : acronym;
+    }
 
-  const acronym = program.eventName.match(/\(([A-Z][A-Z0-9]+)\)/)?.[1];
-  if (acronym) {
-    const after = program.eventName.replace(/.*\)\s*/, "").trim();
-    event.shortName = after ? `${acronym} ${after}` : acronym;
+    return { ...event, byStem: program.byStem };
   }
 
-  return { ...event, byStem: program.byStem };
+  const indexPath = join(eventDir, "index.json");
+  if (existsSync(indexPath)) {
+    try {
+      const config = JSON.parse(await readFile(indexPath, "utf8"));
+      const heading = config?.page?.heading || config?.page?.title;
+      if (typeof heading === "string" && heading.trim()) {
+        event.name = heading.trim();
+        event.shortName = heading.trim();
+      }
+    } catch {
+      // ignore malformed index.json; slug-derived names remain
+    }
+  }
+
+  return { ...event, byStem: new Map() };
+}
+
+async function resolvePdfOutputPath(eventDir, slug) {
+  const defaultRel = join(
+    "transcripts",
+    "pdf",
+    "talks",
+    `${slug.replace(/[\\/]+/g, "-")}-Transcripts.pdf`
+  );
+  const indexPath = join(eventDir, "index.json");
+  if (existsSync(indexPath)) {
+    try {
+      const config = JSON.parse(await readFile(indexPath, "utf8"));
+      const nav = Array.isArray(config?.page?.nav) ? config.page.nav : [];
+      for (const item of nav) {
+        const href = item?.href;
+        if (
+          typeof href === "string" &&
+          href.includes("transcripts/pdf/") &&
+          href.endsWith(".pdf") &&
+          !href.startsWith("/") &&
+          !/^https?:\/\//i.test(href)
+        ) {
+          return join(eventDir, href);
+        }
+      }
+    } catch {
+      // fall through to default
+    }
+  }
+  return join(eventDir, defaultRel);
 }
 
 function coverTitleParts(event) {
@@ -842,7 +902,7 @@ function findChrome() {
 // ─── Main ───────────────────────────────────────────────────────────────────
 
 async function main() {
-  const { slug, openAfter } = parseArgs(process.argv.slice(2));
+  const { slug, openAfter, dryRun } = parseArgs(process.argv.slice(2));
   if (!slug) {
     usage();
     process.exit(1);
@@ -850,17 +910,23 @@ async function main() {
 
   const eventDir = await findEventDir(slug);
   const event = await loadEventMeta(eventDir, slug);
-  const outputPath = join(ROOT, `${slug.replace(/[\\/]+/g, "-")}-Transcripts.pdf`);
+  const outputPath = await resolvePdfOutputPath(eventDir, slug);
 
   const srtFiles = await collectSrtFiles(eventDir);
   if (srtFiles.length === 0) {
-    console.error("No .srt files found in", eventDir);
-    process.exit(1);
+    console.warn(`No .srt files found in ${eventDir} — skipping PDF.`);
+    return;
   }
 
   console.log(`Event: ${event.name}`);
   console.log(`Source: ${eventDir}`);
   console.log(`Found ${srtFiles.length} transcript files.`);
+  console.log(`Output: ${outputPath}`);
+
+  if (dryRun) {
+    console.log("[dry-run] skipping Chrome render");
+    return;
+  }
 
   const talks = [];
   for (const path of srtFiles) {
@@ -889,6 +955,8 @@ async function main() {
   const htmlPath = join(ROOT, ".transcripts-build.html");
   await writeFile(htmlPath, html, "utf8");
   console.log(`Wrote intermediate HTML: ${htmlPath}`);
+
+  await mkdir(dirname(outputPath), { recursive: true });
 
   console.log("Launching Chrome to render PDF…");
   const browser = await puppeteer.launch({
