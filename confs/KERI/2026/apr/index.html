@@ -3662,8 +3662,10 @@
 
             // ─────────────────────────────────────────────────────────────────────
             //  Multi-language subtitles (optional). `subtitle` = English (`foo.srt`).
-            //  Extra languages are discovered as siblings: `foo.nl.srt`, `foo.es.srt`, …
-            //  Partial tracks: coverage is derived from SRT cue timestamps.
+            //  Extra languages are sibling files (`foo.nl.srt`) recorded in
+            //  DISCOVERED_SUBTITLE_LANGS when landing pages are built. An optional
+            //  `subtitles` map in index.json overrides those paths. Missing files
+            //  are not requested. Partial tracks: coverage comes from SRT cues.
             // ─────────────────────────────────────────────────────────────────────
             const LANGUAGE_LABELS = {
                 en: 'English',
@@ -3685,6 +3687,10 @@
                 pl: 'Polski',
                 uk: 'Українська'
             };
+
+            // Keys are English subtitle paths from index.json.
+            // scripts/confs.mjs landing-pages replaces the marker per gallery.
+            const DISCOVERED_SUBTITLE_LANGS = {};
 
             const captionTrackStore = {};
             const captionTrackPromises = {};
@@ -3710,13 +3716,6 @@
                 return entry?.src || null;
             }
 
-            function derivedSubtitleSrc(englishSrc, lang) {
-                const key = String(lang || '').toLowerCase();
-                if (!englishSrc || !key || key === 'en') return null;
-                if (!/\.srt$/i.test(englishSrc)) return null;
-                return englishSrc.replace(/\.srt$/i, `.${key}.srt`);
-            }
-
             function subtitleTracks(video) {
                 const tracks = {};
                 if (!video) return tracks;
@@ -3734,49 +3733,38 @@
                 return tracks;
             }
 
-            function probeSubtitleExists(src) {
-                return fetch(src, { method: 'HEAD' })
-                    .then((res) => {
-                        if (res.ok) return true;
-                        // Some hosts reject HEAD; fall back to a light GET.
-                        if (res.status === 405 || res.status === 501) {
-                            return fetch(src, { method: 'GET', headers: { Range: 'bytes=0-0' } })
-                                .then((r) => r.ok || r.status === 206)
-                                .catch(() => false);
-                        }
-                        return false;
-                    })
-                    .catch(() => false);
+            function applyDiscoveredSubtitleLangs(video) {
+                const raw = typeof video?.subtitle === 'string'
+                    ? video.subtitle
+                    : (video?.subtitle && typeof video.subtitle === 'object' && video.subtitle.src
+                        ? String(video.subtitle.src)
+                        : '');
+                if (!raw || /^(https?:)?\/\//i.test(raw) || raw.startsWith('/')) return;
+                const found = DISCOVERED_SUBTITLE_LANGS[raw];
+                if (!found || typeof found !== 'object') return;
+                if (!video.subtitles || typeof video.subtitles !== 'object') video.subtitles = {};
+                for (const [lang, src] of Object.entries(found)) {
+                    const key = String(lang || '').toLowerCase();
+                    if (!key || key === 'en' || !LANGUAGE_LABELS[key] || !src || video.subtitles[key]) continue;
+                    video.subtitles[key] = src;
+                }
             }
 
             function resolveExtraSubtitleTracks(video) {
                 if (!video) return Promise.resolve({});
                 if (video._subtitleDiscovery) return video._subtitleDiscovery;
 
-                video._subtitleDiscovery = (async () => {
-                    const resolved = {};
-                    if (video.subtitles && typeof video.subtitles === 'object') {
-                        for (const [lang, value] of Object.entries(video.subtitles)) {
-                            const entry = normalizeSubtitleEntry(value);
-                            const key = String(lang || '').toLowerCase();
-                            if (entry && key && key !== 'en') resolved[key] = entry;
-                        }
+                const resolved = {};
+                if (video.subtitles && typeof video.subtitles === 'object') {
+                    for (const [lang, value] of Object.entries(video.subtitles)) {
+                        const entry = normalizeSubtitleEntry(value);
+                        const key = String(lang || '').toLowerCase();
+                        if (entry && key && key !== 'en') resolved[key] = entry;
                     }
+                }
 
-                    const en = englishSubtitleSrc(video);
-                    if (en) {
-                        const langs = Object.keys(LANGUAGE_LABELS).filter((lang) => lang !== 'en' && !resolved[lang]);
-                        await Promise.all(langs.map(async (lang) => {
-                            const src = derivedSubtitleSrc(en, lang);
-                            if (!src) return;
-                            if (await probeSubtitleExists(src)) resolved[lang] = { src };
-                        }));
-                    }
-
-                    video._resolvedSubtitles = resolved;
-                    return resolved;
-                })();
-
+                video._resolvedSubtitles = resolved;
+                video._subtitleDiscovery = Promise.resolve(resolved);
                 return video._subtitleDiscovery;
             }
 
@@ -6141,6 +6129,7 @@
                     ? config.transcriptsDir.replace(/\/+$/, '')
                     : '';
                 videos.forEach((v) => {
+                    applyDiscoveredSubtitleLangs(v);
                     if (v.subtitle) v.subtitle = resolveAssetUrl(v.subtitle);
                     if (v.subtitles && typeof v.subtitles === 'object') {
                         for (const [lang, entry] of Object.entries(v.subtitles)) {
