@@ -2,14 +2,35 @@
 <html lang="en">
 <!--
   Shared presentations landing page (self-contained shell).
-  deploy-confs.sh copies this file into every gallery on build / landing-pages.
+  deploy-confs.sh landing-pages stamps this file into every gallery and fills
+  title / description / canonical URL in the social meta tags from that
+  gallery's index.json. Do not edit per-gallery index.html by hand.
   Page copy, videos, and posters come from that gallery's index.json.
 -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Videos</title>
+    <title>2026 Videos</title>
+    <meta name="description" content="Samuel Smith introduces KERI, and why the choice is KERI or surveillance">
+    <link rel="canonical" href="https://keri.foundation/vids/2026/">
+    <!-- Open Graph / social previews (image from custom/img logo on brand background) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="KERI Foundation">
+    <meta property="og:title" content="2026 Videos">
+    <meta property="og:description" content="Samuel Smith introduces KERI, and why the choice is KERI or surveillance">
+    <meta property="og:url" content="https://keri.foundation/vids/2026/">
+    <meta property="og:image" content="https://keri.foundation/custom/img/logo-keri-foundation-og.png">
+    <meta property="og:image:secure_url" content="https://keri.foundation/custom/img/logo-keri-foundation-og.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="KERI Foundation logo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="2026 Videos">
+    <meta name="twitter:description" content="Samuel Smith introduces KERI, and why the choice is KERI or surveillance">
+    <meta name="twitter:image" content="https://keri.foundation/custom/img/logo-keri-foundation-og.png">
+    <meta name="twitter:image:alt" content="KERI Foundation logo">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -3127,10 +3148,32 @@
                 nav.hidden = false;
             }
 
+            function setMetaContent(selector, content, attr = 'content') {
+                if (content == null || content === '') return;
+                const el = document.head.querySelector(selector);
+                if (el) el.setAttribute(attr, content);
+            }
+
+            function applySocialMeta(page) {
+                const title = (page && (page.title || page.heading)) || document.title || 'KERI Foundation Videos';
+                const description = (page && (page.subtitle || page.description))
+                    || 'Presentations and talks from the KERI Foundation.';
+                const url = window.location.href.split('#')[0];
+
+                document.title = title;
+                setMetaContent('meta[name="description"]', description);
+                setMetaContent('link[rel="canonical"]', url, 'href');
+                setMetaContent('meta[property="og:title"]', title);
+                setMetaContent('meta[property="og:description"]', description);
+                setMetaContent('meta[property="og:url"]', url);
+                setMetaContent('meta[name="twitter:title"]', title);
+                setMetaContent('meta[name="twitter:description"]', description);
+            }
+
             function renderPageChrome(page, topClipsConfig) {
                 if (!page) return;
 
-                if (page.title) document.title = page.title;
+                applySocialMeta(page);
 
                 renderTranscriptLinks(page);
 
