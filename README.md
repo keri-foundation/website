@@ -63,7 +63,7 @@ confs/
 ├── .htaccess                       directory listing rewrite (see below)
 ├── index.php                       styled folder browser for bare dirs
 ├── KERI/2026/apr/                  → https://keri.foundation/confs/KERI/2026/apr/
-│   ├── index.html                  gallery app (copy of the template)
+│   ├── index.html                  gallery app (synced from the template on build)
 │   ├── index.json                  page copy, video list, paths
 │   ├── talks/                      *.mp4 + *.mp3 + *.srt side by side
 │   ├── interviews/                 *.mp4 + *.mp3 + *.srt side by side
@@ -80,10 +80,12 @@ confs/
 │   └── transcripts/
 │       ├── html/talks/
 │       └── pdf/talks/
-└── template-presentations-landingpage/   generic starting point for a new conference
+└── template-presentations-landingpage/   shared gallery shell (copied into every gallery on build)
 ```
 
 `index.json` → `transcriptsDir` (`transcripts/html`) tells both the gallery and the generator where HTML transcript pages live, for example `transcripts/html/talks/<video-id>.html`. Concatenated PDFs go under `transcripts/pdf/talks/`.
+
+`build` / `deploy` always copy `confs/template-presentations-landingpage/index.html` over each gallery’s `index.html`. Edit the template only; page copy, nav, and transcript links live in each gallery’s `index.json`.
 
 ## Yearly videos (`/vids/<YEAR>/`)
 
@@ -94,7 +96,7 @@ vids/
 ├── .htaccess                       directory listing rewrite (see below)
 ├── index.php                       styled folder browser for bare dirs
 ├── 2024/                           → https://keri.foundation/vids/2024/
-│   ├── index.html                  gallery app (copy of the conference template)
+│   ├── index.html                  gallery app (synced from the template on build)
 │   ├── index.json                  page copy and video list
 │   ├── talks/                      *.mp4 + *.mp3 + *.srt side by side
 │   └── transcripts/html/talks/     generated static transcript pages
@@ -113,15 +115,16 @@ The old standalone player redirects here:
 
 ### New conference
 
-1. Create `confs/<ORG>/<YEAR>/<month>/` and copy `index.html` + `index.json` from `confs/template-presentations-landingpage/`.
+1. Create `confs/<ORG>/<YEAR>/<month>/` and copy `index.json` from `confs/template-presentations-landingpage/` (edit page copy, nav, `transcriptLinks`, videos there).
 2. Add media to `talks/` (and `interviews/`, `slides/`, … when present) and fill in `index.json`.
-3. Adjust the static transcript links (`<nav class="seo-transcript-links">`) in `index.html`.
+3. Run `scripts/deploy-confs.sh landing-pages` (or `build`) so `index.html` is copied from the template.
 4. Edit `.srt` files in that conference folder. `scripts/subtitle-sources.tsv` is only for an optional copy from somewhere else.
 
 ### Build and deploy
 
 ```bash
-scripts/deploy-confs.sh build            # subtitles → transcript pages → verify (local only)
+scripts/deploy-confs.sh landing-pages    # sync template index.html → every gallery
+scripts/deploy-confs.sh build            # landing-pages → subtitles → transcripts → pdfs → verify
 scripts/deploy-confs.sh -n push          # preview what would be uploaded
 scripts/deploy-confs.sh deploy           # build + push (rsync --delete) + check the live site
 scripts/deploy-confs.sh check-remote     # HEAD-request every referenced file on keri.foundation

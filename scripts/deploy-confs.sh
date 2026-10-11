@@ -32,10 +32,11 @@ Usage: scripts/deploy-confs.sh [options] <command>...
 Commands (run in the order given):
   list            Show galleries: confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/
   subtitles       Copy curated .srt files from scripts/subtitle-sources.tsv (no-op when that file has no sources; edit SRTs in place under the gallery)
+  landing-pages   Copy confs/template-presentations-landingpage/index.html into every gallery
   transcripts     Regenerate the static transcript HTML pages from the .srt files
   pdfs            Build concatenated transcript PDFs under each gallery's transcripts/pdf/
   verify          Check every file referenced by each index.json exists locally
-  build           subtitles + transcripts + pdfs + verify
+  build           landing-pages + subtitles + transcripts + pdfs + verify
   push            Mirror conference folders and vids/ to the server (rsync --delete), then re-upload every index.html and index.json, plus .htaccess redirects
   check-remote    verify + HEAD-request every referenced file on the live site
   deploy          build + push + check-remote
@@ -138,6 +139,36 @@ step_list() {
 step_subtitles() {
     echo "── Subtitles"
     run_node "$SCRIPT_DIR/confs.mjs" sync-subtitles $(dry_flag)
+}
+
+# Shared gallery shell: one template, copied into every conference / vids gallery.
+# Page copy stays in each gallery's index.json — do not fork index.html per gallery.
+step_landing_pages() {
+    echo "── Landing pages (template → galleries)"
+    local template="$CONFS/template-presentations-landingpage/index.html"
+    if [ ! -f "$template" ]; then
+        echo "Missing template: $template" >&2
+        exit 1
+    fi
+    local id dest
+    for id in $(conferences); do
+        dest="$(gallery_dir "$id")/index.html"
+        if [ "$DRY_RUN" -eq 1 ]; then
+            if cmp -s "$template" "$dest" 2>/dev/null; then
+                echo "[dry-run] unchanged $id/index.html"
+            else
+                echo "[dry-run] would copy template → $id/index.html"
+            fi
+            continue
+        fi
+        mkdir -p "$(dirname "$dest")"
+        if cmp -s "$template" "$dest" 2>/dev/null; then
+            echo "unchanged $id/index.html"
+        else
+            cp "$template" "$dest"
+            echo "updated  $id/index.html"
+        fi
+    done
 }
 
 step_transcripts() {
@@ -314,14 +345,15 @@ for cmd in "${COMMANDS[@]}"; do
     case "$cmd" in
         list) step_list ;;
         subtitles) step_subtitles ;;
+        landing-pages) step_landing_pages ;;
         transcripts) step_transcripts ;;
         pdfs) step_pdfs ;;
         verify) step_verify ;;
-        build) step_subtitles; step_transcripts; step_pdfs; step_verify ;;
+        build) step_landing_pages; step_subtitles; step_transcripts; step_pdfs; step_verify ;;
         push) step_push ;;
         check-remote) step_check_remote ;;
         deploy)
-            step_subtitles; step_transcripts; step_pdfs; step_verify; step_push
+            step_landing_pages; step_subtitles; step_transcripts; step_pdfs; step_verify; step_push
             [ "$DRY_RUN" -eq 1 ] || step_check_remote
             ;;
         push-legacy-moved) step_push_legacy_moved ;;
