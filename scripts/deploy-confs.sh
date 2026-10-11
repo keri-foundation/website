@@ -32,7 +32,7 @@ Usage: scripts/deploy-confs.sh [options] <command>...
 Commands (run in the order given):
   list            Show galleries: confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/
   subtitles       Copy curated .srt files from scripts/subtitle-sources.tsv (no-op when that file has no sources; edit SRTs in place under the gallery)
-  landing-pages   Copy confs/template-presentations-landingpage/index.html into every gallery
+  landing-pages   Copy the shared template into every gallery and stamp social meta from index.json
   transcripts     Regenerate the static transcript HTML pages from the .srt files
   pdfs            Build concatenated transcript PDFs under each gallery's transcripts/pdf/
   verify          Check every file referenced by each index.json exists locally
@@ -141,34 +141,13 @@ step_subtitles() {
     run_node "$SCRIPT_DIR/confs.mjs" sync-subtitles $(dry_flag)
 }
 
-# Shared gallery shell: one template, copied into every conference / vids gallery.
-# Page copy stays in each gallery's index.json — do not fork index.html per gallery.
+# Shared gallery shell: one template, stamped into every conference / vids gallery.
+# Page copy stays in each gallery's index.json. index.html is generated from the
+# template (social meta title/description/url stamped per gallery) — do not edit
+# gallery index.html files by hand.
 step_landing_pages() {
     echo "── Landing pages (template → galleries)"
-    local template="$CONFS/template-presentations-landingpage/index.html"
-    if [ ! -f "$template" ]; then
-        echo "Missing template: $template" >&2
-        exit 1
-    fi
-    local id dest
-    for id in $(conferences); do
-        dest="$(gallery_dir "$id")/index.html"
-        if [ "$DRY_RUN" -eq 1 ]; then
-            if cmp -s "$template" "$dest" 2>/dev/null; then
-                echo "[dry-run] unchanged $id/index.html"
-            else
-                echo "[dry-run] would copy template → $id/index.html"
-            fi
-            continue
-        fi
-        mkdir -p "$(dirname "$dest")"
-        if cmp -s "$template" "$dest" 2>/dev/null; then
-            echo "unchanged $id/index.html"
-        else
-            cp "$template" "$dest"
-            echo "updated  $id/index.html"
-        fi
-    done
+    run_node "$SCRIPT_DIR/confs.mjs" landing-pages $(dry_flag)
 }
 
 step_transcripts() {
