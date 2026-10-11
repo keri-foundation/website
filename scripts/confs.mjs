@@ -4,11 +4,15 @@
  *
  * Usage:
  *   node scripts/confs.mjs list
+ *   node scripts/confs.mjs landing-pages [--dry-run] [--conf KERI/2026/apr]...
  *   node scripts/confs.mjs sync-subtitles [--dry-run] [--conf KERI/2026/apr]...
  *   node scripts/confs.mjs verify [--remote https://keri.foundation] [--conf KERI/2026/apr]...
  *
  * list            Print every gallery id that has an index.json.
  *                 Conferences are ORG/YEAR/month. Video galleries are vids/YEAR.
+ * landing-pages   Copy the shared template into every gallery and stamp title /
+ *                 description / canonical URL into the social meta tags from that
+ *                 gallery's index.json (shell stays shared; only meta content varies).
  * sync-subtitles  Copy curated .srt files from the source folders listed in
  *                 scripts/subtitle-sources.tsv into the conference folders. Only
  *                 subtitles referenced by that conference's index.json are copied
@@ -21,7 +25,7 @@
  *                 on the live site.
  */
 
-import { readFile, readdir, stat, copyFile, mkdir } from "node:fs/promises";
+import { readFile, readdir, stat, copyFile, mkdir, writeFile } from "node:fs/promises";
 import { existsSync, readdirSync } from "node:fs";
 import { basename, dirname, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -32,6 +36,8 @@ const SITE_ROOT = resolve(SCRIPT_DIR, "..");
 const CONFS_ROOT = join(SITE_ROOT, "confs");
 const VIDS_ROOT = join(SITE_ROOT, "vids");
 const SOURCES_FILE = join(SCRIPT_DIR, "subtitle-sources.tsv");
+const LANDING_TEMPLATE = join(CONFS_ROOT, "template-presentations-landingpage", "index.html");
+const SITE_URL = (process.env.SITE_URL || "https://keri.foundation").replace(/\/+$/, "");
 
 const ORG_RE = /^[A-Za-z][A-Za-z0-9_-]*$/;
 const YEAR_RE = /^\d{4}$/;
@@ -47,6 +53,78 @@ function parseArgs(argv) {
     else throw new Error(`Unknown argument: ${a}`);
   }
   return opts;
+}
+
+function escapeAttr(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/"/g, "&quot;")
+    .replace(/</g, "&lt;");
+}
+
+function setTagContent(html, pattern, value) {
+  if (!pattern.test(html)) {
+    throw new Error(`landing-pages: template missing match for ${pattern}`);
+  }
+  return html.replace(pattern, (match, prefix, _old, suffix) => `${prefix}${value}${suffix}`);
+}
+
+function stampLandingMeta(templateHtml, { title, description, url }) {
+  const t = escapeAttr(title);
+  const d = escapeAttr(description);
+  const u = escapeAttr(url);
+  let html = templateHtml;
+  html = setTagContent(html, /(<title>)([\s\S]*?)(<\/title>)/i, t);
+  html = setTagContent(html, /(<meta\s+name="description"\s+content=")([^"]*)(")/i, d);
+  html = setTagContent(html, /(<link\s+rel="canonical"\s+href=")([^"]*)(")/i, u);
+  html = setTagContent(html, /(<meta\s+property="og:title"\s+content=")([^"]*)(")/i, t);
+  html = setTagContent(html, /(<meta\s+property="og:description"\s+content=")([^"]*)(")/i, d);
+  html = setTagContent(html, /(<meta\s+property="og:url"\s+content=")([^"]*)(")/i, u);
+  html = setTagContent(html, /(<meta\s+name="twitter:title"\s+content=")([^"]*)(")/i, t);
+  html = setTagContent(html, /(<meta\s+name="twitter:description"\s+content=")([^"]*)(")/i, d);
+  return html;
+}
+
+async function cmdLandingPages(opts) {
+  if (!existsSync(LANDING_TEMPLATE)) {
+    throw new Error(`Missing template: ${LANDING_TEMPLATE}`);
+  }
+  const templateHtml = await readFile(LANDING_TEMPLATE, "utf8");
+  let updated = 0;
+  let unchanged = 0;
+  for (const id of await selectedConferences(opts)) {
+    const config = await loadConfig(id);
+    const page = config.page || {};
+    const title = page.title || page.heading || "KERI Foundation Videos";
+    const description =
+      page.subtitle || page.description || "Presentations and talks from the KERI Foundation.";
+    const url = `${SITE_URL}/${galleryPrefix(id)}/`;
+    const html = stampLandingMeta(templateHtml, { title, description, url });
+    const dest = join(galleryDir(id), "index.html");
+    let previous = null;
+    try {
+      previous = await readFile(dest, "utf8");
+    } catch {
+      previous = null;
+    }
+    if (previous === html) {
+      console.log(`unchanged ${id}/index.html`);
+      unchanged++;
+      continue;
+    }
+    if (opts.dryRun) {
+      console.log(`[dry-run] would update ${id}/index.html`);
+    } else {
+      await mkdir(dirname(dest), { recursive: true });
+      await writeFile(dest, html, "utf8");
+      console.log(`updated  ${id}/index.html`);
+    }
+    updated++;
+  }
+  console.log(
+    `\nlanding-pages: ${updated} updated, ${unchanged} unchanged` +
+      (opts.dryRun ? " (dry-run)" : "")
+  );
 }
 
 const toPosix = (p) => p.split(sep).join("/");
@@ -452,6 +530,9 @@ async function main() {
     case "list":
       for (const id of await selectedConferences(opts)) console.log(id);
       break;
+    case "landing-pages":
+      await cmdLandingPages(opts);
+      break;
     case "sync-subtitles":
       await cmdSyncSubtitles(opts);
       break;
@@ -459,7 +540,9 @@ async function main() {
       await cmdVerify(opts);
       break;
     default:
-      console.log("Usage: node scripts/confs.mjs <list|sync-subtitles|verify> [--conf ORG/YEAR/month|vids/YEAR] [--dry-run] [--remote URL]");
+      console.log(
+        "Usage: node scripts/confs.mjs <list|landing-pages|sync-subtitles|verify> [--conf ORG/YEAR/month|vids/YEAR] [--dry-run] [--remote URL]"
+      );
       process.exit(opts.command ? 1 : 0);
   }
 }
