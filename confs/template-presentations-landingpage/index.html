@@ -21,6 +21,11 @@
             --heading-font: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
             /* Mild shared tone so posters/images read as one set (dwarshuis-cms, nudged up for headshots) */
             --media-tone: brightness(1.02) contrast(0.92) saturate(0.72) sepia(0.16);
+            /* keri.foundation: warm band, white content, header stone, logo bronze */
+            --page-bg: #fdefde;
+            --panel-bg: #ffffff;
+            --stone: #e8e6de;
+            --speaker: #f6e2b8;
         }
 
         * {
@@ -31,7 +36,7 @@
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: #b1d1cf;
+            background: var(--page-bg);
             color: #060b6f;
             padding: 16px 8px;
             min-height: 100vh;
@@ -131,7 +136,7 @@
         .audience-filter {
             margin: 0;
             min-width: 0;
-            background: rgba(255, 255, 255, 0.35);
+            background: var(--panel-bg);
             border-radius: 8px;
             padding: 20px 24px;
             border: 1px solid rgba(6, 11, 111, 0.12);
@@ -168,7 +173,7 @@
             font-weight: 700;
             font-size: 0.95rem;
             color: #060b6f;
-            background: rgba(255, 255, 255, 0.55);
+            background: var(--page-bg);
             border: 1px solid rgba(6, 11, 111, 0.18);
             border-radius: 999px;
             padding: 8px 16px;
@@ -176,7 +181,7 @@
         }
 
         .audience-filter-options button:hover {
-            background: rgba(255, 255, 255, 0.85);
+            background: #f8e4c8;
         }
 
         .audience-filter-options button[aria-pressed="true"] {
@@ -225,7 +230,7 @@
             text-align: center;
             padding: 30px 0;
             margin-bottom: 20px;
-            background: rgba(255, 255, 255, 0.35);
+            background: var(--panel-bg);
             border-radius: 8px;
             border: 1px solid rgba(6, 11, 111, 0.12);
         }
@@ -251,7 +256,7 @@
             display: inline-block;
             margin: 0 auto 18px;
             padding: 10px 16px;
-            background: rgba(255, 255, 255, 0.55);
+            background: var(--page-bg);
             color: #060b6f;
             border-radius: 4px;
             border: 1px solid rgba(6, 11, 111, 0.14);
@@ -274,7 +279,7 @@
         .search-section {
             display: block;
             min-width: 0;
-            background: rgba(255, 255, 255, 0.35);
+            background: var(--panel-bg);
             border-radius: 8px;
             padding: 20px 24px;
             border: 1px solid rgba(6, 11, 111, 0.12);
@@ -307,7 +312,7 @@
         #transcriptSearch {
             flex: 1 1 12rem;
             min-width: 0;
-            background: rgba(255, 255, 255, 0.65);
+            background: var(--page-bg);
             border: 1px solid rgba(6, 11, 111, 0.2);
             border-radius: 8px;
             color: #060b6f;
@@ -329,7 +334,7 @@
         #searchToggleAll,
         #searchClear,
         #toggleAllVideos {
-            background: rgba(255, 255, 255, 0.65);
+            background: var(--page-bg);
             border: 1px solid rgba(6, 11, 111, 0.2);
             border-radius: 8px;
             color: #060b6f;
@@ -342,7 +347,7 @@
         #searchToggleAll:hover,
         #searchClear:hover,
         #toggleAllVideos:hover {
-            background: rgba(255, 255, 255, 0.9);
+            background: #f8e4c8;
             border-color: rgba(6, 11, 111, 0.3);
         }
 
@@ -351,6 +356,10 @@
         #toggleAllVideos:focus-visible {
             outline: 2px solid #986c32;
             outline-offset: 2px;
+        }
+
+        #toggleAllVideos {
+            background: #ffffff;
         }
 
         #searchToggleAll:disabled {
@@ -377,8 +386,8 @@
             gap: 14px;
             width: 100%;
             appearance: none;
-            background: rgba(177, 209, 207, 0.12);
-            border: 1px solid rgba(177, 209, 207, 0.25);
+            background: #ffffff;
+            border: 1px solid rgba(152, 108, 50, 0.28);
             border-radius: 10px;
             padding: 12px 16px;
             cursor: pointer;
@@ -458,7 +467,7 @@
         }
 
         .search-result-text mark {
-            background: rgba(177, 209, 207, 0.75);
+            background: rgba(240, 200, 110, 0.7);
             color: #060b6f;
             border-radius: 2px;
             padding: 0 2px;
@@ -466,8 +475,8 @@
 
         /* ── Search result grouping ── */
         .search-result-group {
-            background: rgba(177, 209, 207, 0.08);
-            border: 1px solid rgba(177, 209, 207, 0.2);
+            background: #ffffff;
+            border: 1px solid rgba(152, 108, 50, 0.22);
             border-radius: 10px;
             overflow: hidden;
         }
@@ -478,9 +487,9 @@
             justify-content: space-between;
             width: 100%;
             appearance: none;
-            background: rgba(177, 209, 207, 0.15);
+            background: #f8ead8;
             border: none;
-            border-bottom: 1px solid rgba(177, 209, 207, 0.2);
+            border-bottom: 1px solid rgba(152, 108, 50, 0.2);
             padding: 10px 16px;
             font: inherit;
             font-size: 0.95rem;
@@ -492,7 +501,7 @@
         }
 
         .search-result-group-title:hover {
-            background: rgba(177, 209, 207, 0.25);
+            background: #f3dcc0;
         }
 
         .search-result-group-title:focus-visible {
@@ -548,7 +557,7 @@
         .search-result-group .search-result {
             background: transparent;
             border: none;
-            border-bottom: 1px solid rgba(177, 209, 207, 0.1);
+            border-bottom: 1px solid rgba(152, 108, 50, 0.16);
             border-radius: 0;
             padding: 10px 16px;
             margin: 0;
@@ -562,7 +571,7 @@
 
         .search-result-group .search-result:hover,
         .search-result-group .search-result:focus-visible {
-            background: rgba(177, 209, 207, 0.12);
+            background: rgba(152, 108, 50, 0.1);
             border-color: transparent;
         }
 
@@ -597,7 +606,7 @@
             }
 
             .search-bar {
-                background: rgba(255, 255, 255, 0.35);
+                background: var(--panel-bg);
                 border-radius: 8px;
                 padding: 20px 24px;
                 border: 1px solid rgba(6, 11, 111, 0.12);
@@ -651,7 +660,7 @@
         .promo-section {
             margin: 0;
             min-width: 0;
-            background: rgba(255, 255, 255, 0.35);
+            background: var(--panel-bg);
             border-radius: 8px;
             padding: 20px 24px 24px;
             border: 1px solid rgba(6, 11, 111, 0.12);
@@ -702,7 +711,7 @@
             margin: 0;
             min-width: 0;
             max-width: 100%;
-            background: rgba(255, 255, 255, 0.35);
+            background: var(--panel-bg);
             border-radius: 8px;
             padding: 20px 24px 14px;
             border: 1px solid rgba(6, 11, 111, 0.12);
@@ -963,7 +972,7 @@
             font-size: 0.82rem;
             font-weight: 700;
             letter-spacing: 0.04em;
-            color: #b1d1cf;
+            color: var(--speaker);
         }
 
         .top-clip-talk {
@@ -1040,11 +1049,11 @@
 
         /* ── Video cards ── */
         .video-card {
-            background: rgba(255, 255, 255, 0.4);
+            background: var(--panel-bg);
             border-radius: 8px;
             overflow: hidden;
             transition: border-color 0.2s ease, opacity 0.3s ease, filter 0.3s ease;
-            border: 6px solid #e8e8f1;
+            border: 6px solid var(--stone);
             display: flex;
             flex-direction: column;
             width: 100%;
@@ -1234,7 +1243,7 @@
             height: 100%;
             max-width: 100%;
             max-height: 100%;
-            background: #f4f8f7;
+            background: #fffdf8;
             border-radius: 8px;
             border: 1px solid rgba(6, 11, 111, 0.14);
             overflow: hidden;
@@ -1253,7 +1262,7 @@
             justify-content: space-between;
             gap: 12px;
             padding: 12px 16px;
-            background: rgba(177, 209, 207, 0.35);
+            background: var(--page-bg);
             border-bottom: 1px solid rgba(6, 11, 111, 0.12);
             flex-shrink: 0;
         }
@@ -1329,7 +1338,7 @@
             flex: 1 1 auto;
             min-height: 0;
             overflow: hidden;
-            background: rgba(177, 209, 207, 0.12);
+            background: #f7f1e6;
         }
 
         .video-modal-panel {
@@ -1376,7 +1385,7 @@
             gap: 8px;
             padding: 8px 12px;
             border-bottom: 1px solid rgba(6, 11, 111, 0.1);
-            background: rgba(177, 209, 207, 0.28);
+            background: #f6e6cf;
             cursor: grab;
             touch-action: none;
             user-select: none;
@@ -1512,7 +1521,7 @@
             flex: 0 0 auto;
             padding: 8px 14px;
             border-bottom: 1px solid rgba(6, 11, 111, 0.1);
-            background: rgba(177, 209, 207, 0.18);
+            background: #f8efe2;
             display: flex;
             gap: 10px;
             align-items: center;
@@ -1530,7 +1539,7 @@
         .video-modal-transcript-search {
             flex: 1 1 auto;
             min-width: 0;
-            background: rgba(255, 255, 255, 0.65);
+            background: var(--page-bg);
             border: 1px solid rgba(6, 11, 111, 0.2);
             border-radius: 6px;
             color: #060b6f;
@@ -1672,7 +1681,7 @@
         }
 
         .video-modal-transcript-body .cue-text mark {
-            background: rgba(177, 209, 207, 0.75);
+            background: rgba(240, 200, 110, 0.7);
             color: #060b6f;
             border-radius: 2px;
             padding: 0 2px;
@@ -1696,7 +1705,7 @@
         }
 
         .video-modal-transcript-body .transcript-plain mark {
-            background: rgba(177, 209, 207, 0.75);
+            background: rgba(240, 200, 110, 0.7);
             color: #060b6f;
             border-radius: 2px;
             padding: 0 2px;
@@ -2093,7 +2102,7 @@
             overflow-y: auto;
             max-height: 360px;
             scrollbar-width: thin;
-            scrollbar-color: rgba(177, 209, 207, 0.6) transparent;
+            scrollbar-color: rgba(152, 108, 50, 0.45) transparent;
         }
 
         .transcript-body::-webkit-scrollbar {
@@ -2101,7 +2110,7 @@
         }
 
         .transcript-body::-webkit-scrollbar-thumb {
-            background: rgba(177, 209, 207, 0.6);
+            background: rgba(152, 108, 50, 0.45);
             border-radius: 3px;
         }
 
@@ -2131,7 +2140,7 @@
         }
 
         .cue-line:hover {
-            background: rgba(177, 209, 207, 0.14);
+            background: rgba(152, 108, 50, 0.12);
         }
 
         .cue-line:focus-visible {
