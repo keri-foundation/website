@@ -1,0 +1,905 @@
+1
+00:00:00,000 --> 00:00:03,700
+– Goedemiddag.
+
+2
+00:00:07,560 --> 00:00:12,380
+Mijn naam is Thomas Mayfield. Ik word
+vandaag vergezeld door mijn collega’s Fergal O
+
+3
+00:00:12,380 --> 00:00:16,720
+'Connor op het podium en Jeremy Furster in het
+publiek. Wij vertegenwoordigen hier de
+
+4
+00:00:16,720 --> 00:00:22,180
+Cardano Foundation, een in Zwitserland gevestigde non-profit-organisatie,
+en we zijn van heinde en verre
+
+5
+00:00:22,180 --> 00:00:26,260
+aangereisd. Jeremy is vanuit Taiwan gekomen,
+Fergal is vanuit Ierland gekomen, en
+
+6
+00:00:26,260 --> 00:00:30,480
+ikzelf ben vanuit het Verenigd
+Koninkrijk gekomen. En dat hebben we gedaan omdat wat
+
+7
+00:00:30,480 --> 00:00:35,960
+hier in de staat Utah gebeurt,
+een paradigmaverschuiving is op het gebied van digitale identiteit. En
+
+8
+00:00:35,960 --> 00:00:40,420
+wat we u vandaag graag willen laten zien,
+is de kunst van het mogelijke, het
+
+9
+00:00:40,420 --> 00:00:44,200
+potentieel van sommige van deze zaken waarover we
+vandaag hebben gehoord, zoals voogdij,
+
+10
+00:00:44,580 --> 00:00:48,840
+er voor uw burgers uit zou kunnen zien en hoe
+de staat deze
+
+11
+00:00:48,840 --> 00:00:56,020
+technologieën zou kunnen benutten. Voordat we met de demo beginnen, wil ik
+graag even iets zeggen. We
+
+12
+00:00:56,020 --> 00:00:59,920
+leven in een wereld waarin ons vertrouwen in
+overheidstechnologie en onze mede-
+
+13
+00:00:59,920 --> 00:01:05,960
+medeburgers elke dag verder afbrokkelt. Ik durf
+te beamen dat iedereen in deze zaal en
+
+14
+00:01:05,960 --> 00:01:10,440
+degenen die online meekijken, geloven dat de
+bescherming van kinderen onze meest
+
+15
+00:01:10,440 --> 00:01:15,960
+belangrijkste maatschappelijke verantwoordelijkheid is. Het is
+duidelijk dat het internet een krachtige
+
+16
+00:01:15,960 --> 00:01:22,320
+maar gevaarlijke plek is. Een plek waar we
+niet met zekerheid weten met wie we
+
+17
+00:01:22,320 --> 00:01:30,220
+met wie we online communiceren. Is het een volwassene of
+een kind? Is het een mens? Of een machine? Is het
+
+18
+00:01:30,220 --> 00:01:36,780
+een echt persoon of een roofdier? Er
+zijn talrijke statistieken beschikbaar en ik
+
+19
+00:01:36,780 --> 00:01:42,620
+wil er graag een paar uitlichten, gezien de
+tijdsbeperkingen die we vandaag hebben. In 2024,
+
+20
+00:01:42,920 --> 00:01:47,900
+meldde ChildLight, het Global Child Safety
+Institute, dat meer dan 300 miljoen
+
+21
+00:01:47,900 --> 00:01:54,100
+kinderen elk
+
+22
+00:01:54,100 --> 00:01:59,760
+jaar. Net als in het tragische verhaal dat we
+vanmorgen hoorden, zijn er meer dan 1300
+
+23
+00:01:59,760 --> 00:02:05,820
+meldingen gedaan over gewelddadige online
+groepen die kinderen aanmoedigen om zichzelf en
+
+24
+00:02:05,820 --> 00:02:13,480
+zichzelf en anderen kwaad te doen. Online games zijn
+jachtgebieden geworden voor roofdieren. Enkele
+
+25
+00:02:13,480 --> 00:02:20,760
+van de grootste zijn Roblox, Minecraft
+en Fortnite. Door Roblox zelf gemelde gevallen
+
+26
+00:02:20,760 --> 00:02:26,240
+van vermoedelijke seksuele uitbuiting van kinderen aan
+het National Center for Missing and
+
+27
+00:02:26,240 --> 00:02:37,500
+uitgebuite kinderen is tussen 2019 en 2024 dramatisch gestegen
+van 675 naar 24.000
+
+28
+00:02:37,500 --> 00:02:44,700
+gevallen. Alleen al in de eerste zes maanden van dit
+jaar heeft Roblox meer dan
+
+29
+00:02:44,700 --> 00:02:53,220
+gevallen gemeld dan in heel vorig jaar. In 2019 bleek uit een
+onderzoek onder meer dan 2.000 jonge Minecraft-
+
+30
+00:02:53,220 --> 00:02:59,480
+spelers uit dat bijna 10% was
+gevraagd door een andere speler om elkaar in het echte
+
+31
+00:02:59,480 --> 00:03:06,240
+leven te ontmoeten. Dat zijn bijna 200 kinderen en dat
+was zes jaar geleden. Dit aantal is
+
+32
+00:03:06,240 --> 00:03:10,920
+exponentieel gestegen. Er zijn talloze
+pogingen ondernomen om deze risico’s voor
+
+33
+00:03:10,920 --> 00:03:15,760
+kinderen aan te pakken. Deze pakken echter niet de
+kernproblemen aan: hoe we toegang krijgen tot het internet,
+
+34
+00:03:16,340 --> 00:03:22,120
+digitale inhoud, en de interacties
+waaraan kinderen worden blootgesteld. Vandaag zult u
+
+35
+00:03:22,120 --> 00:03:26,920
+voor het eerst ter wereld
+twee technologieën zien: de ‘Key Event Receipt’
+
+36
+00:03:26,920 --> 00:03:31,380
+infrastructuur, beter bekend als
+KERI, en ‘Authentic Chained Data
+
+37
+00:03:31,380 --> 00:03:36,420
+containers, ACDCs, die worden ingezet op een
+manier die geen enkele andere technologie
+
+38
+00:03:36,420 --> 00:03:43,680
+op dit moment kan evenaren. Het biedt een open source,
+door de overheid erkende, digitale identiteitsportemonnee
+
+39
+00:03:43,680 --> 00:03:50,400
+en ondersteunende diensten die zijn ontworpen om
+de controle weer in handen te geven van ouders en
+
+40
+00:03:50,400 --> 00:03:56,580
+voogden, waardoor zij in staat worden gesteld om een
+veilige en verifieerbare digitale toekomst te waarborgen voor
+
+41
+00:03:56,580 --> 00:04:00,860
+hun kinderen en de kinderen van hun
+kinderen. Wat we nu graag willen doen, is
+
+42
+00:04:00,860 --> 00:04:03,680
+u een demonstratie geven waarin gebruik wordt gemaakt van
+deze technologieën.
+
+43
+00:04:07,140 --> 00:04:11,380
+Wat Fergal aan de linkerkant gaat demonstreren,
+is een weergave
+
+44
+00:04:11,380 --> 00:04:16,300
+van het platform voor burgerlijke standgegevens
+van de staat Utah. Wat hij hier gaat doen, is
+
+45
+00:04:16,300 --> 00:04:21,100
+het afgeven van een geboorteakte. Dit kan
+een handmatig proces zijn dat wordt uitgevoerd door een
+
+46
+00:04:21,100 --> 00:04:25,700
+beheerder. Het kan een selectievakje zijn in
+een bestaand, geïntegreerd systeem. Het
+
+47
+00:04:25,700 --> 00:04:31,520
+het kan volledig geautomatiseerd zijn. Maar het punt
+hier is dat er bepaalde aspecten van
+
+48
+00:04:31,520 --> 00:04:36,380
+SEDI zijn die door de
+overheid moeten worden ingevoerd en andere die onder de
+
+49
+00:04:36,380 --> 00:04:42,900
+bevoegdheid van de ouders vallen. Fergal zet een
+peer-to-peer-kanaal op met de overheid,
+
+50
+00:04:43,120 --> 00:04:49,120
+waarbij hij gebruikmaakt van de mobiele portemonnee van het kind
+Oliver in de demonstratie van vandaag. De
+
+51
+00:04:49,120 --> 00:04:55,280
+ouder, Mary, heeft ook een peer-to-peer-
+communicatie tot stand gebracht. En zij zal
+
+52
+00:04:55,280 --> 00:05:01,640
+de overheid vragen om een geboorteakte
+voor haar kind uit te geven, evenals een
+
+53
+00:05:01,640 --> 00:05:06,600
+voogdijcertificaat. Dit is allemaal
+ACDC-technologie.
+
+54
+00:05:15,500 --> 00:05:20,060
+Wat er nu dus is gebeurd, is dat er een voogdijbewijs
+is afgegeven aan de ouder
+
+55
+00:05:20,060 --> 00:05:25,480
+en dat er een geboorteakte is afgegeven aan
+Oliver. server. Wat je hier online kunt zien
+
+56
+00:05:25,480 --> 00:05:30,340
+is dat deze toegangsvergunning allerlei
+informatie bevat, waaronder een directe link
+
+57
+00:05:30,340 --> 00:05:37,040
+mogelijk naar een bestandssysteem of server. Deze
+kan volledig worden aangepast op basis van het beleid.
+
+58
+00:05:37,540 --> 00:05:43,400
+En dat is het belangrijkste aspect.
+Het zijn niet de technologieleveranciers die dicteren wat
+
+59
+00:05:43,400 --> 00:05:50,340
+de overheid mag gebruiken. Dit is technologie die
+is ontwikkeld op basis van beleid en wetgeving. Nu
+
+60
+00:05:50,340 --> 00:05:54,760
+de geboorteakte is afgegeven en
+de voogdijverklaring nu is
+
+61
+00:05:54,760 --> 00:06:00,120
+aan Mary, de moeder, is afgegeven. En dit zou
+een relatie met meerdere handtekeningen kunnen zijn voor beide
+
+62
+00:06:00,120 --> 00:06:05,660
+ouders, bijvoorbeeld, wat allemaal mogelijk is met
+KERI- en ACDC-technologie. Nu zal Mary
+
+63
+00:06:05,660 --> 00:06:11,000
+gebruikmaken van het familieportaal. Dit is allemaal
+open-source-software die u hier
+
+64
+00:06:11,000 --> 00:06:16,880
+vandaag ziet. Dit zou op uw thuissysteem kunnen draaien,
+zoals een thuismediacenter, of het
+
+65
+00:06:16,880 --> 00:06:22,040
+door een derde partij worden aangeboden. Het
+belangrijkste verschil is dat dit niet te vergelijken is met
+
+66
+00:06:22,040 --> 00:06:27,140
+de gecentraliseerde systemen. De sleutels
+die de gegevens beheren, bevinden zich in de SEDI
+
+67
+00:06:27,140 --> 00:06:32,620
+wallet in handen van de ouder. Ze
+verlaten dat platform nooit. Ze komen nooit
+
+68
+00:06:32,620 --> 00:06:38,000
+naar dit systeem dat je nu ziet.
+Alles moet worden ondertekend en goedgekeurd aan
+
+69
+00:06:38,000 --> 00:06:43,220
+de rand of vanuit de wallet. Dus nu heeft Mary
+zich aangemeld bij dit systeem. Je zult merken
+
+70
+00:06:43,220 --> 00:06:47,020
+dat er geen gebruikersnamen of wachtwoorden waren.
+Dit staat bekend als wachtwoordloze
+
+71
+00:06:47,020 --> 00:06:52,880
+authenticatie. En nu toont Mary
+haar SEDI-inloggegevens aan het familieportaal.
+
+72
+00:06:52,880 --> 00:06:57,280
+Hierdoor kan het portaal bepalen
+welke functies voor haar beschikbaar moeten zijn.
+
+73
+00:06:57,940 --> 00:07:02,640
+Daarin zul je een aantal zaken zien
+verschijnen in de stamboom. Dit is die
+
+74
+00:07:02,640 --> 00:07:08,500
+koppelingsfunctie die zojuist
+werd genoemd in verband met ACDC-inloggegevens. In de
+
+75
+00:07:08,500 --> 00:07:13,580
+SEDI-wallet is niet alleen een referentie
+die de voogdijrelatie voor
+
+76
+00:07:13,580 --> 00:07:21,040
+Oliver, maar ook de voogdijrelatie
+met Liam, de vader van Liam. Dit zou dus bijvoorbeeld een
+
+77
+00:07:21,040 --> 00:07:25,180
+door een rechtbank afgegeven volmacht zijn.
+Het idee is om aan te tonen dat
+
+78
+00:07:25,180 --> 00:07:30,540
+al deze informatie kan worden opgenomen
+in een keten van referenties die
+
+79
+00:07:30,540 --> 00:07:34,740
+cryptografisch op elkaar zijn gebouwd,
+vergelijkbaar met dat scenario met de Lego
+
+80
+00:07:34,740 --> 00:07:40,600
+blokjes die zojuist op het scherm werden getoond. Dus nu
+hebben de ouders de mogelijkheid om
+
+81
+00:07:40,600 --> 00:07:47,540
+referenties uit te geven om bevoegdheden te delegeren aan hun
+kinderen, volledig los van de
+
+82
+00:07:47,540 --> 00:07:51,980
+staat. De staat heeft de
+toegangsgegevens verstrekt om het voogdijschap aan te tonen, maar nu
+
+83
+00:07:51,980 --> 00:07:57,860
+heeft de ouder de controle. Nu zal Mary
+een inloggegeven aan Oliver verstrekken en je zult
+
+84
+00:07:57,860 --> 00:08:02,460
+zien dat we hier drie scenario’s hebben
+besproken. Sociale media, streaming
+
+85
+00:08:02,460 --> 00:08:07,860
+en gameconsoles. We zullen
+een inloggegeven voor sociale media demonstreren en
+
+86
+00:08:07,860 --> 00:08:13,200
+de mogelijkheid om de kenmerken aan te passen.
+Wat je hier in eerste instantie ziet, is een
+
+87
+00:08:13,200 --> 00:08:18,420
+leeftijdsclassificatie op basis van gesprekken. Dit is de
+mogelijkheid voor ouders om de leeftijd te bepalen
+
+88
+00:08:18,420 --> 00:08:22,920
+waarmee ze willen dat hun kinderen
+omgaan. Omgaan. Ten tweede zul je zien
+
+89
+00:08:22,920 --> 00:08:27,620
+een tijdsbeperking. Ze kunnen parameters instellen
+met betrekking tot wanneer deze inloggegevens kunnen worden gebruikt,
+
+90
+00:08:27,860 --> 00:08:32,980
+wanneer deze platforms toegankelijk zijn. En
+ten slotte is er een inhoudsclassificatie die
+
+91
+00:08:32,980 --> 00:08:37,500
+door de ouder kan worden ingesteld. Je ziet onderaan een
+selectievakje met de tekst ‘veilige interacties inschakelen’
+
+92
+00:08:37,500 --> 00:08:43,040
+. Dit geeft aan
+het systeem dat, waar deze inloggegevens ook
+
+93
+00:08:43,040 --> 00:08:49,340
+worden aangeboden, deze gebruiker alleen
+kan communiceren met andere door SEDI goedgekeurde gebruikers.
+
+94
+00:08:50,360 --> 00:08:55,920
+Wat we nu gaan doen, is deze
+toegangsgegevens uitgeven. Maar voordat ik dat doe: dit is
+
+95
+00:08:55,920 --> 00:09:01,360
+slechts een voorbeeld. Het beleid bepaalt
+de parameters van deze toegangsgegevens, niet de
+
+96
+00:09:01,360 --> 00:09:05,460
+technische leveranciers. Dus zodra dat
+is vastgesteld, wat er precies in
+
+97
+00:09:05,460 --> 00:09:10,060
+deze inloggegevens komt te staan, wat die opties zijn,
+zal dat worden geïmplementeerd. Ze zijn
+
+98
+00:09:10,060 --> 00:09:14,740
+volledig flexibel. Wat je nu zult zien is
+dat Mary een verzoek ontvangt, want
+
+99
+00:09:14,740 --> 00:09:18,900
+hoewel het lijkt alsof dit systeem
+de referentie aanmaakt en uitgeeft,
+
+100
+00:09:18,900 --> 00:09:24,620
+is dat niet. Het is slechts een legoblokje om mee te bouwen,
+maar Mary moet ondertekenen met de sleutels die
+
+101
+00:09:24,620 --> 00:09:29,700
+zijn opgeslagen in haar SEDI-portemonnee, haar identiteit
+die daarin is opgenomen, om
+
+102
+00:09:29,700 --> 00:09:34,780
+deze handeling uit te voeren. En wat je nu zult
+zien, is dat het kind een melding krijgt op
+
+103
+00:09:34,780 --> 00:09:38,960
+op zijn telefoon waarin staat dat zijn moeder hem
+een toegangsbewijs wil toekennen en dat hij
+
+104
+00:09:38,960 --> 00:09:43,800
+dit toegangsbewijs ook moet goedkeuren om
+het te kunnen behouden en ontvangen. Wat je hier dus ziet
+
+105
+00:09:43,800 --> 00:09:48,900
+hier is niet alleen het bezit en de uitgifte, maar
+ook de mogelijkheid om gedecentraliseerde
+
+106
+00:09:48,900 --> 00:09:56,100
+verificatie, wat de volgende stap is. Dus
+nu Oliver een social
+
+107
+00:09:56,100 --> 00:10:01,480
+media-toegangsreferentie heeft ontvangen, kan hij zich nu
+aanmelden voor een nieuwe paradigmaverschuiving in
+
+108
+00:10:01,480 --> 00:10:06,140
+de sociale media die we vandaag
+Socialbook noemen. Je zult opnieuw merken
+
+109
+00:10:06,140 --> 00:10:11,600
+dat er geen gebruikersnamen en wachtwoorden zijn.
+Oliver zal online inloggen met zijn
+
+110
+00:10:11,600 --> 00:10:16,920
+gedelegeerde bevoegdheid van zijn moeder in een
+ACDC-toegangsbewijs op het Socialbook
+
+111
+00:10:16,920 --> 00:10:23,040
+platform. Oliver zal deze QR-code scannen
+die je op het scherm ziet om een peer-to
+
+112
+00:10:23,040 --> 00:10:28,520
+-peer-verbinding met SocialBook tot stand te brengen. Hij zal
+zijn e-mailadres invoeren, maar je zult merken dat Oliver
+
+113
+00:10:28,520 --> 00:10:33,160
+het systeem niet zal vertellen hoe oud hij
+is. De door de staat erkende digitale identiteit,
+
+114
+00:10:33,380 --> 00:10:38,600
+waardoor de moeder een
+toegangsgegeven voor sociale media kon aanmaken, zal
+
+115
+00:10:38,600 --> 00:10:46,240
+het platform op cryptografische wijze laten weten hoe
+oud Oliver is. Oliver zal zich nu registreren
+
+116
+00:10:46,240 --> 00:10:51,900
+bij het platform en zal vervolgens
+inloggen op het platform zonder gebruik te maken van gebruikersnamen en
+
+117
+00:10:51,900 --> 00:10:52,420
+wachtwoorden.
+
+118
+00:10:59,040 --> 00:11:04,440
+Zodra Oliver is ingelogd op het platform,
+gaan we nu onderzoeken hoe die
+
+119
+00:11:04,440 --> 00:11:09,900
+criteria en beperkingen die door
+zijn ouder zijn ingesteld, in een systeem kunnen worden gevisualiseerd.
+
+120
+00:11:10,200 --> 00:11:15,680
+Wat we hier hebben gedaan, is dat we
+de gegevens in dit bericht hebben voorzien van een metadatatag
+
+121
+00:11:15,680 --> 00:11:22,400
+die aangeeft tot welke inhoudscategorie
+deze afbeelding behoort. En omdat de
+
+122
+00:11:22,400 --> 00:11:27,720
+ouder die beperking heeft ingesteld op ‘tieners’,
+kan hij die afbeelding niet meer bekijken. Als hij
+
+123
+00:11:27,720 --> 00:11:32,080
+deze zou willen bekijken, zou hij erom kunnen vragen.
+Maar laten we nu verdergaan met de chat om
+
+124
+00:11:32,080 --> 00:11:36,700
+te laten zien hoe de chat nu gebruikmaakt van
+die leeftijdsbeperking. Wat je hier op
+
+125
+00:11:36,700 --> 00:11:41,340
+scherm hier zijn bestaande gesprekken die
+al gaande zijn. En je zult zien
+
+126
+00:11:41,340 --> 00:11:46,100
+dat er hieronder een aantal SEDI-tokens staan
+die aangeven dat dit gebruikers zijn die
+
+127
+00:11:46,100 --> 00:11:50,120
+gebruik hebben gemaakt van een op SEDI gebaseerde
+toegangsverificatie om toegang te krijgen tot en zich te registreren voor het
+
+128
+00:11:50,120 --> 00:11:55,460
+systeem. En je ziet daar ook andere gebruikers die
+rode labels hebben. Deze vallen buiten
+
+129
+00:11:55,460 --> 00:12:00,140
+de leeftijdsbeperkingen die zijn ingesteld door
+de moeder. In een scenario waarin Oliver
+
+130
+00:12:00,140 --> 00:12:06,860
+met Justin zou willen praten, moet hij
+toestemming krijgen van zijn ouders. In dit
+
+131
+00:12:06,860 --> 00:12:14,260
+scenario moet Mary daarvoor toestemming geven. Dit
+creëert een online bescherming waar ouders gebruik van kunnen maken
+
+132
+00:12:14,260 --> 00:12:19,260
+controle over hun kinderen
+op cryptografische wijze. Wat we nu gaan doen is
+
+133
+00:12:19,260 --> 00:12:27,060
+gaan we verder met een ander voorbeeld van hoe
+sociale media kunnen worden ingezet. We hebben een
+
+134
+00:12:27,060 --> 00:12:33,200
+aantal gesprekken gevoerd met sociale-mediaplatforms
+en met game-ontwikkelaars
+
+135
+00:12:33,200 --> 00:12:39,600
+. En we probeerden een
+proof of concept op te zetten waarbij gebruik werd gemaakt van gedecentraliseerde
+
+136
+00:12:39,600 --> 00:12:46,320
+identiteit. De meest voorkomende feedback die we
+kregen, was dat gedecentraliseerde identiteit te
+
+137
+00:12:46,320 --> 00:12:51,360
+complex is om in games te integreren. Games
+moeten gecentraliseerde servers hebben. De
+
+138
+00:12:51,360 --> 00:12:55,860
+identiteitssystemen moeten gecentraliseerd zijn in
+het platform om ervoor te zorgen dat de game- en gebruikerservaring
+
+139
+00:12:55,860 --> 00:13:00,880
+in stand blijft. Dus hoewel het
+concept en het idee achter een gecentraliseerde
+
+140
+00:13:00,880 --> 00:13:06,060
+identiteit krachtig is en ze begrepen
+welke waarde het zou kunnen opleveren, was hun standpunt
+
+141
+00:13:06,060 --> 00:13:11,380
+dat je deze
+uitgebreide technologie simpelweg niet kunt integreren. Dus gaf ik mijn team
+
+142
+00:13:11,380 --> 00:13:17,220
+taak aan mijn team om precies dat te doen. Dus,
+wat we hebben gedaan, is dat we
+
+143
+00:13:17,220 --> 00:13:22,880
+wegversperringen hebben gekloond. We noemen ze KERI-blokken.
+We hebben dit in minder dan twee weken voor elkaar gekregen. Gewoon
+
+144
+00:13:22,880 --> 00:13:26,080
+om je een idee te geven van het
+tijdsbestek: we zijn absoluut geen gameontwikkelaars
+
+145
+00:13:26,080 --> 00:13:30,680
+in geen geval. En wat je zult zien is dat
+Oliver zich nu gaat registreren en inloggen
+
+146
+00:13:30,680 --> 00:13:35,200
+op precies dezelfde manier op dit platform,
+waarbij hij gebruikmaakt van een inloggegeven dat
+
+147
+00:13:35,200 --> 00:13:40,360
+door zijn moeder aan hem is verstrekt om dit
+spel online te kunnen spelen. En al die beperkingen
+
+148
+00:13:40,360 --> 00:13:44,400
+en beperkingen die in
+de inloggegevens zijn ingebed, zullen ook van toepassing zijn op zijn
+
+149
+00:13:44,400 --> 00:13:50,140
+gebruik van dit spelplatform. Oliver
+zal zich dus bij het systeem aansluiten en hij zal beginnen met
+
+150
+00:13:50,140 --> 00:13:53,940
+met het spelen. En er zijn een aantal
+elementen die ik hier graag wil aanstippen.
+
+151
+00:13:55,940 --> 00:14:04,380
+De mate van agressief gedrag die
+zich voordoet in de in-game chat is een aanzienlijke
+
+152
+00:14:04,380 --> 00:14:11,960
+zorg. Wat je vandaag op het scherm hebt gedemonstreerd,
+is de mogelijkheid om leeftijds-
+
+153
+00:14:11,960 --> 00:14:18,500
+leeftijdsverificatie in een game te integreren. Dit is een
+volledige, op KERI en ACDC gebaseerde chat-
+
+154
+00:14:18,500 --> 00:14:25,620
+integratie in KERI-blokken. Al deze
+communicatie is digitaal ondertekend en
+
+155
+00:14:25,620 --> 00:14:30,040
+de leeftijd van de personen die
+met Oliver mogen communiceren, moet vallen binnen
+
+156
+00:14:30,040 --> 00:14:34,700
+de beperkingen die zijn vastgelegd in de
+toegangsgegevens. Een ander belangrijk aspect van
+
+157
+00:14:34,700 --> 00:14:43,660
+de zorgen rond games betreft aankopen. Vaak
+voeren ouders hun creditcardgegevens in
+
+158
+00:14:43,660 --> 00:14:50,420
+om op dat moment iets te kopen.
+Wat er dan gebeurt, is dat kinderen
+
+159
+00:14:50,420 --> 00:14:54,980
+hoge creditcardrekeningen hebben opgebouwd omdat
+die gegevens in het spel staan. De
+
+160
+00:14:54,980 --> 00:14:58,740
+kinderen kunnen op dingen klikken en ze
+kopen, en mama en papa komen er pas achter als
+
+161
+00:14:58,740 --> 00:15:03,480
+de rekening binnenkomt. Op precies dezelfde manier
+als Oliver toestemming moest vragen om
+
+162
+00:15:03,480 --> 00:15:08,000
+met iemand te praten die buiten de
+leeftijdsbeperkingen viel, moeten mama en papa ook
+
+163
+00:15:08,000 --> 00:15:14,020
+de aankoop goedkeuren. Nogmaals, dit is een
+volledig nieuwe paradigmaverschuiving op het gebied van
+
+164
+00:15:14,020 --> 00:15:20,180
+aankopen in games en ouderlijk toezicht voor
+mensen die gebruikmaken van online systemen. De
+
+165
+00:15:20,180 --> 00:15:26,260
+de komende één à twee minuten van wat u
+straks te zien krijgt, is de mogelijke toekomst voor
+
+166
+00:15:26,260 --> 00:15:31,060
+de gebruikers die Roblox gebruiken.
+Er zijn dagelijks 20 tot 40 miljoen gebruikers
+
+167
+00:15:31,060 --> 00:15:37,220
+die gebruikmaken van dit systeem. Er ligt hier een enorme
+kans vanuit commercieel
+
+168
+00:15:37,220 --> 00:15:44,200
+perspectief, maar er is ook een enorm risico dat
+met deze technologie kan worden opgelost. Ga
+
+169
+00:15:44,200 --> 00:15:47,040
+maar door. Laten we eens kijken of het geluid werkt.
+
+170
+00:15:50,500 --> 00:15:52,700
+Oké. Het geluid werkt niet, maar dat is
+niet erg.
+
+171
+00:15:55,660 --> 00:16:05,120
+Ga je gang. Doe het nog een keer. Oké.
+Veilig, draagbaar en zelfsoeverein.
+
+172
+00:16:05,720 --> 00:16:12,260
+Met deze identiteit kun je je
+eigen regels en vertrouwde kringen creëren met
+
+173
+00:16:12,260 --> 00:16:19,720
+cryptografisch bewijs. Stel leeftijdsgrenzen in voor
+je privéruimte. Bepaal je speeltijden
+
+174
+00:16:19,720 --> 00:16:27,240
+of verleen alleen toegang aan vrienden die je
+persoonlijk hebt goedgekeurd. In KERI-blokken bouw je
+
+175
+00:16:27,240 --> 00:16:33,240
+niet alleen werelden. Je stelt de
+regels op die daarin gelden, en creëert zo een
+
+176
+00:16:33,240 --> 00:16:40,480
+een aantoonbaar veilige en gepersonaliseerde
+spelervaring. Ontwikkeld door Veridian en
+
+177
+00:16:40,480 --> 00:16:48,380
+geïntegreerd met het NotBlocks.online-project,
+geeft KERI Blocks een nieuwe invulling aan hoe we spelen in een
+
+178
+00:16:48,380 --> 00:16:54,200
+verbonden wereld. Dus ik laat jullie hier achter met
+een gedachte. Aan de ouders en de
+
+179
+00:16:54,200 --> 00:17:01,400
+voogden in het publiek en die vandaag
+online meekijken. Als jullie konden kiezen tussen
+
+180
+00:17:01,400 --> 00:17:10,520
+deze veilige, betrouwbare en vriendelijke spelervaring
+voor jullie kinderen, of
+
+181
+00:17:10,520 --> 00:17:16,220
+een gokje wagen en gebruikmaken van de systemen
+die vandaag de dag beschikbaar zijn, welke keuze
+
+182
+00:17:16,220 --> 00:17:19,640
+zou u dan maken? Hartelijk dank voor
+uw tijd.
