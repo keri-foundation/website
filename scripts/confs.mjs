@@ -13,6 +13,8 @@
  * landing-pages   Copy the shared template into every gallery and stamp title /
  *                 description / canonical URL into the social meta tags from that
  *                 gallery's index.json (shell stays shared; only meta content varies).
+ *                 Also stamps DISCOVERED_SUBTITLE_LANGS with sibling caption files
+ *                 (`foo.nl.srt` next to `foo.srt`) so the page does not probe for them.
  * sync-subtitles  Copy curated .srt files from the source folders listed in
  *                 scripts/subtitle-sources.tsv into the conference folders. Only
  *                 subtitles referenced by that conference's index.json are copied
@@ -69,6 +71,48 @@ function setTagContent(html, pattern, value) {
   return html.replace(pattern, (match, prefix, _old, suffix) => `${prefix}${value}${suffix}`);
 }
 
+const SUBTITLE_LANG_MARKER = "/*__DISCOVERED_SUBTITLE_LANGS__*/{}";
+
+/** English subtitle path as stored in index.json, or null. */
+function englishSubtitleRel(video) {
+  if (typeof video?.subtitle === "string") return video.subtitle;
+  if (video?.subtitle && typeof video.subtitle === "object" && video.subtitle.src) {
+    return String(video.subtitle.src);
+  }
+  return null;
+}
+
+/**
+ * Map of English subtitle path → { lang: sibling path } for files that exist
+ * in the gallery (`foo.srt` → `foo.nl.srt`). Only real files are included.
+ */
+function discoveredSubtitleLangs(config, confDir) {
+  const map = {};
+  for (const video of config.videos || []) {
+    const english = englishSubtitleRel(video);
+    if (!english || isExternal(english) || english.startsWith("/")) continue;
+    const key = toPosix(english);
+    const langs = {};
+    for (const rel of discoverLanguageSubtitlePaths(key, confDir)) {
+      const match = basename(rel).match(/\.([a-z]{2,3})\.srt$/i);
+      if (!match) continue;
+      const lang = match[1].toLowerCase();
+      if (lang === "en") continue;
+      langs[lang] = rel;
+    }
+    const codes = Object.keys(langs).sort();
+    if (!codes.length) continue;
+    map[key] = Object.fromEntries(codes.map((code) => [code, langs[code]]));
+  }
+  const sorted = {};
+  for (const key of Object.keys(map).sort()) sorted[key] = map[key];
+  return sorted;
+}
+
+function embedJson(value) {
+  return JSON.stringify(value).replace(/</g, "\\u003c");
+}
+
 function stampLandingMeta(templateHtml, { title, description, url }) {
   const t = escapeAttr(title);
   const d = escapeAttr(description);
@@ -90,6 +134,9 @@ async function cmdLandingPages(opts) {
     throw new Error(`Missing template: ${LANDING_TEMPLATE}`);
   }
   const templateHtml = await readFile(LANDING_TEMPLATE, "utf8");
+  if (!templateHtml.includes(SUBTITLE_LANG_MARKER)) {
+    throw new Error("landing-pages: template missing DISCOVERED_SUBTITLE_LANGS marker");
+  }
   let updated = 0;
   let unchanged = 0;
   for (const id of await selectedConferences(opts)) {
@@ -99,7 +146,11 @@ async function cmdLandingPages(opts) {
     const description =
       page.subtitle || page.description || "Presentations and talks from the KERI Foundation.";
     const url = `${SITE_URL}/${galleryPrefix(id)}/`;
-    const html = stampLandingMeta(templateHtml, { title, description, url });
+    const langMap = discoveredSubtitleLangs(config, galleryDir(id));
+    const html = stampLandingMeta(templateHtml, { title, description, url }).replace(
+      SUBTITLE_LANG_MARKER,
+      embedJson(langMap)
+    );
     const dest = join(galleryDir(id), "index.html");
     let previous = null;
     try {
