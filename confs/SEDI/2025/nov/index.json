@@ -41,16 +41,16 @@
         "videoTitle": "Opening - Christopher Bramwell",
         "speaker": "Christopher Bramwell",
         "talk": "Opening",
-        "start": 730,
-        "end": 746,
+        "start": "12:10",
+        "end": "12:23",
         "quote": "Identity belongs to the person, not to the government. The government's role is not to create or control identity, but to endorse and protect it as a matter of public trust."
       },
       {
         "videoTitle": "Ryan Hurst",
         "speaker": "Ryan Hurst",
         "talk": "What Digital Identity Is",
-        "start": 401,
-        "end": 424,
+        "start": "06:43",
+        "end": "07:02",
         "quote": "Today I can generate a fake utility bill, birth certificate\u2026 I can do real-time deepfakes that are nearly impossible to distinguish. You cannot rely on a video call to authenticate who you're talking to anymore."
       },
       {
@@ -58,15 +58,15 @@
         "speaker": "Cindy George",
         "talk": "A Mother's Story",
         "start": 1388,
-        "end": 1403,
+        "end": "23:16",
         "quote": "I asked for your help because I can't catch them. My son died so needlessly."
       },
       {
         "videoTitle": "Daniel Hardman",
         "speaker": "Daniel Hardman",
         "talk": "Waves of Identity",
-        "start": 429,
-        "end": 443,
+        "start": "07:11",
+        "end": "07:23",
         "quote": "It would be really foolish to build an identity system that's not ready for post-quantum at this point, when NIST has already announced post-quantum standards."
       },
       {
@@ -81,8 +81,8 @@
         "videoTitle": "Paul Cutler",
         "speaker": "Paul Cutler",
         "talk": "The State's Role",
-        "start": 209,
-        "end": 229,
+        "start": "03:09",
+        "end": "04:01",
         "quote": "The role of the state is to endorse, verify, authenticate, protect, and guarantee an individual's digital identity. The role of the state is not to own, create, control, gatekeep, or surveil it."
       },
       {
@@ -90,32 +90,32 @@
         "speaker": "Jay Stanley",
         "talk": "Privacy and Digital ID",
         "start": 483,
-        "end": 503,
+        "end": "08:14",
         "quote": "Because some governor doesn't like your politics, revoke their digital ID and make them an unperson. That is a power a government has never had before."
       },
       {
         "videoTitle": "Jason Chipman",
         "speaker": "Jason Chipman",
         "talk": "Digital ID Risks",
-        "start": 67,
-        "end": 81,
+        "start": "01:10",
+        "end": "01.23",
         "quote": "Countries like the UK and the EU are pushing hard to create a mandatory surveillance regime through digital IDs \u2014 intended to trace every activity, every service."
       },
       {
         "videoTitle": "Timothy Ruff",
         "speaker": "Timothy Ruff",
         "talk": "SEDI Security Model",
-        "start": 456,
-        "end": 471,
+        "start": "07:37",
+        "end": "07:46",
         "quote": "SEDI expects compromise, then it can detect compromise, then it can contain compromise and recover."
       },
       {
         "videoTitle": "Thomas Mayfield",
         "speaker": "Thomas Mayfield",
         "talk": "Child Safety",
-        "start": 77,
-        "end": 97,
-        "quote": "The internet is a powerful but dangerous place. We do not know who we are interacting with. Is it an adult or a child? A human or a machine? A genuine person or a predator?"
+        "start": "01:14",
+        "end": "01:40",
+        "quote": "It is evident that the internet is a powerful but dangerous place. We do not know who we are interacting with. Is it an adult or a child? A human or a machine? A genuine person or a predator?"
       }
     ]
   },
