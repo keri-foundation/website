@@ -6619,7 +6619,9 @@
             async function bootGallery() {
                 const configUrl = window.GALLERY_CONFIG || 'index.json';
                 const url = new URL(configUrl, window.location.href);
-                const res = await fetch(url.href);
+                // Unique query so browsers and CDNs do not serve a stale index.json.
+                url.searchParams.set('nocache', String(Date.now()));
+                const res = await fetch(url.href, { cache: 'no-store' });
                 if (!res.ok) {
                     throw new Error(`Failed to load gallery config: ${url.href} (${res.status})`);
                 }
