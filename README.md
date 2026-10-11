@@ -85,7 +85,40 @@ confs/
 
 `index.json` → `transcriptsDir` (`transcripts/html`) tells both the gallery and the generator where HTML transcript pages live, for example `transcripts/html/talks/<video-id>.html`. Concatenated PDFs go under `transcripts/pdf/talks/`.
 
-`build` / `deploy` always copy `confs/template-presentations-landingpage/index.html` over each gallery’s `index.html`. Edit the template only; page copy, nav, and transcript links live in each gallery’s `index.json`.
+`build` / `deploy` always copy `confs/template-presentations-landingpage/index.html` over each gallery’s `index.html`. Edit the template only; page copy, nav, and transcript links live in each gallery’s `index.json`. See `confs/template-presentations-landingpage/index.json` for a full example shape.
+
+### Top clips (`topClips`)
+
+Optional teaser row on the gallery. Set `topClips.enabled` and list clips under `topClips.clips`. Each clip needs:
+
+| Field | Role |
+| ----- | ---- |
+| `videoTitle` | Must match a `videos[].title` in the same `index.json` |
+| `speaker` / `talk` | Labels on the card |
+| `start` / `end` | Clip range in the video (see below) |
+| `quote` | Short quote shown on the card |
+
+`start` and `end` accept either seconds or clock strings (same meaning either way):
+
+| Form | Example | Meaning |
+| ---- | ------- | ------- |
+| Seconds (number or string) | `730` or `"730"` | 730 seconds |
+| `MM:SS` / `M:SS` | `"12:10"` | 12 minutes 10 seconds |
+| `HH:MM:SS` | `"00:12:10"` | same as above |
+| Fractional seconds | `"12:10.5"` or `"00:12:10,500"` | optional |
+
+```json
+{
+  "videoTitle": "Opening - Christopher Bramwell",
+  "speaker": "Christopher Bramwell",
+  "talk": "Opening",
+  "start": "00:12:10",
+  "end": "00:12:26",
+  "quote": "Identity belongs to the person, not to the government."
+}
+```
+
+Clips with unparseable times or `end` ≤ `start` are skipped. Numeric seconds remain valid.
 
 ## Yearly videos (`/vids/<YEAR>/`)
 
