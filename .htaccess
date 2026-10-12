@@ -28,43 +28,11 @@ RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 RewriteBase /
 
 
-# BEGIN conf redirects
-# KERI Conference April 2026
-RewriteRule ^confs/2026/videos/?$ /confs/KERI/2026/apr/ [R=301,L]
-RewriteRule ^confs/2026/videos/index\.html$ /confs/KERI/2026/apr/ [R=301,L]
-RewriteRule ^confs/2026/videos/index\.json$ /confs/KERI/2026/apr/index.json [R=301,L]
-
-RewriteRule ^confs/2026/videos/KERICONF26/subtitles/([^/]+)$ /confs/KERI/2026/apr/talks/$1 [R=301,L,NE]
-RewriteRule ^confs/2026/videos/KERICONF26/presentations/([^/]+)$ /confs/KERI/2026/apr/slides/$1 [R=301,L,NE]
-RewriteRule ^confs/2026/videos/KERICONF26/transcripts/(.*)$ /confs/KERI/2026/apr/transcripts/html/talks/$1 [R=301,L,NE]
-RewriteRule ^confs/2026/videos/KERICONF26/([^/]+\.(mp4|mp3))$ /confs/KERI/2026/apr/talks/$1 [R=301,L,NE]
-
-RewriteRule ^confs/2026/videos/KERICONF26-interviews/subtitles/([^/]+\.srt)$ /confs/KERI/2026/apr/interviews/$1 [R=301,L,NE]
-RewriteRule ^confs/2026/videos/KERICONF26-interviews/transcripts/(.*)$ /confs/KERI/2026/apr/transcripts/html/interviews/$1 [R=301,L,NE]
-RewriteRule ^confs/2026/videos/KERICONF26-interviews/([^/]+\.(mp4|mp3))$ /confs/KERI/2026/apr/interviews/$1 [R=301,L,NE]
-
-RewriteRule ^confs/2026/videos/KERICONF26-promo/Keri2026Promo\.(mp4|jpg)$ /confs/KERI/2026/apr/promo/promo.$1 [R=301,L]
-
-# SEDI Summit November 2025
-RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/?$ /confs/SEDI/2025/nov/ [R=301,L]
-RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/index\.html$ /confs/SEDI/2025/nov/ [R=301,L]
-RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/index\.json$ /confs/SEDI/2025/nov/index.json [R=301,L]
-
-RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Morning-Session/speakers/([^/]+)$ /confs/SEDI/2025/nov/talks/morning-$1 [R=301,L,NE]
-RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Lunch-Panel/speakers/([^/]+)$ /confs/SEDI/2025/nov/talks/lunch-$1 [R=301,L,NE]
-RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Afternoon-Session/speakers/([^/]+)$ /confs/SEDI/2025/nov/talks/afternoon-$1 [R=301,L,NE]
-
-RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/speaker-photos/([^/]+)$ /confs/SEDI/2025/nov/speaker-photos/$1 [R=301,L,NE]
-RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/poster-sedi-summit\.jpg$ /confs/SEDI/2025/nov/promo/poster-sedi-summit.jpg [R=301,L]
-RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/transcripts/(.*)$ /confs/SEDI/2025/nov/transcripts/html/talks/$1 [R=301,L,NE]
-RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/pdf/([^/]+)$ /confs/SEDI/2025/nov/transcripts/pdf/talks/$1 [R=301,L,NE]
-# END conf redirects
-
 # BEGIN vids redirects
 # Standalone player moved into the 2026 gallery. /videos/ stays with WordPress.
+# /confs/ and /vids/ redirects live in those directories' .htaccess files.
+# LiteSpeed does not apply parent rewrite rules there.
 RewriteRule ^videos/sam-smith/Its-KERI-or-Surveillance/Its-KERI-or-Surveillance\.html$ /vids/2026/#it-s-keri-or-surveillance-samuel-smith [R=301,L,NE]
-# Former monthly path now lives at the year gallery.
-RewriteRule ^vids/2026/jul(?:/(.*))?$ /vids/2026/$1 [R=301,L,NE]
 # END vids redirects
 
 

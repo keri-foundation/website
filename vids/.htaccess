@@ -1,11 +1,17 @@
 # Hostinger/LiteSpeed ignores AutoIndexUri and HTML-escapes HEADER.html.
 # Serve a real PHP index instead, and rewrite bare subdirs to it.
+#
+# The /vids/2026/jul/ redirect lives here. LiteSpeed does not apply parent
+# rewrite rules once this directory enables its own rewrite engine.
 Options -Indexes
 DirectoryIndex index.html index.php
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /vids/
+
+# Former monthly path now lives at the year gallery.
+RewriteRule ^2026/jul(?:/(.*))?$ /vids/2026/$1 [R=301,L,NE]
 
 # Directories that already have index.html / index.php keep those.
 RewriteCond %{REQUEST_FILENAME} -d
