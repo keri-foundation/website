@@ -144,7 +144,7 @@ The old standalone player redirects here:
 
 `/videos/sam-smith/Its-KERI-or-Surveillance/Its-KERI-or-Surveillance.html` → `/vids/2026/#it-s-keri-or-surveillance-samuel-smith`
 
-`/vids/2026/jul/` redirects to `/vids/2026/`.
+`/vids/2026/jul/` redirects to `/vids/2026/` via `vids/.htaccess`.
 
 ### New conference
 
@@ -165,7 +165,7 @@ scripts/deploy-confs.sh --conf SEDI/2025/nov push
 scripts/deploy-confs.sh --conf vids/2026 push
 ```
 
-`push` and `deploy` also upload the site-root `.htaccess` (redirects), plus `confs/.htaccess` and `confs/index.php`. A full push mirrors every `confs/<ORG>/` folder and the whole `vids/` tree (so `vids/.htaccess` and `vids/index.php` ride along with that mirror). `--conf` limits the gallery mirror; site-root and `confs/` listing files are still uploaded.
+`push` and `deploy` also upload the site-root `.htaccess` (the `/videos/` redirect), plus `confs/.htaccess` (legacy `/confs/2026/videos/` redirects) and `confs/index.php`. A full push mirrors every `confs/<ORG>/` folder and the whole `vids/` tree (so `vids/.htaccess` and `vids/index.php` ride along with that mirror). `--conf` limits the gallery mirror; site-root and `confs/` listing files are still uploaded.
 
 ### Directory listings (`/confs/`, `/vids/`)
 
@@ -190,7 +190,7 @@ Do not rely on `HEADER.html` or LiteSpeed `AutoIndexUri` on this host.
 
 ### Legacy gallery URLs
 
-Old paths under `/confs/2026/videos/` are redirected with 301 rules in `.htaccess` (not separate “moved” HTML pages). Examples:
+Old paths under `/confs/2026/videos/` are redirected with 301 rules in `confs/.htaccess` (not the site-root file, and not separate “moved” HTML pages). LiteSpeed ignores parent rewrite rules once `confs/.htaccess` turns on its own rewrite engine. Examples:
 
 - `/confs/2026/videos/` → `/confs/KERI/2026/apr/`
 - `/confs/2026/videos/SEDI/2025-11-SEDI/` → `/confs/SEDI/2025/nov/`

@@ -7,7 +7,8 @@ set -euo pipefail
 # The server mirrors those trees. /videos/ is left for WordPress.
 #
 # The legacy tree confs/2026/ is never pushed or deleted by this script. Old gallery
-# URLs redirect with rules in .htaccess, which this script uploads on push.
+# URLs redirect with rules in confs/.htaccess (and vids/.htaccess), which this
+# script uploads on push. Site-root rules do not run under those directories.
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SITE_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
