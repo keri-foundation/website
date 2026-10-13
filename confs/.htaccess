@@ -1,5 +1,6 @@
 # Hostinger/LiteSpeed ignores AutoIndexUri and HTML-escapes HEADER.html.
-# Serve a real PHP index instead, and rewrite bare subdirs to it.
+# /confs/ is the generated overview (index.html). Bare subdirs without their
+# own index are rewritten to index.php.
 #
 # Legacy redirects live here, not in the site-root .htaccess. Once this
 # directory enables its own rewrite engine, LiteSpeed does not apply parent

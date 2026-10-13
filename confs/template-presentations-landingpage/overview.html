@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--
+  Shared overview of a media tree (confs/ or vids/).
+  deploy-confs.sh landing-pages stamps this file into each tree root as
+  index.html. Page copy comes from that tree's overview.json (next to
+  index.php). Cards come from every gallery index.json in the tree.
+  Do not edit confs/index.html or vids/index.html by hand.
+  Copy overview.json from this folder and tailor it beside each index.php.
+-->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Videos</title>
+    <meta name="description" content="Presentations and talks from the KERI Foundation.">
+    <link rel="canonical" href="https://keri.foundation/">
+    <link rel="icon" href="https://keri.foundation/custom/img/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="https://keri.foundation/custom/img/favicon-192x192.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="https://keri.foundation/custom/img/apple-touch-icon.png">
+    <meta name="msapplication-TileImage" content="https://keri.foundation/custom/img/mstile-270x270.png">
+    <!-- Open Graph / social previews (image from custom/img logo on brand background) -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="KERI Foundation">
+    <meta property="og:title" content="KERI Foundation Videos">
+    <meta property="og:description" content="Presentations and talks from the KERI Foundation.">
+    <meta property="og:url" content="https://keri.foundation/">
+    <meta property="og:image" content="https://keri.foundation/custom/img/logo-keri-foundation-og.png">
+    <meta property="og:image:secure_url" content="https://keri.foundation/custom/img/logo-keri-foundation-og.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="KERI Foundation logo">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="KERI Foundation Videos">
+    <meta name="twitter:description" content="Presentations and talks from the KERI Foundation.">
+    <meta name="twitter:image" content="https://keri.foundation/custom/img/logo-keri-foundation-og.png">
+    <meta name="twitter:image:alt" content="KERI Foundation logo">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;0,800;1,600&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --heading-font: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
+            --media-tone: brightness(1.02) contrast(0.92) saturate(0.72) sepia(0.16);
+            --page-bg: #fdefde;
+            --panel-bg: #f4f0e8;
+            --stone: #e8e6de;
+            --waves: url("https://keri.foundation/custom/img/waves-kim-1.png");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--page-bg);
+            color: #060b6f;
+            padding: 16px 8px;
+            min-height: 100vh;
+        }
+
+        a {
+            color: #0450a8;
+        }
+
+        a:hover {
+            color: #060b6f;
+        }
+
+        a:focus-visible {
+            outline: 2px solid #986c32;
+            outline-offset: 2px;
+        }
+
+        h1 a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        h1 a:hover,
+        h1 a:focus-visible {
+            text-decoration: underline;
+        }
+
+        .skip-link {
+            position: absolute;
+            left: 16px;
+            top: 16px;
+            z-index: 3000;
+            padding: 10px 16px;
+            background: #060b6f;
+            color: #fff;
+            font-weight: 700;
+            border-radius: 8px;
+            text-decoration: none;
+            transform: translateY(-200%);
+        }
+
+        .skip-link:focus,
+        .skip-link:focus-visible {
+            color: #fff;
+            transform: none;
+            outline: 2px solid #986c32;
+            outline-offset: 3px;
+        }
+
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            position: relative;
+            z-index: 0;
+            overflow: hidden;
+            text-align: center;
+            padding: 30px 20px;
+            margin-bottom: 20px;
+            background: var(--panel-bg);
+            border-radius: 8px;
+            border: 1px solid rgba(6, 11, 111, 0.12);
+        }
+
+        header > * {
+            position: relative;
+            z-index: 1;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 360px;
+            height: 208px;
+            background-image: var(--waves);
+            background-repeat: no-repeat;
+            background-position: left top;
+            background-size: 360px 208px;
+            transform: rotate(180deg);
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.55;
+        }
+
+        h1,
+        h1 a,
+        h2,
+        .video-title {
+            font-family: var(--heading-font);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.12;
+            margin-bottom: 10px;
+        }
+
+        .status-notice {
+            display: inline-block;
+            margin: 0 auto 18px;
+            padding: 10px 16px;
+            background: var(--page-bg);
+            color: #060b6f;
+            border-radius: 4px;
+            border: 1px solid rgba(6, 11, 111, 0.14);
+            border-left: 3px solid #986c32;
+            font-size: 0.9rem;
+            font-weight: 500;
+            max-width: 760px;
+            text-align: left;
+            line-height: 1.45;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #2e3a7a;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .gallery-nav {
+            margin-top: 14px;
+            font-size: 0.95rem;
+        }
+
+        .video-container {
+            padding: 8px 0 20px;
+        }
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 16px;
+            width: 100%;
+        }
+
+        .overview-empty {
+            grid-column: 1 / -1;
+            text-align: center;
+            color: #2e3a7a;
+            padding: 28px 16px;
+        }
+
+        .overview-card {
+            background: var(--panel-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 6px solid var(--stone);
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            transition: border-color 0.2s ease;
+        }
+
+        .overview-card:hover {
+            border-color: #986c32;
+        }
+
+        .overview-card-link {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .overview-card-link:hover {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .overview-card-link:focus-visible {
+            outline: 2px solid #986c32;
+            outline-offset: -4px;
+        }
+
+        .overview-poster {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 16 / 9;
+            background: #accfce;
+            overflow: hidden;
+        }
+
+        .overview-poster img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            filter: var(--media-tone);
+        }
+
+        .overview-poster-fallback {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overview-poster-fallback span {
+            font-family: var(--heading-font);
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: #060b6f;
+            opacity: 0.72;
+        }
+
+        .video-info {
+            padding: 16px 20px 18px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            flex: 1;
+        }
+
+        .video-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .overview-blurb {
+            color: #2e3a7a;
+            font-size: 0.95rem;
+            line-height: 1.45;
+        }
+
+        .video-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.9rem;
+            color: #2e3a7a;
+            margin-top: auto;
+        }
+
+        .overview-org {
+            font-weight: 700;
+            color: #060b6f;
+        }
+
+        .video-meta .sep {
+            margin: 0 0.35em;
+            opacity: 0.55;
+        }
+
+        .video-duration {
+            background: rgba(6, 11, 111, 0.1);
+            padding: 3px 8px;
+            border-radius: 20px;
+            color: #060b6f;
+            white-space: nowrap;
+        }
+
+        footer {
+            position: relative;
+            z-index: 0;
+            text-align: center;
+            padding: 30px 0 120px;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #2e3a7a;
+        }
+
+        footer::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 280px;
+            height: 161px;
+            background: var(--waves) right bottom / 280px 161px no-repeat;
+            pointer-events: none;
+            z-index: -1;
+            opacity: 0.85;
+        }
+
+        @media (max-width: 768px) {
+            header::after {
+                width: 220px;
+                height: 126px;
+                background-size: 220px 126px;
+            }
+
+            footer {
+                padding-bottom: 88px;
+            }
+
+            footer::after {
+                width: 180px;
+                height: 104px;
+                background-size: 180px 104px;
+            }
+        }
+
+        @media (max-width: 640px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .video-grid {
+                grid-template-columns: minmax(0, 1fr);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a class="skip-link" href="#mainContent">Skip to main content</a>
+    <div class="page">
+        <header id="galleryHeader"><!--__GALLERY_HEADER__--></header>
+
+        <main id="mainContent">
+            <div class="video-container">
+                <div class="video-grid" id="overviewGrid">
+<!--__OVERVIEW_CARDS__-->
+                </div>
+            </div>
+        </main>
+
+        <footer id="galleryFooter"><!--__OVERVIEW_FOOTER__--></footer>
+    </div>
+</body>
+
+</html>

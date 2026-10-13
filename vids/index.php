@@ -1,10 +1,11 @@
 <?php
 /**
- * Directory listing for a media tree root (confs/ or vids/) on Hostinger/LiteSpeed.
+ * Directory listing for bare folders under a media tree (confs/ or vids/).
  *
- * LiteSpeed HTML-escapes HEADER.html and ignores AutoIndexUri, so bare
- * directories are rewritten here (see .htaccess) or served via DirectoryIndex.
- * URI prefix is derived from this file's location under DOCUMENT_ROOT.
+ * The tree root itself is a generated index.html (see overview.html). LiteSpeed
+ * HTML-escapes HEADER.html and ignores AutoIndexUri, so bare subdirectories
+ * are rewritten here (see .htaccess). URI prefix is derived from this file's
+ * location under DOCUMENT_ROOT.
  */
 
 declare(strict_types=1);
