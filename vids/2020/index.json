@@ -1,0 +1,69 @@
+{
+  "page": {
+    "title": "2020 Videos",
+    "heading": "2020 Videos",
+    "headingHref": "/vids/2020/",
+    "statusNotice": "",
+    "subtitle": "Samuel Smith's Nonconformist keynote on the economics of its and bits",
+    "footer": "KERI Foundation • Videos",
+    "searchPlaceholder": "Type to search this talk…",
+    "searchLabel": "Search transcript",
+    "nav": [
+      {
+        "label": "Home",
+        "href": "/",
+        "external": false
+      },
+      {
+        "label": "All Transcripts (PDF)",
+        "href": "transcripts/pdf/talks/vids-2020-Transcripts.pdf",
+        "external": false
+      },
+      {
+        "label": "2024 Videos",
+        "href": "/vids/2024/",
+        "external": false
+      },
+      {
+        "label": "2026 Videos",
+        "href": "/vids/2026/",
+        "external": false
+      },
+      {
+        "label": "KERI Conference April 2026",
+        "href": "/confs/KERI/2026/apr/",
+        "external": false
+      },
+      {
+        "label": "SEDI Summit November 2025",
+        "href": "/confs/SEDI/2025/nov/",
+        "external": false
+      }
+    ],
+    "transcriptLinks": [
+      {
+        "label": "Talk transcripts",
+        "href": "transcripts/html/talks/"
+      }
+    ]
+  },
+  "days": [
+    "July 2020"
+  ],
+  "transcriptsDir": "transcripts/html",
+  "speakerPhotos": {
+    "Samuel Smith": "https://kericonf.com/wp-content/uploads/2025/11/Samuel-Smith.jpg"
+  },
+  "videos": [
+    {
+      "order": 1,
+      "day": "July 2020",
+      "title": "Nonconformist Keynote - Samuel Smith",
+      "speaker": "Samuel Smith",
+      "path": "talks/NonconformistKeynoteWeb20200702.mp4",
+      "duration": "34:55",
+      "subtitle": "talks/NonconformistKeynoteWeb20200702.srt",
+      "presentation": "slides/NonconformistKeynoteWeb20200702.pdf"
+    }
+  ]
+}
