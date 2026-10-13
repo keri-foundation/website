@@ -224,20 +224,18 @@ function renderTalkPage({
     :root {
       --ink: #060b6f;
       --muted: #2e3a7a;
-      --bg: #b1d1cf;
-      --panel: rgba(255, 255, 255, 0.55);
+      --bg: #fdefde;
+      --panel: #f4f0e8;
       --accent: #986c32;
       --link: #0450a8;
+      --waves: url("https://keri.foundation/custom/img/waves-kim-1.png");
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
       min-height: 100vh;
       font-family: "Source Serif 4", Georgia, serif;
-      background:
-        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(255,255,255,0.45), transparent),
-        radial-gradient(ellipse 60% 40% at 100% 0%, rgba(152,108,50,0.12), transparent),
-        var(--bg);
+      background: var(--bg);
       color: var(--ink);
       padding: 24px 16px 48px;
       line-height: 1.55;
@@ -251,11 +249,31 @@ function renderTalkPage({
     nav a { color: var(--link); }
     nav a:hover { color: var(--ink); }
     header {
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
       background: var(--panel);
       border: 1px solid rgba(6, 11, 111, 0.12);
       border-radius: 10px;
       padding: 1.25rem 1.4rem;
       margin-bottom: 1.5rem;
+    }
+    header > * { position: relative; z-index: 1; }
+    header::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 360px;
+      height: 208px;
+      background-image: var(--waves);
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 360px 208px;
+      transform: rotate(180deg);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.55;
     }
     h1 {
       font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
@@ -287,7 +305,7 @@ function renderTalkPage({
       border-radius: 8px;
       padding: 0.55rem 0.9rem;
     }
-    .actions a:hover { background: rgba(152, 108, 50, 0.28); }
+    .actions a:hover { background: rgba(152, 108, 50, 0.32); }
     .actions a.primary {
       background: var(--ink);
       color: #fff;
@@ -320,11 +338,39 @@ function renderTalkPage({
     .cue-time:hover { color: var(--ink); text-decoration: underline; }
     .cue-text { font-size: 1.05rem; }
     footer {
+      position: relative;
+      z-index: 0;
       font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
       margin-top: 2rem;
+      padding-bottom: 7.5rem;
       font-size: 0.85rem;
       color: var(--muted);
       text-align: center;
+    }
+    footer::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 220px;
+      height: 126px;
+      background: var(--waves) right bottom / 220px 126px no-repeat;
+      pointer-events: none;
+      z-index: -1;
+      opacity: 0.85;
+    }
+    @media (max-width: 768px) {
+      header::after {
+        width: 220px;
+        height: 126px;
+        background-size: 220px 126px;
+      }
+      footer { padding-bottom: 5.5rem; }
+      footer::after {
+        width: 160px;
+        height: 92px;
+        background-size: 160px 92px;
+      }
     }
     @media (max-width: 520px) {
       .cue { grid-template-columns: 1fr; gap: 0.2rem; }
@@ -403,17 +449,17 @@ ${items}
     :root {
       --ink: #060b6f;
       --muted: #2e3a7a;
-      --bg: #b1d1cf;
-      --panel: rgba(255, 255, 255, 0.55);
+      --bg: #fdefde;
+      --panel: #f4f0e8;
       --link: #0450a8;
+      --waves: url("https://keri.foundation/custom/img/waves-kim-1.png");
     }
     * { box-sizing: border-box; }
     body {
       margin: 0;
+      min-height: 100vh;
       font-family: "Source Serif 4", Georgia, serif;
-      background:
-        radial-gradient(ellipse 80% 50% at 10% -10%, rgba(255,255,255,0.45), transparent),
-        var(--bg);
+      background: var(--bg);
       color: var(--ink);
       padding: 24px 16px 48px;
       line-height: 1.5;
@@ -424,13 +470,41 @@ ${items}
     }
     nav { font-size: 0.9rem; margin-bottom: 1rem; }
     nav a, a { color: var(--link); }
+    nav a:hover { color: var(--ink); }
+    header {
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+      background: var(--panel);
+      border: 1px solid rgba(6, 11, 111, 0.12);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    header > * { position: relative; z-index: 1; }
+    header::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 360px;
+      height: 208px;
+      background-image: var(--waves);
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 360px 208px;
+      transform: rotate(180deg);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.55;
+    }
     h1 {
       font-weight: 800;
       letter-spacing: -0.03em;
       font-size: clamp(1.5rem, 3vw, 2rem);
       margin: 0 0 0.35rem;
     }
-    .lead { color: var(--muted); margin: 0 0 1.5rem; }
+    .lead { color: var(--muted); margin: 0; }
     section {
       background: var(--panel);
       border: 1px solid rgba(6, 11, 111, 0.12);
@@ -443,19 +517,49 @@ ${items}
     li { margin: 0.35rem 0; }
     .dur { color: var(--muted); font-size: 0.85rem; font-weight: 600; }
     footer {
+      position: relative;
+      z-index: 0;
       font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
       margin-top: 2rem;
+      padding-bottom: 7.5rem;
       font-size: 0.85rem;
       color: var(--muted);
       text-align: center;
+    }
+    footer::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 220px;
+      height: 126px;
+      background: var(--waves) right bottom / 220px 126px no-repeat;
+      pointer-events: none;
+      z-index: -1;
+      opacity: 0.85;
+    }
+    @media (max-width: 768px) {
+      header::after {
+        width: 220px;
+        height: 126px;
+        background-size: 220px 126px;
+      }
+      footer { padding-bottom: 5.5rem; }
+      footer::after {
+        width: 160px;
+        height: 92px;
+        background-size: 160px 92px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="wrap">
     <nav><a href="${escHtml(galleryHref)}">${escHtml(chrome.heading)}</a></nav>
-    <h1>Transcripts</h1>
-    <p class="lead">Full text of each talk. Open a transcript, then jump to the matching moment in the video.</p>
+    <header>
+      <h1>Transcripts</h1>
+      <p class="lead">Full text of each talk. Open a transcript, then jump to the matching moment in the video.</p>
+    </header>
 ${sections}
     <footer>${escHtml(chrome.footer)}</footer>
   </div>
