@@ -2895,9 +2895,15 @@
                 btn.className = 'plyr__control plyr__control--overlay-seek';
                 btn.setAttribute('aria-label', label);
                 btn.setAttribute('title', title);
-                btn.addEventListener('click', (e) => {
+                const keepSeekOnly = (e) => {
                     e.preventDefault();
                     e.stopPropagation();
+                };
+                // A second click is also a dblclick. Plyr turns that into fullscreen
+                // unless it is stopped before it reaches the player container.
+                btn.addEventListener('dblclick', keepSeekOnly);
+                btn.addEventListener('click', (e) => {
+                    keepSeekOnly(e);
                     onClick();
                 });
 
@@ -3176,6 +3182,20 @@
                 window.matchMedia('(min-width: 769px) and (hover: none) and (pointer: coarse)').addEventListener('change', syncButtons);
             }
 
+            function disableDoubleClickFullscreen(player) {
+                const container = player?.elements?.container;
+                if (!container || container.dataset.dblclickFullscreenDisabled === 'true') return;
+                container.dataset.dblclickFullscreenDisabled = 'true';
+                // Plyr toggles fullscreen on dblclick anywhere outside .plyr__controls.
+                // The center seek buttons sit outside that bar, and a fast second click
+                // on rewind or fast-forward is a dblclick, so both gestures entered
+                // fullscreen. The fullscreen control still uses a normal click.
+                container.addEventListener('dblclick', (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                }, true);
+            }
+
             function initPlyrVideo(videoEl, options = {}) {
                 if (!videoEl || !window.Plyr || videoEl.dataset.plyrInitialized === 'true') return null;
                 if (!videoEl.isConnected) {
@@ -3191,6 +3211,7 @@
                 const player = new window.Plyr(videoEl, getPlyrConfig());
                 videoEl.dataset.plyrInitialized = 'true';
                 videoEl._plyrPlayer = player;
+                disableDoubleClickFullscreen(player);
                 enhanceOverlaidPlayToggle(player, plyrConfig.iconUrl);
                 attachMobilePlaybackRecovery(videoEl, player);
                 attachIosNativeCaptionBridge(videoEl, player);
