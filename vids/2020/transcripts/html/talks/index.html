@@ -14,8 +14,9 @@
       --muted: #2e3a7a;
       --bg: #fdefde;
       --panel: #f4f0e8;
+      --accent: #986c32;
       --link: #0450a8;
-      --waves: url("https://keri.foundation/custom/img/waves-kim-1.png");
+      --waves: url("/custom/img/waves-kim-1.png");
     }
     * { box-sizing: border-box; }
     body {
@@ -39,7 +40,7 @@
       z-index: 0;
       overflow: hidden;
       background: var(--panel);
-      border: 1px solid rgba(6, 11, 111, 0.12);
+      border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
       border-radius: 10px;
       padding: 1.25rem 1.4rem;
       margin-bottom: 1.5rem;
@@ -70,7 +71,7 @@
     .lead { color: var(--muted); margin: 0; }
     section {
       background: var(--panel);
-      border: 1px solid rgba(6, 11, 111, 0.12);
+      border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
       border-radius: 10px;
       padding: 1rem 1.25rem;
       margin-bottom: 1rem;

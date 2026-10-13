@@ -85,13 +85,14 @@ confs/
 └── template-presentations-landingpage/   shared gallery shell and overview template
     ├── index.html                  gallery app, copied into every gallery on build
     ├── index.json                  example gallery config
+    ├── brand.json                  site name, icons, share image, wave, and colors
     ├── overview.html               overview shell for /confs/ and /vids/
     └── overview.json               example overview config
 ```
 
 `index.json` → `transcriptsDir` (`transcripts/html`) tells both the gallery and the generator where HTML transcript pages live, for example `transcripts/html/talks/<video-id>.html`. Concatenated PDFs go under `transcripts/pdf/talks/`.
 
-`build` / `deploy` always copy `confs/template-presentations-landingpage/index.html` over each gallery’s `index.html`. Edit the template only; page copy, nav, and transcript links live in each gallery’s `index.json`. That copy step writes the page header and `page.transcriptLinks` into the HTML as real content. See `confs/template-presentations-landingpage/index.json` for a full example shape.
+`build` / `deploy` always copy `confs/template-presentations-landingpage/index.html` over each gallery’s `index.html`. Edit the template only; page copy, nav, and transcript links live in each gallery’s `index.json`. That copy step writes the page header and `page.transcriptLinks` into the HTML as real content, and stamps the site chrome from `confs/template-presentations-landingpage/brand.json` (name, icons, share image, wave, colors). A gallery may override that with its own `brand` object. See `confs/template-presentations-landingpage/index.json` for a full example shape. Paths in `brand.json` that start with `/` are site-root paths; the stamp turns icon and share-image URLs into absolute links with `SITE_URL`.
 
 The same step writes `confs/index.html` and `vids/index.html` from `overview.html`. Page copy for those overviews lives in `confs/overview.json` and `vids/overview.json` (copy `template-presentations-landingpage/overview.json` and tailor it). Each card is filled from that gallery’s `index.json` (heading, subtitle, poster, video counts). Do not edit the generated `index.html` files by hand.
 

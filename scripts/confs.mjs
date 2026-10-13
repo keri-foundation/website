@@ -12,7 +12,9 @@
  *                 Conferences are ORG/YEAR/month. Video galleries are vids/YEAR.
  * landing-pages   Copy the shared template into every gallery and stamp title /
  *                 description / canonical URL into the social meta tags from that
- *                 gallery's index.json (shell stays shared; only meta content varies).
+ *                 gallery's index.json. Site name, icons, share image, wave, and
+ *                 colors come from template-presentations-landingpage/brand.json
+ *                 (a gallery index.json "brand" object overrides that gallery).
  *                 Also writes the page header and page.transcriptLinks into the
  *                 HTML as real content, and stamps DISCOVERED_SUBTITLE_LANGS with
  *                 sibling caption files (`foo.nl.srt` next to `foo.srt`) so the
@@ -38,6 +40,7 @@ import { existsSync, readdirSync } from "node:fs";
 import { basename, dirname, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { homedir } from "node:os";
+import { absoluteAsset, brandThemeStyle, loadBrand, mergeBrand } from "./brand.mjs";
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const SITE_ROOT = resolve(SCRIPT_DIR, "..");
@@ -79,6 +82,8 @@ function setTagContent(html, pattern, value) {
 }
 
 const SUBTITLE_LANG_MARKER = "/*__DISCOVERED_SUBTITLE_LANGS__*/{}";
+const SITE_BRAND_MARKER = "/*__SITE_BRAND__*/ null";
+const BRAND_THEME_RE = /<style id="brand-theme">[\s\S]*?<\/style>/;
 const TRANSCRIPT_NAV_MARKER =
   '<nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Transcript indexes" hidden><!--__TRANSCRIPT_LINKS__--></nav>';
 const GALLERY_HEADER_MARKER = "<!--__GALLERY_HEADER__-->";
@@ -249,7 +254,36 @@ function stampGalleryHeader(html, page, pageUrl) {
   return html.replace(GALLERY_HEADER_MARKER, renderGalleryHeader(page, pageUrl));
 }
 
-function stampLandingMeta(templateHtml, { title, description, url }) {
+function originOf(pageUrl) {
+  try {
+    return new URL(pageUrl).origin;
+  } catch {
+    return SITE_URL;
+  }
+}
+
+function setIf(html, pattern, value) {
+  if (value == null || String(value).trim() === "") return html;
+  return setTagContent(html, pattern, escapeAttr(value));
+}
+
+/** Absolute share/icon URLs for meta tags. The wave stays as authored for CSS. */
+function clientBrand(brand, origin) {
+  return {
+    ...brand,
+    colors: { ...(brand.colors || {}) },
+    favicon32: absoluteAsset(origin, brand.favicon32),
+    favicon192: absoluteAsset(origin, brand.favicon192),
+    appleTouchIcon: absoluteAsset(origin, brand.appleTouchIcon),
+    msTile: absoluteAsset(origin, brand.msTile),
+    image: absoluteAsset(origin, brand.image),
+  };
+}
+
+function stampLandingMeta(templateHtml, { title, description, url, brand }) {
+  const b = brand || {};
+  const origin = originOf(url);
+  const abs = (value) => absoluteAsset(origin, value);
   const t = escapeAttr(title);
   const d = escapeAttr(description);
   const u = escapeAttr(url);
@@ -262,6 +296,25 @@ function stampLandingMeta(templateHtml, { title, description, url }) {
   html = setTagContent(html, /(<meta\s+property="og:url"\s+content=")([^"]*)(")/i, u);
   html = setTagContent(html, /(<meta\s+name="twitter:title"\s+content=")([^"]*)(")/i, t);
   html = setTagContent(html, /(<meta\s+name="twitter:description"\s+content=")([^"]*)(")/i, d);
+  html = setIf(html, /(<meta\s+property="og:site_name"\s+content=")([^"]*)(")/i, b.siteName);
+  html = setIf(html, /(<link\s+rel="icon"\s+href=")([^"]*)("\s+sizes="32x32")/i, abs(b.favicon32));
+  html = setIf(html, /(<link\s+rel="icon"\s+href=")([^"]*)("\s+sizes="192x192")/i, abs(b.favicon192));
+  html = setIf(html, /(<link\s+rel="apple-touch-icon"\s+href=")([^"]*)(")/i, abs(b.appleTouchIcon));
+  html = setIf(html, /(<meta\s+name="msapplication-TileImage"\s+content=")([^"]*)(")/i, abs(b.msTile));
+  html = setIf(html, /(<meta\s+property="og:image"\s+content=")([^"]*)(")/i, abs(b.image));
+  html = setIf(html, /(<meta\s+property="og:image:secure_url"\s+content=")([^"]*)(")/i, abs(b.image));
+  html = setIf(html, /(<meta\s+property="og:image:alt"\s+content=")([^"]*)(")/i, b.imageAlt);
+  html = setIf(html, /(<meta\s+property="og:image:width"\s+content=")([^"]*)(")/i, b.imageWidth);
+  html = setIf(html, /(<meta\s+property="og:image:height"\s+content=")([^"]*)(")/i, b.imageHeight);
+  html = setIf(html, /(<meta\s+name="twitter:image"\s+content=")([^"]*)(")/i, abs(b.image));
+  html = setIf(html, /(<meta\s+name="twitter:image:alt"\s+content=")([^"]*)(")/i, b.imageAlt);
+  if (!BRAND_THEME_RE.test(html)) {
+    throw new Error("landing-pages: template missing #brand-theme");
+  }
+  html = html.replace(BRAND_THEME_RE, brandThemeStyle(b));
+  if (html.includes(SITE_BRAND_MARKER)) {
+    html = html.replace(SITE_BRAND_MARKER, embedJson(clientBrand(b, origin)));
+  }
   return html;
 }
 
@@ -270,6 +323,7 @@ async function cmdLandingPages(opts) {
     throw new Error(`Missing template: ${LANDING_TEMPLATE}`);
   }
   const templateHtml = await readFile(LANDING_TEMPLATE, "utf8");
+  const siteBrand = loadBrand();
   if (!templateHtml.includes(SUBTITLE_LANG_MARKER)) {
     throw new Error("landing-pages: template missing DISCOVERED_SUBTITLE_LANGS marker");
   }
@@ -284,14 +338,15 @@ async function cmdLandingPages(opts) {
   for (const id of await selectedConferences(opts)) {
     const config = await loadConfig(id);
     const page = config.page || {};
-    const title = page.title || page.heading || "KERI Foundation Videos";
+    const brand = mergeBrand(siteBrand, config.brand);
+    const title = page.title || page.heading || brand.titleFallback || "Videos";
     const description =
-      page.subtitle || page.description || "Presentations and talks from the KERI Foundation.";
+      page.subtitle || page.description || brand.descriptionFallback || "Presentations and talks.";
     const url = `${SITE_URL}/${galleryPrefix(id)}/`;
     const langMap = discoveredSubtitleLangs(config, galleryDir(id));
     const html = stampGalleryHeader(
       stampTranscriptLinks(
-        stampLandingMeta(templateHtml, { title, description, url }).replace(
+        stampLandingMeta(templateHtml, { title, description, url, brand }).replace(
           SUBTITLE_LANG_MARKER,
           embedJson(langMap)
         ),
@@ -471,9 +526,10 @@ async function cmdOverviewPages(opts) {
       throw new Error(`${page.configPath}: scope must be "${page.scope}"`);
     }
     const pageCopy = overview.page || {};
-    const title = pageCopy.title || pageCopy.heading || "KERI Foundation Videos";
+    const brand = mergeBrand(loadBrand(), overview.brand);
+    const title = pageCopy.title || pageCopy.heading || brand.titleFallback || "Videos";
     const description =
-      pageCopy.subtitle || pageCopy.description || "Presentations and talks from the KERI Foundation.";
+      pageCopy.subtitle || pageCopy.description || brand.descriptionFallback || "Presentations and talks.";
     const url = `${SITE_URL}/${page.scope}/`;
     const ids = all.filter((id) => (page.scope === "vids" ? isVidsGallery(id) : !isVidsGallery(id)));
     ids.sort((a, b) => gallerySortKey(b) - gallerySortKey(a) || a.localeCompare(b));
@@ -494,7 +550,7 @@ async function cmdOverviewPages(opts) {
       });
     }
     const html = stampGalleryHeader(
-      stampLandingMeta(templateHtml, { title, description, url }),
+      stampLandingMeta(templateHtml, { title, description, url, brand }),
       pageCopy,
       url
     )
