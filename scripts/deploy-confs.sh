@@ -33,7 +33,7 @@ Usage: scripts/deploy-confs.sh [options] <command>...
 Commands (run in the order given):
   list            Show galleries: confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/
   subtitles       Copy curated .srt files from scripts/subtitle-sources.tsv (no-op when that file has no sources; edit SRTs in place under the gallery)
-  landing-pages   Copy the shared template into every gallery and stamp social meta from index.json
+  landing-pages   Copy the shared template into every gallery, stamp social meta, and hardcode transcript links from index.json
   transcripts     Regenerate the static transcript HTML pages from the .srt files
   pdfs            Build concatenated transcript PDFs under each gallery's transcripts/pdf/
   verify          Check every file referenced by each index.json exists locally
@@ -144,7 +144,7 @@ step_subtitles() {
 
 # Shared gallery shell: one template, stamped into every conference / vids gallery.
 # Page copy stays in each gallery's index.json. index.html is generated from the
-# template (social meta title/description/url stamped per gallery) — do not edit
+# template (social meta and transcript nav links stamped per gallery) — do not edit
 # gallery index.html files by hand.
 step_landing_pages() {
     echo "── Landing pages (template → galleries)"

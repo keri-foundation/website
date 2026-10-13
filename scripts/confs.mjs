@@ -13,8 +13,10 @@
  * landing-pages   Copy the shared template into every gallery and stamp title /
  *                 description / canonical URL into the social meta tags from that
  *                 gallery's index.json (shell stays shared; only meta content varies).
- *                 Also stamps DISCOVERED_SUBTITLE_LANGS with sibling caption files
- *                 (`foo.nl.srt` next to `foo.srt`) so the page does not probe for them.
+ *                 Also writes page.transcriptLinks into the transcript nav as real
+ *                 <a href> elements, and stamps DISCOVERED_SUBTITLE_LANGS with
+ *                 sibling caption files (`foo.nl.srt` next to `foo.srt`) so the
+ *                 page does not probe for them.
  * sync-subtitles  Copy curated .srt files from the source folders listed in
  *                 scripts/subtitle-sources.tsv into the conference folders. Only
  *                 subtitles referenced by that conference's index.json are copied
@@ -72,6 +74,8 @@ function setTagContent(html, pattern, value) {
 }
 
 const SUBTITLE_LANG_MARKER = "/*__DISCOVERED_SUBTITLE_LANGS__*/{}";
+const TRANSCRIPT_NAV_MARKER =
+  '<nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Transcript indexes" hidden><!--__TRANSCRIPT_LINKS__--></nav>';
 
 /** English subtitle path as stored in index.json, or null. */
 function englishSubtitleRel(video) {
@@ -113,6 +117,42 @@ function embedJson(value) {
   return JSON.stringify(value).replace(/</g, "\\u003c");
 }
 
+function escapeText(value) {
+  return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
+}
+
+/** Same filter as renderTranscriptLinks() in the gallery template. */
+function transcriptLinkItems(page) {
+  const links = Array.isArray(page && page.transcriptLinks) ? page.transcriptLinks : [];
+  return links.filter(
+    (item) =>
+      item &&
+      typeof item.href === "string" &&
+      item.href.trim() &&
+      typeof item.label === "string" &&
+      item.label.trim()
+  );
+}
+
+function renderTranscriptNav(links) {
+  const parts = [];
+  links.forEach((item, i) => {
+    if (i > 0) parts.push('<span class="sep" aria-hidden="true">·</span>');
+    parts.push(
+      `<a href="${escapeAttr(item.href.trim())}">${escapeText(item.label.trim())}</a>`
+    );
+  });
+  const hidden = links.length ? "" : " hidden";
+  return `<nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Transcript indexes"${hidden}>${parts.join("")}</nav>`;
+}
+
+function stampTranscriptLinks(html, page) {
+  if (!html.includes(TRANSCRIPT_NAV_MARKER)) {
+    throw new Error("landing-pages: template missing transcript links marker");
+  }
+  return html.replace(TRANSCRIPT_NAV_MARKER, renderTranscriptNav(transcriptLinkItems(page)));
+}
+
 function stampLandingMeta(templateHtml, { title, description, url }) {
   const t = escapeAttr(title);
   const d = escapeAttr(description);
@@ -137,6 +177,9 @@ async function cmdLandingPages(opts) {
   if (!templateHtml.includes(SUBTITLE_LANG_MARKER)) {
     throw new Error("landing-pages: template missing DISCOVERED_SUBTITLE_LANGS marker");
   }
+  if (!templateHtml.includes(TRANSCRIPT_NAV_MARKER)) {
+    throw new Error("landing-pages: template missing transcript links marker");
+  }
   let updated = 0;
   let unchanged = 0;
   for (const id of await selectedConferences(opts)) {
@@ -147,9 +190,12 @@ async function cmdLandingPages(opts) {
       page.subtitle || page.description || "Presentations and talks from the KERI Foundation.";
     const url = `${SITE_URL}/${galleryPrefix(id)}/`;
     const langMap = discoveredSubtitleLangs(config, galleryDir(id));
-    const html = stampLandingMeta(templateHtml, { title, description, url }).replace(
-      SUBTITLE_LANG_MARKER,
-      embedJson(langMap)
+    const html = stampTranscriptLinks(
+      stampLandingMeta(templateHtml, { title, description, url }).replace(
+        SUBTITLE_LANG_MARKER,
+        embedJson(langMap)
+      ),
+      page
     );
     const dest = join(galleryDir(id), "index.html");
     let previous = null;
