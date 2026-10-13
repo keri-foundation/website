@@ -1,0 +1,1736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nonconformist Keynote - Samuel Smith — Transcript</title>
+  <meta name="description" content="Transcript: Nonconformist Keynote - Samuel Smith (July 2020 · 34:55)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #060b6f;
+      --muted: #2e3a7a;
+      --bg: #fdefde;
+      --panel: #f4f0e8;
+      --accent: #986c32;
+      --link: #0450a8;
+      --waves: url("https://keri.foundation/custom/img/waves-kim-1.png");
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Source Serif 4", Georgia, serif;
+      background: var(--bg);
+      color: var(--ink);
+      padding: 24px 16px 48px;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 44rem; margin: 0 auto; }
+    nav {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+    nav a { color: var(--link); }
+    nav a:hover { color: var(--ink); }
+    header {
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+      background: var(--panel);
+      border: 1px solid rgba(6, 11, 111, 0.12);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    header > * { position: relative; z-index: 1; }
+    header::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 360px;
+      height: 208px;
+      background-image: var(--waves);
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 360px 208px;
+      transform: rotate(180deg);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.55;
+    }
+    h1 {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      margin: 0 0 0.4rem;
+    }
+    .meta {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0 0 1rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .actions a {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--ink);
+      background: rgba(152, 108, 50, 0.18);
+      border: 1px solid rgba(152, 108, 50, 0.35);
+      border-radius: 8px;
+      padding: 0.55rem 0.9rem;
+    }
+    .actions a:hover { background: rgba(152, 108, 50, 0.32); }
+    .actions a.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+    .actions a.primary:hover { background: #0a1270; }
+    article {
+      background: var(--panel);
+      border: 1px solid rgba(6, 11, 111, 0.12);
+      border-radius: 10px;
+      padding: 1rem 1.25rem 1.5rem;
+    }
+    .cue {
+      display: grid;
+      grid-template-columns: 4.5rem 1fr;
+      gap: 0.65rem 0.85rem;
+      margin: 0;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(6, 11, 111, 0.08);
+    }
+    .cue:last-child { border-bottom: none; }
+    .cue-time {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      padding-top: 0.15rem;
+    }
+    .cue-time:hover { color: var(--ink); text-decoration: underline; }
+    .cue-text { font-size: 1.05rem; }
+    footer {
+      position: relative;
+      z-index: 0;
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      margin-top: 2rem;
+      padding-bottom: 7.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    footer::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 220px;
+      height: 126px;
+      background: var(--waves) right bottom / 220px 126px no-repeat;
+      pointer-events: none;
+      z-index: -1;
+      opacity: 0.85;
+    }
+    @media (max-width: 768px) {
+      header::after {
+        width: 220px;
+        height: 126px;
+        background-size: 220px 126px;
+      }
+      footer { padding-bottom: 5.5rem; }
+      footer::after {
+        width: 160px;
+        height: 92px;
+        background-size: 160px 92px;
+      }
+    }
+    @media (max-width: 520px) {
+      .cue { grid-template-columns: 1fr; gap: 0.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="../../../">2020 Videos</a>
+      · <a href="./">All transcripts</a>
+    </nav>
+    <header>
+      <h1>Nonconformist Keynote - Samuel Smith</h1>
+      <p class="meta">July 2020 · 34:55</p>
+      <div class="actions">
+        <a class="primary" href="../../../#nonconformist-keynote-samuel-smith">Watch video</a>
+        <a href="./">All transcripts</a>
+        <a href="../../../">Video gallery</a>
+      </div>
+    </header>
+    <article>
+    <p class="cue" id="t10">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=10">0:10</a>
+      <span class="cue-text">You know, by way of introducing Sam, for those of you who don't know Sam, you know,</span>
+    </p>
+    <p class="cue" id="t16">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=16">0:16</a>
+      <span class="cue-text">he was recently elected to be the chairman of the board at the Sovereign Foundation.</span>
+    </p>
+    <p class="cue" id="t23">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=23">0:23</a>
+      <span class="cue-text">So congratulations, Sam. In looking at Sam's background and reading, you know,</span>
+    </p>
+    <p class="cue" id="t29">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=29">0:29</a>
+      <span class="cue-text">some of the of his past works. I was just in awe and I felt very lucky, you know, by</span>
+    </p>
+    <p class="cue" id="t34">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=34">0:34</a>
+      <span class="cue-text">way of another past guest of the podcast, Phil Winley for introducing him to us. You</span>
+    </p>
+    <p class="cue" id="t42">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=42">0:42</a>
+      <span class="cue-text">know, he comes, you know, with the background as both an entrepreneur, a</span>
+    </p>
+    <p class="cue" id="t46">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=46">0:46</a>
+      <span class="cue-text">consultant, you know, very prolific in his writing, looks likes to spend time at the</span>
+    </p>
+    <p class="cue" id="t53">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=53">0:53</a>
+      <span class="cue-text">intersection of AI, blockchain, and decentralized identity. So, with that, I'm</span>
+    </p>
+    <p class="cue" id="t59">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=59">0:59</a>
+      <span class="cue-text">going to turn it over to Sam. And Sam, thank you very much for joining us from</span>
+    </p>
+    <p class="cue" id="t62">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=62">1:02</a>
+      <span class="cue-text">whereabouts in Utah are you from? – A little town called Linden, which is a sub,</span>
+    </p>
+    <p class="cue" id="t70">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=70">1:10</a>
+      <span class="cue-text">you know, in the greater metropolitan area for Salt Lake City, Utah. You know,</span>
+    </p>
+    <p class="cue" id="t77">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=77">1:17</a>
+      <span class="cue-text">everybody in Utah lives in a three-county area. The rest of the state is mostly</span>
+    </p>
+    <p class="cue" id="t81">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=81">1:21</a>
+      <span class="cue-text">empty. – Well, I'm going to, you know, turn it over to you. Thank you so much.</span>
+    </p>
+    <p class="cue" id="t87">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=87">1:27</a>
+      <span class="cue-text">And take it away. All right. Thank you. So I'm going to talk about the economics of</span>
+    </p>
+    <p class="cue" id="t95">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=95">1:35</a>
+      <span class="cue-text">its and bits. And that's going to cover a little bit about digital identity,</span>
+    </p>
+    <p class="cue" id="t100">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=100">1:40</a>
+      <span class="cue-text">freedom, privacy, control, and security. And I left security for last because it's</span>
+    </p>
+    <p class="cue" id="t105">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=105">1:45</a>
+      <span class="cue-text">actually the most important part of this conversation. And those that know me</span>
+    </p>
+    <p class="cue" id="t110">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=110">1:50</a>
+      <span class="cue-text">probably aren't surprised when I say that. So when I talk about economics, I'm really</span>
+    </p>
+    <p class="cue" id="t115">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=115">1:55</a>
+      <span class="cue-text">talking about value, creation and capture. And so in the environment of digital</span>
+    </p>
+    <p class="cue" id="t121">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=121">2:01</a>
+      <span class="cue-text">identity, what do we mean by that? Well, we talk about value extraction exchange</span>
+    </p>
+    <p class="cue" id="t126">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=126">2:06</a>
+      <span class="cue-text">and of course exploitation. And in order to have economics, somebody to benefit</span>
+    </p>
+    <p class="cue" id="t134">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=134">2:14</a>
+      <span class="cue-text">from economics has to have control over value. That's the key thing. And if you</span>
+    </p>
+    <p class="cue" id="t139">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=139">2:19</a>
+      <span class="cue-text">want control, then you need security. And so this cuts at the root of everything</span>
+    </p>
+    <p class="cue" id="t145">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=145">2:25</a>
+      <span class="cue-text">that we do in digital identity. If we don't have security, we don't have control</span>
+    </p>
+    <p class="cue" id="t149">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=149">2:29</a>
+      <span class="cue-text">over value and that leaves us free for exploitation by others. So, how do we get</span>
+    </p>
+    <p class="cue" id="t155">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=155">2:35</a>
+      <span class="cue-text">control over value? Well, this is where the its and the bits come in. When I say</span>
+    </p>
+    <p class="cue" id="t159">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=159">2:39</a>
+      <span class="cue-text">its, I mean atoms, physical things. So, a person is made of atoms. So, a person is a</span>
+    </p>
+    <p class="cue" id="t167">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=167">2:47</a>
+      <span class="cue-text">physical thing. Buildings, cars, planes, ore, minerals, all of those things are</span>
+    </p>
+    <p class="cue" id="t174">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=174">2:54</a>
+      <span class="cue-text">physical things. And here's the thing. It's easy to have security over physical</span>
+    </p>
+    <p class="cue" id="t178">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=178">2:58</a>
+      <span class="cue-text">things because physical things are not easily replicable. You have to create more</span>
+    </p>
+    <p class="cue" id="t186">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=186">3:06</a>
+      <span class="cue-text">atoms or you have to build or extract or get more atoms. And it costs money. Atoms</span>
+    </p>
+    <p class="cue" id="t191">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=191">3:11</a>
+      <span class="cue-text">are relatively scarce. Some atoms are very scarce. And you can maintain control over</span>
+    </p>
+    <p class="cue" id="t197">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=197">3:17</a>
+      <span class="cue-text">those atoms with what's called physical security. Just keep the atoms in place</span>
+    </p>
+    <p class="cue" id="t202">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=202">3:22</a>
+      <span class="cue-text">where somebody can't get to them. Now, when we talk about bits, we have a</span>
+    </p>
+    <p class="cue" id="t207">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=207">3:27</a>
+      <span class="cue-text">problem. Bits is digital information. The problem with bits is that it's easy to</span>
+    </p>
+    <p class="cue" id="t214">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=214">3:34</a>
+      <span class="cue-text">copy them. We actually use subatomic particles to transfer and store</span>
+    </p>
+    <p class="cue" id="t219">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=219">3:39</a>
+      <span class="cue-text">information, but those subatomic particles, electrons and photons are, you</span>
+    </p>
+    <p class="cue" id="t225">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=225">3:45</a>
+      <span class="cue-text">know, virtually inexhaustible. So, from a cost perspective, information wants to be</span>
+    </p>
+    <p class="cue" id="t230">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=230">3:50</a>
+      <span class="cue-text">free, easily copied, very difficult difficult to secure, especially if we want</span>
+    </p>
+    <p class="cue" id="t236">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=236">3:56</a>
+      <span class="cue-text">to control it because if somebody copies it, we lose control of it. So the question</span>
+    </p>
+    <p class="cue" id="t240">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=240">4:00</a>
+      <span class="cue-text">is in ITS, we have certain entities that have control over other entities or other</span>
+    </p>
+    <p class="cue" id="t249">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=249">4:09</a>
+      <span class="cue-text">physical bits. In information, what fills the role of a legal entity like a person</span>
+    </p>
+    <p class="cue" id="t255">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=255">4:15</a>
+      <span class="cue-text">or an organization or a corporation or a government? What fills that legal role</span>
+    </p>
+    <p class="cue" id="t260">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=260">4:20</a>
+      <span class="cue-text">that actually gives the same degree of informational security that I have in</span>
+    </p>
+    <p class="cue" id="t264">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=264">4:24</a>
+      <span class="cue-text">physical security. So I'm not going to answer that question right now, but I'm</span>
+    </p>
+    <p class="cue" id="t268">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=268">4:28</a>
+      <span class="cue-text">going to pose that question because I wanted to motivate the reason why that's</span>
+    </p>
+    <p class="cue" id="t273">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=273">4:33</a>
+      <span class="cue-text">so important. So if we look at 60 years of its and bits, I looked at the Fortune 20</span>
+    </p>
+    <p class="cue" id="t279">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=279">4:39</a>
+      <span class="cue-text">in 1960. You can look at the companies and the Fortune 500, they always in the old</span>
+    </p>
+    <p class="cue" id="t287">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=287">4:47</a>
+      <span class="cue-text">days, they did it in terms of revenue. That's how they rank them. You see that</span>
+    </p>
+    <p class="cue" id="t290">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=290">4:50</a>
+      <span class="cue-text">all but one company on this list gets its value from capturing its, not bits. Only</span>
+    </p>
+    <p class="cue" id="t298">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=298">4:58</a>
+      <span class="cue-text">AT&amp;T is primarily gets its value from capturing, storing, transmitting bits of</span>
+    </p>
+    <p class="cue" id="t304">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=304">5:04</a>
+      <span class="cue-text">information. If we go to 1980, well, we got IBM in there. You could maybe say that</span>
+    </p>
+    <p class="cue" id="t310">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=310">5:10</a>
+      <span class="cue-text">it got it from bits. It was a equipment manufacturer, but it was equipment to</span>
+    </p>
+    <p class="cue" id="t317">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=317">5:17</a>
+      <span class="cue-text">capture value from bits. When we get to 2000, There's a few more in there. We've</span>
+    </p>
+    <p class="cue" id="t324">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=324">5:24</a>
+      <span class="cue-text">got Southern Bell, Hewlett-Packard, Compact Computer, and AT&amp;T. But still, the</span>
+    </p>
+    <p class="cue" id="t331">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=331">5:31</a>
+      <span class="cue-text">majority of value capture, creation capture is in the it's, not the bits.</span>
+    </p>
+    <p class="cue" id="t339">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=339">5:39</a>
+      <span class="cue-text">2020, things start to change. We see now that for the first time, we've got Amazon,</span>
+    </p>
+    <p class="cue" id="t344">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=344">5:44</a>
+      <span class="cue-text">Apple, you know, they've moved up into the top spots, Alphabet, Verizon, But this is</span>
+    </p>
+    <p class="cue" id="t354">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=354">5:54</a>
+      <span class="cue-text">revenue. And if we look at something much more telling, it's not revenue, but market</span>
+    </p>
+    <p class="cue" id="t361">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=361">6:01</a>
+      <span class="cue-text">cap. This is people saying who is going to capture value in the future? What</span>
+    </p>
+    <p class="cue" id="t366">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=366">6:06</a>
+      <span class="cue-text">companies are going to capture the value? And this is a scary list. Now, in terms of</span>
+    </p>
+    <p class="cue" id="t373">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=373">6:13</a>
+      <span class="cue-text">market cap in 2020, we've got Microsoft, Apple, Amazon.com, Alphabet, Facebook, and</span>
+    </p>
+    <p class="cue" id="t379">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=379">6:19</a>
+      <span class="cue-text">we've got</span>
+    </p>
+    <p class="cue" id="t384">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=384">6:24</a>
+      <span class="cue-text">five, well, three, $2 trillion companies. Alphabet was, Amazon was trillion dollars</span>
+    </p>
+    <p class="cue" id="t390">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=390">6:30</a>
+      <span class="cue-text">for a little bit in 2019 and Facebook and then Verizon, AT&amp;T are still there. So,</span>
+    </p>
+    <p class="cue" id="t398">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=398">6:38</a>
+      <span class="cue-text">the top value captures in the world are the ones that capture value from</span>
+    </p>
+    <p class="cue" id="t402">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=402">6:42</a>
+      <span class="cue-text">aggregating bits. They have figured it out. They have figured out how to capture</span>
+    </p>
+    <p class="cue" id="t408">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=408">6:48</a>
+      <span class="cue-text">value. And they're doing it through something called network effects. A</span>
+    </p>
+    <p class="cue" id="t413">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=413">6:53</a>
+      <span class="cue-text">network scaling law basically describes how network value scales with the number</span>
+    </p>
+    <p class="cue" id="t418">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=418">6:58</a>
+      <span class="cue-text">of participants. And so if we have a multi -sided network like this, then Metcalfe's</span>
+    </p>
+    <p class="cue" id="t424">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=424">7:04</a>
+      <span class="cue-text">law may apply. And when Metcalfe's law applies, we get this very powerful</span>
+    </p>
+    <p class="cue" id="t428">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=428">7:08</a>
+      <span class="cue-text">scaling. So this equation says that the value, the average value to a participant</span>
+    </p>
+    <p class="cue" id="t433">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=433">7:13</a>
+      <span class="cue-text">on the network V is proportional to the number of participants on the network. And</span>
+    </p>
+    <p class="cue" id="t440">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=440">7:20</a>
+      <span class="cue-text">the total value of the network is the average value per participant times number</span>
+    </p>
+    <p class="cue" id="t444">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=444">7:24</a>
+      <span class="cue-text">of participants. So, it's proportional to the number of participants squared. And</span>
+    </p>
+    <p class="cue" id="t450">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=450">7:30</a>
+      <span class="cue-text">any square loss scaling is going to dominate when the network gets large</span>
+    </p>
+    <p class="cue" id="t455">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=455">7:35</a>
+      <span class="cue-text">enough. And this can be the main value that these companies are able to aggregate</span>
+    </p>
+    <p class="cue" id="t462">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=462">7:42</a>
+      <span class="cue-text">is these network effects. And it's the network effects from bits of information</span>
+    </p>
+    <p class="cue" id="t466">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=466">7:46</a>
+      <span class="cue-text">that they're aggregating. And the primary value is reach. If you have reach, like</span>
+    </p>
+    <p class="cue" id="t472">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=472">7:52</a>
+      <span class="cue-text">you can reach people in Facebook ads or Google ads, or you can reach people in</span>
+    </p>
+    <p class="cue" id="t478">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=478">7:58</a>
+      <span class="cue-text">your Apple app on the App Store, those contribute to value that scales</span>
+    </p>
+    <p class="cue" id="t485">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=485">8:05</a>
+      <span class="cue-text">tremendously. And if you extract even a little bit of value from a square law</span>
+    </p>
+    <p class="cue" id="t489">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=489">8:09</a>
+      <span class="cue-text">network effect, you're going to be an extremely valuable company. And Metz</span>
+    </p>
+    <p class="cue" id="t494">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=494">8:14</a>
+      <span class="cue-text">-Kaft's law has been extensively validated. I wrote a paper on this some</span>
+    </p>
+    <p class="cue" id="t499">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=499">8:19</a>
+      <span class="cue-text">these are some of the papers from the quote. You can go look at the paper, look</span>
+    </p>
+    <p class="cue" id="t502">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=502">8:22</a>
+      <span class="cue-text">at them if you're not familiar with it. So the question is how do we recapture the</span>
+    </p>
+    <p class="cue" id="t508">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=508">8:28</a>
+      <span class="cue-text">value in our data? Because the value in our data is being captured with good</span>
+    </p>
+    <p class="cue" id="t512">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=512">8:32</a>
+      <span class="cue-text">effect by these super aggregators. There's two ways that we can capture it. We can</span>
+    </p>
+    <p class="cue" id="t518">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=518">8:38</a>
+      <span class="cue-text">leverage cooperative network effects and we can retake control of our data. And</span>
+    </p>
+    <p class="cue" id="t523">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=523">8:43</a>
+      <span class="cue-text">when I say retake control, I mean really take control of our data, not sort of take</span>
+    </p>
+    <p class="cue" id="t527">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=527">8:47</a>
+      <span class="cue-text">control of our data. So what do I mean by cooperative network effects? Well, what</span>
+    </p>
+    <p class="cue" id="t533">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=533">8:53</a>
+      <span class="cue-text">happens to value when two smaller networks combine? And understand, this is how we</span>
+    </p>
+    <p class="cue" id="t538">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=538">8:58</a>
+      <span class="cue-text">fight people that are the largest, most profitable, most powerful corporations in</span>
+    </p>
+    <p class="cue" id="t544">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=544">9:04</a>
+      <span class="cue-text">the world, right? How do we fight them? Because if we can't fight them, we'll</span>
+    </p>
+    <p class="cue" id="t548">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=548">9:08</a>
+      <span class="cue-text">always lose. Because they have more power. They are now at the state size where they</span>
+    </p>
+    <p class="cue" id="t555">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=555">9:15</a>
+      <span class="cue-text">are nation states in and of themselves. themselves, they can change how nation</span>
+    </p>
+    <p class="cue" id="t561">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=561">9:21</a>
+      <span class="cue-text">states treat them. Well, Metcalfe's law comes to the rescue. If you look at</span>
+    </p>
+    <p class="cue" id="t567">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=567">9:27</a>
+      <span class="cue-text">Metcalfe's square law effect and I take two networks, N1 and N2, and I combine</span>
+    </p>
+    <p class="cue" id="t572">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=572">9:32</a>
+      <span class="cue-text">them and I look at the square law value, I get this bigger rectangle. And so N1 by</span>
+    </p>
+    <p class="cue" id="t579">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=579">9:39</a>
+      <span class="cue-text">itself has this smaller rectangle. N2 by itself has a smaller rectangle. But</span>
+    </p>
+    <p class="cue" id="t584">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=584">9:44</a>
+      <span class="cue-text">combined, each of them gets an an added rectangle that is in N2's cases, N1's case</span>
+    </p>
+    <p class="cue" id="t592">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=592">9:52</a>
+      <span class="cue-text">is bigger than N1 was to start with. And so without going through the math, what</span>
+    </p>
+    <p class="cue" id="t597">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=597">9:57</a>
+      <span class="cue-text">you get is a bonus of an N1 times N2 proportional factor for any two networks</span>
+    </p>
+    <p class="cue" id="t603">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=603">10:03</a>
+      <span class="cue-text">that combine. This is essentially free just for combining, just by combining</span>
+    </p>
+    <p class="cue" id="t610">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=610">10:10</a>
+      <span class="cue-text">participants from two networks. So why wouldn't any two networks combine? That's</span>
+    </p>
+    <p class="cue" id="t616">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=616">10:16</a>
+      <span class="cue-text">a good question. Right? And this is actually the regimes in which combination</span>
+    </p>
+    <p class="cue" id="t624">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=624">10:24</a>
+      <span class="cue-text">makes sense. When two networks are value symmetric, that means they're of the same</span>
+    </p>
+    <p class="cue" id="t629">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=629">10:29</a>
+      <span class="cue-text">size value, then it's always more profitable for both to combine. And in</span>
+    </p>
+    <p class="cue" id="t633">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=633">10:33</a>
+      <span class="cue-text">this paper, positive demand externalities is an operational research code word for</span>
+    </p>
+    <p class="cue" id="t640">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=640">10:40</a>
+      <span class="cue-text">network effects. When two networks are value asymmetric, it's always more</span>
+    </p>
+    <p class="cue" id="t645">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=645">10:45</a>
+      <span class="cue-text">profitable for smaller networks to combine. This is lifetime value of the</span>
+    </p>
+    <p class="cue" id="t648">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=648">10:48</a>
+      <span class="cue-text">combination. Now, when I have two networks where one is much larger, it's not always</span>
+    </p>
+    <p class="cue" id="t653">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=653">10:53</a>
+      <span class="cue-text">more profitable for the larger one to combine. That's the problem. If you're</span>
+    </p>
+    <p class="cue" id="t657">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=657">10:57</a>
+      <span class="cue-text">large enough, you don't want to combine. But if the network size is below a</span>
+    </p>
+    <p class="cue" id="t662">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=662">11:02</a>
+      <span class="cue-text">threshold, then it's still more profitable for the larger one to combine. And that</span>
+    </p>
+    <p class="cue" id="t668">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=668">11:08</a>
+      <span class="cue-text">threshold is based on a feedback adoption growth rate curve, which tends to follow</span>
+    </p>
+    <p class="cue" id="t673">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=673">11:13</a>
+      <span class="cue-text">sigmoidal adoption curve. And when you're down here close to the bottom of this</span>
+    </p>
+    <p class="cue" id="t678">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=678">11:18</a>
+      <span class="cue-text">curve, even if you're a much larger network, it's still to your advantage to</span>
+    </p>
+    <p class="cue" id="t683">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=683">11:23</a>
+      <span class="cue-text">always combine with smaller networks. If you're up here in a saturation regime,</span>
+    </p>
+    <p class="cue" id="t688">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=688">11:28</a>
+      <span class="cue-text">there's no advantage to combination. So, what is this? What do competing small</span>
+    </p>
+    <p class="cue" id="t694">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=694">11:34</a>
+      <span class="cue-text">networks do? Well, let's look at what happens if we had several competing small</span>
+    </p>
+    <p class="cue" id="t698">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=698">11:38</a>
+      <span class="cue-text">networks. Each of them has a value proportional to their side. They're all</span>
+    </p>
+    <p class="cue" id="t703">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=703">11:43</a>
+      <span class="cue-text">the same size, right? And if they're square law effect. If I now make a super</span>
+    </p>
+    <p class="cue" id="t710">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=710">11:50</a>
+      <span class="cue-text">network of these cooperating small networks, the value of each sub network is</span>
+    </p>
+    <p class="cue" id="t716">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=716">11:56</a>
+      <span class="cue-text">10 times its value before they combine when the size of the total network is 10</span>
+    </p>
+    <p class="cue" id="t722">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=722">12:02</a>
+      <span class="cue-text">times the size. So, I get a 10 times increase in value for free just by</span>
+    </p>
+    <p class="cue" id="t727">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=727">12:07</a>
+      <span class="cue-text">cooperating to the extent that cooperation is free. I mean, there's always some cost</span>
+    </p>
+    <p class="cue" id="t734">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=734">12:14</a>
+      <span class="cue-text">to cooperation if you don't have interoperable systems. But if you have</span>
+    </p>
+    <p class="cue" id="t737">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=737">12:17</a>
+      <span class="cue-text">interoperable systems, then that cost is pretty small. The total value of the super</span>
+    </p>
+    <p class="cue" id="t742">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=742">12:22</a>
+      <span class="cue-text">network is 100 times the value of the individual networks combined. This is</span>
+    </p>
+    <p class="cue" id="t747">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=747">12:27</a>
+      <span class="cue-text">huge. This allows a bunch of small networks to become super aggregators</span>
+    </p>
+    <p class="cue" id="t752">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=752">12:32</a>
+      <span class="cue-text">merely by combining. And when I say super aggregators, I mean benefit have a network</span>
+    </p>
+    <p class="cue" id="t760">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=760">12:40</a>
+      <span class="cue-text">whose network value benefits from the network effect. So that is a powerful</span>
+    </p>
+    <p class="cue" id="t765">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=765">12:45</a>
+      <span class="cue-text">force that we can use to fight the</span>
+    </p>
+    <p class="cue" id="t772">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=772">12:52</a>
+      <span class="cue-text">extraction and exploitation of our data value, how we can fight back. And so this</span>
+    </p>
+    <p class="cue" id="t777">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=777">12:57</a>
+      <span class="cue-text">is an equation that says the proportion will value for any network to join a</span>
+    </p>
+    <p class="cue" id="t782">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=782">13:02</a>
+      <span class="cue-text">larger network is the ratio of the size of the larger network to the size of the</span>
+    </p>
+    <p class="cue" id="t787">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=787">13:07</a>
+      <span class="cue-text">smaller network. So the network effect from a subnetwork joining and cooperating</span>
+    </p>
+    <p class="cue" id="t791">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=791">13:11</a>
+      <span class="cue-text">as a super network is the subnetwork's values increased by the ratio of the</span>
+    </p>
+    <p class="cue" id="t794">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=794">13:14</a>
+      <span class="cue-text">subnetwork size to the supernetwork subnetwork size. This is the advantage of</span>
+    </p>
+    <p class="cue" id="t799">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=799">13:19</a>
+      <span class="cue-text">cooperation. It's a huge advantage. So the small network strategy is to one strategy</span>
+    </p>
+    <p class="cue" id="t806">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=806">13:26</a>
+      <span class="cue-text">is to create what's called a cooperative network cascade. What that means is I've</span>
+    </p>
+    <p class="cue" id="t810">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=810">13:30</a>
+      <span class="cue-text">got a small network and I'm competing with the larger network. If I convince the</span>
+    </p>
+    <p class="cue" id="t815">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=815">13:35</a>
+      <span class="cue-text">larger network to cooperate, then the combined network can now outcompete the</span>
+    </p>
+    <p class="cue" id="t820">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=820">13:40</a>
+      <span class="cue-text">next larger network and so on. And so you can cascade to where you can force even</span>
+    </p>
+    <p class="cue" id="t827">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=827">13:47</a>
+      <span class="cue-text">the largest existing non-cooperating network to realize that it's more</span>
+    </p>
+    <p class="cue" id="t832">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=832">13:52</a>
+      <span class="cue-text">profitable for them to cooperate than to compete because if you're benefiting from</span>
+    </p>
+    <p class="cue" id="t837">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=837">13:57</a>
+      <span class="cue-text">Metcalf's network scaling effects. So, how do we remove the primary barrier to</span>
+    </p>
+    <p class="cue" id="t843">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=843">14:03</a>
+      <span class="cue-text">cooperation? Even with this knowledge, even with this knowledge that cooperation</span>
+    </p>
+    <p class="cue" id="t847">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=847">14:07</a>
+      <span class="cue-text">is more beneficial than competition when you're in the right regime, which happens</span>
+    </p>
+    <p class="cue" id="t853">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=853">14:13</a>
+      <span class="cue-text">a lot, but people still don't cooperate. because they're competitors. So how do we</span>
+    </p>
+    <p class="cue" id="t857">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=857">14:17</a>
+      <span class="cue-text">remove that barrier? Well, one way to remove that barrier is to look at</span>
+    </p>
+    <p class="cue" id="t860">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=860">14:20</a>
+      <span class="cue-text">different value contexts. Look at networks that aren't directly competitive. If we</span>
+    </p>
+    <p class="cue" id="t867">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=867">14:27</a>
+      <span class="cue-text">can find value that's transferable between contexts, then we have a way of gaining a</span>
+    </p>
+    <p class="cue" id="t875">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=875">14:35</a>
+      <span class="cue-text">cooperative network effect without ever forcing competitors to cooperate because</span>
+    </p>
+    <p class="cue" id="t881">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=881">14:41</a>
+      <span class="cue-text">they're not competitors in the first place. They just have to cooperate. And I</span>
+    </p>
+    <p class="cue" id="t884">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=884">14:44</a>
+      <span class="cue-text">call this transcontential value creation and capture. So if we can have value that</span>
+    </p>
+    <p class="cue" id="t889">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=889">14:49</a>
+      <span class="cue-text">is transitive or transferable between contexts, and context in this case would</span>
+    </p>
+    <p class="cue" id="t893">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=893">14:53</a>
+      <span class="cue-text">be products and services in the same market segment, then we have an</span>
+    </p>
+    <p class="cue" id="t899">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=899">14:59</a>
+      <span class="cue-text">opportunity to prime or bootstrap cooperative network effects. So we use</span>
+    </p>
+    <p class="cue" id="t905">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=905">15:05</a>
+      <span class="cue-text">transcontential value creation and capture to fuel cooperative network effects. And</span>
+    </p>
+    <p class="cue" id="t910">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=910">15:10</a>
+      <span class="cue-text">then that starts the cascade. So the final thing we want to do is since the question</span>
+    </p>
+    <p class="cue" id="t916">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=916">15:16</a>
+      <span class="cue-text">was how do we regain control of our data value is that we want these cooperative</span>
+    </p>
+    <p class="cue" id="t923">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=923">15:23</a>
+      <span class="cue-text">networks to be participant controlled. We want to extract the value from it, not</span>
+    </p>
+    <p class="cue" id="t928">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=928">15:28</a>
+      <span class="cue-text">some administrator of a network. Even a cooperative network administrator can</span>
+    </p>
+    <p class="cue" id="t932">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=932">15:32</a>
+      <span class="cue-text">extract value. We want the participants to be able to extract appropriate levels of</span>
+    </p>
+    <p class="cue" id="t936">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=936">15:36</a>
+      <span class="cue-text">value. So we want participant controlled networks and we can get participant</span>
+    </p>
+    <p class="cue" id="t940">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=940">15:40</a>
+      <span class="cue-text">controlled networks if we use the right tech. And what that means is that</span>
+    </p>
+    <p class="cue" id="t944">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=944">15:44</a>
+      <span class="cue-text">participants can then create a virtual participant-centric network. And this</span>
+    </p>
+    <p class="cue" id="t950">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=950">15:50</a>
+      <span class="cue-text">enables participants to amplify their own value across multiple contexts, which</span>
+    </p>
+    <p class="cue" id="t954">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=954">15:54</a>
+      <span class="cue-text">maximizes adoption pool and creates the fastest spin-in of cooperative network</span>
+    </p>
+    <p class="cue" id="t958">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=958">15:58</a>
+      <span class="cue-text">effects. That's the economics of cooperation. And another benefit of</span>
+    </p>
+    <p class="cue" id="t964">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=964">16:04</a>
+      <span class="cue-text">cooperation is what I call the cooperative long tail network effect. If you think</span>
+    </p>
+    <p class="cue" id="t967">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=967">16:07</a>
+      <span class="cue-text">about the long tail, and that's the area under the the long tail in this curve,</span>
+    </p>
+    <p class="cue" id="t972">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=972">16:12</a>
+      <span class="cue-text">this is a power log distribution for a market. The long tail is essentially a</span>
+    </p>
+    <p class="cue" id="t978">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=978">16:18</a>
+      <span class="cue-text">bunch of different contexts because they're all too small and disparate and</span>
+    </p>
+    <p class="cue" id="t983">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=983">16:23</a>
+      <span class="cue-text">segmented to have enough individual value to be here where people are targeting. And</span>
+    </p>
+    <p class="cue" id="t989">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=989">16:29</a>
+      <span class="cue-text">so if we recognize that the long tail is different context, we can create a</span>
+    </p>
+    <p class="cue" id="t994">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=994">16:34</a>
+      <span class="cue-text">cooperative network that aggregates the value in that long tail and and get a</span>
+    </p>
+    <p class="cue" id="t1001">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1001">16:41</a>
+      <span class="cue-text">network effect just from the long tail. So, where do we find transcontextual</span>
+    </p>
+    <p class="cue" id="t1004">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1004">16:44</a>
+      <span class="cue-text">value? Well, we find it in transaction costs. The theory of the firm, the theory</span>
+    </p>
+    <p class="cue" id="t1012">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1012">16:52</a>
+      <span class="cue-text">of why any organization has value is that it reduces transaction costs to its</span>
+    </p>
+    <p class="cue" id="t1019">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1019">16:59</a>
+      <span class="cue-text">customers. There are three ways we can group transaction costs into three</span>
+    </p>
+    <p class="cue" id="t1024">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1024">17:04</a>
+      <span class="cue-text">buckets. There's lots of ways to do it, but this is a very useful grouping. First</span>
+    </p>
+    <p class="cue" id="t1030">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1030">17:10</a>
+      <span class="cue-text">set are triangulation costs. These are about connection, fine filtering and</span>
+    </p>
+    <p class="cue" id="t1034">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1034">17:14</a>
+      <span class="cue-text">matching participants. The second is transfer, facilitation, transport,</span>
+    </p>
+    <p class="cue" id="t1038">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1038">17:18</a>
+      <span class="cue-text">delivering payment. We all know business models that are focused on one or both of</span>
+    </p>
+    <p class="cue" id="t1043">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1043">17:23</a>
+      <span class="cue-text">these. The third one, the one that is hidden that most of us don't realize or</span>
+    </p>
+    <p class="cue" id="t1047">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1047">17:27</a>
+      <span class="cue-text">see is trust transaction costs, security, competency, reliability, privacy, and</span>
+    </p>
+    <p class="cue" id="t1054">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1054">17:34</a>
+      <span class="cue-text">liability. These trust costs are often hidden costs and they're often not well</span>
+    </p>
+    <p class="cue" id="t1060">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1060">17:40</a>
+      <span class="cue-text">optimized. They're not reduced. And in many cases, people mistake the value of a</span>
+    </p>
+    <p class="cue" id="t1065">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1065">17:45</a>
+      <span class="cue-text">network effect from their triangulation transfer and ignore the fact that they</span>
+    </p>
+    <p class="cue" id="t1070">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1070">17:50</a>
+      <span class="cue-text">actually solved a trust transaction cost. And this is where digital identity and</span>
+    </p>
+    <p class="cue" id="t1074">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1074">17:54</a>
+      <span class="cue-text">decentralized identity come to play because all of the technical stuff, trust</span>
+    </p>
+    <p class="cue" id="t1079">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1079">17:59</a>
+      <span class="cue-text">over IP, right? It's about reducing trust transaction costs. So, platforms and</span>
+    </p>
+    <p class="cue" id="t1085">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1085">18:05</a>
+      <span class="cue-text">networks sell reductions in transaction costs. To a consumer, all costs look like</span>
+    </p>
+    <p class="cue" id="t1090">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1090">18:10</a>
+      <span class="cue-text">transaction costs. It doesn't matter if it's its or bits. All costs look like</span>
+    </p>
+    <p class="cue" id="t1093">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1093">18:13</a>
+      <span class="cue-text">transaction costs. The principal super aggregated pull in many cases is reduced</span>
+    </p>
+    <p class="cue" id="t1098">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1098">18:18</a>
+      <span class="cue-text">trust action costs. Your Facebook login account. You can log into Facebook.</span>
+    </p>
+    <p class="cue" id="t1103">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1103">18:23</a>
+      <span class="cue-text">They're going to manage all of your trust for you, all of your security so that you</span>
+    </p>
+    <p class="cue" id="t1107">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1107">18:27</a>
+      <span class="cue-text">can interact with other participants on the platform and you don't have to worry</span>
+    </p>
+    <p class="cue" id="t1111">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1111">18:31</a>
+      <span class="cue-text">about it. So, but the thing is trust may be highly transferable. If you think about</span>
+    </p>
+    <p class="cue" id="t1117">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1117">18:37</a>
+      <span class="cue-text">it, reliability, credibility, accessibility, those things, an entity or</span>
+    </p>
+    <p class="cue" id="t1123">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1123">18:43</a>
+      <span class="cue-text">an individual tend to be transferable. Those sorts of behaviors tend to be</span>
+    </p>
+    <p class="cue" id="t1130">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1130">18:50</a>
+      <span class="cue-text">transferable. Security tends to be transferable. Digital identity is</span>
+    </p>
+    <p class="cue" id="t1135">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1135">18:55</a>
+      <span class="cue-text">transferable. Login, onboarding, all of those things are transferable. So, a</span>
+    </p>
+    <p class="cue" id="t1142">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1142">19:02</a>
+      <span class="cue-text">reduction in trust transaction cost is a primary network effect value from</span>
+    </p>
+    <p class="cue" id="t1145">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1145">19:05</a>
+      <span class="cue-text">cooperation. We can leverage that. So, what we want is we want to have transitive</span>
+    </p>
+    <p class="cue" id="t1151">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1151">19:11</a>
+      <span class="cue-text">value virtual network scaling law. What does that look like? Well, if we have a</span>
+    </p>
+    <p class="cue" id="t1156">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1156">19:16</a>
+      <span class="cue-text">set of transcontextual cooperating networks, that means there's value that</span>
+    </p>
+    <p class="cue" id="t1160">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1160">19:20</a>
+      <span class="cue-text">can transfer between, but they're not direct competitors, and there's some</span>
+    </p>
+    <p class="cue" id="t1165">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1165">19:25</a>
+      <span class="cue-text">transitivity factor, average transitivity factor, then we can rewrite Metcoff</span>
+    </p>
+    <p class="cue" id="t1169">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1169">19:29</a>
+      <span class="cue-text">scaling law this way and don't read the math, but it basically gives us down at</span>
+    </p>
+    <p class="cue" id="t1175">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1175">19:35</a>
+      <span class="cue-text">the bottom a square law scale effect just from the value that is extractable, that</span>
+    </p>
+    <p class="cue" id="t1181">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1181">19:41</a>
+      <span class="cue-text">is transitive. And even if T is really, really, really small because it's a square</span>
+    </p>
+    <p class="cue" id="t1186">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1186">19:46</a>
+      <span class="cue-text">law, we get huge value just from cooperation. So, that's how we fight. And</span>
+    </p>
+    <p class="cue" id="t1193">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1193">19:53</a>
+      <span class="cue-text">you can read the details in this paper below. Just look up meta platforms and</span>
+    </p>
+    <p class="cue" id="t1197">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1197">19:57</a>
+      <span class="cue-text">cooperative networking network effects. So, the second strategy was retake control</span>
+    </p>
+    <p class="cue" id="t1203">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1203">20:03</a>
+      <span class="cue-text">of our data. How do we retake control of our data? data. We have certain toolkits</span>
+    </p>
+    <p class="cue" id="t1208">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1208">20:08</a>
+      <span class="cue-text">for controlling our data. Now, you've heard this thing that says if all you have</span>
+    </p>
+    <p class="cue" id="t1213">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1213">20:13</a>
+      <span class="cue-text">is a hammer, everything looks like a nail. Well, the truth of the matter is if you</span>
+    </p>
+    <p class="cue" id="t1218">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1218">20:18</a>
+      <span class="cue-text">have nails, there's different types of nails and different types of hammers work</span>
+    </p>
+    <p class="cue" id="t1224">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1224">20:24</a>
+      <span class="cue-text">better. So, that's okay. But in this context, usually people use it to say,</span>
+    </p>
+    <p class="cue" id="t1228">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1228">20:28</a>
+      <span class="cue-text">well, you need to get more tools in your toolbox and not just have hammers. The</span>
+    </p>
+    <p class="cue" id="t1232">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1232">20:32</a>
+      <span class="cue-text">problem is that an information we only have one set of tools. We can do things</span>
+    </p>
+    <p class="cue" id="t1238">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1238">20:38</a>
+      <span class="cue-text">with screws and we can use screwdrivers, but hammer is on an option. In fact, there</span>
+    </p>
+    <p class="cue" id="t1245">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1245">20:45</a>
+      <span class="cue-text">aren't very many options. We have one set of tools for truly secure data control.</span>
+    </p>
+    <p class="cue" id="t1249">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1249">20:49</a>
+      <span class="cue-text">That's it. And this gets us back to answering the question because the hard</span>
+    </p>
+    <p class="cue" id="t1256">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1256">20:56</a>
+      <span class="cue-text">question for data is secure control, right? Information security. So, we want</span>
+    </p>
+    <p class="cue" id="t1262">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1262">21:02</a>
+      <span class="cue-text">control over value. you. Physical security, that's a solvable problem.</span>
+    </p>
+    <p class="cue" id="t1267">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1267">21:07</a>
+      <span class="cue-text">Information security, we continue to have hacks of computing infrastructure. We</span>
+    </p>
+    <p class="cue" id="t1274">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1274">21:14</a>
+      <span class="cue-text">continue to have the network is not secure. We continue to have, in fact, many</span>
+    </p>
+    <p class="cue" id="t1279">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1279">21:19</a>
+      <span class="cue-text">of the talks today were about how to how better to achieve informational security</span>
+    </p>
+    <p class="cue" id="t1283">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1283">21:23</a>
+      <span class="cue-text">in your systems. And it's not a and it appears to not be a well-solved problem.</span>
+    </p>
+    <p class="cue" id="t1290">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1290">21:30</a>
+      <span class="cue-text">Well, the solution, the set of tools comes from digital uniqueness. The reason</span>
+    </p>
+    <p class="cue" id="t1295">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1295">21:35</a>
+      <span class="cue-text">physical security is a solvable problem because we have physical uniqueness of</span>
+    </p>
+    <p class="cue" id="t1299">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1299">21:39</a>
+      <span class="cue-text">atoms. We do not have physical uniqueness of bits. We need to somehow bootstrap to</span>
+    </p>
+    <p class="cue" id="t1306">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1306">21:46</a>
+      <span class="cue-text">something that looks like that. That bootstrap, there's only one. It's called</span>
+    </p>
+    <p class="cue" id="t1311">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1311">21:51</a>
+      <span class="cue-text">informational entropy. It's the only tool we have. It's like the screws in the</span>
+    </p>
+    <p class="cue" id="t1317">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1317">21:57</a>
+      <span class="cue-text">picture before and the drivers are entropy -derived tools. These are cryptographic</span>
+    </p>
+    <p class="cue" id="t1324">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1324">22:04</a>
+      <span class="cue-text">one-way functions. You know them as hashes, scalar multiplication, digital</span>
+    </p>
+    <p class="cue" id="t1329">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1329">22:09</a>
+      <span class="cue-text">signatures, EKPs. That's it. That's all we've got. If we don't know how to use</span>
+    </p>
+    <p class="cue" id="t1333">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1333">22:13</a>
+      <span class="cue-text">them well, we don't have informational security. If we use them poorly or we use</span>
+    </p>
+    <p class="cue" id="t1338">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1338">22:18</a>
+      <span class="cue-text">them inadequately or we use them in not best practices, we fail over and over and</span>
+    </p>
+    <p class="cue" id="t1344">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1344">22:24</a>
+      <span class="cue-text">over again. We have to do this right if we ever want to actually gain control over</span>
+    </p>
+    <p class="cue" id="t1349">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1349">22:29</a>
+      <span class="cue-text">our data. It's like we're in la-la land if we think otherwise. And unfortunately,</span>
+    </p>
+    <p class="cue" id="t1356">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1356">22:36</a>
+      <span class="cue-text">many people imagine that there's some magical way to get informational security</span>
+    </p>
+    <p class="cue" id="t1360">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1360">22:40</a>
+      <span class="cue-text">that doesn't use these tools. So information uniqueness comes from captured</span>
+    </p>
+    <p class="cue" id="t1366">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1366">22:46</a>
+      <span class="cue-text">entropy. But guess what? Anybody can capture entropy. That makes captured</span>
+    </p>
+    <p class="cue" id="t1371">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1371">22:51</a>
+      <span class="cue-text">entropy an inherently decentralized tool. So we individuals, participants can take</span>
+    </p>
+    <p class="cue" id="t1378">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1378">22:58</a>
+      <span class="cue-text">control of our data, but we first must retake control of our identifiers because</span>
+    </p>
+    <p class="cue" id="t1382">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1382">23:02</a>
+      <span class="cue-text">the identifier control is what the tools give us. We can control our identifiers.</span>
+    </p>
+    <p class="cue" id="t1389">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1389">23:09</a>
+      <span class="cue-text">And the type of identifier that allows us to do that are called self-certifying</span>
+    </p>
+    <p class="cue" id="t1394">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1394">23:14</a>
+      <span class="cue-text">pseudonymous identifiers. And there's a white paper I wrote that talks about the</span>
+    </p>
+    <p class="cue" id="t1399">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1399">23:19</a>
+      <span class="cue-text">theory of self-certifying pseudonymous identifiers and why they enable us to have</span>
+    </p>
+    <p class="cue" id="t1403">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1403">23:23</a>
+      <span class="cue-text">true decentralized roots of trust to control over our data. But obviously it's</span>
+    </p>
+    <p class="cue" id="t1407">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1407">23:27</a>
+      <span class="cue-text">not, it's and you can go look at the paper, but it's beyond the scope of this</span>
+    </p>
+    <p class="cue" id="t1411">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1411">23:31</a>
+      <span class="cue-text">talk. What that simplifies to are the four A's of secure data control. That's the</span>
+    </p>
+    <p class="cue" id="t1417">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1417">23:37</a>
+      <span class="cue-text">author, authentic, authorized, and authoritative. Each data item can be</span>
+    </p>
+    <p class="cue" id="t1425">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1425">23:45</a>
+      <span class="cue-text">imbued with these four A's. So, I call that A4 data control. That establishes</span>
+    </p>
+    <p class="cue" id="t1431">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1431">23:51</a>
+      <span class="cue-text">that control via self-certifying pseudonymous identifiers of the data and</span>
+    </p>
+    <p class="cue" id="t1437">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1437">23:57</a>
+      <span class="cue-text">the author and the authorization consent to all of those can be can be put in the</span>
+    </p>
+    <p class="cue" id="t1442">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1442">24:02</a>
+      <span class="cue-text">data. And so I coined a new term called sapored data. So the term sapored means the</span>
+    </p>
+    <p class="cue" id="t1448">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1448">24:08</a>
+      <span class="cue-text">quality and substance that affects the sense of taste, savor, flavor. So if we</span>
+    </p>
+    <p class="cue" id="t1452">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1452">24:12</a>
+      <span class="cue-text">want data that is controllable, we need to sapored the data. And what that means is we</span>
+    </p>
+    <p class="cue" id="t1458">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1458">24:18</a>
+      <span class="cue-text">can securely provenance the data to its authors. And if we can't securely</span>
+    </p>
+    <p class="cue" id="t1463">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1463">24:23</a>
+      <span class="cue-text">provenance the data to the authors, we can't securely extract control. That</span>
+    </p>
+    <p class="cue" id="t1467">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1467">24:27</a>
+      <span class="cue-text">attribution is necessary. And that means that we we build sapored data supply chains</span>
+    </p>
+    <p class="cue" id="t1472">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1472">24:32</a>
+      <span class="cue-text">that enable consumer pull in addition to regulatory push so that we become</span>
+    </p>
+    <p class="cue" id="t1477">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1477">24:37</a>
+      <span class="cue-text">conscious consumers of sapored data. So we go back to our diagram. We have the its that</span>
+    </p>
+    <p class="cue" id="t1484">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1484">24:44</a>
+      <span class="cue-text">control the bits. And now I've got rid of the question mark here because this is</span>
+    </p>
+    <p class="cue" id="t1490">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1490">24:50</a>
+      <span class="cue-text">cryptographic pseudonymous identifiers. We can control those. We can control those in</span>
+    </p>
+    <p class="cue" id="t1494">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1494">24:54</a>
+      <span class="cue-text">a decentralized secure way and there's no there are no exploits other than you can</span>
+    </p>
+    <p class="cue" id="t1501">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1501">25:01</a>
+      <span class="cue-text">protect it with purely key management. That means that we can have control and</span>
+    </p>
+    <p class="cue" id="t1506">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1506">25:06</a>
+      <span class="cue-text">attribution. So we can control our data and we can get attribution back, which</span>
+    </p>
+    <p class="cue" id="t1510">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1510">25:10</a>
+      <span class="cue-text">means we can extract value of our own data. And what we want to prevent is</span>
+    </p>
+    <p class="cue" id="t1516">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1516">25:16</a>
+      <span class="cue-text">correlation between these identifiers and the its. That's the thing that we need to</span>
+    </p>
+    <p class="cue" id="t1522">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1522">25:22</a>
+      <span class="cue-text">do to get privacy. But if we throw away all of this in order to get privacy, we</span>
+    </p>
+    <p class="cue" id="t1527">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1527">25:27</a>
+      <span class="cue-text">throw away our ability to extract value and to control our own data. And that's</span>
+    </p>
+    <p class="cue" id="t1532">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1532">25:32</a>
+      <span class="cue-text">the problem with the regulatory regime. Most regulations are throwing away all of</span>
+    </p>
+    <p class="cue" id="t1538">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1538">25:38</a>
+      <span class="cue-text">the bits in order to prevent the correlation. They say, oh, you don't want</span>
+    </p>
+    <p class="cue" id="t1543">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1543">25:43</a>
+      <span class="cue-text">correlation? Get rid of the bits. Then you won't have correlation because there's</span>
+    </p>
+    <p class="cue" id="t1546">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1546">25:46</a>
+      <span class="cue-text">nothing to correlate. But then you get rid of the value as well. So it's a</span>
+    </p>
+    <p class="cue" id="t1550">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1550">25:50</a>
+      <span class="cue-text">diseconomic incentive. So what does that mean? Privacy. You have to choose. You can</span>
+    </p>
+    <p class="cue" id="t1555">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1555">25:55</a>
+      <span class="cue-text">have this kind of privacy. You're a lone person on an island. Don't interact with</span>
+    </p>
+    <p class="cue" id="t1559">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1559">25:59</a>
+      <span class="cue-text">anybody or you can have privacy where you interact with people. But if you're alone</span>
+    </p>
+    <p class="cue" id="t1565">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1565">26:05</a>
+      <span class="cue-text">on the island, it can be strong because you're not disclosing data to anyone.</span>
+    </p>
+    <p class="cue" id="t1570">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1570">26:10</a>
+      <span class="cue-text">You're not extracting value from your data. You're just living on your own. If</span>
+    </p>
+    <p class="cue" id="t1574">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1574">26:14</a>
+      <span class="cue-text">you want to interact, have commercial economic interactions, then the only</span>
+    </p>
+    <p class="cue" id="t1579">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1579">26:19</a>
+      <span class="cue-text">privacy you can have is weak. And that sounds depressing, but it's not. So what</span>
+    </p>
+    <p class="cue" id="t1584">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1584">26:24</a>
+      <span class="cue-text">do I mean by strong privacy? It means uncorrelated interactions over unbound in</span>
+    </p>
+    <p class="cue" id="t1589">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1589">26:29</a>
+      <span class="cue-text">time and space. And I get in these discussions with people who want strong</span>
+    </p>
+    <p class="cue" id="t1593">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1593">26:33</a>
+      <span class="cue-text">privacy and it's not possible because super aggregators and state actors have</span>
+    </p>
+    <p class="cue" id="t1599">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1599">26:39</a>
+      <span class="cue-text">effectively unlimited storage and compute capacity. That means eventually all</span>
+    </p>
+    <p class="cue" id="t1602">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1602">26:42</a>
+      <span class="cue-text">disclosed data, that means not just the third parties, the second parties will be</span>
+    </p>
+    <p class="cue" id="t1606">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1606">26:46</a>
+      <span class="cue-text">at least statistically correlatable at some time. So all we can have is weak</span>
+    </p>
+    <p class="cue" id="t1611">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1611">26:51</a>
+      <span class="cue-text">privacy. What does that mean? We can have uncorrelated interactive actions over</span>
+    </p>
+    <p class="cue" id="t1615">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1615">26:55</a>
+      <span class="cue-text">bounded time and space. That's what we get. That's what we you have to work with.</span>
+    </p>
+    <p class="cue" id="t1620">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1620">27:00</a>
+      <span class="cue-text">And when is it weak? When the cost of correlation exceeds the value of</span>
+    </p>
+    <p class="cue" id="t1624">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1624">27:04</a>
+      <span class="cue-text">correlation of the data, then it will be uncorrelated. Then we'll have weak</span>
+    </p>
+    <p class="cue" id="t1628">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1628">27:08</a>
+      <span class="cue-text">privacy. So it's an economic privacy. So let's look at the economics of</span>
+    </p>
+    <p class="cue" id="t1633">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1633">27:13</a>
+      <span class="cue-text">correlation. On this graph, I have a data life cycle. So now is data in the present.</span>
+    </p>
+    <p class="cue" id="t1641">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1641">27:21</a>
+      <span class="cue-text">And when I'm looking at predictive value of that data, that's the primary value</span>
+    </p>
+    <p class="cue" id="t1644">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1644">27:24</a>
+      <span class="cue-text">that aggregators get from aggregating our data is predicting. So, if I look at the</span>
+    </p>
+    <p class="cue" id="t1650">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1650">27:30</a>
+      <span class="cue-text">blue line, this is the value of correlating my data. Notice that if I can</span>
+    </p>
+    <p class="cue" id="t1655">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1655">27:35</a>
+      <span class="cue-text">correlate data in the future, like predicted value, it's very valuable. But</span>
+    </p>
+    <p class="cue" id="t1659">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1659">27:39</a>
+      <span class="cue-text">the older data is, the less predictive it is, the less value it has. The brown graph</span>
+    </p>
+    <p class="cue" id="t1667">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1667">27:47</a>
+      <span class="cue-text">is about the correlation cost. It's harder to correlate data that's present because</span>
+    </p>
+    <p class="cue" id="t1673">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1673">27:53</a>
+      <span class="cue-text">it hasn't been shared much. You can keep it close. You can keep it relatively</span>
+    </p>
+    <p class="cue" id="t1679">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1679">27:59</a>
+      <span class="cue-text">private. You can only share it, disclose it with certain people. Over time, it gets</span>
+    </p>
+    <p class="cue" id="t1683">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1683">28:03</a>
+      <span class="cue-text">cheaper to correlate because data is correlatable. Now, maybe, you know, some</span>
+    </p>
+    <p class="cue" id="t1688">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1688">28:08</a>
+      <span class="cue-text">data may just be pretty hard to correlate, but eventually it might become zero. I</span>
+    </p>
+    <p class="cue" id="t1694">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1694">28:14</a>
+      <span class="cue-text">don't know what this curve looks like. What that means is that where these curve</span>
+    </p>
+    <p class="cue" id="t1699">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1699">28:19</a>
+      <span class="cue-text">crosses right here tells you something. That tells you where the extractable value</span>
+    </p>
+    <p class="cue" id="t1704">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1704">28:24</a>
+      <span class="cue-text">is. This is the value that somebody's going to go after. So if you can move this</span>
+    </p>
+    <p class="cue" id="t1710">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1710">28:30</a>
+      <span class="cue-text">curve by making it a little bit harder to extract, you can reduce the extractable</span>
+    </p>
+    <p class="cue" id="t1715">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1715">28:35</a>
+      <span class="cue-text">value that increases your privacy because it just won't be extracted because it's</span>
+    </p>
+    <p class="cue" id="t1720">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1720">28:40</a>
+      <span class="cue-text">not economic. And if you can get more value out of your data, then that changes</span>
+    </p>
+    <p class="cue" id="t1728">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1728">28:48</a>
+      <span class="cue-text">things too. So let's look at the economics of the decorrelator. That's you. You want</span>
+    </p>
+    <p class="cue" id="t1733">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1733">28:53</a>
+      <span class="cue-text">your data to be decorrelated, right? So you have a decorrelation value. This is</span>
+    </p>
+    <p class="cue" id="t1737">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1737">28:57</a>
+      <span class="cue-text">the value of your data when it's decorrelated because then you can extract</span>
+    </p>
+    <p class="cue" id="t1740">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1740">29:00</a>
+      <span class="cue-text">value from it. But here is your cost to prevent people from extracting value. And</span>
+    </p>
+    <p class="cue" id="t1746">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1746">29:06</a>
+      <span class="cue-text">guess what? Your costs go up exponentially the older the data is because now you're</span>
+    </p>
+    <p class="cue" id="t1750">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1750">29:10</a>
+      <span class="cue-text">fighting against the super aggregators and the nation states and they're going to</span>
+    </p>
+    <p class="cue" id="t1754">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1754">29:14</a>
+      <span class="cue-text">beat you every time. So the only place you can extract value is here. It's in the</span>
+    </p>
+    <p class="cue" id="t1760">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1760">29:20</a>
+      <span class="cue-text">immediate past and in the future. But this can be a lot of value. And if we do things</span>
+    </p>
+    <p class="cue" id="t1765">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1765">29:25</a>
+      <span class="cue-text">right, we can move this red curve to the left so that we can extract more value.</span>
+    </p>
+    <p class="cue" id="t1771">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1771">29:31</a>
+      <span class="cue-text">But we have to control. We have to be able to control our data or we can't extract</span>
+    </p>
+    <p class="cue" id="t1775">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1775">29:35</a>
+      <span class="cue-text">our own value. And it depends on the operating regime. Those curves are</span>
+    </p>
+    <p class="cue" id="t1780">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1780">29:40</a>
+      <span class="cue-text">operating dependent. And this is one of the problems is that when we talk about</span>
+    </p>
+    <p class="cue" id="t1784">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1784">29:44</a>
+      <span class="cue-text">privacy and correlation, if we're talking about legitimate actors, legitimate</span>
+    </p>
+    <p class="cue" id="t1789">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1789">29:49</a>
+      <span class="cue-text">economic actors and legitimate political actors, then regulation is a useful tool.</span>
+    </p>
+    <p class="cue" id="t1796">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1796">29:56</a>
+      <span class="cue-text">Contracts are a useful tool. But as soon as we're talking about illegitimate</span>
+    </p>
+    <p class="cue" id="t1800">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1800">30:00</a>
+      <span class="cue-text">actors, illegitimate political actors, neither of those tools work. By</span>
+    </p>
+    <p class="cue" id="t1804">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1804">30:04</a>
+      <span class="cue-text">definition, they don't keep the rules and illegitimate economic actors don't keep</span>
+    </p>
+    <p class="cue" id="t1809">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1809">30:09</a>
+      <span class="cue-text">the rules. So if we're in an illegitimate political regime with illegitimate</span>
+    </p>
+    <p class="cue" id="t1812">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1812">30:12</a>
+      <span class="cue-text">economic actors, the only way we can protect our data is to hide and bribe. We</span>
+    </p>
+    <p class="cue" id="t1817">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1817">30:17</a>
+      <span class="cue-text">just never disclose our data. So we can't ever get value from it unless we bribe</span>
+    </p>
+    <p class="cue" id="t1822">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1822">30:22</a>
+      <span class="cue-text">somebody, which means we're not getting very much value. If we're in a legitimate</span>
+    </p>
+    <p class="cue" id="t1828">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1828">30:28</a>
+      <span class="cue-text">political regime, but dealing with illegitimate economic actors, we might be</span>
+    </p>
+    <p class="cue" id="t1832">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1832">30:32</a>
+      <span class="cue-text">able to hide or bribe. And if we're in a, I'm not sure what happens in a with</span>
+    </p>
+    <p class="cue" id="t1837">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1837">30:37</a>
+      <span class="cue-text">legitimate actors and illegitimate political regime. I guess if they're just</span>
+    </p>
+    <p class="cue" id="t1841">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1841">30:41</a>
+      <span class="cue-text">honest, then we can do business with them with contracts. If they're dishonest, then</span>
+    </p>
+    <p class="cue" id="t1846">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1846">30:46</a>
+      <span class="cue-text">they can get away with it because they can, they're an illegitimate political</span>
+    </p>
+    <p class="cue" id="t1850">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1850">30:50</a>
+      <span class="cue-text">regime, but doesn't enforce the rules or enforces rules that we don't have. If we</span>
+    </p>
+    <p class="cue" id="t1855">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1855">30:55</a>
+      <span class="cue-text">don't, and the thing is, is if we build privacy preserving mechanisms that aren't</span>
+    </p>
+    <p class="cue" id="t1862">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1862">31:02</a>
+      <span class="cue-text">recognizing the regime we're operating in, we'll build systems that won't work well.</span>
+    </p>
+    <p class="cue" id="t1866">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1866">31:06</a>
+      <span class="cue-text">And often things that work well down here are horrible up here because we can't get</span>
+    </p>
+    <p class="cue" id="t1872">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1872">31:12</a>
+      <span class="cue-text">value because we're just we're throwing away our value in order to work in this</span>
+    </p>
+    <p class="cue" id="t1876">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1876">31:16</a>
+      <span class="cue-text">regime. Because in this regime, pretty much the only thing you can do is to hide.</span>
+    </p>
+    <p class="cue" id="t1879">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1879">31:19</a>
+      <span class="cue-text">But in this regime, you don't want to hide. You want to extract your value. You</span>
+    </p>
+    <p class="cue" id="t1883">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1883">31:23</a>
+      <span class="cue-text">just want to extract it securely under your control and protect yourself through</span>
+    </p>
+    <p class="cue" id="t1887">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1887">31:27</a>
+      <span class="cue-text">contracts and regulation. So when we talk about freedom, freedom is a balancing act.</span>
+    </p>
+    <p class="cue" id="t1893">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1893">31:33</a>
+      <span class="cue-text">We have freedom from and freedom to. We have freedom from exploitation,</span>
+    </p>
+    <p class="cue" id="t1897">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1897">31:37</a>
+      <span class="cue-text">intimidation, censorship. We also need the freedom to extract value of our own to</span>
+    </p>
+    <p class="cue" id="t1902">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1902">31:42</a>
+      <span class="cue-text">build relationships to build community. The possibility of ratio of our data</span>
+    </p>
+    <p class="cue" id="t1906">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1906">31:46</a>
+      <span class="cue-text">increases the possibility of censorship. Anonymity is the loss of value from</span>
+    </p>
+    <p class="cue" id="t1912">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1912">31:52</a>
+      <span class="cue-text">attribution. Fairness requires data attribution. So there's trade-offs between</span>
+    </p>
+    <p class="cue" id="t1918">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1918">31:58</a>
+      <span class="cue-text">these values of freedom and privacy. And we have to… Regulations and technology has</span>
+    </p>
+    <p class="cue" id="t1926">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1926">32:06</a>
+      <span class="cue-text">to recognize those trade-offs. So what is a possible solution to those trade-offs?</span>
+    </p>
+    <p class="cue" id="t1931">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1931">32:11</a>
+      <span class="cue-text">Well, class-based A4 pseudonymity. It has the ability to have both high degrees of</span>
+    </p>
+    <p class="cue" id="t1938">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1938">32:18</a>
+      <span class="cue-text">hiding and non-disclosure while still maintaining control and value extraction</span>
+    </p>
+    <p class="cue" id="t1945">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1945">32:25</a>
+      <span class="cue-text">based on the class. And then we can separate our identifier trust bases so</span>
+    </p>
+    <p class="cue" id="t1951">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1951">32:31</a>
+      <span class="cue-text">that if we have to hide, we can erase without being commingled with other trust</span>
+    </p>
+    <p class="cue" id="t1959">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1959">32:39</a>
+      <span class="cue-text">bases that prevent erasure. And KERI allows us to do both of those. And KERI is</span>
+    </p>
+    <p class="cue" id="t1964">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1964">32:44</a>
+      <span class="cue-text">a future technology that doesn't exist today, but is something that we're</span>
+    </p>
+    <p class="cue" id="t1968">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1968">32:48</a>
+      <span class="cue-text">building for the future. So, that's the end of my talk.</span>
+    </p>
+    <p class="cue" id="t1974">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1974">32:54</a>
+      <span class="cue-text">And I'm sorry I went three minutes over.</span>
+    </p>
+    <p class="cue" id="t1980">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1980">33:00</a>
+      <span class="cue-text">I can't hear you, Steve.</span>
+    </p>
+    <p class="cue" id="t1986">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1986">33:06</a>
+      <span class="cue-text">Steve, I can't I can't hear you. Steve, you're on mute for everyone. Nobody can</span>
+    </p>
+    <p class="cue" id="t1989">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1989">33:09</a>
+      <span class="cue-text">hear you. Yeah, sorry. Sorry. Yeah, my double mute is protecting me from myself.</span>
+    </p>
+    <p class="cue" id="t1996">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=1996">33:16</a>
+      <span class="cue-text">Sam, I have to say that the that talk was epic and I've early feedback. from people</span>
+    </p>
+    <p class="cue" id="t2002">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=2002">33:22</a>
+      <span class="cue-text">on instant message and LinkedIn suggests that our minds are blown and we maybe</span>
+    </p>
+    <p class="cue" id="t2008">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=2008">33:28</a>
+      <span class="cue-text">should have you gone earlier in the day. But for everybody who likes podcasts, I</span>
+    </p>
+    <p class="cue" id="t2015">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=2015">33:35</a>
+      <span class="cue-text">assure you, Sam has promised me he'll come back and record a podcast with me because</span>
+    </p>
+    <p class="cue" id="t2023">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=2023">33:43</a>
+      <span class="cue-text">for me, that's something I need to play like over again and over again and over</span>
+    </p>
+    <p class="cue" id="t2027">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=2027">33:47</a>
+      <span class="cue-text">again and play it slowly and then play it fast. and take a transcript and it needs a</span>
+    </p>
+    <p class="cue" id="t2033">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=2033">33:53</a>
+      <span class="cue-text">little bit of repetitiveness for it to sink in. Yeah. And I'll post the slide</span>
+    </p>
+    <p class="cue" id="t2037">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=2037">33:57</a>
+      <span class="cue-text">someplace. I'm not, I guess. That was another question. Yep. Yeah. You just tell</span>
+    </p>
+    <p class="cue" id="t2040">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=2040">34:00</a>
+      <span class="cue-text">me where to just send me the link and I'll post them there. You may have already done</span>
+    </p>
+    <p class="cue" id="t2043">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=2043">34:03</a>
+      <span class="cue-text">that, but I just. If you could, you know, just email me a link or, you know, the</span>
+    </p>
+    <p class="cue" id="t2048">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=2048">34:08</a>
+      <span class="cue-text">file, I'll make sure. Yeah. I'll put them up on my GitHub page and then I'll send</span>
+    </p>
+    <p class="cue" id="t2053">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=2053">34:13</a>
+      <span class="cue-text">you a link to them. Awesome. I appreciate it. And I will be following up with you</span>
+    </p>
+    <p class="cue" id="t2058">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=2058">34:18</a>
+      <span class="cue-text">because, you know, Phil has been on a podcast. We've had Drummond, we've had</span>
+    </p>
+    <p class="cue" id="t2062">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=2062">34:22</a>
+      <span class="cue-text">Anne, quite a few folks. Good luck in your new role at Sovereign. I'm going to be</span>
+    </p>
+    <p class="cue" id="t2069">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=2069">34:29</a>
+      <span class="cue-text">watching that and looking forward to chatting again with you soon.</span>
+    </p>
+    <p class="cue" id="t2084">
+      <a class="cue-time" href="../../../#nonconformist-keynote-samuel-smith&amp;t=2084">34:44</a>
+      <span class="cue-text">We'll see you next time.</span>
+    </p>
+    </article>
+    <footer>KERI Foundation • Videos</footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,1930 @@
+1
+00:00:10,420 --> 00:00:16,120
+You know, by way of introducing Sam, for
+those of you who don't know Sam, you know,
+
+2
+00:00:16,260 --> 00:00:22,220
+he was recently elected to be the chairman
+of the board at the Sovereign Foundation.
+
+3
+00:00:23,040 --> 00:00:29,720
+So congratulations, Sam. In looking at
+Sam's background and reading, you know,
+
+4
+00:00:29,780 --> 00:00:34,820
+some of the of his past works. I was just
+in awe and I felt very lucky, you know, by
+
+5
+00:00:34,820 --> 00:00:42,840
+way of another past guest of the podcast,
+Phil Winley for introducing him to us. You
+
+6
+00:00:42,840 --> 00:00:46,840
+know, he comes, you know, with the
+background as both an entrepreneur, a
+
+7
+00:00:46,840 --> 00:00:53,240
+consultant, you know, very prolific in his
+writing, looks likes to spend time at the
+
+8
+00:00:53,240 --> 00:00:59,480
+intersection of AI, blockchain, and
+decentralized identity. So, with that, I'm
+
+9
+00:00:59,480 --> 00:01:02,820
+going to turn it over to Sam. And Sam,
+thank you very much for joining us from
+
+10
+00:01:02,820 --> 00:01:10,440
+whereabouts in Utah are you from? – A
+little town called Linden, which is a sub,
+
+11
+00:01:10,640 --> 00:01:17,000
+you know, in the greater metropolitan area
+for Salt Lake City, Utah. You know,
+
+12
+00:01:17,640 --> 00:01:21,060
+everybody in Utah lives in a three-county
+area. The rest of the state is mostly
+
+13
+00:01:21,060 --> 00:01:27,720
+empty. – Well, I'm going to, you know,
+turn it over to you. Thank you so much.
+
+14
+00:01:27,960 --> 00:01:35,760
+And take it away. All right. Thank you. So
+I'm going to talk about the economics of
+
+15
+00:01:35,760 --> 00:01:40,440
+its and bits. And that's going to cover a
+little bit about digital identity,
+
+16
+00:01:40,620 --> 00:01:45,840
+freedom, privacy, control, and security.
+And I left security for last because it's
+
+17
+00:01:45,840 --> 00:01:50,240
+actually the most important part of this
+conversation. And those that know me
+
+18
+00:01:50,240 --> 00:01:55,320
+probably aren't surprised when I say that.
+So when I talk about economics, I'm really
+
+19
+00:01:55,320 --> 00:02:01,640
+talking about value, creation and capture.
+And so in the environment of digital
+
+20
+00:02:01,640 --> 00:02:06,820
+identity, what do we mean by that? Well,
+we talk about value extraction exchange
+
+21
+00:02:06,820 --> 00:02:14,440
+and of course exploitation. And in order
+to have economics, somebody to benefit
+
+22
+00:02:14,440 --> 00:02:19,260
+from economics has to have control over
+value. That's the key thing. And if you
+
+23
+00:02:19,260 --> 00:02:25,780
+want control, then you need security. And
+so this cuts at the root of everything
+
+24
+00:02:25,780 --> 00:02:29,640
+that we do in digital identity. If we
+don't have security, we don't have control
+
+25
+00:02:29,640 --> 00:02:35,500
+over value and that leaves us free for
+exploitation by others. So, how do we get
+
+26
+00:02:35,500 --> 00:02:39,380
+control over value? Well, this is where
+the its and the bits come in. When I say
+
+27
+00:02:39,380 --> 00:02:47,420
+its, I mean atoms, physical things. So, a
+person is made of atoms. So, a person is a
+
+28
+00:02:47,420 --> 00:02:54,440
+physical thing. Buildings, cars, planes,
+ore, minerals, all of those things are
+
+29
+00:02:54,440 --> 00:02:58,800
+physical things. And here's the thing.
+It's easy to have security over physical
+
+30
+00:02:58,800 --> 00:03:06,060
+things because physical things are not
+easily replicable. You have to create more
+
+31
+00:03:06,060 --> 00:03:11,640
+atoms or you have to build or extract or
+get more atoms. And it costs money. Atoms
+
+32
+00:03:11,640 --> 00:03:17,800
+are relatively scarce. Some atoms are very
+scarce. And you can maintain control over
+
+33
+00:03:17,800 --> 00:03:22,540
+those atoms with what's called physical
+security. Just keep the atoms in place
+
+34
+00:03:22,540 --> 00:03:27,140
+where somebody can't get to them. Now,
+when we talk about bits, we have a
+
+35
+00:03:27,140 --> 00:03:34,960
+problem. Bits is digital information. The
+problem with bits is that it's easy to
+
+36
+00:03:34,960 --> 00:03:39,740
+copy them. We actually use subatomic
+particles to transfer and store
+
+37
+00:03:39,740 --> 00:03:45,360
+information, but those subatomic
+particles, electrons and photons are, you
+
+38
+00:03:45,360 --> 00:03:50,820
+know, virtually inexhaustible. So, from a
+cost perspective, information wants to be
+
+39
+00:03:50,820 --> 00:03:56,620
+free, easily copied, very difficult
+difficult to secure, especially if we want
+
+40
+00:03:56,620 --> 00:04:00,980
+to control it because if somebody copies
+it, we lose control of it. So the question
+
+41
+00:04:00,980 --> 00:04:09,580
+is in ITS, we have certain entities that
+have control over other entities or other
+
+42
+00:04:09,580 --> 00:04:15,860
+physical bits. In information, what fills
+the role of a legal entity like a person
+
+43
+00:04:15,860 --> 00:04:20,740
+or an organization or a corporation or a
+government? What fills that legal role
+
+44
+00:04:20,740 --> 00:04:24,640
+that actually gives the same degree of
+informational security that I have in
+
+45
+00:04:24,640 --> 00:04:28,480
+physical security. So I'm not going to
+answer that question right now, but I'm
+
+46
+00:04:28,480 --> 00:04:33,740
+going to pose that question because I
+wanted to motivate the reason why that's
+
+47
+00:04:33,740 --> 00:04:39,780
+so important. So if we look at 60 years of
+its and bits, I looked at the Fortune 20
+
+48
+00:04:39,780 --> 00:04:47,100
+in 1960. You can look at the companies and
+the Fortune 500, they always in the old
+
+49
+00:04:47,100 --> 00:04:50,900
+days, they did it in terms of revenue.
+That's how they rank them. You see that
+
+50
+00:04:50,900 --> 00:04:58,660
+all but one company on this list gets its
+value from capturing its, not bits. Only
+
+51
+00:04:58,660 --> 00:05:04,000
+AT&T is primarily gets its value from
+capturing, storing, transmitting bits of
+
+52
+00:05:04,000 --> 00:05:10,880
+information. If we go to 1980, well, we
+got IBM in there. You could maybe say that
+
+53
+00:05:10,880 --> 00:05:17,640
+it got it from bits. It was a equipment
+manufacturer, but it was equipment to
+
+54
+00:05:17,640 --> 00:05:24,740
+capture value from bits. When we get to
+2000, There's a few more in there. We've
+
+55
+00:05:24,740 --> 00:05:31,760
+got Southern Bell, Hewlett-Packard,
+Compact Computer, and AT&T. But still, the
+
+56
+00:05:31,760 --> 00:05:38,460
+majority of value capture, creation
+capture is in the it's, not the bits.
+
+57
+00:05:39,040 --> 00:05:44,300
+2020, things start to change. We see now
+that for the first time, we've got Amazon,
+
+58
+00:05:44,600 --> 00:05:54,440
+Apple, you know, they've moved up into the
+top spots, Alphabet, Verizon, But this is
+
+59
+00:05:54,440 --> 00:06:01,340
+revenue. And if we look at something much
+more telling, it's not revenue, but market
+
+60
+00:06:01,340 --> 00:06:06,880
+cap. This is people saying who is going to
+capture value in the future? What
+
+61
+00:06:06,880 --> 00:06:13,000
+companies are going to capture the value?
+And this is a scary list. Now, in terms of
+
+62
+00:06:13,000 --> 00:06:19,800
+market cap in 2020, we've got Microsoft,
+Apple, Amazon.com, Alphabet, Facebook, and
+
+63
+00:06:19,800 --> 00:06:20,360
+we've got
+
+64
+00:06:24,120 --> 00:06:30,320
+five, well, three, $2 trillion companies.
+Alphabet was, Amazon was trillion dollars
+
+65
+00:06:30,320 --> 00:06:38,120
+for a little bit in 2019 and Facebook and
+then Verizon, AT&T are still there. So,
+
+66
+00:06:38,260 --> 00:06:42,720
+the top value captures in the world are
+the ones that capture value from
+
+67
+00:06:42,720 --> 00:06:48,660
+aggregating bits. They have figured it
+out. They have figured out how to capture
+
+68
+00:06:48,660 --> 00:06:53,400
+value. And they're doing it through
+something called network effects. A
+
+69
+00:06:53,400 --> 00:06:58,060
+network scaling law basically describes
+how network value scales with the number
+
+70
+00:06:58,060 --> 00:07:04,140
+of participants. And so if we have a multi
+-sided network like this, then Metcalfe's
+
+71
+00:07:04,140 --> 00:07:08,000
+law may apply. And when Metcalfe's law
+applies, we get this very powerful
+
+72
+00:07:08,000 --> 00:07:13,480
+scaling. So this equation says that the
+value, the average value to a participant
+
+73
+00:07:13,480 --> 00:07:20,240
+on the network V is proportional to the
+number of participants on the network. And
+
+74
+00:07:20,240 --> 00:07:24,580
+the total value of the network is the
+average value per participant times number
+
+75
+00:07:24,580 --> 00:07:30,840
+of participants. So, it's proportional to
+the number of participants squared. And
+
+76
+00:07:30,840 --> 00:07:35,000
+any square loss scaling is going to
+dominate when the network gets large
+
+77
+00:07:35,000 --> 00:07:42,280
+enough. And this can be the main value
+that these companies are able to aggregate
+
+78
+00:07:42,280 --> 00:07:46,820
+is these network effects. And it's the
+network effects from bits of information
+
+79
+00:07:46,820 --> 00:07:52,340
+that they're aggregating. And the primary
+value is reach. If you have reach, like
+
+80
+00:07:52,340 --> 00:07:58,020
+you can reach people in Facebook ads or
+Google ads, or you can reach people in
+
+81
+00:07:58,020 --> 00:08:05,260
+your Apple app on the App Store, those
+contribute to value that scales
+
+82
+00:08:05,260 --> 00:08:09,480
+tremendously. And if you extract even a
+little bit of value from a square law
+
+83
+00:08:09,480 --> 00:08:14,760
+network effect, you're going to be an
+extremely valuable company. And Metz
+
+84
+00:08:14,760 --> 00:08:19,040
+-Kaft's law has been extensively
+validated. I wrote a paper on this some
+
+85
+00:08:19,040 --> 00:08:22,240
+these are some of the papers from the
+quote. You can go look at the paper, look
+
+86
+00:08:22,240 --> 00:08:28,500
+at them if you're not familiar with it. So
+the question is how do we recapture the
+
+87
+00:08:28,500 --> 00:08:32,720
+value in our data? Because the value in
+our data is being captured with good
+
+88
+00:08:32,720 --> 00:08:38,060
+effect by these super aggregators. There's
+two ways that we can capture it. We can
+
+89
+00:08:38,060 --> 00:08:43,120
+leverage cooperative network effects and
+we can retake control of our data. And
+
+90
+00:08:43,120 --> 00:08:47,500
+when I say retake control, I mean really
+take control of our data, not sort of take
+
+91
+00:08:47,500 --> 00:08:53,660
+control of our data. So what do I mean by
+cooperative network effects? Well, what
+
+92
+00:08:53,660 --> 00:08:58,400
+happens to value when two smaller networks
+combine? And understand, this is how we
+
+93
+00:08:58,400 --> 00:09:04,140
+fight people that are the largest, most
+profitable, most powerful corporations in
+
+94
+00:09:04,140 --> 00:09:08,100
+the world, right? How do we fight them?
+Because if we can't fight them, we'll
+
+95
+00:09:08,100 --> 00:09:15,860
+always lose. Because they have more power.
+They are now at the state size where they
+
+96
+00:09:15,860 --> 00:09:21,100
+are nation states in and of themselves.
+themselves, they can change how nation
+
+97
+00:09:21,100 --> 00:09:27,640
+states treat them. Well, Metcalfe's law
+comes to the rescue. If you look at
+
+98
+00:09:27,640 --> 00:09:32,560
+Metcalfe's square law effect and I take
+two networks, N1 and N2, and I combine
+
+99
+00:09:32,560 --> 00:09:39,740
+them and I look at the square law value, I
+get this bigger rectangle. And so N1 by
+
+100
+00:09:39,740 --> 00:09:44,200
+itself has this smaller rectangle. N2 by
+itself has a smaller rectangle. But
+
+101
+00:09:44,200 --> 00:09:52,000
+combined, each of them gets an an added
+rectangle that is in N2's cases, N1's case
+
+102
+00:09:52,000 --> 00:09:57,280
+is bigger than N1 was to start with. And
+so without going through the math, what
+
+103
+00:09:57,280 --> 00:10:03,960
+you get is a bonus of an N1 times N2
+proportional factor for any two networks
+
+104
+00:10:03,960 --> 00:10:10,360
+that combine. This is essentially free
+just for combining, just by combining
+
+105
+00:10:10,360 --> 00:10:16,560
+participants from two networks. So why
+wouldn't any two networks combine? That's
+
+106
+00:10:16,560 --> 00:10:24,920
+a good question. Right? And this is
+actually the regimes in which combination
+
+107
+00:10:24,920 --> 00:10:29,540
+makes sense. When two networks are value
+symmetric, that means they're of the same
+
+108
+00:10:29,540 --> 00:10:33,900
+size value, then it's always more
+profitable for both to combine. And in
+
+109
+00:10:33,900 --> 00:10:40,140
+this paper, positive demand externalities
+is an operational research code word for
+
+110
+00:10:40,140 --> 00:10:45,060
+network effects. When two networks are
+value asymmetric, it's always more
+
+111
+00:10:45,060 --> 00:10:48,580
+profitable for smaller networks to
+combine. This is lifetime value of the
+
+112
+00:10:48,580 --> 00:10:53,620
+combination. Now, when I have two networks
+where one is much larger, it's not always
+
+113
+00:10:53,620 --> 00:10:57,980
+more profitable for the larger one to
+combine. That's the problem. If you're
+
+114
+00:10:57,980 --> 00:11:02,580
+large enough, you don't want to combine.
+But if the network size is below a
+
+115
+00:11:02,580 --> 00:11:08,580
+threshold, then it's still more profitable
+for the larger one to combine. And that
+
+116
+00:11:08,580 --> 00:11:13,220
+threshold is based on a feedback adoption
+growth rate curve, which tends to follow
+
+117
+00:11:13,220 --> 00:11:18,920
+sigmoidal adoption curve. And when you're
+down here close to the bottom of this
+
+118
+00:11:18,920 --> 00:11:23,200
+curve, even if you're a much larger
+network, it's still to your advantage to
+
+119
+00:11:23,200 --> 00:11:28,220
+always combine with smaller networks. If
+you're up here in a saturation regime,
+
+120
+00:11:28,320 --> 00:11:34,680
+there's no advantage to combination. So,
+what is this? What do competing small
+
+121
+00:11:34,680 --> 00:11:38,560
+networks do? Well, let's look at what
+happens if we had several competing small
+
+122
+00:11:38,560 --> 00:11:43,260
+networks. Each of them has a value
+proportional to their side. They're all
+
+123
+00:11:43,260 --> 00:11:50,340
+the same size, right? And if they're
+square law effect. If I now make a super
+
+124
+00:11:50,340 --> 00:11:56,000
+network of these cooperating small
+networks, the value of each sub network is
+
+125
+00:11:56,000 --> 00:12:02,160
+10 times its value before they combine
+when the size of the total network is 10
+
+126
+00:12:02,160 --> 00:12:07,360
+times the size. So, I get a 10 times
+increase in value for free just by
+
+127
+00:12:07,360 --> 00:12:14,360
+cooperating to the extent that cooperation
+is free. I mean, there's always some cost
+
+128
+00:12:14,360 --> 00:12:17,840
+to cooperation if you don't have
+interoperable systems. But if you have
+
+129
+00:12:17,840 --> 00:12:22,220
+interoperable systems, then that cost is
+pretty small. The total value of the super
+
+130
+00:12:22,220 --> 00:12:27,560
+network is 100 times the value of the
+individual networks combined. This is
+
+131
+00:12:27,560 --> 00:12:32,000
+huge. This allows a bunch of small
+networks to become super aggregators
+
+132
+00:12:32,000 --> 00:12:40,020
+merely by combining. And when I say super
+aggregators, I mean benefit have a network
+
+133
+00:12:40,020 --> 00:12:45,560
+whose network value benefits from the
+network effect. So that is a powerful
+
+134
+00:12:45,560 --> 00:12:52,360
+force that we can use to fight the
+
+135
+00:12:52,360 --> 00:12:57,360
+extraction and exploitation of our data
+value, how we can fight back. And so this
+
+136
+00:12:57,360 --> 00:13:02,540
+is an equation that says the proportion
+will value for any network to join a
+
+137
+00:13:02,540 --> 00:13:07,040
+larger network is the ratio of the size of
+the larger network to the size of the
+
+138
+00:13:07,040 --> 00:13:11,360
+smaller network. So the network effect
+from a subnetwork joining and cooperating
+
+139
+00:13:11,360 --> 00:13:14,520
+as a super network is the subnetwork's
+values increased by the ratio of the
+
+140
+00:13:14,520 --> 00:13:19,460
+subnetwork size to the supernetwork
+subnetwork size. This is the advantage of
+
+141
+00:13:19,460 --> 00:13:26,500
+cooperation. It's a huge advantage. So the
+small network strategy is to one strategy
+
+142
+00:13:26,500 --> 00:13:30,500
+is to create what's called a cooperative
+network cascade. What that means is I've
+
+143
+00:13:30,500 --> 00:13:35,120
+got a small network and I'm competing with
+the larger network. If I convince the
+
+144
+00:13:35,120 --> 00:13:40,700
+larger network to cooperate, then the
+combined network can now outcompete the
+
+145
+00:13:40,700 --> 00:13:47,180
+next larger network and so on. And so you
+can cascade to where you can force even
+
+146
+00:13:47,180 --> 00:13:52,060
+the largest existing non-cooperating
+network to realize that it's more
+
+147
+00:13:52,060 --> 00:13:57,680
+profitable for them to cooperate than to
+compete because if you're benefiting from
+
+148
+00:13:57,680 --> 00:14:03,800
+Metcalf's network scaling effects. So, how
+do we remove the primary barrier to
+
+149
+00:14:03,800 --> 00:14:07,740
+cooperation? Even with this knowledge,
+even with this knowledge that cooperation
+
+150
+00:14:07,740 --> 00:14:13,220
+is more beneficial than competition when
+you're in the right regime, which happens
+
+151
+00:14:13,220 --> 00:14:17,560
+a lot, but people still don't cooperate.
+because they're competitors. So how do we
+
+152
+00:14:17,560 --> 00:14:20,820
+remove that barrier? Well, one way to
+remove that barrier is to look at
+
+153
+00:14:20,820 --> 00:14:27,480
+different value contexts. Look at networks
+that aren't directly competitive. If we
+
+154
+00:14:27,480 --> 00:14:35,060
+can find value that's transferable between
+contexts, then we have a way of gaining a
+
+155
+00:14:35,060 --> 00:14:41,480
+cooperative network effect without ever
+forcing competitors to cooperate because
+
+156
+00:14:41,480 --> 00:14:44,960
+they're not competitors in the first
+place. They just have to cooperate. And I
+
+157
+00:14:44,960 --> 00:14:49,720
+call this transcontential value creation
+and capture. So if we can have value that
+
+158
+00:14:49,720 --> 00:14:53,940
+is transitive or transferable between
+contexts, and context in this case would
+
+159
+00:14:53,940 --> 00:14:59,660
+be products and services in the same
+market segment, then we have an
+
+160
+00:14:59,660 --> 00:15:05,600
+opportunity to prime or bootstrap
+cooperative network effects. So we use
+
+161
+00:15:05,600 --> 00:15:10,000
+transcontential value creation and capture
+to fuel cooperative network effects. And
+
+162
+00:15:10,000 --> 00:15:16,560
+then that starts the cascade. So the final
+thing we want to do is since the question
+
+163
+00:15:16,560 --> 00:15:23,580
+was how do we regain control of our data
+value is that we want these cooperative
+
+164
+00:15:23,580 --> 00:15:28,180
+networks to be participant controlled. We
+want to extract the value from it, not
+
+165
+00:15:28,180 --> 00:15:32,740
+some administrator of a network. Even a
+cooperative network administrator can
+
+166
+00:15:32,740 --> 00:15:36,780
+extract value. We want the participants to
+be able to extract appropriate levels of
+
+167
+00:15:36,780 --> 00:15:40,680
+value. So we want participant controlled
+networks and we can get participant
+
+168
+00:15:40,680 --> 00:15:44,080
+controlled networks if we use the right
+tech. And what that means is that
+
+169
+00:15:44,080 --> 00:15:50,080
+participants can then create a virtual
+participant-centric network. And this
+
+170
+00:15:50,080 --> 00:15:54,080
+enables participants to amplify their own
+value across multiple contexts, which
+
+171
+00:15:54,080 --> 00:15:58,040
+maximizes adoption pool and creates the
+fastest spin-in of cooperative network
+
+172
+00:15:58,040 --> 00:16:04,300
+effects. That's the economics of
+cooperation. And another benefit of
+
+173
+00:16:04,300 --> 00:16:07,400
+cooperation is what I call the cooperative
+long tail network effect. If you think
+
+174
+00:16:07,400 --> 00:16:12,360
+about the long tail, and that's the area
+under the the long tail in this curve,
+
+175
+00:16:12,400 --> 00:16:18,760
+this is a power log distribution for a
+market. The long tail is essentially a
+
+176
+00:16:18,760 --> 00:16:23,400
+bunch of different contexts because
+they're all too small and disparate and
+
+177
+00:16:23,400 --> 00:16:29,420
+segmented to have enough individual value
+to be here where people are targeting. And
+
+178
+00:16:29,420 --> 00:16:34,860
+so if we recognize that the long tail is
+different context, we can create a
+
+179
+00:16:34,860 --> 00:16:41,480
+cooperative network that aggregates the
+value in that long tail and and get a
+
+180
+00:16:41,480 --> 00:16:44,960
+network effect just from the long tail.
+So, where do we find transcontextual
+
+181
+00:16:44,960 --> 00:16:52,300
+value? Well, we find it in transaction
+costs. The theory of the firm, the theory
+
+182
+00:16:52,300 --> 00:16:59,800
+of why any organization has value is that
+it reduces transaction costs to its
+
+183
+00:16:59,800 --> 00:17:04,880
+customers. There are three ways we can
+group transaction costs into three
+
+184
+00:17:04,880 --> 00:17:10,520
+buckets. There's lots of ways to do it,
+but this is a very useful grouping. First
+
+185
+00:17:10,520 --> 00:17:14,260
+set are triangulation costs. These are
+about connection, fine filtering and
+
+186
+00:17:14,260 --> 00:17:18,660
+matching participants. The second is
+transfer, facilitation, transport,
+
+187
+00:17:18,820 --> 00:17:23,340
+delivering payment. We all know business
+models that are focused on one or both of
+
+188
+00:17:23,340 --> 00:17:27,700
+these. The third one, the one that is
+hidden that most of us don't realize or
+
+189
+00:17:27,700 --> 00:17:34,380
+see is trust transaction costs, security,
+competency, reliability, privacy, and
+
+190
+00:17:34,380 --> 00:17:40,060
+liability. These trust costs are often
+hidden costs and they're often not well
+
+191
+00:17:40,060 --> 00:17:45,820
+optimized. They're not reduced. And in
+many cases, people mistake the value of a
+
+192
+00:17:45,820 --> 00:17:50,340
+network effect from their triangulation
+transfer and ignore the fact that they
+
+193
+00:17:50,340 --> 00:17:54,880
+actually solved a trust transaction cost.
+And this is where digital identity and
+
+194
+00:17:54,880 --> 00:17:59,480
+decentralized identity come to play
+because all of the technical stuff, trust
+
+195
+00:17:59,480 --> 00:18:05,600
+over IP, right? It's about reducing trust
+transaction costs. So, platforms and
+
+196
+00:18:05,600 --> 00:18:10,020
+networks sell reductions in transaction
+costs. To a consumer, all costs look like
+
+197
+00:18:10,020 --> 00:18:13,800
+transaction costs. It doesn't matter if
+it's its or bits. All costs look like
+
+198
+00:18:13,800 --> 00:18:18,900
+transaction costs. The principal super
+aggregated pull in many cases is reduced
+
+199
+00:18:18,900 --> 00:18:23,500
+trust action costs. Your Facebook login
+account. You can log into Facebook.
+
+200
+00:18:23,660 --> 00:18:27,220
+They're going to manage all of your trust
+for you, all of your security so that you
+
+201
+00:18:27,220 --> 00:18:31,280
+can interact with other participants on
+the platform and you don't have to worry
+
+202
+00:18:31,280 --> 00:18:37,980
+about it. So, but the thing is trust may
+be highly transferable. If you think about
+
+203
+00:18:37,980 --> 00:18:43,660
+it, reliability, credibility,
+accessibility, those things, an entity or
+
+204
+00:18:43,660 --> 00:18:50,700
+an individual tend to be transferable.
+Those sorts of behaviors tend to be
+
+205
+00:18:50,700 --> 00:18:55,020
+transferable. Security tends to be
+transferable. Digital identity is
+
+206
+00:18:55,020 --> 00:19:02,020
+transferable. Login, onboarding, all of
+those things are transferable. So, a
+
+207
+00:19:02,020 --> 00:19:05,580
+reduction in trust transaction cost is a
+primary network effect value from
+
+208
+00:19:05,580 --> 00:19:11,660
+cooperation. We can leverage that. So,
+what we want is we want to have transitive
+
+209
+00:19:11,660 --> 00:19:16,280
+value virtual network scaling law. What
+does that look like? Well, if we have a
+
+210
+00:19:16,280 --> 00:19:20,080
+set of transcontextual cooperating
+networks, that means there's value that
+
+211
+00:19:20,080 --> 00:19:25,040
+can transfer between, but they're not
+direct competitors, and there's some
+
+212
+00:19:25,040 --> 00:19:29,380
+transitivity factor, average transitivity
+factor, then we can rewrite Metcoff
+
+213
+00:19:29,380 --> 00:19:35,140
+scaling law this way and don't read the
+math, but it basically gives us down at
+
+214
+00:19:35,140 --> 00:19:41,760
+the bottom a square law scale effect just
+from the value that is extractable, that
+
+215
+00:19:41,760 --> 00:19:46,900
+is transitive. And even if T is really,
+really, really small because it's a square
+
+216
+00:19:46,900 --> 00:19:53,320
+law, we get huge value just from
+cooperation. So, that's how we fight. And
+
+217
+00:19:53,320 --> 00:19:57,760
+you can read the details in this paper
+below. Just look up meta platforms and
+
+218
+00:19:57,760 --> 00:20:03,340
+cooperative networking network effects.
+So, the second strategy was retake control
+
+219
+00:20:03,340 --> 00:20:08,820
+of our data. How do we retake control of
+our data? data. We have certain toolkits
+
+220
+00:20:08,820 --> 00:20:13,300
+for controlling our data. Now, you've
+heard this thing that says if all you have
+
+221
+00:20:13,300 --> 00:20:18,940
+is a hammer, everything looks like a nail.
+Well, the truth of the matter is if you
+
+222
+00:20:18,940 --> 00:20:24,180
+have nails, there's different types of
+nails and different types of hammers work
+
+223
+00:20:24,180 --> 00:20:28,640
+better. So, that's okay. But in this
+context, usually people use it to say,
+
+224
+00:20:28,720 --> 00:20:32,000
+well, you need to get more tools in your
+toolbox and not just have hammers. The
+
+225
+00:20:32,000 --> 00:20:38,580
+problem is that an information we only
+have one set of tools. We can do things
+
+226
+00:20:38,580 --> 00:20:45,300
+with screws and we can use screwdrivers,
+but hammer is on an option. In fact, there
+
+227
+00:20:45,300 --> 00:20:48,980
+aren't very many options. We have one set
+of tools for truly secure data control.
+
+228
+00:20:49,120 --> 00:20:56,420
+That's it. And this gets us back to
+answering the question because the hard
+
+229
+00:20:56,420 --> 00:21:02,840
+question for data is secure control,
+right? Information security. So, we want
+
+230
+00:21:02,840 --> 00:21:07,600
+control over value. you. Physical
+security, that's a solvable problem.
+
+231
+00:21:07,940 --> 00:21:14,420
+Information security, we continue to have
+hacks of computing infrastructure. We
+
+232
+00:21:14,420 --> 00:21:19,020
+continue to have the network is not
+secure. We continue to have, in fact, many
+
+233
+00:21:19,020 --> 00:21:23,640
+of the talks today were about how to how
+better to achieve informational security
+
+234
+00:21:23,640 --> 00:21:29,620
+in your systems. And it's not a and it
+appears to not be a well-solved problem.
+
+235
+00:21:30,580 --> 00:21:35,280
+Well, the solution, the set of tools comes
+from digital uniqueness. The reason
+
+236
+00:21:35,280 --> 00:21:39,320
+physical security is a solvable problem
+because we have physical uniqueness of
+
+237
+00:21:39,320 --> 00:21:46,540
+atoms. We do not have physical uniqueness
+of bits. We need to somehow bootstrap to
+
+238
+00:21:46,540 --> 00:21:51,760
+something that looks like that. That
+bootstrap, there's only one. It's called
+
+239
+00:21:51,760 --> 00:21:57,400
+informational entropy. It's the only tool
+we have. It's like the screws in the
+
+240
+00:21:57,400 --> 00:22:04,420
+picture before and the drivers are entropy
+-derived tools. These are cryptographic
+
+241
+00:22:04,420 --> 00:22:09,440
+one-way functions. You know them as
+hashes, scalar multiplication, digital
+
+242
+00:22:09,440 --> 00:22:13,840
+signatures, EKPs. That's it. That's all
+we've got. If we don't know how to use
+
+243
+00:22:13,840 --> 00:22:18,220
+them well, we don't have informational
+security. If we use them poorly or we use
+
+244
+00:22:18,220 --> 00:22:24,220
+them inadequately or we use them in not
+best practices, we fail over and over and
+
+245
+00:22:24,220 --> 00:22:29,420
+over again. We have to do this right if we
+ever want to actually gain control over
+
+246
+00:22:29,420 --> 00:22:35,920
+our data. It's like we're in la-la land if
+we think otherwise. And unfortunately,
+
+247
+00:22:36,260 --> 00:22:40,860
+many people imagine that there's some
+magical way to get informational security
+
+248
+00:22:40,860 --> 00:22:46,200
+that doesn't use these tools. So
+information uniqueness comes from captured
+
+249
+00:22:46,200 --> 00:22:51,360
+entropy. But guess what? Anybody can
+capture entropy. That makes captured
+
+250
+00:22:51,360 --> 00:22:58,300
+entropy an inherently decentralized tool.
+So we individuals, participants can take
+
+251
+00:22:58,300 --> 00:23:02,260
+control of our data, but we first must
+retake control of our identifiers because
+
+252
+00:23:02,260 --> 00:23:08,480
+the identifier control is what the tools
+give us. We can control our identifiers.
+
+253
+00:23:09,640 --> 00:23:14,060
+And the type of identifier that allows us
+to do that are called self-certifying
+
+254
+00:23:14,060 --> 00:23:19,260
+pseudonymous identifiers. And there's a
+white paper I wrote that talks about the
+
+255
+00:23:19,260 --> 00:23:23,220
+theory of self-certifying pseudonymous
+identifiers and why they enable us to have
+
+256
+00:23:23,220 --> 00:23:27,680
+true decentralized roots of trust to
+control over our data. But obviously it's
+
+257
+00:23:27,680 --> 00:23:31,180
+not, it's and you can go look at the
+paper, but it's beyond the scope of this
+
+258
+00:23:31,180 --> 00:23:37,840
+talk. What that simplifies to are the four
+A's of secure data control. That's the
+
+259
+00:23:37,840 --> 00:23:45,180
+author, authentic, authorized, and
+authoritative. Each data item can be
+
+260
+00:23:45,180 --> 00:23:51,800
+imbued with these four A's. So, I call
+that A4 data control. That establishes
+
+261
+00:23:51,800 --> 00:23:57,080
+that control via self-certifying
+pseudonymous identifiers of the data and
+
+262
+00:23:57,080 --> 00:24:02,780
+the author and the authorization consent
+to all of those can be can be put in the
+
+263
+00:24:02,780 --> 00:24:08,980
+data. And so I coined a new term called
+sapored data. So the term sapored means the
+
+264
+00:24:08,980 --> 00:24:12,500
+quality and substance that affects the
+sense of taste, savor, flavor. So if we
+
+265
+00:24:12,500 --> 00:24:18,860
+want data that is controllable, we need to
+sapored the data. And what that means is we
+
+266
+00:24:18,860 --> 00:24:23,280
+can securely provenance the data to its
+authors. And if we can't securely
+
+267
+00:24:23,280 --> 00:24:27,380
+provenance the data to the authors, we
+can't securely extract control. That
+
+268
+00:24:27,380 --> 00:24:32,900
+attribution is necessary. And that means
+that we we build sapored data supply chains
+
+269
+00:24:32,900 --> 00:24:37,420
+that enable consumer pull in addition to
+regulatory push so that we become
+
+270
+00:24:37,420 --> 00:24:44,280
+conscious consumers of sapored data. So we go
+back to our diagram. We have the its that
+
+271
+00:24:44,280 --> 00:24:50,800
+control the bits. And now I've got rid of
+the question mark here because this is
+
+272
+00:24:50,800 --> 00:24:54,660
+cryptographic pseudonymous identifiers. We
+can control those. We can control those in
+
+273
+00:24:54,660 --> 00:25:01,020
+a decentralized secure way and there's no
+there are no exploits other than you can
+
+274
+00:25:01,020 --> 00:25:06,060
+protect it with purely key management.
+That means that we can have control and
+
+275
+00:25:06,060 --> 00:25:10,560
+attribution. So we can control our data
+and we can get attribution back, which
+
+276
+00:25:10,560 --> 00:25:16,580
+means we can extract value of our own
+data. And what we want to prevent is
+
+277
+00:25:16,580 --> 00:25:22,480
+correlation between these identifiers and
+the its. That's the thing that we need to
+
+278
+00:25:22,480 --> 00:25:27,460
+do to get privacy. But if we throw away
+all of this in order to get privacy, we
+
+279
+00:25:27,460 --> 00:25:32,980
+throw away our ability to extract value
+and to control our own data. And that's
+
+280
+00:25:32,980 --> 00:25:38,980
+the problem with the regulatory regime.
+Most regulations are throwing away all of
+
+281
+00:25:38,980 --> 00:25:43,140
+the bits in order to prevent the
+correlation. They say, oh, you don't want
+
+282
+00:25:43,140 --> 00:25:46,920
+correlation? Get rid of the bits. Then you
+won't have correlation because there's
+
+283
+00:25:46,920 --> 00:25:50,540
+nothing to correlate. But then you get rid
+of the value as well. So it's a
+
+284
+00:25:50,540 --> 00:25:55,920
+diseconomic incentive. So what does that
+mean? Privacy. You have to choose. You can
+
+285
+00:25:55,920 --> 00:25:59,280
+have this kind of privacy. You're a lone
+person on an island. Don't interact with
+
+286
+00:25:59,280 --> 00:26:05,740
+anybody or you can have privacy where you
+interact with people. But if you're alone
+
+287
+00:26:05,740 --> 00:26:10,060
+on the island, it can be strong because
+you're not disclosing data to anyone.
+
+288
+00:26:10,240 --> 00:26:14,600
+You're not extracting value from your
+data. You're just living on your own. If
+
+289
+00:26:14,600 --> 00:26:19,240
+you want to interact, have commercial
+economic interactions, then the only
+
+290
+00:26:19,240 --> 00:26:24,160
+privacy you can have is weak. And that
+sounds depressing, but it's not. So what
+
+291
+00:26:24,160 --> 00:26:29,020
+do I mean by strong privacy? It means
+uncorrelated interactions over unbound in
+
+292
+00:26:29,020 --> 00:26:33,500
+time and space. And I get in these
+discussions with people who want strong
+
+293
+00:26:33,500 --> 00:26:39,200
+privacy and it's not possible because
+super aggregators and state actors have
+
+294
+00:26:39,200 --> 00:26:42,660
+effectively unlimited storage and compute
+capacity. That means eventually all
+
+295
+00:26:42,660 --> 00:26:46,920
+disclosed data, that means not just the
+third parties, the second parties will be
+
+296
+00:26:46,920 --> 00:26:51,520
+at least statistically correlatable at
+some time. So all we can have is weak
+
+297
+00:26:51,520 --> 00:26:55,700
+privacy. What does that mean? We can have
+uncorrelated interactive actions over
+
+298
+00:26:55,700 --> 00:26:59,420
+bounded time and space. That's what we
+get. That's what we you have to work with.
+
+299
+00:27:00,260 --> 00:27:04,820
+And when is it weak? When the cost of
+correlation exceeds the value of
+
+300
+00:27:04,820 --> 00:27:08,760
+correlation of the data, then it will be
+uncorrelated. Then we'll have weak
+
+301
+00:27:08,760 --> 00:27:13,920
+privacy. So it's an economic privacy. So
+let's look at the economics of
+
+302
+00:27:13,920 --> 00:27:20,780
+correlation. On this graph, I have a data
+life cycle. So now is data in the present.
+
+303
+00:27:21,460 --> 00:27:24,800
+And when I'm looking at predictive value
+of that data, that's the primary value
+
+304
+00:27:24,800 --> 00:27:30,480
+that aggregators get from aggregating our
+data is predicting. So, if I look at the
+
+305
+00:27:30,480 --> 00:27:35,080
+blue line, this is the value of
+correlating my data. Notice that if I can
+
+306
+00:27:35,080 --> 00:27:39,580
+correlate data in the future, like
+predicted value, it's very valuable. But
+
+307
+00:27:39,580 --> 00:27:47,060
+the older data is, the less predictive it
+is, the less value it has. The brown graph
+
+308
+00:27:47,060 --> 00:27:53,220
+is about the correlation cost. It's harder
+to correlate data that's present because
+
+309
+00:27:53,220 --> 00:27:59,520
+it hasn't been shared much. You can keep
+it close. You can keep it relatively
+
+310
+00:27:59,520 --> 00:28:03,360
+private. You can only share it, disclose
+it with certain people. Over time, it gets
+
+311
+00:28:03,360 --> 00:28:08,220
+cheaper to correlate because data is
+correlatable. Now, maybe, you know, some
+
+312
+00:28:08,220 --> 00:28:14,480
+data may just be pretty hard to correlate,
+but eventually it might become zero. I
+
+313
+00:28:14,480 --> 00:28:19,120
+don't know what this curve looks like.
+What that means is that where these curve
+
+314
+00:28:19,120 --> 00:28:24,420
+crosses right here tells you something.
+That tells you where the extractable value
+
+315
+00:28:24,420 --> 00:28:30,720
+is. This is the value that somebody's
+going to go after. So if you can move this
+
+316
+00:28:30,720 --> 00:28:35,340
+curve by making it a little bit harder to
+extract, you can reduce the extractable
+
+317
+00:28:35,340 --> 00:28:40,400
+value that increases your privacy because
+it just won't be extracted because it's
+
+318
+00:28:40,400 --> 00:28:48,480
+not economic. And if you can get more
+value out of your data, then that changes
+
+319
+00:28:48,480 --> 00:28:53,040
+things too. So let's look at the economics
+of the decorrelator. That's you. You want
+
+320
+00:28:53,040 --> 00:28:57,660
+your data to be decorrelated, right? So
+you have a decorrelation value. This is
+
+321
+00:28:57,660 --> 00:29:00,960
+the value of your data when it's
+decorrelated because then you can extract
+
+322
+00:29:00,960 --> 00:29:06,340
+value from it. But here is your cost to
+prevent people from extracting value. And
+
+323
+00:29:06,340 --> 00:29:10,660
+guess what? Your costs go up exponentially
+the older the data is because now you're
+
+324
+00:29:10,660 --> 00:29:14,720
+fighting against the super aggregators and
+the nation states and they're going to
+
+325
+00:29:14,720 --> 00:29:20,440
+beat you every time. So the only place you
+can extract value is here. It's in the
+
+326
+00:29:20,440 --> 00:29:25,960
+immediate past and in the future. But this
+can be a lot of value. And if we do things
+
+327
+00:29:25,960 --> 00:29:31,740
+right, we can move this red curve to the
+left so that we can extract more value.
+
+328
+00:29:31,880 --> 00:29:35,800
+But we have to control. We have to be able
+to control our data or we can't extract
+
+329
+00:29:35,800 --> 00:29:40,460
+our own value. And it depends on the
+operating regime. Those curves are
+
+330
+00:29:40,460 --> 00:29:44,640
+operating dependent. And this is one of
+the problems is that when we talk about
+
+331
+00:29:44,640 --> 00:29:49,900
+privacy and correlation, if we're talking
+about legitimate actors, legitimate
+
+332
+00:29:49,900 --> 00:29:56,080
+economic actors and legitimate political
+actors, then regulation is a useful tool.
+
+333
+00:29:56,080 --> 00:30:00,460
+Contracts are a useful tool. But as soon
+as we're talking about illegitimate
+
+334
+00:30:00,460 --> 00:30:04,420
+actors, illegitimate political actors,
+neither of those tools work. By
+
+335
+00:30:04,420 --> 00:30:09,380
+definition, they don't keep the rules and
+illegitimate economic actors don't keep
+
+336
+00:30:09,380 --> 00:30:12,700
+the rules. So if we're in an illegitimate
+political regime with illegitimate
+
+337
+00:30:12,700 --> 00:30:17,840
+economic actors, the only way we can
+protect our data is to hide and bribe. We
+
+338
+00:30:17,840 --> 00:30:22,400
+just never disclose our data. So we can't
+ever get value from it unless we bribe
+
+339
+00:30:22,400 --> 00:30:28,200
+somebody, which means we're not getting
+very much value. If we're in a legitimate
+
+340
+00:30:28,200 --> 00:30:32,280
+political regime, but dealing with
+illegitimate economic actors, we might be
+
+341
+00:30:32,280 --> 00:30:37,700
+able to hide or bribe. And if we're in a,
+I'm not sure what happens in a with
+
+342
+00:30:37,700 --> 00:30:41,080
+legitimate actors and illegitimate
+political regime. I guess if they're just
+
+343
+00:30:41,080 --> 00:30:46,400
+honest, then we can do business with them
+with contracts. If they're dishonest, then
+
+344
+00:30:46,400 --> 00:30:50,860
+they can get away with it because they
+can, they're an illegitimate political
+
+345
+00:30:50,860 --> 00:30:55,700
+regime, but doesn't enforce the rules or
+enforces rules that we don't have. If we
+
+346
+00:30:55,700 --> 00:31:02,340
+don't, and the thing is, is if we build
+privacy preserving mechanisms that aren't
+
+347
+00:31:02,340 --> 00:31:05,740
+recognizing the regime we're operating in,
+we'll build systems that won't work well.
+
+348
+00:31:06,740 --> 00:31:12,780
+And often things that work well down here
+are horrible up here because we can't get
+
+349
+00:31:12,780 --> 00:31:16,480
+value because we're just we're throwing
+away our value in order to work in this
+
+350
+00:31:16,480 --> 00:31:19,420
+regime. Because in this regime, pretty
+much the only thing you can do is to hide.
+
+351
+00:31:19,800 --> 00:31:23,300
+But in this regime, you don't want to
+hide. You want to extract your value. You
+
+352
+00:31:23,300 --> 00:31:27,200
+just want to extract it securely under
+your control and protect yourself through
+
+353
+00:31:27,200 --> 00:31:33,220
+contracts and regulation. So when we talk
+about freedom, freedom is a balancing act.
+
+354
+00:31:33,340 --> 00:31:37,520
+We have freedom from and freedom to. We
+have freedom from exploitation,
+
+355
+00:31:37,700 --> 00:31:42,460
+intimidation, censorship. We also need the
+freedom to extract value of our own to
+
+356
+00:31:42,460 --> 00:31:46,860
+build relationships to build community.
+The possibility of ratio of our data
+
+357
+00:31:46,860 --> 00:31:52,200
+increases the possibility of censorship.
+Anonymity is the loss of value from
+
+358
+00:31:52,200 --> 00:31:58,940
+attribution. Fairness requires data
+attribution. So there's trade-offs between
+
+359
+00:31:58,940 --> 00:32:06,240
+these values of freedom and privacy. And
+we have to… Regulations and technology has
+
+360
+00:32:06,240 --> 00:32:11,220
+to recognize those trade-offs. So what is
+a possible solution to those trade-offs?
+
+361
+00:32:11,380 --> 00:32:18,740
+Well, class-based A4 pseudonymity. It has
+the ability to have both high degrees of
+
+362
+00:32:18,740 --> 00:32:25,040
+hiding and non-disclosure while still
+maintaining control and value extraction
+
+363
+00:32:25,040 --> 00:32:31,360
+based on the class. And then we can
+separate our identifier trust bases so
+
+364
+00:32:31,360 --> 00:32:39,220
+that if we have to hide, we can erase
+without being commingled with other trust
+
+365
+00:32:39,220 --> 00:32:44,400
+bases that prevent erasure. And KERI
+allows us to do both of those. And KERI is
+
+366
+00:32:44,400 --> 00:32:48,100
+a future technology that doesn't exist
+today, but is something that we're
+
+367
+00:32:48,100 --> 00:32:51,620
+building for the future. So, that's the
+end of my talk.
+
+368
+00:32:54,460 --> 00:32:56,400
+And I'm sorry I went three minutes over.
+
+369
+00:33:00,660 --> 00:33:01,980
+I can't hear you, Steve.
+
+370
+00:33:06,880 --> 00:33:09,800
+Steve, I can't I can't hear you. Steve,
+you're on mute for everyone. Nobody can
+
+371
+00:33:09,800 --> 00:33:14,620
+hear you. Yeah, sorry. Sorry. Yeah, my
+double mute is protecting me from myself.
+
+372
+00:33:16,860 --> 00:33:22,120
+Sam, I have to say that the that talk was
+epic and I've early feedback. from people
+
+373
+00:33:22,120 --> 00:33:28,880
+on instant message and LinkedIn suggests
+that our minds are blown and we maybe
+
+374
+00:33:28,880 --> 00:33:35,440
+should have you gone earlier in the day.
+But for everybody who likes podcasts, I
+
+375
+00:33:35,440 --> 00:33:43,080
+assure you, Sam has promised me he'll come
+back and record a podcast with me because
+
+376
+00:33:43,080 --> 00:33:47,820
+for me, that's something I need to play
+like over again and over again and over
+
+377
+00:33:47,820 --> 00:33:53,440
+again and play it slowly and then play it
+fast. and take a transcript and it needs a
+
+378
+00:33:53,440 --> 00:33:57,240
+little bit of repetitiveness for it to
+sink in. Yeah. And I'll post the slide
+
+379
+00:33:57,240 --> 00:34:00,740
+someplace. I'm not, I guess. That was
+another question. Yep. Yeah. You just tell
+
+380
+00:34:00,740 --> 00:34:03,500
+me where to just send me the link and I'll
+post them there. You may have already done
+
+381
+00:34:03,500 --> 00:34:08,000
+that, but I just. If you could, you know,
+just email me a link or, you know, the
+
+382
+00:34:08,000 --> 00:34:13,200
+file, I'll make sure. Yeah. I'll put them
+up on my GitHub page and then I'll send
+
+383
+00:34:13,200 --> 00:34:18,420
+you a link to them. Awesome. I appreciate
+it. And I will be following up with you
+
+384
+00:34:18,420 --> 00:34:22,600
+because, you know, Phil has been on a
+podcast. We've had Drummond, we've had
+
+385
+00:34:22,600 --> 00:34:29,100
+Anne, quite a few folks. Good luck in your
+new role at Sovereign. I'm going to be
+
+386
+00:34:29,100 --> 00:34:33,500
+watching that and looking forward to
+chatting again with you soon.
+
+387
+00:34:44,280 --> 00:34:44,400
+We'll see you next time.
+
