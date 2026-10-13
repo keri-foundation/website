@@ -85,7 +85,7 @@ confs/
 
 `index.json` → `transcriptsDir` (`transcripts/html`) tells both the gallery and the generator where HTML transcript pages live, for example `transcripts/html/talks/<video-id>.html`. Concatenated PDFs go under `transcripts/pdf/talks/`.
 
-`build` / `deploy` always copy `confs/template-presentations-landingpage/index.html` over each gallery’s `index.html`. Edit the template only; page copy, nav, and transcript links live in each gallery’s `index.json`. That copy step writes `page.transcriptLinks` into the transcript nav as real links. See `confs/template-presentations-landingpage/index.json` for a full example shape.
+`build` / `deploy` always copy `confs/template-presentations-landingpage/index.html` over each gallery’s `index.html`. Edit the template only; page copy, nav, and transcript links live in each gallery’s `index.json`. That copy step writes the page header and `page.transcriptLinks` into the HTML as real content. See `confs/template-presentations-landingpage/index.json` for a full example shape.
 
 ### Top clips (`topClips`)
 
