@@ -1482,10 +1482,12 @@
             flex: 1 1 auto;
             min-height: 0;
             background: #000;
-            --plyr-font-size-small: 1.6rem;
-            --plyr-font-size-base: 1.8rem;
-            --plyr-font-size-large: 1.8rem;
-            --plyr-font-size-xlarge: 1.8rem;
+            --subtitle-font-size: 1.8rem;
+            --subtitle-control-size: 2.75rem;
+            --plyr-font-size-small: var(--subtitle-font-size);
+            --plyr-font-size-base: var(--subtitle-font-size);
+            --plyr-font-size-large: var(--subtitle-font-size);
+            --plyr-font-size-xlarge: var(--subtitle-font-size);
         }
 
         .video-modal-player video {
@@ -1501,8 +1503,86 @@
             height: 100%;
         }
 
+        .video-modal-player .plyr__captions {
+            font-size: var(--subtitle-font-size);
+        }
+
+        .video-modal-player .plyr__captions:has(.plyr__caption:not(:empty)) {
+            /* Keep the caption text below the A− / A+ controls. */
+            padding-top: calc(var(--subtitle-control-size) + 0.95rem);
+        }
+
+        .video-modal-player .plyr__captions:not(:has(.plyr__caption:not(:empty))) .subtitle-size-controls {
+            display: none;
+        }
+
         .video-modal-player .plyr__caption {
             line-height: 1.6;
+        }
+
+        /* Wide touch screens (iPad) otherwise inherit the 1.8rem desktop size. */
+        @media (min-width: 769px) and (hover: none) and (pointer: coarse) {
+            .video-modal-player {
+                --subtitle-font-size: 1.15rem;
+            }
+        }
+
+        .subtitle-size-controls {
+            position: absolute;
+            top: 0.3rem;
+            right: 0.45rem;
+            z-index: 4;
+            display: flex;
+            direction: ltr;
+            gap: 0.3rem;
+            pointer-events: auto;
+        }
+
+        .video-modal-player .subtitle-size-btn {
+            display: inline-flex;
+            align-items: baseline;
+            justify-content: center;
+            gap: 0.04em;
+            min-width: var(--subtitle-control-size);
+            min-height: var(--subtitle-control-size);
+            padding: 0 0.4rem;
+            border: 0;
+            border-radius: 8px;
+            background: rgba(0, 0, 0, 0.78);
+            color: #fff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 0.95rem;
+            font-weight: 700;
+            line-height: 1;
+            letter-spacing: 0;
+            white-space: nowrap;
+            cursor: pointer;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
+            touch-action: manipulation;
+            user-select: none;
+        }
+
+        .video-modal-player .subtitle-size-btn--smaller .subtitle-size-a {
+            font-size: 0.72rem;
+        }
+
+        .video-modal-player .subtitle-size-btn--larger .subtitle-size-a {
+            font-size: 1.2rem;
+        }
+
+        .video-modal-player .subtitle-size-btn:hover:not(:disabled),
+        .video-modal-player .subtitle-size-btn:focus-visible:not(:disabled) {
+            background: var(--plyr-color-main, #5f7c2f);
+        }
+
+        .video-modal-player .subtitle-size-btn:focus-visible {
+            outline: 2px solid #fff;
+            outline-offset: 2px;
+        }
+
+        .video-modal-player .subtitle-size-btn:disabled {
+            opacity: 0.4;
+            cursor: default;
         }
 
         .caption-gap-notice {
@@ -1803,6 +1883,10 @@
         html.ios-native-fullscreen .plyr--full-ui ::-webkit-media-text-track-container,
         html.ios-native-fullscreen video::-webkit-media-text-track-container {
             display: block !important;
+        }
+
+        html.ios-native-fullscreen .video-modal-player video::cue {
+            font-size: var(--subtitle-font-size, 1rem);
         }
 
         .plyr--video:not(.plyr--playing) .plyr__overlay-controls,
@@ -2362,10 +2446,8 @@
             }
 
             .video-modal-player {
-                --plyr-font-size-small: 0.75rem;
-                --plyr-font-size-base: 0.8rem;
-                --plyr-font-size-large: 0.9rem;
-                --plyr-font-size-xlarge: 0.95rem;
+                --subtitle-font-size: 0.85rem;
+                --subtitle-control-size: 2.25rem;
             }
 
             .video-modal-player .plyr__caption {
@@ -2374,6 +2456,10 @@
 
             .video-modal-player .plyr__captions {
                 padding: 4px 8px 8px;
+            }
+
+            .video-modal-player .plyr__captions:has(.plyr__caption:not(:empty)) {
+                padding-top: calc(var(--subtitle-control-size) + 0.85rem);
             }
 
             .plyr__controls [data-plyr="fullscreen"] {
@@ -2942,6 +3028,154 @@
                 wrapper.appendChild(wrap);
             }
 
+            // Absolute sizes. Defaults: phone 0.85rem, wide touch (iPad) 1.15rem, desktop 1.8rem.
+            const SUBTITLE_SIZE_STEPS = ['0.75rem', '0.85rem', '1.15rem', '1.45rem', '1.8rem', '2.2rem', '2.6rem'];
+            const SUBTITLE_SIZE_STORAGE_KEY = 'keri-subtitle-size';
+
+            function defaultSubtitleSizeIndex() {
+                if (window.matchMedia('(max-width: 768px)').matches) return 1;
+                if (window.matchMedia('(min-width: 769px) and (hover: none) and (pointer: coarse)').matches) return 2;
+                return 4;
+            }
+
+            function readSubtitleSizeIndex() {
+                try {
+                    const raw = localStorage.getItem(SUBTITLE_SIZE_STORAGE_KEY);
+                    if (raw == null || raw === '') return null;
+                    const index = Number(raw);
+                    if (!Number.isInteger(index) || index < 0 || index >= SUBTITLE_SIZE_STEPS.length) return null;
+                    return index;
+                } catch {
+                    return null;
+                }
+            }
+
+            function writeSubtitleSizeIndex(index) {
+                try {
+                    localStorage.setItem(SUBTITLE_SIZE_STORAGE_KEY, String(index));
+                } catch {
+                    // Private mode still keeps the size for this page via the inline style.
+                }
+            }
+
+            function applySubtitleFontSize(playerWrap, size) {
+                if (!playerWrap || !size) return;
+                playerWrap.style.setProperty('--subtitle-font-size', size);
+                const video = playerWrap.querySelector('video');
+                if (video) video.style.setProperty('--subtitle-font-size', size);
+            }
+
+            function makeSubtitleSizeButton(kind) {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = `subtitle-size-btn subtitle-size-btn--${kind}`;
+                const letter = document.createElement('span');
+                letter.className = 'subtitle-size-a';
+                letter.setAttribute('aria-hidden', 'true');
+                letter.textContent = 'A';
+                const mark = document.createElement('span');
+                mark.className = 'subtitle-size-mark';
+                mark.setAttribute('aria-hidden', 'true');
+                mark.textContent = kind === 'smaller' ? '\u2212' : '+';
+                btn.appendChild(letter);
+                btn.appendChild(mark);
+                return btn;
+            }
+
+            // Plyr empties .plyr__captions on every cue, so the controls are reattached.
+            function attachSubtitleSizeControls(playerWrap, attempt = 0) {
+                if (!playerWrap || playerWrap.dataset.subtitleSizeReady === 'true') return;
+                const captions = playerWrap.querySelector('.plyr__captions');
+                if (!captions) {
+                    if (attempt < 8) {
+                        requestAnimationFrame(() => attachSubtitleSizeControls(playerWrap, attempt + 1));
+                    }
+                    return;
+                }
+                playerWrap.dataset.subtitleSizeReady = 'true';
+
+                const controls = document.createElement('div');
+                controls.className = 'subtitle-size-controls';
+                controls.setAttribute('role', 'group');
+                controls.setAttribute('aria-label', 'Subtitle size');
+                controls.dir = 'ltr';
+
+                const smaller = makeSubtitleSizeButton('smaller');
+                const larger = makeSubtitleSizeButton('larger');
+                controls.appendChild(smaller);
+                controls.appendChild(larger);
+
+                const status = document.createElement('div');
+                status.className = 'visually-hidden';
+                status.setAttribute('role', 'status');
+                status.setAttribute('aria-live', 'polite');
+                playerWrap.appendChild(status);
+
+                let chosen = readSubtitleSizeIndex();
+                if (chosen != null) applySubtitleFontSize(playerWrap, SUBTITLE_SIZE_STEPS[chosen]);
+
+                const activeIndex = () => (chosen == null ? defaultSubtitleSizeIndex() : chosen);
+
+                const syncButtons = () => {
+                    const index = activeIndex();
+                    smaller.disabled = index <= 0;
+                    larger.disabled = index >= SUBTITLE_SIZE_STEPS.length - 1;
+                    smaller.title = smaller.disabled ? 'Smallest subtitle size' : 'Smaller subtitles';
+                    larger.title = larger.disabled ? 'Largest subtitle size' : 'Larger subtitles';
+                    smaller.setAttribute('aria-label', smaller.title);
+                    larger.setAttribute('aria-label', larger.title);
+                };
+
+                const stepBy = (delta) => {
+                    const next = activeIndex() + delta;
+                    if (next < 0 || next >= SUBTITLE_SIZE_STEPS.length) return;
+                    chosen = next;
+                    writeSubtitleSizeIndex(chosen);
+                    applySubtitleFontSize(playerWrap, SUBTITLE_SIZE_STEPS[chosen]);
+                syncButtons();
+                const atLimit = delta < 0 ? smaller.disabled : larger.disabled;
+                status.textContent = atLimit
+                    ? (delta < 0 ? 'Smallest subtitle size' : 'Largest subtitle size')
+                    : `${delta < 0 ? 'Smaller' : 'Larger'} subtitles, ${chosen + 1} of ${SUBTITLE_SIZE_STEPS.length}`;
+                };
+
+                smaller.addEventListener('click', () => stepBy(-1));
+                larger.addEventListener('click', () => stepBy(1));
+
+                const keepOnButtons = (event) => {
+                    event.stopPropagation();
+                };
+                controls.addEventListener('pointerdown', keepOnButtons);
+                controls.addEventListener('pointerup', keepOnButtons);
+                controls.addEventListener('click', keepOnButtons);
+
+                let focusedControl = null;
+                controls.addEventListener('focusin', (event) => {
+                    if (event.target instanceof HTMLElement && controls.contains(event.target)) {
+                        focusedControl = event.target;
+                    }
+                });
+                controls.addEventListener('focusout', () => {
+                    if (controls.isConnected) focusedControl = null;
+                });
+
+                const ensureMounted = () => {
+                    if (controls.parentNode === captions) return;
+                    const restore = focusedControl;
+                    captions.appendChild(controls);
+                    if (restore && typeof restore.focus === 'function') {
+                        restore.focus({ preventScroll: true });
+                    }
+                };
+                ensureMounted();
+                const observer = new MutationObserver(ensureMounted);
+                observer.observe(captions, { childList: true });
+
+                syncButtons();
+                window.matchMedia('(max-width: 768px)').addEventListener('change', syncButtons);
+                window.matchMedia('(min-width: 769px) and (hover: none) and (pointer: coarse)').addEventListener('change', syncButtons);
+            }
+
             function initPlyrVideo(videoEl, options = {}) {
                 if (!videoEl || !window.Plyr || videoEl.dataset.plyrInitialized === 'true') return null;
                 if (!videoEl.isConnected) {
@@ -2963,6 +3197,10 @@
                 bindCaptionLanguageUrlSync(videoEl);
                 if (options.filteredPoster !== false) {
                     attachFilteredPoster(videoEl);
+                }
+                if (options.subtitleSize) {
+                    const wrap = videoEl.closest('.video-modal-player');
+                    if (wrap) attachSubtitleSizeControls(wrap);
                 }
                 return player;
             }
@@ -5061,7 +5299,7 @@
                 modalLinksSection.hidden = true;
                 videoContent.appendChild(modalLinksSection);
 
-                initPlyrVideo(modalVideoEl);
+                initPlyrVideo(modalVideoEl, { subtitleSize: true });
                 // Keep the clip timer above Plyr's rebuilt player chrome
                 playerWrap.appendChild(modalClipTimer);
 
