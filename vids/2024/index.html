@@ -4,7 +4,8 @@
   Shared presentations landing page (self-contained shell).
   deploy-confs.sh landing-pages stamps this file into every gallery and fills
   title / description / canonical URL in the social meta tags from that
-  gallery's index.json. Do not edit per-gallery index.html by hand.
+  gallery's index.json. The same step writes page.transcriptLinks into the
+  transcript nav as real links. Do not edit per-gallery index.html by hand.
   Page copy, videos, and posters come from that gallery's index.json.
 -->
 
@@ -125,7 +126,7 @@
             border: 0;
         }
 
-        /* Transcript index links — labels/hrefs come from page.transcriptLinks in index.json. */
+        /* Transcript index links. landing-pages writes page.transcriptLinks here; JS refreshes the same list. */
         .seo-transcript-links {
             margin: 0 0 10px;
             padding: 6px 10px;
@@ -2406,7 +2407,7 @@
 
 <body>
     <a class="skip-link" href="#mainContent">Skip to main content</a>
-    <nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Transcript indexes" hidden></nav>
+    <nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Transcript indexes"><a href="transcripts/html/talks/">Talk transcripts</a></nav>
     <header id="galleryHeader"></header>
 
     <main id="mainContent">
