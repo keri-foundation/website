@@ -1502,7 +1502,9 @@
             height: 100%;
         }
 
-        .video-modal-player .plyr__captions {
+        .video-modal-player .plyr__captions,
+        .video-thumbnail .plyr__captions,
+        .promo-player .plyr__captions {
             font-size: var(--subtitle-font-size);
         }
 
@@ -1817,7 +1819,9 @@
             display: block !important;
         }
 
-        html.ios-native-fullscreen .video-modal-player video::cue {
+        html.ios-native-fullscreen .video-modal-player video::cue,
+        html.ios-native-fullscreen .video-thumbnail video::cue,
+        html.ios-native-fullscreen .promo-player video::cue {
             font-size: var(--subtitle-font-size, 1rem);
         }
 
@@ -3020,6 +3024,20 @@
             }
 
             const SUBTITLE_SIZE_LABELS = ['Smallest', 'Smaller', 'Small', 'Medium', 'Large', 'Larger', 'Largest'];
+            const subtitleSizeSyncs = [];
+            let subtitleSizeChosen = readSubtitleSizeIndex();
+
+            function currentSubtitleSizeIndex() {
+                return subtitleSizeChosen == null ? defaultSubtitleSizeIndex() : subtitleSizeChosen;
+            }
+
+            function applyChosenSubtitleSize() {
+                if (subtitleSizeChosen == null) return;
+                const size = SUBTITLE_SIZE_STEPS[subtitleSizeChosen];
+                document.querySelectorAll('.video-modal-player, .video-thumbnail, .promo-player').forEach((wrap) => {
+                    applySubtitleFontSize(wrap, size);
+                });
+            }
 
             function attachSubtitleSizeSetting(player) {
                 const container = player?.elements?.container;
@@ -3028,13 +3046,12 @@
                 const home = popup.querySelector('[id$="-home"]');
                 const menu = home?.querySelector('[role="menu"]');
                 const panels = home?.parentElement;
-                const playerWrap = container.closest('.video-modal-player');
+                const playerWrap = container.closest('.video-modal-player, .video-thumbnail, .promo-player');
                 if (!home || !menu || !panels || !playerWrap) return;
                 popup.dataset.subtitleSizeReady = 'true';
 
-                let chosen = readSubtitleSizeIndex();
-                const activeIndex = () => (chosen == null ? defaultSubtitleSizeIndex() : chosen);
-                if (chosen != null) applySubtitleFontSize(playerWrap, SUBTITLE_SIZE_STEPS[chosen]);
+                const activeIndex = () => currentSubtitleSizeIndex();
+                if (subtitleSizeChosen != null) applySubtitleFontSize(playerWrap, SUBTITLE_SIZE_STEPS[subtitleSizeChosen]);
 
                 const status = document.createElement('div');
                 status.className = 'visually-hidden';
@@ -3113,10 +3130,10 @@
 
                 const chooseSize = (index) => {
                     if (index < 0 || index >= SUBTITLE_SIZE_STEPS.length) return;
-                    chosen = index;
-                    writeSubtitleSizeIndex(chosen);
-                    applySubtitleFontSize(playerWrap, SUBTITLE_SIZE_STEPS[chosen]);
-                    syncOptions();
+                    subtitleSizeChosen = index;
+                    writeSubtitleSizeIndex(index);
+                    applyChosenSubtitleSize();
+                    subtitleSizeSyncs.forEach((sync) => sync());
                     status.textContent = `Subtitle size ${SUBTITLE_SIZE_LABELS[index]}`;
                 };
 
@@ -3139,9 +3156,15 @@
                 });
 
                 syncOptions();
-                window.matchMedia('(max-width: 768px)').addEventListener('change', syncOptions);
-                window.matchMedia('(min-width: 769px) and (hover: none) and (pointer: coarse)').addEventListener('change', syncOptions);
+                subtitleSizeSyncs.push(syncOptions);
             }
+
+            window.matchMedia('(max-width: 768px)').addEventListener('change', () => {
+                subtitleSizeSyncs.forEach((sync) => sync());
+            });
+            window.matchMedia('(min-width: 769px) and (hover: none) and (pointer: coarse)').addEventListener('change', () => {
+                subtitleSizeSyncs.forEach((sync) => sync());
+            });
 
             function disableDoubleClickFullscreen(player) {
                 const container = player?.elements?.container;
@@ -3205,7 +3228,7 @@
                 if (options.filteredPoster !== false) {
                     attachFilteredPoster(videoEl);
                 }
-                if (options.subtitleSize) attachSubtitleSizeSetting(player);
+                attachSubtitleSizeSetting(player);
                 return player;
             }
 
