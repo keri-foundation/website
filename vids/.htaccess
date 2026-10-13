@@ -1,5 +1,6 @@
 # Hostinger/LiteSpeed ignores AutoIndexUri and HTML-escapes HEADER.html.
-# Serve a real PHP index instead, and rewrite bare subdirs to it.
+# /vids/ is the generated overview (index.html). Bare subdirs without their
+# own index are rewritten to index.php.
 #
 # The /vids/2026/jul/ redirect lives here. LiteSpeed does not apply parent
 # rewrite rules once this directory enables its own rewrite engine.

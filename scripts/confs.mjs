@@ -17,6 +17,10 @@
  *                 HTML as real content, and stamps DISCOVERED_SUBTITLE_LANGS with
  *                 sibling caption files (`foo.nl.srt` next to `foo.srt`) so the
  *                 page does not probe for them.
+ *                 Then writes confs/index.html and vids/index.html from
+ *                 template-presentations-landingpage/overview.html, using each
+ *                 tree's overview.json for page copy and each gallery index.json
+ *                 for the cards. --conf limits which tree overview is rewritten.
  * sync-subtitles  Copy curated .srt files from the source folders listed in
  *                 scripts/subtitle-sources.tsv into the conference folders. Only
  *                 subtitles referenced by that conference's index.json are copied
@@ -41,6 +45,7 @@ const CONFS_ROOT = join(SITE_ROOT, "confs");
 const VIDS_ROOT = join(SITE_ROOT, "vids");
 const SOURCES_FILE = join(SCRIPT_DIR, "subtitle-sources.tsv");
 const LANDING_TEMPLATE = join(CONFS_ROOT, "template-presentations-landingpage", "index.html");
+const OVERVIEW_TEMPLATE = join(CONFS_ROOT, "template-presentations-landingpage", "overview.html");
 const SITE_URL = (process.env.SITE_URL || "https://keri.foundation").replace(/\/+$/, "");
 
 const ORG_RE = /^[A-Za-z][A-Za-z0-9_-]*$/;
@@ -77,6 +82,36 @@ const SUBTITLE_LANG_MARKER = "/*__DISCOVERED_SUBTITLE_LANGS__*/{}";
 const TRANSCRIPT_NAV_MARKER =
   '<nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Transcript indexes" hidden><!--__TRANSCRIPT_LINKS__--></nav>';
 const GALLERY_HEADER_MARKER = "<!--__GALLERY_HEADER__-->";
+const OVERVIEW_CARDS_MARKER = "<!--__OVERVIEW_CARDS__-->";
+const OVERVIEW_FOOTER_MARKER = "<!--__OVERVIEW_FOOTER__-->";
+const MONTH_INDEX = {
+  jan: 1,
+  feb: 2,
+  mar: 3,
+  apr: 4,
+  may: 5,
+  jun: 6,
+  jul: 7,
+  aug: 8,
+  sep: 9,
+  oct: 10,
+  nov: 11,
+  dec: 12,
+};
+const MONTH_NAME = {
+  jan: "January",
+  feb: "February",
+  mar: "March",
+  apr: "April",
+  may: "May",
+  jun: "June",
+  jul: "July",
+  aug: "August",
+  sep: "September",
+  oct: "October",
+  nov: "November",
+  dec: "December",
+};
 const YOUTUBE_ICON =
   "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiA4djggbC00LTIuNXYtMy4yTDggMTJ6Ii8+PC9zdmc+";
 
@@ -288,6 +323,206 @@ async function cmdLandingPages(opts) {
   }
   console.log(
     `\nlanding-pages: ${updated} updated, ${unchanged} unchanged` +
+      (opts.dryRun ? " (dry-run)" : "")
+  );
+}
+
+/** Tree-root overview pages. scope must match the directory the config lives in. */
+const OVERVIEW_PAGES = [
+  {
+    scope: "confs",
+    configPath: join(CONFS_ROOT, "overview.json"),
+    dest: join(CONFS_ROOT, "index.html"),
+  },
+  {
+    scope: "vids",
+    configPath: join(VIDS_ROOT, "overview.json"),
+    dest: join(VIDS_ROOT, "index.html"),
+  },
+];
+
+function overviewScopesFor(opts) {
+  if (!opts.confs.length) return new Set(["confs", "vids"]);
+  const scopes = new Set();
+  for (const id of opts.confs) scopes.add(isVidsGallery(id) ? "vids" : "confs");
+  return scopes;
+}
+
+function gallerySortKey(id) {
+  if (isVidsGallery(id)) return Number(id.slice("vids/".length)) * 100;
+  const parts = id.split("/");
+  const year = Number(parts[1]);
+  const month = MONTH_INDEX[String(parts[2] || "").toLowerCase()] || 0;
+  return year * 100 + month;
+}
+
+function galleryWhen(id) {
+  if (isVidsGallery(id)) return id.slice("vids/".length);
+  const parts = id.split("/");
+  const month = MONTH_NAME[String(parts[2] || "").toLowerCase()] || parts[2] || "";
+  return `${month} ${parts[1]}`.trim();
+}
+
+function galleryOrg(id) {
+  return isVidsGallery(id) ? "" : id.split("/")[0];
+}
+
+function countLabel(n, singular, plural) {
+  return `${n} ${n === 1 ? singular : plural}`;
+}
+
+/** "24 talks, 16 interviews" from videos[].path prefixes. */
+function videoCountLabel(videos) {
+  const list = Array.isArray(videos) ? videos : [];
+  let talks = 0;
+  let interviews = 0;
+  let other = 0;
+  for (const video of list) {
+    const path = String(video?.path || "");
+    if (path.startsWith("interviews/")) interviews++;
+    else if (path.startsWith("talks/")) talks++;
+    else other++;
+  }
+  const parts = [];
+  if (talks) parts.push(countLabel(talks, "talk", "talks"));
+  if (interviews) parts.push(countLabel(interviews, "interview", "interviews"));
+  if (other) parts.push(countLabel(other, "video", "videos"));
+  return parts.length ? parts.join(", ") : "No videos yet";
+}
+
+/** First usable poster: promo, defaultPoster, a video poster, then a speaker photo. */
+function galleryPosterUrl(config, id) {
+  const candidates = [];
+  if (config.promo && config.promo.poster) candidates.push(config.promo.poster);
+  if (config.defaultPoster) candidates.push(config.defaultPoster);
+  for (const video of config.videos || []) {
+    if (video && video.poster) candidates.push(video.poster);
+  }
+  const photos = config.speakerPhotos && typeof config.speakerPhotos === "object" ? config.speakerPhotos : {};
+  for (const video of config.videos || []) {
+    const name = video && video.speaker;
+    if (name && photos[name]) candidates.push(photos[name]);
+  }
+  for (const raw of candidates) {
+    const value = String(raw || "").trim();
+    if (!value) continue;
+    if (/^https?:\/\//i.test(value)) return value;
+    if (value.startsWith("/")) return value;
+    const rel = toPosix(value.replace(/^\.\//, ""));
+    if (!existsSync(join(galleryDir(id), rel))) continue;
+    return `/${galleryPrefix(id)}/${rel}`;
+  }
+  return "";
+}
+
+function renderOverviewCard(card) {
+  const poster = card.poster
+    ? `<div class="overview-poster"><img src="${escapeAttr(card.poster)}" alt=""></div>`
+    : `<div class="overview-poster overview-poster-fallback" aria-hidden="true"><span>${escapeText(card.fallback)}</span></div>`;
+  const when = card.org
+    ? `<span class="overview-org">${escapeText(card.org)}</span><span class="sep" aria-hidden="true">·</span>${escapeText(card.when)}`
+    : escapeText(card.when);
+  const blurb = card.subtitle
+    ? `\n                            <p class="overview-blurb">${escapeText(card.subtitle)}</p>`
+    : "";
+  return `                <article class="overview-card">
+                    <a class="overview-card-link" href="${escapeAttr(card.href)}">
+                        ${poster}
+                        <div class="video-info">
+                            <h2 class="video-title">${escapeText(card.title)}</h2>${blurb}
+                            <p class="video-meta"><span>${when}</span><span class="video-duration">${escapeText(card.countLabel)}</span></p>
+                        </div>
+                    </a>
+                </article>`;
+}
+
+function renderOverviewCards(cards) {
+  if (!cards.length) {
+    return `                <p class="overview-empty">No videos published yet.</p>`;
+  }
+  return `${cards.map(renderOverviewCard).join("\n")}\n`;
+}
+
+async function cmdOverviewPages(opts) {
+  if (!existsSync(OVERVIEW_TEMPLATE)) {
+    throw new Error(`Missing template: ${OVERVIEW_TEMPLATE}`);
+  }
+  const templateHtml = await readFile(OVERVIEW_TEMPLATE, "utf8");
+  if (!templateHtml.includes(GALLERY_HEADER_MARKER)) {
+    throw new Error("overview: template missing gallery header marker");
+  }
+  if (!templateHtml.includes(OVERVIEW_CARDS_MARKER)) {
+    throw new Error("overview: template missing overview cards marker");
+  }
+  if (!templateHtml.includes(OVERVIEW_FOOTER_MARKER)) {
+    throw new Error("overview: template missing overview footer marker");
+  }
+  const scopes = overviewScopesFor(opts);
+  const all = await findConferences();
+  let updated = 0;
+  let unchanged = 0;
+  for (const page of OVERVIEW_PAGES) {
+    if (!scopes.has(page.scope)) continue;
+    if (!existsSync(page.configPath)) {
+      throw new Error(`Missing overview config: ${page.configPath}`);
+    }
+    const overview = JSON.parse(await readFile(page.configPath, "utf8"));
+    if (overview.scope !== page.scope) {
+      throw new Error(`${page.configPath}: scope must be "${page.scope}"`);
+    }
+    const pageCopy = overview.page || {};
+    const title = pageCopy.title || pageCopy.heading || "KERI Foundation Videos";
+    const description =
+      pageCopy.subtitle || pageCopy.description || "Presentations and talks from the KERI Foundation.";
+    const url = `${SITE_URL}/${page.scope}/`;
+    const ids = all.filter((id) => (page.scope === "vids" ? isVidsGallery(id) : !isVidsGallery(id)));
+    ids.sort((a, b) => gallerySortKey(b) - gallerySortKey(a) || a.localeCompare(b));
+    const cards = [];
+    for (const id of ids) {
+      const config = await loadConfig(id);
+      const copy = config.page || {};
+      const org = galleryOrg(id);
+      cards.push({
+        href: `/${galleryPrefix(id)}/`,
+        title: copy.heading || copy.title || id,
+        subtitle: copy.subtitle || "",
+        poster: galleryPosterUrl(config, id),
+        fallback: org || galleryWhen(id),
+        org,
+        when: galleryWhen(id),
+        countLabel: videoCountLabel(config.videos),
+      });
+    }
+    const html = stampGalleryHeader(
+      stampLandingMeta(templateHtml, { title, description, url }),
+      pageCopy,
+      url
+    )
+      .replace(OVERVIEW_CARDS_MARKER, renderOverviewCards(cards))
+      .replace(OVERVIEW_FOOTER_MARKER, escapeText(pageCopy.footer || ""));
+    const label = `${page.scope}/index.html`;
+    let previous = null;
+    try {
+      previous = await readFile(page.dest, "utf8");
+    } catch {
+      previous = null;
+    }
+    if (previous === html) {
+      console.log(`unchanged ${label}`);
+      unchanged++;
+      continue;
+    }
+    if (opts.dryRun) {
+      console.log(`[dry-run] would update ${label}`);
+    } else {
+      await mkdir(dirname(page.dest), { recursive: true });
+      await writeFile(page.dest, html, "utf8");
+      console.log(`updated  ${label}`);
+    }
+    updated++;
+  }
+  console.log(
+    `\noverview-pages: ${updated} updated, ${unchanged} unchanged` +
       (opts.dryRun ? " (dry-run)" : "")
   );
 }
@@ -697,6 +932,7 @@ async function main() {
       break;
     case "landing-pages":
       await cmdLandingPages(opts);
+      await cmdOverviewPages(opts);
       break;
     case "sync-subtitles":
       await cmdSyncSubtitles(opts);

@@ -61,7 +61,9 @@ One folder per conference; the server mirrors this tree. A folder that is missin
 ```text
 confs/
 ├── .htaccess                       directory listing rewrite (see below)
-├── index.php                       styled folder browser for bare dirs
+├── overview.json                   page copy for the /confs/ overview
+├── index.html                      generated overview of conference galleries
+├── index.php                       folder browser for bare subdirectories
 ├── KERI/2026/apr/                  → https://keri.foundation/confs/KERI/2026/apr/
 │   ├── index.html                  gallery app (synced from the template on build)
 │   ├── index.json                  page copy, video list, paths
@@ -80,12 +82,18 @@ confs/
 │   └── transcripts/
 │       ├── html/talks/
 │       └── pdf/talks/
-└── template-presentations-landingpage/   shared gallery shell (copied into every gallery on build)
+└── template-presentations-landingpage/   shared gallery shell and overview template
+    ├── index.html                  gallery app, copied into every gallery on build
+    ├── index.json                  example gallery config
+    ├── overview.html               overview shell for /confs/ and /vids/
+    └── overview.json               example overview config
 ```
 
 `index.json` → `transcriptsDir` (`transcripts/html`) tells both the gallery and the generator where HTML transcript pages live, for example `transcripts/html/talks/<video-id>.html`. Concatenated PDFs go under `transcripts/pdf/talks/`.
 
 `build` / `deploy` always copy `confs/template-presentations-landingpage/index.html` over each gallery’s `index.html`. Edit the template only; page copy, nav, and transcript links live in each gallery’s `index.json`. That copy step writes the page header and `page.transcriptLinks` into the HTML as real content. See `confs/template-presentations-landingpage/index.json` for a full example shape.
+
+The same step writes `confs/index.html` and `vids/index.html` from `overview.html`. Page copy for those overviews lives in `confs/overview.json` and `vids/overview.json` (copy `template-presentations-landingpage/overview.json` and tailor it). Each card is filled from that gallery’s `index.json` (heading, subtitle, poster, video counts). Do not edit the generated `index.html` files by hand.
 
 ### Top clips (`topClips`)
 
@@ -127,7 +135,9 @@ Same gallery app as the conferences, for videos that are not part of a conferenc
 ```text
 vids/
 ├── .htaccess                       directory listing rewrite (see below)
-├── index.php                       styled folder browser for bare dirs
+├── overview.json                   page copy for the /vids/ overview
+├── index.html                      generated overview of yearly galleries
+├── index.php                       folder browser for bare subdirectories
 ├── 2024/                           → https://keri.foundation/vids/2024/
 │   ├── index.html                  gallery app (synced from the template on build)
 │   ├── index.json                  page copy and video list
@@ -150,13 +160,13 @@ The old standalone player redirects here:
 
 1. Create `confs/<ORG>/<YEAR>/<month>/` and copy `index.json` from `confs/template-presentations-landingpage/` (edit page copy, nav, `transcriptLinks`, videos there).
 2. Add media to `talks/` (and `interviews/`, `slides/`, … when present) and fill in `index.json`.
-3. Run `scripts/deploy-confs.sh landing-pages` (or `build`) so `index.html` is copied from the template.
+3. Run `scripts/deploy-confs.sh landing-pages` (or `build`) so `index.html` is copied from the template and the `/confs/` overview is rewritten.
 4. Edit `.srt` files in that conference folder. `scripts/subtitle-sources.tsv` is only for an optional copy from somewhere else.
 
 ### Build and deploy
 
 ```bash
-scripts/deploy-confs.sh landing-pages    # sync template index.html → every gallery
+scripts/deploy-confs.sh landing-pages    # sync gallery index.html, and write /confs/ and /vids/ overviews
 scripts/deploy-confs.sh build            # landing-pages → subtitles → transcripts → pdfs → verify
 scripts/deploy-confs.sh -n push          # preview what would be uploaded
 scripts/deploy-confs.sh deploy           # build + push (rsync --delete) + check the live site
@@ -165,25 +175,28 @@ scripts/deploy-confs.sh --conf SEDI/2025/nov push
 scripts/deploy-confs.sh --conf vids/2026 push
 ```
 
-`push` and `deploy` also upload the site-root `.htaccess` (the `/videos/` redirect), plus `confs/.htaccess` (legacy `/confs/2026/videos/` redirects) and `confs/index.php`. A full push mirrors every `confs/<ORG>/` folder and the whole `vids/` tree (so `vids/.htaccess` and `vids/index.php` ride along with that mirror). `--conf` limits the gallery mirror; site-root and `confs/` listing files are still uploaded.
+`push` and `deploy` also upload the site-root `.htaccess` (the `/videos/` redirect), plus the tree indexes: `confs/.htaccess`, `confs/index.php`, `confs/index.html`, and the same three files under `vids/`. A full push mirrors every `confs/<ORG>/` folder and the whole `vids/` tree. `--conf` limits the gallery mirror; the site-root `.htaccess` and both tree indexes are still uploaded.
 
-### Directory listings (`/confs/`, `/vids/`)
+### Overviews and directory listings (`/confs/`, `/vids/`)
 
-Hostinger runs **LiteSpeed**, not Apache. LiteSpeed’s built-in autoindex HTML-escapes `HEADER.html` and ignores `AutoIndexUri` in `.htaccess`, so Apache-style `HeaderName` / fancy indexing cannot style these trees.
+`/confs/` and `/vids/` are static overview pages in the same visual style as a gallery. `landing-pages` (and therefore `build` / `deploy`) writes them from `confs/template-presentations-landingpage/overview.html`. Edit `confs/overview.json` or `vids/overview.json` for the heading, subtitle, nav, and footer. Cards are built from each gallery’s `index.json` and listed newest first.
 
-Instead each tree root has:
+Hostinger runs **LiteSpeed**, not Apache. LiteSpeed’s built-in autoindex HTML-escapes `HEADER.html` and ignores `AutoIndexUri` in `.htaccess`, so folders that are not a gallery still need a PHP listing.
 
 | File | Role |
 | ---- | ---- |
+| `overview.json` | Page copy for that tree’s overview. Not uploaded. |
+| `index.html` | Generated overview. Do not edit by hand. |
 | `.htaccess` | `Options -Indexes`, `DirectoryIndex index.html index.php`, rewrite bare subdirs to `index.php?path=…` |
-| `index.php` | Dark-themed folder list (dirs first; media/config file types hidden) |
+| `index.php` | Dark-themed folder list for bare subdirectories (dirs first; media/config file types hidden) |
 
 `RewriteBase` must match the public URL of that tree (`/confs/` or `/vids/`). The PHP script derives link prefixes from its location under `DOCUMENT_ROOT`, so the same `index.php` works in either tree—only `.htaccess`’s `RewriteBase` must differ.
 
 Behaviour:
 
-- A directory **with** `index.html` (a gallery) or its own `index.php` is left alone.
-- A bare directory (e.g. `/confs/`, `/confs/KERI/`, `/vids/`) is rewritten to that tree’s `index.php`.
+- `/confs/` and `/vids/` serve the generated `index.html` (`DirectoryIndex` prefers it over `index.php`).
+- A directory **with** its own `index.html` (a gallery) or its own `index.php` is left alone.
+- A bare directory (e.g. `/confs/KERI/`, `/confs/KERI/2026/`) is rewritten to that tree’s `index.php`.
 - Entries named in the script’s ignore list are omitted (including `template-presentations-landingpage` under `confs/`).
 
 Do not rely on `HEADER.html` or LiteSpeed `AutoIndexUri` on this host.

@@ -33,7 +33,7 @@ Usage: scripts/deploy-confs.sh [options] <command>...
 Commands (run in the order given):
   list            Show galleries: confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/
   subtitles       Copy curated .srt files from scripts/subtitle-sources.tsv (no-op when that file has no sources; edit SRTs in place under the gallery)
-  landing-pages   Copy the shared template into every gallery and stamp social meta, header, and transcript links from index.json
+  landing-pages   Copy the shared template into every gallery and stamp social meta, header, and transcript links from index.json. Also write confs/index.html and vids/index.html from the overview template
   transcripts     Regenerate the static transcript HTML pages from the .srt files
   pdfs            Build concatenated transcript PDFs under each gallery's transcripts/pdf/
   verify          Check every file referenced by each index.json exists locally
@@ -146,6 +146,8 @@ step_subtitles() {
 # Page copy stays in each gallery's index.json. index.html is generated from the
 # template (social meta, header, and transcript nav links stamped per gallery) — do not edit
 # gallery index.html files by hand.
+# The same step writes confs/index.html and vids/index.html from overview.html,
+# using each tree's overview.json plus the gallery index.json files.
 step_landing_pages() {
     echo "── Landing pages (template → galleries)"
     run_node "$SCRIPT_DIR/confs.mjs" landing-pages $(dry_flag)
@@ -275,14 +277,27 @@ step_push() {
     [ "$DRY_RUN" -eq 1 ] && ht_rsync+=(--dry-run)
     rsync "${ht_rsync[@]}" "$SITE_ROOT/.htaccess" "$REMOTE_HOST:$REMOTE_ROOT/.htaccess"
 
-    echo "── confs/ directory index (.htaccess, index.php)"
-    local confs_index_rsync=(-av --human-readable)
-    [ "$DRY_RUN" -eq 1 ] && confs_index_rsync+=(--dry-run)
-    [ "$DRY_RUN" -eq 1 ] || ssh "$REMOTE_HOST" "mkdir -p '$REMOTE_ROOT/confs'"
-    rsync "${confs_index_rsync[@]}" \
+    echo "── Directory indexes (confs/ and vids/ overview HTML, plus PHP for bare subdirs)"
+    local tree_index_rsync=(-av --human-readable)
+    [ "$DRY_RUN" -eq 1 ] && tree_index_rsync+=(--dry-run)
+    local overview
+    for overview in "$CONFS/index.html" "$SITE_ROOT/vids/index.html"; do
+        if [ ! -f "$overview" ]; then
+            echo "Missing $overview — run landing-pages first" >&2
+            exit 1
+        fi
+    done
+    [ "$DRY_RUN" -eq 1 ] || ssh "$REMOTE_HOST" "mkdir -p '$REMOTE_ROOT/confs' '$REMOTE_ROOT/vids'"
+    rsync "${tree_index_rsync[@]}" \
         "$CONFS/.htaccess" \
         "$CONFS/index.php" \
+        "$CONFS/index.html" \
         "$REMOTE_HOST:$REMOTE_ROOT/confs/"
+    rsync "${tree_index_rsync[@]}" \
+        "$SITE_ROOT/vids/.htaccess" \
+        "$SITE_ROOT/vids/index.php" \
+        "$SITE_ROOT/vids/index.html" \
+        "$REMOTE_HOST:$REMOTE_ROOT/vids/"
     # Drop leftovers from the earlier HEADER.html / AutoIndexUri approach.
     if [ "$DRY_RUN" -eq 0 ]; then
         ssh "$REMOTE_HOST" "rm -f '$REMOTE_ROOT/confs/HEADER.html' '$REMOTE_ROOT/confs/autoindex.php'"
