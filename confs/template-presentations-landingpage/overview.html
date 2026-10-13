@@ -4,7 +4,9 @@
   Shared overview of a media tree (confs/ or vids/).
   deploy-confs.sh landing-pages stamps this file into each tree root as
   index.html. Page copy comes from that tree's overview.json (next to
-  index.php). Cards come from every gallery index.json in the tree.
+  index.php). Site name, icons, share image, wave, and colors come from
+  brand.json beside the gallery template. Cards come from every gallery
+  index.json in the tree.
   Do not edit confs/index.html or vids/index.html by hand.
   Copy overview.json from this folder and tailor it beside each index.php.
 -->
@@ -13,42 +15,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Videos</title>
-    <meta name="description" content="Presentations and talks from the KERI Foundation.">
-    <link rel="canonical" href="https://keri.foundation/">
-    <link rel="icon" href="https://keri.foundation/custom/img/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" href="https://keri.foundation/custom/img/favicon-192x192.png" sizes="192x192">
-    <link rel="apple-touch-icon" href="https://keri.foundation/custom/img/apple-touch-icon.png">
-    <meta name="msapplication-TileImage" content="https://keri.foundation/custom/img/mstile-270x270.png">
-    <!-- Open Graph / social previews (image from custom/img logo on brand background) -->
+    <meta name="description" content="Presentations and talks.">
+    <link rel="canonical" href="./">
+    <link rel="icon" href="" sizes="32x32">
+    <link rel="icon" href="" sizes="192x192">
+    <link rel="apple-touch-icon" href="">
+    <meta name="msapplication-TileImage" content="">
+    <!-- Open Graph / social previews. landing-pages fills these from brand.json. -->
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="KERI Foundation">
-    <meta property="og:title" content="KERI Foundation Videos">
-    <meta property="og:description" content="Presentations and talks from the KERI Foundation.">
-    <meta property="og:url" content="https://keri.foundation/">
-    <meta property="og:image" content="https://keri.foundation/custom/img/logo-keri-foundation-og.png">
-    <meta property="og:image:secure_url" content="https://keri.foundation/custom/img/logo-keri-foundation-og.png">
+    <meta property="og:site_name" content="">
+    <meta property="og:title" content="Videos">
+    <meta property="og:description" content="Presentations and talks.">
+    <meta property="og:url" content="./">
+    <meta property="og:image" content="">
+    <meta property="og:image:secure_url" content="">
     <meta property="og:image:type" content="image/png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="KERI Foundation logo">
+    <meta property="og:image:alt" content="">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="KERI Foundation Videos">
-    <meta name="twitter:description" content="Presentations and talks from the KERI Foundation.">
-    <meta name="twitter:image" content="https://keri.foundation/custom/img/logo-keri-foundation-og.png">
-    <meta name="twitter:image:alt" content="KERI Foundation logo">
+    <meta name="twitter:title" content="Videos">
+    <meta name="twitter:description" content="Presentations and talks.">
+    <meta name="twitter:image" content="">
+    <meta name="twitter:image:alt" content="">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;0,800;1,600&display=swap"
         rel="stylesheet">
+    <!-- Brand colors and wave. landing-pages fills this from brand.json. -->
+    <style id="brand-theme">
+        :root {
+            --ink: #1a2332;
+            --muted: #3e4c63;
+            --bg: #f4f5f7;
+            --panel: #ffffff;
+            --stone: #e7e9ee;
+            --speaker: #e8eef6;
+            --accent: #3d5a80;
+            --link: #0b57d0;
+            --on-ink: #ffffff;
+            --hover: #e4eaf3;
+            --play: #2f6f4e;
+            --play-press: #24573d;
+            --surface: #eef1f6;
+            --surface-2: #e3e8f0;
+            --surface-3: #f7f8fa;
+            --surface-4: #e7ebf2;
+            --surface-5: #f3f5f8;
+            --waves: none;
+        }
+    </style>
     <style>
         :root {
             --heading-font: 'Plus Jakarta Sans', 'Segoe UI', sans-serif;
             --media-tone: brightness(1.02) contrast(0.92) saturate(0.72) sepia(0.16);
-            --page-bg: #fdefde;
-            --panel-bg: #f4f0e8;
-            --stone: #e8e6de;
-            --waves: url("https://keri.foundation/custom/img/waves-kim-1.png");
+            --page-bg: var(--bg);
+            --panel-bg: var(--panel);
+            --ink-deep: color-mix(in srgb, var(--ink) 54%, black);
+            --ink-deeper: color-mix(in srgb, var(--ink) 43%, black);
         }
 
         * {
@@ -60,21 +85,21 @@
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: var(--page-bg);
-            color: #060b6f;
+            color: var(--ink);
             padding: 16px 8px;
             min-height: 100vh;
         }
 
         a {
-            color: #0450a8;
+            color: var(--link);
         }
 
         a:hover {
-            color: #060b6f;
+            color: var(--ink);
         }
 
         a:focus-visible {
-            outline: 2px solid #986c32;
+            outline: 2px solid var(--accent);
             outline-offset: 2px;
         }
 
@@ -94,8 +119,8 @@
             top: 16px;
             z-index: 3000;
             padding: 10px 16px;
-            background: #060b6f;
-            color: #fff;
+            background: var(--ink);
+            color: var(--on-ink);
             font-weight: 700;
             border-radius: 8px;
             text-decoration: none;
@@ -104,9 +129,9 @@
 
         .skip-link:focus,
         .skip-link:focus-visible {
-            color: #fff;
+            color: var(--on-ink);
             transform: none;
-            outline: 2px solid #986c32;
+            outline: 2px solid var(--accent);
             outline-offset: 3px;
         }
 
@@ -124,7 +149,7 @@
             margin-bottom: 20px;
             background: var(--panel-bg);
             border-radius: 8px;
-            border: 1px solid rgba(6, 11, 111, 0.12);
+            border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
         }
 
         header > * {
@@ -169,10 +194,10 @@
             margin: 0 auto 18px;
             padding: 10px 16px;
             background: var(--page-bg);
-            color: #060b6f;
+            color: var(--ink);
             border-radius: 4px;
-            border: 1px solid rgba(6, 11, 111, 0.14);
-            border-left: 3px solid #986c32;
+            border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+            border-left: 3px solid var(--accent);
             font-size: 0.9rem;
             font-weight: 500;
             max-width: 760px;
@@ -182,7 +207,7 @@
 
         .subtitle {
             font-size: 1.2rem;
-            color: #2e3a7a;
+            color: var(--muted);
             max-width: 800px;
             margin: 0 auto;
         }
@@ -206,7 +231,7 @@
         .overview-empty {
             grid-column: 1 / -1;
             text-align: center;
-            color: #2e3a7a;
+            color: var(--muted);
             padding: 28px 16px;
         }
 
@@ -222,7 +247,7 @@
         }
 
         .overview-card:hover {
-            border-color: #986c32;
+            border-color: var(--accent);
         }
 
         .overview-card-link {
@@ -239,7 +264,7 @@
         }
 
         .overview-card-link:focus-visible {
-            outline: 2px solid #986c32;
+            outline: 2px solid var(--accent);
             outline-offset: -4px;
         }
 
@@ -270,7 +295,7 @@
             font-size: 1.6rem;
             font-weight: 800;
             letter-spacing: -0.03em;
-            color: #060b6f;
+            color: var(--ink);
             opacity: 0.72;
         }
 
@@ -289,7 +314,7 @@
         }
 
         .overview-blurb {
-            color: #2e3a7a;
+            color: var(--muted);
             font-size: 0.95rem;
             line-height: 1.45;
         }
@@ -300,13 +325,13 @@
             align-items: center;
             gap: 12px;
             font-size: 0.9rem;
-            color: #2e3a7a;
+            color: var(--muted);
             margin-top: auto;
         }
 
         .overview-org {
             font-weight: 700;
-            color: #060b6f;
+            color: var(--ink);
         }
 
         .video-meta .sep {
@@ -315,10 +340,10 @@
         }
 
         .video-duration {
-            background: rgba(6, 11, 111, 0.1);
+            background: color-mix(in srgb, var(--ink) 10%, transparent);
             padding: 3px 8px;
             border-radius: 20px;
-            color: #060b6f;
+            color: var(--ink);
             white-space: nowrap;
         }
 
@@ -329,7 +354,7 @@
             padding: 30px 0 120px;
             margin-top: 30px;
             font-size: 0.9rem;
-            color: #2e3a7a;
+            color: var(--muted);
         }
 
         footer::after {

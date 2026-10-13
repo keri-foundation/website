@@ -144,7 +144,7 @@ step_subtitles() {
 
 # Shared gallery shell: one template, stamped into every conference / vids gallery.
 # Page copy stays in each gallery's index.json. index.html is generated from the
-# template (social meta, header, and transcript nav links stamped per gallery) — do not edit
+# template (social meta, brand chrome, header, and transcript nav links stamped per gallery) — do not edit
 # gallery index.html files by hand.
 # The same step writes confs/index.html and vids/index.html from overview.html,
 # using each tree's overview.json plus the gallery index.json files.

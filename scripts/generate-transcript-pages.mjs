@@ -29,6 +29,7 @@ import { readFile, writeFile, mkdir, rm, readdir } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { dirname, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
+import { loadBrand, mergeBrand, themeDeclarations } from "./brand.mjs";
 
 const BOM = "\uFEFF";
 const TIME_PAT =
@@ -177,11 +178,12 @@ function watchHref(fromFile, galleryIndexFile, videoId, startSec) {
   return t > 0 ? `${base}#${videoId}&t=${t}` : `${base}#${videoId}`;
 }
 
-function pageChrome(page) {
+function pageChrome(page, brand) {
+  const theme = brand || {};
   return {
-    siteTitle: page?.title || "Videos",
+    siteTitle: page?.title || theme.titleFallback || "Videos",
     heading: page?.heading || page?.title || "Videos",
-    footer: page?.footer || "KERI Foundation",
+    footer: page?.footer || theme.footerFallback || "",
   };
 }
 
@@ -193,6 +195,7 @@ function renderTalkPage({
   galleryHref,
   listingHref,
   watchTopHref,
+  themeCss,
 }) {
   const title = video.title || videoId;
   const day = video.day || "";
@@ -222,13 +225,7 @@ function renderTalkPage({
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ink: #060b6f;
-      --muted: #2e3a7a;
-      --bg: #fdefde;
-      --panel: #f4f0e8;
-      --accent: #986c32;
-      --link: #0450a8;
-      --waves: url("https://keri.foundation/custom/img/waves-kim-1.png");
+${themeCss}
     }
     * { box-sizing: border-box; }
     body {
@@ -253,7 +250,7 @@ function renderTalkPage({
       z-index: 0;
       overflow: hidden;
       background: var(--panel);
-      border: 1px solid rgba(6, 11, 111, 0.12);
+      border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
       border-radius: 10px;
       padding: 1.25rem 1.4rem;
       margin-bottom: 1.5rem;
@@ -314,7 +311,7 @@ function renderTalkPage({
     .actions a.primary:hover { background: #0a1270; }
     article {
       background: var(--panel);
-      border: 1px solid rgba(6, 11, 111, 0.12);
+      border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
       border-radius: 10px;
       padding: 1rem 1.25rem 1.5rem;
     }
@@ -324,7 +321,7 @@ function renderTalkPage({
       gap: 0.65rem 0.85rem;
       margin: 0;
       padding: 0.45rem 0;
-      border-bottom: 1px solid rgba(6, 11, 111, 0.08);
+      border-bottom: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
     }
     .cue:last-child { border-bottom: none; }
     .cue-time {
@@ -402,7 +399,7 @@ ${cueHtml || "      <p>No subtitle cues found.</p>"}
 `;
 }
 
-function renderListingPage({ chrome, galleryHref, entries, dayOrder }) {
+function renderListingPage({ chrome, galleryHref, entries, dayOrder, themeCss }) {
   const byDay = new Map();
   for (const e of entries) {
     const day = e.day || "Talks";
@@ -447,12 +444,7 @@ ${items}
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ink: #060b6f;
-      --muted: #2e3a7a;
-      --bg: #fdefde;
-      --panel: #f4f0e8;
-      --link: #0450a8;
-      --waves: url("https://keri.foundation/custom/img/waves-kim-1.png");
+${themeCss}
     }
     * { box-sizing: border-box; }
     body {
@@ -476,7 +468,7 @@ ${items}
       z-index: 0;
       overflow: hidden;
       background: var(--panel);
-      border: 1px solid rgba(6, 11, 111, 0.12);
+      border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
       border-radius: 10px;
       padding: 1.25rem 1.4rem;
       margin-bottom: 1.5rem;
@@ -507,7 +499,7 @@ ${items}
     .lead { color: var(--muted); margin: 0; }
     section {
       background: var(--panel);
-      border: 1px solid rgba(6, 11, 111, 0.12);
+      border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
       border-radius: 10px;
       padding: 1rem 1.25rem;
       margin-bottom: 1rem;
@@ -583,7 +575,13 @@ async function main() {
   const galleryDir = dirname(configPath);
   const galleryIndexFile = join(galleryDir, "index.html");
   const config = JSON.parse(await readFile(configPath, "utf8"));
-  const chrome = pageChrome(config.page);
+  const brand = mergeBrand(loadBrand(), config.brand);
+  const themeCss = themeDeclarations(
+    brand,
+    "      ",
+    ["ink", "muted", "bg", "panel", "accent", "link"]
+  );
+  const chrome = pageChrome(config.page, brand);
   const videos = Array.isArray(config.videos) ? config.videos : [];
   const dayOrder = Array.isArray(config.days) ? config.days : [];
   const transcriptsDir =
@@ -635,6 +633,7 @@ async function main() {
       galleryHref,
       listingHref,
       watchTopHref,
+      themeCss,
     });
 
     if (!listings.has(outDirRel)) {
@@ -684,6 +683,7 @@ async function main() {
       galleryHref,
       entries,
       dayOrder,
+      themeCss,
     });
     console.log(`${opts.dryRun ? "[dry-run] " : ""}write ${toPosix(join(outDirRel, "index.html"))} (${entries.length} talks)`);
     if (!opts.dryRun) {
