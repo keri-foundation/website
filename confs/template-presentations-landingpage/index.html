@@ -1483,7 +1483,6 @@
             min-height: 0;
             background: #000;
             --subtitle-font-size: 1.8rem;
-            --subtitle-control-size: 2.75rem;
             --plyr-font-size-small: var(--subtitle-font-size);
             --plyr-font-size-base: var(--subtitle-font-size);
             --plyr-font-size-large: var(--subtitle-font-size);
@@ -1507,15 +1506,6 @@
             font-size: var(--subtitle-font-size);
         }
 
-        .video-modal-player .plyr__captions:has(.plyr__caption:not(:empty)) {
-            /* Keep the caption text below the A− / A+ controls. */
-            padding-top: calc(var(--subtitle-control-size) + 0.95rem);
-        }
-
-        .video-modal-player .plyr__captions:not(:has(.plyr__caption:not(:empty))) .subtitle-size-controls {
-            display: none;
-        }
-
         .video-modal-player .plyr__caption {
             line-height: 1.6;
         }
@@ -1525,64 +1515,6 @@
             .video-modal-player {
                 --subtitle-font-size: 1.15rem;
             }
-        }
-
-        .subtitle-size-controls {
-            position: absolute;
-            top: 0.3rem;
-            right: 0.45rem;
-            z-index: 4;
-            display: flex;
-            direction: ltr;
-            gap: 0.3rem;
-            pointer-events: auto;
-        }
-
-        .video-modal-player .subtitle-size-btn {
-            display: inline-flex;
-            align-items: baseline;
-            justify-content: center;
-            gap: 0.04em;
-            min-width: var(--subtitle-control-size);
-            min-height: var(--subtitle-control-size);
-            padding: 0 0.4rem;
-            border: 0;
-            border-radius: 8px;
-            background: rgba(0, 0, 0, 0.78);
-            color: #fff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            font-size: 0.95rem;
-            font-weight: 700;
-            line-height: 1;
-            letter-spacing: 0;
-            white-space: nowrap;
-            cursor: pointer;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.45);
-            touch-action: manipulation;
-            user-select: none;
-        }
-
-        .video-modal-player .subtitle-size-btn--smaller .subtitle-size-a {
-            font-size: 0.72rem;
-        }
-
-        .video-modal-player .subtitle-size-btn--larger .subtitle-size-a {
-            font-size: 1.2rem;
-        }
-
-        .video-modal-player .subtitle-size-btn:hover:not(:disabled),
-        .video-modal-player .subtitle-size-btn:focus-visible:not(:disabled) {
-            background: var(--plyr-color-main, #5f7c2f);
-        }
-
-        .video-modal-player .subtitle-size-btn:focus-visible {
-            outline: 2px solid #fff;
-            outline-offset: 2px;
-        }
-
-        .video-modal-player .subtitle-size-btn:disabled {
-            opacity: 0.4;
-            cursor: default;
         }
 
         .caption-gap-notice {
@@ -1969,6 +1901,22 @@
 
         .plyr__control--overlaid.plyr__control--pressed svg {
             left: 0;
+        }
+
+        /* The settings sheet opens upward into the center controls. On a phone
+           those play / seek buttons sit on top of it. */
+        .plyr--video.plyr--menu-open .plyr__overlay-controls,
+        .plyr--video.plyr--menu-open .plyr__control--overlaid,
+        .plyr--video.plyr--playing.plyr--menu-open:not(.plyr--hide-controls) .plyr__overlay-controls,
+        .plyr--video.plyr--playing.plyr--menu-open:not(.plyr--hide-controls) .plyr__control--overlaid,
+        .plyr--video.plyr--playing.plyr--menu-open.plyr--overlay-controls-pinned .plyr__overlay-controls,
+        .plyr--video.plyr--playing.plyr--menu-open.plyr--overlay-controls-pinned .plyr__control--overlaid {
+            visibility: hidden;
+            pointer-events: none;
+        }
+
+        .plyr--menu-open .plyr__menu__container {
+            z-index: 5;
         }
 
         /* Mild media-tone on posters/images only (while player is stopped) */
@@ -2435,6 +2383,11 @@
                 order: 1;
             }
 
+            .video-modal-panel--video:has(.plyr--menu-open) {
+                overflow: visible;
+                z-index: 4;
+            }
+
             .video-modal-panel--transcript {
                 flex: 1 1 54%;
                 min-height: 140px;
@@ -2447,7 +2400,6 @@
 
             .video-modal-player {
                 --subtitle-font-size: 0.85rem;
-                --subtitle-control-size: 2.25rem;
             }
 
             .video-modal-player .plyr__caption {
@@ -2456,10 +2408,6 @@
 
             .video-modal-player .plyr__captions {
                 padding: 4px 8px 8px;
-            }
-
-            .video-modal-player .plyr__captions:has(.plyr__caption:not(:empty)) {
-                padding-top: calc(var(--subtitle-control-size) + 0.85rem);
             }
 
             .plyr__controls [data-plyr="fullscreen"] {
@@ -3071,45 +3019,22 @@
                 if (video) video.style.setProperty('--subtitle-font-size', size);
             }
 
-            function makeSubtitleSizeButton(kind) {
-                const btn = document.createElement('button');
-                btn.type = 'button';
-                btn.className = `subtitle-size-btn subtitle-size-btn--${kind}`;
-                const letter = document.createElement('span');
-                letter.className = 'subtitle-size-a';
-                letter.setAttribute('aria-hidden', 'true');
-                letter.textContent = 'A';
-                const mark = document.createElement('span');
-                mark.className = 'subtitle-size-mark';
-                mark.setAttribute('aria-hidden', 'true');
-                mark.textContent = kind === 'smaller' ? '\u2212' : '+';
-                btn.appendChild(letter);
-                btn.appendChild(mark);
-                return btn;
-            }
+            const SUBTITLE_SIZE_LABELS = ['Smallest', 'Smaller', 'Small', 'Medium', 'Large', 'Larger', 'Largest'];
 
-            // Plyr empties .plyr__captions on every cue, so the controls are reattached.
-            function attachSubtitleSizeControls(playerWrap, attempt = 0) {
-                if (!playerWrap || playerWrap.dataset.subtitleSizeReady === 'true') return;
-                const captions = playerWrap.querySelector('.plyr__captions');
-                if (!captions) {
-                    if (attempt < 8) {
-                        requestAnimationFrame(() => attachSubtitleSizeControls(playerWrap, attempt + 1));
-                    }
-                    return;
-                }
-                playerWrap.dataset.subtitleSizeReady = 'true';
+            function attachSubtitleSizeSetting(player) {
+                const container = player?.elements?.container;
+                const popup = container?.querySelector('.plyr__menu__container');
+                if (!popup || popup.dataset.subtitleSizeReady === 'true') return;
+                const home = popup.querySelector('[id$="-home"]');
+                const menu = home?.querySelector('[role="menu"]');
+                const panels = home?.parentElement;
+                const playerWrap = container.closest('.video-modal-player');
+                if (!home || !menu || !panels || !playerWrap) return;
+                popup.dataset.subtitleSizeReady = 'true';
 
-                const controls = document.createElement('div');
-                controls.className = 'subtitle-size-controls';
-                controls.setAttribute('role', 'group');
-                controls.setAttribute('aria-label', 'Subtitle size');
-                controls.dir = 'ltr';
-
-                const smaller = makeSubtitleSizeButton('smaller');
-                const larger = makeSubtitleSizeButton('larger');
-                controls.appendChild(smaller);
-                controls.appendChild(larger);
+                let chosen = readSubtitleSizeIndex();
+                const activeIndex = () => (chosen == null ? defaultSubtitleSizeIndex() : chosen);
+                if (chosen != null) applySubtitleFontSize(playerWrap, SUBTITLE_SIZE_STEPS[chosen]);
 
                 const status = document.createElement('div');
                 status.className = 'visually-hidden';
@@ -3117,69 +3042,105 @@
                 status.setAttribute('aria-live', 'polite');
                 playerWrap.appendChild(status);
 
-                let chosen = readSubtitleSizeIndex();
-                if (chosen != null) applySubtitleFontSize(playerWrap, SUBTITLE_SIZE_STEPS[chosen]);
+                const valueLabel = document.createElement('span');
+                valueLabel.className = 'plyr__menu__value';
 
-                const activeIndex = () => (chosen == null ? defaultSubtitleSizeIndex() : chosen);
+                const menuItem = document.createElement('button');
+                menuItem.type = 'button';
+                menuItem.className = 'plyr__control plyr__control--forward';
+                menuItem.setAttribute('role', 'menuitem');
+                menuItem.setAttribute('aria-haspopup', 'true');
+                const menuLabel = document.createElement('span');
+                menuLabel.append('Subtitle size', valueLabel);
+                menuItem.appendChild(menuLabel);
+                menu.appendChild(menuItem);
 
-                const syncButtons = () => {
-                    const index = activeIndex();
-                    smaller.disabled = index <= 0;
-                    larger.disabled = index >= SUBTITLE_SIZE_STEPS.length - 1;
-                    smaller.title = smaller.disabled ? 'Smallest subtitle size' : 'Smaller subtitles';
-                    larger.title = larger.disabled ? 'Largest subtitle size' : 'Larger subtitles';
-                    smaller.setAttribute('aria-label', smaller.title);
-                    larger.setAttribute('aria-label', larger.title);
+                const panelId = `plyr-settings-${player.id}-subtitlesize`;
+                const panel = document.createElement('div');
+                panel.id = panelId;
+                panel.hidden = true;
+
+                const back = document.createElement('button');
+                back.type = 'button';
+                back.className = 'plyr__control plyr__control--back';
+                const backLabel = document.createElement('span');
+                backLabel.setAttribute('aria-hidden', 'true');
+                backLabel.textContent = 'Subtitle size';
+                const backSr = document.createElement('span');
+                backSr.className = 'plyr__sr-only';
+                backSr.textContent = 'Go back to previous menu';
+                back.append(backLabel, backSr);
+
+                const list = document.createElement('div');
+                list.setAttribute('role', 'menu');
+                const options = SUBTITLE_SIZE_LABELS.map((label, index) => {
+                    const option = document.createElement('button');
+                    option.type = 'button';
+                    option.className = 'plyr__control';
+                    option.setAttribute('role', 'menuitemradio');
+                    option.setAttribute('aria-checked', 'false');
+                    const optionLabel = document.createElement('span');
+                    optionLabel.textContent = label;
+                    option.appendChild(optionLabel);
+                    option.addEventListener('click', (event) => {
+                        event.preventDefault();
+                        event.stopPropagation();
+                        chooseSize(index);
+                        showPanel(home);
+                    });
+                    list.appendChild(option);
+                    return option;
+                });
+
+                panel.append(back, list);
+                panels.appendChild(panel);
+
+                const showPanel = (target) => {
+                    panels.style.width = '';
+                    panels.style.height = '';
+                    Array.from(panels.children).forEach((child) => {
+                        child.hidden = child !== target;
+                    });
                 };
 
-                const stepBy = (delta) => {
-                    const next = activeIndex() + delta;
-                    if (next < 0 || next >= SUBTITLE_SIZE_STEPS.length) return;
-                    chosen = next;
+                const syncOptions = () => {
+                    const index = activeIndex();
+                    valueLabel.textContent = SUBTITLE_SIZE_LABELS[index];
+                    options.forEach((option, optionIndex) => {
+                        option.setAttribute('aria-checked', optionIndex === index ? 'true' : 'false');
+                    });
+                };
+
+                const chooseSize = (index) => {
+                    if (index < 0 || index >= SUBTITLE_SIZE_STEPS.length) return;
+                    chosen = index;
                     writeSubtitleSizeIndex(chosen);
                     applySubtitleFontSize(playerWrap, SUBTITLE_SIZE_STEPS[chosen]);
-                syncButtons();
-                const atLimit = delta < 0 ? smaller.disabled : larger.disabled;
-                status.textContent = atLimit
-                    ? (delta < 0 ? 'Smallest subtitle size' : 'Largest subtitle size')
-                    : `${delta < 0 ? 'Smaller' : 'Larger'} subtitles, ${chosen + 1} of ${SUBTITLE_SIZE_STEPS.length}`;
+                    syncOptions();
+                    status.textContent = `Subtitle size ${SUBTITLE_SIZE_LABELS[index]}`;
                 };
 
-                smaller.addEventListener('click', () => stepBy(-1));
-                larger.addEventListener('click', () => stepBy(1));
-
-                const keepOnButtons = (event) => {
+                menuItem.addEventListener('click', (event) => {
+                    event.preventDefault();
                     event.stopPropagation();
-                };
-                controls.addEventListener('pointerdown', keepOnButtons);
-                controls.addEventListener('pointerup', keepOnButtons);
-                controls.addEventListener('click', keepOnButtons);
-
-                let focusedControl = null;
-                controls.addEventListener('focusin', (event) => {
-                    if (event.target instanceof HTMLElement && controls.contains(event.target)) {
-                        focusedControl = event.target;
-                    }
+                    showPanel(panel);
                 });
-                controls.addEventListener('focusout', () => {
-                    if (controls.isConnected) focusedControl = null;
+                back.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    showPanel(home);
+                });
+                panel.addEventListener('keydown', (event) => {
+                    if (event.key !== 'ArrowLeft') return;
+                    event.preventDefault();
+                    event.stopPropagation();
+                    showPanel(home);
+                    menuItem.focus();
                 });
 
-                const ensureMounted = () => {
-                    if (controls.parentNode === captions) return;
-                    const restore = focusedControl;
-                    captions.appendChild(controls);
-                    if (restore && typeof restore.focus === 'function') {
-                        restore.focus({ preventScroll: true });
-                    }
-                };
-                ensureMounted();
-                const observer = new MutationObserver(ensureMounted);
-                observer.observe(captions, { childList: true });
-
-                syncButtons();
-                window.matchMedia('(max-width: 768px)').addEventListener('change', syncButtons);
-                window.matchMedia('(min-width: 769px) and (hover: none) and (pointer: coarse)').addEventListener('change', syncButtons);
+                syncOptions();
+                window.matchMedia('(max-width: 768px)').addEventListener('change', syncOptions);
+                window.matchMedia('(min-width: 769px) and (hover: none) and (pointer: coarse)').addEventListener('change', syncOptions);
             }
 
             function disableDoubleClickFullscreen(player) {
@@ -3194,6 +3155,30 @@
                     event.preventDefault();
                     event.stopPropagation();
                 }, true);
+            }
+
+            function fitSettingsMenu(player) {
+                const container = player?.elements?.container;
+                if (!container || container.dataset.menuFit === 'true') return;
+                const popup = container.querySelector('.plyr__menu__container');
+                const button = container.querySelector('[data-plyr="settings"]');
+                const inner = popup?.querySelector(':scope > div');
+                if (!popup || !button || !inner) return;
+                container.dataset.menuFit = 'true';
+
+                const fit = () => {
+                    if (!container.classList.contains('plyr--menu-open')) {
+                        inner.style.maxHeight = '';
+                        inner.style.overflowY = '';
+                        return;
+                    }
+                    const available = button.getBoundingClientRect().top - container.getBoundingClientRect().top - 8;
+                    inner.style.maxHeight = `${Math.max(96, available)}px`;
+                    inner.style.overflowY = 'auto';
+                };
+
+                const observer = new MutationObserver(fit);
+                observer.observe(container, { attributes: true, attributeFilter: ['class'] });
             }
 
             function initPlyrVideo(videoEl, options = {}) {
@@ -3213,16 +3198,14 @@
                 videoEl._plyrPlayer = player;
                 disableDoubleClickFullscreen(player);
                 enhanceOverlaidPlayToggle(player, plyrConfig.iconUrl);
+                fitSettingsMenu(player);
                 attachMobilePlaybackRecovery(videoEl, player);
                 attachIosNativeCaptionBridge(videoEl, player);
                 bindCaptionLanguageUrlSync(videoEl);
                 if (options.filteredPoster !== false) {
                     attachFilteredPoster(videoEl);
                 }
-                if (options.subtitleSize) {
-                    const wrap = videoEl.closest('.video-modal-player');
-                    if (wrap) attachSubtitleSizeControls(wrap);
-                }
+                if (options.subtitleSize) attachSubtitleSizeSetting(player);
                 return player;
             }
 
