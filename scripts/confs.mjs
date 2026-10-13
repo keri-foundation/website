@@ -13,8 +13,8 @@
  * landing-pages   Copy the shared template into every gallery and stamp title /
  *                 description / canonical URL into the social meta tags from that
  *                 gallery's index.json (shell stays shared; only meta content varies).
- *                 Also writes page.transcriptLinks into the transcript nav as real
- *                 <a href> elements, and stamps DISCOVERED_SUBTITLE_LANGS with
+ *                 Also writes the page header and page.transcriptLinks into the
+ *                 HTML as real content, and stamps DISCOVERED_SUBTITLE_LANGS with
  *                 sibling caption files (`foo.nl.srt` next to `foo.srt`) so the
  *                 page does not probe for them.
  * sync-subtitles  Copy curated .srt files from the source folders listed in
@@ -76,6 +76,9 @@ function setTagContent(html, pattern, value) {
 const SUBTITLE_LANG_MARKER = "/*__DISCOVERED_SUBTITLE_LANGS__*/{}";
 const TRANSCRIPT_NAV_MARKER =
   '<nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Transcript indexes" hidden><!--__TRANSCRIPT_LINKS__--></nav>';
+const GALLERY_HEADER_MARKER = "<!--__GALLERY_HEADER__-->";
+const YOUTUBE_ICON =
+  "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiA4djggbC00LTIuNXYtMy4yTDggMTJ6Ii8+PC9zdmc+";
 
 /** English subtitle path as stored in index.json, or null. */
 function englishSubtitleRel(video) {
@@ -121,6 +124,11 @@ function escapeText(value) {
   return String(value).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
+/** Same escaping as escHtml() in the gallery template. */
+function escHtml(value) {
+  return escapeText(value).replace(/"/g, "&quot;");
+}
+
 /** Same filter as renderTranscriptLinks() in the gallery template. */
 function transcriptLinkItems(page) {
   const links = Array.isArray(page && page.transcriptLinks) ? page.transcriptLinks : [];
@@ -153,6 +161,59 @@ function stampTranscriptLinks(html, page) {
   return html.replace(TRANSCRIPT_NAV_MARKER, renderTranscriptNav(transcriptLinkItems(page)));
 }
 
+/** Same header markup as renderPageChrome() in the gallery template. */
+function renderGalleryHeader(page, pageUrl) {
+  const heading = page.heading || page.title || "";
+  const href = page.headingHref || "./";
+  let html = `<h1><a href="${escHtml(href)}">${escHtml(heading)}</a></h1>`;
+  if (page.statusNotice) {
+    html += `<div class="status-notice" role="status">${escHtml(page.statusNotice)}</div>`;
+  }
+  if (page.subtitle) {
+    html += `<p class="subtitle">${escHtml(page.subtitle)}</p>`;
+  }
+  const nav = Array.isArray(page.nav) ? page.nav : [];
+  if (nav.length) {
+    const parts = [];
+    const normalize = (path) => path.replace(/\/+$/, "") || "/";
+    const pagePath = normalize(new URL(pageUrl).pathname);
+    nav.forEach((item, i) => {
+      const prev = nav[i - 1];
+      const openInNewTab = item.external === true;
+      const target = openInNewTab ? ' target="_blank" rel="noopener noreferrer"' : "";
+      let label = escHtml(item.label || "");
+      if (item.icon === "youtube") {
+        label = `<img src="${YOUTUBE_ICON}" alt="" width="24" height="24" style="vertical-align: middle; margin-right: 5px;">${label}`;
+      }
+      const prefix = item.prefix ? `${escHtml(item.prefix)} ` : "";
+      const newTabHint = openInNewTab
+        ? ' <span class="visually-hidden">(opens in a new tab)</span>'
+        : "";
+      let currentAttr = "";
+      try {
+        const itemUrl = new URL(item.href, pageUrl);
+        if (normalize(itemUrl.pathname) === pagePath) currentAttr = ' aria-current="page"';
+      } catch {
+        // Ignore invalid href values from config.
+      }
+      const link = `${prefix}<a href="${escHtml(item.href)}"${target}${currentAttr}>${label}${newTabHint}</a>`;
+      if (i === 0) parts.push(link);
+      else if (item.prefix) parts.push(" | " + link);
+      else if (prev && prev.icon === "youtube" && item.icon === "youtube") parts.push(" " + link);
+      else parts.push(" | " + link);
+    });
+    html += `<nav class="gallery-nav" aria-label="Related pages">${parts.join("")}</nav>`;
+  }
+  return html;
+}
+
+function stampGalleryHeader(html, page, pageUrl) {
+  if (!html.includes(GALLERY_HEADER_MARKER)) {
+    throw new Error("landing-pages: template missing gallery header marker");
+  }
+  return html.replace(GALLERY_HEADER_MARKER, renderGalleryHeader(page, pageUrl));
+}
+
 function stampLandingMeta(templateHtml, { title, description, url }) {
   const t = escapeAttr(title);
   const d = escapeAttr(description);
@@ -180,6 +241,9 @@ async function cmdLandingPages(opts) {
   if (!templateHtml.includes(TRANSCRIPT_NAV_MARKER)) {
     throw new Error("landing-pages: template missing transcript links marker");
   }
+  if (!templateHtml.includes(GALLERY_HEADER_MARKER)) {
+    throw new Error("landing-pages: template missing gallery header marker");
+  }
   let updated = 0;
   let unchanged = 0;
   for (const id of await selectedConferences(opts)) {
@@ -190,12 +254,16 @@ async function cmdLandingPages(opts) {
       page.subtitle || page.description || "Presentations and talks from the KERI Foundation.";
     const url = `${SITE_URL}/${galleryPrefix(id)}/`;
     const langMap = discoveredSubtitleLangs(config, galleryDir(id));
-    const html = stampTranscriptLinks(
-      stampLandingMeta(templateHtml, { title, description, url }).replace(
-        SUBTITLE_LANG_MARKER,
-        embedJson(langMap)
+    const html = stampGalleryHeader(
+      stampTranscriptLinks(
+        stampLandingMeta(templateHtml, { title, description, url }).replace(
+          SUBTITLE_LANG_MARKER,
+          embedJson(langMap)
+        ),
+        page
       ),
-      page
+      page,
+      url
     );
     const dest = join(galleryDir(id), "index.html");
     let previous = null;
