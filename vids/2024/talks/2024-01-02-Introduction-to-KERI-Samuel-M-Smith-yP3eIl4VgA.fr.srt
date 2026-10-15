@@ -1,7 +1,7 @@
 1
 00:00:00,000 --> 00:00:05,240
-Voici une présentation de KERI, l'infrastructure
-de réception d'événements clés.
+Voici une présentation de KERI, la Key Event
+Receipt Infrastructure.
 
 2
 00:00:08,500 --> 00:00:13,120
@@ -10,7 +10,7 @@ inventeur de KERI. Si j’ai inventé
 
 3
 00:00:13,120 --> 00:00:19,040
-KERI, c’est parce qu’Internet ne fonctionne pas correctement et que
+KERI, c’est parce qu’Internet s’est complètement dévoyé et que
 je voulais y remédier. Le problème
 
 4
