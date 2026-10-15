@@ -85,7 +85,7 @@ Hablemos de lo que esto significa. La atribución segura
 
 18
 00:01:45,320 --> 00:01:51,440
-la atribución segura es otra forma de decir que
+es otra forma de decir que
 queremos establecer la autoría de los datos,
 
 19
@@ -150,7 +150,7 @@ otra persona para verificar lo que dice alguien con quien
 
 31
 00:03:00,180 --> 00:03:05,480
-con quien quiero comunicarme de forma privada
+quiero comunicarme de forma privada
 y confidencial. Necesito ser capaz
 
 32
@@ -160,7 +160,7 @@ en alguien, entonces la seguridad de quienquiera que sea en quien
 
 33
 00:03:11,680 --> 00:03:16,600
-en quien confío ahora se convierte en algo de lo que tengo que
+confío ahora se convierte en algo de lo que tengo que
 preocuparme. Y eso es un problema.
 
 34
@@ -437,11 +437,11 @@ ser universalmente único. Solo puede
 88
 00:08:07,660 --> 00:08:13,940
 ser único en todo el universo. La única forma
-en que podemos garantizar que tus identificadores
+en que podemos garantizar tus identificadores
 
 89
 00:08:13,940 --> 00:08:21,340
-identificadores únicos es utilizar criptografía
+únicos es utilizar criptografía
 o recurrir a un tercero de confianza que
 
 90
@@ -521,7 +521,7 @@ hablado realmente de cómo lo hace KERI, pero os he
 
 105
 00:09:46,220 --> 00:09:51,180
-os he dado una introducción al difícil
+dado una introducción al difícil
 problema. El difícil problema es la
 
 106

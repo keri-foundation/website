@@ -85,7 +85,7 @@ Vamos falar sobre o que isso significa. A atribuição segura
 
 18
 00:01:45,320 --> 00:01:51,440
-atribuição é outra forma de dizer que
+é outra forma de dizer que
 queremos estabelecer a autoria dos dados,
 
 19
@@ -150,17 +150,17 @@ em mais ninguém para verificar o que alguém com quem
 
 31
 00:03:00,180 --> 00:03:05,480
-com quem pretendo comunicar de forma privada
+pretendo comunicar de forma privada
 e confidencial. Preciso de ser capaz
 
 32
 00:03:05,480 --> 00:03:11,680
 de o fazer sozinho. Se tiver de confiar
-em alguém, então a segurança daquele em quem estou
+em alguém, então a segurança daquele em quem
 
 33
 00:03:11,680 --> 00:03:16,600
-em quem confio torna-se algo com que tenho de
+confio torna-se algo com que tenho de
 me preocupar. E isso é um problema.
 
 34
@@ -436,11 +436,11 @@ ser universalmente único. Só pode
 88
 00:08:07,660 --> 00:08:13,940
 ser único em todo o universo. A única forma
-de garantirmos que os vossos identificadores
+de garantirmos os vossos identificadores
 
 89
 00:08:13,940 --> 00:08:21,340
-identificadores únicos é recorrer à criptografia
+únicos é recorrer à criptografia
 ou a um terceiro de confiança que
 
 90
@@ -520,7 +520,7 @@ falámos sobre como o KERI o faz, mas dei-vos
 
 105
 00:09:46,220 --> 00:09:51,180
-apresentei-vos uma introdução ao difícil
+uma introdução ao difícil
 problema. O difícil problema é a atribuição
 
 106
