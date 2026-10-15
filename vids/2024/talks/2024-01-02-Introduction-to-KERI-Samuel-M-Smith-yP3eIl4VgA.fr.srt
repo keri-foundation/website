@@ -85,7 +85,7 @@ Voyons ce que cela signifie. L’attribution sécurisée
 
 18
 00:01:45,320 --> 00:01:51,440
-l’attribution sécurisée est une autre façon de dire que nous
+est une autre façon de dire que nous
 voulons établir la paternité des données,
 
 19
@@ -150,7 +150,7 @@ le faire sans avoir à faire confiance à un tiers
 
 31
 00:03:00,180 --> 00:03:05,480
-avec qui je souhaite communiquer de manière
+je souhaite communiquer de manière
 privée et confidentielle. Je dois être capable
 
 32
@@ -160,7 +160,7 @@ de le faire moi-même. Si je dois faire confiance
 
 33
 00:03:11,680 --> 00:03:16,600
-de confiance devient alors une source de
+fais confiance devient alors une source de
 souci. Et c’est un problème.
 
 34
@@ -245,7 +245,7 @@ de suite. Et si vous parvenez à retracer cette chaîne de
 
 50
 00:04:49,300 --> 00:04:54,820
-de possession jusqu’au propriétaire ou détenteur actuel de
+possession jusqu’au propriétaire ou détenteur actuel de
 ce tableau, alors on peut affirmer que oui, il
 
 51
@@ -521,7 +521,7 @@ parlé de la manière dont KERI s’y prend, mais je vous ai
 
 105
 00:09:46,220 --> 00:09:51,180
-vous ai donné un aperçu de ce
+donné un aperçu de ce
 problème épineux. Le problème épineux, c’est l’
 
 106
