@@ -861,8 +861,8 @@ entre los que se incluye uno denominado
 
 183
 00:08:00,800 --> 00:08:02,536
-Identidad Digital Avalada
-por el Estado (SEDI).
+State Endorsed
+Digital Identity (SEDI).
 
 184
 00:08:02,560 --> 00:08:03,816
@@ -2811,12 +2811,12 @@ tenga éxito». Y KERI utiliza
 
 596
 00:26:13,460 --> 00:26:15,196
-<i>umbral</i> estructuras <i>multi-</i>
+estructuras <i>threshold</i> <i>multi-</i>
 
 597
 00:26:15,220 --> 00:26:18,476
-<i>firma</i>, grupos de <i>testigos</i>,
-grupos de <i>observadores</i>
+<i>signature</i>, grupos de <i>witnesses</i>,
+grupos de <i>watchers</i>
 
 598
 00:26:18,500 --> 00:26:21,596
@@ -3056,7 +3056,7 @@ puedo recuperarme
 649
 00:28:41,799 --> 00:28:45,456
 gracias al mecanismo
-de <i>pre-rotación</i> de KERI,
+de <i>pre-rotation</i> de KERI,
 
 650
 00:28:45,480 --> 00:28:47,856
@@ -5124,8 +5124,8 @@ en marcha el KERI para
 
 1086
 00:47:32,750 --> 00:47:34,486
-la iniciativa de Identidad Digital
-Avalada por el Estado (SEDI)
+la iniciativa State Endorsed
+Digital Identity (SEDI)
 
 1087
 00:47:34,510 --> 00:47:37,366
