@@ -346,7 +346,7 @@ voulons résoudre ce problème d’attribution sécurisée
 70
 00:06:35,880 --> 00:06:41,740
 Internet, nous ne faisons qu’envoyer des informations.
-Les données, ce sont des informations. Ce ne sont que des bits. Or,
+Les données, ce sont des informations. Ce ne sont que des « bits ». Or,
 
 71
 00:06:41,740 --> 00:06:45,620
@@ -356,7 +356,7 @@ pense habituellement à la chaîne de traçabilité, on
 72
 00:06:45,620 --> 00:06:50,540
 à un objet physique. Je vais donc les appeler
-« ces trucs ». Ce sont des atomes. Donc, si j’ai réellement
+« its ». Ce sont des atomes. Donc, si j’ai réellement
 
 73
 00:06:50,540 --> 00:06:54,440
@@ -400,7 +400,7 @@ transmission. Cela fonctionne pour les atomes. Cela ne
 
 81
 00:07:29,180 --> 00:07:34,500
-fonctionne pas pour les bits d’information. Nous sommes donc confrontés à un
+fonctionne pas pour les « bits » d’information. Nous sommes donc confrontés à un
 problème plus complexe pour établir la provenance des données
 
 82
@@ -420,7 +420,7 @@ identifiant est un identifiant électronique.
 
 85
 00:07:50,000 --> 00:07:56,980
-C’est davantage d’informations. Ce sont davantage de bits. Pour
+C’est davantage d’informations. Ce sont davantage de « bits ». Pour
 permettre d’attribuer de manière sécurisée
 
 86

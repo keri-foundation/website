@@ -346,7 +346,7 @@ queremos resolver este problema da atribuição segura
 70
 00:06:35,880 --> 00:06:41,740
 Internet, estamos apenas a enviar informação.
-Os dados são informação. São apenas bits. Agora,
+Os dados são informação. São apenas «bits». Agora,
 
 71
 00:06:41,740 --> 00:06:45,620
@@ -356,7 +356,7 @@ normalmente pensamos na cadeia de custódia,
 72
 00:06:45,620 --> 00:06:50,540
 pensamos num objeto físico. Por isso, vou chamá-los de
-«esses it». São átomos. Portanto, se eu tiver, de facto,
+«its». São átomos. Portanto, se eu tiver, de facto,
 
 73
 00:06:50,540 --> 00:06:54,440
@@ -400,7 +400,7 @@ custódia. Isso funciona para os átomos. Mas não
 
 81
 00:07:29,180 --> 00:07:34,500
-funciona para bits de informação. Por isso, temos um
+funciona para «bits» de informação. Por isso, temos um
 problema mais difícil em determinar a proveniência dos dados
 
 82
@@ -420,7 +420,7 @@ identificador é um identificador eletrónico.
 
 85
 00:07:50,000 --> 00:07:56,980
-É mais informação. São mais bits. Para
+É mais informação. São mais «bits». Para
 possibilitar a atribuição segura a
 
 86
