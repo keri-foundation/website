@@ -1,7 +1,7 @@
 1
 00:00:00,000 --> 00:00:05,240
-Voici une présentation de KERI, l'infrastructure
-de réception d'événements clés.
+Voici une présentation de KERI, la Key Event
+Receipt Infrastructure.
 
 2
 00:00:08,500 --> 00:00:13,120
@@ -10,7 +10,7 @@ inventeur de KERI. Si j’ai inventé
 
 3
 00:00:13,120 --> 00:00:19,040
-KERI, c’est parce qu’Internet ne fonctionne pas correctement et que
+KERI, c’est parce qu’Internet s’est complètement dévoyé et que
 je voulais y remédier. Le problème
 
 4
@@ -85,7 +85,7 @@ Voyons ce que cela signifie. L’attribution sécurisée
 
 18
 00:01:45,320 --> 00:01:51,440
-l’attribution sécurisée est une autre façon de dire que nous
+est une autre façon de dire que nous
 voulons établir la paternité des données,
 
 19
@@ -150,7 +150,7 @@ le faire sans avoir à faire confiance à un tiers
 
 31
 00:03:00,180 --> 00:03:05,480
-avec qui je souhaite communiquer de manière
+je souhaite communiquer de manière
 privée et confidentielle. Je dois être capable
 
 32
@@ -160,7 +160,7 @@ de le faire moi-même. Si je dois faire confiance
 
 33
 00:03:11,680 --> 00:03:16,600
-de confiance devient alors une source de
+fais confiance devient alors une source de
 souci. Et c’est un problème.
 
 34
@@ -245,7 +245,7 @@ de suite. Et si vous parvenez à retracer cette chaîne de
 
 50
 00:04:49,300 --> 00:04:54,820
-de possession jusqu’au propriétaire ou détenteur actuel de
+possession jusqu’au propriétaire ou détenteur actuel de
 ce tableau, alors on peut affirmer que oui, il
 
 51
@@ -346,7 +346,7 @@ voulons résoudre ce problème d’attribution sécurisée
 70
 00:06:35,880 --> 00:06:41,740
 Internet, nous ne faisons qu’envoyer des informations.
-Les données, ce sont des informations. Ce ne sont que des bits. Or,
+Les données, ce sont des informations. Ce ne sont que des « bits ». Or,
 
 71
 00:06:41,740 --> 00:06:45,620
@@ -356,7 +356,7 @@ pense habituellement à la chaîne de traçabilité, on
 72
 00:06:45,620 --> 00:06:50,540
 à un objet physique. Je vais donc les appeler
-« ces trucs ». Ce sont des atomes. Donc, si j’ai réellement
+« its ». Ce sont des atomes. Donc, si j’ai réellement
 
 73
 00:06:50,540 --> 00:06:54,440
@@ -400,7 +400,7 @@ transmission. Cela fonctionne pour les atomes. Cela ne
 
 81
 00:07:29,180 --> 00:07:34,500
-fonctionne pas pour les bits d’information. Nous sommes donc confrontés à un
+fonctionne pas pour les « bits » d’information. Nous sommes donc confrontés à un
 problème plus complexe pour établir la provenance des données
 
 82
@@ -420,7 +420,7 @@ identifiant est un identifiant électronique.
 
 85
 00:07:50,000 --> 00:07:56,980
-C’est davantage d’informations. Ce sont davantage de bits. Pour
+C’est davantage d’informations. Ce sont davantage de « bits ». Pour
 permettre d’attribuer de manière sécurisée
 
 86
@@ -481,27 +481,27 @@ attribuer des données à cet identifiant,
 97
 00:09:01,800 --> 00:09:06,900
 cet identifiant étant la source de ces
-données. J’ai donc désormais mis en place le
+données. J’ai donc désormais posé le problème de base.
 
 98
 00:09:06,900 --> 00:09:13,080
-problème. La manière dont je peux contrôler un
-identifiant ou prouver que je contrôle un
+La manière dont je peux contrôler un
+identifiant — ou prouver que j’en ai le contrôle —
 
 99
 00:09:13,080 --> 00:09:17,960
-identifiant consiste à utiliser ce que l’on appelle
-des clés cryptographiques. Et le type spécifique
+consiste à utiliser ce que l’on appelle
+des clés cryptographiques.
 
 100
 00:09:17,960 --> 00:09:24,240
-de clé que nous utilisons appartient à ce qu’on
-appelle une paire de clés publique ou une
+Le type spécifique de clé utilisé fait
+partie de ce que l’on appelle une paire de clés
 
 101
 00:09:24,240 --> 00:09:30,380
-paire de clés privée, où je dispose d’une clé publique
-et d’une clé privée. Ce sera l’objet d’un
+publique et privée, composée d’une clé
+publique et d’une clé privée. Ce sera l’objet d’un
 
 102
 00:09:30,380 --> 00:09:37,140
@@ -521,7 +521,7 @@ parlé de la manière dont KERI s’y prend, mais je vous ai
 
 105
 00:09:46,220 --> 00:09:51,180
-vous ai donné un aperçu de ce
+donné un aperçu de ce
 problème épineux. Le problème épineux, c’est l’
 
 106
@@ -531,9 +531,5 @@ plus. Posez vos questions dans les commentaires.
 
 107
 00:09:57,860 --> 00:09:58,100
-Merci.
-
-108
-00:10:27,780 --> 00:10:28,500
 Merci.
 

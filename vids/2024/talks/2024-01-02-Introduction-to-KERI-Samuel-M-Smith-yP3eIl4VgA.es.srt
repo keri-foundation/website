@@ -1,7 +1,7 @@
 1
 00:00:00,000 --> 00:00:05,240
-Esta es una introducción a KERI, la Infraestructura de
-Recepción de Eventos Clave.
+Esta es una introducción a KERI, la Key Event
+Receipt Infrastructure.
 
 2
 00:00:08,500 --> 00:00:13,120
@@ -10,7 +10,7 @@ inventor de KERI. La razón por la que inventé
 
 3
 00:00:13,120 --> 00:00:19,040
-KERI es porque Internet no funciona bien y
+KERI es porque el Internet se desvirtuó por completo y
 quería solucionarlo. Así pues, el problema
 
 4
@@ -85,7 +85,7 @@ Hablemos de lo que esto significa. La atribución segura
 
 18
 00:01:45,320 --> 00:01:51,440
-la atribución segura es otra forma de decir que
+es otra forma de decir que
 queremos establecer la autoría de los datos,
 
 19
@@ -150,7 +150,7 @@ otra persona para verificar lo que dice alguien con quien
 
 31
 00:03:00,180 --> 00:03:05,480
-con quien quiero comunicarme de forma privada
+quiero comunicarme de forma privada
 y confidencial. Necesito ser capaz
 
 32
@@ -160,7 +160,7 @@ en alguien, entonces la seguridad de quienquiera que sea en quien
 
 33
 00:03:11,680 --> 00:03:16,600
-en quien confío ahora se convierte en algo de lo que tengo que
+confío ahora se convierte en algo de lo que tengo que
 preocuparme. Y eso es un problema.
 
 34
@@ -347,7 +347,7 @@ queremos resolver este problema de la atribución segura
 70
 00:06:35,880 --> 00:06:41,740
 Internet, lo único que hacemos es enviar información.
-Los datos son información. No son más que bits. Ahora bien,
+Los datos son información. No son más que «bits». Ahora bien,
 
 71
 00:06:41,740 --> 00:06:45,620
@@ -357,7 +357,7 @@ normalmente pensamos en la cadena de custodia,
 72
 00:06:45,620 --> 00:06:50,540
 pensamos en un objeto físico. Así que los llamaré
-«esos». Son átomos. Así que si realmente
+«its». Son átomos. Así que si realmente
 
 73
 00:06:50,540 --> 00:06:54,440
@@ -401,7 +401,7 @@ custodia. Eso funciona con los átomos. Pero no
 
 81
 00:07:29,180 --> 00:07:34,500
-funciona con los bits de información. Así que nos enfrentamos a un
+funciona con los «bits» de información. Así que nos enfrentamos a un
 problema más complejo a la hora de determinar la procedencia de los datos
 
 82
@@ -421,7 +421,7 @@ identificador es un identificador electrónico.
 
 85
 00:07:50,000 --> 00:07:56,980
-Es más información. Son más bits. Para
+Es más información. Son más «bits». Para
 poder atribuir de forma segura la autoría a
 
 86
@@ -437,11 +437,11 @@ ser universalmente único. Solo puede
 88
 00:08:07,660 --> 00:08:13,940
 ser único en todo el universo. La única forma
-en que podemos garantizar que tus identificadores
+en que podemos garantizar tus identificadores
 
 89
 00:08:13,940 --> 00:08:21,340
-identificadores únicos es utilizar criptografía
+únicos es utilizar criptografía
 o recurrir a un tercero de confianza que
 
 90
@@ -482,27 +482,27 @@ atribuir datos a ese identificador, de modo que
 97
 00:09:01,800 --> 00:09:06,900
 ese identificador sea la fuente de dichos
-datos. Así pues, ahora he construido el problema básico
+datos. Así pues, ahora he construido el problema básico.
 
 98
 00:09:06,900 --> 00:09:13,080
-problema. La forma en que puedo controlar un
-identificador o demostrar el control de un
+La forma en que puedo controlar un
+identificador —o demostrar que tengo control sobre él—
 
 99
 00:09:13,080 --> 00:09:17,960
-identificador es utilizando lo que llamamos
-claves criptográficas. Y el tipo específico
+es mediante el uso de lo que denominamos
+claves criptográficas.
 
 100
 00:09:17,960 --> 00:09:24,240
-de clave que utilizamos pertenece a lo que
-se denomina un par de claves pública o un par de
+El tipo específico de clave utilizado forma
+parte de lo que se conoce como un par de claves
 
 101
 00:09:24,240 --> 00:09:30,380
-clave privada, en el que dispongo de una clave pública
-y una clave privada. Eso supondrá
+pública y privada, compuesto por una clave
+pública y una clave privada. Eso supondrá
 
 102
 00:09:30,380 --> 00:09:37,140
@@ -521,7 +521,7 @@ hablado realmente de cómo lo hace KERI, pero os he
 
 105
 00:09:46,220 --> 00:09:51,180
-os he dado una introducción al difícil
+dado una introducción al difícil
 problema. El difícil problema es la
 
 106
@@ -531,8 +531,4 @@ más. Dejad vuestras preguntas en los comentarios.
 
 107
 00:09:57,860 --> 00:09:58,100
-Gracias.
-
-108
-00:10:27,780 --> 00:10:28,500
 Gracias.
