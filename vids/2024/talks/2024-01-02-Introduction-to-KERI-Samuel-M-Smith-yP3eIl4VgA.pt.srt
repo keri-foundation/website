@@ -481,27 +481,27 @@ atribuir dados a esse identificador, sendo que
 97
 00:09:01,800 --> 00:09:06,900
 esse identificador é a fonte desses
-dados. Assim, construí agora o problema básico
+dados. Assim, construí agora o problema básico.
 
 98
 00:09:06,900 --> 00:09:13,080
-problema. A forma de controlar um
-identificador ou provar o controlo de um
+A forma como posso controlar um
+identificador —ou provar que tenho controlo sobre ele—
 
 99
 00:09:13,080 --> 00:09:17,960
-identificador é utilizar o que chamamos
-chaves criptográficas. E o tipo específico
+é através do uso daquilo a que chamamos
+chaves criptográficas.
 
 100
 00:09:17,960 --> 00:09:24,240
-de chave que utilizamos pertence a algo
-chamado par de chaves pública ou par de chaves
+O tipo específico de chave utilizado faz
+parte daquilo que se designa por par de chaves
 
 101
 00:09:24,240 --> 00:09:30,380
-pública e privada, em que tenho uma chave pública
-e uma chave privada. Isso vai ser um
+pública e privada, composto por uma chave
+pública e uma chave privada. Isso vai ser um
 
 102
 00:09:30,380 --> 00:09:37,140

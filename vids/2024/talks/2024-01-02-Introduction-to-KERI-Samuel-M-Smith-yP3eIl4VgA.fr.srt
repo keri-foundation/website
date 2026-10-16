@@ -481,27 +481,27 @@ attribuer des données à cet identifiant,
 97
 00:09:01,800 --> 00:09:06,900
 cet identifiant étant la source de ces
-données. J’ai donc désormais mis en place le
+données. J’ai donc désormais posé le problème de base.
 
 98
 00:09:06,900 --> 00:09:13,080
-problème. La manière dont je peux contrôler un
-identifiant ou prouver que je contrôle un
+La manière dont je peux contrôler un
+identifiant — ou prouver que j’en ai le contrôle —
 
 99
 00:09:13,080 --> 00:09:17,960
-identifiant consiste à utiliser ce que l’on appelle
-des clés cryptographiques. Et le type spécifique
+consiste à utiliser ce que l’on appelle
+des clés cryptographiques.
 
 100
 00:09:17,960 --> 00:09:24,240
-de clé que nous utilisons appartient à ce qu’on
-appelle une paire de clés publique ou une
+Le type spécifique de clé utilisé fait
+partie de ce que l’on appelle une paire de clés
 
 101
 00:09:24,240 --> 00:09:30,380
-paire de clés privée, où je dispose d’une clé publique
-et d’une clé privée. Ce sera l’objet d’un
+publique et privée, composée d’une clé
+publique et d’une clé privée. Ce sera l’objet d’un
 
 102
 00:09:30,380 --> 00:09:37,140
