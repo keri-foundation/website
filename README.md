@@ -1,16 +1,77 @@
 # General information
 
-[https://keri.foundation](https://keri.foundation) runs as a WordPress site on a remote host (Hostinger). This repository tracks the parts of that site that are versioned here; it does **not** include WordPress core. A password-protected database export ZIP may also be present at the repo root.
+[https://keri.foundation](https://keri.foundation) runs on Hostinger. The live document root and this repository are different trees. This checkout versions `custom/`, `confs/`, `vids/`, `scripts/`, and the site-root `.htaccess`. WordPress itself, plus `/edu/`, `/kerisse/`, and `/various/`, live on the host and are maintained from their own projects. A password-protected database export ZIP may also be present at the repo root.
 
-Three trees matter most:
+Remote document root:
+
+```text
+public_html/
+├── .htaccess                  WordPress permalinks, plus the /videos/ redirect tracked here
+├── index.php                  WordPress front controller
+├── license.txt                WordPress license
+├── readme.html                WordPress readme
+├── wp-activate.php            WordPress entry points
+├── wp-blog-header.php
+├── wp-comments-post.php
+├── wp-config.php              live config; stays on the server
+├── wp-config-sample.php
+├── wp-cron.php
+├── wp-links-opml.php
+├── wp-load.php
+├── wp-login.php
+├── wp-mail.php
+├── wp-settings.php
+├── wp-signup.php
+├── wp-trackback.php
+├── xmlrpc.php
+├── wp-admin/                  WordPress admin
+├── wp-content/                themes, plugins, uploads
+├── wp-includes/               WordPress core
+├── digistate_logo.jpg
+├── confs/                     conference galleries — described below
+├── vids/                      yearly video galleries — described below
+├── custom/                    WordPress look-and-feel — described below
+├── edu/                       KERI Learning Hub (kerioke)
+├── kerisse/                   Kerisse search index and dataset
+└── various/                   various things
+```
 
 | Path | Role |
 | ---- | ---- |
-| `custom/` | WordPress look-and-feel and page scripts served from the live document root |
-| `confs/` | Non-WordPress: conference galleries (videos, audio, subtitles, slides, promo, transcripts) |
-| `vids/` | Non-WordPress: yearly (non-conference) video galleries (same media + subtitle + transcript layout) |
+| WordPress (`wp-admin/`, `wp-content/`, `wp-includes/`, the `wp-*.php` files, `.htaccess`, `index.php`) | The site |
+| `confs/` | Conference galleries: videos, audio, subtitles, slides, promo, transcripts |
+| `vids/` | Yearly video galleries, same media layout, for recordings that are not a conference |
+| `custom/` | Stylesheet, page scripts, and the `[kc_banner]` shortcode, served from the document root |
+| `edu/` | Static KERI learning site, built and deployed from the kerioke project |
+| `kerisse/` | Search-index shards and the scraped corpus for the Kerisse search engine |
+| `various/` | Various things |
 
-`custom/` belongs to the WordPress site. `confs/` and `vids/` are separate static trees next to WordPress; they are not pages, posts, or theme code.
+`custom/` belongs to the WordPress site. `confs/` and `vids/` are separate static trees beside WordPress.
+
+## WordPress
+
+WordPress is installed in the document root. Administration is `wp-admin/`, core libraries are `wp-includes/`, and themes, plugins, and uploads are `wp-content/`. The usual entry points (`index.php`, `wp-login.php`, `wp-cron.php`, `xmlrpc.php`, and the rest of the `wp-*.php` files) sit next to them, along with `license.txt` and `readme.html`. `wp-config.php` stays on the server.
+
+`bash scripts/fetch-wordpress.sh` pulls that WordPress tree, and `custom/`, into this checkout. It leaves `confs/` and `vids/` alone.
+
+## Learning site (`/edu/`)
+
+[https://keri.foundation/edu](https://keri.foundation/edu) is the KERI Learning Hub: tutorials, explanations, concept cards, learning modules, and H5P interactive video. It is a static Nuxt site from the **kerioke** project. Production is generated with base path `/edu/` (`generate:deploy` in that project) and deployed by `live.sh`, which rsyncs the build into `public_html/edu`.
+
+On a local kerioke checkout, `confs` and `videos` are symlinks so media plays at `localhost`. On this host those files already live at `/confs/` and `/videos/`. `live.sh` removes the symlink copies from the build output before upload, so a learning-site deploy leaves the galleries in place.
+
+## Kerisse (`/kerisse/`)
+
+`/kerisse/` holds data for the Kerisse search engine. Search runs in the browser. At build time, scraped JSONL entries are compiled into one gzipped MessagePack Orama index per category, plus a manifest. The kerisse git repo does not store that corpus or those shards; they are uploaded here.
+
+- `https://keri.foundation/kerisse/search-index/` — shards the search UI downloads (`manifest.json`, then one `.orama.msgpack.gz` per category)
+- `https://keri.foundation/kerisse/dataset/` — the full scraped corpus
+
+The search UI is published with GitHub Actions (webpack only) and loads the shards from `search-index/`. The Repository shard is over GitHub’s 100 MB file limit, so the index is hosted here. Upload from the kerisse project with `npm run upload:search-data`. That script also installs a CORS `.htaccess` on `search-index/` and `dataset/`. The files are static.
+
+## Various (`/various/`)
+
+`/various/` holds various things.
 
 ## Managing the website
 
