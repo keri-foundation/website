@@ -5,7 +5,7 @@
 # --- Git & editor housekeeping ---
 !/.gitignore
 !/.htaccess
-!/README_HOSTINGER.md
+!/README_READ_THIS_FIRST.md
 
 # --- Custom theme / plugin code ---
 !/custom/
