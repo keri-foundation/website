@@ -60,7 +60,7 @@
     ]
   },
   "transcriptsDir": "transcripts/html",
-  "defaultPoster": "https://kericonf.com/wp-content/uploads/2025/11/logo-keri-conference-scaled.png",
+  "defaultPoster": "https://kericonf.com/wp-content/uploads/2026/05/KERI-mini-CONF26-scaled.png",
   "speakerPhotos": {
     "Samuel Smith": "https://kericonf.com/wp-content/uploads/2025/11/Samuel-Smith.jpg",
     "Phil Feairheller": "https://kericonf.com/wp-content/uploads/2026/01/PhilFeairheller_v1.0-edited.jpeg",
@@ -92,13 +92,13 @@
   "videos": [
     {
       "order": 1,
-      "day": "KERICONF26 Day 1",
+      "day": "Mini Conference nov 2026",
       "title": "Test 1",
       "path": "talks/TESTVID-Plenary-SamuelSmitht.mp4"
     },
     {
       "order": 2,
-      "day": "KERICONF26 Day 1",
+      "day": "Mini Conference nov 2026",
       "title": "Test 2",
       "path": "talks/TESTVID-shortfilm-Christmas-Carol.mp4"
     }
