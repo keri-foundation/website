@@ -273,7 +273,7 @@ The old standalone player redirects here:
 
 ```bash
 scripts/deploy-confs.sh landing-pages    # sync gallery index.html, and write /confs/ and /vids/ overviews
-scripts/deploy-confs.sh build            # landing-pages → audio → subtitles → transcripts → pdfs → verify
+scripts/deploy-confs.sh build            # landing-pages → audio → subtitles → transcripts → sitemap → pdfs → verify
 scripts/deploy-confs.sh audio            # podcast MP3 beside each MP4 that does not have one yet
 scripts/deploy-confs.sh -n push          # preview what would be uploaded
 scripts/deploy-confs.sh deploy           # build + push (rsync --delete) + check the live site
@@ -284,7 +284,9 @@ scripts/deploy-confs.sh --conf vids/2026 push
 
 `audio` (included in `build` and `deploy`) writes `talks/foo.mp3` from `talks/foo.mp4` when that MP3 is absent. The encode is mono, 44.1 kHz, 64 kbps MP3: about 28 MB per hour, clear enough for a spoken-word podcast. It needs `ffmpeg` with LAME (`brew install ffmpeg`). MP3s are gitignored; `push` uploads them with the gallery. An MP4 that is not on this machine is skipped, and `verify` still reports that file missing.
 
-`push` and `deploy` also upload the site-root `.htaccess` (the `/videos/` redirect), plus the tree indexes: `confs/.htaccess`, `confs/index.php`, `confs/index.html`, and the same three files under `vids/`. A full push mirrors every `confs/<ORG>/` folder and the whole `vids/` tree. `--conf` limits the gallery mirror; the site-root `.htaccess` and both tree indexes are still uploaded.
+`push` and `deploy` also upload the site-root `.htaccess` (the `/videos/` redirect), `robots.txt`, `confs/sitemap.xml`, and `vids/sitemap.xml`, plus the tree indexes: `confs/.htaccess`, `confs/index.php`, `confs/index.html`, and the same three files under `vids/`. A full push mirrors every `confs/<ORG>/` folder and the whole `vids/` tree. `--conf` limits the gallery mirror; the site-root `.htaccess`, `robots.txt`, both sitemaps, and both tree indexes are still uploaded.
+
+`sitemap` (included in `build` and `deploy`) writes those two XML files from the gallery `index.json` files. Each lists that tree’s overview, gallery pages, transcript indexes, and transcript HTML. Slides, video, and audio are left out. `robots.txt` in the site root is a real file (it replaces WordPress’s generated one) and names both sitemaps plus the WordPress sitemap.
 
 ### Overviews and directory listings (`/confs/`, `/vids/`)
 

@@ -8,6 +8,7 @@
  *   node scripts/confs.mjs sync-subtitles [--dry-run] [--conf KERI/2026/apr]...
  *   node scripts/confs.mjs audio [--dry-run] [--conf KERI/2026/apr]...
  *   node scripts/confs.mjs verify [--remote https://keri.foundation] [--conf KERI/2026/apr]...
+ *   node scripts/confs.mjs sitemap [--dry-run]
  *
  * list            Print every gallery id that has an index.json.
  *                 Conferences are ORG/YEAR/month. Video galleries are vids/YEAR.
@@ -41,6 +42,9 @@
  *                 subtitles, slides, posters, photos, transcript pages) and list files
  *                 that nothing references. With --remote, also HEAD-request each file
  *                 on the live site.
+ * sitemap         Write confs/sitemap.xml and vids/sitemap.xml. Each lists that tree's
+ *                 overview, gallery pages, transcript indexes, and transcript HTML.
+ *                 --conf is ignored: a sitemap is always the full tree.
  */
 
 import { readFile, readdir, stat, copyFile, mkdir, writeFile, rename, unlink } from "node:fs/promises";
@@ -1205,6 +1209,102 @@ async function cmdAudio(opts) {
   console.log(`\naudio: ${jobs.length} file(s) encoded`);
 }
 
+function xmlEscape(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+/** Public URL for a site-root path. index.html is the directory URL. */
+function locForSiteRel(rel) {
+  const withSlash = rel.replace(/\/index\.html$/, "/");
+  const path = withSlash.split("/").map((part) => encodeURIComponent(part)).join("/");
+  return `${SITE_URL}/${path}`;
+}
+
+async function lastmodOf(abs) {
+  return (await stat(abs)).mtime.toISOString().slice(0, 10);
+}
+
+/**
+ * Overview, gallery, transcript index, and transcript HTML URLs for one tree.
+ * Media, slides, and PDFs stay out: those are not the pages we want crawled for text.
+ */
+async function sitemapEntriesForTree(scope) {
+  const entries = new Map();
+  const addFile = async (siteRel) => {
+    const abs = join(SITE_ROOT, siteRel);
+    if (!existsSync(abs)) return;
+    const loc = locForSiteRel(siteRel);
+    const lastmod = await lastmodOf(abs);
+    const prev = entries.get(loc);
+    if (!prev || lastmod > prev.lastmod) entries.set(loc, { loc, lastmod });
+  };
+
+  await addFile(`${scope}/index.html`);
+  const ids = (await findConferences()).filter((id) =>
+    scope === "vids" ? isVidsGallery(id) : !isVidsGallery(id)
+  );
+  for (const id of ids) {
+    await addFile(`${galleryPrefix(id)}/index.html`);
+    const config = await loadConfig(id);
+    const confDir = galleryDir(id);
+    for (const ref of collectRefs(config, confDir)) {
+      if (ref.kind !== "transcript") continue;
+      await addFile(siteRelative(id, ref.href));
+    }
+  }
+  return [...entries.values()].sort((a, b) => a.loc.localeCompare(b.loc));
+}
+
+function renderSitemap(entries) {
+  const urls = entries
+    .map(
+      (entry) =>
+        `  <url>\n    <loc>${xmlEscape(entry.loc)}</loc>\n    <lastmod>${entry.lastmod}</lastmod>\n  </url>`
+    )
+    .join("\n");
+  return (
+    `<?xml version="1.0" encoding="UTF-8"?>\n` +
+    `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
+    `${urls}\n` +
+    `</urlset>\n`
+  );
+}
+
+async function cmdSitemap(opts) {
+  if (opts.confs.length) {
+    console.log("sitemap: writing both full trees (--conf does not limit this)");
+  }
+  const files = [
+    { scope: "confs", dest: join(CONFS_ROOT, "sitemap.xml") },
+    { scope: "vids", dest: join(VIDS_ROOT, "sitemap.xml") },
+  ];
+  for (const { scope, dest } of files) {
+    const entries = await sitemapEntriesForTree(scope);
+    if (!entries.length) {
+      console.log(`sitemap: no ${scope} pages, skipped ${relative(SITE_ROOT, dest)}`);
+      continue;
+    }
+    const xml = renderSitemap(entries);
+    const rel = toPosix(relative(SITE_ROOT, dest));
+    let previous = null;
+    if (existsSync(dest)) previous = await readFile(dest, "utf8");
+    if (previous === xml) {
+      console.log(`unchanged ${rel} (${entries.length} urls)`);
+      continue;
+    }
+    if (opts.dryRun) {
+      console.log(`[dry-run] would update ${rel} (${entries.length} urls)`);
+      continue;
+    }
+    await writeFile(dest, xml, "utf8");
+    console.log(`updated  ${rel} (${entries.length} urls)`);
+  }
+}
+
 async function cmdSyncSubtitles(opts) {
   const confs = await selectedConferences(opts);
   const sources = (await readSources()).filter((s) => confs.includes(s.conf));
@@ -1275,9 +1375,12 @@ async function main() {
     case "verify":
       await cmdVerify(opts);
       break;
+    case "sitemap":
+      await cmdSitemap(opts);
+      break;
     default:
       console.log(
-        "Usage: node scripts/confs.mjs <list|landing-pages|sync-subtitles|audio|verify> [--conf ORG/YEAR/month|vids/YEAR] [--dry-run] [--remote URL]"
+        "Usage: node scripts/confs.mjs <list|landing-pages|sync-subtitles|audio|verify|sitemap> [--conf ORG/YEAR/month|vids/YEAR] [--dry-run] [--remote URL]"
       );
       process.exit(opts.command ? 1 : 0);
   }

@@ -37,8 +37,9 @@ Commands (run in the order given):
   audio           Write a spoken-word MP3 beside each gallery MP4 when that MP3 does not exist yet
   transcripts     Regenerate the static transcript HTML pages from the .srt files
   pdfs            Build concatenated transcript PDFs under each gallery's transcripts/pdf/
+  sitemap         Write confs/sitemap.xml and vids/sitemap.xml (overviews, galleries, transcript HTML)
   verify          Check every file referenced by each index.json exists locally
-  build           landing-pages + audio + subtitles + transcripts + pdfs + verify
+  build           landing-pages + audio + subtitles + transcripts + sitemap + pdfs + verify
   push            Mirror conference folders and vids/ to the server (rsync --delete), then re-upload every index.html and index.json, plus .htaccess redirects
   check-remote    verify + HEAD-request every referenced file on the live site
   deploy          build + push + check-remote
@@ -169,6 +170,11 @@ step_transcripts() {
     done
 }
 
+step_sitemap() {
+    echo "── Sitemaps (confs/sitemap.xml, vids/sitemap.xml)"
+    run_node "$SCRIPT_DIR/confs.mjs" sitemap $(dry_flag)
+}
+
 step_pdfs() {
     echo "── Transcript PDFs"
     local id
@@ -279,10 +285,25 @@ step_push() {
         rsync "${index_rsync[@]}" "${mirror_local[$i]}" "$REMOTE_HOST:${mirror_remote[$i]}"
     done
 
-    echo "── Site redirects (.htaccess)"
+    echo "── Site redirects (.htaccess), robots.txt, and media sitemaps"
     local ht_rsync=(-av --human-readable)
     [ "$DRY_RUN" -eq 1 ] && ht_rsync+=(--dry-run)
+    local published
+    for published in \
+        "$SITE_ROOT/.htaccess" \
+        "$SITE_ROOT/robots.txt" \
+        "$CONFS/sitemap.xml" \
+        "$SITE_ROOT/vids/sitemap.xml"
+    do
+        if [ ! -f "$published" ]; then
+            echo "Missing $published — run sitemap (or build) first" >&2
+            exit 1
+        fi
+    done
     rsync "${ht_rsync[@]}" "$SITE_ROOT/.htaccess" "$REMOTE_HOST:$REMOTE_ROOT/.htaccess"
+    rsync "${ht_rsync[@]}" "$SITE_ROOT/robots.txt" "$REMOTE_HOST:$REMOTE_ROOT/robots.txt"
+    rsync "${ht_rsync[@]}" "$CONFS/sitemap.xml" "$REMOTE_HOST:$REMOTE_ROOT/confs/sitemap.xml"
+    rsync "${ht_rsync[@]}" "$SITE_ROOT/vids/sitemap.xml" "$REMOTE_HOST:$REMOTE_ROOT/vids/sitemap.xml"
 
     echo "── Directory indexes (confs/ and vids/ overview HTML, plus PHP for bare subdirs)"
     local tree_index_rsync=(-av --human-readable)
@@ -351,12 +372,13 @@ for cmd in "${COMMANDS[@]}"; do
         audio) step_audio ;;
         transcripts) step_transcripts ;;
         pdfs) step_pdfs ;;
+        sitemap) step_sitemap ;;
         verify) step_verify ;;
-        build) step_landing_pages; step_audio; step_subtitles; step_transcripts; step_pdfs; step_verify ;;
+        build) step_landing_pages; step_audio; step_subtitles; step_transcripts; step_sitemap; step_pdfs; step_verify ;;
         push) step_push ;;
         check-remote) step_check_remote ;;
         deploy)
-            step_landing_pages; step_audio; step_subtitles; step_transcripts; step_pdfs; step_verify; step_push
+            step_landing_pages; step_audio; step_subtitles; step_transcripts; step_sitemap; step_pdfs; step_verify; step_push
             [ "$DRY_RUN" -eq 1 ] || step_check_remote
             ;;
         push-legacy-moved) step_push_legacy_moved ;;
