@@ -118,8 +118,8 @@
         "quote": "They're encrypted with the key derived from the passcode you have at the edge. This passcode never moves over here \u2014 ever. That's why it's called a signing-at-the-edge architecture."
       },
       {
-        "videoTitle": "Mobile Wallet - Evan Asawaka",
-        "speaker": "Evan Asawaka",
+        "videoTitle": "Mobile Wallet - Evan Asakawa",
+        "speaker": "Evan Asakawa",
         "talk": "Mobile Wallet",
         "start": 46,
         "end": 66,
@@ -183,7 +183,6 @@
     "Nicholas Racz": "https://kericonf.com/wp-content/uploads/2026/04/NicholasRacz_v1.0-edited.jpeg",
     "Christopher Bramwell": "https://kericonf.com/wp-content/uploads/2026/04/ChristopherBramwell_v1.0-scaled.jpg",
     "Evan Asakawa": "https://kericonf.com/wp-content/uploads/2026/04/EvanAsakawa_v1.0-scaled.jpg",
-    "Evan Asawaka": "https://kericonf.com/wp-content/uploads/2026/04/EvanAsakawa_v1.0-scaled.jpg",
     "Ryan Hansen": "https://kericonf.com/wp-content/uploads/2026/04/RyanHansen_v1.0.jpeg"
   },
   "targetGroups": [
@@ -446,14 +445,14 @@
     {
       "order": 6,
       "day": "KERICONF26 Day 2",
-      "title": "Mobile Wallet - Evan Asawaka",
+      "title": "Mobile Wallet - Evan Asakawa",
       "targetGroups": [
         "developer"
       ],
-      "path": "talks/Evan Asawaka \uff5c Mobile Wallet \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Evan Asakawa \uff5c Mobile Wallet \uff5c KERI Conference 2026.mp4",
       "duration": "40:15",
-      "subtitle": "talks/Evan Asawaka \uff5c Mobile Wallet \uff5c KERI Conference 2026.srt",
-      "presentation": "slides/Evan Asawaka \uff5c Mobile Wallet \uff5c KERI Conference 2026.pdf"
+      "subtitle": "talks/Evan Asakawa \uff5c Mobile Wallet \uff5c KERI Conference 2026.srt",
+      "presentation": "slides/Evan Asakawa \uff5c Mobile Wallet \uff5c KERI Conference 2026.pdf"
     },
     {
       "order": 7,
