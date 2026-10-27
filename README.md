@@ -21,7 +21,6 @@
   - [Subtitles](#subtitles)
     - [Scripts](#scripts)
   - [Video submission guide](#video-submission-guide)
-      - [Other important settings](#other-important-settings)
   - [YouTube uploader setup](#youtube-uploader-setup)
     - [Step 1: Create a Google Cloud Project](#step-1-create-a-google-cloud-project)
     - [Step 2: Create OAuth2 Credentials](#step-2-create-oauth2-credentials)
@@ -362,20 +361,6 @@ python3 scripts/generate_policy_brief_pdf.py
 Follow these rules when submitting videos so files stay consistent and easy to find.
 
 Go to [video submission guide](https://github.com/keri-foundation/recordings-and-subtitles/blob/main/VIDEO_SUBMISSION_GUIDE.md)
-
-#### Other important settings
-
-- **Frame Rate**: Keep original (usually 25 or 30 fps). Do not convert unless necessary.
-- **Keyframe Interval**: Every 2–3 seconds (or automatic).
-- **Aspect Ratio**: 16:9 (most common). Use 4:3 only if the original recording is 4:3.
-- **Audio**: 128 kbps AAC stereo is plenty. Conference audio is mostly speech — no need for high bitrates.
-- **Maximum file size goal**:
-  - < 1 GB per hour is excellent.
-  - < 700–800 MB per hour is ideal for good user experience.
-- **Encoding Settings**:
-  - Two-pass encoding (better quality at same file size).
-  - CRF 19–23 (if using x264) for high quality.
-  - Use **fast** or **medium** preset — avoid "placebo" or "veryslow" unless you have time.
 
 ## YouTube uploader setup
 
