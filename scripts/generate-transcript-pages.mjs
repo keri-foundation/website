@@ -4,7 +4,8 @@
  *
  * Each talk with a subtitle becomes a page under a transcripts/ folder. Paths inside
  * those pages are relative to the gallery index.html so the tree can be moved later.
- * Uses English (`subtitle`); sibling language tracks (`foo.nl.srt`) are ignored here.
+ * Uses English (`subtitle`, or the same-named `.srt` beside the media when that
+ * field is omitted); sibling language tracks (`foo.nl.srt`) are ignored here.
  *
  * Usage:
  *   node scripts/generate-transcript-pages.mjs \
@@ -122,20 +123,46 @@ function toPosix(p) {
   return p.split(sep).join("/");
 }
 
-/** English (or first) subtitle path used for SEO transcript pages. */
-function primarySubtitlePath(video) {
-  if (video?.subtitles && typeof video.subtitles === "object") {
-    const en = video.subtitles.en;
-    if (typeof en === "string") return toPosix(en);
-    if (en && typeof en === "object" && en.src) return toPosix(String(en.src));
-  }
-  if (typeof video?.subtitle === "string") return toPosix(video.subtitle);
+function isExternal(href) {
+  return /^(https?:)?\/\//i.test(href) || /^(mailto|tel):/i.test(href);
+}
+
+/** English `subtitle` path as stored in index.json, or null. */
+function explicitEnglishSubtitle(video) {
+  if (typeof video?.subtitle === "string" && video.subtitle.trim()) return toPosix(video.subtitle.trim());
   if (video?.subtitle && typeof video.subtitle === "object" && video.subtitle.src) {
     return toPosix(String(video.subtitle.src));
   }
+  return null;
+}
+
+/** `talks/foo.mp4` or `talks/foo.mp3` → `talks/foo.srt`. */
+function conventionalSubtitleRel(video) {
+  const media = toPosix(String(video?.path || ""));
+  if (!media || isExternal(media) || media.startsWith("/")) return null;
+  if (!/\.(mp4|mp3)$/i.test(media)) return null;
+  return media.replace(/\.(mp4|mp3)$/i, ".srt");
+}
+
+/**
+ * English subtitle path. Explicit `subtitle` wins. Otherwise the media file
+ * with `.srt` is used when that file exists under `galleryDir`.
+ */
+function primarySubtitlePath(video, galleryDir = null) {
+  if (video?.subtitles && typeof video.subtitles === "object") {
+    const en = video.subtitles.en;
+    if (typeof en === "string" && en.trim()) return toPosix(en.trim());
+    if (en && typeof en === "object" && en.src) return toPosix(String(en.src));
+  }
+  const explicit = explicitEnglishSubtitle(video);
+  if (explicit) return explicit;
+  const conventional = conventionalSubtitleRel(video);
+  if (conventional && galleryDir && existsSync(join(galleryDir, ...conventional.split("/")))) {
+    return conventional;
+  }
   if (video?.subtitles && typeof video.subtitles === "object") {
     for (const value of Object.values(video.subtitles)) {
-      if (typeof value === "string") return toPosix(value);
+      if (typeof value === "string" && value.trim()) return toPosix(value.trim());
       if (value && typeof value === "object" && value.src) return toPosix(String(value.src));
     }
   }
@@ -593,7 +620,7 @@ async function main() {
   let skipped = 0;
 
   for (const video of videos) {
-    const subtitleRel = primarySubtitlePath(video);
+    const subtitleRel = primarySubtitlePath(video, galleryDir);
     if (!subtitleRel) {
       skipped++;
       continue;

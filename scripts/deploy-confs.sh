@@ -24,7 +24,7 @@ LEGACY_MOVED_PAGES=(
     "confs/2026/videos/SEDI/2025-11-SEDI/index.html"
 )
 
-RSYNC_EXCLUDES=(--exclude .DS_Store --exclude .gitkeep --exclude '._*' --exclude '*.log')
+RSYNC_EXCLUDES=(--exclude .DS_Store --exclude .gitkeep --exclude '._*' --exclude '*.log' --exclude '*.mp3.part')
 
 usage() {
     cat <<'EOF'
@@ -34,10 +34,11 @@ Commands (run in the order given):
   list            Show galleries: confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/
   subtitles       Copy curated .srt files from scripts/subtitle-sources.tsv (no-op when that file has no sources; edit SRTs in place under the gallery)
   landing-pages   Copy the shared template into every gallery and stamp social meta, header, and transcript links from index.json. Also write confs/index.html and vids/index.html from the overview template
+  audio           Write a spoken-word MP3 beside each gallery MP4 when that MP3 does not exist yet
   transcripts     Regenerate the static transcript HTML pages from the .srt files
   pdfs            Build concatenated transcript PDFs under each gallery's transcripts/pdf/
   verify          Check every file referenced by each index.json exists locally
-  build           landing-pages + subtitles + transcripts + pdfs + verify
+  build           landing-pages + audio + subtitles + transcripts + pdfs + verify
   push            Mirror conference folders and vids/ to the server (rsync --delete), then re-upload every index.html and index.json, plus .htaccess redirects
   check-remote    verify + HEAD-request every referenced file on the live site
   deploy          build + push + check-remote
@@ -54,6 +55,7 @@ REMOTE_ROOT (server web root), SITE_URL (default https://keri.foundation).
 
 Examples:
   scripts/deploy-confs.sh build                     # local only
+  scripts/deploy-confs.sh --conf KERI/2026/nov audio # podcast MP3s for one gallery
   scripts/deploy-confs.sh -n push                   # preview upload
   scripts/deploy-confs.sh deploy                    # build, upload, check live site
   scripts/deploy-confs.sh --conf SEDI/2025/nov push
@@ -151,6 +153,11 @@ step_subtitles() {
 step_landing_pages() {
     echo "── Landing pages (template → galleries)"
     run_node "$SCRIPT_DIR/confs.mjs" landing-pages $(dry_flag)
+}
+
+step_audio() {
+    echo "── Podcast audio (mp4 → mp3)"
+    run_node "$SCRIPT_DIR/confs.mjs" audio $(dry_flag)
 }
 
 step_transcripts() {
@@ -341,14 +348,15 @@ for cmd in "${COMMANDS[@]}"; do
         list) step_list ;;
         subtitles) step_subtitles ;;
         landing-pages) step_landing_pages ;;
+        audio) step_audio ;;
         transcripts) step_transcripts ;;
         pdfs) step_pdfs ;;
         verify) step_verify ;;
-        build) step_landing_pages; step_subtitles; step_transcripts; step_pdfs; step_verify ;;
+        build) step_landing_pages; step_audio; step_subtitles; step_transcripts; step_pdfs; step_verify ;;
         push) step_push ;;
         check-remote) step_check_remote ;;
         deploy)
-            step_landing_pages; step_subtitles; step_transcripts; step_pdfs; step_verify; step_push
+            step_landing_pages; step_audio; step_subtitles; step_transcripts; step_pdfs; step_verify; step_push
             [ "$DRY_RUN" -eq 1 ] || step_check_remote
             ;;
         push-legacy-moved) step_push_legacy_moved ;;

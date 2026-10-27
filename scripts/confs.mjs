@@ -6,6 +6,7 @@
  *   node scripts/confs.mjs list
  *   node scripts/confs.mjs landing-pages [--dry-run] [--conf KERI/2026/apr]...
  *   node scripts/confs.mjs sync-subtitles [--dry-run] [--conf KERI/2026/apr]...
+ *   node scripts/confs.mjs audio [--dry-run] [--conf KERI/2026/apr]...
  *   node scripts/confs.mjs verify [--remote https://keri.foundation] [--conf KERI/2026/apr]...
  *
  * list            Print every gallery id that has an index.json.
@@ -18,7 +19,9 @@
  *                 Also writes the page header and page.transcriptLinks into the
  *                 HTML as real content, and stamps DISCOVERED_SUBTITLE_LANGS with
  *                 sibling caption files (`foo.nl.srt` next to `foo.srt`) so the
- *                 page does not probe for them.
+ *                 page does not probe for them. An omitted `subtitle` means the
+ *                 English file is the media basename with `.srt`
+ *                 (`talks/foo.mp4` → `talks/foo.srt`) when that file exists.
  *                 Then writes confs/index.html and vids/index.html from
  *                 template-presentations-landingpage/overview.html, using each
  *                 tree's overview.json for page copy and each gallery index.json
@@ -26,17 +29,23 @@
  * sync-subtitles  Copy curated .srt files from the source folders listed in
  *                 scripts/subtitle-sources.tsv into the conference folders. Only
  *                 subtitles referenced by that conference's index.json are copied
- *                 (English `subtitle`, optional `subtitles` map, plus sibling
- *                 language files `foo.nl.srt` next to `foo.srt` in the source).
+ *                 (English `subtitle` or the same-named `.srt` beside the media,
+ *                 optional `subtitles` map, plus sibling language files
+ *                 `foo.nl.srt` next to `foo.srt` in the source).
  *                 Sources are matched recursively by exact basename.
+ * audio           For each local gallery video, write talks/foo.mp3 from talks/foo.mp4
+ *                 when that MP3 is not already there. Spoken-word encode: mono,
+ *                 44.1 kHz, 64 kbps CBR MP3 (about 28 MB per hour). Needs ffmpeg
+ *                 with libmp3lame. An MP4 that is not on disk is skipped.
  * verify          Check that every file referenced by index.json exists (media, mp3,
  *                 subtitles, slides, posters, photos, transcript pages) and list files
  *                 that nothing references. With --remote, also HEAD-request each file
  *                 on the live site.
  */
 
-import { readFile, readdir, stat, copyFile, mkdir, writeFile } from "node:fs/promises";
+import { readFile, readdir, stat, copyFile, mkdir, writeFile, rename, unlink } from "node:fs/promises";
 import { existsSync, readdirSync } from "node:fs";
+import { spawn } from "node:child_process";
 import { basename, dirname, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { homedir } from "node:os";
@@ -120,13 +129,41 @@ const MONTH_NAME = {
 const YOUTUBE_ICON =
   "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiA4djggbC00LTIuNXYtMy4yTDggMTJ6Ii8+PC9zdmc+";
 
-/** English subtitle path as stored in index.json, or null. */
-function englishSubtitleRel(video) {
-  if (typeof video?.subtitle === "string") return video.subtitle;
+/** English `subtitle` path as stored in index.json, or null. */
+function explicitEnglishSubtitle(video) {
+  if (typeof video?.subtitle === "string" && video.subtitle.trim()) return toPosix(video.subtitle.trim());
   if (video?.subtitle && typeof video.subtitle === "object" && video.subtitle.src) {
-    return String(video.subtitle.src);
+    return toPosix(String(video.subtitle.src));
   }
   return null;
+}
+
+/** `talks/foo.mp4` or `talks/foo.mp3` → `talks/foo.srt`. External paths are left alone. */
+function conventionalSubtitleRel(video) {
+  const media = toPosix(String(video?.path || ""));
+  if (!media || isExternal(media) || media.startsWith("/")) return null;
+  if (!/\.(mp4|mp3)$/i.test(media)) return null;
+  return media.replace(/\.(mp4|mp3)$/i, ".srt");
+}
+
+function siblingSubtitleExists(confDir, rel) {
+  if (!confDir || !rel) return false;
+  return existsSync(join(confDir, ...toPosix(rel).split("/")));
+}
+
+/**
+ * English subtitle path.
+ * An explicit `subtitle` wins. Otherwise the media file with `.srt` is used
+ * when that file is in the gallery. With no confDir (sync-subtitles), the
+ * conventional path is returned so the source copy can still be found.
+ */
+function englishSubtitleRel(video, confDir = null) {
+  const explicit = explicitEnglishSubtitle(video);
+  if (explicit) return explicit;
+  const conventional = conventionalSubtitleRel(video);
+  if (!conventional) return null;
+  if (!confDir) return conventional;
+  return siblingSubtitleExists(confDir, conventional) ? conventional : null;
 }
 
 /**
@@ -136,7 +173,7 @@ function englishSubtitleRel(video) {
 function discoveredSubtitleLangs(config, confDir) {
   const map = {};
   for (const video of config.videos || []) {
-    const english = englishSubtitleRel(video);
+    const english = englishSubtitleRel(video, confDir);
     if (!english || isExternal(english) || english.startsWith("/")) continue;
     const key = toPosix(english);
     const langs = {};
@@ -714,35 +751,35 @@ function collectSubtitlePaths(video, confDir = null) {
   if (video?.subtitles && typeof video.subtitles === "object") {
     for (const value of Object.values(video.subtitles)) add(value);
   }
-  const english = typeof video?.subtitle === "string"
-    ? video.subtitle
-    : (video?.subtitle && typeof video.subtitle === "object" && video.subtitle.src
-      ? String(video.subtitle.src)
-      : null);
+  const english = englishSubtitleRel(video, confDir);
   if (english) {
+    add(english);
     for (const sibling of discoverLanguageSubtitlePaths(english, confDir)) add(sibling);
   }
   return [...new Set(paths.map((p) => toPosix(String(p))))];
 }
 
 /** English (or first) subtitle path used for SEO transcript pages. */
-function primarySubtitlePath(video) {
+function primarySubtitlePath(video, confDir = null) {
   if (video?.subtitles && typeof video.subtitles === "object") {
     const en = video.subtitles.en;
-    if (typeof en === "string") return toPosix(en);
+    if (typeof en === "string" && en.trim()) return toPosix(en.trim());
     if (en && typeof en === "object" && en.src) return toPosix(String(en.src));
   }
-  if (typeof video?.subtitle === "string") return toPosix(video.subtitle);
-  if (video?.subtitle && typeof video.subtitle === "object" && video.subtitle.src) {
-    return toPosix(String(video.subtitle.src));
+  const english = englishSubtitleRel(video, confDir);
+  if (english) return english;
+  if (video?.subtitles && typeof video.subtitles === "object") {
+    for (const value of Object.values(video.subtitles)) {
+      if (typeof value === "string" && value.trim()) return toPosix(value.trim());
+      if (value && typeof value === "object" && value.src) return toPosix(String(value.src));
+    }
   }
-  const all = collectSubtitlePaths(video);
-  return all[0] || null;
+  return null;
 }
 
-function transcriptPageRel(config, video) {
+function transcriptPageRel(config, video, confDir = null) {
   const dir = transcriptsDirOf(config);
-  const subtitle = primarySubtitlePath(video);
+  const subtitle = primarySubtitlePath(video, confDir);
   if (!dir || !subtitle) return null;
   const id = generateVideoId(video.title);
   if (!id) return null;
@@ -781,7 +818,7 @@ function collectRefs(config, confDir = null) {
     for (const sub of collectSubtitlePaths(v, confDir)) add("subtitle", v.title, sub);
     add("slides", v.title, v.presentation);
     add("poster", v.title, v.poster);
-    const page = transcriptPageRel(config, v);
+    const page = transcriptPageRel(config, v, confDir);
     if (page) {
       add("transcript", v.title, page);
       sections.add(dirname(page));
@@ -929,6 +966,245 @@ async function indexSrtByBasename(root) {
   return byBase;
 }
 
+/**
+ * Spoken-word podcast MP3. Mono 44.1 kHz at 64 kbps CBR (about 28 MB per hour)
+ * matches the yearly gallery files. The 80 Hz highpass drops rumble so those
+ * bits stay on the voice. LAME compression_level 0 is the slowest,
+ * highest-effort encode; this runs only when the MP3 is missing.
+ */
+const PODCAST_MP3_BITRATE = "64k";
+const PODCAST_MP3_RATE = "44100";
+
+function metaText(value) {
+  return String(value || "")
+    .replace(/[\r\n\0]/g, " ")
+    .trim();
+}
+
+function formatBytes(bytes) {
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
+}
+
+/** Local `talks/foo.mp4` → `talks/foo.mp3`, or null when this video is not an MP4. */
+function siblingPodcastPair(video) {
+  const media = toPosix(String(video?.path || "").trim()).split(/[?#]/)[0];
+  if (!media || isExternal(media) || !/\.mp4$/i.test(media)) return null;
+  const mp3 = media.replace(/\.mp4$/i, ".mp3");
+  if (typeof video?.audio === "string" && video.audio.trim()) {
+    const override = toPosix(video.audio.trim()).split(/[?#]/)[0];
+    if (override !== mp3) return null;
+  }
+  return { mp4: media, mp3 };
+}
+
+function absInGallery(confDir, rel) {
+  const clean = toPosix(rel);
+  const abs = clean.startsWith("/")
+    ? resolve(SITE_ROOT, ...clean.slice(1).split("/").filter(Boolean))
+    : resolve(confDir, ...clean.split("/").filter(Boolean));
+  const root = resolve(confDir);
+  if (abs !== root && !abs.startsWith(root + sep)) return null;
+  return abs;
+}
+
+function formatClock(seconds) {
+  const s = Math.max(0, Math.floor(seconds));
+  const h = Math.floor(s / 3600);
+  const m = Math.floor((s % 3600) / 60);
+  const r = s % 60;
+  if (h) return `${h}:${String(m).padStart(2, "0")}:${String(r).padStart(2, "0")}`;
+  return `${m}:${String(r).padStart(2, "0")}`;
+}
+
+function clockSeconds(stamp) {
+  const match = /^(\d+):(\d+):(\d+(?:\.\d+)?)$/.exec(stamp);
+  if (!match) return null;
+  return Number(match[1]) * 3600 + Number(match[2]) * 60 + Number(match[3]);
+}
+
+function runProcess(cmd, args, onStdoutLine) {
+  return new Promise((resolvePromise, reject) => {
+    const child = spawn(cmd, args, { stdio: ["ignore", "pipe", "pipe"] });
+    const out = [];
+    let stdoutBuf = "";
+    let stderr = "";
+    child.stdout.on("data", (buf) => {
+      if (!onStdoutLine) {
+        out.push(buf);
+        return;
+      }
+      stdoutBuf += buf.toString();
+      let nl;
+      while ((nl = stdoutBuf.indexOf("\n")) !== -1) {
+        const line = stdoutBuf.slice(0, nl).trim();
+        stdoutBuf = stdoutBuf.slice(nl + 1);
+        if (line) onStdoutLine(line);
+      }
+    });
+    child.stderr.on("data", (buf) => {
+      stderr += buf.toString();
+    });
+    child.on("error", reject);
+    child.on("close", (code) => {
+      if (code === 0) resolvePromise(Buffer.concat(out).toString());
+      else {
+        const err = new Error(`${cmd} exited ${code}`);
+        err.stderr = stderr;
+        err.exitCode = code;
+        reject(err);
+      }
+    });
+  });
+}
+
+async function assertFfmpegHasLame() {
+  let help = "";
+  try {
+    help = await runProcess("ffmpeg", ["-hide_banner", "-encoders"]);
+  } catch (err) {
+    if (err.code === "ENOENT") {
+      throw new Error("ffmpeg is required to build podcast MP3s. Install it (brew install ffmpeg) and retry.");
+    }
+    const tail = (err.stderr || "").trim().split("\n").slice(-4).join("\n");
+    throw new Error(`Could not run ffmpeg.${tail ? `\n${tail}` : ""}`);
+  }
+  if (!/\blibmp3lame\b/.test(help)) {
+    throw new Error("ffmpeg has no libmp3lame encoder. Install an ffmpeg build with LAME.");
+  }
+}
+
+async function encodePodcastMp3(src, dest, { title, album }) {
+  const part = `${dest}.part`;
+  const args = [
+    "-hide_banner",
+    "-loglevel",
+    "error",
+    "-nostats",
+    "-progress",
+    "pipe:1",
+    "-y",
+    "-i",
+    src,
+    "-vn",
+    "-map",
+    "0:a:0",
+    "-map_metadata",
+    "-1",
+    "-af",
+    "aformat=channel_layouts=mono,highpass=f=80",
+    "-ac",
+    "1",
+    "-ar",
+    PODCAST_MP3_RATE,
+    "-c:a",
+    "libmp3lame",
+    "-b:a",
+    PODCAST_MP3_BITRATE,
+    "-compression_level",
+    "0",
+    "-write_xing",
+    "1",
+    "-id3v2_version",
+    "3",
+  ];
+  if (title) args.push("-metadata", `title=${title}`);
+  if (album) args.push("-metadata", `album=${album}`);
+  args.push("-f", "mp3", part);
+  let mark = 0;
+  try {
+    await mkdir(dirname(dest), { recursive: true });
+    await runProcess("ffmpeg", args, (line) => {
+      if (!line.startsWith("out_time=")) return;
+      const sec = clockSeconds(line.slice("out_time=".length));
+      if (sec == null) return;
+      const bucket = Math.floor(sec / 600);
+      if (bucket > mark) {
+        mark = bucket;
+        console.log(`    ${formatClock(sec)}`);
+      }
+    });
+    await rename(part, dest);
+  } catch (err) {
+    await unlink(part).catch(() => {});
+    throw err;
+  }
+}
+
+async function cmdAudio(opts) {
+  const jobs = [];
+  for (const id of await selectedConferences(opts)) {
+    const config = await loadConfig(id);
+    const confDir = galleryDir(id);
+    const album = metaText(config.page?.heading || config.page?.title || id);
+    const seen = new Set();
+    let present = 0;
+    let missingMp4 = 0;
+    const pending = [];
+    const notes = [];
+    for (const video of config.videos || []) {
+      const pair = siblingPodcastPair(video);
+      if (!pair || seen.has(pair.mp3)) continue;
+      seen.add(pair.mp3);
+      const src = absInGallery(confDir, pair.mp4);
+      const dest = absInGallery(confDir, pair.mp3);
+      if (!src || !dest) {
+        notes.push(`  skip (path escapes gallery): ${pair.mp4}`);
+        continue;
+      }
+      if (existsSync(dest)) {
+        present++;
+        continue;
+      }
+      if (!existsSync(src)) {
+        missingMp4++;
+        notes.push(`  skip (mp4 not on disk): ${pair.mp4}`);
+        continue;
+      }
+      pending.push({
+        id,
+        src,
+        dest,
+        label: pair.mp3,
+        title: metaText(video.title),
+        album,
+      });
+    }
+    console.log(
+      `\n== ${id}  (${pending.length} to encode, ${present} present, ${missingMp4} missing mp4)`
+    );
+    for (const note of notes) console.log(note);
+    if (opts.dryRun) {
+      for (const job of pending) console.log(`  [dry-run] ${job.label}`);
+    }
+    jobs.push(...pending);
+  }
+
+  if (!jobs.length) {
+    console.log("\naudio: nothing to encode");
+    return;
+  }
+  if (opts.dryRun) {
+    console.log(`\naudio: ${jobs.length} file(s) would be encoded`);
+    return;
+  }
+
+  await assertFfmpegHasLame();
+  for (const job of jobs) {
+    console.log(`  encoding ${job.id}/${job.label}`);
+    try {
+      await encodePodcastMp3(job.src, job.dest, job);
+    } catch (err) {
+      const tail = (err.stderr || err.message || "").trim().split("\n").slice(-8).join("\n");
+      throw new Error(`Failed to encode ${job.id}/${job.label}${tail ? `\n${tail}` : ""}`);
+    }
+    const size = (await stat(job.dest)).size;
+    console.log(`  wrote ${job.label} (${formatBytes(size)})`);
+  }
+  console.log(`\naudio: ${jobs.length} file(s) encoded`);
+}
+
 async function cmdSyncSubtitles(opts) {
   const confs = await selectedConferences(opts);
   const sources = (await readSources()).filter((s) => confs.includes(s.conf));
@@ -993,12 +1269,15 @@ async function main() {
     case "sync-subtitles":
       await cmdSyncSubtitles(opts);
       break;
+    case "audio":
+      await cmdAudio(opts);
+      break;
     case "verify":
       await cmdVerify(opts);
       break;
     default:
       console.log(
-        "Usage: node scripts/confs.mjs <list|landing-pages|sync-subtitles|verify> [--conf ORG/YEAR/month|vids/YEAR] [--dry-run] [--remote URL]"
+        "Usage: node scripts/confs.mjs <list|landing-pages|sync-subtitles|audio|verify> [--conf ORG/YEAR/month|vids/YEAR] [--dry-run] [--remote URL]"
       );
       process.exit(opts.command ? 1 : 0);
   }

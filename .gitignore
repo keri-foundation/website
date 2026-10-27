@@ -37,6 +37,7 @@
 # --- Media files ---
 *.mp4
 *.mp3
+*.mp3.part
 *.wav
 *.ogg
 *.flac

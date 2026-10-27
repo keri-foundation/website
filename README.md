@@ -264,7 +264,7 @@ The old standalone player redirects here:
 ### New conference
 
 1. Create `confs/<ORG>/<YEAR>/<month>/` and copy `index.json` from `confs/template-presentations-landingpage/` (edit page copy, nav, `transcriptLinks`, videos there).
-2. Add media to `talks/` (and `interviews/`, `slides/`, … when present) and fill in `index.json`.
+2. Add media to `talks/` (and `interviews/`, `slides/`, … when present) and fill in `index.json`. `build` writes a podcast `.mp3` next to each `.mp4` when that `.mp3` is not there yet.
 3. Run `scripts/deploy-confs.sh landing-pages` (or `build`) so `index.html` is copied from the template and the `/confs/` overview is rewritten.
 4. Edit `.srt` files in that conference folder. `scripts/subtitle-sources.tsv` is only for an optional copy from somewhere else.
 
@@ -272,13 +272,16 @@ The old standalone player redirects here:
 
 ```bash
 scripts/deploy-confs.sh landing-pages    # sync gallery index.html, and write /confs/ and /vids/ overviews
-scripts/deploy-confs.sh build            # landing-pages → subtitles → transcripts → pdfs → verify
+scripts/deploy-confs.sh build            # landing-pages → audio → subtitles → transcripts → pdfs → verify
+scripts/deploy-confs.sh audio            # podcast MP3 beside each MP4 that does not have one yet
 scripts/deploy-confs.sh -n push          # preview what would be uploaded
 scripts/deploy-confs.sh deploy           # build + push (rsync --delete) + check the live site
 scripts/deploy-confs.sh check-remote     # HEAD-request every referenced file on keri.foundation
 scripts/deploy-confs.sh --conf SEDI/2025/nov push
 scripts/deploy-confs.sh --conf vids/2026 push
 ```
+
+`audio` (included in `build` and `deploy`) writes `talks/foo.mp3` from `talks/foo.mp4` when that MP3 is absent. The encode is mono, 44.1 kHz, 64 kbps MP3: about 28 MB per hour, clear enough for a spoken-word podcast. It needs `ffmpeg` with LAME (`brew install ffmpeg`). MP3s are gitignored; `push` uploads them with the gallery. An MP4 that is not on this machine is skipped, and `verify` still reports that file missing.
 
 `push` and `deploy` also upload the site-root `.htaccess` (the `/videos/` redirect), plus the tree indexes: `confs/.htaccess`, `confs/index.php`, `confs/index.html`, and the same three files under `vids/`. A full push mirrors every `confs/<ORG>/` folder and the whole `vids/` tree. `--conf` limits the gallery mirror; the site-root `.htaccess` and both tree indexes are still uploaded.
 
