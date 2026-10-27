@@ -572,9 +572,9 @@ if (import.meta.url === `file://${process.argv[1]}`) {
   }
 
   if (!playlistUrl) {
-    console.error('Usage: node scripts/youtube-uploader.js <playlist-url> <srt-dir> [--file <subtitle-file>] [--force] [--reauth]');
-    console.error('Example: node scripts/youtube-uploader.js "https://www.youtube.com/playlist?list=PLxxx" confs/KERI/2026/apr/talks');
-    console.error('Example: bash scripts/upload-youtube-subs.sh "https://www.youtube.com/playlist?list=PLxxx" confs/KERI/2026/apr/talks --file "Talk Title.srt"');
+    console.error('Usage: node scripts/upload-youtube-subtitles.js <playlist-url> <srt-dir> [--file <subtitle-file>] [--force] [--reauth]');
+    console.error('Example: node scripts/upload-youtube-subtitles.js "https://www.youtube.com/playlist?list=PLxxx" confs/KERI/2026/apr/talks');
+    console.error('Example: bash scripts/upload-youtube-subtitles.sh "https://www.youtube.com/playlist?list=PLxxx" confs/KERI/2026/apr/talks --file "Talk Title.srt"');
     process.exit(1);
   }
 

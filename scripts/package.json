@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "build:pdf": "node build-transcript-pdf.js",
-    "upload": "bash upload-youtube-subs.sh",
+    "upload": "bash upload-youtube-subtitles.sh",
     "fix-rolling": "node remove-rolling-subtitles.js",
     "nonsense": "node detect-nonsense-subtitles.js"
   },

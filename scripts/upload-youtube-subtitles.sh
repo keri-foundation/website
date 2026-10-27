@@ -3,7 +3,7 @@
 # Upload fixed subtitles to YouTube videos in a playlist.
 # Run from the kerifoundation repo root.
 #
-#   bash scripts/upload-youtube-subs.sh 'https://www.youtube.com/playlist?list=ID' confs/KERI/2026/apr/talks
+#   bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=ID' confs/KERI/2026/apr/talks
 
 set -e
 
@@ -43,12 +43,12 @@ done
 
 if [ -z "$PLAYLIST_URL" ] || [ -z "$FIXED_DIR" ]; then
   echo "Usage:"
-  echo "  bash scripts/upload-youtube-subs.sh PLAYLIST_URL SRT_DIR"
-  echo "  bash scripts/upload-youtube-subs.sh PLAYLIST_URL SRT_DIR --file 'Video Title.srt'"
-  echo "  bash scripts/upload-youtube-subs.sh PLAYLIST_URL SRT_DIR --force"
-  echo "  bash scripts/upload-youtube-subs.sh PLAYLIST_URL SRT_DIR --reauth"
+  echo "  bash scripts/upload-youtube-subtitles.sh PLAYLIST_URL SRT_DIR"
+  echo "  bash scripts/upload-youtube-subtitles.sh PLAYLIST_URL SRT_DIR --file 'Video Title.srt'"
+  echo "  bash scripts/upload-youtube-subtitles.sh PLAYLIST_URL SRT_DIR --force"
+  echo "  bash scripts/upload-youtube-subtitles.sh PLAYLIST_URL SRT_DIR --reauth"
   echo "Example:"
-  echo "  bash scripts/upload-youtube-subs.sh 'https://www.youtube.com/playlist?list=ID' confs/KERI/2026/apr/talks"
+  echo "  bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=ID' confs/KERI/2026/apr/talks"
   exit 1
 fi
 
@@ -66,4 +66,4 @@ if [ "$FORCE_REAUTH" = "true" ]; then
   UPLOAD_ARGS+=(--reauth)
 fi
 
-node "$SCRIPT_DIR/youtube-uploader.js" "${UPLOAD_ARGS[@]}"
+node "$SCRIPT_DIR/upload-youtube-subtitles.js" "${UPLOAD_ARGS[@]}"

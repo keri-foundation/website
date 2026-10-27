@@ -21,7 +21,7 @@
   - [Subtitles](#subtitles)
     - [Scripts](#scripts)
   - [Video submission guide](#video-submission-guide)
-  - [YouTube uploader setup](#youtube-uploader-setup)
+  - [YouTube subtitle upload setup](#youtube-subtitle-upload-setup)
     - [Step 1: Create a Google Cloud Project](#step-1-create-a-google-cloud-project)
     - [Step 2: Create OAuth2 Credentials](#step-2-create-oauth2-credentials)
     - [Step 3: First upload](#step-3-first-upload)
@@ -352,7 +352,7 @@ Install once with `npm install` inside `scripts/`:
 node scripts/build-transcript-pdf.js KERI/2026/apr
 node scripts/remove-rolling-subtitles.js confs/KERI/2026/apr/talks
 node scripts/detect-nonsense-subtitles.js confs/KERI/2026/apr/interviews
-bash scripts/upload-youtube-subs.sh 'PLAYLIST_URL' confs/KERI/2026/apr/talks
+bash scripts/upload-youtube-subtitles.sh 'PLAYLIST_URL' confs/KERI/2026/apr/talks
 bash scripts/fetch-wordpress.sh  # pull live WordPress (not confs/ or vids/)
 python3 scripts/generate_policy_brief_pdf.py
 ```
@@ -365,7 +365,7 @@ Follow these rules when submitting videos so files stay consistent and easy to f
 
 Go to [video submission guide](https://github.com/keri-foundation/recordings-and-subtitles/blob/main/VIDEO_SUBMISSION_GUIDE.md)
 
-## YouTube uploader setup
+## YouTube subtitle upload setup
 
 To upload fixed subtitles to YouTube, you need to set up OAuth2 credentials from Google Cloud.
 
@@ -398,7 +398,7 @@ To upload fixed subtitles to YouTube, you need to set up OAuth2 credentials from
 From the repo root, after `npm install` in `scripts/`:
 
 ```bash
-bash scripts/upload-youtube-subs.sh 'https://www.youtube.com/playlist?list=YOUR_PLAYLIST_ID' confs/KERI/2026/apr/talks
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=YOUR_PLAYLIST_ID' confs/KERI/2026/apr/talks
 ```
 
 **First time only:**
@@ -420,13 +420,13 @@ bash scripts/upload-youtube-subs.sh 'https://www.youtube.com/playlist?list=YOUR_
 From the kerifoundation repo root (after `npm install` in `scripts/`):
 
 ```bash
-bash scripts/upload-youtube-subs.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks
 
 # One file
-bash scripts/upload-youtube-subs.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks --file 'Video Title.srt'
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks --file 'Video Title.srt'
 
 # Force OAuth re-consent
-bash scripts/upload-youtube-subs.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks --reauth
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks --reauth
 ```
 
 ### How it works
@@ -468,7 +468,7 @@ bash scripts/upload-youtube-subs.sh 'https://www.youtube.com/playlist?list=PLxxx
 
 - This usually means the saved refresh token was revoked or expired
 - The uploader now auto-detects this, removes stale credentials, and prompts login again
-- You can force a clean OAuth flow anytime with: `bash scripts/upload-youtube-subs.sh 'https://www.youtube.com/playlist?list=PLAYLIST_ID' confs/KERI/2026/apr/talks --reauth`
+- You can force a clean OAuth flow anytime with: `bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLAYLIST_ID' confs/KERI/2026/apr/talks --reauth`
 
 **"Insufficient Permission" when uploading captions**
 
