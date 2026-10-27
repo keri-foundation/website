@@ -422,8 +422,11 @@ From the kerifoundation repo root (after `npm install` in `scripts/`):
 ```bash
 bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks
 
-# One file
+# One file (English)
 bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks --file 'Video Title.srt'
+
+# One file (other language)
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks --file 'Video Title.nl.srt'
 
 # Force OAuth re-consent
 bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks --reauth
@@ -432,11 +435,18 @@ bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=
 ### How it works
 
 1. Fetches all videos from the YouTube playlist
-2. For each video, searches for a matching `.srt` file in the directory you passed
-3. Matches by video title
-4. Uploads the subtitle file to the video
-5. If a subtitle already exists, it updates it
+2. For each video, searches for matching `.srt` files in the directory you passed
+3. Matches by video title; language comes from the filename suffix
+4. Uploads each language track to the video
+5. If a caption track for that language already exists, it updates it
 
+**Filename convention**
+
+- `Video Title.srt` → English (`en`)
+- `Video Title.nl.srt` → Dutch (`nl`)
+- `Video Title.es.srt` → Spanish (`es`)
+
+The part before the optional `.xx` language code must match the YouTube video title.
 ### Troubleshooting
 
 **"Client secret not found"**
@@ -457,6 +467,7 @@ bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=
 **"No matching .srt file"**
 
 - Make sure the video title in the subtitle filename matches the YouTube video title exactly
+- For other languages, keep that same title and add a language suffix, for example `Video Title.nl.srt`
 - Edited subtitle files live next to the videos, for example `confs/KERI/2026/apr/talks/*.srt`
 
 **Authentication issues**

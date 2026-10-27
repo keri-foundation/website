@@ -75,20 +75,20 @@ function trackUploadResultCounts(result, counts) {
   counts.insertedCount++;
 }
 
-function maybeSkipUnchangedVideoUpload({ force, state, video, subtitlePath, counts }) {
+function maybeSkipUnchangedVideoUpload({ force, state, video, subtitlePath, language = 'en', counts }) {
   if (force) return false;
 
-  const check = shouldSkipUnchangedUpload(state, video.videoId, subtitlePath);
+  const check = shouldSkipUnchangedUpload(state, video.videoId, subtitlePath, language);
   if (!check.skip) return false;
 
-  console.log(`⊘ Skipped: ${video.title} (subtitle unchanged)\n`);
+  console.log(`⊘ Skipped: ${video.title} [${language}] (subtitle unchanged)`);
   counts.skippedCount++;
   counts.skippedUnchangedCount++;
   return true;
 }
 
-function persistSuccessfulUpload({ state, videoId, subtitlePath, result }) {
-  const uploadCheck = shouldSkipUnchangedUpload(state, videoId, subtitlePath);
+function persistSuccessfulUpload({ state, videoId, subtitlePath, language = 'en', result }) {
+  const uploadCheck = shouldSkipUnchangedUpload(state, videoId, subtitlePath, language);
   markUploadState(state, {
     key: uploadCheck.key,
     hash: uploadCheck.currentHash,
@@ -313,25 +313,70 @@ function titlesMatch(left, right) {
   );
 }
 
-function subtitleTitleFromPath(subtitlePath) {
-  return path.basename(subtitlePath).replace(/\.srt$/i, '');
+const LANGUAGE_TRACK_NAMES = {
+  en: 'English',
+  nl: 'Dutch',
+  de: 'German',
+  fr: 'French',
+  es: 'Spanish',
+  pt: 'Portuguese',
+  it: 'Italian',
+  ja: 'Japanese',
+  ko: 'Korean',
+  zh: 'Chinese',
+  ar: 'Arabic',
+  hi: 'Hindi',
+  pl: 'Polish',
+  sv: 'Swedish',
+  da: 'Danish',
+  fi: 'Finnish',
+  no: 'Norwegian',
+  nb: 'Norwegian',
+  tr: 'Turkish',
+  uk: 'Ukrainian',
+  ru: 'Russian',
+};
+
+const LANGUAGE_SUFFIX_RE = /\.([a-z]{2}(?:-[a-z]{2})?)$/i;
+
+function trackNameForLanguage(language) {
+  return LANGUAGE_TRACK_NAMES[language.toLowerCase()] || language;
 }
 
-function findSubtitleFile(videoTitle, fixedDir) {
+function parseSubtitleFilename(fileName) {
+  const base = path.basename(fileName).replace(/\.srt$/i, '');
+  const match = base.match(LANGUAGE_SUFFIX_RE);
+  if (!match) {
+    return { title: base, language: 'en' };
+  }
+
+  return {
+    title: base.slice(0, -match[0].length),
+    language: match[1].toLowerCase(),
+  };
+}
+
+function subtitleTitleFromPath(subtitlePath) {
+  return parseSubtitleFilename(subtitlePath).title;
+}
+
+function findSubtitleTracks(videoTitle, fixedDir) {
   const files = fs.readdirSync(fixedDir);
+  const tracks = [];
 
   for (const file of files) {
     if (!file.toLowerCase().endsWith('.srt')) continue;
-    // Language tracks such as foo.nl.srt are not the default English captions.
-    if (/\.[a-z]{2}\.srt$/i.test(file)) continue;
 
-    const filenameTitle = file.replace(/\.srt$/i, '');
-    if (titlesMatch(videoTitle, filenameTitle)) {
-      return path.join(fixedDir, file);
-    }
+    const { title, language } = parseSubtitleFilename(file);
+    if (!titlesMatch(videoTitle, title)) continue;
+
+    tracks.push({
+      path: path.join(fixedDir, file),
+      language,
+    });
   }
 
-  return null;
+  return tracks.sort((a, b) => a.language.localeCompare(b.language));
 }
 
 function findVideoForSubtitleFile(videos, subtitlePath) {
@@ -339,9 +384,24 @@ function findVideoForSubtitleFile(videos, subtitlePath) {
   return videos.find((video) => titlesMatch(video.title, subtitleTitle)) || null;
 }
 
+function findExistingCaptionTrack(captions, language, trackName) {
+  const standardTracks = (captions || []).filter(
+    (cap) =>
+      cap.snippet?.language === language &&
+      String(cap.snippet?.trackKind || 'standard').toLowerCase() !== 'asr'
+  );
+
+  return (
+    standardTracks.find((cap) => cap.snippet.name === trackName) ||
+    standardTracks.find((cap) => String(cap.snippet.name || '').toLowerCase() === language) ||
+    standardTracks[0] ||
+    null
+  );
+}
+
 // Upload subtitle file to video
 async function uploadSubtitle(youtube, videoId, subtitlePath, language = 'en') {
-  const trackName = language === 'en' ? 'English' : language;
+  const trackName = trackNameForLanguage(language);
   const fileContent = fs.readFileSync(subtitlePath, 'utf-8');
 
   const doUpdate = (captionId) => youtube.captions.update({
@@ -378,9 +438,7 @@ async function uploadSubtitle(youtube, videoId, subtitlePath, language = 'en') {
   });
 
   const captions = await youtube.captions.list({ part: 'snippet', videoId });
-  const existing = captions.data.items?.find(
-    (cap) => cap.snippet.language === language && cap.snippet.name === trackName
-  );
+  const existing = findExistingCaptionTrack(captions.data.items, language, trackName);
 
   if (existing) {
     await doUpdate(existing.id);
@@ -415,16 +473,17 @@ async function uploadSingleSubtitle(youtube, videos, fixedDir, singleFile, state
     throw new Error(`Subtitle file not found: ${subtitlePath}`);
   }
 
+  const { language } = parseSubtitleFilename(subtitlePath);
   const matchingVideo = findVideoForSubtitleFile(videos, subtitlePath);
   if (!matchingVideo) {
     throw new Error(`No matching video found in playlist for subtitle file: ${path.basename(subtitlePath)}`);
   }
 
-  console.log(`Uploading single subtitle file: ${path.basename(subtitlePath)}`);
+  console.log(`Uploading single subtitle file: ${path.basename(subtitlePath)} [${language}]`);
   console.log(`Matched video: ${matchingVideo.title}`);
 
   if (!force) {
-    const check = shouldSkipUnchangedUpload(state, matchingVideo.videoId, subtitlePath);
+    const check = shouldSkipUnchangedUpload(state, matchingVideo.videoId, subtitlePath, language);
     if (check.skip) {
       console.log('⊘ Skipped: subtitle is unchanged from last successful upload');
       console.log('\nSummary:');
@@ -434,12 +493,12 @@ async function uploadSingleSubtitle(youtube, videos, fixedDir, singleFile, state
     }
   }
 
-  const result = await uploadSubtitle(youtube, matchingVideo.videoId, subtitlePath);
-  const uploadCheck = shouldSkipUnchangedUpload(state, matchingVideo.videoId, subtitlePath);
-  markUploadState(state, {
-    key: uploadCheck.key,
-    hash: uploadCheck.currentHash,
+  const result = await uploadSubtitle(youtube, matchingVideo.videoId, subtitlePath, language);
+  persistSuccessfulUpload({
+    state,
+    videoId: matchingVideo.videoId,
     subtitlePath,
+    language,
     result,
   });
   writeUploadState(state);
@@ -461,39 +520,51 @@ async function uploadPlaylistSubtitles(youtube, videos, fixedDir, state, options
   };
 
   for (const video of videos) {
-    const subtitlePath = findSubtitleFile(video.title, fixedDir);
+    const tracks = findSubtitleTracks(video.title, fixedDir);
 
-    if (!subtitlePath) {
+    if (tracks.length === 0) {
       console.log(`⊘ Skipped: ${video.title} (no matching .srt file)\n`);
       counts.skippedCount++;
       continue;
     }
 
-    if (maybeSkipUnchangedVideoUpload({ force, state, video, subtitlePath, counts })) {
-      continue;
-    }
-
-    try {
-      console.log(`Uploading: ${video.title}`);
-      const result = await uploadSubtitle(youtube, video.videoId, subtitlePath);
-
-      persistSuccessfulUpload({
+    for (const track of tracks) {
+      if (maybeSkipUnchangedVideoUpload({
+        force,
         state,
-        videoId: video.videoId,
-        subtitlePath,
-        result,
-      });
-
-      trackUploadResultCounts(result, counts);
-      console.log(`✓ Success (${result})\n`);
-      counts.uploadedCount++;
-    } catch (error) {
-      if (isInsufficientPermission(error)) {
-        printInsufficientPermissionHelp();
+        video,
+        subtitlePath: track.path,
+        language: track.language,
+        counts,
+      })) {
         continue;
       }
-      console.error(`✗ Error uploading: ${error.message}\n`);
+
+      try {
+        console.log(`Uploading: ${video.title} [${track.language}]`);
+        const result = await uploadSubtitle(youtube, video.videoId, track.path, track.language);
+
+        persistSuccessfulUpload({
+          state,
+          videoId: video.videoId,
+          subtitlePath: track.path,
+          language: track.language,
+          result,
+        });
+
+        trackUploadResultCounts(result, counts);
+        console.log(`✓ Success (${result})`);
+        counts.uploadedCount++;
+      } catch (error) {
+        if (isInsufficientPermission(error)) {
+          printInsufficientPermissionHelp();
+          continue;
+        }
+        console.error(`✗ Error uploading: ${error.message}`);
+      }
     }
+
+    console.log('');
   }
 
   writeUploadState(state);
@@ -575,6 +646,7 @@ if (import.meta.url === `file://${process.argv[1]}`) {
     console.error('Usage: node scripts/upload-youtube-subtitles.js <playlist-url> <srt-dir> [--file <subtitle-file>] [--force] [--reauth]');
     console.error('Example: node scripts/upload-youtube-subtitles.js "https://www.youtube.com/playlist?list=PLxxx" confs/KERI/2026/apr/talks');
     console.error('Example: bash scripts/upload-youtube-subtitles.sh "https://www.youtube.com/playlist?list=PLxxx" confs/KERI/2026/apr/talks --file "Talk Title.srt"');
+    console.error('Example: bash scripts/upload-youtube-subtitles.sh "https://www.youtube.com/playlist?list=PLxxx" confs/KERI/2026/apr/talks --file "Talk Title.nl.srt"');
     process.exit(1);
   }
 
