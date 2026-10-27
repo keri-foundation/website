@@ -26,6 +26,7 @@
     - [Step 2: Create OAuth2 Credentials](#step-2-create-oauth2-credentials)
     - [Step 3: First upload](#step-3-first-upload)
     - [Usage](#usage)
+    - [Known playlists](#known-playlists)
     - [How it works](#how-it-works)
     - [Troubleshooting](#troubleshooting)
 
@@ -398,7 +399,7 @@ To upload fixed subtitles to YouTube, you need to set up OAuth2 credentials from
 From the repo root, after `npm install` in `scripts/`:
 
 ```bash
-bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=YOUR_PLAYLIST_ID' confs/KERI/2026/apr/talks
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' confs/KERI/2026/apr/talks
 ```
 
 **First time only:**
@@ -420,16 +421,38 @@ bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=
 From the kerifoundation repo root (after `npm install` in `scripts/`):
 
 ```bash
-bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' confs/KERI/2026/apr/talks
 
 # One file (English)
-bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks --file 'Video Title.srt'
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' confs/KERI/2026/apr/talks --file 'Video Title.srt'
 
 # One file (other language)
-bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks --file 'Video Title.nl.srt'
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' confs/KERI/2026/apr/talks --file 'Video Title.nl.srt'
 
 # Force OAuth re-consent
-bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLxxx' confs/KERI/2026/apr/talks --reauth
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' confs/KERI/2026/apr/talks --reauth
+```
+
+### Known playlists
+
+**KERI Conference April 2026**
+
+```bash
+# Day 1 talks
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' confs/KERI/2026/apr/talks
+
+# Day 2 talks
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksMjwBseKJ7ivXiYukRvI65a' confs/KERI/2026/apr/talks
+
+# Interviews (use the playlist that contains the interview videos)
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' confs/KERI/2026/apr/interviews
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksMjwBseKJ7ivXiYukRvI65a' confs/KERI/2026/apr/interviews
+```
+
+**KERI Mini Conference November 2026**
+
+```bash
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLNq_uXoW6DaQ' confs/KERI/2026/nov/talks
 ```
 
 ### How it works
@@ -447,6 +470,7 @@ bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=
 - `Video Title.es.srt` → Spanish (`es`)
 
 The part before the optional `.xx` language code must match the YouTube video title.
+
 ### Troubleshooting
 
 **"Client secret not found"**
@@ -479,7 +503,7 @@ The part before the optional `.xx` language code must match the YouTube video ti
 
 - This usually means the saved refresh token was revoked or expired
 - The uploader now auto-detects this, removes stale credentials, and prompts login again
-- You can force a clean OAuth flow anytime with: `bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLAYLIST_ID' confs/KERI/2026/apr/talks --reauth`
+- You can force a clean OAuth flow anytime with: `bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' confs/KERI/2026/apr/talks --reauth`
 
 **"Insufficient Permission" when uploading captions**
 
