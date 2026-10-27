@@ -4035,6 +4035,8 @@
 
             // ─────────────────────────────────────────────────────────────────────
             //  Multi-language subtitles (optional). `subtitle` = English (`foo.srt`).
+            //  When `subtitle` is omitted, English is the media file with `.srt`
+            //  (`talks/foo.mp4` → `talks/foo.srt`) if that file is present.
             //  Extra languages are sibling files (`foo.nl.srt`) recorded in
             //  DISCOVERED_SUBTITLE_LANGS when landing pages are built. An optional
             //  `subtitles` map in index.json overrides those paths. Missing files
@@ -4082,6 +4084,30 @@
                 if (typeof value === 'string') return { src: value };
                 if (typeof value === 'object' && value.src) return { src: String(value.src) };
                 return null;
+            }
+
+            function conventionalSubtitleRel(video) {
+                const media = String(video?.path || '');
+                if (!media || /^(https?:)?\/\//i.test(media) || media.startsWith('/')) return null;
+                if (!/\.(mp4|mp3)$/i.test(media)) return null;
+                return media.replace(/\.(mp4|mp3)$/i, '.srt');
+            }
+
+            // When index.json omits `subtitle`, use talks/foo.srt next to talks/foo.mp4
+            // if the file is actually there. An explicit subtitle is left unchanged.
+            async function attachConventionalSubtitles(list) {
+                await Promise.all(list.map(async (video) => {
+                    if (normalizeSubtitleEntry(video?.subtitle)) return;
+                    const rel = conventionalSubtitleRel(video);
+                    if (!rel) return;
+                    try {
+                        const res = await fetch(resolveAssetUrl(rel));
+                        if (!res.ok) return;
+                        video.subtitle = rel;
+                    } catch {
+                        // No sibling subtitle for this video.
+                    }
+                }));
             }
 
             function englishSubtitleSrc(video) {
@@ -6502,6 +6528,7 @@
                 transcriptsDir = typeof config.transcriptsDir === 'string'
                     ? config.transcriptsDir.replace(/\/+$/, '')
                     : '';
+                await attachConventionalSubtitles(videos);
                 videos.forEach((v) => {
                     applyDiscoveredSubtitleLangs(v);
                     if (v.subtitle) v.subtitle = resolveAssetUrl(v.subtitle);

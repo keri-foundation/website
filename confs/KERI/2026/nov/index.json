@@ -1,0 +1,106 @@
+{
+  "page": {
+    "title": "KERI Mini Conference November 2026 Videos",
+    "heading": "KERI Mini Conference November 2026 Videos",
+    "headingHref": "/confs/KERI/2026/nov/",
+    "statusNotice": "",
+    "subtitle": "A collection of presentations and talks from the KERI community",
+    "footer": "KERI Foundation \u2022 Conference Videos Collection",
+    "searchPlaceholder": "Type to search across all talks\u2026",
+    "searchLabel": "Search all transcripts",
+    "nav": [
+      {
+        "label": "Home",
+        "href": "/",
+        "external": false
+      },
+      {
+        "label": "Mini Conference November 2026 Program",
+        "href": "https://kericonf.com/archive/kericonf26/program/",
+        "external": false
+      },
+      {
+        "label": "Speakers 2026",
+        "href": "https://kericonf.com/archive/kericonf26/speakers-2026/",
+        "external": false
+      },
+      {
+        "label": "Day 1",
+        "href": "https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL",
+        "external": false,
+        "icon": "youtube",
+        "prefix": "All videos on YouTube:"
+      },
+      {
+        "label": "Day 2",
+        "href": "https://www.youtube.com/playlist?list=PLnHy2ee5UksMjwBseKJ7ivXiYukRvI65a",
+        "external": false,
+        "icon": "youtube"
+      },
+      {
+        "label": "All Transcripts (PDF)",
+        "href": "transcripts/pdf/talks/KERI-2026-apr-Transcripts.pdf",
+        "external": false
+      },
+      {
+        "label": "SEDI nov 2025",
+        "href": "/confs/SEDI/2025/nov/",
+        "external": false
+      }
+    ],
+    "transcriptLinks": [
+      {
+        "label": "Conference talk transcripts",
+        "href": "transcripts/html/talks/"
+      },
+      {
+        "label": "Interview transcripts",
+        "href": "transcripts/html/interviews/"
+      }
+    ]
+  },
+  "transcriptsDir": "transcripts/html",
+  "defaultPoster": "https://kericonf.com/wp-content/uploads/2025/11/logo-keri-conference-scaled.png",
+  "speakerPhotos": {
+    "Samuel Smith": "https://kericonf.com/wp-content/uploads/2025/11/Samuel-Smith.jpg",
+    "Phil Feairheller": "https://kericonf.com/wp-content/uploads/2026/01/PhilFeairheller_v1.0-edited.jpeg",
+    "Daniel Hardman": "https://kericonf.com/wp-content/uploads/2026/01/DanielHardman_v1.0.png",
+    "George McEwan": "https://kericonf.com/wp-content/uploads/2026/01/GeorgeMcEwan_v1.0-scaled.jpg",
+    "Ari Argoud": "https://kericonf.com/wp-content/uploads/2026/02/AriArgoud_v1.0.jpeg",
+    "Thomas Mayfield": "https://kericonf.com/wp-content/uploads/2026/01/ThomasMayfield_v1.0-scaled.jpg",
+    "Jonathan Rayback": "https://kericonf.com/wp-content/uploads/2026/02/JonathanRayback_v1.0.jpg",
+    "Kent Bull": "https://kericonf.com/wp-content/uploads/2026/01/KentBull_v1.0.png",
+    "Ned Smith": "https://kericonf.com/wp-content/uploads/2026/02/NedSmith_v1.0.jpeg",
+    "Cole Davis": "https://kericonf.com/wp-content/uploads/2026/02/ColeDavis_v1.0-edited.jpeg",
+    "Alan Davies": "https://kericonf.com/wp-content/uploads/2026/02/AlanDavies_v1.0-edited.jpeg",
+    "Fergal O'Connor": "https://kericonf.com/wp-content/uploads/2026/03/FergalOConnor_v.1.0.png",
+    "Fergal O'Conner": "https://kericonf.com/wp-content/uploads/2026/03/FergalOConnor_v.1.0.png",
+    "Scott Stuewe": "https://kericonf.com/wp-content/uploads/2026/03/ScottStuewe_v1.0-e1773917316969.jpg",
+    "Jay Alexander Elliot": "https://kericonf.com/wp-content/uploads/2026/03/JayElliot_v1.0-scaled.jpg",
+    "Mark Scrimshire": "https://kericonf.com/wp-content/uploads/2026/03/MarkScripshire_v1.0.png",
+    "Phil Windley": "https://kericonf.com/wp-content/uploads/2026/03/phil-windley.jpg",
+    "Jared Jeffery": "https://kericonf.com/wp-content/uploads/2026/03/jared-jeffery.jpg",
+    "Jared Jefferey": "https://kericonf.com/wp-content/uploads/2026/03/jared-jeffery.jpg",
+    "Keanu Pahio": "https://kericonf.com/wp-content/uploads/2026/04/KeanuPahio_v1.0.jpg",
+    "Karla McKenna": "https://kericonf.com/wp-content/uploads/2026/04/KarlaMcKenna_v1.0-edited.jpg",
+    "Nicholas Racz": "https://kericonf.com/wp-content/uploads/2026/04/NicholasRacz_v1.0-edited.jpeg",
+    "Christopher Bramwell": "https://kericonf.com/wp-content/uploads/2026/04/ChristopherBramwell_v1.0-scaled.jpg",
+    "Evan Asakawa": "https://kericonf.com/wp-content/uploads/2026/04/EvanAsakawa_v1.0-scaled.jpg",
+    "Evan Asawaka": "https://kericonf.com/wp-content/uploads/2026/04/EvanAsakawa_v1.0-scaled.jpg",
+    "Ryan Hansen": "https://kericonf.com/wp-content/uploads/2026/04/RyanHansen_v1.0.jpeg"
+  },
+  "videos": [
+    {
+      "order": 1,
+      "day": "KERICONF26 Day 1",
+      "title": "Test 1",
+      "path": "talks/TESTVID-Plenary-SamuelSmitht.mp4"
+    },
+    {
+      "order": 2,
+      "day": "KERICONF26 Day 1",
+      "title": "Test 2",
+      "path": "talks/TESTVID-shortfilm-Christmas-Carol.mp4"
+    }
+  ]
+}

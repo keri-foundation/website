@@ -1,0 +1,1700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test 2 — Transcript</title>
+  <meta name="description" content="Transcript: Test 2 (KERICONF26 Day 1)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #060b6f;
+      --muted: #2e3a7a;
+      --bg: #fdefde;
+      --panel: #f4f0e8;
+      --accent: #986c32;
+      --link: #0450a8;
+      --waves: url("/custom/img/waves-kim-1.png");
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Source Serif 4", Georgia, serif;
+      background: var(--bg);
+      color: var(--ink);
+      padding: 24px 16px 48px;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 44rem; margin: 0 auto; }
+    nav {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+    nav a { color: var(--link); }
+    nav a:hover { color: var(--ink); }
+    header {
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+      background: var(--panel);
+      border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    header > * { position: relative; z-index: 1; }
+    header::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 360px;
+      height: 208px;
+      background-image: var(--waves);
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 360px 208px;
+      transform: rotate(180deg);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.55;
+    }
+    h1 {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      margin: 0 0 0.4rem;
+    }
+    .meta {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0 0 1rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .actions a {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--ink);
+      background: rgba(152, 108, 50, 0.18);
+      border: 1px solid rgba(152, 108, 50, 0.35);
+      border-radius: 8px;
+      padding: 0.55rem 0.9rem;
+    }
+    .actions a:hover { background: rgba(152, 108, 50, 0.32); }
+    .actions a.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+    .actions a.primary:hover { background: #0a1270; }
+    article {
+      background: var(--panel);
+      border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+      border-radius: 10px;
+      padding: 1rem 1.25rem 1.5rem;
+    }
+    .cue {
+      display: grid;
+      grid-template-columns: 4.5rem 1fr;
+      gap: 0.65rem 0.85rem;
+      margin: 0;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+    }
+    .cue:last-child { border-bottom: none; }
+    .cue-time {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      padding-top: 0.15rem;
+    }
+    .cue-time:hover { color: var(--ink); text-decoration: underline; }
+    .cue-text { font-size: 1.05rem; }
+    footer {
+      position: relative;
+      z-index: 0;
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      margin-top: 2rem;
+      padding-bottom: 7.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    footer::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 220px;
+      height: 126px;
+      background: var(--waves) right bottom / 220px 126px no-repeat;
+      pointer-events: none;
+      z-index: -1;
+      opacity: 0.85;
+    }
+    @media (max-width: 768px) {
+      header::after {
+        width: 220px;
+        height: 126px;
+        background-size: 220px 126px;
+      }
+      footer { padding-bottom: 5.5rem; }
+      footer::after {
+        width: 160px;
+        height: 92px;
+        background-size: 160px 92px;
+      }
+    }
+    @media (max-width: 520px) {
+      .cue { grid-template-columns: 1fr; gap: 0.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="../../../">KERI Mini Conference November 2026 Videos</a>
+      · <a href="./">All transcripts</a>
+    </nav>
+    <header>
+      <h1>Test 2</h1>
+      <p class="meta">KERICONF26 Day 1</p>
+      <div class="actions">
+        <a class="primary" href="../../../#test-2">Watch video</a>
+        <a href="./">All transcripts</a>
+        <a href="../../../">Video gallery</a>
+      </div>
+    </header>
+    <article>
+    <p class="cue" id="t0">
+      <a class="cue-time" href="../../../#test-2">0:00</a>
+      <span class="cue-text">T'was the night before Christmas when all through the house not a creature was</span>
+    </p>
+    <p class="cue" id="t5">
+      <a class="cue-time" href="../../../#test-2&amp;t=5">0:05</a>
+      <span class="cue-text">stirring, not even a… Ah, fun story. I believe it was this one. Marley was dead.</span>
+    </p>
+    <p class="cue" id="t16">
+      <a class="cue-time" href="../../../#test-2&amp;t=16">0:16</a>
+      <span class="cue-text">Dead as a doredale. And his business partner Scrooge, well, I'll let you see</span>
+    </p>
+    <p class="cue" id="t22">
+      <a class="cue-time" href="../../../#test-2&amp;t=22">0:22</a>
+      <span class="cue-text">for yourself, that callous old man.</span>
+    </p>
+    <p class="cue" id="t40">
+      <a class="cue-time" href="../../../#test-2&amp;t=40">0:40</a>
+      <span class="cue-text">Jolly good day, Mr. Scrooge. Oh, Merry Christmas. You know, it's Christmas Eve.</span>
+    </p>
+    <p class="cue" id="t48">
+      <a class="cue-time" href="../../../#test-2&amp;t=48">0:48</a>
+      <span class="cue-text">It's one of my favorite days of the year because I know that tomorrow I get to</span>
+    </p>
+    <p class="cue" id="t54">
+      <a class="cue-time" href="../../../#test-2&amp;t=54">0:54</a>
+      <span class="cue-text">spend so much good time with my father and my brothers. Anyways, Merry Christmas, Mr.</span>
+    </p>
+    <p class="cue" id="t63">
+      <a class="cue-time" href="../../../#test-2&amp;t=63">1:03</a>
+      <span class="cue-text">Scrooge. ...t... ...numbers. Good day to you sir and Merry Christmas as well. Do</span>
+    </p>
+    <p class="cue" id="t73">
+      <a class="cue-time" href="../../../#test-2&amp;t=73">1:13</a>
+      <span class="cue-text">you have the pleasure of speaking with Mr. Morley or Mr. Scrooge? Mr. Morley has been</span>
+    </p>
+    <p class="cue" id="t78">
+      <a class="cue-time" href="../../../#test-2&amp;t=78">1:18</a>
+      <span class="cue-text">dead these seven years. My goodness. I hope you accept our condolences. Is there</span>
+    </p>
+    <p class="cue" id="t86">
+      <a class="cue-time" href="../../../#test-2&amp;t=86">1:26</a>
+      <span class="cue-text">any way we can lighten the mood for you Mr. Scrooge? No.</span>
+    </p>
+    <p class="cue" id="t91">
+      <a class="cue-time" href="../../../#test-2&amp;t=91">1:31</a>
+      <span class="cue-text">Well, you also came to ask a favour of your kind sir. You see, I'm not a family</span>
+    </p>
+    <p class="cue" id="t97">
+      <a class="cue-time" href="../../../#test-2&amp;t=97">1:37</a>
+      <span class="cue-text">so we would like you to have a Christmas I don't know. A toy or something to lighten</span>
+    </p>
+    <p class="cue" id="t101">
+      <a class="cue-time" href="../../../#test-2&amp;t=101">1:41</a>
+      <span class="cue-text">the mood and help them feel a little comfort and joy. Would you be so kind as</span>
+    </p>
+    <p class="cue" id="t106">
+      <a class="cue-time" href="../../../#test-2&amp;t=106">1:46</a>
+      <span class="cue-text">to make a donation to our charity? How about charity donates to me? Um, Mr.</span>
+    </p>
+    <p class="cue" id="t115">
+      <a class="cue-time" href="../../../#test-2&amp;t=115">1:55</a>
+      <span class="cue-text">Scrooge, I don't believe that will help us in our cause. And why should I care? Or</span>
+    </p>
+    <p class="cue" id="t122">
+      <a class="cue-time" href="../../../#test-2&amp;t=122">2:02</a>
+      <span class="cue-text">it'd be beneficial to donate to the Zyganda Fort if not their own. I believe</span>
+    </p>
+    <p class="cue" id="t128">
+      <a class="cue-time" href="../../../#test-2&amp;t=128">2:08</a>
+      <span class="cue-text">they'd be better off. Leave them be. Who has better uses for his money. Well, so</span>
+    </p>
+    <p class="cue" id="t136">
+      <a class="cue-time" href="../../../#test-2&amp;t=136">2:16</a>
+      <span class="cue-text">good use of that money is to donate to our charity. What should I put you down for</span>
+    </p>
+    <p class="cue" id="t139">
+      <a class="cue-time" href="../../../#test-2&amp;t=139">2:19</a>
+      <span class="cue-text">as? Nothing. So you wish to remain anonymous then? I wish to be left alone!</span>
+    </p>
+    <p class="cue" id="t149">
+      <a class="cue-time" href="../../../#test-2&amp;t=149">2:29</a>
+      <span class="cue-text">Since you asked me what I wish gentlemen, that is my answer. I don't make myself</span>
+    </p>
+    <p class="cue" id="t158">
+      <a class="cue-time" href="../../../#test-2&amp;t=158">2:38</a>
+      <span class="cue-text">merry at Christmas. I can't afford to make oil people merry. I help to support the</span>
+    </p>
+    <p class="cue" id="t165">
+      <a class="cue-time" href="../../../#test-2&amp;t=165">2:45</a>
+      <span class="cue-text">establishments I have mentioned. They cost enough. Those who are badly off must go</span>
+    </p>
+    <p class="cue" id="t172">
+      <a class="cue-time" href="../../../#test-2&amp;t=172">2:52</a>
+      <span class="cue-text">there. But many can't go there, sir. And many would rather die. If they would</span>
+    </p>
+    <p class="cue" id="t179">
+      <a class="cue-time" href="../../../#test-2&amp;t=179">2:59</a>
+      <span class="cue-text">rather die, they had better do it. and decrease the surplus population. It's not</span>
+    </p>
+    <p class="cue" id="t188">
+      <a class="cue-time" href="../../../#test-2&amp;t=188">3:08</a>
+      <span class="cue-text">my business.</span>
+    </p>
+    <p class="cue" id="t192">
+      <a class="cue-time" href="../../../#test-2&amp;t=192">3:12</a>
+      <span class="cue-text">This doesn't mean you let them starve or freeze to death, sir. On Christmas days of</span>
+    </p>
+    <p class="cue" id="t196">
+      <a class="cue-time" href="../../../#test-2&amp;t=196">3:16</a>
+      <span class="cue-text">all days for that matter. 4300. Kind, sir. Five. 4300. Sir. Six. 4300. 4300. 4300. 99</span>
+    </p>
+    <p class="cue" id="t208">
+      <a class="cue-time" href="../../../#test-2&amp;t=208">3:28</a>
+      <span class="cue-text">4400.</span>
+    </p>
+    <p class="cue" id="t215">
+      <a class="cue-time" href="../../../#test-2&amp;t=215">3:35</a>
+      <span class="cue-text">It's enough for a man to understand his own business and not interfere with other</span>
+    </p>
+    <p class="cue" id="t225">
+      <a class="cue-time" href="../../../#test-2&amp;t=225">3:45</a>
+      <span class="cue-text">people's. Mine occupies me constantly. Good afternoon gentlemen.</span>
+    </p>
+    <p class="cue" id="t236">
+      <a class="cue-time" href="../../../#test-2&amp;t=236">3:56</a>
+      <span class="cue-text">Good afternoon sir.</span>
+    </p>
+    <p class="cue" id="t245">
+      <a class="cue-time" href="../../../#test-2&amp;t=245">4:05</a>
+      <span class="cue-text">Mr.</span>
+    </p>
+    <p class="cue" id="t250">
+      <a class="cue-time" href="../../../#test-2&amp;t=250">4:10</a>
+      <span class="cue-text">Scrooge. What? I believe I finished all the paperwork you required of me and I</span>
+    </p>
+    <p class="cue" id="t257">
+      <a class="cue-time" href="../../../#test-2&amp;t=257">4:17</a>
+      <span class="cue-text">would like to… Like to what? But as I was saying, I'd somewhat like to go home to my</span>
+    </p>
+    <p class="cue" id="t264">
+      <a class="cue-time" href="../../../#test-2&amp;t=264">4:24</a>
+      <span class="cue-text">family now or soon. I did all you asked of me. May I… Depart? Yes.</span>
+    </p>
+    <p class="cue" id="t279">
+      <a class="cue-time" href="../../../#test-2&amp;t=279">4:39</a>
+      <span class="cue-text">Fine. Thank you kindly. Report here seven o'clock sharp tomorrow morning for your</span>
+    </p>
+    <p class="cue" id="t287">
+      <a class="cue-time" href="../../../#test-2&amp;t=287">4:47</a>
+      <span class="cue-text">shift. Christmas morning. Um, very well.</span>
+    </p>
+    <p class="cue" id="t305">
+      <a class="cue-time" href="../../../#test-2&amp;t=305">5:05</a>
+      <span class="cue-text">Oh, what's the list is? Don't you want to do it for money to charity? Alright, why</span>
+    </p>
+    <p class="cue" id="t312">
+      <a class="cue-time" href="../../../#test-2&amp;t=312">5:12</a>
+      <span class="cue-text">don't you go make your own money? Don't do that to charity.</span>
+    </p>
+    <p class="cue" id="t319">
+      <a class="cue-time" href="../../../#test-2&amp;t=319">5:19</a>
+      <span class="cue-text">Don't care about this one of you. Okay, alright.</span>
+    </p>
+    <p class="cue" id="t338">
+      <a class="cue-time" href="../../../#test-2&amp;t=338">5:38</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t343">
+      <a class="cue-time" href="../../../#test-2&amp;t=343">5:43</a>
+      <span class="cue-text">혹시 혹시</span>
+    </p>
+    <p class="cue" id="t348">
+      <a class="cue-time" href="../../../#test-2&amp;t=348">5:48</a>
+      <span class="cue-text">혹시 혹시</span>
+    </p>
+    <p class="cue" id="t358">
+      <a class="cue-time" href="../../../#test-2&amp;t=358">5:58</a>
+      <span class="cue-text">혹시</span>
+    </p>
+    <p class="cue" id="t366">
+      <a class="cue-time" href="../../../#test-2&amp;t=366">6:06</a>
+      <span class="cue-text">Ebonizer Scrooge, we have much to discuss. What do you want with me? As I said, much.</span>
+    </p>
+    <p class="cue" id="t382">
+      <a class="cue-time" href="../../../#test-2&amp;t=382">6:22</a>
+      <span class="cue-text">Who are you? Ask me who I was. Who were you? In life, I was your partner, Jacob</span>
+    </p>
+    <p class="cue" id="t398">
+      <a class="cue-time" href="../../../#test-2&amp;t=398">6:38</a>
+      <span class="cue-text">Marley.</span>
+    </p>
+    <p class="cue" id="t404">
+      <a class="cue-time" href="../../../#test-2&amp;t=404">6:44</a>
+      <span class="cue-text">I suspected as much. Can you sit down? Yes, I can. Do it then. You don't believe</span>
+    </p>
+    <p class="cue" id="t415">
+      <a class="cue-time" href="../../../#test-2&amp;t=415">6:55</a>
+      <span class="cue-text">in me, do you, Screech range. Indeed I do not. That would be preposterous. What</span>
+    </p>
+    <p class="cue" id="t423">
+      <a class="cue-time" href="../../../#test-2&amp;t=423">7:03</a>
+      <span class="cue-text">evidence do you have of my reality beyond that of your own senses? I don't know. You</span>
+    </p>
+    <p class="cue" id="t436">
+      <a class="cue-time" href="../../../#test-2&amp;t=436">7:16</a>
+      <span class="cue-text">doubt I exist? Indeed I do. Even the littlest thing can affect your senses. You</span>
+    </p>
+    <p class="cue" id="t444">
+      <a class="cue-time" href="../../../#test-2&amp;t=444">7:24</a>
+      <span class="cue-text">could be a bit of undigested beef. A splot of mustard. A crumb of cheese. A fragment</span>
+    </p>
+    <p class="cue" id="t452">
+      <a class="cue-time" href="../../../#test-2&amp;t=452">7:32</a>
+      <span class="cue-text">of an underbaked potato. There's more of gravy to you than grave. Whatever you are.</span>
+    </p>
+    <p class="cue" id="t460">
+      <a class="cue-time" href="../../../#test-2&amp;t=460">7:40</a>
+      <span class="cue-text">– No! – Mercy, Harley! Why did you come here? Man of worldly mind. Do you believe</span>
+    </p>
+    <p class="cue" id="t470">
+      <a class="cue-time" href="../../../#test-2&amp;t=470">7:50</a>
+      <span class="cue-text">in me or not? – I do. I must. I'm bored never more than that. You're vetted in</span>
+    </p>
+    <p class="cue" id="t480">
+      <a class="cue-time" href="../../../#test-2&amp;t=480">8:00</a>
+      <span class="cue-text">chains. Why? I wear the chains. I boised in life. I made it link by link. Yard by</span>
+    </p>
+    <p class="cue" id="t492">
+      <a class="cue-time" href="../../../#test-2&amp;t=492">8:12</a>
+      <span class="cue-text">yard. I girded it of my own free will. And of my own free will, I bore its wit. What?</span>
+    </p>
+    <p class="cue" id="t504">
+      <a class="cue-time" href="../../../#test-2&amp;t=504">8:24</a>
+      <span class="cue-text">Scrooge, do you not know the weight and length of the chains you bear yourself?</span>
+    </p>
+    <p class="cue" id="t513">
+      <a class="cue-time" href="../../../#test-2&amp;t=513">8:33</a>
+      <span class="cue-text">You've been generously adding a link to the chain with every day, with every hour,</span>
+    </p>
+    <p class="cue" id="t521">
+      <a class="cue-time" href="../../../#test-2&amp;t=521">8:41</a>
+      <span class="cue-text">with every minute replacing the wedding ring you would have had seven Christmases</span>
+    </p>
+    <p class="cue" id="t528">
+      <a class="cue-time" href="../../../#test-2&amp;t=528">8:48</a>
+      <span class="cue-text">ago. Jacob or Marley, say no more. Please speak comfort to me. I have none to give.</span>
+    </p>
+    <p class="cue" id="t543">
+      <a class="cue-time" href="../../../#test-2&amp;t=543">9:03</a>
+      <span class="cue-text">Nothing. No peace. No rest. Nothing but a money-changing pet with no end choked with</span>
+    </p>
+    <p class="cue" id="t555">
+      <a class="cue-time" href="../../../#test-2&amp;t=555">9:15</a>
+      <span class="cue-text">gold and metal. A meal which you shall devour. But I only ate. And yet you</span>
+    </p>
+    <p class="cue" id="t567">
+      <a class="cue-time" href="../../../#test-2&amp;t=567">9:27</a>
+      <span class="cue-text">hunger. An insatiable desire which affects your senses more than an underdone potato.</span>
+    </p>
+    <p class="cue" id="t578">
+      <a class="cue-time" href="../../../#test-2&amp;t=578">9:38</a>
+      <span class="cue-text">You are undying, unliving as I was. But you were a great man. A wonderful business</span>
+    </p>
+    <p class="cue" id="t589">
+      <a class="cue-time" href="../../../#test-2&amp;t=589">9:49</a>
+      <span class="cue-text">partner. Oh, I hope you succeed. Mankind was my business, but you thrust upon me a</span>
+    </p>
+    <p class="cue" id="t597">
+      <a class="cue-time" href="../../../#test-2&amp;t=597">9:57</a>
+      <span class="cue-text">mantle of metal.</span>
+    </p>
+    <p class="cue" id="t601">
+      <a class="cue-time" href="../../../#test-2&amp;t=601">10:01</a>
+      <span class="cue-text">Leaving me choking on your currency as you are now. You are a successful businessman.</span>
+    </p>
+    <p class="cue" id="t610">
+      <a class="cue-time" href="../../../#test-2&amp;t=610">10:10</a>
+      <span class="cue-text">Well off. Surely you could purchase your way out of these chains. I wear the gold.</span>
+    </p>
+    <p class="cue" id="t616">
+      <a class="cue-time" href="../../../#test-2&amp;t=616">10:16</a>
+      <span class="cue-text">I earned in life. It binds me. Binds me to those to which I should have helped.</span>
+    </p>
+    <p class="cue" id="t628">
+      <a class="cue-time" href="../../../#test-2&amp;t=628">10:28</a>
+      <span class="cue-text">Surely you could help me out of this. You will be haunted by three spirits. Expect</span>
+    </p>
+    <p class="cue" id="t638">
+      <a class="cue-time" href="../../../#test-2&amp;t=638">10:38</a>
+      <span class="cue-text">the first tonight. It's late. I really should be getting to sleep. And the next</span>
+    </p>
+    <p class="cue" id="t646">
+      <a class="cue-time" href="../../../#test-2&amp;t=646">10:46</a>
+      <span class="cue-text">to come. And the third to come after. What am I supposed to do? How am I supposed to</span>
+    </p>
+    <p class="cue" id="t656">
+      <a class="cue-time" href="../../../#test-2&amp;t=656">10:56</a>
+      <span class="cue-text">fix this? You should get some rest. You'll need it. Wait! Marnie! What am I supposed</span>
+    </p>
+    <p class="cue" id="t668">
+      <a class="cue-time" href="../../../#test-2&amp;t=668">11:08</a>
+      <span class="cue-text">to do?</span>
+    </p>
+    <p class="cue" id="t681">
+      <a class="cue-time" href="../../../#test-2&amp;t=681">11:21</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t681">
+      <a class="cue-time" href="../../../#test-2&amp;t=681">11:21</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t681">
+      <a class="cue-time" href="../../../#test-2&amp;t=681">11:21</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t682">
+      <a class="cue-time" href="../../../#test-2&amp;t=682">11:22</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t682">
+      <a class="cue-time" href="../../../#test-2&amp;t=682">11:22</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t685">
+      <a class="cue-time" href="../../../#test-2&amp;t=685">11:25</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t685">
+      <a class="cue-time" href="../../../#test-2&amp;t=685">11:25</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t690">
+      <a class="cue-time" href="../../../#test-2&amp;t=690">11:30</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t691">
+      <a class="cue-time" href="../../../#test-2&amp;t=691">11:31</a>
+      <span class="cue-text">혹시</span>
+    </p>
+    <p class="cue" id="t697">
+      <a class="cue-time" href="../../../#test-2&amp;t=697">11:37</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t698">
+      <a class="cue-time" href="../../../#test-2&amp;t=698">11:38</a>
+      <span class="cue-text">혹시 혹시</span>
+    </p>
+    <p class="cue" id="t717">
+      <a class="cue-time" href="../../../#test-2&amp;t=717">11:57</a>
+      <span class="cue-text">It was just an old man. That's all. Did you really think I'd be hiding under your</span>
+    </p>
+    <p class="cue" id="t727">
+      <a class="cue-time" href="../../../#test-2&amp;t=727">12:07</a>
+      <span class="cue-text">bed? Who are you and how did you get in here? I am the ghost of Christmas past and</span>
+    </p>
+    <p class="cue" id="t736">
+      <a class="cue-time" href="../../../#test-2&amp;t=736">12:16</a>
+      <span class="cue-text">we have much to discuss. You, I remember you. Do you really think that breaking</span>
+    </p>
+    <p class="cue" id="t743">
+      <a class="cue-time" href="../../../#test-2&amp;t=743">12:23</a>
+      <span class="cue-text">into my house and putting on this charade will get a single penny out of me I'm</span>
+    </p>
+    <p class="cue" id="t748">
+      <a class="cue-time" href="../../../#test-2&amp;t=748">12:28</a>
+      <span class="cue-text">calling the police. First of all, they are all off duty Christmas night and even if</span>
+    </p>
+    <p class="cue" id="t754">
+      <a class="cue-time" href="../../../#test-2&amp;t=754">12:34</a>
+      <span class="cue-text">they weren't it would not be necessary. But did I not tell you to stay out of my</span>
+    </p>
+    <p class="cue" id="t759">
+      <a class="cue-time" href="../../../#test-2&amp;t=759">12:39</a>
+      <span class="cue-text">business? I am a spirit. I am not the man who asked you for donations yesterday. I</span>
+    </p>
+    <p class="cue" id="t766">
+      <a class="cue-time" href="../../../#test-2&amp;t=766">12:46</a>
+      <span class="cue-text">simply bear his likeness as he is the only one who has recently pricked your</span>
+    </p>
+    <p class="cue" id="t772">
+      <a class="cue-time" href="../../../#test-2&amp;t=772">12:52</a>
+      <span class="cue-text">conscience. This is absurd, Umbug. Perhaps so, but there are only so many hours in</span>
+    </p>
+    <p class="cue" id="t780">
+      <a class="cue-time" href="../../../#test-2&amp;t=780">13:00</a>
+      <span class="cue-text">the night and we need to get started. Well, at least let me get dressed.</span>
+    </p>
+    <p class="cue" id="t794">
+      <a class="cue-time" href="../../../#test-2&amp;t=794">13:14</a>
+      <span class="cue-text">It matters little. It's not very little.</span>
+    </p>
+    <p class="cue" id="t801">
+      <a class="cue-time" href="../../../#test-2&amp;t=801">13:21</a>
+      <span class="cue-text">Another idol has displaced me. And if it can bring you the same cheer and comfort</span>
+    </p>
+    <p class="cue" id="t808">
+      <a class="cue-time" href="../../../#test-2&amp;t=808">13:28</a>
+      <span class="cue-text">as I would have tried to bring, then I am happy for you. Do you hear me, Atisa?</span>
+    </p>
+    <p class="cue" id="t820">
+      <a class="cue-time" href="../../../#test-2&amp;t=820">13:40</a>
+      <span class="cue-text">– What idol has displaced you? – A golden one. – I use</span>
+    </p>
+    <p class="cue" id="t832">
+      <a class="cue-time" href="../../../#test-2&amp;t=832">13:52</a>
+      <span class="cue-text">that so-called idol to help me. To help you. I'm doing this for us. You know that,</span>
+    </p>
+    <p class="cue" id="t841">
+      <a class="cue-time" href="../../../#test-2&amp;t=841">14:01</a>
+      <span class="cue-text">right?</span>
+    </p>
+    <p class="cue" id="t845">
+      <a class="cue-time" href="../../../#test-2&amp;t=845">14:05</a>
+      <span class="cue-text">You fear the world too much. You have sold your nobler aspirations for gemstones</span>
+    </p>
+    <p class="cue" id="t850">
+      <a class="cue-time" href="../../../#test-2&amp;t=850">14:10</a>
+      <span class="cue-text">until you are encased by them. Am I wrong? So what? If I have grown to be so much</span>
+    </p>
+    <p class="cue" id="t859">
+      <a class="cue-time" href="../../../#test-2&amp;t=859">14:19</a>
+      <span class="cue-text">wiser, then what? Am I not the same to you?</span>
+    </p>
+    <p class="cue" id="t866">
+      <a class="cue-time" href="../../../#test-2&amp;t=866">14:26</a>
+      <span class="cue-text">4,008. 4,009.</span>
+    </p>
+    <p class="cue" id="t873">
+      <a class="cue-time" href="../../../#test-2&amp;t=873">14:33</a>
+      <span class="cue-text">Am I? Our contract is an old one. It was made when we were both poor and content to</span>
+    </p>
+    <p class="cue" id="t881">
+      <a class="cue-time" href="../../../#test-2&amp;t=881">14:41</a>
+      <span class="cue-text">be so. I was a boy then. You still are one. You are a child with a bounteous</span>
+    </p>
+    <p class="cue" id="t889">
+      <a class="cue-time" href="../../../#test-2&amp;t=889">14:49</a>
+      <span class="cue-text">mountain of golden toys to play with. All the while saying mine, mine, Mine. Oh, I</span>
+    </p>
+    <p class="cue" id="t894">
+      <a class="cue-time" href="../../../#test-2&amp;t=894">14:54</a>
+      <span class="cue-text">share plenty. What's that spark you once had? It's gone to the glinting of your</span>
+    </p>
+    <p class="cue" id="t900">
+      <a class="cue-time" href="../../../#test-2&amp;t=900">15:00</a>
+      <span class="cue-text">gold. It sucked out the man you once were. I released</span>
+    </p>
+    <p class="cue" id="t909">
+      <a class="cue-time" href="../../../#test-2&amp;t=909">15:09</a>
+      <span class="cue-text">you, Ebenezer. – Yeah.</span>
+    </p>
+    <p class="cue" id="t926">
+      <a class="cue-time" href="../../../#test-2&amp;t=926">15:26</a>
+      <span class="cue-text">– Bah, humbug. She never cared about me anyways. She abandoned me. She left me.</span>
+    </p>
+    <p class="cue" id="t936">
+      <a class="cue-time" href="../../../#test-2&amp;t=936">15:36</a>
+      <span class="cue-text">Ah, you think she's the one who abandoned you. See for yourself. Go follow her. Put</span>
+    </p>
+    <p class="cue" id="t946">
+      <a class="cue-time" href="../../../#test-2&amp;t=946">15:46</a>
+      <span class="cue-text">yourself in her position and see what she loves. She can't even begin to list all</span>
+    </p>
+    <p class="cue" id="t953">
+      <a class="cue-time" href="../../../#test-2&amp;t=953">15:53</a>
+      <span class="cue-text">the things that she's done for you. You have turned her love for you</span>
+    </p>
+    <p class="cue" id="t957">
+      <a class="cue-time" href="../../../#test-2&amp;t=957">15:57</a>
+      <span class="cue-text">transactional. Do you really love her? Or do you simply love the idea of having a</span>
+    </p>
+    <p class="cue" id="t965">
+      <a class="cue-time" href="../../../#test-2&amp;t=965">16:05</a>
+      <span class="cue-text">lady to run your home as you expy expensive dresses, jewels, and trinkets</span>
+    </p>
+    <p class="cue" id="t970">
+      <a class="cue-time" href="../../../#test-2&amp;t=970">16:10</a>
+      <span class="cue-text">wore up. Believing she desires to spend her days alone in the parlor gossiping</span>
+    </p>
+    <p class="cue" id="t977">
+      <a class="cue-time" href="../../../#test-2&amp;t=977">16:17</a>
+      <span class="cue-text">with false friends and conversing with socialites. While you bid her come and go</span>
+    </p>
+    <p class="cue" id="t983">
+      <a class="cue-time" href="../../../#test-2&amp;t=983">16:23</a>
+      <span class="cue-text">as if her master and not the man she fell in love with. You of all people should</span>
+    </p>
+    <p class="cue" id="t990">
+      <a class="cue-time" href="../../../#test-2&amp;t=990">16:30</a>
+      <span class="cue-text">understand. Leave. Leave it behind.</span>
+    </p>
+    <p class="cue" id="t1000">
+      <a class="cue-time" href="../../../#test-2&amp;t=1000">16:40</a>
+      <span class="cue-text">I'm doing this for us. Why can't she understand that? Don't the ladies want</span>
+    </p>
+    <p class="cue" id="t1007">
+      <a class="cue-time" href="../../../#test-2&amp;t=1007">16:47</a>
+      <span class="cue-text">nice things?</span>
+    </p>
+    <p class="cue" id="t1017">
+      <a class="cue-time" href="../../../#test-2&amp;t=1017">16:57</a>
+      <span class="cue-text">You can't hide from me.</span>
+    </p>
+    <p class="cue" id="t1029">
+      <a class="cue-time" href="../../../#test-2&amp;t=1029">17:09</a>
+      <span class="cue-text">Sorry.</span>
+    </p>
+    <p class="cue" id="t1049">
+      <a class="cue-time" href="../../../#test-2&amp;t=1049">17:29</a>
+      <span class="cue-text">Do you have anything more to show me? Not I, but time for you to go. Oh</span>
+    </p>
+    <p class="cue" id="t1069">
+      <a class="cue-time" href="../../../#test-2&amp;t=1069">17:49</a>
+      <span class="cue-text">Molly</span>
+    </p>
+    <p class="cue" id="t1076">
+      <a class="cue-time" href="../../../#test-2&amp;t=1076">17:56</a>
+      <span class="cue-text">Spirit Why? Why have you come back? Come back! Oh, I'm really getting started. You</span>
+    </p>
+    <p class="cue" id="t1088">
+      <a class="cue-time" href="../../../#test-2&amp;t=1088">18:08</a>
+      <span class="cue-text">haven't met me yet, stranger.</span>
+    </p>
+    <p class="cue" id="t1093">
+      <a class="cue-time" href="../../../#test-2&amp;t=1093">18:13</a>
+      <span class="cue-text">Come in! The plum pudding's getting cold.</span>
+    </p>
+    <p class="cue" id="t1112">
+      <a class="cue-time" href="../../../#test-2&amp;t=1112">18:32</a>
+      <span class="cue-text">Sonny 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1112">
+      <a class="cue-time" href="../../../#test-2&amp;t=1112">18:32</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1112">
+      <a class="cue-time" href="../../../#test-2&amp;t=1112">18:32</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1112">
+      <a class="cue-time" href="../../../#test-2&amp;t=1112">18:32</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1112">
+      <a class="cue-time" href="../../../#test-2&amp;t=1112">18:32</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1113">
+      <a class="cue-time" href="../../../#test-2&amp;t=1113">18:33</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1113">
+      <a class="cue-time" href="../../../#test-2&amp;t=1113">18:33</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1113">
+      <a class="cue-time" href="../../../#test-2&amp;t=1113">18:33</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1123">
+      <a class="cue-time" href="../../../#test-2&amp;t=1123">18:43</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1128">
+      <a class="cue-time" href="../../../#test-2&amp;t=1128">18:48</a>
+      <span class="cue-text">Belle?</span>
+    </p>
+    <p class="cue" id="t1133">
+      <a class="cue-time" href="../../../#test-2&amp;t=1133">18:53</a>
+      <span class="cue-text">Oh, I'm not your sweet Belle. She's but a memory now. Whereas I'm the ghost of</span>
+    </p>
+    <p class="cue" id="t1140">
+      <a class="cue-time" href="../../../#test-2&amp;t=1140">19:00</a>
+      <span class="cue-text">Christmas presents. We thought you'd listen more if you saw the likes of her.</span>
+    </p>
+    <p class="cue" id="t1146">
+      <a class="cue-time" href="../../../#test-2&amp;t=1146">19:06</a>
+      <span class="cue-text">Oh, fucking ghosts. What have you done with Belle? Eponisa, why must you be so</span>
+    </p>
+    <p class="cue" id="t1153">
+      <a class="cue-time" href="../../../#test-2&amp;t=1153">19:13</a>
+      <span class="cue-text">downtrodden? So pathetic. I come to bring joy and happiness. to those who deserve</span>
+    </p>
+    <p class="cue" id="t1160">
+      <a class="cue-time" href="../../../#test-2&amp;t=1160">19:20</a>
+      <span class="cue-text">it. I own plenty in my own right. This is nonsense. Where's the plum pudding? Or is</span>
+    </p>
+    <p class="cue" id="t1170">
+      <a class="cue-time" href="../../../#test-2&amp;t=1170">19:30</a>
+      <span class="cue-text">that what you promised Belle you would share?</span>
+    </p>
+    <p class="cue" id="t1175">
+      <a class="cue-time" href="../../../#test-2&amp;t=1175">19:35</a>
+      <span class="cue-text">Nevertheless, it is time I teach. Let us go visit some old friends.</span>
+    </p>
+    <p class="cue" id="t1200">
+      <a class="cue-time" href="../../../#test-2&amp;t=1200">20:00</a>
+      <span class="cue-text">Unbog! I will learn whenever unboxing the… What</span>
+    </p>
+    <p class="cue" id="t1206">
+      <a class="cue-time" href="../../../#test-2&amp;t=1206">20:06</a>
+      <span class="cue-text">is this? You know the crotchets. Never mind the crotchets. I know who they are.</span>
+    </p>
+    <p class="cue" id="t1212">
+      <a class="cue-time" href="../../../#test-2&amp;t=1212">20:12</a>
+      <span class="cue-text">Mr. Crouch, it works for me. And yet you barely pay him anything worth his efforts.</span>
+    </p>
+    <p class="cue" id="t1218">
+      <a class="cue-time" href="../../../#test-2&amp;t=1218">20:18</a>
+      <span class="cue-text">He barely knows how to spend his wages in a sophisticated manner, that man. You have</span>
+    </p>
+    <p class="cue" id="t1224">
+      <a class="cue-time" href="../../../#test-2&amp;t=1224">20:24</a>
+      <span class="cue-text">a lot to learn. Not to mention your incessant harsh words, Scrooge. It's a</span>
+    </p>
+    <p class="cue" id="t1229">
+      <a class="cue-time" href="../../../#test-2&amp;t=1229">20:29</a>
+      <span class="cue-text">miracle he can't yet hear you already. Pfft. Close.</span>
+    </p>
+    <p class="cue" id="t1238">
+      <a class="cue-time" href="../../../#test-2&amp;t=1238">20:38</a>
+      <span class="cue-text">Children, I understand I said I would be here for Christmas, but Scrooge asked me</span>
+    </p>
+    <p class="cue" id="t1244">
+      <a class="cue-time" href="../../../#test-2&amp;t=1244">20:44</a>
+      <span class="cue-text">to come into work today. Father, it's Christmas Day. When will you be home? I</span>
+    </p>
+    <p class="cue" id="t1251">
+      <a class="cue-time" href="../../../#test-2&amp;t=1251">20:51</a>
+      <span class="cue-text">don't know. Father, we don't have enough food for Christmas dinner. And I didn't</span>
+    </p>
+    <p class="cue" id="t1257">
+      <a class="cue-time" href="../../../#test-2&amp;t=1257">20:57</a>
+      <span class="cue-text">get a gift for you or Peter like I hoped. I don't need no gifts. Thank you, though,</span>
+    </p>
+    <p class="cue" id="t1263">
+      <a class="cue-time" href="../../../#test-2&amp;t=1263">21:03</a>
+      <span class="cue-text">son.</span>
+    </p>
+    <p class="cue" id="t1266">
+      <a class="cue-time" href="../../../#test-2&amp;t=1266">21:06</a>
+      <span class="cue-text">We don't even have a mother for Christmas anymore. Her presence was gift enough for</span>
+    </p>
+    <p class="cue" id="t1272">
+      <a class="cue-time" href="../../../#test-2&amp;t=1272">21:12</a>
+      <span class="cue-text">me. I know. God bless us. God bless us everyone. Now we're inside, children. It's</span>
+    </p>
+    <p class="cue" id="t1280">
+      <a class="cue-time" href="../../../#test-2&amp;t=1280">21:20</a>
+      <span class="cue-text">mighty chilly out here. Father, we can handle the cold. We're strong like you.</span>
+    </p>
+    <p class="cue" id="t1285">
+      <a class="cue-time" href="../../../#test-2&amp;t=1285">21:25</a>
+      <span class="cue-text">Bob knows Tiny Tim could have a few mere weeks or months left. This could be their</span>
+    </p>
+    <p class="cue" id="t1291">
+      <a class="cue-time" href="../../../#test-2&amp;t=1291">21:31</a>
+      <span class="cue-text">last Christmas together.</span>
+    </p>
+    <p class="cue" id="t1296">
+      <a class="cue-time" href="../../../#test-2&amp;t=1296">21:36</a>
+      <span class="cue-text">What should I care? Mercy Scrooge! Don't you want to be labeled a liability and</span>
+    </p>
+    <p class="cue" id="t1303">
+      <a class="cue-time" href="../../../#test-2&amp;t=1303">21:43</a>
+      <span class="cue-text">simply tossed aside as an inconvenience because of a defect you have no control</span>
+    </p>
+    <p class="cue" id="t1307">
+      <a class="cue-time" href="../../../#test-2&amp;t=1307">21:47</a>
+      <span class="cue-text">over?</span>
+    </p>
+    <p class="cue" id="t1311">
+      <a class="cue-time" href="../../../#test-2&amp;t=1311">21:51</a>
+      <span class="cue-text">Tim, it's time to come inside now. Let me finish my drawing. Just five more minutes.</span>
+    </p>
+    <p class="cue" id="t1319">
+      <a class="cue-time" href="../../../#test-2&amp;t=1319">21:59</a>
+      <span class="cue-text">Five minutes. But father doesn't want you getting sick on my watch. So hurry it up.</span>
+    </p>
+    <p class="cue" id="t1326">
+      <a class="cue-time" href="../../../#test-2&amp;t=1326">22:06</a>
+      <span class="cue-text">We can play with those wooden soldiers I carved for you.!</span>
+    </p>
+    <p class="cue" id="t1356">
+      <a class="cue-time" href="../../../#test-2&amp;t=1356">22:36</a>
+      <span class="cue-text">Kim? It's time to come inside.</span>
+    </p>
+    <p class="cue" id="t1368">
+      <a class="cue-time" href="../../../#test-2&amp;t=1368">22:48</a>
+      <span class="cue-text">Merry Christmas.</span>
+    </p>
+    <p class="cue" id="t1373">
+      <a class="cue-time" href="../../../#test-2&amp;t=1373">22:53</a>
+      <span class="cue-text">Merry Christmas.</span>
+    </p>
+    <p class="cue" id="t1393">
+      <a class="cue-time" href="../../../#test-2&amp;t=1393">23:13</a>
+      <span class="cue-text">I think I'll keep this.</span>
+    </p>
+    <p class="cue" id="t1410">
+      <a class="cue-time" href="../../../#test-2&amp;t=1410">23:30</a>
+      <span class="cue-text">Wait! Where are you going? Oh, you want it back? Alright.</span>
+    </p>
+    <p class="cue" id="t1438">
+      <a class="cue-time" href="../../../#test-2&amp;t=1438">23:58</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1438">
+      <a class="cue-time" href="../../../#test-2&amp;t=1438">23:58</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1438">
+      <a class="cue-time" href="../../../#test-2&amp;t=1438">23:58</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1438">
+      <a class="cue-time" href="../../../#test-2&amp;t=1438">23:58</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1438">
+      <a class="cue-time" href="../../../#test-2&amp;t=1438">23:58</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1438">
+      <a class="cue-time" href="../../../#test-2&amp;t=1438">23:58</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1439">
+      <a class="cue-time" href="../../../#test-2&amp;t=1439">23:59</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1439">
+      <a class="cue-time" href="../../../#test-2&amp;t=1439">23:59</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1446">
+      <a class="cue-time" href="../../../#test-2&amp;t=1446">24:06</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 Tiny Tim, where are you now?</span>
+    </p>
+    <p class="cue" id="t1456">
+      <a class="cue-time" href="../../../#test-2&amp;t=1456">24:16</a>
+      <span class="cue-text">Tim, this isn't a joke.</span>
+    </p>
+    <p class="cue" id="t1464">
+      <a class="cue-time" href="../../../#test-2&amp;t=1464">24:24</a>
+      <span class="cue-text">Tim?</span>
+    </p>
+    <p class="cue" id="t1467">
+      <a class="cue-time" href="../../../#test-2&amp;t=1467">24:27</a>
+      <span class="cue-text">Timothy Cratchit?</span>
+    </p>
+    <p class="cue" id="t1483">
+      <a class="cue-time" href="../../../#test-2&amp;t=1483">24:43</a>
+      <span class="cue-text">Very long.</span>
+    </p>
+    <p class="cue" id="t1493">
+      <a class="cue-time" href="../../../#test-2&amp;t=1493">24:53</a>
+      <span class="cue-text">Past. Present. And… it must be the ghost of Christmas future.</span>
+    </p>
+    <p class="cue" id="t1505">
+      <a class="cue-time" href="../../../#test-2&amp;t=1505">25:05</a>
+      <span class="cue-text">Oh, wonderful. Take me to the stock market. Knowing the outcome of future</span>
+    </p>
+    <p class="cue" id="t1510">
+      <a class="cue-time" href="../../../#test-2&amp;t=1510">25:10</a>
+      <span class="cue-text">investments could do wonders for my business.</span>
+    </p>
+    <p class="cue" id="t1518">
+      <a class="cue-time" href="../../../#test-2&amp;t=1518">25:18</a>
+      <span class="cue-text">What do you mean? What could possibly be more important in the future than the</span>
+    </p>
+    <p class="cue" id="t1522">
+      <a class="cue-time" href="../../../#test-2&amp;t=1522">25:22</a>
+      <span class="cue-text">stock market?</span>
+    </p>
+    <p class="cue" id="t1535">
+      <a class="cue-time" href="../../../#test-2&amp;t=1535">25:35</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1536">
+      <a class="cue-time" href="../../../#test-2&amp;t=1536">25:36</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1536">
+      <a class="cue-time" href="../../../#test-2&amp;t=1536">25:36</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1536">
+      <a class="cue-time" href="../../../#test-2&amp;t=1536">25:36</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1536">
+      <a class="cue-time" href="../../../#test-2&amp;t=1536">25:36</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1537">
+      <a class="cue-time" href="../../../#test-2&amp;t=1537">25:37</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1537">
+      <a class="cue-time" href="../../../#test-2&amp;t=1537">25:37</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1537">
+      <a class="cue-time" href="../../../#test-2&amp;t=1537">25:37</a>
+      <span class="cue-text">혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시 혹시</span>
+    </p>
+    <p class="cue" id="t1552">
+      <a class="cue-time" href="../../../#test-2&amp;t=1552">25:52</a>
+      <span class="cue-text">혹시</span>
+    </p>
+    <p class="cue" id="t1559">
+      <a class="cue-time" href="../../../#test-2&amp;t=1559">25:59</a>
+      <span class="cue-text">Why am I here again? Why must I relive this torment over and over? Are my basic</span>
+    </p>
+    <p class="cue" id="t1567">
+      <a class="cue-time" href="../../../#test-2&amp;t=1567">26:07</a>
+      <span class="cue-text">needs for communication a torment to you? Is it simply too much for you to put those</span>
+    </p>
+    <p class="cue" id="t1572">
+      <a class="cue-time" href="../../../#test-2&amp;t=1572">26:12</a>
+      <span class="cue-text">coins away and really truly listen to me? Well, I… Do I matter to you? Or do these</span>
+    </p>
+    <p class="cue" id="t1584">
+      <a class="cue-time" href="../../../#test-2&amp;t=1584">26:24</a>
+      <span class="cue-text">measly pieces of metal bring more happiness to you in life than the people</span>
+    </p>
+    <p class="cue" id="t1587">
+      <a class="cue-time" href="../../../#test-2&amp;t=1587">26:27</a>
+      <span class="cue-text">you love? Than me? You care little to nothing for anyone let alone for me.</span>
+    </p>
+    <p class="cue" id="t1592">
+      <a class="cue-time" href="../../../#test-2&amp;t=1592">26:32</a>
+      <span class="cue-text">That's not true.</span>
+    </p>
+    <p class="cue" id="t1605">
+      <a class="cue-time" href="../../../#test-2&amp;t=1605">26:45</a>
+      <span class="cue-text">This is easier than I thought it would be, Ebenezer. I released you! No!</span>
+    </p>
+    <p class="cue" id="t1613">
+      <a class="cue-time" href="../../../#test-2&amp;t=1613">26:53</a>
+      <span class="cue-text">Isn't it illegal to destroy credency?</span>
+    </p>
+    <p class="cue" id="t1618">
+      <a class="cue-time" href="../../../#test-2&amp;t=1618">26:58</a>
+      <span class="cue-text">What just happened? What happened is that you were given a chance that most men can</span>
+    </p>
+    <p class="cue" id="t1625">
+      <a class="cue-time" href="../../../#test-2&amp;t=1625">27:05</a>
+      <span class="cue-text">only dream of. The chance to do things differently. We can see where that went.</span>
+    </p>
+    <p class="cue" id="t1635">
+      <a class="cue-time" href="../../../#test-2&amp;t=1635">27:15</a>
+      <span class="cue-text">Now what? Now we discuss your mistakes so that you can learn from them. First of</span>
+    </p>
+    <p class="cue" id="t1645">
+      <a class="cue-time" href="../../../#test-2&amp;t=1645">27:25</a>
+      <span class="cue-text">all, you are the only one in this reality who can see and hear me. Hey, think of me</span>
+    </p>
+    <p class="cue" id="t1652">
+      <a class="cue-time" href="../../../#test-2&amp;t=1652">27:32</a>
+      <span class="cue-text">as your imaginary friend. When you were yelling at me earlier, Belle naturally</span>
+    </p>
+    <p class="cue" id="t1658">
+      <a class="cue-time" href="../../../#test-2&amp;t=1658">27:38</a>
+      <span class="cue-text">thought you were yelling at her. But you were standing right there. You and I are</span>
+    </p>
+    <p class="cue" id="t1664">
+      <a class="cue-time" href="../../../#test-2&amp;t=1664">27:44</a>
+      <span class="cue-text">the only ones who know that. Give me another chance. Didn't do a tie, but that</span>
+    </p>
+    <p class="cue" id="t1673">
+      <a class="cue-time" href="../../../#test-2&amp;t=1673">27:53</a>
+      <span class="cue-text">alone is progress. Progress. Your desire to do better. Okay. Now, brace yourself.</span>
+    </p>
+    <p class="cue" id="t1682">
+      <a class="cue-time" href="../../../#test-2&amp;t=1682">28:02</a>
+      <span class="cue-text">It is quite cold outside.</span>
+    </p>
+    <p class="cue" id="t1687">
+      <a class="cue-time" href="../../../#test-2&amp;t=1687">28:07</a>
+      <span class="cue-text">Bell, you're back. Right. You're not there.</span>
+    </p>
+    <p class="cue" id="t1695">
+      <a class="cue-time" href="../../../#test-2&amp;t=1695">28:15</a>
+      <span class="cue-text">Where am I? 9th street? You! What are you doing here? Uh, I'm going to work.</span>
+    </p>
+    <p class="cue" id="t1716">
+      <a class="cue-time" href="../../../#test-2&amp;t=1716">28:36</a>
+      <span class="cue-text">Here's your chance. Make it count.</span>
+    </p>
+    <p class="cue" id="t1746">
+      <a class="cue-time" href="../../../#test-2&amp;t=1746">29:06</a>
+      <span class="cue-text">What? It's because of me you still have one. You accept it, Mami.</span>
+    </p>
+    <p class="cue" id="t1756">
+      <a class="cue-time" href="../../../#test-2&amp;t=1756">29:16</a>
+      <span class="cue-text">Ah! Hey! It matters little to you very little. Another idol has displaced me. And</span>
+    </p>
+    <p class="cue" id="t1768">
+      <a class="cue-time" href="../../../#test-2&amp;t=1768">29:28</a>
+      <span class="cue-text">if it can bring you the same cheer and comfort as I would have tried to do, then</span>
+    </p>
+    <p class="cue" id="t1775">
+      <a class="cue-time" href="../../../#test-2&amp;t=1775">29:35</a>
+      <span class="cue-text">I am happy for you. I do know I do know what idol has displaced you. It's gold,</span>
+    </p>
+    <p class="cue" id="t1783">
+      <a class="cue-time" href="../../../#test-2&amp;t=1783">29:43</a>
+      <span class="cue-text">isn't it? What? Have you any need to be so prejudiced about that fact? Why would I be</span>
+    </p>
+    <p class="cue" id="t1793">
+      <a class="cue-time" href="../../../#test-2&amp;t=1793">29:53</a>
+      <span class="cue-text">prejudiced about wanting to repair things? You are doing a terrible job of repairing</span>
+    </p>
+    <p class="cue" id="t1799">
+      <a class="cue-time" href="../../../#test-2&amp;t=1799">29:59</a>
+      <span class="cue-text">anything right now. This is going nowhere. Simply show her that you love her. Fine</span>
+    </p>
+    <p class="cue" id="t1806">
+      <a class="cue-time" href="../../../#test-2&amp;t=1806">30:06</a>
+      <span class="cue-text">idea. Belle, I love you. You love me? Me? You make me unsure. Why? Why should I</span>
+    </p>
+    <p class="cue" id="t1817">
+      <a class="cue-time" href="../../../#test-2&amp;t=1817">30:17</a>
+      <span class="cue-text">trust you? You've all but forgotten me for your precious gold.</span>
+    </p>
+    <p class="cue" id="t1824">
+      <a class="cue-time" href="../../../#test-2&amp;t=1824">30:24</a>
+      <span class="cue-text">I'd follow her and apologize if I were you. You could still salvage this.</span>
+    </p>
+    <p class="cue" id="t1831">
+      <a class="cue-time" href="../../../#test-2&amp;t=1831">30:31</a>
+      <span class="cue-text">What's the point? What am I to do? You.</span>
+    </p>
+    <p class="cue" id="t1841">
+      <a class="cue-time" href="../../../#test-2&amp;t=1841">30:41</a>
+      <span class="cue-text">How am I going to mend this? She sees me as a mere tax collector. There's little</span>
+    </p>
+    <p class="cue" id="t1848">
+      <a class="cue-time" href="../../../#test-2&amp;t=1848">30:48</a>
+      <span class="cue-text">charm in that. Well, on the bright side, you are humbled. Please let that be</span>
+    </p>
+    <p class="cue" id="t1856">
+      <a class="cue-time" href="../../../#test-2&amp;t=1856">30:56</a>
+      <span class="cue-text">sufficient, spirit. What good are my weak attempts to redeem myself? This is</span>
+    </p>
+    <p class="cue" id="t1864">
+      <a class="cue-time" href="../../../#test-2&amp;t=1864">31:04</a>
+      <span class="cue-text">anguish.</span>
+    </p>
+    <p class="cue" id="t1868">
+      <a class="cue-time" href="../../../#test-2&amp;t=1868">31:08</a>
+      <span class="cue-text">If you think that is sufficient, well have it go away. I didn't mean it like that!</span>
+    </p>
+    <p class="cue" id="t1889">
+      <a class="cue-time" href="../../../#test-2&amp;t=1889">31:29</a>
+      <span class="cue-text">Oh! Hey! Are you alright? You seem distraught. You've been running around and</span>
+    </p>
+    <p class="cue" id="t1895">
+      <a class="cue-time" href="../../../#test-2&amp;t=1895">31:35</a>
+      <span class="cue-text">screaming. That's because I've been re -living my on-bogging fast! Ah, re-living</span>
+    </p>
+    <p class="cue" id="t1903">
+      <a class="cue-time" href="../../../#test-2&amp;t=1903">31:43</a>
+      <span class="cue-text">old memories. I've been there too, so it's kind of bad. thing to… No, not memories.</span>
+    </p>
+    <p class="cue" id="t1908">
+      <a class="cue-time" href="../../../#test-2&amp;t=1908">31:48</a>
+      <span class="cue-text">It's those unboggin' spirits that keep taking me back and forth through time.</span>
+    </p>
+    <p class="cue" id="t1919">
+      <a class="cue-time" href="../../../#test-2&amp;t=1919">31:59</a>
+      <span class="cue-text">Look how I set anything. Of course so. Now's not the time to live in the past,</span>
+    </p>
+    <p class="cue" id="t1927">
+      <a class="cue-time" href="../../../#test-2&amp;t=1927">32:07</a>
+      <span class="cue-text">Scrooge. You'll have plenty of time to do that later.</span>
+    </p>
+    <p class="cue" id="t1933">
+      <a class="cue-time" href="../../../#test-2&amp;t=1933">32:13</a>
+      <span class="cue-text">I suppose… Uh, I suppose getting the day off for Christmas is still out of the</span>
+    </p>
+    <p class="cue" id="t1940">
+      <a class="cue-time" href="../../../#test-2&amp;t=1940">32:20</a>
+      <span class="cue-text">question. Indeed.</span>
+    </p>
+    <p class="cue" id="t1946">
+      <a class="cue-time" href="../../../#test-2&amp;t=1946">32:26</a>
+      <span class="cue-text">And I suppose getting a little extra penny for my time on Christmas Day is out of the</span>
+    </p>
+    <p class="cue" id="t1956">
+      <a class="cue-time" href="../../../#test-2&amp;t=1956">32:36</a>
+      <span class="cue-text">question still. Indeed.</span>
+    </p>
+    <p class="cue" id="t1961">
+      <a class="cue-time" href="../../../#test-2&amp;t=1961">32:41</a>
+      <span class="cue-text">Mr. Kratto, when this whole Christmas nonsense is over, Sir, we're gonna need to</span>
+    </p>
+    <p class="cue" id="t1966">
+      <a class="cue-time" href="../../../#test-2&amp;t=1966">32:46</a>
+      <span class="cue-text">have a talk about your career in the future. You're not going to fire me, are</span>
+    </p>
+    <p class="cue" id="t1972">
+      <a class="cue-time" href="../../../#test-2&amp;t=1972">32:52</a>
+      <span class="cue-text">you? I have no word for you. But sir, you can't fire me- Can't afford to have you</span>
+    </p>
+    <p class="cue" id="t1980">
+      <a class="cue-time" href="../../../#test-2&amp;t=1980">33:00</a>
+      <span class="cue-text">working for me anymore!</span>
+    </p>
+    <p class="cue" id="t1989">
+      <a class="cue-time" href="../../../#test-2&amp;t=1989">33:09</a>
+      <span class="cue-text">Ugh!</span>
+    </p>
+    <p class="cue" id="t2016">
+      <a class="cue-time" href="../../../#test-2&amp;t=2016">33:36</a>
+      <span class="cue-text">!</span>
+    </p>
+    <p class="cue" id="t2046">
+      <a class="cue-time" href="../../../#test-2&amp;t=2046">34:06</a>
+      <span class="cue-text">!</span>
+    </p>
+    <p class="cue" id="t2052">
+      <a class="cue-time" href="../../../#test-2&amp;t=2052">34:12</a>
+      <span class="cue-text">I got these for you. Thank you. That is so sweet. I brought something for you too.</span>
+    </p>
+    <p class="cue" id="t2071">
+      <a class="cue-time" href="../../../#test-2&amp;t=2071">34:31</a>
+      <span class="cue-text">So I'll be seeing you then, Scrooge. Not on my watch.</span>
+    </p>
+    <p class="cue" id="t2082">
+      <a class="cue-time" href="../../../#test-2&amp;t=2082">34:42</a>
+      <span class="cue-text">Get to work. Okay, sir.</span>
+    </p>
+    <p class="cue" id="t2095">
+      <a class="cue-time" href="../../../#test-2&amp;t=2095">34:55</a>
+      <span class="cue-text">Tim! Tim! Tim! Tim! Tim! Tim! Oh, Tim! Oh, what happened to you, Tim? Were you hurt?</span>
+    </p>
+    <p class="cue" id="t2105">
+      <a class="cue-time" href="../../../#test-2&amp;t=2105">35:05</a>
+      <span class="cue-text">What happened, Tim? What happened?</span>
+    </p>
+    <p class="cue" id="t2134">
+      <a class="cue-time" href="../../../#test-2&amp;t=2134">35:34</a>
+      <span class="cue-text">It stings. It doesn't.</span>
+    </p>
+    <p class="cue" id="t2167">
+      <a class="cue-time" href="../../../#test-2&amp;t=2167">36:07</a>
+      <span class="cue-text">You're not going to... Don't you?</span>
+    </p>
+    <p class="cue" id="t2174">
+      <a class="cue-time" href="../../../#test-2&amp;t=2174">36:14</a>
+      <span class="cue-text">Well...</span>
+    </p>
+    <p class="cue" id="t2180">
+      <a class="cue-time" href="../../../#test-2&amp;t=2180">36:20</a>
+      <span class="cue-text">I'm trying to work here.</span>
+    </p>
+    <p class="cue" id="t2193">
+      <a class="cue-time" href="../../../#test-2&amp;t=2193">36:33</a>
+      <span class="cue-text">Hey!</span>
+    </p>
+    <p class="cue" id="t2199">
+      <a class="cue-time" href="../../../#test-2&amp;t=2199">36:39</a>
+      <span class="cue-text">You! Spirit! Why are you three conspiring against me? Your outlook on these tests</span>
+    </p>
+    <p class="cue" id="t2207">
+      <a class="cue-time" href="../../../#test-2&amp;t=2207">36:47</a>
+      <span class="cue-text">still leaves some to be desired. I'm sorry. What do you want from me? What am I</span>
+    </p>
+    <p class="cue" id="t2217">
+      <a class="cue-time" href="../../../#test-2&amp;t=2217">36:57</a>
+      <span class="cue-text">supposed to do? You are not the first man to ask that question. Even Solomon himself</span>
+    </p>
+    <p class="cue" id="t2225">
+      <a class="cue-time" href="../../../#test-2&amp;t=2225">37:05</a>
+      <span class="cue-text">had trouble with relationships from time to time. Well, I suppose you're gonna take</span>
+    </p>
+    <p class="cue" id="t2231">
+      <a class="cue-time" href="../../../#test-2&amp;t=2231">37:11</a>
+      <span class="cue-text">me into the past to talk to him then? No, but you are on the right track. Finally!</span>
+    </p>
+    <p class="cue" id="t2239">
+      <a class="cue-time" href="../../../#test-2&amp;t=2239">37:19</a>
+      <span class="cue-text">What is that supposed to mean? Better figure that out fast. Three Two One</span>
+    </p>
+    <p class="cue" id="t2253">
+      <a class="cue-time" href="../../../#test-2&amp;t=2253">37:33</a>
+      <span class="cue-text">You're not telling anyone else. So… Sir, please do not fire me. I need the money,</span>
+    </p>
+    <p class="cue" id="t2263">
+      <a class="cue-time" href="../../../#test-2&amp;t=2263">37:43</a>
+      <span class="cue-text">as you probably know. My family's poor, as you also probably know. I ask you one more</span>
+    </p>
+    <p class="cue" id="t2268">
+      <a class="cue-time" href="../../../#test-2&amp;t=2268">37:48</a>
+      <span class="cue-text">time. Please don't fire me. Ebenezer, we have a lot of faith in you. Don't give us</span>
+    </p>
+    <p class="cue" id="t2275">
+      <a class="cue-time" href="../../../#test-2&amp;t=2275">37:55</a>
+      <span class="cue-text">reason to believe otherwise. I'm not firing you. Thank you, sir.</span>
+    </p>
+    <p class="cue" id="t2289">
+      <a class="cue-time" href="../../../#test-2&amp;t=2289">38:09</a>
+      <span class="cue-text">You called it a woman before.</span>
+    </p>
+    <p class="cue" id="t2296">
+      <a class="cue-time" href="../../../#test-2&amp;t=2296">38:16</a>
+      <span class="cue-text">Uh… why are you asking me this? Don't worry, it has nothing to do with your job.</span>
+    </p>
+    <p class="cue" id="t2303">
+      <a class="cue-time" href="../../../#test-2&amp;t=2303">38:23</a>
+      <span class="cue-text">Oh, uh… I guess I have to answer your question anyhow. Oh, I mean, this seems to</span>
+    </p>
+    <p class="cue" id="t2312">
+      <a class="cue-time" href="../../../#test-2&amp;t=2312">38:32</a>
+      <span class="cue-text">be your skill set, considering a woman just died to be with you. Scrooge, you</span>
+    </p>
+    <p class="cue" id="t2317">
+      <a class="cue-time" href="../../../#test-2&amp;t=2317">38:37</a>
+      <span class="cue-text">can't.</span>
+    </p>
+    <p class="cue" id="t2320">
+      <a class="cue-time" href="../../../#test-2&amp;t=2320">38:40</a>
+      <span class="cue-text">That's still a sore wound, sir. Oh.</span>
+    </p>
+    <p class="cue" id="t2330">
+      <a class="cue-time" href="../../../#test-2&amp;t=2330">38:50</a>
+      <span class="cue-text">Well, I suppose it is. My apologies. Well, the important part about courting a woman</span>
+    </p>
+    <p class="cue" id="t2344">
+      <a class="cue-time" href="../../../#test-2&amp;t=2344">39:04</a>
+      <span class="cue-text">is giving her your full attention. Well, obviously it was easy enough. Hold on.</span>
+    </p>
+    <p class="cue" id="t2350">
+      <a class="cue-time" href="../../../#test-2&amp;t=2350">39:10</a>
+      <span class="cue-text">Here's a point. That's not the hard part. Hard part is making it obvious that she</span>
+    </p>
+    <p class="cue" id="t2356">
+      <a class="cue-time" href="../../../#test-2&amp;t=2356">39:16</a>
+      <span class="cue-text">has your full attention.</span>
+    </p>
+    <p class="cue" id="t2360">
+      <a class="cue-time" href="../../../#test-2&amp;t=2360">39:20</a>
+      <span class="cue-text">Here's an idea. What's something that other than her that receives a lot of your</span>
+    </p>
+    <p class="cue" id="t2367">
+      <a class="cue-time" href="../../../#test-2&amp;t=2367">39:27</a>
+      <span class="cue-text">attention?</span>
+    </p>
+    <p class="cue" id="t2370">
+      <a class="cue-time" href="../../../#test-2&amp;t=2370">39:30</a>
+      <span class="cue-text">The whole might work?</span>
+    </p>
+    <p class="cue" id="t2375">
+      <a class="cue-time" href="../../../#test-2&amp;t=2375">39:35</a>
+      <span class="cue-text">What's your turn? Anything more specific? Alright, fine. My gold. There we go. Now,</span>
+    </p>
+    <p class="cue" id="t2383">
+      <a class="cue-time" href="../../../#test-2&amp;t=2383">39:43</a>
+      <span class="cue-text">how about when you're having a serious conversation, you put it out of sight in a</span>
+    </p>
+    <p class="cue" id="t2392">
+      <a class="cue-time" href="../../../#test-2&amp;t=2392">39:52</a>
+      <span class="cue-text">different room. If she knows you well enough that Gold takes a lot of your</span>
+    </p>
+    <p class="cue" id="t2397">
+      <a class="cue-time" href="../../../#test-2&amp;t=2397">39:57</a>
+      <span class="cue-text">attention and sees you putting it aside, just talk to her. That will help greatly.</span>
+    </p>
+    <p class="cue" id="t2404">
+      <a class="cue-time" href="../../../#test-2&amp;t=2404">40:04</a>
+      <span class="cue-text">Isn't it important that she sees I have a stable life? Oh yes, surely a stable life</span>
+    </p>
+    <p class="cue" id="t2409">
+      <a class="cue-time" href="../../../#test-2&amp;t=2409">40:09</a>
+      <span class="cue-text">requires one to be costly. elaborate, fancy, and otherwise unattainable in terms</span>
+    </p>
+    <p class="cue" id="t2414">
+      <a class="cue-time" href="../../../#test-2&amp;t=2414">40:14</a>
+      <span class="cue-text">of wealth to show just how high one's standards of living are. But I bet she</span>
+    </p>
+    <p class="cue" id="t2421">
+      <a class="cue-time" href="../../../#test-2&amp;t=2421">40:21</a>
+      <span class="cue-text">knows that you have a financially stable life. And anyways, if she truly admires</span>
+    </p>
+    <p class="cue" id="t2427">
+      <a class="cue-time" href="../../../#test-2&amp;t=2427">40:27</a>
+      <span class="cue-text">you, I think she would value your attention far more than your money. Aw,</span>
+    </p>
+    <p class="cue" id="t2432">
+      <a class="cue-time" href="../../../#test-2&amp;t=2432">40:32</a>
+      <span class="cue-text">seems like a terrible business practice.</span>
+    </p>
+    <p class="cue" id="t2438">
+      <a class="cue-time" href="../../../#test-2&amp;t=2438">40:38</a>
+      <span class="cue-text">I guess not everything is about business now is it?</span>
+    </p>
+    <p class="cue" id="t2446">
+      <a class="cue-time" href="../../../#test-2&amp;t=2446">40:46</a>
+      <span class="cue-text">You remember that prized turkey that they were selling on the market? Not the little</span>
+    </p>
+    <p class="cue" id="t2450">
+      <a class="cue-time" href="../../../#test-2&amp;t=2450">40:50</a>
+      <span class="cue-text">one, the big one. The one as big as me? Yes, that one. Go and buy it. But sir, my</span>
+    </p>
+    <p class="cue" id="t2456">
+      <a class="cue-time" href="../../../#test-2&amp;t=2456">40:56</a>
+      <span class="cue-text">wages, they won't a- Oh, screw it. You fill of sticks, go buy it anyways. I'm</span>
+    </p>
+    <p class="cue" id="t2462">
+      <a class="cue-time" href="../../../#test-2&amp;t=2462">41:02</a>
+      <span class="cue-text">raising your wages thrice fold. Go and buy that turkey for your rightfully earned</span>
+    </p>
+    <p class="cue" id="t2466">
+      <a class="cue-time" href="../../../#test-2&amp;t=2466">41:06</a>
+      <span class="cue-text">family. Your words have changed the very course of my life. Thank you, sir. And</span>
+    </p>
+    <p class="cue" id="t2475">
+      <a class="cue-time" href="../../../#test-2&amp;t=2475">41:15</a>
+      <span class="cue-text">Merry Christmas, Bob. I am impressed. You're not the man you once were. I see a</span>
+    </p>
+    <p class="cue" id="t2484">
+      <a class="cue-time" href="../../../#test-2&amp;t=2484">41:24</a>
+      <span class="cue-text">small light has returned to you. What is it sufficient? We can only see in your</span>
+    </p>
+    <p class="cue" id="t2491">
+      <a class="cue-time" href="../../../#test-2&amp;t=2491">41:31</a>
+      <span class="cue-text">time. Remember, Good deeds are not simply transactional. They ought to be</span>
+    </p>
+    <p class="cue" id="t2498">
+      <a class="cue-time" href="../../../#test-2&amp;t=2498">41:38</a>
+      <span class="cue-text">transformational. And not only for yourself. My apologies. Will the Cratchits</span>
+    </p>
+    <p class="cue" id="t2506">
+      <a class="cue-time" href="../../../#test-2&amp;t=2506">41:46</a>
+      <span class="cue-text">be alright? The Tony Tim. Will he be okay? Spirit? Spirit.</span>
+    </p>
+    <p class="cue" id="t2532">
+      <a class="cue-time" href="../../../#test-2&amp;t=2532">42:12</a>
+      <span class="cue-text">As I would have tried to do, then I am happy for you.</span>
+    </p>
+    <p class="cue" id="t2545">
+      <a class="cue-time" href="../../../#test-2&amp;t=2545">42:25</a>
+      <span class="cue-text">These will hurt you no longer. I fear the world no more. Belle, I've changed.</span>
+    </p>
+    <p class="cue" id="t2554">
+      <a class="cue-time" href="../../../#test-2&amp;t=2554">42:34</a>
+      <span class="cue-text">Overnight for that matter. Our contract is an old one. It was made when we were both</span>
+    </p>
+    <p class="cue" id="t2559">
+      <a class="cue-time" href="../../../#test-2&amp;t=2559">42:39</a>
+      <span class="cue-text">poor and content to be so.</span>
+    </p>
+    <p class="cue" id="t2564">
+      <a class="cue-time" href="../../../#test-2&amp;t=2564">42:44</a>
+      <span class="cue-text">You've changed Ebenezer. When that contract was made, you were another man.</span>
+    </p>
+    <p class="cue" id="t2573">
+      <a class="cue-time" href="../../../#test-2&amp;t=2573">42:53</a>
+      <span class="cue-text">Oh, Belle. I'm so sorry. I've been lost in this world, carried away by greed. And</span>
+    </p>
+    <p class="cue" id="t2582">
+      <a class="cue-time" href="../../../#test-2&amp;t=2582">43:02</a>
+      <span class="cue-text">you've suffered because of it. I aim to repair what money cannot buy.</span>
+    </p>
+    <p class="cue" id="t2591">
+      <a class="cue-time" href="../../../#test-2&amp;t=2591">43:11</a>
+      <span class="cue-text">It is hard to put aside the years of ignorance you showed towards me. It</span>
+    </p>
+    <p class="cue" id="t2597">
+      <a class="cue-time" href="../../../#test-2&amp;t=2597">43:17</a>
+      <span class="cue-text">destroyed me inside and out. It was confusing.</span>
+    </p>
+    <p class="cue" id="t2602">
+      <a class="cue-time" href="../../../#test-2&amp;t=2602">43:22</a>
+      <span class="cue-text">It's as if I had transgressed the law. My respect and admiration for you has only</span>
+    </p>
+    <p class="cue" id="t2610">
+      <a class="cue-time" href="../../../#test-2&amp;t=2610">43:30</a>
+      <span class="cue-text">grown. You shan't ever be displaced. What do you swear to that? You stay by me for</span>
+    </p>
+    <p class="cue" id="t2617">
+      <a class="cue-time" href="../../../#test-2&amp;t=2617">43:37</a>
+      <span class="cue-text">always. To my dying day. Can I believe you? Yes!</span>
+    </p>
+    <p class="cue" id="t2627">
+      <a class="cue-time" href="../../../#test-2&amp;t=2627">43:47</a>
+      <span class="cue-text">I will consider what you've said.</span>
+    </p>
+    <p class="cue" id="t2643">
+      <a class="cue-time" href="../../../#test-2&amp;t=2643">44:03</a>
+      <span class="cue-text">What are you doing here? Yeah. Ebeneza, my friend, have you noticed that she has</span>
+    </p>
+    <p class="cue" id="t2650">
+      <a class="cue-time" href="../../../#test-2&amp;t=2650">44:10</a>
+      <span class="cue-text">never been appropriately attired for the dead of winter? No petticoats for her</span>
+    </p>
+    <p class="cue" id="t2655">
+      <a class="cue-time" href="../../../#test-2&amp;t=2655">44:15</a>
+      <span class="cue-text">dresses, no shawl, no gloves, and no jewelry. Messing with that!</span>
+    </p>
+    <p class="cue" id="t2671">
+      <a class="cue-time" href="../../../#test-2&amp;t=2671">44:31</a>
+      <span class="cue-text">Not even her mother's precious hair comb. No. Mother's hair comb. Or when she gave</span>
+    </p>
+    <p class="cue" id="t2681">
+      <a class="cue-time" href="../../../#test-2&amp;t=2681">44:41</a>
+      <span class="cue-text">her before she died. And her soul. She got that after her mother passed away from the</span>
+    </p>
+    <p class="cue" id="t2688">
+      <a class="cue-time" href="../../../#test-2&amp;t=2688">44:48</a>
+      <span class="cue-text">cold. She gave it all up. Did what? Do you remember your little sister, Pham? Don't</span>
+    </p>
+    <p class="cue" id="t2699">
+      <a class="cue-time" href="../../../#test-2&amp;t=2699">44:59</a>
+      <span class="cue-text">bring her up. I'm torn not remembering. She's still alive in this time that I</span>
+    </p>
+    <p class="cue" id="t2705">
+      <a class="cue-time" href="../../../#test-2&amp;t=2705">45:05</a>
+      <span class="cue-text">brought you. Belle sold everything. All that she inherited in the last effort to</span>
+    </p>
+    <p class="cue" id="t2713">
+      <a class="cue-time" href="../../../#test-2&amp;t=2713">45:13</a>
+      <span class="cue-text">buy food, medicine, and crumbs of coal for your sister's sake. Belle had never told</span>
+    </p>
+    <p class="cue" id="t2720">
+      <a class="cue-time" href="../../../#test-2&amp;t=2720">45:20</a>
+      <span class="cue-text">me of this. What didn't this little fatty tell me? I would have helped. Would you</span>
+    </p>
+    <p class="cue" id="t2726">
+      <a class="cue-time" href="../../../#test-2&amp;t=2726">45:26</a>
+      <span class="cue-text">though? You're too busy playing with your mountains and mountain of gold. All those</span>
+    </p>
+    <p class="cue" id="t2732">
+      <a class="cue-time" href="../../../#test-2&amp;t=2732">45:32</a>
+      <span class="cue-text">high society ladies who display such traits of all this affection and inflated</span>
+    </p>
+    <p class="cue" id="t2740">
+      <a class="cue-time" href="../../../#test-2&amp;t=2740">45:40</a>
+      <span class="cue-text">self-importance would care nothing for you but the gold, fame, and blood you provide.</span>
+    </p>
+    <p class="cue" id="t2751">
+      <a class="cue-time" href="../../../#test-2&amp;t=2751">45:51</a>
+      <span class="cue-text">Their facades are like gold gilded gravestones, but they're vile. You will</span>
+    </p>
+    <p class="cue" id="t2758">
+      <a class="cue-time" href="../../../#test-2&amp;t=2758">45:58</a>
+      <span class="cue-text">soon wish for the virtue down in Bel and not a piece of currency. No, I was</span>
+    </p>
+    <p class="cue" id="t2774">
+      <a class="cue-time" href="../../../#test-2&amp;t=2774">46:14</a>
+      <span class="cue-text">also cruel. Oh, my God.</span>
+    </p>
+    <p class="cue" id="t2781">
+      <a class="cue-time" href="../../../#test-2&amp;t=2781">46:21</a>
+      <span class="cue-text">Fan.</span>
+    </p>
+    <p class="cue" id="t2786">
+      <a class="cue-time" href="../../../#test-2&amp;t=2786">46:26</a>
+      <span class="cue-text">This must be another test of sorts. Might there be a way I could say Fan?</span>
+    </p>
+    <p class="cue" id="t2794">
+      <a class="cue-time" href="../../../#test-2&amp;t=2794">46:34</a>
+      <span class="cue-text">Fan.</span>
+    </p>
+    <p class="cue" id="t2824">
+      <a class="cue-time" href="../../../#test-2&amp;t=2824">47:04</a>
+      <span class="cue-text">I'm sorry. Wait! You're burning up! You must have caught... a man's illness. I can</span>
+    </p>
+    <p class="cue" id="t2837">
+      <a class="cue-time" href="../../../#test-2&amp;t=2837">47:17</a>
+      <span class="cue-text">get you food, medicine, anything! No, not now! I need to... I'll get the fire going!</span>
+    </p>
+    <p class="cue" id="t2846">
+      <a class="cue-time" href="../../../#test-2&amp;t=2846">47:26</a>
+      <span class="cue-text">Where's the keys? No, no, no, no!</span>
+    </p>
+    <p class="cue" id="t2853">
+      <a class="cue-time" href="../../../#test-2&amp;t=2853">47:33</a>
+      <span class="cue-text">Here, take this!</span>
+    </p>
+    <p class="cue" id="t2858">
+      <a class="cue-time" href="../../../#test-2&amp;t=2858">47:38</a>
+      <span class="cue-text">No, no, no, I can't be here right now! No, take me back! No! No! No! No! Oh, no.</span>
+    </p>
+    <p class="cue" id="t2894">
+      <a class="cue-time" href="../../../#test-2&amp;t=2894">48:14</a>
+      <span class="cue-text">Who are you? Where's Belle? Speak! Where is she? What happens to her?</span>
+    </p>
+    <p class="cue" id="t2909">
+      <a class="cue-time" href="../../../#test-2&amp;t=2909">48:29</a>
+      <span class="cue-text">You… You're the third ghost. I remember you. You've come to teach me a lesson.</span>
+    </p>
+    <p class="cue" id="t2919">
+      <a class="cue-time" href="../../../#test-2&amp;t=2919">48:39</a>
+      <span class="cue-text">Well, teach me! Tell me I've lost everything! Tell me everyone gets hurt</span>
+    </p>
+    <p class="cue" id="t2926">
+      <a class="cue-time" href="../../../#test-2&amp;t=2926">48:46</a>
+      <span class="cue-text">because of me! Tell me that I've not changed nothing!</span>
+    </p>
+    <p class="cue" id="t2932">
+      <a class="cue-time" href="../../../#test-2&amp;t=2932">48:52</a>
+      <span class="cue-text">All my efforts were but no good.</span>
+    </p>
+    <p class="cue" id="t2940">
+      <a class="cue-time" href="../../../#test-2&amp;t=2940">49:00</a>
+      <span class="cue-text">This can't be all there is! Am I really that far beyond saving?</span>
+    </p>
+    <p class="cue" id="t2950">
+      <a class="cue-time" href="../../../#test-2&amp;t=2950">49:10</a>
+      <span class="cue-text">Can you not show me the same mercy? me.</span>
+    </p>
+    <p class="cue" id="t2960">
+      <a class="cue-time" href="../../../#test-2&amp;t=2960">49:20</a>
+      <span class="cue-text">Belle. Will Belle be alright? And Tiny Tim, his family. Please take my gold. My</span>
+    </p>
+    <p class="cue" id="t2973">
+      <a class="cue-time" href="../../../#test-2&amp;t=2973">49:33</a>
+      <span class="cue-text">company, all of it. I know it's not a product for purchasing. But please let it</span>
+    </p>
+    <p class="cue" id="t2978">
+      <a class="cue-time" href="../../../#test-2&amp;t=2978">49:38</a>
+      <span class="cue-text">be sacrificed enough. Take my life in dead!</span>
+    </p>
+    <p class="cue" id="t2992">
+      <a class="cue-time" href="../../../#test-2&amp;t=2992">49:52</a>
+      <span class="cue-text">No.</span>
+    </p>
+    <p class="cue" id="t2996">
+      <a class="cue-time" href="../../../#test-2&amp;t=2996">49:56</a>
+      <span class="cue-text">No. It can't be. Tony Tim, I'm so sorry.</span>
+    </p>
+    <p class="cue" id="t3021">
+      <a class="cue-time" href="../../../#test-2&amp;t=3021">50:21</a>
+      <span class="cue-text">No. No. No. Please. If I must die at least please spare them. They don't deserve</span>
+    </p>
+    <p class="cue" id="t3032">
+      <a class="cue-time" href="../../../#test-2&amp;t=3032">50:32</a>
+      <span class="cue-text">this. No. Die. No! No. It can't be. It was just a dream. Ebeneezo come down already.</span>
+    </p>
+    <p class="cue" id="t3045">
+      <a class="cue-time" href="../../../#test-2&amp;t=3045">50:45</a>
+      <span class="cue-text">The plum pudding's getting cold.</span>
+    </p>
+    <p class="cue" id="t3051">
+      <a class="cue-time" href="../../../#test-2&amp;t=3051">50:51</a>
+      <span class="cue-text">For real this time? Are you alright? I think you have a fever. Yes!</span>
+    </p>
+    <p class="cue" id="t3063">
+      <a class="cue-time" href="../../../#test-2&amp;t=3063">51:03</a>
+      <span class="cue-text">Yes! Yes! Yes! Yes! Yes! Yes! Yes! Yes! Yes! Yes! They did it. Well, your sister</span>
+    </p>
+    <p class="cue" id="t3077">
+      <a class="cue-time" href="../../../#test-2&amp;t=3077">51:17</a>
+      <span class="cue-text">is here as well as her family and the Cratchits are here as well. So just be</span>
+    </p>
+    <p class="cue" id="t3082">
+      <a class="cue-time" href="../../../#test-2&amp;t=3082">51:22</a>
+      <span class="cue-text">ready. Yes, yes, yes. Thank you. Thank you.</span>
+    </p>
+    <p class="cue" id="t3103">
+      <a class="cue-time" href="../../../#test-2&amp;t=3103">51:43</a>
+      <span class="cue-text">Ah, Tiny Tim, that little fellow. Always so full of boundless energy in his</span>
+    </p>
+    <p class="cue" id="t3111">
+      <a class="cue-time" href="../../../#test-2&amp;t=3111">51:51</a>
+      <span class="cue-text">countenance. You did it! You saved them! Thank you. I can't thank you enough. That</span>
+    </p>
+    <p class="cue" id="t3120">
+      <a class="cue-time" href="../../../#test-2&amp;t=3120">52:00</a>
+      <span class="cue-text">was not my doing. You have finally learned that to care for others, to extend mercy</span>
+    </p>
+    <p class="cue" id="t3128">
+      <a class="cue-time" href="../../../#test-2&amp;t=3128">52:08</a>
+      <span class="cue-text">and charity, that is the quest of this life. I see. I shall take care of them.</span>
+    </p>
+    <p class="cue" id="t3140">
+      <a class="cue-time" href="../../../#test-2&amp;t=3140">52:20</a>
+      <span class="cue-text">They are the light of my life. What of tiny Tim? With time and with help, he will</span>
+    </p>
+    <p class="cue" id="t3151">
+      <a class="cue-time" href="../../../#test-2&amp;t=3151">52:31</a>
+      <span class="cue-text">recover from his illness. Thank you. Poor soul's had enough.</span>
+    </p>
+    <p class="cue" id="t3162">
+      <a class="cue-time" href="../../../#test-2&amp;t=3162">52:42</a>
+      <span class="cue-text">People need a new... Can you?</span>
+    </p>
+    <p class="cue" id="t3174">
+      <a class="cue-time" href="../../../#test-2&amp;t=3174">52:54</a>
+      <span class="cue-text">Wonderful. Everyone's waiting on me. Want me to get downstairs. Which?</span>
+    </p>
+    <p class="cue" id="t3186">
+      <a class="cue-time" href="../../../#test-2&amp;t=3186">53:06</a>
+      <span class="cue-text">Merry Christmas everyone. Merry Christmas to you. Am I okay? I'm feeling great.</span>
+    </p>
+    <p class="cue" id="t3193">
+      <a class="cue-time" href="../../../#test-2&amp;t=3193">53:13</a>
+      <span class="cue-text">Merry Christmas. Have a wonderful day.</span>
+    </p>
+    <p class="cue" id="t3224">
+      <a class="cue-time" href="../../../#test-2&amp;t=3224">53:44</a>
+      <span class="cue-text">Haha!</span>
+    </p>
+    <p class="cue" id="t3227">
+      <a class="cue-time" href="../../../#test-2&amp;t=3227">53:47</a>
+      <span class="cue-text">Thank you.</span>
+    </p>
+    </article>
+    <footer>KERI Foundation • Conference Videos Collection</footer>
+  </div>
+</body>
+</html>
