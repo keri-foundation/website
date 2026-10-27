@@ -1,4 +1,36 @@
-# General information
+# keri.foundation
+
+## Contents
+
+- [keri.foundation](#kerifoundation)
+  - [Contents](#contents)
+  - [General information](#general-information)
+  - [Managing the website](#managing-the-website)
+  - [WordPress](#wordpress)
+  - [Learning site (`/edu/`)](#learning-site-edu)
+  - [Kerisse (`/kerisse/`)](#kerisse-kerisse)
+  - [Various (`/various/`)](#various-various)
+  - [Site customizations (`/custom/`)](#site-customizations-custom)
+  - [Conference galleries (`/confs/<ORG>/<YEAR>/<month>/`)](#conference-galleries-confsorgyearmonth)
+    - [Top clips (`topClips`)](#top-clips-topclips)
+  - [Yearly videos (`/vids/<YEAR>/`)](#yearly-videos-vidsyear)
+    - [New conference](#new-conference)
+    - [Build and deploy](#build-and-deploy)
+    - [Overviews and directory listings (`/confs/`, `/vids/`)](#overviews-and-directory-listings-confs-vids)
+    - [Legacy gallery URLs](#legacy-gallery-urls)
+  - [Subtitles](#subtitles)
+    - [Scripts](#scripts)
+  - [Video submission guide](#video-submission-guide)
+      - [Other important settings](#other-important-settings)
+  - [YouTube uploader setup](#youtube-uploader-setup)
+    - [Step 1: Create a Google Cloud Project](#step-1-create-a-google-cloud-project)
+    - [Step 2: Create OAuth2 Credentials](#step-2-create-oauth2-credentials)
+    - [Step 3: First upload](#step-3-first-upload)
+    - [Usage](#usage)
+    - [How it works](#how-it-works)
+    - [Troubleshooting](#troubleshooting)
+
+## General information
 
 [https://keri.foundation](https://keri.foundation) runs on Hostinger. The live document root and this repository are different trees. This checkout versions `custom/`, `confs/`, `vids/`, `scripts/`, and the site-root `.htaccess`. WordPress itself, plus `/edu/`, `/kerisse/`, and `/various/`, live on the host and are maintained from their own projects. A password-protected database export ZIP may also be present at the repo root.
 
@@ -48,17 +80,25 @@ public_html/
 
 `custom/` belongs to the WordPress site. `confs/` and `vids/` are separate static trees beside WordPress.
 
+## Managing the website
+
+Go to [https://hpanel.hostinger.com/](https://hpanel.hostinger.com/)
+
 ## WordPress
 
 WordPress is installed in the document root. Administration is `wp-admin/`, core libraries are `wp-includes/`, and themes, plugins, and uploads are `wp-content/`. The usual entry points (`index.php`, `wp-login.php`, `wp-cron.php`, `xmlrpc.php`, and the rest of the `wp-*.php` files) sit next to them, along with `license.txt` and `readme.html`. `wp-config.php` stays on the server.
 
 `bash scripts/fetch-wordpress.sh` pulls that WordPress tree, and `custom/`, into this checkout. It leaves `confs/` and `vids/` alone.
 
+<a id="learning-site-edu"></a>
+
 ## Learning site (`/edu/`)
 
 [https://keri.foundation/edu](https://keri.foundation/edu) is the KERI Learning Hub: tutorials, explanations, concept cards, learning modules, and H5P interactive video. It is a static Nuxt site from the **kerioke** project. Production is generated with base path `/edu/` (`generate:deploy` in that project) and deployed by `live.sh`, which rsyncs the build into `public_html/edu`.
 
 On a local kerioke checkout, `confs` and `videos` are symlinks so media plays at `localhost`. On this host those files already live at `/confs/` and `/videos/`. `live.sh` removes the symlink copies from the build output before upload, so a learning-site deploy leaves the galleries in place.
+
+<a id="kerisse-kerisse"></a>
 
 ## Kerisse (`/kerisse/`)
 
@@ -69,13 +109,13 @@ On a local kerioke checkout, `confs` and `videos` are symlinks so media plays at
 
 The search UI is published with GitHub Actions (webpack only) and loads the shards from `search-index/`. The Repository shard is over GitHub’s 100 MB file limit, so the index is hosted here. Upload from the kerisse project with `npm run upload:search-data`. That script also installs a CORS `.htaccess` on `search-index/` and `dataset/`. The files are static.
 
+<a id="various-various"></a>
+
 ## Various (`/various/`)
 
 `/various/` holds various things.
 
-## Managing the website
-
-Go to [https://hpanel.hostinger.com/](https://hpanel.hostinger.com/)
+<a id="site-customizations-custom"></a>
 
 ## Site customizations (`/custom/`)
 
@@ -114,6 +154,8 @@ custom/
 - a countdown (21 April 2026, 22:00) prepended to any element with class `countdown`
 
 `kc-banner-shortcode.php` registers `[kc_banner]`. The shortcode shows a banner preview, the escaped HTML, and a copy button. Install it by copying the file to `wp-content/plugins/kc-banner/kc-banner.php` and activating the plugin, or by pasting the functions into the theme’s `functions.php`.
+
+<a id="conference-galleries"></a>
 
 ## Conference galleries (`/confs/<ORG>/<YEAR>/<month>/`)
 
@@ -189,6 +231,8 @@ Optional teaser row on the gallery. Set `topClips.enabled` and list clips under 
 ```
 
 Clips with unparseable times or `end` ≤ `start` are skipped. Numeric seconds remain valid.
+
+<a id="yearly-videos"></a>
 
 ## Yearly videos (`/vids/<YEAR>/`)
 
@@ -317,66 +361,7 @@ python3 scripts/generate_policy_brief_pdf.py
 
 Follow these rules when submitting videos so files stay consistent and easy to find.
 
-### Naming conventions
-
-Discuss the naming convention with your team before starting. Decide on a format. Use that format for every file.
-
-Example pattern: `firstname-lastname-interview`
-
-Incorrect (inconsistent suffixes):
-
-- `john-doe-interview`
-- `john-smith`
-- `joe-bloggs-interview`
-
-Correct (same suffix on every file):
-
-- `john-doe-interview`
-- `john-smith-interview`
-- `joe-bloggs-interview`
-
-Do not use the following characters in file names:
-
-- spaces (` `)
-- pipe symbols (`|`)
-- slashes (`/`)
-- back-slashes (`\`)
-- periods (`.`)
-
-If you include a date in the file name, put it first and use ISO format (`YYYY-MM-DD`), for example: `2026-07-23-john-doe-interview`.
-
-### File location
-
-Once a video is released (for example via Google Drive), keep its path and file name unchanged. New versions must replace the existing file at the same location rather than introducing a new name or path.
-
-### Content freeze
-
-After delivery, do not edit the video’s length or content. Any change—cuts, inserts, reordering, or re-exports with different timing—breaks subtitle sync and forces a full rework of the caption files.
-
-Cosmetic changes that do not affect timing—such as volume, color grading, or brightness—are fine.
-
-### Video quality
-
-The video files are intended for the web. The video files you submit must meet the following requirements.
-
-#### Core format (maximum compatibility)
-
-- **Container**: MP4 (MPEG-4 Part 14)
-- **Video Codec**: H.264 (AVC) — best universal support across all browsers and devices
-- **Audio Codec**: AAC (Advanced Audio Coding), stereo, 128–192 kbps
-- **Profile**: High Profile, Level 4.1 or 4.2 (safe for 1080p)
-
-This combination plays natively in Chrome, Firefox, Safari, Edge, iOS, Android, etc., with no plugins.
-
-#### Resolution & bitrate recommendations (conference recordings)
-
-Conference videos (talking head + slides) compress very well. Aim for these targets:
-
-| Resolution      | Target Bitrate (Video) | Approx. File Size (1 hour) |
-| --------------- | ---------------------- | -------------------------- |
-| 720p (1280×720) | 1,500 – 2,500 kbps     | 700 MB – 1.1 GB            |
-
-Deliver **720p at ~2,000 kbps** video bitrate. This usually keeps a 1-hour conference talk under **900–950 MB** while looking sharp on laptops and large screens. Most viewers will not notice a big difference from 1080p on typical conference content.
+Go to [video submission guide](https://github.com/keri-foundation/recordings-and-subtitles/blob/main/VIDEO_SUBMISSION_GUIDE.md)
 
 #### Other important settings
 
