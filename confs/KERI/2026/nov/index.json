@@ -29,7 +29,7 @@
   "transcriptsDir": "transcripts/html",
   "defaultPoster": "https://kericonf.com/wp-content/uploads/2026/05/KERI-mini-CONF26-scaled.png",
   "speakerPhotos": {
-    "Samuel Smith": "https://kericonf.com/wp-content/uploads/2025/11/Samuel-Smith.jpg",
+    "Samuel M. Smith": "https://kericonf.com/wp-content/uploads/2025/11/Samuel-Smith.jpg",
     "Phil Feairheller": "https://kericonf.com/wp-content/uploads/2026/01/PhilFeairheller_v1.0-edited.jpeg",
     "Daniel Hardman": "https://kericonf.com/wp-content/uploads/2026/01/DanielHardman_v1.0.png",
     "George McEwan": "https://kericonf.com/wp-content/uploads/2026/01/GeorgeMcEwan_v1.0-scaled.jpg",
@@ -57,40 +57,55 @@
   },
   "videos": [
     {
-      "order": 3,
+      "order": 1,
       "day": "Mini Conference nov 2026",
-      "title": "Placeholder - Kent Bull",
-      "speaker": "Kent Bull",
-      "path": "talks/PLACEHOLDER-Kent-Bull.mp4",
-      "duration": "0:05",
-      "subtitle": "talks/PLACEHOLDER-Kent-Bull.srt"
+      "title": "Samuel M. Smith",
+      "path": "talks/2026-11-02-samuel-m-smith-1.mp4",
+      "duration": "0:17",
+      "subtitle": "talks/2026-11-02-samuel-m-smith-1.srt"
     },
     {
       "order": 2,
       "day": "Mini Conference nov 2026",
-      "title": "Placeholder - Ryan Hansen",
-      "speaker": "Ryan Hansen",
-      "path": "talks/PLACEHOLDER-Ryan-Hansen.mp4",
-      "duration": "0:05",
-      "subtitle": "talks/PLACEHOLDER-Ryan-Hansen.srt"
+      "title": "Ryan Hansen / Samuel M. Smith",
+      "path": "talks/2026-11-02-ryan-hansen-samuel-m-smith.mp4",
+      "duration": "0:17",
+      "subtitle": "talks/2026-11-02-ryan-hansen-samuel-m-smith.srt",
+      "poster": "https://kericonf.com/wp-content/uploads/2026/05/IMG_1704-1024x768.jpg"
     },
     {
-      "order": 1,
+      "order": 3,
       "day": "Mini Conference nov 2026",
-      "title": "Placeholder - Samuel Smith",
-      "speaker": "Samuel Smith",
-      "path": "talks/PLACEHOLDER-Samuel-Smith.mp4",
-      "duration": "0:05",
-      "subtitle": "talks/PLACEHOLDER-Samuel-Smith.srt"
+      "title": "Kent Bull",
+      "path": "talks/2026-11-02-kent-bull.mp4",
+      "duration": "0:17",
+      "subtitle": "talks/2026-11-02-kent-bull.srt"
     },
     {
       "order": 4,
       "day": "Mini Conference nov 2026",
-      "title": "Placeholder - Evan Asakawa",
-      "speaker": "Evan Asakawa",
-      "path": "talks/PLACEHOLDER-Evan-Asakawa.mp4",
-      "duration": "0:05",
-      "subtitle": "talks/PLACEHOLDER-Evan-Asakawa.srt"
+      "title": "Samuel M. Smith",
+      "path": "talks/2026-11-02-samuel-m-smith-2.mp4",
+      "duration": "0:17",
+      "subtitle": "talks/2026-11-02-samuel-m-smith-2.srt"
+    },
+    {
+      "order": 5,
+      "day": "Mini Conference nov 2026",
+      "title": "Ryan Hansen / Evan Asakawa",
+      "path": "talks/2026-11-02-ryan-hansen-evan-asakawa.mp4",
+      "duration": "0:17",
+      "subtitle": "talks/2026-11-02-ryan-hansen-evan-asakawa.srt",
+      "poster": "https://kericonf.com/wp-content/uploads/2026/05/IMG_1704-1024x768.jpg"
+    },
+    {
+      "order": 6,
+      "day": "Mini Conference nov 2026",
+      "title": "Samuel M. Smith / Ryan Hansen",
+      "path": "talks/2026-11-02-samuel-m-smith-ryan-hansen.mp4",
+      "duration": "0:17",
+      "subtitle": "talks/2026-11-02-samuel-m-smith-ryan-hansen.srt",
+      "poster": "https://kericonf.com/wp-content/uploads/2026/05/IMG_1704-1024x768.jpg"
     }
   ]
 }
