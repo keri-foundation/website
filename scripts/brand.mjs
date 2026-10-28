@@ -23,6 +23,7 @@ export const DEFAULT_BRAND = {
   titleFallback: "Videos",
   descriptionFallback: "Presentations and talks.",
   footerFallback: "",
+  galleryLinks: [],
   favicon32: "",
   favicon192: "",
   appleTouchIcon: "",

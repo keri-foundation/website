@@ -18,7 +18,8 @@
  *
  * Output (under the gallery):
  *   transcripts/pdf/talks/{slug-with-dashes}-Transcripts.pdf
- *   If index.json nav already links a transcripts/pdf/*.pdf, that path is used.
+ *   If index.json nav or transcriptLinks already links a transcripts/pdf/*.pdf,
+ *   that path is used.
  */
 
 import { mkdir, readFile, readdir, writeFile } from "node:fs/promises";
@@ -237,8 +238,11 @@ async function resolvePdfOutputPath(eventDir, slug) {
   if (existsSync(indexPath)) {
     try {
       const config = JSON.parse(await readFile(indexPath, "utf8"));
-      const nav = Array.isArray(config?.page?.nav) ? config.page.nav : [];
-      for (const item of nav) {
+      const candidates = [
+        ...(Array.isArray(config?.page?.nav) ? config.page.nav : []),
+        ...(Array.isArray(config?.page?.transcriptLinks) ? config.page.transcriptLinks : []),
+      ];
+      for (const item of candidates) {
         const href = item?.href;
         if (
           typeof href === "string" &&

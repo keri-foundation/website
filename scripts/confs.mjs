@@ -17,12 +17,18 @@
  *                 gallery's index.json. Site name, icons, share image, wave, and
  *                 colors come from template-presentations-landingpage/brand.json
  *                 (a gallery index.json "brand" object overrides that gallery).
- *                 Also writes the page header and page.transcriptLinks into the
- *                 HTML as real content, and stamps DISCOVERED_SUBTITLE_LANGS with
- *                 sibling caption files (`foo.nl.srt` next to `foo.srt`) so the
- *                 page does not probe for them. An omitted `subtitle` means the
- *                 English file is the media basename with `.srt`
- *                 (`talks/foo.mp4` → `talks/foo.srt`) when that file exists.
+ *                 Also writes the page header into the HTML as real content.
+ *                 The shared top-left links (Home, Conference index, Other
+ *                 videos) come from brand.json galleryLinks. Talk / interview /
+ *                 PDF links are discovered from transcripts/html/ and
+ *                 transcripts/pdf/ and appended (stamped as
+ *                 DISCOVERED_TRANSCRIPT_LINKS for the client). Optional
+ *                 page.transcriptLinks are extra items for that gallery only.
+ *                 Stamps DISCOVERED_SUBTITLE_LANGS with sibling caption
+ *                 files (`foo.nl.srt` next to `foo.srt`) so the page does not
+ *                 probe for them. An omitted `subtitle` means the English file
+ *                 is the media basename with `.srt` (`talks/foo.mp4` →
+ *                 `talks/foo.srt`) when that file exists.
  *                 Then writes confs/index.html and vids/index.html from
  *                 template-presentations-landingpage/overview.html, using each
  *                 tree's overview.json for page copy and each gallery index.json
@@ -95,10 +101,11 @@ function setTagContent(html, pattern, value) {
 }
 
 const SUBTITLE_LANG_MARKER = "/*__DISCOVERED_SUBTITLE_LANGS__*/{}";
+const TRANSCRIPT_LINKS_MARKER = "/*__DISCOVERED_TRANSCRIPT_LINKS__*/[]";
 const SITE_BRAND_MARKER = "/*__SITE_BRAND__*/ null";
 const BRAND_THEME_RE = /<style id="brand-theme">[\s\S]*?<\/style>/;
 const TRANSCRIPT_NAV_MARKER =
-  '<nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Transcript indexes" hidden><!--__TRANSCRIPT_LINKS__--></nav>';
+  '<nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Gallery links" hidden><!--__TRANSCRIPT_LINKS__--></nav>';
 const GALLERY_HEADER_MARKER = "<!--__GALLERY_HEADER__-->";
 const OVERVIEW_CARDS_MARKER = "<!--__OVERVIEW_CARDS__-->";
 const OVERVIEW_FOOTER_MARKER = "<!--__OVERVIEW_FOOTER__-->";
@@ -211,9 +218,9 @@ function escHtml(value) {
 }
 
 /** Same filter as renderTranscriptLinks() in the gallery template. */
-function transcriptLinkItems(page) {
-  const links = Array.isArray(page && page.transcriptLinks) ? page.transcriptLinks : [];
-  return links.filter(
+function transcriptLinkItems(links) {
+  const list = Array.isArray(links) ? links : [];
+  return list.filter(
     (item) =>
       item &&
       typeof item.href === "string" &&
@@ -223,23 +230,103 @@ function transcriptLinkItems(page) {
   );
 }
 
+/** True when transcripts/html/<kind>/ has an index or at least one talk page. */
+function transcriptHtmlKindExists(confDir, kind) {
+  if (!confDir) return false;
+  const dir = join(confDir, "transcripts", "html", kind);
+  if (!existsSync(dir)) return false;
+  try {
+    return readdirSync(dir).some((name) => name.toLowerCase().endsWith(".html"));
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Prefer `{gallery-id-with-dashes}-Transcripts.pdf`, else any *-Transcripts.pdf,
+ * else the first .pdf under transcripts/pdf/talks/.
+ */
+function discoverTranscriptPdfHref(confDir, galleryId) {
+  if (!confDir) return null;
+  const dir = join(confDir, "transcripts", "pdf", "talks");
+  if (!existsSync(dir)) return null;
+  let names;
+  try {
+    names = readdirSync(dir).filter((name) => name.toLowerCase().endsWith(".pdf"));
+  } catch {
+    return null;
+  }
+  if (!names.length) return null;
+  const preferred = galleryId
+    ? `${String(galleryId).replace(/[\\/]+/g, "-")}-Transcripts.pdf`
+    : null;
+  const pick =
+    (preferred && names.includes(preferred) && preferred) ||
+    names.find((name) => /-Transcripts\.pdf$/i.test(name)) ||
+    names.sort()[0];
+  return `transcripts/pdf/talks/${pick}`;
+}
+
+/** Shared top-left links from brand.json. Same on every gallery and overview. */
+function siteGalleryLinks(brand) {
+  return transcriptLinkItems(brand && brand.galleryLinks);
+}
+
+/**
+ * Auto links from files on disk. Talks / interviews / concatenated PDF only.
+ */
+function discoverTranscriptLinks(confDir, galleryId = null) {
+  const links = [];
+  if (transcriptHtmlKindExists(confDir, "talks")) {
+    links.push({ label: "Talk transcripts", href: "transcripts/html/talks/" });
+  }
+  if (transcriptHtmlKindExists(confDir, "interviews")) {
+    links.push({ label: "Interview transcripts", href: "transcripts/html/interviews/" });
+  }
+  const pdf = discoverTranscriptPdfHref(confDir, galleryId);
+  if (pdf) links.push({ label: "All Transcripts (PDF)", href: pdf });
+  return links;
+}
+
+/** Site links, then optional page.transcriptLinks, then discovered links. Dedupe by href. */
+function mergeTranscriptLinks(page, confDir = null, galleryId = null, brand = null) {
+  const site = siteGalleryLinks(brand);
+  const manual = transcriptLinkItems(page && page.transcriptLinks);
+  const discovered = discoverTranscriptLinks(confDir, galleryId);
+  const seen = new Set();
+  const out = [];
+  for (const item of [...site, ...manual, ...discovered]) {
+    const href = item.href.trim();
+    if (seen.has(href)) continue;
+    seen.add(href);
+    out.push({ label: item.label.trim(), href });
+  }
+  return out;
+}
+
 function renderTranscriptNav(links) {
   const parts = [];
   links.forEach((item, i) => {
     if (i > 0) parts.push('<span class="sep" aria-hidden="true">·</span>');
     parts.push(
-      `<a href="${escapeAttr(item.href.trim())}">${escapeText(item.label.trim())}</a>`
+      `<a href="${escapeAttr(item.href)}">${escapeText(item.label)}</a>`
     );
   });
   const hidden = links.length ? "" : " hidden";
-  return `<nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Transcript indexes"${hidden}>${parts.join("")}</nav>`;
+  return `<nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Gallery links"${hidden}>${parts.join("")}</nav>`;
 }
 
-function stampTranscriptLinks(html, page) {
+function stampTranscriptLinks(html, page, confDir = null, galleryId = null, brand = null) {
   if (!html.includes(TRANSCRIPT_NAV_MARKER)) {
     throw new Error("landing-pages: template missing transcript links marker");
   }
-  return html.replace(TRANSCRIPT_NAV_MARKER, renderTranscriptNav(transcriptLinkItems(page)));
+  const discovered = discoverTranscriptLinks(confDir, galleryId);
+  const merged = mergeTranscriptLinks(page, confDir, galleryId, brand);
+  let out = html.replace(TRANSCRIPT_NAV_MARKER, renderTranscriptNav(merged));
+  if (out.includes(TRANSCRIPT_LINKS_MARKER)) {
+    out = out.replace(TRANSCRIPT_LINKS_MARKER, embedJson(discovered));
+  }
+  return out;
 }
 
 /** Same header markup as renderPageChrome() in the gallery template. */
@@ -368,6 +455,9 @@ async function cmdLandingPages(opts) {
   if (!templateHtml.includes(SUBTITLE_LANG_MARKER)) {
     throw new Error("landing-pages: template missing DISCOVERED_SUBTITLE_LANGS marker");
   }
+  if (!templateHtml.includes(TRANSCRIPT_LINKS_MARKER)) {
+    throw new Error("landing-pages: template missing DISCOVERED_TRANSCRIPT_LINKS marker");
+  }
   if (!templateHtml.includes(TRANSCRIPT_NAV_MARKER)) {
     throw new Error("landing-pages: template missing transcript links marker");
   }
@@ -384,14 +474,18 @@ async function cmdLandingPages(opts) {
     const description =
       page.subtitle || page.description || brand.descriptionFallback || "Presentations and talks.";
     const url = `${SITE_URL}/${galleryPrefix(id)}/`;
-    const langMap = discoveredSubtitleLangs(config, galleryDir(id));
+    const confDir = galleryDir(id);
+    const langMap = discoveredSubtitleLangs(config, confDir);
     const html = stampGalleryHeader(
       stampTranscriptLinks(
         stampLandingMeta(templateHtml, { title, description, url, brand }).replace(
           SUBTITLE_LANG_MARKER,
           embedJson(langMap)
         ),
-        page
+        page,
+        confDir,
+        id,
+        brand
       ),
       page,
       url
@@ -553,6 +647,9 @@ async function cmdOverviewPages(opts) {
   if (!templateHtml.includes(OVERVIEW_FOOTER_MARKER)) {
     throw new Error("overview: template missing overview footer marker");
   }
+  if (!templateHtml.includes(TRANSCRIPT_NAV_MARKER)) {
+    throw new Error("overview: template missing transcript links marker");
+  }
   const scopes = overviewScopesFor(opts);
   const all = await findConferences();
   let updated = 0;
@@ -590,10 +687,16 @@ async function cmdOverviewPages(opts) {
         countLabel: videoCountLabel(config.videos),
       });
     }
-    const html = stampGalleryHeader(
-      stampLandingMeta(templateHtml, { title, description, url, brand }),
+    const html = stampTranscriptLinks(
+      stampGalleryHeader(
+        stampLandingMeta(templateHtml, { title, description, url, brand }),
+        pageCopy,
+        url
+      ),
       pageCopy,
-      url
+      null,
+      null,
+      brand
     )
       .replace(OVERVIEW_CARDS_MARKER, renderOverviewCards(cards))
       .replace(OVERVIEW_FOOTER_MARKER, escapeText(pageCopy.footer || ""));
