@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Transcripts — KERI Mini Conference November 2026 Videos</title>
-  <meta name="description" content="Searchable transcripts for KERI Mini Conference November 2026 Videos">
+  <title>Placeholder - Samuel Smith — Transcript</title>
+  <meta name="description" content="Transcript: Placeholder - Samuel Smith (Mini Conference nov 2026 · 0:05)">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
@@ -26,14 +26,15 @@
       background: var(--bg);
       color: var(--ink);
       padding: 24px 16px 48px;
-      line-height: 1.5;
+      line-height: 1.55;
     }
-    .wrap { max-width: 40rem; margin: 0 auto; }
-    nav, h1, h2, .dur {
+    .wrap { max-width: 44rem; margin: 0 auto; }
+    nav {
       font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
     }
-    nav { font-size: 0.9rem; margin-bottom: 1rem; }
-    nav a, a { color: var(--link); }
+    nav a { color: var(--link); }
     nav a:hover { color: var(--ink); }
     header {
       position: relative;
@@ -63,23 +64,67 @@
       opacity: 0.55;
     }
     h1 {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
       font-weight: 800;
       letter-spacing: -0.03em;
-      font-size: clamp(1.5rem, 3vw, 2rem);
-      margin: 0 0 0.35rem;
+      line-height: 1.15;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      margin: 0 0 0.4rem;
     }
-    .lead { color: var(--muted); margin: 0; }
-    section {
+    .meta {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0 0 1rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .actions a {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--ink);
+      background: rgba(152, 108, 50, 0.18);
+      border: 1px solid rgba(152, 108, 50, 0.35);
+      border-radius: 8px;
+      padding: 0.55rem 0.9rem;
+    }
+    .actions a:hover { background: rgba(152, 108, 50, 0.32); }
+    .actions a.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+    .actions a.primary:hover { background: #0a1270; }
+    article {
       background: var(--panel);
       border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
       border-radius: 10px;
-      padding: 1rem 1.25rem;
-      margin-bottom: 1rem;
+      padding: 1rem 1.25rem 1.5rem;
     }
-    h2 { font-size: 1.05rem; margin: 0 0 0.6rem; }
-    ul { margin: 0; padding-left: 1.15rem; }
-    li { margin: 0.35rem 0; }
-    .dur { color: var(--muted); font-size: 0.85rem; font-weight: 600; }
+    .cue {
+      display: grid;
+      grid-template-columns: 4.5rem 1fr;
+      gap: 0.65rem 0.85rem;
+      margin: 0;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+    }
+    .cue:last-child { border-bottom: none; }
+    .cue-time {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      padding-top: 0.15rem;
+    }
+    .cue-time:hover { color: var(--ink); text-decoration: underline; }
+    .cue-text { font-size: 1.05rem; }
     footer {
       position: relative;
       z-index: 0;
@@ -115,22 +160,36 @@
         background-size: 160px 92px;
       }
     }
+    @media (max-width: 520px) {
+      .cue { grid-template-columns: 1fr; gap: 0.2rem; }
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <nav><a href="../../../">KERI Mini Conference November 2026 Videos</a></nav>
+    <nav>
+      <a href="../../../">KERI Mini Conference November 2026</a>
+      · <a href="./">All transcripts</a>
+    </nav>
     <header>
-      <h1>Transcripts</h1>
-      <p class="lead">Full text of each talk. Open a transcript, then jump to the matching moment in the video.</p>
+      <h1>Placeholder - Samuel Smith</h1>
+      <p class="meta">Mini Conference nov 2026 · 0:05</p>
+      <div class="actions">
+        <a class="primary" href="../../../#placeholder-samuel-smith">Watch video</a>
+        <a href="./">All transcripts</a>
+        <a href="../../../">Video gallery</a>
+      </div>
     </header>
-      <section>
-        <h2>miniConf</h2>
-        <ul>
-        <li><a href="test-1.html">Test 1</a></li>
-        <li><a href="test-2.html">Test 2</a></li>
-        </ul>
-      </section>
+    <article>
+    <p class="cue" id="t0">
+      <a class="cue-time" href="../../../#placeholder-samuel-smith">0:00</a>
+      <span class="cue-text">My name is Sam Smith.</span>
+    </p>
+    <p class="cue" id="t3">
+      <a class="cue-time" href="../../../#placeholder-samuel-smith&amp;t=3">0:03</a>
+      <span class="cue-text">If anybody</span>
+    </p>
+    </article>
     <footer>KERI Foundation • Conference Videos Collection</footer>
   </div>
 </body>

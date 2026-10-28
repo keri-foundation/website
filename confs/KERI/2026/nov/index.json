@@ -1,7 +1,7 @@
 {
   "page": {
-    "title": "KERI Mini Conference November 2026 Videos",
-    "heading": "KERI Mini Conference November 2026 Videos",
+    "title": "KERI Mini Conference November 2026",
+    "heading": "KERI Mini Conference November 2026",
     "headingHref": "/confs/KERI/2026/nov/",
     "statusNotice": "",
     "subtitle": "A collection of presentations and talks from the KERI community",
@@ -10,54 +10,21 @@
     "searchLabel": "Search all transcripts",
     "nav": [
       {
-        "label": "Home",
-        "href": "/",
+        "label": "Program",
+        "href": "https://kericonf.com/program/",
         "external": false
       },
       {
-        "label": "Mini Conference November 2026 Program",
-        "href": "https://kericonf.com/archive/kericonf26/program/",
+        "label": "Speakers",
+        "href": "https://kericonf.com/speakers/",
         "external": false
-      },
-      {
-        "label": "Speakers 2026",
-        "href": "https://kericonf.com/archive/kericonf26/speakers-2026/",
-        "external": false
-      },
-      {
-        "label": "Day 1",
-        "href": "https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL",
-        "external": false,
-        "icon": "youtube",
-        "prefix": "All videos on YouTube:"
-      },
-      {
-        "label": "Day 2",
-        "href": "https://www.youtube.com/playlist?list=PLnHy2ee5UksMjwBseKJ7ivXiYukRvI65a",
-        "external": false,
-        "icon": "youtube"
-      },
-      {
-        "label": "All Transcripts (PDF)",
-        "href": "transcripts/pdf/talks/KERI-2026-apr-Transcripts.pdf",
-        "external": false
-      },
-      {
-        "label": "SEDI nov 2025",
-        "href": "/confs/SEDI/2025/nov/",
-        "external": false
-      }
-    ],
-    "transcriptLinks": [
-      {
-        "label": "Conference talk transcripts",
-        "href": "transcripts/html/talks/"
-      },
-      {
-        "label": "Interview transcripts",
-        "href": "transcripts/html/interviews/"
       }
     ]
+  },
+  "promo": {
+    "src": "promo/promo.mp4",
+    "poster": "promo/promo.jpg",
+    "title": "KERI Mini Conference November 2026"
   },
   "transcriptsDir": "transcripts/html",
   "defaultPoster": "https://kericonf.com/wp-content/uploads/2026/05/KERI-mini-CONF26-scaled.png",
@@ -90,16 +57,40 @@
   },
   "videos": [
     {
-      "order": 1,
+      "order": 3,
       "day": "Mini Conference nov 2026",
-      "title": "Test 1",
-      "path": "talks/TESTVID-Plenary-SamuelSmitht.mp4"
+      "title": "Placeholder - Kent Bull",
+      "speaker": "Kent Bull",
+      "path": "talks/PLACEHOLDER-Kent-Bull.mp4",
+      "duration": "0:05",
+      "subtitle": "talks/PLACEHOLDER-Kent-Bull.srt"
     },
     {
       "order": 2,
       "day": "Mini Conference nov 2026",
-      "title": "Test 2",
-      "path": "talks/TESTVID-shortfilm-Christmas-Carol.mp4"
+      "title": "Placeholder - Ryan Hansen",
+      "speaker": "Ryan Hansen",
+      "path": "talks/PLACEHOLDER-Ryan-Hansen.mp4",
+      "duration": "0:05",
+      "subtitle": "talks/PLACEHOLDER-Ryan-Hansen.srt"
+    },
+    {
+      "order": 1,
+      "day": "Mini Conference nov 2026",
+      "title": "Placeholder - Samuel Smith",
+      "speaker": "Samuel Smith",
+      "path": "talks/PLACEHOLDER-Samuel-Smith.mp4",
+      "duration": "0:05",
+      "subtitle": "talks/PLACEHOLDER-Samuel-Smith.srt"
+    },
+    {
+      "order": 4,
+      "day": "Mini Conference nov 2026",
+      "title": "Placeholder - Evan Asakawa",
+      "speaker": "Evan Asakawa",
+      "path": "talks/PLACEHOLDER-Evan-Asakawa.mp4",
+      "duration": "0:05",
+      "subtitle": "talks/PLACEHOLDER-Evan-Asakawa.srt"
     }
   ]
 }
