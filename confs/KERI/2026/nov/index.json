@@ -4,7 +4,7 @@
     "heading": "KERI Mini Conference November 2026",
     "headingHref": "/confs/KERI/2026/nov/",
     "statusNotice": "",
-    "subtitle": "A collection of presentations and talks from the KERI community",
+    "subtitle": "The videos from the KERI Mini Conference in November 2026 will be posted here.",
     "footer": "KERI Foundation \u2022 Conference Videos Collection",
     "searchPlaceholder": "Type to search across all talks\u2026",
     "searchLabel": "Search all transcripts",
@@ -24,7 +24,7 @@
   "promo": {
     "src": "promo/promo.mp4",
     "poster": "promo/promo.jpg",
-    "title": "KERI Mini Conference November 2026"
+    "title": "The videos from the KERI Mini Conference in November 2026 will be posted here."
   },
   "transcriptsDir": "transcripts/html",
   "defaultPoster": "https://kericonf.com/wp-content/uploads/2026/05/KERI-mini-CONF26-scaled.png",
