@@ -6,18 +6,6 @@
     "headingHref": "/vids/",
     "statusNotice": "",
     "subtitle": "Talks from the KERI Foundation that are not part of a conference",
-    "footer": "KERI Foundation • Videos",
-    "nav": [
-      {
-        "label": "Home",
-        "href": "/",
-        "external": false
-      },
-      {
-        "label": "Conference videos",
-        "href": "/confs/",
-        "external": false
-      }
-    ]
+    "footer": "KERI Foundation • Videos"
   }
 }

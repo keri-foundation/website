@@ -3,10 +3,10 @@
 <!--
   Shared overview of a media tree (confs/ or vids/).
   deploy-confs.sh landing-pages stamps this file into each tree root as
-  index.html. Page copy comes from that tree's overview.json (next to
-  index.php). Site name, icons, share image, wave, and colors come from
-  brand.json beside the gallery template. Cards come from every gallery
-  index.json in the tree.
+  index.html. Page copy and page.transcriptLinks come from that tree's
+  overview.json (next to index.php). Site name, icons, share image, wave,
+  and colors come from brand.json beside the gallery template. Cards come
+  from every gallery index.json in the tree.
   Do not edit confs/index.html or vids/index.html by hand.
   Copy overview.json from this folder and tailor it beside each index.php.
 -->
@@ -212,6 +212,31 @@
             margin: 0 auto;
         }
 
+        /* Gallery links. landing-pages writes page.transcriptLinks here. */
+        .seo-transcript-links {
+            margin: 0 0 10px;
+            padding: 6px 10px;
+            font-size: 0.8rem;
+            line-height: 1.4;
+            color: var(--muted);
+            opacity: 0.85;
+        }
+
+        .seo-transcript-links a {
+            color: var(--link);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .seo-transcript-links a:hover {
+            color: var(--ink);
+        }
+
+        .seo-transcript-links .sep {
+            margin: 0 0.35em;
+            opacity: 0.55;
+        }
+
         .gallery-nav {
             margin-top: 14px;
             font-size: 0.95rem;
@@ -402,17 +427,28 @@
 
 <body>
     <a class="skip-link" href="#mainContent">Skip to main content</a>
+    <nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Gallery links"><a href="/">Home</a><span class="sep" aria-hidden="true">·</span><a href="/confs/">Conference index</a><span class="sep" aria-hidden="true">·</span><a href="/vids/">Other videos</a></nav>
     <div class="page">
-        <header id="galleryHeader"><h1><a href="/confs/">Conference Videos</a></h1><p class="subtitle">Presentations and talks from KERI Foundation conferences</p><nav class="gallery-nav" aria-label="Related pages"><a href="/">Home</a> | <a href="/vids/">Other videos</a></nav></header>
+        <header id="galleryHeader"><h1><a href="/confs/">Conference Videos</a></h1><p class="subtitle">Presentations and talks from KERI Foundation conferences</p></header>
 
         <main id="mainContent">
             <div class="video-container">
                 <div class="video-grid" id="overviewGrid">
                 <article class="overview-card">
+                    <a class="overview-card-link" href="/confs/KERI/2026/nov/">
+                        <div class="overview-poster"><img src="/confs/KERI/2026/nov/promo/promo.jpg" alt=""></div>
+                        <div class="video-info">
+                            <h2 class="video-title">KERI Mini Conference November 2026</h2>
+                            <p class="overview-blurb">A collection of presentations and talks from the KERI community</p>
+                            <p class="video-meta"><span><span class="overview-org">KERI</span><span class="sep" aria-hidden="true">·</span>November 2026</span><span class="video-duration">4 talks</span></p>
+                        </div>
+                    </a>
+                </article>
+                <article class="overview-card">
                     <a class="overview-card-link" href="/confs/KERI/2026/apr/">
                         <div class="overview-poster"><img src="/confs/KERI/2026/apr/promo/promo.jpg" alt=""></div>
                         <div class="video-info">
-                            <h2 class="video-title">KERI Conference April 2026 Videos</h2>
+                            <h2 class="video-title">KERI Conference April 2026</h2>
                             <p class="overview-blurb">A collection of presentations and talks from the KERI community</p>
                             <p class="video-meta"><span><span class="overview-org">KERI</span><span class="sep" aria-hidden="true">·</span>April 2026</span><span class="video-duration">29 talks, 13 interviews</span></p>
                         </div>

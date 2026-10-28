@@ -10,16 +10,6 @@
     "searchLabel": "Search transcript",
     "nav": [
       {
-        "label": "Home",
-        "href": "/",
-        "external": false
-      },
-      {
-        "label": "All Transcripts (PDF)",
-        "href": "transcripts/pdf/talks/vids-2024-Transcripts.pdf",
-        "external": false
-      },
-      {
         "label": "2020 Videos",
         "href": "/vids/2020/",
         "external": false
@@ -38,12 +28,6 @@
         "label": "SEDI Summit November 2025",
         "href": "/confs/SEDI/2025/nov/",
         "external": false
-      }
-    ],
-    "transcriptLinks": [
-      {
-        "label": "Talk transcripts",
-        "href": "transcripts/html/talks/"
       }
     ]
   },

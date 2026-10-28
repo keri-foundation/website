@@ -3,6 +3,20 @@
   "titleFallback": "KERI Foundation Videos",
   "descriptionFallback": "Presentations and talks from the KERI Foundation.",
   "footerFallback": "KERI Foundation",
+  "galleryLinks": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Conference index",
+      "href": "/confs/"
+    },
+    {
+      "label": "Other videos",
+      "href": "/vids/"
+    }
+  ],
   "favicon32": "/custom/img/favicon-32x32.png",
   "favicon192": "/custom/img/favicon-192x192.png",
   "appleTouchIcon": "/custom/img/apple-touch-icon.png",

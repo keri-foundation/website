@@ -7,30 +7,7 @@
     "subtitle": "Morning, lunch panel, and afternoon talks from the UVU summit",
     "footer": "KERI Foundation \u2022 UVU Summit Videos",
     "searchPlaceholder": "Type to search across all sessions\u2026",
-    "searchLabel": "Search all transcripts",
-    "nav": [
-      {
-        "label": "Home",
-        "href": "/",
-        "external": false
-      },
-      {
-        "label": "KERIConf 2026 Videos",
-        "href": "/confs/KERI/2026/apr/",
-        "external": false
-      },
-      {
-        "label": "All Transcripts (PDF)",
-        "href": "transcripts/pdf/talks/2025-11-SEDI-Transcripts.pdf",
-        "external": false
-      }
-    ],
-    "transcriptLinks": [
-      {
-        "label": "All transcripts",
-        "href": "transcripts/html/talks/"
-      }
-    ]
+    "searchLabel": "Search all transcripts"
   },
   "topClips": {
     "enabled": true,

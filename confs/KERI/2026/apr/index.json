@@ -1,7 +1,7 @@
 {
   "page": {
-    "title": "KERI Conference April 2026 Videos",
-    "heading": "KERI Conference April 2026 Videos",
+    "title": "KERI Conference April 2026",
+    "heading": "KERI Conference April 2026",
     "headingHref": "/confs/KERI/2026/apr/",
     "statusNotice": "",
     "subtitle": "A collection of presentations and talks from the KERI community",
@@ -9,11 +9,6 @@
     "searchPlaceholder": "Type to search across all talks\u2026",
     "searchLabel": "Search all transcripts",
     "nav": [
-      {
-        "label": "Home",
-        "href": "/",
-        "external": false
-      },
       {
         "label": "Conference 2026 Program",
         "href": "https://kericonf.com/archive/kericonf26/program/",
@@ -36,33 +31,13 @@
         "href": "https://www.youtube.com/playlist?list=PLnHy2ee5UksMjwBseKJ7ivXiYukRvI65a",
         "external": false,
         "icon": "youtube"
-      },
-      {
-        "label": "All Transcripts (PDF)",
-        "href": "transcripts/pdf/talks/KERI-2026-apr-Transcripts.pdf",
-        "external": false
-      },
-      {
-        "label": "SEDI nov 2025",
-        "href": "/confs/SEDI/2025/nov/",
-        "external": false
-      }
-    ],
-    "transcriptLinks": [
-      {
-        "label": "Conference talk transcripts",
-        "href": "transcripts/html/talks/"
-      },
-      {
-        "label": "Interview transcripts",
-        "href": "transcripts/html/interviews/"
       }
     ]
   },
   "promo": {
     "src": "promo/promo.mp4",
     "poster": "promo/promo.jpg",
-    "title": "KERI Conference 2026 Promo"
+    "title": "KERI Conference 2026"
   },
   "topClips": {
     "enabled": true,

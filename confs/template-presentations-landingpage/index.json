@@ -10,11 +10,6 @@
     "searchLabel": "Search all transcripts",
     "nav": [
       {
-        "label": "Home",
-        "href": "/",
-        "external": false
-      },
-      {
         "label": "Program",
         "href": "https://example.com/program/",
         "external": false
@@ -25,16 +20,6 @@
         "external": false,
         "icon": "youtube",
         "prefix": "All videos on YouTube:"
-      }
-    ],
-    "transcriptLinks": [
-      {
-        "label": "Talk transcripts",
-        "href": "transcripts/html/talks/"
-      },
-      {
-        "label": "Interview transcripts",
-        "href": "transcripts/html/interviews/"
       }
     ]
   },

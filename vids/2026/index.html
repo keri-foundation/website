@@ -6,7 +6,8 @@
   Page copy comes from that gallery's index.json. Site name, icons, share
   image, wave, and colors come from brand.json beside this file. An optional
   "brand" object on a gallery index.json overrides it for that gallery.
-  The same step writes the page header and page.transcriptLinks into the HTML.
+  The same step writes the page header and page.transcriptLinks into the HTML,
+  and appends talk / interview / PDF links discovered under transcripts/.
   Do not edit per-gallery index.html by hand.
 -->
 
@@ -148,7 +149,7 @@
             border: 0;
         }
 
-        /* Transcript index links. landing-pages writes page.transcriptLinks here; JS refreshes the same list. */
+        /* Gallery links. landing-pages writes page.transcriptLinks plus discovered transcript/PDF links; JS refreshes the same list. */
         .seo-transcript-links {
             margin: 0 0 10px;
             padding: 6px 10px;
@@ -2467,8 +2468,8 @@
 
 <body>
     <a class="skip-link" href="#mainContent">Skip to main content</a>
-    <nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Transcript indexes"><a href="transcripts/html/talks/">Talk transcripts</a></nav>
-    <header id="galleryHeader"><h1><a href="/vids/2026/">2026 Videos</a></h1><p class="subtitle">Samuel Smith introduces KERI, and why the choice is KERI or surveillance</p><nav class="gallery-nav" aria-label="Related pages"><a href="/">Home</a> | <a href="transcripts/pdf/talks/vids-2026-Transcripts.pdf">All Transcripts (PDF)</a> | <a href="/vids/2020/">2020 Videos</a> | <a href="/vids/2024/">2024 Videos</a> | <a href="/confs/KERI/2026/apr/">KERI Conference April 2026</a> | <a href="/confs/SEDI/2025/nov/">SEDI Summit November 2025</a></nav></header>
+    <nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Gallery links"><a href="/">Home</a><span class="sep" aria-hidden="true">·</span><a href="/confs/">Conference index</a><span class="sep" aria-hidden="true">·</span><a href="/vids/">Other videos</a><span class="sep" aria-hidden="true">·</span><a href="transcripts/html/talks/">Talk transcripts</a><span class="sep" aria-hidden="true">·</span><a href="transcripts/pdf/talks/vids-2026-Transcripts.pdf">All Transcripts (PDF)</a></nav>
+    <header id="galleryHeader"><h1><a href="/vids/2026/">2026 Videos</a></h1><p class="subtitle">Samuel Smith introduces KERI, and why the choice is KERI or surveillance</p><nav class="gallery-nav" aria-label="Related pages"><a href="/vids/2020/">2020 Videos</a> | <a href="/vids/2024/">2024 Videos</a> | <a href="/confs/KERI/2026/apr/">KERI Conference April 2026</a> | <a href="/confs/SEDI/2025/nov/">SEDI Summit November 2025</a></nav></header>
 
     <main id="mainContent">
         <div class="featured-media" id="featuredMedia">
@@ -2553,7 +2554,7 @@
             'use strict';
 
             // landing-pages replaces the marker with the site brand object.
-            const SITE_BRAND = {"siteName":"KERI Foundation","titleFallback":"KERI Foundation Videos","descriptionFallback":"Presentations and talks from the KERI Foundation.","footerFallback":"KERI Foundation","favicon32":"https://keri.foundation/custom/img/favicon-32x32.png","favicon192":"https://keri.foundation/custom/img/favicon-192x192.png","appleTouchIcon":"https://keri.foundation/custom/img/apple-touch-icon.png","msTile":"https://keri.foundation/custom/img/mstile-270x270.png","image":"https://keri.foundation/custom/img/logo-keri-foundation-og.png","imageAlt":"KERI Foundation logo","imageWidth":"1200","imageHeight":"630","wave":"/custom/img/waves-kim-1.png","colors":{"ink":"#060b6f","muted":"#2e3a7a","bg":"#fdefde","panel":"#f4f0e8","stone":"#e8e6de","speaker":"#f6e2b8","accent":"#986c32","link":"#0450a8","onInk":"#ffffff","hover":"#f8e4c8","play":"#5f7c2f","playPress":"#4e6826","surface":"#f8ead8","surface2":"#f3dcc0","surface3":"#f7f1e6","surface4":"#f6e6cf","surface5":"#f8efe2"}};
+            const SITE_BRAND = {"siteName":"KERI Foundation","titleFallback":"KERI Foundation Videos","descriptionFallback":"Presentations and talks from the KERI Foundation.","footerFallback":"KERI Foundation","galleryLinks":[{"label":"Home","href":"/"},{"label":"Conference index","href":"/confs/"},{"label":"Other videos","href":"/vids/"}],"favicon32":"https://keri.foundation/custom/img/favicon-32x32.png","favicon192":"https://keri.foundation/custom/img/favicon-192x192.png","appleTouchIcon":"https://keri.foundation/custom/img/apple-touch-icon.png","msTile":"https://keri.foundation/custom/img/mstile-270x270.png","image":"https://keri.foundation/custom/img/logo-keri-foundation-og.png","imageAlt":"KERI Foundation logo","imageWidth":"1200","imageHeight":"630","wave":"/custom/img/waves-kim-1.png","colors":{"ink":"#060b6f","muted":"#2e3a7a","bg":"#fdefde","panel":"#f4f0e8","stone":"#e8e6de","speaker":"#f6e2b8","accent":"#986c32","link":"#0450a8","onInk":"#ffffff","hover":"#f8e4c8","play":"#5f7c2f","playPress":"#4e6826","surface":"#f8ead8","surface2":"#f3dcc0","surface3":"#f7f1e6","surface4":"#f6e6cf","surface5":"#f8efe2"}};
 
             const BRAND_COLOR_VARS = {
                 ink: '--ink',
@@ -3435,19 +3436,36 @@
 
             const YOUTUBE_ICON = 'data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiA4djggbC00LTIuNXYtMy4yTDggMTJ6Ii8+PC9zdmc+';
 
+            // Stamped by landing-pages from transcripts/html and transcripts/pdf.
+            const DISCOVERED_TRANSCRIPT_LINKS = [{"label":"Talk transcripts","href":"transcripts/html/talks/"},{"label":"All Transcripts (PDF)","href":"transcripts/pdf/talks/vids-2026-Transcripts.pdf"}];
+
             function renderTranscriptLinks(page) {
                 const nav = document.getElementById('seoTranscriptLinks');
                 if (!nav) return;
 
                 nav.replaceChildren();
-                const links = Array.isArray(page && page.transcriptLinks) ? page.transcriptLinks : [];
-                const valid = links.filter((item) =>
-                    item
-                    && typeof item.href === 'string'
-                    && item.href.trim()
-                    && typeof item.label === 'string'
-                    && item.label.trim()
-                );
+                const site = SITE_BRAND && Array.isArray(SITE_BRAND.galleryLinks)
+                    ? SITE_BRAND.galleryLinks
+                    : [];
+                const manual = Array.isArray(page && page.transcriptLinks) ? page.transcriptLinks : [];
+                const discovered = Array.isArray(DISCOVERED_TRANSCRIPT_LINKS)
+                    ? DISCOVERED_TRANSCRIPT_LINKS
+                    : [];
+                const seen = new Set();
+                const valid = [];
+                for (const item of [...site, ...manual, ...discovered]) {
+                    if (
+                        !item
+                        || typeof item.href !== 'string'
+                        || !item.href.trim()
+                        || typeof item.label !== 'string'
+                        || !item.label.trim()
+                    ) continue;
+                    const href = item.href.trim();
+                    if (seen.has(href)) continue;
+                    seen.add(href);
+                    valid.push({ label: item.label.trim(), href });
+                }
                 if (!valid.length) {
                     nav.hidden = true;
                     return;
@@ -3462,8 +3480,8 @@
                         nav.appendChild(sep);
                     }
                     const a = document.createElement('a');
-                    a.href = item.href.trim();
-                    a.textContent = item.label.trim();
+                    a.href = item.href;
+                    a.textContent = item.label;
                     nav.appendChild(a);
                 });
                 nav.hidden = false;
