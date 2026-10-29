@@ -16,6 +16,7 @@
   - [Yearly videos (`/vids/<YEAR>/`)](#yearly-videos-vidsyear)
     - [New conference](#new-conference)
     - [Build and deploy](#build-and-deploy)
+    - [Dependencies (`ffmpeg` / `ffprobe`)](#dependencies-ffmpeg--ffprobe)
     - [Overviews and directory listings (`/confs/`, `/vids/`)](#overviews-and-directory-listings-confs-vids)
     - [Legacy gallery URLs](#legacy-gallery-urls)
   - [Subtitles](#subtitles)
@@ -275,6 +276,8 @@ The old standalone player redirects here:
 scripts/deploy-confs.sh landing-pages    # sync gallery index.html, and write /confs/ and /vids/ overviews
 scripts/deploy-confs.sh build            # landing-pages → audio → subtitles → transcripts → sitemap → pdfs → verify
 scripts/deploy-confs.sh audio            # podcast MP3 beside each MP4 that does not have one yet
+scripts/deploy-confs.sh verify           # referenced files exist locally
+scripts/deploy-confs.sh verify-videos    # optional gallery MP4 encode checks (needs ffprobe; not in build/deploy)
 scripts/deploy-confs.sh -n push          # preview what would be uploaded
 scripts/deploy-confs.sh deploy           # build + push (rsync --delete) + check the live site
 scripts/deploy-confs.sh check-remote     # HEAD-request every referenced file on keri.foundation
@@ -282,7 +285,42 @@ scripts/deploy-confs.sh --conf SEDI/2025/nov push
 scripts/deploy-confs.sh --conf vids/2026 push
 ```
 
-`audio` (included in `build` and `deploy`) writes `talks/foo.mp3` from `talks/foo.mp4` when that MP3 is absent. The encode is mono, 44.1 kHz, 64 kbps MP3: about 28 MB per hour, clear enough for a spoken-word podcast. It needs `ffmpeg` with LAME (`brew install ffmpeg`). MP3s are gitignored; `push` uploads them with the gallery. An MP4 that is not on this machine is skipped, and `verify` still reports that file missing.
+`audio` (included in `build` and `deploy`) writes `talks/foo.mp3` from `talks/foo.mp4` when that MP3 is absent. The encode is mono, 44.1 kHz, 64 kbps MP3: about 28 MB per hour, clear enough for a spoken-word podcast. It needs `ffmpeg` with LAME. MP3s are gitignored; `push` uploads them with the gallery. An MP4 that is not on this machine is skipped, and `verify` still reports that file missing.
+
+`verify` (included in `build` and `deploy`) checks that every file referenced by each gallery `index.json` exists locally.
+
+`verify-videos` is optional and **not** part of `build` or `deploy`. Run it when you want encode checks: for each local gallery `.mp4` it uses `ffprobe` to enforce the technical rules in [VIDEO_SUBMISSION_GUIDE.md](VIDEO_SUBMISSION_GUIDE.md) (H.264 High level 3.1–4.2, 720p, ~1.5–2.5 Mbps video, AAC stereo, size/hour, fast-start `moov` before `mdat`, and a few filename-character rules). Missing MP4s are skipped. Soft issues such as audio slightly under 128 kbps are warnings; hard mismatches exit non-zero.
+
+### Dependencies (`ffmpeg` / `ffprobe`)
+
+Gallery `audio`, `build`, and `deploy` need `ffmpeg`. Optional `verify-videos` also needs `ffprobe` (same install):
+
+| Tool | Used for |
+| ---- | -------- |
+| `ffmpeg` | Podcast MP3s from gallery MP4s (`audio`); needs the `libmp3lame` encoder |
+| `ffprobe` | Optional gallery MP4 encode checks (`verify-videos`); ships with FFmpeg |
+
+Install:
+
+```bash
+# macOS (Homebrew)
+brew install ffmpeg
+
+# Debian / Ubuntu
+sudo apt update && sudo apt install ffmpeg
+
+# Fedora
+sudo dnf install ffmpeg
+```
+
+Confirm both binaries are available:
+
+```bash
+ffmpeg -version
+ffprobe -version
+```
+
+On macOS, Homebrew’s `ffmpeg` formula includes `ffprobe` and LAME.
 
 `push` and `deploy` also upload the site-root `.htaccess` (the `/videos/` redirect), `robots.txt`, `confs/sitemap.xml`, and `vids/sitemap.xml`, plus the tree indexes: `confs/.htaccess`, `confs/index.php`, `confs/index.html`, and the same three files under `vids/`. A full push mirrors every `confs/<ORG>/` folder and the whole `vids/` tree. `--conf` limits the gallery mirror; the site-root `.htaccess`, `robots.txt`, both sitemaps, and both tree indexes are still uploaded.
 

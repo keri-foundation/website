@@ -8,6 +8,7 @@
  *   node scripts/confs.mjs sync-subtitles [--dry-run] [--conf KERI/2026/apr]...
  *   node scripts/confs.mjs audio [--dry-run] [--conf KERI/2026/apr]...
  *   node scripts/confs.mjs verify [--remote https://keri.foundation] [--conf KERI/2026/apr]...
+ *   node scripts/confs.mjs verify-videos [--conf KERI/2026/apr]...
  *   node scripts/confs.mjs sitemap [--dry-run]
  *
  * list            Print every gallery id that has an index.json.
@@ -47,16 +48,21 @@
  * verify          Check that every file referenced by index.json exists (media, mp3,
  *                 subtitles, slides, posters, photos, transcript pages) and list files
  *                 that nothing references. With --remote, also HEAD-request each file
- *                 on the live site.
+ *                 on the live site. Does not run encode checks (see verify-videos).
+ * verify-videos   Optional: for each local gallery MP4 referenced by index.json, check
+ *                 the VIDEO_SUBMISSION_GUIDE.md technical rules with ffprobe (codec,
+ *                 High profile level 3.1–4.2, 720p, bitrate, size/hour, AAC stereo,
+ *                 fast start). Missing MP4s are skipped. Not part of build/deploy.
+ *                 Needs ffprobe (ships with ffmpeg).
  * sitemap         Write confs/sitemap.xml and vids/sitemap.xml. Each lists that tree's
  *                 overview, gallery pages, transcript indexes, and transcript HTML.
  *                 --conf is ignored: a sitemap is always the full tree.
  */
 
-import { readFile, readdir, stat, copyFile, mkdir, writeFile, rename, unlink } from "node:fs/promises";
+import { readFile, readdir, stat, copyFile, mkdir, writeFile, rename, unlink, open } from "node:fs/promises";
 import { existsSync, readdirSync } from "node:fs";
 import { spawn } from "node:child_process";
-import { basename, dirname, join, relative, resolve, sep } from "node:path";
+import { basename, dirname, extname, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { homedir } from "node:os";
 import { absoluteAsset, brandThemeStyle, loadBrand, mergeBrand } from "./brand.mjs";
@@ -976,6 +982,215 @@ async function headAll(urls, concurrency = 6) {
   return results;
 }
 
+/** Technical limits from VIDEO_SUBMISSION_GUIDE.md (conference talk encodes). */
+const VIDEO_SPEC = {
+  width: 1280,
+  height: 720,
+  videoBitrateMin: 1_500_000,
+  videoBitrateMax: 2_500_000,
+  audioBitrateSoftMin: 128_000,
+  audioBitrateHardMin: 96_000,
+  audioBitrateMax: 192_000,
+  maxBytesPerHour: 1.1 * 1024 ** 3,
+  warnBytesPerHour: 1 * 1024 ** 3,
+  // 3.1 is the usual ceiling for 720p30; 4.1/4.2 match the guide's 1080p-safe recommendation.
+  allowedLevels: new Set([31, 32, 40, 41, 42]),
+};
+
+async function assertFfprobe() {
+  try {
+    await runProcess("ffprobe", ["-version"]);
+  } catch (err) {
+    if (err.code === "ENOENT") {
+      throw new Error(
+        "ffprobe is required to check gallery videos. Install ffmpeg (brew install ffmpeg) and retry."
+      );
+    }
+    const tail = (err.stderr || "").trim().split("\n").slice(-4).join("\n");
+    throw new Error(`Could not run ffprobe.${tail ? `\n${tail}` : ""}`);
+  }
+}
+
+async function ffprobeJson(absPath) {
+  const out = await runProcess("ffprobe", [
+    "-v",
+    "quiet",
+    "-print_format",
+    "json",
+    "-show_format",
+    "-show_streams",
+    absPath,
+  ]);
+  return JSON.parse(out);
+}
+
+/** True when the moov atom appears before mdat (fast start / web-optimized). */
+async function mp4MoovBeforeMdat(absPath) {
+  const fh = await open(absPath, "r");
+  try {
+    const size = (await fh.stat()).size;
+    let offset = 0;
+    let sawMoov = false;
+    const hdr = Buffer.alloc(16);
+    while (offset + 8 <= size) {
+      const { bytesRead } = await fh.read(hdr, 0, 8, offset);
+      if (bytesRead < 8) break;
+      let boxSize = hdr.readUInt32BE(0);
+      const type = hdr.toString("ascii", 4, 8);
+      let headerLen = 8;
+      if (boxSize === 1) {
+        const large = await fh.read(hdr, 0, 8, offset + 8);
+        if (large.bytesRead < 8) break;
+        boxSize = Number(hdr.readBigUInt64BE(0));
+        headerLen = 16;
+      } else if (boxSize === 0) {
+        boxSize = size - offset;
+      }
+      if (boxSize < headerLen) break;
+      if (type === "moov") sawMoov = true;
+      if (type === "mdat") return sawMoov;
+      offset += boxSize;
+    }
+    return sawMoov;
+  } finally {
+    await fh.close();
+  }
+}
+
+function stemHasForbiddenChars(filename) {
+  const stem = basename(filename, extname(filename));
+  const bad = /[ |/\\.]/;
+  return bad.test(stem);
+}
+
+function evaluateGalleryMp4(probe, { fastStart, filename }) {
+  const fails = [];
+  const warns = [];
+  const formatName = String(probe.format?.format_name || "");
+  if (!formatName.split(",").includes("mp4")) {
+    fails.push(`container is ${formatName || "unknown"} (want mp4)`);
+  }
+
+  const video = (probe.streams || []).find((s) => s.codec_type === "video");
+  const audio = (probe.streams || []).find((s) => s.codec_type === "audio");
+  if (!video) fails.push("no video stream");
+  if (!audio) fails.push("no audio stream");
+
+  if (video) {
+    if (video.codec_name !== "h264") fails.push(`video codec ${video.codec_name} (want h264)`);
+    if (video.profile !== "High") fails.push(`video profile ${video.profile || "unknown"} (want High)`);
+    const level = Number(video.level);
+    if (!VIDEO_SPEC.allowedLevels.has(level)) {
+      fails.push(
+        `video level ${Number.isFinite(level) ? (level / 10).toFixed(1) : "unknown"} (want 3.1–4.2 for web 720p)`
+      );
+    }
+    if (video.width !== VIDEO_SPEC.width || video.height !== VIDEO_SPEC.height) {
+      fails.push(`resolution ${video.width || "?"}×${video.height || "?"} (want ${VIDEO_SPEC.width}×${VIDEO_SPEC.height})`);
+    }
+    const vbr = Number(video.bit_rate);
+    if (Number.isFinite(vbr) && vbr > 0) {
+      if (vbr < VIDEO_SPEC.videoBitrateMin || vbr > VIDEO_SPEC.videoBitrateMax) {
+        fails.push(
+          `video bitrate ${(vbr / 1000).toFixed(0)} kbps (want ${VIDEO_SPEC.videoBitrateMin / 1000}–${VIDEO_SPEC.videoBitrateMax / 1000})`
+        );
+      }
+    } else {
+      warns.push("video bitrate missing from probe");
+    }
+  }
+
+  if (audio) {
+    if (audio.codec_name !== "aac") fails.push(`audio codec ${audio.codec_name} (want aac)`);
+    if (Number(audio.channels) !== 2 && audio.channel_layout !== "stereo") {
+      fails.push(`audio channels ${audio.channel_layout || audio.channels || "unknown"} (want stereo)`);
+    }
+    const abr = Number(audio.bit_rate);
+    if (Number.isFinite(abr) && abr > 0) {
+      if (abr < VIDEO_SPEC.audioBitrateHardMin || abr > VIDEO_SPEC.audioBitrateMax) {
+        fails.push(
+          `audio bitrate ${(abr / 1000).toFixed(0)} kbps (want ${VIDEO_SPEC.audioBitrateSoftMin / 1000}–${VIDEO_SPEC.audioBitrateMax / 1000})`
+        );
+      } else if (abr < VIDEO_SPEC.audioBitrateSoftMin) {
+        warns.push(
+          `audio bitrate ${(abr / 1000).toFixed(0)} kbps (guide ${VIDEO_SPEC.audioBitrateSoftMin / 1000}–${VIDEO_SPEC.audioBitrateMax / 1000}; ok for speech)`
+        );
+      }
+    }
+  }
+
+  const duration = Number(probe.format?.duration);
+  const size = Number(probe.format?.size);
+  if (Number.isFinite(duration) && duration > 0 && Number.isFinite(size) && size > 0) {
+    const perHour = size / (duration / 3600);
+    const mbPerHour = perHour / 1024 ** 2;
+    if (perHour > VIDEO_SPEC.maxBytesPerHour) {
+      fails.push(`size ${mbPerHour.toFixed(0)} MB/hour (max ~${(VIDEO_SPEC.maxBytesPerHour / 1024 ** 2).toFixed(0)} MB/hour)`);
+    } else if (perHour > VIDEO_SPEC.warnBytesPerHour) {
+      warns.push(`size ${mbPerHour.toFixed(0)} MB/hour (ideal under 1024 MB/hour)`);
+    }
+  }
+
+  if (!fastStart) fails.push("not fast-start (moov after mdat; enable web-optimized / -movflags +faststart)");
+  if (stemHasForbiddenChars(filename)) {
+    fails.push(`filename stem has forbidden characters (no spaces, |, /, \\, or . before the extension)`);
+  }
+
+  return { fails, warns };
+}
+
+async function checkGalleryVideos(opts) {
+  await assertFfprobe();
+  let problems = 0;
+  let checked = 0;
+  let skipped = 0;
+  for (const id of await selectedConferences(opts)) {
+    const config = await loadConfig(id);
+    const videos = (config.videos || []).filter((v) => v.path && /\.mp4$/i.test(String(v.path).split(/[?#]/)[0]));
+    console.log(`\n== ${id}  video encode (${videos.length} gallery mp4 path(s))`);
+    if (!videos.length) {
+      console.log("  no gallery mp4 paths");
+      continue;
+    }
+    for (const v of videos) {
+      const rel = siteRelative(id, v.path);
+      const abs = join(SITE_ROOT, rel);
+      if (!existsSync(abs)) {
+        skipped++;
+        console.log(`  skip   ${rel}  (missing locally)`);
+        continue;
+      }
+      checked++;
+      try {
+        const probe = await ffprobeJson(abs);
+        const fastStart = await mp4MoovBeforeMdat(abs);
+        const { fails, warns } = evaluateGalleryMp4(probe, { fastStart, filename: basename(rel) });
+        for (const w of warns) console.log(`  WARN   ${rel}  ${w}`);
+        if (fails.length) {
+          problems += fails.length;
+          for (const f of fails) console.log(`  FAIL   ${rel}  ${f}`);
+        } else {
+          console.log(`  OK     ${rel}`);
+        }
+      } catch (err) {
+        problems++;
+        console.log(`  FAIL   ${rel}  could not probe (${err.message || err})`);
+      }
+    }
+  }
+  return { problems, checked, skipped };
+}
+
+async function cmdVerifyVideos(opts) {
+  const { problems, checked, skipped } = await checkGalleryVideos(opts);
+  console.log(`\nverify-videos: checked ${checked}, skipped ${skipped} missing`);
+  if (problems) {
+    console.log(`${problems} problem(s) found.`);
+    process.exit(1);
+  }
+  console.log("verify-videos: OK");
+}
+
 async function cmdVerify(opts) {
   let problems = 0;
   for (const id of await selectedConferences(opts)) {
@@ -1478,12 +1693,15 @@ async function main() {
     case "verify":
       await cmdVerify(opts);
       break;
+    case "verify-videos":
+      await cmdVerifyVideos(opts);
+      break;
     case "sitemap":
       await cmdSitemap(opts);
       break;
     default:
       console.log(
-        "Usage: node scripts/confs.mjs <list|landing-pages|sync-subtitles|audio|verify|sitemap> [--conf ORG/YEAR/month|vids/YEAR] [--dry-run] [--remote URL]"
+        "Usage: node scripts/confs.mjs <list|landing-pages|sync-subtitles|audio|verify|verify-videos|sitemap> [--conf ORG/YEAR/month|vids/YEAR] [--dry-run] [--remote URL]"
       );
       process.exit(opts.command ? 1 : 0);
   }

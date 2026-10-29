@@ -39,6 +39,7 @@ Commands (run in the order given):
   pdfs            Build concatenated transcript PDFs under each gallery's transcripts/pdf/
   sitemap         Write confs/sitemap.xml and vids/sitemap.xml (overviews, galleries, transcript HTML)
   verify          Check every file referenced by each index.json exists locally
+  verify-videos   Optional gallery MP4 encode checks against VIDEO_SUBMISSION_GUIDE.md (not part of build/deploy; needs ffprobe)
   build           landing-pages + audio + subtitles + transcripts + sitemap + pdfs + verify
   push            Mirror conference folders and vids/ to the server (rsync --delete), then re-upload every index.html and index.json, plus .htaccess redirects
   check-remote    verify + HEAD-request every referenced file on the live site
@@ -57,6 +58,7 @@ REMOTE_ROOT (server web root), SITE_URL (default https://keri.foundation).
 Examples:
   scripts/deploy-confs.sh build                     # local only
   scripts/deploy-confs.sh --conf KERI/2026/nov audio # podcast MP3s for one gallery
+  scripts/deploy-confs.sh --conf KERI/2026/nov verify-videos
   scripts/deploy-confs.sh -n push                   # preview upload
   scripts/deploy-confs.sh deploy                    # build, upload, check live site
   scripts/deploy-confs.sh --conf SEDI/2025/nov push
@@ -187,6 +189,11 @@ step_pdfs() {
 step_verify() {
     echo "── Verify (local)"
     run_node "$SCRIPT_DIR/confs.mjs" verify
+}
+
+step_verify_videos() {
+    echo "── Verify gallery MP4 encode"
+    run_node "$SCRIPT_DIR/confs.mjs" verify-videos
 }
 
 step_push() {
@@ -374,6 +381,7 @@ for cmd in "${COMMANDS[@]}"; do
         pdfs) step_pdfs ;;
         sitemap) step_sitemap ;;
         verify) step_verify ;;
+        verify-videos) step_verify_videos ;;
         build) step_landing_pages; step_audio; step_subtitles; step_transcripts; step_sitemap; step_pdfs; step_verify ;;
         push) step_push ;;
         check-remote) step_check_remote ;;
