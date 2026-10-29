@@ -53,6 +53,17 @@ The video files are intended for the web. The video files you submit must meet t
 
 This combination plays natively in Chrome, Firefox, Safari, Edge, iOS, Android, etc., with no plugins.
 
+### Web Streaming (Fast Start)
+
+MP4 files store playback metadata in a `moov` atom. For web streaming, that metadata must be at the **beginning** of the file (before the media data), not at the end.
+
+If it is at the end, browsers may need to download a large part of the file before playback can start. If it is at the beginning (“fast start” / “web optimized”), playback can begin after a small initial fetch.
+
+When exporting or encoding, enable the equivalent of:
+
+- “Fast Start”, “Web Optimized”, or “Progressive Download”, or
+- FFmpeg: `-movflags +faststart`
+
 ### Resolution & Bitrate Recommendations (Conference Recordings)
 
 Conference videos (talking head + slides) compress very well. Aim for these targets:
