@@ -366,7 +366,7 @@ python3 scripts/generate_policy_brief_pdf.py
 
 Follow these rules when submitting videos so files stay consistent and easy to find.
 
-Go to [video submission guide](https://github.com/keri-foundation/recordings-and-subtitles/blob/main/VIDEO_SUBMISSION_GUIDE.md)
+Go to [video submission guide](VIDEO_SUBMISSION_GUIDE.md)
 
 ## YouTube subtitle upload setup
 
