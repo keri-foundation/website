@@ -1239,11 +1239,31 @@
             outline-offset: 2px;
         }
 
+        /* ── Card media kind labels (Audio above Video) ── */
+        .media-kind-label {
+            margin: 0;
+            padding: 10px 14px 0;
+            font-family: var(--heading-font);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--muted);
+            line-height: 1.2;
+            background: color-mix(in srgb, var(--ink) 8%, transparent);
+        }
+
+        .media-kind-label[data-kind="video"] {
+            margin-top: 12px;
+            background: transparent;
+            border-top: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+            padding-top: 12px;
+        }
+
         /* ── Card audio player ── */
         .video-audio {
             width: 100%;
             background: color-mix(in srgb, var(--ink) 8%, transparent);
-            border-top: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
         }
 
         .video-audio .plyr,
@@ -6387,41 +6407,15 @@
                 const videoId = generateVideoId(video);
                 card.id = videoId;
 
-                // ── video player ──
-                const thumbDiv = document.createElement('div');
-                thumbDiv.className = 'video-thumbnail';
-
-                const videoEl = document.createElement('video');
-                videoEl.controls = true;
-                videoEl.poster = getSpeakerPoster(video);
-                videoEl.preload = 'none';
-                videoEl.controlsList = "nodownload";
-                videoEl.setAttribute('aria-label', video.title);
-                videoEl.oncontextmenu = () => false;  // Disable right-click on video for an extra layer of download prevention
-                prepareVideoElement(videoEl);
-
-                const source = document.createElement('source');
-                const sourceSrc = resolveAssetUrl(video.path);
-                source.src = sourceSrc;
-                source.type = 'video/mp4';
-                videoEl.appendChild(source);
-                thumbDiv.appendChild(videoEl);
-                initPlyrVideo(videoEl);
-                card.appendChild(thumbDiv);
-
-                videoElementMap[video.path] = videoEl;
-                if (!window.videoCardMap) {
-                    window.videoCardMap = new Map();
-                }
-                window.videoCardMap.set(video.path, card);
-                attachClockTracking(videoEl, video.path);
-                videoEl.addEventListener('play', () => {
-                    pauseAllVideos(videoEl);
-                    syncMediaToClock(videoEl, video.path);
-                });
-
+                // ── audio player (above video so the two control bars are not adjacent) ──
                 const audioPath = audioPathFor(video);
                 if (audioPath) {
+                    const audioLabel = document.createElement('p');
+                    audioLabel.className = 'media-kind-label';
+                    audioLabel.dataset.kind = 'audio';
+                    audioLabel.textContent = 'Audio';
+                    card.appendChild(audioLabel);
+
                     const audioWrap = document.createElement('div');
                     audioWrap.className = 'video-audio';
 
@@ -6470,6 +6464,47 @@
                         }
                     });
                 }
+
+                // ── video player ──
+                if (audioPath) {
+                    const videoLabel = document.createElement('p');
+                    videoLabel.className = 'media-kind-label';
+                    videoLabel.dataset.kind = 'video';
+                    videoLabel.textContent = 'Video';
+                    card.appendChild(videoLabel);
+                }
+
+                const thumbDiv = document.createElement('div');
+                thumbDiv.className = 'video-thumbnail';
+
+                const videoEl = document.createElement('video');
+                videoEl.controls = true;
+                videoEl.poster = getSpeakerPoster(video);
+                videoEl.preload = 'none';
+                videoEl.controlsList = "nodownload";
+                videoEl.setAttribute('aria-label', `Video: ${video.title}`);
+                videoEl.oncontextmenu = () => false;  // Disable right-click on video for an extra layer of download prevention
+                prepareVideoElement(videoEl);
+
+                const source = document.createElement('source');
+                const sourceSrc = resolveAssetUrl(video.path);
+                source.src = sourceSrc;
+                source.type = 'video/mp4';
+                videoEl.appendChild(source);
+                thumbDiv.appendChild(videoEl);
+                initPlyrVideo(videoEl);
+                card.appendChild(thumbDiv);
+
+                videoElementMap[video.path] = videoEl;
+                if (!window.videoCardMap) {
+                    window.videoCardMap = new Map();
+                }
+                window.videoCardMap.set(video.path, card);
+                attachClockTracking(videoEl, video.path);
+                videoEl.addEventListener('play', () => {
+                    pauseAllVideos(videoEl);
+                    syncMediaToClock(videoEl, video.path);
+                });
 
                 // ── info ──
                 const infoDiv = document.createElement('div');
