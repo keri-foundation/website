@@ -26,7 +26,8 @@
   "promo": {
     "src": "promo/promo.mp4",
     "poster": "promo/promo.jpg",
-    "title": "Conference Promo"
+    "title": "Conference Promo",
+    "orientation": "landscape"
   },
   "topClips": {
     "enabled": true,

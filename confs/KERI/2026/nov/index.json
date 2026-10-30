@@ -22,8 +22,8 @@
     ]
   },
   "promo": {
-    "src": "promo/promo.mp4",
-    "poster": "promo/promo.jpg",
+    "src": "promo/2026-11-02-miniconf-promo.mp4",
+    "poster": "promo/2026-11-02-miniconf-promo.jpg",
     "title": "The videos from the KERI Mini Conference in November 2026 will be posted here."
   },
   "transcriptsDir": "transcripts/html",
