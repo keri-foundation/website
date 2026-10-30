@@ -770,8 +770,17 @@
             border: 1px solid color-mix(in srgb, var(--ink) 20%, transparent);
         }
 
+        /* Portrait promos would be huge at full landscape width; keep them phone-tall. */
+        .promo-player.is-portrait {
+            max-width: min(420px, 100%);
+        }
+
         .featured-media:has(> .promo-section:not([hidden])):has(> .top-clips-section:not([hidden])) .promo-player {
             max-width: none;
+        }
+
+        .featured-media:has(> .promo-section:not([hidden])):has(> .top-clips-section:not([hidden])) .promo-player.is-portrait {
+            max-width: min(380px, 100%);
         }
 
         .promo-player .plyr {
@@ -1997,6 +2006,10 @@
             object-fit: cover;
         }
 
+        .promo-player.is-portrait .video-poster-filter {
+            object-fit: contain;
+        }
+
         .video-card:hover .video-thumbnail .plyr.plyr--stopped .video-poster-filter {
             filter: none;
         }
@@ -2686,8 +2699,8 @@
                     || (('ontouchstart' in window) && navigator.maxTouchPoints > 0);
             }
 
-            function getPlyrConfig() {
-                return { ...plyrConfig };
+            function getPlyrConfig(overrides = {}) {
+                return { ...plyrConfig, ...overrides };
             }
 
             function getPlyrAudioConfig() {
@@ -3267,7 +3280,7 @@
                     }
                     return null;
                 }
-                const player = new window.Plyr(videoEl, getPlyrConfig());
+                const player = new window.Plyr(videoEl, getPlyrConfig(options.plyr || {}));
                 videoEl.dataset.plyrInitialized = 'true';
                 videoEl._plyrPlayer = player;
                 disableDoubleClickFullscreen(player);
@@ -3647,6 +3660,39 @@
                 }
             }
 
+            function normalizePromoOrientation(value) {
+                const v = String(value || '').trim().toLowerCase();
+                if (v === 'portrait' || v === 'vertical' || v === '9:16') return 'portrait';
+                if (v === 'landscape' || v === 'horizontal' || v === '16:9') return 'landscape';
+                return '';
+            }
+
+            function applyPromoOrientation(playerHost, orientation) {
+                if (!playerHost || (orientation !== 'portrait' && orientation !== 'landscape')) return;
+                playerHost.classList.toggle('is-portrait', orientation === 'portrait');
+                playerHost.classList.toggle('is-landscape', orientation === 'landscape');
+            }
+
+            function detectVideoOrientation(videoEl) {
+                const w = Number(videoEl && videoEl.videoWidth);
+                const h = Number(videoEl && videoEl.videoHeight);
+                if (!w || !h) return '';
+                return h > w ? 'portrait' : 'landscape';
+            }
+
+            function plyrRatioForOrientation(orientation) {
+                if (orientation === 'portrait') return '9:16';
+                if (orientation === 'landscape') return '16:9';
+                return '';
+            }
+
+            function setPromoPlayerRatio(videoEl, orientation) {
+                const ratio = plyrRatioForOrientation(orientation);
+                if (!ratio) return;
+                const player = videoEl && videoEl._plyrPlayer;
+                if (player) player.ratio = ratio;
+            }
+
             function renderPromo(promoConfig) {
                 const section = document.getElementById('promoSection');
                 const playerHost = document.getElementById('promoPlayer');
@@ -3657,6 +3703,7 @@
                 if (!src) {
                     section.hidden = true;
                     playerHost.innerHTML = '';
+                    playerHost.classList.remove('is-portrait', 'is-landscape');
                     promoVideoEl = null;
                     return;
                 }
@@ -3676,6 +3723,12 @@
                     titleEl.textContent = 'Promo video';
                 }
 
+                // Optional index.json hint: "orientation": "portrait" | "landscape"
+                // (also accepts vertical/horizontal and 9:16/16:9). Auto-detects from
+                // the video when omitted.
+                const configuredOrientation = normalizePromoOrientation(promoConfig.orientation);
+                applyPromoOrientation(playerHost, configuredOrientation || 'landscape');
+
                 playerHost.innerHTML = '';
                 const videoEl = document.createElement('video');
                 videoEl.controls = true;
@@ -3694,9 +3747,25 @@
                 videoEl.appendChild(source);
                 playerHost.appendChild(videoEl);
 
+                const syncOrientationFromVideo = () => {
+                    if (configuredOrientation) return;
+                    const detected = detectVideoOrientation(videoEl);
+                    if (!detected) return;
+                    applyPromoOrientation(playerHost, detected);
+                    setPromoPlayerRatio(videoEl, detected);
+                };
+
+                if (!configuredOrientation) {
+                    if (videoEl.readyState >= 1) syncOrientationFromVideo();
+                    else videoEl.addEventListener('loadedmetadata', syncOrientationFromVideo, { once: true });
+                }
+
                 promoVideoEl = videoEl;
                 videoEl.addEventListener('play', () => pauseAllVideos(videoEl));
-                initPlyrVideo(videoEl);
+                const plyrOverrides = {};
+                const ratio = plyrRatioForOrientation(configuredOrientation);
+                if (ratio) plyrOverrides.ratio = ratio;
+                initPlyrVideo(videoEl, { plyr: plyrOverrides });
                 section.hidden = false;
             }
 
