@@ -8,6 +8,7 @@
  *   node scripts/confs.mjs sync-subtitles [--dry-run] [--conf KERI/2026/apr]...
  *   node scripts/confs.mjs audio [--dry-run] [--conf KERI/2026/apr]...
  *   node scripts/confs.mjs verify [--remote https://keri.foundation] [--conf KERI/2026/apr]...
+ *   node scripts/confs.mjs unused [--conf KERI/2026/apr]...
  *   node scripts/confs.mjs verify-videos [--conf KERI/2026/apr]...
  *   node scripts/confs.mjs sitemap [--dry-run]
  *
@@ -45,10 +46,16 @@
  *                 when that MP3 is not already there. Spoken-word encode: mono,
  *                 44.1 kHz, 64 kbps CBR MP3 (about 28 MB per hour). Needs ffmpeg
  *                 with libmp3lame. An MP4 that is not on disk is skipped.
- * verify          Check that every file referenced by index.json exists (media, mp3,
- *                 subtitles, slides, posters, photos, transcript pages) and list files
- *                 that nothing references. With --remote, also HEAD-request each file
- *                 on the live site. Does not run encode checks (see verify-videos).
+ * verify          Check that every file the gallery page reaches exists (index.json
+ *                 media / mp3 / subtitles / slides / posters / photos / transcript
+ *                 pages, plus stamped talk / interview / PDF nav links) and list
+ *                 files that nothing references. With --remote, also HEAD-request
+ *                 each file on the live site. Does not run encode checks
+ *                 (see verify-videos).
+ * unused          List gallery files that nothing on the gallery page references
+ *                 (index.json fields plus stamped talk / interview / PDF nav links;
+ *                 same rules as the unused lines from verify). Does not check missing
+ *                 references.
  * verify-videos   Optional: for each local gallery MP4 referenced by index.json, check
  *                 the VIDEO_SUBMISSION_GUIDE.md technical rules with ffprobe (codec,
  *                 High profile level 3.1–4.2, 720p, bitrate, size/hour, AAC stereo,
@@ -904,19 +911,28 @@ function isExternal(href) {
   return /^(https?:)?\/\//i.test(href) || /^(mailto|tel):/i.test(href);
 }
 
-/** Every local asset referenced by a gallery config: [{ kind, label, href }]. */
-function collectRefs(config, confDir = null) {
+/**
+ * Every local asset a gallery page reaches: index.json fields plus the same
+ * talk / interview / PDF links landing-pages stamps into the nav.
+ * Returns [{ kind, label, href }].
+ */
+function collectRefs(config, confDir = null, galleryId = null) {
   const refs = [];
   const add = (kind, label, href) => {
     if (href && !isExternal(href)) refs.push({ kind, label, href: String(href) });
   };
-
-  for (const item of config.page?.nav || []) {
-    const href = String(item.href || "");
+  const addLocalNav = (item) => {
+    const href = String(item?.href || "");
     if (href.startsWith("/confs/") || href.startsWith("/vids/") || (href && !href.startsWith("/"))) {
       add("nav", item.label, href);
     }
-  }
+  };
+
+  for (const item of config.page?.nav || []) addLocalNav(item);
+  for (const item of transcriptLinkItems(config.page?.transcriptLinks)) addLocalNav(item);
+  // Same discovery as landing-pages (talk/interview indexes + concatenated PDF).
+  for (const item of discoverTranscriptLinks(confDir, galleryId)) addLocalNav(item);
+
   if (config.promo) {
     add("promo", "promo video", config.promo.src);
     add("promo", "promo poster", config.promo.poster);
@@ -1191,12 +1207,44 @@ async function cmdVerifyVideos(opts) {
   console.log("verify-videos: OK");
 }
 
+/** Site-root-relative paths under a gallery that nothing in index.json points at. */
+async function unreferencedFiles(id, config, confDir, referenced) {
+  const transcriptsDir = transcriptsDirOf(config);
+  return (await walkFiles(confDir))
+    .map((abs) => toPosix(relative(SITE_ROOT, abs)))
+    .filter((rel) => !IGNORED_FILES.has(rel.split("/").pop()))
+    .filter((rel) => !referenced.has(rel))
+    .filter((rel) => !(transcriptsDir && rel.startsWith(`${galleryPrefix(id)}/${transcriptsDir}/`) && rel.endsWith(".html")));
+}
+
+async function cmdUnused(opts) {
+  let total = 0;
+  for (const id of await selectedConferences(opts)) {
+    const config = await loadConfig(id);
+    const confDir = galleryDir(id);
+    const referenced = new Set();
+    for (const ref of collectRefs(config, confDir, id)) {
+      referenced.add(siteRelative(id, ref.href));
+    }
+    const unreferenced = await unreferencedFiles(id, config, confDir, referenced);
+    if (!unreferenced.length) continue;
+    console.log(`\n== ${id}`);
+    for (const rel of unreferenced) console.log(`  unused  ${rel}`);
+    total += unreferenced.length;
+  }
+  if (!total) {
+    console.log("unused: none");
+    return;
+  }
+  console.log(`\nunused: ${total} file(s)`);
+}
+
 async function cmdVerify(opts) {
   let problems = 0;
   for (const id of await selectedConferences(opts)) {
     const config = await loadConfig(id);
     const confDir = galleryDir(id);
-    const refs = collectRefs(config, confDir);
+    const refs = collectRefs(config, confDir, id);
     console.log(`\n== ${id}  (${(config.videos || []).length} videos, ${refs.length} local references)`);
 
     const referenced = new Set();
@@ -1209,12 +1257,7 @@ async function cmdVerify(opts) {
     for (const m of missing) console.log(`  MISSING ${m.kind.padEnd(10)} ${m.rel}   (${m.label})`);
     problems += missing.length;
 
-    const transcriptsDir = transcriptsDirOf(config);
-    const unreferenced = (await walkFiles(confDir))
-      .map((abs) => toPosix(relative(SITE_ROOT, abs)))
-      .filter((rel) => !IGNORED_FILES.has(rel.split("/").pop()))
-      .filter((rel) => !referenced.has(rel))
-      .filter((rel) => !(transcriptsDir && rel.startsWith(`${galleryPrefix(id)}/${transcriptsDir}/`) && rel.endsWith(".html")));
+    const unreferenced = await unreferencedFiles(id, config, confDir, referenced);
     for (const rel of unreferenced) console.log(`  unused  ${rel}`);
 
     if (!missing.length) console.log("  all referenced files present locally");
@@ -1569,7 +1612,7 @@ async function sitemapEntriesForTree(scope) {
     await addFile(`${galleryPrefix(id)}/index.html`);
     const config = await loadConfig(id);
     const confDir = galleryDir(id);
-    for (const ref of collectRefs(config, confDir)) {
+    for (const ref of collectRefs(config, confDir, id)) {
       if (ref.kind !== "transcript") continue;
       await addFile(siteRelative(id, ref.href));
     }
@@ -1693,6 +1736,9 @@ async function main() {
     case "verify":
       await cmdVerify(opts);
       break;
+    case "unused":
+      await cmdUnused(opts);
+      break;
     case "verify-videos":
       await cmdVerifyVideos(opts);
       break;
@@ -1701,7 +1747,7 @@ async function main() {
       break;
     default:
       console.log(
-        "Usage: node scripts/confs.mjs <list|landing-pages|sync-subtitles|audio|verify|verify-videos|sitemap> [--conf ORG/YEAR/month|vids/YEAR] [--dry-run] [--remote URL]"
+        "Usage: node scripts/confs.mjs <list|landing-pages|sync-subtitles|audio|verify|unused|verify-videos|sitemap> [--conf ORG/YEAR/month|vids/YEAR] [--dry-run] [--remote URL]"
       );
       process.exit(opts.command ? 1 : 0);
   }

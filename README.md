@@ -277,6 +277,7 @@ scripts/deploy-confs.sh landing-pages    # sync gallery index.html, and write /c
 scripts/deploy-confs.sh build            # landing-pages → audio → subtitles → transcripts → sitemap → pdfs → verify
 scripts/deploy-confs.sh audio            # podcast MP3 beside each MP4 that does not have one yet
 scripts/deploy-confs.sh verify           # referenced files exist locally
+scripts/deploy-confs.sh unused           # list files not reached from any gallery page
 scripts/deploy-confs.sh verify-videos    # optional gallery MP4 encode checks (needs ffprobe; not in build/deploy)
 scripts/deploy-confs.sh -n push          # preview what would be uploaded
 scripts/deploy-confs.sh deploy           # build + push (rsync --delete) + check the live site
@@ -288,6 +289,8 @@ scripts/deploy-confs.sh --conf vids/2026 push
 `audio` (included in `build` and `deploy`) writes `talks/foo.mp3` from `talks/foo.mp4` when that MP3 is absent. The encode is mono, 44.1 kHz, 64 kbps MP3: about 28 MB per hour, clear enough for a spoken-word podcast. It needs `ffmpeg` with LAME. MP3s are gitignored; `push` uploads them with the gallery. An MP4 that is not on this machine is skipped, and `verify` still reports that file missing.
 
 `verify` (included in `build` and `deploy`) checks that every file referenced by each gallery `index.json` exists locally.
+
+`unused` lists gallery files that nothing on the gallery page points at — `index.json` fields plus the talk / interview / PDF links `landing-pages` stamps into the nav (same rules as the unused lines from `verify`). It does not check for missing references. Use `--conf` to limit to one gallery.
 
 `verify-videos` is optional and **not** part of `build` or `deploy`. Run it when you want encode checks: for each local gallery `.mp4` it uses `ffprobe` to enforce the technical rules in [VIDEO_SUBMISSION_GUIDE.md](VIDEO_SUBMISSION_GUIDE.md) (H.264 High level 3.1–4.2, 720p, ~1.5–2.5 Mbps video, AAC stereo, size/hour, fast-start `moov` before `mdat`, and a few filename-character rules). Missing MP4s are skipped. Soft issues such as audio slightly under 128 kbps are warnings; hard mismatches exit non-zero.
 
