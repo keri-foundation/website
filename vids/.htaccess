@@ -7,6 +7,16 @@
 Options -Indexes
 DirectoryIndex index.html index.php
 
+# Prefer HTML transcript pages in Google. Concatenated PDFs stay downloadable
+# but are not indexed (do not Disallow them in robots.txt — that freezes
+# already-indexed copies). Slide PDFs under slides/ are left alone.
+<IfModule mod_setenvif.c>
+SetEnvIf Request_URI "transcripts/pdf/.*\.pdf$" noindex_transcript_pdf
+</IfModule>
+<IfModule mod_headers.c>
+Header always set X-Robots-Tag "noindex, follow" env=noindex_transcript_pdf
+</IfModule>
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /vids/
