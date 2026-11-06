@@ -65,11 +65,11 @@
       "subtitle": "talks/2026-11-02-samuel-m-smith-1.srt"
     },
     {
-      "order": 2,
+      "order": 6,
       "day": "Mini Conference nov 2026",
       "title": "Ryan Hansen & Samuel M. Smith –  Open infrastructure for KERI-based digital identity",
       "path": "talks/2026-11-02-ryan-hansen-samuel-m-smith.mp4",
-      "duration": "0:17",
+      "duration": "55:51",
       "subtitle": "talks/2026-11-02-ryan-hansen-samuel-m-smith.srt",
       "poster": "https://kericonf.com/wp-content/uploads/2026/05/IMG_1704-1024x768.jpg"
     },
@@ -99,7 +99,7 @@
       "poster": "https://kericonf.com/wp-content/uploads/2026/05/IMG_1704-1024x768.jpg"
     },
     {
-      "order": 6,
+      "order": 2,
       "day": "Mini Conference nov 2026",
       "title": "Samuel M. Smith & Ryan Hansen – Progress report: The 5W’s of KERI: Witnesses, Watchers, Wallet, Web, and Wizard PLUS Bulk issuances and anchoring in Merkle Trees",
       "path": "talks/2026-11-02-samuel-m-smith-ryan-hansen.mp4",
