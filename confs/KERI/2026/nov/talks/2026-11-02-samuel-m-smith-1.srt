@@ -399,7 +399,7 @@ and so I started down that path. And then
 81
 00:08:07,060 --> 00:08:12,040
 I started publishing some white papers as
-part of Evernym and the Sovereign
+part of Evernym and the Sovrin
 
 82
 00:08:12,040 --> 00:08:22,600
@@ -438,8 +438,8 @@ identity be on their ledger. And as great
 
 89
 00:08:54,220 --> 00:09:03,140
-as the idea of Sovereign was, and we have
-founders of Sovereign here, everybody
+as the idea of Sovrin was, and we have
+founders of Sovrin here, everybody
 
 90
 00:09:03,140 --> 00:09:07,880
@@ -488,7 +488,7 @@ here too. I pointed out Timothy, but Phil
 
 99
 00:09:51,400 --> 00:09:57,240
-was the founding chairman of Sovereign. So
+was the founding chairman of Sovrin. So
 we have some of the original ones there.
 
 100
@@ -2168,7 +2168,7 @@ registries using cryptographic
 437
 00:41:04,240 --> 00:41:09,700
 accumulators, but nobody's after
-Sovereign, nobody's really done anything
+Sovrin, nobody's really done anything
 
 438
 00:41:09,700 --> 00:41:17,780
@@ -2188,7 +2188,7 @@ difficult? Too difficult. It's just
 441
 00:41:29,040 --> 00:41:31,860
 they're just too difficult. The
-performance, I mean, you know, Sovereign
+performance, I mean, you know, Sovrin
 
 442
 00:41:31,860 --> 00:41:37,080
