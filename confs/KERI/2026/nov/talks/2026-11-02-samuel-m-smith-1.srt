@@ -228,12 +228,12 @@ agent, which will then qualify
 
 47
 00:04:49,720 --> 00:04:56,580
-qualified VLA issuers. So this is an
+qualified vLEI issuers. So this is an
 example of deepening and extending the
 
 48
 00:04:56,580 --> 00:05:01,360
-organizational density root of trust that
+organizational density Root of Trust that
 GLEIF provides that was the early adopter
 
 49
@@ -278,8 +278,8 @@ to the SEDI project. We had the first ever
 
 57
 00:05:46,940 --> 00:05:52,300
-KERI conference. Some of you attended it.
-You'll see some of those who didn't attend
+KERI conference. Some of you
+attended it. Those who did attend
 
 58
 00:05:52,300 --> 00:05:59,040
@@ -453,8 +453,8 @@ identity. And that meant that you didn't
 
 92
 00:09:11,240 --> 00:09:16,120
-have interoperability. You didn't have the
-problem and just created a host of new
+have interoperability. You didn't have
+portability and just created a host of new
 
 93
 00:09:16,120 --> 00:09:21,400
@@ -503,8 +503,8 @@ which is the hard problem, which is key
 
 102
 00:10:10,360 --> 00:10:18,760
-management. And so wrote a white paper on
-fault tolerant key
+management. And so wrote a
+white paper on fault tolerant key
 
 103
 00:10:18,760 --> 00:10:28,920
@@ -523,7 +523,7 @@ in 2019. The core result of that white
 
 106
 00:10:39,460 --> 00:10:43,180
-paper was you did need blockchain to have
+paper was you didn't need blockchain to have
 perpetual identity. You could do it
 
 107
@@ -578,7 +578,7 @@ Secure DIDs was a paper published in 2020,
 
 117
 00:11:33,800 --> 00:11:39,780
-which is how we solve the the ability
+which is how we solve the ability
 
 118
 00:11:39,780 --> 00:11:47,320
@@ -616,8 +616,8 @@ identity with KERI.
 
 125
 00:12:23,340 --> 00:12:29,320
-We started the trusted RIP task force for
-ACDCs in 2020. So a lot of these protocols
+We started the Trust over IP (ToIP) task force
+for ACDCs in 2020. So a lot of these protocols
 
 126
 00:12:29,320 --> 00:12:35,120
@@ -632,7 +632,7 @@ then in 2023, I wrote a white paper called
 128
 00:12:44,100 --> 00:12:49,480
 SPAC, which has now resulted in the trust
-spanning protocol. And we have Wenjing,
+spanning protocol. And we have Wenjing Chu,
 
 129
 00:12:49,620 --> 00:12:54,680
@@ -665,8 +665,8 @@ I mentioned, SEDI work begins. And so it
 
 135
 00:13:29,340 --> 00:13:37,360
-took three years. I was I was appointed to
-the Utah State Privacy Commission back in
+took three years. I was appointed to the
+Utah State Privacy Commission back in
 
 136
 00:13:37,360 --> 00:13:43,420
@@ -690,8 +690,8 @@ years work of setting up the legislation.
 
 140
 00:13:58,700 --> 00:14:04,680
-And there are other people in the room
-that were that were essential in doing
+And there are other people in the
+room that were essential in doing
 
 141
 00:14:04,680 --> 00:14:08,300
@@ -700,13 +700,13 @@ wrote a white paper on sustainable
 
 142
 00:14:08,300 --> 00:14:13,580
-privacy. And then we formed the trust RIP
+privacy. And then we formed the ToIP
 KERI Suite Working Group to get the specs
 
 143
 00:14:13,580 --> 00:14:18,560
 finalized. The Cardano Foundation adopted
-KERIs. We have some of the Cardano. Well,
+KERI. We have some of the Cardano. Well,
 
 144
 00:14:18,640 --> 00:14:23,520
@@ -730,13 +730,13 @@ Linux Foundation standards went final in
 
 148
 00:14:40,380 --> 00:14:49,520
-2026. So that's sort of where we got how
-we got started. So a lot has happened and
+2026. So that's sort of how we got
+started. So a lot has happened and
 
 149
 00:14:49,520 --> 00:14:54,320
 it's happening faster. So the rate is
-accelerating and I've you know, it's been
+accelerating and you know, it's been
 
 150
 00:14:54,320 --> 00:14:59,800
@@ -800,7 +800,7 @@ from scratch. I mean, anybody's… I mean,
 
 162
 00:15:59,440 --> 00:16:07,160
-the the people behind Git and GitHub and
+the people behind Git and GitHub and
 the various organizations that use Git
 
 163
@@ -865,7 +865,7 @@ channel attacks that are viable. And so
 
 175
 00:17:27,520 --> 00:17:33,680
-you no matter what you do, you will fail
+no matter what you do, you will fail
 at some point. So the only way that it
 
 176
@@ -915,8 +915,8 @@ identity. The building systems that are
 
 185
 00:18:22,640 --> 00:18:28,960
-fault tolerant as a principle design is a
-well-known there are a well-known set of
+fault tolerant as a principle
+design… there are a well-known set of
 
 186
 00:18:28,960 --> 00:18:32,680
@@ -1055,8 +1055,8 @@ that if I have a mechanism that makes my
 
 213
 00:20:48,360 --> 00:20:56,000
-identity perpetually perpetual, I can use
-that same mechanism mechanism to anchor
+identity perpetual, I can use that
+same mechanism to anchor
 
 214
 00:20:56,000 --> 00:21:01,160
@@ -1066,7 +1066,7 @@ So we got a two for one. It's like we
 215
 00:21:01,160 --> 00:21:05,140
 built one set of infrastructure and it
-solved a whole nother set of problems
+solved a whole other set of problems
 
 216
 00:21:05,140 --> 00:21:07,900
@@ -1111,7 +1111,7 @@ talk about delegation in all sorts of
 224
 00:21:49,160 --> 00:21:55,500
 identity contexts. We were talking about
-delegation since 2020. 2020. We've been
+delegation since 2020. We've been
 
 225
 00:21:55,500 --> 00:22:01,060
@@ -1165,7 +1165,7 @@ we're going to make this as secure as you
 
 235
 00:22:44,720 --> 00:22:45,720
-can practically make it. Okay.
+can practically make it.
 
 236
 00:22:50,480 --> 00:22:57,860
@@ -1343,7 +1343,7 @@ a global root of trust for the ultimate
 
 271
 00:26:09,940 --> 00:26:16,900
-beneficial owner of a legal entity. and
+beneficial owner of a legal entity and
 the roles of the people that run the
 
 272
@@ -1353,8 +1353,8 @@ members of the organization. And you trust
 
 273
 00:26:23,780 --> 00:26:28,320
-because you trust by reference. And if you
-can trust by reference, you need to and
+because you trust by reference.
+And if you can trust by reference, and
 
 274
 00:26:28,320 --> 00:26:32,700
@@ -1363,12 +1363,11 @@ other ones above it, then you have a basis
 
 275
 00:26:32,700 --> 00:26:43,300
-for trust. Yes. Yes. Oh, yes. Sorry. Here.
-– There's reputation dependent on… I'm
+for trust. […]
 
 276
 00:26:43,300 --> 00:26:46,940
-sorry. – I just wanted to point out
+– I just wanted to point out
 there's a recursive element here too
 
 277
@@ -1378,8 +1377,8 @@ trustworthy all goes back to the start
 
 278
 00:26:55,000 --> 00:27:00,140
-from the authored part and goes back in. –
-Yeah, you can't have reputation if you
+from the authored part and goes back in.
+– Yeah, you can't have reputation if you
 
 279
 00:27:00,140 --> 00:27:03,340
@@ -1553,7 +1552,7 @@ the minimal properties. So, you either
 313
 00:29:55,280 --> 00:30:00,300
 decide that you're going to live in a
-world where your hacked continually or
+world where you're hacked continually or
 
 314
 00:30:00,300 --> 00:30:03,660

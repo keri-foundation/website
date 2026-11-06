@@ -2705,18 +2705,18 @@ answer is no. – So there's no there's
 
 543
 00:45:51,840 --> 00:46:01,780
-TrustRIP isn't a gating effect on it. –
+ToIP isn't a gating effect on it. –
 Okay. And the idea, the goal is that we
 
 544
 00:46:01,780 --> 00:46:05,540
-want to be just like DIDWebVH and
-DIDWebPlus and there might be a couple of
+want to be just like did:webVH and
+did:webplus and there might be a couple of
 
 545
 00:46:05,540 --> 00:46:09,060
 others now. We do want to be a DIF
-recommended DID method. It just looks
+recommended did method. It just looks
 
 546
 00:46:09,060 --> 00:46:15,800
