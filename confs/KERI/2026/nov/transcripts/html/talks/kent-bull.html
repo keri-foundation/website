@@ -183,7 +183,2803 @@
     <article>
     <p class="cue" id="t0">
       <a class="cue-time" href="../../../#kent-bull">0:00</a>
-      <span class="cue-text">[Background noise]</span>
+      <span class="cue-text">Thank you, Carla. And thank you to GLEIF for letting me work on did:webs. We'll get</span>
+    </p>
+    <p class="cue" id="t5">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=5">0:05</a>
+      <span class="cue-text">into that a little bit more. We're going to start with the TLDR. But who am I? I'm</span>
+    </p>
+    <p class="cue" id="t11">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=11">0:11</a>
+      <span class="cue-text">Kent Bull. I work for GLEIF as Carla mentioned. She was actually the person who</span>
+    </p>
+    <p class="cue" id="t15">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=15">0:15</a>
+      <span class="cue-text">hired me at GLEIF two blessed years ago. Was it two? It's going to be… Yeah, it's</span>
+    </p>
+    <p class="cue" id="t20">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=20">0:20</a>
+      <span class="cue-text">going to be two in April. Wow. No, that's going to be three. Oh, that's fast. Wow. I</span>
+    </p>
+    <p class="cue" id="t26">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=26">0:26</a>
+      <span class="cue-text">had three kids and two kids in the last couple of years. Things went fast. All</span>
+    </p>
+    <p class="cue" id="t31">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=31">0:31</a>
+      <span class="cue-text">right. So did:webs, what's the why the s matters is the s matters most. And of</span>
+    </p>
+    <p class="cue" id="t38">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=38">0:38</a>
+      <span class="cue-text">course, we've got DIDWeb. We're trying to say this is very close to DIDWeb. And by</span>
+    </p>
+    <p class="cue" id="t43">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=43">0:43</a>
+      <span class="cue-text">the end of this presentation, we'll circle back to this. You'll see what we add in</span>
+    </p>
+    <p class="cue" id="t48">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=48">0:48</a>
+      <span class="cue-text">addition to what did:webs provides. And it's just enough so that you can verify</span>
+    </p>
+    <p class="cue" id="t53">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=53">0:53</a>
+      <span class="cue-text">with KERI ACDC that you actually control the domains and the keys that you say you</span>
+    </p>
+    <p class="cue" id="t58">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=58">0:58</a>
+      <span class="cue-text">control. So let's start with the CLDR. For those, there are enough people in the room</span>
+    </p>
+    <p class="cue" id="t66">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=66">1:06</a>
+      <span class="cue-text">that have seen me before that have seen did:webs that know kind of where things are</span>
+    </p>
+    <p class="cue" id="t71">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=71">1:11</a>
+      <span class="cue-text">at. So let me give you a quick update before we dive into the next 23, 24 slides</span>
+    </p>
+    <p class="cue" id="t75">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=75">1:15</a>
+      <span class="cue-text">that will go in depth. So essentially seen did:webs today works with KERI ACDC, I'm</span>
+    </p>
+    <p class="cue" id="t83">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=83">1:23</a>
+      <span class="cue-text">going to say version 1. And when I say KERI ACDC version 2, let me be very</span>
+    </p>
+    <p class="cue" id="t88">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=88">1:28</a>
+      <span class="cue-text">specific about that. It's actually version 1.1 of the trust over IP specifications</span>
+    </p>
+    <p class="cue" id="t94">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=94">1:34</a>
+      <span class="cue-text">that the KERI stack working group are working on. I'm calling that KERI 2 just</span>
+    </p>
+    <p class="cue" id="t100">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=100">1:40</a>
+      <span class="cue-text">for the purpose of this presentation because if you look at the Python</span>
+    </p>
+    <p class="cue" id="t104">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=104">1:44</a>
+      <span class="cue-text">reference implementation in GitHub, there's something called the main branch</span>
+    </p>
+    <p class="cue" id="t108">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=108">1:48</a>
+      <span class="cue-text">and the main branch is KERI 2. So it's sort of I spend most of my time in KERI</span>
+    </p>
+    <p class="cue" id="t112">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=112">1:52</a>
+      <span class="cue-text">API. So when I say KERI 2, it's really 1.1 of the specs. Just sort of keep that in</span>
+    </p>
+    <p class="cue" id="t116">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=116">1:56</a>
+      <span class="cue-text">mind. And that's confusing. Okay. How would you like me to say that would be</span>
+    </p>
+    <p class="cue" id="t121">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=121">2:01</a>
+      <span class="cue-text">what would be the least confusing way for me to describe it? No, no, no. Absolutely</span>
+    </p>
+    <p class="cue" id="t126">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=126">2:06</a>
+      <span class="cue-text">call it KERI 2. I just I also spent a bunch of time trying to figure that out.</span>
+    </p>
+    <p class="cue" id="t131">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=131">2:11</a>
+      <span class="cue-text">Like, the thing that you're explaining is super confusing. It's because KERI as a</span>
+    </p>
+    <p class="cue" id="t139">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=139">2:19</a>
+      <span class="cue-text">code base existed for several years before we started the standards track. And so we</span>
+    </p>
+    <p class="cue" id="t145">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=145">2:25</a>
+      <span class="cue-text">had already advanced to well into the one point whatever you know and so the spec</span>
+    </p>
+    <p class="cue" id="t152">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=152">2:32</a>
+      <span class="cue-text">actually incorporated a bunch of lessons learned so it was already anticipating you</span>
+    </p>
+    <p class="cue" id="t159">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=159">2:39</a>
+      <span class="cue-text">know KERI 2.0 but it was one point of the spec. – Maybe you can use the artist</span>
+    </p>
+    <p class="cue" id="t164">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=164">2:44</a>
+      <span class="cue-text">formerly known as in spec itself right? – Like one on one formerly known as KERI 2</span>
+    </p>
+    <p class="cue" id="t169">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=169">2:49</a>
+      <span class="cue-text">.0. – Yes, yes, exactly. I'll state that for everybody to hear. So spec version 1.1</span>
+    </p>
+    <p class="cue" id="t177">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=177">2:57</a>
+      <span class="cue-text">formerly known as KERI 2. Thank you so much Judith. I think you saw me almost</span>
+    </p>
+    <p class="cue" id="t184">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=184">3:04</a>
+      <span class="cue-text">trip myself there. Yeah, I'm a walker. That's for sure. All right. So the TLDR is</span>
+    </p>
+    <p class="cue" id="t196">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=196">3:16</a>
+      <span class="cue-text">that did:webs works great with KERI 1 and GLEIF was I was fortunate with GLEIF to be</span>
+    </p>
+    <p class="cue" id="t202">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=202">3:22</a>
+      <span class="cue-text">able to actually fully integrate did:webs with with ACDC and a W3C presentation. So</span>
+    </p>
+    <p class="cue" id="t209">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=209">3:29</a>
+      <span class="cue-text">we know that it works all the way through end to end with KERI version 1. There is a</span>
+    </p>
+    <p class="cue" id="t214">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=214">3:34</a>
+      <span class="cue-text">significant amount of work that's non -trivial to do to make it work for KERI 2.</span>
+    </p>
+    <p class="cue" id="t218">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=218">3:38</a>
+      <span class="cue-text">So as a part of this presentation, we'll get into later the differences between</span>
+    </p>
+    <p class="cue" id="t222">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=222">3:42</a>
+      <span class="cue-text">KERI ACDC version 1 and KERI ACDC version 2. Before we get there, so we do have some</span>
+    </p>
+    <p class="cue" id="t230">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=230">3:50</a>
+      <span class="cue-text">slides that say what next, where are we going to go with this? Just keep in your</span>
+    </p>
+    <p class="cue" id="t234">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=234">3:54</a>
+      <span class="cue-text">mind everything works with KERI 1 right now. And it's I know it's version 1,</span>
+    </p>
+    <p class="cue" id="t238">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=238">3:58</a>
+      <span class="cue-text">version 2. It's I just want to delineate between the two. It's not as scary as you</span>
+    </p>
+    <p class="cue" id="t243">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=243">4:03</a>
+      <span class="cue-text">might think the upgrade from 1 to 2. So we'll get there. You if you understand the</span>
+    </p>
+    <p class="cue" id="t248">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=248">4:08</a>
+      <span class="cue-text">fundamentals and the basics, all those transfer, there's just really new cool</span>
+    </p>
+    <p class="cue" id="t251">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=251">4:11</a>
+      <span class="cue-text">capabilities that KERI 2 brings us like graduated disclosure, Blindable State</span>
+    </p>
+    <p class="cue" id="t255">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=255">4:15</a>
+      <span class="cue-text">tells that are a step above what KERI 1 brings, but everything from KERI 1 still</span>
+    </p>
+    <p class="cue" id="t261">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=261">4:21</a>
+      <span class="cue-text">applies. All right. So now let's get back to what the TLDR done and we're going to</span>
+    </p>
+    <p class="cue" id="t265">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=265">4:25</a>
+      <span class="cue-text">dive deep into did:webs. Before we get into that, do we have any questions? Anybody</span>
+    </p>
+    <p class="cue" id="t271">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=271">4:31</a>
+      <span class="cue-text">already wants to start us off with? And if not, I'll just dive right into it. Great.</span>
+    </p>
+    <p class="cue" id="t277">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=277">4:37</a>
+      <span class="cue-text">So the idea is that we have the web. And if you look at so many implementations out</span>
+    </p>
+    <p class="cue" id="t283">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=283">4:43</a>
+      <span class="cue-text">there, remember the DID wars or the not the did the well, there were some DID</span>
+    </p>
+    <p class="cue" id="t288">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=288">4:48</a>
+      <span class="cue-text">wars. There were the ledger wars. You probably saw Sam's presentation from</span>
+    </p>
+    <p class="cue" id="t292">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=292">4:52</a>
+      <span class="cue-text">earlier today. There were definitely DID wars. The battles were smaller, there were</span>
+    </p>
+    <p class="cue" id="t295">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=295">4:55</a>
+      <span class="cue-text">less fighters, but there were wars. And usually what would happen is when somebody</span>
+    </p>
+    <p class="cue" id="t301">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=301">5:01</a>
+      <span class="cue-text">lost a war, they just used DID web. Or if they didn't know which war to fight, they</span>
+    </p>
+    <p class="cue" id="t306">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=306">5:06</a>
+      <span class="cue-text">just used DID web because it was simple. And you had a DID JSON document you'd put</span>
+    </p>
+    <p class="cue" id="t311">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=311">5:11</a>
+      <span class="cue-text">on a web server. That's why I say web hosts, web host delivers the DID doc. And</span>
+    </p>
+    <p class="cue" id="t315">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=315">5:15</a>
+      <span class="cue-text">in that DID doc, your DID was your URL. Pretty much very straightforward to</span>
+    </p>
+    <p class="cue" id="t319">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=319">5:19</a>
+      <span class="cue-text">transform a URL into a DID. And then in that DID document, you'd say here are the</span>
+    </p>
+    <p class="cue" id="t324">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=324">5:24</a>
+      <span class="cue-text">keys they're currently authorized for signing. That's why it worked. It was</span>
+    </p>
+    <p class="cue" id="t328">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=328">5:28</a>
+      <span class="cue-text">really it's just a web page, DID JSON web page. Here's my authorized keys and here's</span>
+    </p>
+    <p class="cue" id="t332">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=332">5:32</a>
+      <span class="cue-text">what they can do. Well, it's very similar to how the certificate authority system</span>
+    </p>
+    <p class="cue" id="t337">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=337">5:37</a>
+      <span class="cue-text">works in the sense that there's one key when it's done, it's over, it's gone</span>
+    </p>
+    <p class="cue" id="t341">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=341">5:41</a>
+      <span class="cue-text">forever. Well, with DID web, what happens when you change your keys? That's when you</span>
+    </p>
+    <p class="cue" id="t346">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=346">5:46</a>
+      <span class="cue-text">need DID web s because DID web doesn't support key rotation. So now we actually</span>
+    </p>
+    <p class="cue" id="t350">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=350">5:50</a>
+      <span class="cue-text">want to support, okay, I'm going to change my keys and I want to have a relationship</span>
+    </p>
+    <p class="cue" id="t355">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=355">5:55</a>
+      <span class="cue-text">between the old key and the new key so that you can know that Kent version 1, 2,</span>
+    </p>
+    <p class="cue" id="t361">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=361">6:01</a>
+      <span class="cue-text">3, and 4 are all actually Kent. You don't just have to take my web server's word for</span>
+    </p>
+    <p class="cue" id="t366">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=366">6:06</a>
+      <span class="cue-text">it. If you want to verify, yeah, you're the same person across time, that's where</span>
+    </p>
+    <p class="cue" id="t369">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=369">6:09</a>
+      <span class="cue-text">did:webs comes in. And when I say KERI establishes authority, the authority to</span>
+    </p>
+    <p class="cue" id="t376">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=376">6:16</a>
+      <span class="cue-text">say that I am perpetually one person. I'm not this multiplicity schizophrenic</span>
+    </p>
+    <p class="cue" id="t381">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=381">6:21</a>
+      <span class="cue-text">identity across many different keys. I'm a consistent thing over time. That's why the</span>
+    </p>
+    <p class="cue" id="t385">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=385">6:25</a>
+      <span class="cue-text">S in KERI in did:webs is so special. It's because it allows us to add that</span>
+    </p>
+    <p class="cue" id="t389">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=389">6:29</a>
+      <span class="cue-text">characteristic to the world of decentralized identity. All right. So</span>
+    </p>
+    <p class="cue" id="t394">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=394">6:34</a>
+      <span class="cue-text">here's what we're going to go through. Now you sort of get the overall specialness of</span>
+    </p>
+    <p class="cue" id="t398">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=398">6:38</a>
+      <span class="cue-text">did:webs. We're going to walk through just an example with did:web and did:webs. Talk</span>
+    </p>
+    <p class="cue" id="t404">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=404">6:44</a>
+      <span class="cue-text">about what does it mean to actually resolve a did:webs DID? What are the</span>
+    </p>
+    <p class="cue" id="t408">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=408">6:48</a>
+      <span class="cue-text">different capabilities that are in the that are in or need to be in the did:webs</span>
+    </p>
+    <p class="cue" id="t413">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=413">6:53</a>
+      <span class="cue-text">resolver? talk we're going to go into a little bit later how you even though keys</span>
+    </p>
+    <p class="cue" id="t418">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=418">6:58</a>
+      <span class="cue-text">change you still maintain control of the identifier and then I'll get to a current</span>
+    </p>
+    <p class="cue" id="t424">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=424">7:04</a>
+      <span class="cue-text">state on where's where's the specification? Where are the libraries?</span>
+    </p>
+    <p class="cue" id="t427">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=427">7:07</a>
+      <span class="cue-text">Where's the implementations people are using? What needs to be done next? Because</span>
+    </p>
+    <p class="cue" id="t431">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=431">7:11</a>
+      <span class="cue-text">there's like I mentioned there's KERI 1, there's KERI 2, there's significant work</span>
+    </p>
+    <p class="cue" id="t435">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=435">7:15</a>
+      <span class="cue-text">to be done for KERI 2 and even for the KERI 1 there's some elements of the spec.</span>
+    </p>
+    <p class="cue" id="t439">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=439">7:19</a>
+      <span class="cue-text">We got some review from the KERI stack working group So, I should say that I am</span>
+    </p>
+    <p class="cue" id="t447">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=447">7:27</a>
+      <span class="cue-text">one of the current editors and co-chairs of the DIDWeb S spec and the DIDWeb S sub</span>
+    </p>
+    <p class="cue" id="t454">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=454">7:34</a>
+      <span class="cue-text">working group instead of the KERI stack working group. When we finish a version of</span>
+    </p>
+    <p class="cue" id="t458">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=458">7:38</a>
+      <span class="cue-text">the spec, we pass it on up to the KERI stack working group chairs of which Sam is</span>
+    </p>
+    <p class="cue" id="t462">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=462">7:42</a>
+      <span class="cue-text">one and I believe Philip Fairhiller is another. It might just be those two. So,</span>
+    </p>
+    <p class="cue" id="t466">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=466">7:46</a>
+      <span class="cue-text">we got our version of the spec ready. We sent it to them and they gave us some</span>
+    </p>
+    <p class="cue" id="t469">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=469">7:49</a>
+      <span class="cue-text">review points. And so, there's still review points on KERI 1, which is what</span>
+    </p>
+    <p class="cue" id="t472">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=472">7:52</a>
+      <span class="cue-text">we'll get into a little bit later. And then there's a bunch more KERI 2 work to</span>
+    </p>
+    <p class="cue" id="t476">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=476">7:56</a>
+      <span class="cue-text">do. And by the end of this presentation, you'll know where the reference</span>
+    </p>
+    <p class="cue" id="t481">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=481">8:01</a>
+      <span class="cue-text">implementation is. So you can go start to play with this if you'd like. So as I</span>
+    </p>
+    <p class="cue" id="t486">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=486">8:06</a>
+      <span class="cue-text">mentioned, did:webs provides us a base of DNS, a predictable location for your DID</span>
+    </p>
+    <p class="cue" id="t492">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=492">8:12</a>
+      <span class="cue-text">JSON. A URL is that predictable location. did:webs doesn't change that. Everything</span>
+    </p>
+    <p class="cue" id="t499">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=499">8:19</a>
+      <span class="cue-text">you know about how to use DIDWeb still applies in DataWebs. It's just that we</span>
+    </p>
+    <p class="cue" id="t505">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=505">8:25</a>
+      <span class="cue-text">take and we add another file and we say here's a KERI-CESER. It's a set of bytes</span>
+    </p>
+    <p class="cue" id="t511">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=511">8:31</a>
+      <span class="cue-text">that has a set of KERI objects expressed in the encoding called CESER. That's the</span>
+    </p>
+    <p class="cue" id="t515">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=515">8:35</a>
+      <span class="cue-text">first time seeing CESER. CESER is a custom wire protocol for how you express KERI</span>
+    </p>
+    <p class="cue" id="t522">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=522">8:42</a>
+      <span class="cue-text">data structures, KERI and ACDC data structures. So we take this extra file and</span>
+    </p>
+    <p class="cue" id="t527">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=527">8:47</a>
+      <span class="cue-text">it's got a lot of data structures in it that allow you to provide verification of,</span>
+    </p>
+    <p class="cue" id="t532">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=532">8:52</a>
+      <span class="cue-text">okay, I'm the same Kent over time. I'm the same person. I have all these things that</span>
+    </p>
+    <p class="cue" id="t537">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=537">8:57</a>
+      <span class="cue-text">cryptographically verify to say I had these keys today. I rotated to the these</span>
+    </p>
+    <p class="cue" id="t542">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=542">9:02</a>
+      <span class="cue-text">keys, the other keys tomorrow and so on and so forth. The KERI CaesarStream has</span>
+    </p>
+    <p class="cue" id="t546">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=546">9:06</a>
+      <span class="cue-text">all of that data plus a couple of credentials as you'll get into later.</span>
+    </p>
+    <p class="cue" id="t551">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=551">9:11</a>
+      <span class="cue-text">Okay, and the and those credentials I mentioned, they go directly into the DID</span>
+    </p>
+    <p class="cue" id="t556">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=556">9:16</a>
+      <span class="cue-text">document and you'll see that a little bit later because all you really need to do is</span>
+    </p>
+    <p class="cue" id="t560">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=560">9:20</a>
+      <span class="cue-text">you need to say I have a KERI identifier. That KERI identifier has keys. And I also</span>
+    </p>
+    <p class="cue" id="t566">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=566">9:26</a>
+      <span class="cue-text">need to say which I have credentials to say which domains are authorized. Once you</span>
+    </p>
+    <p class="cue" id="t571">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=571">9:31</a>
+      <span class="cue-text">know how to process the appropriate KERI keys and KERI credentials, you can derive</span>
+    </p>
+    <p class="cue" id="t576">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=576">9:36</a>
+      <span class="cue-text">a DID document as you'll see in just a couple slides. All right. So when your</span>
+    </p>
+    <p class="cue" id="t585">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=585">9:45</a>
+      <span class="cue-text">keys change in did:webs, you just replace the published keys. You do keep the same</span>
+    </p>
+    <p class="cue" id="t592">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=592">9:52</a>
+      <span class="cue-text">DID because the DID is your URL. But you just change the keys. You throw the old</span>
+    </p>
+    <p class="cue" id="t596">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=596">9:56</a>
+      <span class="cue-text">keys away. You've got some new keys. Well, there's nothing in DID web that says these</span>
+    </p>
+    <p class="cue" id="t602">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=602">10:02</a>
+      <span class="cue-text">old keys relate to these new keys. You just sort of have that's implied. It's not</span>
+    </p>
+    <p class="cue" id="t607">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=607">10:07</a>
+      <span class="cue-text">explicit. It's implicit in the sense because you use the same URL and you just</span>
+    </p>
+    <p class="cue" id="t612">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=612">10:12</a>
+      <span class="cue-text">transform the URL to a DID. KERI says, no, we're going to be explicit about that.</span>
+    </p>
+    <p class="cue" id="t617">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=617">10:17</a>
+      <span class="cue-text">We're going to verify the authorized key transitions for the same identifier, which</span>
+    </p>
+    <p class="cue" id="t621">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=621">10:21</a>
+      <span class="cue-text">is what AID is. Well, how do you verify that? That's where the key event log comes</span>
+    </p>
+    <p class="cue" id="t625">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=625">10:25</a>
+      <span class="cue-text">in. And what this means is that we're not just replacing published keys. You're</span>
+    </p>
+    <p class="cue" id="t632">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=632">10:32</a>
+      <span class="cue-text">getting a new pair of keys and the old pair of keys we're saying we've rotated</span>
+    </p>
+    <p class="cue" id="t635">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=635">10:35</a>
+      <span class="cue-text">away from those. So the relationship between the old and the new keys is</span>
+    </p>
+    <p class="cue" id="t638">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=638">10:38</a>
+      <span class="cue-text">explicit.</span>
+    </p>
+    <p class="cue" id="t641">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=641">10:41</a>
+      <span class="cue-text">And it would really this top bullet point is a sort of just another way to say the</span>
+    </p>
+    <p class="cue" id="t645">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=645">10:45</a>
+      <span class="cue-text">same exact thing. Even though you're going to get the just from a regular web server</span>
+    </p>
+    <p class="cue" id="t651">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=651">10:51</a>
+      <span class="cue-text">that did that JSON, you actually when I say controller evidence right here,</span>
+    </p>
+    <p class="cue" id="t654">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=654">10:54</a>
+      <span class="cue-text">controller is a term if you see that for the rest of the presentation, we use</span>
+    </p>
+    <p class="cue" id="t658">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=658">10:58</a>
+      <span class="cue-text">controller to refer to a person or an entity that controls a KERI key store. So</span>
+    </p>
+    <p class="cue" id="t664">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=664">11:04</a>
+      <span class="cue-text">I'm just saying give me your KERI evidence and I'm going to use that to verify what</span>
+    </p>
+    <p class="cue" id="t667">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=667">11:07</a>
+      <span class="cue-text">you're telling me in the DID document. So a couple of purposes that you might use</span>
+    </p>
+    <p class="cue" id="t671">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=671">11:11</a>
+      <span class="cue-text">for did:webs are similar to what you just need identity for security for in general.</span>
+    </p>
+    <p class="cue" id="t678">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=678">11:18</a>
+      <span class="cue-text">So let's take this ACME corporation. They're going to host to things at example</span>
+    </p>
+    <p class="cue" id="t682">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=682">11:22</a>
+      <span class="cue-text">.org, they might want to be able to take the same identity as a company. So GLEI</span>
+    </p>
+    <p class="cue" id="t687">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=687">11:27</a>
+      <span class="cue-text">solves the problem of organizational identity. We're going to model a little</span>
+    </p>
+    <p class="cue" id="t692">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=692">11:32</a>
+      <span class="cue-text">bit of an organizational identity problem here, but with did:webs. So what the VLEI</span>
+    </p>
+    <p class="cue" id="t698">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=698">11:38</a>
+      <span class="cue-text">brings and this isn't a VLEI presentation, but I'll give you a quick quick intro is</span>
+    </p>
+    <p class="cue" id="t703">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=703">11:43</a>
+      <span class="cue-text">we say, well, we've got this entity identifier that says this is Microsoft or</span>
+    </p>
+    <p class="cue" id="t708">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=708">11:48</a>
+      <span class="cue-text">this is Google. And then there's the VLEI that says, Okay, well, this is</span>
+    </p>
+    <p class="cue" id="t712">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=712">11:52</a>
+      <span class="cue-text">cryptographically verifiable based on a key ecosystem that we've a trust ecosystem</span>
+    </p>
+    <p class="cue" id="t717">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=717">11:57</a>
+      <span class="cue-text">we've established to say this really is Google. It's not an imposter. Well, you</span>
+    </p>
+    <p class="cue" id="t722">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=722">12:02</a>
+      <span class="cue-text">could consider that to be kind of like this. You want to host some content. You</span>
+    </p>
+    <p class="cue" id="t727">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=727">12:07</a>
+      <span class="cue-text">want people to be able to say this is who you are. You might want to have content in</span>
+    </p>
+    <p class="cue" id="t732">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=732">12:12</a>
+      <span class="cue-text">multiple places. And I call it a backup here, but you could really think of it as</span>
+    </p>
+    <p class="cue" id="t737">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=737">12:17</a>
+      <span class="cue-text">anywhere else in the world that the same company might want to either release new</span>
+    </p>
+    <p class="cue" id="t742">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=742">12:22</a>
+      <span class="cue-text">products, host other content. You need to be able to say you have a consistent</span>
+    </p>
+    <p class="cue" id="t746">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=746">12:26</a>
+      <span class="cue-text">identity no matter where your content is hosted. Part of what you'll see through</span>
+    </p>
+    <p class="cue" id="t750">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=750">12:30</a>
+      <span class="cue-text">the rest of the presentation is that… So, we use something called an AID. Is there</span>
+    </p>
+    <p class="cue" id="t756">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=756">12:36</a>
+      <span class="cue-text">anybody here that doesn't know what an AID is? Okay. Thank you. So, an AID is</span>
+    </p>
+    <p class="cue" id="t761">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=761">12:41</a>
+      <span class="cue-text">something called an autonomic identifier. It's what the KERI world describes. It's</span>
+    </p>
+    <p class="cue" id="t768">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=768">12:48</a>
+      <span class="cue-text">just an identifier. It's there's a couple of cool properties about it that bring in</span>
+    </p>
+    <p class="cue" id="t772">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=772">12:52</a>
+      <span class="cue-text">the name autonomic. But for this example, it's just your organization ID. Well, your</span>
+    </p>
+    <p class="cue" id="t778">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=778">12:58</a>
+      <span class="cue-text">organization, let's say you're running an AI agent, which is sort of where this OPS</span>
+    </p>
+    <p class="cue" id="t783">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=783">13:03</a>
+      <span class="cue-text">ID comes in. I said delegated identifier here. That's another thing that's did WebS</span>
+    </p>
+    <p class="cue" id="t790">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=790">13:10</a>
+      <span class="cue-text">supports, but it's really based on the KERI support. You might want to take your</span>
+    </p>
+    <p class="cue" id="t794">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=794">13:14</a>
+      <span class="cue-text">identity as a company and say, I do all these different activities. Maybe I'm</span>
+    </p>
+    <p class="cue" id="t798">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=798">13:18</a>
+      <span class="cue-text">going to delegate this one to a person, this one to an AI agent or so on and so</span>
+    </p>
+    <p class="cue" id="t802">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=802">13:22</a>
+      <span class="cue-text">forth. And part of what I've got here on the slide is to say, okay, if you're</span>
+    </p>
+    <p class="cue" id="t807">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=807">13:27</a>
+      <span class="cue-text">running an organization, you're going to have lots of different concerns at the</span>
+    </p>
+    <p class="cue" id="t811">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=811">13:31</a>
+      <span class="cue-text">organization and you want to have consistent coherent identity across all of</span>
+    </p>
+    <p class="cue" id="t814">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=814">13:34</a>
+      <span class="cue-text">them. The foundation for that is KERI ACDC. What we're showing through the rest</span>
+    </p>
+    <p class="cue" id="t820">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=820">13:40</a>
+      <span class="cue-text">of the presentation is how we're using did:webs on top of that to provide a</span>
+    </p>
+    <p class="cue" id="t825">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=825">13:45</a>
+      <span class="cue-text">standard interface through these decentralized identifiers, which is a the</span>
+    </p>
+    <p class="cue" id="t829">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=829">13:49</a>
+      <span class="cue-text">W3C standard to allow you to have a consistent identity across all these</span>
+    </p>
+    <p class="cue" id="t832">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=832">13:52</a>
+      <span class="cue-text">concerns and where we're going to the biggest part of the work that remains is</span>
+    </p>
+    <p class="cue" id="t837">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=837">13:57</a>
+      <span class="cue-text">actually in this fourth box right here. I see credential verifier checks issuer</span>
+    </p>
+    <p class="cue" id="t841">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=841">14:01</a>
+      <span class="cue-text">proof and part of what I wanted to say up front as the as the TLDRs a big part of</span>
+    </p>
+    <p class="cue" id="t846">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=846">14:06</a>
+      <span class="cue-text">the work is that just because we've got nice things in the KERI world called</span>
+    </p>
+    <p class="cue" id="t851">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=851">14:11</a>
+      <span class="cue-text">multisig and nested threshold weighted signature multisig doesn't mean that all</span>
+    </p>
+    <p class="cue" id="t858">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=858">14:18</a>
+      <span class="cue-text">verifiers that you consume that. You might have heard from the W3C world, you might</span>
+    </p>
+    <p class="cue" id="t862">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=862">14:22</a>
+      <span class="cue-text">have heard of something called the data integrity proof specification. Anybody</span>
+    </p>
+    <p class="cue" id="t866">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=866">14:26</a>
+      <span class="cue-text">heard of that? So if you know data integrity proofs, well, it helps your</span>
+    </p>
+    <p class="cue" id="t871">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=871">14:31</a>
+      <span class="cue-text">verifier know to how to use the right keys to verify a credential signature. Is that</span>
+    </p>
+    <p class="cue" id="t876">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=876">14:36</a>
+      <span class="cue-text">correct? So we have to do that. I just want to thank you for being here so I</span>
+    </p>
+    <p class="cue" id="t880">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=880">14:40</a>
+      <span class="cue-text">could validate that. I was pretty sure about that when I looked into it in April,</span>
+    </p>
+    <p class="cue" id="t884">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=884">14:44</a>
+      <span class="cue-text">but thank you. We have to write a similar thing for the DataWebs world. And this is</span>
+    </p>
+    <p class="cue" id="t889">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=889">14:49</a>
+      <span class="cue-text">a significant piece of work that we didn't quite have time to get to. What it is is</span>
+    </p>
+    <p class="cue" id="t895">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=895">14:55</a>
+      <span class="cue-text">that so KERI has this amazing capability for multisig. I said nested weighted</span>
+    </p>
+    <p class="cue" id="t900">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=900">15:00</a>
+      <span class="cue-text">threshold multisig. Just because you can sign a document with this really fancy</span>
+    </p>
+    <p class="cue" id="t905">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=905">15:05</a>
+      <span class="cue-text">grouping or ordering of signers that can be resilient, fault tolerant and</span>
+    </p>
+    <p class="cue" id="t910">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=910">15:10</a>
+      <span class="cue-text">everything you want doesn't mean that the verifier is smart enough to pull all the</span>
+    </p>
+    <p class="cue" id="t914">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=914">15:14</a>
+      <span class="cue-text">right keys out of the DID document because you're going to define what's called the</span>
+    </p>
+    <p class="cue" id="t917">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=917">15:17</a>
+      <span class="cue-text">verification methods and I'll just let me just skip ahead a little bit. So here's a</span>
+    </p>
+    <p class="cue" id="t922">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=922">15:22</a>
+      <span class="cue-text">DID document. Your keys are going to be defined in your verification method area.</span>
+    </p>
+    <p class="cue" id="t928">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=928">15:28</a>
+      <span class="cue-text">And then you're going to say what they can do with the assertion method and you're</span>
+    </p>
+    <p class="cue" id="t931">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=931">15:31</a>
+      <span class="cue-text">going to say which ones allow you to authenticate the DID document in your</span>
+    </p>
+    <p class="cue" id="t934">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=934">15:34</a>
+      <span class="cue-text">authentication. Well, just because KERI can produce really in did:webs really fancy</span>
+    </p>
+    <p class="cue" id="t939">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=939">15:39</a>
+      <span class="cue-text">DID documents that represent our conceptual domain model doesn't mean the</span>
+    </p>
+    <p class="cue" id="t944">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=944">15:44</a>
+      <span class="cue-text">verifiers have that domain model. So when I'm talking about that fourth box that I</span>
+    </p>
+    <p class="cue" id="t948">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=948">15:48</a>
+      <span class="cue-text">mentioned. Even after we add version 2 support, KERI version 2, there's actually</span>
+    </p>
+    <p class="cue" id="t955">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=955">15:55</a>
+      <span class="cue-text">one final piece we need to add beyond that to call it a complete package, which is we</span>
+    </p>
+    <p class="cue" id="t961">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=961">16:01</a>
+      <span class="cue-text">need to write a spec and a library so that if somebody just decides to use a fancy</span>
+    </p>
+    <p class="cue" id="t966">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=966">16:06</a>
+      <span class="cue-text">multisig group and put all their keys here, well, the verifier needs to be able</span>
+    </p>
+    <p class="cue" id="t969">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=969">16:09</a>
+      <span class="cue-text">to detect that it's not just a simple key, but there's a lot of things involved</span>
+    </p>
+    <p class="cue" id="t973">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=973">16:13</a>
+      <span class="cue-text">because you don't want verifiers verifying credentials that just have one valid</span>
+    </p>
+    <p class="cue" id="t978">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=978">16:18</a>
+      <span class="cue-text">signature you need to be able to interpret what a multisig nested weighted threshold</span>
+    </p>
+    <p class="cue" id="t982">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=982">16:22</a>
+      <span class="cue-text">multisig group is. And so it's pretty straightforward for people that know KERI,</span>
+    </p>
+    <p class="cue" id="t987">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=987">16:27</a>
+      <span class="cue-text">but what we we need to be explicit and clear, which means we need to write a spec</span>
+    </p>
+    <p class="cue" id="t991">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=991">16:31</a>
+      <span class="cue-text">and then write a library that'll do that. So I'm seeing at least one nodding head in</span>
+    </p>
+    <p class="cue" id="t996">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=996">16:36</a>
+      <span class="cue-text">the audience. Makes me feel like I'm not a total failure. That's great. Anyway, all</span>
+    </p>
+    <p class="cue" id="t1001">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1001">16:41</a>
+      <span class="cue-text">right. So this is an example of a did-webs did. Let's just walk through it slowly.</span>
+    </p>
+    <p class="cue" id="t1006">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1006">16:46</a>
+      <span class="cue-text">You know, of course, you've got the protocol method at the front did:webs for</span>
+    </p>
+    <p class="cue" id="t1011">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1011">16:51</a>
+      <span class="cue-text">domain which we'll get into the designated alias ACDC later and you've got a path.</span>
+    </p>
+    <p class="cue" id="t1019">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1019">16:59</a>
+      <span class="cue-text">You might have a bunch of different paths here just like a traditional web domain.</span>
+    </p>
+    <p class="cue" id="t1022">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1022">17:02</a>
+      <span class="cue-text">And then on the end here is that thing that I said earlier is an AID, autonomic</span>
+    </p>
+    <p class="cue" id="t1027">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1027">17:07</a>
+      <span class="cue-text">identifier. It's a KERI AID. And one way to think about what did:webs adds on top of</span>
+    </p>
+    <p class="cue" id="t1035">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1035">17:15</a>
+      <span class="cue-text">KERI is we're using the W3C decentralized identifier standard as a standard way to</span>
+    </p>
+    <p class="cue" id="t1042">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1042">17:22</a>
+      <span class="cue-text">discover keystate. That's really this… If you had to say KERI in one sentence,</span>
+    </p>
+    <p class="cue" id="t1049">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1049">17:29</a>
+      <span class="cue-text">DataWebs is a standard is a W3C standard way to discover keystate. And when I say</span>
+    </p>
+    <p class="cue" id="t1056">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1056">17:36</a>
+      <span class="cue-text">keystate, I mean current or prior history for this identifier. Because remember I</span>
+    </p>
+    <p class="cue" id="t1061">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1061">17:41</a>
+      <span class="cue-text">said key rotation, so you could have lots of rotations and lots of history. That's</span>
+    </p>
+    <p class="cue" id="t1065">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1065">17:45</a>
+      <span class="cue-text">really what we're doing here. And you'll give something that looks like this to</span>
+    </p>
+    <p class="cue" id="t1067">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1067">17:47</a>
+      <span class="cue-text">what's called the DID resolver and that DID resolver will go and it'll ask for two</span>
+    </p>
+    <p class="cue" id="t1072">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1072">17:52</a>
+      <span class="cue-text">files as you'll see later and it'll say, okay, tell me what the current keys are</span>
+    </p>
+    <p class="cue" id="t1076">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1076">17:56</a>
+      <span class="cue-text">and who's going to do this. Let's actually put our minds in the mindset of who's</span>
+    </p>
+    <p class="cue" id="t1081">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1081">18:01</a>
+      <span class="cue-text">using this. So let's say you're at a gas station and you see this young looking</span>
+    </p>
+    <p class="cue" id="t1087">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1087">18:07</a>
+      <span class="cue-text">person come into your establishment. They want to buy some tobacco and you're in the</span>
+    </p>
+    <p class="cue" id="t1093">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1093">18:13</a>
+      <span class="cue-text">state of Utah. You're at a place called Maverick. Maverick says give me your</span>
+    </p>
+    <p class="cue" id="t1097">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1097">18:17</a>
+      <span class="cue-text">driver license and you give me your digital driver license and it's a SEDI one</span>
+    </p>
+    <p class="cue" id="t1100">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1100">18:20</a>
+      <span class="cue-text">but for whatever reason their verifier can only accept W3C things and so they use the</span>
+    </p>
+    <p class="cue" id="t1105">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1105">18:25</a>
+      <span class="cue-text">compatibility layer, right? And they've got a SEDI identifier. Somebody has a W3C</span>
+    </p>
+    <p class="cue" id="t1108">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1108">18:28</a>
+      <span class="cue-text">compatibility layer and they've got a credential that's issued that has a</span>
+    </p>
+    <p class="cue" id="t1112">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1112">18:32</a>
+      <span class="cue-text">did:webs in it. Well, how is the verifier going to go and find the right key to</span>
+    </p>
+    <p class="cue" id="t1118">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1118">18:38</a>
+      <span class="cue-text">verify this credential? That's what we're going to learn about through the rest of</span>
+    </p>
+    <p class="cue" id="t1123">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1123">18:43</a>
+      <span class="cue-text">the presentation. But the idea is that they look at the history for this</span>
+    </p>
+    <p class="cue" id="t1128">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1128">18:48</a>
+      <span class="cue-text">identifier and say, okay, what's the current key right now today? So I</span>
+    </p>
+    <p class="cue" id="t1134">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1134">18:54</a>
+      <span class="cue-text">mentioned two files. So when you're in in what I wanted to say with that example is</span>
+    </p>
+    <p class="cue" id="t1139">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1139">18:59</a>
+      <span class="cue-text">that the who of who's who cares to receive this did:webs is a verifier. When the</span>
+    </p>
+    <p class="cue" id="t1146">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1146">19:06</a>
+      <span class="cue-text">verifier says, okay, are you authorized to buy what you're trying to buy? They're</span>
+    </p>
+    <p class="cue" id="t1149">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1149">19:09</a>
+      <span class="cue-text">going to find two things for your identifier. They're going to get your DID</span>
+    </p>
+    <p class="cue" id="t1153">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1153">19:13</a>
+      <span class="cue-text">.json and anybody who's familiar with the DID ecosystem knows this pretty well. And</span>
+    </p>
+    <p class="cue" id="t1157">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1157">19:17</a>
+      <span class="cue-text">I said DID web form right under it. Because DID JSON, it's when we when it's</span>
+    </p>
+    <p class="cue" id="t1164">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1164">19:24</a>
+      <span class="cue-text">actually sitting there on disk or when we retrieve it, it's actually just a regular</span>
+    </p>
+    <p class="cue" id="t1168">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1168">19:28</a>
+      <span class="cue-text">DID web DID JSON. But we have another file that's not DID web. That's what this KERI</span>
+    </p>
+    <p class="cue" id="t1174">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1174">19:34</a>
+      <span class="cue-text">Caesar stream is. So when they verify or they're trying to make a decision, should</span>
+    </p>
+    <p class="cue" id="t1178">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1178">19:38</a>
+      <span class="cue-text">I sell this to you or not, they go and they resolve both the issuers did and your</span>
+    </p>
+    <p class="cue" id="t1182">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1182">19:42</a>
+      <span class="cue-text">did and they get these two files per for the issuer and for you, this is what we're</span>
+    </p>
+    <p class="cue" id="t1188">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1188">19:48</a>
+      <span class="cue-text">talking about as far as verifying a credential. There's a W3C credential</span>
+    </p>
+    <p class="cue" id="t1193">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1193">19:53</a>
+      <span class="cue-text">that's been secured with a KERI identifier. And then we go through this</span>
+    </p>
+    <p class="cue" id="t1197">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1197">19:57</a>
+      <span class="cue-text">process. We put them both together and we essentially say from the KERI Caesar</span>
+    </p>
+    <p class="cue" id="t1201">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1201">20:01</a>
+      <span class="cue-text">string, can we derive the exact same document that was hosted over here? If we</span>
+    </p>
+    <p class="cue" id="t1206">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1206">20:06</a>
+      <span class="cue-text">can, we at least know it from that point, it's coherent and it's cryptographically</span>
+    </p>
+    <p class="cue" id="t1212">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1212">20:12</a>
+      <span class="cue-text">verifiable as far as what you've told me is honest. There's another question that</span>
+    </p>
+    <p class="cue" id="t1217">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1217">20:17</a>
+      <span class="cue-text">we're not going to get into in this presentation of, well, what if verifiers</span>
+    </p>
+    <p class="cue" id="t1221">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1221">20:21</a>
+      <span class="cue-text">want to use witnesses and watchers? What if they want to use registrars and</span>
+    </p>
+    <p class="cue" id="t1224">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1224">20:24</a>
+      <span class="cue-text">observers? That gets beyond what we've decided to solve with the current version</span>
+    </p>
+    <p class="cue" id="t1230">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1230">20:30</a>
+      <span class="cue-text">of the did:webs spec. And here's why. Does the DID world really care about our</span>
+    </p>
+    <p class="cue" id="t1240">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1240">20:40</a>
+      <span class="cue-text">special KERI infrastructure? They don't and they can't. And you can make an</span>
+    </p>
+    <p class="cue" id="t1246">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1246">20:46</a>
+      <span class="cue-text">argument that they shouldn't. What they're limited to here, because here's the thing,</span>
+    </p>
+    <p class="cue" id="t1251">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1251">20:51</a>
+      <span class="cue-text">as soon as you start to become KERI aware, why use did:webs? As soon as you become</span>
+    </p>
+    <p class="cue" id="t1257">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1257">20:57</a>
+      <span class="cue-text">aware of the conceptual model of witness, a watcher, a registrar, observer of all of</span>
+    </p>
+    <p class="cue" id="t1262">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1262">21:02</a>
+      <span class="cue-text">that, and the adjudicator, if you're going to pay that conceptual burden, you can</span>
+    </p>
+    <p class="cue" id="t1266">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1266">21:06</a>
+      <span class="cue-text">just use straight KERI identifiers. We already have a discovery protocol built</span>
+    </p>
+    <p class="cue" id="t1269">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1269">21:09</a>
+      <span class="cue-text">into KERI. It's called out-of-bound introductions. We send everything across</span>
+    </p>
+    <p class="cue" id="t1274">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1274">21:14</a>
+      <span class="cue-text">the wire that's necessary. So if you're already going to pay the architectural and</span>
+    </p>
+    <p class="cue" id="t1279">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1279">21:19</a>
+      <span class="cue-text">conceptual cost to upgrade all of your infrastructure to be KERI aware, just use</span>
+    </p>
+    <p class="cue" id="t1284">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1284">21:24</a>
+      <span class="cue-text">KERI. The use case for did:webs is for verifiers that never, that probably have</span>
+    </p>
+    <p class="cue" id="t1290">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1290">21:30</a>
+      <span class="cue-text">something against KERI, to be quite honest. They say, we don't want to hear</span>
+    </p>
+    <p class="cue" id="t1295">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1295">21:35</a>
+      <span class="cue-text">you say it. Don't talk about it. We know it's behind the scenes, but don't bring it</span>
+    </p>
+    <p class="cue" id="t1298">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1298">21:38</a>
+      <span class="cue-text">up. There are some of those. There are some of those. – Some big ones, notable</span>
+    </p>
+    <p class="cue" id="t1306">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1306">21:46</a>
+      <span class="cue-text">ones that have said almost exactly that. – So we're like, okay, fine. We'll call it</span>
+    </p>
+    <p class="cue" id="t1311">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1311">21:51</a>
+      <span class="cue-text">did my best. We will never use the word KERI. Just don't read the spec. But no, if</span>
+    </p>
+    <p class="cue" id="t1317">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1317">21:57</a>
+      <span class="cue-text">you take an economic argument, you could say there are some people that don't want</span>
+    </p>
+    <p class="cue" id="t1321">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1321">22:01</a>
+      <span class="cue-text">to spend the resources or don't have the resources to spend to get full</span>
+    </p>
+    <p class="cue" id="t1324">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1324">22:04</a>
+      <span class="cue-text">infrastructure support for the I and KERI. Or they've got a really good reason why,</span>
+    </p>
+    <p class="cue" id="t1329">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1329">22:09</a>
+      <span class="cue-text">hey, this for the risk profile here, we can accept these risks So just a plain</span>
+    </p>
+    <p class="cue" id="t1335">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1335">22:15</a>
+      <span class="cue-text">did:webs, that's fine. And so what I'm leading to here is that you're doing a</span>
+    </p>
+    <p class="cue" id="t1342">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1342">22:22</a>
+      <span class="cue-text">check by taking the DIDJSON and the KERI CESER and saying, are they coherent? Can I</span>
+    </p>
+    <p class="cue" id="t1348">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1348">22:28</a>
+      <span class="cue-text">derive my DIDJSON from my KERI CESER? If so, at least that's not lying to you. And</span>
+    </p>
+    <p class="cue" id="t1353">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1353">22:33</a>
+      <span class="cue-text">if that's enough for your verifier to say, yes, you can take this tobacco out of the</span>
+    </p>
+    <p class="cue" id="t1356">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1356">22:36</a>
+      <span class="cue-text">store to the young man he's trying to buy it, that might be enough. So you send that</span>
+    </p>
+    <p class="cue" id="t1360">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1360">22:40</a>
+      <span class="cue-text">all into the DID resolver. You do that for the issuer, do it for the the holder and</span>
+    </p>
+    <p class="cue" id="t1364">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1364">22:44</a>
+      <span class="cue-text">say does it verify? And if so, great. Now you can verify signatures on a credential.</span>
+    </p>
+    <p class="cue" id="t1369">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1369">22:49</a>
+      <span class="cue-text">Now I'm going to have this slide because let me check myself on time. Okay, we got</span>
+    </p>
+    <p class="cue" id="t1375">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1375">22:55</a>
+      <span class="cue-text">about great. I've had questions come up from members of the community that didn't</span>
+    </p>
+    <p class="cue" id="t1380">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1380">23:00</a>
+      <span class="cue-text">know about this fourth thing on the slide. So I'm going to walk you through it. This</span>
+    </p>
+    <p class="cue" id="t1384">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1384">23:04</a>
+      <span class="cue-text">is a little bit deeper. And so if you're if you're new to KERI, don't worry too</span>
+    </p>
+    <p class="cue" id="t1388">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1388">23:08</a>
+      <span class="cue-text">much about what I'm going to say here or if you need to do did:webs. This is maybe a</span>
+    </p>
+    <p class="cue" id="t1393">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1393">23:13</a>
+      <span class="cue-text">little bit deeper. Okay, so this is the KERI-CESER. If you want to go inside that</span>
+    </p>
+    <p class="cue" id="t1397">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1397">23:17</a>
+      <span class="cue-text">file, that box from the last slide of the I said you can derive the DID document</span>
+    </p>
+    <p class="cue" id="t1402">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1402">23:22</a>
+      <span class="cue-text">from the KERI-CESER string. And that's actually what the did:webs resolver does</span>
+    </p>
+    <p class="cue" id="t1407">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1407">23:27</a>
+      <span class="cue-text">behind the scenes. Well, what's in the KERI-CESER string? Four primary kinds of</span>
+    </p>
+    <p class="cue" id="t1412">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1412">23:32</a>
+      <span class="cue-text">content. There's key event logs. Here's my identifier. Here's what keys control my</span>
+    </p>
+    <p class="cue" id="t1419">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1419">23:39</a>
+      <span class="cue-text">current my identifier. There's transaction event logs. Remember I said KERI 1 and</span>
+    </p>
+    <p class="cue" id="t1423">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1423">23:43</a>
+      <span class="cue-text">KERI 2? Well, in KERI 2, we have a new kind of transaction event log. But in KERI</span>
+    </p>
+    <p class="cue" id="t1427">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1427">23:47</a>
+      <span class="cue-text">1, we've got what's called a registry TEL and an ACDC TEL. You're going to have one</span>
+    </p>
+    <p class="cue" id="t1432">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1432">23:52</a>
+      <span class="cue-text">of these for your registry for your credential and you're going to have one of</span>
+    </p>
+    <p class="cue" id="t1435">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1435">23:55</a>
+      <span class="cue-text">them for the credentials life lifespan of cells like issuance and revocation. And</span>
+    </p>
+    <p class="cue" id="t1440">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1440">24:00</a>
+      <span class="cue-text">you're going to have some ACDCs. Now, why do you have ACDCs in the KERI seizure</span>
+    </p>
+    <p class="cue" id="t1445">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1445">24:05</a>
+      <span class="cue-text">stream? It's because of a feature called a designated alias. Right now, this is</span>
+    </p>
+    <p class="cue" id="t1452">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1452">24:12</a>
+      <span class="cue-text">actually something that makes KERI special and distinct. It's the big fake fiberoptic</span>
+    </p>
+    <p class="cue" id="t1457">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1457">24:17</a>
+      <span class="cue-text">S we had at the beginning of the presentation. This is part of what makes</span>
+    </p>
+    <p class="cue" id="t1461">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1461">24:21</a>
+      <span class="cue-text">DDoS special is that you make an explicit commitment to say, I'm authorizing this</span>
+    </p>
+    <p class="cue" id="t1467">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1467">24:27</a>
+      <span class="cue-text">DID on this domain. There's no other DID method in existence that does something</span>
+    </p>
+    <p class="cue" id="t1472">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1472">24:32</a>
+      <span class="cue-text">like that. That's as portable and decentralized as KERI. You might get a</span>
+    </p>
+    <p class="cue" id="t1477">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1477">24:37</a>
+      <span class="cue-text">close approximation for DID methods that are on on blockchains that have something</span>
+    </p>
+    <p class="cue" id="t1482">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1482">24:42</a>
+      <span class="cue-text">like this, but one of the rules, what I'm hinting at is one of the rules for did:webs</span>
+    </p>
+    <p class="cue" id="t1488">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1488">24:48</a>
+      <span class="cue-text">is that you're not authorized to a verifier should reject your DID document</span>
+    </p>
+    <p class="cue" id="t1497">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1497">24:57</a>
+      <span class="cue-text">if you don't have an explicit commitment to example.com or to whatever your domain</span>
+    </p>
+    <p class="cue" id="t1500">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1500">25:00</a>
+      <span class="cue-text">is. So the reason why you have ACDCs is because it's a 100% requirement that if</span>
+    </p>
+    <p class="cue" id="t1506">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1506">25:06</a>
+      <span class="cue-text">you want your DID to be hosted on a given URL, you have to commit to that URL. with</span>
+    </p>
+    <p class="cue" id="t1511">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1511">25:11</a>
+      <span class="cue-text">an ACDC. So, and what that implies, that one requirement implies that every did:webs</span>
+    </p>
+    <p class="cue" id="t1518">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1518">25:18</a>
+      <span class="cue-text">implementation must have full support for KERI and ACDC. There's no way to get away</span>
+    </p>
+    <p class="cue" id="t1524">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1524">25:24</a>
+      <span class="cue-text">with it. This is the reason why you have to have it all implemented for a did:webs</span>
+    </p>
+    <p class="cue" id="t1528">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1528">25:28</a>
+      <span class="cue-text">implementation. Okay, now the fourth part here is a little bit more surprising</span>
+    </p>
+    <p class="cue" id="t1534">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1534">25:34</a>
+      <span class="cue-text">because you're like, okay, it's natural that we've got key event logs. It's</span>
+    </p>
+    <p class="cue" id="t1537">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1537">25:37</a>
+      <span class="cue-text">natural that we've got registry or transaction event logs. It's natural that</span>
+    </p>
+    <p class="cue" id="t1540">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1540">25:40</a>
+      <span class="cue-text">we have ACDCs. Well, what's this RPUI? Well, that's actually shorthand for what's</span>
+    </p>
+    <p class="cue" id="t1546">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1546">25:46</a>
+      <span class="cue-text">called a reply message. And we use them and KERI to describe a couple key records.</span>
+    </p>
+    <p class="cue" id="t1551">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1551">25:51</a>
+      <span class="cue-text">There's like a URL or an endpoint role authorization. And what that does is it</span>
+    </p>
+    <p class="cue" id="t1557">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1557">25:57</a>
+      <span class="cue-text">essentially says this person or this controller, this person that controls</span>
+    </p>
+    <p class="cue" id="t1560">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1560">26:00</a>
+      <span class="cue-text">these key pairs, this identifier is allowed to act in this capacity on this</span>
+    </p>
+    <p class="cue" id="t1565">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1565">26:05</a>
+      <span class="cue-text">URL. And we include that in the DID document because you'll see there's the</span>
+    </p>
+    <p class="cue" id="t1569">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1569">26:09</a>
+      <span class="cue-text">services section of the DID document. They're going to be able to look at okay</span>
+    </p>
+    <p class="cue" id="t1573">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1573">26:13</a>
+      <span class="cue-text">there's a witness or an agent or a there's one other I was going to say watcher</span>
+    </p>
+    <p class="cue" id="t1580">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1580">26:20</a>
+      <span class="cue-text">there's actually one I'm thinking of a delegator. Okay. You might see a couple of</span>
+    </p>
+    <p class="cue" id="t1584">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1584">26:24</a>
+      <span class="cue-text">different services and you want to verify okay was is there actually cryptographic</span>
+    </p>
+    <p class="cue" id="t1588">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1588">26:28</a>
+      <span class="cue-text">commitment and authorization by the controller of this identifier of this</span>
+    </p>
+    <p class="cue" id="t1593">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1593">26:33</a>
+      <span class="cue-text">endpoint and in KERI we could do that in DeadWebs we can do that and we expressed</span>
+    </p>
+    <p class="cue" id="t1599">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1599">26:39</a>
+      <span class="cue-text">that in the KERI Caesar stream with reply messages. Now, these are not anchored to a</span>
+    </p>
+    <p class="cue" id="t1605">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1605">26:45</a>
+      <span class="cue-text">KEL. They are just signed reply messages. And a question came up in the KERI</span>
+    </p>
+    <p class="cue" id="t1611">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1611">26:51</a>
+      <span class="cue-text">community. They said, well, is everything in the KERI Caesar stream, is it</span>
+    </p>
+    <p class="cue" id="t1615">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1615">26:55</a>
+      <span class="cue-text">essentially just a… This is part of the aspect problem we have to fix that I've</span>
+    </p>
+    <p class="cue" id="t1619">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1619">26:59</a>
+      <span class="cue-text">got later in the slides is they said, well, should a KERI Caesar stream just</span>
+    </p>
+    <p class="cue" id="t1624">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1624">27:04</a>
+      <span class="cue-text">always be a subset of a key event log, whether the whole thing or just a part?</span>
+    </p>
+    <p class="cue" id="t1628">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1628">27:08</a>
+      <span class="cue-text">No. And this is why you have to say, well, if I'm going to have a services section of</span>
+    </p>
+    <p class="cue" id="t1635">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1635">27:15</a>
+      <span class="cue-text">my DID document and to say where things are at, there's a way we express that in</span>
+    </p>
+    <p class="cue" id="t1638">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1638">27:18</a>
+      <span class="cue-text">KERI and that's with reply messages. All right. Now that's about as deep as we need</span>
+    </p>
+    <p class="cue" id="t1642">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1642">27:22</a>
+      <span class="cue-text">to get. So those that are new to KERI, the rest of the presentation shouldn't be as</span>
+    </p>
+    <p class="cue" id="t1647">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1647">27:27</a>
+      <span class="cue-text">brutal. But we'll see. I don't want to make any promises. All right. We've talked</span>
+    </p>
+    <p class="cue" id="t1652">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1652">27:32</a>
+      <span class="cue-text">through this. Again, we fetch both the files. We verify that they're coherent and</span>
+    </p>
+    <p class="cue" id="t1658">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1658">27:38</a>
+      <span class="cue-text">And as I mentioned, there's designated aliases and that's where when I say</span>
+    </p>
+    <p class="cue" id="t1662">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1662">27:42</a>
+      <span class="cue-text">authorized DID names here. So we go through the verification process and we</span>
+    </p>
+    <p class="cue" id="t1665">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1665">27:45</a>
+      <span class="cue-text">say, okay, is the URL that you're hosting this DID web-s DID document on, is it</span>
+    </p>
+    <p class="cue" id="t1670">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1670">27:50</a>
+      <span class="cue-text">authorized? If it's in your designated aliases ACDC, it is. And once we check</span>
+    </p>
+    <p class="cue" id="t1676">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1676">27:56</a>
+      <span class="cue-text">that all that's coherent, we essentially just derive the DID document from the KERI</span>
+    </p>
+    <p class="cue" id="t1680">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1680">28:00</a>
+      <span class="cue-text">-CESER stream and compare it with the DID JSON that you've got on your web server.</span>
+    </p>
+    <p class="cue" id="t1686">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1686">28:06</a>
+      <span class="cue-text">And if they if they're the same same document, you verify. You're good. So we</span>
+    </p>
+    <p class="cue" id="t1691">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1691">28:11</a>
+      <span class="cue-text">already saw the slide. We won't spend too much time on it. This is just an example</span>
+    </p>
+    <p class="cue" id="t1694">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1694">28:14</a>
+      <span class="cue-text">of what a DID document looks like if you haven't seen it. I've mentioned there's</span>
+    </p>
+    <p class="cue" id="t1698">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1698">28:18</a>
+      <span class="cue-text">one thing that I should mention on this slide is I mentioned the concept of a</span>
+    </p>
+    <p class="cue" id="t1701">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1701">28:21</a>
+      <span class="cue-text">designated alias and I'll just slowly talk through that again. A designated alias is</span>
+    </p>
+    <p class="cue" id="t1707">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1707">28:27</a>
+      <span class="cue-text">what I was just referring to as this is no other DID method in the world does this.</span>
+    </p>
+    <p class="cue" id="t1712">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1712">28:32</a>
+      <span class="cue-text">KERI makes an explicit commitment to a URL. That URL Well, I was going to say it</span>
+    </p>
+    <p class="cue" id="t1719">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1719">28:39</a>
+      <span class="cue-text">goes in the also known as that some of them do. Now I might have jumped ahead of</span>
+    </p>
+    <p class="cue" id="t1725">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1725">28:45</a>
+      <span class="cue-text">myself here. So some of your designated aliases will be placed in the also known</span>
+    </p>
+    <p class="cue" id="t1732">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1732">28:52</a>
+      <span class="cue-text">as section. So let's say you're essentially trying to tell the world this</span>
+    </p>
+    <p class="cue" id="t1737">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1737">28:57</a>
+      <span class="cue-text">DID document or the location that I'm storing this did:webs DID document isn't</span>
+    </p>
+    <p class="cue" id="t1742">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1742">29:02</a>
+      <span class="cue-text">the only location there is. There's a couple of other locations you can get the</span>
+    </p>
+    <p class="cue" id="t1747">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1747">29:07</a>
+      <span class="cue-text">same DID document, but just under a slightly different URL, but it's the same</span>
+    </p>
+    <p class="cue" id="t1752">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1752">29:12</a>
+      <span class="cue-text">controlling identifier. You'll put those in the also known as and those come from</span>
+    </p>
+    <p class="cue" id="t1755">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1755">29:15</a>
+      <span class="cue-text">your designated aliases ACDC. So now to the multisig stuff. We do have multisig</span>
+    </p>
+    <p class="cue" id="t1764">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1764">29:24</a>
+      <span class="cue-text">support and I'm going to say limited multisig support and you'll see why. Give</span>
+    </p>
+    <p class="cue" id="t1769">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1769">29:29</a>
+      <span class="cue-text">me just a second to drink here. There is something that exists in the W3C</span>
+    </p>
+    <p class="cue" id="t1775">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1775">29:35</a>
+      <span class="cue-text">essentiallyidentity ecosystem called Conditional Proof 2022. And it lets you</span>
+    </p>
+    <p class="cue" id="t1781">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1781">29:41</a>
+      <span class="cue-text">define a threshold structure for signing something. So it was a natural fit for</span>
+    </p>
+    <p class="cue" id="t1788">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1788">29:48</a>
+      <span class="cue-text">DataWebs. DataWebs based on KERI with KERI Multisake. We just needed a way to define,</span>
+    </p>
+    <p class="cue" id="t1794">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1794">29:54</a>
+      <span class="cue-text">okay, well, there's a let's say it's two of three. Like this example, we've got</span>
+    </p>
+    <p class="cue" id="t1799">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1799">29:59</a>
+      <span class="cue-text">three keys that can sign. Two of them are required. Conditional Proof 2022 lets us</span>
+    </p>
+    <p class="cue" id="t1805">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1805">30:05</a>
+      <span class="cue-text">define that sort of a simple threshold structure, but it gets deeper than that.</span>
+    </p>
+    <p class="cue" id="t1810">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1810">30:10</a>
+      <span class="cue-text">Conditional proof 2022 also allows you to do nesting. So the really fancy cool</span>
+    </p>
+    <p class="cue" id="t1816">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1816">30:16</a>
+      <span class="cue-text">threshold weight, nested weighted threshold multisig stuff that KERI could</span>
+    </p>
+    <p class="cue" id="t1821">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1821">30:21</a>
+      <span class="cue-text">do, you can actually express that with conditional proof 2022, which is actually</span>
+    </p>
+    <p class="cue" id="t1826">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1826">30:26</a>
+      <span class="cue-text">what we do in the did:webs resolver. But the way that it works is it's how many</span>
+    </p>
+    <p class="cue" id="t1832">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1832">30:32</a>
+      <span class="cue-text">people here are new to multisig in KERI? Just a couple. All right. So I'll walk</span>
+    </p>
+    <p class="cue" id="t1838">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1838">30:38</a>
+      <span class="cue-text">through that one a little bit slower.</span>
+    </p>
+    <p class="cue" id="t1843">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1843">30:43</a>
+      <span class="cue-text">Let's say you have… So let me introduce this from why would you actually use this?</span>
+    </p>
+    <p class="cue" id="t1850">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1850">30:50</a>
+      <span class="cue-text">And I'll mention a GLEIF example. So we have defined in the ecosystem governance</span>
+    </p>
+    <p class="cue" id="t1855">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1855">30:55</a>
+      <span class="cue-text">framework rules for different participants in the ecosystem. And it's actually useful</span>
+    </p>
+    <p class="cue" id="t1860">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1860">31:00</a>
+      <span class="cue-text">from an operational standpoint because let's say you have a group of three</span>
+    </p>
+    <p class="cue" id="t1864">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1864">31:04</a>
+      <span class="cue-text">employees who's responsible for a role at your company and that role is to manage a</span>
+    </p>
+    <p class="cue" id="t1868">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1868">31:08</a>
+      <span class="cue-text">certain identifier. Well, what if one of them is gone on any given day? What if</span>
+    </p>
+    <p class="cue" id="t1873">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1873">31:13</a>
+      <span class="cue-text">they're sick or they're out or they're unavailable? Do you want to require all</span>
+    </p>
+    <p class="cue" id="t1877">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1877">31:17</a>
+      <span class="cue-text">three to be at work to be able to sign an event? You might not want to do that. And</span>
+    </p>
+    <p class="cue" id="t1881">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1881">31:21</a>
+      <span class="cue-text">there's other lifecycle reasons why you might say, well, let's say somebody gets</span>
+    </p>
+    <p class="cue" id="t1884">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1884">31:24</a>
+      <span class="cue-text">fired or they die or something. It can be really rough if you say, I've got, okay, I</span>
+    </p>
+    <p class="cue" id="t1890">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1890">31:30</a>
+      <span class="cue-text">need three of three signatures. You might just say two or you could say four of</span>
+    </p>
+    <p class="cue" id="t1894">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1894">31:34</a>
+      <span class="cue-text">seven or or two of nine, however you want to define your threshold structure,</span>
+    </p>
+    <p class="cue" id="t1897">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1897">31:37</a>
+      <span class="cue-text">there's actually a lot of business continuity reasons, failover, redundancy,</span>
+    </p>
+    <p class="cue" id="t1901">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1901">31:41</a>
+      <span class="cue-text">reliability, why you would want to use a threshold structure and the way that this</span>
+    </p>
+    <p class="cue" id="t1904">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1904">31:44</a>
+      <span class="cue-text">works from the KERI level and then we'll cascade out to the did:webs level is you</span>
+    </p>
+    <p class="cue" id="t1909">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1909">31:49</a>
+      <span class="cue-text">say, I've got K1, K2, and K3. As long as I have enough signers, okay, this credential</span>
+    </p>
+    <p class="cue" id="t1916">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1916">31:56</a>
+      <span class="cue-text">is valid or this issuance has happened. That's what multisig is. Now, what did:webs</span>
+    </p>
+    <p class="cue" id="t1923">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1923">32:03</a>
+      <span class="cue-text">does is it says, okay, for a verifier that doesn't care about KERI at all. If they</span>
+    </p>
+    <p class="cue" id="t1930">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1930">32:10</a>
+      <span class="cue-text">want to verify that this is a credential, let's say this is a W3C credential that</span>
+    </p>
+    <p class="cue" id="t1935">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1935">32:15</a>
+      <span class="cue-text">has been projected from maybe something in the KERI world, and I want to verify that</span>
+    </p>
+    <p class="cue" id="t1939">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1939">32:19</a>
+      <span class="cue-text">this issuer issued it and that this holder currently holds it. But what if those</span>
+    </p>
+    <p class="cue" id="t1944">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1944">32:24</a>
+      <span class="cue-text">issuers or that's fine if it's single SIG, but what happens if you've got a multisig</span>
+    </p>
+    <p class="cue" id="t1948">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1948">32:28</a>
+      <span class="cue-text">issuer or you've got a multisig holder? Now we need to go in there. We need rules</span>
+    </p>
+    <p class="cue" id="t1953">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1953">32:33</a>
+      <span class="cue-text">to say, okay, well, we need to be able to define the threshold and who is authorized</span>
+    </p>
+    <p class="cue" id="t1958">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1958">32:38</a>
+      <span class="cue-text">to sign. That's what this conditional proof 2022 does is it allows us to define</span>
+    </p>
+    <p class="cue" id="t1962">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1962">32:42</a>
+      <span class="cue-text">that very clearly within did:webs. So with that in mind, let's actually dive into</span>
+    </p>
+    <p class="cue" id="t1970">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1970">32:50</a>
+      <span class="cue-text">what a verification method might look like for conditional proof 2022. You're</span>
+    </p>
+    <p class="cue" id="t1975">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1975">32:55</a>
+      <span class="cue-text">essentially saying and when I say K1, K2, and K3 here, if you're familiar with DID</span>
+    </p>
+    <p class="cue" id="t1980">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1980">33:00</a>
+      <span class="cue-text">documents, you're familiar probably with the verification method section or the</span>
+    </p>
+    <p class="cue" id="t1985">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1985">33:05</a>
+      <span class="cue-text">authentication or assertion method section, that's where this shorthand is</span>
+    </p>
+    <p class="cue" id="t1989">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1989">33:09</a>
+      <span class="cue-text">referring to. There's going to be a verification method that says this</span>
+    </p>
+    <p class="cue" id="t1991">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1991">33:11</a>
+      <span class="cue-text">particular key is K1, K2, or K3. But what you're looking at here, this object here,</span>
+    </p>
+    <p class="cue" id="t1998">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=1998">33:18</a>
+      <span class="cue-text">this set of text, this is what a conditional proof 2022 looks like. It</span>
+    </p>
+    <p class="cue" id="t2003">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2003">33:23</a>
+      <span class="cue-text">says, okay, I need two signers and here's the people who can sign. And I mentioned</span>
+    </p>
+    <p class="cue" id="t2009">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2009">33:29</a>
+      <span class="cue-text">the authentication and assertion methods of the DIDDoc. There's a lot of rules to</span>
+    </p>
+    <p class="cue" id="t2013">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2013">33:33</a>
+      <span class="cue-text">remember. whatever, especially if you want to as a verifier be able to support the</span>
+    </p>
+    <p class="cue" id="t2019">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2019">33:39</a>
+      <span class="cue-text">coolest features of did:webs, which is multi-sig issuers and multi-sig holders.</span>
+    </p>
+    <p class="cue" id="t2023">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2023">33:43</a>
+      <span class="cue-text">So, and we just this just walks a little bit through a waiting signing threshold</span>
+    </p>
+    <p class="cue" id="t2030">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2030">33:50</a>
+      <span class="cue-text">thing. We can sort of move on. There's plenty to discuss later. All right. So I</span>
+    </p>
+    <p class="cue" id="t2035">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2035">33:55</a>
+      <span class="cue-text">mentioned remember the four things that were in a KERI season stream. And I said</span>
+    </p>
+    <p class="cue" id="t2040">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2040">34:00</a>
+      <span class="cue-text">you need to it's not just a key event log. You've got service endpoints. You've got</span>
+    </p>
+    <p class="cue" id="t2044">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2044">34:04</a>
+      <span class="cue-text">role authorizations. That's what we talked through on this slide. Is you might say I</span>
+    </p>
+    <p class="cue" id="t2049">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2049">34:09</a>
+      <span class="cue-text">have a witness or I have a mailbox or I have an agent and that has a relationship</span>
+    </p>
+    <p class="cue" id="t2054">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2054">34:14</a>
+      <span class="cue-text">to my to</span>
+    </p>
+    <p class="cue" id="t2058">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2058">34:18</a>
+      <span class="cue-text">the identifier that is giving you this didDoc. And so the way we represent that</span>
+    </p>
+    <p class="cue" id="t2065">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2065">34:25</a>
+      <span class="cue-text">is not with a key event. There's something called the location scheme. The slash LLC</span>
+    </p>
+    <p class="cue" id="t2069">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2069">34:29</a>
+      <span class="cue-text">and slash scheme is the the the name space that we give it in the KERI world. We say</span>
+    </p>
+    <p class="cue" id="t2075">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2075">34:35</a>
+      <span class="cue-text">there's a couple of data structures we use to represent these things when they're</span>
+    </p>
+    <p class="cue" id="t2079">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2079">34:39</a>
+      <span class="cue-text">given into a DID doc. Now, you might ask me, well, why are we including these in</span>
+    </p>
+    <p class="cue" id="t2084">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2084">34:44</a>
+      <span class="cue-text">the DID document at all? Because I thought we said that we should assume that the</span>
+    </p>
+    <p class="cue" id="t2090">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2090">34:50</a>
+      <span class="cue-text">verifier doesn't know KERI at all. That's true. And really what we're doing here is</span>
+    </p>
+    <p class="cue" id="t2096">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2096">34:56</a>
+      <span class="cue-text">we're piggybacking a little bit on the structure of the DID document and say,</span>
+    </p>
+    <p class="cue" id="t2101">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2101">35:01</a>
+      <span class="cue-text">well, maybe people might be interested in discovering that I have a witness or that</span>
+    </p>
+    <p class="cue" id="t2105">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2105">35:05</a>
+      <span class="cue-text">I have a mailbox or that I have an agent. This straddles the line. I mean, it's a</span>
+    </p>
+    <p class="cue" id="t2109">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2109">35:09</a>
+      <span class="cue-text">potentially useful construct. It starts to straddle the line. If we're not pulling</span>
+    </p>
+    <p class="cue" id="t2113">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2113">35:13</a>
+      <span class="cue-text">anything from the witness or from the mailbox or the agent, maybe we don't</span>
+    </p>
+    <p class="cue" id="t2115">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2115">35:15</a>
+      <span class="cue-text">actually need this, but it seemed invaluable and so we kept it in there. But</span>
+    </p>
+    <p class="cue" id="t2121">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2121">35:21</a>
+      <span class="cue-text">it's debatable that if you know how to talk to a witness, if you know how to talk</span>
+    </p>
+    <p class="cue" id="t2124">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2124">35:24</a>
+      <span class="cue-text">to a mailbox and an agent, you'd probably just do that directly. Maybe you wouldn't</span>
+    </p>
+    <p class="cue" id="t2126">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2126">35:26</a>
+      <span class="cue-text">need did:webs, but we've defined it in the spec in case it becomes useful. Cool. So,</span>
+    </p>
+    <p class="cue" id="t2134">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2134">35:34</a>
+      <span class="cue-text">okay, I won't get too far into the delegation because then again delegation</span>
+    </p>
+    <p class="cue" id="t2137">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2137">35:37</a>
+      <span class="cue-text">is also a KERI-specific concept.</span>
+    </p>
+    <p class="cue" id="t2142">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2142">35:42</a>
+      <span class="cue-text">This slide is really just a repetition of what I've told you earlier. I said if you</span>
+    </p>
+    <p class="cue" id="t2148">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2148">35:48</a>
+      <span class="cue-text">want to support the fancy molded-sign stuff from KERI, we need another spec.</span>
+    </p>
+    <p class="cue" id="t2152">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2152">35:52</a>
+      <span class="cue-text">This is when I say credential proof right here. When I say a credential proof has to</span>
+    </p>
+    <p class="cue" id="t2158">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2158">35:58</a>
+      <span class="cue-text">use an authorized method where that's valuable is before we let the kid go out</span>
+    </p>
+    <p class="cue" id="t2163">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2163">36:03</a>
+      <span class="cue-text">of the store with the tobacco and we need to verify the right state of Utah issued</span>
+    </p>
+    <p class="cue" id="t2167">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2167">36:07</a>
+      <span class="cue-text">this and this kid actually holds it. There's rules you have to use to say,</span>
+    </p>
+    <p class="cue" id="t2174">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2174">36:14</a>
+      <span class="cue-text">okay, I can verify the signatures on this credential because they can't come from</span>
+    </p>
+    <p class="cue" id="t2179">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2179">36:19</a>
+      <span class="cue-text">these places in the DID document. And we could walk through this example, but</span>
+    </p>
+    <p class="cue" id="t2181">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2181">36:21</a>
+      <span class="cue-text">essentially when I talk about the assertion methods, the different proof</span>
+    </p>
+    <p class="cue" id="t2185">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2185">36:25</a>
+      <span class="cue-text">formats that we have, it's essentially we would walk through, I I think that's</span>
+    </p>
+    <p class="cue" id="t2189">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2189">36:29</a>
+      <span class="cue-text">probably not a good time to walk through the nitty gritty of what that proof spec</span>
+    </p>
+    <p class="cue" id="t2196">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2196">36:36</a>
+      <span class="cue-text">would be like, but essentially know that we need to write a proof spec and this</span>
+    </p>
+    <p class="cue" id="t2199">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2199">36:39</a>
+      <span class="cue-text">slide gets a little bit deeper into that. Oh, you want to go? Actually, if you want</span>
+    </p>
+    <p class="cue" id="t2204">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2204">36:44</a>
+      <span class="cue-text">to go there, we'll go there. I have a question about the proof purpose. Perfect.</span>
+    </p>
+    <p class="cue" id="t2210">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2210">36:50</a>
+      <span class="cue-text">Okay. Is there a KERI data model equivalence either in the event log or any</span>
+    </p>
+    <p class="cue" id="t2218">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2218">36:58</a>
+      <span class="cue-text">of the delegation mechanisms for assigning proof purpose to keys to not the pre</span>
+    </p>
+    <p class="cue" id="t2226">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2226">37:06</a>
+      <span class="cue-text">-rotation keys but to regular document keys. Can you say this key can only be</span>
+    </p>
+    <p class="cue" id="t2231">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2231">37:11</a>
+      <span class="cue-text">used for authentication, this key for signing stuff and this key for key</span>
+    </p>
+    <p class="cue" id="t2234">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2234">37:14</a>
+      <span class="cue-text">agreement?</span>
+    </p>
+    <p class="cue" id="t2240">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2240">37:20</a>
+      <span class="cue-text">So is the question is there something in the KERI data model that would support</span>
+    </p>
+    <p class="cue" id="t2244">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2244">37:24</a>
+      <span class="cue-text">deriving that from the KERI data model? Yes. I see. That's the question. Can I</span>
+    </p>
+    <p class="cue" id="t2250">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2250">37:30</a>
+      <span class="cue-text">answer that? Yeah. So signing keys can only be used to sign. Oh, you got it.</span>
+    </p>
+    <p class="cue" id="t2256">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2256">37:36</a>
+      <span class="cue-text">Rotation keys can only be used to rotate. And most</span>
+    </p>
+    <p class="cue" id="t2265">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2265">37:45</a>
+      <span class="cue-text">of the time when you're doing something of high value, you anchor in an event, which</span>
+    </p>
+    <p class="cue" id="t2273">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2273">37:53</a>
+      <span class="cue-text">means it must be signed with the signing keys or you anchor it in a rotation event</span>
+    </p>
+    <p class="cue" id="t2279">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2279">37:59</a>
+      <span class="cue-text">which must be signed with the rotation keys, the pre-rotated keys. There aren't</span>
+    </p>
+    <p class="cue" id="t2286">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2286">38:06</a>
+      <span class="cue-text">any other places that you use keys for any other thing in the whole KERI ecosystem.</span>
+    </p>
+    <p class="cue" id="t2291">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2291">38:11</a>
+      <span class="cue-text">Signing is general. You can do anything you want with signing. Right? So you could</span>
+    </p>
+    <p class="cue" id="t2296">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2296">38:16</a>
+      <span class="cue-text">say, well, if I want to sign a particular type of packet, I suppose you could say</span>
+    </p>
+    <p class="cue" id="t2306">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2306">38:26</a>
+      <span class="cue-text">that, but we don't have a another set of keys, right? And then witnesses have their</span>
+    </p>
+    <p class="cue" id="t2312">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2312">38:32</a>
+      <span class="cue-text">own set of keys. But witness keys are only used for receding. So we define keys</span>
+    </p>
+    <p class="cue" id="t2317">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2317">38:37</a>
+      <span class="cue-text">implicitly for the purpose they solve. We don't have keys that you assign to proof</span>
+    </p>
+    <p class="cue" id="t2324">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2324">38:44</a>
+      <span class="cue-text">purpose because where the key appears in KERI determines its purpose. So witness</span>
+    </p>
+    <p class="cue" id="t2329">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2329">38:49</a>
+      <span class="cue-text">key appears in the witness list. Assigning key appears in the signing key list and</span>
+    </p>
+    <p class="cue" id="t2334">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2334">38:54</a>
+      <span class="cue-text">the rotation keys appear in the next rotated key list. So those key key lists</span>
+    </p>
+    <p class="cue" id="t2338">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2338">38:58</a>
+      <span class="cue-text">determine their proof purpose. There isn't a reason to have… I never came up with a</span>
+    </p>
+    <p class="cue" id="t2344">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2344">39:04</a>
+      <span class="cue-text">reason to have to have some generic semantic thing for keys because in</span>
+    </p>
+    <p class="cue" id="t2349">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2349">39:09</a>
+      <span class="cue-text">general, I don't believe that keys are very useful. Bear signatures are highly</span>
+    </p>
+    <p class="cue" id="t2353">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2353">39:13</a>
+      <span class="cue-text">insecure. They're not very useful. So you only use them for ephemeral things. And</span>
+    </p>
+    <p class="cue" id="t2357">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2357">39:17</a>
+      <span class="cue-text">proof purpose seems like something that's not ephemeral. What about the ability to</span>
+    </p>
+    <p class="cue" id="t2362">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2362">39:22</a>
+      <span class="cue-text">designate and rotate key agreement, so encryption keys, which are currently</span>
+    </p>
+    <p class="cue" id="t2368">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2368">39:28</a>
+      <span class="cue-text">derived from signing keys deterministically in the KERI ecosystem.</span>
+    </p>
+    <p class="cue" id="t2375">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2375">39:35</a>
+      <span class="cue-text">Would you be open to having that? – So yes, that's a really good question. KERI</span>
+    </p>
+    <p class="cue" id="t2380">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2380">39:40</a>
+      <span class="cue-text">doesn't do encryption. KERI is all about authentication. Now the trust spanning</span>
+    </p>
+    <p class="cue" id="t2385">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2385">39:45</a>
+      <span class="cue-text">protocol does do encryption. And so there's a need to define how you generate</span>
+    </p>
+    <p class="cue" id="t2393">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2393">39:53</a>
+      <span class="cue-text">your encryption keys. And so we have so that's not defined in KERI. That's that's</span>
+    </p>
+    <p class="cue" id="t2398">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2398">39:58</a>
+      <span class="cue-text">the encryption is a is a different protocol from KERI. So, so yes. So is that</span>
+    </p>
+    <p class="cue" id="t2405">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2405">40:05</a>
+      <span class="cue-text">a potentially yes? That's the potential yes. Yeah. Good question. Now we've been</span>
+    </p>
+    <p class="cue" id="t2411">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2411">40:11</a>
+      <span class="cue-text">getting a little bit deeper into the technical depths. I like going there. I</span>
+    </p>
+    <p class="cue" id="t2415">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2415">40:15</a>
+      <span class="cue-text">know we've got sort of our time is getting shorter. So what I'd like to do is look</span>
+    </p>
+    <p class="cue" id="t2420">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2420">40:20</a>
+      <span class="cue-text">get a little bit more towards the status. We're going to go pretty quickly through</span>
+    </p>
+    <p class="cue" id="t2422">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2422">40:22</a>
+      <span class="cue-text">the rest of the technical stuff. I will be at IIW. you. So I'll be here for the rest</span>
+    </p>
+    <p class="cue" id="t2427">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2427">40:27</a>
+      <span class="cue-text">of the week in case anybody wants to go deeper. All right. So we talked about a</span>
+    </p>
+    <p class="cue" id="t2433">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2433">40:33</a>
+      <span class="cue-text">little bit about the DID document. We won't go too deeply into there and</span>
+    </p>
+    <p class="cue" id="t2437">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2437">40:37</a>
+      <span class="cue-text">historical keys. Let's actually skip ahead a little bit. We already mentioned that</span>
+    </p>
+    <p class="cue" id="t2442">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2442">40:42</a>
+      <span class="cue-text">hosting can change. The identifier stays the same. If you go from your DID from</span>
+    </p>
+    <p class="cue" id="t2446">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2446">40:46</a>
+      <span class="cue-text">example.org to backup.example.org, you can have the same identity and you can</span>
+    </p>
+    <p class="cue" id="t2451">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2451">40:51</a>
+      <span class="cue-text">cryptographically verify that it's the same identity or person who controls that.</span>
+    </p>
+    <p class="cue" id="t2456">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2456">40:56</a>
+      <span class="cue-text">All right. We already talked about sort of threshold identifiers and we talked about</span>
+    </p>
+    <p class="cue" id="t2463">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2463">41:03</a>
+      <span class="cue-text">we don't need to get quite into duplicity detection here or some of the other</span>
+    </p>
+    <p class="cue" id="t2468">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2468">41:08</a>
+      <span class="cue-text">problems here. We're going to skip over. Let's go right to where the spec is at.</span>
+    </p>
+    <p class="cue" id="t2472">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2472">41:12</a>
+      <span class="cue-text">Okay. So the spec we're on version 0.10.3 of the did:webs spec. That's where we're at</span>
+    </p>
+    <p class="cue" id="t2477">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2477">41:17</a>
+      <span class="cue-text">today. We've got a number of open items. We've got about 17 different open items</span>
+    </p>
+    <p class="cue" id="t2481">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2481">41:21</a>
+      <span class="cue-text">that we need to handle and we We thought we had a normative baseline around August</span>
+    </p>
+    <p class="cue" id="t2488">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2488">41:28</a>
+      <span class="cue-text">11th. We've actually been working earlier this year with the DIF recommended DID</span>
+    </p>
+    <p class="cue" id="t2492">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2492">41:32</a>
+      <span class="cue-text">methods to have did:webs become a recommended DID method. We're not quite</span>
+    </p>
+    <p class="cue" id="t2496">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2496">41:36</a>
+      <span class="cue-text">there yet. And as I mentioned, we've still got the KERI version 2 stuff that we need</span>
+    </p>
+    <p class="cue" id="t2501">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2501">41:41</a>
+      <span class="cue-text">to add in. And there's some review points as we'll get into later. I'll just that we</span>
+    </p>
+    <p class="cue" id="t2509">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2509">41:49</a>
+      <span class="cue-text">need to provide clarity around transferable and non-transferable</span>
+    </p>
+    <p class="cue" id="t2511">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2511">41:51</a>
+      <span class="cue-text">identifiers. There's a couple of other things, but there's a little bit of the</span>
+    </p>
+    <p class="cue" id="t2514">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2514">41:54</a>
+      <span class="cue-text">timeline I became aware of the fact that if this is actually going to be used in</span>
+    </p>
+    <p class="cue" id="t2520">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2520">42:00</a>
+      <span class="cue-text">production for a consumer who wants to verify multisig issuers and multisig</span>
+    </p>
+    <p class="cue" id="t2526">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2526">42:06</a>
+      <span class="cue-text">holders, we definitely will need to write that credential proof spec and write a</span>
+    </p>
+    <p class="cue" id="t2532">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2532">42:12</a>
+      <span class="cue-text">library. Right now, everything's usable with simple multisig and with single sig.</span>
+    </p>
+    <p class="cue" id="t2539">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2539">42:19</a>
+      <span class="cue-text">It's pretty straightforward to have a single sig issuer, single sig holder. It's</span>
+    </p>
+    <p class="cue" id="t2543">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2543">42:23</a>
+      <span class="cue-text">because it's just one signature and just one one key. And when I say simple</span>
+    </p>
+    <p class="cue" id="t2547">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2547">42:27</a>
+      <span class="cue-text">multisig, I mean with not nested weighted threshold stuff. I mean, you can have a</span>
+    </p>
+    <p class="cue" id="t2552">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2552">42:32</a>
+      <span class="cue-text">threshold, but if it's just a flat set of multisig members, that's fine. That's easy</span>
+    </p>
+    <p class="cue" id="t2557">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2557">42:37</a>
+      <span class="cue-text">today. It's just the challenge is that verifiers don't know how to interpret the</span>
+    </p>
+    <p class="cue" id="t2561">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2561">42:41</a>
+      <span class="cue-text">nesting is the challenge. And if we're going to have a way for the verifiers to</span>
+    </p>
+    <p class="cue" id="t2566">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2566">42:46</a>
+      <span class="cue-text">interpret the nesting, that's a decision we have to say, do we want to have the</span>
+    </p>
+    <p class="cue" id="t2571">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2571">42:51</a>
+      <span class="cue-text">rules for that interpretation of that nesting, the DataWeb S spec? Probably not.</span>
+    </p>
+    <p class="cue" id="t2576">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2576">42:56</a>
+      <span class="cue-text">DeadWebs should be about keys, right? Not about credentials. We should probably be a</span>
+    </p>
+    <p class="cue" id="t2581">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2581">43:01</a>
+      <span class="cue-text">separate spec if we say this is going to be a spec for verifiers that want to</span>
+    </p>
+    <p class="cue" id="t2585">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2585">43:05</a>
+      <span class="cue-text">interpret the vcdm w3c data model. They're going to verify that credential with keys</span>
+    </p>
+    <p class="cue" id="t2592">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2592">43:12</a>
+      <span class="cue-text">deadWebs that are defined by deadWebs and KERI for a w3c credential that has multi</span>
+    </p>
+    <p class="cue" id="t2599">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2599">43:19</a>
+      <span class="cue-text">-sig issuers, multi-sig holders. That's more of a credential proofing spec. And</span>
+    </p>
+    <p class="cue" id="t2604">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2604">43:24</a>
+      <span class="cue-text">it's not just a spec. You'd want a library as well. That's easy to use. So if we</span>
+    </p>
+    <p class="cue" id="t2609">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2609">43:29</a>
+      <span class="cue-text">decide if somebody decides they want to use this in production for a really</span>
+    </p>
+    <p class="cue" id="t2613">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2613">43:33</a>
+      <span class="cue-text">advanced multisig, that's some work that needs to be done later. So, but where</span>
+    </p>
+    <p class="cue" id="t2619">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2619">43:39</a>
+      <span class="cue-text">we're going though is we want to we want to finish out the diff process. And so to</span>
+    </p>
+    <p class="cue" id="t2623">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2623">43:43</a>
+      <span class="cue-text">get to where we redo we really do want did:webs to be a a fully accepted fully</span>
+    </p>
+    <p class="cue" id="t2630">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2630">43:50</a>
+      <span class="cue-text">supported diff recommended DID method. And we were pretty close earlier this year. So</span>
+    </p>
+    <p class="cue" id="t2636">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2636">43:56</a>
+      <span class="cue-text">is the spec being approved at Trust over IP a prerequisite for DIF to recognize</span>
+    </p>
+    <p class="cue" id="t2646">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2646">44:06</a>
+      <span class="cue-text">did:webs as an acceptable DID method on their list? Now that I I'll repeat the</span>
+    </p>
+    <p class="cue" id="t2652">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2652">44:12</a>
+      <span class="cue-text">question. Yeah, I'll repeat the question just so we can all hear. It's a good</span>
+    </p>
+    <p class="cue" id="t2655">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2655">44:15</a>
+      <span class="cue-text">question. So is TOIP approval of the did:webs spec required in order for the DIF</span>
+    </p>
+    <p class="cue" id="t2661">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2661">44:21</a>
+      <span class="cue-text">recommended DID methods group to put it on their their recommended list. As far as my</span>
+    </p>
+    <p class="cue" id="t2665">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2665">44:25</a>
+      <span class="cue-text">understanding, it's not a hard constraint. It would help. But the more important</span>
+    </p>
+    <p class="cue" id="t2669">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2669">44:29</a>
+      <span class="cue-text">thing is that we have two implementations and that the DIF recommended DIF methods</span>
+    </p>
+    <p class="cue" id="t2675">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2675">44:35</a>
+      <span class="cue-text">team believes that it's stable enough. Now, I don't to be responsible, I need to</span>
+    </p>
+    <p class="cue" id="t2681">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2681">44:41</a>
+      <span class="cue-text">say I don't know for sure. I need to talk to Otto and help with the other people.</span>
+    </p>
+    <p class="cue" id="t2685">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2685">44:45</a>
+      <span class="cue-text">Jonathan, if Jonathan were here, he could say. So I'm pretty sure that they don't</span>
+    </p>
+    <p class="cue" id="t2690">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2690">44:50</a>
+      <span class="cue-text">require it because they're approving it based on DIF. It's a DIF standard. So</span>
+    </p>
+    <p class="cue" id="t2697">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2697">44:57</a>
+      <span class="cue-text">whether or not it's it's trust over IP approved matter doesn't matter. It's just</span>
+    </p>
+    <p class="cue" id="t2703">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2703">45:03</a>
+      <span class="cue-text">that whoever the whoever it is that's that's working under the aegis of DIF has</span>
+    </p>
+    <p class="cue" id="t2709">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2709">45:09</a>
+      <span class="cue-text">to follow the DIF rules. And so that's you and Jonathan. And all you're doing is</span>
+    </p>
+    <p class="cue" id="t2714">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2714">45:14</a>
+      <span class="cue-text">leveraging the task force at trust over IP to get it right. Right. I will say that on</span>
+    </p>
+    <p class="cue" id="t2720">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2720">45:20</a>
+      <span class="cue-text">the criteria like you mentioned from DIFF on the rubric that they give us to</span>
+    </p>
+    <p class="cue" id="t2725">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2725">45:25</a>
+      <span class="cue-text">evaluate how ready we are. There isn't a criteria for whether or not the spec is</span>
+    </p>
+    <p class="cue" id="t2730">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2730">45:30</a>
+      <span class="cue-text">approved. – Yeah, that's what I say. DIFF allows approved specs from just anybody</span>
+    </p>
+    <p class="cue" id="t2739">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2739">45:39</a>
+      <span class="cue-text">that wants to contribute it under DIFF. So it's its own, it has its own approval</span>
+    </p>
+    <p class="cue" id="t2745">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2745">45:45</a>
+      <span class="cue-text">process. – Got it. So it sounds like the answer is no. – So there's no there's</span>
+    </p>
+    <p class="cue" id="t2751">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2751">45:51</a>
+      <span class="cue-text">TrustRIP isn't a gating effect on it. – Okay. And the idea, the goal is that we</span>
+    </p>
+    <p class="cue" id="t2761">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2761">46:01</a>
+      <span class="cue-text">want to be just like DIDWebVH and DIDWebPlus and there might be a couple of</span>
+    </p>
+    <p class="cue" id="t2765">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2765">46:05</a>
+      <span class="cue-text">others now. We do want to be a DIF recommended DID method. It just looks</span>
+    </p>
+    <p class="cue" id="t2769">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2769">46:09</a>
+      <span class="cue-text">good. So once we have the KERI v2 stuff in there and all the open points addressed, I</span>
+    </p>
+    <p class="cue" id="t2775">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2775">46:15</a>
+      <span class="cue-text">don't see why we wouldn't be. So, all right. So there I mentioned some review</span>
+    </p>
+    <p class="cue" id="t2781">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2781">46:21</a>
+      <span class="cue-text">from the KERI stack working group chairs. I say Sam's review up here. It was his</span>
+    </p>
+    <p class="cue" id="t2785">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2785">46:25</a>
+      <span class="cue-text">particular comments. We've got four on this slide, three on this slide. I broke</span>
+    </p>
+    <p class="cue" id="t2789">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2789">46:29</a>
+      <span class="cue-text">them down into a few different categories. We don't have to go into the individual</span>
+    </p>
+    <p class="cue" id="t2793">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2793">46:33</a>
+      <span class="cue-text">depths of what these review criteria are because that's my job and I won't force</span>
+    </p>
+    <p class="cue" id="t2797">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2797">46:37</a>
+      <span class="cue-text">you to go through that. Just be aware there's a significant number of open</span>
+    </p>
+    <p class="cue" id="t2802">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2802">46:42</a>
+      <span class="cue-text">points that we have to clear to get the spec into the next version and it's</span>
+    </p>
+    <p class="cue" id="t2807">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2807">46:47</a>
+      <span class="cue-text">generally around some of them are actually about… Oh, I want to wrong slide. We need</span>
+    </p>
+    <p class="cue" id="t2813">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2813">46:53</a>
+      <span class="cue-text">to show examples. Okay, what is an ordinary did:webs consumer receive? We need</span>
+    </p>
+    <p class="cue" id="t2819">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2819">46:59</a>
+      <span class="cue-text">to walk you through, okay, what does a W3C credential proof look like? And so we're</span>
+    </p>
+    <p class="cue" id="t2825">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2825">47:05</a>
+      <span class="cue-text">going to add that at least for the simple multisig and single sig walk people</span>
+    </p>
+    <p class="cue" id="t2829">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2829">47:09</a>
+      <span class="cue-text">through examples so that you can by the time you're done reading the did:webs spec,</span>
+    </p>
+    <p class="cue" id="t2835">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2835">47:15</a>
+      <span class="cue-text">there should be enough examples in there to be able to give you a pretty good</span>
+    </p>
+    <p class="cue" id="t2838">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2838">47:18</a>
+      <span class="cue-text">illustration of how do I actually use this? And so we're going to add some</span>
+    </p>
+    <p class="cue" id="t2842">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2842">47:22</a>
+      <span class="cue-text">examples there. And this is a harder one. The nested thresholds like I've been</span>
+    </p>
+    <p class="cue" id="t2848">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2848">47:28</a>
+      <span class="cue-text">mentioning. We do have the recursive mapping but we need the worked case. We</span>
+    </p>
+    <p class="cue" id="t2853">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2853">47:33</a>
+      <span class="cue-text">need to show here's if you're going to do a nested threshold multi-safers actually a</span>
+    </p>
+    <p class="cue" id="t2857">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2857">47:37</a>
+      <span class="cue-text">worked case of it done. If we do the most complicated one, the other ones are piece</span>
+    </p>
+    <p class="cue" id="t2862">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2862">47:42</a>
+      <span class="cue-text">of cake. Okay, so we've got there's other things that need to be other open points,</span>
+    </p>
+    <p class="cue" id="t2869">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2869">47:49</a>
+      <span class="cue-text">but the big one is really the KERI-CESER ACDC version 2. We need to be very</span>
+    </p>
+    <p class="cue" id="t2875">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2875">47:55</a>
+      <span class="cue-text">explicit about things like what happens when you have a KEL that begins in version</span>
+    </p>
+    <p class="cue" id="t2880">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2880">48:00</a>
+      <span class="cue-text">1 and then we have some version 2 events. How does the stream declare its supported</span>
+    </p>
+    <p class="cue" id="t2884">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2884">48:04</a>
+      <span class="cue-text">protocol versions? And CESER and KERI 2 already have a way to declare protocol</span>
+    </p>
+    <p class="cue" id="t2888">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2888">48:08</a>
+      <span class="cue-text">versions, but we need to be explicit about that in the spec. We need to acknowledge</span>
+    </p>
+    <p class="cue" id="t2892">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2892">48:12</a>
+      <span class="cue-text">that yes, there can be a version 1 stream or a version 2 stream can be partial. So</span>
+    </p>
+    <p class="cue" id="t2897">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2897">48:17</a>
+      <span class="cue-text">there's a couple of things that we need to go in there and just clean some things up</span>
+    </p>
+    <p class="cue" id="t2900">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2900">48:20</a>
+      <span class="cue-text">and be more explicit about. And then the registry state is going to be a</span>
+    </p>
+    <p class="cue" id="t2905">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2905">48:25</a>
+      <span class="cue-text">particularly interesting one in KERI 2 because we have a new kind of registry and</span>
+    </p>
+    <p class="cue" id="t2910">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2910">48:30</a>
+      <span class="cue-text">it can be blinded. And what about unblinding life cycle of the registry</span>
+    </p>
+    <p class="cue" id="t2915">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2915">48:35</a>
+      <span class="cue-text">state? So we just need to be more clear and explicit about everything that KERI</span>
+    </p>
+    <p class="cue" id="t2920">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2920">48:40</a>
+      <span class="cue-text">version 2 brings into the picture. Okay, this is an there's an interesting</span>
+    </p>
+    <p class="cue" id="t2926">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2926">48:46</a>
+      <span class="cue-text">discussion in. Since we have time, maybe actually let me let me actually jump</span>
+    </p>
+    <p class="cue" id="t2931">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2931">48:51</a>
+      <span class="cue-text">forward a little bit. Yeah, I get a little bit more into some of the other open</span>
+    </p>
+    <p class="cue" id="t2937">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2937">48:57</a>
+      <span class="cue-text">points, but it's probably would be belaboring the issue here. What I think</span>
+    </p>
+    <p class="cue" id="t2943">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2943">49:03</a>
+      <span class="cue-text">would be what would be valuable is to show the existing repositories, show you where</span>
+    </p>
+    <p class="cue" id="t2948">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2948">49:08</a>
+      <span class="cue-text">things are at so that you can go play with it yourself. So right now the if you look</span>
+    </p>
+    <p class="cue" id="t2952">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2952">49:12</a>
+      <span class="cue-text">at the Glyph GitHub, we've got Glyph IT, we've got the did:webs resolver. That's</span>
+    </p>
+    <p class="cue" id="t2958">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2958">49:18</a>
+      <span class="cue-text">what this 037 is right now. That's the current version of the did:webs resolver.</span>
+    </p>
+    <p class="cue" id="t2963">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2963">49:23</a>
+      <span class="cue-text">That's the reference implementation. There's one old pull request to it right</span>
+    </p>
+    <p class="cue" id="t2967">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2967">49:27</a>
+      <span class="cue-text">now, but we'll just go ahead and skip beyond that. So, I'm going to skip forward</span>
+    </p>
+    <p class="cue" id="t2971">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2971">49:31</a>
+      <span class="cue-text">a little bit to show you some resources. Okay, so we do have the ECHI over IP</span>
+    </p>
+    <p class="cue" id="t2976">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2976">49:36</a>
+      <span class="cue-text">specifications. I mentioned there's the did:webs resolver. There's a couple of</span>
+    </p>
+    <p class="cue" id="t2981">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2981">49:41</a>
+      <span class="cue-text">other things that are worth mentioning. So, when you actually build did:webs into a</span>
+    </p>
+    <p class="cue" id="t2988">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2988">49:48</a>
+      <span class="cue-text">wallet or a verifier, you'll want to use this did:webs TS library. That library is</span>
+    </p>
+    <p class="cue" id="t2996">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=2996">49:56</a>
+      <span class="cue-text">not a implementation of did:webs and TypeScript. It's just when you are as a</span>
+    </p>
+    <p class="cue" id="t3002">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3002">50:02</a>
+      <span class="cue-text">verifier, you are verifying credentials. There are libraries that like or resolver</span>
+    </p>
+    <p class="cue" id="t3009">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3009">50:09</a>
+      <span class="cue-text">libraries that we use to resolve key state. That's what this is useful for.</span>
+    </p>
+    <p class="cue" id="t3013">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3013">50:13</a>
+      <span class="cue-text">It's actually useful for from TypeScript resolving key state. So you're not</span>
+    </p>
+    <p class="cue" id="t3019">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3019">50:19</a>
+      <span class="cue-text">generating it, but you're pulling it in as a part of standard DIF infrastructure. And</span>
+    </p>
+    <p class="cue" id="t3024">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3024">50:24</a>
+      <span class="cue-text">then as a response to the DIF recommended DID methods work group earlier this year,</span>
+    </p>
+    <p class="cue" id="t3032">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3032">50:32</a>
+      <span class="cue-text">we presented to them the Python implementation. And we were pretty much</span>
+    </p>
+    <p class="cue" id="t3038">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3038">50:38</a>
+      <span class="cue-text">getting to the point where they said, okay, well, we will accept did:webs as a</span>
+    </p>
+    <p class="cue" id="t3042">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3042">50:42</a>
+      <span class="cue-text">DIF recommended DID method. And then they said, does it have a second</span>
+    </p>
+    <p class="cue" id="t3046">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3046">50:46</a>
+      <span class="cue-text">implementation?</span>
+    </p>
+    <p class="cue" id="t3050">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3050">50:50</a>
+      <span class="cue-text">And I'm like, no, it doesn't, but it will soon. And so I started on a TypeScript</span>
+    </p>
+    <p class="cue" id="t3055">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3055">50:55</a>
+      <span class="cue-text">implementation that was I tried to keep it as minimal as I could for as long as I</span>
+    </p>
+    <p class="cue" id="t3059">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3059">50:59</a>
+      <span class="cue-text">could, but I did start a TypeScript implementation of KERI, ACDC and did:webs</span>
+    </p>
+    <p class="cue" id="t3065">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3065">51:05</a>
+      <span class="cue-text">just enough so we can sort of get through that process so that when they ask us that</span>
+    </p>
+    <p class="cue" id="t3070">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3070">51:10</a>
+      <span class="cue-text">question, we can say yes. Personally, I don't think it's fair. I don't think it's</span>
+    </p>
+    <p class="cue" id="t3075">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3075">51:15</a>
+      <span class="cue-text">fair to have that as a criteria because there's it doesn't take into the</span>
+    </p>
+    <p class="cue" id="t3080">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3080">51:20</a>
+      <span class="cue-text">complexity of the different DID methods is completely different. Like if you look at</span>
+    </p>
+    <p class="cue" id="t3087">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3087">51:27</a>
+      <span class="cue-text">the lines of code that are required for some of the other DID methods, it's in the</span>
+    </p>
+    <p class="cue" id="t3092">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3092">51:32</a>
+      <span class="cue-text">thousands. Whereas a KERI implementation could be tens of thousands closer to a</span>
+    </p>
+    <p class="cue" id="t3096">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3096">51:36</a>
+      <span class="cue-text">hundred thousand. There's a lot more complexity going on. So personally, I</span>
+    </p>
+    <p class="cue" id="t3101">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3101">51:41</a>
+      <span class="cue-text">understand people's desire for a second implementation, but to a truly secure</span>
+    </p>
+    <p class="cue" id="t3105">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3105">51:45</a>
+      <span class="cue-text">complete implementation of KERI ACDC is non-trivial. It's a big deal. So I'm going</span>
+    </p>
+    <p class="cue" id="t3113">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3113">51:53</a>
+      <span class="cue-text">through the process just enough so where we can get through if that actually</span>
+    </p>
+    <p class="cue" id="t3117">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3117">51:57</a>
+      <span class="cue-text">becomes a hard blocker. We can be unblocked by that, but that's what this</span>
+    </p>
+    <p class="cue" id="t3121">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3121">52:01</a>
+      <span class="cue-text">second line item is. And if you want to go to a place to learn a little bit more</span>
+    </p>
+    <p class="cue" id="t3125">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3125">52:05</a>
+      <span class="cue-text">about did:webs, this hasn't been quite enough where you want to learn more</span>
+    </p>
+    <p class="cue" id="t3128">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3128">52:08</a>
+      <span class="cue-text">details, you can go to did:webs.info. That's the website actually. This Glyph IT</span>
+    </p>
+    <p class="cue" id="t3132">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3132">52:12</a>
+      <span class="cue-text">on the front of it, that's just where the repositories hosted. But there's a</span>
+    </p>
+    <p class="cue" id="t3136">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3136">52:16</a>
+      <span class="cue-text">informational website you or you can point your AI agent to at did:webs.info. So some</span>
+    </p>
+    <p class="cue" id="t3143">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3143">52:23</a>
+      <span class="cue-text">other work. Go ahead. Oh, let's get you the… You got it? So we got a question in</span>
+    </p>
+    <p class="cue" id="t3154">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3154">52:34</a>
+      <span class="cue-text">the back from Phil.</span>
+    </p>
+    <p class="cue" id="t3159">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3159">52:39</a>
+      <span class="cue-text">So one of my primary interests in this is being able to do DIDCOM on top of KERI. So</span>
+    </p>
+    <p class="cue" id="t3172">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3172">52:52</a>
+      <span class="cue-text">I'm not actually even sure what question to ask, but I mean, is it the case that I</span>
+    </p>
+    <p class="cue" id="t3181">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3181">53:01</a>
+      <span class="cue-text">can create a DID web ask from any KERI anytime? Do they change as you rotate</span>
+    </p>
+    <p class="cue" id="t3188">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3188">53:08</a>
+      <span class="cue-text">keys? I mean, what's happening under the covers? I was a little late, so maybe you</span>
+    </p>
+    <p class="cue" id="t3193">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3193">53:13</a>
+      <span class="cue-text">already answered this, But that's a good question. So how do we support? I'll just</span>
+    </p>
+    <p class="cue" id="t3198">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3198">53:18</a>
+      <span class="cue-text">repeat the question for the benefit of everybody. How do we support DIDCOM with</span>
+    </p>
+    <p class="cue" id="t3203">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3203">53:23</a>
+      <span class="cue-text">did:webs? And then there was a second question there as can we turn any KERI</span>
+    </p>
+    <p class="cue" id="t3207">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3207">53:27</a>
+      <span class="cue-text">identifier into a did:webs at any time? Yes. And there's one decision you have to</span>
+    </p>
+    <p class="cue" id="t3212">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3212">53:32</a>
+      <span class="cue-text">make and then one additional decision. What domain are you going to use for the</span>
+    </p>
+    <p class="cue" id="t3217">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3217">53:37</a>
+      <span class="cue-text">identifier? And the reason is after you make that decision, you take whatever that</span>
+    </p>
+    <p class="cue" id="t3221">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3221">53:41</a>
+      <span class="cue-text">domain is, put it in what's called a designated aliases ACDC and you self-issue</span>
+    </p>
+    <p class="cue" id="t3225">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3225">53:45</a>
+      <span class="cue-text">that. So that's the only other decision you have to make. But other than that, the</span>
+    </p>
+    <p class="cue" id="t3230">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3230">53:50</a>
+      <span class="cue-text">answer is yes, any KERI identifier can be turned into a DID-Webs DID, whether it's</span>
+    </p>
+    <p class="cue" id="t3234">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3234">53:54</a>
+      <span class="cue-text">transferable or non-transferable.</span>
+    </p>
+    <p class="cue" id="t3242">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3242">54:02</a>
+      <span class="cue-text">And as far as support for DIDCOM, I'm curious too. I've never quite done that. I</span>
+    </p>
+    <p class="cue" id="t3247">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3247">54:07</a>
+      <span class="cue-text">haven't looked quite deep enough to be able to know enough about DIDCOM to answer</span>
+    </p>
+    <p class="cue" id="t3251">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3251">54:11</a>
+      <span class="cue-text">your question. I would imagine. So if you just think about the inventory of what</span>
+    </p>
+    <p class="cue" id="t3256">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3256">54:16</a>
+      <span class="cue-text">KERI gives you or what did:webs gives you. So you've got a full key event log, you've</span>
+    </p>
+    <p class="cue" id="t3259">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3259">54:19</a>
+      <span class="cue-text">got keys, your keys can change, you've got consistent identity and did:webs is really</span>
+    </p>
+    <p class="cue" id="t3264">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3264">54:24</a>
+      <span class="cue-text">just a discoverability protocol in that it's a DID document to say, well, what's</span>
+    </p>
+    <p class="cue" id="t3269">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3269">54:29</a>
+      <span class="cue-text">my latest key state? So without knowing anything about DIDCOM, if DIDCOM needs to</span>
+    </p>
+    <p class="cue" id="t3275">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3275">54:35</a>
+      <span class="cue-text">look at a DID document to get latest key state to do communication, did:webs could</span>
+    </p>
+    <p class="cue" id="t3279">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3279">54:39</a>
+      <span class="cue-text">fully support that. So I had a conversation at lunch And what a lot of</span>
+    </p>
+    <p class="cue" id="t3284">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3284">54:44</a>
+      <span class="cue-text">people don't understand about KERI is that KERI normatively can be used in a very</span>
+    </p>
+    <p class="cue" id="t3289">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3289">54:49</a>
+      <span class="cue-text">simple way. A normative KERI AID can be non-transferable, use the term, means it</span>
+    </p>
+    <p class="cue" id="t3296">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3296">54:56</a>
+      <span class="cue-text">does not have a KEL. It has at most an inception event, but it's a vacuous</span>
+    </p>
+    <p class="cue" id="t3302">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3302">55:02</a>
+      <span class="cue-text">inception event, which means a non -transferable KERI identifier is</span>
+    </p>
+    <p class="cue" id="t3306">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3306">55:06</a>
+      <span class="cue-text">equivalent to DIDKey, which means you can use it with DIDKey. It's no harder than</span>
+    </p>
+    <p class="cue" id="t3313">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3313">55:13</a>
+      <span class="cue-text">using DIDKey. It is KERI. It's full KERI. It's fully normative KERI. It just doesn't</span>
+    </p>
+    <p class="cue" id="t3318">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3318">55:18</a>
+      <span class="cue-text">have all the security benefits of a KERI. But it still works. It's still KERI. A</span>
+    </p>
+    <p class="cue" id="t3325">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3325">55:25</a>
+      <span class="cue-text">KERI stack will recognize it as a KERI identifier and treat it appropriately.</span>
+    </p>
+    <p class="cue" id="t3330">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3330">55:30</a>
+      <span class="cue-text">What's cool about the non-transferable identifier is you can essentially derive</span>
+    </p>
+    <p class="cue" id="t3334">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3334">55:34</a>
+      <span class="cue-text">not just the inception event, but you could derive if you knew what domain you</span>
+    </p>
+    <p class="cue" id="t3337">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3337">55:37</a>
+      <span class="cue-text">wanted to commit to, you could derive a DID document just from having a non</span>
+    </p>
+    <p class="cue" id="t3340">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3340">55:40</a>
+      <span class="cue-text">-transferable identifier. Yeah, you just don't get the security benefits of a KEL.</span>
+    </p>
+    <p class="cue" id="t3343">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3343">55:43</a>
+      <span class="cue-text">Right. It's did:webs, DIDWeb that's no more no weaker and no more complicated than the</span>
+    </p>
+    <p class="cue" id="t3351">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3351">55:51</a>
+      <span class="cue-text">DIDKey DIDWeb. So just to repeat that for anybody that might not have heard it. So</span>
+    </p>
+    <p class="cue" id="t3355">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3355">55:55</a>
+      <span class="cue-text">if you're familiar with the concept of a non-transferable identifier in KERI, non</span>
+    </p>
+    <p class="cue" id="t3359">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3359">55:59</a>
+      <span class="cue-text">-transferable means you can't rotate keys. And you might say, well, why design a key</span>
+    </p>
+    <p class="cue" id="t3363">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3363">56:03</a>
+      <span class="cue-text">rotation protocol but not be able to rotate keys? Well, there are certain</span>
+    </p>
+    <p class="cue" id="t3366">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3366">56:06</a>
+      <span class="cue-text">instances where there's a lot of other things you get from KERI. There are a lot</span>
+    </p>
+    <p class="cue" id="t3370">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3370">56:10</a>
+      <span class="cue-text">of instances where you don't need key rotation. For example, witnesses have non</span>
+    </p>
+    <p class="cue" id="t3375">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3375">56:15</a>
+      <span class="cue-text">-transferable AIDs. They don't need KELs. The witness itself doesn't need a KEL</span>
+    </p>
+    <p class="cue" id="t3380">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3380">56:20</a>
+      <span class="cue-text">because its KEL is implicit in the KEL of the controller. The witness's AID is its</span>
+    </p>
+    <p class="cue" id="t3387">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3387">56:27</a>
+      <span class="cue-text">public key and it's a key in the KEL of the controller. So it's rotated when you</span>
+    </p>
+    <p class="cue" id="t3392">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3392">56:32</a>
+      <span class="cue-text">rotate witnesses. So it doesn't need its own KEL. So it is trivially just a key</span>
+    </p>
+    <p class="cue" id="t3399">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3399">56:39</a>
+      <span class="cue-text">pair like did key. So we use them all the time in KERI infrastructure. Whenever we</span>
+    </p>
+    <p class="cue" id="t3404">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3404">56:44</a>
+      <span class="cue-text">need just a bare key pair, we can use it and it's still a valid KERI AID. – And the</span>
+    </p>
+    <p class="cue" id="t3410">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3410">56:50</a>
+      <span class="cue-text">interesting that we're talking about this because some of the open points on the</span>
+    </p>
+    <p class="cue" id="t3413">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3413">56:53</a>
+      <span class="cue-text">spec are to make sure that we make exactly this clear in the did:webs spec is how the</span>
+    </p>
+    <p class="cue" id="t3418">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3418">56:58</a>
+      <span class="cue-text">utility of non-transferable identifiers with did:webs. And I imagine… – And then</span>
+    </p>
+    <p class="cue" id="t3422">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3422">57:02</a>
+      <span class="cue-text">there's another step. You can use a transferable identifier, but use it in</span>
+    </p>
+    <p class="cue" id="t3426">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3426">57:06</a>
+      <span class="cue-text">indirect mode. So it's transferable, but it does not have a witness, right? Which</span>
+    </p>
+    <p class="cue" id="t3433">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3433">57:13</a>
+      <span class="cue-text">means it's equivalent to DIDPEER. So you can do DIDPEER with KERI just like</span>
+    </p>
+    <p class="cue" id="t3438">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3438">57:18</a>
+      <span class="cue-text">DIDPEER. It's essentially DIDPEER, but it's full KERI normative spec because it</span>
+    </p>
+    <p class="cue" id="t3443">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3443">57:23</a>
+      <span class="cue-text">doesn't need witnesses. It has a key event log. So it's better than DIDPEER. It's</span>
+    </p>
+    <p class="cue" id="t3449">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3449">57:29</a>
+      <span class="cue-text">more secure, but it still doesn't require anything, any more infrastructure than</span>
+    </p>
+    <p class="cue" id="t3452">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3452">57:32</a>
+      <span class="cue-text">DIDPEER does. And you just use direct mode to exchange your KEL. Right. Right. Yeah.</span>
+    </p>
+    <p class="cue" id="t3458">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3458">57:38</a>
+      <span class="cue-text">I believe that's in the open. So you don't have witnesses to publish your KEL because</span>
+    </p>
+    <p class="cue" id="t3462">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3462">57:42</a>
+      <span class="cue-text">DIDPIR assumes that you can communicate directly. So if you can communicate</span>
+    </p>
+    <p class="cue" id="t3467">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3467">57:47</a>
+      <span class="cue-text">directly, I don't need the witnesses for high availability. I also lose the other</span>
+    </p>
+    <p class="cue" id="t3471">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3471">57:51</a>
+      <span class="cue-text">things that witnesses give me. But if I don't care about those things, which I</span>
+    </p>
+    <p class="cue" id="t3474">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3474">57:54</a>
+      <span class="cue-text">don't if I'm using DIDPIR, then I just use KERI in DIDPIR mode and it works just</span>
+    </p>
+    <p class="cue" id="t3479">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3479">57:59</a>
+      <span class="cue-text">fine. Right. So does that make sense? Does that help? Yeah. It's just like KERI does</span>
+    </p>
+    <p class="cue" id="t3484">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3484">58:04</a>
+      <span class="cue-text">a bunch of more things simply it's just that we they're sort of throwaways because</span>
+    </p>
+    <p class="cue" id="t3489">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3489">58:09</a>
+      <span class="cue-text">it's like well this is easy we can do that. I have one question. Maybe I just</span>
+    </p>
+    <p class="cue" id="t3494">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3494">58:14</a>
+      <span class="cue-text">misunderstood. Oh, we're done. Let him answer. That's okay.</span>
+    </p>
+    <p class="cue" id="t3502">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3502">58:22</a>
+      <span class="cue-text">What I'm primarily interested in is I've got a million people out there with a</span>
+    </p>
+    <p class="cue" id="t3508">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3508">58:28</a>
+      <span class="cue-text">system based on KERI and I want to be able to enable secure messaging through DIDCOM.</span>
+    </p>
+    <p class="cue" id="t3516">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3516">58:36</a>
+      <span class="cue-text">Yes. Yeah. And you can do that. Yeah. That's Yeah. And that's one reason for</span>
+    </p>
+    <p class="cue" id="t3521">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3521">58:41</a>
+      <span class="cue-text">did:webs is so you can bridge to any DID world because the worst case they'll just</span>
+    </p>
+    <p class="cue" id="t3528">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3528">58:48</a>
+      <span class="cue-text">use it as a DID web and not a DID and not the KERI stuff. Yeah. They don't have to</span>
+    </p>
+    <p class="cue" id="t3533">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3533">58:53</a>
+      <span class="cue-text">have KERI on their end because they'll just say, well, I don't understand KERI.</span>
+    </p>
+    <p class="cue" id="t3536">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3536">58:56</a>
+      <span class="cue-text">So give them the DID web. But I understand keys and I can get the key from the DID</span>
+    </p>
+    <p class="cue" id="t3540">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3540">59:00</a>
+      <span class="cue-text">doc and I'm good. Yeah. And then you're good. Yep. Okay. So we I I will say that</span>
+    </p>
+    <p class="cue" id="t3545">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3545">59:05</a>
+      <span class="cue-text">I've been told by the staff that my presentation is done and so my hour is up</span>
+    </p>
+    <p class="cue" id="t3551">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3551">59:11</a>
+      <span class="cue-text">but I will be here at IAW and you can get me after this as well but I want to make</span>
+    </p>
+    <p class="cue" id="t3555">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3555">59:15</a>
+      <span class="cue-text">room. We do have a break, right? So yeah, we have a break at 3 o'clock so. Thank</span>
+    </p>
+    <p class="cue" id="t3559">
+      <a class="cue-time" href="../../../#kent-bull&amp;t=3559">59:19</a>
+      <span class="cue-text">you.</span>
     </p>
     </article>
     <footer>KERI Foundation • Conference Videos Collection</footer>

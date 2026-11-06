@@ -183,7 +183,2187 @@
     <article>
     <p class="cue" id="t0">
       <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa">0:00</a>
-      <span class="cue-text">[Background noise]</span>
+      <span class="cue-text">Okay. So this is a little bit of an audible on what we're going to present.</span>
+    </p>
+    <p class="cue" id="t11">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=11">0:11</a>
+      <span class="cue-text">Some of you may have seen this or some that are watching may have seen this. I</span>
+    </p>
+    <p class="cue" id="t15">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=15">0:15</a>
+      <span class="cue-text">went through this in our first KERI conference. So it's a little bit geared</span>
+    </p>
+    <p class="cue" id="t19">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=19">0:19</a>
+      <span class="cue-text">toward the infrastructure as it was back then, but I'll kind of update on the fly</span>
+    </p>
+    <p class="cue" id="t24">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=24">0:24</a>
+      <span class="cue-text">as we go through this to where we are now. demo. We already showed you these repos</span>
+    </p>
+    <p class="cue" id="t31">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=31">0:31</a>
+      <span class="cue-text">that we'll be dealing with. There's a setup guide out there which I mentioned is</span>
+    </p>
+    <p class="cue" id="t35">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=35">0:35</a>
+      <span class="cue-text">a little bit outdated. This is geared toward running an infrastructure on one</span>
+    </p>
+    <p class="cue" id="t40">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=40">0:40</a>
+      <span class="cue-text">host and in a demo sort of way as opposed to what we have now which is four</span>
+    </p>
+    <p class="cue" id="t44">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=44">0:44</a>
+      <span class="cue-text">different hosts to spread out the services. So and there's the there's a QR</span>
+    </p>
+    <p class="cue" id="t50">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=50">0:50</a>
+      <span class="cue-text">code to the oops sorry if people want to follow along with the setup guide you you</span>
+    </p>
+    <p class="cue" id="t56">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=56">0:56</a>
+      <span class="cue-text">can hit that QR code and pull it up.</span>
+    </p>
+    <p class="cue" id="t67">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=67">1:07</a>
+      <span class="cue-text">This is a little longer now than it was originally. So core concepts here is I</span>
+    </p>
+    <p class="cue" id="t74">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=74">1:14</a>
+      <span class="cue-text">mean obviously we've talked about KERI being all about keys, key events. I'm</span>
+    </p>
+    <p class="cue" id="t80">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=80">1:20</a>
+      <span class="cue-text">going to kind of jump through these fairly quickly till we get to the well let me</span>
+    </p>
+    <p class="cue" id="t83">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=83">1:23</a>
+      <span class="cue-text">just jump to the more important stuff. off. Okay, so as Sam showed this one</span>
+    </p>
+    <p class="cue" id="t91">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=91">1:31</a>
+      <span class="cue-text">earlier, this is the KERI ecosystem, kind of the basics of the KERI ecosystem. What</span>
+    </p>
+    <p class="cue" id="t97">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=97">1:37</a>
+      <span class="cue-text">we're going to go through is kind of a setup guide of how we actually set up this</span>
+    </p>
+    <p class="cue" id="t101">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=101">1:41</a>
+      <span class="cue-text">infrastructure and what exists out in DigitalOcean right now and how you could</span>
+    </p>
+    <p class="cue" id="t105">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=105">1:45</a>
+      <span class="cue-text">actually deploy this kind of a stack yourselves. Any of you who are more</span>
+    </p>
+    <p class="cue" id="t110">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=110">1:50</a>
+      <span class="cue-text">technically inclined or want to get into some of this stuff. So it's not terribly</span>
+    </p>
+    <p class="cue" id="t115">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=115">1:55</a>
+      <span class="cue-text">technical but there is some more technical detail for those who are interested in</span>
+    </p>
+    <p class="cue" id="t120">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=120">2:00</a>
+      <span class="cue-text">those kinds of things. So the core components, we have our boot service, as I</span>
+    </p>
+    <p class="cue" id="t127">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=127">2:07</a>
+      <span class="cue-text">mentioned, we have witnesses and we have watchers. So these are a good way to</span>
+    </p>
+    <p class="cue" id="t131">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=131">2:11</a>
+      <span class="cue-text">remember that. Just watch all these movies and then you'll remember that.</span>
+    </p>
+    <p class="cue" id="t138">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=138">2:18</a>
+      <span class="cue-text">If I have questions, should I ever watch the movies? Yes. Yeah, just go back to the</span>
+    </p>
+    <p class="cue" id="t142">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=142">2:22</a>
+      <span class="cue-text">movies.</span>
+    </p>
+    <p class="cue" id="t171">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=171">2:51</a>
+      <span class="cue-text">It's still not. It's all Python code. It's not as early anymore. This was several</span>
+    </p>
+    <p class="cue" id="t178">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=178">2:58</a>
+      <span class="cue-text">months ago when this came up. But this is really a demo only or maybe not quite to</span>
+    </p>
+    <p class="cue" id="t184">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=184">3:04</a>
+      <span class="cue-text">the point of a staging environment that you could use, but it's definitely not a</span>
+    </p>
+    <p class="cue" id="t187">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=187">3:07</a>
+      <span class="cue-text">production kind of a deployment. So keep that in mind. This is what a production</span>
+    </p>
+    <p class="cue" id="t193">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=193">3:13</a>
+      <span class="cue-text">deployment might look like. Maybe-ish. If you were to imagine the wallet having</span>
+    </p>
+    <p class="cue" id="t198">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=198">3:18</a>
+      <span class="cue-text">connections to multiple different providers of plug-ins in the wallet itself</span>
+    </p>
+    <p class="cue" id="t204">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=204">3:24</a>
+      <span class="cue-text">and each of them is connected to some sort of cloud or data center and they</span>
+    </p>
+    <p class="cue" id="t209">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=209">3:29</a>
+      <span class="cue-text">distribute the services throughout according to availability zones and</span>
+    </p>
+    <p class="cue" id="t213">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=213">3:33</a>
+      <span class="cue-text">regions and all that kind of stuff. It might look something like this. Again,</span>
+    </p>
+    <p class="cue" id="t218">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=218">3:38</a>
+      <span class="cue-text">this is not something we say that you should do or you have to do, but maybe</span>
+    </p>
+    <p class="cue" id="t222">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=222">3:42</a>
+      <span class="cue-text">that's what it would look like. That is not what this looks like. Yeah, yeah, Ken.</span>
+    </p>
+    <p class="cue" id="t226">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=226">3:46</a>
+      <span class="cue-text">So is it intentional to have only one KF on each data center? It doesn't really…</span>
+    </p>
+    <p class="cue" id="t232">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=232">3:52</a>
+      <span class="cue-text">well, there's two actually here. Two, but… and it doesn't really matter. Actually,</span>
+    </p>
+    <p class="cue" id="t238">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=238">3:58</a>
+      <span class="cue-text">there's two on both. Right. So, you can run advantage. You can make it as</span>
+    </p>
+    <p class="cue" id="t241">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=241">4:01</a>
+      <span class="cue-text">redundant or as not as you want. KFboot can handle quite a bit, so you wouldn't</span>
+    </p>
+    <p class="cue" id="t247">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=247">4:07</a>
+      <span class="cue-text">necessarily need to make that vastly redundant. But, I mean, if you want a</span>
+    </p>
+    <p class="cue" id="t252">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=252">4:12</a>
+      <span class="cue-text">really resilient service, obviously, you won't at least spread it out across zones</span>
+    </p>
+    <p class="cue" id="t255">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=255">4:15</a>
+      <span class="cue-text">or something like that. So, can I say something? Yeah. Yeah. In a full</span>
+    </p>
+    <p class="cue" id="t259">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=259">4:19</a>
+      <span class="cue-text">production environment, every service is potentially subject to DDoS attack, which</span>
+    </p>
+    <p class="cue" id="t266">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=266">4:26</a>
+      <span class="cue-text">means that you have to have load balancers. That's the only way you're</span>
+    </p>
+    <p class="cue" id="t269">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=269">4:29</a>
+      <span class="cue-text">going to be protected from DDoS attack. So all of these services have to sit behind a</span>
+    </p>
+    <p class="cue" id="t274">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=274">4:34</a>
+      <span class="cue-text">load balancer, otherwise somebody could just DDoS them out of existence. For sure.</span>
+    </p>
+    <p class="cue" id="t279">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=279">4:39</a>
+      <span class="cue-text">Yeah. And so what the plugin architecture of the wallet allows is that you could</span>
+    </p>
+    <p class="cue" id="t285">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=285">4:45</a>
+      <span class="cue-text">have like let's say a KERify.net, which I don't know who owns that? It might be</span>
+    </p>
+    <p class="cue" id="t290">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=290">4:50</a>
+      <span class="cue-text">someone in this room that might own that particular domain. But that particular one</span>
+    </p>
+    <p class="cue" id="t295">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=295">4:55</a>
+      <span class="cue-text">might be two different data centers that's spread out across their entire</span>
+    </p>
+    <p class="cue" id="t300">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=300">5:00</a>
+      <span class="cue-text">infrastructure is spread out across two different entirely different cloud</span>
+    </p>
+    <p class="cue" id="t304">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=304">5:04</a>
+      <span class="cue-text">providers or something like that. Whereas a KERI foundation might be just in one.</span>
+    </p>
+    <p class="cue" id="t308">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=308">5:08</a>
+      <span class="cue-text">So, you know, there's a million ways you could figure that out and smarter people</span>
+    </p>
+    <p class="cue" id="t311">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=311">5:11</a>
+      <span class="cue-text">than me can come up with the best ways to make a really solid KERI ecosystem that is</span>
+    </p>
+    <p class="cue" id="t317">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=317">5:17</a>
+      <span class="cue-text">very resilient and powerful. but that's not really what we're solving in the</span>
+    </p>
+    <p class="cue" id="t320">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=320">5:20</a>
+      <span class="cue-text">foundation right now. So, base requirements for this as it is right now.</span>
+    </p>
+    <p class="cue" id="t330">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=330">5:30</a>
+      <span class="cue-text">Ubuntu 24.04 is what we built it on. I think that's the latest LTS or maybe 24</span>
+    </p>
+    <p class="cue" id="t337">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=337">5:37</a>
+      <span class="cue-text">.10. Yeah, 24.4, I think. Libsodium, which is the crypto library. PySodium, which</span>
+    </p>
+    <p class="cue" id="t346">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=346">5:46</a>
+      <span class="cue-text">wraps Libsodium. Nginx, which handles the reverse proxying and TLS termination.</span>
+    </p>
+    <p class="cue" id="t356">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=356">5:56</a>
+      <span class="cue-text">Certbot to just handle the certificates and Circus to actually manage the</span>
+    </p>
+    <p class="cue" id="t362">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=362">6:02</a>
+      <span class="cue-text">services, the Python services themselves. So those are the kind of base requirements</span>
+    </p>
+    <p class="cue" id="t367">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=367">6:07</a>
+      <span class="cue-text">for this setup.</span>
+    </p>
+    <p class="cue" id="t371">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=371">6:11</a>
+      <span class="cue-text">The way we set it up was we created a service user called KERI There's no login</span>
+    </p>
+    <p class="cue" id="t378">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=378">6:18</a>
+      <span class="cue-text">on that one. It's just key only and it's just kind of for that purpose.</span>
+    </p>
+    <p class="cue" id="t385">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=385">6:25</a>
+      <span class="cue-text">It's only meant for the service itself to run. It's not really meant to be logged</span>
+    </p>
+    <p class="cue" id="t389">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=389">6:29</a>
+      <span class="cue-text">into. And this is the path that we put it in. Again, this is all just how we set</span>
+    </p>
+    <p class="cue" id="t398">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=398">6:38</a>
+      <span class="cue-text">this one up. It doesn't mean you have to do it that way. We also use UV and Python</span>
+    </p>
+    <p class="cue" id="t403">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=403">6:43</a>
+      <span class="cue-text">3.14 specifically in this case. So anybody have any questions or anything you want to</span>
+    </p>
+    <p class="cue" id="t409">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=409">6:49</a>
+      <span class="cue-text">say, certainly chime in because I'm going to move through this fairly quickly.</span>
+    </p>
+    <p class="cue" id="t416">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=416">6:56</a>
+      <span class="cue-text">And there's three installs that you can do. Now, this is based on releases that we</span>
+    </p>
+    <p class="cue" id="t420">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=420">7:00</a>
+      <span class="cue-text">have not actually done yet. So we haven't actually released into like into Pypy or</span>
+    </p>
+    <p class="cue" id="t425">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=425">7:05</a>
+      <span class="cue-text">anything with opnet and WADopnet as those names just yet or KFboot for that matter.</span>
+    </p>
+    <p class="cue" id="t430">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=430">7:10</a>
+      <span class="cue-text">But you can install them straight from from GitHub. If you just point to the</span>
+    </p>
+    <p class="cue" id="t433">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=433">7:13</a>
+      <span class="cue-text">repos, you can install them at whatever point you want. want to. So, but</span>
+    </p>
+    <p class="cue" id="t438">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=438">7:18</a>
+      <span class="cue-text">eventually the plan is that we'll create formal releases for those and we'll</span>
+    </p>
+    <p class="cue" id="t441">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=441">7:21</a>
+      <span class="cue-text">release them out into PyPy and then they'll be available under those names.</span>
+    </p>
+    <p class="cue" id="t448">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=448">7:28</a>
+      <span class="cue-text">Next, the configuration. Again, this is based on a single host with multiple</span>
+    </p>
+    <p class="cue" id="t457">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=457">7:37</a>
+      <span class="cue-text">instances running. In the real case that we have now, you wouldn't need four of</span>
+    </p>
+    <p class="cue" id="t463">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=463">7:43</a>
+      <span class="cue-text">these on the same host, but you would create one of these to determine what the</span>
+    </p>
+    <p class="cue" id="t468">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=468">7:48</a>
+      <span class="cue-text">URLs are that will be available to Locksmith when it connects in.</span>
+    </p>
+    <p class="cue" id="t480">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=480">8:00</a>
+      <span class="cue-text">Sorry. And the watcher one looks very similar. Just need one of those. Launch</span>
+    </p>
+    <p class="cue" id="t490">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=490">8:10</a>
+      <span class="cue-text">scripts. This is for being able to actually launch the commands that run the</span>
+    </p>
+    <p class="cue" id="t496">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=496">8:16</a>
+      <span class="cue-text">services. So again, anybody have any questions? Caller out or… Yeah, just some</span>
+    </p>
+    <p class="cue" id="t504">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=504">8:24</a>
+      <span class="cue-text">tips for our… Microphone.</span>
+    </p>
+    <p class="cue" id="t510">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=510">8:30</a>
+      <span class="cue-text">So, thank you. So is the WIT opnet and the WOT opnet, is that just one per process?</span>
+    </p>
+    <p class="cue" id="t517">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=517">8:37</a>
+      <span class="cue-text">So it's not like something that provisions many, it's just one per process. Just one.</span>
+    </p>
+    <p class="cue" id="t520">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=520">8:40</a>
+      <span class="cue-text">Yeah, just one instance will run, you know, one like one watcher, for example,</span>
+    </p>
+    <p class="cue" id="t528">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=528">8:48</a>
+      <span class="cue-text">or one witness, for example. So as many of those as you run would be it's a one-to</span>
+    </p>
+    <p class="cue" id="t535">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=535">8:55</a>
+      <span class="cue-text">-one, you know, does that make sense? Okay. Yeah. Thank you.</span>
+    </p>
+    <p class="cue" id="t540">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=540">9:00</a>
+      <span class="cue-text">Okay. And KF boots config. All this stuff is again, this is all in the guide itself.</span>
+    </p>
+    <p class="cue" id="t546">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=546">9:06</a>
+      <span class="cue-text">So if you're following along or if you want to actually set this up, all this</span>
+    </p>
+    <p class="cue" id="t549">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=549">9:09</a>
+      <span class="cue-text">stuff is available in that guide. So this is mostly just to kind of give you some</span>
+    </p>
+    <p class="cue" id="t553">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=553">9:13</a>
+      <span class="cue-text">view of it. in this setting here.</span>
+    </p>
+    <p class="cue" id="t561">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=561">9:21</a>
+      <span class="cue-text">Just one of the environment variables to… Sorry.</span>
+    </p>
+    <p class="cue" id="t571">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=571">9:31</a>
+      <span class="cue-text">I think this is actually out of date. Sorry. I'm going to skip this one. Let me</span>
+    </p>
+    <p class="cue" id="t575">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=575">9:35</a>
+      <span class="cue-text">jump past this.</span>
+    </p>
+    <p class="cue" id="t583">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=583">9:43</a>
+      <span class="cue-text">Yeah. Yeah.</span>
+    </p>
+    <p class="cue" id="t589">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=589">9:49</a>
+      <span class="cue-text">Okay. And then pretty simple circus install.</span>
+    </p>
+    <p class="cue" id="t599">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=599">9:59</a>
+      <span class="cue-text">And then certbot and all that stuff gets set up as well. So that's the core pieces</span>
+    </p>
+    <p class="cue" id="t605">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=605">10:05</a>
+      <span class="cue-text">of what it takes to actually get this stuff up and running. All right. Okay. So</span>
+    </p>
+    <p class="cue" id="t613">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=613">10:13</a>
+      <span class="cue-text">all that being done, apologies for the issues there, but all that being done, you</span>
+    </p>
+    <p class="cue" id="t621">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=621">10:21</a>
+      <span class="cue-text">end up with four</span>
+    </p>
+    <p class="cue" id="t625">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=625">10:25</a>
+      <span class="cue-text">witness processes, watchers, and a KF boot. And right now I have this running.</span>
+    </p>
+    <p class="cue" id="t633">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=633">10:33</a>
+      <span class="cue-text">I'm only doing this locally right now, but I have in this one here is KF boot along</span>
+    </p>
+    <p class="cue" id="t638">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=638">10:38</a>
+      <span class="cue-text">with a witness and a watcher. This is going to mirror more how we're actually</span>
+    </p>
+    <p class="cue" id="t642">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=642">10:42</a>
+      <span class="cue-text">running it now in our environment in DigitalOcean. So the KF boot is running on</span>
+    </p>
+    <p class="cue" id="t649">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=649">10:49</a>
+      <span class="cue-text">one host with a witness and a watcher. And on the all subsequent hosts, there's</span>
+    </p>
+    <p class="cue" id="t655">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=655">10:55</a>
+      <span class="cue-text">actually three others. They're just one witness and one watcher instance. And with</span>
+    </p>
+    <p class="cue" id="t660">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=660">11:00</a>
+      <span class="cue-text">that setup, I can actually run Locksmith. I'll just give you a quick view of this</span>
+    </p>
+    <p class="cue" id="t669">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=669">11:09</a>
+      <span class="cue-text">and we'll get into a little more details about Locksmith in a second. And so what</span>
+    </p>
+    <p class="cue" id="t673">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=673">11:13</a>
+      <span class="cue-text">I'm doing, this is a fresh clean version of Locksmith that's just starting up with</span>
+    </p>
+    <p class="cue" id="t678">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=678">11:18</a>
+      <span class="cue-text">as if it was brand new. And initialize a new vault first of all. We'll just call it</span>
+    </p>
+    <p class="cue" id="t684">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=684">11:24</a>
+      <span class="cue-text">demo.</span>
+    </p>
+    <p class="cue" id="t688">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=688">11:28</a>
+      <span class="cue-text">I'm going to add a this part here I'm actually creating my ID, my AID.</span>
+    </p>
+    <p class="cue" id="t697">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=697">11:37</a>
+      <span class="cue-text">And now you see there that KERI Foundation is the that's the plugin. in itself. And I</span>
+    </p>
+    <p class="cue" id="t705">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=705">11:45</a>
+      <span class="cue-text">have it configured so that it connects to my local Docker to hit those hosts. And</span>
+    </p>
+    <p class="cue" id="t711">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=711">11:51</a>
+      <span class="cue-text">you can see that it's the connection is connected here. So it's able to make that</span>
+    </p>
+    <p class="cue" id="t715">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=715">11:55</a>
+      <span class="cue-text">connection. I choose that AID from the list. I'm going to do a three of four</span>
+    </p>
+    <p class="cue" id="t722">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=722">12:02</a>
+      <span class="cue-text">because I have four instances running. And when I click this, if I had all four</span>
+    </p>
+    <p class="cue" id="t729">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=729">12:09</a>
+      <span class="cue-text">terminals, it'd be cooler, but But you'll see basically what's going on with KFBoot</span>
+    </p>
+    <p class="cue" id="t734">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=734">12:14</a>
+      <span class="cue-text">on the left side here on your right and the witnesses and watcher service on the</span>
+    </p>
+    <p class="cue" id="t741">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=741">12:21</a>
+      <span class="cue-text">other side. So you can see that this is actually doing stuff for real. It's not</span>
+    </p>
+    <p class="cue" id="t746">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=746">12:26</a>
+      <span class="cue-text">we're not just kind of vapor wearing this. This is actually doing what it's supposed</span>
+    </p>
+    <p class="cue" id="t750">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=750">12:30</a>
+      <span class="cue-text">to do. And on this side. Can I ask a question? Yeah. So this is locksmith on</span>
+    </p>
+    <p class="cue" id="t756">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=756">12:36</a>
+      <span class="cue-text">either your local computer.</span>
+    </p>
+    <p class="cue" id="t761">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=761">12:41</a>
+      <span class="cue-text">Microphone. Clearly I need help. I think it's just that I'm tired. It's the end of</span>
+    </p>
+    <p class="cue" id="t766">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=766">12:46</a>
+      <span class="cue-text">the day. All right. So this locks what I'm looking at and I want to make sure I'm</span>
+    </p>
+    <p class="cue" id="t769">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=769">12:49</a>
+      <span class="cue-text">understanding what I'm seeing here. Sure. Yeah. This locksmith you're running on</span>
+    </p>
+    <p class="cue" id="t773">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=773">12:53</a>
+      <span class="cue-text">your machine is targeting those digital ocean machines that you've got. And it's…</span>
+    </p>
+    <p class="cue" id="t778">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=778">12:58</a>
+      <span class="cue-text">No, not right now. Okay. This is my local locksmith that's pointing to my local</span>
+    </p>
+    <p class="cue" id="t782">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=782">13:02</a>
+      <span class="cue-text">Docker deployment of four hosts, which is exactly like we have it in in</span>
+    </p>
+    <p class="cue" id="t790">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=790">13:10</a>
+      <span class="cue-text">DigitalOcean, but there was an issue with the DigitalOcean environment right now. So</span>
+    </p>
+    <p class="cue" id="t794">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=794">13:14</a>
+      <span class="cue-text">I'm just running it locally. But as far as the actual structure of it, it's set up</span>
+    </p>
+    <p class="cue" id="t799">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=799">13:19</a>
+      <span class="cue-text">the same way. Got it. So it's just using local URLs? Is that the only difference?</span>
+    </p>
+    <p class="cue" id="t802">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=802">13:22</a>
+      <span class="cue-text">This is all done locally here. Okay, cool. Got it. That's it. So it's a little bit</span>
+    </p>
+    <p class="cue" id="t806">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=806">13:26</a>
+      <span class="cue-text">canned in that sense. But as far as the code, it's all running the same code. It's</span>
+    </p>
+    <p class="cue" id="t810">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=810">13:30</a>
+      <span class="cue-text">deployed exactly the same way. I'm just running it on my local host here. So any</span>
+    </p>
+    <p class="cue" id="t815">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=815">13:35</a>
+      <span class="cue-text">other questions about that? You see we got this QR code back, which basically means</span>
+    </p>
+    <p class="cue" id="t819">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=819">13:39</a>
+      <span class="cue-text">that our witnesses got connected. We can go back over here. You can see all the</span>
+    </p>
+    <p class="cue" id="t825">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=825">13:45</a>
+      <span class="cue-text">lists of the witnesses here and one watcher that got connected to the wallet.</span>
+    </p>
+    <p class="cue" id="t832">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=832">13:52</a>
+      <span class="cue-text">So, I'm sorry? What is the QR code for? What do we do with that? You can scan it</span>
+    </p>
+    <p class="cue" id="t839">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=839">13:59</a>
+      <span class="cue-text">and it'll take you to like an authenticator app if you have it on your</span>
+    </p>
+    <p class="cue" id="t843">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=843">14:03</a>
+      <span class="cue-text">phone. Oh, right. That's right. So now everybody can steal his local witnesses.</span>
+    </p>
+    <p class="cue" id="t848">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=848">14:08</a>
+      <span class="cue-text">Right. So at this point I'm going to turn it over to you to give a little more.</span>
+    </p>
+    <p class="cue" id="t854">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=854">14:14</a>
+      <span class="cue-text">Yeah. So because a controller controls their own witnesses, you can add MFA to</span>
+    </p>
+    <p class="cue" id="t862">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=862">14:22</a>
+      <span class="cue-text">your witnesses so that even if your keys were compromised, your signing keys were</span>
+    </p>
+    <p class="cue" id="t870">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=870">14:30</a>
+      <span class="cue-text">compromised, they couldn't publish your witnesses unless they also compromised</span>
+    </p>
+    <p class="cue" id="t874">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=874">14:34</a>
+      <span class="cue-text">your NFA, your MFA. Okay. So that makes it doubly hard for them to publish anything.</span>
+    </p>
+    <p class="cue" id="t881">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=881">14:41</a>
+      <span class="cue-text">And even if they've compromised your keys, that isn't enough by itself if you add the</span>
+    </p>
+    <p class="cue" id="t887">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=887">14:47</a>
+      <span class="cue-text">MFA to your witnesses. So that's built into the witness structures and MFA. So</span>
+    </p>
+    <p class="cue" id="t892">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=892">14:52</a>
+      <span class="cue-text">you could do a you don't do pass keys right now. You just do authenticator apps,</span>
+    </p>
+    <p class="cue" id="t899">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=899">14:59</a>
+      <span class="cue-text">right? Yeah. So you have an authenticator app that you'd have to also pass in</span>
+    </p>
+    <p class="cue" id="t902">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=902">15:02</a>
+      <span class="cue-text">addition to sending a signed key key event to the witnesses. Right. So any questions</span>
+    </p>
+    <p class="cue" id="t909">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=909">15:09</a>
+      <span class="cue-text">at this point? Anything else you want to see about that? Particularly, I'm going to</span>
+    </p>
+    <p class="cue" id="t913">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=913">15:13</a>
+      <span class="cue-text">give Evan some time to show you a little more, maybe talk a little more about</span>
+    </p>
+    <p class="cue" id="t917">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=917">15:17</a>
+      <span class="cue-text">Locksmith itself. – Data storage is just local files. – LMDB. – LMDB. – So you need</span>
+    </p>
+    <p class="cue" id="t923">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=923">15:23</a>
+      <span class="cue-text">to use a staple set. – Use a what? – Staple set like in Kubernetes. – Yes, yes,</span>
+    </p>
+    <p class="cue" id="t933">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=933">15:33</a>
+      <span class="cue-text">yes, you would need to. Yeah, for sure. Definitely. Definitely. Yeah. Definitely.</span>
+    </p>
+    <p class="cue" id="t936">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=936">15:36</a>
+      <span class="cue-text">Yeah. The reason he's using Circus is for is so that you could run your witnesses</span>
+    </p>
+    <p class="cue" id="t946">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=946">15:46</a>
+      <span class="cue-text">and watchers bare metal, which means that you're not you're not exposing yourself to</span>
+    </p>
+    <p class="cue" id="t952">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=952">15:52</a>
+      <span class="cue-text">all of the Docker Kubernetes security vulnerabilities. Right. Most people don't</span>
+    </p>
+    <p class="cue" id="t957">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=957">15:57</a>
+      <span class="cue-text">know this, but NIST released a report that says anybody that care I'm paraphrasing</span>
+    </p>
+    <p class="cue" id="t961">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=961">16:01</a>
+      <span class="cue-text">anybody that cares about security does not use Kubernetes. because it's a single</span>
+    </p>
+    <p class="cue" id="t965">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=965">16:05</a>
+      <span class="cue-text">point of failure for all of your infrastructure. One compromise of one IT</span>
+    </p>
+    <p class="cue" id="t969">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=969">16:09</a>
+      <span class="cue-text">person's keys compromised 100% of infrastructure. And one of the recent</span>
+    </p>
+    <p class="cue" id="t973">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=973">16:13</a>
+      <span class="cue-text">supply chain attacks was an AI that was collecting Kubernetes credentials. And if</span>
+    </p>
+    <p class="cue" id="t980">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=980">16:20</a>
+      <span class="cue-text">that attack had gone on longer than I think they caught it after a few hours, if</span>
+    </p>
+    <p class="cue" id="t985">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=985">16:25</a>
+      <span class="cue-text">it had progressed, it would have captured all the Kubernetes credentials for</span>
+    </p>
+    <p class="cue" id="t990">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=990">16:30</a>
+      <span class="cue-text">everybody's cubes over the whole internet if it had had time. time. And so it would</span>
+    </p>
+    <p class="cue" id="t995">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=995">16:35</a>
+      <span class="cue-text">have brought down the whole internet hard. And that's because Kubernetes has a single</span>
+    </p>
+    <p class="cue" id="t1000">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1000">16:40</a>
+      <span class="cue-text">point of failure. A single credential is enough to take down everything. And that's</span>
+    </p>
+    <p class="cue" id="t1004">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1004">16:44</a>
+      <span class="cue-text">why NIST says if you care about security, you don't use Kubernetes. I know everybody</span>
+    </p>
+    <p class="cue" id="t1008">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1008">16:48</a>
+      <span class="cue-text">hates that if you're in DevOps, but we at least did it in a way that it will run on</span>
+    </p>
+    <p class="cue" id="t1014">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1014">16:54</a>
+      <span class="cue-text">bare metal. So you can't say, oh, well, you guys didn't give me a way to be</span>
+    </p>
+    <p class="cue" id="t1018">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1018">16:58</a>
+      <span class="cue-text">secure. So if you want to run in Kubernetes, you know, by all means, at</span>
+    </p>
+    <p class="cue" id="t1023">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1023">17:03</a>
+      <span class="cue-text">your own risk, but you can use this bare metal if you want to. I was tired of</span>
+    </p>
+    <p class="cue" id="t1026">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1026">17:06</a>
+      <span class="cue-text">running on bare metal. I know bare metal hurts.</span>
+    </p>
+    <p class="cue" id="t1034">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1034">17:14</a>
+      <span class="cue-text">It's true. All right. We'll give the mic over to Evan for a minute to show a little</span>
+    </p>
+    <p class="cue" id="t1040">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1040">17:20</a>
+      <span class="cue-text">more of Locksmith. Maybe talk a little more about that specifically. Do you need</span>
+    </p>
+    <p class="cue" id="t1044">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1044">17:24</a>
+      <span class="cue-text">this? I mean, I could just click through yours. Yeah, by all means. I don't know if</span>
+    </p>
+    <p class="cue" id="t1048">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1048">17:28</a>
+      <span class="cue-text">people have questions about other things in Locksmith.</span>
+    </p>
+    <p class="cue" id="t1055">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1055">17:35</a>
+      <span class="cue-text">Locksmith as a whole, you can go back and you have these isolated vault environments</span>
+    </p>
+    <p class="cue" id="t1062">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1062">17:42</a>
+      <span class="cue-text">where you can hold different sets of keys. You can have two-factor authentication on</span>
+    </p>
+    <p class="cue" id="t1071">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1071">17:51</a>
+      <span class="cue-text">your vaults. If you download a password, there's no password. Yeah, you can get</span>
+    </p>
+    <p class="cue" id="t1079">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1079">17:59</a>
+      <span class="cue-text">remote identifiers. This would be how you connect to other wallets, for example. So</span>
+    </p>
+    <p class="cue" id="t1085">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1085">18:05</a>
+      <span class="cue-text">if you were able to do some sort of out-of -band introduction with identifiers from</span>
+    </p>
+    <p class="cue" id="t1091">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1091">18:11</a>
+      <span class="cue-text">other wallets, you could import them here. You would see them here. That's why when</span>
+    </p>
+    <p class="cue" id="t1095">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1095">18:15</a>
+      <span class="cue-text">you see like the these</span>
+    </p>
+    <p class="cue" id="t1100">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1100">18:20</a>
+      <span class="cue-text">identifiers, witnesses and watchers, they'll show up as remote identifiers</span>
+    </p>
+    <p class="cue" id="t1105">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1105">18:25</a>
+      <span class="cue-text">because they have identifiers associated with them.</span>
+    </p>
+    <p class="cue" id="t1111">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1111">18:31</a>
+      <span class="cue-text">And then yeah you can add like identifiers on your account. So the way we we have</span>
+    </p>
+    <p class="cue" id="t1117">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1117">18:37</a>
+      <span class="cue-text">created this plugin in Locksmith and our overarching idea is that when other people</span>
+    </p>
+    <p class="cue" id="t1122">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1122">18:42</a>
+      <span class="cue-text">want to contribute their own infrastructure they're able to just add a</span>
+    </p>
+    <p class="cue" id="t1127">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1127">18:47</a>
+      <span class="cue-text">plugin to this menu and add their own compatible infrastructure. And that way</span>
+    </p>
+    <p class="cue" id="t1135">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1135">18:55</a>
+      <span class="cue-text">you don't have to rely on a single service provider within your wallet to get</span>
+    </p>
+    <p class="cue" id="t1139">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1139">18:59</a>
+      <span class="cue-text">witnesses and watchers.</span>
+    </p>
+    <p class="cue" id="t1143">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1143">19:03</a>
+      <span class="cue-text">So the method for like creating a plugin is really simple. You can kind of like if</span>
+    </p>
+    <p class="cue" id="t1147">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1147">19:07</a>
+      <span class="cue-text">you want to you could just like copy the folder of code in the repository, register</span>
+    </p>
+    <p class="cue" id="t1154">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1154">19:14</a>
+      <span class="cue-text">a new plugin here and then change your UI to your heart's computer. So I'd really</span>
+    </p>
+    <p class="cue" id="t1160">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1160">19:20</a>
+      <span class="cue-text">love that if somebody in here who's building KERI infrastructure writes a</span>
+    </p>
+    <p class="cue" id="t1165">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1165">19:25</a>
+      <span class="cue-text">plugin for this so that we can publish that and then when we do a demo they'll</span>
+    </p>
+    <p class="cue" id="t1169">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1169">19:29</a>
+      <span class="cue-text">have their logo up there and not just the KERI Foundation. Just saying.</span>
+    </p>
+    <p class="cue" id="t1175">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1175">19:35</a>
+      <span class="cue-text">On that note, so is the plugin just essentially discoverability for let's say</span>
+    </p>
+    <p class="cue" id="t1182">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1182">19:42</a>
+      <span class="cue-text">I had like a testnet infrastructure and I want to connect my Locksmith to my</span>
+    </p>
+    <p class="cue" id="t1187">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1187">19:47</a>
+      <span class="cue-text">testnet. Do I would I then write a plugin so the Locksmith knows where to look or</span>
+    </p>
+    <p class="cue" id="t1192">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1192">19:52</a>
+      <span class="cue-text">like what exactly is threaded through the plugin? Yeah, it would be where to look</span>
+    </p>
+    <p class="cue" id="t1196">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1196">19:56</a>
+      <span class="cue-text">for the infrastructure. So like for example, the KERI Foundation plugin is</span>
+    </p>
+    <p class="cue" id="t1199">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1199">19:59</a>
+      <span class="cue-text">looking at KF boot, which is kind of our infrastructure orchestration. So if you</span>
+    </p>
+    <p class="cue" id="t1204">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1204">20:04</a>
+      <span class="cue-text">wanted to do your own version of that, you could just have it talk to your… – And</span>
+    </p>
+    <p class="cue" id="t1208">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1208">20:08</a>
+      <span class="cue-text">there's config in the plugin itself that lets you specify those addresses or hosts</span>
+    </p>
+    <p class="cue" id="t1213">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1213">20:13</a>
+      <span class="cue-text">or whatever to designate where it's going to look for that stuff. – Isn't the config</span>
+    </p>
+    <p class="cue" id="t1217">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1217">20:17</a>
+      <span class="cue-text">just a JSON file? – Not in this one. It's code for this plugin code. It's just part</span>
+    </p>
+    <p class="cue" id="t1225">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1225">20:25</a>
+      <span class="cue-text">of the code. Yeah.</span>
+    </p>
+    <p class="cue" id="t1229">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1229">20:29</a>
+      <span class="cue-text">Yeah. We also are working through credential exchanges.</span>
+    </p>
+    <p class="cue" id="t1234">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1234">20:34</a>
+      <span class="cue-text">So you're able to load in schema and then apply for credentials and issue</span>
+    </p>
+    <p class="cue" id="t1242">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1242">20:42</a>
+      <span class="cue-text">credentials. And we're working towards getting Sam's full IPEX exchanges, which</span>
+    </p>
+    <p class="cue" id="t1248">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1248">20:48</a>
+      <span class="cue-text">are issuance and presentation exchanges between two wallets working. These are</span>
+    </p>
+    <p class="cue" id="t1254">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1254">20:54</a>
+      <span class="cue-text">version two. Yeah, this is version two. of KERI and ACDCs. – When you say credential,</span>
+    </p>
+    <p class="cue" id="t1259">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1259">20:59</a>
+      <span class="cue-text">that's ACDC. – Correct. – Right. – Yeah. So the IPEX exchanges will allow us to</span>
+    </p>
+    <p class="cue" id="t1264">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1264">21:04</a>
+      <span class="cue-text">create those beautiful graphs of delegated authority that Sam was showing us earlier.</span>
+    </p>
+    <p class="cue" id="t1272">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1272">21:12</a>
+      <span class="cue-text">– So at the SEDI summit demo, the graduated disclosure, which is what is</span>
+    </p>
+    <p class="cue" id="t1283">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1283">21:23</a>
+      <span class="cue-text">supported in IPEX v2. So the current set of infrastructure that the people are</span>
+    </p>
+    <p class="cue" id="t1291">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1291">21:31</a>
+      <span class="cue-text">using ACDC for credentials like VLEIs aren't doing graduated disclosure. That's</span>
+    </p>
+    <p class="cue" id="t1296">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1296">21:36</a>
+      <span class="cue-text">in the spec, but it wasn't fully implemented. So we're fully implementing</span>
+    </p>
+    <p class="cue" id="t1301">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1301">21:41</a>
+      <span class="cue-text">that part of the spec. So we don't have it in the wallet yet, but that's our target</span>
+    </p>
+    <p class="cue" id="t1308">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1308">21:48</a>
+      <span class="cue-text">is two weeks from now to have it running in the wallet. We have it very close.</span>
+    </p>
+    <p class="cue" id="t1311">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1311">21:51</a>
+      <span class="cue-text">There's a one remaining, I think only one remaining edge operator that has to be</span>
+    </p>
+    <p class="cue" id="t1316">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1316">21:56</a>
+      <span class="cue-text">implemented, which we have an actual PR for which hasn't emerged yet, but it's</span>
+    </p>
+    <p class="cue" id="t1320">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1320">22:00</a>
+      <span class="cue-text">very close. So we're we are well on our way and should be ready to go for the SEDI</span>
+    </p>
+    <p class="cue" id="t1326">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1326">22:06</a>
+      <span class="cue-text">conference to have this whole IPEX exchange in place. So that's coming along</span>
+    </p>
+    <p class="cue" id="t1331">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1331">22:11</a>
+      <span class="cue-text">quick. Yeah, good question. So let's say let's say I'm a city and I want to set up</span>
+    </p>
+    <p class="cue" id="t1340">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1340">22:20</a>
+      <span class="cue-text">a witness for my the residents of my city. So I set up what I set up one, two, three,</span>
+    </p>
+    <p class="cue" id="t1350">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1350">22:30</a>
+      <span class="cue-text">four of those maybe. Well, our recommendation is either it's either one,</span>
+    </p>
+    <p class="cue" id="t1354">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1354">22:34</a>
+      <span class="cue-text">which is not as secure, but it's either one or it's four. So you can do a three of</span>
+    </p>
+    <p class="cue" id="t1359">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1359">22:39</a>
+      <span class="cue-text">four. Right. Okay. So, but ideally again, if I'm just checking my knowledge here. So</span>
+    </p>
+    <p class="cue" id="t1366">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1366">22:46</a>
+      <span class="cue-text">like let's say my city sets up one witness. Okay. And then let's say my bank</span>
+    </p>
+    <p class="cue" id="t1373">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1373">22:53</a>
+      <span class="cue-text">sets up a one witness and then let's say my university sets up one witness. And so</span>
+    </p>
+    <p class="cue" id="t1381">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1381">23:01</a>
+      <span class="cue-text">then I now I make an identity and then I say, okay, I want my city and my bank and</span>
+    </p>
+    <p class="cue" id="t1390">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1390">23:10</a>
+      <span class="cue-text">my university to then witness my logs. And that's a secure way. Is that am I is this</span>
+    </p>
+    <p class="cue" id="t1397">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1397">23:17</a>
+      <span class="cue-text">am I saying right stuff here? Each of those would be the currently the way it's</span>
+    </p>
+    <p class="cue" id="t1402">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1402">23:22</a>
+      <span class="cue-text">built. each of those would be a separate plugin in the wallet and you could do a</span>
+    </p>
+    <p class="cue" id="t1406">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1406">23:26</a>
+      <span class="cue-text">configuration of one per each of those. So my bank and my university and my… Yeah. So</span>
+    </p>
+    <p class="cue" id="t1413">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1413">23:33</a>
+      <span class="cue-text">if they provided plugins to the Locksmith wallet, I believe it's right. You could</span>
+    </p>
+    <p class="cue" id="t1417">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1417">23:37</a>
+      <span class="cue-text">configure the identity to use four witnesses from four different plugins.</span>
+    </p>
+    <p class="cue" id="t1424">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1424">23:44</a>
+      <span class="cue-text">Okay. Different organizations. Yeah. Yeah. Yeah. Okay. And so, okay. Follow-up</span>
+    </p>
+    <p class="cue" id="t1430">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1430">23:50</a>
+      <span class="cue-text">question to that. Yeah. So if I'm again, I'm a city. So let's say I set up one</span>
+    </p>
+    <p class="cue" id="t1435">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1435">23:55</a>
+      <span class="cue-text">witness in the city and that one witness can support all of my residents. So I can</span>
+    </p>
+    <p class="cue" id="t1442">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1442">24:02</a>
+      <span class="cue-text">have there'll be multiple AIDs and all those AIDs can use the one witness. I</span>
+    </p>
+    <p class="cue" id="t1448">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1448">24:08</a>
+      <span class="cue-text">don't have to like I don't have to instantiate another witness per AID. No,</span>
+    </p>
+    <p class="cue" id="t1452">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1452">24:12</a>
+      <span class="cue-text">no, no. Yeah, yeah. So I wouldn't recommend you do it that way. I would</span>
+    </p>
+    <p class="cue" id="t1457">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1457">24:17</a>
+      <span class="cue-text">recommend that you have one witness service. and then that witness service is</span>
+    </p>
+    <p class="cue" id="t1464">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1464">24:24</a>
+      <span class="cue-text">a host that's running witnesses, but each witness for each person could have a</span>
+    </p>
+    <p class="cue" id="t1469">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1469">24:29</a>
+      <span class="cue-text">different identifier. But if you did one witness, it would work. So you can do one</span>
+    </p>
+    <p class="cue" id="t1477">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1477">24:37</a>
+      <span class="cue-text">witness with multiple AIDs, but that's not recommended? Is that what you said? Well,</span>
+    </p>
+    <p class="cue" id="t1482">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1482">24:42</a>
+      <span class="cue-text">it's just… Again, I'll have the other ones too. Yeah. But if my university does that</span>
+    </p>
+    <p class="cue" id="t1491">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1491">24:51</a>
+      <span class="cue-text">and my, you know, if all of those locations do that and I'm using all of</span>
+    </p>
+    <p class="cue" id="t1497">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1497">24:57</a>
+      <span class="cue-text">those, then it's okay for just the city to do that. Yeah, it'll work. It's okay. It's</span>
+    </p>
+    <p class="cue" id="t1506">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1506">25:06</a>
+      <span class="cue-text">not ideal. But you got to understand that I live in this ideal world. Right. So. And</span>
+    </p>
+    <p class="cue" id="t1513">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1513">25:13</a>
+      <span class="cue-text">you got to also make sure we make the distinction between the witness service,</span>
+    </p>
+    <p class="cue" id="t1517">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1517">25:17</a>
+      <span class="cue-text">like WitOPnet is a witness service and each one that… – Yeah, each AID gets its</span>
+    </p>
+    <p class="cue" id="t1524">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1524">25:24</a>
+      <span class="cue-text">own witness within the witness service. – Within that service. – So that's why I'm</span>
+    </p>
+    <p class="cue" id="t1527">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1527">25:27</a>
+      <span class="cue-text">saying this is that you your bank would set up a witness service, but it wouldn't</span>
+    </p>
+    <p class="cue" id="t1532">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1532">25:32</a>
+      <span class="cue-text">use the same witness AID for everybody's wallet. It would just spin up a separate</span>
+    </p>
+    <p class="cue" id="t1537">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1537">25:37</a>
+      <span class="cue-text">witness. All that… so that separate witness is really just an AID that says</span>
+    </p>
+    <p class="cue" id="t1545">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1545">25:45</a>
+      <span class="cue-text">I'm going to sign with this AID. So everybody's witness is signing with a</span>
+    </p>
+    <p class="cue" id="t1550">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1550">25:50</a>
+      <span class="cue-text">different AID. So you're not reusing AIDs to sign receipts. But you have one witness</span>
+    </p>
+    <p class="cue" id="t1556">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1556">25:56</a>
+      <span class="cue-text">service that is basically running an endpoint where people send events to it</span>
+    </p>
+    <p class="cue" id="t1560">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1560">26:00</a>
+      <span class="cue-text">and it has one database and it's storing the stuff in the database. Sorry, Carla</span>
+    </p>
+    <p class="cue" id="t1567">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1567">26:07</a>
+      <span class="cue-text">had a question. Oh, yeah. Have you made any load tests on this service? We haven't</span>
+    </p>
+    <p class="cue" id="t1576">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1576">26:16</a>
+      <span class="cue-text">gotten that point of really hitting it with a lot of load. No. But I don't know.</span>
+    </p>
+    <p class="cue" id="t1581">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1581">26:21</a>
+      <span class="cue-text">Healthcare might have done that. We haven't done that as a foundation. We just</span>
+    </p>
+    <p class="cue" id="t1584">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1584">26:24</a>
+      <span class="cue-text">haven't had the resources to really throw that much at it just yet. But it's a</span>
+    </p>
+    <p class="cue" id="t1588">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1588">26:28</a>
+      <span class="cue-text">fairly lightweight services though. So it's hard to imagine that it would… It's</span>
+    </p>
+    <p class="cue" id="t1593">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1593">26:33</a>
+      <span class="cue-text">in my to-do list. I would share results whenever I get to it. For sure. Yeah,</span>
+    </p>
+    <p class="cue" id="t1599">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1599">26:39</a>
+      <span class="cue-text">actually it was more of a comment than a question. I was going to bring up the</span>
+    </p>
+    <p class="cue" id="t1603">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1603">26:43</a>
+      <span class="cue-text">issue or the concern of consideration of scale because GLEIF set up five witnesses</span>
+    </p>
+    <p class="cue" id="t1610">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1610">26:50</a>
+      <span class="cue-text">for the infrastructure for the VLEI and each QVI has to set up a total of five as</span>
+    </p>
+    <p class="cue" id="t1620">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1620">27:00</a>
+      <span class="cue-text">I said before with two that they could share from existing witnesses that have</span>
+    </p>
+    <p class="cue" id="t1626">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1626">27:06</a>
+      <span class="cue-text">already been spun up. So net each QVI adds three more witnesses to the overall</span>
+    </p>
+    <p class="cue" id="t1634">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1634">27:14</a>
+      <span class="cue-text">witness service for the the VLEI ecosystem. And that was in order to be</span>
+    </p>
+    <p class="cue" id="t1639">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1639">27:19</a>
+      <span class="cue-text">able one of the considerations with scale. Yeah, we haven't put it through major</span>
+    </p>
+    <p class="cue" id="t1645">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1645">27:25</a>
+      <span class="cue-text">scale testing, but then again, to be clear that you're talking about witness</span>
+    </p>
+    <p class="cue" id="t1649">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1649">27:29</a>
+      <span class="cue-text">services, right? Not witnesses themselves. Witnesses themselves.</span>
+    </p>
+    <p class="cue" id="t1660">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1660">27:40</a>
+      <span class="cue-text">So witness service of every two of them. My own. Take my own. My own advice. Each</span>
+    </p>
+    <p class="cue" id="t1667">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1667">27:47</a>
+      <span class="cue-text">ecosystem governance framework requires that each QVI set up five witnesses. And</span>
+    </p>
+    <p class="cue" id="t1674">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1674">27:54</a>
+      <span class="cue-text">in total, it's one witness service with five witnesses or more of that witness</span>
+    </p>
+    <p class="cue" id="t1680">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1680">28:00</a>
+      <span class="cue-text">service. Okay. So it's not a big code change to change the witness so that what</span>
+    </p>
+    <p class="cue" id="t1692">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1692">28:12</a>
+      <span class="cue-text">you're now calling a witness could become its own witness service. So it's the same</span>
+    </p>
+    <p class="cue" id="t1697">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1697">28:17</a>
+      <span class="cue-text">endpoints and stuff like that. You're just allowing it to have to create AIDs on the</span>
+    </p>
+    <p class="cue" id="t1706">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1706">28:26</a>
+      <span class="cue-text">for each wallet that wants to use it as a witness service. Right? And so it creates</span>
+    </p>
+    <p class="cue" id="t1714">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1714">28:34</a>
+      <span class="cue-text">the AID for the wallet, not for the whole witness service. Now, would that be a</span>
+    </p>
+    <p class="cue" id="t1721">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1721">28:41</a>
+      <span class="cue-text">consideration right now? mostly everything is running on a custodial wallet from the</span>
+    </p>
+    <p class="cue" id="t1727">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1727">28:47</a>
+      <span class="cue-text">QVI's that offer that. Would they have to do that? No, for a custodial wallet, they</span>
+    </p>
+    <p class="cue" id="t1733">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1733">28:53</a>
+      <span class="cue-text">may want to do it a different way. Right? The thing is, is it from it's really we're</span>
+    </p>
+    <p class="cue" id="t1740">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1740">29:00</a>
+      <span class="cue-text">not talking KERI protocol anymore. We're talking infrastructure deployment. KERI</span>
+    </p>
+    <p class="cue" id="t1747">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1747">29:07</a>
+      <span class="cue-text">just says there is a witness with an identifier that you designate as the</span>
+    </p>
+    <p class="cue" id="t1753">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1753">29:13</a>
+      <span class="cue-text">witness for your KEL and when and you need a witness service and a witness service</span>
+    </p>
+    <p class="cue" id="t1758">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1758">29:18</a>
+      <span class="cue-text">could be one service with one AID that witnesses multiple KELs or it could be a</span>
+    </p>
+    <p class="cue" id="t1766">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1766">29:26</a>
+      <span class="cue-text">witness service that allocates a different AID for each KEL it witnesses. Those are</span>
+    </p>
+    <p class="cue" id="t1771">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1771">29:31</a>
+      <span class="cue-text">two different arrangements and there's some niggly differences between how they</span>
+    </p>
+    <p class="cue" id="t1779">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1779">29:39</a>
+      <span class="cue-text">perform. But under the hood, the infrastructure is the same. You have a</span>
+    </p>
+    <p class="cue" id="t1783">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1783">29:43</a>
+      <span class="cue-text">database that stores KELs and you receipt KELs when you get them and the service</span>
+    </p>
+    <p class="cue" id="t1788">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1788">29:48</a>
+      <span class="cue-text">says, oh, I witnessed this KEL, right? And I sign it with what AID? Well, if I have</span>
+    </p>
+    <p class="cue" id="t1795">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1795">29:55</a>
+      <span class="cue-text">one, I sign every KEL I witness with the same ID. If I have one AID per KEL, then</span>
+    </p>
+    <p class="cue" id="t1800">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1800">30:00</a>
+      <span class="cue-text">if I'm witnessing an event from this KEL, I sign it with a different AID than if I</span>
+    </p>
+    <p class="cue" id="t1804">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1804">30:04</a>
+      <span class="cue-text">witness an event from that KEL. That's the only difference. It's just whether you</span>
+    </p>
+    <p class="cue" id="t1808">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1808">30:08</a>
+      <span class="cue-text">multiply the AIDs or you have one AID. And multiplying the AIDs means that you have</span>
+    </p>
+    <p class="cue" id="t1814">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1814">30:14</a>
+      <span class="cue-text">more flexibility in terms of adding and subtracting services and stuff like that</span>
+    </p>
+    <p class="cue" id="t1819">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1819">30:19</a>
+      <span class="cue-text">because you're not locked to one AID for everybody. Because if that AID gets</span>
+    </p>
+    <p class="cue" id="t1826">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1826">30:26</a>
+      <span class="cue-text">compromised, it's compromised for every KEL that it witnesses. And so that's why</span>
+    </p>
+    <p class="cue" id="t1830">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1830">30:30</a>
+      <span class="cue-text">it's that's why it'd be better to have an AID per KEL than one KEL shared across</span>
+    </p>
+    <p class="cue" id="t1835">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1835">30:35</a>
+      <span class="cue-text">multiple AIDs. So on that note, is there anything with regard to provisioning or a</span>
+    </p>
+    <p class="cue" id="t1843">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1843">30:43</a>
+      <span class="cue-text">provisioner in KF boot or is right now is KF boot more just an interface for</span>
+    </p>
+    <p class="cue" id="t1850">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1850">30:50</a>
+      <span class="cue-text">something like Locksmith to use that plugin to discover already provisioned</span>
+    </p>
+    <p class="cue" id="t1855">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1855">30:55</a>
+      <span class="cue-text">infrastructure? No, we do provisioning. Like the way that the code that we got was</span>
+    </p>
+    <p class="cue" id="t1860">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1860">31:00</a>
+      <span class="cue-text">set up is that like the witness HK to create witnesses you had to hit like its</span>
+    </p>
+    <p class="cue" id="t1870">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1870">31:10</a>
+      <span class="cue-text">local endpoints. And so you have to put like a we had to put the boot service on</span>
+    </p>
+    <p class="cue" id="t1876">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1876">31:16</a>
+      <span class="cue-text">the same machine as the witness service so that we could securely create witnesses</span>
+    </p>
+    <p class="cue" id="t1884">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1884">31:24</a>
+      <span class="cue-text">and watchers and coordinate all that. So it does provision. Oh, so help me</span>
+    </p>
+    <p class="cue" id="t1888">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1888">31:28</a>
+      <span class="cue-text">understand that. So the boot service can talk to the widopnet and the watt optnet</span>
+    </p>
+    <p class="cue" id="t1895">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1895">31:35</a>
+      <span class="cue-text">to provision witnesses and watchers on demand. Correct. Do you have the you can</span>
+    </p>
+    <p class="cue" id="t1899">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1899">31:39</a>
+      <span class="cue-text">pull up like the witness and watcher repository. The readme is good. Oops.</span>
+    </p>
+    <p class="cue" id="t1903">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1903">31:43</a>
+      <span class="cue-text">Sorry. Pretty good. Browser around here somewhere.</span>
+    </p>
+    <p class="cue" id="t1919">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1919">31:59</a>
+      <span class="cue-text">Just gonna win.</span>
+    </p>
+    <p class="cue" id="t1925">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1925">32:05</a>
+      <span class="cue-text">Yeah. So like in here</span>
+    </p>
+    <p class="cue" id="t1935">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1935">32:15</a>
+      <span class="cue-text">Here's the HTTP API. So to provision witnesses for these controller AIDs,</span>
+    </p>
+    <p class="cue" id="t1945">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1945">32:25</a>
+      <span class="cue-text">you're hitting these like boot server ports.</span>
+    </p>
+    <p class="cue" id="t1952">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1952">32:32</a>
+      <span class="cue-text">And then to like actually talk to your witnesses. is there's a different port to</span>
+    </p>
+    <p class="cue" id="t1957">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1957">32:37</a>
+      <span class="cue-text">that. So you said securely provision these things. Is there a what's the relationship</span>
+    </p>
+    <p class="cue" id="t1966">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1966">32:46</a>
+      <span class="cue-text">from a security perspective between your Locksmith wallet and the boot server? Is</span>
+    </p>
+    <p class="cue" id="t1971">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1971">32:51</a>
+      <span class="cue-text">that determined by something? Is that part of the plugin configuration? And is it</span>
+    </p>
+    <p class="cue" id="t1975">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1975">32:55</a>
+      <span class="cue-text">just okay? You probably want to use like ESSR to talk to your things, but I don't</span>
+    </p>
+    <p class="cue" id="t1980">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1980">33:00</a>
+      <span class="cue-text">know if we have all that set up. Okay. So the Locksmith talks to the boot server.</span>
+    </p>
+    <p class="cue" id="t1986">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1986">33:06</a>
+      <span class="cue-text">The boot server then is installed in the same infrastructure where it's allowed to</span>
+    </p>
+    <p class="cue" id="t1991">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1991">33:11</a>
+      <span class="cue-text">provision through these boot ports. Okay, I gotcha. So this is the that's the config</span>
+    </p>
+    <p class="cue" id="t1998">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=1998">33:18</a>
+      <span class="cue-text">file inside the Locksmith code and that's those are the two addresses that I gave it</span>
+    </p>
+    <p class="cue" id="t2002">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2002">33:22</a>
+      <span class="cue-text">to point to my local Docker. Earlier I had those pointed to our our DigitalOcean</span>
+    </p>
+    <p class="cue" id="t2008">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2008">33:28</a>
+      <span class="cue-text">environment just to make sure I could connect to it and I could connect okay to</span>
+    </p>
+    <p class="cue" id="t2012">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2012">33:32</a>
+      <span class="cue-text">one of the hosts but a couple others were having trouble which is why I did the</span>
+    </p>
+    <p class="cue" id="t2015">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2015">33:35</a>
+      <span class="cue-text">Docker thing instead for this particular demo. But that's where you change that. –</span>
+    </p>
+    <p class="cue" id="t2019">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2019">33:39</a>
+      <span class="cue-text">So final question, is the same approach being taken towards essentially every</span>
+    </p>
+    <p class="cue" id="t2024">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2024">33:44</a>
+      <span class="cue-text">infrastructure repo inside of the KERI Foundation is that there's like a boot</span>
+    </p>
+    <p class="cue" id="t2029">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2029">33:49</a>
+      <span class="cue-text">port where you can boot one up and then it's just there to use for Locksmith? –</span>
+    </p>
+    <p class="cue" id="t2034">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2034">33:54</a>
+      <span class="cue-text">Wait, say that again. Sorry. – Like it's the same provision or approach being taken</span>
+    </p>
+    <p class="cue" id="t2038">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2038">33:58</a>
+      <span class="cue-text">to the mailbox and the other infrastructure. – Those will be a little</span>
+    </p>
+    <p class="cue" id="t2042">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2042">34:02</a>
+      <span class="cue-text">bit different, but But we're still kind of in development on those, so I'm not going</span>
+    </p>
+    <p class="cue" id="t2045">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2045">34:05</a>
+      <span class="cue-text">to speak to those too much yet. So I don't want to give you an answer and then end up</span>
+    </p>
+    <p class="cue" id="t2049">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2049">34:09</a>
+      <span class="cue-text">doing something else. So, you know, we'll try to keep it as consistent as we can,</span>
+    </p>
+    <p class="cue" id="t2054">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2054">34:14</a>
+      <span class="cue-text">but we're not sure yet exactly how that's going to last. Okay. I have another</span>
+    </p>
+    <p class="cue" id="t2058">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2058">34:18</a>
+      <span class="cue-text">conceptual question here. So I asked about witnesses before now on the watcher side.</span>
+    </p>
+    <p class="cue" id="t2065">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2065">34:25</a>
+      <span class="cue-text">So now let's say like I'm a car salesman. Like I have a lot of of cars and I want to</span>
+    </p>
+    <p class="cue" id="t2074">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2074">34:34</a>
+      <span class="cue-text">you know get financing or somebody and so that is that a situation where then I</span>
+    </p>
+    <p class="cue" id="t2080">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2080">34:40</a>
+      <span class="cue-text">would I would need some watchers then to to watch people or is that not? Well</span>
+    </p>
+    <p class="cue" id="t2088">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2088">34:48</a>
+      <span class="cue-text">watchers are watching witnesses. Right so then yeah so then they would watch the</span>
+    </p>
+    <p class="cue" id="t2093">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2093">34:53</a>
+      <span class="cue-text">witnesses of like I said those other ones like the university and the bank and and</span>
+    </p>
+    <p class="cue" id="t2097">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2097">34:57</a>
+      <span class="cue-text">all that stuff. And if you want I mean if you want the KERI ecosystem as it's</span>
+    </p>
+    <p class="cue" id="t2102">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2102">35:02</a>
+      <span class="cue-text">designed And you're always going to want at least a watcher watching. Yeah. But my</span>
+    </p>
+    <p class="cue" id="t2106">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2106">35:06</a>
+      <span class="cue-text">question though is like, because if I understand correctly, the witness is a</span>
+    </p>
+    <p class="cue" id="t2115">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2115">35:15</a>
+      <span class="cue-text">controller concern primarily. It's like it's my infrastructure as a controller and</span>
+    </p>
+    <p class="cue" id="t2121">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2121">35:21</a>
+      <span class="cue-text">then a watcher is more of a validator's concern. Like I want the watchers so that</span>
+    </p>
+    <p class="cue" id="t2130">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2130">35:30</a>
+      <span class="cue-text">I can. Is that true? Yes. That's one exception. Every controller should have a</span>
+    </p>
+    <p class="cue" id="t2136">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2136">35:36</a>
+      <span class="cue-text">local watcher that they use to watch their own infrastructure. So you want a watcher</span>
+    </p>
+    <p class="cue" id="t2142">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2142">35:42</a>
+      <span class="cue-text">you trust to watch your witnesses. That's how you detect whether or not your</span>
+    </p>
+    <p class="cue" id="t2146">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2146">35:46</a>
+      <span class="cue-text">witnesses have been compromised. And then you have watchers that watch other</span>
+    </p>
+    <p class="cue" id="t2150">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2150">35:50</a>
+      <span class="cue-text">people's infrastructure. And that's what normally people think of as watchers,</span>
+    </p>
+    <p class="cue" id="t2155">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2155">35:55</a>
+      <span class="cue-text">right? The outside watcher network is watching other people's infrastructure</span>
+    </p>
+    <p class="cue" id="t2159">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2159">35:59</a>
+      <span class="cue-text">detect duplicity, but you want a watcher to watch your own infrastructure that you</span>
+    </p>
+    <p class="cue" id="t2163">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2163">36:03</a>
+      <span class="cue-text">trust. So that's why the default configuration is you set up one watcher</span>
+    </p>
+    <p class="cue" id="t2168">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2168">36:08</a>
+      <span class="cue-text">you control. So you control one watcher and four witnesses. That's your</span>
+    </p>
+    <p class="cue" id="t2172">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2172">36:12</a>
+      <span class="cue-text">infrastructure. And that one watcher is mainly to watch your stuff. It can watch</span>
+    </p>
+    <p class="cue" id="t2178">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2178">36:18</a>
+      <span class="cue-text">anybody else's stuff as well. But you want to have something watching your</span>
+    </p>
+    <p class="cue" id="t2183">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2183">36:23</a>
+      <span class="cue-text">infrastructure. And the reason is is that the only way you can tell whether your</span>
+    </p>
+    <p class="cue" id="t2188">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2188">36:28</a>
+      <span class="cue-text">witnesses have been compromised is if it goes through watcher logic. And so watcher</span>
+    </p>
+    <p class="cue" id="t2193">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2193">36:33</a>
+      <span class="cue-text">logic only will see an event if everything is perfect. So if it's delegated, it has</span>
+    </p>
+    <p class="cue" id="t2202">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2202">36:42</a>
+      <span class="cue-text">to be delegated. If it's witnessed, it has to be fully witnessed. Whereas a witness</span>
+    </p>
+    <p class="cue" id="t2207">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2207">36:47</a>
+      <span class="cue-text">will witness something, any event that comes from a controller. A witness doesn't</span>
+    </p>
+    <p class="cue" id="t2212">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2212">36:52</a>
+      <span class="cue-text">wait till all the other witnesses witness it to witness it. It just witnesses it</span>
+    </p>
+    <p class="cue" id="t2216">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2216">36:56</a>
+      <span class="cue-text">when it verifies that it's in the KEL. Right? So you can't tell whether your</span>
+    </p>
+    <p class="cue" id="t2220">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2220">37:00</a>
+      <span class="cue-text">witness pool has been compromised without a watcher that watches your witness pool.</span>
+    </p>
+    <p class="cue" id="t2225">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2225">37:05</a>
+      <span class="cue-text">Now you could trust somebody else's watcher to watch your witness pool, but it</span>
+    </p>
+    <p class="cue" id="t2229">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2229">37:09</a>
+      <span class="cue-text">makes sense to have your own watcher you control. If you're spinning up witnesses,</span>
+    </p>
+    <p class="cue" id="t2232">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2232">37:12</a>
+      <span class="cue-text">you might as well spin up a watcher that controls your stuff. Or you could have a</span>
+    </p>
+    <p class="cue" id="t2236">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2236">37:16</a>
+      <span class="cue-text">watcher run locally in your wallet, but then it's not highly available, you know,</span>
+    </p>
+    <p class="cue" id="t2241">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2241">37:21</a>
+      <span class="cue-text">so that's a trade-off as well. Does that make sense? Yes. And then to round out the</span>
+    </p>
+    <p class="cue" id="t2248">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2248">37:28</a>
+      <span class="cue-text">watcher thing, like, what would be a reason why I might want to watch other</span>
+    </p>
+    <p class="cue" id="t2253">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2253">37:33</a>
+      <span class="cue-text">people's witnesses? To detect duplicity, whether they've been compromised. So like</span>
+    </p>
+    <p class="cue" id="t2258">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2258">37:38</a>
+      <span class="cue-text">in a business sense, right? Like if that's where if I'm dealing with somebody and I</span>
+    </p>
+    <p class="cue" id="t2263">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2263">37:43</a>
+      <span class="cue-text">want to make sure that this person I'm dealing with is reputable. Yeah, because</span>
+    </p>
+    <p class="cue" id="t2267">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2267">37:47</a>
+      <span class="cue-text">you can't tell the difference between somebody who's been compromised and</span>
+    </p>
+    <p class="cue" id="t2271">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2271">37:51</a>
+      <span class="cue-text">somebody who's malicious. Both of them look like duplicity, which is a good thing</span>
+    </p>
+    <p class="cue" id="t2275">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2275">37:55</a>
+      <span class="cue-text">because if you see duplicity, you know, don't trust. trust. Because it doesn't</span>
+    </p>
+    <p class="cue" id="t2280">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2280">38:00</a>
+      <span class="cue-text">matter whether they've been compromised or they're malicious, you know not to trust</span>
+    </p>
+    <p class="cue" id="t2283">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2283">38:03</a>
+      <span class="cue-text">it. – So if I have customers and they and I UBI them, then I know who their</span>
+    </p>
+    <p class="cue" id="t2289">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2289">38:09</a>
+      <span class="cue-text">witnesses are. – That's right. – And then I could choose to watch those witnesses of</span>
+    </p>
+    <p class="cue" id="t2294">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2294">38:14</a>
+      <span class="cue-text">my customers or whatever. – Yeah. – Yeah. – Okay. Thank you. – Yeah, we're good.</span>
+    </p>
+    <p class="cue" id="t2303">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2303">38:23</a>
+      <span class="cue-text">Okay. I think that's pretty much it. – I don't think You can just the demo, right?</span>
+    </p>
+    <p class="cue" id="t2310">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2310">38:30</a>
+      <span class="cue-text">I mean, is there anything else that people want to show? We're going to want. Can you</span>
+    </p>
+    <p class="cue" id="t2316">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2316">38:36</a>
+      <span class="cue-text">do a credential issue?</span>
+    </p>
+    <p class="cue" id="t2320">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2320">38:40</a>
+      <span class="cue-text">I don't have to get someone to the normal ones. Probably not from my machine. I</span>
+    </p>
+    <p class="cue" id="t2324">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2324">38:44</a>
+      <span class="cue-text">don't have the or you can go get those schemas. Yes, they're built in, aren't</span>
+    </p>
+    <p class="cue" id="t2329">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2329">38:49</a>
+      <span class="cue-text">they? Oh, yeah. So Sam has published a draft of some of the SEDI schemas in in a</span>
+    </p>
+    <p class="cue" id="t2338">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2338">38:58</a>
+      <span class="cue-text">repository called SEDI in the KERI Foundation GitHub. And so I grabbed them</span>
+    </p>
+    <p class="cue" id="t2343">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2343">39:03</a>
+      <span class="cue-text">and built them in here so that you don't have to think about it. And so you can</span>
+    </p>
+    <p class="cue" id="t2350">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2350">39:10</a>
+      <span class="cue-text">grab one of these schemas, load it in.</span>
+    </p>
+    <p class="cue" id="t2358">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2358">39:18</a>
+      <span class="cue-text">And then</span>
+    </p>
+    <p class="cue" id="t2370">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2370">39:30</a>
+      <span class="cue-text">I might have needed to grab the previous witness code. I'll show you. And those</span>
+    </p>
+    <p class="cue" id="t2376">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2376">39:36</a>
+      <span class="cue-text">schemas are again ACDCs? Schema for ACDCs. Schema for ACDCs. They're JSON schema.</span>
+    </p>
+    <p class="cue" id="t2389">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2389">39:49</a>
+      <span class="cue-text">Oh, wait.</span>
+    </p>
+    <p class="cue" id="t2398">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2398">39:58</a>
+      <span class="cue-text">to see it to going to do an ubi here. I just exported this local identifier. Let's</span>
+    </p>
+    <p class="cue" id="t2405">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2405">40:05</a>
+      <span class="cue-text">see if I can import it into this one.</span>
+    </p>
+    <p class="cue" id="t2412">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2412">40:12</a>
+      <span class="cue-text">And why are you switching vaults? Just to have two vaults talk to each other to</span>
+    </p>
+    <p class="cue" id="t2417">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2417">40:17</a>
+      <span class="cue-text">prove that you know because the two vaults are isolated key environments. So it'd be</span>
+    </p>
+    <p class="cue" id="t2421">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2421">40:21</a>
+      <span class="cue-text">the same as if I just had two wallets running.</span>
+    </p>
+    <p class="cue" id="t2426">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2426">40:26</a>
+      <span class="cue-text">So let's see.</span>
+    </p>
+    <p class="cue" id="t2433">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2433">40:33</a>
+      <span class="cue-text">I think I need to also take this one, put it in the other vault. Oh, that shouldn't.</span>
+    </p>
+    <p class="cue" id="t2446">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2446">40:46</a>
+      <span class="cue-text">And so is this going through a mailbox or is it all or</span>
+    </p>
+    <p class="cue" id="t2453">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2453">40:53</a>
+      <span class="cue-text">is there no mailbox involved here yet? Well, that's a good question. Did you</span>
+    </p>
+    <p class="cue" id="t2456">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2456">40:56</a>
+      <span class="cue-text">connect it up yet? We have the mailbox service, but we haven't quite finished</span>
+    </p>
+    <p class="cue" id="t2460">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2460">41:00</a>
+      <span class="cue-text">with the implementation on thing. Yeah, so it might not work because we might not</span>
+    </p>
+    <p class="cue" id="t2463">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2463">41:03</a>
+      <span class="cue-text">have the mailbox service running. Okay.</span>
+    </p>
+    <p class="cue" id="t2468">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2468">41:08</a>
+      <span class="cue-text">So I can apply for a credential from… All</span>
+    </p>
+    <p class="cue" id="t2478">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2478">41:18</a>
+      <span class="cue-text">right, the contact isn't showing up.</span>
+    </p>
+    <p class="cue" id="t2483">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2483">41:23</a>
+      <span class="cue-text">Yeah, you'd be able to apply for a credential from one of your remote</span>
+    </p>
+    <p class="cue" id="t2488">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2488">41:28</a>
+      <span class="cue-text">identifiers.</span>
+    </p>
+    <p class="cue" id="t2493">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2493">41:33</a>
+      <span class="cue-text">and from there you'd be able to do an exchange.</span>
+    </p>
+    <p class="cue" id="t2500">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2500">41:40</a>
+      <span class="cue-text">I don't know where it is. I don't know why it's not showing yet.</span>
+    </p>
+    <p class="cue" id="t2508">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2508">41:48</a>
+      <span class="cue-text">Yeah, it might just be we need the mailbox set up to send messages between and</span>
+    </p>
+    <p class="cue" id="t2513">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2513">41:53</a>
+      <span class="cue-text">Donfarus. Yeah, so we're working on the mailbox. You've done it locally, right?</span>
+    </p>
+    <p class="cue" id="t2517">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2517">41:57</a>
+      <span class="cue-text">Yeah. That's my I don't know what you're saying. – Yeah, I don't know what's</span>
+    </p>
+    <p class="cue" id="t2519">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2519">41:59</a>
+      <span class="cue-text">running on my box right now either. Yeah, then you would have like, we have</span>
+    </p>
+    <p class="cue" id="t2525">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2525">42:05</a>
+      <span class="cue-text">notifications here. And so you would send like an application message to an</span>
+    </p>
+    <p class="cue" id="t2535">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2535">42:15</a>
+      <span class="cue-text">identifier. It would show up in your notifications and then you could see each</span>
+    </p>
+    <p class="cue" id="t2539">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2539">42:19</a>
+      <span class="cue-text">of the steps in your exchange where you're disclosing which fields</span>
+    </p>
+    <p class="cue" id="t2547">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2547">42:27</a>
+      <span class="cue-text">for a presentation that you would want or to create a credential and then send that</span>
+    </p>
+    <p class="cue" id="t2551">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2551">42:31</a>
+      <span class="cue-text">credential to somebody who would be applying for that credential. And then</span>
+    </p>
+    <p class="cue" id="t2555">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2555">42:35</a>
+      <span class="cue-text">you'd be just sending the notifications to the mailbox and they would show up here.</span>
+    </p>
+    <p class="cue" id="t2561">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2561">42:41</a>
+      <span class="cue-text">So the problem is that do they need to these two vaults I guess with AIDs in</span>
+    </p>
+    <p class="cue" id="t2567">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2567">42:47</a>
+      <span class="cue-text">there they need to ubi each other or something? Is that in that little We need</span>
+    </p>
+    <p class="cue" id="t2573">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2573">42:53</a>
+      <span class="cue-text">to get their mailboxes to configure to each other to send like messages between</span>
+    </p>
+    <p class="cue" id="t2580">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2580">43:00</a>
+      <span class="cue-text">each other. The issuance exchange would go over the mailbox. It could use a different</span>
+    </p>
+    <p class="cue" id="t2587">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2587">43:07</a>
+      <span class="cue-text">transport but the way Locksmith is set up is to use the mailbox. Just the</span>
+    </p>
+    <p class="cue" id="t2592">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2592">43:12</a>
+      <span class="cue-text">contributed version of Locksmith didn't include the mailbox. We had to write our</span>
+    </p>
+    <p class="cue" id="t2597">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2597">43:17</a>
+      <span class="cue-text">own mailbox. and stuff like that. Yeah. But yeah, and then for like a… Oh, yeah,</span>
+    </p>
+    <p class="cue" id="t2602">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2602">43:22</a>
+      <span class="cue-text">sorry. No, go ahead. No, I was just going to say that for example, for a</span>
+    </p>
+    <p class="cue" id="t2606">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2606">43:26</a>
+      <span class="cue-text">presentation where you're going to the liquor store and you want to buy like a</span>
+    </p>
+    <p class="cue" id="t2614">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2614">43:34</a>
+      <span class="cue-text">beer, you would show your credential and then you could choose to disclose that you</span>
+    </p>
+    <p class="cue" id="t2620">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2620">43:40</a>
+      <span class="cue-text">were, for example, over 21, but then you wouldn't have to disclose some of the</span>
+    </p>
+    <p class="cue" id="t2624">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2624">43:44</a>
+      <span class="cue-text">other information about yourself within that credential. And so then, you know, we</span>
+    </p>
+    <p class="cue" id="t2628">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2628">43:48</a>
+      <span class="cue-text">would have a field where you would be able to choose which information you would like</span>
+    </p>
+    <p class="cue" id="t2635">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2635">43:55</a>
+      <span class="cue-text">to disclose and send to a verifier such as a liquor store as an individual. So my</span>
+    </p>
+    <p class="cue" id="t2643">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2643">44:03</a>
+      <span class="cue-text">question is on the original issuance of the credentials. You said that that was</span>
+    </p>
+    <p class="cue" id="t2648">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2648">44:08</a>
+      <span class="cue-text">also going to use a communication with an application through the mailbox. Did I</span>
+    </p>
+    <p class="cue" id="t2655">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2655">44:15</a>
+      <span class="cue-text">misunderstand or understand that? Sorry, what was that? For original issuance of a</span>
+    </p>
+    <p class="cue" id="t2660">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2660">44:20</a>
+      <span class="cue-text">credential, there was going to be an application function that was then going</span>
+    </p>
+    <p class="cue" id="t2665">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2665">44:25</a>
+      <span class="cue-text">to send a request to have a credential issued and then send that credential to</span>
+    </p>
+    <p class="cue" id="t2672">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2672">44:32</a>
+      <span class="cue-text">the person who was supposed to get it. Right. Correct. Okay. So I understood</span>
+    </p>
+    <p class="cue" id="t2675">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2675">44:35</a>
+      <span class="cue-text">that. Yeah. All right. In that, I think that what Joe was asking was, so for the</span>
+    </p>
+    <p class="cue" id="t2681">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2681">44:41</a>
+      <span class="cue-text">VLEI, we have an identity authentication layer that does a challenge response</span>
+    </p>
+    <p class="cue" id="t2686">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2686">44:46</a>
+      <span class="cue-text">process before actually giving the credential to the person who's supposed to</span>
+    </p>
+    <p class="cue" id="t2692">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2692">44:52</a>
+      <span class="cue-text">get it. Is that part of this in the background somewhere? Yes. I'm also</span>
+    </p>
+    <p class="cue" id="t2697">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2697">44:57</a>
+      <span class="cue-text">working on like a identity proofing challenge response. That's just exactly</span>
+    </p>
+    <p class="cue" id="t2702">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2702">45:02</a>
+      <span class="cue-text">what you're describing. So yes. So for SEDI, the state has defined their own</span>
+    </p>
+    <p class="cue" id="t2708">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2708">45:08</a>
+      <span class="cue-text">challenge response mechanism that's slightly different from the GLEIF</span>
+    </p>
+    <p class="cue" id="t2713">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2713">45:13</a>
+      <span class="cue-text">ecosystem challenge response. Okay. So to support both of those, the wallet would</span>
+    </p>
+    <p class="cue" id="t2720">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2720">45:20</a>
+      <span class="cue-text">have to support both types of challenge response. Okay. So it might be worth</span>
+    </p>
+    <p class="cue" id="t2726">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2726">45:26</a>
+      <span class="cue-text">taking a look in order to be able to see what they've done and compare. What they</span>
+    </p>
+    <p class="cue" id="t2730">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2730">45:30</a>
+      <span class="cue-text">do, the main difference is that instead of just signing both sides of the challenge</span>
+    </p>
+    <p class="cue" id="t2736">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2736">45:36</a>
+      <span class="cue-text">response, which is what the GLEIQ one does, which is simpler, because the state</span>
+    </p>
+    <p class="cue" id="t2742">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2742">45:42</a>
+      <span class="cue-text">of Utah is planning to use external proofing agents for the identity assurance</span>
+    </p>
+    <p class="cue" id="t2748">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2748">45:48</a>
+      <span class="cue-text">instead of a GLEIF authorized representative or a QBI like in the case</span>
+    </p>
+    <p class="cue" id="t2757">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2757">45:57</a>
+      <span class="cue-text">of or a qualification like in case of direct trust they would just hire they</span>
+    </p>
+    <p class="cue" id="t2761">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2761">46:01</a>
+      <span class="cue-text">might just hire somebody that they're requiring that the response be anchored in</span>
+    </p>
+    <p class="cue" id="t2768">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2768">46:08</a>
+      <span class="cue-text">the KEL of the user as opposed to just signed by the user. So it's more secure.</span>
+    </p>
+    <p class="cue" id="t2774">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2774">46:14</a>
+      <span class="cue-text">It's more secure. Yeah. Because we're having issues with people coming to us and</span>
+    </p>
+    <p class="cue" id="t2780">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2780">46:20</a>
+      <span class="cue-text">telling us that it's too much the way that we're doing it. And this is on top of what</span>
+    </p>
+    <p class="cue" id="t2786">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2786">46:26</a>
+      <span class="cue-text">we're doing. The state is now going to have millions of people who are going to</span>
+    </p>
+    <p class="cue" id="t2790">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2790">46:30</a>
+      <span class="cue-text">be really lax with their key management. So basically by anchoring, having the</span>
+    </p>
+    <p class="cue" id="t2798">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2798">46:38</a>
+      <span class="cue-text">wallets automatically anchor, then we take that away from them. They don't get to be</span>
+    </p>
+    <p class="cue" id="t2804">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2804">46:44</a>
+      <span class="cue-text">so lax. But it happens under the hood from their perspective. – Okay. Thanks. – So</span>
+    </p>
+    <p class="cue" id="t2811">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2811">46:51</a>
+      <span class="cue-text">can what's that automatic anchoring you were just referring to? – Identity</span>
+    </p>
+    <p class="cue" id="t2816">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2816">46:56</a>
+      <span class="cue-text">proofing. – Identity authentication. – Yeah. Yeah. In an identity and an IAL,</span>
+    </p>
+    <p class="cue" id="t2823">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2823">47:03</a>
+      <span class="cue-text">NIST IAL level three. So it's not two plus, it's level three for the state of</span>
+    </p>
+    <p class="cue" id="t2827">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2827">47:07</a>
+      <span class="cue-text">Utah. – Well, we do the identity proofing first and then as a second step the</span>
+    </p>
+    <p class="cue" id="t2831">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2831">47:11</a>
+      <span class="cue-text">identity authentication. – But then an IAL level three, the last step in identity</span>
+    </p>
+    <p class="cue" id="t2835">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2835">47:15</a>
+      <span class="cue-text">proofing is you have to bind an account or an identifier to the proofing session. So</span>
+    </p>
+    <p class="cue" id="t2841">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2841">47:21</a>
+      <span class="cue-text">it has to be done in session. In session. In session. So in session, the proofing</span>
+    </p>
+    <p class="cue" id="t2847">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2847">47:27</a>
+      <span class="cue-text">agent sends a challenge over a non -internet channel. So either an NFC or</span>
+    </p>
+    <p class="cue" id="t2854">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2854">47:34</a>
+      <span class="cue-text">Bluetooth something, you know, well maybe not even Bluetooth, but or optic</span>
+    </p>
+    <p class="cue" id="t2859">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2859">47:39</a>
+      <span class="cue-text">optically, right? Like a QR code. It can't be Bluetooth or anything that somebody can</span>
+    </p>
+    <p class="cue" id="t2863">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2863">47:43</a>
+      <span class="cue-text">surveil. And then you anchor the challenge in your KEL, which means you're signing it</span>
+    </p>
+    <p class="cue" id="t2870">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2870">47:50</a>
+      <span class="cue-text">to anchor it. But now it becomes detectable if somebody showed up and</span>
+    </p>
+    <p class="cue" id="t2877">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2877">47:57</a>
+      <span class="cue-text">impersonated you. Let's say somebody who looks like you stole your identity</span>
+    </p>
+    <p class="cue" id="t2882">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2882">48:02</a>
+      <span class="cue-text">documents and showed up at the proofing agent. And they said, okay, you're just a</span>
+    </p>
+    <p class="cue" id="t2887">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2887">48:07</a>
+      <span class="cue-text">person. So you don't have all of the security that you have at GLEI because</span>
+    </p>
+    <p class="cue" id="t2890">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2890">48:10</a>
+      <span class="cue-text">you're dealing with people that represent entities that have layers of management</span>
+    </p>
+    <p class="cue" id="t2895">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2895">48:15</a>
+      <span class="cue-text">for them to show up. You just have, you know, a homeless person off the street,</span>
+    </p>
+    <p class="cue" id="t2900">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2900">48:20</a>
+      <span class="cue-text">for example, show up and say, Hey, I want an ID, right? And they go, Well, here's my</span>
+    </p>
+    <p class="cue" id="t2904">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2904">48:24</a>
+      <span class="cue-text">documents, right? And they may not, you know, and they may have a grainy picture</span>
+    </p>
+    <p class="cue" id="t2908">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2908">48:28</a>
+      <span class="cue-text">that, you know, doesn't look really good and they go, Well, it's the best you got.</span>
+    </p>
+    <p class="cue" id="t2912">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2912">48:32</a>
+      <span class="cue-text">So, so this way, if if somebody stole their signing keys, if they were</span>
+    </p>
+    <p class="cue" id="t2920">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2920">48:40</a>
+      <span class="cue-text">compromised, then at least they could detect that they were compromise. So</span>
+    </p>
+    <p class="cue" id="t2925">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2925">48:45</a>
+      <span class="cue-text">between the proofing session when they actually go back to the state and apply</span>
+    </p>
+    <p class="cue" id="t2928">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2928">48:48</a>
+      <span class="cue-text">for their SEDI, there's an opportunity to verify those anchors. So it adds some</span>
+    </p>
+    <p class="cue" id="t2937">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2937">48:57</a>
+      <span class="cue-text">extra security that might be useful.</span>
+    </p>
+    <p class="cue" id="t2943">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2943">49:03</a>
+      <span class="cue-text">Okay. I'm sorry. I have one more question. So the</span>
+    </p>
+    <p class="cue" id="t2949">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2949">49:09</a>
+      <span class="cue-text">KF boot thing. Okay. I noticed you had to add a schema here. So I assume that means</span>
+    </p>
+    <p class="cue" id="t2957">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2957">49:17</a>
+      <span class="cue-text">that when you booted stuff up, there were no… Is there a way to include schemas?</span>
+    </p>
+    <p class="cue" id="t2961">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2961">49:21</a>
+      <span class="cue-text">Because for example, like again, if I was a university and let's say I made my</span>
+    </p>
+    <p class="cue" id="t2965">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2965">49:25</a>
+      <span class="cue-text">plugin, I would probably have my diplomas or the things that I offer and everything</span>
+    </p>
+    <p class="cue" id="t2972">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2972">49:32</a>
+      <span class="cue-text">like that. And so when I have my plugin and my boot, not only am I going to be</span>
+    </p>
+    <p class="cue" id="t2978">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2978">49:38</a>
+      <span class="cue-text">like, okay, here's you can set up witnesses and watchers for your</span>
+    </p>
+    <p class="cue" id="t2981">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2981">49:41</a>
+      <span class="cue-text">university, but these are all the schemas and things that, you know. So schema</span>
+    </p>
+    <p class="cue" id="t2986">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2986">49:46</a>
+      <span class="cue-text">discovery is what you're talking about. Yeah. Yeah. The schema isn't to do with KF</span>
+    </p>
+    <p class="cue" id="t2990">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2990">49:50</a>
+      <span class="cue-text">boot. It has nothing to do with your infrastructure. The schema are only for</span>
+    </p>
+    <p class="cue" id="t2993">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=2993">49:53</a>
+      <span class="cue-text">the actual credentials. Yeah, but a credential, an ACDC credential. And if I'm</span>
+    </p>
+    <p class="cue" id="t3000">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3000">50:00</a>
+      <span class="cue-text">a university, wouldn't that be the diploma? Like I'm… Yes, but it doesn't</span>
+    </p>
+    <p class="cue" id="t3004">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3004">50:04</a>
+      <span class="cue-text">have anything to do with KF boot. You just said something about credentials for the</span>
+    </p>
+    <p class="cue" id="t3009">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3009">50:09</a>
+      <span class="cue-text">schema for KF boot. That's what That's what confused me. – I guess I was bundling</span>
+    </p>
+    <p class="cue" id="t3012">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3012">50:12</a>
+      <span class="cue-text">it in there because it's like I'm trying if I'm a university and I'm trying to</span>
+    </p>
+    <p class="cue" id="t3016">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3016">50:16</a>
+      <span class="cue-text">bootstrap my university infrastructure, I don't know. I would suspect that might be</span>
+    </p>
+    <p class="cue" id="t3022">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3022">50:22</a>
+      <span class="cue-text">a good place to just put all the schemas in there. – Well, we have a plan for</span>
+    </p>
+    <p class="cue" id="t3027">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3027">50:27</a>
+      <span class="cue-text">schema discovery within the wallet. Doesn't really have anything to do with</span>
+    </p>
+    <p class="cue" id="t3031">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3031">50:31</a>
+      <span class="cue-text">the booting and onboarding of the infrastructure. Just a separate mechanism.</span>
+    </p>
+    <p class="cue" id="t3036">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3036">50:36</a>
+      <span class="cue-text">So you could publish, for example, or the university could publish their list of</span>
+    </p>
+    <p class="cue" id="t3040">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3040">50:40</a>
+      <span class="cue-text">approved schemas and then the wallet could go find that. So like they could publish</span>
+    </p>
+    <p class="cue" id="t3045">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3045">50:45</a>
+      <span class="cue-text">all of their credential schemas as dot well-knowns for example. And then anybody</span>
+    </p>
+    <p class="cue" id="t3051">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3051">50:51</a>
+      <span class="cue-text">that wanted to talk to the university would go go say, oh, here's the schema</span>
+    </p>
+    <p class="cue" id="t3055">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3055">50:55</a>
+      <span class="cue-text">that the university uses for their ACDCs. And they can publish them in multiple</span>
+    </p>
+    <p class="cue" id="t3059">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3059">50:59</a>
+      <span class="cue-text">places. And because each schema has a hash as its identifier, anybody changes the</span>
+    </p>
+    <p class="cue" id="t3066">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3066">51:06</a>
+      <span class="cue-text">schema, it's a different hash. So you can detect that it's been tampered with. So</span>
+    </p>
+    <p class="cue" id="t3071">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3071">51:11</a>
+      <span class="cue-text">you know it's not the right one. You just have to get the authoritative publication</span>
+    </p>
+    <p class="cue" id="t3075">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3075">51:15</a>
+      <span class="cue-text">of the hash someplace and say, yeah, this is the one the university uses. So the</span>
+    </p>
+    <p class="cue" id="t3081">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3081">51:21</a>
+      <span class="cue-text">university would have a vested interest in making sure that the hashes and schema</span>
+    </p>
+    <p class="cue" id="t3085">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3085">51:25</a>
+      <span class="cue-text">they use are published in well-known locations that people can verify came from</span>
+    </p>
+    <p class="cue" id="t3089">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3089">51:29</a>
+      <span class="cue-text">the university and then any wallet can be preconfigured with those if they want to</span>
+    </p>
+    <p class="cue" id="t3095">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3095">51:35</a>
+      <span class="cue-text">or they can discover them on the fly. But you know, there's an advantage for people</span>
+    </p>
+    <p class="cue" id="t3100">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3100">51:40</a>
+      <span class="cue-text">in the university ecosystem to just pre -configure their wallets with those</span>
+    </p>
+    <p class="cue" id="t3104">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3104">51:44</a>
+      <span class="cue-text">schema. – So KF boot wouldn't be the right place for it anyway because it's even</span>
+    </p>
+    <p class="cue" id="t3108">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3108">51:48</a>
+      <span class="cue-text">though they're kind of related in a way in the sense it's KERI ecosystem, KF boot</span>
+    </p>
+    <p class="cue" id="t3113">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3113">51:53</a>
+      <span class="cue-text">itself doesn't really have any understanding of schemas or credentials or</span>
+    </p>
+    <p class="cue" id="t3117">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3117">51:57</a>
+      <span class="cue-text">any of that stuff. So it's really not the right place for that kind of stuff to be.</span>
+    </p>
+    <p class="cue" id="t3122">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3122">52:02</a>
+      <span class="cue-text">So separate consideration. – Thank you. – Cool. Cool. Anything else? Any other</span>
+    </p>
+    <p class="cue" id="t3130">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3130">52:10</a>
+      <span class="cue-text">questions? We pretty much run through the time. All right.</span>
+    </p>
+    <p class="cue" id="t3141">
+      <a class="cue-time" href="../../../#ryan-hansen-evan-asakawa&amp;t=3141">52:21</a>
+      <span class="cue-text">Thanks everyone. Thank you.</span>
     </p>
     </article>
     <footer>KERI Foundation • Conference Videos Collection</footer>
