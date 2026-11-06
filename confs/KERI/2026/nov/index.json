@@ -59,7 +59,7 @@
     {
       "order": 1,
       "day": "Mini Conference nov 2026",
-      "title": "Samuel M. Smith",
+      "title": "Samuel M. Smith: The state and the future of the KERI Suite",
       "path": "talks/2026-11-02-samuel-m-smith-1.mp4",
       "duration": "0:17",
       "subtitle": "talks/2026-11-02-samuel-m-smith-1.srt"
@@ -67,7 +67,7 @@
     {
       "order": 2,
       "day": "Mini Conference nov 2026",
-      "title": "Ryan Hansen / Samuel M. Smith",
+      "title": "Ryan Hansen / Samuel M. Smith: Progress report: The 5W’s of KERI: Witnesses, Watchers, Wallet, Web, and Wizard PLUS Bulk issuances and anchoring in Merkle Trees.",
       "path": "talks/2026-11-02-ryan-hansen-samuel-m-smith.mp4",
       "duration": "0:17",
       "subtitle": "talks/2026-11-02-ryan-hansen-samuel-m-smith.srt",
@@ -76,7 +76,7 @@
     {
       "order": 3,
       "day": "Mini Conference nov 2026",
-      "title": "Kent Bull",
+      "title": "Kent Bull: Did:webs, why the ‘s’ matters most",
       "path": "talks/2026-11-02-kent-bull.mp4",
       "duration": "59:26",
       "subtitle": "talks/2026-11-02-kent-bull.srt"
@@ -84,7 +84,7 @@
     {
       "order": 4,
       "day": "Mini Conference nov 2026",
-      "title": "Samuel M. Smith",
+      "title": "Samuel M. Smith: Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
       "path": "talks/2026-11-02-samuel-m-smith-2.mp4",
       "duration": "57:36",
       "subtitle": "talks/2026-11-02-samuel-m-smith-2.srt"
@@ -92,7 +92,7 @@
     {
       "order": 5,
       "day": "Mini Conference nov 2026",
-      "title": "Ryan Hansen / Evan Asakawa",
+      "title": "Ryan Hansen / Evan Asakawa: Demonstration KERISuite",
       "path": "talks/2026-11-02-ryan-hansen-evan-asakawa.mp4",
       "duration": "52:31",
       "subtitle": "talks/2026-11-02-ryan-hansen-evan-asakawa.srt",
@@ -101,7 +101,7 @@
     {
       "order": 6,
       "day": "Mini Conference nov 2026",
-      "title": "Samuel M. Smith / Ryan Hansen",
+      "title": "Samuel M. Smith / Ryan Hansen: Open infrastructure for KERI-based digital identity",
       "path": "talks/2026-11-02-samuel-m-smith-ryan-hansen.mp4",
       "duration": "58:33",
       "subtitle": "talks/2026-11-02-samuel-m-smith-ryan-hansen.srt",
