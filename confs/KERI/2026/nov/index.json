@@ -62,7 +62,8 @@
       "title": "Samuel M. Smith: The state and the future of the KERI Suite",
       "path": "talks/2026-11-02-samuel-m-smith-1.mp4",
       "duration": "57:37",
-      "subtitle": "talks/2026-11-02-samuel-m-smith-1.srt"
+      "subtitle": "talks/2026-11-02-samuel-m-smith-1.srt",
+      "poster": "placeholder.jpg"
     },
     {
       "order": 6,
@@ -71,7 +72,7 @@
       "path": "talks/2026-11-02-ryan-hansen-samuel-m-smith.mp4",
       "duration": "55:51",
       "subtitle": "talks/2026-11-02-ryan-hansen-samuel-m-smith.srt",
-      "poster": "https://kericonf.com/wp-content/uploads/2026/05/IMG_1704-1024x768.jpg"
+      "poster": "placeholder.jpg"
     },
     {
       "order": 3,
@@ -79,7 +80,8 @@
       "title": "Kent Bull – did:webs, why the ‘s’ matters most",
       "path": "talks/2026-11-02-kent-bull.mp4",
       "duration": "59:26",
-      "subtitle": "talks/2026-11-02-kent-bull.srt"
+      "subtitle": "talks/2026-11-02-kent-bull.srt",
+      "poster": "placeholder.jpg"
     },
     {
       "order": 4,
@@ -87,7 +89,8 @@
       "title": "Samuel M. Smith – Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
       "path": "talks/2026-11-02-samuel-m-smith-2.mp4",
       "duration": "57:36",
-      "subtitle": "talks/2026-11-02-samuel-m-smith-2.srt"
+      "subtitle": "talks/2026-11-02-samuel-m-smith-2.srt",
+      "poster": "placeholder.jpg"
     },
     {
       "order": 5,
@@ -96,7 +99,7 @@
       "path": "talks/2026-11-02-ryan-hansen-evan-asakawa.mp4",
       "duration": "52:31",
       "subtitle": "talks/2026-11-02-ryan-hansen-evan-asakawa.srt",
-      "poster": "https://kericonf.com/wp-content/uploads/2026/05/IMG_1704-1024x768.jpg"
+      "poster": "placeholder.jpg"
     },
     {
       "order": 2,
@@ -105,7 +108,7 @@
       "path": "talks/2026-11-02-samuel-m-smith-ryan-hansen.mp4",
       "duration": "58:33",
       "subtitle": "talks/2026-11-02-samuel-m-smith-ryan-hansen.srt",
-      "poster": "https://kericonf.com/wp-content/uploads/2026/05/IMG_1704-1024x768.jpg"
+      "poster": "placeholder.jpg"
     }
   ]
 }
