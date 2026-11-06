@@ -1,4 +1,3304 @@
 1
-00:00:00,000 --> 00:00:17,000
-[Background noise]
+00:00:00,000 --> 00:00:06,800
+Okay, so this is a really long title. What
+I wanted to do is I wanted to take
+
+2
+00:00:06,800 --> 00:00:11,120
+something that's happening in the SEDI
+world and relate it to what has now become
+
+3
+00:00:11,120 --> 00:00:18,360
+people call it AI anxiety, right? In fact,
+I had my daughter send me a text and say,
+
+4
+00:00:18,560 --> 00:00:25,940
+so when the world ends because of AI, what
+should be our emergency plan? And then
+
+5
+00:00:25,940 --> 00:00:30,180
+they live a couple miles away and it says,
+how do we communicate? how do we get food?
+
+6
+00:00:30,320 --> 00:00:35,660
+What do we do? You know, and I have my
+house is like I'm fully off griddable
+
+7
+00:00:35,660 --> 00:00:39,380
+because I have solar panels and batteries
+and stuff like that. And I have a swimming
+
+8
+00:00:39,380 --> 00:00:43,140
+pool. So I have, you know, years worth of
+water and a bunch of stuff. So I just
+
+9
+00:00:43,140 --> 00:00:47,660
+said, no, you know, just get from your
+house to my house and you're good. Right?
+
+10
+00:00:47,760 --> 00:00:51,900
+So you got two miles, you know, you got to
+fight off the zombies for those two miles,
+
+11
+00:00:52,040 --> 00:00:57,200
+but otherwise you're good. But it was just
+because of all the AI anxiety. So this is
+
+12
+00:00:57,200 --> 00:01:02,600
+a little bit to address that problem. So
+what is the AI surveillance problem? Well,
+
+13
+00:01:02,980 --> 00:01:06,540
+people have been using this term and it's
+now gotten to be a bad word called
+
+14
+00:01:06,540 --> 00:01:12,800
+continuous identity. What is continuous
+identity? Well, it means that I determine
+
+15
+00:01:12,800 --> 00:01:17,780
+who you are by continuously surveilling
+everything that you do. And if I
+
+16
+00:01:17,780 --> 00:01:24,400
+continuously surveil everything you do, I
+can build a persona of your behavior that
+
+17
+00:01:24,400 --> 00:01:32,540
+an AI can't deep fake or can't deepfake
+today, but might deepfake tomorrow, which
+
+18
+00:01:32,540 --> 00:01:39,860
+means the level of surveillance has to get
+more pervasive. So the assumptions always
+
+19
+00:01:39,860 --> 00:01:45,740
+is there are things that I can permit
+somebody to know about me that an external
+
+20
+00:01:45,740 --> 00:01:52,740
+AI attacker can't get to yet. So as long
+as it can get to stuff that they can't,
+
+21
+00:01:52,880 --> 00:01:57,440
+then it can build a higher fidelity
+surveillance model than the AI can. And so
+
+22
+00:01:57,440 --> 00:02:03,640
+the AI can't deep fake me. Like, does the
+AI know my weight? Right? Well, it knows
+
+23
+00:02:03,640 --> 00:02:07,460
+my image because my image is everywhere.
+Right? But does it know my weight? Well,
+
+24
+00:02:07,580 --> 00:02:13,460
+if I have a monitor in my bathroom scale
+that's measuring my weight every day and
+
+25
+00:02:13,460 --> 00:02:23,420
+that monitor is air-gapped, then I could
+build a model of me that had my weight
+
+26
+00:02:23,420 --> 00:02:29,320
+data that the AI can't fake. Right? So, I
+have to securely present that data and
+
+27
+00:02:29,320 --> 00:02:32,740
+then they go, oh, okay, well, you know,
+that's within the range of what we've been
+
+28
+00:02:32,740 --> 00:02:36,380
+measuring over the last year for your
+weight. So we'll trust you. That's the
+
+29
+00:02:36,380 --> 00:02:41,580
+example of what you have to do to make
+continuous identity work is that you have
+
+30
+00:02:41,580 --> 00:02:47,160
+to be able to surveil stuff that the
+attacker AI can't surveil, at least for
+
+31
+00:02:47,160 --> 00:02:53,940
+now. And then you can build a better
+persona than your wallet or whatever it is
+
+32
+00:02:53,940 --> 00:02:58,000
+that you're authenticating against or
+whatever host that you've allowed to
+
+33
+00:02:58,000 --> 00:03:03,080
+surveil you presents on your behalf,
+right? So does this scare anybody? Is
+
+34
+00:03:03,080 --> 00:03:06,900
+anybody worried about this? Okay. All
+right. So another term they use, which is
+
+35
+00:03:06,900 --> 00:03:10,340
+a little friendlier term, behavioral
+biometrics. It's just another type of
+
+36
+00:03:10,340 --> 00:03:14,480
+biometric. It means we know everything
+about you and that is your biometric,
+
+37
+00:03:14,680 --> 00:03:19,000
+right? It's a behavioral biometric because
+it has nothing to do with your DNA or your
+
+38
+00:03:19,000 --> 00:03:22,360
+skin or your fingerprints. It has to do
+with everything else about you besides
+
+39
+00:03:22,360 --> 00:03:30,060
+those, right? Another friendlier term,
+participatory identity. You participate in
+
+40
+00:03:30,060 --> 00:03:35,560
+your identity by letting your identity
+provider know everything about you. Isn't
+
+41
+00:03:35,560 --> 00:03:39,600
+that fun? Persona-based authentication,
+right? That's the more technical term.
+
+42
+00:03:41,100 --> 00:03:46,500
+It's essentially authentication via
+statistical correlation. You basically use
+
+43
+00:03:46,500 --> 00:03:51,020
+all of data science to statistical
+correlate more about you than the attacker
+
+44
+00:03:51,020 --> 00:03:55,100
+can correlate, right? If you think about
+what authentication factors are. Things
+
+45
+00:03:55,100 --> 00:04:00,960
+you know, things you have, things you are,
+right? They're just data points that you
+
+46
+00:04:00,960 --> 00:04:06,140
+can present that the attacker can't
+present, right? But since all of the
+
+47
+00:04:06,140 --> 00:04:11,120
+standard authenticators have been very
+easily hacked recently, right? Then it's
+
+48
+00:04:11,120 --> 00:04:16,120
+like, well, how do we make authenticators
+that are harder to hack? And if you're a
+
+49
+00:04:16,120 --> 00:04:23,100
+company that lives on correlation, what
+your natural thing is, well, wait, if we
+
+50
+00:04:23,100 --> 00:04:26,600
+could just surveil everything about you,
+we can build a really high fidelity
+
+51
+00:04:26,600 --> 00:04:31,960
+persona that the attackers don't know as
+much as. And guess what? You can't do
+
+52
+00:04:31,960 --> 00:04:36,840
+anything or go anywhere unless you share
+everything about you with us because the
+
+53
+00:04:36,840 --> 00:04:41,360
+way you authenticate is to ask us to
+present this persona that we've generated
+
+54
+00:04:41,360 --> 00:04:46,080
+from surveilling you. Does that feel like
+something you, a world you'd like to live
+
+55
+00:04:46,080 --> 00:04:51,240
+in? Yes, we know. But you understand that
+that is the world we're in right now. You
+
+56
+00:04:51,240 --> 00:04:55,820
+go look online and you security companies
+look at the biggest billion dollar
+
+57
+00:04:55,820 --> 00:04:59,920
+security companies and guess what their
+new products are? Continuous identity,
+
+58
+00:05:00,560 --> 00:05:04,520
+behavioral biometrics. That's what they're
+selling. Everybody you want to go to this
+
+59
+00:05:04,520 --> 00:05:09,940
+is well, you know what? The AI can can
+fish everything. They can attack
+
+60
+00:05:09,940 --> 00:05:15,060
+everything. So what we need to do is have
+a counter AI that fights against it. And
+
+61
+00:05:15,060 --> 00:05:21,460
+what does the counter AI use? Well, what
+do AI's use? Correlation, right? That's
+
+62
+00:05:21,460 --> 00:05:26,800
+how they work. An LLM is just a
+correlation machine. So you build a model
+
+63
+00:05:26,800 --> 00:05:30,860
+that correlates you better than the deep
+fake can correlate you. That's all it is.
+
+64
+00:05:31,260 --> 00:05:36,420
+And so guess what that turns into? The
+more pervasive surveillance, the higher
+
+65
+00:05:36,420 --> 00:05:40,160
+the fidelity of the model, the more likely
+it will distinguish a real person from a
+
+66
+00:05:40,160 --> 00:05:45,500
+fake. But that just means you've created
+an arms race of surveillance. You've
+
+67
+00:05:45,500 --> 00:05:49,520
+basically given yourself a way to just
+being surveilled to guess what's going to
+
+68
+00:05:49,520 --> 00:05:54,300
+happen. You know, you're going to start
+having monitors in your body monitoring
+
+69
+00:05:54,300 --> 00:05:59,520
+things that are essentially you know
+somebody in North Korea can't monitor
+
+70
+00:05:59,520 --> 00:06:05,060
+because they have to they attack but in
+order for it to be useful you have to un
+
+71
+00:06:05,060 --> 00:06:09,800
+-air gap your body right in order that the
+AI that is creating your model so you're
+
+72
+00:06:09,800 --> 00:06:15,260
+actually weakening your ability to protect
+yourself because you're un-air gapping
+
+73
+00:06:15,260 --> 00:06:20,460
+everything about you right and so it just
+becomes an arms race the more they know
+
+74
+00:06:20,460 --> 00:06:27,080
+the more you need the Your AI needs to
+know. And guess what? Any breach of your
+
+75
+00:06:27,080 --> 00:06:33,700
+AI immediate makes the attacking AI that
+much smarter. So guess what? You have to
+
+76
+00:06:33,700 --> 00:06:40,240
+be even more pervasive in order to have a
+delta. So it never ends. You just become
+
+77
+00:06:40,240 --> 00:06:46,400
+perfectly surveilled. And once you're
+perfectly surveilled, there's nothing
+
+78
+00:06:46,400 --> 00:06:54,240
+left. And then nobody has any security. So
+the end state is zero security. The end
+
+79
+00:06:54,240 --> 00:06:57,620
+state, but somebody will make billions of
+dollars or trillions of dollars in the
+
+80
+00:06:57,620 --> 00:07:03,640
+process. So… – I thought there were just
+more and more turtles. – No, no. At the
+
+81
+00:07:03,640 --> 00:07:04,800
+bottom, there's an egg.
+
+82
+00:07:07,600 --> 00:07:12,760
+There's an egg and once that egg's
+cracked, no more turtles. All right. So
+
+83
+00:07:12,760 --> 00:07:18,480
+the solution cannot, must not be more
+surveillance, but that's what the world is
+
+84
+00:07:18,480 --> 00:07:25,660
+telling us. The only answer to AI cyber
+attack is more is AI defender and it's an
+
+85
+00:07:25,660 --> 00:07:31,140
+arms race of surveillance because they're
+just surveilling yourself. So here's the
+
+86
+00:07:31,140 --> 00:07:37,120
+here's some facts that we can use to fight
+back. Strong crypto is not vulnerable to
+
+87
+00:07:37,120 --> 00:07:41,220
+brute force attack. It is computationally
+infeasible. It doesn't matter how big the
+
+88
+00:07:41,220 --> 00:07:46,160
+AI is. It doesn't matter how many servers
+there is. Strong crypto is designed so
+
+89
+00:07:46,160 --> 00:07:51,300
+that a trillion servers operating for a
+trillion years can't break it. Does that
+
+90
+00:07:51,300 --> 00:07:55,300
+make sense? So it is that's what
+computational feasible means and AI
+
+91
+00:07:55,300 --> 00:08:02,020
+doesn't have any advantage in that world.
+All of the atoms in the solar system would
+
+92
+00:08:02,020 --> 00:08:08,140
+have to be computing machines before you'd
+start to reach that level of 120 bits of
+
+93
+00:08:08,140 --> 00:08:16,180
+cryptographic strength. So how does AI
+work when it attacks? It's not brute
+
+94
+00:08:16,180 --> 00:08:20,300
+forcing any of the crypto. That's not none
+of those attacks are brute the crypto.
+
+95
+00:08:20,680 --> 00:08:25,260
+Every once in a while somebody will
+publish a thing that says, oh, AI cyber
+
+96
+00:08:25,260 --> 00:08:29,920
+defeated some crypto algorithm. And then
+you go read the fine print and no, no, it
+
+97
+00:08:29,920 --> 00:08:33,080
+was a side channel attack. They didn't
+actually brute force anything. They didn't
+
+98
+00:08:33,080 --> 00:08:37,740
+invent a new attack. They just figured out
+a better side channel attack. Right? What
+
+99
+00:08:37,740 --> 00:08:41,900
+is a side channel attack? Does somebody
+everybody familiar with the term? Do I
+
+100
+00:08:41,900 --> 00:08:46,120
+need to find that? It's any other attack
+besides brute force essentially. So
+
+101
+00:08:46,120 --> 00:08:50,100
+phishing is a side channel attack. If they
+phish your secret, it, that's a side
+
+102
+00:08:50,100 --> 00:08:57,980
+channel attack. If there's a bug in the
+software running on your phone that allows
+
+103
+00:08:57,980 --> 00:09:01,100
+them to get access to your private key,
+that's a side channel attack. They didn't
+
+104
+00:09:01,100 --> 00:09:05,280
+brute force the public key to get to the
+private key. They just found the private
+
+105
+00:09:05,280 --> 00:09:09,640
+key because you had bad software. – The
+policy engine emits its own credentials. –
+
+106
+00:09:09,640 --> 00:09:17,800
+Yes, something like that, right? Or an IT
+person walks out of the building with the
+
+107
+00:09:17,800 --> 00:09:22,140
+secrets and you know, shares on the
+internet, right? Those are side channel
+
+108
+00:09:22,140 --> 00:09:28,580
+attacks. Or for example, there was a
+recent crypto wallet that had multisig. By
+
+109
+00:09:28,580 --> 00:09:34,940
+the way, multisig has never been
+successfully attacked other than through
+
+110
+00:09:34,940 --> 00:09:40,380
+code supply chain attacks or bugs in the
+wallet. So if you eliminate wallets that
+
+111
+00:09:40,380 --> 00:09:47,840
+have bad bugs, attacks that can
+successfully do like a three of five where
+
+112
+00:09:47,840 --> 00:09:52,240
+they have to get compromised three keys,
+you know, or even a two of three. They
+
+113
+00:09:52,240 --> 00:09:55,880
+don't, there are no published examples
+where they're successful to do that other
+
+114
+00:09:55,880 --> 00:10:01,020
+than a code supply chain attack. So a
+recent crypto wallet and exchange had a
+
+115
+00:10:01,020 --> 00:10:06,140
+successful attack and here's the attack.
+The three people that had the keys, it was
+
+116
+00:10:06,140 --> 00:10:11,640
+a two of three, right? Got an email that
+said, Hey, there's a bug in your wallet.
+
+117
+00:10:12,060 --> 00:10:16,840
+Click on this link and upgrade your wallet
+to the new one that fixes the bug. All
+
+118
+00:10:16,840 --> 00:10:21,840
+three of them clicked on the link. And
+what did the link do? It downloaded a
+
+119
+00:10:21,840 --> 00:10:30,140
+wallet that exposed their private keys.
+Okay. So it wasn't an attack on the
+
+120
+00:10:30,140 --> 00:10:34,700
+strength of the crypto or a strength on
+the multisig. It was an attack on the
+
+121
+00:10:34,700 --> 00:10:40,420
+strength of the gray matter between the
+ears of the holders of the keys. Right?
+
+122
+00:10:40,960 --> 00:10:44,500
+That's a side channel attack. So if it
+comes in here and comes out here, it's a
+
+123
+00:10:44,500 --> 00:10:51,400
+side channel attack. Right? All right.
+Okay. So what's the solution? Well, if I
+
+124
+00:10:51,400 --> 00:10:56,700
+have key management that detects and can
+recover from successful site channel
+
+125
+00:10:56,700 --> 00:11:03,420
+sites, because guess what? People will be
+tricked. You can trick people. You can
+
+126
+00:11:03,420 --> 00:11:09,140
+cause them to do things, right? Even
+experts in moments of weakness, in moments
+
+127
+00:11:09,140 --> 00:11:17,280
+of stress can be tricked into doing bad
+stuff. I can count probably half a dozen
+
+128
+00:11:17,280 --> 00:11:24,480
+times we're in a moment of stress or worry
+or hurry or something like that, that I've
+
+129
+00:11:24,480 --> 00:11:30,400
+accidentally clicked on a link without
+thinking about it and almost compromised
+
+130
+00:11:30,400 --> 00:11:35,420
+did something. And then I go, wait a
+minute, that's not right, right? And
+
+131
+00:11:35,420 --> 00:11:39,100
+caught myself. And there's been a couple
+of times where I've lost like a couple
+
+132
+00:11:39,100 --> 00:11:44,980
+hundred bucks or something because I did
+something stupid, right? It's not hard to
+
+133
+00:11:44,980 --> 00:11:53,020
+trick people into being attackable with
+side channel attacks. So if you want to
+
+134
+00:11:53,020 --> 00:11:58,640
+actually protect it from AIs, you have to
+allow the fact that the AI is going to be
+
+135
+00:11:58,640 --> 00:12:04,080
+successful in side channel attacks. What
+you want to be able to do is detect those
+
+136
+00:12:04,080 --> 00:12:08,880
+and be able to recover from them to limit
+the damage or limit the blast radius or
+
+137
+00:12:08,880 --> 00:12:15,000
+limit the extent of the attack so that the
+damage is minimal minimized, right? Right?
+
+138
+00:12:16,440 --> 00:12:25,360
+Well, if I have multiple complementary
+threshold structures that have combined
+
+139
+00:12:25,360 --> 00:12:30,880
+with the detection and recovery from side
+-channel attack, then I can make a system
+
+140
+00:12:30,880 --> 00:12:36,460
+that is practically unassailable from AI
+cyber. That's a very strong claim, but I
+
+141
+00:12:36,460 --> 00:12:41,800
+will back it up. Right? So there is an
+answer and it's not continuous
+
+142
+00:12:41,800 --> 00:12:47,620
+surveillance. It is just key management.
+If we do key management well, AI cyber
+
+143
+00:12:47,620 --> 00:12:53,420
+can't attack us, can't attack you, can't
+attack anybody. There is a solution and it
+
+144
+00:12:53,420 --> 00:12:58,240
+isn't spending more money on correlation
+machines and super aggregators who want
+
+145
+00:12:58,240 --> 00:13:02,640
+your money and your services and all of
+your data. And they will say, well, give
+
+146
+00:13:02,640 --> 00:13:06,860
+me all your data and then you will be
+secure. But I'll know everything about you
+
+147
+00:13:06,860 --> 00:13:14,740
+and I will sell you to the highest bidder.
+So what does that look like? Wait, wait.
+
+148
+00:13:16,180 --> 00:13:22,100
+Oh, that's just sorry. I forgot to delete
+that slide. That's a duplicate slide.
+
+149
+00:13:22,400 --> 00:13:27,400
+Okay. Threshold structure. Okay. What is a
+threshold structure? I use that term. A
+
+150
+00:13:27,400 --> 00:13:31,300
+threshold structure multiplies the number
+of attack surfaces that must be
+
+151
+00:13:31,300 --> 00:13:35,420
+simultaneously compromised for a
+successful attack. So if you think about
+
+152
+00:13:35,420 --> 00:13:40,060
+normal armor, right? It doesn't have
+threshold structures. It has a helmet. If
+
+153
+00:13:40,060 --> 00:13:44,260
+I breach the helmet, you're dead. It has a
+breastplate. If I breach the breastplate,
+
+154
+00:13:44,440 --> 00:13:48,580
+you're dead. Okay? That's not a threshold
+structure. A threshold structure would be
+
+155
+00:13:48,580 --> 00:13:53,540
+a shield and a breastplate. I have to
+pierce if the arrow comes through the
+
+156
+00:13:53,540 --> 00:13:57,400
+shield, it has to pierce the shield and
+pierce the breastplate at the same time.
+
+157
+00:13:57,700 --> 00:14:01,760
+If it's over here and the arrow comes in
+that direction, it goes through the
+
+158
+00:14:01,760 --> 00:14:05,840
+shield, I'm not going to do this, right?
+I'm going to go, oh, wait, there's an
+
+159
+00:14:05,840 --> 00:14:10,120
+arrow in my shield. I guess I need to
+break it off before I use it, put the
+
+160
+00:14:10,120 --> 00:14:14,200
+shield in front of my breastplate. You see
+the difference? In other words, the arrow
+
+161
+00:14:14,200 --> 00:14:20,980
+has to go through two in order to kill me.
+It can't just go through one. Right? So an
+
+162
+00:14:20,980 --> 00:14:26,880
+example of threshold structures. Okay,
+I'll get to examples. A fault-tolerant
+
+163
+00:14:26,880 --> 00:14:31,260
+system. So when I use the term fault
+-tolerant, detects and recovers from a
+
+164
+00:14:31,260 --> 00:14:36,440
+partially successful attack, therefore
+reverting the attack progress. So let's
+
+165
+00:14:36,440 --> 00:14:41,180
+say that they shoot an arrow at me. It
+goes through my shield. Right? But my
+
+166
+00:14:41,180 --> 00:14:45,560
+shield is out here. So I got this arrow
+sticking out of my shield, right? It
+
+167
+00:14:45,560 --> 00:14:48,040
+didn't happen to go through my arm. That
+would have been bad, right? But it went
+
+168
+00:14:48,040 --> 00:14:52,160
+through the shield. If I break the arrow
+off, pull it out of my shield, I reverted
+
+169
+00:14:52,160 --> 00:14:56,820
+the attack progress. The only thing now is
+I have a hole in my shield. So if they can
+
+170
+00:14:56,820 --> 00:15:00,580
+put an arrow through the same hole, then I
+got a problem because it'll probably come
+
+171
+00:15:00,580 --> 00:15:04,460
+right through and hit me, right? But
+otherwise, they have to start the attack
+
+172
+00:15:04,460 --> 00:15:08,060
+over again, right? Because they have to go
+through both the shield and my breastplate
+
+173
+00:15:08,060 --> 00:15:12,660
+to kill me. And so as long as I can
+nullify the first attack before the second
+
+174
+00:15:12,660 --> 00:15:17,380
+attack is successful, then they have to
+start over, right? That's the whole idea
+
+175
+00:15:17,380 --> 00:15:22,960
+is that you reset their effort to attack.
+So it's like, okay, we got 90% of the way,
+
+176
+00:15:23,200 --> 00:15:28,660
+but we failed. Now we have to start from
+zero and go all the way again every time
+
+177
+00:15:28,660 --> 00:15:34,240
+that it's detected and recovered from. So
+what you have with a fault-tolerant system
+
+178
+00:15:34,240 --> 00:15:40,280
+is potentially a perpetually secure
+system. It's never breached ever because
+
+179
+00:15:40,280 --> 00:15:46,440
+the cost of a breach breach is too high
+for them ever to fully succeed in a
+
+180
+00:15:46,440 --> 00:15:50,160
+breach. And that's the only type of
+security system that is going to be AI
+
+181
+00:15:50,160 --> 00:15:53,580
+resilient. It has to be perpetually
+secure. That means it has to be fault
+
+182
+00:15:53,580 --> 00:15:57,720
+tolerant. In general, security systems are
+not fault tolerant. They don't detect and
+
+183
+00:15:57,720 --> 00:16:02,420
+recover from attacks. They don't even
+detect attacks. Usually the attacker says,
+
+184
+00:16:02,540 --> 00:16:06,240
+Hey, by the way, six months ago, we
+breached your system. We exfiltrated all
+
+185
+00:16:06,240 --> 00:16:10,180
+your data. We've now gotten all the value
+out of it. We just wanted to let the world
+
+186
+00:16:10,180 --> 00:16:15,600
+know that we breached you so that we can
+get higher ransom next time because our
+
+187
+00:16:15,600 --> 00:16:18,880
+reputation goes up. That's how most
+breaches are discovered. They're not
+
+188
+00:16:18,880 --> 00:16:21,360
+discovered by the people that are
+breached. They're discovered because the
+
+189
+00:16:21,360 --> 00:16:25,460
+people breaching them tell them that they
+were breached. The average time to detect
+
+190
+00:16:25,460 --> 00:16:32,560
+a breach is six months. The average time
+to contain a breach is two months or three
+
+191
+00:16:32,560 --> 00:16:37,060
+months. So you have nine months of time
+where the attacker can benefit from the
+
+192
+00:16:37,060 --> 00:16:41,800
+breach. That's not a good thing to have.
+And that's why people can legitimately
+
+193
+00:16:41,800 --> 00:16:47,680
+say, well, the only solution is continuous
+identity because we have to do something
+
+194
+00:16:47,680 --> 00:16:53,660
+about that. So an allowable fault is a
+side channel attack on signing keys. In
+
+195
+00:16:53,660 --> 00:16:59,500
+KERI, we say side channel attacks on
+signing keys are allowable. Our system is
+
+196
+00:16:59,500 --> 00:17:06,100
+fault tolerant to those faults. We can
+detect and recover those faults. Loss of
+
+197
+00:17:06,100 --> 00:17:10,400
+control over the identifier is the system
+failure which is not allowed. If they gain
+
+198
+00:17:10,400 --> 00:17:16,700
+control, of your identifier, then we call
+that a failure. You have to start over. So
+
+199
+00:17:16,700 --> 00:17:19,600
+we want to make that really, really hard.
+
+200
+00:17:22,200 --> 00:17:28,360
+And if we can do that, then we can
+minimize the damage. So how do we do that?
+
+201
+00:17:28,460 --> 00:17:31,900
+We do that with threshold structures. So
+what are the threshold structures? Well,
+
+202
+00:17:31,980 --> 00:17:36,620
+we talk about this a lot. Signing keys and
+pre-rotated rotation keys. That is a
+
+203
+00:17:36,620 --> 00:17:40,980
+threshold structure. It's like the shield,
+my signing keys, my breastplate, my
+
+204
+00:17:40,980 --> 00:17:45,520
+rotation keys. They don't get control of
+me. They don't kill me until they breach
+
+205
+00:17:45,520 --> 00:17:50,400
+both of them at the same time. They breach
+my signing keys. Great. I can throw the
+
+206
+00:17:50,400 --> 00:17:54,080
+shield away, get a new shield. Throw the
+shield away, get a new shield. Every time
+
+207
+00:17:54,080 --> 00:17:58,600
+they have to start over, right? They never
+get to the breastplate. So why won't they
+
+208
+00:17:58,600 --> 00:18:07,020
+just attack the breastplate? Well, I can
+protect my rotation keys much better
+
+209
+00:18:07,020 --> 00:18:12,520
+because I don't care about friction,
+right? If I'm signing stuff all the time,
+
+210
+00:18:12,820 --> 00:18:17,640
+friction matters. It's not usable to the
+user if it's too hard to sign. If I said
+
+211
+00:18:17,640 --> 00:18:23,260
+to you in order for you to sign to log in
+to your account at your bank, you have to
+
+212
+00:18:23,260 --> 00:18:33,640
+go to the bank, go to a safe deposit box,
+pull out your safe deposit box. Inside
+
+213
+00:18:33,640 --> 00:18:42,820
+your safe deposit box is a sub-safe with
+some keys on it. it, take that home, open
+
+214
+00:18:42,820 --> 00:18:48,680
+it up, find your login and then log in to
+get to your bank. Okay. That's too much
+
+215
+00:18:48,680 --> 00:18:53,960
+friction. But it would be a hard for an
+attacker to attack that. Well, yeah,
+
+216
+00:18:54,100 --> 00:18:59,040
+because one it's air-gapped. Two, they
+have to be physically present. They have
+
+217
+00:18:59,040 --> 00:19:02,800
+to impersonate you physically. They have
+to go to your bank. They have to be able
+
+218
+00:19:02,800 --> 00:19:08,200
+to get into your safe deposit box all
+before they can log in. So is that really,
+
+219
+00:19:08,240 --> 00:19:13,060
+really, really, really secure for almost
+all the attacks on your identity? Well,
+
+220
+00:19:13,160 --> 00:19:17,700
+unless you're a really, really high value
+individual, that's probably more friction
+
+221
+00:19:17,700 --> 00:19:22,100
+than any attacker ever wants to execute.
+Right? Some attacker in North Korea or
+
+222
+00:19:22,100 --> 00:19:27,540
+China is not going to come to your bank.
+Right? Unless you're worth a lot of money
+
+223
+00:19:27,540 --> 00:19:29,960
+and then they won't come to your bank,
+they'll hire somebody to come to your
+
+224
+00:19:29,960 --> 00:19:33,620
+bank. Right? But it still requires
+somebody to come to your bank. And that
+
+225
+00:19:33,620 --> 00:19:37,460
+means that somebody, when they
+fraudulently impersonate, you could get
+
+226
+00:19:37,460 --> 00:19:42,940
+arrested and go to prison. Right? So the
+cost the attacker is potentially to be
+
+227
+00:19:42,940 --> 00:19:49,680
+imprisoned. How many hackers want to be in
+prison? Why are most hackers in foreign
+
+228
+00:19:49,680 --> 00:19:54,600
+countries on the internet? Because they're
+not liable to be imprisoned because
+
+229
+00:19:54,600 --> 00:19:58,540
+they're not in the jurisdiction of the
+place where they're attacking. So I can
+
+230
+00:19:58,540 --> 00:20:05,960
+make the pre-rotated keys as secure as I
+need to because the friction of recovery
+
+231
+00:20:05,960 --> 00:20:11,840
+only occurs if they're a successful side
+channel attack. So there's a differential
+
+232
+00:20:11,840 --> 00:20:18,480
+that allows me to make it so the overall
+security is really, really, really secure
+
+233
+00:20:18,480 --> 00:20:23,160
+and still have low enough friction that
+it's practical to use the system. Okay,
+
+234
+00:20:23,600 --> 00:20:27,400
+multisig signing keys. I already mentioned
+the multisig is really hard to do. Well, I
+
+235
+00:20:27,400 --> 00:20:33,120
+can have two of three. Now they can they
+can phish one set of keys, but they got to
+
+236
+00:20:33,120 --> 00:20:39,400
+phish another set in order to get to me.
+And if they try to use the one set, Well,
+
+237
+00:20:39,860 --> 00:20:44,680
+if my system's designed right, it might be
+detectable that they're trying to use one.
+
+238
+00:20:44,720 --> 00:20:50,960
+I know that one set of keys has been
+compromised. I can do multi-sig for my
+
+239
+00:20:50,960 --> 00:20:55,820
+rotation keys. So I can have single-sig
+signing keys for low friction, but I can
+
+240
+00:20:55,820 --> 00:21:00,740
+have multi-sig rotation keys when I need
+to recover. So now they can say, well,
+
+241
+00:21:00,820 --> 00:21:06,080
+yeah, okay, we know that you have a
+rotation key here. Oh, but you have two or
+
+242
+00:21:06,080 --> 00:21:09,680
+three rotation keys and the other rotation
+keys over there. So now we got to attack
+
+243
+00:21:09,680 --> 00:21:16,880
+two different places. The return on our
+investment is good enough there. Delegated
+
+244
+00:21:16,880 --> 00:21:20,680
+AIDs. A lot of people don't understand
+that. A delegated AID is a threshold
+
+245
+00:21:20,680 --> 00:21:27,140
+structure. If I have a three-layer
+hierarchy, each layer is a threshold
+
+246
+00:21:27,140 --> 00:21:31,440
+structure for the lower layer because I
+can compromise the lower layer, but if
+
+247
+00:21:31,440 --> 00:21:35,980
+they don't compromise the layer above, the
+layer above can recover the layer below.
+
+248
+00:21:36,820 --> 00:21:42,500
+And if I compromise two layers, the top
+layer can recover both layers below. So
+
+249
+00:21:42,500 --> 00:21:47,120
+they have to compromise all three layers
+at the same time. If they only compromise
+
+250
+00:21:47,120 --> 00:21:52,060
+one layer, it's detectable recoverable.
+They have to start over every time. Now,
+
+251
+00:21:52,120 --> 00:21:54,840
+if you're an attacker and you go, okay,
+I'm going to spend all this time and
+
+252
+00:21:54,840 --> 00:22:00,420
+efforts. I'm going to compromise one key.
+And then as soon as I try to benefit from
+
+253
+00:22:00,420 --> 00:22:04,340
+that compromise, it becomes detectable.
+And then they're going to rotate me away.
+
+254
+00:22:04,500 --> 00:22:10,420
+They're like, crap, I've got like
+literally a day at most, not nine months,
+
+255
+00:22:10,560 --> 00:22:14,820
+a day, maybe an hour where I compromise a
+key I can do something with. And as soon
+
+256
+00:22:14,820 --> 00:22:19,760
+as I do anything with it, they're going to
+detect it like the minute, the second I do
+
+257
+00:22:19,760 --> 00:22:23,740
+something with it, like seconds, network
+propagation time, they'll detect it. And
+
+258
+00:22:23,740 --> 00:22:27,980
+then it's however long it takes for them
+to figure out to recover from it. So then
+
+259
+00:22:27,980 --> 00:22:31,460
+they're looking at, well, wow, you know,
+we can't, you know, it's like the
+
+260
+00:22:31,460 --> 00:22:36,200
+attackers that compromise Google in 2025.
+You guys all know this, right? That every
+
+261
+00:22:36,200 --> 00:22:41,600
+Google email account at Google was
+compromised in 2025. All five billion of
+
+262
+00:22:41,600 --> 00:22:47,420
+them. So everybody that has a name, an
+address, a phone number, and any other
+
+263
+00:22:47,420 --> 00:22:53,600
+data, they didn't compromise your
+password, but they compromised the account
+
+264
+00:22:53,600 --> 00:22:59,740
+data. So now they know who you are. They
+know whatever information else that Google
+
+265
+00:22:59,740 --> 00:23:04,760
+has. And so they can try to phish you, try
+to impersonate you, whatever. But all five
+
+266
+00:23:04,760 --> 00:23:08,800
+billion of those were compromised and they
+had several months to do it and Google
+
+267
+00:23:08,800 --> 00:23:13,240
+didn't know that it was happening and then
+it got detected after all the data had
+
+268
+00:23:13,240 --> 00:23:18,500
+been exfiltrated. Okay, so that's the
+problem that AIs make all of those attacks
+
+269
+00:23:18,500 --> 00:23:23,760
+cheap, but they don't make attacks that
+are threshold structures where you
+
+270
+00:23:23,760 --> 00:23:26,540
+differentially protect things that are
+hard for them to get to. They don't make
+
+271
+00:23:26,540 --> 00:23:34,980
+those cheap. Witness pools. If I have a
+witness pool that say a three or four in
+
+272
+00:23:34,980 --> 00:23:42,860
+order for an event to get witnessed, I
+have to compromise three witness keys. So
+
+273
+00:23:42,860 --> 00:23:51,100
+that's a threshold structure. So what's
+the final one? The watcher network, right?
+
+274
+00:23:51,360 --> 00:23:57,380
+In order to not be detected, but
+duplicity, they have to compromise every
+
+275
+00:23:57,380 --> 00:24:02,040
+possible watcher that a verifier would
+talk to. And they don't know which
+
+276
+00:24:02,040 --> 00:24:06,120
+watchers verifiers are using. So it's a
+really hard compromise. But let's look,
+
+277
+00:24:06,320 --> 00:24:11,200
+let's say that I have a two of three
+signing key, a two of three rotation key.
+
+278
+00:24:11,660 --> 00:24:19,900
+I'm using a two layer delegation and a
+three of four witness pool. How many
+
+279
+00:24:19,900 --> 00:24:27,200
+simultaneous side channel attacks do they
+have to execute to be able to compromise
+
+280
+00:24:27,200 --> 00:24:35,560
+me? Huh? Like 10? Do you know how often
+anybody's ever been able to simultaneously
+
+281
+00:24:35,560 --> 00:24:42,460
+compromise 10 keys? Ever? In the history
+of the world? I don't know of any. It's
+
+282
+00:24:42,460 --> 00:24:47,780
+really hard to do. Compromising private
+keys is really hard to do, but it's not
+
+283
+00:24:47,780 --> 00:24:53,720
+impossible. And we just made it
+practically infeasible by nesting
+
+284
+00:24:53,720 --> 00:24:58,220
+threshold structures, which means you
+actually can have security without
+
+285
+00:24:58,220 --> 00:25:04,180
+continuous surveillance if you use KERI.
+And so, perpetually secure. KERI allows…
+
+286
+00:25:04,180 --> 00:25:08,780
+So, we've talked about perpetual identity,
+perpetual verifiability. You get perpetual
+
+287
+00:25:08,780 --> 00:25:14,360
+security because you can control your
+identifier even against cyber AI. So, give
+
+288
+00:25:14,360 --> 00:25:22,180
+an example from SEDI. This is a draft
+proposed example for what the SEDI
+
+289
+00:25:22,180 --> 00:25:28,520
+identity structure looks like for the
+state of Utah. So, what we have here is
+
+290
+00:25:28,520 --> 00:25:34,200
+the state of Utah has a root ID. It issues
+an organizational unit delegation
+
+291
+00:25:34,200 --> 00:25:40,200
+credential that delegates a unit AID that
+issues an issuing agent delegation
+
+292
+00:25:40,200 --> 00:25:45,660
+credential which delegates an agent AID.
+This is the issuing agent that issues SEDI
+
+293
+00:25:45,660 --> 00:25:54,140
+credentials. So it's in some ways similar
+to GLEIS. Yeah. So this would be the this
+
+294
+00:25:54,140 --> 00:26:00,740
+would be the QVI. Yeah. So the agent would
+be the person the the so this so
+
+295
+00:26:00,740 --> 00:26:09,560
+organization's unit would be like driver's
+license division or the health and human
+
+296
+00:26:09,560 --> 00:26:14,260
+services, whoever it is, right? Issuing
+agent could be an employee in the driver's
+
+297
+00:26:14,260 --> 00:26:21,280
+license division. It could be an identity
+proofer like id.me or whoever they want to
+
+298
+00:26:21,280 --> 00:26:27,680
+proxy that role out to. And they have an
+agent AID. So they're going to issue a
+
+299
+00:26:27,680 --> 00:26:33,960
+core identity credential to a citizen AID.
+Now the citizen person creates that AID.
+
+300
+00:26:34,260 --> 00:26:39,560
+The state doesn't. If they don't want any
+of these, they just don't go to the state
+
+301
+00:26:39,560 --> 00:26:44,560
+and say, give me these credentials. They
+just use paper. Okay. One of the things
+
+302
+00:26:44,560 --> 00:26:49,700
+that people don't understand is that if
+you don't allow people to opt out of
+
+303
+00:26:49,700 --> 00:26:56,240
+digital identity, then there will be whole
+swaths of the electorate that will go out
+
+304
+00:26:56,240 --> 00:27:00,000
+of their way to make sure your bill
+doesn't get passed. So one of the things
+
+305
+00:27:00,000 --> 00:27:05,240
+that make it so that SEDI was passed
+unanimously to everybody that said, no,
+
+306
+00:27:05,320 --> 00:27:10,380
+no, no. You create this identifier. We
+don't create it for you. If you don't
+
+307
+00:27:10,380 --> 00:27:16,860
+create it, there's you have there is no
+digital ID for you. You have to use paper.
+
+308
+00:27:17,100 --> 00:27:22,140
+If you decide not to create it, there is
+no there is no identifier. There is no way
+
+309
+00:27:22,140 --> 00:27:28,440
+for the state to issue you digital stuff.
+You just go paper, right? And they go, oh,
+
+310
+00:27:28,460 --> 00:27:33,460
+okay. Well, I guess that I guess we can't
+complain now, right? And so like, really?
+
+311
+00:27:34,200 --> 00:27:39,180
+Is that's it? That's it? There isn't some
+subterfuge that you're doing that you
+
+312
+00:27:39,180 --> 00:27:46,140
+didn't? No, no. It's state endorsed
+digital identity, citizen sourced, right?
+
+313
+00:27:46,340 --> 00:27:49,960
+Citizen creates the identity. The state
+just says, I'm going to apply reputation
+
+314
+00:27:49,960 --> 00:27:55,760
+to it, right? So, this core identity is
+issued to the citizen AID. And then we
+
+315
+00:27:55,760 --> 00:27:59,680
+have three other credentials. We have a
+proof of residence, we have a proof of
+
+316
+00:27:59,680 --> 00:28:05,560
+age, and we have a high resolution image
+because in some cases your biometric, the
+
+317
+00:28:05,560 --> 00:28:10,480
+biometric using the core identity is a
+facial image and that's because state law
+
+318
+00:28:10,480 --> 00:28:14,220
+requires it. And in some cases you need a
+high-res image. So that's the basic idea.
+
+319
+00:28:14,620 --> 00:28:21,400
+So to attack this system, they got to
+attack a two-layer delegation. The citizen
+
+320
+00:28:21,400 --> 00:28:25,560
+can decide how secure they want their own
+AID to be. Do they want single SIG
+
+321
+00:28:25,560 --> 00:28:30,100
+everywhere? For most people, that's
+probably secure enough because they at
+
+322
+00:28:30,100 --> 00:28:33,980
+least have one threshold structure. They
+have signing keys and rotation keys,
+
+323
+00:28:34,580 --> 00:28:38,660
+right? They all have to have witnesses. So
+they've got a second threshold structure.
+
+324
+00:28:38,880 --> 00:28:45,460
+So now they have to attack really hard to
+make it so you can't detect that your keys
+
+325
+00:28:45,460 --> 00:28:49,840
+have been compromised when you're using
+your credential. So that's a simple
+
+326
+00:28:49,840 --> 00:28:54,800
+structure that gives the citizen AID and
+then they can just add other entitlements.
+
+327
+00:28:54,920 --> 00:28:59,520
+We call these entitlements. These are the
+core ones and then you can throw in like
+
+328
+00:28:59,520 --> 00:29:06,000
+your like if you're on food stamps, you
+know, whatever, you want a driver's
+
+329
+00:29:06,000 --> 00:29:10,180
+license, you want a hunting license, you
+want a food handler's permit, all of those
+
+330
+00:29:10,180 --> 00:29:17,580
+things just become more things in this
+list of things that are issued, right? And
+
+331
+00:29:17,580 --> 00:29:28,140
+we're using edges. These green binds,
+those are edges in the ACDCs. And edges
+
+332
+00:29:28,140 --> 00:29:33,660
+are a normative feature of ACDCs. We spent
+years figuring out how to use edges
+
+333
+00:29:33,660 --> 00:29:38,440
+correctly. The edges make it so that the
+relationships are just as secure as
+
+334
+00:29:38,440 --> 00:29:44,440
+everything else. And so an attacker can't
+forge relationships. So that's another
+
+335
+00:29:44,440 --> 00:29:50,960
+threshold structure. If I have multiple
+edges that are cryptographically bound
+
+336
+00:29:50,960 --> 00:29:57,700
+together and each edge is anchored in a
+different KEL in order for an attacker to
+
+337
+00:29:57,700 --> 00:30:04,260
+recreate an edge structure they have to
+compromise multiple KELs. And if the state
+
+338
+00:30:04,260 --> 00:30:08,680
+of these ACDCs is in a registry that's
+anchored in KELs, then for them to
+
+339
+00:30:08,680 --> 00:30:13,880
+recreate this structure, they have to
+compromise multiple registries and
+
+340
+00:30:13,880 --> 00:30:18,960
+multiple KELs. Those are all threshold
+structures. So if I went back, I should
+
+341
+00:30:18,960 --> 00:30:26,340
+have added registries and edges as
+threshold structures, right? So how many
+
+342
+00:30:26,340 --> 00:30:31,440
+threshold structures do you have to break
+before you can break this identity. It's
+
+343
+00:30:31,440 --> 00:30:39,020
+now like 20 keys. I don't know. It's a big
+number. It's an unassailable big number
+
+344
+00:30:39,020 --> 00:30:44,060
+because the likelihood of compromising one
+private key is really, really low. And now
+
+345
+00:30:44,060 --> 00:30:49,440
+I've got to do it 20 times simultaneously,
+not 20 times in sequence, but
+
+346
+00:30:49,440 --> 00:30:52,780
+simultaneously. It's a different set of
+it. So as you're multiplying the
+
+347
+00:30:52,780 --> 00:30:58,420
+probability. So if I got 0.001 times 0.001
+to the 20th, how small a number is that?
+
+348
+00:30:58,480 --> 00:30:58,740
+Yes. Yes.
+
+349
+00:31:02,620 --> 00:31:08,080
+I'm probably missing something, but you
+said each edge has a different KEL. I
+
+350
+00:31:08,080 --> 00:31:12,340
+mean, I know that the citizen AID has a
+KEL, agent AID has a KEL, and all of those
+
+351
+00:31:12,340 --> 00:31:21,280
+edges are products of those two things,
+right? Yeah. So, but this ACDC, its edge,
+
+352
+00:31:21,580 --> 00:31:29,340
+this ACDC's identifier is a hash of the
+ACDC, which includes the edge, right? So
+
+353
+00:31:29,340 --> 00:31:34,880
+when you hash that identifier in order for
+you to fraudulently issue that credential
+
+354
+00:31:34,880 --> 00:31:42,980
+that has this edge, you have a registry
+that's anchored in the KEL that you have
+
+355
+00:31:42,980 --> 00:31:51,540
+to then you have to fraudulently change
+the registration that is bound to the set
+
+356
+00:31:51,540 --> 00:31:57,900
+of this ACDC in order for you to forge the
+ACDC. So you have to compromise the
+
+357
+00:31:57,900 --> 00:32:03,040
+registry. not just the ACDC. Okay. Got it.
+Does that make sense? Yeah. Now, if they
+
+358
+00:32:03,040 --> 00:32:06,900
+weren't registered ACDCs, then that
+wouldn't be true. But all of the ones in
+
+359
+00:32:06,900 --> 00:32:11,180
+this state one are all in registries and
+the registries are all anchored in KELs.
+
+360
+00:32:11,800 --> 00:32:17,120
+And all the edges are bound to the SEDs of
+the ACDC and that SED is anchored in a
+
+361
+00:32:17,120 --> 00:32:24,540
+registry which is bound to a KEL. So it's
+doubly bound. It's bound in the issuers,
+
+362
+00:32:25,160 --> 00:32:28,500
+you know, well, no, it's not doubly
+bounded. It's issued. It's turtles all the
+
+363
+00:32:28,500 --> 00:32:31,720
+way down. It's turtles all the way down.
+Yeah, in this case it truly is turtles all
+
+364
+00:32:31,720 --> 00:32:32,120
+the way down.
+
+365
+00:32:35,160 --> 00:32:40,900
+So now let's go to guardianship. So this
+is the guardianship thing. Now I know this
+
+366
+00:32:40,900 --> 00:32:44,600
+looks really complicated, but under the
+hood, it's no more complicated than
+
+367
+00:32:44,600 --> 00:32:49,520
+guardianship really is. Okay. So we have
+the same delegation chain, but now this
+
+368
+00:32:49,520 --> 00:32:55,040
+agent AID is issuing a guardianship
+delegation, right? So this is a
+
+369
+00:32:55,040 --> 00:32:59,860
+guardianship delegation, which is a
+citizen that designates the citizen ward
+
+370
+00:32:59,860 --> 00:33:06,080
+AID, but it's delegating to a citizen
+guardian AID the rights to be a guardian.
+
+371
+00:33:06,480 --> 00:33:10,880
+And now this AID, which is not part of the
+state hierarchy, but it's part of the
+
+372
+00:33:10,880 --> 00:33:16,520
+hierarchy to get this social media access
+authorization. So the social media access
+
+373
+00:33:16,520 --> 00:33:23,000
+authorization is protected in this
+delegation chain that the ward can now
+
+374
+00:33:23,000 --> 00:33:31,380
+present to gain access. So you have the
+same structure and then you have for the
+
+375
+00:33:31,380 --> 00:33:37,660
+citizen ward, this is the citizen ward's
+AID and his core identity and stuff like
+
+376
+00:33:37,660 --> 00:33:41,800
+that. It's all nested down here. But now
+you've introduced the guardian. You have
+
+377
+00:33:41,800 --> 00:33:47,020
+additional edges in here that bind it all
+together. So all of the cryptographic
+
+378
+00:33:47,020 --> 00:33:51,060
+verification across the edges and the
+edges are anchored in registries because
+
+379
+00:33:51,060 --> 00:33:55,560
+you're putting these things in registries
+to register the state. All add security
+
+380
+00:33:55,560 --> 00:33:59,820
+that an attacker has has to compromise
+multiple things at the same time to be
+
+381
+00:33:59,820 --> 00:34:04,980
+able to forge the forge this this these
+set of relationships. And if the
+
+382
+00:34:04,980 --> 00:34:10,320
+relationships aren't normative, then you
+have no guarantee that the security
+
+383
+00:34:10,320 --> 00:34:16,400
+properties apply. You're just dependent on
+somebody's bespoke software to make it
+
+384
+00:34:16,400 --> 00:34:23,640
+happen. But in ACDC land, those edges are
+normative parts of the ACDC that operate
+
+385
+00:34:23,640 --> 00:34:29,000
+in secure ways. They're essentially, this
+is essentially is a Merkle tree. People
+
+386
+00:34:29,000 --> 00:34:34,000
+don't understand. This is describing a
+type of Merkle tree. We call it a it's not
+
+387
+00:34:34,000 --> 00:34:40,420
+a tree because you can have edges can be
+mary, but it's an mary Merkle tree if that
+
+388
+00:34:40,420 --> 00:34:45,380
+makes any sense. Where the branching can
+be as many branches at each layer of the
+
+389
+00:34:45,380 --> 00:34:51,460
+tree, but you basically have a hash tree.
+And so you have to so if you forge any
+
+390
+00:34:51,460 --> 00:34:56,000
+hash, it would break the tree because the
+root hash would be different, right? So
+
+391
+00:34:56,000 --> 00:35:02,040
+you got this root hash up here for this
+credential, you know, well actually it's
+
+392
+00:35:02,040 --> 00:35:05,600
+the root would be is this one. The bottom
+credential is the root because it goes
+
+393
+00:35:05,600 --> 00:35:11,140
+backwards. The edges point backwards. So
+to forge this one, you have to forge those
+
+394
+00:35:11,140 --> 00:35:16,860
+and to forge this one, you have to forge
+all the ones there for it to be valid. So
+
+395
+00:35:16,860 --> 00:35:22,020
+it's a very secure, very hard to attack
+data structure. Yes. Sam, this might be a
+
+396
+00:35:22,020 --> 00:35:28,140
+detail, but that core identity credential,
+that's the first one that you got on the
+
+397
+00:35:28,140 --> 00:35:33,680
+other slide? Yes. That one right there. Is
+that the birth certificate or? No. Okay.
+
+398
+00:35:34,140 --> 00:35:37,900
+Where does the birth certificate come in?
+It would be another credential. Okay. But
+
+399
+00:35:37,900 --> 00:35:42,140
+it has to come before the PIPOR identity.
+The SEDI legislation only authorized
+
+400
+00:35:42,140 --> 00:35:49,000
+these. Okay. So that was going to require
+additional either legislation or what they
+
+401
+00:35:49,000 --> 00:35:57,600
+call it rules from the agency. Okay. So
+the the rendering that was on the slide
+
+402
+00:35:57,600 --> 00:36:01,540
+before is for an existing person who
+already exists, not somebody who was just
+
+403
+00:36:01,540 --> 00:36:06,000
+born. There will be more legislation. Yes,
+there will be more legislation and
+
+404
+00:36:06,000 --> 00:36:09,660
+rulemaking that happens. There will be
+lots of rules. There will be lots of
+
+405
+00:36:09,660 --> 00:36:17,280
+rules. But the legislation in 2026 only
+authorized two things guardianship and the
+
+406
+00:36:17,280 --> 00:36:23,100
+other one. And you don't need the other
+stuff to do guardianship. Guardianship was
+
+407
+00:36:23,100 --> 00:36:28,400
+the driving factor. They passed a law in
+2023. for social media access with no idea
+
+408
+00:36:28,400 --> 00:36:34,040
+how to implement it. And then, you know,
+there's some people in the room in 2023 in
+
+409
+00:36:34,040 --> 00:36:38,080
+like January, I think Timothy and I went
+and talked to people at the state of Utah
+
+410
+00:36:38,080 --> 00:36:43,400
+and said, well, you can do it with KERI,
+right? And, you know, and it's like, oh,
+
+411
+00:36:43,620 --> 00:36:48,600
+okay, how do we do that? Right? And so it
+took took a while to get there. – So Sam,
+
+412
+00:36:48,780 --> 00:36:56,580
+a related topic. – Oh, microphone. A
+related topic just of interest to people
+
+413
+00:36:56,580 --> 00:37:03,100
+is this whole idea of guardianship is that
+this is a great technical structure, but
+
+414
+00:37:03,100 --> 00:37:08,480
+the real problem is that there is actually
+no database anywhere that says who is
+
+415
+00:37:08,480 --> 00:37:13,740
+whose guardian. That's right. It's all in
+court documents. Yes. If you're lucky,
+
+416
+00:37:13,940 --> 00:37:20,820
+they might be PDFs. Yes. And this would
+protect children better than the court
+
+417
+00:37:20,820 --> 00:37:27,520
+documents. Because this one doesn't show
+two guardians, but most children have two
+
+418
+00:37:27,520 --> 00:37:34,700
+guardians. And so the guardianship
+relationship, the state could revoke one
+
+419
+00:37:34,700 --> 00:37:41,040
+of the guardians based on a court
+proceeding that then doesn't allow the
+
+420
+00:37:41,040 --> 00:37:47,360
+revoked guardian any opportunity to
+pretend to be a current guardian. So if
+
+421
+00:37:47,360 --> 00:37:50,840
+they show up at the school and say, hey, I
+want to check the kid out of school, they
+
+422
+00:37:50,840 --> 00:37:55,060
+can check check that they're no longer a
+guardian instantaneously and say, no, no,
+
+423
+00:37:55,160 --> 00:37:59,460
+you're not guardian anymore. You can't
+check the kid out of school. So, so it's,
+
+424
+00:37:59,580 --> 00:38:05,180
+it really helps protection. Yeah. You had
+a question. Yeah. So, um, back when I was
+
+425
+00:38:05,180 --> 00:38:10,860
+first learning about all this, the
+legislation does not define the technology
+
+426
+00:38:10,860 --> 00:38:15,780
+that will be used. It's the guardrails,
+right? Um, so I'm wondering now, this was
+
+427
+00:38:15,780 --> 00:38:21,820
+your proposal to them. Has Utah in one
+department or whatever said yes, we're
+
+428
+00:38:21,820 --> 00:38:28,120
+going to use KERI or is it still fighting
+against other technologies? Okay. So in
+
+429
+00:38:28,120 --> 00:38:34,160
+multiple meetings, they have effectively
+said that, but they haven't officially
+
+430
+00:38:34,160 --> 00:38:39,360
+said that publicly for political reasons.
+But the, but when you come to the SEDI
+
+431
+00:38:39,360 --> 00:38:43,400
+summit, if you come to the SEDI summit in
+two weeks, then they, then they are going
+
+432
+00:38:43,400 --> 00:38:50,020
+to say that. That's the plan. Okay. So, so
+I have to be careful because it's very
+
+433
+00:38:50,020 --> 00:38:57,840
+political. So, okay. So, I've got 20
+minutes. So, I think I'm going to skip
+
+434
+00:38:57,840 --> 00:39:06,040
+through some slides here because I think I
+want to get to… –
+
+435
+00:39:06,040 --> 00:39:11,620
+You need to AI delegation? – Huh? – Are
+you going to show that same slide that you
+
+436
+00:39:11,620 --> 00:39:18,740
+just had in the form of AI delegation? –
+Well, yes.
+
+437
+00:39:19,340 --> 00:39:23,160
+So, So, all
+
+438
+00:39:23,160 --> 00:39:23,440
+right.
+
+439
+00:39:31,280 --> 00:39:38,640
+Okay. So I'll show this slide because
+that's a good thing. Okay. So agentic
+
+440
+00:39:38,640 --> 00:39:44,640
+control is no different than everything
+that we've done. Everything that KERI has
+
+441
+00:39:44,640 --> 00:39:52,060
+been doing for the last six years with
+delegation maps perfectly to agentic
+
+442
+00:39:52,060 --> 00:39:57,820
+control. There's no change. The only
+difference would be that you might have an
+
+443
+00:39:57,820 --> 00:40:06,020
+attribute in the delegating instrument,
+the ACDC that says the AID of that I'm
+
+444
+00:40:06,020 --> 00:40:11,140
+delegating to is an agent instead of a
+person. That's the only thing that
+
+445
+00:40:11,140 --> 00:40:17,660
+changes. The security, the properties like
+from my talk this morning about authored
+
+446
+00:40:17,660 --> 00:40:26,040
+authentication, authentication,
+authorization, and authoritariveness all
+
+447
+00:40:26,040 --> 00:40:31,100
+applies without any changes. We've already
+solved the agentic control problem from
+
+448
+00:40:31,100 --> 00:40:35,560
+the standpoint of the secure
+infrastructure that you need to do it. You
+
+449
+00:40:35,560 --> 00:40:41,380
+just take what's already in KERI and ACDC
+and just have the AID belong to an agent
+
+450
+00:40:41,380 --> 00:40:48,580
+instead of a person. There's fundamentally
+no difference in how it works. So it's a
+
+451
+00:40:48,580 --> 00:40:54,580
+solved problem already. It's just a matter
+of talking about it in different ways. So
+
+452
+00:40:54,580 --> 00:40:58,540
+an agent is a verifiable authorized
+delegate of a natural person or legal
+
+453
+00:40:58,540 --> 00:41:04,780
+entity. Agent could be a natural person or
+legal entity or agent could be a piece of
+
+454
+00:41:04,780 --> 00:41:11,020
+software or it could be an IoT device or
+it can be an AI harness. It doesn't matter
+
+455
+00:41:11,020 --> 00:41:20,400
+from the standpoint of the tooling. It's
+the same. An agent has its own AID. this
+
+456
+00:41:20,400 --> 00:41:24,180
+is the original meaning of the word agent.
+I mean, when they call AI agents agents,
+
+457
+00:41:24,460 --> 00:41:28,300
+you're not doing anything other than
+saying, well, agent is something that you
+
+458
+00:41:28,300 --> 00:41:33,580
+delegate to, right? It's just that right
+now the delegation is broken. There's no
+
+459
+00:41:33,580 --> 00:41:42,160
+accountability of AI agents because it's a
+prompt. And you say, well, do this for me.
+
+460
+00:41:42,320 --> 00:41:47,160
+And it's like it goes and does it and then
+like nobody checked that it was doing it
+
+461
+00:41:47,160 --> 00:41:52,020
+for you. They just say, well, some agent
+showed up and did this. Right? So people
+
+462
+00:41:52,020 --> 00:41:57,100
+are now trying to put in delegation to
+solve this problem. We've been we've
+
+463
+00:41:57,100 --> 00:42:03,160
+already built the infrastructure for that
+over the last six years. So that's really
+
+464
+00:42:03,160 --> 00:42:09,440
+all amounts to. So the details are how do
+you do the specifics of the authorization?
+
+465
+00:42:09,820 --> 00:42:13,780
+That's still something you have to work
+out. Like are you using MCP? You know,
+
+466
+00:42:13,920 --> 00:42:18,360
+what are the APIs look like? What are the
+details? Are you are you bridging from
+
+467
+00:42:18,360 --> 00:42:26,940
+KERI ACDC land to OIDC, OAuth land, right?
+Those are all valid bridging points. Those
+
+468
+00:42:26,940 --> 00:42:33,340
+are valid things that require work. But
+the core property that gives you the
+
+469
+00:42:33,340 --> 00:42:40,940
+security that makes your system impervious
+to AI attack is not that. It's what we've
+
+470
+00:42:40,940 --> 00:42:48,980
+already talked about. That you have this
+identity, this AID that is protected via
+
+471
+00:42:48,980 --> 00:42:53,800
+key management that is fault tolerant with
+multiple threshold structures that an AI
+
+472
+00:42:53,800 --> 00:42:59,520
+can't attack. So you can always securely
+attribute who the accountable party is.
+
+473
+00:43:00,460 --> 00:43:07,080
+The agent isn't the accountable party. The
+agent has no legal standing. The person or
+
+474
+00:43:07,080 --> 00:43:12,180
+legal entity that authorized that agent is
+the accountable party and we can make that
+
+475
+00:43:12,180 --> 00:43:17,400
+securely attributable and bound in a way
+that an attacker can't forge. And so
+
+476
+00:43:17,400 --> 00:43:23,060
+that's the problem. Everything else is
+just in the just details. It's just it's
+
+477
+00:43:23,060 --> 00:43:27,220
+execution details. It isn't solving any
+hard problems. The hard problem is a
+
+478
+00:43:27,220 --> 00:43:27,800
+solved problem.
+
+479
+00:43:31,720 --> 00:43:43,240
+So edges are how you authorize access to
+resources in an ACDC, right? You can use
+
+480
+00:43:43,240 --> 00:43:50,880
+those edges to bind resources to access.
+with. And that edge is part of a
+
+481
+00:43:50,880 --> 00:43:55,620
+cryptographic verifiable data structure
+which is a graph of ACDCs. It is a graph
+
+482
+00:43:55,620 --> 00:44:01,160
+of ACDCs is a M-ary Merkle tree in
+construction. That's what it looks like.
+
+483
+00:44:01,360 --> 00:44:06,920
+So if I change any node in the tree, it
+changes the root. So it's detectable. So
+
+484
+00:44:06,920 --> 00:44:13,160
+any attempt to attack it is detectable.
+It's not just an integrity graph. It's an
+
+485
+00:44:13,160 --> 00:44:19,100
+integrity authenticity graph because every
+entry in that graph is not just hashed,
+
+486
+00:44:19,540 --> 00:44:26,380
+but it's signed and anchored in a KEL. So
+it's bound to key state. So it is secure
+
+487
+00:44:26,380 --> 00:44:32,760
+in a way that no other system secures it
+because people don't hash and sign and
+
+488
+00:44:32,760 --> 00:44:38,980
+anchor except in the blockchain world. But
+nobody uses blockchain anymore because of
+
+489
+00:44:38,980 --> 00:44:43,160
+the ledger wars. So we have all the good
+properties of blockchain and none of the
+
+490
+00:44:43,160 --> 00:44:49,040
+bad properties. That's what KERI ACDC is,
+well, you know, there's a lot of good
+
+491
+00:44:49,040 --> 00:44:51,880
+stuff on blockchain, but there's a lot of
+bad stuff that we just can't get around.
+
+492
+00:44:52,160 --> 00:44:55,420
+So let's keep the good stuff and throw
+away the bad stuff. So we kept the good
+
+493
+00:44:55,420 --> 00:44:59,880
+stuff. So now we get all of those security
+properties without any of the governance
+
+494
+00:44:59,880 --> 00:45:06,620
+problems. So every issuer is potentially
+both a resource authority and an edge.
+
+495
+00:45:07,520 --> 00:45:11,260
+Mutually authenticated edge accessor and
+resource authority prevent impersonation
+
+496
+00:45:11,260 --> 00:45:18,840
+attacks. And so this is what it looks
+like, right? Right? And ACDC is this graph
+
+497
+00:45:18,840 --> 00:45:25,980
+fragment. It has attributes and edges. And
+then I chain them together. And then I get
+
+498
+00:45:25,980 --> 00:45:32,240
+a graph. And this is the root or the
+origin of the graph. And I verify this and
+
+499
+00:45:32,240 --> 00:45:38,720
+then I walk back. Right? And these are the
+leaves of this graph. And I can't change
+
+500
+00:45:38,720 --> 00:45:43,660
+any of the nodes without changing this one
+because this is literally a hash graph.
+
+501
+00:45:43,780 --> 00:45:48,220
+It's a Merkle tree. That's how a Merkle
+tree works. It's just that it's a very
+
+502
+00:45:48,220 --> 00:45:54,000
+flexible Merkle tree that isn't a tree.
+This is shown as a tree, but each of these
+
+503
+00:45:54,000 --> 00:45:59,000
+each ACDC could have any number of edges,
+right? So it's an M-ERI tree.
+
+504
+00:46:00,720 --> 00:46:08,820
+So edge verifiable agent control is we
+already do that with ACDCs. Anybody that's
+
+505
+00:46:08,820 --> 00:46:14,780
+delegated is an agent. All I have to do is
+put the word AI in little quotes there and
+
+506
+00:46:14,780 --> 00:46:20,080
+then I've solved the agentic AI problem
+from the authorization authentication
+
+507
+00:46:20,080 --> 00:46:26,080
+security point of view, not the details of
+what specific things that it does. You
+
+508
+00:46:26,080 --> 00:46:30,800
+still have to manage that. So I'm not
+claiming that I've solved all of the
+
+509
+00:46:30,800 --> 00:46:34,340
+problems. There's lots of really good
+meaty problems there. But the problems
+
+510
+00:46:34,340 --> 00:46:38,080
+that most people aren't solving, that
+they're hand-waving, that they're just
+
+511
+00:46:38,080 --> 00:46:41,740
+saying, oh, we assume key management is
+secure. Right? When as soon as somebody
+
+512
+00:46:41,740 --> 00:46:47,220
+does that, when they go, key management is
+secure, I know, okay. Okay. You just
+
+513
+00:46:47,220 --> 00:46:52,300
+avoided the hard problem. You just assumed
+the hardest problem to solve. Somebody
+
+514
+00:46:52,300 --> 00:46:55,220
+else is going to solve. And now you're
+going to work on the cool sexy problem
+
+515
+00:46:55,220 --> 00:46:59,660
+that you want to solve, but you basically
+left yourself open to all forms of attack.
+
+516
+00:46:59,960 --> 00:47:03,160
+You're insecure because you didn't solve
+the key management problem. That's my
+
+517
+00:47:03,160 --> 00:47:07,620
+contention. Anytime anybody does that, I
+just go, okay, I'm not interested in what
+
+518
+00:47:07,620 --> 00:47:10,820
+you're doing because you didn't solve the
+hard problem. Once you solve the hard
+
+519
+00:47:10,820 --> 00:47:14,200
+problem, then I'm interested in the other
+stuff that you're doing. Okay, so let's
+
+520
+00:47:14,200 --> 00:47:19,660
+see how it works. Right? Here's an ACDC.
+These are the top level fields. You have
+
+521
+00:47:19,660 --> 00:47:25,000
+an issuance registry. Okay. Here's the
+fields in the issuance registry. You have
+
+522
+00:47:25,000 --> 00:47:29,860
+a usage registry. These are the fields in
+the usage registry. And then you have a
+
+523
+00:47:29,860 --> 00:47:36,440
+resource map. Routes and capabilities.
+This would be like a, you know, object
+
+524
+00:47:36,440 --> 00:47:41,080
+capabilities type authorization structure.
+This is a well-known thing. Not
+
+525
+00:47:41,080 --> 00:47:46,180
+reinventing the wheel here. What we're
+reinventing is that how this gets secured
+
+526
+00:47:46,180 --> 00:47:53,400
+is through these key management based
+security threshold structures.
+
+527
+00:47:57,640 --> 00:48:00,480
+Okay, so I'm going to skip these slides
+because those are just getting into
+
+528
+00:48:00,480 --> 00:48:06,180
+detail. I'm going to skip ahead to these
+slides. I got just a few minutes. So this
+
+529
+00:48:06,180 --> 00:48:11,400
+is going to be somewhat controversial. The
+reason it's somewhat controversial is
+
+530
+00:48:11,400 --> 00:48:16,220
+because it's contrarian to the way the
+world thinks. Now, this isn't contrary.
+
+531
+00:48:16,480 --> 00:48:20,440
+The internet is a dangerous place, right?
+Everybody agrees? Dangerous place to be.
+
+532
+00:48:21,260 --> 00:48:26,060
+Right? So, what we need is a digital
+refuge, an online shelter, an internet
+
+533
+00:48:26,060 --> 00:48:30,460
+sanctuary, a surveillance asylum, right?
+Cool word, right? We want to go to the
+
+534
+00:48:30,460 --> 00:48:36,680
+asylum to be protected from surveillance,
+right? Safety requires accountability.
+
+535
+00:48:36,980 --> 00:48:39,480
+Does anybody disagree with me that safety
+requires accountability? accountability.
+
+536
+00:48:46,040 --> 00:48:50,660
+Can you think of a way that you can be
+safe from people who are going to harm you
+
+537
+00:48:50,660 --> 00:48:55,100
+if the people harming you can't be held
+accountable for harming you?
+
+538
+00:48:58,200 --> 00:49:04,360
+If they can get away with harming you,
+what's to stop them from harming you? I
+
+539
+00:49:04,360 --> 00:49:07,200
+mean, if you, I mean, you could say, well,
+you personally could hold them
+
+540
+00:49:07,200 --> 00:49:09,660
+accountable, but it's still the same
+thing. Self-defense is a form of
+
+541
+00:49:09,660 --> 00:49:14,500
+accountability, right? If they're not held
+accountable, harm will happen. So
+
+542
+00:49:14,500 --> 00:49:17,560
+fundamentally safety comes from
+accountability. It doesn't come from
+
+543
+00:49:17,560 --> 00:49:23,900
+anything else, right? You could say, well,
+you could hide. They can't find you. Okay.
+
+544
+00:49:24,360 --> 00:49:29,780
+That's one way to protect yourself is to
+hide. But if you're hiding, what else
+
+545
+00:49:29,780 --> 00:49:35,420
+aren't you doing? Everything else that
+matters in your life, right? Anybody in
+
+546
+00:49:35,420 --> 00:49:40,860
+here ever lived off grid for any
+significant amount of time? Okay. What was
+
+547
+00:49:40,860 --> 00:49:46,320
+it like? Yeah, you completely off-grid?
+You're one of the ones that doesn't want
+
+548
+00:49:46,320 --> 00:49:51,800
+to be on the camera? Okay. So what things
+did you have to give up to live off-grid?
+
+549
+00:49:59,240 --> 00:49:59,600
+Okay.
+
+550
+00:50:04,060 --> 00:50:10,000
+We're talking about food and clothing,
+right? So you can't use a bank online,
+
+551
+00:50:10,200 --> 00:50:14,540
+right? But not be off-grid.
+
+552
+00:50:17,360 --> 00:50:22,920
+Okay. So off-grid more than just power. I
+don't mean off-grid power. I mean truly
+
+553
+00:50:22,920 --> 00:50:27,440
+off-grid, not using the internet for any
+purpose. Because I'm talking about the
+
+554
+00:50:27,440 --> 00:50:32,220
+internet as a dangerous place, not whether
+your neighborhood's a dangerous place. All
+
+555
+00:50:32,220 --> 00:50:37,200
+right. So I know people that are off-grid
+on the internet and they live in the
+
+556
+00:50:37,200 --> 00:50:42,980
+mountains and they can't go anywhere or do
+anything because as soon as they leave
+
+557
+00:50:42,980 --> 00:50:48,600
+their enclave, they become observable.
+They become surveillable. Huh? Like Steven
+
+558
+00:50:48,600 --> 00:50:54,640
+Hawkins in World Wargate. Yeah, that kind
+of that level. Yeah, that level of it.
+
+559
+00:50:54,760 --> 00:51:00,080
+Okay. So safety requires accountability.
+That means privacy requires
+
+560
+00:51:00,080 --> 00:51:03,660
+accountability. This is where it gets
+controversial. People don't think that
+
+561
+00:51:03,660 --> 00:51:09,620
+privacy requires accountability. So So
+think about it. Second parties to repeated
+
+562
+00:51:09,620 --> 00:51:12,880
+interactions can correlate the first
+parties. That's true.
+
+563
+00:51:16,600 --> 00:51:23,200
+So if I never interact with somebody, then
+there's nobody to hold accountable, right?
+
+564
+00:51:23,580 --> 00:51:29,500
+As soon as I interact with somebody,
+there's somebody now that can harm me. And
+
+565
+00:51:29,500 --> 00:51:35,040
+if they can correlate me by repeated
+interactions, even if I'm as anonymous as
+
+566
+00:51:35,040 --> 00:51:38,800
+I can make myself, if there's a way to
+correlate me, then eventually they knew
+
+567
+00:51:38,800 --> 00:51:43,520
+who I am, which means that eventually they
+can harm me. Right? You heard the phrase,
+
+568
+00:51:43,640 --> 00:51:48,320
+right? I know where you live. What does
+that mean? It means, well, I know where
+
+569
+00:51:48,320 --> 00:51:53,900
+you live, which means if you wrong me, I
+know where to go to harm you, to get
+
+570
+00:51:53,900 --> 00:51:58,740
+revenge, to get to, you know, restitution
+for the harm you did me because I know
+
+571
+00:51:58,740 --> 00:52:02,540
+where you live. I know where you're
+vulnerable, right? Well, if you're on the
+
+572
+00:52:02,540 --> 00:52:05,860
+internet and you're interacting on the
+internet, at you've made yourself
+
+573
+00:52:05,860 --> 00:52:10,940
+vulnerable to harm. The act of interaction
+makes you vulnerable to harm. That means
+
+574
+00:52:10,940 --> 00:52:12,640
+if you truly want to be private,
+
+575
+00:52:15,240 --> 00:52:20,340
+you need to be the whole anybody you
+interact with accountable for what they do
+
+576
+00:52:20,340 --> 00:52:24,160
+because one of the ways they can harm you
+is through a third party. They can just
+
+577
+00:52:24,160 --> 00:52:27,740
+share whatever data you have shared with
+them with a third party and the third
+
+578
+00:52:27,740 --> 00:52:32,680
+party is the one that harms you. But that
+the source of the harm came from the party
+
+579
+00:52:32,680 --> 00:52:38,920
+that you interacted with who didn't
+respect your privacy. All right. Using the
+
+580
+00:52:38,920 --> 00:52:43,120
+wrong definition of the word privacy. Any
+interaction system that does not enable
+
+581
+00:52:43,120 --> 00:52:46,480
+first parties to hold second parties
+accountable is fundamentally incompatible
+
+582
+00:52:46,480 --> 00:52:51,440
+with privacy. That's my argument. If you
+can't hold people accountable, you can't
+
+583
+00:52:51,440 --> 00:52:57,720
+have privacy, which is counterintuitive to
+the idea that privacy comes from hiding.
+
+584
+00:52:59,300 --> 00:53:03,840
+If you're interacting, you're not, you
+can't hide. There's no way to hide if
+
+585
+00:53:03,840 --> 00:53:08,440
+you're interacting. Everything you try to
+do always leaks information. And when you
+
+586
+00:53:08,440 --> 00:53:16,540
+have surveillance that it has sufficient
+coverage, sufficient scope, every piece of
+
+587
+00:53:16,540 --> 00:53:22,820
+information you leak eventually will be
+able to correlate to create an identity of
+
+588
+00:53:22,820 --> 00:53:27,980
+you. What is continuous identity? It's
+just using correlation. They're already
+
+589
+00:53:27,980 --> 00:53:31,900
+doing it. Everybody's already the reason
+they can even propose it is they've been
+
+590
+00:53:31,900 --> 00:53:34,560
+doing it for years and calling it
+something else and then said, Oh, well,
+
+591
+00:53:34,720 --> 00:53:40,520
+heck, we can re-identify people. That
+means we can identify people. We'll use it
+
+592
+00:53:40,520 --> 00:53:46,700
+for authentication. We won't use it for re
+-identification. We'll just use it for
+
+593
+00:53:46,700 --> 00:53:50,600
+first, you know, you go to their websites
+and say, Oh, use continuous identity. What
+
+594
+00:53:50,600 --> 00:53:55,320
+it says is, Well, you can improve the user
+experience because as soon as the user
+
+595
+00:53:55,320 --> 00:54:01,100
+touches your website, we know who they are
+so that you can guide the user knowing
+
+596
+00:54:01,100 --> 00:54:04,020
+that you know who they are. And the user
+didn't have to click a button that said
+
+597
+00:54:04,020 --> 00:54:08,240
+cookies or not cookies or login or
+anything like that. You don't even have to
+
+598
+00:54:08,240 --> 00:54:16,940
+log in. They know who you are just from
+what browser you used. And so it's lower
+
+599
+00:54:16,940 --> 00:54:21,080
+friction because it's like, well, you
+don't have to give me a password. I know
+
+600
+00:54:21,080 --> 00:54:26,000
+who you are because I know that you're
+logging in from this cell phone and this
+
+601
+00:54:26,000 --> 00:54:30,980
+cell phone happens to be in this location
+and it correlates positively to being you.
+
+602
+00:54:31,560 --> 00:54:35,340
+Somebody didn't steal your cell phone and
+log in because if they stole it, they
+
+603
+00:54:35,340 --> 00:54:40,340
+wouldn't be in your bedroom at 4am, right?
+They'd be someplace else at 4am, right? So
+
+604
+00:54:40,340 --> 00:54:44,040
+we know that when you're logging in from
+your bedroom at 4am, it's highly likely
+
+605
+00:54:44,040 --> 00:54:50,220
+you, so we can trust it and we'll remove
+that friction of you supplying us an
+
+606
+00:54:50,220 --> 00:54:55,660
+authenticator. That's what continuous
+identity is saying, right? So if you think
+
+607
+00:54:55,660 --> 00:54:59,340
+it through far enough, you realize there
+is no such thing as privacy without
+
+608
+00:54:59,340 --> 00:55:03,520
+accountability because privacy really
+isn't privacy if you're interacting. It's
+
+609
+00:55:03,520 --> 00:55:08,440
+confidentiality. You have to get people to
+respect that the data you share with them
+
+610
+00:55:08,440 --> 00:55:14,480
+stays between you. It's confidential to
+you too. It doesn't nobody else has any
+
+611
+00:55:14,480 --> 00:55:20,100
+right to it. And that's a type of privacy,
+but it's intimacy between parties, not
+
+612
+00:55:20,100 --> 00:55:27,220
+truly private. So how do you enforce
+accountability? Well, there's a protocol
+
+613
+00:55:27,220 --> 00:55:33,360
+called the trust spanning protocol, which
+is you can use the KERI suite for, but you
+
+614
+00:55:33,360 --> 00:55:37,480
+create and control safe relationships
+where interaction is protected from
+
+615
+00:55:37,480 --> 00:55:40,960
+surveillance by third parties and second
+parties are held accountable for any
+
+616
+00:55:40,960 --> 00:55:45,500
+information shared with or by them. This
+part isn't part of the TSP protocol, but
+
+617
+00:55:45,500 --> 00:55:52,140
+if you're using secure authorization, then
+you can then layer on accountability. And
+
+618
+00:55:52,140 --> 00:55:56,360
+one of the things in this Utah state law,
+and I know we're almost out of time, is it
+
+619
+00:55:56,360 --> 00:56:01,380
+called a duty of data loyalty. Duty of
+data loyalty is the latest and greatest
+
+620
+00:56:01,380 --> 00:56:09,380
+legal principle for reversing the harm on
+the internet. And what that says is that
+
+621
+00:56:09,380 --> 00:56:16,420
+succinctly anybody that interacts with you
+or uses data about you or from you that
+
+622
+00:56:16,420 --> 00:56:22,000
+comes from an interaction has to be loyal
+to your best interests. They can't use
+
+623
+00:56:22,000 --> 00:56:27,080
+that data in a way that isn't in your best
+interest. That means they can't do
+
+624
+00:56:27,080 --> 00:56:34,320
+something like trick you into saying
+things like, oh, we're going to de
+
+625
+00:56:34,320 --> 00:56:41,280
+-identify this data and then it's not data
+about you. That's a lie, right? But what
+
+626
+00:56:41,280 --> 00:56:48,060
+can you do, right? Well, if they've agreed
+to use it in your best interest, then they
+
+627
+00:56:48,060 --> 00:56:52,120
+no longer have a safe harbor. If they take
+that data and sell it to a third party,
+
+628
+00:56:52,240 --> 00:56:56,060
+whether it's de-identified or not, and
+they come back to harm you, you have
+
+629
+00:56:56,060 --> 00:57:00,340
+recourse against them because they were
+disloyal. And the burden of proof of
+
+630
+00:57:00,340 --> 00:57:04,620
+disloyalty is different from the burden of
+proof for harm. Disloyalty, all you have
+
+631
+00:57:04,620 --> 00:57:09,640
+to prove is that they self-dealed. If they
+benefited from it, whether you are harmed
+
+632
+00:57:09,640 --> 00:57:15,620
+or not, they're presumptively disloyal and
+you can sue them. And so your ability to
+
+633
+00:57:15,620 --> 00:57:22,180
+enforce increases exponentially. So that's
+in the Utah state law. And we snuck that
+
+634
+00:57:22,180 --> 00:57:28,640
+in, honestly, because the data aggregators
+don't like it. And I'm done. So, all
+
+635
+00:57:28,640 --> 00:57:35,340
+right. Dire Dire Dire Dire Dire Dire Dire
+Dire Dire
+
+636
+00:57:35,340 --> 00:57:36,160
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+637
+00:57:36,160 --> 00:57:36,160
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+638
+00:57:36,160 --> 00:57:36,160
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+639
+00:57:36,160 --> 00:57:36,160
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+640
+00:57:36,160 --> 00:57:36,160
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+641
+00:57:36,160 --> 00:57:36,200
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+642
+00:57:36,200 --> 00:57:36,300
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+643
+00:57:36,300 --> 00:57:36,300
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+644
+00:57:36,300 --> 00:57:36,300
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+645
+00:57:36,300 --> 00:57:36,300
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+646
+00:57:36,300 --> 00:57:36,300
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+647
+00:57:36,300 --> 00:57:36,300
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+648
+00:57:36,300 --> 00:57:36,300
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+649
+00:57:36,300 --> 00:57:36,340
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+650
+00:57:36,340 --> 00:57:36,340
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+651
+00:57:36,340 --> 00:57:36,340
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+652
+00:57:36,340 --> 00:57:36,340
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+653
+00:57:36,340 --> 00:57:36,340
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+654
+00:57:36,340 --> 00:57:36,340
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+655
+00:57:36,340 --> 00:57:36,340
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+656
+00:57:36,340 --> 00:57:36,380
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+657
+00:57:36,380 --> 00:57:36,380
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+658
+00:57:36,380 --> 00:57:36,400
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+659
+00:57:36,400 --> 00:57:36,420
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+660
+00:57:36,420 --> 00:57:36,420
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+661
+00:57:36,420 --> 00:57:36,420
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+662
+00:57:36,420 --> 00:57:36,420
+Dire Dire Dire Dire Dire Dire Dire Dire
+Dire Dire Dire Dire Dire Dire Dire Dire
+
+663
+00:57:36,420 --> 00:57:36,460
+Dire Dire Dire Dire Dire
 

@@ -1,4 +1,3169 @@
 1
-00:00:00,000 --> 00:00:17,000
-[Background noise]
+00:00:00,000 --> 00:00:07,140
+Please go ahead and get going on this one.
+All right. For those most of you who
+
+2
+00:00:07,140 --> 00:00:11,320
+probably don't know who I am, my name is
+Ryan Hanson. I'm a member of the KERI
+
+3
+00:00:11,320 --> 00:00:15,640
+Foundation Development Team, the small
+team that Sam put together to kind of help
+
+4
+00:00:15,640 --> 00:00:20,260
+bring the five Ws to life. So I'm going to
+give you a quick rundown of what the five
+
+5
+00:00:20,260 --> 00:00:25,940
+Ws are. Sam already introduced them, but
+we're going to go through them a little
+
+6
+00:00:25,940 --> 00:00:31,340
+bit more. And then I'll give you a little
+bit of a state of where we are in the
+
+7
+00:00:31,340 --> 00:00:36,380
+development of these. So this alternate
+title is the state of the key state. This
+
+8
+00:00:36,380 --> 00:00:47,260
+is my state of the key state address to
+this community. So, that
+
+9
+00:00:47,260 --> 00:00:52,640
+was weird. Okay. I've got to make sure my
+slides line up with these slides. So,
+
+10
+00:00:52,920 --> 00:00:59,340
+first of all, I'll give you a quick why
+when it comes to the five Ws. KERI, as
+
+11
+00:00:59,340 --> 00:01:05,180
+those of you who are very familiar with it
+and as Sam has already established, KERI
+
+12
+00:01:05,180 --> 00:01:10,580
+is all about key state. Implied in that is
+identity and keys themselves. But what
+
+13
+00:01:10,580 --> 00:01:17,560
+good really is an identity and keys that
+you if you can't prove the state of those
+
+14
+00:01:17,560 --> 00:01:24,100
+keys that they're still within your
+control and are still verifiable. So proof
+
+15
+00:01:24,100 --> 00:01:30,600
+itself requires witnesses. It's all well
+and good for me to assert an identity or
+
+16
+00:01:30,600 --> 00:01:36,140
+assert that I've done something, but it's
+not as strong or it's weaker without
+
+17
+00:01:36,140 --> 00:01:42,640
+witnesses that will attest to that
+particular assertion of some kind.
+
+18
+00:01:44,540 --> 00:01:51,580
+Witnesses also need to be independent,
+meaning something outside of me or the
+
+19
+00:01:51,580 --> 00:01:56,740
+control of that particular ID, whatever it
+might be. And we'll get into that a little
+
+20
+00:01:56,740 --> 00:02:05,340
+bit more. highly available, meaning that
+state can be determined whether like I
+
+21
+00:02:05,340 --> 00:02:14,920
+particularly am online or not. And kind of
+to wrap that up, the Ws are a big part of
+
+22
+00:02:14,920 --> 00:02:19,620
+the I in KERI. There's more to it than
+just what I'll be talking about today, but
+
+23
+00:02:19,620 --> 00:02:29,180
+infrastructure in KERI is what the Ws kind
+of are about. So with that, the five W's
+
+24
+00:02:29,180 --> 00:02:35,420
+as Sam already has kind of gone through.
+We have the wallet and I won't spend a lot
+
+25
+00:02:35,420 --> 00:02:38,860
+of time on each one of these in this slide
+but we'll move through these pretty
+
+26
+00:02:38,860 --> 00:02:50,140
+quickly. Wallet, witnesses, watchers, web,
+and wizard. So each one of these are
+
+27
+00:02:50,140 --> 00:02:54,560
+critical part of the KERI overall
+ecosystem as Cam and Sam already
+
+28
+00:02:54,560 --> 00:02:58,780
+illustrated before. So let's get into each
+one of those little bit more. Starting
+
+29
+00:02:58,780 --> 00:03:06,260
+with the wallet. Wallet has some primary
+responsibility and function which is first
+
+30
+00:03:06,260 --> 00:03:11,220
+of all it's the home of our of the
+identity and the keys. That's where all
+
+31
+00:03:11,220 --> 00:03:19,240
+these things live. It's that secure
+enclave as Sam said to house the identity
+
+32
+00:03:19,240 --> 00:03:26,520
+itself and the keys. It is also
+responsible for the KE in KERI which is
+
+33
+00:03:26,520 --> 00:03:32,660
+the the key events, all the events that
+take place relative to that particular
+
+34
+00:03:32,660 --> 00:03:43,140
+identity and the keys that it controls.
+Those events are inception, rotation, and
+
+35
+00:03:43,140 --> 00:03:48,180
+interaction. There's a few more when we
+get into the details of the specifics of
+
+36
+00:03:48,180 --> 00:03:56,620
+the KERI protocol, but effectively these
+are what your wallet will do. The wallet
+
+37
+00:03:56,620 --> 00:04:05,920
+does in the KERI ecosystem is to generate
+those events and publish those or keep the
+
+38
+00:04:05,920 --> 00:04:08,800
+record of those in the key event log in
+its own key event log.
+
+39
+00:04:12,820 --> 00:04:18,660
+Next with witnesses, their primary
+responsibility is a witness of the truth
+
+40
+00:04:18,660 --> 00:04:25,500
+of the key state or to assert that the key
+state is what it is. Is that a fair
+
+41
+00:04:25,500 --> 00:04:30,300
+statement, Sam? Yeah. It's the R in KERI
+because it's the receipts. Funny you
+
+42
+00:04:30,300 --> 00:04:40,920
+should say that. Yes. Exactly right. So
+when the key event is issued, let's say
+
+43
+00:04:40,920 --> 00:04:47,680
+it's created an event and is published,
+when the witness then basically gives back
+
+44
+00:04:47,680 --> 00:04:53,500
+the receipt or creates the receipt on that
+event with its own keys, but then
+
+45
+00:04:53,500 --> 00:05:00,240
+establishes more firmly that that key
+event log is intact, that the math lines
+
+46
+00:05:00,240 --> 00:05:06,040
+up, everything is in order. So obviously
+that's the R in what KERI stands for.
+
+47
+00:05:07,260 --> 00:05:10,880
+Again, high availability witnesses are
+designed to be able to be highly available
+
+48
+00:05:10,880 --> 00:05:17,020
+to run in a situation where that those key
+events in the key event logs that they're
+
+49
+00:05:17,020 --> 00:05:22,860
+witnessing for are available at any time
+whether the wallet itself is online or not
+
+50
+00:05:22,860 --> 00:05:29,980
+or available or not. So that it that any
+verifier that needs to verify that key
+
+51
+00:05:29,980 --> 00:05:31,960
+event log can do so, can get it from a
+witness.
+
+52
+00:05:35,780 --> 00:05:40,980
+And choose your own meaning independent.
+What I mean by this is that when you
+
+53
+00:05:40,980 --> 00:05:44,600
+establish and I'm using the word you, any
+controller really is what I'm talking
+
+54
+00:05:44,600 --> 00:05:50,260
+about, but when in
+
+55
+00:05:50,260 --> 00:05:55,680
+choosing what witnesses are going to
+witness for any given ID that you might
+
+56
+00:05:55,680 --> 00:06:03,080
+create with your wallet. The idea is that
+there would be many different witness
+
+57
+00:06:03,080 --> 00:06:08,500
+providers or witness services available
+that you could choose from. And in an
+
+58
+00:06:08,500 --> 00:06:13,680
+ideal scenario, you would have more than
+one and all of them would be independent
+
+59
+00:06:13,680 --> 00:06:18,240
+of each other. So there's no collusion
+between that, no possibility or less
+
+60
+00:06:18,240 --> 00:06:24,920
+possibility of collusion between them
+about you know, anything that might be
+
+61
+00:06:24,920 --> 00:06:30,220
+they might want to assert. No way to kind
+of fudge it, I guess. It makes it makes it
+
+62
+00:06:30,220 --> 00:06:39,120
+less likely that you could do anything
+untoward with the assertions of the key
+
+63
+00:06:39,120 --> 00:06:40,060
+state itself.
+
+64
+00:06:43,580 --> 00:06:46,460
+Okay, watchers. And I'm kind of going
+through these fairly quickly because
+
+65
+00:06:46,460 --> 00:06:52,100
+mostly I want to get to what the state of
+development on these particular tools.
+
+66
+00:06:55,740 --> 00:07:02,740
+Watchers are independent witness
+observers. So they're always watching as
+
+67
+00:07:02,740 --> 00:07:08,180
+our little friend the monkey from Toy
+Story 3 if you guys recognize that one. It
+
+68
+00:07:08,180 --> 00:07:15,500
+was always watching. It was always there.
+Their entire role is really duplicity
+
+69
+00:07:15,500 --> 00:07:20,560
+detection and duplicity just so that we're
+all on the same page about what that
+
+70
+00:07:20,560 --> 00:07:27,680
+means. is duplicity would be when any two
+different records of the same key event
+
+71
+00:07:27,680 --> 00:07:34,840
+log disagree about what that the state of
+that identity is or the keys of that
+
+72
+00:07:34,840 --> 00:07:38,720
+particular identity. So if there's any
+kind of disagreement between them, that
+
+73
+00:07:38,720 --> 00:07:43,080
+would be duplicity. Watchers' whole
+purpose is to watch the witnesses to make
+
+74
+00:07:43,080 --> 00:07:47,900
+sure that they all align and agree about
+that key state of that particular ID. And
+
+75
+00:07:47,900 --> 00:07:52,500
+if there is any kind of duplicity, they
+detect that and and then you can take
+
+76
+00:07:52,500 --> 00:08:00,380
+action necessary to rotate and do what you
+need to do. So the idea becomes trust me
+
+77
+00:08:00,380 --> 00:08:04,000
+turns into see for yourself rather than
+just trust me on telling you this my
+
+78
+00:08:04,000 --> 00:08:08,780
+identity. This is with all these
+mechanisms you can you can actually verify
+
+79
+00:08:08,780 --> 00:08:13,000
+for yourself effectively is what that's
+what that's suggesting. Can I add? Sure.
+
+80
+00:08:13,280 --> 00:08:19,920
+So duplicity is in no I got a mic.
+Duplicity is independently verifiable. It
+
+81
+00:08:19,920 --> 00:08:23,040
+isn't something you ever have to trust
+somebody fund. Anybody that detects
+
+82
+00:08:23,040 --> 00:08:27,780
+duplicity can prove it to anybody else. So
+if I detect duplicity, I can prove that
+
+83
+00:08:27,780 --> 00:08:35,380
+it's duplicity. You don't have to trust
+me. Yeah. Yeah. Great. Thanks for that. So
+
+84
+00:08:35,380 --> 00:08:42,720
+really
+
+85
+00:08:42,720 --> 00:08:49,140
+the key thing for watcher is somebody
+bothered to watch with. You just it
+
+86
+00:08:49,140 --> 00:08:53,620
+doesn't matter who's watching, any watcher
+is as good as any other watcher because
+
+87
+00:08:53,620 --> 00:08:58,020
+you don't trust the watcher. It just
+proves to you its odd duplicity. So the
+
+88
+00:08:58,020 --> 00:09:03,740
+worst that a watcher can do is not watch.
+Right. Yes. So to that point, if you want
+
+89
+00:09:03,740 --> 00:09:09,360
+to weaken the security and anti
+
+90
+00:09:09,360 --> 00:09:13,980
+-fraud properties of KERI, then as they
+say in the movie, get rid of that monkey.
+
+91
+00:09:14,260 --> 00:09:23,200
+You know, we've got to get rid of that
+monkey. So. All right. Web. There's a
+
+92
+00:09:23,200 --> 00:09:28,520
+number of things that are implied by web
+or meant by web. Discovery, as we all
+
+93
+00:09:28,520 --> 00:09:32,140
+know, the web is a series of tubes. That's
+a common old joke for those who are old
+
+94
+00:09:32,140 --> 00:09:40,020
+enough to remember. Remember that one. But
+there's a number of things that web
+
+95
+00:09:40,020 --> 00:09:48,440
+implies in the KERI world. The ability to
+discover, discovery meaning other… I don't
+
+96
+00:09:48,440 --> 00:09:53,980
+know, how would you describe it, Sam? and
+discovery of other witnesses. Yeah,
+
+97
+00:09:54,280 --> 00:09:58,820
+discovery of infrastructure. We don't need
+a secure discovery mechanism. We just need
+
+98
+00:09:58,820 --> 00:10:03,220
+one that works well and the web already is
+there. So why not just use the web for
+
+99
+00:10:03,220 --> 00:10:08,180
+discovery instead of inventing a new
+discovery mechanism. Right. Yeah. The
+
+100
+00:10:08,180 --> 00:10:11,920
+expert, ladies and gentlemen.
+Communication. So once discovery has
+
+101
+00:10:11,920 --> 00:10:15,120
+happened, obviously it's about
+communication between which also implies
+
+102
+00:10:15,120 --> 00:10:19,640
+transport, which includes messages, any
+kind of messages, events, and things like
+
+103
+00:10:19,640 --> 00:10:23,940
+that. like that between these different
+parts of the infrastructure wallets and
+
+104
+00:10:23,940 --> 00:10:34,180
+witnesses and watchers and all of this. So
+all this done over web protocols. So no
+
+105
+00:10:34,180 --> 00:10:39,740
+other special infrastructure is needed for
+that. It's all web protocols and agnostic
+
+106
+00:10:39,740 --> 00:10:44,900
+of the transport itself, whether it's
+HTTP, Bluetooth, NFC, whatever the
+
+107
+00:10:44,900 --> 00:10:51,200
+transport mechanism might be that KERI can
+travel across all of those mechanisms
+
+108
+00:10:51,200 --> 00:10:58,320
+without any particular issues or any
+special needs. It doesn't trust anything
+
+109
+00:10:58,320 --> 00:11:04,000
+that the web does. Right. It doesn't need
+to trust, but it can certainly use it to
+
+110
+00:11:04,000 --> 00:11:07,640
+send stuff. Now, it's kind of it's
+interesting because we talk about trust a
+
+111
+00:11:07,640 --> 00:11:11,020
+lot when it comes to identity and all
+these kinds of things. But ultimately, as
+
+112
+00:11:11,020 --> 00:11:16,920
+many of you know, what we're going for is
+not having to trust anything and not
+
+113
+00:11:16,920 --> 00:11:22,080
+trusting anything and being making it
+verifiable and provable. And that's what
+
+114
+00:11:22,080 --> 00:11:29,200
+this whole ecosystem and KERI itself is
+designed to provide. And then finally,
+
+115
+00:11:29,300 --> 00:11:35,440
+wizard. And wizard becomes a little more,
+I
+
+116
+00:11:35,440 --> 00:11:41,800
+guess it's a little more, a little harder
+to describe exactly. The idea would be
+
+117
+00:11:41,800 --> 00:11:47,080
+sort of one-click KERI. That maybe is a
+little bit of ambitious. I don't know that
+
+118
+00:11:47,080 --> 00:11:50,820
+one-click might ever be the thing, but
+that's the idea that we're trying to
+
+119
+00:11:50,820 --> 00:11:59,400
+suggest with Wizard. Making KERI as usable
+as possible for as many people as possible
+
+120
+00:11:59,400 --> 00:12:04,800
+by determining some things like safe and
+useful defaults when it comes to creating
+
+121
+00:12:04,800 --> 00:12:07,460
+IDs and setting up witnesses and things
+like that.
+
+122
+00:12:10,340 --> 00:12:16,200
+Abstraction APIs for developers. KERI
+itself, the protocol can be pretty dense
+
+123
+00:12:16,200 --> 00:12:22,240
+and pretty difficult to get up to speed on
+quickly. But by providing potentially some
+
+124
+00:12:22,240 --> 00:12:28,740
+abstraction type APIs and libraries that
+wrap some of the lower level functionality
+
+125
+00:12:28,740 --> 00:12:34,940
+of KERI machinery in a little more
+accessible calls and things like that,
+
+126
+00:12:35,300 --> 00:12:40,820
+then we get a little bit closer to making
+adoption of KERI an easier thing, an
+
+127
+00:12:40,820 --> 00:12:48,200
+easier path. And ultimately what we what
+wizard concerns itself with is trying KERI
+
+128
+00:12:48,200 --> 00:12:53,620
+more into product than protocol. So
+building product around the protocol to
+
+129
+00:12:53,620 --> 00:13:00,880
+make it something that average individuals
+can at least get their head around enough
+
+130
+00:13:00,880 --> 00:13:05,300
+to recognize it's something that they want
+to use and then make it easy for them to
+
+131
+00:13:05,300 --> 00:13:15,080
+do so. So that's the intro to what the
+five Ws are. So now as far as the state of
+
+132
+00:13:15,080 --> 00:13:23,180
+those five W's itself. We have the KERI
+Foundation has a repository or a presence
+
+133
+00:13:23,180 --> 00:13:29,800
+on GitHub under KERI Foundation and within
+that organization
+
+134
+00:13:29,800 --> 00:13:35,260
+on GitHub we have several different repos
+that are of interest there. First of all
+
+135
+00:13:35,260 --> 00:13:41,280
+is Locksmith. Locksmith is our reference
+implementation of a desktop application
+
+136
+00:13:41,280 --> 00:13:46,920
+wallet. This is kind of where the core
+work of the wallet goes in and then that
+
+137
+00:13:46,920 --> 00:13:53,000
+funnels down from Locksmith to these other
+repos. One of them we have one called
+
+138
+00:13:53,000 --> 00:13:58,120
+Fortweb which is… – Yeah and I just want
+to note that Locksmith was donated to the
+
+139
+00:13:58,120 --> 00:14:04,180
+KERI Foundation from HealthKERI which is a
+company building KERI based stuff in the
+
+140
+00:14:04,180 --> 00:14:09,600
+healthcare sector. – Yeah good call out.
+HealthKERI has given us a lot of good
+
+141
+00:14:09,600 --> 00:14:13,780
+boosts. We'll talk a little bit more about
+that in a minute. But Fortweb is the same
+
+142
+00:14:13,780 --> 00:14:18,840
+wallet but in a web browser type of
+environment, WASM-based browser
+
+143
+00:14:18,840 --> 00:14:26,700
+environment. And from FortWeb, we're able
+to bundle and create FortiOS or FortiOS,
+
+144
+00:14:26,940 --> 00:14:34,000
+whatever you want to call it. And FortiOS,
+so the iOS and the Android mobile apps of
+
+145
+00:14:34,000 --> 00:14:41,380
+these two things as well. And then in more
+of the infrastructure side of things or
+
+146
+00:14:41,380 --> 00:14:47,080
+the deployment infrastructure, we have
+KFboot, which is… You see my beautiful,
+
+147
+00:14:47,720 --> 00:14:53,700
+really detailed architectural diagram
+here. We have KFboot, which is kind of an
+
+148
+00:14:53,700 --> 00:14:59,640
+onboarding service that communicates with
+the wallet to onboard an ID and set up
+
+149
+00:14:59,640 --> 00:15:01,880
+witnesses and that kind of stuff.
+
+150
+00:15:04,820 --> 00:15:10,740
+We have WitnessHK and we have WatcherHK,
+both of which the HK in those once again
+
+151
+00:15:10,740 --> 00:15:15,440
+is HealthKERI. They were the originators
+of those libraries and donated them very
+
+152
+00:15:15,440 --> 00:15:20,820
+generously into the community and open
+sourced them for us to use and to start to
+
+153
+00:15:20,820 --> 00:15:27,080
+build on even more. And then we have also
+KF mailbox which has a little asterisk
+
+154
+00:15:27,080 --> 00:15:31,640
+because this is something new. It's not
+quite ready for use just yet, but it's
+
+155
+00:15:31,640 --> 00:15:37,000
+something we're introducing now as a
+mailbox service that can be used within
+
+156
+00:15:37,000 --> 00:15:40,000
+the deployment infrastructure.
+
+157
+00:15:42,600 --> 00:15:53,480
+And then, so, I mean, this basically…
+There we go. The state of the key state
+
+158
+00:15:53,480 --> 00:15:59,460
+without KERI is… Who else? We don't
+actually know what it is. Well, that's my
+
+159
+00:15:59,460 --> 00:16:06,640
+way of asserting that and joking that KERI
+is the way to go when it comes to being
+
+160
+00:16:06,640 --> 00:16:14,920
+able to prove our key state. And with it,
+that's where we are. So silly pictures. So
+
+161
+00:16:14,920 --> 00:16:19,400
+that's
+
+162
+00:16:19,400 --> 00:16:23,060
+pretty much it for my particular slide.
+Sam, unless there's any questions, I got
+
+163
+00:16:23,060 --> 00:16:27,920
+through that quicker than I anticipated,
+but well, we can certainly go into in more
+
+164
+00:16:27,920 --> 00:16:33,500
+detail. So let's ask, but I think this is
+a good place to ask questions because I
+
+165
+00:16:33,500 --> 00:16:38,040
+know I cover things very quickly and then,
+you know, there's lots of latent
+
+166
+00:16:38,040 --> 00:16:43,720
+questions. and saw him use the whiteboard
+to answer those. I've got a question about
+
+167
+00:16:43,720 --> 00:16:51,460
+KFBoot. Is this on? Okay. It's going to
+the video. If the light's on, it's on.
+
+168
+00:16:51,460 --> 00:16:56,160
+It's just the reverb of like boom. Yeah.
+All right. So for KFBoot, you said that it
+
+169
+00:16:56,160 --> 00:17:01,620
+communicates with the wallet when you've
+set your identifier up. I looked at
+
+170
+00:17:01,620 --> 00:17:05,620
+KFBoot. My understanding is that there
+were five standard and you could dive into
+
+171
+00:17:05,620 --> 00:17:09,760
+this. There were sort of five main pieces
+of infrastructure helps you stand up and
+
+172
+00:17:09,760 --> 00:17:12,600
+then there was a little bit more
+definition. If you could, if you could
+
+173
+00:17:12,600 --> 00:17:16,540
+dive into that, I had never heard what you
+just really said, which is when you set up
+
+174
+00:17:16,540 --> 00:17:20,520
+an identifier, it walks you through some
+things. Can you detail that for me and
+
+175
+00:17:20,520 --> 00:17:24,180
+then we can sort of come to some questions
+to the other parts? Evan could probably
+
+176
+00:17:24,180 --> 00:17:29,080
+address that a little bit easier. Evan
+does a lot of work with the wallet itself
+
+177
+00:17:29,080 --> 00:17:35,500
+and that communication process. Yeah. So,
+I mean, you came from when we got this
+
+178
+00:17:35,500 --> 00:17:39,680
+infrastructure from HelpKERI, they had
+their like healthcare platform that they
+
+179
+00:17:39,680 --> 00:17:45,040
+use to orchestrate this sort of stuff. And
+so like they stripped it out, sent it to
+
+180
+00:17:45,040 --> 00:17:50,020
+us to be open sourced and we had to kind
+of fill in the gaps of the like identity
+
+181
+00:17:50,020 --> 00:17:54,700
+infrastructure orchestration. So that's
+sort of what we have KFBOOP4 now as like
+
+182
+00:17:54,700 --> 00:17:59,700
+an open source identity infrastructure
+orchestration like Ryan's. Kind of like a
+
+183
+00:17:59,700 --> 00:18:03,300
+plug-in infrastructure, right? Exactly.
+Yeah. So anybody that creates witnesses,
+
+184
+00:18:03,560 --> 00:18:09,760
+anybody that creates a watch or service
+could register with with KFBoot, right? Do
+
+185
+00:18:09,760 --> 00:18:14,420
+we have a registration yet? We don't,
+right? But we have to have a way to
+
+186
+00:18:14,420 --> 00:18:19,540
+discover. Is there a way to discover their
+services? Or we have an implemented data?
+
+187
+00:18:20,120 --> 00:18:25,700
+Yeah, like when we set everything up on
+DigitalOcean. Yeah. So you'd have to
+
+188
+00:18:25,700 --> 00:18:30,380
+they'd have to add up like a connector.
+But if you have that connector, then then
+
+189
+00:18:30,380 --> 00:18:35,300
+any services that KFBoot knows about, then
+that wallet could say, Oh, I want
+
+190
+00:18:35,300 --> 00:18:41,360
+witnesses from this service. and I want a
+watcher from this service. Part of why I
+
+191
+00:18:41,360 --> 00:18:47,940
+ask is since we at Glive work with the
+ecosystem with lots of players and there's
+
+192
+00:18:47,940 --> 00:18:51,660
+going to be potentially many different
+providers of infrastructure. I wonder is
+
+193
+00:18:51,660 --> 00:18:58,180
+this generalizable or generalized
+infrastructure discovery tool as KFBoot
+
+194
+00:18:58,180 --> 00:19:02,740
+and it interacts with sort of a set of
+infrastructure providers and a set of
+
+195
+00:19:02,740 --> 00:19:06,520
+wallets that recognize that discovery
+protocol? Am I characterizing it
+
+196
+00:19:06,520 --> 00:19:08,740
+correctly? Am I going in the right
+direction or am I misunderstanding?
+
+197
+00:19:12,740 --> 00:19:16,980
+I mean, it's early enough in its
+development that it could go a number of
+
+198
+00:19:16,980 --> 00:19:23,280
+ways. All it does for us right now at its
+current state is it's the first landing
+
+199
+00:19:23,280 --> 00:19:28,380
+point that the wallet uses to discover
+what witnesses are available to add those
+
+200
+00:19:28,380 --> 00:19:35,660
+to your configuration for your particular
+AID. So that's the first step and that's
+
+201
+00:19:35,660 --> 00:19:41,360
+really what it's doing. at this point is
+kind of facilitating that initial
+
+202
+00:19:41,360 --> 00:19:45,900
+onboarding to be able to set up your
+witnesses. Where it goes from there, I
+
+203
+00:19:45,900 --> 00:19:48,880
+mean, I guess there's lots of different
+ways you could take it. It's fairly simple
+
+204
+00:19:48,880 --> 00:19:53,680
+little service right now and it's all it's
+all work in progress still. There's still
+
+205
+00:19:53,680 --> 00:20:02,780
+much to be done on that. So, yeah. So, I
+guess I have one. I guess for GLEIF, the
+
+206
+00:20:02,780 --> 00:20:11,360
+important thing is to be able to offer to
+to holders of VLEIs, for example, and to
+
+207
+00:20:11,360 --> 00:20:19,400
+allow companies who want to implement the
+VLEI credentials to have alternatives to
+
+208
+00:20:19,400 --> 00:20:27,680
+custodial wallets offered by QVI. So we're
+looking to be able to build up in the
+
+209
+00:20:27,680 --> 00:20:36,220
+ecosystem alternatives for standalone
+wallets. And so with the capability that
+
+210
+00:20:36,220 --> 00:20:41,480
+this has at this particular point, are we
+talking about functionality that would
+
+211
+00:20:41,480 --> 00:20:47,600
+allow a holder of a legal entity level
+credential, an official organizational
+
+212
+00:20:47,600 --> 00:20:53,260
+role credential, ECR credential to accept
+that credential and then be able to
+
+213
+00:20:53,260 --> 00:20:54,920
+present it in whatever.
+
+214
+00:20:58,140 --> 00:21:02,960
+That's not KFU I think. No, no, that
+doesn't sound like it to me, but we
+
+215
+00:21:02,960 --> 00:21:05,900
+probably need to go into that a little bit
+more and understand because I would need
+
+216
+00:21:05,900 --> 00:21:10,220
+to understand implications of what you're
+I think what she's asking is it that's
+
+217
+00:21:10,220 --> 00:21:15,960
+really the wallet the open source wallets
+would be able to do that KF boot is is
+
+218
+00:21:15,960 --> 00:21:20,440
+bootstrapping the infrastructure the
+witnesses and watchers so if you set up
+
+219
+00:21:20,440 --> 00:21:25,160
+your wallet and you want to have four
+witnesses where do the witnesses come from
+
+220
+00:21:25,160 --> 00:21:29,560
+if you're not standing up your own
+witnesses you're just some person but
+
+221
+00:21:29,560 --> 00:21:34,920
+let's say company A has a witness service
+and company B has a witness service and
+
+222
+00:21:34,920 --> 00:21:39,020
+company C has a witness and a watcher
+service, then you would want to be able to
+
+223
+00:21:39,020 --> 00:21:45,620
+have a way to click on a list of service
+providers and say, configure me a witness
+
+224
+00:21:45,620 --> 00:21:51,440
+in this data center that has these
+properties. And then you could create your
+
+225
+00:21:51,440 --> 00:21:58,740
+witness pool from providers. But right
+now, it's just really basic. It's just
+
+226
+00:21:58,740 --> 00:22:04,200
+allowing the KERI Foundation wallets to
+configure witnesses and watchers. The KERI
+
+227
+00:22:04,200 --> 00:22:09,480
+Foundation stands up. Certainly, the idea
+is that eventually we want to have that
+
+228
+00:22:09,480 --> 00:22:14,440
+sort of plug-in architecture. It's just,
+you know, it's a resource thing. So, as
+
+229
+00:22:14,440 --> 00:22:17,620
+you see here, this KERI Foundation, that's
+actually a plug-in within this wallet
+
+230
+00:22:17,620 --> 00:22:22,720
+infrastructure. The idea would be that
+many providers could provide plug-ins that
+
+231
+00:22:22,720 --> 00:22:25,400
+could plug right into this and you could
+just choose from them and see what
+
+232
+00:22:25,400 --> 00:22:29,320
+services they have available and set up
+based on that. So, we do have the plug-in
+
+233
+00:22:29,320 --> 00:22:34,580
+stuff, but not the other provider. Thanks
+for the clarification. So, I'm always
+
+234
+00:22:34,580 --> 00:22:40,060
+interested in the wizard part of it, the
+user interface. I'm curious, is there…
+
+235
+00:22:40,060 --> 00:22:50,920
+what's your vision for… Say there is a
+duplicity event by launchers or observers.
+
+236
+00:22:52,340 --> 00:22:58,220
+How does that surface to the user? To the
+Verify, for example. I mean, there's… it's
+
+237
+00:22:58,220 --> 00:23:02,740
+pretty open to however an organization
+wants to implement that kind of
+
+238
+00:23:02,740 --> 00:23:07,860
+capability. We don't have anything built
+into it, just yet to handle that as it is,
+
+239
+00:23:08,040 --> 00:23:12,440
+but that's something that's pretty open to
+whatever tooling you want to put in place
+
+240
+00:23:12,440 --> 00:23:16,120
+to be able to watch for that event that's
+emitted by the watcher to say that there's
+
+241
+00:23:16,120 --> 00:23:19,640
+a duplicity thing and then whatever path
+you want to send it down at that point,
+
+242
+00:23:19,760 --> 00:23:24,240
+whether it's a pager duty message or
+whatever it might be, or even an automated
+
+243
+00:23:24,240 --> 00:23:28,600
+process that connects in and somehow
+rotates the keys automatically. I don't
+
+244
+00:23:28,600 --> 00:23:33,220
+know. It's kind of a decision-making
+process within the implementing
+
+245
+00:23:33,220 --> 00:23:38,660
+organization. So the mailbox can help with
+that because you can post duplicity
+
+246
+00:23:38,660 --> 00:23:44,080
+notifications into the mailbox and then
+your user experience would go, oh, yeah,
+
+247
+00:23:44,240 --> 00:23:51,680
+this particular AID that we're interacting
+with, their key state has evidence to
+
+248
+00:23:51,680 --> 00:23:57,540
+duplicity. And duplicity will be no
+duplicity and at some event there's
+
+249
+00:23:57,540 --> 00:24:03,740
+duplicity. And is it reconciled or is it
+unreconciled? Well, at that event, you
+
+250
+00:24:03,740 --> 00:24:09,280
+shouldn't trust anything that you do with
+that AID. So you can trust everything that
+
+251
+00:24:09,280 --> 00:24:13,500
+happens before. So if somebody presents
+you a credential issued before the
+
+252
+00:24:13,500 --> 00:24:17,900
+duplicity, you can trust the entries in
+their key event log. But at the moment of
+
+253
+00:24:17,900 --> 00:24:22,080
+duplicity, anything new you wouldn't
+trust. You wouldn't trust something they
+
+254
+00:24:22,080 --> 00:24:25,840
+signed because you don't know if the
+signature is with the correct key state
+
+255
+00:24:25,840 --> 00:24:32,320
+because the current key state is
+uncertain. So you don't do any new things
+
+256
+00:24:32,320 --> 00:24:36,400
+with them. And so your user experience
+would have to say, okay, you can't do
+
+257
+00:24:36,400 --> 00:24:41,160
+certain things with this entity because we
+can't trust their key state until it gets
+
+258
+00:24:41,160 --> 00:24:45,520
+reconciled. And in some cases they can
+reconcile it and then you can start
+
+259
+00:24:45,520 --> 00:24:49,260
+trusting, but then you'd have to see that
+it was reconciled. So you'd have to look
+
+260
+00:24:49,260 --> 00:24:53,340
+at their key event log and go, oh yeah, it
+was reconciled. They did a rotation. They
+
+261
+00:24:53,340 --> 00:24:58,640
+did a recovery rotation. It cleaned up
+their key state. Now I can trust it. I
+
+262
+00:24:58,640 --> 00:25:04,920
+can, but for that, so it is an important
+an important user experience that we
+
+263
+00:25:04,920 --> 00:25:10,260
+haven't we're just at the point where
+people building wallets need to address
+
+264
+00:25:10,260 --> 00:25:15,900
+that. So it's a really good problem to
+solve. And just to reiterate this, we
+
+265
+00:25:15,900 --> 00:25:20,220
+refer to all this as reference
+implementation because we are as a
+
+266
+00:25:20,220 --> 00:25:24,200
+foundation fairly resource constrained.
+And so we can't build all the things that
+
+267
+00:25:24,200 --> 00:25:27,860
+we want to build right out of the box. So
+we're working our way there as much as we
+
+268
+00:25:27,860 --> 00:25:33,620
+can. This is all meant to give an idea of
+what can be done with this and to give
+
+269
+00:25:33,620 --> 00:25:37,020
+some baseline to start from. It's all open
+source. It's all things that people could
+
+270
+00:25:37,020 --> 00:25:40,300
+take and start to build from. But
+obviously we're not going to be able to
+
+271
+00:25:40,300 --> 00:25:48,260
+build a fully fleshed out production level
+capability, at least not as we are right
+
+272
+00:25:48,260 --> 00:25:52,920
+now in the foundation. I want to go back
+to the point about the wallet being the
+
+273
+00:25:52,920 --> 00:26:00,180
+source of key events and the log. And two
+questions come to my mind. Is it the kind
+
+274
+00:26:00,180 --> 00:26:05,500
+of thing where if I run different devices,
+a laptop, a phone. I could have a single
+
+275
+00:26:05,500 --> 00:26:09,060
+wallet that shared persistence of where
+the wallet data was in the cloud and my
+
+276
+00:26:09,060 --> 00:26:14,340
+app was running. And in order for someone
+to inspect my key of that log, you have to
+
+277
+00:26:14,340 --> 00:26:18,680
+have access to my devices. So in the past,
+I never really thought about where the log
+
+278
+00:26:18,680 --> 00:26:24,160
+was. But now that the concept of the log
+being somewhere and can be looked at, can
+
+279
+00:26:24,160 --> 00:26:29,120
+be verified by a copy of the events. Yeah,
+well your witnesses hold a copy of your
+
+280
+00:26:29,120 --> 00:26:33,680
+log. Yeah, witnesses have a copy. That's
+recovery aspect of things. No, no. That's
+
+281
+00:26:33,680 --> 00:26:37,680
+for anybody to verify. Right. Okay. So
+they don't have to look in your wallet to
+
+282
+00:26:37,680 --> 00:26:40,900
+know what your log looks like. They just
+ask your witnesses. Do I only have one
+
+283
+00:26:40,900 --> 00:26:44,280
+device where my wallet is or can I
+actually access a wallet from my laptop or
+
+284
+00:26:44,280 --> 00:26:47,940
+my phone? Well, there's different wallet
+architectures. I know the rooting guys are
+
+285
+00:26:47,940 --> 00:26:52,820
+here and there's an open source wallet
+that Gleif uses called the Signify TS
+
+286
+00:26:52,820 --> 00:26:58,560
+architecture, which is a hosted wallet. So
+you have what's on your device, which is
+
+287
+00:26:58,560 --> 00:27:03,100
+your private keys. Everything else is in
+the cloud. Well, right. That's kind of
+
+288
+00:27:03,100 --> 00:27:07,460
+what I'm thinking is I've been in the
+world of Apple where the photos and things
+
+289
+00:27:07,460 --> 00:27:11,620
+get copied between device you can access
+your your cloud account securely from
+
+290
+00:27:11,620 --> 00:27:16,160
+multiple devices. I would certainly like
+to be able to do that with with my
+
+291
+00:27:16,160 --> 00:27:21,720
+identity in a KERI SIS from a log that had
+access to the persistent state of my log
+
+292
+00:27:21,720 --> 00:27:25,300
+somewhere under my control. I mean as
+we've been implemented right now that's
+
+293
+00:27:25,300 --> 00:27:30,960
+not possible just because what it requires
+is you to actually copy the keys to that
+
+294
+00:27:30,960 --> 00:27:33,520
+other device. device. You're going to
+create any kind of an event from some
+
+295
+00:27:33,520 --> 00:27:36,580
+other device. You've got to have the keys
+to be able to do that. So if you want to
+
+296
+00:27:36,580 --> 00:27:41,320
+spread out your footprint a little bit,
+then that would be possible. But we
+
+297
+00:27:41,320 --> 00:27:46,200
+haven't implemented anything like that
+yet. – What if my keys are stored
+
+298
+00:27:46,200 --> 00:27:46,820
+securely?
+
+299
+00:27:50,600 --> 00:27:58,940
+– Secure key storage is on a spectrum,
+right? There is no such thing as perfectly
+
+300
+00:27:58,940 --> 00:28:07,340
+secure key storage. So the question is,
+what are you trading off? So if I store it
+
+301
+00:28:07,340 --> 00:28:12,420
+in a secure enclave, secure enclaves have
+the property that you can't export the
+
+302
+00:28:12,420 --> 00:28:21,880
+private keys. I could store them in a
+hardware security module like a ledger or
+
+303
+00:28:21,880 --> 00:28:26,380
+an ubi key or something like that. Some of
+those allow you to export them. Some of
+
+304
+00:28:26,380 --> 00:28:32,940
+them don't. So it's a property of what
+they can do. because KERI supports
+
+305
+00:28:32,940 --> 00:28:40,280
+multisig, you could horcrox yourself so
+that you have multiple keys that control
+
+306
+00:28:40,280 --> 00:28:44,860
+your identifier, each key stored on a
+different device. And as long, then you'd
+
+307
+00:28:44,860 --> 00:28:48,240
+have to do like a two or three or
+something, or you could do a one event,
+
+308
+00:28:48,620 --> 00:28:55,000
+right? You could say any one of the keys
+can sign. I just need one key and that
+
+309
+00:28:55,000 --> 00:28:59,600
+just changed your security property,
+right? Or you could decide that if you're
+
+310
+00:28:59,600 --> 00:29:04,420
+that you're going to allow your private
+keys to be exportable and then you can
+
+311
+00:29:04,420 --> 00:29:09,580
+share them across devices but you share
+them in a secure out-of-band way. So for
+
+312
+00:29:09,580 --> 00:29:14,760
+example the hard drive is on my laptop and
+my secure enclave in my laptop in my room.
+
+313
+00:29:15,000 --> 00:29:19,920
+Yes. But the extension of that where that
+was now on Apple cloud service is less
+
+314
+00:29:19,920 --> 00:29:24,460
+secure just because those keys are not
+encrypted there. Well, no, you would want
+
+315
+00:29:24,460 --> 00:29:28,080
+to do that. I know, but is there a way? If
+you do end-to-end encryption on on Apple,
+
+316
+00:29:28,360 --> 00:29:32,680
+then they're encrypted and Apple can't see
+them. Okay, so that would be a viable…
+
+317
+00:29:32,680 --> 00:29:38,560
+Yes, that's a layer. That's a different… I
+mean, one of the things is you have to
+
+318
+00:29:38,560 --> 00:29:43,580
+look at the likelihood of exploit and the
+susceptibility to exploit. And this is all
+
+319
+00:29:43,580 --> 00:29:50,580
+part of survivability engineering.
+Survivability engineering says, how
+
+320
+00:29:50,580 --> 00:29:55,480
+susceptible are you to exploit? Well, if
+you're a high value individual, you're way
+
+321
+00:29:55,480 --> 00:30:01,400
+more susceptible to attack than grandma
+is. Grandma's got $100 in a bank account.
+
+322
+00:30:01,640 --> 00:30:07,320
+Nobody's going to spend more than $100 in
+resources to get it. Right? It's not worth
+
+323
+00:30:07,320 --> 00:30:12,500
+it. Which means that her security doesn't
+have to be as much as security at somebody
+
+324
+00:30:12,500 --> 00:30:18,100
+that has 4 million. Now like I know
+somebody whose
+
+325
+00:30:18,100 --> 00:30:27,600
+phone was SIMjacked. But that person had a
+Coinbase account with millions of dollars
+
+326
+00:30:27,600 --> 00:30:32,060
+in it. They went to a lot. They knew that
+that person had a Coinbase account with
+
+327
+00:30:32,060 --> 00:30:36,360
+millions of dollars in it. So they went to
+great lengths to SIM jack them. I know
+
+328
+00:30:36,360 --> 00:30:41,500
+millions of other people who have never
+been SIM jacked and nobody's ever
+
+329
+00:30:41,500 --> 00:30:50,000
+attempted to SIM jack them because there's
+no ROI to the attack. So storing your keys
+
+330
+00:30:50,000 --> 00:30:55,780
+in Apple's cloud end-to-end encrypted,
+Apple doesn't have the keys. The risk to
+
+331
+00:30:55,780 --> 00:31:01,720
+you is, do you lose the decryption key?
+That's your failure point. Not being in
+
+332
+00:31:01,720 --> 00:31:05,920
+the cloud. The cloud itself isn't the
+failure point. Strong encryption isn't
+
+333
+00:31:05,920 --> 00:31:09,400
+breakable. They can't break the strong
+encryption. What they break is your key
+
+334
+00:31:09,400 --> 00:31:13,800
+management. I'm just looking for a way to
+make the use of the wallet manageable. So,
+
+335
+00:31:13,940 --> 00:31:17,680
+yes. As opposed to confined to a device
+that might lose. That's right. So, some
+
+336
+00:31:17,680 --> 00:31:21,620
+people will complain and say, you know,
+you have to use hardware keys that are
+
+337
+00:31:21,620 --> 00:31:26,820
+stored on a device. And that's not a
+viable position to take because it doesn't
+
+338
+00:31:26,820 --> 00:31:32,040
+reflect the actual totality of the threat
+environment. For most people, storing your
+
+339
+00:31:32,040 --> 00:31:36,920
+keys in the cloud encrypted with an end in
+encryption is a viable place to store
+
+340
+00:31:36,920 --> 00:31:41,360
+them. And now what you have to do is not
+lose your decryption key. You have not
+
+341
+00:31:41,360 --> 00:31:44,680
+forget your decryption key. Well, if you
+have one password and you're storing
+
+342
+00:31:44,680 --> 00:31:48,760
+secrets in one password, then you have to
+say, well, is one password sufficiently
+
+343
+00:31:48,760 --> 00:31:55,820
+secure, right? For your threat profile, if
+it is, then there's all of those things
+
+344
+00:31:55,820 --> 00:32:01,040
+that are available to you as a wallet
+designer. When people are doctrine error
+
+345
+00:32:01,040 --> 00:32:05,500
+about certain thresholds of security
+without looking at the total landscape,
+
+346
+00:32:05,840 --> 00:32:09,540
+then they're not valuing the trace space
+correctly. And what they're either doing
+
+347
+00:32:09,540 --> 00:32:13,620
+is they're over securing things and adding
+too much friction to users they don't need
+
+348
+00:32:13,620 --> 00:32:20,160
+the security and they don't benefit from
+the friction. Or to solve for that, they
+
+349
+00:32:20,160 --> 00:32:23,540
+make everything the lowest common
+denominator, which means for people that
+
+350
+00:32:23,540 --> 00:32:27,520
+need more friction and need more security,
+can't have it. Is there a way for KERI to
+
+351
+00:32:27,520 --> 00:32:32,480
+actually play a part in rotating those
+encryption keys? Well, KERI is a protocol,
+
+352
+00:32:32,720 --> 00:32:36,220
+so it's not a person. I mean, there might
+be somebody in the hallway that's named
+
+353
+00:32:36,220 --> 00:32:41,880
+KERI. We can ask her as a separate
+application of a KERI service to keep
+
+354
+00:32:41,880 --> 00:32:46,060
+track of other forms of encryption. Yeah,
+that's not part of the KERI protocol, but
+
+355
+00:32:46,060 --> 00:32:49,040
+certainly it's something that people
+could. Well, I talked about hosted key
+
+356
+00:32:49,040 --> 00:32:53,560
+management. Right. So KERI enables hosted
+key management. So if people want to
+
+357
+00:32:53,560 --> 00:32:57,480
+provide a hosted key management service,
+Absolutely. I mean, I could have a
+
+358
+00:32:57,480 --> 00:33:01,080
+separate KERI account just for managing my
+own encryption keys. Yeah, that's right.
+
+359
+00:33:01,360 --> 00:33:07,260
+That's what I'm talking about. Yeah. All
+of those are available. Good questions.
+
+360
+00:33:08,620 --> 00:33:16,860
+Let's keep passing the mic. Oh, he's got
+one. Speaking of discoverability, I think
+
+361
+00:33:16,860 --> 00:33:23,640
+DNS is a beautiful protocol. Do you think
+it makes sense to embed some of the
+
+362
+00:33:23,640 --> 00:33:31,160
+witness endpoints into TXC records or SRB
+records. How are you thinking about
+
+363
+00:33:31,160 --> 00:33:38,580
+weaving this network? The way we use DNS
+right now is we use well it's technically
+
+364
+00:33:38,580 --> 00:33:46,280
+it's part of DNS right is the well-known
+protocol.
+
+365
+00:33:46,960 --> 00:33:51,320
+So if anybody that has a web service can
+make it so that all of their
+
+366
+00:33:51,320 --> 00:33:55,360
+infrastructure is discoverable by public
+publishing that those infrastructure
+
+367
+00:33:55,360 --> 00:33:59,720
+endpoints as well-knowns, right? So
+there's a well-known protocol called a
+
+368
+00:33:59,720 --> 00:34:05,540
+well-known protocol that you can publish
+and just say, you know, witness and here's
+
+369
+00:34:05,540 --> 00:34:10,020
+the identifier and here's the endpoint.
+And so we take advantage of that and
+
+370
+00:34:10,020 --> 00:34:15,920
+that's crawlable. So people can crawl the
+web, discover everybody's witnesses and
+
+371
+00:34:15,920 --> 00:34:19,920
+everybody's watchers from the well-knowns.
+So that's one thing. And then we have
+
+372
+00:34:19,920 --> 00:34:26,460
+something called an OOBI, right? The out
+-of-band introduction and you can publish
+
+373
+00:34:26,460 --> 00:34:35,720
+those and use those for discovery. So we
+do a lot of that kind of stuff. DNS
+
+374
+00:34:35,720 --> 00:34:44,680
+itself, you know, yes, you could publish
+in XPO9's anything you want, right? It's a
+
+375
+00:34:44,680 --> 00:34:50,440
+flexible document protocol. So I could see
+people publishing if they wanted to. I
+
+376
+00:34:50,440 --> 00:34:55,000
+mean, a certificate authority might want
+to do it that way. They may want to
+
+377
+00:34:55,000 --> 00:34:59,620
+publish stuff in X509s that enables
+discovery because the people are
+
+378
+00:34:59,620 --> 00:35:06,880
+discovering the X509s already. So I know
+he perked up because he's a CA. – So we
+
+379
+00:35:06,880 --> 00:35:10,800
+want to talk a little bit about Merkle
+trees. We got five minutes left and lunch
+
+380
+00:35:10,800 --> 00:35:15,400
+right here. So we want to talk about
+Merkle trees or what's that we were doing
+
+381
+00:35:15,400 --> 00:35:23,880
+next? Oh, yeah. Oh, sorry. Yes. So since
+it's about the current state of these
+
+382
+00:35:23,880 --> 00:35:30,480
+things, what watcher and witness
+infrastructure networks are available that
+
+383
+00:35:30,480 --> 00:35:35,240
+people plug into that are live today?
+Okay. Sorry, I forgot to mention that.
+
+384
+00:35:35,560 --> 00:35:40,580
+That we actually have a
+
+385
+00:35:40,580 --> 00:35:46,700
+handful of servers that are running on
+DigitalOcean that are available. We'll
+
+386
+00:35:46,700 --> 00:35:50,200
+publish, I don't have those up yet, but
+we'll publish the like that information of
+
+387
+00:35:50,200 --> 00:35:56,760
+where that stuff is. But there is a
+witness network and watchers available
+
+388
+00:35:56,760 --> 00:36:05,000
+that people can use as kind of an entry
+level into testing it out. Sorry, I don't
+
+389
+00:36:05,000 --> 00:36:08,680
+have that information up here. I don't
+have it in my slide deck, but we'll get
+
+390
+00:36:08,680 --> 00:36:12,140
+that out onto the repo, make sure
+everybody knows what IP addresses and all
+
+391
+00:36:12,140 --> 00:36:18,000
+that kind of stuff. But that's a good
+question. So, HealthKERI, they provide
+
+392
+00:36:18,000 --> 00:36:22,840
+witness and watcher services to their
+customers. So it's not publicly available.
+
+393
+00:36:22,980 --> 00:36:27,940
+You have to be in their space. The GLEIF
+ecosystem, there are witnesses that
+
+394
+00:36:27,940 --> 00:36:36,340
+various people run, but they're primarily
+for that. So the main, I think one of the
+
+395
+00:36:36,340 --> 00:36:41,660
+main outcomes of the state of Utah SEDI
+initiative is that you will, it will
+
+396
+00:36:41,660 --> 00:36:48,080
+force, it will be a forcing function for
+providers of KERI infrastructure to all of
+
+397
+00:36:48,080 --> 00:36:52,980
+the citizens in the state of Utah. So it
+doesn't exist yet, but one of the things
+
+398
+00:36:52,980 --> 00:36:57,780
+that we're doing is we're open sourcing
+the core libraries so that other people
+
+399
+00:36:57,780 --> 00:37:03,200
+can start to stand up those services. But
+nobody's spun them up yet because it's a
+
+400
+00:37:03,200 --> 00:37:07,640
+chicken and egg problem right now. It's
+like the state of Utah isn't using SEDI
+
+401
+00:37:07,640 --> 00:37:14,340
+yet. They're about to, right? And in order
+to do that, people have to start spinning
+
+402
+00:37:14,340 --> 00:37:19,940
+up witness and watchers and wallet
+services for citizens. So they meet weekly
+
+403
+00:37:19,940 --> 00:37:25,220
+to foster the community to start talking
+about these things. So it should happen
+
+404
+00:37:25,220 --> 00:37:30,720
+over the next couple of years. So that
+brings a follow-on question. So you said
+
+405
+00:37:30,720 --> 00:37:35,840
+HealthKERI has theirs that are working in
+their ecosystem. GLEIF has theirs that are
+
+406
+00:37:35,840 --> 00:37:42,180
+working in the VLEI system, but they're
+not publicly available at this point. So
+
+407
+00:37:42,180 --> 00:37:46,680
+then my question is as this… Well, they're
+publicly available to the extent you're
+
+408
+00:37:46,680 --> 00:37:53,060
+using a VLEI. Okay. So, but what are the
+advantages and disadvantages for
+
+409
+00:37:53,060 --> 00:38:00,440
+ecosystems such as health carrier, GLEIFs
+setup to make those publicly available for
+
+410
+00:38:00,440 --> 00:38:07,180
+other ecosystems to be able to auto to use
+as the watcher network? I think
+
+411
+00:38:07,180 --> 00:38:13,360
+advantages, disadvantages, why you would
+have your own versus you know, putting it
+
+412
+00:38:13,360 --> 00:38:19,060
+out into the global infrastructure. So, so
+that's a really good question because it's
+
+413
+00:38:19,060 --> 00:38:22,960
+about how do we bootstrap infrastructure,
+right? Who pays for the infrastructure,
+
+414
+00:38:23,640 --> 00:38:28,020
+right? That's a challenge problem. And
+Phil wrote a white paper, some
+
+415
+00:38:28,020 --> 00:38:31,000
+presentations about this. One of the
+challenges is the identity infrastructure
+
+416
+00:38:31,000 --> 00:38:35,000
+who pays for identity insurance. The state
+of Utah is going to pay for identity
+
+417
+00:38:35,000 --> 00:38:39,600
+insurance so that everybody gets identity
+insurance for free, right? And then the
+
+418
+00:38:39,600 --> 00:38:42,920
+question is who pays for the other
+infrastructure, which is witnesses and
+
+419
+00:38:42,920 --> 00:38:46,780
+watchers, right? Well, the state of Utah
+has a vested interest in making those
+
+420
+00:38:46,780 --> 00:38:51,120
+available for disadvantaged populations in
+the state of Utah. So they're going to
+
+421
+00:38:51,120 --> 00:38:57,440
+fund some of that. Every business that
+wants to leverage the free identity
+
+422
+00:38:57,440 --> 00:39:03,260
+assurance now has an incentive to make
+witnesses and watchers available to their
+
+423
+00:39:03,260 --> 00:39:04,700
+customers for free.
+
+424
+00:39:08,980 --> 00:39:12,600
+It's sort of how do you bootstrap that
+kind of infrastructure. And so with SEDI,
+
+425
+00:39:12,760 --> 00:39:17,460
+do you think… And I don't know if Phil had
+a comment. Oh, sorry. Okay. We've said it.
+
+426
+00:39:17,720 --> 00:39:22,560
+Do you see as this goes beyond the state
+of Utah and this new consortium that's…
+
+427
+00:39:22,560 --> 00:39:26,720
+Yeah, that's the idea. If other states
+adopt it… …that they'll start helping that
+
+428
+00:39:26,720 --> 00:39:31,460
+to happen. Yeah, it's the classical cold
+start problem for infrastructure, right?
+
+429
+00:39:31,880 --> 00:39:36,040
+How do you start infrastructure that
+benefits when the infrastructure exists?
+
+430
+00:39:36,220 --> 00:39:40,060
+And until it exists, everybody's like,
+well, if I stand it up and I spend money
+
+431
+00:39:40,060 --> 00:39:44,100
+on it, when do I make money? Well, I don't
+make money until I get to scale, right?
+
+432
+00:39:44,100 --> 00:39:47,180
+So, you have to you have this cold start
+problem. And so the state of Utah is a
+
+433
+00:39:47,180 --> 00:39:51,720
+forcing function to enable to solve the
+cold start problem. That's one of the
+
+434
+00:39:51,720 --> 00:39:59,080
+things that's really cool about SEDI is
+that we have somebody who has an incentive
+
+435
+00:39:59,080 --> 00:40:08,400
+to solve the cold start problem. Yes. And
+this state is also both an issuer and a
+
+436
+00:40:08,400 --> 00:40:13,820
+recipient of stuff. So they actually can
+create an entire ecosystem that then other
+
+437
+00:40:13,820 --> 00:40:19,560
+go, oh, that's working. Maybe I should sit
+on top of this or you sit beside it sit
+
+438
+00:40:19,560 --> 00:40:24,300
+beside it and use it so yeah so the state
+needs witnesses and watchers at scale to
+
+439
+00:40:24,300 --> 00:40:30,320
+interact with millions of citizens for no
+other reason than just the state to
+
+440
+00:40:30,320 --> 00:40:34,560
+conduct its own business but if you then
+at that point have witnesses and watchers
+
+441
+00:40:34,560 --> 00:40:39,800
+at scale for millions of citizens just to
+do business with the government it then
+
+442
+00:40:39,800 --> 00:40:43,840
+becomes easy for other people to say well
+wait there's already a there's already
+
+443
+00:40:43,840 --> 00:40:48,260
+millions of these out there millions of
+users, I can start to compete in that
+
+444
+00:40:48,260 --> 00:40:53,840
+space. I will offer a witness service
+because the state already created a market
+
+445
+00:40:53,840 --> 00:41:00,920
+for me. So that was actually the name of
+the proposal that I wrote to the state,
+
+446
+00:41:01,240 --> 00:41:08,820
+which is a public information utility, a
+public identity utility. So we're building
+
+447
+00:41:08,820 --> 00:41:12,160
+stuff in the KERI Foundation that we're
+donating to anybody. We're not going to
+
+448
+00:41:12,160 --> 00:41:16,480
+build those utilities. We're just
+providing the stuff for else to do it. So
+
+449
+00:41:16,480 --> 00:41:19,940
+somebody else has to catch the vision. And
+I know the reading guys are trying to do
+
+450
+00:41:19,940 --> 00:41:22,840
+that, right? Is that fair?
+
+451
+00:41:25,860 --> 00:41:31,600
+Yeah, they're not. Okay. I will contribute
+though from a blank perspective. It might
+
+452
+00:41:31,600 --> 00:41:37,440
+not be evident, but we have some internal
+bootstrapping going on in the way that the
+
+453
+00:41:37,440 --> 00:41:43,720
+governance framework is written for the
+BLEI issuers. So when anybody comes into
+
+454
+00:41:43,720 --> 00:41:51,360
+the infrastructure they can share
+witnesses. They have to set up five, spin
+
+455
+00:41:51,360 --> 00:41:57,600
+up five, but two of those can be shared.
+And then they have to increase the witness
+
+456
+00:41:57,600 --> 00:42:06,940
+pool by three. The overall VLEI ecosystem
+infrastructure by three at that point. So
+
+457
+00:42:06,940 --> 00:42:13,880
+that's how we grow our witness pool. And
+we have not even discussed at this
+
+458
+00:42:13,880 --> 00:42:19,740
+particular point in time whether it would
+ever be a possibility that we would offer
+
+459
+00:42:19,740 --> 00:42:26,880
+something to anybody outside our ecosystem
+where the public sector is much better
+
+460
+00:42:26,880 --> 00:42:33,100
+placed in order to be able to do such a
+thing. This gentleman here had to do it.
+
+461
+00:42:33,640 --> 00:42:40,960
+So I wanted to add another. So SEDI is an
+adoption vector that is trying to that has
+
+462
+00:42:40,960 --> 00:42:44,340
+to solve the cold start problem. Right?
+And the state of Utah has the best
+
+463
+00:42:44,340 --> 00:42:47,660
+industry. The healthcare sector has a
+similar problem. Now, it's the healthcare
+
+464
+00:42:47,660 --> 00:42:53,160
+sector, but those two start to move
+together. And the reason is that right now
+
+465
+00:42:53,160 --> 00:43:00,200
+in this administration, they passed new
+regulations that say all healthcare
+
+466
+00:43:00,200 --> 00:43:07,300
+information, people that work in
+healthcare, all patient data has to be
+
+467
+00:43:07,300 --> 00:43:11,720
+portable. So, they're saying we want
+patient data to be portable. So, those
+
+468
+00:43:11,720 --> 00:43:16,120
+regulations are causing problems in the
+healthcare sector because they have on one
+
+469
+00:43:16,120 --> 00:43:22,420
+hand all these HIPAA rules that say you
+have to protect this healthcare data and
+
+470
+00:43:22,420 --> 00:43:25,640
+on the other hand they just said but we
+have to make it portable and the reason is
+
+471
+00:43:25,640 --> 00:43:33,100
+is that providers in the healthcare sector
+tend to want to capture their patients and
+
+472
+00:43:33,100 --> 00:43:37,260
+one way they capture them is make it so
+their data is importable. So if I get a
+
+473
+00:43:37,260 --> 00:43:41,560
+bunch of tests done and I have a bunch of
+scans and things like that and I want to
+
+474
+00:43:41,560 --> 00:43:48,340
+go to a new provider provider, well, the
+new provider says, well, I can't treat you
+
+475
+00:43:48,340 --> 00:43:53,700
+because I need to do all of these tests.
+And you say, well, no, my other provider
+
+476
+00:43:53,700 --> 00:43:58,140
+did them. Just get the data from them. And
+the new provider says, they won't give it
+
+477
+00:43:58,140 --> 00:44:02,340
+to me because they don't trust me. They
+have no way to know that they can send it
+
+478
+00:44:02,340 --> 00:44:05,940
+to me and not violate their regulations.
+So the new regulations are saying, no, no,
+
+479
+00:44:05,980 --> 00:44:09,720
+you have to give it to the new guy. And
+the old guy says, yeah, but we can't give
+
+480
+00:44:09,720 --> 00:44:13,320
+it to the new guy because these other
+regulations say we can't do it. So KERI
+
+481
+00:44:13,320 --> 00:44:18,720
+and ACDC solves that cross-trust domain
+transfer problem. These two can trust each
+
+482
+00:44:18,720 --> 00:44:22,660
+other so they can move your data from one
+provider to the other. And that's patient
+
+483
+00:44:22,660 --> 00:44:27,640
+data, which means the patients now have a
+reason to have a wallet, have a reason to
+
+484
+00:44:27,640 --> 00:44:32,520
+have infrastructure, and that then starts
+to merge those two ecosystems. Because if
+
+485
+00:44:32,520 --> 00:44:37,440
+I have a wallet so I can do business with
+the state and I need a wallet so I can do
+
+486
+00:44:37,440 --> 00:44:40,740
+business with my healthcare provider, it
+can be the same wallet because it's the
+
+487
+00:44:40,740 --> 00:44:46,440
+same protocol under the hood. And now you
+start to get that flywheel effect. – I
+
+488
+00:44:46,440 --> 00:44:50,320
+assume. – Yes. – Wasn't the case already
+HIPAA took care of that just by the
+
+489
+00:44:50,320 --> 00:44:54,460
+patient authorizing the transfer, right? –
+They don't trust the patient authorizing
+
+490
+00:44:54,460 --> 00:44:58,640
+the transfer. It's, well, yeah, you can do
+it that way, but it takes weeks. – Yeah,
+
+491
+00:44:58,740 --> 00:45:01,600
+but I'm going to say that's the way it has
+been done. – Yes, it's manual, right? And
+
+492
+00:45:01,600 --> 00:45:05,380
+it takes weeks. – Right. – And if you're
+suffering from a serious illness and you
+
+493
+00:45:05,380 --> 00:45:08,360
+might not live weeks, that doesn't really
+help you, right? – The patient's
+
+494
+00:45:08,360 --> 00:45:09,800
+essentially the middle man. – Yes.
+
+495
+00:45:12,740 --> 00:45:17,500
+So back on the topic of public
+infrastructure. Yeah. I'm curious if
+
+496
+00:45:17,500 --> 00:45:22,200
+you're familiar with the app protocol
+ecosystem and their identity system did
+
+497
+00:45:22,200 --> 00:45:28,140
+PLC. Yeah, I've heard of that. Yeah, I see
+it is kind of like a it's not KERI, but
+
+498
+00:45:28,140 --> 00:45:31,920
+it's like a verifiable key history. So it
+has some similarities. I think it's easier
+
+499
+00:45:31,920 --> 00:45:36,460
+to use, but doesn't have the same security
+properties. But one of the things I think
+
+500
+00:45:36,460 --> 00:45:42,080
+is nice or convenient about the ecosystem
+is they just provide a directory service,
+
+501
+00:45:42,240 --> 00:45:46,980
+which is like analogous maybe to a
+witness. But I haven't really thought
+
+502
+00:45:46,980 --> 00:45:51,660
+through kind of the security properties of
+it because like like de facto it's a
+
+503
+00:45:51,660 --> 00:45:55,720
+centralized directory. Yeah, that's right.
+But it's interesting relative to this
+
+504
+00:45:55,720 --> 00:46:00,000
+question. Yeah. So if I centralize things,
+it makes it much easier. The world becomes
+
+505
+00:46:00,000 --> 00:46:05,140
+really easy when I centralize things. So
+that's always been a problem for KERI is
+
+506
+00:46:05,140 --> 00:46:10,720
+that we wanted KERI to be fully, totally
+zero trust, decentralized and that means
+
+507
+00:46:10,720 --> 00:46:17,560
+we have a hard problem to solve. So yeah,
+I get it. We created a hard problem by
+
+508
+00:46:17,560 --> 00:46:21,860
+forcing it to be totally decentralized.
+But that's why we've been searching for
+
+509
+00:46:21,860 --> 00:46:26,700
+these forcing functions like healthcare or
+state of Utah. Actually, prominent telecom
+
+510
+00:46:26,700 --> 00:46:32,340
+is not a forcing function because it all
+happens behind the scenes. When it stops
+
+511
+00:46:32,340 --> 00:46:37,240
+call spam, it's your cell phone provider
+that's signing and checking the
+
+512
+00:46:37,240 --> 00:46:40,380
+signatures. You, the user, never never
+even know that it's happening. You just
+
+513
+00:46:40,380 --> 00:46:45,140
+see something on your screen that says,
+yeah, this call came from Microsoft. You
+
+514
+00:46:45,140 --> 00:46:53,020
+can trust it. And you go, okay. – And I
+would say that is actually a turning point
+
+515
+00:46:53,020 --> 00:46:59,840
+for KERI because the early use cases were
+all organizational, right? – Yeah. –
+
+516
+00:46:59,840 --> 00:47:04,680
+Provenant, those kinds of things. – Yeah.
+– So state of Utah, health, health KERI,
+
+517
+00:47:05,020 --> 00:47:10,440
+those are things that are different than
+what has happened before. So we need to
+
+518
+00:47:10,440 --> 00:47:16,120
+watch them because that will say, you
+know, how does this actually work? Yeah.
+
+519
+00:47:16,380 --> 00:47:21,240
+Yeah. Yeah. That's what that's given me.
+That's why I'm optimistic because I see
+
+520
+00:47:21,240 --> 00:47:26,560
+those as real serious adoption vectors and
+there's drivers that aren't going to go
+
+521
+00:47:26,560 --> 00:47:30,880
+away. There's regulations involved. All of
+those things are forcing functions that
+
+522
+00:47:30,880 --> 00:47:37,760
+will force things. And let me say
+something about, I mean, I don't want to,
+
+523
+00:47:37,880 --> 00:47:38,220
+I mean,
+
+524
+00:47:41,180 --> 00:47:47,940
+DidPLC, DidRevvh, there's a couple of
+other ones, have adopted many of the
+
+525
+00:47:47,940 --> 00:47:54,160
+mechanisms in KERI for key state. What
+they have not adopted are the mechanisms
+
+526
+00:47:54,160 --> 00:48:00,400
+for perpetually verifiable issuances,
+which means you can't use them for many of
+
+527
+00:48:00,400 --> 00:48:05,300
+the applications that people want to use
+them for. It's similar to my criticisms of
+
+528
+00:48:05,300 --> 00:48:10,020
+zero knowledge proofs. You can't use them
+for things that for issuances that need to
+
+529
+00:48:10,020 --> 00:48:13,840
+survive a long time because there's no way
+to verify them once you rotate keys. You
+
+530
+00:48:13,840 --> 00:48:17,360
+know you rotated keys, but everything
+issued under the old keys becomes
+
+531
+00:48:17,360 --> 00:48:21,900
+unverifiable the moment you do it unless
+you're anchoring those issuances to your e
+
+532
+00:48:21,900 --> 00:48:25,480
+-state. That means they have to change
+their protocols and as soon as they do
+
+533
+00:48:25,480 --> 00:48:30,960
+that, they now become as complicated as
+KERI and why do it that way then? Yes. –
+
+534
+00:48:30,960 --> 00:48:37,100
+So I wanted to add to that to what you
+said. So I'm involved in DIDWebVH and
+
+535
+00:48:37,100 --> 00:48:42,780
+involved in decentralized social protocols
+such as AT protocol. I'm familiar with
+
+536
+00:48:42,780 --> 00:48:53,220
+DIDPLC, etc. To add to what Sam is saying
+that there first of all, there is osmosis
+
+537
+00:48:53,220 --> 00:49:00,500
+of KERI security properties to some of the
+DID methods for those exact same reasons
+
+538
+00:49:00,500 --> 00:49:05,880
+because it's same shape of the problem,
+same security space, very similar shaped
+
+539
+00:49:05,880 --> 00:49:10,420
+solutions and things like that part
+
+540
+00:49:10,420 --> 00:49:16,980
+of the unsolved problem in both DIDWebVH
+space, in the social media space and in
+
+541
+00:49:16,980 --> 00:49:21,300
+KERI as we've been discussing is exactly
+who's going to run the infrastructure,
+
+542
+00:49:21,800 --> 00:49:28,220
+right? In social media space, it's always
+been Twitter. Okay. Twitter's running the
+
+543
+00:49:28,220 --> 00:49:34,120
+infrastructure or Facebook or whatever in
+the hopes of monetizing. Blue Sky came
+
+544
+00:49:34,120 --> 00:49:38,780
+along who is operating DIDPLC, the
+servers. and they're providing the
+
+545
+00:49:38,780 --> 00:49:45,020
+infrastructure and they're venture capital
+funded in the hopes of finding a business
+
+546
+00:49:45,020 --> 00:49:50,300
+model and monetizing, right? What's the
+alternative? The essentially one and a
+
+547
+00:49:50,300 --> 00:49:55,060
+half to two things that we have been
+mentioned governments, right? So on the
+
+548
+00:49:55,060 --> 00:50:00,860
+federal state or city level like SEDI or
+what we've been seeing in the
+
+549
+00:50:00,860 --> 00:50:05,840
+decentralized social media space such as
+Macedon, basically small communities and
+
+550
+00:50:05,840 --> 00:50:11,440
+volunteers. Right. Yeah. It was run the
+common infrastructure of the… Yeah. And,
+
+551
+00:50:11,440 --> 00:50:16,840
+and, and yeah, so it, it, it has its
+challenges. I'm not saying that it's not
+
+552
+00:50:16,840 --> 00:50:22,580
+challenging. So how much, we got 10
+minutes left? You got a question? Somebody
+
+553
+00:50:22,580 --> 00:50:27,780
+else had a question. Yeah, I was going to
+say, did PLC? They can't hear you on the
+
+554
+00:50:27,780 --> 00:50:28,180
+recording.
+
+555
+00:50:32,180 --> 00:50:39,080
+So there's delegation and multisig are
+challenging to get right in a way that is
+
+556
+00:50:39,080 --> 00:50:43,420
+usable. And those are things two things
+that KERI does that no other DID method
+
+557
+00:50:43,420 --> 00:50:47,040
+does. I've looked and I could be wrong.
+It's been a while since I've looked at
+
+558
+00:50:47,040 --> 00:50:53,040
+DIDWebVH. But when the last time I looked
+at DIDPLC… – Well, I read the DIDWebVH
+
+559
+00:50:53,040 --> 00:50:58,200
+latest spec as of like three weeks ago and
+it doesn't have any of those in it. –
+
+560
+00:50:58,200 --> 00:51:05,960
+Yeah, so I… – Is that right? – It's it has
+a new user space. It has it in application
+
+561
+00:51:05,960 --> 00:51:12,960
+space, not in the protocol. So for those
+listening to the recording, VidWebH is
+
+562
+00:51:12,960 --> 00:51:19,240
+working on multisig in sort of application
+space, not in the signature space. So
+
+563
+00:51:19,240 --> 00:51:24,040
+they're trying, they're working on it.
+Yes. Once you decide to accept you need
+
+564
+00:51:24,040 --> 00:51:29,800
+multisig and delegation and anchor
+disuances, you have KERI. Completely.
+
+565
+00:51:30,180 --> 00:51:41,100
+You've recreated exactly the same thing. I
+got one. Yeah, we got 10 minutes left. 10
+
+566
+00:51:41,100 --> 00:51:45,860
+minutes left. Well, I could talk seven
+minutes. I could talk a little bit about
+
+567
+00:51:45,860 --> 00:52:01,260
+how witnesses and how witnesses solve the
+detectability problem and the availability
+
+568
+00:52:01,260 --> 00:52:09,380
+problem. You guys interested in that? So a
+lot of KERI infrastructure, a lot of KERI
+
+569
+00:52:09,380 --> 00:52:20,220
+protocol does multiple duty. It's like for
+me a sign of a good design is that I
+
+570
+00:52:20,220 --> 00:52:27,140
+design something to solve one problem and
+then serendipitously it solves other
+
+571
+00:52:27,140 --> 00:52:32,080
+problems that I hadn't yet got to yet. And
+they go, oh, wait a minute. this also
+
+572
+00:52:32,080 --> 00:52:37,600
+solves that problem. So delegation,
+delegated AIDs solve multiple problems.
+
+573
+00:52:38,760 --> 00:52:45,300
+Witnesses solve two different problems.
+The first problem they solve and Ryan
+
+574
+00:52:45,300 --> 00:52:54,020
+mentioned this, the first problem is
+availability. So originally, one
+
+575
+00:52:54,020 --> 00:52:57,980
+of the problems that people complain about
+is, well, if I have a wallet and all my
+
+576
+00:52:57,980 --> 00:53:03,240
+keys are in my wallet and my wallet it's
+offline, nobody can verify my key state
+
+577
+00:53:03,240 --> 00:53:11,180
+because my wallet's offline. I can't have
+a presence because my wallet has to be
+
+578
+00:53:11,180 --> 00:53:14,820
+online. And a lot of people approach it
+and say, well, then I need a hosted wallet
+
+579
+00:53:14,820 --> 00:53:20,840
+so that my host has my stuff. And so a lot
+of people solve it that way. I have hosted
+
+580
+00:53:20,840 --> 00:53:25,640
+wallets. Now they go to the host to get
+it. But the problem is, is the host now
+
+581
+00:53:25,640 --> 00:53:32,660
+becomes something I don't control and I
+can't trust. And so now I've basically
+
+582
+00:53:32,660 --> 00:53:37,800
+solved the availability problem, but I've
+introduced an even worse security problem.
+
+583
+00:53:38,580 --> 00:53:42,500
+So witnesses solve the availability
+problem without introducing a security
+
+584
+00:53:42,500 --> 00:53:50,680
+problem. Yeah. What's the threat model on
+the host? You said something you can't
+
+585
+00:53:50,680 --> 00:53:59,180
+control. Aren't the key event logs still
+secured by the user's keys? Well, my copy
+
+586
+00:53:59,180 --> 00:54:05,520
+is secured, right? But the host could
+publish a key event log to anybody they
+
+587
+00:54:05,520 --> 00:54:09,900
+wanted to and I wouldn't know they were
+publishing a duplicate copy. I wouldn't be
+
+588
+00:54:09,900 --> 00:54:14,940
+able to tell that they were cheating. Got
+it. Right? So because they because my host
+
+589
+00:54:14,940 --> 00:54:20,100
+can eclipse me. So I'm subject to an
+eclipse attack if I just have a host. So I
+
+590
+00:54:20,100 --> 00:54:25,620
+need an eclipse attack proof availability
+mechanism. Well, the only eclipse attack
+
+591
+00:54:25,620 --> 00:54:30,260
+proof availability building mechanism is a
+Byzantine fault tolerant distributed pool.
+
+592
+00:54:30,920 --> 00:54:38,260
+Now, it doesn't have to be total ordering.
+It just has to be Eclipse
+
+593
+00:54:38,260 --> 00:54:44,460
+proof. So when I say deconstructed block
+data, I said I've got to solve this
+
+594
+00:54:44,460 --> 00:54:48,020
+Eclipse attacks problem. The only way to
+solve an Eclipse attacks problem is a
+
+595
+00:54:48,020 --> 00:54:52,540
+distributed pool, but I don't need the
+distributed pool to do a total ordered
+
+596
+00:54:52,540 --> 00:54:58,860
+replicable state machine, which I need for
+double spend proof. I don't have to do a
+
+597
+00:54:58,860 --> 00:55:03,460
+double spend proof. I just have to know
+that there's duplicity. Double spend proof
+
+598
+00:55:03,460 --> 00:55:08,740
+is actually duplicity hiding. It says
+there's only ever one valid copy and if
+
+599
+00:55:08,740 --> 00:55:14,920
+somebody cheats then we'll just take the
+cheat and say yeah that's the true state
+
+600
+00:55:14,920 --> 00:55:19,300
+because the cheating is they've
+compromised your keys. So I need to detect
+
+601
+00:55:19,300 --> 00:55:24,480
+that my keys have been compromised. I'll
+also have it be highly available and so
+
+602
+00:55:24,480 --> 00:55:30,080
+that's why it's solves multiple problems
+because it solves availability with a
+
+603
+00:55:30,080 --> 00:55:34,940
+distributed pool. There's lots of ways to
+solve availability. You can have master
+
+604
+00:55:34,940 --> 00:55:40,120
+slay or whatever they call it nowadays.
+Sharded. You can have a sharded
+
+605
+00:55:40,120 --> 00:55:42,500
+architecture. You have a host
+architecture. There's lots of ways to
+
+606
+00:55:42,500 --> 00:55:52,500
+solve availability, but a distributed pool
+of independent servers that exchange data
+
+607
+00:55:52,500 --> 00:55:59,260
+using a fault tolerant exchange change
+algorithm is a way to do it. The reason
+
+608
+00:55:59,260 --> 00:56:04,300
+you pick that way is because it doesn't
+just solve the availability problem, it
+
+609
+00:56:04,300 --> 00:56:12,640
+solves the eclipse problem. So it prevents
+you from being eclipsed. Now you need to
+
+610
+00:56:12,640 --> 00:56:17,520
+control that pool so that you don't have
+to trust anybody. So it's under your
+
+611
+00:56:17,520 --> 00:56:23,340
+control which means that ultimately they
+can't trust what you published because you
+
+612
+00:56:23,340 --> 00:56:28,620
+could publish, you could do an eclipse
+attack on the people reading from your
+
+613
+00:56:28,620 --> 00:56:32,600
+watcher pool. That's why, I mean, reading
+from your witness pool, that's why you
+
+614
+00:56:32,600 --> 00:56:36,280
+need to have a watcher pool that they
+control because they can then detect that
+
+615
+00:56:36,280 --> 00:56:41,800
+you're not eclipsing them. So it's just
+one step after another to go, okay, I have
+
+616
+00:56:41,800 --> 00:56:46,560
+to solve this problem. And then once I
+solve it, then it's done. Yeah. So you
+
+617
+00:56:46,560 --> 00:56:53,160
+have availability, eclipse attack, and
+then detection. The third one is detect
+
+618
+00:56:53,160 --> 00:57:04,620
+detect key compromise. Now here's the
+thing. If I'm doing a
+
+619
+00:57:04,620 --> 00:57:09,240
+key event log, the key event log doesn't
+enable me to detect key compromise.
+
+620
+00:57:09,600 --> 00:57:16,180
+There's no key compromise detection in a
+key event log. The witness pool gives me
+
+621
+00:57:16,180 --> 00:57:21,680
+key compromise detection, but only if I'm
+anchoring issuances. If I anchor issues,
+
+622
+00:57:21,780 --> 00:57:26,280
+the only way I can get anchored is it gets
+entered in the key event log that a
+
+623
+00:57:26,280 --> 00:57:32,340
+witness witnesses. And if I have my own
+copy of the key event log and I check my
+
+624
+00:57:32,340 --> 00:57:35,520
+witness and the witness has a different
+copy than I have and there's stuff in the
+
+625
+00:57:35,520 --> 00:57:39,620
+witnesses copy that is anchored that I did
+and the only way I can get there is if my
+
+626
+00:57:39,620 --> 00:57:43,120
+keys have been compromised then I detect
+the key compromised. But until you anchor
+
+627
+00:57:43,120 --> 00:57:46,740
+issuances you can't actually detect key
+compromised. So you don't get the most
+
+628
+00:57:46,740 --> 00:57:52,780
+important security property of KERI which
+is I can detect key compromised. You have
+
+629
+00:57:52,780 --> 00:57:55,580
+to trust that there's some other mechanism
+to detect your keys. So yeah, you can
+
+630
+00:57:55,580 --> 00:57:59,160
+rotate your keys, but you don't know when
+to rotate. With a witness pool, you know
+
+631
+00:57:59,160 --> 00:58:02,360
+when to rotate. But the witness pool
+doesn't tell you when to when to rotate
+
+632
+00:58:02,360 --> 00:58:06,320
+unless you're anchoring issuances. Any
+issuances that aren't anchored are not
+
+633
+00:58:06,320 --> 00:58:10,680
+detectable when you get your keys
+compromised. So you don't need to anchor
+
+634
+00:58:10,680 --> 00:58:13,760
+everything because not everything's
+important enough. But the important stuff
+
+635
+00:58:13,760 --> 00:58:18,160
+you anchor and that allows you to detect
+it. So without anchoring, you've missed
+
+636
+00:58:18,160 --> 00:58:23,700
+most of the security properties of what
+KERI provides. But it's complicated,
+
+637
+00:58:23,940 --> 00:58:28,740
+right? You have to complicate your system.
+Okay, I'm done. Thank you.
 
