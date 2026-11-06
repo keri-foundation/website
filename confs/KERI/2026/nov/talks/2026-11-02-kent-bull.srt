@@ -680,11 +680,11 @@ identity. We're going to model a little
 137
 00:11:32,420 --> 00:11:38,900
 bit of an organizational identity problem
-here, but with did:webs. So what the VLEI
+here, but with did:webs. So what the vLEI
 
 138
 00:11:38,900 --> 00:11:43,660
-brings and this isn't a VLEI presentation,
+brings and this isn't a vLEI presentation,
 but I'll give you a quick quick intro is
 
 139
@@ -694,7 +694,7 @@ identifier that says this is Microsoft or
 
 140
 00:11:48,020 --> 00:11:52,020
-this is Google. And then there's the VLEI
+this is Google. And then there's the vLEI
 that says, Okay, well, this is
 
 141

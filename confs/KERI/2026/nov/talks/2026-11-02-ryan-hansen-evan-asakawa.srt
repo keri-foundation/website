@@ -1107,7 +1107,7 @@ of infrastructure that the people are
 
 225
 00:21:31,480 --> 00:21:36,140
-using ACDC for credentials like VLEIs
+using ACDC for credentials like vLEIs
 aren't doing graduated disclosure. That's
 
 226
@@ -1377,7 +1377,7 @@ scale because GLEIF set up five witnesses
 
 279
 00:26:50,700 --> 00:27:00,580
-for the infrastructure for the VLEI and
+for the infrastructure for the vLEI and
 each QVI has to set up a total of five as
 
 280
@@ -1392,7 +1392,7 @@ three more witnesses to the overall
 
 282
 00:27:14,160 --> 00:27:19,060
-witness service for the the VLEI
+witness service for the the vLEI
 ecosystem. And that was in order to be
 
 283
@@ -2270,7 +2270,7 @@ that what Joe was asking was, so for the
 
 460
 00:44:41,360 --> 00:44:46,480
-VLEI, we have an identity authentication
+vLEI, we have an identity authentication
 layer that does a challenge response
 
 461

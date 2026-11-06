@@ -1019,12 +1019,12 @@ guess I have one. I guess for GLEIF, the
 206
 00:20:02,780 --> 00:20:11,360
 important thing is to be able to offer to
-to holders of VLEIs, for example, and to
+to holders of vLEIs, for example, and to
 
 207
 00:20:11,360 --> 00:20:19,400
 allow companies who want to implement the
-VLEI credentials to have alternatives to
+vLEI credentials to have alternatives to
 
 208
 00:20:19,400 --> 00:20:27,680
@@ -2015,7 +2015,7 @@ their ecosystem. GLEIF has theirs that are
 
 406
 00:37:35,840 --> 00:37:42,180
-working in the VLEI system, but they're
+working in the vLEI system, but they're
 not publicly available at this point. So
 
 407
@@ -2025,7 +2025,7 @@ publicly available to the extent you're
 
 408
 00:37:46,680 --> 00:37:53,060
-using a VLEI. Okay. So, but what are the
+using a vLEI. Okay. So, but what are the
 advantages and disadvantages for
 
 409
@@ -2263,7 +2263,7 @@ And then they have to increase the witness
 
 456
 00:41:57,600 --> 00:42:06,940
-pool by three. The overall VLEI ecosystem
+pool by three. The overall vLEI ecosystem
 infrastructure by three at that point. So
 
 457
