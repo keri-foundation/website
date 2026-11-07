@@ -26,6 +26,85 @@
     "poster": "promo/2026-11-02-miniconf-promo.jpg",
     "title": "The videos from the KERI Mini Conference in November 2026 will be posted here."
   },
+  "topClips": {
+    "enabled": true,
+    "title": "Top Ten Clips",
+    "subtitle": "Ten bite-size moments from the talks \u2014 each clip plays for 10\u201320 seconds.",
+    "clips": [
+      {
+        "videoTitle": "Samuel M. Smith \u2013 Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
+        "speaker": "Samuel M. Smith",
+        "talk": "AI Agent Surveillance Protection",
+        "start": 19,
+        "end": 30,
+        "quote": "So when the world ends because of AI, what should be our emergency plan? How do we communicate? How do we get food?"
+      },
+      {
+        "videoTitle": "Samuel M. Smith \u2013 Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
+        "speaker": "Samuel M. Smith",
+        "talk": "AI Agent Surveillance Protection",
+        "start": 63,
+        "end": 77,
+        "quote": "Continuous identity means I determine who you are by continuously surveilling everything that you do."
+      },
+      {
+        "videoTitle": "Samuel M. Smith \u2013 Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
+        "speaker": "Samuel M. Smith",
+        "talk": "AI Agent Surveillance Protection",
+        "start": 341,
+        "end": 348.5,
+        "quote": "That just means you've created an arms race of surveillance."
+      },
+      {
+        "videoTitle": "Samuel M. Smith \u2013 Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
+        "speaker": "Samuel M. Smith",
+        "talk": "AI Agent Surveillance Protection",
+        "start": 758.5,
+        "end": 771.5,
+        "quote": "The answer isn't continuous surveillance. It is just key management. If we do key management well, AI cyber can't attack us, can't attack you, can't attack anybody."
+      },
+      {
+        "videoTitle": "Kent Bull \u2013 did:webs, why the \u2018s\u2019 matters most",
+        "speaker": "Kent Bull",
+        "talk": "did:webs",
+        "start": 32,
+        "end": 42,
+        "quote": "did:webs \u2014 why the \u2018s\u2019 matters is the \u2018s\u2019 matters most."
+      },
+      {
+        "videoTitle": "Samuel M. Smith: The state and the future of the KERI Suite",
+        "speaker": "Samuel M. Smith",
+        "talk": "State of the KERI Suite",
+        "start": 503,
+        "end": 519,
+        "quote": "I call it the era of the ledger wars. Everybody decided that digital identity based on blockchain was the coolest thing."
+      },
+      {
+        "videoTitle": "Samuel M. Smith & Ryan Hansen \u2013 Progress report: The 5W\u2019s of KERI: Witnesses, Watchers, Wallet, Web, and Wizard PLUS Bulk issuances and anchoring in Merkle Trees",
+        "speaker": "Samuel M. Smith & Ryan Hansen",
+        "talk": "5W's Progress Report",
+        "start": 3493,
+        "end": 3501,
+        "quote": "Without anchoring, you've missed most of the security properties of what KERI provides."
+      },
+      {
+        "videoTitle": "Ryan Hansen & Samuel M. Smith \u2013  Open infrastructure for KERI-based digital identity",
+        "speaker": "Ryan Hansen & Samuel M. Smith",
+        "talk": "Open Infrastructure",
+        "start": 71,
+        "end": 83.5,
+        "quote": "If you have vendor lock-in, it's not open infrastructure. Open standards and open source aren't enough if users still can't leave."
+      },
+      {
+        "videoTitle": "Ryan Hansen & Evan Asakawa \u2013 Demonstration KERISuite",
+        "speaker": "Ryan Hansen & Evan Asakawa",
+        "talk": "KERISuite Demo",
+        "start": 1128,
+        "end": 1140,
+        "quote": "You don't have to rely on a single service provider within your wallet to get witnesses and watchers."
+      }
+    ]
+  },
   "transcriptsDir": "transcripts/html",
   "defaultPoster": "https://kericonf.com/wp-content/uploads/2026/05/KERI-mini-CONF26-scaled.png",
   "speakerPhotos": {
