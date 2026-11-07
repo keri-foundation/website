@@ -598,8 +598,8 @@ transitions for the same identifier, which
 
 121
 00:10:21,660 --> 00:10:25,620
-is what AID is. Well, how do you verify
-that? That's where the key event log comes
+is what AID is. Well, how do you verify that?
+That's where the key event log (KEL) comes
 
 122
 00:10:25,620 --> 00:10:32,120
