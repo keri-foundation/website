@@ -1324,7 +1324,7 @@ Or they've got a really good reason why,
 266
 00:22:09,500 --> 00:22:15,080
 hey, this for the risk profile here, we
-can accept these risks So just a plain
+can accept these risks. So just a plain
 
 267
 00:22:15,080 --> 00:22:22,960
@@ -1457,7 +1457,7 @@ presentation. This is part of what makes
 
 293
 00:24:21,620 --> 00:24:27,160
-DDoS special is that you make an explicit
+did:webs special is that you make an explicit
 commitment to say, I'm authorizing this
 
 294
@@ -1498,7 +1498,7 @@ is because it's a 100% requirement that if
 301
 00:25:06,360 --> 00:25:11,300
 you want your DID to be hosted on a given
-URL, you have to commit to that URL. with
+URL, you have to commit to that URL with
 
 302
 00:25:11,300 --> 00:25:18,340
@@ -1532,7 +1532,7 @@ transaction event logs. It's natural that
 
 308
 00:25:40,940 --> 00:25:46,180
-we have ACDCs. Well, what's this RPUI?
+we have ACDCs. Well, what's this rpy?
 Well, that's actually shorthand for what's
 
 309
@@ -1588,7 +1588,7 @@ the controller of this identifier of this
 319
 00:26:33,800 --> 00:26:39,120
 endpoint and in KERI we could do that in
-DeadWebs we can do that and we expressed
+did:webs we can do that and we expressed
 
 320
 00:26:39,120 --> 00:26:45,120
@@ -1677,8 +1677,8 @@ just derive the DID document from the keri.cesr
 
 337
 00:28:00,620 --> 00:28:06,260
-stream and compare it with the DID
-JSON that you've got on your web server.
+stream and compare it with the did:json
+that you've got on your web server.
 
 338
 00:28:06,400 --> 00:28:11,720
@@ -1758,17 +1758,17 @@ to the multisig stuff. We do have multisig
 353
 00:29:24,140 --> 00:29:29,000
 support and I'm going to say limited
-multisig support and you'll see why. Give
+multisig support and you'll see why.
 
 354
 00:29:29,000 --> 00:29:35,300
-me just a second to drink here. There
-is something that exists in the W3C
+There is something
+that exists in the W3C
 
 355
 00:29:35,300 --> 00:29:41,140
 essentiallyidentity ecosystem called
-Conditional Proof 2022. And it lets you
+ConditionalProof2022. And it lets you
 
 356
 00:29:41,140 --> 00:29:48,620
@@ -1777,8 +1777,8 @@ something. So it was a natural fit for
 
 357
 00:29:48,620 --> 00:29:54,060
-DataWebs. DataWebs based on KERI with KERI
-Multisake. We just needed a way to define,
+did:webs. did:webs based on KERI with KERI
+multisig. We just needed a way to define,
 
 358
 00:29:54,200 --> 00:29:59,040
@@ -1788,7 +1788,7 @@ of three. Like this example, we've got
 359
 00:29:59,040 --> 00:30:05,440
 three keys that can sign. Two of them are
-required. Conditional Proof 2022 lets us
+required. ConditionalProof2022 lets us
 
 360
 00:30:05,440 --> 00:30:09,940
@@ -1797,7 +1797,7 @@ structure, but it gets deeper than that.
 
 361
 00:30:10,480 --> 00:30:16,180
-Conditional proof 2022 also allows
+ConditionalProof2022 also allows
 you to do nesting. So the really fancy cool
 
 362
@@ -1808,7 +1808,7 @@ threshold multisig stuff that KERI could
 363
 00:30:21,140 --> 00:30:26,760
 do, you can actually express that with
-conditional proof 2022, which is actually
+ConditionalProof2022, which is actually
 
 364
 00:30:26,760 --> 00:30:32,240
@@ -1827,8 +1827,8 @@ a little bit slower.
 
 367
 00:30:43,800 --> 00:30:49,020
-Let's say you have… So let me introduce
-this from why would you actually use this?
+So let me introduce this from
+why would you actually use this?
 
 368
 00:30:50,200 --> 00:30:55,360
@@ -1958,7 +1958,7 @@ with that in mind, let's actually dive into
 393
 00:32:50,080 --> 00:32:55,200
 what a verification method might look
-like for conditional proof 2022. You're
+like for ConditionalProof2022. You're
 
 394
 00:32:55,200 --> 00:33:00,800
@@ -1988,7 +1988,7 @@ you're looking at here, this object here,
 399
 00:33:18,800 --> 00:33:23,380
 this set of text, this is what a
-conditional proof 2022 looks like. It
+ConditionalProof2022 looks like. It
 
 400
 00:33:23,380 --> 00:33:29,040
