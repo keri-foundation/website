@@ -28,7 +28,7 @@
   },
   "topClips": {
     "enabled": true,
-    "title": "Top Ten Clips",
+    "title": "Top Clips",
     "subtitle": "Ten bite-size moments from the talks \u2014 each clip plays for 10\u201320 seconds.",
     "clips": [
       {
@@ -64,14 +64,6 @@
         "quote": "The answer isn't continuous surveillance. It is just key management. If we do key management well, AI cyber can't attack us, can't attack you, can't attack anybody."
       },
       {
-        "videoTitle": "Kent Bull \u2013 did:webs, why the \u2018s\u2019 matters most",
-        "speaker": "Kent Bull",
-        "talk": "did:webs",
-        "start": 32,
-        "end": 42,
-        "quote": "did:webs \u2014 why the \u2018s\u2019 matters is the \u2018s\u2019 matters most."
-      },
-      {
         "videoTitle": "Samuel M. Smith: The state and the future of the KERI Suite",
         "speaker": "Samuel M. Smith",
         "talk": "State of the KERI Suite",
@@ -94,14 +86,6 @@
         "start": 71,
         "end": 83.5,
         "quote": "If you have vendor lock-in, it's not open infrastructure. Open standards and open source aren't enough if users still can't leave."
-      },
-      {
-        "videoTitle": "Ryan Hansen & Evan Asakawa \u2013 Demonstration KERISuite",
-        "speaker": "Ryan Hansen & Evan Asakawa",
-        "talk": "KERISuite Demo",
-        "start": 1128,
-        "end": 1140,
-        "quote": "You don't have to rely on a single service provider within your wallet to get witnesses and watchers."
       }
     ]
   },
