@@ -759,7 +759,7 @@ it's just your organization ID. Well, your
 153
 00:12:58,200 --> 00:13:03,440
 organization, let's say you're running an
-AI agent, which is sort of where this OPS
+AI agent, which is sort of where this Ops
 
 154
 00:13:03,440 --> 00:13:10,740
@@ -829,7 +829,7 @@ I see credential verifier checks issuer
 167
 00:14:01,360 --> 00:14:06,720
 proof and part of what I wanted to say
-up front as the as the TLDRs a big part of
+up front as the as the TL;DRs a big part of
 
 168
 00:14:06,720 --> 00:14:11,280
@@ -874,16 +874,16 @@ about that when I looked into it in April,
 176
 00:14:44,080 --> 00:14:49,040
 but thank you. We have to write a similar
-thing for the DataWebs world. And this is
+thing for the did:webs world. And this is
 
 177
 00:14:49,040 --> 00:14:55,400
-a significant piece of work that we didn't
-quite have time to get to. What it is is
+a significant piece of work that
+we didn't quite have time to get to.
 
 178
 00:14:55,400 --> 00:15:00,980
-that so KERI has this amazing capability
+So KERI has this amazing capability
 for multisig. I said nested weighted
 
 179
@@ -998,8 +998,8 @@ a total failure. That's great. Anyway, all
 
 201
 00:16:41,860 --> 00:16:46,300
-right. So this is an example of a did-webs
-did. Let's just walk through it slowly.
+right. So this is an example of a did:webs
+DID. Let's just walk through it slowly.
 
 202
 00:16:46,660 --> 00:16:51,020
@@ -1038,7 +1038,7 @@ If you had to say KERI in one sentence,
 
 209
 00:17:29,040 --> 00:17:36,000
-DataWebs is a standard is a W3C standard
+did:webs is a standard is a W3C standard
 way to discover keystate. And when I say
 
 210
@@ -1128,8 +1128,8 @@ the current key right now today? So I
 
 227
 00:18:54,920 --> 00:18:59,920
-mentioned two files. So when you're in in
-what I wanted to say with that example is
+mentioned two files. So what I
+wanted to say with that example is
 
 228
 00:18:59,920 --> 00:19:06,060
@@ -1143,12 +1143,12 @@ to buy what you're trying to buy? They're
 
 230
 00:19:09,940 --> 00:19:13,280
-going to find two things for your
-identifier. They're going to get your DID
+going to find two things for your identifier.
+They're going to get your did.json
 
 231
 00:19:13,280 --> 00:19:17,940
-.json and anybody who's familiar with the
+and anybody who's familiar with the
 DID ecosystem knows this pretty well. And
 
 232
@@ -1164,21 +1164,21 @@ retrieve it, it's actually just a regular
 234
 00:19:28,340 --> 00:19:34,140
 did:web did:json. But we have another file
-that's not did:web. That's what this KERI
+that's not did:web. That's what this keri.cesr
 
 235
 00:19:34,140 --> 00:19:38,220
-Caesar stream is. So when they verify or
+stream is. So when they verify or
 they're trying to make a decision, should
 
 236
 00:19:38,220 --> 00:19:42,660
-I sell this to you or not, they go and
-they resolve both the issuers did and your
+[…] or not, they go and
+they resolve both the issuers DID and your
 
 237
 00:19:42,660 --> 00:19:48,760
-did and they get these two files per for
+DID and they get these two files for
 the issuer and for you, this is what we're
 
 238
@@ -1194,11 +1194,11 @@ identifier. And then we go through this
 240
 00:19:57,860 --> 00:20:01,100
 process. We put them both together and
-we essentially say from the KERI Caesar
+we essentially say from the keri.cesr
 
 241
 00:20:01,100 --> 00:20:06,800
-string, can we derive the exact same
+stream, can we derive the exact same
 document that was hosted over here? If we
 
 242
@@ -1264,7 +1264,7 @@ already have a discovery protocol built
 254
 00:21:09,840 --> 00:21:14,640
 into KERI. It's called out-of-bound
-introductions. We send everything across
+introductions (OOBI). We send everything across
 
 255
 00:21:14,640 --> 00:21:19,300
@@ -1293,7 +1293,7 @@ it's behind the scenes, but don't bring it
 
 260
 00:21:38,260 --> 00:21:46,280
-up. There are some of those. There are
+up. – There are some of those. – There are
 some of those. – Some big ones, notable
 
 261
@@ -1303,7 +1303,7 @@ ones that have said almost exactly that.
 
 262
 00:21:51,260 --> 00:21:57,740
-did my best. We will never use the word
+did:webs. We will never use the word
 KERI. Just don't read the spec. But no, if
 
 263
@@ -1333,12 +1333,12 @@ I'm leading to here is that you're doing a
 
 268
 00:22:22,960 --> 00:22:28,240
-check by taking the DIDJSON and the KERI
-CESR and saying, are they coherent? Can I
+check by taking the did:json and the
+keri.cesr and saying, are they coherent? Can I
 
 269
 00:22:28,240 --> 00:22:33,740
-derive my DIDJSON from my keri.cesr? If
+derive my did:json from my keri.cesr? If
 so, at least that's not lying to you. And
 
 270
@@ -1364,12 +1364,11 @@ you can verify signatures on a credential.
 274
 00:22:49,660 --> 00:22:55,140
 Now I'm going to have this slide because
-let me check myself on time. Okay, we got
 
 275
 00:22:55,140 --> 00:23:00,800
-about great. I've had questions come up
-from members of the community that didn't
+I've had questions come up from
+members of the community that didn't
 
 276
 00:23:00,800 --> 00:23:04,240
@@ -1439,7 +1438,7 @@ cells like issuance and revocation. And
 289
 00:24:00,140 --> 00:24:05,920
 you're going to have some ACDCs. Now,
-why do you have ACDCs in the KERI seizure
+why do you have ACDCs in the keri.cesr
 
 290
 00:24:05,920 --> 00:24:12,000
@@ -1593,7 +1592,7 @@ DeadWebs we can do that and we expressed
 
 320
 00:26:39,120 --> 00:26:45,120
-that in the KERI Caesar stream with reply
+that in the keri.cesr stream with reply
 messages. Now, these are not anchored to a
 
 321
@@ -1604,7 +1603,7 @@ And a question came up in the KERI
 322
 00:26:51,820 --> 00:26:55,640
 community. They said, well, is
-everything in the KERI Caesar stream, is it
+everything in the keri.cesr stream, is it
 
 323
 00:26:55,640 --> 00:26:59,960
@@ -1614,7 +1613,7 @@ aspect problem we have to fix that I've
 324
 00:26:59,960 --> 00:27:04,320
 got later in the slides is they said,
-well, should a KERI Caesar stream just
+well, should a keri.cesr stream just
 
 325
 00:27:04,320 --> 00:27:08,200
@@ -1674,11 +1673,11 @@ aliases ACDC, it is. And once we check
 336
 00:27:56,700 --> 00:28:00,620
 that all that's coherent, we essentially
-just derive the DID document from the KERI
+just derive the DID document from the keri.cesr
 
 337
 00:28:00,620 --> 00:28:06,260
--CESR stream and compare it with the DID
+stream and compare it with the DID
 JSON that you've got on your web server.
 
 338
@@ -2024,7 +2023,7 @@ plenty to discuss later. All right. So I
 406
 00:33:55,160 --> 00:34:00,300
 mentioned remember the four things that
-were in a KERI season stream. And I said
+were in a keri.cesr stream. And I said
 
 407
 00:34:00,300 --> 00:34:04,680
