@@ -29,7 +29,7 @@
   "topClips": {
     "enabled": true,
     "title": "Top Clips",
-    "subtitle": "Ten bite-size moments from the talks \u2014 each clip plays for 10\u201320 seconds.",
+    "subtitle": "A few bite-size moments from the talks \u2014 each clip plays for 10\u201320 seconds.",
     "clips": [
       {
         "videoTitle": "Samuel M. Smith \u2013 Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
