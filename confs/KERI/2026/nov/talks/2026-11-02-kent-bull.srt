@@ -1377,8 +1377,8 @@ So I'm going to walk you through it. This
 
 277
 00:23:04,240 --> 00:23:08,940
-is a little bit deeper. And so if you're
-if you're new to KERI, don't worry too
+is a little bit deeper. And so if
+you're new to KERI, don't worry too
 
 278
 00:23:08,940 --> 00:23:13,260
@@ -1392,8 +1392,8 @@ keri.cesr. If you want to go inside that
 
 280
 00:23:17,360 --> 00:23:22,620
-file, that box from the last slide of the I
-said you can derive the DID document
+file, that box from the last slide of the …
+I said you can derive the DID document
 
 281
 00:23:22,620 --> 00:23:27,320
@@ -1412,7 +1412,7 @@ my identifier. Here's what keys control my
 
 284
 00:23:39,340 --> 00:23:43,200
-current my identifier. There's transaction
+my identifier. There's transaction
 event logs. Remember I said KERI 1 and
 
 285
@@ -1432,8 +1432,8 @@ credential and you're going to have one of
 
 288
 00:23:55,280 --> 00:24:00,140
-them for the credentials life lifespan of
-cells like issuance and revocation. And
+them for the credentials lifespan of
+[…] like issuance and revocation. And
 
 289
 00:24:00,140 --> 00:24:05,920
@@ -1472,17 +1472,17 @@ decentralized as KERI. You might get a
 
 296
 00:24:37,640 --> 00:24:42,780
-close approximation for DID methods that
-are on on blockchains that have something
+close approximation for DID methods
+that are on blockchains that have something
 
 297
 00:24:42,780 --> 00:24:48,780
-like this, but one of the rules, what I'm
-hinting at is one of the rules for did:webs
+like this, what I'm hinting at
+is one of the rules for did:webs
 
 298
 00:24:48,780 --> 00:24:57,080
-is that you're not authorized to a
+is that you're not authorized to… a
 verifier should reject your DID document
 
 299
@@ -1572,13 +1572,13 @@ one other I was going to say watcher
 
 316
 00:26:20,800 --> 00:26:24,060
-there's actually one I'm thinking of a
-delegator. Okay. You might see a couple of
+there's actually one I'm thinking of… a
+delegator! Okay. You might see a couple of
 
 317
 00:26:24,060 --> 00:26:28,920
 different services and you want to verify
-okay was is there actually cryptographic
+okay is there actually cryptographic
 
 318
 00:26:28,920 --> 00:26:33,800
@@ -1587,7 +1587,7 @@ the controller of this identifier of this
 
 319
 00:26:33,800 --> 00:26:39,120
-endpoint and in KERI we could do that in
+endpoint and in KERI we could do that. In
 did:webs we can do that and we expressed
 
 320
@@ -1707,28 +1707,28 @@ through that again. A designated alias is
 
 343
 00:28:27,300 --> 00:28:31,940
-what I was just referring to as this is no
+what I was just referring to as this is… no
 other DID method in the world does this.
 
 344
 00:28:32,240 --> 00:28:39,460
 KERI makes an explicit commitment to a
-URL. That URL Well, I was going to say it
+URL. That URL… Well, I was going to say it
 
 345
 00:28:39,460 --> 00:28:45,520
-goes in the also known as that some of
+goes in the alsoKnownAs that some of
 them do. Now I might have jumped ahead of
 
 346
 00:28:45,520 --> 00:28:52,900
 myself here. So some of your designated
-aliases will be placed in the also known
+aliases will be placed in the alsoKnownAs
 
 347
 00:28:52,900 --> 00:28:57,200
-as section. So let's say you're
-essentially trying to tell the world this
+section. So let's say you're
+essentially trying to tell the world: this
 
 348
 00:28:57,200 --> 00:29:02,580
@@ -1748,7 +1748,7 @@ slightly different URL, but it's the same
 351
 00:29:12,160 --> 00:29:15,800
 controlling identifier. You'll put those in
-the also known as and those come from
+the alsoKnownAs and those come from
 
 352
 00:29:15,800 --> 00:29:24,140
@@ -1767,7 +1767,7 @@ that exists in the W3C
 
 355
 00:29:35,300 --> 00:29:41,140
-essentiallyidentity ecosystem called
+decentralized identity ecosystem called
 ConditionalProof2022. And it lets you
 
 356
@@ -1782,7 +1782,7 @@ multisig. We just needed a way to define,
 
 358
 00:29:54,200 --> 00:29:59,040
-okay, well, there's a let's say it's two
+okay, well, there's a… let's say it's two
 of three. Like this example, we've got
 
 359
@@ -1802,8 +1802,8 @@ you to do nesting. So the really fancy cool
 
 362
 00:30:16,180 --> 00:30:21,140
-threshold weight, nested weighted
-threshold multisig stuff that KERI could
+nested weighted threshold
+multisig stuff that KERI could
 
 363
 00:30:21,140 --> 00:30:26,760
