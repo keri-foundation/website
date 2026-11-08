@@ -2268,19 +2268,14 @@
         /* ── Cue lines ── */
         .cue-line {
             display: flex;
-            gap: 10px;
+            gap: 6px;
             width: 100%;
-            appearance: none;
             margin-bottom: 6px;
             align-items: flex-start;
-            cursor: pointer;
-            border: none;
             border-radius: 6px;
             padding: 4px 6px;
             background: transparent;
-            font: inherit;
             color: inherit;
-            text-align: left;
             transition: background 0.15s;
         }
 
@@ -2288,9 +2283,44 @@
             background: color-mix(in srgb, var(--accent) 12%, transparent);
         }
 
-        .cue-line:focus-visible {
+        .cue-line-play {
+            display: flex;
+            gap: 10px;
+            flex: 1 1 auto;
+            min-width: 0;
+            align-items: flex-start;
+            appearance: none;
+            cursor: pointer;
+            border: none;
+            border-radius: 6px;
+            padding: 0;
+            background: transparent;
+            font: inherit;
+            color: inherit;
+            text-align: left;
+        }
+
+        .cue-line-play:focus-visible {
             outline: 2px solid var(--accent);
             outline-offset: 1px;
+        }
+
+        .cue-edit {
+            flex: 0 0 auto;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 2rem;
+            height: 2rem;
+            margin-top: 1px;
+            border-radius: 6px;
+            color: #036b64;
+            text-decoration: none;
+        }
+
+        .cue-edit:hover {
+            color: var(--ink);
+            background: color-mix(in srgb, var(--accent) 28%, transparent);
         }
 
         .cue-time {
@@ -3872,37 +3902,96 @@
             }
 
             // ─────────────────────────────────────────────────────────────────────
-            //  SRT parser → array of { start, end, startLabel, text }
+            //  SRT parser → array of { start, end, startLabel, text, lineStart, lineEnd }
+            //  lineStart/lineEnd are 1-based file lines for the numbered cue block
+            //  (the cue index through its last text line), matching GitHub #L anchors.
             // ─────────────────────────────────────────────────────────────────────
             function parseSrt(raw) {
                 const cues = [];
-                const normalized = raw.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
-                const blocks = normalized.split(/\n{2,}/);
+                const normalized = String(raw || '').replace(/^\uFEFF/, '').replace(/\r\n/g, '\n').replace(/\r/g, '\n');
+                const lines = normalized.split('\n');
                 const timePat = new RegExp(
                     '(\\d{2}:\\d{2}:\\d{2})[.,](\\d{3})\\s*-->\\s*(\\d{2}:\\d{2}:\\d{2})[.,](\\d{3})'
                 );
 
-                for (const block of blocks) {
-                    const lines = block.trim().split('\n');
-                    if (lines.length < 2) continue;
+                let i = 0;
+                while (i < lines.length) {
+                    if (lines[i] === '') {
+                        i++;
+                        continue;
+                    }
+                    const blockStart = i;
+                    let blockEnd = i;
+                    while (blockEnd < lines.length && lines[blockEnd] !== '') blockEnd++;
+                    const block = lines.slice(blockStart, blockEnd);
+                    i = blockEnd;
+
                     let timeLine = -1;
-                    for (let i = 0; i < lines.length; i++) {
-                        if (timePat.test(lines[i])) { timeLine = i; break; }
+                    for (let t = 0; t < block.length; t++) {
+                        if (timePat.test(block[t])) { timeLine = t; break; }
                     }
                     if (timeLine === -1) continue;
-                    const m = lines[timeLine].match(timePat);
+                    const m = block[timeLine].match(timePat);
                     if (!m) continue;
-                    const startSec = srtTimeToSeconds(m[1], m[2]);
-                    const cueText = lines.slice(timeLine + 1).join(' ').trim();
+                    const cueText = block.slice(timeLine + 1).join(' ').trim();
                     if (!cueText) continue;
+                    const startSec = srtTimeToSeconds(m[1], m[2]);
                     cues.push({
                         start: startSec,
                         end: srtTimeToSeconds(m[3], m[4]),
                         startLabel: formatTime(startSec),
-                        text: cueText
+                        text: cueText,
+                        lineStart: blockStart + 1,
+                        lineEnd: blockEnd
                     });
                 }
                 return cues;
+            }
+
+            // Canonical repo. A pencil on each cue is a normal link to that file line.
+            const GITHUB_SUBTITLE_BLOB = 'https://github.com/keri-foundation/website/blob/main/';
+
+            function repoPathForSubtitle(src) {
+                if (!src) return '';
+                let pathname = '';
+                try {
+                    const url = new URL(src, location.href);
+                    if (url.origin !== location.origin) return '';
+                    pathname = url.pathname;
+                } catch {
+                    return '';
+                }
+                const parts = [];
+                for (const seg of pathname.split('/')) {
+                    if (!seg || seg === '.') continue;
+                    if (seg === '..') {
+                        parts.pop();
+                        continue;
+                    }
+                    try {
+                        parts.push(decodeURIComponent(seg));
+                    } catch {
+                        return '';
+                    }
+                }
+                if (!parts.length || !parts[parts.length - 1].toLowerCase().endsWith('.srt')) return '';
+                return parts.map(encodeURIComponent).join('/');
+            }
+
+            function githubSubtitleLineUrl(src, lineStart, lineEnd) {
+                const repoPath = repoPathForSubtitle(src);
+                const start = Number(lineStart);
+                if (!repoPath || !Number.isInteger(start) || start < 1) return '';
+                const end = Number(lineEnd);
+                const fragment = Number.isInteger(end) && end > start ? `L${start}-L${end}` : `L${start}`;
+                return `${GITHUB_SUBTITLE_BLOB}${repoPath}#${fragment}`;
+            }
+
+            function subtitleFileSrc(videoPath, lang, store) {
+                if (lang && captionTrackStore[videoPath]?.[lang]?.src) {
+                    return captionTrackStore[videoPath][lang].src;
+                }
+                return store?.src || '';
             }
 
             function normalizeUrl(url) {
@@ -4730,12 +4819,15 @@
             // ─────────────────────────────────────────────────────────────────────
             //  Cue line element (shared by accordion and search results)
             // ─────────────────────────────────────────────────────────────────────
-            function makeCueLine(cue, videoPath, highlightQuery, targetVideoEl, lang) {
+            function makeCueLine(cue, videoPath, highlightQuery, targetVideoEl, lang, subtitleSrc) {
+                const row = document.createElement('div');
+                row.className = 'cue-line';
+                row.dataset.cueStart = String(cue.start);
+                row.dataset.cueEnd = String(cue.end);
+
                 const btn = document.createElement('button');
                 btn.type = 'button';
-                btn.className = 'cue-line';
-                btn.dataset.cueStart = String(cue.start);
-                btn.dataset.cueEnd = String(cue.end);
+                btn.className = 'cue-line-play';
                 const langName = lang ? languageLabel(lang) : '';
                 btn.setAttribute(
                     'aria-label',
@@ -4777,7 +4869,29 @@
                     }
                 };
                 btn.addEventListener('click', seek);
-                return btn;
+                row.appendChild(btn);
+
+                const editUrl = githubSubtitleLineUrl(subtitleSrc, cue.lineStart, cue.lineEnd);
+                if (editUrl) {
+                    const edit = document.createElement('a');
+                    edit.className = 'cue-edit';
+                    edit.href = editUrl;
+                    edit.target = '_blank';
+                    edit.rel = 'noopener noreferrer';
+                    edit.title = 'Edit this subtitle on GitHub';
+                    edit.setAttribute(
+                        'aria-label',
+                        `Edit subtitle at ${cue.startLabel} on GitHub`
+                    );
+                    edit.innerHTML = PENCIL_ICON_SVG;
+                    const hint = document.createElement('span');
+                    hint.className = 'visually-hidden';
+                    hint.textContent = ' (opens in a new tab)';
+                    edit.appendChild(hint);
+                    row.appendChild(edit);
+                }
+
+                return row;
             }
 
             // ─────────────────────────────────────────────────────────────────────
@@ -4826,6 +4940,7 @@
             let copyFlashTimer = null;
 
             const COPY_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+            const PENCIL_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>';
             const COPY_CHECK_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><polyline points="20 6 9 17 4 12"></polyline></svg>';
             const CLEAR_TIMESTAMPS_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline><line x1="4" y1="4" x2="20" y2="20"></line></svg>';
 
@@ -5196,11 +5311,11 @@
                 modalTranscriptBody.querySelectorAll('.cue-line.is-live-cue').forEach((el) => {
                     if (next.has(el)) return;
                     el.classList.remove('is-live-cue');
-                    el.removeAttribute('aria-current');
+                    el.querySelector('.cue-line-play')?.removeAttribute('aria-current');
                 });
                 lines.forEach((el) => {
                     el.classList.add('is-live-cue');
-                    el.setAttribute('aria-current', 'true');
+                    el.querySelector('.cue-line-play')?.setAttribute('aria-current', 'true');
                 });
                 const target = lines[0];
                 if (!scroll || !target) return;
@@ -5835,12 +5950,14 @@
                 modalTranscriptBody.setAttribute('aria-label', 'Transcript cues');
                 const frag = document.createDocumentFragment();
                 for (const hit of matchingHits) {
+                    const cueLang = hit.lang || modalTranscriptLang;
                     frag.appendChild(makeCueLine(
                         hit.cue,
                         videoPath,
                         normalizedQuery ? trimmedQuery : null,
                         modalVideoEl,
-                        showLang ? hit.lang : null
+                        showLang ? hit.lang : null,
+                        subtitleFileSrc(videoPath, cueLang, store)
                     ));
                 }
                 modalTranscriptBody.appendChild(frag);
