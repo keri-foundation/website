@@ -2445,7 +2445,7 @@ We've got about 17 different open items
 
 491
 00:41:21,640 --> 00:41:28,700
-that we need to handle and we We thought
+that we need to handle and we thought
 we had a normative baseline around August
 
 492
@@ -2465,8 +2465,8 @@ got the KERI version 2 stuff that we need
 
 495
 00:41:41,640 --> 00:41:49,200
-to add in. And there's some review points
-as we'll get into later. I'll just that we
+to add in. And there's some review points as
+we'll get into later. I'll just add that we
 
 496
 00:41:49,200 --> 00:41:51,700
@@ -2496,12 +2496,12 @@ that credential proof spec and write a
 501
 00:42:12,860 --> 00:42:18,860
 library. Right now, everything's usable
-with simple multisig and with single sig.
+with simple multisig and with singlesig.
 
 502
 00:42:19,180 --> 00:42:23,580
 It's pretty straightforward to have a
-single sig issuer, single sig holder. It's
+singlesig issuer, singlesig holder. It's
 
 503
 00:42:23,580 --> 00:42:27,320
@@ -2525,7 +2525,7 @@ verifiers don't know how to interpret the
 
 507
 00:42:41,260 --> 00:42:46,660
-nesting is the challenge. And if we're
+nesting, is the challenge. And if we're
 going to have a way for the verifiers to
 
 508
@@ -2536,12 +2536,12 @@ we have to say, do we want to have the
 509
 00:42:51,720 --> 00:42:56,360
 rules for that interpretation of that
-nesting, the DataWeb S spec? Probably not.
+nesting, the did:webs spec? Probably not.
 
 510
 00:42:56,580 --> 00:43:01,880
-DeadWebs should be about keys, right? Not
-about credentials. We should probably be a
+did:webs should be about keys, right? Not
+about credentials. There should probably be a
 
 511
 00:43:01,880 --> 00:43:05,660
@@ -2555,7 +2555,7 @@ going to verify that credential with keys
 
 513
 00:43:12,240 --> 00:43:19,180
-deadWebs that are defined by deadWebs and
+did:webs that are defined by did:webs and
 KERI for a w3c credential that has multi
 
 514
