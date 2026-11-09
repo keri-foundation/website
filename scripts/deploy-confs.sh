@@ -14,8 +14,10 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SITE_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
 CONFS="$SITE_ROOT/confs"
 
+# SSH host alias (user/host/port live in ~/.ssh/config). Path is relative to that
+# account's home so the Hostinger username is not stored in this repository.
 REMOTE_HOST="${REMOTE_HOST:-kerifoundation}"
-REMOTE_ROOT="${REMOTE_ROOT:-/home/REDACTED/domains/keri.foundation/public_html}"
+REMOTE_ROOT="${REMOTE_ROOT:-domains/keri.foundation/public_html}"
 SITE_URL="${SITE_URL:-https://keri.foundation}"
 
 # Legacy gallery entry pages (plain HTML "moved" notices → new conference paths).
@@ -54,7 +56,8 @@ Options:
   -h, --help      Show this help
 
 Environment overrides: REMOTE_HOST (ssh alias, default kerifoundation),
-REMOTE_ROOT (server web root), SITE_URL (default https://keri.foundation).
+REMOTE_ROOT (path on that host, default domains/keri.foundation/public_html),
+SITE_URL (default https://keri.foundation).
 
 Examples:
   scripts/deploy-confs.sh build                     # local only

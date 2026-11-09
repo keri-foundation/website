@@ -33,7 +33,7 @@
 
 ## General information
 
-[https://keri.foundation](https://keri.foundation) runs on Hostinger. The live document root and this repository are different trees. This checkout versions `custom/`, `confs/`, `vids/`, `scripts/`, and the site-root `.htaccess`. WordPress itself, plus `/edu/`, `/kerisse/`, and `/various/`, live on the host and are maintained from their own projects. A password-protected database export ZIP may also be present at the repo root.
+[https://keri.foundation](https://keri.foundation) runs on Hostinger. The live document root and this repository are different trees. This checkout versions `custom/`, `confs/`, `vids/`, `scripts/`, and the site-root `.htaccess`. WordPress itself, plus `/edu/`, `/kerisse/`, and `/various/`, live on the host and are maintained from their own projects. Database dumps and other archives are not tracked in git.
 
 Remote document root:
 
@@ -83,7 +83,7 @@ public_html/
 
 ## Managing the website
 
-Go to [https://hpanel.hostinger.com/](https://hpanel.hostinger.com/)
+Site administration is in Hostinger hPanel. Deploy scripts use the local SSH host alias `kerifoundation` (user, host, and port stay in `~/.ssh/config`).
 
 ## WordPress
 

@@ -2,17 +2,19 @@
 # KERI Foundation - Upload custom/ to the live site
 # Run from anywhere: bash scripts/deploy-custom-code.sh
 
-set -e  # Exit on error
+set -euo pipefail
 
 echo "⚡ Uploading custom CSS and JS..."
 
-# Repository root (this script lives in scripts/)
-cd "$(dirname "$0")/.."
+SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
+cd "$SCRIPT_DIR/.."
+
+REMOTE_HOST="${REMOTE_HOST:-kerifoundation}"
+REMOTE_ROOT="${REMOTE_ROOT:-domains/keri.foundation/public_html}"
 
 echo "🚀 Deploying to remote server..."
-# SSH options come from ~/.ssh/config
 rsync -vurt --delete --timeout=30 -e "ssh -o ConnectTimeout=10" \
 	custom/ \
-	REDACTED@REDACTED:/home/REDACTED/domains/keri.foundation/public_html/custom/
+	"${REMOTE_HOST}:${REMOTE_ROOT}/custom/"
 
 echo "✅ Deployment completed successfully!"

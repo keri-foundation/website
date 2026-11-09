@@ -68,9 +68,8 @@
 # !/various/
 # !/various/**
 
-# --- Database dump (password-protected ZIP) ---
-# Add the dump file to the repo root and it will be tracked.
-!/*.zip
+# --- Database dumps and other archives stay private ---
+*.zip
 
 # --- Documentation ---
 !/README.md

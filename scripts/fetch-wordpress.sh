@@ -3,9 +3,7 @@
 # Does not touch confs/ or vids/ (those use scripts/deploy-confs.sh).
 # Run from anywhere: bash scripts/fetch-wordpress.sh
 
-# Updated: 2026-04-12: Digistate -> Hostinger
-
-set -e  # Exit on error
+set -euo pipefail
 
 echo "⚡ Fetch remote WordPress..."
 
@@ -41,13 +39,12 @@ FILTERS=(
 	--exclude='*'
 )
 
-# Remote and local paths
-REMOTE_USER_HOST="REDACTED@REDACTED"
-REMOTE_PATH="/home/REDACTED/domains/keri.foundation/public_html/"
+# SSH host alias (user/host/port live in ~/.ssh/config). Path is relative to home.
+REMOTE_HOST="${REMOTE_HOST:-kerifoundation}"
+REMOTE_ROOT="${REMOTE_ROOT:-domains/keri.foundation/public_html}"
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 LOCAL_PATH="$(cd "$SCRIPT_DIR/.." && pwd)"
 
-# RSYNC_OPTS=(-vurt --delete --timeout=30 -e "ssh -o ConnectTimeout=10")
 RSYNC_OPTS=(-vurt --timeout=30 -e "ssh -o ConnectTimeout=10")
 
 if [ ! -d "$LOCAL_PATH" ]; then
@@ -57,11 +54,11 @@ fi
 
 if [ "$DRY_RUN" = "1" ]; then
 	echo "⚠️  Dry-run enabled: no files will be changed. To perform the fetch set DRY_RUN=0 and re-run."
-	rsync "${RSYNC_OPTS[@]}" --dry-run "${FILTERS[@]}" "${REMOTE_USER_HOST}:${REMOTE_PATH}" "$LOCAL_PATH"
+	rsync "${RSYNC_OPTS[@]}" --dry-run "${FILTERS[@]}" "${REMOTE_HOST}:${REMOTE_ROOT}/" "$LOCAL_PATH"
 else
-	echo "🔄 Downloading WordPress files from: ${REMOTE_USER_HOST}:${REMOTE_PATH}"
+	echo "🔄 Downloading WordPress files from: ${REMOTE_HOST}:${REMOTE_ROOT}/"
 	echo "   → $LOCAL_PATH"
 	echo "   (allowlist: wp-admin, wp-content, wp-includes, custom, root WP files; skips confs/ & vids/)"
-	rsync "${RSYNC_OPTS[@]}" "${FILTERS[@]}" "${REMOTE_USER_HOST}:${REMOTE_PATH}" "$LOCAL_PATH"
+	rsync "${RSYNC_OPTS[@]}" "${FILTERS[@]}" "${REMOTE_HOST}:${REMOTE_ROOT}/" "$LOCAL_PATH"
 	echo "✅ WordPress fetch completed successfully!"
 fi
