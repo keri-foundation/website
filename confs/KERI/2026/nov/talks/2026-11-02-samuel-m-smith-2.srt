@@ -1459,7 +1459,7 @@ This is the issuing agent that issues SEDI
 293
 00:25:45,660 --> 00:25:54,140
 credentials. So it's in some ways similar
-to GLEIS. Yeah. So this would be the this
+to GLEIF's. Yeah. So this would be the this
 
 294
 00:25:54,140 --> 00:26:00,740
@@ -1594,7 +1594,7 @@ attack a two-layer delegation. The citizen
 320
 00:28:21,400 --> 00:28:25,560
 can decide how secure they want their own
-AID to be. Do they want single SIG
+AID to be. Do they want single-sig
 
 321
 00:28:25,560 --> 00:28:30,100
@@ -1792,8 +1792,8 @@ the registries are all anchored in KELs.
 
 360
 00:32:11,800 --> 00:32:17,120
-And all the edges are bound to the SEDs of
-the ACDC and that SED is anchored in a
+And all the edges are bound to the SAIDs of
+the ACDC and that SAID is anchored in a
 
 361
 00:32:17,120 --> 00:32:24,540
@@ -2504,7 +2504,7 @@ This is shown as a tree, but each of these
 503
 00:45:54,000 --> 00:45:59,000
 each ACDC could have any number of edges,
-right? So it's an M-ERI tree.
+right? So it's an M-ary tree.
 
 504
 00:46:00,720 --> 00:46:08,820
@@ -3140,7 +3140,7 @@ proof for harm. Disloyalty, all you have
 
 631
 00:57:04,620 --> 00:57:09,640
-to prove is that they self-dealed. If they
+to prove is that they self-dealt. If they
 benefited from it, whether you are harmed
 
 632

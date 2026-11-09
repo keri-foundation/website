@@ -279,7 +279,7 @@ they didn't know which war to fight, they
 57
 00:05:06,460 --> 00:05:11,020
 just used did:web because it was simple.
-And you had a did:json document you'd put
+And you had a did.json document you'd put
 
 58
 00:05:11,020 --> 00:05:15,500
@@ -303,7 +303,7 @@ signing. That's why it worked. It was
 
 62
 00:05:28,540 --> 00:05:32,900
-really it's just a web page, did:json web
+really it's just a web page, did.json web
 page. Here's my authorized keys and here's
 
 63
@@ -474,7 +474,7 @@ to play with this if you'd like. So as I
 96
 00:08:06,000 --> 00:08:12,740
 mentioned, did:webs provides us a base of
-DNS, a predictable location for your did:json
+DNS, a predictable location for your did.json
 
 97
 00:08:12,740 --> 00:08:19,280
@@ -1154,7 +1154,7 @@ DID ecosystem knows this pretty well. And
 232
 00:19:17,940 --> 00:19:24,540
 I said did:web form right under it.
-Because did:json, it's when we when it's
+Because did.json, it's when we when it's
 
 233
 00:19:24,540 --> 00:19:28,340
@@ -1163,7 +1163,7 @@ retrieve it, it's actually just a regular
 
 234
 00:19:28,340 --> 00:19:34,140
-did:web did:json. But we have another file
+did:web did.json. But we have another file
 that's not did:web. That's what this keri.cesr
 
 235
@@ -1263,7 +1263,7 @@ already have a discovery protocol built
 
 254
 00:21:09,840 --> 00:21:14,640
-into KERI. It's called out-of-bound
+into KERI. It's called out-of-band
 introductions (OOBI). We send everything across
 
 255
@@ -1333,12 +1333,12 @@ I'm leading to here is that you're doing a
 
 268
 00:22:22,960 --> 00:22:28,240
-check by taking the did:json and the
+check by taking the did.json and the
 keri.cesr and saying, are they coherent? Can I
 
 269
 00:22:28,240 --> 00:22:33,740
-derive my did:json from my keri.cesr? If
+derive my did.json from my keri.cesr? If
 so, at least that's not lying to you. And
 
 270
@@ -1678,7 +1678,7 @@ derive the DID document from the keri.cesr
 
 337
 00:28:00,620 --> 00:28:06,260
-stream and compare it with the did:json
+stream and compare it with the did.json
 that you've got on your web server.
 
 338
@@ -1933,7 +1933,7 @@ currently holds it. But what if those
 
 388
 00:32:24,280 --> 00:32:28,480
-issuers or… that's fine if it's singlesig,
+issuers or… that's fine if it's single-sig,
 but what happens if you've got a multisig
 
 389
@@ -2497,12 +2497,12 @@ that credential proof spec and write a
 501
 00:42:12,860 --> 00:42:18,860
 library. Right now, everything's usable
-with simple multisig and with singlesig.
+with simple multisig and with single-sig.
 
 502
 00:42:19,180 --> 00:42:23,580
 It's pretty straightforward to have a
-singlesig issuer, singlesig holder. It's
+single-sig issuer, single-sig holder. It's
 
 503
 00:42:23,580 --> 00:42:27,320
@@ -2701,7 +2701,7 @@ Okay. And the idea, the goal is that we
 
 542
 00:46:01,780 --> 00:46:05,540
-want to be just like did:webVH and
+want to be just like did:webvh and
 did:webplus and there might be a couple of
 
 543
@@ -2767,7 +2767,7 @@ credential proof looks like? And so we're
 555
 00:47:05,460 --> 00:47:09,680
 going to add that at least for the
-simple multisig and singlesig walk people
+simple multisig and single-sig walk people
 
 556
 00:47:09,680 --> 00:47:14,900
@@ -2797,7 +2797,7 @@ mapping but we need the worked case. We
 561
 00:47:33,060 --> 00:47:37,020
 need to show here's if you're going to do
-a nested threshold multi-safers actually a
+a nested threshold multisig actually a
 
 562
 00:47:37,020 --> 00:47:42,180

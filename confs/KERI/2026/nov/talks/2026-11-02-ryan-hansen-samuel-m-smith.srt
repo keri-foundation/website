@@ -31,7 +31,7 @@ discussion because this is the problem
 7
 00:00:34,340 --> 00:00:39,660
 that we're trying to solve as a KERI
-community. And unlike some of the IAW
+community. And unlike some of the IIW
 
 8
 00:00:39,660 --> 00:00:43,580
@@ -765,7 +765,7 @@ supposed to repeat the level identity
 
 156
 00:14:50,560 --> 00:14:56,700
-assurance every time they reissue a X-49
+assurance every time they reissue a X.509
 certificate. That's what the spec says. Do
 
 157
@@ -1470,11 +1470,11 @@ identity system can't amortize it. So it's
 298
 00:29:04,060 --> 00:29:10,480
 even worse for them. Right? If I'm doing
-DNSCA, every time I churn my certificate,
+this as a CA, every time I churn my certificate,
 
 299
 00:29:10,800 --> 00:29:16,960
-I have to re-incurred that KYC. But KERI
+I have to re-incur that KYC. But KERI
 not because perpetual identity. That's the
 
 300
@@ -1821,7 +1821,7 @@ That's one of the worst provenanced
 369
 00:35:36,840 --> 00:35:46,480
 primary identity documents are birth
-certificates. And George McEwen,
+certificates. And George McEwan,
 
 370
 00:35:46,660 --> 00:35:51,460
@@ -1914,7 +1914,7 @@ you don't have anybody else in any other
 
 388
 00:37:38,140 --> 00:37:45,560
-vertical paying for the IAO level three.
+vertical paying for the IAL level three.
 But SEDI, you have that forcing function.
 
 389
@@ -2089,7 +2089,7 @@ sign regulatory reports. – Yeah, they
 423
 00:40:57,620 --> 00:41:02,780
 impose liability upon themselves every
-time they sign their K10 or whatever it is
+time they sign their 10-K or whatever it is
 
 424
 00:41:02,780 --> 00:41:08,040
@@ -2922,7 +2922,7 @@ yeah, might be doable. Well, every phone
 
 590
 00:55:17,200 --> 00:55:22,520
-does have an IP6 static IP address. So you
+does have an IPv6 static IP address. So you
 technically could run… …snap networks
 
 591

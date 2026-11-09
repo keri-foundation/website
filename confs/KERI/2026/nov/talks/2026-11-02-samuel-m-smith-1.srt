@@ -338,7 +338,7 @@ source, end-to-end encrypted and signed
 
 69
 00:07:05,200 --> 00:07:12,060
-communications protocol called RATE,
+communications protocol called RAET,
 Reliable Asynchronous Event Transport. The
 
 70
@@ -2839,17 +2839,17 @@ signatures are technically zero-knowledge
 
 572
 00:53:20,040 --> 00:53:24,940
-proofs because you have a private key in a
-NOTS, you can prove that somebody who knew
+proofs because you have a private key and a
+nonce, you can prove that somebody who knew
 
 573
 00:53:24,940 --> 00:53:28,100
-the private key in a NOTS created the
+the private key and a nonce created the
 signature without disclosing the private
 
 574
 00:53:28,100 --> 00:53:31,320
-key of their NOTS. So that's technically a
+key or their nonce. So that's technically a
 zero-knowledge proof. Now, there are
 
 575
@@ -3035,7 +3035,7 @@ applications. Those type of zero knowledge
 611
 00:56:21,260 --> 00:56:25,360
 proofs. Now there are other ones. There's
-SNARKs, the STARTS, all of those all have
+SNARKs, the STARKs, all of those all have
 
 612
 00:56:25,360 --> 00:56:29,180

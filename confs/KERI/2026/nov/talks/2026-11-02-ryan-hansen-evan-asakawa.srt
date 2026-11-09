@@ -358,11 +358,11 @@ do. Now, this is based on releases that we
 73
 00:07:00,360 --> 00:07:05,380
 have not actually done yet. So we haven't
-actually released into like into Pypy or
+actually released into like into PyPI or
 
 74
 00:07:05,380 --> 00:07:10,480
-anything with opnet and WADopnet as those
+anything with opnet and WotOpNet as those
 names just yet or KFboot for that matter.
 
 75
@@ -382,7 +382,7 @@ formal releases for those and we'll
 
 78
 00:07:21,900 --> 00:07:25,900
-release them out into PyPy and then
+release them out into PyPI and then
 they'll be available under those names.
 
 79
@@ -735,7 +735,7 @@ witnesses unless they also compromised
 
 150
 00:14:34,780 --> 00:14:41,460
-your NFA, your MFA. Okay. So that makes it
+your MFA. Okay. So that makes it
 doubly hard for them to publish anything.
 
 151
@@ -1651,7 +1651,7 @@ of the plugin configuration? And is it
 334
 00:32:55,120 --> 00:33:00,540
 just okay? You probably want to use like
-ESSR to talk to your things, but I don't
+CESR to talk to your things, but I don't
 
 335
 00:33:00,540 --> 00:33:06,040
@@ -1956,7 +1956,7 @@ they're malicious, you know not to trust
 395
 00:38:03,800 --> 00:38:09,700
 it. – So if I have customers and they and
-I UBI them, then I know who their
+I OOBI them, then I know who their
 
 396
 00:38:09,700 --> 00:38:14,680
@@ -2320,7 +2320,7 @@ just signing both sides of the challenge
 
 470
 00:45:36,720 --> 00:45:42,700
-response, which is what the GLEIQ one
+response, which is what the GLEIF one
 does, which is simpler, because the state
 
 471
@@ -2331,7 +2331,7 @@ proofing agents for the identity assurance
 472
 00:45:48,500 --> 00:45:57,100
 instead of a GLEIF authorized
-representative or a QBI like in the case
+representative or a QVI like in the case
 
 473
 00:45:57,100 --> 00:46:01,540
