@@ -2544,34 +2544,34 @@ did:webs should be about keys, right? Not
 about credentials. There should probably be a
 
 511
-00:43:01,880 --> 00:43:05,660
-separate spec if we say this is going
-to be a spec for verifiers that want to
+00:43:01,880 --> 00:43:06,205
+separate spec if we say this is going to be
+a spec for verifiers that want to interpret
 
 512
-00:43:05,660 --> 00:43:12,240
-interpret the vcdm w3c data model. They're
+00:43:06,229 --> 00:43:12,240
+W3C Verifiable Credentials Data Model. They're
 going to verify that credential with keys
 
 513
 00:43:12,240 --> 00:43:19,180
-did:webs that are defined by did:webs and
-KERI for a w3c credential that has multi
+that are defined by did:webs and
+KERI for a w3c credential that has multisig
 
 514
 00:43:19,180 --> 00:43:24,720
--sig issuers, multi-sig holders. That's
+issuers, multisig holders. That's
 more of a credential proofing spec. And
 
 515
 00:43:24,720 --> 00:43:29,660
-it's not just a spec. You'd want a library
-as well. That's easy to use. So if we
+it's not just a spec. You'd want a
+library as well. That's easy to use. So if
 
 516
 00:43:29,660 --> 00:43:33,600
-decide if somebody decides they
-want to use this in production for a really
+somebody decides they want to
+use this in production for a really
 
 517
 00:43:33,600 --> 00:43:39,100
@@ -2580,8 +2580,8 @@ that needs to be done later. So, but where
 
 518
 00:43:39,100 --> 00:43:43,180
-we're going though is we want to we want
-to finish out the diff process. And so to
+we're going though is we want to
+finish out the diff process. And so to
 
 519
 00:43:43,180 --> 00:43:50,180
@@ -2589,28 +2589,28 @@ get to where we redo we really do want
 did:webs to be a a fully accepted fully
 
 520
-00:43:50,180 --> 00:43:56,480
+00:43:50,180 --> 00:43:55,924
 supported diff recommended DID method. And
-we were pretty close earlier this year. So
+we were pretty close earlier this year.
 
 521
-00:43:56,480 --> 00:44:06,240
-is the spec being approved at Trust
-over IP a prerequisite for DIF to recognize
+00:43:55,924 --> 00:44:06,240
+– So is the spec being approved at Trust
+over IP, a prerequisite for DIF to recognize
 
 522
-00:44:06,240 --> 00:44:12,540
-did:webs as an acceptable DID method
-on their list? Now that I I'll repeat the
+00:44:06,240 --> 00:44:10,756
+did:webs as an acceptable
+DID method on their list?
 
 523
-00:44:12,540 --> 00:44:15,220
-question. Yeah, I'll repeat the question
-just so we can all hear. It's a good
+00:44:10,756 --> 00:44:15,220
+I'll repeat the question just
+so we can all hear. It's a good
 
 524
 00:44:15,220 --> 00:44:21,800
-question. So is TOIP approval of the
+question. So is ToIP approval of the
 did:webs spec required in order for the DIF
 
 525
@@ -2631,7 +2631,7 @@ and that the DIF recommended DIF methods
 528
 00:44:35,200 --> 00:44:41,620
 team believes that it's stable enough.
-Now, I don't to be responsible, I need to
+Now, to be responsible, I need to
 
 529
 00:44:41,620 --> 00:44:45,320
@@ -2641,7 +2641,7 @@ to Otto and help with the other people.
 530
 00:44:45,680 --> 00:44:50,200
 Jonathan, if Jonathan were here, he could
-say. So I'm pretty sure that they don't
+say. – I'm pretty sure that they don't
 
 531
 00:44:50,200 --> 00:44:57,400
@@ -2650,13 +2650,13 @@ it based on DIF. It's a DIF standard. So
 
 532
 00:44:57,400 --> 00:45:03,360
-whether or not it's it's trust over IP
+whether or not it's Trust over IP
 approved matter doesn't matter. It's just
 
 533
 00:45:03,360 --> 00:45:09,020
-that whoever the whoever it is that's
-that's working under the aegis of DIF has
+whoever it is that's that's
+working under the aegis of DIF has
 
 534
 00:45:09,020 --> 00:45:14,100
@@ -2665,13 +2665,13 @@ you and Jonathan. And all you're doing is
 
 535
 00:45:14,100 --> 00:45:20,940
-leveraging the task force at trust over IP
-to get it right. Right. I will say that on
+leveraging the task force at Trust over IP
+to get it right. – Right. I will say that on
 
 536
 00:45:20,940 --> 00:45:25,700
 the criteria like you mentioned from
-DIFF on the rubric that they give us to
+DIF on the rubric that they give us to
 
 537
 00:45:25,700 --> 00:45:30,780
@@ -2680,13 +2680,13 @@ a criteria for whether or not the spec is
 
 538
 00:45:30,780 --> 00:45:39,360
-approved. – Yeah, that's what I say. DIFF
+approved. – Yeah, that's what I say. DIF
 allows approved specs from just anybody
 
 539
 00:45:39,360 --> 00:45:45,300
-that wants to contribute it under DIFF.
-So it's its own, it has its own approval
+that wants to contribute it under
+DIF. So it has its own approval
 
 540
 00:45:45,300 --> 00:45:51,840
@@ -2750,8 +2750,8 @@ the spec into the next version and it's
 
 552
 00:46:47,600 --> 00:46:53,740
-generally around some of them are actually
-about… Oh, I want to wrong slide. We need
+generally around… some of them
+are actually about… We need
 
 553
 00:46:53,740 --> 00:46:59,440
@@ -2761,12 +2761,12 @@ ordinary did:webs consumer receive? We need
 554
 00:46:59,440 --> 00:47:05,460
 to walk you through, okay, what does a W3C
-credential proof look like? And so we're
+credential proof looks like? And so we're
 
 555
 00:47:05,460 --> 00:47:09,680
 going to add that at least for the
-simple multisig and single sig walk people
+simple multisig and singlesig walk people
 
 556
 00:47:09,680 --> 00:47:14,900
@@ -2805,8 +2805,8 @@ complicated one, the other ones are piece
 
 563
 00:47:42,180 --> 00:47:49,820
-of cake. Okay, so we've got there's other
-things that need to be other open points,
+of cake. Okay, so we've got… there's other
+things that need to be… other open points,
 
 564
 00:47:49,840 --> 00:47:55,460
@@ -2866,12 +2866,12 @@ and explicit about everything that KERI
 575
 00:48:40,280 --> 00:48:46,020
 version 2 brings into the picture.
-Okay, this is an there's an interesting
+Okay, there's an interesting
 
 576
 00:48:46,020 --> 00:48:51,600
-discussion in. Since we have time,
-maybe actually let me let me actually jump
+discussion…. Since we have time…
+maybe let me actually jump
 
 577
 00:48:51,600 --> 00:48:57,980
@@ -2895,12 +2895,12 @@ it yourself. So right now the if you look
 
 581
 00:49:12,740 --> 00:49:18,020
-at the Glyph GitHub, we've got Glyph
+at the GLEIF GitHub, we've got GLEIF
 IT, we've got the did:webs resolver. That's
 
 582
 00:49:18,020 --> 00:49:23,020
-what this 037 is right now. That's the
+what this 0.3.7 is right now. That's the
 current version of the did:webs resolver.
 
 583
@@ -2916,7 +2916,7 @@ beyond that. So, I'm going to skip forward
 585
 00:49:31,180 --> 00:49:36,980
 a little bit to show you some resources.
-Okay, so we do have the ECHI over IP
+Okay, so we do have the Trust over IP
 
 586
 00:49:36,980 --> 00:49:41,880
@@ -2931,7 +2931,7 @@ So, when you actually build did:webs into a
 588
 00:49:48,720 --> 00:49:56,100
 wallet or a verifier, you'll want to use
-this did:webs TS library. That library is
+this did:webs-ts library. That library is
 
 589
 00:49:56,100 --> 00:50:02,940
@@ -2940,8 +2940,8 @@ TypeScript. It's just when you are as a
 
 590
 00:50:02,940 --> 00:50:09,840
-verifier, you are verifying credentials.
-There are libraries that like or resolver
+verifier, you are verifying
+credentials. There are libraries, resolver
 
 591
 00:50:09,840 --> 00:50:13,560
@@ -2989,7 +2989,7 @@ soon. And so I started on a TypeScript
 
 600
 00:50:55,480 --> 00:50:59,600
-implementation that was I tried to keep
+implementation. I tried to keep
 it as minimal as I could for as long as I
 
 601
@@ -3064,8 +3064,8 @@ enough where you want to learn more
 
 615
 00:52:08,560 --> 00:52:12,880
-details, you can go to did:webs.info.
-That's the website actually. This Glyph IT
+details, you can go to didwebs.info.
+That's the website actually. This GLEIF IT
 
 616
 00:52:12,880 --> 00:52:16,340
@@ -3074,13 +3074,13 @@ the repositories hosted. But there's a
 
 617
 00:52:16,340 --> 00:52:23,620
-informational website you or you can point
-your AI agent to at did:webs.info. So some
+informational website you can point
+your AI agent to at didwebs.info. So some
 
 618
 00:52:23,620 --> 00:52:34,080
-other work. Go ahead. Oh, let's get you
-the… You got it? So we got a question in
+other work. Go ahead.
+So we got a question in
 
 619
 00:52:34,080 --> 00:52:34,880
@@ -3088,8 +3088,8 @@ the back from Phil.
 
 620
 00:52:39,580 --> 00:52:52,920
-So one of my primary interests in this is
-being able to do DIDCOM on top of KERI. So
+– So one of my primary interests in this is
+being able to do DIDComm on top of KERI. So
 
 621
 00:52:52,920 --> 00:53:01,160
@@ -3108,13 +3108,13 @@ covers? I was a little late, so maybe you
 
 624
 00:53:13,000 --> 00:53:18,380
-already answered this, But that's a good
+already answered this, but… – That's a good
 question. So how do we support? I'll just
 
 625
 00:53:18,380 --> 00:53:23,460
 repeat the question for the benefit of
-everybody. How do we support DIDCOM with
+everybody. How do we support DIDComm with
 
 626
 00:53:23,460 --> 00:53:27,720
