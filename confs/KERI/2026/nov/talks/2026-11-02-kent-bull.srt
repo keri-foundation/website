@@ -2062,7 +2062,7 @@ use to represent these things when they're
 
 414
 00:34:39,960 --> 00:34:44,480
-given into a DID doc. Now, you might
+given into a DID Doc. Now, you might
 ask me, well, why are we including these in
 
 415
