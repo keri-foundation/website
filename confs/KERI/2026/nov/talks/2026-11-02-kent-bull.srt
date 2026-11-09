@@ -3149,7 +3149,7 @@ you have to make. But other than that, the
 632
 00:53:50,080 --> 00:53:54,980
 answer is yes, any KERI identifier can be
-turned into a DID-Webs DID, whether it's
+turned into a did-webs DID, whether it's
 
 633
 00:53:54,980 --> 00:53:56,800
@@ -3158,13 +3158,13 @@ non-transferable.
 
 634
 00:54:02,640 --> 00:54:07,600
-And as far as support for DIDCOM, I'm
+And as far as support for DIDComm, I'm
 curious too. I've never quite done that. I
 
 635
 00:54:07,600 --> 00:54:11,120
 haven't looked quite deep enough to be
-able to know enough about DIDCOM to answer
+able to know enough about DIDComm to answer
 
 636
 00:54:11,120 --> 00:54:16,020
@@ -3189,7 +3189,7 @@ it's a DID document to say, well, what's
 640
 00:54:29,660 --> 00:54:35,540
 my latest key state? So without knowing
-anything about DIDCOM, if DIDCOM needs to
+anything about DIDComm, if DIDComm needs to
 
 641
 00:54:35,540 --> 00:54:39,500
@@ -3198,7 +3198,7 @@ state to do communication, did:webs could
 
 642
 00:54:39,500 --> 00:54:44,260
-fully support that. So I had a
+fully support that. – So I had a
 conversation at lunch And what a lot of
 
 643
@@ -3223,17 +3223,17 @@ non -transferable KERI identifier is
 
 647
 00:55:06,900 --> 00:55:13,560
-equivalent to DIDKey, which means you
-can use it with DIDKey. It's no harder than
+equivalent to did:key, which means you
+can use it with DIDComm. It's no harder than
 
 648
 00:55:13,560 --> 00:55:18,620
-using DIDKey. It is KERI. It's full KERI.
+using did:key. It is KERI. It's full KERI.
 It's fully normative KERI. It just doesn't
 
 649
 00:55:18,620 --> 00:55:25,600
-have all the security benefits of a KERI.
+have all the security benefits of a KEL.
 But it still works. It's still KERI. A
 
 650
@@ -3243,7 +3243,7 @@ KERI identifier and treat it appropriately.
 
 651
 00:55:30,480 --> 00:55:34,000
-What's cool about the non-transferable
+– What's cool about the non-transferable
 identifier is you can essentially derive
 
 652
@@ -3258,12 +3258,12 @@ a DID document just from having a non
 
 654
 00:55:40,840 --> 00:55:43,520
--transferable identifier. Yeah, you just
+-transferable identifier. – Yeah, you just
 don't get the security benefits of a KEL.
 
 655
 00:55:43,800 --> 00:55:51,140
-Right. It's did:webs, did:web that's no
+It's did:webs, did:web that's no
 weaker and no more complicated than the
 
 656
@@ -3294,7 +3294,7 @@ things you get from KERI. There are a lot
 661
 00:56:10,880 --> 00:56:15,860
 of instances where you don't need key
-rotation. For example, witnesses have non
+rotation. For example… – Witnesses have non
 
 662
 00:56:15,860 --> 00:56:20,460
@@ -3373,13 +3373,13 @@ anything, any more infrastructure than
 
 677
 00:57:32,940 --> 00:57:38,240
-did:peer does. And you just use direct
-mode to exchange your KEL. – Yeah.
+did:peer does. And you just use
+direct mode to exchange your KEL.
 
 678
 00:57:38,360 --> 00:57:42,160
-I believe that's in the open. – So you don't
-have witnesses to publish your KEL because
+So you don't have witnesses
+to publish your KEL because
 
 679
 00:57:42,160 --> 00:57:47,340
@@ -3403,80 +3403,69 @@ use KERI in did:peer mode and it works just
 
 683
 00:57:59,380 --> 00:58:04,040
-fine. Right. So does that make sense? Does
-that help? Yeah. It's just like KERI does
+fine. KERI does
 
 684
 00:58:04,040 --> 00:58:09,520
-a bunch of more things simply it's just
-that we they're sort of throwaways because
+a bunch of more things… simply
+they're sort of throwaways because
 
 685
-00:58:09,520 --> 00:58:14,080
-it's like well this is easy we can do
-that. I have one question. Maybe I just
+00:58:09,520 --> 00:58:15,877
+it's like, well this is easy we can do that. –
+I have one question. Maybe I just misunderstood.
 
 686
-00:58:14,080 --> 00:58:19,140
-misunderstood. Oh, we're done.
-Let him answer. That's okay.
-
-687
 00:58:22,200 --> 00:58:28,520
 What I'm primarily interested in is
 I've got a million people out there with a
 
-688
+687
 00:58:28,520 --> 00:58:36,020
 system based on KERI and I want to be able
-to enable secure messaging through DIDCOM.
+to enable secure messaging through DIDComm.
+
+688
+00:58:36,480 --> 00:58:41,840
+– And you can do that.
+And that's one reason for
 
 689
-00:58:36,480 --> 00:58:41,840
-Yes. Yeah. And you can do that. Yeah.
-That's Yeah. And that's one reason for
-
-690
 00:58:41,840 --> 00:58:48,480
 did:webs is so you can bridge to any DID
 world because the worst case they'll just
 
-691
+690
 00:58:48,480 --> 00:58:53,340
-use it as a did:web and not a DID and not
-the KERI stuff. Yeah. They don't have to
+use it as a did:web and not the
+KERI stuff. Yeah. They don't have to
 
-692
+691
 00:58:53,340 --> 00:58:56,840
 have KERI on their end because they'll
 just say, well, I don't understand KERI.
 
-693
+692
 00:58:56,980 --> 00:59:00,220
-So give them the did:web. But I understand
+So give them the did:web. – I understand
 keys and I can get the key from the DID
 
-694
+693
 00:59:00,220 --> 00:59:05,700
-doc and I'm good. Yeah. And then you're
-good. Yep. Okay. So we I I will say that
+doc and I'm good.
+– So I will say that
 
-695
+694
 00:59:05,700 --> 00:59:11,720
 I've been told by the staff that my
 presentation is done and so my hour is up
 
-696
+695
 00:59:11,720 --> 00:59:15,500
-but I will be here at IAW and you can get
+but I will be here at IIW and you can get
 me after this as well but I want to make
 
-697
+696
 00:59:15,500 --> 00:59:19,440
-room. We do have a break, right? So yeah,
-we have a break at 3 o'clock so. Thank
-
-698
-00:59:19,440 --> 00:59:19,560
-you.
+room.
 
