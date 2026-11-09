@@ -1932,7 +1932,7 @@ currently holds it. But what if those
 
 388
 00:32:24,280 --> 00:32:28,480
-issuers or that's fine if it's single SIG,
+issuers or… that's fine if it's singlesig,
 but what happens if you've got a multisig
 
 389
@@ -1947,8 +1947,8 @@ define the threshold and who is authorized
 
 391
 00:32:38,020 --> 00:32:42,820
-to sign. That's what this conditional
-proof 2022 does is it allows us to define
+to sign. That's what this ConditionalProof2022
+does, is it allows us to define
 
 392
 00:32:42,820 --> 00:32:50,080
@@ -1998,17 +1998,17 @@ the people who can sign. And I mentioned
 401
 00:33:29,040 --> 00:33:33,640
 the authentication and assertion methods
-of the DIDDoc. There's a lot of rules to
+of the DID Doc. There's a lot of rules to
 
 402
 00:33:33,640 --> 00:33:39,160
-remember. whatever, especially if you want
+remember. Especially if you want
 to as a verifier be able to support the
 
 403
 00:33:39,160 --> 00:33:42,920
 coolest features of did:webs, which is
-multi-sig issuers and multi-sig holders.
+multisig issuers and multisig holders.
 
 404
 00:33:43,960 --> 00:33:50,020
@@ -2027,1460 +2027,1456 @@ were in a keri.cesr stream. And I said
 
 407
 00:34:00,300 --> 00:34:04,680
-you need to it's not just a key event log.
+you need to… it's not just a key event log.
 You've got service endpoints. You've got
 
 408
 00:34:04,680 --> 00:34:09,200
 role authorizations. That's what we talked
-through on this slide. Is you might say I
+through on this slide. As you might say I
 
 409
-00:34:09,200 --> 00:34:14,960
+00:34:09,200 --> 00:34:16,175
 have a witness or I have a mailbox or I
 have an agent and that has a relationship
 
 410
-00:34:14,960 --> 00:34:18,940
-to my to
+00:34:18,780 --> 00:34:25,240
+to the identifier that is giving you this
+DID Doc. And so the way we represent that
 
 411
-00:34:18,940 --> 00:34:25,240
-the identifier that is giving you this
-didDoc. And so the way we represent that
-
-412
 00:34:25,240 --> 00:34:29,420
 is not with a key event. There's something
-called the location scheme. The slash LLC
+called the location scheme. The `/loc`
 
-413
+412
 00:34:29,420 --> 00:34:35,000
-and slash scheme is the the the name space
+and `/scheme` is the the name space
 that we give it in the KERI world. We say
 
-414
+413
 00:34:35,000 --> 00:34:39,960
 there's a couple of data structures we
 use to represent these things when they're
 
-415
+414
 00:34:39,960 --> 00:34:44,480
 given into a DID doc. Now, you might
 ask me, well, why are we including these in
 
-416
+415
 00:34:44,480 --> 00:34:50,620
 the DID document at all? Because I thought
 we said that we should assume that the
 
-417
+416
 00:34:50,620 --> 00:34:56,600
 verifier doesn't know KERI at all. That's
 true. And really what we're doing here is
 
-418
+417
 00:34:56,600 --> 00:35:01,500
 we're piggybacking a little bit on the
 structure of the DID document and say,
 
-419
+418
 00:35:01,540 --> 00:35:05,560
 well, maybe people might be interested in
 discovering that I have a witness or that
 
-420
+419
 00:35:05,560 --> 00:35:09,600
 I have a mailbox or that I have an agent.
 This straddles the line. I mean, it's a
 
-421
+420
 00:35:09,600 --> 00:35:13,200
 potentially useful construct. It starts
 to straddle the line. If we're not pulling
 
-422
+421
 00:35:13,200 --> 00:35:15,960
 anything from the witness or from the
 mailbox or the agent, maybe we don't
 
-423
+422
 00:35:15,960 --> 00:35:21,260
 actually need this, but it seemed
 invaluable and so we kept it in there. But
 
-424
+423
 00:35:21,260 --> 00:35:24,060
 it's debatable that if you know how to
 talk to a witness, if you know how to talk
 
-425
+424
 00:35:24,060 --> 00:35:26,800
 to a mailbox and an agent, you'd probably
 just do that directly. Maybe you wouldn't
 
-426
+425
 00:35:26,800 --> 00:35:33,460
 need did:webs, but we've defined it in the
 spec in case it becomes useful. Cool. So,
 
-427
+426
 00:35:34,480 --> 00:35:37,660
 okay, I won't get too far into the
 delegation because then again delegation
 
-428
+427
 00:35:37,660 --> 00:35:39,300
 is also a KERI-specific concept.
 
-429
+428
 00:35:42,440 --> 00:35:48,000
 This slide is really just a repetition of
 what I've told you earlier. I said if you
 
-430
+429
 00:35:48,000 --> 00:35:52,280
 want to support the fancy molded-sign
 stuff from KERI, we need another spec.
 
-431
+430
 00:35:52,660 --> 00:35:58,320
 This is when I say credential proof right
 here. When I say a credential proof has to
 
-432
+431
 00:35:58,320 --> 00:36:03,260
 use an authorized method where that's
 valuable is before we let the kid go out
 
-433
+432
 00:36:03,260 --> 00:36:07,540
 of the store with the tobacco and we need
 to verify the right state of Utah issued
 
-434
+433
 00:36:07,540 --> 00:36:13,960
 this and this kid actually holds it.
 There's rules you have to use to say,
 
-435
+434
 00:36:14,100 --> 00:36:19,020
 okay, I can verify the signatures on this
 credential because they can't come from
 
-436
+435
 00:36:19,020 --> 00:36:21,880
 these places in the DID document. And
 we could walk through this example, but
 
-437
+436
 00:36:21,880 --> 00:36:25,680
 essentially when I talk about the
 assertion methods, the different proof
 
-438
+437
 00:36:25,680 --> 00:36:29,620
 formats that we have, it's essentially
 we would walk through, I I think that's
 
-439
+438
 00:36:29,620 --> 00:36:36,100
 probably not a good time to walk through
 the nitty gritty of what that proof spec
 
-440
+439
 00:36:36,100 --> 00:36:39,140
 would be like, but essentially know
 that we need to write a proof spec and this
 
-441
+440
 00:36:39,140 --> 00:36:44,740
 slide gets a little bit deeper into that.
 Oh, you want to go? Actually, if you want
 
-442
+441
 00:36:44,740 --> 00:36:50,280
 to go there, we'll go there. I have a
 question about the proof purpose. Perfect.
 
-443
+442
 00:36:50,560 --> 00:36:58,440
 Okay. Is there a KERI data model
 equivalence either in the event log or any
 
-444
+443
 00:36:58,440 --> 00:37:06,940
 of the delegation mechanisms for assigning
 proof purpose to keys to not the pre
 
-445
+444
 00:37:06,940 --> 00:37:11,120
 -rotation keys but to regular document
 keys. Can you say this key can only be
 
-446
+445
 00:37:11,120 --> 00:37:14,980
 used for authentication, this key
 for signing stuff and this key for key
 
-447
+446
 00:37:14,980 --> 00:37:15,400
 agreement?
 
-448
+447
 00:37:20,860 --> 00:37:24,880
 So is the question is there something in
 the KERI data model that would support
 
-449
+448
 00:37:24,880 --> 00:37:30,700
 deriving that from the KERI data model?
 Yes. I see. That's the question. Can I
 
-450
+449
 00:37:30,700 --> 00:37:35,300
 answer that? Yeah. So signing keys
 can only be used to sign. Oh, you got it.
 
-451
+450
 00:37:36,520 --> 00:37:45,680
 Rotation keys can only
 be used to rotate. And most
 
-452
+451
 00:37:45,680 --> 00:37:53,600
 of the time when you're doing something of
 high value, you anchor in an event, which
 
-453
+452
 00:37:53,600 --> 00:37:59,180
 means it must be signed with the signing
 keys or you anchor it in a rotation event
 
-454
+453
 00:37:59,180 --> 00:38:06,740
 which must be signed with the rotation
 keys, the pre-rotated keys. There aren't
 
-455
+454
 00:38:06,740 --> 00:38:11,380
 any other places that you use keys for any
 other thing in the whole KERI ecosystem.
 
-456
+455
 00:38:11,920 --> 00:38:16,480
 Signing is general. You can do anything
 you want with signing. Right? So you could
 
-457
+456
 00:38:16,480 --> 00:38:26,640
 say, well, if I want to sign a particular
 type of packet, I suppose you could say
 
-458
+457
 00:38:26,640 --> 00:38:32,100
 that, but we don't have a another set of
 keys, right? And then witnesses have their
 
-459
+458
 00:38:32,100 --> 00:38:37,540
 own set of keys. But witness keys are
 only used for receding. So we define keys
 
-460
+459
 00:38:37,540 --> 00:38:44,120
 implicitly for the purpose they solve. We
 don't have keys that you assign to proof
 
-461
+460
 00:38:44,120 --> 00:38:49,800
 purpose because where the key appears
 in KERI determines its purpose. So witness
 
-462
+461
 00:38:49,800 --> 00:38:54,580
 key appears in the witness list. Assigning
 key appears in the signing key list and
 
-463
+462
 00:38:54,580 --> 00:38:58,480
 the rotation keys appear in the next
 rotated key list. So those key key lists
 
-464
+463
 00:38:58,480 --> 00:39:04,920
 determine their proof purpose. There isn't
 a reason to have… I never came up with a
 
-465
+464
 00:39:04,920 --> 00:39:09,520
 reason to have to have some generic
 semantic thing for keys because in
 
-466
+465
 00:39:09,520 --> 00:39:13,820
 general, I don't believe that keys are
 very useful. Bear signatures are highly
 
-467
+466
 00:39:13,820 --> 00:39:17,920
 insecure. They're not very useful. So you
 only use them for ephemeral things. And
 
-468
+467
 00:39:17,920 --> 00:39:22,780
 proof purpose seems like something that's
 not ephemeral. What about the ability to
 
-469
+468
 00:39:22,780 --> 00:39:28,720
 designate and rotate key agreement,
 so encryption keys, which are currently
 
-470
+469
 00:39:28,720 --> 00:39:32,440
 derived from signing keys
 deterministically in the KERI ecosystem.
 
-471
+470
 00:39:35,000 --> 00:39:40,440
 Would you be open to having that? –
 So yes, that's a really good question. KERI
 
-472
+471
 00:39:40,440 --> 00:39:45,840
 doesn't do encryption. KERI is all about
 authentication. Now the trust spanning
 
-473
+472
 00:39:45,840 --> 00:39:53,080
 protocol does do encryption. And so
 there's a need to define how you generate
 
-474
+473
 00:39:53,080 --> 00:39:58,720
 your encryption keys. And so we have so
 that's not defined in KERI. That's that's
 
-475
+474
 00:39:58,720 --> 00:40:05,040
 the encryption is a is a different
 protocol from KERI. So, so yes. So is that
 
-476
+475
 00:40:05,040 --> 00:40:11,300
 a potentially yes? That's the potential
 yes. Yeah. Good question. Now we've been
 
-477
+476
 00:40:11,300 --> 00:40:15,960
 getting a little bit deeper into the
 technical depths. I like going there. I
 
-478
+477
 00:40:15,960 --> 00:40:20,000
 know we've got sort of our time is getting
 shorter. So what I'd like to do is look
 
-479
+478
 00:40:20,000 --> 00:40:22,840
 get a little bit more towards the status.
 We're going to go pretty quickly through
 
-480
+479
 00:40:22,840 --> 00:40:27,780
 the rest of the technical stuff. I will be
 at IIW. you. So I'll be here for the rest
 
-481
+480
 00:40:27,780 --> 00:40:33,760
 of the week in case anybody wants to
 go deeper. All right. So we talked about a
 
-482
+481
 00:40:33,760 --> 00:40:37,120
 little bit about the DID document.
 We won't go too deeply into there and
 
-483
+482
 00:40:37,120 --> 00:40:42,320
 historical keys. Let's actually skip ahead
 a little bit. We already mentioned that
 
-484
+483
 00:40:42,320 --> 00:40:46,820
 hosting can change. The identifier stays
 the same. If you go from your DID from
 
-485
+484
 00:40:46,820 --> 00:40:51,820
 example.org to backup.example.org,
 you can have the same identity and you can
 
-486
+485
 00:40:51,820 --> 00:40:55,500
 cryptographically verify that it's the
 same identity or person who controls that.
 
-487
+486
 00:40:56,780 --> 00:41:03,480
 All right. We already talked about sort of
 threshold identifiers and we talked about
 
-488
+487
 00:41:03,480 --> 00:41:08,560
 we don't need to get quite into duplicity
 detection here or some of the other
 
-489
+488
 00:41:08,560 --> 00:41:12,520
 problems here. We're going to skip over.
 Let's go right to where the spec is at.
 
-490
+489
 00:41:12,680 --> 00:41:17,600
 Okay. So the spec we're on version 0.10.3
 of the did:webs spec. That's where we're at
 
-491
+490
 00:41:17,600 --> 00:41:21,640
 today. We've got a number of open items.
 We've got about 17 different open items
 
-492
+491
 00:41:21,640 --> 00:41:28,700
 that we need to handle and we We thought
 we had a normative baseline around August
 
-493
+492
 00:41:28,700 --> 00:41:32,420
 11th. We've actually been working earlier
 this year with the DIF recommended DID
 
-494
+493
 00:41:32,420 --> 00:41:36,540
 methods to have did:webs become a
 recommended DID method. We're not quite
 
-495
+494
 00:41:36,540 --> 00:41:41,640
 there yet. And as I mentioned, we've still
 got the KERI version 2 stuff that we need
 
-496
+495
 00:41:41,640 --> 00:41:49,200
 to add in. And there's some review points
 as we'll get into later. I'll just that we
 
-497
+496
 00:41:49,200 --> 00:41:51,700
 need to provide clarity around
 transferable and non-transferable
 
-498
+497
 00:41:51,700 --> 00:41:54,640
 identifiers. There's a couple of other
 things, but there's a little bit of the
 
-499
+498
 00:41:54,640 --> 00:42:00,180
 timeline I became aware of the fact that
 if this is actually going to be used in
 
-500
+499
 00:42:00,180 --> 00:42:06,760
 production for a consumer who wants
 to verify multisig issuers and multisig
 
-501
+500
 00:42:06,760 --> 00:42:12,860
 holders, we definitely will need to write
 that credential proof spec and write a
 
-502
+501
 00:42:12,860 --> 00:42:18,860
 library. Right now, everything's usable
 with simple multisig and with single sig.
 
-503
+502
 00:42:19,180 --> 00:42:23,580
 It's pretty straightforward to have a
 single sig issuer, single sig holder. It's
 
-504
+503
 00:42:23,580 --> 00:42:27,320
 because it's just one signature and
 just one one key. And when I say simple
 
-505
+504
 00:42:27,320 --> 00:42:32,160
 multisig, I mean with not nested weighted
 threshold stuff. I mean, you can have a
 
-506
+505
 00:42:32,160 --> 00:42:37,000
 threshold, but if it's just a flat set of
 multisig members, that's fine. That's easy
 
-507
+506
 00:42:37,000 --> 00:42:41,260
 today. It's just the challenge is that
 verifiers don't know how to interpret the
 
-508
+507
 00:42:41,260 --> 00:42:46,660
 nesting is the challenge. And if we're
 going to have a way for the verifiers to
 
-509
+508
 00:42:46,660 --> 00:42:51,720
 interpret the nesting, that's a decision
 we have to say, do we want to have the
 
-510
+509
 00:42:51,720 --> 00:42:56,360
 rules for that interpretation of that
 nesting, the DataWeb S spec? Probably not.
 
-511
+510
 00:42:56,580 --> 00:43:01,880
 DeadWebs should be about keys, right? Not
 about credentials. We should probably be a
 
-512
+511
 00:43:01,880 --> 00:43:05,660
 separate spec if we say this is going
 to be a spec for verifiers that want to
 
-513
+512
 00:43:05,660 --> 00:43:12,240
 interpret the vcdm w3c data model. They're
 going to verify that credential with keys
 
-514
+513
 00:43:12,240 --> 00:43:19,180
 deadWebs that are defined by deadWebs and
 KERI for a w3c credential that has multi
 
-515
+514
 00:43:19,180 --> 00:43:24,720
 -sig issuers, multi-sig holders. That's
 more of a credential proofing spec. And
 
-516
+515
 00:43:24,720 --> 00:43:29,660
 it's not just a spec. You'd want a library
 as well. That's easy to use. So if we
 
-517
+516
 00:43:29,660 --> 00:43:33,600
 decide if somebody decides they
 want to use this in production for a really
 
-518
+517
 00:43:33,600 --> 00:43:39,100
 advanced multisig, that's some work
 that needs to be done later. So, but where
 
-519
+518
 00:43:39,100 --> 00:43:43,180
 we're going though is we want to we want
 to finish out the diff process. And so to
 
-520
+519
 00:43:43,180 --> 00:43:50,180
 get to where we redo we really do want
 did:webs to be a a fully accepted fully
 
-521
+520
 00:43:50,180 --> 00:43:56,480
 supported diff recommended DID method. And
 we were pretty close earlier this year. So
 
-522
+521
 00:43:56,480 --> 00:44:06,240
 is the spec being approved at Trust
 over IP a prerequisite for DIF to recognize
 
-523
+522
 00:44:06,240 --> 00:44:12,540
 did:webs as an acceptable DID method
 on their list? Now that I I'll repeat the
 
-524
+523
 00:44:12,540 --> 00:44:15,220
 question. Yeah, I'll repeat the question
 just so we can all hear. It's a good
 
-525
+524
 00:44:15,220 --> 00:44:21,800
 question. So is TOIP approval of the
 did:webs spec required in order for the DIF
 
-526
+525
 00:44:21,800 --> 00:44:25,580
 recommended DID methods group to put it on
 their their recommended list. As far as my
 
-527
+526
 00:44:25,580 --> 00:44:29,720
 understanding, it's not a hard constraint.
 It would help. But the more important
 
-528
+527
 00:44:29,720 --> 00:44:35,200
 thing is that we have two implementations
 and that the DIF recommended DIF methods
 
-529
+528
 00:44:35,200 --> 00:44:41,620
 team believes that it's stable enough.
 Now, I don't to be responsible, I need to
 
-530
+529
 00:44:41,620 --> 00:44:45,320
 say I don't know for sure. I need to talk
 to Otto and help with the other people.
 
-531
+530
 00:44:45,680 --> 00:44:50,200
 Jonathan, if Jonathan were here, he could
 say. So I'm pretty sure that they don't
 
-532
+531
 00:44:50,200 --> 00:44:57,400
 require it because they're approving
 it based on DIF. It's a DIF standard. So
 
-533
+532
 00:44:57,400 --> 00:45:03,360
 whether or not it's it's trust over IP
 approved matter doesn't matter. It's just
 
-534
+533
 00:45:03,360 --> 00:45:09,020
 that whoever the whoever it is that's
 that's working under the aegis of DIF has
 
-535
+534
 00:45:09,020 --> 00:45:14,100
 to follow the DIF rules. And so that's
 you and Jonathan. And all you're doing is
 
-536
+535
 00:45:14,100 --> 00:45:20,940
 leveraging the task force at trust over IP
 to get it right. Right. I will say that on
 
-537
+536
 00:45:20,940 --> 00:45:25,700
 the criteria like you mentioned from
 DIFF on the rubric that they give us to
 
-538
+537
 00:45:25,700 --> 00:45:30,780
 evaluate how ready we are. There isn't
 a criteria for whether or not the spec is
 
-539
+538
 00:45:30,780 --> 00:45:39,360
 approved. – Yeah, that's what I say. DIFF
 allows approved specs from just anybody
 
-540
+539
 00:45:39,360 --> 00:45:45,300
 that wants to contribute it under DIFF.
 So it's its own, it has its own approval
 
-541
+540
 00:45:45,300 --> 00:45:51,840
 process. – Got it. So it sounds like
 the answer is no. – So there's no there's
 
-542
+541
 00:45:51,840 --> 00:46:01,780
 ToIP isn't a gating effect on it. –
 Okay. And the idea, the goal is that we
 
-543
+542
 00:46:01,780 --> 00:46:05,540
 want to be just like did:webVH and
 did:webplus and there might be a couple of
 
-544
+543
 00:46:05,540 --> 00:46:09,060
 others now. We do want to be a DIF
 recommended did method. It just looks
 
-545
+544
 00:46:09,060 --> 00:46:15,800
 good. So once we have the KERI v2 stuff in
 there and all the open points addressed, I
 
-546
+545
 00:46:15,800 --> 00:46:21,260
 don't see why we wouldn't be. So, all
 right. So there I mentioned some review
 
-547
+546
 00:46:21,260 --> 00:46:25,900
 from the KERI stack working group chairs.
 I say Sam's review up here. It was his
 
-548
+547
 00:46:25,900 --> 00:46:29,720
 particular comments. We've got four
 on this slide, three on this slide. I broke
 
-549
+548
 00:46:29,720 --> 00:46:33,300
 them down into a few different categories.
 We don't have to go into the individual
 
-550
+549
 00:46:33,300 --> 00:46:37,820
 depths of what these review criteria
 are because that's my job and I won't force
 
-551
+550
 00:46:37,820 --> 00:46:42,080
 you to go through that. Just be aware
 there's a significant number of open
 
-552
+551
 00:46:42,080 --> 00:46:47,600
 points that we have to clear to get
 the spec into the next version and it's
 
-553
+552
 00:46:47,600 --> 00:46:53,740
 generally around some of them are actually
 about… Oh, I want to wrong slide. We need
 
-554
+553
 00:46:53,740 --> 00:46:59,440
 to show examples. Okay, what is an
 ordinary did:webs consumer receive? We need
 
-555
+554
 00:46:59,440 --> 00:47:05,460
 to walk you through, okay, what does a W3C
 credential proof look like? And so we're
 
-556
+555
 00:47:05,460 --> 00:47:09,680
 going to add that at least for the
 simple multisig and single sig walk people
 
-557
+556
 00:47:09,680 --> 00:47:14,900
 through examples so that you can by the
 time you're done reading the did:webs spec,
 
-558
+557
 00:47:15,220 --> 00:47:18,720
 there should be enough examples in
 there to be able to give you a pretty good
 
-559
+558
 00:47:18,720 --> 00:47:22,860
 illustration of how do I actually use
 this? And so we're going to add some
 
-560
+559
 00:47:22,860 --> 00:47:28,040
 examples there. And this is a harder
 one. The nested thresholds like I've been
 
-561
+560
 00:47:28,040 --> 00:47:33,060
 mentioning. We do have the recursive
 mapping but we need the worked case. We
 
-562
+561
 00:47:33,060 --> 00:47:37,020
 need to show here's if you're going to do
 a nested threshold multi-safers actually a
 
-563
+562
 00:47:37,020 --> 00:47:42,180
 worked case of it done. If we do the most
 complicated one, the other ones are piece
 
-564
+563
 00:47:42,180 --> 00:47:49,820
 of cake. Okay, so we've got there's other
 things that need to be other open points,
 
-565
+564
 00:47:49,840 --> 00:47:55,460
 but the big one is really the keri.cesr
 ACDC version 2. We need to be very
 
-566
+565
 00:47:55,460 --> 00:48:00,420
 explicit about things like what happens
 when you have a KEL that begins in version
 
-567
+566
 00:48:00,420 --> 00:48:04,660
 1 and then we have some version 2 events.
 How does the stream declare its supported
 
-568
+567
 00:48:04,660 --> 00:48:08,720
 protocol versions? And CESR and KERI
 2 already have a way to declare protocol
 
-569
+568
 00:48:08,720 --> 00:48:12,680
 versions, but we need to be explicit about
 that in the spec. We need to acknowledge
 
-570
+569
 00:48:12,680 --> 00:48:17,320
 that yes, there can be a version 1 stream
 or a version 2 stream can be partial. So
 
-571
+570
 00:48:17,320 --> 00:48:20,620
 there's a couple of things that we need to
 go in there and just clean some things up
 
-572
+571
 00:48:20,620 --> 00:48:25,820
 and be more explicit about. And
 then the registry state is going to be a
 
-573
+572
 00:48:25,820 --> 00:48:30,180
 particularly interesting one in KERI 2
 because we have a new kind of registry and
 
-574
+573
 00:48:30,180 --> 00:48:35,300
 it can be blinded. And what about
 unblinding life cycle of the registry
 
-575
+574
 00:48:35,300 --> 00:48:40,280
 state? So we just need to be more clear
 and explicit about everything that KERI
 
-576
+575
 00:48:40,280 --> 00:48:46,020
 version 2 brings into the picture.
 Okay, this is an there's an interesting
 
-577
+576
 00:48:46,020 --> 00:48:51,600
 discussion in. Since we have time,
 maybe actually let me let me actually jump
 
-578
+577
 00:48:51,600 --> 00:48:57,980
 forward a little bit. Yeah, I get a little
 bit more into some of the other open
 
-579
+578
 00:48:57,980 --> 00:49:03,800
 points, but it's probably would be
 belaboring the issue here. What I think
 
-580
+579
 00:49:03,800 --> 00:49:08,460
 would be what would be valuable is to show
 the existing repositories, show you where
 
-581
+580
 00:49:08,460 --> 00:49:12,740
 things are at so that you can go play with
 it yourself. So right now the if you look
 
-582
+581
 00:49:12,740 --> 00:49:18,020
 at the Glyph GitHub, we've got Glyph
 IT, we've got the did:webs resolver. That's
 
-583
+582
 00:49:18,020 --> 00:49:23,020
 what this 037 is right now. That's the
 current version of the did:webs resolver.
 
-584
+583
 00:49:23,200 --> 00:49:27,680
 That's the reference implementation.
 There's one old pull request to it right
 
-585
+584
 00:49:27,680 --> 00:49:31,180
 now, but we'll just go ahead and skip
 beyond that. So, I'm going to skip forward
 
-586
+585
 00:49:31,180 --> 00:49:36,980
 a little bit to show you some resources.
 Okay, so we do have the ECHI over IP
 
-587
+586
 00:49:36,980 --> 00:49:41,880
 specifications. I mentioned there's the
 did:webs resolver. There's a couple of
 
-588
+587
 00:49:41,880 --> 00:49:48,720
 other things that are worth mentioning.
 So, when you actually build did:webs into a
 
-589
+588
 00:49:48,720 --> 00:49:56,100
 wallet or a verifier, you'll want to use
 this did:webs TS library. That library is
 
-590
+589
 00:49:56,100 --> 00:50:02,940
 not a implementation of did:webs and
 TypeScript. It's just when you are as a
 
-591
+590
 00:50:02,940 --> 00:50:09,840
 verifier, you are verifying credentials.
 There are libraries that like or resolver
 
-592
+591
 00:50:09,840 --> 00:50:13,560
 libraries that we use to resolve key
 state. That's what this is useful for.
 
-593
+592
 00:50:13,620 --> 00:50:19,340
 It's actually useful for from TypeScript
 resolving key state. So you're not
 
-594
+593
 00:50:19,340 --> 00:50:24,180
 generating it, but you're pulling it in as
 a part of standard DIF infrastructure. And
 
-595
+594
 00:50:24,180 --> 00:50:32,860
 then as a response to the DIF recommended
 DID methods work group earlier this year,
 
-596
+595
 00:50:32,940 --> 00:50:38,000
 we presented to them the Python
 implementation. And we were pretty much
 
-597
+596
 00:50:38,000 --> 00:50:42,860
 getting to the point where they said,
 okay, well, we will accept did:webs as a
 
-598
+597
 00:50:42,860 --> 00:50:46,760
 DIF recommended DID method. And
 then they said, does it have a second
 
-599
+598
 00:50:46,760 --> 00:50:47,420
 implementation?
 
-600
+599
 00:50:50,380 --> 00:50:55,480
 And I'm like, no, it doesn't, but it will
 soon. And so I started on a TypeScript
 
-601
+600
 00:50:55,480 --> 00:50:59,600
 implementation that was I tried to keep
 it as minimal as I could for as long as I
 
-602
+601
 00:50:59,600 --> 00:51:05,560
 could, but I did start a TypeScript
 implementation of KERI, ACDC and did:webs
 
-603
+602
 00:51:05,560 --> 00:51:10,540
 just enough so we can sort of get through
 that process so that when they ask us that
 
-604
+603
 00:51:10,540 --> 00:51:15,720
 question, we can say yes. Personally,
 I don't think it's fair. I don't think it's
 
-605
+604
 00:51:15,720 --> 00:51:20,940
 fair to have that as a criteria
 because there's it doesn't take into the
 
-606
+605
 00:51:20,940 --> 00:51:27,460
 complexity of the different DID methods is
 completely different. Like if you look at
 
-607
+606
 00:51:27,460 --> 00:51:32,400
 the lines of code that are required for
 some of the other DID methods, it's in the
 
-608
+607
 00:51:32,400 --> 00:51:36,740
 thousands. Whereas a KERI implementation
 could be tens of thousands closer to a
 
-609
+608
 00:51:36,740 --> 00:51:41,760
 hundred thousand. There's a lot more
 complexity going on. So personally, I
 
-610
+609
 00:51:41,760 --> 00:51:45,800
 understand people's desire for a second
 implementation, but to a truly secure
 
-611
+610
 00:51:45,800 --> 00:51:53,820
 complete implementation of KERI ACDC is
 non-trivial. It's a big deal. So I'm going
 
-612
+611
 00:51:53,820 --> 00:51:57,840
 through the process just enough so
 where we can get through if that actually
 
-613
+612
 00:51:57,840 --> 00:52:01,600
 becomes a hard blocker. We can be
 unblocked by that, but that's what this
 
-614
+613
 00:52:01,600 --> 00:52:05,240
 second line item is. And if you want
 to go to a place to learn a little bit more
 
-615
+614
 00:52:05,240 --> 00:52:08,560
 about did:webs, this hasn't been quite
 enough where you want to learn more
 
-616
+615
 00:52:08,560 --> 00:52:12,880
 details, you can go to did:webs.info.
 That's the website actually. This Glyph IT
 
-617
+616
 00:52:12,880 --> 00:52:16,340
 on the front of it, that's just where
 the repositories hosted. But there's a
 
-618
+617
 00:52:16,340 --> 00:52:23,620
 informational website you or you can point
 your AI agent to at did:webs.info. So some
 
-619
+618
 00:52:23,620 --> 00:52:34,080
 other work. Go ahead. Oh, let's get you
 the… You got it? So we got a question in
 
-620
+619
 00:52:34,080 --> 00:52:34,880
 the back from Phil.
 
-621
+620
 00:52:39,580 --> 00:52:52,920
 So one of my primary interests in this is
 being able to do DIDCOM on top of KERI. So
 
-622
+621
 00:52:52,920 --> 00:53:01,160
 I'm not actually even sure what question
 to ask, but I mean, is it the case that I
 
-623
+622
 00:53:01,160 --> 00:53:08,780
 can create a did:webs from any KERI
 anytime? Do they change as you rotate
 
-624
+623
 00:53:08,780 --> 00:53:13,000
 keys? I mean, what's happening under the
 covers? I was a little late, so maybe you
 
-625
+624
 00:53:13,000 --> 00:53:18,380
 already answered this, But that's a good
 question. So how do we support? I'll just
 
-626
+625
 00:53:18,380 --> 00:53:23,460
 repeat the question for the benefit of
 everybody. How do we support DIDCOM with
 
-627
+626
 00:53:23,460 --> 00:53:27,720
 did:webs? And then there was a second
 question there as can we turn any KERI
 
-628
+627
 00:53:27,720 --> 00:53:32,340
 identifier into a did:webs at any time?
 Yes. And there's one decision you have to
 
-629
+628
 00:53:32,340 --> 00:53:37,560
 make and then one additional decision.
 What domain are you going to use for the
 
-630
+629
 00:53:37,560 --> 00:53:41,640
 identifier? And the reason is after you
 make that decision, you take whatever that
 
-631
+630
 00:53:41,640 --> 00:53:45,940
 domain is, put it in what's called a
 designated aliases ACDC and you self-issue
 
-632
+631
 00:53:45,940 --> 00:53:50,080
 that. So that's the only other decision
 you have to make. But other than that, the
 
-633
+632
 00:53:50,080 --> 00:53:54,980
 answer is yes, any KERI identifier can be
 turned into a DID-Webs DID, whether it's
 
-634
+633
 00:53:54,980 --> 00:53:56,800
 transferable or
 non-transferable.
 
-635
+634
 00:54:02,640 --> 00:54:07,600
 And as far as support for DIDCOM, I'm
 curious too. I've never quite done that. I
 
-636
+635
 00:54:07,600 --> 00:54:11,120
 haven't looked quite deep enough to be
 able to know enough about DIDCOM to answer
 
-637
+636
 00:54:11,120 --> 00:54:16,020
 your question. I would imagine. So if
 you just think about the inventory of what
 
-638
+637
 00:54:16,020 --> 00:54:19,540
 KERI gives you or what did:webs gives you.
 So you've got a full key event log, you've
 
-639
+638
 00:54:19,540 --> 00:54:24,080
 got keys, your keys can change, you've got
 consistent identity and did:webs is really
 
-640
+639
 00:54:24,080 --> 00:54:29,660
 just a discoverability protocol in that
 it's a DID document to say, well, what's
 
-641
+640
 00:54:29,660 --> 00:54:35,540
 my latest key state? So without knowing
 anything about DIDCOM, if DIDCOM needs to
 
-642
+641
 00:54:35,540 --> 00:54:39,500
 look at a DID document to get latest key
 state to do communication, did:webs could
 
-643
+642
 00:54:39,500 --> 00:54:44,260
 fully support that. So I had a
 conversation at lunch And what a lot of
 
-644
+643
 00:54:44,260 --> 00:54:49,660
 people don't understand about KERI is
 that KERI normatively can be used in a very
 
-645
+644
 00:54:49,660 --> 00:54:56,800
 simple way. A normative KERI AID can
 be non-transferable, use the term, means it
 
-646
+645
 00:54:56,800 --> 00:55:02,220
 does not have a KEL. It has at most
 an inception event, but it's a vacuous
 
-647
+646
 00:55:02,220 --> 00:55:06,900
 inception event, which means a
 non -transferable KERI identifier is
 
-648
+647
 00:55:06,900 --> 00:55:13,560
 equivalent to DIDKey, which means you
 can use it with DIDKey. It's no harder than
 
-649
+648
 00:55:13,560 --> 00:55:18,620
 using DIDKey. It is KERI. It's full KERI.
 It's fully normative KERI. It just doesn't
 
-650
+649
 00:55:18,620 --> 00:55:25,600
 have all the security benefits of a KERI.
 But it still works. It's still KERI. A
 
-651
+650
 00:55:25,600 --> 00:55:29,500
 KERI stack will recognize it as a
 KERI identifier and treat it appropriately.
 
-652
+651
 00:55:30,480 --> 00:55:34,000
 What's cool about the non-transferable
 identifier is you can essentially derive
 
-653
+652
 00:55:34,000 --> 00:55:37,640
 not just the inception event, but you
 could derive if you knew what domain you
 
-654
+653
 00:55:37,640 --> 00:55:40,840
 wanted to commit to, you could derive
 a DID document just from having a non
 
-655
+654
 00:55:40,840 --> 00:55:43,520
 -transferable identifier. Yeah, you just
 don't get the security benefits of a KEL.
 
-656
+655
 00:55:43,800 --> 00:55:51,140
 Right. It's did:webs, did:web that's no
 weaker and no more complicated than the
 
-657
+656
 00:55:51,140 --> 00:55:55,160
 did:key did:web. So just to repeat that for
 anybody that might not have heard it. So
 
-658
+657
 00:55:55,160 --> 00:55:59,880
 if you're familiar with the concept of a
 non-transferable identifier in KERI, non
 
-659
+658
 00:55:59,880 --> 00:56:03,340
 -transferable means you can't rotate keys.
 And you might say, well, why design a key
 
-660
+659
 00:56:03,340 --> 00:56:06,640
 rotation protocol but not be able to
 rotate keys? Well, there are certain
 
-661
+660
 00:56:06,640 --> 00:56:10,880
 instances where there's a lot of other
 things you get from KERI. There are a lot
 
-662
+661
 00:56:10,880 --> 00:56:15,860
 of instances where you don't need key
 rotation. For example, witnesses have non
 
-663
+662
 00:56:15,860 --> 00:56:20,460
 -transferable AIDs. They don't need
 KELs. The witness itself doesn't need a KEL
 
-664
+663
 00:56:20,460 --> 00:56:27,920
 because its KEL is implicit in the KEL
 of the controller. The witness's AID is its
 
-665
+664
 00:56:27,920 --> 00:56:32,720
 public key and it's a key in the KEL of
 the controller. So it's rotated when you
 
-666
+665
 00:56:32,720 --> 00:56:39,340
 rotate witnesses. So it doesn't need
 its own KEL. So it is trivially just a key
 
-667
+666
 00:56:39,340 --> 00:56:44,100
 pair like did:key. So we use them all the
 time in KERI infrastructure. Whenever we
 
-668
+667
 00:56:44,100 --> 00:56:50,380
 need just a bare key pair, we can use it
 and it's still a valid KERI AID. – And the
 
-669
+668
 00:56:50,380 --> 00:56:53,400
 interesting that we're talking about this
 because some of the open points on the
 
-670
+669
 00:56:53,400 --> 00:56:58,600
 spec are to make sure that we make exactly
 this clear in the did:webs spec is how the
 
-671
+670
 00:56:58,600 --> 00:57:02,960
 utility of non-transferable identifiers
 with did:webs. And I imagine… – And then
 
-672
+671
 00:57:02,960 --> 00:57:06,960
 there's another step. You can use
 a transferable identifier, but use it in
 
-673
+672
 00:57:06,960 --> 00:57:13,060
 indirect mode. So it's transferable, but
 it does not have a witness, right? Which
 
-674
+673
 00:57:13,060 --> 00:57:18,300
 means it's equivalent to did:peer. So
 you can do did:peer with KERI just like
 
-675
+674
 00:57:18,300 --> 00:57:23,980
 did:peer. It's essentially did:peer, but
 it's full KERI normative spec because it
 
-676
+675
 00:57:23,980 --> 00:57:29,120
 doesn't need witnesses. It has a key event
 log. So it's better than did:peer. It's
 
-677
+676
 00:57:29,120 --> 00:57:32,940
 more secure, but it still doesn't require
 anything, any more infrastructure than
 
-678
+677
 00:57:32,940 --> 00:57:38,240
 did:peer does. And you just use direct
 mode to exchange your KEL. – Yeah.
 
-679
+678
 00:57:38,360 --> 00:57:42,160
 I believe that's in the open. – So you don't
 have witnesses to publish your KEL because
 
-680
+679
 00:57:42,160 --> 00:57:47,340
 did:peer assumes that you can communicate
 directly. So if you can communicate
 
-681
+680
 00:57:47,340 --> 00:57:51,400
 directly, I don't need the witnesses for
 high availability. I also lose the other
 
-682
+681
 00:57:51,400 --> 00:57:54,560
 things that witnesses give me. But if I
 don't care about those things, which I
 
-683
+682
 00:57:54,560 --> 00:57:59,380
 don't if I'm using did:peer, then I just
 use KERI in did:peer mode and it works just
 
-684
+683
 00:57:59,380 --> 00:58:04,040
 fine. Right. So does that make sense? Does
 that help? Yeah. It's just like KERI does
 
-685
+684
 00:58:04,040 --> 00:58:09,520
 a bunch of more things simply it's just
 that we they're sort of throwaways because
 
-686
+685
 00:58:09,520 --> 00:58:14,080
 it's like well this is easy we can do
 that. I have one question. Maybe I just
 
-687
+686
 00:58:14,080 --> 00:58:19,140
 misunderstood. Oh, we're done.
 Let him answer. That's okay.
 
-688
+687
 00:58:22,200 --> 00:58:28,520
 What I'm primarily interested in is
 I've got a million people out there with a
 
-689
+688
 00:58:28,520 --> 00:58:36,020
 system based on KERI and I want to be able
 to enable secure messaging through DIDCOM.
 
-690
+689
 00:58:36,480 --> 00:58:41,840
 Yes. Yeah. And you can do that. Yeah.
 That's Yeah. And that's one reason for
 
-691
+690
 00:58:41,840 --> 00:58:48,480
 did:webs is so you can bridge to any DID
 world because the worst case they'll just
 
-692
+691
 00:58:48,480 --> 00:58:53,340
 use it as a did:web and not a DID and not
 the KERI stuff. Yeah. They don't have to
 
-693
+692
 00:58:53,340 --> 00:58:56,840
 have KERI on their end because they'll
 just say, well, I don't understand KERI.
 
-694
+693
 00:58:56,980 --> 00:59:00,220
 So give them the did:web. But I understand
 keys and I can get the key from the DID
 
-695
+694
 00:59:00,220 --> 00:59:05,700
 doc and I'm good. Yeah. And then you're
 good. Yep. Okay. So we I I will say that
 
-696
+695
 00:59:05,700 --> 00:59:11,720
 I've been told by the staff that my
 presentation is done and so my hour is up
 
-697
+696
 00:59:11,720 --> 00:59:15,500
 but I will be here at IAW and you can get
 me after this as well but I want to make
 
-698
+697
 00:59:15,500 --> 00:59:19,440
 room. We do have a break, right? So yeah,
 we have a break at 3 o'clock so. Thank
 
-699
+698
 00:59:19,440 --> 00:59:19,560
 you.
 
