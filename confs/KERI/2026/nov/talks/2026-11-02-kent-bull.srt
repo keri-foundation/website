@@ -1173,8 +1173,8 @@ they're trying to make a decision, should
 
 236
 00:19:38,220 --> 00:19:42,660
-[…] or not, they go and
-they resolve both the issuers DID and your
+[…] or not, they go and they
+resolve both the issuers DID and your
 
 237
 00:19:42,660 --> 00:19:48,760
@@ -1193,8 +1193,8 @@ identifier. And then we go through this
 
 240
 00:19:57,860 --> 00:20:01,100
-process. We put them both together and
-we essentially say from the keri.cesr
+process. We put them both together
+and we essentially say from the keri.cesr
 
 241
 00:20:01,100 --> 00:20:06,800
@@ -1293,8 +1293,8 @@ it's behind the scenes, but don't bring it
 
 260
 00:21:38,260 --> 00:21:46,280
-up. – There are some of those. – There are
-some of those. – Some big ones, notable
+up. – There are some of those. – There
+are some of those. – Some big ones, notable
 
 261
 00:21:46,280 --> 00:21:51,260
@@ -1363,7 +1363,8 @@ you can verify signatures on a credential.
 
 274
 00:22:49,660 --> 00:22:55,140
-Now I'm going to have this slide because
+Now I'm going to
+have this slide because
 
 275
 00:22:55,140 --> 00:23:00,800
@@ -1577,8 +1578,8 @@ delegator! Okay. You might see a couple of
 
 317
 00:26:24,060 --> 00:26:28,920
-different services and you want to verify
-okay is there actually cryptographic
+different services and you want to
+verify okay is there actually cryptographic
 
 318
 00:26:28,920 --> 00:26:33,800
@@ -1672,8 +1673,8 @@ aliases ACDC, it is. And once we check
 
 336
 00:27:56,700 --> 00:28:00,620
-that all that's coherent, we essentially
-just derive the DID document from the keri.cesr
+that all that's coherent, we essentially just
+derive the DID document from the keri.cesr
 
 337
 00:28:00,620 --> 00:28:06,260
@@ -1707,8 +1708,8 @@ through that again. A designated alias is
 
 343
 00:28:27,300 --> 00:28:31,940
-what I was just referring to as this is… no
-other DID method in the world does this.
+what I was just referring to as this is…
+no other DID method in the world does this.
 
 344
 00:28:32,240 --> 00:28:39,460
@@ -1782,13 +1783,13 @@ multisig. We just needed a way to define,
 
 358
 00:29:54,200 --> 00:29:59,040
-okay, well, there's a… let's say it's two
-of three. Like this example, we've got
+okay, well, there's a… let's say it's
+two of three. Like this example, we've got
 
 359
 00:29:59,040 --> 00:30:05,440
-three keys that can sign. Two of them are
-required. ConditionalProof2022 lets us
+three keys that can sign. Two of them
+are required. ConditionalProof2022 lets us
 
 360
 00:30:05,440 --> 00:30:09,940
@@ -1797,8 +1798,8 @@ structure, but it gets deeper than that.
 
 361
 00:30:10,480 --> 00:30:16,180
-ConditionalProof2022 also allows
-you to do nesting. So the really fancy cool
+ConditionalProof2022 also allows you
+to do nesting. So the really fancy cool
 
 362
 00:30:16,180 --> 00:30:21,140
@@ -2007,8 +2008,8 @@ to as a verifier be able to support the
 
 403
 00:33:39,160 --> 00:33:42,920
-coolest features of did:webs, which is
-multisig issuers and multisig holders.
+coolest features of did:webs, which
+is multisig issuers and multisig holders.
 
 404
 00:33:43,960 --> 00:33:50,020
@@ -2022,8 +2023,8 @@ plenty to discuss later. All right. So I
 
 406
 00:33:55,160 --> 00:34:00,300
-mentioned remember the four things that
-were in a keri.cesr stream. And I said
+mentioned remember the four things
+that were in a keri.cesr stream. And I said
 
 407
 00:34:00,300 --> 00:34:04,680
@@ -2117,8 +2118,8 @@ just do that directly. Maybe you wouldn't
 
 425
 00:35:26,800 --> 00:35:33,460
-need did:webs, but we've defined it in the
-spec in case it becomes useful. So,
+need did:webs, but we've defined it in
+the spec in case it becomes useful. So,
 
 426
 00:35:34,480 --> 00:35:37,660
@@ -2225,13 +2226,13 @@ agreement?
 
 447
 00:37:20,860 --> 00:37:24,880
-– So is the question is there something in
-the KERI data model that would support
+– So is the question is there something
+in the KERI data model that would support
 
 448
 00:37:24,880 --> 00:37:30,700
-deriving that from the KERI data model?
-– Yes. That's the question. – Can I
+deriving that from the KERI data
+model? – Yes. That's the question. – Can I
 
 449
 00:37:30,700 --> 00:37:35,300
@@ -2555,8 +2556,8 @@ going to verify that credential with keys
 
 513
 00:43:12,240 --> 00:43:19,180
-that are defined by did:webs and
-KERI for a w3c credential that has multisig
+that are defined by did:webs and KERI
+for a w3c credential that has multisig
 
 514
 00:43:19,180 --> 00:43:24,720
@@ -2590,8 +2591,8 @@ did:webs to be a a fully accepted fully
 
 520
 00:43:50,180 --> 00:43:55,924
-supported diff recommended DID method. And
-we were pretty close earlier this year.
+supported diff recommended DID method.
+And we were pretty close earlier this year.
 
 521
 00:43:55,924 --> 00:44:06,240
@@ -2750,8 +2751,8 @@ the spec into the next version and it's
 
 552
 00:46:47,600 --> 00:46:53,740
-generally around… some of them
-are actually about… We need
+generally around… some of
+them are actually about… We need
 
 553
 00:46:53,740 --> 00:46:59,440
@@ -2870,8 +2871,8 @@ Okay, there's an interesting
 
 576
 00:48:46,020 --> 00:48:51,600
-discussion…. Since we have time…
-maybe let me actually jump
+discussion…. Since we have
+time… maybe let me actually jump
 
 577
 00:48:51,600 --> 00:48:57,980
@@ -2989,8 +2990,8 @@ soon. And so I started on a TypeScript
 
 600
 00:50:55,480 --> 00:50:59,600
-implementation. I tried to keep
-it as minimal as I could for as long as I
+implementation. I tried to keep it
+as minimal as I could for as long as I
 
 601
 00:50:59,600 --> 00:51:05,560
@@ -3148,8 +3149,8 @@ you have to make. But other than that, the
 
 632
 00:53:50,080 --> 00:53:54,980
-answer is yes, any KERI identifier can be
-turned into a did-webs DID, whether it's
+answer is yes, any KERI identifier can
+be turned into a did-webs DID, whether it's
 
 633
 00:53:54,980 --> 00:53:56,800
@@ -3223,8 +3224,8 @@ non -transferable KERI identifier is
 
 647
 00:55:06,900 --> 00:55:13,560
-equivalent to did:key, which means you
-can use it with DIDComm. It's no harder than
+equivalent to did:key, which means you can
+use it with DIDComm. It's no harder than
 
 648
 00:55:13,560 --> 00:55:18,620
@@ -3233,8 +3234,8 @@ It's fully normative KERI. It just doesn't
 
 649
 00:55:18,620 --> 00:55:25,600
-have all the security benefits of a KEL.
-But it still works. It's still KERI. A
+have all the security benefits of a
+KEL. But it still works. It's still KERI. A
 
 650
 00:55:25,600 --> 00:55:29,500
@@ -3263,8 +3264,8 @@ don't get the security benefits of a KEL.
 
 655
 00:55:43,800 --> 00:55:51,140
-It's did:webs, did:web that's no
-weaker and no more complicated than the
+It's did:webs, did:web that's no weaker
+and no more complicated than the
 
 656
 00:55:51,140 --> 00:55:55,160
