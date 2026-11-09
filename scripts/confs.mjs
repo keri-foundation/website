@@ -28,7 +28,9 @@
  *                 page.transcriptLinks are extra items for that gallery only.
  *                 Stamps DISCOVERED_SUBTITLE_LANGS with sibling caption
  *                 files (`foo.nl.srt` next to `foo.srt`) so the page does not
- *                 probe for them. An omitted `subtitle` means the English file
+ *                 probe for them. Stamps DISCOVERED_SUBTITLE_MTIMES with each
+ *                 referenced .srt file's filesystem mtime (ISO) for the
+ *                 transcript panel. An omitted `subtitle` means the English file
  *                 is the media basename with `.srt` (`talks/foo.mp4` →
  *                 `talks/foo.srt`) when that file exists.
  *                 Then writes confs/index.html and vids/index.html from
@@ -114,6 +116,7 @@ function setTagContent(html, pattern, value) {
 }
 
 const SUBTITLE_LANG_MARKER = "/*__DISCOVERED_SUBTITLE_LANGS__*/{}";
+const SUBTITLE_MTIME_MARKER = "/*__DISCOVERED_SUBTITLE_MTIMES__*/{}";
 const TRANSCRIPT_LINKS_MARKER = "/*__DISCOVERED_TRANSCRIPT_LINKS__*/[]";
 const SITE_BRAND_MARKER = "/*__SITE_BRAND__*/ null";
 const BRAND_THEME_RE = /<style id="brand-theme">[\s\S]*?<\/style>/;
@@ -211,6 +214,31 @@ function discoveredSubtitleLangs(config, confDir) {
     const codes = Object.keys(langs).sort();
     if (!codes.length) continue;
     map[key] = Object.fromEntries(codes.map((code) => [code, langs[code]]));
+  }
+  const sorted = {};
+  for (const key of Object.keys(map).sort()) sorted[key] = map[key];
+  return sorted;
+}
+
+/**
+ * Map of gallery-relative .srt path → ISO mtime for every subtitle a video
+ * references (English, optional JSON map, and discovered language siblings).
+ */
+async function discoveredSubtitleMtimes(config, confDir) {
+  const map = {};
+  for (const video of config.videos || []) {
+    for (const rel of collectSubtitlePaths(video, confDir)) {
+      if (!rel || isExternal(rel) || rel.startsWith("/")) continue;
+      const key = toPosix(rel);
+      if (map[key]) continue;
+      const abs = join(confDir, ...key.split("/"));
+      if (!existsSync(abs)) continue;
+      try {
+        map[key] = (await stat(abs)).mtime.toISOString();
+      } catch {
+        // Skip unreadable paths; the transcript panel just omits the date.
+      }
+    }
   }
   const sorted = {};
   for (const key of Object.keys(map).sort()) sorted[key] = map[key];
@@ -468,6 +496,9 @@ async function cmdLandingPages(opts) {
   if (!templateHtml.includes(SUBTITLE_LANG_MARKER)) {
     throw new Error("landing-pages: template missing DISCOVERED_SUBTITLE_LANGS marker");
   }
+  if (!templateHtml.includes(SUBTITLE_MTIME_MARKER)) {
+    throw new Error("landing-pages: template missing DISCOVERED_SUBTITLE_MTIMES marker");
+  }
   if (!templateHtml.includes(TRANSCRIPT_LINKS_MARKER)) {
     throw new Error("landing-pages: template missing DISCOVERED_TRANSCRIPT_LINKS marker");
   }
@@ -489,12 +520,12 @@ async function cmdLandingPages(opts) {
     const url = `${SITE_URL}/${galleryPrefix(id)}/`;
     const confDir = galleryDir(id);
     const langMap = discoveredSubtitleLangs(config, confDir);
+    const mtimeMap = await discoveredSubtitleMtimes(config, confDir);
     const html = stampGalleryHeader(
       stampTranscriptLinks(
-        stampLandingMeta(templateHtml, { title, description, url, brand }).replace(
-          SUBTITLE_LANG_MARKER,
-          embedJson(langMap)
-        ),
+        stampLandingMeta(templateHtml, { title, description, url, brand })
+          .replace(SUBTITLE_LANG_MARKER, embedJson(langMap))
+          .replace(SUBTITLE_MTIME_MARKER, embedJson(mtimeMap)),
         page,
         confDir,
         id,

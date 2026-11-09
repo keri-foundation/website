@@ -1513,6 +1513,17 @@
             text-transform: uppercase;
         }
 
+        .video-modal-panel-handle-mtime {
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            text-transform: none;
+            color: var(--muted);
+        }
+
+        .video-modal-panel--video .video-modal-panel-handle-mtime {
+            color: rgba(255, 255, 255, 0.62);
+        }
+
         .video-modal-panel-handle-hint {
             margin-left: auto;
             font-size: 0.68rem;
@@ -4263,6 +4274,9 @@
             // scripts/confs.mjs landing-pages replaces the marker per gallery.
             const DISCOVERED_SUBTITLE_LANGS = {};
 
+            // Gallery-relative .srt path → ISO mtime, stamped by landing-pages.
+            const DISCOVERED_SUBTITLE_MTIMES = {"interviews/Ari-Argoud-Interview.srt":"2026-07-22T05:23:49.000Z","interviews/Cole-Davis-Interview.srt":"2026-07-22T05:23:58.000Z","interviews/Daniel-Hardman-Interview.srt":"2026-07-22T05:24:04.000Z","interviews/Fergal-O'Connor.srt":"2026-07-22T05:24:20.000Z","interviews/Jared-Jefferey-Interview.srt":"2026-10-10T15:35:26.543Z","interviews/Jonathan-Rayback-Interview.srt":"2026-07-22T05:24:54.000Z","interviews/Keanu-Pahio-Interview.srt":"2026-07-22T05:25:00.000Z","interviews/Kent-Bull-Interview.srt":"2026-07-22T05:25:06.000Z","interviews/Ned-Smith-Interview.srt":"2026-07-22T05:25:15.000Z","interviews/Nicholas-Racz-Interview.srt":"2026-07-22T05:25:22.000Z","interviews/Phil-Feairheller-Interview.srt":"2026-07-22T05:25:26.000Z","interviews/Phil-Windley-Interview.srt":"2026-10-10T15:35:41.941Z","interviews/Ryan-Hansen-Interview.srt":"2026-10-10T15:36:41.497Z","talks/Alan Davies ｜ ACDCs for Enterprises ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.054Z","talks/Ari Argoud ｜ KRAM IT! with Ari ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.054Z","talks/Cole Davis ｜ Contract Credentials & Verifiable Identity ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.054Z","talks/Daniel Hardman ｜ Applying KERI to General Evidence Problems ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.055Z","talks/Daniel Hardman ｜ Open Verifiable Communications ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.055Z","talks/Evan Asakawa ｜ Mobile Wallet ｜ KERI Conference 2026.srt":"2026-10-27T15:47:24.031Z","talks/Fergal O'Conner ｜ Signify Security Architecture ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.055Z","talks/Fergal O'Connor ｜ KERIA & Signify Path to Production ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.056Z","talks/George McEwan ｜ How KERI Enables Better Private-Public Partnerships ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.056Z","talks/George McEwan ｜ The Landscape of SEDI ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.057Z","talks/Jared Jefferey ｜ FHIR and CMS ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.057Z","talks/Jay Alexander Elliot ｜ Open KERI Infrastructure ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.057Z","talks/Jonathan Rayback ｜ KERI Bridge to the DID World ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.057Z","talks/Keanu Pahio ｜ KERI Developement & Deployment ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.058Z","talks/Kent Bull ｜ KERIA Tutorial ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.058Z","talks/Kent Bull ｜ KERIpy Async Architecture ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.058Z","talks/Ned Smith ｜ Secure Asset Transfer Protocol ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.058Z","talks/Nicholas Racz ｜ Investigating the Game of Trust ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.059Z","talks/Phil Feairheller ｜ ACDCs for Authorization ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.059Z","talks/Phil Feairheller ｜ Infrastructure for Security ｜ Keri Conference 2026.srt":"2026-10-04T19:06:31.059Z","talks/Phil Windley ｜ Digital Identity Needs a Legal Foundation ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.059Z","talks/Ryan Hansen Pannel ｜ What KERI allows us to do that we couldn't before ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.060Z","talks/Ryan Hansen ｜ Witnesses & Watchers ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.060Z","talks/Samuel Smith ｜ SPAC & TSP ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.060Z","talks/Samuel Smith ｜ State of the KERI Suite ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.060Z","talks/Samuel Smith ｜ The Digital Identity Tradespace ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.061Z","talks/Samuel Smith ｜ The Future of KERI ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.061Z","talks/Scott Stuewe Mark Scrimshire Jared Jeffery ｜ Provenanting Patient's Medical Records ｜ KERI Conf 2026.srt":"2026-10-04T19:06:31.062Z","talks/Thomas Mayfield ｜ KERI Infrastructure & the 5 W's ｜ KERI Conference 2026.srt":"2026-10-04T19:06:31.062Z"};
+
             const captionTrackStore = {};
             const captionTrackPromises = {};
             const captionCoverageByVideo = new WeakMap();
@@ -4656,6 +4670,20 @@
                 return URL.createObjectURL(blob);
             }
 
+            function stampedSubtitleMtime(src) {
+                if (!src || typeof src !== 'string') return null;
+                const stamped = DISCOVERED_SUBTITLE_MTIMES[src];
+                if (typeof stamped !== 'string' || !stamped) return null;
+                const date = new Date(stamped);
+                return Number.isNaN(date.getTime()) ? null : date;
+            }
+
+            function parseLastModifiedHeader(value) {
+                if (!value) return null;
+                const date = new Date(value);
+                return Number.isNaN(date.getTime()) ? null : date;
+            }
+
             function loadCaptionTrack(video, lang) {
                 const key = `${video.path}::${lang}`;
                 if (captionTrackPromises[key]) return captionTrackPromises[key];
@@ -4673,12 +4701,20 @@
                     rawText: '',
                     coverage: [],
                     src: entry.src,
-                    lang
+                    lang,
+                    lastModified: stampedSubtitleMtime(entry.src)
                 };
 
                 captionTrackPromises[key] = fetch(entry.src)
-                    .then(r => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.text(); })
-                    .then(raw => {
+                    .then(r => {
+                        if (!r.ok) throw new Error(`HTTP ${r.status}`);
+                        const headerMtime = parseLastModifiedHeader(r.headers.get('Last-Modified'));
+                        return r.text().then((raw) => ({
+                            raw,
+                            lastModified: headerMtime || stampedSubtitleMtime(entry.src)
+                        }));
+                    })
+                    .then(({ raw, lastModified }) => {
                         const cues = parseSrt(raw);
                         const track = {
                             status: 'ready',
@@ -4686,7 +4722,8 @@
                             cues,
                             coverage: coverageRangesFromCues(cues),
                             src: entry.src,
-                            lang
+                            lang,
+                            lastModified
                         };
                         captionTrackStore[video.path][lang] = track;
                         return track;
@@ -4698,7 +4735,8 @@
                             cues: [],
                             coverage: [],
                             src: entry.src,
-                            lang
+                            lang,
+                            lastModified: stampedSubtitleMtime(entry.src)
                         };
                         captionTrackStore[video.path][lang] = track;
                         return track;
@@ -4722,20 +4760,27 @@
                 if (transcriptPromises[id]) return transcriptPromises[id];
                 const lang = primarySubtitleLang(video);
                 if (!lang) {
-                    transcriptStore[id] = { status: 'error', cues: [], rawText: '' };
+                    transcriptStore[id] = { status: 'error', cues: [], rawText: '', lastModified: null };
                     transcriptPromises[id] = Promise.resolve(transcriptStore[id]);
                     return transcriptPromises[id];
                 }
 
-                transcriptStore[id] = { status: 'loading', cues: [], rawText: '' };
+                transcriptStore[id] = { status: 'loading', cues: [], rawText: '', lastModified: null };
                 transcriptPromises[id] = loadCaptionTrack(video, lang).then((track) => {
                     if (!track || track.status !== 'ready') {
-                        transcriptStore[id] = { status: 'error', cues: [], rawText: '' };
+                        transcriptStore[id] = {
+                            status: 'error',
+                            cues: [],
+                            rawText: '',
+                            lastModified: track?.lastModified || null
+                        };
                     } else {
                         transcriptStore[id] = {
                             status: 'ready',
                             cues: track.cues,
-                            rawText: track.rawText
+                            rawText: track.rawText,
+                            src: track.src,
+                            lastModified: track.lastModified || null
                         };
                     }
                     return transcriptStore[id];
@@ -4901,6 +4946,7 @@
             let videoModalDialog = null;
             let modalVideoEl = null;
             let modalTranscriptBody = null;
+            let modalTranscriptHandleLabel = null;
             let modalTranscriptSyncBtn = null;
             let modalTranscriptViewBtn = null;
             let modalTranscriptSearchInput = null;
@@ -5207,7 +5253,37 @@
                 panel.appendChild(content);
                 initModalPanelDrag(panel, handle);
 
-                return { panel, content };
+                return { panel, content, handleLabel };
+            }
+
+            function formatSubtitleModifiedLabel(value) {
+                if (!value) return '';
+                const date = value instanceof Date ? value : new Date(value);
+                if (Number.isNaN(date.getTime())) return '';
+                return date.toLocaleString('en-GB', {
+                    day: 'numeric',
+                    month: 'short',
+                    year: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit'
+                });
+            }
+
+            function setModalTranscriptHandleLabel(store) {
+                if (!modalTranscriptHandleLabel) return;
+                const base = 'Transcript';
+                const dateText = formatSubtitleModifiedLabel(store?.lastModified);
+                modalTranscriptHandleLabel.textContent = '';
+                modalTranscriptHandleLabel.appendChild(document.createTextNode(base));
+                if (!dateText) {
+                    modalTranscriptHandleLabel.removeAttribute('title');
+                    return;
+                }
+                const mtime = document.createElement('span');
+                mtime.className = 'video-modal-panel-handle-mtime';
+                mtime.textContent = ` · ${dateText}`;
+                modalTranscriptHandleLabel.appendChild(mtime);
+                modalTranscriptHandleLabel.title = `Subtitle last modified ${dateText}`;
             }
 
             function scrollElementIntoContainer(container, element, behavior = motionSafeBehavior()) {
@@ -5680,7 +5756,12 @@
                 // Keep the clip timer above Plyr's rebuilt player chrome
                 playerWrap.appendChild(modalClipTimer);
 
-                const { panel: transcriptPanel, content: transcriptContent } = createModalPanel('video-modal-panel--transcript', 'Transcript');
+                const {
+                    panel: transcriptPanel,
+                    content: transcriptContent,
+                    handleLabel: transcriptHandleLabel
+                } = createModalPanel('video-modal-panel--transcript', 'Transcript');
+                modalTranscriptHandleLabel = transcriptHandleLabel;
                 const transcriptSection = document.createElement('div');
                 transcriptSection.className = 'video-modal-transcript';
 
@@ -5849,6 +5930,7 @@
                 modalTranscriptStore = store;
                 modalTranscriptVideoPath = videoPath;
                 modalTranscriptLiveKey = '';
+                setModalTranscriptHandleLabel(store);
                 const transcriptDomToken = ++modalTranscriptScrollLock;
                 modalTranscriptBody.innerHTML = '';
                 setTimeout(() => {
@@ -6082,6 +6164,7 @@
                 setModalTranscriptViewEnabled(false);
                 if (modalTranscriptSearchInput) modalTranscriptSearchInput.disabled = true;
                 modalTranscriptBody.innerHTML = '<p class="transcript-loading">Loading transcript…</p>';
+                setModalTranscriptHandleLabel(null);
                 renderModalLinks(null);
 
                 Promise.all([loadTranscript(video), loadAllCaptionTracks(video)]).then(([store, captionStore]) => {
