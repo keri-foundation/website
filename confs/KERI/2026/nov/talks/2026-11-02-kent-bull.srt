@@ -2118,7 +2118,7 @@ just do that directly. Maybe you wouldn't
 425
 00:35:26,800 --> 00:35:33,460
 need did:webs, but we've defined it in the
-spec in case it becomes useful. Cool. So,
+spec in case it becomes useful. So,
 
 426
 00:35:34,480 --> 00:35:37,660
@@ -2136,7 +2136,7 @@ what I've told you earlier. I said if you
 
 429
 00:35:48,000 --> 00:35:52,280
-want to support the fancy molded-sign
+want to support the fancy multisig
 stuff from KERI, we need another spec.
 
 430
@@ -2146,7 +2146,7 @@ here. When I say a credential proof has to
 
 431
 00:35:58,320 --> 00:36:03,260
-use an authorized method where that's
+use an authorized method, where that's
 valuable is before we let the kid go out
 
 432
@@ -2166,7 +2166,7 @@ credential because they can't come from
 
 435
 00:36:19,020 --> 00:36:21,880
-these places in the DID document. And
+these places in the DID Document. And
 we could walk through this example, but
 
 436
@@ -2177,7 +2177,7 @@ assertion methods, the different proof
 437
 00:36:25,680 --> 00:36:29,620
 formats that we have, it's essentially
-we would walk through, I I think that's
+we would walk through, I think that's
 
 438
 00:36:29,620 --> 00:36:36,100
@@ -2196,12 +2196,12 @@ Oh, you want to go? Actually, if you want
 
 441
 00:36:44,740 --> 00:36:50,280
-to go there, we'll go there. I have a
-question about the proof purpose. Perfect.
+to go there, we'll go there. – I have a
+question about the proof purpose. – Perfect.
 
 442
 00:36:50,560 --> 00:36:58,440
-Okay. Is there a KERI data model
+Okay. – Is there a KERI data model
 equivalence either in the event log or any
 
 443
@@ -2225,18 +2225,18 @@ agreement?
 
 447
 00:37:20,860 --> 00:37:24,880
-So is the question is there something in
+– So is the question is there something in
 the KERI data model that would support
 
 448
 00:37:24,880 --> 00:37:30,700
 deriving that from the KERI data model?
-Yes. I see. That's the question. Can I
+– Yes. That's the question. – Can I
 
 449
 00:37:30,700 --> 00:37:35,300
-answer that? Yeah. So signing keys
-can only be used to sign. Oh, you got it.
+answer that? So signing
+keys can only be used to sign.
 
 450
 00:37:36,520 --> 00:37:45,680
@@ -2275,7 +2275,7 @@ type of packet, I suppose you could say
 
 457
 00:38:26,640 --> 00:38:32,100
-that, but we don't have a another set of
+that, but we don't have another set of
 keys, right? And then witnesses have their
 
 458
@@ -2305,7 +2305,7 @@ rotated key list. So those key key lists
 
 463
 00:38:58,480 --> 00:39:04,920
-determine their proof purpose. There isn't
+determine their proofPurpose. There isn't
 a reason to have… I never came up with a
 
 464
@@ -2316,7 +2316,7 @@ semantic thing for keys because in
 465
 00:39:09,520 --> 00:39:13,820
 general, I don't believe that keys are
-very useful. Bear signatures are highly
+very useful. Bare signatures are highly
 
 466
 00:39:13,820 --> 00:39:17,920
@@ -2325,8 +2325,8 @@ only use them for ephemeral things. And
 
 467
 00:39:17,920 --> 00:39:22,780
-proof purpose seems like something that's
-not ephemeral. What about the ability to
+proofPurpose seems like something that's
+not ephemeral. – What about the ability to
 
 468
 00:39:22,780 --> 00:39:28,720
@@ -2346,27 +2346,27 @@ So yes, that's a really good question. KERI
 471
 00:39:40,440 --> 00:39:45,840
 doesn't do encryption. KERI is all about
-authentication. Now the trust spanning
+authentication. Now the Trust Spanning
 
 472
 00:39:45,840 --> 00:39:53,080
-protocol does do encryption. And so
+Protocol does do encryption. And so
 there's a need to define how you generate
 
 473
 00:39:53,080 --> 00:39:58,720
-your encryption keys. And so we have so
-that's not defined in KERI. That's that's
+your encryption keys. So
+that's not defined in KERI.
 
 474
 00:39:58,720 --> 00:40:05,040
-the encryption is a is a different
-protocol from KERI. So, so yes. So is that
+Encryption is a different protocol
+from KERI. So yes. – So is that
 
 475
 00:40:05,040 --> 00:40:11,300
-a potentially yes? That's the potential
-yes. Yeah. Good question. Now we've been
+a potentially yes? – That's a potential
+yes. Yeah. – Good question. Now we've been
 
 476
 00:40:11,300 --> 00:40:15,960
@@ -2385,8 +2385,8 @@ We're going to go pretty quickly through
 
 479
 00:40:22,840 --> 00:40:27,780
-the rest of the technical stuff. I will be
-at IIW. you. So I'll be here for the rest
+the rest of the technical stuff. I will
+be at IIW. So I'll be here for the rest
 
 480
 00:40:27,780 --> 00:40:33,760
