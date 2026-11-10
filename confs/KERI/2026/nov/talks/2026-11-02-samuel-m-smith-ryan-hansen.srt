@@ -1,12 +1,12 @@
 1
 00:00:00,000 --> 00:00:07,140
-Please go ahead and get going on this one.
-All right. For those most of you who
+Please go ahead and get going on this
+one. All right. For those most of you who
 
 2
 00:00:07,140 --> 00:00:11,320
-probably don't know who I am, my name is
-Ryan Hansen. I'm a member of the KERI
+probably don't know who I am, my name
+is Ryan Hansen. I'm a member of the KERI
 
 3
 00:00:11,320 --> 00:00:15,640
@@ -20,8 +20,8 @@ give you a quick rundown of what the five
 
 5
 00:00:20,260 --> 00:00:25,940
-Ws are. Sam already introduced them, but
-we're going to go through them a little
+Ws are. Sam already introduced them,
+but we're going to go through them a little
 
 6
 00:00:25,940 --> 00:00:31,340
@@ -35,13 +35,13 @@ title is the state of the key state. This
 
 8
 00:00:36,380 --> 00:00:47,260
-is my state of the key state address to
-this community. So, that
+is my state of the key state
+address to this community. So, that
 
 9
 00:00:47,260 --> 00:00:52,640
-was weird. Okay. I've got to make sure my
-slides line up with these slides. So,
+was weird. Okay. I've got to make sure
+my slides line up with these slides. So,
 
 10
 00:00:52,920 --> 00:00:59,340
@@ -75,8 +75,8 @@ and good for me to assert an identity or
 
 16
 00:01:30,600 --> 00:01:36,140
-assert that I've done something, but it's
-not as strong or it's weaker without
+assert that I've done something, but
+it's not as strong or it's weaker without
 
 17
 00:01:36,140 --> 00:01:42,640
@@ -95,13 +95,13 @@ might be. And we'll get into that a little
 
 20
 00:01:56,740 --> 00:02:05,340
-bit more. highly available, meaning that
-state can be determined whether like I
+bit more. Highly available, meaning
+that state can be determined whether like I
 
 21
 00:02:05,340 --> 00:02:14,920
-particularly am online or not. And kind of
-to wrap that up, the Ws are a big part of
+particularly am online or not. And to
+wrap that up, the Ws are a big part of
 
 22
 00:02:14,920 --> 00:02:19,620
@@ -120,13 +120,13 @@ We have the wallet and I won't spend a lot
 
 25
 00:02:35,420 --> 00:02:38,860
-of time on each one of these in this slide
-but we'll move through these pretty
+of time on each one of these in this
+slide but we'll move through these pretty
 
 26
 00:02:38,860 --> 00:02:50,140
-quickly. Wallet, witnesses, watchers, web,
-and wizard. So each one of these are
+quickly. Wallet, witnesses, watchers,
+web, and wizard. So each one of these are
 
 27
 00:02:50,140 --> 00:02:54,560
@@ -135,8 +135,8 @@ ecosystem as Sam already
 
 28
 00:02:54,560 --> 00:02:58,780
-illustrated before. So let's get into each
-one of those little bit more. Starting
+illustrated before. So let's get into
+each one of those little bit more. Starting
 
 29
 00:02:58,780 --> 00:03:06,260
@@ -145,8 +145,8 @@ responsibility and function which is first
 
 30
 00:03:06,260 --> 00:03:11,220
-of all it's the home of the
-identity and the keys. That's where all
+of all it's the home of the identity
+and the keys. That's where all
 
 31
 00:03:11,220 --> 00:03:19,240
@@ -170,8 +170,8 @@ Those events are inception, rotation, and
 
 35
 00:03:43,140 --> 00:03:48,180
-interaction. There's a few more when we
-get into the details of the specifics of
+interaction. There's a few more when
+we get into the details of the specifics of
 
 36
 00:03:48,180 --> 00:03:56,620
@@ -185,8 +185,8 @@ those events and publish those or keep the
 
 38
 00:04:05,920 --> 00:04:08,800
-record of those in the key event log in
-its own key event log.
+record of those in the key
+event log in its own key event log.
 
 39
 00:04:12,820 --> 00:04:18,660
@@ -195,17 +195,17 @@ responsibility is a witness of the truth
 
 40
 00:04:18,660 --> 00:04:25,500
-of the key state or to assert that the key
-state is what it is. Is that a fair
+of the key state or to assert that
+the key state is what it is. Is that a fair
 
 41
 00:04:25,500 --> 00:04:30,300
-statement, Sam? Yeah. It's the R in KERI
-because it's the receipts. Funny you
+statement, Sam? – Yeah. It's the R in
+KERI because it's the receipts. – Funny you
 
 42
 00:04:30,300 --> 00:04:40,920
-should say that. Yes. Exactly right. So
+should say that. Exactly right. So
 when the key event is issued, let's say
 
 43
@@ -215,8 +215,8 @@ when the witness then basically gives back
 
 44
 00:04:47,680 --> 00:04:53,500
-the receipt or creates the receipt on that
-event with its own keys, but then
+the receipt or creates the receipt on
+that event with its own keys, but then
 
 45
 00:04:53,500 --> 00:05:00,240
@@ -245,13 +245,13 @@ whether the wallet itself is online or not
 
 50
 00:05:22,860 --> 00:05:29,980
-or available or not. So that it that any
-verifier that needs to verify that key
+or available or not. So that it that
+any verifier that needs to verify that key
 
 51
 00:05:29,980 --> 00:05:31,960
-event log can do so, can get it from a
-witness.
+event log can do so,
+can get it from a witness.
 
 52
 00:05:35,780 --> 00:05:40,980
@@ -260,8 +260,8 @@ What I mean by this is that when you
 
 53
 00:05:40,980 --> 00:05:44,600
-establish and I'm using the word you, any
-controller really is what I'm talking
+establish, and I'm using the word you,
+any controller really is what I'm talking
 
 54
 00:05:44,600 --> 00:05:50,260
@@ -274,8 +274,8 @@ witness for any given ID that you might
 
 56
 00:05:55,680 --> 00:06:03,080
-create with your wallet. The idea is that
-there would be many different witness
+create with your wallet. The idea is
+that there would be many different witness
 
 57
 00:06:03,080 --> 00:06:08,500
@@ -295,12 +295,12 @@ between that, no possibility or less
 60
 00:06:18,240 --> 00:06:24,920
 possibility of collusion between them
-about you know, anything that might be
+about you know, anything that might be…
 
 61
 00:06:24,920 --> 00:06:30,220
-they might want to assert. No way to kind
-of fudge it, I guess. It makes it makes it
+they might want to assert. No way
+to kind of fudge it, I guess. It makes it
 
 62
 00:06:30,220 --> 00:06:39,120
@@ -318,8 +318,8 @@ through these fairly quickly because
 
 65
 00:06:46,460 --> 00:06:52,100
-mostly I want to get to what the state of
-development on these particular tools.
+mostly I want to get to what the state
+of development on these particular tools.
 
 66
 00:06:55,740 --> 00:07:02,740
@@ -338,18 +338,18 @@ Their entire role is really duplicity
 
 69
 00:07:15,500 --> 00:07:20,560
-detection and duplicity just so that we're
-all on the same page about what that
+detection and just so that we're all
+on the same page about what that
 
 70
 00:07:20,560 --> 00:07:27,680
-means. is duplicity would be when any two
-different records of the same key event
+means, is: duplicity would be when any
+two different records of the same key event
 
 71
 00:07:27,680 --> 00:07:34,840
-log disagree about what that the state of
-that identity is or the keys of that
+log disagree about what the state
+of that identity is or the keys of that
 
 72
 00:07:34,840 --> 00:07:38,720
@@ -368,8 +368,8 @@ that key state of that particular ID. And
 
 75
 00:07:47,900 --> 00:07:52,500
-if there is any kind of duplicity, they
-detect that and then you can take
+if there is any kind of duplicity,
+they detect that and then you can take
 
 76
 00:07:52,500 --> 00:08:00,380
@@ -378,8 +378,8 @@ need to do. So the idea becomes trust me
 
 77
 00:08:00,380 --> 00:08:04,000
-turns into see for yourself rather than
-just trust me on telling you this my
+turns into see for yourself rather
+than just trust me on telling you this my
 
 78
 00:08:04,000 --> 00:08:08,780
@@ -389,7 +389,7 @@ mechanisms you can you can actually verify
 79
 00:08:08,780 --> 00:08:13,000
 for yourself effectively is what that's
-what that's suggesting. Can I add? Sure.
+what that's suggesting. – Can I add? – Sure.
 
 80
 00:08:13,280 --> 00:08:19,920
@@ -403,8 +403,8 @@ somebody fund. Anybody that detects
 
 82
 00:08:23,040 --> 00:08:27,780
-duplicity can prove it to anybody else. So
-if I detect duplicity, I can prove that
+duplicity can prove it to anybody else.
+So if I detect duplicity, I can prove that
 
 83
 00:08:27,780 --> 00:08:35,380
@@ -451,8 +451,8 @@ monkey. So. All right. Web. There's a
 
 92
 00:09:23,200 --> 00:09:28,520
-number of things that are implied by web
-or meant by web. Discovery, as we all
+number of things that are implied by
+web or meant by web. Discovery, as we all
 
 93
 00:09:28,520 --> 00:09:32,140
@@ -461,8 +461,8 @@ a common old joke for those who are old
 
 94
 00:09:32,140 --> 00:09:40,020
-enough to remember. Remember that one. But
-there's a number of things that web
+enough to remember. Remember that one.
+But there's a number of things that web
 
 95
 00:09:40,020 --> 00:09:48,440
@@ -471,8 +471,8 @@ discover, discovery meaning other… I don't
 
 96
 00:09:48,440 --> 00:09:53,980
-know, how would you describe it, Sam? and
-discovery of other witnesses. Yeah,
+know, how would you describe it, Sam?
+and discovery of other witnesses. Yeah,
 
 97
 00:09:54,280 --> 00:09:58,820
@@ -481,8 +481,8 @@ a secure discovery mechanism. We just need
 
 98
 00:09:58,820 --> 00:10:03,220
-one that works well and the web already is
-there. So why not just use the web for
+one that works well and the web already
+is there. So why not just use the web for
 
 99
 00:10:03,220 --> 00:10:08,180
@@ -511,8 +511,8 @@ parts of the infrastructure wallets and
 
 104
 00:10:23,940 --> 00:10:34,180
-witnesses and watchers and all of this. So
-all this done over web protocols. So no
+witnesses and watchers and all of this.
+So all this done over web protocols. So no
 
 105
 00:10:34,180 --> 00:10:39,740
@@ -526,8 +526,8 @@ HTTP, Bluetooth, NFC, whatever the
 
 107
 00:10:44,900 --> 00:10:51,200
-transport mechanism might be that KERI can
-travel across all of those mechanisms
+transport mechanism might be that KERI
+can travel across all of those mechanisms
 
 108
 00:10:51,200 --> 00:10:58,320
@@ -551,8 +551,8 @@ these kinds of things. But ultimately, as
 
 112
 00:11:11,020 --> 00:11:16,920
-many of you know, what we're going for is
-not having to trust anything and not
+many of you know, what we're going
+for is not having to trust anything and not
 
 113
 00:11:16,920 --> 00:11:22,080
@@ -561,13 +561,13 @@ verifiable and provable. And that's what
 
 114
 00:11:22,080 --> 00:11:29,200
-this whole ecosystem and KERI itself is
-designed to provide. And then finally,
+this whole ecosystem and KERI itself
+is designed to provide. And then finally,
 
 115
 00:11:29,300 --> 00:11:35,440
-wizard. And wizard becomes a little more,
-I
+wizard. And wizard
+becomes a little more, I
 
 116
 00:11:35,440 --> 00:11:41,800
@@ -581,8 +581,8 @@ little bit of ambitious. I don't know that
 
 118
 00:11:47,080 --> 00:11:50,820
-one-click might ever be the thing, but
-that's the idea that we're trying to
+one-click might ever be the thing,
+but that's the idea that we're trying to
 
 119
 00:11:50,820 --> 00:11:59,400
@@ -596,8 +596,8 @@ useful defaults when it comes to creating
 
 121
 00:12:04,800 --> 00:12:07,460
-IDs and setting up witnesses and things
-like that.
+IDs and setting up
+witnesses and things like that.
 
 122
 00:12:10,340 --> 00:12:16,200
@@ -656,8 +656,8 @@ Foundation has a repository or a presence
 
 133
 00:13:23,180 --> 00:13:29,800
-on GitHub under KERI Foundation and within
-that organization
+on GitHub under KERI Foundation
+and within that organization
 
 134
 00:13:29,800 --> 00:13:35,260
@@ -676,8 +676,8 @@ work of the wallet goes in and then that
 
 137
 00:13:46,920 --> 00:13:53,000
-funnels down from Locksmith to these other
-repos. One of them we have one called
+funnels down from Locksmith to these
+other repos. One of them we have one called
 
 138
 00:13:53,000 --> 00:13:58,120
@@ -686,13 +686,13 @@ to note that Locksmith was donated to the
 
 139
 00:13:58,120 --> 00:14:04,180
-KERI Foundation from HealthKERI which is a
-company building KERI based stuff in the
+KERI Foundation from HealthKERI which is
+a company building KERI based stuff in the
 
 140
 00:14:04,180 --> 00:14:09,600
-healthcare sector. – Yeah good call out.
-HealthKERI has given us a lot of good
+healthcare sector. – Yeah good call
+out. HealthKERI has given us a lot of good
 
 141
 00:14:09,600 --> 00:14:13,780
@@ -731,12 +731,13 @@ here. We have kf-boot, which is kind of an
 
 148
 00:14:53,700 --> 00:14:59,640
-onboarding service that communicates with
-the wallet to onboard an ID and set up
+onboarding service that communicates
+with the wallet to onboard an ID and set up
 
 149
 00:14:59,640 --> 00:15:01,880
-witnesses and that kind of stuff.
+witnesses and
+that kind of stuff.
 
 150
 00:15:04,820 --> 00:15:10,740
@@ -755,13 +756,13 @@ sourced them for us to use and to start to
 
 153
 00:15:20,820 --> 00:15:27,080
-build on even more. And then we have also
-KF mailbox which has a little asterisk
+build on even more. And then we have
+also KF mailbox which has a little asterisk
 
 154
 00:15:27,080 --> 00:15:31,640
-because this is something new. It's not
-quite ready for use just yet, but it's
+because this is something new. It's
+not quite ready for use just yet, but it's
 
 155
 00:15:31,640 --> 00:15:37,000
@@ -808,13 +809,13 @@ but well, we can certainly go into in more
 
 164
 00:16:27,920 --> 00:16:33,500
-detail. So let's ask, but I think this is
-a good place to ask questions because I
+detail. So let's ask, but I think this is a
+good place to ask questions because I
 
 165
 00:16:33,500 --> 00:16:38,040
-know I cover things very quickly and then,
-you know, there's lots of latent
+know I cover things very quickly and
+then, you know, there's lots of latent
 
 166
 00:16:38,040 --> 00:16:43,720
@@ -823,8 +824,8 @@ to answer those. I've got a question about
 
 167
 00:16:43,720 --> 00:16:51,460
-kf-boot. Is this on? Okay. It's going to
-the video. If the light's on, it's on.
+kf-boot. Is this on? Okay. It's going
+to the video. If the light's on, it's on.
 
 168
 00:16:51,460 --> 00:16:56,160
@@ -833,8 +834,8 @@ All right. So for kf-boot, you said that it
 
 169
 00:16:56,160 --> 00:17:01,620
-communicates with the wallet when you've
-set your identifier up. I looked at
+communicates with the wallet when
+you've set your identifier up. I looked at
 
 170
 00:17:01,620 --> 00:17:05,620
@@ -873,8 +874,8 @@ does a lot of work with the wallet itself
 
 177
 00:17:29,080 --> 00:17:35,500
-and that communication process. Yeah. So,
-I mean, you came from when we got this
+and that communication process. Yeah.
+So, I mean, you came from when we got this
 
 178
 00:17:35,500 --> 00:17:39,680
@@ -923,8 +924,8 @@ services? Or we have an implemented data?
 
 187
 00:18:20,120 --> 00:18:25,700
-Yeah, like when we set everything up on
-DigitalOcean. Yeah. So you'd have to
+Yeah, like when we set everything up
+on DigitalOcean. Yeah. So you'd have to
 
 188
 00:18:25,700 --> 00:18:30,380
@@ -933,13 +934,13 @@ But if you have that connector, then
 
 189
 00:18:30,380 --> 00:18:35,300
-any services that kf-boot knows about, then
-that wallet could say, Oh, I want
+any services that kf-boot knows about,
+then that wallet could say, Oh, I want
 
 190
 00:18:35,300 --> 00:18:41,360
-witnesses from this service. and I want a
-watcher from this service. Part of why I
+witnesses from this service. and I want
+a watcher from this service. Part of why I
 
 191
 00:18:41,360 --> 00:18:47,940
@@ -978,8 +979,8 @@ development that it could go a number of
 
 198
 00:19:16,980 --> 00:19:23,280
-ways. All it does for us right now at its
-current state is it's the first landing
+ways. All it does for us right now at
+its current state is it's the first landing
 
 199
 00:19:23,280 --> 00:19:28,380
@@ -993,8 +994,8 @@ AID. So that's the first step and that's
 
 201
 00:19:35,660 --> 00:19:41,360
-really what it's doing. at this point is
-kind of facilitating that initial
+really what it's doing. at this
+point is kind of facilitating that initial
 
 202
 00:19:41,360 --> 00:19:45,900
@@ -1018,8 +1019,8 @@ guess I have one. I guess for GLEIF, the
 
 206
 00:20:02,780 --> 00:20:11,360
-important thing is to be able to offer to
-holders of vLEIs, for example, and to
+important thing is to be able to offer
+to holders of vLEIs, for example, and to
 
 207
 00:20:11,360 --> 00:20:19,400
@@ -1028,8 +1029,8 @@ vLEI credentials to have alternatives to
 
 208
 00:20:19,400 --> 00:20:27,680
-custodial wallets offered by QVI. So we're
-looking to be able to build up in the
+custodial wallets offered by QVI. So
+we're looking to be able to build up in the
 
 209
 00:20:27,680 --> 00:20:36,220
@@ -1038,8 +1039,8 @@ wallets. And so with the capability that
 
 210
 00:20:36,220 --> 00:20:41,480
-this has at this particular point, are we
-talking about functionality that would
+this has at this particular point, are
+we talking about functionality that would
 
 211
 00:20:41,480 --> 00:20:47,600
@@ -1048,8 +1049,8 @@ credential, an official organizational
 
 212
 00:20:47,600 --> 00:20:53,260
-role credential, ECR credential to accept
-that credential and then be able to
+role credential, ECR credential to
+accept that credential and then be able to
 
 213
 00:20:53,260 --> 00:20:54,920
@@ -1057,8 +1058,8 @@ present it in whatever.
 
 214
 00:20:58,140 --> 00:21:02,960
-That's not kf-boot I think. No, no, that
-doesn't sound like it to me, but we
+That's not kf-boot I think. No, no,
+that doesn't sound like it to me, but we
 
 215
 00:21:02,960 --> 00:21:05,900
@@ -1072,8 +1073,8 @@ I think what she's asking is it that's
 
 217
 00:21:10,220 --> 00:21:15,960
-really the wallet the open source wallets
-would be able to do that kf-boot is
+really the wallet the open source
+wallets would be able to do that kf-boot is
 
 218
 00:21:15,960 --> 00:21:20,440
@@ -1212,8 +1213,8 @@ process within the implementing
 
 245
 00:23:33,220 --> 00:23:38,660
-organization. So the mailbox can help with
-that because you can post duplicity
+organization. So the mailbox can help
+with that because you can post duplicity
 
 246
 00:23:38,660 --> 00:23:44,080
@@ -1242,8 +1243,8 @@ that AID. So you can trust everything that
 
 251
 00:24:09,280 --> 00:24:13,500
-happens before. So if somebody presents
-you a credential issued before the
+happens before. So if somebody
+presents you a credential issued before the
 
 252
 00:24:13,500 --> 00:24:17,900
@@ -1277,8 +1278,8 @@ can't trust their key state until it gets
 
 258
 00:24:41,160 --> 00:24:45,520
-reconciled. And in some cases they can
-reconcile it and then you can start
+reconciled. And in some cases they
+can reconcile it and then you can start
 
 259
 00:24:45,520 --> 00:24:49,260
@@ -1292,8 +1293,8 @@ was reconciled. They did a rotation. They
 
 261
 00:24:53,340 --> 00:24:58,640
-did a recovery rotation. It cleaned up
-their key state. Now I can trust it. I
+did a recovery rotation. It cleaned
+up their key state. Now I can trust it. I
 
 262
 00:24:58,640 --> 00:25:04,920
@@ -1307,8 +1308,8 @@ people building wallets need to address
 
 264
 00:25:10,260 --> 00:25:15,900
-that. So it's a really good problem to
-solve. And just to reiterate this, we
+that. So it's a really good problem
+to solve. And just to reiterate this, we
 
 265
 00:25:15,900 --> 00:25:20,220
@@ -1327,8 +1328,8 @@ we're working our way there as much as we
 
 268
 00:25:27,860 --> 00:25:33,620
-can. This is all meant to give an idea of
-what can be done with this and to give
+can. This is all meant to give an idea
+of what can be done with this and to give
 
 269
 00:25:33,620 --> 00:25:37,020
@@ -1397,8 +1398,8 @@ they don't have to look in your wallet to
 
 282
 00:26:37,680 --> 00:26:40,900
-know what your log looks like. They just
-ask your witnesses. Do I only have one
+know what your log looks like. They
+just ask your witnesses. Do I only have one
 
 283
 00:26:40,900 --> 00:26:44,280
@@ -1422,8 +1423,8 @@ you have what's on your device, which is
 
 287
 00:26:58,560 --> 00:27:03,100
-your private keys. Everything else is in
-the cloud. Well, right. That's kind of
+your private keys. Everything else is
+in the cloud. Well, right. That's kind of
 
 288
 00:27:03,100 --> 00:27:07,460
@@ -1432,18 +1433,18 @@ world of Apple where the photos and things
 
 289
 00:27:07,460 --> 00:27:11,620
-get copied between device you can access
-your cloud account securely from
+get copied between device you can
+access your cloud account securely from
 
 290
 00:27:11,620 --> 00:27:16,160
-multiple devices. I would certainly like
-to be able to do that with my
+multiple devices. I would certainly
+like to be able to do that with my
 
 291
 00:27:16,160 --> 00:27:21,720
-identity in a KERI sense from a log that had
-access to the persistent state of my log
+identity in a KERI sense from a log that
+had access to the persistent state of my log
 
 292
 00:27:21,720 --> 00:27:25,300
@@ -1472,8 +1473,8 @@ then that would be possible. But we
 
 297
 00:27:41,320 --> 00:27:46,200
-haven't implemented anything like that
-yet. – What if my keys are stored
+haven't implemented anything like
+that yet. – What if my keys are stored
 
 298
 00:27:46,200 --> 00:27:46,820
@@ -1491,8 +1492,8 @@ what are you trading off? So if I store it
 
 301
 00:28:07,340 --> 00:28:12,420
-in a secure enclave, secure enclaves have
-the property that you can't export the
+in a secure enclave, secure enclaves
+have the property that you can't export the
 
 302
 00:28:12,420 --> 00:28:21,880
@@ -1501,8 +1502,8 @@ hardware security module like a ledger or
 
 303
 00:28:21,880 --> 00:28:26,380
-a YubiKey or something like that. Some of
-those allow you to export them. Some of
+a YubiKey or something like that. Some
+of those allow you to export them. Some of
 
 304
 00:28:26,380 --> 00:28:32,940
@@ -1526,8 +1527,8 @@ something, or you could do a one event,
 
 308
 00:28:48,620 --> 00:28:55,000
-right? You could say any one of the keys
-can sign. I just need one key and that
+right? You could say any one of the
+keys can sign. I just need one key and that
 
 309
 00:28:55,000 --> 00:28:59,600
@@ -1551,8 +1552,8 @@ my secure enclave in my laptop in my room.
 
 313
 00:29:15,000 --> 00:29:19,920
-Yes. But the extension of that where that
-was now on Apple cloud service is less
+Yes. But the extension of that where
+that was now on Apple cloud service is less
 
 314
 00:29:19,920 --> 00:29:24,460
@@ -1566,13 +1567,13 @@ you do end-to-end encryption on Apple,
 
 316
 00:29:28,360 --> 00:29:32,680
-then they're encrypted and Apple can't see
-them. Okay, so that would be a viable…
+then they're encrypted and Apple can't
+see them. Okay, so that would be a viable…
 
 317
 00:29:32,680 --> 00:29:38,560
-Yes, that's a layer. That's a different… I
-mean, one of the things is you have to
+Yes, that's a layer. That's a different…
+I mean, one of the things is you have to
 
 318
 00:29:38,560 --> 00:29:43,580
@@ -1606,13 +1607,13 @@ have to be as much as security at somebody
 
 324
 00:30:12,500 --> 00:30:18,100
-that has 4 million. Now like I know
-somebody whose
+that has 4 million. Now
+like I know somebody whose
 
 325
 00:30:18,100 --> 00:30:27,600
-phone was SIMjacked. But that person had a
-Coinbase account with millions of dollars
+phone was SIMjacked. But that person had
+a Coinbase account with millions of dollars
 
 326
 00:30:27,600 --> 00:30:32,060
@@ -1621,13 +1622,13 @@ that person had a Coinbase account with
 
 327
 00:30:32,060 --> 00:30:36,360
-millions of dollars in it. So they went to
-great lengths to SIMjack them. I know
+millions of dollars in it. So they went
+to great lengths to SIMjack them. I know
 
 328
 00:30:36,360 --> 00:30:41,500
-millions of other people who have never
-been SIMjacked and nobody's ever
+millions of other people who have
+never been SIMjacked and nobody's ever
 
 329
 00:30:41,500 --> 00:30:50,000
@@ -1681,13 +1682,13 @@ environment. For most people, storing your
 
 339
 00:31:32,040 --> 00:31:36,920
-keys in the cloud encrypted with an end in
-encryption is a viable place to store
+keys in the cloud encrypted with an end
+in encryption is a viable place to store
 
 340
 00:31:36,920 --> 00:31:41,360
-them. And now what you have to do is not
-lose your decryption key. You have not
+them. And now what you have to do is
+not lose your decryption key. You have not
 
 341
 00:31:41,360 --> 00:31:44,680
@@ -1696,13 +1697,13 @@ have one password and you're storing
 
 342
 00:31:44,680 --> 00:31:48,760
-secrets in one password, then you have to
-say, well, is one password sufficiently
+secrets in one password, then you have
+to say, well, is one password sufficiently
 
 343
 00:31:48,760 --> 00:31:55,820
-secure, right? For your threat profile, if
-it is, then there's all of those things
+secure, right? For your threat profile,
+if it is, then there's all of those things
 
 344
 00:31:55,820 --> 00:32:01,040
@@ -1766,18 +1767,18 @@ could. Well, I talked about hosted key
 
 356
 00:32:49,040 --> 00:32:53,560
-management. Right. So KERI enables hosted
-key management. So if people want to
+management. Right. So KERI enables
+hosted key management. So if people want to
 
 357
 00:32:53,560 --> 00:32:57,480
-provide a hosted key management service,
-Absolutely. I mean, I could have a
+provide a hosted key management
+service, Absolutely. I mean, I could have a
 
 358
 00:32:57,480 --> 00:33:01,080
-separate KERI account just for managing my
-own encryption keys. Yeah, that's right.
+separate KERI account just for managing
+my own encryption keys. Yeah, that's right.
 
 359
 00:33:01,360 --> 00:33:07,260
@@ -1791,13 +1792,13 @@ one. Speaking of discoverability, I think
 
 361
 00:33:16,860 --> 00:33:23,640
-DNS is a beautiful protocol. Do you think
-it makes sense to embed some of the
+DNS is a beautiful protocol. Do you
+think it makes sense to embed some of the
 
 362
 00:33:23,640 --> 00:33:31,160
-witness endpoints into TXT records or SRV
-records. How are you thinking about
+witness endpoints into TXT records or
+SRV records. How are you thinking about
 
 363
 00:33:31,160 --> 00:33:38,580
@@ -1806,18 +1807,18 @@ right now is we use well it's technically
 
 364
 00:33:38,580 --> 00:33:46,280
-it's part of DNS right is the well-known
-protocol.
+it's part of DNS right is
+the well-known protocol.
 
 365
 00:33:46,960 --> 00:33:51,320
-So if anybody that has a web service can
-make it so that all of their
+So if anybody that has a web
+service can make it so that all of their
 
 366
 00:33:51,320 --> 00:33:55,360
-infrastructure is discoverable by public
-publishing that those infrastructure
+infrastructure is discoverable by
+public publishing that those infrastructure
 
 367
 00:33:55,360 --> 00:33:59,720
@@ -1851,8 +1852,8 @@ something called an OOBI, right? The out
 
 373
 00:34:26,460 --> 00:34:35,720
-those and use those for discovery. So we
-do a lot of that kind of stuff. DNS
+those and use those for discovery.
+So we do a lot of that kind of stuff. DNS
 
 374
 00:34:35,720 --> 00:34:44,680
@@ -1861,13 +1862,13 @@ in X.509s anything you want, right? It's a
 
 375
 00:34:44,680 --> 00:34:50,440
-flexible document protocol. So I could see
-people publishing if they wanted to. I
+flexible document protocol. So I could
+see people publishing if they wanted to. I
 
 376
 00:34:50,440 --> 00:34:55,000
-mean, a certificate authority might want
-to do it that way. They may want to
+mean, a certificate authority might
+want to do it that way. They may want to
 
 377
 00:34:55,000 --> 00:34:59,620
@@ -1891,8 +1892,8 @@ Merkle trees or what's that we were doing
 
 381
 00:35:15,400 --> 00:35:23,880
-next? Oh, yeah. Oh, sorry. Yes. So since
-it's about the current state of these
+next? Oh, yeah. Oh, sorry. Yes. So
+since it's about the current state of these
 
 382
 00:35:23,880 --> 00:35:30,480
@@ -1910,8 +1911,8 @@ we actually have a
 
 385
 00:35:40,580 --> 00:35:46,700
-handful of servers that are running on
-DigitalOcean that are available. We'll
+handful of servers that are running
+on DigitalOcean that are available. We'll
 
 386
 00:35:46,700 --> 00:35:50,200
@@ -1950,8 +1951,8 @@ customers. So it's not publicly available.
 
 393
 00:36:22,980 --> 00:36:27,940
-You have to be in their space. The GLEIF
-ecosystem, there are witnesses that
+You have to be in their space. The
+GLEIF ecosystem, there are witnesses that
 
 394
 00:36:27,940 --> 00:36:36,340
@@ -1960,8 +1961,8 @@ for that. So the main, I think one of the
 
 395
 00:36:36,340 --> 00:36:41,660
-main outcomes of the state of Utah SEDI
-initiative is that you will, it will
+main outcomes of the state of Utah
+SEDI initiative is that you will, it will
 
 396
 00:36:41,660 --> 00:36:48,080
@@ -2025,8 +2026,8 @@ publicly available to the extent you're
 
 408
 00:37:46,680 --> 00:37:53,060
-using a vLEI. Okay. So, but what are the
-advantages and disadvantages for
+using a vLEI. Okay. So, but what are
+the advantages and disadvantages for
 
 409
 00:37:53,060 --> 00:38:00,440
@@ -2035,8 +2036,8 @@ setup to make those publicly available for
 
 410
 00:38:00,440 --> 00:38:07,180
-other ecosystems to be able to auto to use
-as the watcher network? I think
+other ecosystems to be able to auto
+to use as the watcher network? I think
 
 411
 00:38:07,180 --> 00:38:13,360
@@ -2055,8 +2056,8 @@ right? Who pays for the infrastructure,
 
 414
 00:38:23,640 --> 00:38:28,020
-right? That's a challenge problem. And
-Phil wrote a white paper, some
+right? That's a challenge problem.
+And Phil wrote a white paper, some
 
 415
 00:38:28,020 --> 00:38:31,000
@@ -2065,8 +2066,8 @@ challenges is the identity infrastructure
 
 416
 00:38:31,000 --> 00:38:35,000
-who pays for identity insurance. The state
-of Utah is going to pay for identity
+who pays for identity insurance. The
+state of Utah is going to pay for identity
 
 417
 00:38:35,000 --> 00:38:39,600
@@ -2085,13 +2086,13 @@ has a vested interest in making those
 
 420
 00:38:46,780 --> 00:38:51,120
-available for disadvantaged populations in
-the state of Utah. So they're going to
+available for disadvantaged populations
+in the state of Utah. So they're going to
 
 421
 00:38:51,120 --> 00:38:57,440
-fund some of that. Every business that
-wants to leverage the free identity
+fund some of that. Every business
+that wants to leverage the free identity
 
 422
 00:38:57,440 --> 00:39:03,260
@@ -2149,8 +2150,8 @@ problem. And so the state of Utah is a
 
 433
 00:39:47,180 --> 00:39:51,720
-forcing function to enable to solve the
-cold start problem. That's one of the
+forcing function to enable to solve
+the cold start problem. That's one of the
 
 434
 00:39:51,720 --> 00:39:59,080
@@ -2159,8 +2160,8 @@ that we have somebody who has an incentive
 
 435
 00:39:59,080 --> 00:40:08,400
-to solve the cold start problem. Yes. And
-this state is also both an issuer and a
+to solve the cold start problem. Yes.
+And this state is also both an issuer and a
 
 436
 00:40:08,400 --> 00:40:13,820
@@ -2169,8 +2170,8 @@ create an entire ecosystem that then other
 
 437
 00:40:13,820 --> 00:40:19,560
-go, oh, that's working. Maybe I should sit
-on top of this or you sit beside it sit
+go, oh, that's working. Maybe I should
+sit on top of this or you sit beside it sit
 
 438
 00:40:19,560 --> 00:40:24,300
@@ -2179,8 +2180,8 @@ needs witnesses and watchers at scale to
 
 439
 00:40:24,300 --> 00:40:30,320
-interact with millions of citizens for no
-other reason than just the state to
+interact with millions of citizens for
+no other reason than just the state to
 
 440
 00:40:30,320 --> 00:40:34,560
@@ -2194,13 +2195,13 @@ do business with the government it then
 
 442
 00:40:39,800 --> 00:40:43,840
-becomes easy for other people to say well
-wait there's already a there's already
+becomes easy for other people to say
+well wait there's already a there's already
 
 443
 00:40:43,840 --> 00:40:48,260
-millions of these out there millions of
-users, I can start to compete in that
+millions of these out there millions
+of users, I can start to compete in that
 
 444
 00:40:48,260 --> 00:40:53,840
@@ -2209,8 +2210,8 @@ because the state already created a market
 
 445
 00:40:53,840 --> 00:41:00,920
-for me. So that was actually the name of
-the proposal that I wrote to the state,
+for me. So that was actually the name
+of the proposal that I wrote to the state,
 
 446
 00:41:01,240 --> 00:41:08,820
@@ -2268,8 +2269,8 @@ infrastructure by three at that point. So
 
 457
 00:42:06,940 --> 00:42:13,880
-that's how we grow our witness pool. And
-we have not even discussed at this
+that's how we grow our witness pool.
+And we have not even discussed at this
 
 458
 00:42:13,880 --> 00:42:19,740
@@ -2293,8 +2294,8 @@ adoption vector that is trying to that has
 
 462
 00:42:40,960 --> 00:42:44,340
-to solve the cold start problem. Right?
-And the state of Utah has the best
+to solve the cold start problem.
+Right? And the state of Utah has the best
 
 463
 00:42:44,340 --> 00:42:47,660
@@ -2308,8 +2309,8 @@ together. And the reason is that right now
 
 465
 00:42:53,160 --> 00:43:00,200
-in this administration, they passed new
-regulations that say all healthcare
+in this administration, they passed
+new regulations that say all healthcare
 
 466
 00:43:00,200 --> 00:43:07,300
@@ -2343,18 +2344,18 @@ tend to want to capture their patients and
 
 472
 00:43:33,100 --> 00:43:37,260
-one way they capture them is make it so
-their data is importable. So if I get a
+one way they capture them is make it
+so their data is importable. So if I get a
 
 473
 00:43:37,260 --> 00:43:41,560
-bunch of tests done and I have a bunch of
-scans and things like that and I want to
+bunch of tests done and I have a bunch
+of scans and things like that and I want to
 
 474
 00:43:41,560 --> 00:43:48,340
-go to a new provider, well, the
-new provider says, well, I can't treat you
+go to a new provider, well, the new
+provider says, well, I can't treat you
 
 475
 00:43:48,340 --> 00:43:53,700
@@ -2398,8 +2399,8 @@ provider to the other. And that's patient
 
 483
 00:44:22,660 --> 00:44:27,640
-data, which means the patients now have a
-reason to have a wallet, have a reason to
+data, which means the patients now have
+a reason to have a wallet, have a reason to
 
 484
 00:44:27,640 --> 00:44:32,520
@@ -2418,23 +2419,23 @@ can be the same wallet because it's the
 
 487
 00:44:40,740 --> 00:44:46,440
-same protocol under the hood. And now you
-start to get that flywheel effect. – I
+same protocol under the hood. And now
+you start to get that flywheel effect. – I
 
 488
 00:44:46,440 --> 00:44:50,320
-assume. – Yes. – Wasn't the case already
-HIPAA took care of that just by the
+assume. – Yes. – Wasn't the case
+already HIPAA took care of that just by the
 
 489
 00:44:50,320 --> 00:44:54,460
-patient authorizing the transfer, right? –
-They don't trust the patient authorizing
+patient authorizing the transfer, right?
+– They don't trust the patient authorizing
 
 490
 00:44:54,460 --> 00:44:58,640
-the transfer. It's, well, yeah, you can do
-it that way, but it takes weeks. – Yeah,
+the transfer. It's, well, yeah, you can
+do it that way, but it takes weeks. – Yeah,
 
 491
 00:44:58,740 --> 00:45:01,600
@@ -2448,12 +2449,13 @@ suffering from a serious illness and you
 
 493
 00:45:05,380 --> 00:45:08,360
-might not live weeks, that doesn't really
-help you, right? – The patient's
+might not live weeks, that doesn't
+really help you, right? – The patient's
 
 494
 00:45:08,360 --> 00:45:09,800
-essentially the middle man. – Yes.
+essentially the
+middle man. – Yes.
 
 495
 00:45:12,740 --> 00:45:17,500
@@ -2467,8 +2469,8 @@ ecosystem and their identity system did
 
 497
 00:45:22,200 --> 00:45:28,140
-PLC. Yeah, I've heard of that. Yeah, I see
-it is kind of like a it's not KERI, but
+PLC. Yeah, I've heard of that. Yeah, I
+see it is kind of like a it's not KERI, but
 
 498
 00:45:28,140 --> 00:45:31,920
@@ -2492,8 +2494,8 @@ witness. But I haven't really thought
 
 502
 00:45:46,980 --> 00:45:51,660
-through kind of the security properties of
-it because like de facto it's a
+through kind of the security properties
+of it because like de facto it's a
 
 503
 00:45:51,660 --> 00:45:55,720
@@ -2537,8 +2539,8 @@ happens behind the scenes. When it stops
 
 511
 00:46:32,340 --> 00:46:37,240
-call spam, it's your cell phone provider
-that's signing and checking the
+call spam, it's your cell phone
+provider that's signing and checking the
 
 512
 00:46:37,240 --> 00:46:40,380
@@ -2557,13 +2559,13 @@ would say that is actually a turning point
 
 515
 00:46:53,020 --> 00:46:59,840
-for KERI because the early use cases were
-all organizational, right? – Yeah. –
+for KERI because the early use cases
+were all organizational, right? – Yeah. –
 
 516
 00:46:59,840 --> 00:47:04,680
-Provenant, those kinds of things. – Yeah.
-– So state of Utah, HealthKERI,
+Provenant, those kinds of things. –
+Yeah. – So state of Utah, HealthKERI,
 
 517
 00:47:05,020 --> 00:47:10,440
@@ -2577,18 +2579,18 @@ know, how does this actually work? Yeah.
 
 519
 00:47:16,380 --> 00:47:21,240
-Yeah. Yeah. That's what that's given me.
-That's why I'm optimistic because I see
+Yeah. Yeah. That's what that's given
+me. That's why I'm optimistic because I see
 
 520
 00:47:21,240 --> 00:47:26,560
-those as real serious adoption vectors and
-there's drivers that aren't going to go
+those as real serious adoption vectors
+and there's drivers that aren't going to go
 
 521
 00:47:26,560 --> 00:47:30,880
-away. There's regulations involved. All of
-those things are forcing functions that
+away. There's regulations involved. All
+of those things are forcing functions that
 
 522
 00:47:30,880 --> 00:47:37,760
@@ -2676,7 +2678,8 @@ same security space, very similar shaped
 
 539
 00:49:05,880 --> 00:49:10,420
-solutions and things like that part
+solutions and
+things like that part
 
 540
 00:49:10,420 --> 00:49:16,980
@@ -2695,13 +2698,13 @@ been Twitter. Okay. Twitter's running the
 
 543
 00:49:28,220 --> 00:49:34,120
-infrastructure or Facebook or whatever in
-the hopes of monetizing. Bluesky came
+infrastructure or Facebook or whatever
+in the hopes of monetizing. Bluesky came
 
 544
 00:49:34,120 --> 00:49:38,780
-along who is operating did:plc, the
-servers. and they're providing the
+along who is operating did:plc,
+the servers. and they're providing the
 
 545
 00:49:38,780 --> 00:49:45,020
@@ -2710,8 +2713,8 @@ funded in the hopes of finding a business
 
 546
 00:49:45,020 --> 00:49:50,300
-model and monetizing, right? What's the
-alternative? The essentially one and a
+model and monetizing, right? What's
+the alternative? The essentially one and a
 
 547
 00:49:50,300 --> 00:49:55,060
@@ -2720,8 +2723,8 @@ mentioned governments, right? So on the
 
 548
 00:49:55,060 --> 00:50:00,860
-federal state or city level like SEDI or
-what we've been seeing in the
+federal state or city level like SEDI
+or what we've been seeing in the
 
 549
 00:50:00,860 --> 00:50:05,840
@@ -2735,8 +2738,8 @@ common infrastructure of the… Yeah. And
 
 551
 00:50:11,440 --> 00:50:16,840
-yeah, so it has its
-challenges. I'm not saying that it's not
+yeah, so it has its challenges.
+I'm not saying that it's not
 
 552
 00:50:16,840 --> 00:50:22,580
@@ -2774,8 +2777,8 @@ at did:plc… – Well, I read the did:webvh
 
 559
 00:50:53,040 --> 00:50:58,200
-latest spec as of like three weeks ago and
-it doesn't have any of those in it. –
+latest spec as of like three weeks ago
+and it doesn't have any of those in it. –
 
 560
 00:50:58,200 --> 00:51:05,960
@@ -2804,8 +2807,8 @@ issuances, you have KERI. Completely.
 
 565
 00:51:30,180 --> 00:51:41,100
-You've recreated exactly the same thing. I
-got one. Yeah, we got 10 minutes left. 10
+You've recreated exactly the same thing.
+I got one. Yeah, we got 10 minutes left. 10
 
 566
 00:51:41,100 --> 00:51:45,860
@@ -2819,23 +2822,23 @@ detectability problem and the availability
 
 568
 00:52:01,260 --> 00:52:09,380
-problem. You guys interested in that? So a
-lot of KERI infrastructure, a lot of KERI
+problem. You guys interested in that? So
+a lot of KERI infrastructure, a lot of KERI
 
 569
 00:52:09,380 --> 00:52:20,220
-protocol does multiple duty. It's like for
-me a sign of a good design is that I
+protocol does multiple duty. It's like
+for me a sign of a good design is that I
 
 570
 00:52:20,220 --> 00:52:27,140
-design something to solve one problem and
-then serendipitously it solves other
+design something to solve one problem
+and then serendipitously it solves other
 
 571
 00:52:27,140 --> 00:52:32,080
-problems that I hadn't yet got to yet. And
-they go, oh, wait a minute. this also
+problems that I hadn't yet got to yet.
+And they go, oh, wait a minute. this also
 
 572
 00:52:32,080 --> 00:52:37,600
@@ -2849,8 +2852,8 @@ The first problem they solve and Ryan
 
 574
 00:52:45,300 --> 00:52:54,020
-mentioned this, the first problem is
-availability. So originally, one
+mentioned this, the first problem
+is availability. So originally, one
 
 575
 00:52:54,020 --> 00:52:57,980
@@ -2879,13 +2882,13 @@ of people solve it that way. I have hosted
 
 580
 00:53:20,840 --> 00:53:25,640
-wallets. Now they go to the host to get
-it. But the problem is, is the host now
+wallets. Now they go to the host to
+get it. But the problem is, is the host now
 
 581
 00:53:25,640 --> 00:53:32,660
-becomes something I don't control and I
-can't trust. And so now I've basically
+becomes something I don't control and
+I can't trust. And so now I've basically
 
 582
 00:53:32,660 --> 00:53:37,800
@@ -2899,8 +2902,8 @@ problem without introducing a security
 
 584
 00:53:42,500 --> 00:53:50,680
-problem. Yeah. What's the threat model on
-the host? You said something you can't
+problem. Yeah. What's the threat model
+on the host? You said something you can't
 
 585
 00:53:50,680 --> 00:53:59,180
@@ -2939,8 +2942,8 @@ Byzantine fault tolerant distributed pool.
 
 592
 00:54:30,920 --> 00:54:38,260
-Now, it doesn't have to be total ordering.
-It just has to be eclipse
+Now, it doesn't have to be total
+ordering. It just has to be eclipse
 
 593
 00:54:38,260 --> 00:54:44,460
@@ -2949,8 +2952,8 @@ blockchain, I said I've got to solve this
 
 594
 00:54:44,460 --> 00:54:48,020
-eclipse attack problem. The only way to
-solve an eclipse attack problem is a
+eclipse attack problem. The only way
+to solve an eclipse attack problem is a
 
 595
 00:54:48,020 --> 00:54:52,540
@@ -3029,8 +3032,8 @@ you from being eclipsed. Now you need to
 
 610
 00:56:12,640 --> 00:56:17,520
-control that pool so that you don't have
-to trust anybody. So it's under your
+control that pool so that you don't
+have to trust anybody. So it's under your
 
 611
 00:56:17,520 --> 00:56:23,340
@@ -3059,8 +3062,8 @@ one step after another to go, okay, I have
 
 616
 00:56:41,800 --> 00:56:46,560
-to solve this problem. And then once I
-solve it, then it's done. Yeah. So you
+to solve this problem. And then once
+I solve it, then it's done. Yeah. So you
 
 617
 00:56:46,560 --> 00:56:53,160
@@ -3069,8 +3072,8 @@ then detection. The third one is detect
 
 618
 00:56:53,160 --> 00:57:04,620
-key compromise. Now here's the
-thing. If I'm doing a
+key compromise. Now
+here's the thing. If I'm doing a
 
 619
 00:57:04,620 --> 00:57:09,240
@@ -3079,8 +3082,8 @@ enable me to detect key compromise.
 
 620
 00:57:09,600 --> 00:57:16,180
-There's no key compromise detection in a
-key event log. The witness pool gives me
+There's no key compromise detection in
+a key event log. The witness pool gives me
 
 621
 00:57:16,180 --> 00:57:21,680
@@ -3089,8 +3092,8 @@ anchoring issuances. If I anchor issues,
 
 622
 00:57:21,780 --> 00:57:26,280
-the only way I can get anchored is it gets
-entered in the key event log that a
+the only way I can get anchored is it
+gets entered in the key event log that a
 
 623
 00:57:26,280 --> 00:57:32,340
@@ -3139,8 +3142,8 @@ doesn't tell you when to when to rotate
 
 632
 00:58:02,360 --> 00:58:06,320
-unless you're anchoring issuances. Any
-issuances that aren't anchored are not
+unless you're anchoring issuances.
+Any issuances that aren't anchored are not
 
 633
 00:58:06,320 --> 00:58:10,680
@@ -3159,11 +3162,11 @@ it. So without anchoring, you've missed
 
 636
 00:58:18,160 --> 00:58:23,700
-most of the security properties of what
-KERI provides. But it's complicated,
+most of the security properties of
+what KERI provides. But it's complicated,
 
 637
 00:58:23,940 --> 00:58:28,740
-right? You have to complicate your system.
-Okay, I'm done. Thank you.
+right? You have to complicate your
+system. Okay, I'm done. Thank you.
 
