@@ -56,7 +56,61 @@
       "speaker": "Samuel Smith",
       "path": "talks/Its-KERI-or-Surveillance.mp4",
       "duration": "54:25",
-      "subtitle": "talks/Its-KERI-or-Surveillance.srt"
+      "subtitle": "talks/Its-KERI-or-Surveillance.srt",
+      "chapters": [
+        {
+          "start": "00:00",
+          "description": "Introduction: last best hope for individual-control digital ID"
+        },
+        {
+          "start": "01:42",
+          "description": "Five Eyes warning on foundational genAI cyber threats"
+        },
+        {
+          "start": "07:29",
+          "description": "Two paths: AI-based identity vs KERI-based identity"
+        },
+        {
+          "start": "08:47",
+          "description": "Keeping AI subordinate to cryptographically verifiable identity"
+        },
+        {
+          "start": "14:44",
+          "description": "Why KERI does not need AI to defend against AI"
+        },
+        {
+          "start": "18:28",
+          "description": "Cyber resilience: what stays trustworthy after a breach"
+        },
+        {
+          "start": "24:03",
+          "description": "From protecting secrets to verifiable truth and provenance"
+        },
+        {
+          "start": "26:15",
+          "description": "Witnesses, watchers, and delegated AIDs"
+        },
+        {
+          "start": "31:26",
+          "description": "Accountability without a surveillance society"
+        },
+        {
+          "start": "36:24",
+          "description": "Locus of control: privacy requires individual control"
+        },
+        {
+          "start": "43:52",
+          "description": "Should AI protect freedom—or be constrained by people?"
+        },
+        {
+          "start": "47:13",
+          "description": "Adoption vectors and the SEDI rollout"
+        },
+        {
+          "start": "51:26",
+          "description": "Closing: KERI as the alternative to surveillance identity"
+        }
+      ]
     }
   ]
 }

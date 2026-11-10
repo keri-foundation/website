@@ -64,7 +64,21 @@
       "duration": "20:00",
       "subtitle": "talks/Speaker-Name-Talk-Title.srt",
       "presentation": "slides/Speaker-Name-Talk-Title.pdf",
-      "poster": "speaker-photos/Speaker-Name.jpg"
+      "poster": "speaker-photos/Speaker-Name.jpg",
+      "chapters": [
+        {
+          "start": "00:00",
+          "description": "Introduction"
+        },
+        {
+          "start": "05:30",
+          "description": "Main topic"
+        },
+        {
+          "start": "15:00",
+          "description": "Closing"
+        }
+      ]
     },
     {
       "order": 1,

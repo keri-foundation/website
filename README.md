@@ -13,6 +13,7 @@
   - [Site customizations (`/custom/`)](#site-customizations-custom)
   - [Conference galleries (`/confs/<ORG>/<YEAR>/<month>/`)](#conference-galleries-confsorgyearmonth)
     - [Top clips (`topClips`)](#top-clips-topclips)
+    - [Chapters (`videos[].chapters`)](#chapters-videoschapters)
   - [Yearly videos (`/vids/<YEAR>/`)](#yearly-videos-vidsyear)
     - [New conference](#new-conference)
     - [Build and deploy](#build-and-deploy)
@@ -232,6 +233,24 @@ Optional teaser row on the gallery. Set `topClips.enabled` and list clips under 
 ```
 
 Clips with unparseable times or `end` ≤ `start` are skipped. Numeric seconds remain valid.
+
+### Chapters (`videos[].chapters`)
+
+Optional jump list on a talk card and in the full-screen player. Add a `chapters` array on any `videos[]` entry:
+
+| Field | Role |
+| ----- | ---- |
+| `start` | Chapter start (same clock / seconds forms as `topClips`) |
+| `description` | Label shown next to the timestamp (`title` is accepted as an alias) |
+
+```json
+{
+  "start": "14:44",
+  "description": "Why KERI does not need AI to defend against AI"
+}
+```
+
+Clicking a chapter seeks that video (card or open modal), plays from there, and updates the URL hash (`&t=`). Chapters with unparseable times or an empty description are skipped. See `vids/2026/index.json` (“It's KERI or Surveillance”) for a full example.
 
 <a id="yearly-videos"></a>
 

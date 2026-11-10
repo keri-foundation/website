@@ -1239,6 +1239,128 @@
             outline-offset: 2px;
         }
 
+        /* ── Per-video chapters (index.json videos[].chapters) ── */
+        .video-chapters {
+            margin-top: 14px;
+            padding-top: 12px;
+            border-top: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+        }
+
+        .video-chapters-heading {
+            margin: 0 0 8px;
+            font-family: var(--heading-font);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--muted);
+        }
+
+        .video-chapters-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            max-height: 16rem;
+            overflow: auto;
+        }
+
+        .video-chapter {
+            display: grid;
+            grid-template-columns: 4.25rem minmax(0, 1fr);
+            gap: 0.55rem 0.75rem;
+            align-items: start;
+            width: 100%;
+            margin: 0;
+            padding: 0.45rem 0.55rem;
+            border: 0;
+            border-radius: 6px;
+            background: transparent;
+            color: inherit;
+            font: inherit;
+            text-align: left;
+            cursor: pointer;
+            transition: background 0.15s ease;
+        }
+
+        .video-chapter:hover {
+            background: color-mix(in srgb, var(--accent) 14%, transparent);
+        }
+
+        .video-chapter:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .video-chapter.is-active {
+            background: color-mix(in srgb, var(--accent) 22%, transparent);
+        }
+
+        .video-chapter-time {
+            font-family: var(--heading-font);
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1.35;
+            padding-top: 0.05rem;
+        }
+
+        .video-chapter.is-active .video-chapter-time {
+            color: var(--ink);
+        }
+
+        .video-chapter-desc {
+            font-size: 0.92rem;
+            line-height: 1.35;
+            color: var(--ink);
+        }
+
+        .video-chapters--modal {
+            flex: 0 1 auto;
+            max-height: min(12rem, 32%);
+            margin: 0;
+            padding: 10px 12px 12px;
+            border-top: 1px solid rgba(255, 255, 255, 0.12);
+            background: #111;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 0;
+        }
+
+        .video-chapters--modal[hidden] {
+            display: none !important;
+        }
+
+        .video-chapters--modal .video-chapters-heading {
+            color: rgba(255, 255, 255, 0.72);
+        }
+
+        .video-chapters--modal .video-chapters-list {
+            max-height: none;
+            flex: 1 1 auto;
+            min-height: 0;
+        }
+
+        .video-chapters--modal .video-chapter:hover {
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .video-chapters--modal .video-chapter.is-active {
+            background: rgba(255, 255, 255, 0.14);
+        }
+
+        .video-chapters--modal .video-chapter-time {
+            color: #d4b483;
+        }
+
+        .video-chapters--modal .video-chapter.is-active .video-chapter-time,
+        .video-chapters--modal .video-chapter-desc {
+            color: rgba(255, 255, 255, 0.92);
+        }
+
         /* ── Card media kind labels (Audio above Video) ── */
         .media-kind-label {
             margin: 0;
@@ -3490,6 +3612,23 @@
                 return { ...clip, start, end };
             }
 
+            // videos[].chapters: [{ start, description }] — start uses the same
+            // clock / seconds forms as topClips. description (or title) is required.
+            function normalizeChapters(raw) {
+                if (!Array.isArray(raw)) return [];
+                const chapters = [];
+                for (const item of raw) {
+                    if (!item || typeof item !== 'object') continue;
+                    const start = parseClipTime(item.start ?? item.time ?? item.timestamp);
+                    if (!Number.isFinite(start)) continue;
+                    const description = String(item.description ?? item.title ?? '').trim();
+                    if (!description) continue;
+                    chapters.push({ start, description });
+                }
+                chapters.sort((a, b) => a.start - b.start);
+                return chapters;
+            }
+
             function formatTime(totalSec) {
                 const h = Math.floor(totalSec / 3600);
                 const m = Math.floor((totalSec % 3600) / 60);
@@ -4962,6 +5101,7 @@
             let modalTranscriptScrollLock = 0;
             const captionCueFollowTracks = new WeakSet();
             let modalLinksSection = null;
+            let modalChaptersSection = null;
             let modalTitleEl = null;
             let modalCopyBtn = null;
             let modalClearTimestampsBtn = null;
@@ -5719,6 +5859,7 @@
                         rememberClock(modalSourceVideoPath, modalVideoEl.currentTime);
                     }
                     followModalTranscriptCaption();
+                    syncModalChaptersActive();
                 });
                 modalVideoEl.addEventListener('pause', () => {
                     if (modalSourceVideoPath && shouldAcceptMediaTime(modalSourceVideoPath, modalVideoEl.currentTime)) {
@@ -5728,6 +5869,7 @@
                 modalVideoEl.addEventListener('seeked', () => {
                     if (modalSourceVideoPath) rememberClock(modalSourceVideoPath, modalVideoEl.currentTime);
                     followModalTranscriptCaption();
+                    syncModalChaptersActive();
                 });
 
                 const source = document.createElement('source');
@@ -5749,6 +5891,11 @@
                 playerWrap.appendChild(modalClipTimer);
 
                 videoContent.appendChild(playerWrap);
+
+                modalChaptersSection = document.createElement('div');
+                modalChaptersSection.className = 'video-chapters video-chapters--modal';
+                modalChaptersSection.hidden = true;
+                videoContent.appendChild(modalChaptersSection);
 
                 modalLinksSection = document.createElement('div');
                 modalLinksSection.className = 'video-modal-links';
@@ -6168,6 +6315,7 @@
                 if (modalTranscriptSearchInput) modalTranscriptSearchInput.disabled = true;
                 modalTranscriptBody.innerHTML = '<p class="transcript-loading">Loading transcript…</p>';
                 setModalTranscriptHandleLabel(null);
+                renderModalChapters(video);
                 renderModalLinks(null);
 
                 Promise.all([loadTranscript(video), loadAllCaptionTracks(video)]).then(([store, captionStore]) => {
@@ -6230,6 +6378,10 @@
                     resetModalTranscriptFollow();
                     updateModalTranscriptViewBtn();
                     clearModalTranscriptSearch();
+                    if (modalChaptersSection) {
+                        modalChaptersSection.replaceChildren();
+                        modalChaptersSection.hidden = true;
+                    }
                     clearVideoUrlHash();
                 }
 
@@ -6602,6 +6754,152 @@
             // ─────────────────────────────────────────────────────────────────────
             //  Build a video card
             // ─────────────────────────────────────────────────────────────────────
+            function chaptersForVideo(video) {
+                return Array.isArray(video?.chapters) ? video.chapters : [];
+            }
+
+            function setActiveChapterButtons(root, time) {
+                if (!root) return;
+                const buttons = root.querySelectorAll('.video-chapter');
+                if (!buttons.length) return;
+                let active = null;
+                for (const btn of buttons) {
+                    const start = Number.parseFloat(btn.dataset.chapterStart);
+                    if (Number.isFinite(start) && start <= time) active = btn;
+                }
+                buttons.forEach((btn) => {
+                    const isActive = btn === active;
+                    btn.classList.toggle('is-active', isActive);
+                    if (isActive) btn.setAttribute('aria-current', 'true');
+                    else btn.removeAttribute('aria-current');
+                });
+            }
+
+            function syncModalChaptersActive() {
+                if (!modalChaptersSection || modalChaptersSection.hidden || !modalVideoEl) return;
+                setActiveChapterButtons(modalChaptersSection, modalVideoEl.currentTime || 0);
+            }
+
+            function seekVideoToChapter(video, start) {
+                if (!video?.path || !Number.isFinite(start) || start < 0) return;
+                const videoId = generateVideoId(video);
+                rememberClock(video.path, start);
+                clearClipPlayback();
+
+                const modalOpen = !!(
+                    videoModalOverlay
+                    && !videoModalOverlay.hidden
+                    && modalSourceVideoPath === video.path
+                    && modalVideoEl
+                );
+
+                if (modalOpen) {
+                    try { modalVideoEl.currentTime = start; } catch {
+                        // Ignore seek errors if metadata is not ready yet.
+                    }
+                    playMedia(modalVideoEl);
+                    updateVideoUrlForModal(videoId, start);
+                    syncModalChaptersActive();
+                    return;
+                }
+
+                const videoEl = videoElementMap[video.path];
+                const audioEl = audioElementMap[video.path];
+                if (audioEl) seekWhenReady(audioEl, start);
+                if (videoEl) {
+                    seekWhenReady(videoEl, start);
+                    playMedia(videoEl);
+                    videoEl.scrollIntoView({ behavior: motionSafeBehavior(), block: 'center' });
+                } else if (audioEl) {
+                    playMedia(audioEl);
+                }
+
+                const hash = buildVideoHash(videoId, start);
+                const newUrl = `${window.location.pathname}${window.location.search}${hash}`;
+                const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+                if (newUrl !== currentUrl) history.replaceState(null, '', newUrl);
+
+                const card = window.videoCardMap?.get(video.path);
+                const cardChapters = card?.querySelector('.video-chapters');
+                if (cardChapters) setActiveChapterButtons(cardChapters, start);
+            }
+
+            function fillChaptersList(listEl, video) {
+                const chapters = chaptersForVideo(video);
+                listEl.replaceChildren();
+                chapters.forEach((chapter) => {
+                    const item = document.createElement('li');
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'video-chapter';
+                    btn.dataset.chapterStart = String(chapter.start);
+                    btn.setAttribute(
+                        'aria-label',
+                        `Jump to ${formatTime(chapter.start)}: ${chapter.description}`
+                    );
+
+                    const timeEl = document.createElement('span');
+                    timeEl.className = 'video-chapter-time';
+                    timeEl.setAttribute('aria-hidden', 'true');
+                    timeEl.textContent = formatTime(chapter.start);
+
+                    const descEl = document.createElement('span');
+                    descEl.className = 'video-chapter-desc';
+                    descEl.textContent = chapter.description;
+
+                    btn.appendChild(timeEl);
+                    btn.appendChild(descEl);
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        seekVideoToChapter(video, chapter.start);
+                    });
+                    item.appendChild(btn);
+                    listEl.appendChild(item);
+                });
+            }
+
+            function createChaptersNav(video) {
+                if (!chaptersForVideo(video).length) return null;
+
+                const nav = document.createElement('nav');
+                nav.className = 'video-chapters';
+                nav.setAttribute('aria-label', `Chapters for ${video.title}`);
+
+                const heading = document.createElement('h4');
+                heading.className = 'video-chapters-heading';
+                heading.textContent = 'Chapters';
+
+                const list = document.createElement('ol');
+                list.className = 'video-chapters-list';
+                fillChaptersList(list, video);
+
+                nav.appendChild(heading);
+                nav.appendChild(list);
+                return nav;
+            }
+
+            function renderModalChapters(video) {
+                if (!modalChaptersSection) return;
+                modalChaptersSection.replaceChildren();
+                if (!chaptersForVideo(video).length) {
+                    modalChaptersSection.hidden = true;
+                    return;
+                }
+
+                modalChaptersSection.hidden = false;
+                const heading = document.createElement('h3');
+                heading.className = 'video-chapters-heading';
+                heading.textContent = 'Chapters';
+
+                const list = document.createElement('ol');
+                list.className = 'video-chapters-list';
+                fillChaptersList(list, video);
+
+                modalChaptersSection.appendChild(heading);
+                modalChaptersSection.appendChild(list);
+                syncModalChaptersActive();
+            }
+
             function createVideoCard(video) {
                 const card = document.createElement('article');
                 card.className = 'video-card';
@@ -6809,6 +7107,26 @@
                     infoDiv.appendChild(actionsRow);
                 }
 
+                const chaptersNav = createChaptersNav(video);
+                if (chaptersNav) {
+                    infoDiv.appendChild(chaptersNav);
+                    const syncCardChapters = () => {
+                        const media = (!videoEl.paused && videoEl.readyState)
+                            ? videoEl
+                            : (audioElementMap[video.path] && !audioElementMap[video.path].paused
+                                ? audioElementMap[video.path]
+                                : videoEl);
+                        setActiveChapterButtons(chaptersNav, media?.currentTime || 0);
+                    };
+                    videoEl.addEventListener('timeupdate', syncCardChapters);
+                    videoEl.addEventListener('seeked', syncCardChapters);
+                    const cardAudio = audioElementMap[video.path];
+                    if (cardAudio) {
+                        cardAudio.addEventListener('timeupdate', syncCardChapters);
+                        cardAudio.addEventListener('seeked', syncCardChapters);
+                    }
+                }
+
                 card.appendChild(infoDiv);
 
                 const toggleAllBtn = document.querySelector('#toggleAllVideos');
@@ -6855,6 +7173,7 @@
                     : '';
                 await attachConventionalSubtitles(videos);
                 videos.forEach((v) => {
+                    v.chapters = normalizeChapters(v.chapters);
                     applyDiscoveredSubtitleLangs(v);
                     if (v.subtitle) v.subtitle = resolveAssetUrl(v.subtitle);
                     if (v.subtitles && typeof v.subtitles === 'object') {
