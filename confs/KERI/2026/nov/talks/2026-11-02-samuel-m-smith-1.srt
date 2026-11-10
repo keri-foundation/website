@@ -1497,17 +1497,17 @@ protocols that allow you to do that. And
 302
 00:29:06,080 --> 00:29:11,540
 it was designed to be web scalable to
-solve the cost for problem of blockchain.
+solve the cost floor problem of blockchain.
 
 303
 00:29:11,780 --> 00:29:15,060
 So they said, well, blockchain is way too
-expensive. The cost for is way too high,
+expensive. The cost floor is way too high,
 
 304
 00:29:15,400 --> 00:29:20,480
 right? So we want it to be web scalable.
-We want an ultra low cost for because it's
+We want an ultra low cost floor because it's
 
 305
 00:29:20,480 --> 00:29:27,120

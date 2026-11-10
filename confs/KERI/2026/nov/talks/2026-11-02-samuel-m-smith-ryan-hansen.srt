@@ -722,12 +722,12 @@ of the infrastructure side of things or
 146
 00:14:41,380 --> 00:14:47,080
 the deployment infrastructure, we have
-KFboot, which is… You see my beautiful,
+kf-boot, which is… You see my beautiful,
 
 147
 00:14:47,720 --> 00:14:53,700
 really detailed architectural diagram
-here. We have KFboot, which is kind of an
+here. We have kf-boot, which is kind of an
 
 148
 00:14:53,700 --> 00:14:59,640
@@ -823,13 +823,13 @@ to answer those. I've got a question about
 
 167
 00:16:43,720 --> 00:16:51,460
-KFboot. Is this on? Okay. It's going to
+kf-boot. Is this on? Okay. It's going to
 the video. If the light's on, it's on.
 
 168
 00:16:51,460 --> 00:16:56,160
 It's just the reverb of like boom. Yeah.
-All right. So for KFboot, you said that it
+All right. So for kf-boot, you said that it
 
 169
 00:16:56,160 --> 00:17:01,620
@@ -838,7 +838,7 @@ set your identifier up. I looked at
 
 170
 00:17:01,620 --> 00:17:05,620
-KFboot. My understanding is that there
+kf-boot. My understanding is that there
 were five standard and you could dive into
 
 171
@@ -894,7 +894,7 @@ of fill in the gaps of the like identity
 181
 00:17:50,020 --> 00:17:54,700
 infrastructure orchestration. So that's
-sort of what we have KFboot for now as like
+sort of what we have kf-boot for now as like
 
 182
 00:17:54,700 --> 00:17:59,700
@@ -909,7 +909,7 @@ Yeah. So anybody that creates witnesses,
 184
 00:18:03,560 --> 00:18:09,760
 anybody that creates a watch or service
-could register with with KFboot, right? Do
+could register with with kf-boot, right? Do
 
 185
 00:18:09,760 --> 00:18:14,420
@@ -933,7 +933,7 @@ But if you have that connector, then then
 
 189
 00:18:30,380 --> 00:18:35,300
-any services that KFboot knows about, then
+any services that kf-boot knows about, then
 that wallet could say, Oh, I want
 
 190
@@ -954,7 +954,7 @@ providers of infrastructure. I wonder is
 193
 00:18:51,660 --> 00:18:58,180
 this generalizable or generalized
-infrastructure discovery tool as KFboot
+infrastructure discovery tool as kf-boot
 
 194
 00:18:58,180 --> 00:19:02,740
@@ -1057,7 +1057,7 @@ present it in whatever.
 
 214
 00:20:58,140 --> 00:21:02,960
-That's not KFboot I think. No, no, that
+That's not kf-boot I think. No, no, that
 doesn't sound like it to me, but we
 
 215
@@ -1073,7 +1073,7 @@ I think what she's asking is it that's
 217
 00:21:10,220 --> 00:21:15,960
 really the wallet the open source wallets
-would be able to do that KFboot is is
+would be able to do that kf-boot is is
 
 218
 00:21:15,960 --> 00:21:20,440
@@ -1622,16 +1622,16 @@ that person had a Coinbase account with
 327
 00:30:32,060 --> 00:30:36,360
 millions of dollars in it. So they went to
-great lengths to SIM jack them. I know
+great lengths to SIMjack them. I know
 
 328
 00:30:36,360 --> 00:30:41,500
 millions of other people who have never
-been SIM jacked and nobody's ever
+been SIMjacked and nobody's ever
 
 329
 00:30:41,500 --> 00:30:50,000
-attempted to SIM jack them because there's
+attempted to SIMjack them because there's
 no ROI to the attack. So storing your keys
 
 330
@@ -2940,17 +2940,17 @@ Byzantine fault tolerant distributed pool.
 592
 00:54:30,920 --> 00:54:38,260
 Now, it doesn't have to be total ordering.
-It just has to be Eclipse
+It just has to be eclipse
 
 593
 00:54:38,260 --> 00:54:44,460
-proof. So when I say deconstructed block
-data, I said I've got to solve this
+proof. So when I say deconstructed
+blockchain, I said I've got to solve this
 
 594
 00:54:44,460 --> 00:54:48,020
-Eclipse attacks problem. The only way to
-solve an Eclipse attacks problem is a
+eclipse attack problem. The only way to
+solve an eclipse attack problem is a
 
 595
 00:54:48,020 --> 00:54:52,540
