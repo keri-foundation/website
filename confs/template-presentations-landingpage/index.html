@@ -1345,12 +1345,25 @@
         }
 
         .chapters-sheet-subtitle {
-            margin: 0.2rem 0 0;
+            margin: 0.35rem 0 0;
             font-size: 0.85rem;
             color: var(--muted);
-            white-space: nowrap;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
             overflow: hidden;
-            text-overflow: ellipsis;
+            line-height: 1.3;
+        }
+
+        @media (max-width: 520px) {
+            .chapters-sheet-header {
+                align-items: flex-start;
+                padding: 10px 14px 10px;
+            }
+
+            .chapters-sheet-subtitle {
+                -webkit-line-clamp: 3;
+            }
         }
 
         .chapters-sheet-close {
@@ -1449,6 +1462,11 @@
         .video-modal-header-actions .chapters-toggle-btn:hover,
         .video-modal-header-actions .chapters-toggle-btn[aria-expanded="true"] {
             background: color-mix(in srgb, var(--accent) 28%, transparent);
+        }
+
+        .video-modal-header-actions .chapters-toggle-btn .chapters-toggle-label-count,
+        .video-modal-header-actions .chapters-toggle-btn .chapters-toggle-chevron {
+            display: none;
         }
 
         @media (min-width: 720px) {
@@ -2668,16 +2686,47 @@
             }
 
             .video-modal-header {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) auto;
+                grid-template-areas:
+                    "title close"
+                    "actions actions";
                 align-items: center;
-                gap: 8px;
-                padding: 8px 10px 8px 12px;
+                gap: 8px 10px;
+                padding: 10px 10px 10px 12px;
+            }
+
+            .video-modal-header-text {
+                grid-area: title;
+                min-width: 0;
             }
 
             .video-modal-header-actions {
+                grid-area: actions;
                 max-width: none;
-                flex-shrink: 1;
-                min-width: 0;
+                width: 100%;
+                flex-shrink: 0;
+                flex-wrap: nowrap;
+                justify-content: stretch;
                 gap: 6px;
+                min-width: 0;
+            }
+
+            .video-modal-header-actions > .copy-button,
+            .video-modal-header-actions > .chapters-toggle-btn {
+                flex: 1 1 0;
+                min-width: 0;
+            }
+
+            .video-modal-header-actions .chapters-toggle-btn {
+                justify-content: center;
+                padding: 0.45rem 0.55rem;
+            }
+
+            .video-modal-close {
+                grid-area: close;
+                align-self: center;
+                margin: 0;
             }
 
             .copy-pending-hint,
@@ -2688,6 +2737,10 @@
             .video-modal-title {
                 font-size: 0.95rem;
                 padding-right: 0;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
             }
 
             .video-modal-workspace {
@@ -6981,7 +7034,14 @@
                 const count = chaptersForVideo(video).length;
                 btn.replaceChildren();
                 btn.insertAdjacentHTML('beforeend', CHAPTERS_ICON_SVG);
-                btn.appendChild(document.createTextNode(`Chapters (${count})`));
+                const label = document.createElement('span');
+                label.className = 'chapters-toggle-label';
+                label.appendChild(document.createTextNode('Chapters'));
+                const countEl = document.createElement('span');
+                countEl.className = 'chapters-toggle-label-count';
+                countEl.textContent = ` (${count})`;
+                label.appendChild(countEl);
+                btn.appendChild(label);
                 btn.insertAdjacentHTML('beforeend', CHAPTERS_CHEVRON_SVG);
                 btn.setAttribute('aria-label', `Show ${count} chapters for ${video.title}`);
             }
