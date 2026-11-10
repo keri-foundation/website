@@ -127,7 +127,29 @@
       "duration": "57:37",
       "subtitle": "talks/2026-11-02-samuel-m-smith-1.srt",
       "poster": "talks/2026-11-02-samuel-m-smith-1.jpg",
-      "presentation": "talks/2026-11-02-samuel-m-smith-1.pdf"
+      "presentation": "talks/2026-11-02-samuel-m-smith-1.pdf",
+      "chapters": [
+        {
+          "start": "00:00",
+          "description": "Opening: state and future of the KERI Suite"
+        },
+        {
+          "start": "15:24",
+          "description": "Design foundations and cryptographic agility"
+        },
+        {
+          "start": "28:24",
+          "description": "Mission: foster open KERI infrastructure"
+        },
+        {
+          "start": "36:31",
+          "description": "Failure detection first: wallet, witness, watcher"
+        },
+        {
+          "start": "42:03",
+          "description": "Bulk issuance, sparse Merkle trees, and herd privacy"
+        }
+      ]
     },
     {
       "order": 6,
@@ -136,7 +158,29 @@
       "path": "talks/2026-11-02-ryan-hansen-samuel-m-smith.mp4",
       "duration": "55:51",
       "subtitle": "talks/2026-11-02-ryan-hansen-samuel-m-smith.srt",
-      "poster": "talks/2026-11-02-ryan-hansen-samuel-m-smith.jpg"
+      "poster": "talks/2026-11-02-ryan-hansen-samuel-m-smith.jpg",
+      "chapters": [
+        {
+          "start": "00:43",
+          "description": "What open infrastructure means for KERI"
+        },
+        {
+          "start": "07:54",
+          "description": "The cold-start / bootstrap problem"
+        },
+        {
+          "start": "11:12",
+          "description": "Regulated utilities as a model"
+        },
+        {
+          "start": "16:18",
+          "description": "Market incentives to bootstrap witnesses and watchers"
+        },
+        {
+          "start": "42:00",
+          "description": "Complexity, AI discovery, and adoption paths"
+        }
+      ]
     },
     {
       "order": 3,
@@ -146,7 +190,29 @@
       "duration": "59:26",
       "subtitle": "talks/2026-11-02-kent-bull.srt",
       "poster": "talks/2026-11-02-kent-bull.jpg",
-      "presentation": "talks/2026-11-02-kent-bull.pdf"
+      "presentation": "talks/2026-11-02-kent-bull.pdf",
+      "chapters": [
+        {
+          "start": "00:00",
+          "description": "Introduction: did:webs and why it exists"
+        },
+        {
+          "start": "00:58",
+          "description": "TL;DR: where did:webs stands today"
+        },
+        {
+          "start": "05:46",
+          "description": "Why the “s” matters: key rotation beyond did:web"
+        },
+        {
+          "start": "30:43",
+          "description": "Multisig roles, authorizations, and real-world use"
+        },
+        {
+          "start": "49:08",
+          "description": "Spec status, resolver, and how to try it"
+        }
+      ]
     },
     {
       "order": 4,
@@ -156,7 +222,29 @@
       "duration": "57:36",
       "subtitle": "talks/2026-11-02-samuel-m-smith-2.srt",
       "poster": "talks/2026-11-02-samuel-m-smith-2.jpg",
-      "presentation": "talks/2026-11-02-samuel-m-smith-2.pdf"
+      "presentation": "talks/2026-11-02-samuel-m-smith-2.pdf",
+      "chapters": [
+        {
+          "start": "00:57",
+          "description": "The AI continuous-identity surveillance problem"
+        },
+        {
+          "start": "17:28",
+          "description": "Threshold structures as the defense"
+        },
+        {
+          "start": "26:27",
+          "description": "SEDI citizen AIDs and core identity credentials"
+        },
+        {
+          "start": "32:35",
+          "description": "Guardianship and delegated authority"
+        },
+        {
+          "start": "40:26",
+          "description": "Agentic control: same KERI/ACDC infrastructure"
+        }
+      ]
     },
     {
       "order": 5,
@@ -165,7 +253,29 @@
       "path": "talks/2026-11-02-ryan-hansen-evan-asakawa.mp4",
       "duration": "52:31",
       "subtitle": "talks/2026-11-02-ryan-hansen-evan-asakawa.srt",
-      "poster": "talks/2026-11-02-ryan-hansen-evan-asakawa.jpg"
+      "poster": "talks/2026-11-02-ryan-hansen-evan-asakawa.jpg",
+      "chapters": [
+        {
+          "start": "00:00",
+          "description": "Demo overview and what changed since last time"
+        },
+        {
+          "start": "01:37",
+          "description": "Infrastructure setup: witnesses, watchers, and deploy"
+        },
+        {
+          "start": "11:18",
+          "description": "Live Locksmith: new vault, AID, and plugin"
+        },
+        {
+          "start": "21:12",
+          "description": "Graduated disclosure and IPEX v2 roadmap"
+        },
+        {
+          "start": "34:25",
+          "description": "Q&A: when you need witnesses vs watchers"
+        }
+      ]
     },
     {
       "order": 2,
@@ -174,7 +284,29 @@
       "path": "talks/2026-11-02-samuel-m-smith-ryan-hansen.mp4",
       "duration": "58:33",
       "subtitle": "talks/2026-11-02-samuel-m-smith-ryan-hansen.srt",
-      "poster": "talks/2026-11-02-samuel-m-smith-ryan-hansen.jpg"
+      "poster": "talks/2026-11-02-samuel-m-smith-ryan-hansen.jpg",
+      "chapters": [
+        {
+          "start": "00:15",
+          "description": "Overview of the five Ws"
+        },
+        {
+          "start": "02:54",
+          "description": "Wallet: home of identity, keys, and events"
+        },
+        {
+          "start": "06:55",
+          "description": "Watchers and duplicity detection"
+        },
+        {
+          "start": "14:41",
+          "description": "Current status: Fortweb, FortiOS, and kf-boot"
+        },
+        {
+          "start": "51:45",
+          "description": "Witnesses: availability, eclipse attacks, and detection"
+        }
+      ]
     }
   ]
 }
