@@ -126,7 +126,8 @@
       "path": "talks/2026-11-02-samuel-m-smith-1.mp4",
       "duration": "57:37",
       "subtitle": "talks/2026-11-02-samuel-m-smith-1.srt",
-      "poster": "talks/2026-11-02-samuel-m-smith-1.jpg"
+      "poster": "talks/2026-11-02-samuel-m-smith-1.jpg",
+      "presentation": "talks/2026-11-02-samuel-m-smith-1.pdf"
     },
     {
       "order": 6,
@@ -154,7 +155,8 @@
       "path": "talks/2026-11-02-samuel-m-smith-2.mp4",
       "duration": "57:36",
       "subtitle": "talks/2026-11-02-samuel-m-smith-2.srt",
-      "poster": "talks/2026-11-02-samuel-m-smith-2.jpg"
+      "poster": "talks/2026-11-02-samuel-m-smith-2.jpg",
+      "presentation": "talks/2026-11-02-samuel-m-smith-2.pdf"
     },
     {
       "order": 5,
