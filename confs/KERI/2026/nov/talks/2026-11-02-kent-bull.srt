@@ -1353,8 +1353,8 @@ it, that might be enough. So you send that
 
 272
 00:22:40,520 --> 00:22:44,800
-all into the DID resolver. You do that for
-the issuer, do it for the holder and
+all into the DID resolver. You do that
+for the issuer, do it for the holder and
 
 273
 00:22:44,800 --> 00:22:48,240
@@ -1413,8 +1413,8 @@ my identifier. Here's what keys control my
 
 284
 00:23:39,340 --> 00:23:43,200
-identifier. There's transaction
-event logs. Remember I said KERI 1 and
+identifier. There's transaction event
+logs. Remember I said KERI 1 and
 
 285
 00:23:43,200 --> 00:23:47,980
@@ -2301,8 +2301,8 @@ key appears in the signing key list and
 
 462
 00:38:54,580 --> 00:38:58,480
-the rotation keys appear in the next
-rotated key list. So those key lists
+the rotation keys appear in the
+next rotated key list. So those key lists
 
 463
 00:38:58,480 --> 00:39:04,920
@@ -2616,8 +2616,8 @@ did:webs spec required in order for the DIF
 
 525
 00:44:21,800 --> 00:44:25,580
-recommended DID methods group to put it on
-their recommended list. As far as my
+recommended DID methods group to put
+it on their recommended list. As far as my
 
 526
 00:44:25,580 --> 00:44:29,720
@@ -2796,8 +2796,8 @@ mapping but we need the worked case. We
 
 561
 00:47:33,060 --> 00:47:37,020
-need to show here's if you're going to do
-a nested threshold multisig actually a
+need to show here's if you're going to
+do a nested threshold multisig actually a
 
 562
 00:47:37,020 --> 00:47:42,180

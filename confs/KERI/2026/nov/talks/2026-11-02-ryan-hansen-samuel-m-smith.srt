@@ -10,18 +10,18 @@ try to talk lower because I understand a
 
 3
 00:00:07,400 --> 00:00:11,120
-lower voice is a little more pleasing. I
-use my Samoan voice. Yeah.
+lower voice is a little more pleasing.
+I use my Samoan voice. Yeah.
 
 4
 00:00:14,880 --> 00:00:20,680
-So anyway, is that more pleasing? A lot of
-vowels, right? Rhythmic flow. Polynesian
+So anyway, is that more pleasing? A lot
+of vowels, right? Rhythmic flow. Polynesian
 
 5
 00:00:20,680 --> 00:00:28,920
-languages are kind of nice. Anyway, so I
-have some slides, but I actually wanted
+languages are kind of nice. Anyway, so
+I have some slides, but I actually wanted
 
 6
 00:00:28,920 --> 00:00:34,340
@@ -60,8 +60,8 @@ infrastructure is portable. It allows
 
 13
 00:01:08,460 --> 00:01:13,920
-portability by the users. So if you have
-vendor lock-in, it's not open
+portability by the users. So if you
+have vendor lock-in, it's not open
 
 14
 00:01:13,920 --> 00:01:18,520
@@ -75,8 +75,8 @@ source, but they allow vendor lock-in. So
 
 16
 00:01:24,080 --> 00:01:32,280
-they're not open infrastructure. So for
-example, if you have a mail server is
+they're not open infrastructure. So
+for example, if you have a mail server is
 
 17
 00:01:32,280 --> 00:01:35,700
@@ -89,7 +89,8 @@ open source implementations of it? Can you
 
 19
 00:01:44,140 --> 00:01:49,880
-easily port your mail from say one
+easily port your
+mail from say one
 
 20
 00:01:49,880 --> 00:01:59,000
@@ -98,7 +99,8 @@ right? Right? Yeah. Does your mail client
 
 21
 00:01:59,000 --> 00:02:04,740
-let you do that? Not usually. Huh?
+let you do that?
+Not usually. Huh?
 
 22
 00:02:07,400 --> 00:02:13,760
@@ -117,8 +119,8 @@ is wrong. So to be open infrastructure, it
 
 25
 00:02:27,620 --> 00:02:33,920
-should be designed so that the incentive
-structure fosters cooperation and
+should be designed so that the
+incentive structure fosters cooperation and
 
 26
 00:02:33,920 --> 00:02:36,640
@@ -137,13 +139,13 @@ quality, but there's an incentive for them
 
 29
 00:02:48,200 --> 00:02:55,840
-to cooperate so that everybody benefits if
-there's cooperation. In other words, the
+to cooperate so that everybody benefits
+if there's cooperation. In other words, the
 
 30
 00:02:55,840 --> 00:03:00,800
-network effect is that if we
-cooperate, we make more money than if we
+network effect is that if we cooperate,
+we make more money than if we
 
 31
 00:03:00,800 --> 00:03:06,520
@@ -172,8 +174,8 @@ stuff from another watcher and what
 
 36
 00:03:33,200 --> 00:03:38,020
-incentive does the other watcher have to
-share that with me? Ground source and
+incentive does the other watcher have
+to share that with me? Ground source and
 
 37
 00:03:38,020 --> 00:03:47,960
@@ -222,8 +224,8 @@ incentive to watch the GLEIF ecosystem. I
 
 46
 00:04:30,680 --> 00:04:35,060
-don't have an incentive to watch the Utah
-State ecosystem. But if the Utah State
+don't have an incentive to watch the
+Utah State ecosystem. But if the Utah State
 
 47
 00:04:35,060 --> 00:04:41,320
@@ -247,23 +249,23 @@ cost. Whereas if I had to watch both
 
 51
 00:04:57,660 --> 00:05:02,480
-ecosystems, I'd have to spend much more if
-I had to watch it myself. Right? So
+ecosystems, I'd have to spend much
+more if I had to watch it myself. Right? So
 
 52
 00:05:02,480 --> 00:05:10,700
-anytime you do an incentive structure, if
-the marginal cost is
+anytime you do an incentive
+structure, if the marginal cost is
 
 53
 00:05:10,700 --> 00:05:19,760
-lower for cooperation than not to
-cooperate, then you incentivize
+lower for cooperation than not
+to cooperate, then you incentivize
 
 54
 00:05:19,760 --> 00:05:25,620
-cooperation. So you build things so that
-marginal cost is the side of marginal
+cooperation. So you build things so
+that marginal cost is the side of marginal
 
 55
 00:05:25,620 --> 00:05:31,200
@@ -292,13 +294,13 @@ Because they don't have to share me
 
 60
 00:05:49,480 --> 00:05:53,360
-everything they watch. They just have to
-share with me duplicity that they found
+everything they watch. They just have
+to share with me duplicity that they found
 
 61
 00:05:53,360 --> 00:05:58,420
-because that's all I care about. So I can
-say, hey, do you have any proofs of
+because that's all I care about. So I
+can say, hey, do you have any proofs of
 
 62
 00:05:58,420 --> 00:06:01,720
@@ -332,8 +334,8 @@ in their network is effectively providing
 
 68
 00:06:26,260 --> 00:06:30,620
-coverage over 2 million witnesses. And
-everybody in my network is getting
+coverage over 2 million witnesses.
+And everybody in my network is getting
 
 69
 00:06:30,620 --> 00:06:35,300
@@ -362,8 +364,8 @@ and the marginal cost is the cost of
 
 74
 00:06:56,200 --> 00:07:02,060
-duplicity, not the cost of watching. Does
-that make sense? Okay, so that's an
+duplicity, not the cost of watching.
+Does that make sense? Okay, so that's an
 
 75
 00:07:02,060 --> 00:07:07,980
@@ -372,8 +374,8 @@ watcher network is designed because people
 
 76
 00:07:07,980 --> 00:07:10,720
-would say, well, in the blockchain world,
-well, you have to have incentive for
+would say, well, in the blockchain
+world, well, you have to have incentive for
 
 77
 00:07:10,720 --> 00:07:14,740
@@ -382,8 +384,8 @@ tokens, right? You have to be able to
 
 78
 00:07:14,740 --> 00:07:17,980
-mint tokens because otherwise, why would
-you pay for it? Well, in this
+mint tokens because otherwise,
+why would you pay for it? Well, in this
 
 79
 00:07:17,980 --> 00:07:24,320
@@ -402,8 +404,8 @@ with other ecosystems. So then it flips
 
 82
 00:07:35,460 --> 00:07:39,540
-the incentive structure. You don't have to
-build expensive token-based incentive
+the incentive structure. You don't have
+to build expensive token-based incentive
 
 83
 00:07:39,540 --> 00:07:48,220
@@ -431,8 +433,8 @@ but the everything in KERI is designed so
 
 88
 00:08:10,460 --> 00:08:20,740
-that there is open decentralized
-centralized, not
+that there is open
+decentralized centralized, not
 
 89
 00:08:20,740 --> 00:08:25,820
@@ -493,8 +495,8 @@ the tokenomics of blockchain are critical
 
 101
 00:09:24,540 --> 00:09:28,980
-to that shared governance working. KERI
-says, I can't afford that. That's too
+to that shared governance working.
+KERI says, I can't afford that. That's too
 
 102
 00:09:28,980 --> 00:09:34,020
@@ -523,8 +525,8 @@ reduced the cost floor as low as possible.
 
 107
 00:09:51,180 --> 00:09:55,600
-So the cost floor is as low as we can make
-it because we got rid of shared
+So the cost floor is as low as we can
+make it because we got rid of shared
 
 108
 00:09:55,600 --> 00:09:58,840
@@ -538,8 +540,8 @@ cold start bootstrap problem. How do we
 
 110
 00:10:03,940 --> 00:10:09,900
-get enough infrastructure to enable scale
-and the people providing the
+get enough infrastructure to enable
+scale and the people providing the
 
 111
 00:10:09,900 --> 00:10:14,500
@@ -568,8 +570,8 @@ to pay a dollar a month or maybe 10 cents
 
 116
 00:10:32,640 --> 00:10:41,540
-a month, right? So, how do I afford it?
-That is the hard
+a month, right? So, how
+do I afford it? That is the hard
 
 117
 00:10:41,540 --> 00:10:52,880
@@ -583,7 +585,8 @@ else that wants to be in that ecosystem is
 
 119
 00:11:01,660 --> 00:11:09,260
-incentivized. So a public identity
+incentivized. So
+a public identity
 
 120
 00:11:12,820 --> 00:11:21,940
@@ -627,8 +630,8 @@ get to make money, but they can't make
 
 128
 00:12:07,040 --> 00:12:14,940
-money without about getting approval for
-any rate increases, any changes in
+money without about getting approval
+for any rate increases, any changes in
 
 129
 00:12:14,940 --> 00:12:20,720
@@ -672,8 +675,8 @@ going to have an identity system that is
 
 137
 00:12:58,420 --> 00:13:04,700
-portable and interoperable everywhere, not
-because you've forced people to
+portable and interoperable everywhere,
+not because you've forced people to
 
 138
 00:13:04,700 --> 00:13:08,980
@@ -696,13 +699,13 @@ they're going to ensure that there's
 
 142
 00:13:30,140 --> 00:13:34,020
-enough money to build out the
-infrastructure. Sure.
+enough money to build
+out the infrastructure. Sure.
 
 143
 00:13:37,300 --> 00:13:48,580
-Okay. So that bootstraps it. So what are
-the bootstraps? One is IAL 3. That's
+Okay. So that bootstraps it. So what
+are the bootstraps? One is IAL 3. That's
 
 144
 00:13:48,580 --> 00:13:49,420
@@ -710,13 +713,13 @@ identity assurance.
 
 145
 00:13:52,600 --> 00:13:57,480
-Okay. Is the state of Utah or all states
-in the identity assurance business
+Okay. Is the state of Utah or all
+states in the identity assurance business
 
 146
 00:13:57,480 --> 00:14:02,840
-already? They already are. They already do
-it. They don't do it to IAL level 3
+already? They already are. They already
+do it. They don't do it to IAL level 3
 
 147
 00:14:02,840 --> 00:14:07,560
@@ -735,8 +738,8 @@ guess what? With KERI, I can amortize that
 
 150
 00:14:20,640 --> 00:14:26,040
-one identity assurance session across the
-lifetime of that one citizen. No other
+one identity assurance session across
+the lifetime of that one citizen. No other
 
 151
 00:14:26,040 --> 00:14:29,940
@@ -750,8 +753,8 @@ cost or you're insecure. And guess what
 
 153
 00:14:35,280 --> 00:14:40,240
-they've chosen to do? Not re-incur this
-cost. Which means the first time you
+they've chosen to do? Not re-incur
+this cost. Which means the first time you
 
 154
 00:14:40,240 --> 00:14:43,880
@@ -814,8 +817,8 @@ That's just bootstrapping the identities
 
 166
 00:15:53,500 --> 00:15:56,820
-that need the infrastructure. I'm not sure
-how they're going to pay for the
+that need the infrastructure. I'm not
+sure how they're going to pay for the
 
 167
 00:15:56,820 --> 00:16:01,880
@@ -829,8 +832,8 @@ will actually subsidize infrastructure
 
 169
 00:16:07,940 --> 00:16:13,920
-providers to provide witnesses and
-watchers by issuing coupons to
+providers to provide witnesses
+and watchers by issuing coupons to
 
 170
 00:16:13,920 --> 00:16:18,480
@@ -839,8 +842,8 @@ accounts on those services. So that's one
 
 171
 00:16:18,480 --> 00:16:27,740
-way to bootstrap it. Okay. Another way to
-bootstrap it would be for providers of
+way to bootstrap it. Okay. Another way
+to bootstrap it would be for providers of
 
 172
 00:16:27,740 --> 00:16:36,000
@@ -854,7 +857,8 @@ enabled by them giving away witness and
 
 174
 00:16:44,380 --> 00:16:53,780
-watcher services. So if I'm a bank and
+watcher services.
+So if I'm a bank and
 
 175
 00:16:53,780 --> 00:17:01,600
@@ -883,23 +887,23 @@ portability is expensive. Well that and
 
 180
 00:17:36,420 --> 00:17:39,880
-the banks have to do it. And the thing is
-they can't really use it to stop the
+the banks have to do it. And the thing
+is they can't really use it to stop the
 
 181
 00:17:39,880 --> 00:17:43,660
-customers from moving because they have to
-do it one way or the other and the
+customers from moving because they
+have to do it one way or the other and the
 
 182
 00:17:43,660 --> 00:17:46,240
-customer can just say, you know, I want to
-transfer them. I want to move to a new
+customer can just say, you know, I want
+to transfer them. I want to move to a new
 
 183
 00:17:46,240 --> 00:17:51,560
-bank. And the bank says, okay, we have to
-move your money, but we're only going to
+bank. And the bank says, okay, we have
+to move your money, but we're only going to
 
 184
 00:17:51,560 --> 00:17:55,180
@@ -928,8 +932,8 @@ and a regulation that allows one IAL level
 
 189
 00:18:13,800 --> 00:18:23,280
-three to move between banks, then all you
-have to do as a customer is issue an
+three to move between banks, then all
+you have to do as a customer is issue an
 
 190
 00:18:23,280 --> 00:18:30,120
@@ -958,8 +962,8 @@ right, if you think it through, you can
 
 195
 00:19:00,920 --> 00:19:08,540
-start to build incentives, right?
-And so if you have to have witnesses and
+start to build incentives, right? And
+so if you have to have witnesses and
 
 196
 00:19:08,540 --> 00:19:15,320
@@ -973,8 +977,8 @@ we have lots of citizens who make enough
 
 198
 00:19:18,840 --> 00:19:26,060
-money and so we want to impose on them a
-hidden tax, right? States do this all the
+money and so we want to impose on them
+a hidden tax, right? States do this all the
 
 199
 00:19:26,060 --> 00:19:30,220
@@ -983,8 +987,8 @@ witnesses and watchers, right? But we'll
 
 200
 00:19:30,220 --> 00:19:35,780
-pay for disadvantaged populations. But
-everybody in the state also has a bank
+pay for disadvantaged populations.
+But everybody in the state also has a bank
 
 201
 00:19:35,780 --> 00:19:40,880
@@ -993,8 +997,8 @@ minute. If we just spin up witnesses and
 
 202
 00:19:40,880 --> 00:19:47,220
-watchers for our customers, then we can
-get free KYC because the state paid for
+watchers for our customers, then we
+can get free KYC because the state paid for
 
 203
 00:19:47,220 --> 00:19:51,320
@@ -1033,8 +1037,8 @@ awesome web scale infrastructure. I mean,
 
 210
 00:20:23,820 --> 00:20:29,740
-how many witnesses can we run at $100 a
-year? – It's a year. I couldn't even
+how many witnesses can we run at
+$100 a year? – It's a year. I couldn't even
 
 211
 00:20:29,740 --> 00:20:34,780
@@ -1043,8 +1047,8 @@ Right. So, I mean, we have four droplets
 
 212
 00:20:34,780 --> 00:20:40,200
-that cost us about 100 bucks a month for
-four droplets on DigitalOcean.
+that cost us about 100 bucks a
+month for four droplets on DigitalOcean.
 
 213
 00:20:41,260 --> 00:20:46,280
@@ -1058,8 +1062,8 @@ space, quite a bit of stuff. So they could
 
 215
 00:20:53,660 --> 00:21:01,860
-easily run 10,000 witnesses and 10,000
-watchers and not burp. And that's a
+easily run 10,000 witnesses and
+10,000 watchers and not burp. And that's a
 
 216
 00:21:01,860 --> 00:21:07,140
@@ -1108,8 +1112,8 @@ portable. Everybody has to redo it. But
 
 225
 00:21:55,600 --> 00:22:00,400
-with KERI, it becomes portable. That they
-should be able to justify the cost of
+with KERI, it becomes portable. That
+they should be able to justify the cost of
 
 226
 00:22:00,400 --> 00:22:05,140
@@ -1143,8 +1147,8 @@ this open source, open standard software
 
 232
 00:22:33,640 --> 00:22:37,100
-and just run it on my own servers, right?
-That's what the KERI Foundation's
+and just run it on my own servers,
+right? That's what the KERI Foundation's
 
 233
 00:22:37,100 --> 00:22:44,580
@@ -1162,8 +1166,8 @@ from onboarding?
 
 236
 00:22:52,820 --> 00:22:55,420
-– Insurance. – Insurance. Absolutely.
-Absolutely.
+– Insurance. – Insurance.
+Absolutely. Absolutely.
 
 237
 00:23:00,900 --> 00:23:06,060
@@ -1176,8 +1180,8 @@ Insurance claims.
 
 239
 00:23:14,100 --> 00:23:22,900
-And why is that? Because I can deep fake
-an insurance claim, especially in the
+And why is that? Because I can deep
+fake an insurance claim, especially in the
 
 240
 00:23:22,900 --> 00:23:28,220
@@ -1186,8 +1190,8 @@ what's on the form because the forms are
 
 241
 00:23:28,220 --> 00:23:33,440
-public. I know your address. I know the
-address of all of your providers that
+public. I know your address. I know
+the address of all of your providers that
 
 242
 00:23:33,440 --> 00:23:39,580
@@ -1240,8 +1244,8 @@ messaging. Yeah, but money. Messaging
 
 252
 00:24:26,660 --> 00:24:32,820
-tends to be free. We need something where
-somebody is making money and they're
+tends to be free. We need something
+where somebody is making money and they're
 
 253
 00:24:32,820 --> 00:24:38,900
@@ -1250,8 +1254,8 @@ the only thing the state is providing is
 
 254
 00:24:38,900 --> 00:24:45,300
-this. So we have to leverage this free
-thing the state's doing to incentivize
+this. So we have to leverage this
+free thing the state's doing to incentivize
 
 255
 00:24:45,300 --> 00:24:50,600
@@ -1275,12 +1279,13 @@ their employment history. They have to
 
 259
 00:25:10,580 --> 00:25:17,680
-verify their claims history for prior…
+verify their claims
+history for prior…
 
 260
 00:25:17,680 --> 00:25:27,380
-what is it? – Convictions. – Yeah, prior
-convictions. Yes. That too. Huh?
+what is it? – Convictions. – Yeah,
+prior convictions. Yes. That too. Huh?
 
 261
 00:25:27,600 --> 00:25:30,500
@@ -1289,13 +1294,13 @@ background checks. They don't want to hire
 
 262
 00:25:30,500 --> 00:25:36,200
-somebody who's a criminal, right? Okay. –
-Government service. – I was going to say
+somebody who's a criminal, right? Okay.
+– Government service. – I was going to say
 
 263
 00:25:36,200 --> 00:25:47,340
-government service. – There you go. – Like
-EBT, SNAP, web service. – Yes.
+government service. – There you go.
+– Like EBT, SNAP, web service. – Yes.
 
 264
 00:25:47,800 --> 00:25:54,460
@@ -1304,18 +1309,18 @@ state, since the state provides those, the
 
 265
 00:25:54,460 --> 00:25:59,040
-state has an incentive to use its own IAL
-level three. We're talking about people
+state has an incentive to use its own
+IAL level three. We're talking about people
 
 266
 00:25:59,040 --> 00:26:02,500
-that aren't the state because the state's
-going to do that anyway, right?
+that aren't the state because the
+state's going to do that anyway, right?
 
 267
 00:26:05,820 --> 00:26:11,380
-Who else? A lot of times now what I'm
-seeing is that they are sharing that
+Who else? A lot of times now what
+I'm seeing is that they are sharing that
 
 268
 00:26:11,380 --> 00:26:16,500
@@ -1324,13 +1329,13 @@ California. Oh, yeah. Or in my city
 
 269
 00:26:16,500 --> 00:26:23,440
-anyway. If you've got, I'm sorry. So like
-in my city, if you've got PG&E care,
+anyway. If you've got, I'm sorry. So
+like in my city, if you've got PG&E care,
 
 270
 00:26:24,020 --> 00:26:28,960
-they'll share that with EBT or EBT will
-share that with such. So it's not
+they'll share that with EBT or EBT
+will share that with such. So it's not
 
 271
 00:26:28,960 --> 00:26:34,300
@@ -1349,13 +1354,13 @@ for KERI because it's probably the worst
 
 274
 00:26:43,520 --> 00:26:48,620
-for that. It's the single biggest sector
-in the economy and it has the worst fraud.
+for that. It's the single biggest sector in
+the economy and it has the worst fraud.
 
 275
 00:26:48,620 --> 00:26:55,280
-of any of them because people have to have
-healthcare, right? And they have to
+of any of them because people have to
+have healthcare, right? And they have to
 
 276
 00:26:55,280 --> 00:26:58,860
@@ -1379,8 +1384,8 @@ care, which means they either get paid or
 
 280
 00:27:10,060 --> 00:27:15,200
-they don't. And sometimes they just, you
-know, the payers have to deal with the
+they don't. And sometimes they just,
+you know, the payers have to deal with the
 
 281
 00:27:15,200 --> 00:27:20,300
@@ -1394,8 +1399,8 @@ who buys their services? Yes. Like buying
 
 283
 00:27:26,860 --> 00:27:36,660
-cigarettes, buying alcohol, buying… Yeah,
-every regulated denied
+cigarettes, buying alcohol, buying…
+Yeah, every regulated denied
 
 284
 00:27:36,660 --> 00:27:45,760
@@ -1419,8 +1424,8 @@ never been free before. And I wish Phil
 
 288
 00:28:07,360 --> 00:28:13,080
-was here because he wrote two, he wrote a
-white paper where he said, he said, and I
+was here because he wrote two, he wrote
+a white paper where he said, he said, and I
 
 289
 00:28:13,080 --> 00:28:16,100
@@ -1469,8 +1474,8 @@ identity system can't amortize it. So it's
 
 298
 00:29:04,060 --> 00:29:10,480
-even worse for them. Right? If I'm doing
-this as a CA, every time I churn my certificate,
+even worse for them. Right? If I'm doing this
+as a CA, every time I churn my certificate,
 
 299
 00:29:10,800 --> 00:29:16,960
@@ -1497,8 +1502,8 @@ amortized across the full lifetime of the
 
 304
 00:29:36,480 --> 00:29:43,580
-perpetual identity. So it's the minimum
-cost
+perpetual identity. So
+it's the minimum cost
 
 305
 00:29:43,580 --> 00:29:53,520
@@ -1532,8 +1537,8 @@ it's free, they could, and it would just
 
 311
 00:30:22,480 --> 00:30:27,440
-augment in a very synergistic way. like I
-know in the insurance industry, there's,
+augment in a very synergistic way. like
+I know in the insurance industry, there's,
 
 312
 00:30:27,540 --> 00:30:31,840
@@ -1542,8 +1547,8 @@ companies have approved, you know, people
 
 313
 00:30:31,840 --> 00:30:37,320
-who fix things for, you know,
-whatever was damaged. And so that could be
+who fix things for, you know, whatever
+was damaged. And so that could be
 
 314
 00:30:37,320 --> 00:30:41,620
@@ -1552,13 +1557,13 @@ or even like thing like the auto mechanic
 
 315
 00:30:41,620 --> 00:30:46,480
-shops themselves. Oh, yeah. Or the shops
-that do like home repair and things
+shops themselves. Oh, yeah. Or the
+shops that do like home repair and things
 
 316
 00:30:46,480 --> 00:30:49,680
-like that. They could even use that. Yeah.
-So there's a bigger ecosystem. So the
+like that. They could even use that.
+Yeah. So there's a bigger ecosystem. So the
 
 317
 00:30:49,680 --> 00:30:53,240
@@ -1577,8 +1582,8 @@ the people that can operate at huge scale
 
 320
 00:31:06,920 --> 00:31:13,660
-are ever going to make money doing that.
-But if you can benefit from IAL3 plus
+are ever going to make money doing
+that. But if you can benefit from IAL3 plus
 
 321
 00:31:13,660 --> 00:31:18,700
@@ -1612,8 +1617,8 @@ can't reach citizen. – Yeah. You can't get
 
 327
 00:31:47,880 --> 00:31:53,040
-a driver's license without… If you want a
-SEDI, you're going to get an IAL level
+a driver's license without… If you want
+a SEDI, you're going to get an IAL level
 
 328
 00:31:53,040 --> 00:31:59,160
@@ -1632,13 +1637,13 @@ that shows up and says we're good enough
 
 331
 00:32:07,380 --> 00:32:12,020
-at doing identity assurance and we want to
-do it for the state and the state will
+at doing identity assurance and we want
+to do it for the state and the state will
 
 332
 00:32:12,020 --> 00:32:17,500
-issue them a contract and give them a
-delegated identifier to be an agent for
+issue them a contract and give them
+a delegated identifier to be an agent for
 
 333
 00:32:17,500 --> 00:32:18,720
@@ -1646,8 +1651,8 @@ the state, an issuing agent.
 
 334
 00:32:22,200 --> 00:32:27,900
-So, So, so the point is, is that that's
-the place where you can make money in the
+So, So, so the point is, is that that's the
+place where you can make money in the
 
 335
 00:32:27,900 --> 00:32:33,860
@@ -1676,8 +1681,8 @@ wrong, is because of legislation that they
 
 340
 00:32:53,680 --> 00:32:58,700
-put in place that had no mechanism for
-doing the social media stuff for the 13
+put in place that had no mechanism
+for doing the social media stuff for the 13
 
 341
 00:32:58,700 --> 00:33:02,900
@@ -1706,8 +1711,8 @@ legislation? – Yes. – Yes. They want to
 
 346
 00:33:22,060 --> 00:33:28,380
-have – They have reciprocity. They want to
-have reciprocity between states. So that
+have – They have reciprocity. They want
+to have reciprocity between states. So that
 
 347
 00:33:28,380 --> 00:33:34,120
@@ -1736,8 +1741,8 @@ you get so many second class documents and
 
 352
 00:34:06,000 --> 00:34:09,980
-then you have to have a biometric and then
-you have to have a secure way within
+then you have to have a biometric and
+then you have to have a secure way within
 
 353
 00:34:09,980 --> 00:34:16,000
@@ -1796,8 +1801,8 @@ the hospital is the one that certifies the
 
 364
 00:35:14,200 --> 00:35:18,920
-form. – Yeah, but mom doesn't fill out. –
-So, so – Yeah, well, okay. The hospital
+form. – Yeah, but mom doesn't fill out.
+– So, so – Yeah, well, okay. The hospital
 
 365
 00:35:18,920 --> 00:35:23,080
@@ -1806,27 +1811,28 @@ birth certificates are done differently in
 
 366
 00:35:23,080 --> 00:35:28,100
-every state. So, that's what I'm getting
-to. So, there will have to be a
+every state. So, that's what I'm
+getting to. So, there will have to be a
 
 367
 00:35:28,100 --> 00:35:31,220
-normalization so that states can trust
-birth certificates from other states.
+normalization so that states can
+trust birth certificates from other states.
 
 368
 00:35:31,400 --> 00:35:36,840
-That's one of the worst provenanced
+That's one of the
+worst provenanced
 
 369
 00:35:36,840 --> 00:35:46,480
-primary identity documents are birth
-certificates. And George McEwan,
+primary identity documents are
+birth certificates. And George McEwan,
 
 370
 00:35:46,660 --> 00:35:51,460
-he likes to give the example of he was in
-a state And the way they did birth
+he likes to give the example of he
+was in a state And the way they did birth
 
 371
 00:35:51,460 --> 00:35:57,300
@@ -1845,8 +1851,8 @@ birth certificate altered. It's not even a
 
 374
 00:36:08,260 --> 00:36:13,640
-court process or anything. You just ask
-for it. Yeah. So, that is, so that will
+court process or anything. You just
+ask for it. Yeah. So, that is, so that will
 
 375
 00:36:13,640 --> 00:36:20,120
@@ -1860,8 +1866,8 @@ that's where it's going to end up. Yeah.
 
 377
 00:36:26,700 --> 00:36:35,960
-Yes. There you go. The rumor is that there
-may be as many as 15 states in the
+Yes. There you go. The rumor is that
+there may be as many as 15 states in the
 
 378
 00:36:35,960 --> 00:36:40,780
@@ -1870,8 +1876,8 @@ digit. That is true. It's about a third of
 
 379
 00:36:40,780 --> 00:36:46,660
-the country. That's too much to ignore by
-pretty much any industry in the identity
+the country. That's too much to ignore
+by pretty much any industry in the identity
 
 380
 00:36:46,660 --> 00:36:56,260
@@ -1894,18 +1900,18 @@ that they will say KERI and ACDC isn't
 
 384
 00:37:11,320 --> 00:37:16,860
-mature enough. And that's a real fear. And
-what I'm trying to do is I'm trying to
+mature enough. And that's a real fear.
+And what I'm trying to do is I'm trying to
 
 385
 00:37:16,860 --> 00:37:23,340
-tell the KERI community, there's a reason
-to contribute to open infrastructure
+tell the KERI community, there's a
+reason to contribute to open infrastructure
 
 386
 00:37:23,340 --> 00:37:31,620
-because open infrastructure unlocks all of
-the business opportunities that aren't
+because open infrastructure unlocks all
+of the business opportunities that aren't
 
 387
 00:37:31,620 --> 00:37:38,140
@@ -1919,8 +1925,8 @@ But SEDI, you have that forcing function.
 
 389
 00:37:45,780 --> 00:37:51,140
-Go ahead. Oh, you have a question? Yeah, I
-was going to say something. Okay. I think
+Go ahead. Oh, you have a question? Yeah,
+I was going to say something. Okay. I think
 
 390
 00:37:51,140 --> 00:37:55,940
@@ -1959,8 +1965,8 @@ trying to be able to put the work in at
 
 397
 00:38:39,140 --> 00:38:44,340
-the beginning in order to be able to make
-them secure enough to be long-lived
+the beginning in order to be able to
+make them secure enough to be long-lived
 
 398
 00:38:44,340 --> 00:38:51,440
@@ -2014,8 +2020,8 @@ this is not a flawed process that is, but
 
 408
 00:39:44,640 --> 00:39:49,260
-they don't see the advantages in the and
-so it's a challenge. It's a
+they don't see the advantages
+in the and so it's a challenge. It's a
 
 409
 00:39:49,260 --> 00:39:53,100
@@ -2038,8 +2044,8 @@ online.
 
 413
 00:40:06,840 --> 00:40:10,080
-– CEOs are inappropriate people to be in
-charge of the company's basic
+– CEOs are inappropriate people to
+be in charge of the company's basic
 
 414
 00:40:10,080 --> 00:40:14,720
@@ -2083,8 +2089,8 @@ meeting and they want to vote as CEO and
 
 422
 00:40:48,900 --> 00:40:57,620
-they want to prove their identity. – They
-sign regulatory reports. – Yeah, they
+they want to prove their identity. –
+They sign regulatory reports. – Yeah, they
 
 423
 00:40:57,620 --> 00:41:02,780
@@ -2093,8 +2099,8 @@ time they sign their 10-K or whatever it is
 
 424
 00:41:02,780 --> 00:41:08,040
-for their annual report in the US. – So
-they don't understand that they the
+for their annual report in the US. –
+So they don't understand that they the
 
 425
 00:41:08,040 --> 00:41:12,860
@@ -2143,8 +2149,8 @@ it immediately becomes a fan and all of a
 
 434
 00:42:01,800 --> 00:42:05,740
-sudden has answers for a lot of hard
-questions it didn't have. And if it's
+sudden has answers for a lot of
+hard questions it didn't have. And if it's
 
 435
 00:42:05,740 --> 00:42:09,440
@@ -2193,8 +2199,8 @@ could be five states, might be 20, who
 
 444
 00:42:47,280 --> 00:42:50,820
-knows what the real number is, but a good
-number of states joining them moving
+knows what the real number is, but a
+good number of states joining them moving
 
 445
 00:42:50,820 --> 00:42:55,520
@@ -2232,13 +2238,13 @@ we are all staring at the cold start
 
 452
 00:43:19,140 --> 00:43:24,080
-problem of the two-sided market. So there
-is a kind of a once in a lifetime
+problem of the two-sided market. So
+there is a kind of a once in a lifetime
 
 453
 00:43:24,080 --> 00:43:28,640
-opportunity where you have a bunch of
-states that are banding together
+opportunity where you have a bunch
+of states that are banding together
 
 454
 00:43:28,640 --> 00:43:33,560
@@ -2247,8 +2253,8 @@ your and my home state of Utah, who are
 
 455
 00:43:33,560 --> 00:43:39,720
-priming the pump and putting their thumb
-on the scales on the side of demand,
+priming the pump and putting their
+thumb on the scales on the side of demand,
 
 456
 00:43:40,060 --> 00:43:45,720
@@ -2262,8 +2268,8 @@ So it's going to happen. It's only a
 
 458
 00:43:50,280 --> 00:43:54,820
-matter of which companies can come in and
-provide that supply and satisfy the
+matter of which companies can come
+in and provide that supply and satisfy the
 
 459
 00:43:54,820 --> 00:44:00,480
@@ -2282,8 +2288,8 @@ identity will be what the market provides.
 
 462
 00:44:13,300 --> 00:44:20,820
-And everybody will say, well, we have no
-choice. They will just say, there isn't
+And everybody will say, well, we have
+no choice. They will just say, there isn't
 
 463
 00:44:20,820 --> 00:44:26,300
@@ -2347,13 +2353,13 @@ hate your mom and hate apple pie and hate
 
 475
 00:45:18,820 --> 00:45:24,260
-baseball. And they've really gotten it
-politically toxic to oppose it from a
+baseball. And they've really gotten
+it politically toxic to oppose it from a
 
 476
 00:45:24,260 --> 00:45:29,320
-liberty standpoint. And so when you say
-that it might not happen and that the
+liberty standpoint. And so when you
+say that it might not happen and that the
 
 477
 00:45:29,320 --> 00:45:34,180
@@ -2407,8 +2413,8 @@ That's what's motivating them. – So, I
 
 487
 00:46:17,560 --> 00:46:21,440
-have a question about the consortium. You
-know, this started with legislation and
+have a question about the consortium.
+You know, this started with legislation and
 
 488
 00:46:21,440 --> 00:46:24,860
@@ -2452,8 +2458,8 @@ didn't know that. But the next bill, you
 
 496
 00:47:01,200 --> 00:47:06,560
-know, that they wrote in 2024 and then in
-2025 and then 20 and then 2026, all of
+know, that they wrote in 2024 and then
+in 2025 and then 20 and then 2026, all of
 
 497
 00:47:06,560 --> 00:47:11,680
@@ -2467,8 +2473,8 @@ developed over, you know, four years,
 
 499
 00:47:17,280 --> 00:47:23,880
-right? – Yep. – So, the consortium, is it
-more going to focus on getting similar
+right? – Yep. – So, the consortium, is
+it more going to focus on getting similar
 
 500
 00:47:23,880 --> 00:47:30,160
@@ -2477,8 +2483,8 @@ they're using Utah as a model legislation.
 
 501
 00:47:30,620 --> 00:47:35,920
-– So that, you know, they can go to their
-states and however their legislative
+– So that, you know, they can go to
+their states and however their legislative
 
 502
 00:47:35,920 --> 00:47:41,660
@@ -2497,8 +2503,8 @@ they have a blueprint to follow. – They
 
 505
 00:47:47,840 --> 00:47:52,460
-have a blueprint. So they can jump to the
-head of the line. – I also think that
+have a blueprint. So they can jump to
+the head of the line. – I also think that
 
 506
 00:47:52,460 --> 00:47:59,980
@@ -2517,8 +2523,8 @@ you have to think that most citizens and
 
 509
 00:48:12,460 --> 00:48:18,640
-businesses and the government itself will
-try to be able to digitalize as many
+businesses and the government itself
+will try to be able to digitalize as many
 
 510
 00:48:18,640 --> 00:48:24,400
@@ -2572,8 +2578,8 @@ in. And so then as a byproduct, a natural
 
 520
 00:49:08,180 --> 00:49:15,280
-byproduct as more opt-in, then the cost of
-services will go down. The ability to
+byproduct as more opt-in, then the cost
+of services will go down. The ability to
 
 521
 00:49:15,280 --> 00:49:25,300
@@ -2602,13 +2608,13 @@ friendly, well-run state. So they get that
 
 526
 00:49:46,000 --> 00:49:52,600
-running the state efficiently matters. And
-so it's not lost on them that having a
+running the state efficiently matters.
+And so it's not lost on them that having a
 
 527
 00:49:52,600 --> 00:49:56,540
-digital identity system that allows them
-to run it even more efficiently, but
+digital identity system that allows
+them to run it even more efficiently, but
 
 528
 00:49:56,540 --> 00:50:03,360
@@ -2637,8 +2643,8 @@ point that I think will be like tap to
 
 533
 00:50:23,900 --> 00:50:29,180
-pay. I remember I was a slow adopter of
-tap to pay. It took me a couple of years
+pay. I remember I was a slow adopter
+of tap to pay. It took me a couple of years
 
 534
 00:50:29,180 --> 00:50:34,280
@@ -2702,8 +2708,8 @@ to happen and I think it'll be a five to
 
 546
 00:51:25,860 --> 00:51:30,920
-10 years because we have to work out the
-user experience and it'll take a while
+10 years because we have to work out
+the user experience and it'll take a while
 
 547
 00:51:30,920 --> 00:51:39,880
@@ -2717,8 +2723,8 @@ at the edge and the problem I was thinking
 
 549
 00:51:47,480 --> 00:51:56,120
-to solve was this code stack. Do we have a
-plan B? Does this sound like a plan B?
+to solve was this code stack. Do we have
+a plan B? Does this sound like a plan B?
 
 550
 00:51:56,620 --> 00:52:03,800
@@ -2732,8 +2738,8 @@ for it to be successful in the healthcare
 
 552
 00:52:09,660 --> 00:52:17,260
-sector. Organizational identity will pay
-for KERI-like infrastructure in those
+sector. Organizational identity will
+pay for KERI-like infrastructure in those
 
 553
 00:52:17,260 --> 00:52:22,140
@@ -2747,8 +2753,8 @@ that. It takes time. Right? So that's
 
 555
 00:52:27,660 --> 00:52:33,160
-always been the problem. Let's say if we
-start bundling witnesses on watchers in
+always been the problem. Let's say if
+we start bundling witnesses on watchers in
 
 556
 00:52:33,160 --> 00:52:38,680
@@ -2772,8 +2778,8 @@ going to do is we're going to bootstrap by
 
 560
 00:52:56,220 --> 00:53:00,660
-scaling, by hyper scaling, right? So how
-you hyper scale is you give everything
+scaling, by hyper scaling, right? So
+how you hyper scale is you give everything
 
 561
 00:53:00,660 --> 00:53:05,320
@@ -2787,8 +2793,8 @@ says we're going to spend 10 million or in
 
 563
 00:53:10,200 --> 00:53:14,680
-some cases 100 million. If you're an AI
-company, it's 100 billion that you're
+some cases 100 million. If you're an
+AI company, it's 100 billion that you're
 
 564
 00:53:14,680 --> 00:53:20,060
@@ -2797,8 +2803,8 @@ adoption. And then once you reach the
 
 565
 00:53:20,060 --> 00:53:23,940
-tipping point, then you can start selling
-tokens, right? ChatGPT didn't cost
+tipping point, then you can start
+selling tokens, right? ChatGPT didn't cost
 
 566
 00:53:23,940 --> 00:53:27,380
@@ -2817,8 +2823,8 @@ first two years. Right? So, if you have
 
 569
 00:53:37,860 --> 00:53:42,920
-that kind of resource that you say, you
-know what? Digital identity that looks
+that kind of resource that you say,
+you know what? Digital identity that looks
 
 570
 00:53:42,920 --> 00:53:47,080
@@ -2842,8 +2848,8 @@ give it away. You would just say, you know
 
 574
 00:53:59,500 --> 00:54:02,300
-what? We're going to go do what the state
-of Utah is doing. We're going to
+what? We're going to go do what the
+state of Utah is doing. We're going to
 
 575
 00:54:02,300 --> 00:54:05,880
@@ -2862,13 +2868,13 @@ go, what am I doing with this? And they
 
 578
 00:54:14,220 --> 00:54:17,720
-go, well, here's a place you can use it.
-And it'll be like the tap to pay. Well,
+go, well, here's a place you can use
+it. And it'll be like the tap to pay. Well,
 
 579
 00:54:18,040 --> 00:54:22,020
-yeah, maybe I don't want to go there. But
-at some point, people will find the
+yeah, maybe I don't want to go there.
+But at some point, people will find the
 
 580
 00:54:22,020 --> 00:54:26,360
@@ -2922,8 +2928,8 @@ yeah, might be doable. Well, every phone
 
 590
 00:55:17,200 --> 00:55:22,520
-does have an IPv6 static IP address. So you
-technically could run… …snap networks
+does have an IPv6 static IP address. So
+you technically could run… …snap networks
 
 591
 00:55:22,520 --> 00:55:32,120
@@ -2937,9 +2943,11 @@ from our CEO's conversation. – Yeah. – If
 
 593
 00:55:36,940 --> 00:55:43,460
-they had a nice desktop app. – So I'm just
-offering. Anyway, so before everybody
+they had a nice desktop app. – So I'm
+just offering. Anyway, so before everybody
 
 594
 00:55:43,460 --> 00:55:50,920
-leaves, should we close the session? Thank you.
+leaves, should we close
+the session? Thank you.
+
