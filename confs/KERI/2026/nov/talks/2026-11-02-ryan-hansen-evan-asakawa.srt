@@ -426,8 +426,8 @@ tips for our… Microphone.
 
 87
 00:08:30,280 --> 00:08:37,580
-So, thank you. So is the WIT opnet and the
-WOT opnet, is that just one per process?
+So, thank you. So is the WitOPnet and the
+WotOpNet, is that just one per process?
 
 88
 00:08:37,800 --> 00:08:40,920
@@ -518,7 +518,7 @@ boot. And right now I have this running.
 106
 00:10:33,900 --> 00:10:38,560
 I'm only doing this locally right now, but
-I have in this one here is KF boot along
+I have in this one here is KFboot along
 
 107
 00:10:38,560 --> 00:10:42,780
@@ -528,7 +528,7 @@ going to mirror more how we're actually
 108
 00:10:42,780 --> 00:10:49,400
 running it now in our environment in
-DigitalOcean. So the KF boot is running on
+DigitalOcean. So the KFboot is running on
 
 109
 00:10:49,400 --> 00:10:55,760
@@ -597,7 +597,7 @@ when I click this, if I had all four
 122
 00:12:09,020 --> 00:12:14,360
 terminals, it'd be cooler, but But you'll
-see basically what's going on with KFBoot
+see basically what's going on with KFboot
 
 123
 00:12:14,360 --> 00:12:21,700
@@ -1033,7 +1033,7 @@ example, the KERI Foundation plugin is
 
 210
 00:19:59,540 --> 00:20:04,480
-looking at KF boot, which is kind of our
+looking at KFboot, which is kind of our
 infrastructure orchestration. So if you
 
 211
@@ -1557,8 +1557,8 @@ anything with regard to provisioning or a
 
 315
 00:30:43,800 --> 00:30:50,900
-provisioner in KF boot or is right now is
-KF boot more just an interface for
+provisioner in KFboot or is right now is
+KFboot more just an interface for
 
 316
 00:30:50,900 --> 00:30:55,180
@@ -2509,7 +2509,7 @@ So the
 
 508
 00:49:09,520 --> 00:49:17,380
-KF boot thing. Okay. I noticed you had to
+KFboot thing. Okay. I noticed you had to
 add a schema here. So I assume that means
 
 509
@@ -2564,12 +2564,12 @@ diploma? Like I'm… Yes, but it doesn't
 
 519
 00:50:04,200 --> 00:50:09,040
-have anything to do with KF boot. You just
+have anything to do with KFboot. You just
 said something about credentials for the
 
 520
 00:50:09,040 --> 00:50:12,700
-schema for KF boot. That's what That's
+schema for KFboot. That's what That's
 what confused me. – I guess I was bundling
 
 521
@@ -2669,13 +2669,13 @@ in the university ecosystem to just pre
 
 540
 00:51:44,000 --> 00:51:48,760
-schema. – So KF boot wouldn't be the right
+schema. – So KFboot wouldn't be the right
 place for it anyway because it's even
 
 541
 00:51:48,760 --> 00:51:53,280
 though they're kind of related in a way in
-the sense it's KERI ecosystem, KF boot
+the sense it's KERI ecosystem, KFboot
 
 542
 00:51:53,280 --> 00:51:57,520

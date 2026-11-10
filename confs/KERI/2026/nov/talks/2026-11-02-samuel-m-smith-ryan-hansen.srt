@@ -823,13 +823,13 @@ to answer those. I've got a question about
 
 167
 00:16:43,720 --> 00:16:51,460
-KFBoot. Is this on? Okay. It's going to
+KFboot. Is this on? Okay. It's going to
 the video. If the light's on, it's on.
 
 168
 00:16:51,460 --> 00:16:56,160
 It's just the reverb of like boom. Yeah.
-All right. So for KFBoot, you said that it
+All right. So for KFboot, you said that it
 
 169
 00:16:56,160 --> 00:17:01,620
@@ -838,7 +838,7 @@ set your identifier up. I looked at
 
 170
 00:17:01,620 --> 00:17:05,620
-KFBoot. My understanding is that there
+KFboot. My understanding is that there
 were five standard and you could dive into
 
 171
@@ -909,7 +909,7 @@ Yeah. So anybody that creates witnesses,
 184
 00:18:03,560 --> 00:18:09,760
 anybody that creates a watch or service
-could register with with KFBoot, right? Do
+could register with with KFboot, right? Do
 
 185
 00:18:09,760 --> 00:18:14,420
@@ -933,7 +933,7 @@ But if you have that connector, then then
 
 189
 00:18:30,380 --> 00:18:35,300
-any services that KFBoot knows about, then
+any services that KFboot knows about, then
 that wallet could say, Oh, I want
 
 190
@@ -954,7 +954,7 @@ providers of infrastructure. I wonder is
 193
 00:18:51,660 --> 00:18:58,180
 this generalizable or generalized
-infrastructure discovery tool as KFBoot
+infrastructure discovery tool as KFboot
 
 194
 00:18:58,180 --> 00:19:02,740
@@ -1073,7 +1073,7 @@ I think what she's asking is it that's
 217
 00:21:10,220 --> 00:21:15,960
 really the wallet the open source wallets
-would be able to do that KF boot is is
+would be able to do that KFboot is is
 
 218
 00:21:15,960 --> 00:21:20,440
@@ -2528,7 +2528,7 @@ But that's why we've been searching for
 509
 00:46:21,860 --> 00:46:26,700
 these forcing functions like healthcare or
-state of Utah. Actually, prominent telecom
+state of Utah. Actually, Provenant telecom
 
 510
 00:46:26,700 --> 00:46:32,340
@@ -2563,7 +2563,7 @@ all organizational, right? – Yeah. –
 516
 00:46:59,840 --> 00:47:04,680
 Provenant, those kinds of things. – Yeah.
-– So state of Utah, health, health KERI,
+– So state of Utah, HealthKERI,
 
 517
 00:47:05,020 --> 00:47:10,440
@@ -2696,7 +2696,7 @@ been Twitter. Okay. Twitter's running the
 543
 00:49:28,220 --> 00:49:34,120
 infrastructure or Facebook or whatever in
-the hopes of monetizing. Blue Sky came
+the hopes of monetizing. Bluesky came
 
 544
 00:49:34,120 --> 00:49:38,780
@@ -2726,7 +2726,7 @@ what we've been seeing in the
 549
 00:50:00,860 --> 00:50:05,840
 decentralized social media space such as
-Macedon, basically small communities and
+Mastodon, basically small communities and
 
 550
 00:50:05,840 --> 00:50:11,440
