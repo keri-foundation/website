@@ -250,7 +250,7 @@ Optional jump list on a talk card and in the full-screen player. Add a `chapters
 }
 ```
 
-Clicking a chapter seeks that video (card or open modal), plays from there, and updates the URL hash (`&t=`). Chapters with unparseable times or an empty description are skipped. See `vids/2026/index.json` (“It's KERI or Surveillance”) for a full example.
+A **Chapters** button on the talk card (and in the full-screen player) opens a slide-up sheet on mobile / centered panel on larger screens. Choosing a chapter seeks that video, plays from there, updates the URL hash (`&t=`), and closes the sheet. Chapters with unparseable times or an empty description are skipped. See `vids/2026/index.json` (“It's KERI or Surveillance”) for a full example.
 
 <a id="yearly-videos"></a>
 
