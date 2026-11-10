@@ -2177,12 +2177,12 @@ use like a like the W3C is their standard
 
 439
 00:41:17,780 --> 00:41:24,280
-is a bit status string, which is perfectly
+is a bitstring status list, which is perfectly
 correlatable. Yeah. Is there a problem
 
 440
 00:41:24,280 --> 00:41:29,040
-with cryptographic cumulators or just too
+with cryptographic accumulators or just too
 difficult? Too difficult. It's just
 
 441
@@ -2218,7 +2218,7 @@ before. In fact, I'll do the next slide.
 447
 00:42:03,040 --> 00:42:10,440
 So with bulk issuance, we can get herd
-privacy with sparse milkletrees, with bulk
+privacy with sparse Merkle trees, with bulk
 
 448
 00:42:10,440 --> 00:42:17,780

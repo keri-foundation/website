@@ -664,7 +664,7 @@ They're going to host to things at example
 134
 00:11:22,580 --> 00:11:27,600
 .org, they might want to be able to take
-the same identity as a company. So GLEI
+the same identity as a company. So GLEIF
 
 135
 00:11:27,600 --> 00:11:32,420
@@ -2557,7 +2557,7 @@ going to verify that credential with keys
 513
 00:43:12,240 --> 00:43:19,180
 that are defined by did:webs and KERI
-for a w3c credential that has multisig
+for a W3C credential that has multisig
 
 514
 00:43:19,180 --> 00:43:24,720
@@ -3150,7 +3150,7 @@ you have to make. But other than that, the
 632
 00:53:50,080 --> 00:53:54,980
 answer is yes, any KERI identifier can
-be turned into a did-webs DID, whether it's
+be turned into a did:webs DID, whether it's
 
 633
 00:53:54,980 --> 00:53:56,800

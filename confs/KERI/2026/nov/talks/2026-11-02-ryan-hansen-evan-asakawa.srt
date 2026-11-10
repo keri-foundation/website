@@ -451,7 +451,7 @@ Okay. Yeah. Thank you.
 
 92
 00:09:00,880 --> 00:09:05,940
-Okay. And KF boots config. All this stuff
+Okay. And KFboot's config. All this stuff
 is again, this is all in the guide itself.
 
 93
@@ -1593,7 +1593,7 @@ it does provision. Oh, so help me
 322
 00:31:28,580 --> 00:31:35,140
 understand that. So the boot service can
-talk to the widopnet and the watt optnet
+talk to the WitOPnet and the WotOpNet
 
 323
 00:31:35,140 --> 00:31:39,620
@@ -2120,7 +2120,7 @@ set up to send messages between and
 
 430
 00:41:53,120 --> 00:41:56,220
-Donfarus. Yeah, so we're working on the
+[…]. Yeah, so we're working on the
 mailbox. You've done it locally, right?
 
 431
@@ -2336,7 +2336,7 @@ representative or a QVI like in the case
 473
 00:45:57,100 --> 00:46:01,540
 of or a qualification like in case of
-direct trust they would just hire they
+DirectTrust they would just hire they
 
 474
 00:46:01,540 --> 00:46:08,220
@@ -2451,7 +2451,7 @@ agent. And they said, okay, you're just a
 496
 00:48:07,900 --> 00:48:10,800
 person. So you don't have all of the
-security that you have at GLEI because
+security that you have at GLEIF because
 
 497
 00:48:10,800 --> 00:48:15,860

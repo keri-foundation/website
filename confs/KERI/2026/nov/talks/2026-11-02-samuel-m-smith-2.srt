@@ -26,7 +26,7 @@ how do we communicate? How do we get food?
 6
 00:00:30,320 --> 00:00:35,660
 What do we do? You know,
-and I'm fully off griddable
+and I'm fully off-grid capable
 
 7
 00:00:35,660 --> 00:00:39,380
@@ -1927,7 +1927,7 @@ type of Merkle tree. We call it a it's not
 387
 00:34:34,000 --> 00:34:40,420
 a tree because you can have edges can be
-mary, but it's an mary Merkle tree if that
+many, but it's an M-ary Merkle tree if that
 
 388
 00:34:40,420 --> 00:34:45,380
@@ -1967,7 +1967,7 @@ all the ones there for it to be valid. So
 395
 00:35:16,860 --> 00:35:22,020
 it's a very secure, very hard to attack
-data structure. Yes. Sam, this might be a
+data structure. – Yes. – Sam, this might be a
 
 396
 00:35:22,020 --> 00:35:28,140
@@ -1976,28 +1976,28 @@ that's the first one that you got on the
 
 397
 00:35:28,140 --> 00:35:33,680
-other slide? Yes. That one right there. Is
-that the birth certificate or? No. Okay.
+other slide? That one right there. Is
+that the birth certificate or? – No. – Okay.
 
 398
 00:35:34,140 --> 00:35:37,900
 Where does the birth certificate come in?
-It would be another credential. Okay. But
+It would be another credential. – Okay. But
 
 399
 00:35:37,900 --> 00:35:42,140
-it has to come before the PIPOR identity.
-The SEDI legislation only authorized
+it has to come before the […] identity.
+– The SEDI legislation only authorized
 
 400
 00:35:42,140 --> 00:35:49,000
-these. Okay. So that was going to require
+these. – Okay. – So that was going to require
 additional either legislation or what they
 
 401
 00:35:49,000 --> 00:35:57,600
-call it rules from the agency. Okay. So
-the the rendering that was on the slide
+call it rules from the agency. – Okay. So
+the rendering that was on the slide
 
 402
 00:35:57,600 --> 00:36:01,540
@@ -2006,18 +2006,18 @@ already exists, not somebody who was just
 
 403
 00:36:01,540 --> 00:36:06,000
-born. There will be more legislation. Yes,
+born. – There will be more legislation. – Yes,
 there will be more legislation and
 
 404
 00:36:06,000 --> 00:36:09,660
-rulemaking that happens. There will be
-lots of rules. There will be lots of
+rulemaking that happens. – There will be
+lots of rules. – There will be lots of
 
 405
 00:36:09,660 --> 00:36:17,280
 rules. But the legislation in 2026 only
-authorized two things guardianship and the
+authorized two things: guardianship and the
 
 406
 00:36:17,280 --> 00:36:23,100
@@ -2215,12 +2215,12 @@ person. That's the only thing that
 445
 00:40:11,140 --> 00:40:17,660
 changes. The security, the properties like
-from my talk this morning about authored
+from my talk this morning about Author,
 
 446
 00:40:17,660 --> 00:40:26,040
-authentication, authentication,
-authorization, and authoritariveness all
+authenticated, authorized, and
+authoritative all
 
 447
 00:40:26,040 --> 00:40:31,100
@@ -2772,11 +2772,11 @@ anything because as soon as they leave
 557
 00:50:42,980 --> 00:50:48,600
 their enclave, they become observable.
-They become surveillable. Huh? Like Steven
+They become surveillable. Huh? Like Stephen
 
 558
 00:50:48,600 --> 00:50:54,640
-Hawkins in World Wargate. Yeah, that kind
+Hawking in World Wargate. Yeah, that kind
 of that level. Yeah, that level of it.
 
 559

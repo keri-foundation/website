@@ -6,7 +6,7 @@ All right. For those most of you who
 2
 00:00:07,140 --> 00:00:11,320
 probably don't know who I am, my name is
-Ryan Hanson. I'm a member of the KERI
+Ryan Hansen. I'm a member of the KERI
 
 3
 00:00:11,320 --> 00:00:15,640
@@ -943,7 +943,7 @@ watcher from this service. Part of why I
 
 191
 00:18:41,360 --> 00:18:47,940
-ask is since we at Glive work with the
+ask is since we at GLEIF work with the
 ecosystem with lots of players and there's
 
 192
@@ -1501,7 +1501,7 @@ hardware security module like a ledger or
 
 303
 00:28:21,880 --> 00:28:26,380
-an ubi key or something like that. Some of
+a YubiKey or something like that. Some of
 those allow you to export them. Some of
 
 304
@@ -1511,7 +1511,7 @@ they can do. because KERI supports
 
 305
 00:28:32,940 --> 00:28:40,280
-multisig, you could horcrox yourself so
+multisig, you could horcrux yourself so
 that you have multiple keys that control
 
 306
@@ -1871,12 +1871,12 @@ to do it that way. They may want to
 
 377
 00:34:55,000 --> 00:34:59,620
-publish stuff in X509s that enables
+publish stuff in X.509s that enables
 discovery because the people are
 
 378
 00:34:59,620 --> 00:35:06,880
-discovering the X509s already. So I know
+discovering the X.509s already. So I know
 he perked up because he's a CA. – So we
 
 379
@@ -2030,7 +2030,7 @@ advantages and disadvantages for
 
 409
 00:37:53,060 --> 00:38:00,440
-ecosystems such as health carrier, GLEIFs
+ecosystems such as HealthKERI, GLEIF's
 setup to make those publicly available for
 
 410
@@ -2799,8 +2799,8 @@ Yes. Once you decide to accept you need
 
 564
 00:51:24,040 --> 00:51:29,800
-multisig and delegation and anchor
-disuances, you have KERI. Completely.
+multisig and delegation and anchored
+issuances, you have KERI. Completely.
 
 565
 00:51:30,180 --> 00:51:41,100

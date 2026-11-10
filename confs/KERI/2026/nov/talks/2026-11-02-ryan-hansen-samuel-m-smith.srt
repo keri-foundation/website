@@ -745,7 +745,7 @@ Every other identity system, every time
 
 152
 00:14:29,940 --> 00:14:35,280
-you rotate keys, you either reincur this
+you rotate keys, you either re-incur this
 cost or you're insecure. And guess what
 
 153
@@ -760,7 +760,7 @@ insecure. That's that describes the
 
 155
 00:14:43,880 --> 00:14:50,560
-certificate authority system. CAAs are
+certificate authority system. CAs are
 supposed to repeat the level identity
 
 156
@@ -1236,11 +1236,11 @@ is a good one. Another one? Anybody?
 251
 00:24:19,340 --> 00:24:26,660
 – Any messaging? – Huh? – All kinds of
-messaging. Yeah, but money. Messagings
+messaging. Yeah, but money. Messaging
 
 252
 00:24:26,660 --> 00:24:32,820
-tend to be free. We need something where
+tends to be free. We need something where
 somebody is making money and they're
 
 253
@@ -1711,7 +1711,7 @@ have reciprocity between states. So that
 
 347
 00:33:28,380 --> 00:33:34,120
-if one state does IL level 3, that you can
+if one state does IAL level 3, that you can
 move to a different state and not have to
 
 348
@@ -1726,7 +1726,7 @@ proofing instruments that you have to
 
 350
 00:33:48,360 --> 00:33:57,960
-produce? – Well, IL level 3 Yeah. Says you
+produce? – Well, IAL level 3 Yeah. Says you
 have to use so many first class documents.
 
 351
