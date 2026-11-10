@@ -145,7 +145,7 @@ responsibility and function which is first
 
 30
 00:03:06,260 --> 00:03:11,220
-of all it's the home of our of the
+of all it's the home of the
 identity and the keys. That's where all
 
 31
@@ -160,7 +160,7 @@ responsible for the KE in KERI which is
 
 33
 00:03:26,520 --> 00:03:32,660
-the the key events, all the events that
+the key events, all the events that
 take place relative to that particular
 
 34
@@ -369,7 +369,7 @@ that key state of that particular ID. And
 75
 00:07:47,900 --> 00:07:52,500
 if there is any kind of duplicity, they
-detect that and and then you can take
+detect that and then you can take
 
 76
 00:07:52,500 --> 00:08:00,380
@@ -909,7 +909,7 @@ Yeah. So anybody that creates witnesses,
 184
 00:18:03,560 --> 00:18:09,760
 anybody that creates a watch or service
-could register with with kf-boot, right? Do
+could register with kf-boot, right? Do
 
 185
 00:18:09,760 --> 00:18:14,420
@@ -929,7 +929,7 @@ DigitalOcean. Yeah. So you'd have to
 188
 00:18:25,700 --> 00:18:30,380
 they'd have to add up like a connector.
-But if you have that connector, then then
+But if you have that connector, then
 
 189
 00:18:30,380 --> 00:18:35,300
@@ -1019,7 +1019,7 @@ guess I have one. I guess for GLEIF, the
 206
 00:20:02,780 --> 00:20:11,360
 important thing is to be able to offer to
-to holders of vLEIs, for example, and to
+holders of vLEIs, for example, and to
 
 207
 00:20:11,360 --> 00:20:19,400
@@ -1073,7 +1073,7 @@ I think what she's asking is it that's
 217
 00:21:10,220 --> 00:21:15,960
 really the wallet the open source wallets
-would be able to do that kf-boot is is
+would be able to do that kf-boot is
 
 218
 00:21:15,960 --> 00:21:20,440
@@ -1433,12 +1433,12 @@ world of Apple where the photos and things
 289
 00:27:07,460 --> 00:27:11,620
 get copied between device you can access
-your your cloud account securely from
+your cloud account securely from
 
 290
 00:27:11,620 --> 00:27:16,160
 multiple devices. I would certainly like
-to be able to do that with with my
+to be able to do that with my
 
 291
 00:27:16,160 --> 00:27:21,720
@@ -1457,7 +1457,7 @@ is you to actually copy the keys to that
 
 294
 00:27:30,960 --> 00:27:33,520
-other device. device. You're going to
+other device. You're going to
 create any kind of an event from some
 
 295
@@ -1562,7 +1562,7 @@ encrypted there. Well, no, you would want
 315
 00:29:24,460 --> 00:29:28,080
 to do that. I know, but is there a way? If
-you do end-to-end encryption on on Apple,
+you do end-to-end encryption on Apple,
 
 316
 00:29:28,360 --> 00:29:32,680
@@ -1902,11 +1902,11 @@ infrastructure networks are available that
 383
 00:35:30,480 --> 00:35:35,240
 people plug into that are live today?
-Okay. Sorry, I forgot to mention that.
+Okay. Sorry, I forgot to mention that
 
 384
 00:35:35,560 --> 00:35:40,580
-That we actually have a
+we actually have a
 
 385
 00:35:40,580 --> 00:35:46,700
@@ -2338,7 +2338,7 @@ have to make it portable and the reason is
 
 471
 00:43:25,640 --> 00:43:33,100
-is that providers in the healthcare sector
+that providers in the healthcare sector
 tend to want to capture their patients and
 
 472
@@ -2353,7 +2353,7 @@ scans and things like that and I want to
 
 474
 00:43:41,560 --> 00:43:48,340
-go to a new provider provider, well, the
+go to a new provider, well, the
 new provider says, well, I can't treat you
 
 475
@@ -2493,7 +2493,7 @@ witness. But I haven't really thought
 502
 00:45:46,980 --> 00:45:51,660
 through kind of the security properties of
-it because like like de facto it's a
+it because like de facto it's a
 
 503
 00:45:51,660 --> 00:45:55,720
@@ -2542,7 +2542,7 @@ that's signing and checking the
 
 512
 00:46:37,240 --> 00:46:40,380
-signatures. You, the user, never never
+signatures. You, the user, never
 even know that it's happening. You just
 
 513
@@ -2731,11 +2731,11 @@ Mastodon, basically small communities and
 550
 00:50:05,840 --> 00:50:11,440
 volunteers. Right. Yeah. It was run the
-common infrastructure of the… Yeah. And,
+common infrastructure of the… Yeah. And
 
 551
 00:50:11,440 --> 00:50:16,840
-and, and yeah, so it, it, it has its
+yeah, so it has its
 challenges. I'm not saying that it's not
 
 552
@@ -3069,7 +3069,7 @@ then detection. The third one is detect
 
 618
 00:56:53,160 --> 00:57:04,620
-detect key compromise. Now here's the
+key compromise. Now here's the
 thing. If I'm doing a
 
 619

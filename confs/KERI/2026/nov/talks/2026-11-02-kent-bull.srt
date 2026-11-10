@@ -679,7 +679,7 @@ here, but with did:webs. So what the vLEI
 137
 00:11:38,900 --> 00:11:43,660
 brings and this isn't a vLEI presentation,
-but I'll give you a quick quick intro is
+but I'll give you a quick intro is
 
 138
 00:11:43,660 --> 00:11:48,020
@@ -983,7 +983,7 @@ straightforward for people that know KERI,
 
 198
 00:16:27,880 --> 00:16:31,940
-but what we we need to be explicit and
+but what we need to be explicit and
 clear, which means we need to write a spec
 
 199
@@ -1354,7 +1354,7 @@ it, that might be enough. So you send that
 272
 00:22:40,520 --> 00:22:44,800
 all into the DID resolver. You do that for
-the issuer, do it for the the holder and
+the issuer, do it for the holder and
 
 273
 00:22:44,800 --> 00:22:48,240
@@ -1413,7 +1413,7 @@ my identifier. Here's what keys control my
 
 284
 00:23:39,340 --> 00:23:43,200
-my identifier. There's transaction
+identifier. There's transaction
 event logs. Remember I said KERI 1 and
 
 285
@@ -1653,7 +1653,7 @@ files. We verify that they're coherent and
 
 332
 00:27:38,140 --> 00:27:42,180
-And as I mentioned, there's designated
+as I mentioned, there's designated
 aliases and that's where when I say
 
 333
@@ -1683,7 +1683,7 @@ that you've got on your web server.
 
 338
 00:28:06,400 --> 00:28:11,720
-And if they if they're the same same
+And if they if they're the same
 document, you verify. You're good. So we
 
 339
@@ -1883,7 +1883,7 @@ might just say two or you could say four of
 
 378
 00:31:34,220 --> 00:31:37,400
-seven or or two of nine, however you
+seven or two of nine, however you
 want to define your threshold structure,
 
 379
@@ -2053,7 +2053,7 @@ called the location scheme. The `/loc`
 
 412
 00:34:29,420 --> 00:34:35,000
-and `/scheme` is the the name space
+and `/scheme` is the name space
 that we give it in the KERI world. We say
 
 413
@@ -2302,7 +2302,7 @@ key appears in the signing key list and
 462
 00:38:54,580 --> 00:38:58,480
 the rotation keys appear in the next
-rotated key list. So those key key lists
+rotated key list. So those key lists
 
 463
 00:38:58,480 --> 00:39:04,920
@@ -2507,7 +2507,7 @@ single-sig issuer, single-sig holder. It's
 503
 00:42:23,580 --> 00:42:27,320
 because it's just one signature and
-just one one key. And when I say simple
+just one key. And when I say simple
 
 504
 00:42:27,320 --> 00:42:32,160
@@ -2617,7 +2617,7 @@ did:webs spec required in order for the DIF
 525
 00:44:21,800 --> 00:44:25,580
 recommended DID methods group to put it on
-their their recommended list. As far as my
+their recommended list. As far as my
 
 526
 00:44:25,580 --> 00:44:29,720

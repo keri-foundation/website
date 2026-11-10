@@ -46,7 +46,7 @@ services. So and there's the there's a QR
 10
 00:00:50,260 --> 00:00:56,640
 code to the oops sorry if people want to
-follow along with the setup guide you you
+follow along with the setup guide you
 
 11
 00:00:56,640 --> 00:00:59,580
@@ -368,12 +368,12 @@ names just yet or kf-boot for that matter.
 75
 00:07:10,640 --> 00:07:13,960
 But you can install them straight from
-from GitHub. If you just point to the
+GitHub. If you just point to the
 
 76
 00:07:13,960 --> 00:07:18,100
 repos, you can install them at whatever
-point you want. want to. So, but
+point you want to. So, but
 
 77
 00:07:18,100 --> 00:07:21,900
@@ -596,7 +596,7 @@ when I click this, if I had all four
 
 122
 00:12:09,020 --> 00:12:14,360
-terminals, it'd be cooler, but But you'll
+terminals, it'd be cooler, but you'll
 see basically what's going on with kf-boot
 
 123
@@ -651,7 +651,7 @@ locksmith that's pointing to my local
 133
 00:13:02,880 --> 00:13:10,160
 Docker deployment of four hosts, which is
-exactly like we have it in in
+exactly like we have it in
 
 134
 00:13:10,160 --> 00:13:14,500
@@ -760,7 +760,7 @@ app that you'd have to also pass in
 
 155
 00:15:02,780 --> 00:15:09,580
-addition to sending a signed key key event
+addition to sending a signed key event
 to the witnesses. Right. So any questions
 
 156
@@ -841,7 +841,7 @@ all the Kubernetes credentials for
 171
 00:16:30,280 --> 00:16:35,300
 everybody's cubes over the whole internet
-if it had had time. time. And so it would
+if it had had time. And so it would
 
 172
 00:16:35,300 --> 00:16:40,600
@@ -901,11 +901,11 @@ yours. Yeah, by all means. I don't know if
 183
 00:17:28,380 --> 00:17:31,100
 people have questions about other things
-in Locksmith.
+in Locksmith
 
 184
 00:17:35,940 --> 00:17:42,100
-Locksmith as a whole, you can go back and
+as a whole, you can go back and
 you have these isolated vault environments
 
 185
@@ -950,7 +950,7 @@ with them.
 193
 00:18:31,340 --> 00:18:37,440
 And then yeah you can add like identifiers
-on your account. So the way we we have
+on your account. So the way we have
 
 194
 00:18:37,440 --> 00:18:42,260
@@ -1392,7 +1392,7 @@ three more witnesses to the overall
 
 282
 00:27:14,160 --> 00:27:19,060
-witness service for the the vLEI
+witness service for the vLEI
 ecosystem. And that was in order to be
 
 283
@@ -1676,7 +1676,7 @@ those are the two addresses that I gave it
 339
 00:33:22,580 --> 00:33:28,540
 to point to my local Docker. Earlier I had
-those pointed to our our DigitalOcean
+those pointed to our DigitalOcean
 
 340
 00:33:28,540 --> 00:33:32,500
@@ -1720,7 +1720,7 @@ infrastructure. – Those will be a little
 
 348
 00:34:02,360 --> 00:34:05,860
-bit different, but But we're still kind of
+bit different, but we're still kind of
 in development on those, so I'm not going
 
 349
@@ -1746,7 +1746,7 @@ witnesses before now on the watcher side.
 353
 00:34:25,700 --> 00:34:34,760
 So now let's say like I'm a car salesman.
-Like I have a lot of of cars and I want to
+Like I have a lot of cars and I want to
 
 354
 00:34:34,760 --> 00:34:40,380
@@ -1766,7 +1766,7 @@ then yeah so then they would watch the
 357
 00:34:53,400 --> 00:34:57,560
 witnesses of like I said those other ones
-like the university and the bank and and
+like the university and the bank and
 
 358
 00:34:57,560 --> 00:35:02,060
@@ -1995,7 +1995,7 @@ schemas. Yes, they're built in, aren't
 403
 00:38:49,740 --> 00:38:58,580
 they? Oh, yeah. So Sam has published a
-draft of some of the SEDI schemas in in a
+draft of some of the SEDI schemas in a
 
 404
 00:38:58,580 --> 00:39:03,820
@@ -2480,7 +2480,7 @@ and they go, Well, it's the best you got.
 
 502
 00:48:32,180 --> 00:48:40,400
-So, so this way, if if somebody stole
+So, so this way, if somebody stole
 their signing keys, if they were
 
 503
