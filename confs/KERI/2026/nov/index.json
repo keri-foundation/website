@@ -18,6 +18,11 @@
         "label": "Speakers",
         "href": "https://kericonf.com/speakers/",
         "external": false
+      },
+      {
+        "label": "YouTube",
+        "href": "https://www.youtube.com/playlist?list=PLNq_uXoW6DaQ",
+        "external": true
       }
     ]
   },
