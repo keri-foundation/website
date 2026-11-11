@@ -59,56 +59,28 @@
       "subtitle": "talks/Its-KERI-or-Surveillance.srt",
       "chapters": [
         {
-          "start": "00:00",
-          "description": "Introduction: last best hope for individual-control digital ID"
+          "start": "08:44",
+          "description": "AI & Human Authority"
         },
         {
-          "start": "01:42",
-          "description": "Five Eyes warning on foundational genAI cyber threats"
+          "start": "18:26",
+          "description": "Cyber Resilience After Breach"
         },
         {
-          "start": "07:29",
-          "description": "Two paths: AI-based identity vs KERI-based identity"
+          "start": "27:00",
+          "description": "Privacy Without Surveillance"
         },
         {
-          "start": "08:47",
-          "description": "Keeping AI subordinate to cryptographically verifiable identity"
+          "start": "34:52",
+          "description": "The Stark Choice Of Security"
         },
         {
-          "start": "14:44",
-          "description": "Why KERI does not need AI to defend against AI"
+          "start": "42:08",
+          "description": "The Race Against Time; Keeping Humans Digitally Free"
         },
         {
-          "start": "18:28",
-          "description": "Cyber resilience: what stays trustworthy after a breach"
-        },
-        {
-          "start": "24:03",
-          "description": "From protecting secrets to verifiable truth and provenance"
-        },
-        {
-          "start": "26:15",
-          "description": "Witnesses, watchers, and delegated AIDs"
-        },
-        {
-          "start": "31:26",
-          "description": "Accountability without a surveillance society"
-        },
-        {
-          "start": "36:24",
-          "description": "Locus of control: privacy requires individual control"
-        },
-        {
-          "start": "43:52",
-          "description": "Should AI protect freedom—or be constrained by people?"
-        },
-        {
-          "start": "47:13",
-          "description": "Adoption vectors and the SEDI rollout"
-        },
-        {
-          "start": "51:26",
-          "description": "Closing: KERI as the alternative to surveillance identity"
+          "start": "51:25",
+          "description": "State Endorsed Digital Identity"
         }
       ]
     }
