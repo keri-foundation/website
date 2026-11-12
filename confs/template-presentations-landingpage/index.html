@@ -1449,7 +1449,8 @@
             color: var(--ink);
         }
 
-        .video-modal-header-actions .chapters-toggle-btn {
+        .video-modal-header-actions .chapters-toggle-btn,
+        .video-modal-header-actions .view-presentation-btn {
             flex: 0 0 auto;
             width: auto;
             min-height: 2.25rem;
@@ -1460,7 +1461,8 @@
         }
 
         .video-modal-header-actions .chapters-toggle-btn:hover,
-        .video-modal-header-actions .chapters-toggle-btn[aria-expanded="true"] {
+        .video-modal-header-actions .chapters-toggle-btn[aria-expanded="true"],
+        .video-modal-header-actions .view-presentation-btn:hover {
             background: color-mix(in srgb, var(--accent) 28%, transparent);
         }
 
@@ -2713,12 +2715,14 @@
             }
 
             .video-modal-header-actions > .copy-button,
-            .video-modal-header-actions > .chapters-toggle-btn {
+            .video-modal-header-actions > .chapters-toggle-btn,
+            .video-modal-header-actions > .view-presentation-btn {
                 flex: 1 1 0;
                 min-width: 0;
             }
 
-            .video-modal-header-actions .chapters-toggle-btn {
+            .video-modal-header-actions .chapters-toggle-btn,
+            .video-modal-header-actions .view-presentation-btn {
                 justify-content: center;
                 padding: 0.45rem 0.55rem;
             }
@@ -5283,6 +5287,7 @@
             const captionCueFollowTracks = new WeakSet();
             let modalLinksSection = null;
             let modalChaptersToggleBtn = null;
+            let modalPdfBtn = null;
             let modalTitleEl = null;
             let chaptersSheet = null;
             let chaptersSheetPanel = null;
@@ -6025,8 +6030,16 @@
                     else openChaptersSheet(video, modalChaptersToggleBtn);
                 });
 
+                modalPdfBtn = document.createElement('a');
+                modalPdfBtn.className = 'view-presentation-btn';
+                modalPdfBtn.hidden = true;
+                modalPdfBtn.target = '_blank';
+                modalPdfBtn.rel = 'noopener noreferrer';
+                modalPdfBtn.addEventListener('click', (e) => e.stopPropagation());
+
                 headerActions.appendChild(modalCopyHint);
                 headerActions.appendChild(modalChaptersToggleBtn);
+                headerActions.appendChild(modalPdfBtn);
                 headerActions.appendChild(modalCopyBtn);
                 headerActions.appendChild(modalClearTimestampsBtn);
 
@@ -6520,6 +6533,7 @@
                 modalTranscriptBody.innerHTML = '<p class="transcript-loading">Loading transcript…</p>';
                 setModalTranscriptHandleLabel(null);
                 updateModalChaptersToggle(video);
+                updateModalPdfButton(video);
                 renderModalLinks(null);
 
                 Promise.all([loadTranscript(video), loadAllCaptionTracks(video)]).then(([store, captionStore]) => {
@@ -6583,6 +6597,7 @@
                     updateModalTranscriptViewBtn();
                     clearModalTranscriptSearch();
                     updateModalChaptersToggle(null);
+                    updateModalPdfButton(null);
                     if (isChaptersSheetOpen()) closeChaptersSheet({ restoreFocus: false });
                     clearVideoUrlHash();
                 }
@@ -6964,6 +6979,7 @@
             // ─────────────────────────────────────────────────────────────────────
             const CHAPTERS_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></svg>';
             const CHAPTERS_CHEVRON_SVG = '<svg class="chapters-toggle-chevron" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+            const OPEN_PDF_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
 
             function chaptersForVideo(video) {
                 return Array.isArray(video?.chapters) ? video.chapters : [];
@@ -7070,6 +7086,22 @@
                 }
                 modalChaptersToggleBtn.hidden = false;
                 labelChaptersToggle(modalChaptersToggleBtn, video);
+            }
+
+            function updateModalPdfButton(video) {
+                if (!modalPdfBtn) return;
+                const pdfUrl = video?.presentation ? resolveAssetUrl(video.presentation) : '';
+                if (!pdfUrl) {
+                    modalPdfBtn.hidden = true;
+                    modalPdfBtn.removeAttribute('href');
+                    modalPdfBtn.removeAttribute('aria-label');
+                    modalPdfBtn.replaceChildren();
+                    return;
+                }
+                modalPdfBtn.hidden = false;
+                modalPdfBtn.href = pdfUrl;
+                modalPdfBtn.setAttribute('aria-label', `Open presentation PDF for ${video.title} in a new tab`);
+                modalPdfBtn.innerHTML = `${OPEN_PDF_ICON_SVG} PDF`;
             }
 
             function isChaptersSheetOpen() {
@@ -7507,7 +7539,7 @@
                         pdfView.target = '_blank';
                         pdfView.rel = 'noopener noreferrer';
                         pdfView.setAttribute('aria-label', `Open presentation PDF for ${video.title} in a new tab`);
-                        pdfView.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Open PDF';
+                        pdfView.innerHTML = `${OPEN_PDF_ICON_SVG} Open PDF`;
                         pdfView.addEventListener('click', (e) => e.stopPropagation());
                         actionsRow.appendChild(pdfView);
                     }
