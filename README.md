@@ -301,9 +301,12 @@ scripts/deploy-confs.sh verify-videos    # optional gallery MP4 encode checks (n
 scripts/deploy-confs.sh -n push          # preview what would be uploaded
 scripts/deploy-confs.sh deploy           # build + push (rsync --delete) + check the live site
 scripts/deploy-confs.sh check-remote     # HEAD-request every referenced file on keri.foundation
+scripts/deploy-confs.sh --conf KERI/2026/nov deploy
 scripts/deploy-confs.sh --conf SEDI/2025/nov push
 scripts/deploy-confs.sh --conf vids/2026 push
 ```
+
+`--conf` takes a gallery id, not a filesystem path from the repo root. Conference ids are relative to `confs/` (the script prepends that tree), so use `KERI/2026/nov`, not `confs/KERI/2026/nov`. Yearly video galleries live outside `confs/`, so they keep the tree prefix: `vids/2026`. Passing `confs/KERI/2026/nov` would look for `confs/confs/KERI/2026/nov` and miss.
 
 `audio` (included in `build` and `deploy`) writes `talks/foo.mp3` from `talks/foo.mp4` when that MP3 is absent. The encode is mono, 44.1 kHz, 64 kbps MP3: about 28 MB per hour, clear enough for a spoken-word podcast. It needs `ffmpeg` with LAME. MP3s are gitignored; `push` uploads them with the gallery. An MP4 that is not on this machine is skipped, and `verify` still reports that file missing.
 
