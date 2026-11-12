@@ -1,22 +1,27 @@
 1
 00:00:00,480 --> 00:00:03,256
-Hallo, mijn naam is Samuel Smith. Ik werk
+Hallo, mijn naam is
+Samuel Smith. Ik werk
 
 2
 00:00:03,280 --> 00:00:06,456
-bij de KERI Foundation. Ik ben ook
+bij de KERI
+Foundation. Ik ben ook
 
 3
 00:00:06,480 --> 00:00:08,856
-de bedenker van de KERI-suite van
+de bedenker van
+de KERI-suite van
 
 4
 00:00:08,880 --> 00:00:12,216
-protocollen die steeds vaker worden toegepast in
+protocollen die steeds
+vaker worden toegepast in
 
 5
 00:00:12,240 --> 00:00:16,216
-verschillende sectoren. Ik wilde vandaag een
+verschillende sectoren.
+Ik wilde vandaag een
 
 6
 00:00:16,240 --> 00:00:18,936
@@ -24,19 +29,23 @@ gesprek voeren over wat ik
 
 7
 00:00:18,960 --> 00:00:21,255
-de laatste beste hoop voor individuele
+de laatste beste
+hoop voor individuele
 
 8
 00:00:21,279 --> 00:00:23,736
-controle over digitale identiteit in een AI-wereld. En
+controle over digitale
+identiteit in een AI-wereld. En
 
 9
 00:00:23,760 --> 00:00:26,376
-de aanleiding hiervoor was de recente onthulling door
+de aanleiding hiervoor was
+de recente onthulling door
 
 10
 00:00:26,400 --> 00:00:29,415
-het ‘Five Eyes’-surveillanceconglomeraat
+het ‘Five
+Eyes’-surveillance
 
 11
 00:00:29,439 --> 00:00:32,136
@@ -44,7 +53,7 @@ samenwerkingsverband tussen die
 
 12
 00:00:32,160 --> 00:00:34,695
-landen over de cyber
+landen over de
 
 13
 00:00:34,719 --> 00:00:37,576
@@ -52,7 +61,8 @@ cyberbeveiligingsdreiging die
 
 14
 00:00:37,600 --> 00:00:41,576
-fundamentele genAI-modellen vormen en
+fundamentele
+genAI-modellen vormen en
 
 15
 00:00:41,600 --> 00:00:44,616
@@ -60,7 +70,8 @@ dat afzetten tegen wat KERI
 
 16
 00:00:44,640 --> 00:00:47,336
-biedt, waarbij KERI staat voor Key Event
+biedt, waarbij KERI
+staat voor Key Event
 
 17
 00:00:47,360 --> 00:00:49,256
@@ -68,83 +79,97 @@ Receipt Infrastructure.
 
 18
 00:00:49,280 --> 00:00:51,256
-Het is een technische term, maar in feite
+Het is een technische
+term, maar in feite
 
 19
 00:00:51,280 --> 00:00:54,776
-is het een digitaal identiteitssysteem waarmee
+is het een digitaal
+identiteitssysteem
 
 20
 00:00:54,800 --> 00:00:57,015
-waarbij individuen de controle behouden over hun
+waarbij individuen de
+controle behouden over hun
 
 21
 00:00:57,039 --> 00:00:59,576
-identiteit, die een aantal belangrijke
+identiteit, die een
+aantal belangrijke
 
 22
 00:00:59,600 --> 00:01:01,576
-eigenschappen heeft. Daar wil ik het dus
+eigenschappen heeft.
+Daar wil ik het
 
 23
 00:01:01,600 --> 00:01:03,736
-nader over toelichten.
+nader over hebben.
 
 24
 00:01:03,760 --> 00:01:08,056
-Dit is een fragment uit het rapport,
+Dit is een fragment
+uit het rapport,
 
 25
 00:01:08,080 --> 00:01:11,736
-de link staat erbij, van de NSA. Daarin
+de link staat erbij, van
+de NSA. Daarin staat
 
 26
 00:01:11,760 --> 00:01:15,016
-dat geavanceerde AI-modellen naar
+dat geavanceerde AI-modellen
 
 27
 00:01:15,040 --> 00:01:17,816
-verwacht wordt de huidige verwachtingen van de sector
+de huidige verwachtingen
+van de sector
 
 28
 00:01:17,840 --> 00:01:19,656
-verwachtingen zullen overtreffen.
+zullen overtreffen.
 
 29
 00:01:19,680 --> 00:01:25,735
-Dit is in feite een zeer technisch geformuleerde
+Dit is in feite een zeer
+technisch geformuleerde
 
 30
 00:01:25,759 --> 00:01:29,735
-waarschuwing
+waarschuwing:
 
 31
 00:01:29,759 --> 00:01:34,216
-binnen maanden, niet jaren, zullen deze AI-
+binnen maanden, niet
+jaren, zullen deze AI-
 
 32
 00:01:34,240 --> 00:01:37,016
-modellen zullen
+modellen
 
 33
 00:01:37,040 --> 00:01:39,816
-elke cyberbeveiliging
+elke cyberbeveiligingscapaciteit
 
 34
 00:01:39,840 --> 00:01:42,775
-van bestaande systemen, en dus
+van bestaande systemen
+overspoelen, en dus
 
 35
 00:01:42,799 --> 00:01:45,256
-zeggen ze in feite tegen iedereen in
+zeggen ze in feite
+tegen iedereen in
 
 36
 00:01:45,280 --> 00:01:48,455
-dit artikel (het is een kort artikel) dat je
+dit artikel (het is
+een kort artikel) dat je
 
 37
 00:01:48,479 --> 00:01:51,735
-je houding moet veranderen. Je moet
+je houding moet
+veranderen. Je moet
 
 38
 00:01:51,759 --> 00:01:54,696
@@ -152,43 +177,52 @@ je manier van werken aanpassen
 
 39
 00:01:54,720 --> 00:01:57,415
-omdat we niet kunnen garanderen dat je
+omdat we niet kunnen
+garanderen dat je
 
 40
 00:01:57,439 --> 00:02:00,296
-huidige beveiligingssystemen zullen standhouden
+huidige beveiligingssystemen
+zullen standhouden
 
 41
 00:02:00,320 --> 00:02:01,816
-tegen wat er gebeurt. En wat er
+tegen wat er gebeurt. En wat
 
 42
 00:02:01,840 --> 00:02:04,536
-er gebeurt, is dat bepaalde basis
+er gebeurt, is dat
+bepaalde basis
 
 43
 00:02:04,560 --> 00:02:07,576
-modellen, zoals bijvoorbeeld Mythos,
+modellen, zoals
+bijvoorbeeld Mythos,
 
 44
 00:02:07,600 --> 00:02:09,735
-zijn ontwikkeld om betere cyberbeveiliging te bieden,
+zijn ontwikkeld om betere
+cyber
 
 45
 00:02:09,759 --> 00:02:11,416
-beveiliging te bieden, maar tijdens het trainen
+beveiliging te bieden,
+maar tijdens het trainen
 
 46
 00:02:11,440 --> 00:02:14,295
-om beter te worden in het opsporen van
+om beter te worden
+in het opsporen van
 
 47
 00:02:14,319 --> 00:02:18,056
-exploits, werden ze ook goed in het
+exploits, werden
+ze ook goed in het
 
 48
 00:02:18,080 --> 00:02:21,016
-het misbruiken van kwetsbaarheden. En dat
+het misbruiken van
+kwetsbaarheden. En dat
 
 49
 00:02:21,040 --> 00:02:22,855
@@ -204,71 +238,85 @@ laten we zeggen,
 
 52
 00:02:28,560 --> 00:02:31,496
-bouwen de ‘deugdzame’ partijen vergelijkbare
+‘deugdzame’
+partijen vergelijkbare
 
 53
 00:02:31,520 --> 00:02:34,136
-modellen. En zodra die
+modellen bouwen. En zodra die
 
 54
 00:02:34,160 --> 00:02:37,336
-beschikbaar zijn voor cyberaanvallers, dan
+beschikbaar zijn voor
+cyberaanvallers, dan
 
 55
 00:02:37,360 --> 00:02:40,376
-zal de huidige manier waarop we omgaan met
+zal de huidige manier
+waarop we omgaan met
 
 56
 00:02:40,400 --> 00:02:42,536
-digitale identiteit, waarop digitale
+digitale identiteit,
+waarop digitale
 
 57
 00:02:42,560 --> 00:02:46,215
-beveiliging is gebaseerd, zal overal
+beveiliging is
+gebaseerd, kapot
 
 58
 00:02:46,239 --> 00:02:50,056
-overal. En dat is een probleem. En
+zijn. En dat is
+een probleem. En
 
 59
 00:02:50,080 --> 00:02:51,816
-dus moeten we er iets aan gaan doen
+dus moeten we er
+iets aan gaan doen.
 
 60
 00:02:51,840 --> 00:02:54,616
-daaraan doen. Wat dat betekent, is dat we
+Wat dat betekent, is dat we
 
 61
 00:02:54,640 --> 00:02:57,816
-eigenlijk twee wegen voor de toekomst hebben.
+eigenlijk twee opties hebben.
 
 62
 00:02:57,840 --> 00:03:00,855
-De twee wegen zijn: 1. op AI gebaseerde
+De twee opties zijn:
+1. op AI gebaseerde
 
 63
 00:03:00,879 --> 00:03:02,935
-digitale identiteit en 2. op KERI gebaseerde digitale
+digitale identiteit en 2. op
+KERI gebaseerde digitale
 
 64
 00:03:02,959 --> 00:03:04,536
-identiteit. Als ik KERI zeg, bedoel ik de
+identiteit. Als ik KERI
+zeg, bedoel ik de
 
 65
 00:03:04,560 --> 00:03:05,896
-KERI-protocollenpakket. Er is een
+KERI-protocollenpakket.
+Er is een
 
 66
 00:03:05,920 --> 00:03:07,176
-hele reeks protocollen, een hele reeks verschillende
+hele reeks protocollen,
+een hele reeks verschillende
 
 67
 00:03:07,200 --> 00:03:09,416
-zaken die verband houden met KERI.
+zaken die verband
+houden met KERI.
 
 68
 00:03:09,440 --> 00:03:11,495
-Als ik het heb over een op AI gebaseerde digitale identiteit,
+Als ik het heb over een op AI
+gebaseerde digitale identiteit,
 
 69
 00:03:11,519 --> 00:03:14,536
@@ -276,15 +324,18 @@ dan bedoel ik wat het Five
 
 70
 00:03:14,560 --> 00:03:16,456
-Eyes-rapport aanbeveelt: dat mensen
+Eyes-rapport
+aanbeveelt: dat mensen
 
 71
 00:03:16,480 --> 00:03:19,736
-AI-gebaseerde tegenmaatregelen gaan
+AI-gebaseerde
+tegenmaatregelen gaan
 
 72
 00:03:19,760 --> 00:03:21,656
-maatregelen, defensieve maatregelen, gaan gebruiken. Met andere
+maatregelen, defensieve maatregelen,
+gaan gebruiken. Met andere
 
 73
 00:03:21,680 --> 00:03:24,855
@@ -296,7 +347,8 @@ woorden, het is een soort
 
 75
 00:03:28,560 --> 00:03:31,096
-waarbij beide partijen over AI’s beschikken en
+waarbij beide partijen
+over AI’s beschikken en
 
 76
 00:03:31,120 --> 00:03:33,096
@@ -304,7 +356,8 @@ de AI’s keihard werken om
 
 77
 00:03:33,120 --> 00:03:35,896
-zich te verdedigen tegen cyberaanvallen of om
+zich te verdedigen tegen
+cyberaanvallen of om
 
 78
 00:03:35,920 --> 00:03:38,376
@@ -312,11 +365,13 @@ cyberaanvallen uit te voeren
 
 79
 00:03:38,400 --> 00:03:41,176
-aanvallen uit te voeren. En dus zeggen ze
+aanvallen uit te voeren.
+En dus zeggen ze
 
 80
 00:03:41,200 --> 00:03:43,656
-dat iedereen AI moet gaan gebruiken om
+dat iedereen AI moet
+gaan gebruiken om
 
 81
 00:03:43,680 --> 00:03:46,935
@@ -324,43 +379,52 @@ zich te verdedigen, omdat de AI
 
 82
 00:03:46,959 --> 00:03:49,416
-aanvallers in staat zullen zijn om je
+aanvallers in staat
+zullen zijn om je
 
 83
 00:03:49,440 --> 00:03:52,616
-huidige identiteitsbeveiligingssystemen kan verslaan en
+huidige identiteitsbeveiligingssystemen
+kan verslaan en
 
 84
 00:03:52,640 --> 00:03:54,855
-dat is een potentieel
+dat is een mogelijk
 
 85
 00:03:54,879 --> 00:03:57,976
-probleem. KERI, waar we het straks
+probleem. KERI,
+waar we het straks
 
 86
 00:03:58,000 --> 00:04:00,855
-kort over zullen hebben, is ontworpen om
+kort over zullen
+hebben, is ontworpen om
 
 87
 00:04:00,879 --> 00:04:03,176
-zeer veerkrachtig te zijn in dit soort
+zeer veerkrachtig
+te zijn in dit soort
 
 88
 00:04:03,200 --> 00:04:06,616
-scenario's. Hoe ziet een op AI gebaseerde
+scenario's. Hoe ziet
+een op AI gebaseerde
 
 89
 00:04:06,640 --> 00:04:08,376
-digitale identiteit er dan uit? Nou, het is een
+digitale identiteit er
+dan uit? Nou, het is een
 
 90
 00:04:08,400 --> 00:04:11,096
-digitaal persona dat is afgeleid van
+digitaal persona
+dat is afgeleid van
 
 91
 00:04:11,120 --> 00:04:12,855
-continue monitoring en statistische
+continue monitoring
+en statistische
 
 92
 00:04:12,879 --> 00:04:14,775
@@ -368,7 +432,8 @@ correlatie van iemands gedrag en
 
 93
 00:04:14,799 --> 00:04:18,536
-biometrische uitingen. In feite creëert de AI
+biometrische uitingen.
+In feite creëert de AI
 
 94
 00:04:18,560 --> 00:04:20,296
@@ -380,11 +445,13 @@ een digitaal beeld van
 
 96
 00:04:24,000 --> 00:04:26,455
-je gedrag op basis van tracking en
+je gedrag op basis
+van tracking en
 
 97
 00:04:26,479 --> 00:04:28,856
-het in verband brengen van je gedrag, waarna een
+het in verband brengen
+van je gedrag, waarna een
 
 98
 00:04:28,880 --> 00:04:31,576
@@ -408,19 +475,23 @@ beter in staat is om je
 
 103
 00:04:40,320 --> 00:04:44,296
-gedrag in kaart te brengen en die
+gedrag in kaart
+te brengen en die
 
 104
 00:04:44,320 --> 00:04:47,336
-signalen, zogenaamde fraudesignalen
+signalen, zogenaamde
+fraudesignalen
 
 105
 00:04:47,360 --> 00:04:51,016
-of antifraudesignalen, dan kan de AI
+of antifraudesignalen,
+dan kan de AI
 
 106
 00:04:51,040 --> 00:04:53,016
-zeggen: ‘Nee, jij bent het, en geen
+zeggen: ‘Nee, jij
+bent het, en geen
 
 107
 00:04:53,040 --> 00:04:55,336
@@ -428,27 +499,33 @@ imitator’, terwijl de aanvaller
 
 108
 00:04:55,360 --> 00:04:57,175
-zegt: ‘Nee, ik kan een AI maken die
+zegt: ‘Nee, ik kan
+een AI maken die
 
 109
 00:04:57,199 --> 00:04:59,336
-zich voor jou kan voordoen, die je kan deepfaken, die
+zich voor jou kan voordoen,
+die je kan deepfaken, die
 
 110
 00:04:59,360 --> 00:05:01,976
-het kan laten lijken alsof jij het bent, en
+het kan laten lijken
+alsof jij het bent, en
 
 111
 00:05:02,000 --> 00:05:04,776
-dus wat er gebeurt is dat alles wat
+dus wat er gebeurt
+is dat alles wat
 
 112
 00:05:04,800 --> 00:05:07,416
-je digitale identiteit beschermt, leert de AI
+je digitale identiteit
+beschermt, leert de AI
 
 113
 00:05:07,440 --> 00:05:09,735
-hoe ze je beter kan identificeren,
+hoe ze je beter
+kan identificeren,
 
 114
 00:05:09,759 --> 00:05:12,136
@@ -460,15 +537,18 @@ uiteindelijk leren hoe hij
 
 116
 00:05:13,680 --> 00:05:16,216
-zich beter als jou kan voordoen. En dus is het gewoon
+zich beter als jou kan
+voordoen. En dus is het gewoon
 
 117
 00:05:16,240 --> 00:05:18,296
-een voortdurende cyclus. En de enige manier
+een voortdurende
+cyclus. En de enige manier
 
 118
 00:05:18,320 --> 00:05:23,656
-om te winnen, is als je beschermende AI
+om te winnen, is als
+je beschermende AI
 
 119
 00:05:23,680 --> 00:05:25,895
@@ -484,11 +564,13 @@ beter in staat is om een
 
 122
 00:05:30,160 --> 00:05:32,856
-digitaal profiel kan creëren dat bij je past. Dus als
+digitaal profiel kan creëren
+dat bij je past. Dus als
 
 123
 00:05:32,880 --> 00:05:35,336
-dat niet eng is vanuit het perspectief van privacy en tracking
+dat niet eng is vanuit het
+perspectief van privacy en tracking
 
 124
 00:05:35,360 --> 00:05:37,735
@@ -512,15 +594,18 @@ Terwijl KERI gebaseerd is op een
 
 129
 00:05:47,919 --> 00:05:50,056
-cryptografisch afgeleide fouttolerante
+cryptografisch
+afgeleide fouttolerante
 
 130
 00:05:50,080 --> 00:05:53,496
-bestendige ID (red.) en het is bestand tegen AI
+bestendige ID (red.) en
+het is bestand tegen AI
 
 131
 00:05:53,520 --> 00:05:56,056
-cyberaanvallen. We noemen het ‘perpetual ID’.
+cyberaanvallen. We
+noemen het ‘perpetual ID’.
 
 132
 00:05:56,080 --> 00:05:59,656
@@ -532,19 +617,23 @@ zwakke aspecten van de huidige
 
 134
 00:06:02,320 --> 00:06:04,856
-internetgebaseerde identiteitssystemen zijn gebaseerd
+internetgebaseerde
+identiteitssystemen zijn gebaseerd
 
 135
 00:06:04,880 --> 00:06:06,856
-namelijk grotendeels gedeelde geheimen. Het is
+namelijk grotendeels
+gedeelde geheimen. Het is
 
 136
 00:06:06,880 --> 00:06:09,336
-niet gebaseerd op de zwakke punten die zitten in
+niet gebaseerd op de
+zwakke punten die zitten in
 
 137
 00:06:09,360 --> 00:06:12,295
-het DNS-certificaatautoriteitssysteem en
+het
+DNS-certificaatautoriteitssysteem en
 
 138
 00:06:12,319 --> 00:06:15,496
@@ -556,15 +645,18 @@ systemen die we de afgelopen
 
 140
 00:06:17,039 --> 00:06:18,455
-in de afgelopen 30 jaar en die nu
+in de afgelopen
+30 jaar en die nu
 
 141
 00:06:18,479 --> 00:06:21,416
-kwetsbaar zijn voor cyberaanvallen door AI.
+kwetsbaar zijn voor
+cyberaanvallen door AI.
 
 142
 00:06:21,440 --> 00:06:23,796
-Het is een volledig nieuw ontwerp dat
+Het is een volledig
+nieuw ontwerp dat
 
 143
 00:06:23,821 --> 00:06:27,015
@@ -572,19 +664,23 @@ vanaf het begin is ontworpen om
 
 144
 00:06:27,039 --> 00:06:29,976
-fouttolerant is om aanvallen te weerstaan en
+fouttolerant is om
+aanvallen te weerstaan en
 
 145
 00:06:30,000 --> 00:06:31,735
-inbreuken te kunnen detecteren en zich
+inbreuken te kunnen
+detecteren en zich
 
 146
 00:06:31,759 --> 00:06:35,256
-daarvan te herstellen. Het is dus ontworpen
+daarvan te herstellen.
+Het is dus ontworpen
 
 147
 00:06:35,280 --> 00:06:37,735
-om bestand te zijn tegen dit soort
+om bestand te
+zijn tegen dit soort
 
 148
 00:06:37,759 --> 00:06:39,735
@@ -592,31 +688,38 @@ aanvallen.
 
 149
 00:06:39,759 --> 00:06:42,376
-Wat er dus gebeurt, is dat als je kiest
+Wat er dus gebeurt,
+is dat als je kiest
 
 150
 00:06:42,400 --> 00:06:44,776
-voor op AI gebaseerde identiteitsbeveiliging, je
+voor op AI gebaseerde
+identiteitsbeveiliging, je
 
 151
 00:06:44,800 --> 00:06:47,895
-bescherming, maar het zal onvermijdelijk
+bescherming, maar
+het zal onvermijdelijk
 
 152
 00:06:47,919 --> 00:06:49,416
-volledig gecentraliseerd zijn, met geen enkele
+volledig gecentraliseerd
+zijn, met geen enkele
 
 153
 00:06:49,440 --> 00:06:51,256
-privacy. Terwijl als je voor de KERI-
+privacy. Terwijl
+als je voor de KERI-
 
 154
 00:06:51,280 --> 00:06:53,816
-route kiest, het volledig gedecentraliseerd is met
+route kiest, het volledig
+gedecentraliseerd is met
 
 155
 00:06:53,840 --> 00:06:55,656
-de best mogelijke privacy. En dat betekent niet
+de best mogelijke privacy.
+En dat betekent niet
 
 156
 00:06:55,680 --> 00:06:58,056
@@ -624,19 +727,23 @@ dat je de privacy hebt die
 
 157
 00:06:58,080 --> 00:06:59,575
-misschien dacht dat je zou kunnen hebben. Het
+misschien dacht dat je
+zou kunnen hebben. Het
 
 158
 00:06:59,599 --> 00:07:01,656
-betekent dat het de best mogelijke privacy biedt die je
+betekent dat het de best
+mogelijke privacy biedt die je
 
 159
 00:07:01,680 --> 00:07:04,455
-mogelijk kunt hebben, gezien het feit dat we leven in
+mogelijk kunt hebben,
+gezien het feit dat we leven in
 
 160
 00:07:04,479 --> 00:07:08,136
-deze nieuwe AI-omgeving waarin AI’s
+deze nieuwe
+AI-omgeving waarin AI’s
 
 161
 00:07:08,160 --> 00:07:10,216
@@ -644,7 +751,8 @@ alle gegevens op het
 
 162
 00:07:10,240 --> 00:07:11,895
-internet verwerken en waarover ze beschikken om
+internet verwerken en
+waarover ze beschikken om
 
 163
 00:07:11,919 --> 00:07:14,216
@@ -652,15 +760,18 @@ om vrijwel
 
 164
 00:07:14,240 --> 00:07:16,696
-alles wat je doet met elkaar in verband te brengen.
+alles wat je doet met
+elkaar in verband te brengen.
 
 165
 00:07:16,720 --> 00:07:18,536
-Dus kunnen we er dieper op ingaan
+Dus kunnen we
+er dieper op ingaan
 
 166
 00:07:18,560 --> 00:07:20,936
-hoe de best mogelijke privacy eruitziet
+hoe de best mogelijke
+privacy eruitziet
 
 167
 00:07:20,960 --> 00:07:24,856
@@ -668,15 +779,18 @@ hoe de best mogelijke privacy eruitziet
 
 168
 00:07:24,880 --> 00:07:26,936
-deze discussie een aantal algemene
+deze discussie een
+aantal algemene
 
 169
 00:07:26,960 --> 00:07:29,536
-vragen beantwoorden over wat dit precies inhoudt.
+vragen beantwoorden
+over wat dit precies inhoudt.
 
 170
 00:07:29,560 --> 00:07:32,295
-Deze vragen hebben dus onderwerpen en vervolgens
+Deze vragen hebben dus
+onderwerpen en vervolgens
 
 171
 00:07:32,319 --> 00:07:33,496
@@ -688,27 +802,33 @@ daar dieper op in. Maar
 
 173
 00:07:36,240 --> 00:07:39,015
-laten we even teruggaan en onthouden dat we het hebben
+laten we even teruggaan en
+onthouden dat we het hebben
 
 174
 00:07:39,039 --> 00:07:41,256
-over op AI gebaseerde digitale identiteit, waarover
+over op AI gebaseerde
+digitale identiteit, waarover
 
 175
 00:07:41,280 --> 00:07:45,175
-de NSA en de grote veiligheidsorganisaties
+de NSA en de grote
+veiligheidsorganisaties
 
 176
 00:07:45,199 --> 00:07:48,136
-uit de Five Eyes-landen hebben gezegd (impliciet, red)
+uit de Five Eyes-landen
+hebben gezegd (impliciet, red)
 
 177
 00:07:48,160 --> 00:07:51,015
-“iedereen moet hiermee beginnen” of het
+“iedereen moet
+hiermee beginnen” of het
 
 178
 00:07:51,039 --> 00:07:52,856
-alternatief is een op KERI gebaseerde digitale
+alternatief is een op
+KERI gebaseerde digitale
 
 179
 00:07:52,880 --> 00:07:54,136
@@ -716,19 +836,23 @@ identiteit. KERI is niet zo
 
 180
 00:07:54,160 --> 00:07:56,776
-bekend, dus mensen weten er niets van.
+bekend, dus mensen
+weten er niets van.
 
 181
 00:07:56,800 --> 00:07:58,216
-Hoewel het een aantal belangrijke
+Hoewel het een
+aantal belangrijke
 
 182
 00:07:58,240 --> 00:08:00,776
-toepassingsgebieden heeft, waaronder een die
+toepassingsgebieden
+heeft, waaronder een die
 
 183
 00:08:00,800 --> 00:08:02,536
-State Endorsed Digital Identity (SEDI) heet.
+State Endorsed Digital
+Identity (SEDI) heet.
 
 184
 00:08:02,560 --> 00:08:03,816
@@ -740,7 +864,8 @@ Calling (OVC), waarmee
 
 186
 00:08:06,000 --> 00:08:10,615
-spam bij telefoongesprekken, en in de
+spam bij
+telefoongesprekken, en in de
 
 187
 00:08:10,639 --> 00:08:12,615
@@ -748,35 +873,43 @@ gezondheidszorgsector wordt er
 
 188
 00:08:12,639 --> 00:08:16,295
-werk gaande om KERI te gebruiken voor
+werk gaande om
+KERI te gebruiken voor
 
 189
 00:08:16,319 --> 00:08:19,976
-patiëntidentificatie. Dit zijn allemaal belangrijke
+patiëntidentificatie. Dit
+zijn allemaal belangrijke
 
 190
 00:08:20,000 --> 00:08:24,056
-belangrijke toepassingsgebieden die
+belangrijke
+toepassingsgebieden die
 
 191
 00:08:24,080 --> 00:08:26,936
-KERI in een positie zouden kunnen brengen om
+KERI in een positie
+zouden kunnen brengen om
 
 192
 00:08:26,960 --> 00:08:29,976
-de laatste en beste hoop voor individuele
+de laatste en beste
+hoop voor individuele
 
 193
 00:08:30,000 --> 00:08:32,216
-identiteit te zijn, want als we de AI-route
+identiteit te zijn, want
+als we de AI-route
 
 194
 00:08:32,240 --> 00:08:34,536
-weg inslaan, krijgen we misschien wel veiligheid. Het is een wapenwedloop
+weg inslaan, krijgen we misschien
+wel veiligheid. Het is een wapenwedloop
 
 195
 00:08:34,560 --> 00:08:37,976
-. Het zal altijd een wapenwedloop blijven.
+. Het zal altijd een
+wapenwedloop blijven.
 
 196
 00:08:38,000 --> 00:08:39,656
@@ -784,31 +917,38 @@ Maar we zullen geen
 
 197
 00:08:39,680 --> 00:08:42,776
-spoor van gebruikerscontrole of privacy hebben.
+spoor van gebruikerscontrole
+of privacy hebben.
 
 198
 00:08:42,800 --> 00:08:43,816
-Laten we het daar dus eens over hebben.
+Laten we het daar
+dus eens over hebben.
 
 199
 00:08:47,620 --> 00:08:50,796
-De verklaring van de Five Eyes roept op tot AI
+De verklaring van de
+Five Eyes roept op tot AI
 
 200
 00:08:50,820 --> 00:08:53,596
-door AI ondersteunde verdediging. De vraag is dus hoe
+door AI ondersteunde
+verdediging. De vraag is dus hoe
 
 201
 00:08:53,620 --> 00:08:55,676
-we ervoor zorgen dat AI ondergeschikt blijft aan
+we ervoor zorgen dat
+AI ondergeschikt blijft aan
 
 202
 00:08:55,700 --> 00:08:57,516
-mensen, de wet, het beleid en een cryptografisch
+mensen, de wet, het
+beleid en een cryptografisch
 
 203
 00:08:57,540 --> 00:08:59,116
-verifieerbare identiteitsinfrastructuur
+verifieerbare
+identiteitsinfrastructuur
 
 204
 00:08:59,140 --> 00:09:00,636
@@ -820,11 +960,13 @@ autoriteit te worden.
 
 206
 00:09:04,100 --> 00:09:07,196
-Nou, de manier waarop we dat waarborgen, is dat we
+Nou, de manier waarop
+we dat waarborgen, is dat we
 
 207
 00:09:07,220 --> 00:09:09,036
-in de eerste plaats een cryptografisch
+in de eerste plaats
+een cryptografisch
 
 208
 00:09:09,060 --> 00:09:10,875
@@ -832,27 +974,33 @@ verifieerbare identiteit hebben.
 
 209
 00:09:10,899 --> 00:09:13,116
-Als we dat niet hebben, kunnen we nooit
+Als we dat niet
+hebben, kunnen we nooit
 
 210
 00:09:13,140 --> 00:09:14,956
-ervoor zorgen dat het geen de facto
+ervoor zorgen dat
+het geen de facto
 
 211
 00:09:14,980 --> 00:09:17,276
-autoriteit wordt, omdat we niet kunnen zien wat
+autoriteit wordt, omdat
+we niet kunnen zien wat
 
 212
 00:09:17,300 --> 00:09:19,836
-het doet. Het is niet transparant. Het is
+het doet. Het is niet
+transparant. Het is
 
 213
 00:09:19,860 --> 00:09:23,276
-niet waarneembaar. Het is in feite een AI en
+niet waarneembaar.
+Het is in feite een AI en
 
 214
 00:09:23,300 --> 00:09:25,676
-die AI gaat beslissingen nemen over
+die AI gaat
+beslissingen nemen over
 
 215
 00:09:25,700 --> 00:09:28,875
@@ -860,23 +1008,28 @@ wie je bent. En het
 
 216
 00:09:28,899 --> 00:09:30,875
-doel is om je tegen fraude te beschermen,
+doel is om je tegen
+fraude te beschermen,
 
 217
 00:09:30,899 --> 00:09:35,516
-maar AI’s zelf beschikken niet over een
+maar AI’s zelf
+beschikken niet over een
 
 218
 00:09:35,540 --> 00:09:38,236
-inherente structuur die hen in staat stelt om
+inherente structuur
+die hen in staat stelt om
 
 219
 00:09:38,260 --> 00:09:40,156
-onderscheid te maken tussen wat gevoelige
+onderscheid te maken
+tussen wat gevoelige
 
 220
 00:09:40,180 --> 00:09:42,956
-informatie is en wat gevoelige bevoegdheden zijn,
+informatie is en wat
+gevoelige bevoegdheden zijn,
 
 221
 00:09:42,980 --> 00:09:44,875
@@ -884,7 +1037,8 @@ en gevoelige zaken die het
 
 222
 00:09:44,899 --> 00:09:47,836
-wel of niet zou moeten doen, tegenover alles wat
+wel of niet zou moeten
+doen, tegenover alles wat
 
 223
 00:09:47,860 --> 00:09:52,956
@@ -892,19 +1046,23 @@ binnen zijn kenmerkruimte of
 
 224
 00:09:52,980 --> 00:09:56,236
-gewichtsruimte valt, op basis van de
+gewichtsruimte
+valt, op basis van de
 
 225
 00:09:56,260 --> 00:09:58,796
-de prompts die het heeft ontvangen en de
+de prompts die het
+heeft ontvangen en de
 
 226
 00:09:58,820 --> 00:10:00,556
-doelstellingen die het heeft ontvangen en de
+doelstellingen die het
+heeft ontvangen en de
 
 227
 00:10:00,580 --> 00:10:03,596
-temperatuur op basis waarvan het beslist welk
+temperatuur op basis
+waarvan het beslist welk
 
 228
 00:10:03,620 --> 00:10:06,796
@@ -912,19 +1070,23 @@ pad het moet volgen
 
 229
 00:10:06,820 --> 00:10:08,796
-en ik kan hier dieper op ingaan, maar OWASP
+en ik kan hier dieper
+op ingaan, maar OWASP
 
 230
 00:10:08,820 --> 00:10:12,956
-heeft onlangs, in maart, een 100 pagina’s tellend
+heeft onlangs, in maart,
+een 100 pagina’s tellend
 
 231
 00:10:12,980 --> 00:10:15,356
-rapport over cyberbeveiliging met betrekking tot de nieuwe AI-
+rapport over cyberbeveiliging
+met betrekking tot de nieuwe AI-
 
 232
 00:10:15,380 --> 00:10:19,516
-bedreiging, en het is schokkend, en omdat
+bedreiging, en het is
+schokkend, en omdat
 
 233
 00:10:19,540 --> 00:10:22,315
@@ -932,7 +1094,8 @@ de AI-dreiging een gevaar vormt
 
 234
 00:10:22,339 --> 00:10:24,476
-dat nog nooit eerder heeft bestaan en er
+dat nog nooit eerder
+heeft bestaan en er
 
 235
 00:10:24,500 --> 00:10:26,716
@@ -940,19 +1103,23 @@ geen enkele
 
 236
 00:10:26,740 --> 00:10:29,435
-oplossing voor is. Dat zeggen ze in
+oplossing voor is.
+Dat zeggen ze in
 
 237
 00:10:29,459 --> 00:10:31,836
-het rapport. Het enige wat je kunt doen, is proberen
+het rapport. Het enige wat
+je kunt doen, is proberen
 
 238
 00:10:31,860 --> 00:10:34,396
-de gevolgen tot op zekere hoogte te beperken.
+de gevolgen tot op
+zekere hoogte te beperken.
 
 239
 00:10:34,420 --> 00:10:37,116
-Dus, hoe zorgen we daarvoor? Ten eerste:
+Dus, hoe zorgen we
+daarvoor? Ten eerste:
 
 240
 00:10:37,140 --> 00:10:38,636
@@ -960,7 +1127,8 @@ we moeten beschikken over
 
 241
 00:10:38,660 --> 00:10:40,636
-een cryptografisch verifieerbare identiteitsinfrastructuur
+een cryptografisch verifieerbare
+identiteitsinfrastructuur
 
 242
 00:10:40,660 --> 00:10:44,236
@@ -972,31 +1140,38 @@ autoriteit en individueel
 
 244
 00:10:46,420 --> 00:10:49,836
-beheerd. Wat zijn dan de moeilijkste
+beheerd. Wat zijn
+dan de moeilijkste
 
 245
 00:10:49,860 --> 00:10:52,236
-juridische en technische bestuursmechanismen
+juridische en technische
+bestuursmechanismen
 
 246
 00:10:52,260 --> 00:10:54,636
-die nodig zijn om ervoor te zorgen
+die nodig zijn om
+ervoor te zorgen
 
 247
 00:10:54,660 --> 00:10:57,596
-dat elke belangrijke AI-handeling
+dat elke belangrijke
+AI-handeling
 
 248
 00:10:57,620 --> 00:10:59,356
-toewijsbaar blijft aan of verantwoording aflegt aan
+toewijsbaar blijft aan of
+verantwoording aflegt aan
 
 249
 00:10:59,380 --> 00:11:01,516
-mensen en organisaties? Welnu, dat
+mensen en
+organisaties? Welnu, dat
 
 250
 00:11:01,540 --> 00:11:04,315
-betekent dat we een regelgevend kader moeten opzetten
+betekent dat we een
+regelgevend kader moeten opzetten
 
 251
 00:11:04,339 --> 00:11:07,036
@@ -1004,11 +1179,13 @@ en een juridisch
 
 252
 00:11:07,060 --> 00:11:11,116
-kader voor onze individuele rechten.
+kader voor onze
+individuele rechten.
 
 253
 00:11:11,140 --> 00:11:13,116
-De oorspronkelijke Grondwet van de Verenigde
+De oorspronkelijke
+Grondwet van de Verenigde
 
 254
 00:11:13,140 --> 00:11:15,116
@@ -1016,15 +1193,18 @@ Staten bevat een aantal
 
 255
 00:11:15,140 --> 00:11:16,796
-amendementen, en het vierde en vijfde
+amendementen, en
+het vierde en vijfde
 
 256
 00:11:16,820 --> 00:11:19,196
-amendementen, maar die zijn geschreven in een
+amendementen, maar
+die zijn geschreven in een
 
 257
 00:11:19,220 --> 00:11:21,676
-tijdperk waarin er nog geen digitale wereld bestond
+tijdperk waarin er nog
+geen digitale wereld bestond
 
 258
 00:11:21,700 --> 00:11:25,036
@@ -1036,19 +1216,23 @@ op papier stond. Informatie werd
 
 260
 00:11:28,019 --> 00:11:30,636
-verspreid op papier. We hebben nu een
+verspreid op papier.
+We hebben nu een
 
 261
 00:11:30,660 --> 00:11:34,156
-digitale wereld waarin informatie
+digitale wereld
+waarin informatie
 
 262
 00:11:34,180 --> 00:11:37,676
-elektronisch wordt verspreid. En de manier waarop
+elektronisch wordt verspreid.
+En de manier waarop
 
 263
 00:11:37,700 --> 00:11:40,396
-je jezelf beschermt in de digitale
+je jezelf beschermt
+in de digitale
 
 264
 00:11:40,420 --> 00:11:41,916
@@ -1064,23 +1248,28 @@ aanwezigheid verschilt
 
 267
 00:11:46,740 --> 00:11:49,755
-zo sterk dat we niet uitsluitend kunnen vertrouwen op
+zo sterk dat we niet uitsluitend
+kunnen vertrouwen op
 
 268
 00:11:49,779 --> 00:11:51,916
-die twee beschermingsmaatregelen. We hebben daarvoor
+die twee beschermingsmaatregelen.
+We hebben daarvoor
 
 269
 00:11:51,940 --> 00:11:54,636
-aanvullende beschermingsmaatregelen nodig. En één
+aanvullende
+beschermingsmaatregelen nodig. En één
 
 270
 00:11:54,660 --> 00:11:56,476
-van die waarborgen heet de „plicht tot
+van die waarborgen
+heet de „plicht tot
 
 271
 00:11:56,500 --> 00:11:59,196
-gegevensloyaliteit”. Het is waarschijnlijk het
+gegevensloyaliteit”.
+Het is waarschijnlijk het
 
 272
 00:11:59,220 --> 00:12:01,916
@@ -1092,19 +1281,23 @@ afgelopen jaren is ontwikkeld.
 
 274
 00:12:03,300 --> 00:12:05,516
-Er zijn enkele rechtsgeleerden die
+Er zijn enkele
+rechtsgeleerden die
 
 275
 00:12:05,540 --> 00:12:07,356
-zich hiermee hebben beziggehouden en verschillende
+zich hiermee hebben
+beziggehouden en verschillende
 
 276
 00:12:07,380 --> 00:12:10,636
-artikelen over geschreven, en de staat
+artikelen over
+geschreven, en de staat
 
 277
 00:12:10,660 --> 00:12:12,636
-Utah heeft het onlangs opgenomen in de
+Utah heeft het onlangs
+opgenomen in de
 
 278
 00:12:12,660 --> 00:12:14,236
@@ -1120,7 +1313,8 @@ gegevens over jou verwerken, die
 
 281
 00:12:20,100 --> 00:12:22,076
-gegevens op een manier moeten gebruiken die in jouw
+gegevens op een manier
+moeten gebruiken die in jouw
 
 282
 00:12:22,100 --> 00:12:25,676
@@ -1128,15 +1322,18 @@ belang is. En dat is het
 
 283
 00:12:25,700 --> 00:12:27,435
-begin. En daar moet je vervolgens bovenop bouwen
+begin. En daar moet je
+vervolgens bovenop bouwen
 
 284
 00:12:27,459 --> 00:12:31,115
-daarop een mechanisme waarmee mensen
+daarop een mechanisme
+waarmee mensen
 
 285
 00:12:31,139 --> 00:12:33,036
-controle hebben over hun identiteit, zodat ze
+controle hebben over
+hun identiteit, zodat ze
 
 286
 00:12:33,060 --> 00:12:36,555
@@ -1144,7 +1341,8 @@ hun voorkeuren te uiten. En
 
 287
 00:12:36,579 --> 00:12:40,636
-het gaat niet alleen om toestemming. Het is daadwerkelijk
+het gaat niet alleen om
+toestemming. Het is daadwerkelijk
 
 288
 00:12:40,660 --> 00:12:45,115
@@ -1152,15 +1350,18 @@ betrokken zijn bij wat
 
 289
 00:12:45,139 --> 00:12:47,995
-in hun eigen belang is en het koppelen
+in hun eigen belang
+is en het koppelen
 
 290
 00:12:48,019 --> 00:12:51,036
-aan het gebruik van die gegevens van wat
+aan het gebruik van
+die gegevens van wat
 
 291
 00:12:51,060 --> 00:12:53,196
-‘chain-link-vertrouwelijkheid’ wordt genoemd, waarbij
+‘chain-link-vertrouwelijkheid’
+wordt genoemd, waarbij
 
 292
 00:12:53,220 --> 00:12:57,115
@@ -1168,7 +1369,8 @@ de voorwaarden en de volgende
 
 293
 00:12:57,139 --> 00:12:58,875
-de gegevens terwijl deze door het systeem gaan
+de gegevens terwijl deze
+door het systeem gaan
 
 294
 00:12:58,899 --> 00:13:01,356
@@ -1176,31 +1378,38 @@ zodat je de mogelijkheid hebt om
 
 295
 00:13:01,380 --> 00:13:03,596
-deze af te dwingen, zodat er ook sprake is van
+deze af te dwingen,
+zodat er ook sprake is van
 
 296
 00:13:03,620 --> 00:13:06,315
-handhaving door burgers of rechtsmiddelen voor burgers.
+handhaving door burgers of
+rechtsmiddelen voor burgers.
 
 297
 00:13:06,339 --> 00:13:08,396
-Er zijn dus verschillende lagen van
+Er zijn dus
+verschillende lagen van
 
 298
 00:13:08,420 --> 00:13:10,156
-mechanismen die we moeten invoeren
+mechanismen die
+we moeten invoeren
 
 299
 00:13:10,180 --> 00:13:12,236
-moeten invoeren en we beginnen daar op
+moeten invoeren en
+we beginnen daar op
 
 300
 00:13:12,260 --> 00:13:14,315
-sommige plaatsen al mee. De staat Utah is
+sommige plaatsen al
+mee. De staat Utah is
 
 301
 00:13:14,339 --> 00:13:16,315
-hierin een voortrekkersrol en er is een
+hierin een voortrekkersrol
+en er is een
 
 302
 00:13:16,339 --> 00:13:19,435
@@ -1208,15 +1417,18 @@ coalitie van andere staten die
 
 303
 00:13:19,459 --> 00:13:21,276
-overweegt wetgeving op te stellen op
+overweegt wetgeving
+op te stellen op
 
 304
 00:13:21,300 --> 00:13:23,196
-dezelfde manier, wat ons de kans geeft
+dezelfde manier,
+wat ons de kans geeft
 
 305
 00:13:23,220 --> 00:13:25,435
-om dat te kunnen doen. Maar zonder
+om dat te kunnen
+doen. Maar zonder
 
 306
 00:13:25,459 --> 00:13:29,115
@@ -1224,11 +1436,13 @@ zal het erg
 
 307
 00:13:29,139 --> 00:13:32,476
-moeilijk zijn om de golf van wat er
+moeilijk zijn om
+de golf van wat er
 
 308
 00:13:32,500 --> 00:13:35,115
-er op het gebied van AI gebeurt, en vanwege
+er op het gebied van
+AI gebeurt, en vanwege
 
 309
 00:13:35,139 --> 00:13:37,916
@@ -1240,11 +1454,13 @@ problematisch.
 
 311
 00:13:42,100 --> 00:13:46,875
-Het rapport van de NSA roept dan ook op tot
+Het rapport van de
+NSA roept dan ook op tot
 
 312
 00:13:46,899 --> 00:13:49,276
-strengere identiteits- en toegangscontroles.
+strengere identiteits-
+en toegangscontroles.
 
 313
 00:13:49,300 --> 00:13:52,956
@@ -1260,11 +1476,13 @@ Het probleem is wat er telt
 
 316
 00:13:56,420 --> 00:14:00,875
-als sterker worden beschouwd, toch? Ik bedoel, de
+als sterker worden
+beschouwd, toch? Ik bedoel, de
 
 317
 00:14:00,899 --> 00:14:03,276
-huidige bedieningselementen en mensen gebruiken ze al
+huidige bedieningselementen
+en mensen gebruiken ze al
 
 318
 00:14:03,300 --> 00:14:06,156
@@ -1276,7 +1494,8 @@ en mensen blijven ze aanscherpen
 
 320
 00:14:08,500 --> 00:14:10,956
-en ze blijven er dingen aan toevoegen, maar
+en ze blijven er dingen
+aan toevoegen, maar
 
 321
 00:14:10,980 --> 00:14:14,156
@@ -1292,15 +1511,18 @@ versterkt moeten worden
 
 324
 00:14:20,180 --> 00:14:22,716
-op een manier die nog nooit eerder is gedaan.
+op een manier die nog
+nooit eerder is gedaan.
 
 325
 00:14:22,740 --> 00:14:24,156
-Het is alsof, ik denk dat je zou kunnen zeggen dat het
+Het is alsof, ik denk dat je
+zou kunnen zeggen dat het
 
 326
 00:14:24,180 --> 00:14:28,636
-alsof je overstapt van een harnas gemaakt
+alsof je overstapt van
+een harnas gemaakt
 
 327
 00:14:28,660 --> 00:14:31,916
@@ -1312,15 +1534,18 @@ staal, toch? Alsof je van
 
 329
 00:14:36,100 --> 00:14:38,236
-zwak naar sterk gaat, maar je hebt nog niet de
+zwak naar sterk gaat,
+maar je hebt nog niet de
 
 330
 00:14:38,260 --> 00:14:40,956
-vermogen om stalen pantser te maken. Je
+vermogen om stalen
+pantser te maken. Je
 
 331
 00:14:40,980 --> 00:14:42,636
-hebt staal nog niet uitgevonden. Dus, wat moet je
+hebt staal nog niet
+uitgevonden. Dus, wat moet je
 
 332
 00:14:42,660 --> 00:14:44,796
@@ -1328,23 +1553,28 @@ dan?
 
 333
 00:14:44,820 --> 00:14:47,356
-KERI is dus vanaf de basis ontworpen
+KERI is dus vanaf
+de basis ontworpen
 
 334
 00:14:47,380 --> 00:14:52,156
-zodat er geen AI nodig is om zich te verdedigen
+zodat er geen AI nodig
+is om zich te verdedigen
 
 335
 00:14:52,180 --> 00:14:54,716
-tegen een AI. Het is ontworpen om
+tegen een AI. Het
+is ontworpen om
 
 336
 00:14:54,740 --> 00:14:57,115
-cryptografie op de best mogelijke manier te gebruiken
+cryptografie op de best
+mogelijke manier te gebruiken
 
 337
 00:14:57,139 --> 00:14:59,276
-waarbij je cryptografie kunt gebruiken
+waarbij je cryptografie
+kunt gebruiken
 
 338
 00:14:59,300 --> 00:15:01,836
@@ -1356,7 +1586,8 @@ en dat sleutelbeheer moet op een
 
 340
 00:15:04,339 --> 00:15:05,836
-speciale manier. En als je sleutelbeheer
+speciale manier. En
+als je sleutelbeheer
 
 341
 00:15:05,860 --> 00:15:07,836
@@ -1368,7 +1599,8 @@ dan kun je een systeem bouwen
 
 343
 00:15:11,139 --> 00:15:13,196
-dat bestand is tegen dit soort aanvallen
+dat bestand is tegen
+dit soort aanvallen
 
 344
 00:15:13,220 --> 00:15:14,636
@@ -1376,31 +1608,38 @@ omdat het niet de
 
 345
 00:15:14,660 --> 00:15:16,636
-zwakke punten heeft die zijn ingebouwd in de
+zwakke punten heeft
+die zijn ingebouwd in de
 
 346
 00:15:16,660 --> 00:15:20,476
-huidige besturingssystemen vanwege de
+huidige besturingssystemen
+vanwege de
 
 347
 00:15:20,500 --> 00:15:22,716
-stand van de techniek van 30 jaar geleden, toen
+stand van de techniek
+van 30 jaar geleden, toen
 
 348
 00:15:22,740 --> 00:15:24,236
-deze systemen werden ontworpen, waarna
+deze systemen werden
+ontworpen, waarna
 
 349
 00:15:24,260 --> 00:15:26,236
-er steeds weer onderdelen aan zijn vastgeschroefd en toegevoegd en
+er steeds weer onderdelen aan
+zijn vastgeschroefd en toegevoegd en
 
 350
 00:15:26,260 --> 00:15:28,156
-aangepast, maar de kernarchitectuur
+aangepast, maar
+de kernarchitectuur
 
 351
 00:15:28,180 --> 00:15:30,875
-is in 30 jaar niet veranderd, terwijl
+is in 30 jaar niet
+veranderd, terwijl
 
 352
 00:15:30,899 --> 00:15:34,180
@@ -1412,19 +1651,23 @@ dus de vraag
 
 354
 00:15:37,940 --> 00:15:39,995
-is welke zwakke punten in de huidige
+is welke zwakke
+punten in de huidige
 
 355
 00:15:40,019 --> 00:15:41,755
-identiteitssystemen het gevaarlijkst worden
+identiteitssystemen
+het gevaarlijkst worden
 
 356
 00:15:41,779 --> 00:15:43,995
-wanneer aanvallers kunnen opereren met de snelheid
+wanneer aanvallers kunnen
+opereren met de snelheid
 
 357
 00:15:44,019 --> 00:15:50,555
-en schaal van AI. Welnu, de meeste kwetsbaarheden
+en schaal van AI. Welnu,
+de meeste kwetsbaarheden
 
 358
 00:15:50,579 --> 00:15:54,796
@@ -1432,11 +1675,13 @@ maken doorgaans gebruik van
 
 359
 00:15:54,820 --> 00:15:58,396
-een combinatie van kwetsbaarheden. Dus
+een combinatie van
+kwetsbaarheden. Dus
 
 360
 00:15:58,420 --> 00:16:01,356
-kun je te maken hebben met een algoritmische
+kun je te maken hebben
+met een algoritmische
 
 361
 00:16:01,380 --> 00:16:03,596
@@ -1444,23 +1689,28 @@ infrastructuur,
 
 362
 00:16:03,620 --> 00:16:07,115
-software en een besturingssysteem
+software en een
+besturingssysteem
 
 363
 00:16:07,139 --> 00:16:11,596
-en een kwetsbaarheid in het gebruik die samen
+en een kwetsbaarheid
+in het gebruik die samen
 
 364
 00:16:11,620 --> 00:16:14,235
-een aanval mogelijk maken. Een recursieve
+een aanval mogelijk
+maken. Een recursieve
 
 365
 00:16:14,259 --> 00:16:17,036
-aanval waarbij bevoegdheden worden uitgebreid, maakt vaak
+aanval waarbij bevoegdheden
+worden uitgebreid, maakt vaak
 
 366
 00:16:17,060 --> 00:16:19,276
-gebruik van meerdere kwetsbaarheden
+gebruik van meerdere
+kwetsbaarheden
 
 367
 00:16:19,300 --> 00:16:21,596
@@ -1468,23 +1718,28 @@ om zowel
 
 368
 00:16:21,620 --> 00:16:26,396
-zowel verticaal als horizontaal te bewegen in een
+zowel verticaal als
+horizontaal te bewegen in een
 
 369
 00:16:26,420 --> 00:16:29,196
-of in een organisatorische structuur voor toegangscontrole
+of in een organisatorische
+structuur voor toegangscontrole
 
 370
 00:16:29,220 --> 00:16:32,235
-ruimte door gebruik te maken van verschillende
+ruimte door gebruik te
+maken van verschillende
 
 371
 00:16:32,259 --> 00:16:34,315
-verschillende niveaus van kwetsbaarheden.
+verschillende niveaus
+van kwetsbaarheden.
 
 372
 00:16:34,339 --> 00:16:36,476
-En dus komt het niet in één keer terecht waar het
+En dus komt het niet in
+één keer terecht waar het
 
 373
 00:16:36,500 --> 00:16:38,716
@@ -1492,39 +1747,48 @@ heen wil. Het werkt daar gewoon
 
 374
 00:16:38,740 --> 00:16:41,276
-gaat het daar geleidelijk aan aan de slag, omdat het
+gaat het daar geleidelijk
+aan aan de slag, omdat het
 
 375
 00:16:41,300 --> 00:16:44,396
-op elk punt ontdekt wat er mis is en vervolgens
+op elk punt ontdekt wat
+er mis is en vervolgens
 
 376
 00:16:44,420 --> 00:16:48,476
-zoekt het naar de volgende kwetsbaarheid, toch?
+zoekt het naar de volgende
+kwetsbaarheid, toch?
 
 377
 00:16:48,500 --> 00:16:51,836
-En met AI kunnen ze sneller zoeken.
+En met AI kunnen
+ze sneller zoeken.
 
 378
 00:16:51,860 --> 00:16:55,196
-Ze kunnen exploits sneller combineren
+Ze kunnen exploits
+sneller combineren
 
 379
 00:16:55,220 --> 00:16:56,555
-omdat ze de hele ruimte kunnen doorzoeken
+omdat ze de hele ruimte
+kunnen doorzoeken
 
 380
 00:16:56,579 --> 00:16:58,156
-en dan zeggen ze: „Oh, wacht even...“
+en dan zeggen ze:
+„Oh, wacht even...“
 
 381
 00:16:58,180 --> 00:17:00,716
-Er is trouwens onlangs een artikel verschenen, geloof ik
+Er is trouwens onlangs een
+artikel verschenen, geloof ik
 
 382
 00:17:00,740 --> 00:17:02,875
-vorige week, waarin ze in staat waren om
+vorige week, waarin
+ze in staat waren om
 
 383
 00:17:02,899 --> 00:17:07,116
@@ -1536,7 +1800,8 @@ de M5-architectuur van Apple
 
 385
 00:17:10,020 --> 00:17:13,275
-door een combinatie van menselijke en
+door een combinatie
+van menselijke en
 
 386
 00:17:13,299 --> 00:17:18,876
@@ -1544,7 +1809,8 @@ machine-AI-analyse die de mensen
 
 387
 00:17:18,900 --> 00:17:20,236
-in hun eentje nooit hadden kunnen uitvoeren
+in hun eentje nooit
+hadden kunnen uitvoeren
 
 388
 00:17:20,260 --> 00:17:22,076
@@ -1552,11 +1818,13 @@ omdat ze simpelweg niet het
 
 389
 00:17:22,100 --> 00:17:24,236
-vermogen hadden om alle mogelijke
+vermogen hadden
+om alle mogelijke
 
 390
 00:17:24,260 --> 00:17:25,915
-verschillende dingen te analyseren waar ze aan konden denken.
+verschillende dingen te analyseren
+waar ze aan konden denken.
 
 391
 00:17:25,939 --> 00:17:28,795
@@ -1564,11 +1832,13 @@ ze wisten niet per se hoe ze
 
 392
 00:17:28,819 --> 00:17:30,556
-de exploit tot een goed einde te brengen, maar met de
+de exploit tot een goed
+einde te brengen, maar met de
 
 393
 00:17:30,580 --> 00:17:33,275
-menselijke begeleiding in combinatie
+menselijke begeleiding
+in combinatie
 
 394
 00:17:33,299 --> 00:17:36,716
@@ -1576,7 +1846,8 @@ dus de snelheid en schaal van AI
 
 395
 00:17:36,740 --> 00:17:38,716
-gaat niet alleen om de AI zelf, maar ook om het feit dat
+gaat niet alleen om de AI
+zelf, maar ook om het feit dat
 
 396
 00:17:38,740 --> 00:17:41,836
@@ -1584,11 +1855,13 @@ aanvallers mensen zijn, en dat
 
 397
 00:17:41,860 --> 00:17:44,876
-de meeste van deze aanvallen worden aangestuurd door
+de meeste van deze aanvallen
+worden aangestuurd door
 
 398
 00:17:44,900 --> 00:17:47,275
-mensen, hetzij criminelen, hetzij staten,
+mensen, hetzij
+criminelen, hetzij staten,
 
 399
 00:17:47,299 --> 00:17:49,916
@@ -1596,11 +1869,13 @@ die het gemunt hebben op
 
 400
 00:17:49,940 --> 00:17:52,796
-kritieke of waardevolle infrastructuur en
+kritieke of waardevolle
+infrastructuur en
 
 401
 00:17:52,820 --> 00:17:55,356
-de AI is slechts een krachtversterker voor
+de AI is slechts een
+krachtversterker voor
 
 402
 00:17:55,380 --> 00:17:57,275
@@ -1608,7 +1883,8 @@ voor al die soorten aanvallen,
 
 403
 00:17:57,299 --> 00:17:59,196
-niet alleen, maar is zeker een kracht
+niet alleen, maar
+is zeker een kracht
 
 404
 00:17:59,220 --> 00:18:02,476
@@ -1616,15 +1892,18 @@ versterker. En dat betekent dat
 
 405
 00:18:02,500 --> 00:18:07,596
-zelfs moeilijk te vinden, onbekende kwetsbaarheden
+zelfs moeilijk te vinden,
+onbekende kwetsbaarheden
 
 406
 00:18:07,620 --> 00:18:09,356
-die latent aanwezig zijn, die zich in je systeem bevinden
+die latent aanwezig zijn, die
+zich in je systeem bevinden
 
 407
 00:18:09,380 --> 00:18:11,515
-snel zullen worden uitgebuit, wat
+snel zullen worden
+uitgebuit, wat
 
 408
 00:18:11,539 --> 00:18:13,356
@@ -1632,15 +1911,18 @@ betekent dat je systeem
 
 409
 00:18:13,380 --> 00:18:16,076
-anders ontworpen moet zijn. Het moet
+anders ontworpen
+moet zijn. Het moet
 
 410
 00:18:16,100 --> 00:18:17,916
-zo ontworpen dat het fouttolerant is, zodat het
+zo ontworpen dat het
+fouttolerant is, zodat het
 
 411
 00:18:17,940 --> 00:18:20,956
-kan blijven functioneren, zelfs als er misbruik van wordt gemaakt. En
+kan blijven functioneren, zelfs als
+er misbruik van wordt gemaakt. En
 
 412
 00:18:20,980 --> 00:18:22,876
@@ -1648,7 +1930,8 @@ dat is dus
 
 413
 00:18:22,900 --> 00:18:28,059
-een andere benadering van beveiliging.
+een andere benadering
+van beveiliging.
 
 414
 00:18:28,179 --> 00:18:29,676
@@ -1656,15 +1939,18 @@ Laten we het daar dus nog even
 
 415
 00:18:29,700 --> 00:18:32,316
-over hebben. Cyberweerbaarheid na een inbreuk
+over hebben.
+Cyberweerbaarheid na een inbreuk
 
 416
 00:18:32,340 --> 00:18:34,716
-want dat is de perfecte overgang.
+want dat is de
+perfecte overgang.
 
 417
 00:18:34,740 --> 00:18:36,796
-De stelling gaat ervan uit dat inbreuken
+De stelling gaat
+ervan uit dat inbreuken
 
 418
 00:18:36,820 --> 00:18:38,395
@@ -1672,35 +1958,43 @@ onvermijdelijk zijn.
 
 419
 00:18:38,419 --> 00:18:40,316
-en de vraag is wat er in een op KERI gebaseerde
+en de vraag is wat er in
+een op KERI gebaseerde
 
 420
 00:18:40,340 --> 00:18:42,155
-architectuur wat er nog betrouwbaar is
+architectuur wat er
+nog betrouwbaar is
 
 421
 00:18:42,179 --> 00:18:44,716
-nadat servers, databases en cloudproviders
+nadat servers, databases
+en cloudproviders
 
 422
 00:18:44,740 --> 00:18:47,275
-certificaatautoriteiten zijn gecompromitteerd?
+certificaatautoriteiten
+zijn gecompromitteerd?
 
 423
 00:18:47,299 --> 00:18:50,155
-Nou, in een op KERI gebaseerde architectuur,
+Nou, in een op KERI
+gebaseerde architectuur,
 
 424
 00:18:50,179 --> 00:18:52,636
-blijft het volgende betrouwbaar: dat je
+blijft het volgende
+betrouwbaar: dat je
 
 425
 00:18:52,660 --> 00:18:56,556
-een fouttolerant mechanisme hebt gebouwd
+een fouttolerant
+mechanisme hebt gebouwd
 
 426
 00:18:56,580 --> 00:18:58,876
-waarmee je in staat bent om inbreuken te detecteren
+waarmee je in staat bent
+om inbreuken te detecteren
 
 427
 00:18:58,900 --> 00:19:02,476
@@ -1712,23 +2006,28 @@ Wat er dus gebeurt, is dat je
 
 429
 00:19:06,100 --> 00:19:08,476
-misschien niet in staat bent om te anticiperen op
+misschien niet in staat
+bent om te anticiperen op
 
 430
 00:19:08,500 --> 00:19:12,476
-op alle manieren waarop een aanvaller
+op alle manieren
+waarop een aanvaller
 
 431
 00:19:12,500 --> 00:19:14,796
-je kan aanvallen. Maar als je mechanismen hebt
+je kan aanvallen. Maar
+als je mechanismen hebt
 
 432
 00:19:14,820 --> 00:19:17,916
-waarmee je inbreuken kunt detecteren
+waarmee je inbreuken
+kunt detecteren
 
 433
 00:19:17,940 --> 00:19:19,996
-en vervolgens een manier om tijdig te herstellen van
+en vervolgens een manier
+om tijdig te herstellen van
 
 434
 00:19:20,020 --> 00:19:23,596
@@ -1736,23 +2035,28 @@ een inbreuk, dan heeft de
 
 435
 00:19:23,620 --> 00:19:26,316
-aanvaller geen tijd heeft om misbruik te maken van
+aanvaller geen tijd heeft
+om misbruik te maken van
 
 436
 00:19:26,340 --> 00:19:29,356
-die inbreuk. En net als bij een <i>Recursieve</i>
+die inbreuk. En net
+als bij een <i>Recursieve</i>
 
 437
 00:19:29,380 --> 00:19:31,596
-<i>aanval waarbij bevoegdheden worden uitgebreid</i>,
+<i>aanval waarbij bevoegdheden
+worden uitgebreid</i>,
 
 438
 00:19:31,620 --> 00:19:35,035
-gaat het meestal om een reeks exploits die
+gaat het meestal om
+een reeks exploits die
 
 439
 00:19:35,059 --> 00:19:36,876
-tijd kost. Die tijd hoeft echter niet
+tijd kost. Die tijd
+hoeft echter niet
 
 440
 00:19:36,900 --> 00:19:39,436
@@ -1768,7 +2072,8 @@ vóór de komst van AI, nou ja, de
 
 443
 00:19:46,179 --> 00:19:48,556
-momenteel de gemiddelde tijd die nodig is voordat een inbreuk
+momenteel de gemiddelde tijd
+die nodig is voordat een inbreuk
 
 444
 00:19:48,580 --> 00:19:50,716
@@ -1776,23 +2081,28 @@ wordt ontdekt, en ik
 
 445
 00:19:50,740 --> 00:19:52,476
-denk dat dat niet minder is dan wat je weet
+denk dat dat niet
+minder is dan wat je weet
 
 446
 00:19:52,500 --> 00:19:55,996
-en het inzetten van AI als beschermer zou
+en het inzetten van
+AI als beschermer zou
 
 447
 00:19:56,020 --> 00:19:57,676
-die tijd verkorten, omdat die beter
+die tijd verkorten,
+omdat die beter
 
 448
 00:19:57,700 --> 00:19:59,596
-in staat is om inbreuken te detecteren, toch? Dat is
+in staat is om inbreuken
+te detecteren, toch? Dat is
 
 449
 00:19:59,620 --> 00:20:03,275
-dat is het idee. is 6 maanden en daarna
+dat is het idee. is 6
+maanden en daarna
 
 450
 00:20:03,299 --> 00:20:05,436
@@ -1800,15 +2110,18 @@ dat is het idee. is 6 maanden en daarna
 
 451
 00:20:05,460 --> 00:20:07,515
-inbreuk in te dammen. Het is dus negen maanden tijd die
+inbreuk in te dammen. Het
+is dus negen maanden tijd die
 
 452
 00:20:07,539 --> 00:20:11,436
-een aanvaller heeft om misbruik te maken van de
+een aanvaller heeft om
+misbruik te maken van de
 
 453
 00:20:11,460 --> 00:20:13,035
-kwetsbaarheid die hij heeft ontdekt te misbruiken.
+kwetsbaarheid die hij
+heeft ontdekt te misbruiken.
 
 454
 00:20:13,059 --> 00:20:17,275
@@ -1816,11 +2129,13 @@ KERI is dus zo ontworpen dat
 
 455
 00:20:17,299 --> 00:20:19,996
-de detectietijd in de orde van grootte
+de detectietijd in
+de orde van grootte
 
 456
 00:20:20,020 --> 00:20:22,076
-van seconden ligt. De verspreiding via het netwerk
+van seconden ligt. De
+verspreiding via het netwerk
 
 457
 00:20:22,100 --> 00:20:26,476
@@ -1832,7 +2147,8 @@ misbruikbaar zijn
 
 459
 00:20:28,179 --> 00:20:30,956
-moeten detecteerbaar zijn. Dus het hele
+moeten detecteerbaar
+zijn. Dus het hele
 
 460
 00:20:30,980 --> 00:20:32,476
@@ -1844,19 +2160,23 @@ detecteerbaarheid, toch?
 
 462
 00:20:35,380 --> 00:20:38,556
-Alles komt tot uiting als <i>dubbelzinnigheid</i>.
+Alles komt tot uiting
+als <i>dubbelzinnigheid</i>.
 
 463
 00:20:38,580 --> 00:20:41,035
-Het is een bewijssysteem voor dubbelzinnigheid. Dus om
+Het is een bewijssysteem
+voor dubbelzinnigheid. Dus om
 
 464
 00:20:41,059 --> 00:20:43,756
-er voordeel uit te halen, moet een aanvaller
+er voordeel uit te halen,
+moet een aanvaller
 
 465
 00:20:43,780 --> 00:20:45,996
-iets doen dat zich voordoet als dubbelheid,
+iets doen dat zich
+voordoet als dubbelheid,
 
 466
 00:20:46,020 --> 00:20:48,155
@@ -1864,7 +2184,8 @@ waardoor vervolgens
 
 467
 00:20:48,179 --> 00:20:50,316
-de beheerder van de identiteit om
+de beheerder van
+de identiteit om
 
 468
 00:20:50,340 --> 00:20:53,596
@@ -1872,27 +2193,33 @@ daar tijdig van te herstellen
 
 469
 00:20:53,620 --> 00:20:55,196
-manier te herstellen. Wat niet betekent
+manier te herstellen.
+Wat niet betekent
 
 470
 00:20:55,220 --> 00:20:57,035
-dat er geen succesvolle aanvallen zijn.
+dat er geen succesvolle
+aanvallen zijn.
 
 471
 00:20:57,059 --> 00:21:00,076
-Het betekent dat de inslagradius van
+Het betekent dat
+de inslagradius van
 
 472
 00:21:00,100 --> 00:21:03,196
-de aanval tot een minimum wordt beperkt.
+de aanval tot een
+minimum wordt beperkt.
 
 473
 00:21:03,220 --> 00:21:06,556
-In veel gevallen is de ROI van de aanval of
+In veel gevallen is de
+ROI van de aanval of
 
 474
 00:21:06,580 --> 00:21:09,035
-het rendement op de investering negatief. Ik
+het rendement op de
+investering negatief. Ik
 
 475
 00:21:09,059 --> 00:21:11,196
@@ -1900,7 +2227,8 @@ bedoel dat het meer kost
 
 476
 00:21:11,220 --> 00:21:13,676
-om de aanval uit te voeren dan dat ze ermee verdienen
+om de aanval uit te voeren
+dan dat ze ermee verdienen
 
 477
 00:21:13,700 --> 00:21:17,836
@@ -1912,39 +2240,48 @@ wordt ingeperkt en hersteld.
 
 479
 00:21:22,340 --> 00:21:24,395
-Dus deze systemen die we momenteel gebruiken,
+Dus deze systemen die
+we momenteel gebruiken,
 
 480
 00:21:24,419 --> 00:21:26,155
-servers, databases, cloudproviders,
+servers, databases,
+cloudproviders,
 
 481
 00:21:26,179 --> 00:21:27,676
-certificaatautoriteiten, zijn allemaal
+certificaatautoriteiten,
+zijn allemaal
 
 482
 00:21:27,700 --> 00:21:30,155
-gebaseerd op een verouderd, achterhaald concept
+gebaseerd op een
+verouderd, achterhaald concept
 
 483
 00:21:30,179 --> 00:21:32,395
-van beveiliging en sleutelbeheer. En
+van beveiliging en
+sleutelbeheer. En
 
 484
 00:21:32,419 --> 00:21:33,916
-dat zijn echt harde bewoordingen. En ik weet
+dat zijn echt harde
+bewoordingen. En ik weet
 
 485
 00:21:33,940 --> 00:21:34,956
-dat veel mensen in de sector het niet
+dat veel mensen
+in de sector het niet
 
 486
 00:21:34,980 --> 00:21:36,395
-op prijs stellen als ik dat soort dingen zeg, maar
+op prijs stellen als ik dat
+soort dingen zeg, maar
 
 487
 00:21:36,419 --> 00:21:38,716
-dat zijn ze wel. Het is 30 jaar oud. En je kunt
+dat zijn ze wel. Het is
+30 jaar oud. En je kunt
 
 488
 00:21:38,740 --> 00:21:40,796
@@ -1952,35 +2289,43 @@ terugkomen op de keuzes
 
 489
 00:21:40,820 --> 00:21:42,635
-en het waren goede keuzes 30 jaar geleden
+en het waren goede
+keuzes 30 jaar geleden
 
 490
 00:21:42,659 --> 00:21:44,956
-of zelfs 20 jaar geleden of zelfs 10 jaar
+of zelfs 20 jaar
+geleden of zelfs 10 jaar
 
 491
 00:21:44,980 --> 00:21:47,116
-geleden. Tien jaar geleden nog niet zozeer, maar twintig
+geleden. Tien jaar geleden
+nog niet zozeer, maar twintig
 
 492
 00:21:47,140 --> 00:21:49,836
-jaar geleden zeker wel. Maar in ieder geval in
+jaar geleden zeker wel.
+Maar in ieder geval in
 
 493
 00:21:49,860 --> 00:21:51,515
-de afgelopen 10 jaar hebben we betere
+de afgelopen 10
+jaar hebben we betere
 
 494
 00:21:51,539 --> 00:21:54,076
-technologie voor sleutelbeheer en KERI
+technologie voor
+sleutelbeheer en KERI
 
 495
 00:21:54,100 --> 00:21:56,716
-is gebaseerd op het inzicht dat als
+is gebaseerd op
+het inzicht dat als
 
 496
 00:21:56,740 --> 00:21:58,556
-je over betere technologie beschikt voor sleutel-
+je over betere technologie
+beschikt voor sleutel-
 
 497
 00:21:58,580 --> 00:22:00,476
@@ -1992,15 +2337,18 @@ dingen. Al deze systemen die
 
 499
 00:22:04,580 --> 00:22:10,076
-gebruikmaken van op DNS, TLS, OAuth en OIDC gebaseerde
+gebruikmaken van op DNS,
+TLS, OAuth en OIDC gebaseerde
 
 500
 00:22:10,100 --> 00:22:13,515
-systemen, maken allemaal gebruik van gedeelde geheimen
+systemen, maken allemaal
+gebruik van gedeelde geheimen
 
 501
 00:22:13,539 --> 00:22:15,676
-en gedeelde geheimen zijn inherent zwak
+en gedeelde geheimen
+zijn inherent zwak
 
 502
 00:22:15,700 --> 00:22:19,436
@@ -2008,27 +2356,33 @@ en dragen inherent bij aan
 
 503
 00:22:19,460 --> 00:22:21,836
-<i>recursieve aanvallen voor het uitbreiden van rechten</i>.
+<i>recursieve aanvallen voor
+het uitbreiden van rechten</i>.
 
 504
 00:22:21,860 --> 00:22:25,756
-Het komt er dus eigenlijk op neer dat je
+Het komt er dus
+eigenlijk op neer dat je
 
 505
 00:22:25,780 --> 00:22:27,676
-verschillende manieren moet bedenken om die
+verschillende manieren
+moet bedenken om die
 
 506
 00:22:27,700 --> 00:22:29,116
-gedeelde geheimen te benutten. KERI maakt geen gebruik van
+gedeelde geheimen te benutten.
+KERI maakt geen gebruik van
 
 507
 00:22:29,140 --> 00:22:31,196
-gedeelde geheimen. Het heeft er geen.
+gedeelde geheimen.
+Het heeft er geen.
 
 508
 00:22:31,220 --> 00:22:34,236
-En dus zijn de beveiligingsmechanismen
+En dus zijn de
+beveiligingsmechanismen
 
 509
 00:22:34,260 --> 00:22:36,716
@@ -2040,15 +2394,18 @@ fundamenteel anders, toch?
 
 511
 00:22:38,580 --> 00:22:40,635
-Als je iets niet deelt, dan kan iemand
+Als je iets niet deelt,
+dan kan iemand
 
 512
 00:22:40,659 --> 00:22:43,116
-het niet vastleggen en verzamelen, toch?
+het niet vastleggen
+en verzamelen, toch?
 
 513
 00:22:43,140 --> 00:22:45,035
-Er is een ander soort aanval voor nodig.
+Er is een ander soort
+aanval voor nodig.
 
 514
 00:22:45,059 --> 00:22:46,635
@@ -2056,7 +2413,8 @@ En zelfs als ze daarin slagen
 
 515
 00:22:46,659 --> 00:22:49,515
-met die aanval, als je een herstelmechanisme hebt
+met die aanval, als je een
+herstelmechanisme hebt
 
 516
 00:22:49,539 --> 00:22:51,196
@@ -2072,15 +2430,18 @@ En dus besteed je je tijd niet
 
 519
 00:22:55,860 --> 00:22:58,635
-aan het bouwen van een tank die ondoordringbaar is
+aan het bouwen van een
+tank die ondoordringbaar is
 
 520
 00:22:58,659 --> 00:23:02,236
-voor welk soort bom dan ook. Je besteedt je tijd
+voor welk soort bom
+dan ook. Je besteedt je tijd
 
 521
 00:23:02,260 --> 00:23:06,476
-aan het bouwen van een eskadron tanks
+aan het bouwen van
+een eskadron tanks
 
 522
 00:23:06,500 --> 00:23:07,996
@@ -2088,11 +2449,13 @@ zodat sommige ervan
 
 523
 00:23:08,020 --> 00:23:10,236
-vernietigd kunnen worden, maar het eskader blijft bestaan en
+vernietigd kunnen worden,
+maar het eskader blijft bestaan en
 
 524
 00:23:10,260 --> 00:23:12,476
-herstelt zichzelf en kan doorgaan
+herstelt zichzelf
+en kan doorgaan
 
 525
 00:23:12,500 --> 00:23:13,676
@@ -2100,11 +2463,13 @@ met opereren. En dat is wat <i>fout</i>
 
 526
 00:23:13,700 --> 00:23:16,556
-<i>tolerant</i> betekent. Dus ik gebruik die
+<i>tolerant</i> betekent.
+Dus ik gebruik die
 
 527
 00:23:16,580 --> 00:23:18,316
-analogie. Weet je, je kunt een tank bouwen
+analogie. Weet je, je
+kunt een tank bouwen
 
 528
 00:23:18,340 --> 00:23:19,916
@@ -2112,7 +2477,8 @@ met pantser dat dik genoeg is om
 
 529
 00:23:19,940 --> 00:23:22,316
-elke granaat te weerstaan, maar dan is het geen
+elke granaat te weerstaan,
+maar dan is het geen
 
 530
 00:23:22,340 --> 00:23:24,155
@@ -2120,11 +2486,13 @@ mobiele tank, toch? Per
 
 531
 00:23:24,179 --> 00:23:26,236
-definitie moet een tank mobiel zijn.
+definitie moet een
+tank mobiel zijn.
 
 532
 00:23:26,260 --> 00:23:28,556
-Dus het verandert van een tank in een bunker,
+Dus het verandert van
+een tank in een bunker,
 
 533
 00:23:28,580 --> 00:23:31,196
@@ -2132,7 +2500,8 @@ toch?
 
 534
 00:23:31,220 --> 00:23:34,155
-Je moet een aantal afwegingen maken. En
+Je moet een aantal
+afwegingen maken. En
 
 535
 00:23:34,179 --> 00:23:36,395
@@ -2140,7 +2509,8 @@ en de juiste afweging in
 
 536
 00:23:36,419 --> 00:23:39,836
-een AI-wereld is een fouttolerant systeem,
+een AI-wereld is een
+fouttolerant systeem,
 
 537
 00:23:39,860 --> 00:23:42,716
@@ -2152,15 +2522,18 @@ om de paar
 
 539
 00:23:45,940 --> 00:23:49,356
-dagen of maanden moet weggooien en opnieuw moet beginnen omdat
+dagen of maanden moet weggooien
+en opnieuw moet beginnen omdat
 
 540
 00:23:49,380 --> 00:23:51,035
-je niet kunt vaststellen of je al dan niet
+je niet kunt vaststellen
+of je al dan niet
 
 541
 00:23:51,059 --> 00:23:52,236
-aangevallen of gehackt bent, omdat
+aangevallen of
+gehackt bent, omdat
 
 542
 00:23:52,260 --> 00:23:55,356
@@ -2176,23 +2549,28 @@ Dus eigenlijk deze vraag,
 
 545
 00:24:05,780 --> 00:24:07,756
-ik ben er weer een beetje op ingesprongen, maar hoe
+ik ben er weer een beetje
+op ingesprongen, maar hoe
 
 546
 00:24:07,780 --> 00:24:09,515
-verlegt de KERI-suite de focus op beveiliging van
+verlegt de KERI-suite de
+focus op beveiliging van
 
 547
 00:24:09,539 --> 00:24:10,876
-het beschermen van infrastructuur naar het beschermen van
+het beschermen van infrastructuur
+naar het beschermen van
 
 548
 00:24:10,900 --> 00:24:12,556
-geheimen naar het onthullen van verifieerbare waarheden en
+geheimen naar het onthullen
+van verifieerbare waarheden en
 
 549
 00:24:12,580 --> 00:24:15,436
-herkomst. Het idee in cryptografie is dus,
+herkomst. Het idee
+in cryptografie is dus,
 
 550
 00:24:15,460 --> 00:24:18,956
@@ -2204,11 +2582,13 @@ is dat je openbare en
 
 552
 00:24:21,140 --> 00:24:23,676
-sleutels; en privésleutels zijn echt
+sleutels; en
+privésleutels zijn echt
 
 553
 00:24:23,700 --> 00:24:26,796
-privé in die zin dat ze nooit worden gedeeld.
+privé in die zin dat ze
+nooit worden gedeeld.
 
 554
 00:24:26,820 --> 00:24:29,275
@@ -2216,19 +2596,23 @@ Het probleem is dat mensen die
 
 555
 00:24:29,299 --> 00:24:33,035
-een digitale identiteit willen hebben,
+een digitale identiteit
+willen hebben,
 
 556
 00:24:33,059 --> 00:24:35,116
-die privésleutels moeten beheren. En dus
+die privésleutels
+moeten beheren. En dus
 
 557
 00:24:35,140 --> 00:24:36,956
-werd dat altijd als te moeilijk beschouwd
+werd dat altijd als te
+moeilijk beschouwd
 
 558
 00:24:36,980 --> 00:24:39,275
-een probleem om te beheren. En dus hadden we
+een probleem om te
+beheren. En dus hadden we
 
 559
 00:24:39,299 --> 00:24:41,035
@@ -2236,7 +2620,8 @@ identiteitsproviders nodig die
 
 560
 00:24:41,059 --> 00:24:43,436
-privésleutels namens ons beheerden, toch? En
+privésleutels namens
+ons beheerden, toch? En
 
 561
 00:24:43,460 --> 00:24:45,596
@@ -2244,15 +2629,18 @@ toen was het sleutelbeheer
 
 562
 00:24:45,620 --> 00:24:47,596
-verborgen voor het systeem. Je hebt dus
+verborgen voor het
+systeem. Je hebt dus
 
 563
 00:24:47,620 --> 00:24:49,515
-identiteitsproviders en vertrouwende
+identiteitsproviders
+en vertrouwende
 
 564
 00:24:49,539 --> 00:24:51,836
-partijen, en vervolgens gebruik je gebruikersnamen
+partijen, en vervolgens
+gebruik je gebruikersnamen
 
 565
 00:24:51,860 --> 00:24:53,996
@@ -2260,20 +2648,23 @@ en wachtwoorden of nu <i>Pass Keys</i>
 
 566
 00:24:54,020 --> 00:24:55,596
-Er zijn sterkere methoden dan gebruikersnamen
+Er zijn sterkere methoden
+dan gebruikersnamen
 
 567
 00:24:55,620 --> 00:24:57,996
-en wachtwoorden, maar je bent nog steeds afhankelijk
+en wachtwoorden, maar je
+bent nog steeds afhankelijk
 
 568
 00:24:58,020 --> 00:25:01,116
-op een identiteitsprovider voor de
+op een
+identiteitsprovider voor de
 
 569
 00:25:01,140 --> 00:25:07,699
-ultieme beveiliging van het systeem.
-En dat leidt er uiteindelijk toe
+ultieme beveiliging van het
+systeem. En dat leidt er uiteindelijk toe
 
 570
 00:25:07,700 --> 00:25:10,876
@@ -2281,7 +2672,8 @@ op gedeelde geheimen, <i>bearer</i>
 
 571
 00:25:10,900 --> 00:25:13,356
-<i>tokens</i>, die de identiteitsprovider
+<i>tokens</i>, die de
+identiteitsprovider
 
 572
 00:25:13,380 --> 00:25:15,676
@@ -2289,7 +2681,8 @@ uitdeelt aan mensen of
 
 573
 00:25:15,700 --> 00:25:18,155
-entiteiten, zodat ze activiteiten kunnen uitvoeren
+entiteiten, zodat ze
+activiteiten kunnen uitvoeren
 
 574
 00:25:18,179 --> 00:25:21,836
@@ -2297,23 +2690,27 @@ via beveiligde kanalen,
 
 575
 00:25:21,860 --> 00:25:23,836
-toch?  De beveiligde kanalen
+toch? De beveiligde kanalen
 
 576
 00:25:23,860 --> 00:25:26,236
-worden beveiligd met gedeelde geheimen. TLS,
+worden beveiligd met
+gedeelde geheimen. TLS,
 
 577
 00:25:26,260 --> 00:25:28,635
-maakt, zoals je weet, gebruik van een Diffie-Hellman-sleutel
+maakt, zoals je weet, gebruik
+van een Diffie-Hellman-sleutel
 
 578
 00:25:28,659 --> 00:25:30,956
-om een gedeeld geheim uit te wisselen, om vervolgens
+om een gedeeld geheim uit
+te wisselen, om vervolgens
 
 579
 00:25:30,980 --> 00:25:32,796
-een versleutelingssleutel uit te wisselen die vervolgens
+een versleutelingssleutel
+uit te wisselen die vervolgens
 
 580
 00:25:32,820 --> 00:25:36,476
@@ -2321,11 +2718,13 @@ zwak geauthenticeerd door
 
 581
 00:25:36,500 --> 00:25:37,916
-iets te versleutelen, waarna de andere
+iets te versleutelen,
+waarna de andere
 
 582
 00:25:37,940 --> 00:25:39,356
-kant decodeert het en stuurt het vervolgens terug
+kant decodeert het en
+stuurt het vervolgens terug
 
 583
 00:25:39,380 --> 00:25:41,676
@@ -2333,7 +2732,8 @@ naar jou. Maar het is gevoelig
 
 584
 00:25:41,700 --> 00:25:43,755
-aan sleutelcompromittering <i>identiteitsfraude-aanvallen</i>
+aan sleutelcompromittering
+<i>identiteitsfraude-aanvallen</i>
 
 585
 00:25:43,779 --> 00:25:46,316
@@ -2341,23 +2741,28 @@ en dus wanneer je begint met
 
 586
 00:25:46,340 --> 00:25:48,635
-dingen doet om de lastige problemen van sleutelbeheer
+dingen doet om de lastige
+problemen van sleutelbeheer
 
 587
 00:25:48,659 --> 00:25:50,316
-te omzeilen, verzwak je uiteindelijk
+te omzeilen,
+verzwak je uiteindelijk
 
 588
 00:25:50,340 --> 00:25:52,316
-de beveiliging. KERI zegt: „Nee, we gaan
+de beveiliging. KERI
+zegt: „Nee, we gaan
 
 589
 00:25:52,340 --> 00:25:54,476
-het sleutelbeheer op de juiste manier opzetten.”
+het sleutelbeheer op de
+juiste manier opzetten.”
 
 590
 00:25:54,500 --> 00:25:57,116
-“We gaan het fouttolerant maken.”
+“We gaan het
+fouttolerant maken.”
 
 591
 00:25:57,140 --> 00:25:58,956
@@ -2365,7 +2770,8 @@ het sleutelbeheer op de juiste manier opzetten.”
 
 592
 00:25:58,980 --> 00:26:01,996
-mensen in staat stellen het te gebruiken op een manier
+mensen in staat stellen het
+te gebruiken op een manier
 
 593
 00:26:02,020 --> 00:26:06,716
@@ -2377,7 +2783,8 @@ om de aanval
 
 595
 00:26:10,740 --> 00:26:13,436
-te laten slagen." En KERI maakt gebruik van
+te laten slagen." En
+KERI maakt gebruik van
 
 596
 00:26:13,460 --> 00:26:15,196
@@ -2385,7 +2792,8 @@ te laten slagen." En KERI maakt gebruik van
 
 597
 00:26:15,220 --> 00:26:18,476
-<i>handtekening</i>, <i>getuige</i>-pools, <i>waarnemer</i>-pools
+<i>handtekening</i>, <i>getuige</i>-pools,
+<i>waarnemer</i>-pools
 
 598
 00:26:18,500 --> 00:26:21,596
@@ -2393,19 +2801,23 @@ en gedelegeerde AID’s die
 
 599
 00:26:21,620 --> 00:26:24,395
-hiërarchisch zijn, zodat je een systeem kunt bouwen dat
+hiërarchisch zijn, zodat je
+een systeem kunt bouwen dat
 
 600
 00:26:24,419 --> 00:26:28,876
-zo veilig is als je wilt; zodat je
+zo veilig is als
+je wilt; zodat je
 
 601
 00:26:28,900 --> 00:26:30,956
-de beveiliging kunt afstemmen op de waarde die
+de beveiliging kunt
+afstemmen op de waarde die
 
 602
 00:26:30,980 --> 00:26:32,716
-een aanvaller moet nastreven. Dus als het
+een aanvaller moet
+nastreven. Dus als het
 
 603
 00:26:32,740 --> 00:26:34,876
@@ -2417,15 +2829,18 @@ dan voeg je extra drempels toe
 
 605
 00:26:36,740 --> 00:26:41,436
-structuren. En in verhouding tot de kosten
+structuren. En in
+verhouding tot de kosten
 
 606
 00:26:41,460 --> 00:26:45,196
-van de middelen die nodig zijn om een defensieve
+van de middelen die nodig
+zijn om een defensieve
 
 607
 00:26:45,220 --> 00:26:47,035
-AI in te zetten om je systeem te beschermen, is de
+AI in te zetten om je
+systeem te beschermen, is de
 
 608
 00:26:47,059 --> 00:26:49,755
@@ -2433,7 +2848,8 @@ infrastructuur voor KERI
 
 609
 00:26:49,779 --> 00:26:53,196
-in vergelijking daarmee verwaarloosbaar goedkoop;
+in vergelijking daarmee
+verwaarloosbaar goedkoop;
 
 610
 00:26:53,220 --> 00:26:57,116
@@ -2449,7 +2865,8 @@ waar we naar kijken.
 
 613
 00:27:05,480 --> 00:27:08,980
-Laten we het hebben over privacy zonder
+Laten we het hebben
+over privacy zonder
 
 614
 00:27:09,000 --> 00:27:11,296
@@ -2457,11 +2874,13 @@ toezicht. Kunnen sterke
 
 615
 00:27:11,320 --> 00:27:13,376
-beveiliging, verantwoordingsplicht en veerkracht
+beveiliging, verantwoordingsplicht
+en veerkracht
 
 616
 00:27:13,400 --> 00:27:14,816
-bereikt worden zonder voortdurende
+bereikt worden
+zonder voortdurende
 
 617
 00:27:14,840 --> 00:27:17,296
@@ -2481,7 +2900,8 @@ is dat ze zeggen dat we
 
 621
 00:27:27,880 --> 00:27:33,456
-cryptografie gaan gebruiken zoals het bedoeld is.
+cryptografie gaan gebruiken
+zoals het bedoeld is.
 
 622
 00:27:33,480 --> 00:27:35,296
@@ -2493,39 +2913,48 @@ uit te leggen, wat
 
 624
 00:27:36,840 --> 00:27:41,056
-te veel tijd zou kosten, heeft het niet de
+te veel tijd zou
+kosten, heeft het niet de
 
 625
 00:27:41,080 --> 00:27:42,576
-zwakke punten die onze huidige op
+zwakke punten
+die onze huidige op
 
 626
 00:27:42,600 --> 00:27:45,936
-op geheimen gebaseerde systemen wel hebben, die
+op geheimen gebaseerde
+systemen wel hebben, die
 
 627
 00:27:45,960 --> 00:27:50,496
-kwetsbaar zijn voor misbruik door AI’s. AI’s
+kwetsbaar zijn voor
+misbruik door AI’s. AI’s
 
 628
 00:27:50,520 --> 00:27:53,216
-kunnen geen brute-force-aanval uitvoeren
+kunnen geen
+brute-force-aanval uitvoeren
 
 629
 00:27:53,240 --> 00:27:55,296
-op een openbare sleutel om bij een privésleutel te komen.
+op een openbare sleutel om
+bij een privésleutel te komen.
 
 630
 00:27:55,320 --> 00:27:57,856
-Als ik nu een kwantumcomputer heb, is dat
+Als ik nu een
+kwantumcomputer heb, is dat
 
 631
 00:27:57,880 --> 00:27:59,296
-een ander verhaal, maar we hebben nu
+een ander verhaal,
+maar we hebben nu
 
 632
 00:27:59,320 --> 00:28:02,255
-algoritmen voor het genereren van post-kwantum publieke en private sleutels
+algoritmen voor het genereren van
+post-kwantum publieke en private sleutels
 
 633
 00:28:02,279 --> 00:28:05,296
@@ -2533,11 +2962,13 @@ algoritmen voor het genereren van post-kwantum publieke en private sleutels
 
 634
 00:28:05,320 --> 00:28:06,655
-systeem cryptografisch flexibel is, kun je
+systeem cryptografisch
+flexibel is, kun je
 
 635
 00:28:06,679 --> 00:28:08,655
-daarop overschakelen, wat KERI al doet.
+daarop overschakelen,
+wat KERI al doet.
 
 636
 00:28:08,679 --> 00:28:12,736
@@ -2545,19 +2976,22 @@ Dat is dus een ander probleem.
 
 637
 00:28:12,760 --> 00:28:14,096
-Wat ze dus moeten doen, is wat men noemt
+Wat ze dus moeten
+doen, is wat men noemt
 
 638
 00:28:14,120 --> 00:28:15,775
- een zijkanaalaanval. Ze moeten
+een zijkanaalaanval. Ze moeten
 
 639
 00:28:15,799 --> 00:28:19,056
- een manier vinden om via zijkanalen misbruik te maken.
+een manier vinden om via
+zijkanalen misbruik te maken.
 
 640
 00:28:19,080 --> 00:28:21,775
-Terwijl bij een gedeeld geheim meerdere partijen
+Terwijl bij een gedeeld
+geheim meerdere partijen
 
 641
 00:28:21,799 --> 00:28:24,576
@@ -2569,7 +3003,8 @@ Dus de soorten
 
 643
 00:28:27,080 --> 00:28:29,696
-zijkanaalaanvallen die werken, zijn veel
+zijkanaalaanvallen
+die werken, zijn veel
 
 644
 00:28:29,720 --> 00:28:33,375
@@ -2577,47 +3012,58 @@ groter. Als ik een
 
 645
 00:28:33,399 --> 00:28:35,216
-KERI-privésleutel heb die echt privé is,
+KERI-privésleutel
+heb die echt privé is,
 
 646
 00:28:35,240 --> 00:28:36,736
-wordt deze nooit gedeeld. Dat hoeft ook nooit
+wordt deze nooit gedeeld.
+Dat hoeft ook nooit
 
 647
 00:28:36,760 --> 00:28:39,535
-gedeeld worden. En zelfs als die privésleutel
+gedeeld worden. En
+zelfs als die privésleutel
 
 648
 00:28:39,559 --> 00:28:41,775
-als het systeem gecompromitteerd is, kan ik het herstellen
+als het systeem gecompromitteerd
+is, kan ik het herstellen
 
 649
 00:28:41,799 --> 00:28:45,456
-via het <i>pre-rotatie</i>-mechanisme van KERI,
+via het <i>pre-rotatie</i>-mechanisme
+van KERI,
 
 650
 00:28:45,480 --> 00:28:47,856
-dan heeft een aanvaller er niet veel aan om
+dan heeft een aanvaller
+er niet veel aan om
 
 651
 00:28:47,880 --> 00:28:50,096
-mijn privésleutels te compromitteren. Ze hebben
+mijn privésleutels te
+compromitteren. Ze hebben
 
 652
 00:28:50,120 --> 00:28:52,576
-veel meer moeten compromitteren en dat
+veel meer moeten
+compromitteren en dat
 
 653
 00:28:52,600 --> 00:28:55,696
-dat er veel meer kan worden ontworpen met weinig
+dat er veel meer kan
+worden ontworpen met weinig
 
 654
 00:28:55,720 --> 00:28:58,895
-weerstand voor de gebruiker, maar hoge kosten voor
+weerstand voor de gebruiker,
+maar hoge kosten voor
 
 655
 00:28:58,919 --> 00:29:01,216
-de aanvaller, op zo’n manier dat je
+de aanvaller, op
+zo’n manier dat je
 
 656
 00:29:01,240 --> 00:29:04,976
@@ -2637,23 +3083,28 @@ dan wat je ermee wint vanwege de
 
 660
 00:29:11,880 --> 00:29:14,736
-de inherente gedistribueerde aard
+de inherente
+gedistribueerde aard
 
 661
 00:29:14,760 --> 00:29:19,056
-en gedecentraliseerde aard van het ontwerp.
+en gedecentraliseerde
+aard van het ontwerp.
 
 662
 00:29:19,080 --> 00:29:21,616
-En ik kom nog even terug op dit woord
+En ik kom nog even
+terug op dit woord
 
 663
 00:29:21,640 --> 00:29:23,535
-<i>evenwicht tussen privacy </i>en hoe zorgt KERI
+<i>evenwicht tussen
+privacy </i>en hoe zorgt KERI
 
 664
 00:29:23,559 --> 00:29:26,576
-een evenwicht vinden tussen privacy en verantwoordingsplicht?
+een evenwicht vinden tussen
+privacy en verantwoordingsplicht?
 
 665
 00:29:26,600 --> 00:29:28,255
@@ -2661,7 +3112,8 @@ Beveiliging
 
 666
 00:29:28,279 --> 00:29:31,456
-vereist betrouwbare toewijzing. Je moet
+vereist betrouwbare
+toewijzing. Je moet
 
 667
 00:29:31,480 --> 00:29:34,655
@@ -2673,7 +3125,8 @@ Maar je wilt ook
 
 669
 00:29:39,000 --> 00:29:41,456
-controle kunnen uitoefenen over de
+controle kunnen
+uitoefenen over de
 
 670
 00:29:41,480 --> 00:29:43,216
@@ -2681,7 +3134,8 @@ context
 
 671
 00:29:43,240 --> 00:29:46,255
-mensen weten over wie wat doet. En
+mensen weten over
+wie wat doet. En
 
 672
 00:29:46,279 --> 00:29:48,416
@@ -2693,27 +3147,33 @@ biedt je de mogelijkheid om
 
 674
 00:29:50,120 --> 00:29:52,496
-identificatiegegevens te gebruiken in specifieke
+identificatiegegevens
+te gebruiken in specifieke
 
 675
 00:29:52,520 --> 00:29:54,576
-contexten die niet te koppelen zijn aan
+contexten die niet
+te koppelen zijn aan
 
 676
 00:29:54,600 --> 00:29:56,496
-identificatiegegevens die je in andere contexten gebruikt.
+identificatiegegevens die je
+in andere contexten gebruikt.
 
 677
 00:29:56,520 --> 00:30:00,015
-Maar in elke context beschik je over
+Maar in elke context
+beschik je over
 
 678
 00:30:00,039 --> 00:30:02,255
-een volkomen betrouwbare toewijzing aan alle
+een volkomen betrouwbare
+toewijzing aan alle
 
 679
 00:30:02,279 --> 00:30:04,576
-partijen in de context. En wat dat
+partijen in de
+context. En wat dat
 
 680
 00:30:04,600 --> 00:30:07,535
@@ -2721,15 +3181,18 @@ betekent, is dat je de
 
 681
 00:30:07,559 --> 00:30:10,496
-belangrijkste bron van fraude wegneemt, namelijk
+belangrijkste bron van
+fraude wegneemt, namelijk
 
 682
 00:30:10,520 --> 00:30:12,895
-aanvallen waarbij iemand zich voordoet als iemand anders, waarbij
+aanvallen waarbij iemand zich
+voordoet als iemand anders, waarbij
 
 683
 00:30:12,919 --> 00:30:15,135
-al die zaken grondig worden vervalst, omdat elke
+al die zaken grondig
+worden vervalst, omdat elke
 
 684
 00:30:15,159 --> 00:30:18,576
@@ -2737,7 +3200,8 @@ deelnemer in die
 
 685
 00:30:18,600 --> 00:30:21,296
-context verantwoording moet afleggen. Ze kunnen niet
+context verantwoording
+moet afleggen. Ze kunnen niet
 
 686
 00:30:21,320 --> 00:30:23,135
@@ -2745,11 +3209,13 @@ zich voordoen als iemand anders
 
 687
 00:30:23,159 --> 00:30:25,296
-omdat je hen kunt uitdagen en zij
+omdat je hen
+kunt uitdagen en zij
 
 688
 00:30:25,320 --> 00:30:26,895
-moeten ze dat verband bewijzen. Dus als het een AI is,
+moeten ze dat verband
+bewijzen. Dus als het een AI is,
 
 689
 00:30:26,919 --> 00:30:29,616
@@ -2761,7 +3227,8 @@ iemand, dan kun je
 
 691
 00:30:33,320 --> 00:30:34,816
-het helemaal terugvoeren tot die persoon. Als
+het helemaal terugvoeren
+tot die persoon. Als
 
 692
 00:30:34,840 --> 00:30:37,535
@@ -2769,7 +3236,8 @@ je KERI gebruikt en die
 
 693
 00:30:37,559 --> 00:30:39,696
-persoon bevoegdheden delegeert aan een
+persoon bevoegdheden
+delegeert aan een
 
 694
 00:30:39,720 --> 00:30:42,416
@@ -2777,15 +3245,18 @@ agent-AI, dan kun je
 
 695
 00:30:42,440 --> 00:30:44,655
-altijd de bevoegdheidsketen vaststellen,
+altijd de bevoegdheidsketen
+vaststellen,
 
 696
 00:30:44,679 --> 00:30:46,976
-toch? Verantwoordelijkheid vloeit dus voort
+toch? Verantwoordelijkheid
+vloeit dus voort
 
 697
 00:30:47,000 --> 00:30:50,496
-uit verantwoordelijkheidsketens of
+uit
+verantwoordelijkheidsketens of
 
 698
 00:30:50,520 --> 00:30:51,856
@@ -2801,15 +3272,18 @@ en KERI is inherent ontworpen
 
 701
 00:30:58,360 --> 00:31:01,216
-om dat soort structuren te ondersteunen.
+om dat soort structuren
+te ondersteunen.
 
 702
 00:31:01,240 --> 00:31:03,696
-Terwijl de meeste beveiligingssystemen een platte structuur hebben.
+Terwijl de meeste beveiligingssystemen
+een platte structuur hebben.
 
 703
 00:31:03,720 --> 00:31:06,336
-Ze beschikken niet over deze hiërarchie die
+Ze beschikken niet
+over deze hiërarchie die
 
 704
 00:31:06,360 --> 00:31:08,816
@@ -2821,7 +3295,8 @@ delegaties die sterk
 
 706
 00:31:11,320 --> 00:31:13,216
-cryptografisch verifieerbaar aan elkaar zijn gekoppeld
+cryptografisch verifieerbaar
+aan elkaar zijn gekoppeld
 
 707
 00:31:13,240 --> 00:31:18,015
@@ -2833,15 +3308,18 @@ privacy zonder toezicht. Wat is
 
 709
 00:31:19,960 --> 00:31:21,696
-de minimale hoeveelheid openbaar te maken gegevens
+de minimale hoeveelheid
+openbaar te maken gegevens
 
 710
 00:31:21,720 --> 00:31:23,456
-die nodig is om verantwoording af te leggen zonder
+die nodig is om verantwoording
+af te leggen zonder
 
 711
 00:31:23,480 --> 00:31:26,176
-dat er een surveillancesamenleving ontstaat?
+dat er een
+surveillancesamenleving ontstaat?
 
 712
 00:31:26,200 --> 00:31:29,696
@@ -2853,7 +3331,8 @@ In principe,
 
 714
 00:31:31,320 --> 00:31:33,696
-is het minimum in elke context, elke transactie, elke
+is het minimum in elke
+context, elke transactie, elke
 
 715
 00:31:33,720 --> 00:31:36,816
@@ -2861,7 +3340,8 @@ toepassing is het minimum anders
 
 716
 00:31:36,840 --> 00:31:40,895
-want bij transacties met hoge inzet,
+want bij transacties
+met hoge inzet,
 
 717
 00:31:40,919 --> 00:31:43,216
@@ -2869,15 +3349,18 @@ waar de waarde hoog is,
 
 718
 00:31:43,240 --> 00:31:46,416
-is de vereiste mate van vertrouwen
+is de vereiste mate
+van vertrouwen
 
 719
 00:31:46,440 --> 00:31:48,736
-tussen de partijen groter is. Dat
+tussen de partijen
+groter is. Dat
 
 720
 00:31:48,760 --> 00:31:50,895
-betekent dat ze elkaar beter moeten kunnen
+betekent dat ze elkaar
+beter moeten kunnen
 
 721
 00:31:50,919 --> 00:31:52,416
@@ -2893,31 +3376,38 @@ deelnemers aan die interactie.
 
 724
 00:31:58,039 --> 00:32:00,736
-Bij interacties met een lage inzet is de
+Bij interacties met
+een lage inzet is de
 
 725
 00:32:00,760 --> 00:32:03,616
-bedrag veel lager. Je hebt dus een
+bedrag veel lager.
+Je hebt dus een
 
 726
 00:32:03,640 --> 00:32:07,135
-systeem nodig dat je genoeg geeft voor
+systeem nodig dat
+je genoeg geeft voor
 
 727
 00:32:07,159 --> 00:32:09,535
-de transacties met de hoogste inzet
+de transacties met
+de hoogste inzet
 
 728
 00:32:09,559 --> 00:32:12,255
-maar waarmee je het toch kunt afstemmen op
+maar waarmee je het
+toch kunt afstemmen op
 
 729
 00:32:12,279 --> 00:32:14,255
-transacties met de laagste inzet en
+transacties met
+de laagste inzet en
 
 730
 00:32:14,279 --> 00:32:17,775
-KERI doet dat. Maar hoe zorg je ervoor dat je
+KERI doet dat. Maar
+hoe zorg je ervoor dat je
 
 731
 00:32:17,799 --> 00:32:19,456
@@ -2925,27 +3415,33 @@ geen
 
 732
 00:32:19,480 --> 00:32:21,856
-surveillancesamenleving creëert? Nou,
+surveillancesamenleving
+creëert? Nou,
 
 733
 00:32:21,880 --> 00:32:24,336
-iedereen die bij die transactie betrokken is, moet
+iedereen die bij die
+transactie betrokken is, moet
 
 734
 00:32:24,360 --> 00:32:28,576
-evenwichtige verplichtingen hebben,
+evenwichtige
+verplichtingen hebben,
 
 735
 00:32:28,600 --> 00:32:32,015
-toch? Hoe moet je ervoor zorgen dat er
+toch? Hoe moet je
+ervoor zorgen dat er
 
 736
 00:32:32,039 --> 00:32:33,456
-verantwoordingsplicht ontstaat zonder dat er
+verantwoordingsplicht
+ontstaat zonder dat er
 
 737
 00:32:33,480 --> 00:32:36,176
-toezicht te creëren? Nou, als degenen die toezicht houden
+toezicht te creëren? Nou, als
+degenen die toezicht houden
 
 738
 00:32:36,200 --> 00:32:38,015
@@ -2953,11 +3449,13 @@ verantwoordingsplichtig zijn,
 
 739
 00:32:38,039 --> 00:32:40,576
-dan zullen de mensen die worden gecontroleerd
+dan zullen de mensen
+die worden gecontroleerd
 
 740
 00:32:40,600 --> 00:32:43,456
-rechtsmiddelen hebben tegen de controle.
+rechtsmiddelen hebben
+tegen de controle.
 
 741
 00:32:43,480 --> 00:32:46,655
@@ -2977,11 +3475,13 @@ ruimte; we hoopten
 
 745
 00:32:53,480 --> 00:32:54,976
-dat er technologische middelen waren
+dat er technologische
+middelen waren
 
 746
 00:32:55,000 --> 00:32:56,976
-waarmee je je kon verbergen. Nou ja, in feite
+waarmee je je kon
+verbergen. Nou ja, in feite
 
 747
 00:32:57,000 --> 00:32:59,456
@@ -2989,35 +3489,43 @@ kon je transacties uitvoeren en
 
 748
 00:32:59,480 --> 00:33:01,375
-je kon je onttrekken aan toezicht. En dat is niet
+je kon je onttrekken aan
+toezicht. En dat is niet
 
 749
 00:33:01,399 --> 00:33:05,216
-waar. Met AI kun je je nergens verbergen.
+waar. Met AI kun je
+je nergens verbergen.
 
 750
 00:33:05,240 --> 00:33:06,976
-Als de gegevens op het internet staan, zullen ze
+Als de gegevens op het
+internet staan, zullen ze
 
 751
 00:33:07,000 --> 00:33:08,816
-met elkaar in verband worden gebracht. Zelfs het kleinste
+met elkaar in verband worden
+gebracht. Zelfs het kleinste
 
 752
 00:33:08,840 --> 00:33:11,456
-signaal kan worden gecorreleerd, mits
+signaal kan worden
+gecorreleerd, mits
 
 753
 00:33:11,480 --> 00:33:14,495
-er voldoende dekking is; en AI's hebben
+er voldoende dekking
+is; en AI's hebben
 
 754
 00:33:14,519 --> 00:33:15,936
-voldoende dekking, toch? Mensen zijn
+voldoende dekking,
+toch? Mensen zijn
 
 755
 00:33:15,960 --> 00:33:20,255
-bezig met het bouwen van AI-datacenters
+bezig met het bouwen
+van AI-datacenters
 
 756
 00:33:20,279 --> 00:33:21,856
@@ -3025,11 +3533,13 @@ die een
 
 757
 00:33:21,880 --> 00:33:23,775
-aanzienlijk deel van de wereldwijde
+aanzienlijk deel
+van de wereldwijde
 
 758
 00:33:23,799 --> 00:33:26,336
-wereldwijde elektriciteitsproductie, en wat
+wereldwijde
+elektriciteitsproductie, en wat
 
 759
 00:33:26,360 --> 00:33:27,535
@@ -3037,15 +3547,18 @@ doen ze? Ze correleren, ze zijn
 
 760
 00:33:27,559 --> 00:33:29,135
-correlatiemachines en ze verwerken
+correlatiemachines
+en ze verwerken
 
 761
 00:33:29,159 --> 00:33:30,976
-alle mogelijke gegevens die je ze kunt geven
+alle mogelijke gegevens
+die je ze kunt geven
 
 762
 00:33:31,000 --> 00:33:32,816
-en alles met elkaar in verband brengen, zodat
+en alles met elkaar in
+verband brengen, zodat
 
 763
 00:33:32,840 --> 00:33:35,135
@@ -3053,7 +3566,8 @@ elk stukje informatie
 
 764
 00:33:35,159 --> 00:33:38,096
-een signaal wordt dat in verband kan worden gebracht, wat
+een signaal wordt dat in
+verband kan worden gebracht, wat
 
 765
 00:33:38,120 --> 00:33:41,135
@@ -3065,15 +3579,18 @@ bruikbaar is. Je gaat dus niet
 
 767
 00:33:43,240 --> 00:33:45,216
-de correlatie stoppen. Wat je wel kunt stoppen
+de correlatie stoppen.
+Wat je wel kunt stoppen
 
 768
 00:33:45,240 --> 00:33:47,535
-is het <i>misbruik</i> van de correlatie
+is het <i>misbruik</i>
+van de correlatie
 
 769
 00:33:47,559 --> 00:33:49,775
-en dat betekent dat je degenen die er misbruik van maken
+en dat betekent dat je degenen
+die er misbruik van maken
 
 770
 00:33:49,799 --> 00:33:52,495
@@ -3085,15 +3602,18 @@ Dat vereist een
 
 772
 00:33:56,120 --> 00:33:59,696
-iets andere, nou ja, een ingrijpende
+iets andere, nou
+ja, een ingrijpende
 
 773
 00:33:59,720 --> 00:34:04,096
-andere juridische en regelgevende
+andere juridische
+en regelgevende
 
 774
 00:34:04,120 --> 00:34:06,655
-benadering. Maar vanuit het perspectief van identiteit
+benadering. Maar vanuit
+het perspectief van identiteit
 
 775
 00:34:06,679 --> 00:34:09,775
@@ -3101,11 +3621,13 @@ moet je begrijpen dat
 
 776
 00:34:09,799 --> 00:34:12,015
-je het niet doet door je te verbergen.
+je het niet doet
+door je te verbergen.
 
 777
 00:34:12,039 --> 00:34:15,776
-het moet aanpakken. Je kunt contexten zo indelen
+het moet aanpakken. Je
+kunt contexten zo indelen
 
 778
 00:34:15,800 --> 00:34:19,375
@@ -3117,15 +3639,18 @@ interactieruimte niet te
 
 780
 00:34:21,800 --> 00:34:24,736
-snel naar buiten lekt, maar het zal wel lekken. Wat je ook
+snel naar buiten lekt, maar
+het zal wel lekken. Wat je ook
 
 781
 00:34:24,760 --> 00:34:26,895
-je ook doet, het zal weglekken. Maar wat je
+je ook doet, het zal
+weglekken. Maar wat je
 
 782
 00:34:26,919 --> 00:34:29,135
-wilt kunnen doen, is ervoor zorgen dat je in staat bent om
+wilt kunnen doen, is ervoor
+zorgen dat je in staat bent om
 
 783
 00:34:29,159 --> 00:34:32,256
@@ -3133,7 +3658,8 @@ de exploitatie of
 
 784
 00:34:32,280 --> 00:34:34,736
-het misbruik van die gegevens te bestrijden. En dat
+het misbruik van die
+gegevens te bestrijden. En dat
 
 785
 00:34:34,760 --> 00:34:37,936
@@ -3141,15 +3667,18 @@ en dus contextueel gezien,
 
 786
 00:34:37,960 --> 00:34:40,736
-context-specifieke identificatiegegevens
+context-specifieke
+identificatiegegevens
 
 787
 00:34:40,760 --> 00:34:43,536
-kunnen worden gebruikt om aannemelijke
+kunnen worden
+gebruikt om aannemelijke
 
 788
 00:34:43,560 --> 00:34:46,416
-ontkenning door de andere partijen van
+ontkenning door de
+andere partijen van
 
 789
 00:34:46,440 --> 00:34:49,456
@@ -3157,7 +3686,8 @@ die transacties. Er zijn dus
 
 790
 00:34:49,480 --> 00:34:53,776
-een aantal specifieke dingen die we kunnen doen.
+een aantal specifieke
+dingen die we kunnen doen.
 
 791
 00:34:53,800 --> 00:34:59,296
@@ -3165,19 +3695,23 @@ We staan voor een harde keuze.
 
 792
 00:34:59,320 --> 00:35:01,936
-Als geavanceerde AI bovenmenselijke
+Als geavanceerde
+AI bovenmenselijke
 
 793
 00:35:01,960 --> 00:35:03,696
-aanvallende cybercapaciteiten bereikt, worden onze
+aanvallende cybercapaciteiten
+bereikt, worden onze
 
 794
 00:35:03,720 --> 00:35:05,376
-worden de keuzes steeds moeilijker? Ja,
+worden de keuzes
+steeds moeilijker? Ja,
 
 795
 00:35:05,400 --> 00:35:07,856
-dat klopt. Sterker nog, veel van de
+dat klopt. Sterker
+nog, veel van de
 
 796
 00:35:07,880 --> 00:35:09,216
@@ -3185,11 +3719,13 @@ gesprekken die ik de
 
 797
 00:35:09,240 --> 00:35:10,736
-afgelopen jaren heb gevoerd, gaan vaak over de
+afgelopen jaren heb
+gevoerd, gaan vaak over de
 
 798
 00:35:10,760 --> 00:35:12,815
-gedecentraliseerde identiteitsruimte, en
+gedecentraliseerde
+identiteitsruimte, en
 
 799
 00:35:12,839 --> 00:35:15,776
@@ -3197,15 +3733,18 @@ het gaat meestal over, nou ja,
 
 800
 00:35:15,800 --> 00:35:17,536
-we willen de beveiliging verzwakken, zodat
+we willen de beveiliging
+verzwakken, zodat
 
 801
 00:35:17,560 --> 00:35:19,216
-we privacy kunnen krijgen. We zijn bereid om
+we privacy kunnen
+krijgen. We zijn bereid om
 
 802
 00:35:19,240 --> 00:35:20,815
-afwegingen in die richting te maken. En ik
+afwegingen in die
+richting te maken. En ik
 
 803
 00:35:20,839 --> 00:35:22,496
@@ -3213,19 +3752,23 @@ heb altijd gezegd dat je de
 
 804
 00:35:22,520 --> 00:35:24,656
-de veiligheid mag verzwakken. Als je de veiligheid verzwakt, als je
+de veiligheid mag verzwakken.
+Als je de veiligheid verzwakt, als je
 
 805
 00:35:24,680 --> 00:35:26,095
-veiligheid opgeeft voor privacy, dan
+veiligheid opgeeft
+voor privacy, dan
 
 806
 00:35:26,119 --> 00:35:28,896
-krijg je geen van beide. En nu is dat
+krijg je geen van
+beide. En nu is dat
 
 807
 00:35:28,920 --> 00:35:32,095
-duidelijk geworden. Het is een beetje alsof: als je nu
+duidelijk geworden. Het is
+een beetje alsof: als je nu
 
 808
 00:35:32,119 --> 00:35:36,896
@@ -3237,7 +3780,8 @@ dan is dat echt moeilijk. En
 
 810
 00:35:40,440 --> 00:35:42,256
-als je geen veiligheid hebt, dan heb je
+als je geen veiligheid
+hebt, dan heb je
 
 811
 00:35:42,280 --> 00:35:43,616
@@ -3261,7 +3805,8 @@ daarom heb je niets dat
 
 816
 00:35:52,680 --> 00:35:55,616
-privé is, toch? Want ik kan er niet
+privé is, toch?
+Want ik kan er niet
 
 817
 00:35:55,640 --> 00:35:57,696
@@ -3269,11 +3814,13 @@ van uitgaan dat iets wat ik doe
 
 818
 00:35:57,720 --> 00:36:01,296
-privé blijft als een AI zich voor mij kan uitgeven
+privé blijft als een AI
+zich voor mij kan uitgeven
 
 819
 00:36:01,320 --> 00:36:03,536
-en aan de rest van de wereld kan bewijzen dat
+en aan de rest van de
+wereld kan bewijzen dat
 
 820
 00:36:03,560 --> 00:36:06,335
@@ -3281,31 +3828,38 @@ ik het was die het deed.
 
 821
 00:36:06,359 --> 00:36:08,176
-Wat betekent dat eigenlijk? Kijk,
+Wat betekent
+dat eigenlijk? Kijk,
 
 822
 00:36:08,200 --> 00:36:09,936
-mensen ook aan privacy denken, dan
+mensen ook aan
+privacy denken, dan
 
 823
 00:36:09,960 --> 00:36:11,776
-kan ik dingen doen die niemand anders kan doen
+kan ik dingen doen die
+niemand anders kan doen
 
 824
 00:36:11,800 --> 00:36:15,136
-en waar niemand iets van weet. Maar als
+en waar niemand
+iets van weet. Maar als
 
 825
 00:36:15,160 --> 00:36:19,136
-iemand mij gedrag kan toeschrijven
+iemand mij gedrag
+kan toeschrijven
 
 826
 00:36:19,160 --> 00:36:22,736
-dat ik niet heb vertoond en ik kan het niet weerleggen
+dat ik niet heb vertoond en
+ik kan het niet weerleggen
 
 827
 00:36:22,760 --> 00:36:24,896
-en ik vervolgens de gevolgen daarvan onderga
+en ik vervolgens de
+gevolgen daarvan onderga
 
 828
 00:36:24,920 --> 00:36:27,936
@@ -3317,11 +3871,13 @@ mijn privéleven? Het
 
 830
 00:36:29,880 --> 00:36:32,335
-betekent dat ik dat niet heb; het betekent dat mijn leven wordt beheerst
+betekent dat ik dat niet heb; het
+betekent dat mijn leven wordt beheerst
 
 831
 00:36:32,359 --> 00:36:35,136
-en bepaald door krachten van buitenaf. Mijn
+en bepaald door
+krachten van buitenaf. Mijn
 
 832
 00:36:35,160 --> 00:36:38,736
@@ -3337,7 +3893,8 @@ je locus of control nul is.
 
 835
 00:36:42,920 --> 00:36:44,095
-Wat betekent dat? Het betekent niet
+Wat betekent dat?
+Het betekent niet
 
 836
 00:36:44,119 --> 00:36:46,016
@@ -3353,7 +3910,8 @@ handlanger van de krachten die
 
 839
 00:36:52,359 --> 00:36:55,856
-je identiteit beheersen. Dus het begint
+je identiteit beheersen.
+Dus het begint
 
 840
 00:36:55,880 --> 00:36:57,856
@@ -3361,7 +3919,8 @@ met controle. Je moet
 
 841
 00:36:57,880 --> 00:37:00,976
-controle hebben voordat je privacy kunt hebben.
+controle hebben voordat
+je privacy kunt hebben.
 
 842
 00:37:01,000 --> 00:37:05,536
@@ -3369,19 +3928,23 @@ En dus is de harde keuze:
 
 843
 00:37:05,560 --> 00:37:08,016
-je moet veiligheid hebben voordat je
+je moet veiligheid
+hebben voordat je
 
 844
 00:37:08,040 --> 00:37:10,335
-privacy te hebben, en je kunt kiezen voor
+privacy te hebben,
+en je kunt kiezen voor
 
 845
 00:37:10,359 --> 00:37:13,616
-beveiliging zonder enige privacy, namelijk
+beveiliging zonder
+enige privacy, namelijk
 
 846
 00:37:13,640 --> 00:37:16,496
-namelijk een op AI gebaseerd identiteitssysteem
+namelijk een op AI
+gebaseerd identiteitssysteem
 
 847
 00:37:16,520 --> 00:37:19,055
@@ -3389,7 +3952,8 @@ omdat het totale, continue
 
 848
 00:37:19,079 --> 00:37:20,656
-monitoring en bewaking vereist en in staat moet zijn
+monitoring en bewaking
+vereist en in staat moet zijn
 
 849
 00:37:20,680 --> 00:37:22,416
@@ -3397,7 +3961,8 @@ om je
 
 850
 00:37:22,440 --> 00:37:24,575
-gedrag om je digitale persona te creëren
+gedrag om je digitale
+persona te creëren
 
 851
 00:37:24,599 --> 00:37:26,976
@@ -3405,7 +3970,8 @@ dan de cyberaanvallers doen om
 
 852
 00:37:27,000 --> 00:37:29,456
-zich voor te doen als jou. Of je gebruikt
+zich voor te doen
+als jou. Of je gebruikt
 
 853
 00:37:29,480 --> 00:37:32,256
@@ -3413,11 +3979,13 @@ KERI, dat is gebaseerd op een
 
 854
 00:37:32,280 --> 00:37:34,496
-cryptografisch verifieerbare identiteit
+cryptografisch
+verifieerbare identiteit
 
 855
 00:37:34,520 --> 00:37:36,176
-die fouttolerant is, gebruikmaakt van sleutel
+die fouttolerant is,
+gebruikmaakt van sleutel
 
 856
 00:37:36,200 --> 00:37:37,616
@@ -3425,19 +3993,23 @@ sleutelbeheer, herkomst en
 
 857
 00:37:37,640 --> 00:37:40,095
-verantwoordingsplicht. Het lost dus het
+verantwoordingsplicht.
+Het lost dus het
 
 858
 00:37:40,119 --> 00:37:41,536
-privacyprobleem op dezelfde manier op als je
+privacyprobleem op
+dezelfde manier op als je
 
 859
 00:37:41,560 --> 00:37:43,376
-misschien zou denken, maar het lost het wel op de
+misschien zou denken,
+maar het lost het wel op de
 
 860
 00:37:43,400 --> 00:37:45,456
-enige manier die mogelijk is in de huidige
+enige manier die
+mogelijk is in de huidige
 
 861
 00:37:45,480 --> 00:37:49,136
@@ -3445,23 +4017,28 @@ omgeving.
 
 862
 00:37:49,160 --> 00:37:51,536
-Waarom is er geen stabiel midden? Ik
+Waarom is er geen
+stabiel midden? Ik
 
 863
 00:37:51,560 --> 00:37:54,896
-denk dat ik dat zojuist heb beantwoord. Als AI-
+denk dat ik dat zojuist
+heb beantwoord. Als AI-
 
 864
 00:37:54,920 --> 00:37:58,896
-cybergebaseerde aanvalsmechanismen in staat zijn om
+cybergebaseerde
+aanvalsmechanismen in staat zijn om
 
 865
 00:37:58,920 --> 00:38:02,176
-conventionele beveiliging, gebaseerd op gedeelde
+conventionele beveiliging,
+gebaseerd op gedeelde
 
 866
 00:38:02,200 --> 00:38:06,416
-geheimen, niet KERI, dan is er geen
+geheimen, niet
+KERI, dan is er geen
 
 867
 00:38:06,440 --> 00:38:09,296
@@ -3469,11 +4046,13 @@ privacy. Het is totale bewaking,
 
 868
 00:38:09,320 --> 00:38:11,776
-zodat jij enige mogelijkheid hebt om
+zodat jij enige
+mogelijkheid hebt om
 
 869
 00:38:11,800 --> 00:38:15,376
-enige waarde in je leven te hebben.
+enige waarde in
+je leven te hebben.
 
 870
 00:38:15,400 --> 00:38:18,656
@@ -3485,11 +4064,13 @@ iets doen op het
 
 872
 00:38:20,280 --> 00:38:22,496
-internet. Je moet van het net afgaan.
+internet. Je moet
+van het net afgaan.
 
 873
 00:38:22,520 --> 00:38:24,575
-Helemaal van het net af. Zoals van het net af op een manier
+Helemaal van het net af. Zoals
+van het net af op een manier
 
 874
 00:38:24,599 --> 00:38:28,736
@@ -3501,11 +4082,13 @@ verschrikkelijk leven zou zijn.
 
 876
 00:38:34,940 --> 00:38:37,316
-Dit is een interessante vraag. Naarmate
+Dit is een interessante
+vraag. Naarmate
 
 877
 00:38:37,340 --> 00:38:38,996
-de mogelijkheden van AI toenemen, waarom wordt
+de mogelijkheden van AI
+toenemen, waarom wordt
 
 878
 00:38:39,020 --> 00:38:40,275
@@ -3513,23 +4096,28 @@ continue tracking of bewaking
 
 879
 00:38:40,299 --> 00:38:42,436
-op vertrouwen minder duurzaam worden dan
+op vertrouwen minder
+duurzaam worden dan
 
 880
 00:38:42,460 --> 00:38:44,916
-cryptografisch verifieerbaar vertrouwen? De
+cryptografisch
+verifieerbaar vertrouwen? De
 
 881
 00:38:44,940 --> 00:38:47,156
-reden waarom het minder duurzaam wordt, is
+reden waarom het
+minder duurzaam wordt, is
 
 882
 00:38:47,180 --> 00:38:51,316
-dat het een eindeloze wapenwedloop is.
+dat het een eindeloze
+wapenwedloop is.
 
 883
 00:38:51,340 --> 00:38:57,396
-Elektronische informatie verdwijnt nooit meer, zodra deze
+Elektronische informatie
+verdwijnt nooit meer, zodra deze
 
 884
 00:38:57,420 --> 00:39:00,755
@@ -3553,7 +4141,8 @@ doelvolging. Je kunt het zien
 
 889
 00:39:11,100 --> 00:39:15,076
-dat er een kenmerkruimte is en als ik
+dat er een
+kenmerkruimte is en als ik
 
 890
 00:39:15,100 --> 00:39:16,755
@@ -3561,11 +4150,13 @@ iets volg, beweegt het zich door
 
 891
 00:39:16,779 --> 00:39:18,436
-die kenmerkruimte. Nu, in de fysieke
+die kenmerkruimte.
+Nu, in de fysieke
 
 892
 00:39:18,460 --> 00:39:20,676
-wereld zou die kenmerkruimte kunnen bestaan uit,
+wereld zou die kenmerkruimte
+kunnen bestaan uit,
 
 893
 00:39:20,700 --> 00:39:23,476
@@ -3577,7 +4168,8 @@ hoogte en tijd, toch? En
 
 895
 00:39:26,700 --> 00:39:30,596
-dan heb je nog snelheid, versnelling, al die dingen, toch?
+dan heb je nog snelheid,
+versnelling, al die dingen, toch?
 
 896
 00:39:30,620 --> 00:39:34,116
@@ -3585,15 +4177,18 @@ Maar in de identiteitswereld,
 
 897
 00:39:34,140 --> 00:39:36,196
-heeft de kenmerkruimte te maken met
+heeft de kenmerkruimte
+te maken met
 
 898
 00:39:36,220 --> 00:39:38,035
-zaken als „wanneer je hebt ingelogd, waar
+zaken als „wanneer
+je hebt ingelogd, waar
 
 899
 00:39:38,059 --> 00:39:39,716
-heb je je aangemeld, wat heb je gedaan, wat
+heb je je aangemeld,
+wat heb je gedaan, wat
 
 900
 00:39:39,740 --> 00:39:42,676
@@ -3601,11 +4196,13 @@ heb je gezegd, hoe laat was het,
 
 901
 00:39:42,700 --> 00:39:44,836
-welke browser heb je gebruikt, welk apparaat
+welke browser heb je
+gebruikt, welk apparaat
 
 902
 00:39:44,860 --> 00:39:47,636
-heb je gebruikt, welk protocol heb je gebruikt?'
+heb je gebruikt, welk
+protocol heb je gebruikt?'
 
 903
 00:39:47,660 --> 00:39:50,275
@@ -3613,19 +4210,23 @@ Dat zijn allemaal kenmerken die
 
 904
 00:39:50,299 --> 00:39:53,636
-kunnen worden gebruikt om een digitale vingerafdruk te maken
+kunnen worden gebruikt om
+een digitale vingerafdruk te maken
 
 905
 00:39:53,660 --> 00:39:56,755
-die vervolgens kan worden gevolgd terwijl je
+die vervolgens kan
+worden gevolgd terwijl je
 
 906
 00:39:56,779 --> 00:39:59,795
-je door die ruimte beweegt. En zo ontstaat
+je door die ruimte
+beweegt. En zo ontstaat
 
 907
 00:39:59,819 --> 00:40:03,076
-een traject van je gedrag. En hoe
+een traject van
+je gedrag. En hoe
 
 908
 00:40:03,100 --> 00:40:04,596
@@ -3633,19 +4234,23 @@ meer informatie je hebt, hoe
 
 909
 00:40:04,620 --> 00:40:07,156
-nauwkeurig dat traject is. Mensen
+nauwkeurig dat
+traject is. Mensen
 
 910
 00:40:07,180 --> 00:40:08,996
-noemen het een digitale tweeling. Ze zijn dus bezig met
+noemen het een digitale
+tweeling. Ze zijn dus bezig met
 
 911
 00:40:09,020 --> 00:40:10,676
-een digitale tweeling aan het maken. En ze willen
+een digitale tweeling aan
+het maken. En ze willen
 
 912
 00:40:10,700 --> 00:40:12,755
-dat die digitale tweeling zo dicht mogelijk bij jou staat
+dat die digitale tweeling
+zo dicht mogelijk bij jou staat
 
 913
 00:40:12,779 --> 00:40:15,076
@@ -3653,7 +4258,8 @@ moet zijn, zodat niemand
 
 914
 00:40:15,100 --> 00:40:18,116
-een digitale tweeling kan maken die niet van jou is.
+een digitale tweeling kan
+maken die niet van jou is.
 
 915
 00:40:18,140 --> 00:40:20,676
@@ -3661,7 +4267,8 @@ En je AI die
 
 916
 00:40:20,700 --> 00:40:22,755
-namens jou werkt, kan het verschil zien.
+namens jou werkt,
+kan het verschil zien.
 
 917
 00:40:22,779 --> 00:40:24,275
@@ -3669,35 +4276,43 @@ Toch? Nou, dat betekent dat
 
 918
 00:40:24,299 --> 00:40:28,275
-AI’s, naarmate ze toegang krijgen tot
+AI’s, naarmate ze
+toegang krijgen tot
 
 919
 00:40:28,299 --> 00:40:30,356
-steeds meer informatie, naarmate steeds
+steeds meer informatie,
+naarmate steeds
 
 920
 00:40:30,380 --> 00:40:32,356
-meer van onze samenleving en steeds meer van
+meer van onze samenleving
+en steeds meer van
 
 921
 00:40:32,380 --> 00:40:36,596
-wat we doen door AI wordt ondersteund, dan neemt de
+wat we doen door AI wordt
+ondersteund, dan neemt de
 
 922
 00:40:36,620 --> 00:40:38,836
-hoeveelheid informatie waarmee je zowel gevolgd
+hoeveelheid informatie
+waarmee je zowel gevolgd
 
 923
 00:40:38,860 --> 00:40:42,116
-en zich voor jou uit te geven, neemt toe. Dus,
+en zich voor jou uit te
+geven, neemt toe. Dus,
 
 924
 00:40:42,140 --> 00:40:44,596
-wat er gebeurt, is dat de alomtegenwoordigheid
+wat er gebeurt, is dat
+de alomtegenwoordigheid
 
 925
 00:40:44,620 --> 00:40:47,716
-altijd het maximale bereiken, toch?
+altijd het maximale
+bereiken, toch?
 
 926
 00:40:47,740 --> 00:40:51,156
@@ -3705,23 +4320,28 @@ Er is geen andere benadering en
 
 927
 00:40:51,180 --> 00:40:55,876
-maximaal betekent veel hulpbronnen, ik
+maximaal betekent
+veel hulpbronnen, ik
 
 928
 00:40:55,900 --> 00:40:57,636
-bedoel, daar hebben we het al over
+bedoel, daar
+hebben we het al over
 
 929
 00:40:57,660 --> 00:40:59,396
-het grootste deel van de wereldwijde elektriciteit wordt
+het grootste deel van de
+wereldwijde elektriciteit wordt
 
 930
 00:40:59,420 --> 00:41:01,876
-verbruikt door AI’s. Nou, het zal alleen maar
+verbruikt door AI’s.
+Nou, het zal alleen maar
 
 931
 00:41:01,900 --> 00:41:04,596
-maar toenemen naarmate de tijd vordert
+maar toenemen
+naarmate de tijd vordert
 
 932
 00:41:04,620 --> 00:41:06,515
@@ -3733,15 +4353,18 @@ meer, terwijl cryptografisch
 
 934
 00:41:09,019 --> 00:41:10,515
-verifieerbaar vertrouwen is gebaseerd op een
+verifieerbaar vertrouwen
+is gebaseerd op een
 
 935
 00:41:10,539 --> 00:41:13,795
-een geheel andere reeks beperkingen
+een geheel andere
+reeks beperkingen
 
 936
 00:41:13,819 --> 00:41:15,316
-die te maken hebben met wat men noemt
+die te maken hebben
+met wat men noemt
 
 937
 00:41:15,340 --> 00:41:18,116
@@ -3753,11 +4376,13 @@ en blootstelling. En als je niet
 
 939
 00:41:20,779 --> 00:41:22,836
-iets blootstelt, zodat het niet kan worden
+iets blootstelt, zodat
+het niet kan worden
 
 940
 00:41:22,860 --> 00:41:25,316
-verzameld, als het een echt privé
+verzameld, als
+het een echt privé
 
 941
 00:41:25,340 --> 00:41:28,676
@@ -3769,63 +4394,78 @@ iets openbaar bewijzen zonder
 
 943
 00:41:32,059 --> 00:41:33,876
-het vertrouwelijke te onthullen, dat is
+het vertrouwelijke
+te onthullen, dat is
 
 944
 00:41:33,900 --> 00:41:35,476
-wat een digitale handtekening doet. Er zijn
+wat een digitale
+handtekening doet. Er zijn
 
 945
 00:41:35,500 --> 00:41:37,156
-verschillende soorten bewijzen en je kunt
+verschillende soorten
+bewijzen en je kunt
 
 946
 00:41:37,180 --> 00:41:41,076
-dat voor onbepaalde tijd bewijzen of
+dat voor onbepaalde
+tijd bewijzen of
 
 947
 00:41:41,100 --> 00:41:42,995
-voor altijd. Je hebt dus voor altijd
+voor altijd. Je
+hebt dus voor altijd
 
 948
 00:41:43,019 --> 00:41:45,396
-verifieerbare bewijzen. Dan heb je de
+verifieerbare
+bewijzen. Dan heb je de
 
 949
 00:41:45,420 --> 00:41:50,275
-basis voor een beveiligingssysteem dat
+basis voor een
+beveiligingssysteem dat
 
 950
 00:41:50,299 --> 00:41:52,755
-de beveiliging handhaaft zonder dat het
+de beveiliging
+handhaaft zonder dat het
 
 951
 00:41:52,779 --> 00:41:54,436
-in de loop van de tijd duurder wordt. Sterker nog, het
+in de loop van de tijd
+duurder wordt. Sterker nog, het
 
 952
 00:41:54,460 --> 00:41:56,035
-wordt in de loop van de tijd juist goedkoper, omdat
+wordt in de loop van de
+tijd juist goedkoper, omdat
 
 953
 00:41:56,059 --> 00:41:58,515
-het grootste deel van de kosten daadwerkelijk wordt verminderd
+het grootste deel van de kosten
+daadwerkelijk wordt verminderd
 
 954
 00:41:58,539 --> 00:42:01,156
-de wrijving in de gebruikersinterface. We bevinden ons in
+de wrijving in de gebruikersinterface.
+We bevinden ons in
 
 955
 00:42:01,180 --> 00:42:02,515
-de beginfase van het verminderen van
+de beginfase van
+het verminderen van
 
 956
 00:42:02,539 --> 00:42:04,515
-de wrijving in de gebruikersinterface. Zodat
+de wrijving in de
+gebruikersinterface. Zodat
 
 957
 00:42:04,539 --> 00:42:06,515
-het een perfect schaalbaar systeem wordt
+het een perfect
+schaalbaar systeem wordt
 
 958
 00:42:06,539 --> 00:42:10,420
@@ -3833,15 +4473,18 @@ ten opzichte van het alternatief
 
 959
 00:42:12,029 --> 00:42:14,406
-Mensen digitaal vrij houden terwijl
+Mensen digitaal
+vrij houden terwijl
 
 960
 00:42:14,430 --> 00:42:16,646
-AI de dominante interface wordt voor de
+AI de dominante
+interface wordt voor de
 
 961
 00:42:16,670 --> 00:42:18,966
-digitale wereld. Hoe moet KERI worden toegepast
+digitale wereld. Hoe moet
+KERI worden toegepast
 
 962
 00:42:18,990 --> 00:42:21,206
@@ -3849,35 +4492,43 @@ op AI zelf, zodat mensen
 
 963
 00:42:21,230 --> 00:42:22,886
-digitaal vrij blijven in plaats van
+digitaal vrij blijven
+in plaats van
 
 964
 00:42:22,910 --> 00:42:24,726
-uitgebuit, in de gaten gehouden of gevolgd te worden,
+uitgebuit, in de gaten
+gehouden of gevolgd te worden,
 
 965
 00:42:24,750 --> 00:42:28,005
-gemanipuleerd of gecontroleerd worden? Nou, wij willen
+gemanipuleerd of gecontroleerd
+worden? Nou, wij willen
 
 966
 00:42:28,029 --> 00:42:30,086
-dat AI in ons belang werkt. We willen het
+dat AI in ons belang
+werkt. We willen het
 
 967
 00:42:30,110 --> 00:42:32,886
-beste van twee werelden. We willen AI die
+beste van twee
+werelden. We willen AI die
 
 968
 00:42:32,910 --> 00:42:35,446
-doet wat we haar opdragen, wanneer we
+doet wat we haar
+opdragen, wanneer we
 
 969
 00:42:35,470 --> 00:42:37,285
-het te doen, in de mate waarin we het
+het te doen, in de
+mate waarin we het
 
 970
 00:42:37,309 --> 00:42:39,606
-opdragen. En daarvoor moeten we in staat zijn
+opdragen. En daarvoor
+moeten we in staat zijn
 
 971
 00:42:39,630 --> 00:42:42,806
@@ -3889,23 +4540,28 @@ en over handhavingsmechanismen
 
 973
 00:42:46,670 --> 00:42:49,285
-waarmee we aan andere AI’s kunnen laten weten dat
+waarmee we aan andere
+AI’s kunnen laten weten dat
 
 974
 00:42:49,309 --> 00:42:52,646
-er staat: „Onze AI mag alleen dit doen.”
+er staat: „Onze AI
+mag alleen dit doen.”
 
 975
 00:42:52,670 --> 00:42:54,566
-Dit zijn de regels. Je kunt controleren wat
+Dit zijn de regels. Je
+kunt controleren wat
 
 976
 00:42:54,590 --> 00:42:56,486
-het hoort te doen. Als het dat niet doet
+het hoort te doen.
+Als het dat niet doet
 
 977
 00:42:56,510 --> 00:43:03,446
-dan kun je mijn AI niet vertrouwen.
+dan kun je mijn
+AI niet vertrouwen.
 
 978
 00:43:03,470 --> 00:43:05,525
@@ -3913,19 +4569,23 @@ En dus zijn er mensen
 
 979
 00:43:05,549 --> 00:43:08,806
-die het hebben over reputatiesystemen
+die het hebben over
+reputatiesystemen
 
 980
 00:43:08,830 --> 00:43:10,966
-voor AI’s, maar die reputatiesystemen
+voor AI’s, maar die
+reputatiesystemen
 
 981
 00:43:10,990 --> 00:43:14,406
-systemen moeten op zo’n manier worden beheerd dat
+systemen moeten op zo’n
+manier worden beheerd dat
 
 982
 00:43:14,430 --> 00:43:16,646
-mensen de controle hebben, en dat kunnen we doen met
+mensen de controle hebben,
+en dat kunnen we doen met
 
 983
 00:43:16,670 --> 00:43:19,846
@@ -3933,23 +4593,28 @@ KERI. Als je
 
 984
 00:43:19,870 --> 00:43:21,285
-identiteitssystemen hebt die veilige
+identiteitssystemen
+hebt die veilige
 
 985
 00:43:21,309 --> 00:43:23,285
-toeschrijving mogelijk maken die niet gebaseerd zijn op
+toeschrijving mogelijk maken
+die niet gebaseerd zijn op
 
 986
 00:43:23,309 --> 00:43:25,206
-correlatie-trackingmechanismen, maar die
+correlatie-trackingmechanismen,
+maar die
 
 987
 00:43:25,230 --> 00:43:27,206
-gebaseerd zijn op cryptografische mechanismen. Vervolgens
+gebaseerd zijn op cryptografische
+mechanismen. Vervolgens
 
 988
 00:43:27,230 --> 00:43:29,446
-kun je delegatiemechanismen opzetten en
+kun je delegatiemechanismen
+opzetten en
 
 989
 00:43:29,470 --> 00:43:31,765
@@ -3957,19 +4622,23 @@ autorisatiemechanismen die
 
 990
 00:43:31,789 --> 00:43:33,525
-fundamenteel anders van structuur zijn.
+fundamenteel anders
+van structuur zijn.
 
 991
 00:43:33,549 --> 00:43:36,245
-Ze doorbreken deze beperking van de
+Ze doorbreken deze
+beperking van de
 
 992
 00:43:36,269 --> 00:43:38,886
-vlakke ruimte waar AI momenteel mee te maken heeft
+vlakke ruimte waar AI
+momenteel mee te maken heeft
 
 993
 00:43:38,910 --> 00:43:41,446
-waardoor het onmogelijk is om AI te beveiligen
+waardoor het onmogelijk
+is om AI te beveiligen
 
 994
 00:43:41,470 --> 00:43:43,206
@@ -3977,15 +4646,18 @@ omdat alles zich in dezelfde
 
 995
 00:43:43,230 --> 00:43:45,765
-gewichtruimte bevindt, waardoor je de
+gewichtruimte
+bevindt, waardoor je de
 
 996
 00:43:45,789 --> 00:43:47,686
-de gewichtsruimte kunt opdelen of segmenteren
+de gewichtsruimte kunt
+opdelen of segmenteren
 
 997
 00:43:47,710 --> 00:43:49,846
-in onderdelen die delegeerbaar zijn en
+in onderdelen die
+delegeerbaar zijn en
 
 998
 00:43:49,870 --> 00:43:52,806
@@ -3993,11 +4665,13 @@ zaken die dat niet zijn.
 
 999
 00:43:52,830 --> 00:43:54,486
-Moet AI worden vertrouwd om de menselijke
+Moet AI worden
+vertrouwd om de menselijke
 
 1000
 00:43:54,510 --> 00:43:56,086
-vrijheid te beschermen, of moet AI zelf worden
+vrijheid te beschermen,
+of moet AI zelf worden
 
 1001
 00:43:56,110 --> 00:43:57,206
@@ -4005,11 +4679,13 @@ beperkt door een cryptografische
 
 1002
 00:43:57,230 --> 00:43:59,126
-variabele vertrouwensarchitectuur die
+variabele
+vertrouwensarchitectuur die
 
 1003
 00:43:59,150 --> 00:44:01,206
-de uiteindelijke zeggenschap bij de mens houdt? Nou,
+de uiteindelijke zeggenschap
+bij de mens houdt? Nou,
 
 1004
 00:44:01,230 --> 00:44:02,646
@@ -4025,7 +4701,8 @@ vertrouwen en doemdenken voor
 
 1007
 00:44:07,870 --> 00:44:10,406
-de samenleving zodra een AI slim genoeg wordt.
+de samenleving zodra
+een AI slim genoeg wordt.
 
 1008
 00:44:10,430 --> 00:44:13,206
@@ -4033,19 +4710,23 @@ Ik denk dat ik 20
 
 1009
 00:44:13,230 --> 00:44:15,606
-jaar onderzoek heb gedaan naar AI-systemen. In
+jaar onderzoek heb
+gedaan naar AI-systemen. In
 
 1010
 00:44:15,630 --> 00:44:18,326
-heb ik dat zelfs in het begin van
+heb ik dat zelfs
+in het begin van
 
 1011
 00:44:18,350 --> 00:44:20,005
-mijn carrière gedaan, voordat ik aan
+mijn carrière gedaan,
+voordat ik aan
 
 1012
 00:44:20,029 --> 00:44:23,525
-digitale identiteit. En ja, we kunnen
+digitale identiteit.
+En ja, we kunnen
 
 1013
 00:44:23,549 --> 00:44:26,966
@@ -4061,11 +4742,13 @@ hen toestaan te doen, als we ze
 
 1016
 00:44:31,950 --> 00:44:33,525
-op een andere manier ontwerpen. Dat betekent niet dat we
+op een andere manier
+ontwerpen. Dat betekent niet dat we
 
 1017
 00:44:33,549 --> 00:44:37,525
-generatieve AI moeten afschrijven.
+generatieve AI
+moeten afschrijven.
 
 1018
 00:44:37,549 --> 00:44:40,646
@@ -4077,7 +4760,8 @@ de ruimte waarin het
 
 1020
 00:44:43,789 --> 00:44:46,005
-functioneert, zodat het één ding is om
+functioneert, zodat
+het één ding is om
 
 1021
 00:44:46,029 --> 00:44:49,446
@@ -4085,55 +4769,68 @@ een generatieve AI te hebben die
 
 1022
 00:44:49,470 --> 00:44:51,606
-natuurlijke taal begrijpt. Het is iets heel anders om
+natuurlijke taal begrijpt.
+Het is iets heel anders om
 
 1023
 00:44:51,630 --> 00:44:56,005
-een generatieve AI te hebben die je toestaat om
+een generatieve AI te
+hebben die je toestaat om
 
 1024
 00:44:56,029 --> 00:44:58,245
-dingen namens jou te laten doen; dat is een
+dingen namens jou te
+laten doen; dat is een
 
 1025
 00:44:58,269 --> 00:45:00,726
-agent. We kunnen dus een generatieve AI hebben die
+agent. We kunnen dus een
+generatieve AI hebben die
 
 1026
 00:45:00,750 --> 00:45:03,846
-wordt aangestuurd, maar gebruikmaakt van, je weet wel,
+wordt aangestuurd, maar
+gebruikmaakt van, je weet wel,
 
 1027
 00:45:03,870 --> 00:45:05,926
-interfaces, en dat betekent dat de
+interfaces, en dat
+betekent dat de
 
 1028
 00:45:05,950 --> 00:45:10,486
-de interfacelaag moet beschikken over
+de interfacelaag
+moet beschikken over
 
 1029
 00:45:10,510 --> 00:45:12,086
-veiligheidsvoorzieningen en toen ik vroeger
+veiligheidsvoorzieningen
+en toen ik vroeger
 
 1030
 00:45:12,110 --> 00:45:14,806
-aan autonome voertuigsystemen werkte,
+aan autonome
+voertuigsystemen werkte,
 
 1031
 00:45:14,830 --> 00:45:16,486
-bestond het grootste deel van de code die we schreven uit veiligheids-
+bestond het grootste deel van de
+code die we schreven uit veiligheids-
 
 1032
 00:45:16,510 --> 00:45:18,726
-veiligheidsmaatregelen om het autonome voertuig
+veiligheidsmaatregelen
+om het autonome voertuig
 
 1033
 00:45:18,750 --> 00:45:22,326
-in goede staat en veilig te houden en om
+in goede staat en
+veilig te houden en om
 
 1034
 00:45:22,350 --> 00:45:25,446
-te voorkomen dat het slechte dingen doet. Maar we
+te voorkomen dat het
+slechte dingen doet. Maar we
 
 1035
 00:45:25,470 --> 00:45:28,166
@@ -4141,15 +4838,18 @@ zijn dat een beetje vergeten.
 
 1036
 00:45:28,190 --> 00:45:30,486
-Mensen maken zich daar zorgen over
+Mensen maken
+zich daar zorgen over
 
 1037
 00:45:30,510 --> 00:45:32,005
-. Ik bedoel, veel mensen proberen
+. Ik bedoel, veel
+mensen proberen
 
 1038
 00:45:32,029 --> 00:45:34,886
-die te bouwen, maar ze bouwen het
+die te bouwen,
+maar ze bouwen het
 
 1039
 00:45:34,910 --> 00:45:37,686
@@ -4157,19 +4857,23 @@ met systemen die
 
 1040
 00:45:37,710 --> 00:45:40,886
-waarvoor ze dezelfde AI gebruiken, om
+waarvoor ze dezelfde
+AI gebruiken, om
 
 1041
 00:45:40,910 --> 00:45:44,245
-de veiligheidsvesten te beveiligen en jij
+de veiligheidsvesten
+te beveiligen en jij
 
 1042
 00:45:44,269 --> 00:45:46,166
-dat niet doen. De veiligheidsvesten moeten
+dat niet doen. De
+veiligheidsvesten moeten
 
 1043
 00:45:46,190 --> 00:45:48,806
-fundamenteel anders van aard zijn
+fundamenteel
+anders van aard zijn
 
 1044
 00:45:48,830 --> 00:45:50,646
@@ -4177,11 +4881,13 @@ vanuit computationeel oogpunt.
 
 1045
 00:45:50,670 --> 00:45:54,806
-En als je dat doet, dan heb je een kans.
+En als je dat doet,
+dan heb je een kans.
 
 1046
 00:45:54,830 --> 00:45:56,486
-Hoe zou een wereld eruitzien waarin elke
+Hoe zou een wereld
+eruitzien waarin elke
 
 1047
 00:45:56,510 --> 00:45:57,926
@@ -4189,7 +4895,8 @@ AI-agent opereert onder
 
 1048
 00:45:57,950 --> 00:45:59,606
-cryptografisch geverifieerde bevoegdheid door
+cryptografisch geverifieerde
+bevoegdheid door
 
 1049
 00:45:59,630 --> 00:46:01,206
@@ -4197,7 +4904,8 @@ delegatie en dus verantwoording?
 
 1050
 00:46:01,230 --> 00:46:02,966
-Nou, dat zou het beste van twee werelden zijn.
+Nou, dat zou het beste
+van twee werelden zijn.
 
 1051
 00:46:02,990 --> 00:46:05,686
@@ -4209,7 +4917,8 @@ om onze slagkracht te vergroten
 
 1053
 00:46:08,430 --> 00:46:11,606
-zonder dat we ons zorgen hoeven te maken dat de AI ons schade berokkent.
+zonder dat we ons zorgen hoeven te
+maken dat de AI ons schade berokkent.
 
 1054
 00:46:11,630 --> 00:46:16,166
@@ -4217,35 +4926,43 @@ Er zullen altijd
 
 1055
 00:46:16,190 --> 00:46:19,285
-uitzonderingsgevallen zijn waarin mensen
+uitzonderingsgevallen
+zijn waarin mensen
 
 1056
 00:46:19,309 --> 00:46:22,486
-fouten maken en AI’s zullen in staat zijn om
+fouten maken en AI’s
+zullen in staat zijn om
 
 1057
 00:46:22,510 --> 00:46:24,726
-dingen uit te buiten, maar het zal niet zo’n
+dingen uit te buiten,
+maar het zal niet zo’n
 
 1058
 00:46:24,750 --> 00:46:27,126
-Armageddon-achtige situatie waarmee we
+Armageddon-achtige
+situatie waarmee we
 
 1059
 00:46:27,150 --> 00:46:29,765
-op dit moment worden geconfronteerd. De race tegen
+op dit moment worden
+geconfronteerd. De race tegen
 
 1060
 00:46:29,789 --> 00:46:32,406
-tijd. Als geavanceerde AI zich ontwikkelt op
+tijd. Als geavanceerde
+AI zich ontwikkelt op
 
 1061
 00:46:32,430 --> 00:46:34,005
-een tijdschaal van maanden in plaats van jaren,
+een tijdschaal van
+maanden in plaats van jaren,
 
 1062
 00:46:34,029 --> 00:46:35,846
-hoe snel kan de samenleving dan realistisch gezien
+hoe snel kan de samenleving
+dan realistisch gezien
 
 1063
 00:46:35,870 --> 00:46:37,846
@@ -4253,7 +4970,8 @@ een van deze functies op
 
 1064
 00:46:37,870 --> 00:46:40,806
-wereldwijde schaal kunnen inzetten? Welnu, de harde
+wereldwijde schaal kunnen
+inzetten? Welnu, de harde
 
 1065
 00:46:40,830 --> 00:46:42,245
@@ -4265,11 +4983,13 @@ op dit moment op wereldwijde
 
 1067
 00:46:43,630 --> 00:46:47,525
-schaal kunt inzetten, is AI, omdat AI al
+schaal kunt inzetten,
+is AI, omdat AI al
 
 1068
 00:46:47,549 --> 00:46:50,486
-op wereldwijde schaal ingezet, toch?
+op wereldwijde
+schaal ingezet, toch?
 
 1069
 00:46:50,510 --> 00:46:52,486
@@ -4277,43 +4997,53 @@ Maar dat betekent niet dat je
 
 1070
 00:46:52,510 --> 00:46:55,926
-niet kunt overstappen op KERI zodra het
+niet kunt overstappen
+op KERI zodra het
 
 1071
 00:46:55,950 --> 00:46:57,765
-voor jou beschikbaar komt, toch? Je kunt altijd
+voor jou beschikbaar
+komt, toch? Je kunt altijd
 
 1072
 00:46:57,789 --> 00:46:59,606
-kiezen om te zeggen: „Weet je wat?,
+kiezen om te
+zeggen: „Weet je wat?,
 
 1073
 00:46:59,630 --> 00:47:01,926
-ik gebruik deze digitale persona al
+ik gebruik deze
+digitale persona al
 
 1074
 00:47:01,950 --> 00:47:05,045
-AI, maar ik wil overstappen op het gebruik van
+AI, maar ik wil overstappen
+op het gebruik van
 
 1075
 00:47:05,069 --> 00:47:07,926
-cryptografisch verifieerbare menselijke ...,
+cryptografisch
+verifieerbare menselijke ...,
 
 1076
 00:47:07,950 --> 00:47:10,486
-door het individu beheerde identiteit
+door het individu
+beheerde identiteit
 
 1077
 00:47:10,510 --> 00:47:13,686
-systeem." En dus zijn er, zoals ik
+systeem." En
+dus zijn er, zoals ik
 
 1078
 00:47:13,710 --> 00:47:15,045
-eerder in de lezing al aangaf, adoptie-
+eerder in de lezing
+al aangaf, adoptie-
 
 1079
 00:47:15,069 --> 00:47:16,886
-vectoren. Mensen besteden middelen,
+vectoren. Mensen
+besteden middelen,
 
 1080
 00:47:16,910 --> 00:47:19,926
@@ -4321,15 +5051,18 @@ maar lang niet zoveel middelen
 
 1081
 00:47:19,950 --> 00:47:22,886
-dat naar AI-systemen gaat, naar het AI
+dat naar AI-systemen
+gaat, naar het AI
 
 1082
 00:47:22,910 --> 00:47:24,966
-identiteitssysteem. Als we een fractie hadden van
+identiteitssysteem. Als
+we een fractie hadden van
 
 1083
 00:47:24,990 --> 00:47:27,126
-van die uitgaven naar KERI zou gaan, dan zou KERI
+van die uitgaven naar KERI
+zou gaan, dan zou KERI
 
 1084
 00:47:27,150 --> 00:47:29,686
@@ -4337,11 +5070,13 @@ al beschikbaar zijn. Maar
 
 1085
 00:47:29,710 --> 00:47:32,726
-we zijn van plan KERI uit te rollen voor
+we zijn van plan
+KERI uit te rollen voor
 
 1086
 00:47:32,750 --> 00:47:34,486
-het door de staat goedgekeurde digitale identiteitsinitiatief (SEDI)
+het door de staat goedgekeurde
+digitale identiteitsinitiatief (SEDI)
 
 1087
 00:47:34,510 --> 00:47:37,366
@@ -4349,19 +5084,23 @@ in de komende
 
 1088
 00:47:37,390 --> 00:47:39,366
-12 maanden. We zijn er dus bijna en
+12 maanden. We
+zijn er dus bijna en
 
 1089
 00:47:39,390 --> 00:47:40,726
-zoals ik al zei, maken ze al gebruik van
+zoals ik al zei, maken
+ze al gebruik van
 
 1090
 00:47:40,750 --> 00:47:44,646
-KERI in de vroege implementatiefase in
+KERI in de vroege
+implementatiefase in
 
 1091
 00:47:44,670 --> 00:47:53,686
-de telecomsector en de gezondheidszorg.
+de telecomsector en
+de gezondheidszorg.
 
 1092
 00:47:53,710 --> 00:47:56,005
@@ -4377,7 +5116,8 @@ grond, maar die scheuten kunnen
 
 1095
 00:47:58,600 --> 00:48:00,895
-exponentieel snel groeien. Het enige wat ze nodig hebben is
+exponentieel snel groeien.
+Het enige wat ze nodig hebben is
 
 1096
 00:48:00,919 --> 00:48:05,936
@@ -4385,19 +5125,23 @@ zonlicht, water en aarde en
 
 1097
 00:48:05,960 --> 00:48:08,656
-middelen. We hebben dus alleen maar middelen nodig en
+middelen. We hebben dus
+alleen maar middelen nodig en
 
 1098
 00:48:08,680 --> 00:48:11,536
-dan kan de invoering veel sneller gaan.
+dan kan de invoering
+veel sneller gaan.
 
 1099
 00:48:11,560 --> 00:48:13,536
-Zodra het is ingevoerd, wordt het een bolwerk
+Zodra het is ingevoerd,
+wordt het een bolwerk
 
 1100
 00:48:13,560 --> 00:48:16,176
-tegen toekomstige aantasting. Dus, we
+tegen toekomstige
+aantasting. Dus, we
 
 1101
 00:48:16,200 --> 00:48:19,375
@@ -4409,19 +5153,23 @@ wapenwedloop. We stappen uit de
 
 1103
 00:48:21,960 --> 00:48:23,936
-wapenwedloop om grondstoffen. We doen een eenmalige
+wapenwedloop om grondstoffen.
+We doen een eenmalige
 
 1104
 00:48:23,960 --> 00:48:25,855
-investering om over te stappen op KERI en daarna
+investering om over te
+stappen op KERI en daarna
 
 1105
 00:48:25,879 --> 00:48:27,615
-hoeven we niet steeds maar door te gaan met
+hoeven we niet steeds
+maar door te gaan met
 
 1106
 00:48:27,639 --> 00:48:32,080
-geld uitgeven om onszelf te beschermen.
+geld uitgeven om
+onszelf te beschermen.
 
 1107
 00:48:32,119 --> 00:48:34,095
@@ -4445,15 +5193,18 @@ Zeker, veiliger en
 
 1112
 00:48:44,119 --> 00:48:48,895
-menselijker, KERI. Sneller? Vandaag nog niet
+menselijker, KERI.
+Sneller? Vandaag nog niet
 
 1113
 00:48:48,919 --> 00:48:51,855
-maar over vijf jaar misschien wel,
+maar over vijf
+jaar misschien wel,
 
 1114
 00:48:51,879 --> 00:48:57,135
-want je hoeft het niet om de vijf jaar te doen
+want je hoeft het niet
+om de vijf jaar te doen
 
 1115
 00:48:57,159 --> 00:49:00,176
@@ -4465,19 +5216,23 @@ servers die je in AI draait
 
 1117
 00:49:02,919 --> 00:49:05,216
-datacenters die je niet hoeft te vullen
+datacenters die je
+niet hoeft te vullen
 
 1118
 00:49:05,240 --> 00:49:08,816
-ruimte met AI-datacenters en in staat
+ruimte met
+AI-datacenters en in staat
 
 1119
 00:49:08,840 --> 00:49:11,536
-de wapenwedloop bij te houden. Dus ja,
+de wapenwedloop
+bij te houden. Dus ja,
 
 1120
 00:49:11,560 --> 00:49:14,976
-dus op een tijdsbestek van 5 jaar, als de
+dus op een tijdsbestek
+van 5 jaar, als de
 
 1121
 00:49:15,000 --> 00:49:17,855
@@ -4489,27 +5244,33 @@ de enige haalbare keuze.
 
 1123
 00:49:21,879 --> 00:49:24,576
-Wat zijn de grootste technische, economische
+Wat zijn de grootste
+technische, economische
 
 1124
 00:49:24,600 --> 00:49:25,855
-politieke en implementatiebarrières voor
+politieke en
+implementatiebarrières voor
 
 1125
 00:49:25,879 --> 00:49:28,416
-SEDI/KERISuite snel genoeg in te voeren om
+SEDI/KERISuite snel
+genoeg in te voeren om
 
 1126
 00:49:28,440 --> 00:49:30,576
-een haalbaar alternatief te worden voordat op
+een haalbaar alternatief
+te worden voordat op
 
 1127
 00:49:30,600 --> 00:49:33,855
-op toezicht gebaseerde systemen zich vestigen? Nou,
+op toezicht gebaseerde
+systemen zich vestigen? Nou,
 
 1128
 00:49:33,879 --> 00:49:36,016
-een daarvan is simpelweg dat mensen er niets van weten.
+een daarvan is simpelweg
+dat mensen er niets van weten.
 
 1129
 00:49:36,040 --> 00:49:37,855
@@ -4517,23 +5278,28 @@ dus ze weten niet dat het
 
 1130
 00:49:37,879 --> 00:49:40,176
-eigenlijk een haalbare keuze is. De
+eigenlijk een
+haalbare keuze is. De
 
 1131
 00:49:40,200 --> 00:49:43,135
-andere reden is dat de samenleving vol zit
+andere reden is dat
+de samenleving vol zit
 
 1132
 00:49:43,159 --> 00:49:44,816
-met veel mensen die zich niet bewust zijn van
+met veel mensen die
+zich niet bewust zijn van
 
 1133
 00:49:44,840 --> 00:49:47,936
-deze dreiging en daarom denken ze nog steeds dat
+deze dreiging en daarom
+denken ze nog steeds dat
 
 1134
 00:49:47,960 --> 00:49:51,456
-oude systemen de juiste keuze zijn en dus
+oude systemen de
+juiste keuze zijn en dus
 
 1135
 00:49:51,480 --> 00:49:56,976
@@ -4549,15 +5315,18 @@ Het is alsof ze
 
 1138
 00:50:00,680 --> 00:50:02,656
-de dekprogramma’s verplaatsen naar de
+de dekprogramma’s
+verplaatsen naar de
 
 1139
 00:50:02,680 --> 00:50:04,736
-de Titanic, toch? De Titanic gaat
+de Titanic, toch?
+De Titanic gaat
 
 1140
 00:50:04,760 --> 00:50:06,976
-ten onder. Over een uur zinkt hij,
+ten onder. Over
+een uur zinkt hij,
 
 1141
 00:50:07,000 --> 00:50:09,216
@@ -4569,15 +5338,18 @@ Zodra de hele romp openbarst
 
 1143
 00:50:11,800 --> 00:50:14,256
-en in tweeën breekt, is het weg, toch?
+en in tweeën breekt,
+is het weg, toch?
 
 1144
 00:50:14,280 --> 00:50:16,496
-Maar je hebt het gevoel van: „Oh,
+Maar je hebt het
+gevoel van: „Oh,
 
 1145
 00:50:16,520 --> 00:50:19,375
-nou ja, het drijft nog steeds, dus we hebben
+nou ja, het drijft nog
+steeds, dus we hebben
 
 1146
 00:50:19,399 --> 00:50:21,855
@@ -4585,7 +5357,8 @@ tijd, toch? We hebben tijd,
 
 1147
 00:50:21,879 --> 00:50:24,816
-en er is geen haast bij." En het punt
+en er is geen haast
+bij." En het punt
 
 1148
 00:50:24,840 --> 00:50:26,095
@@ -4593,27 +5366,33 @@ is dat je geen
 
 1149
 00:50:26,119 --> 00:50:29,296
-tijd hebt, wat betekent dat je moet stoppen
+tijd hebt, wat betekent
+dat je moet stoppen
 
 1150
 00:50:29,320 --> 00:50:31,776
-met je zorgen te maken over iets anders dan deze
+met je zorgen te maken
+over iets anders dan deze
 
 1151
 00:50:31,800 --> 00:50:33,696
-twee alternatieven. En als je ophoudt
+twee alternatieven.
+En als je ophoudt
 
 1152
 00:50:33,720 --> 00:50:35,615
-je zorgen te maken over alle alternatieven
+je zorgen te maken
+over alle alternatieven
 
 1153
 00:50:35,639 --> 00:50:38,016
-behalve deze twee, dan wordt het vrij
+behalve deze twee,
+dan wordt het vrij
 
 1154
 00:50:38,040 --> 00:50:40,576
-duidelijk waar voor de meeste mensen
+duidelijk waar voor
+de meeste mensen
 
 1155
 00:50:40,600 --> 00:50:44,335
@@ -4621,11 +5400,13 @@ die zich hiermee bezighouden
 
 1156
 00:50:44,359 --> 00:50:46,416
-waar hun inspanningen naartoe moeten gaan, dat
+waar hun inspanningen
+naartoe moeten gaan, dat
 
 1157
 00:50:46,440 --> 00:50:48,176
-ze zouden moeten helpen ..., want niets
+ze zouden moeten
+helpen ..., want niets
 
 1158
 00:50:48,200 --> 00:50:50,256
@@ -4633,7 +5414,8 @@ anders is goed genoeg
 
 1159
 00:50:50,280 --> 00:50:52,976
-behalve KERI. Er zijn veel „KERI light“-varianten
+behalve KERI. Er zijn
+veel „KERI light“-varianten
 
 1160
 00:50:53,000 --> 00:50:56,416
@@ -4641,35 +5423,43 @@ of gedeeltelijke KERI, of ze
 
 1161
 00:50:56,440 --> 00:50:58,416
-doen een deel van KERI, maar niet alles van KERI
+doen een deel van KERI,
+maar niet alles van KERI
 
 1162
 00:50:58,440 --> 00:51:00,656
-dingen die er zijn. En het probleem is
+dingen die er zijn.
+En het probleem is
 
 1163
 00:51:00,680 --> 00:51:02,976
-dat die systemen niet goed genoeg zijn
+dat die systemen
+niet goed genoeg zijn
 
 1164
 00:51:03,000 --> 00:51:04,416
-omdat ze belangrijke dingen buiten beschouwing laten
+omdat ze belangrijke dingen
+buiten beschouwing laten
 
 1165
 00:51:04,440 --> 00:51:06,335
-waartegen je je moet beschermen tegen de AI-
+waartegen je je moet
+beschermen tegen de AI-
 
 1166
 00:51:06,359 --> 00:51:08,736
-dreiging. Het zijn dus halve maatregelen,
+dreiging. Het zijn dus
+halve maatregelen,
 
 1167
 00:51:08,760 --> 00:51:10,095
-toch? En halve maatregelen zijn niet
+toch? En halve
+maatregelen zijn niet
 
 1168
 00:51:10,119 --> 00:51:12,496
-goed genoeg, toch? Geen halve maatregelen meer.
+goed genoeg, toch? Geen
+halve maatregelen meer.
 
 1169
 00:51:12,520 --> 00:51:15,135
@@ -4677,11 +5467,13 @@ We hanteren dat motto:
 
 1170
 00:51:15,159 --> 00:51:17,296
-Als je veiligheid belangrijk vindt, kun je geen
+Als je veiligheid
+belangrijk vindt, kun je geen
 
 1171
 00:51:17,320 --> 00:51:19,615
-halve maatregelen nemen. `Je bent ofwel
+halve maatregelen
+nemen. `Je bent ofwel
 
 1172
 00:51:19,639 --> 00:51:22,496
@@ -4689,47 +5481,58 @@ voldoende beveiligd, of je wordt
 
 1173
 00:51:22,520 --> 00:51:26,256
-weggevaagd.’ Dat is dus het alternatief.
+weggevaagd.’ Dat
+is dus het alternatief.
 
 1174
 00:51:26,280 --> 00:51:28,416
-En ik heb deze foto die ik heb gekregen
+En ik heb deze foto
+die ik heb gekregen
 
 1175
 00:51:28,440 --> 00:51:31,936
-van Chris Bramwell, die werkt aan
+van Chris Bramwell,
+die werkt aan
 
 1176
 00:51:31,960 --> 00:51:34,895
-dit SEDI-project voor de staat Utah.
+dit SEDI-project
+voor de staat Utah.
 
 1177
 00:51:34,919 --> 00:51:38,256
-SEDI: de laatste en beste hoop tegen
+SEDI: de laatste
+en beste hoop tegen
 
 1178
 00:51:38,280 --> 00:51:42,256
-AI. Op de afbeelding wordt SEDI dus afgebeeld als een krijger,
+AI. Op de afbeelding wordt
+SEDI dus afgebeeld als een krijger,
 
 1179
 00:51:42,280 --> 00:51:44,816
-De ridder die de strijd aangaat tegen
+De ridder die de
+strijd aangaat tegen
 
 1180
 00:51:44,840 --> 00:51:51,696
-de AI-plaag van identiteit. Niet dat AI
+de AI-plaag van
+identiteit. Niet dat AI
 
 1181
 00:51:51,720 --> 00:51:55,536
-van nature slecht is. Het is gewoon zo dat de
+van nature slecht is.
+Het is gewoon zo dat de
 
 1182
 00:51:55,560 --> 00:51:57,936
-de enige oplossing is die een op AI gebaseerde
+de enige oplossing is
+die een op AI gebaseerde
 
 1183
 00:51:57,960 --> 00:52:01,056
-identiteit ons biedt, een gecentraliseerde,
+identiteit ons biedt,
+een gecentraliseerde,
 
 1184
 00:52:01,080 --> 00:52:04,176
@@ -4737,11 +5540,13 @@ identiteit is die maximale
 
 1185
 00:52:04,200 --> 00:52:06,656
-toezicht vereist. Het komt er in feite op neer dat je
+toezicht vereist. Het komt
+er in feite op neer dat je
 
 1186
 00:52:06,680 --> 00:52:08,895
-continu in de gaten moet worden gehouden, zodat het
+continu in de gaten moet
+worden gehouden, zodat het
 
 1187
 00:52:08,919 --> 00:52:12,256
@@ -4749,15 +5554,18 @@ een zeer nauwkeurig beeld van
 
 1188
 00:52:12,280 --> 00:52:15,776
-jou kan opbouwen dat beter is dan de
+jou kan opbouwen
+dat beter is dan de
 
 1189
 00:52:15,800 --> 00:52:18,256
-AI van de aanvaller, die jou ook voortdurend
+AI van de aanvaller,
+die jou ook voortdurend
 
 1190
 00:52:18,280 --> 00:52:21,456
-in de gaten houdt, in een poging een
+in de gaten houdt,
+in een poging een
 
 1191
 00:52:21,480 --> 00:52:23,855
@@ -4769,11 +5577,13 @@ je
 
 1193
 00:52:26,040 --> 00:52:30,416
-identiteit kan stelen en misbruik van je kan maken. En
+identiteit kan stelen en
+misbruik van je kan maken. En
 
 1194
 00:52:30,440 --> 00:52:32,656
-dat is een harde keuze. Geen van beide
+dat is een harde
+keuze. Geen van beide
 
 1195
 00:52:32,680 --> 00:52:34,335
@@ -4781,7 +5591,8 @@ is goed, toch? Geen van beide
 
 1196
 00:52:34,359 --> 00:52:36,176
-is waar we terecht willen komen. We willen
+is waar we terecht
+willen komen. We willen
 
 1197
 00:52:36,200 --> 00:52:38,816
@@ -4789,11 +5600,13 @@ uit die trein stappen. KERI is
 
 1198
 00:52:38,840 --> 00:52:41,696
-een manier om uit die trein te stappen.
+een manier om uit
+die trein te stappen.
 
 1199
 00:52:41,720 --> 00:52:43,855
-Ik hoop dat dit nuttig is geweest. Ik hoop
+Ik hoop dat dit nuttig
+is geweest. Ik hoop
 
 1200
 00:52:43,879 --> 00:52:46,576
@@ -4813,7 +5626,8 @@ genoeg. Je zou je
 
 1204
 00:52:56,919 --> 00:53:01,135
-zoveel zorgen moeten maken als je nog nooit
+zoveel zorgen moeten
+maken als je nog nooit
 
 1205
 00:53:01,159 --> 00:53:03,936
@@ -4825,7 +5639,8 @@ identiteit. Gezien hoe snel de
 
 1207
 00:53:07,560 --> 00:53:11,375
-baanbrekende AI-modellen steeds beter in staat zijn om
+baanbrekende AI-modellen
+steeds beter in staat zijn om
 
 1208
 00:53:11,399 --> 00:53:14,176
@@ -4833,23 +5648,28 @@ huidige digitale
 
 1209
 00:53:14,200 --> 00:53:15,696
-identiteitssystemen te misbruiken – waarop alle
+identiteitssystemen te
+misbruiken – waarop alle
 
 1210
 00:53:15,720 --> 00:53:17,696
-beveiligingssystemen fundamenteel
+beveiligingssystemen
+fundamenteel
 
 1211
 00:53:17,720 --> 00:53:19,696
-gebaseerd zijn op digitale identiteitssystemen.
+gebaseerd zijn op
+digitale identiteitssystemen.
 
 1212
 00:53:19,720 --> 00:53:22,656
-Je gebruikt digitale identiteitsbeveiliging
+Je gebruikt digitale
+identiteitsbeveiliging
 
 1213
 00:53:22,680 --> 00:53:24,095
-als een soort overlay voor al het andere dat je
+als een soort overlay
+voor al het andere dat je
 
 1214
 00:53:24,119 --> 00:53:26,256
@@ -4865,11 +5685,13 @@ catastrofe. Wat er
 
 1217
 00:53:37,080 --> 00:53:38,656
-uiteindelijk gaat gebeuren, is dat mensen
+uiteindelijk gaat
+gebeuren, is dat mensen
 
 1218
 00:53:38,680 --> 00:53:41,615
-ik ga gewoon voor de makkelijke weg
+ik ga gewoon voor
+de makkelijke weg
 
 1219
 00:53:41,639 --> 00:53:47,375
@@ -4881,11 +5703,13 @@ digitale identiteit.
 
 1221
 00:53:51,000 --> 00:53:53,296
-Dat zou een slechte keuze zijn voor
+Dat zou een slechte
+keuze zijn voor
 
 1222
 00:53:53,320 --> 00:53:55,296
-ons. Misschien is het op korte termijn de
+ons. Misschien is
+het op korte termijn de
 
 1223
 00:53:55,320 --> 00:53:56,736
@@ -4897,7 +5721,8 @@ KERI niet overal beschikbaar is.
 
 1225
 00:53:59,399 --> 00:54:06,736
-Het is nog steeds een schacht in de grond. Niet
+Het is nog steeds een
+schacht in de grond. Niet
 
 1226
 00:54:06,760 --> 00:54:09,135
@@ -4905,7 +5730,8 @@ geen heel veld vol
 
 1227
 00:54:09,159 --> 00:54:11,536
-planten. Maar het zou wel een heel
+planten. Maar het
+zou wel een heel
 
 1228
 00:54:11,560 --> 00:54:14,176
@@ -4921,13 +5747,16 @@ paar maanden, tenzij
 
 1231
 00:54:17,800 --> 00:54:19,375
-er een hoop middelen in worden gestoken,
+er een hoop middelen
+in worden gestoken,
 
 1232
 00:54:19,399 --> 00:54:21,407
-wat volgens mij niet gaat gebeuren.
+wat volgens mij
+niet gaat gebeuren.
 
 1233
 00:54:21,431 --> 00:54:25,180
-Video: Sam en Caleb Smith
-Ondertiteling: Henk van Cann en Kor Dwarshuis
+Video: Sam en Caleb Smith Ondertiteling:
+Henk van Cann en Kor Dwarshuis
+
