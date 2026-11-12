@@ -3761,8 +3761,9 @@
                 return h * 3600 + m * 60 + s + Number(ms) / 1000;
             }
 
-            // topClips start/end: seconds (730), or clock strings ("12:10", "00:12:10",
-            // optional fractional "12:10.5" / "00:12:10,500").
+            // Clip stamps (topClips, chapters, and #…&t=&e=) are seconds with
+            // millisecond resolution: 730, 730.5, 730.050, or clock strings
+            // ("12:10", "00:12:10", "12:10.5", "00:12:10,500").
             function parseClipTime(value) {
                 if (typeof value === 'number') {
                     return Number.isFinite(value) && value >= 0 ? value : Number.NaN;
@@ -3787,6 +3788,19 @@
                 if (![hours, minutes, seconds, frac].every(Number.isFinite)) return Number.NaN;
                 if (minutes > 59 || seconds > 59) return Number.NaN;
                 return hours * 3600 + minutes * 60 + seconds + frac;
+            }
+
+            // Share URLs and copied clip points use the same millisecond grid.
+            // Whole seconds stay whole (t=90), so older integer links are unchanged.
+            function quantizeClipSeconds(seconds) {
+                if (typeof seconds !== 'number' || !Number.isFinite(seconds) || seconds < 0) return Number.NaN;
+                return Math.round(seconds * 1000) / 1000;
+            }
+
+            function formatClipSeconds(seconds) {
+                const q = quantizeClipSeconds(seconds);
+                if (!Number.isFinite(q)) return '';
+                return q.toFixed(3).replace(/\.?0+$/, '');
             }
 
             function normalizeTopClip(clip) {
@@ -5965,7 +5979,8 @@
                 modalCopyBtn.innerHTML = COPY_ICON_SVG;
                 modalCopyBtn.addEventListener('click', () => {
                     if (!modalVideoId || !modalVideoEl) return;
-                    const currentTime = Math.floor(modalVideoEl.currentTime);
+                    const currentTime = quantizeClipSeconds(modalVideoEl.currentTime);
+                    if (!Number.isFinite(currentTime)) return;
 
                     if (copyRangeStart === null) {
                         // Starting a new cycle: drop any existing t/e stamps first
@@ -6691,13 +6706,16 @@
             }
 
             function buildVideoHash(videoId, time, endTime) {
-                const t = Math.floor(typeof time === 'number' ? time : 0);
+                const t = quantizeClipSeconds(typeof time === 'number' ? time : 0);
+                const safeT = Number.isFinite(t) ? t : 0;
+                const e = quantizeClipSeconds(endTime);
+                const hasEnd = Number.isFinite(e);
                 let hash = `#${videoId}`;
-                if (t > 0 || (typeof endTime === 'number' && Number.isFinite(endTime))) {
-                    hash += `&t=${Math.max(0, t)}`;
+                if (safeT > 0 || hasEnd) {
+                    hash += `&t=${formatClipSeconds(safeT)}`;
                 }
-                if (typeof endTime === 'number' && Number.isFinite(endTime) && endTime > t) {
-                    hash += `&e=${Math.floor(endTime)}`;
+                if (hasEnd && e > safeT) {
+                    hash += `&e=${formatClipSeconds(e)}`;
                 }
                 const lang = captionLangPreference || readCaptionLangFromLocation();
                 if (lang && lang !== 'en') {
@@ -6730,12 +6748,15 @@
                     const eq = param.indexOf('=');
                     const key = eq === -1 ? param : param.substring(0, eq);
                     const raw = eq === -1 ? '' : param.substring(eq + 1);
-                    if (key === 't') {
-                        const timestamp = parseFloat(raw);
-                        if (!isNaN(timestamp) && timestamp >= 0) result.start = timestamp;
-                    } else if (key === 'e') {
-                        const timestamp = parseFloat(raw);
-                        if (!isNaN(timestamp) && timestamp >= 0) result.end = timestamp;
+                    if (key === 't' || key === 'e') {
+                        let rawValue = raw;
+                        try { rawValue = decodeURIComponent(raw); } catch {
+                            rawValue = raw;
+                        }
+                        const timestamp = quantizeClipSeconds(parseClipTime(rawValue));
+                        if (!Number.isFinite(timestamp)) continue;
+                        if (key === 't') result.start = timestamp;
+                        else result.end = timestamp;
                     } else if (key === 'from') {
                         try {
                             result.from = decodeURIComponent(raw);
@@ -7965,7 +7986,7 @@
                         const duration = document.createElement('span');
                         duration.className = 'top-clip-duration';
                         duration.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
-                        duration.appendChild(document.createTextNode(`${clip.end - clip.start}s`));
+                        duration.appendChild(document.createTextNode(`${formatClipSeconds(clip.end - clip.start)}s`));
 
                         const quote = document.createElement('p');
                         quote.className = 'top-clip-quote';
