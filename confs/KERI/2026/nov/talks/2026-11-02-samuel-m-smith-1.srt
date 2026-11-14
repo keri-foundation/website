@@ -1981,7 +1981,7 @@ infrastructure. The infrastructure that's
 399
 00:37:54,880 --> 00:37:59,340
 shared is the watcher network. So entity
-A controls their own witnesses. entity B
+A controls their own witnesses. Entity B
 
 400
 00:37:59,340 --> 00:38:03,380
@@ -2149,7 +2149,7 @@ the state of the ACDC at the time of
 
 433
 00:40:41,820 --> 00:40:49,020
-presentation is still valid. without
+presentation is still valid without
 creating a correlation point. There are
 
 434
@@ -2732,7 +2732,7 @@ anybody they want. So there's no technical
 
 550
 00:51:23,160 --> 00:51:28,020
-solution to the privacy problem. if
+solution to the privacy problem if
 privacy includes sharing data. You can
 
 551
@@ -3107,4 +3107,3 @@ That's a bad idea. Yeah. So anyway, are we
 625
 00:57:23,280 --> 00:57:27,320
 done? Okay, I'm done. Thank you.
-

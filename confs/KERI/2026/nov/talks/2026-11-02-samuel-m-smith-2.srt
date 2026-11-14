@@ -346,17 +346,17 @@ somebody in North Korea can't monitor
 70
 00:05:59,520 --> 00:06:05,060
 because they have to attack, but in
-order for it to be useful you have to un
+order for it to be useful you have to
 
 71
 00:06:05,060 --> 00:06:09,800
--air gap your body in order that the
+un-air-gap your body in order that the
 AI that is creating your model so you're
 
 72
 00:06:09,800 --> 00:06:15,260
 actually weakening your ability to protect
-yourself because you're un-air gapping
+yourself because you're un-air-gapping
 
 73
 00:06:15,260 --> 00:06:20,460
@@ -689,8 +689,7 @@ threshold structures that have combined
 
 139
 00:12:25,360 --> 00:12:30,880
-with the detection and recovery from side
--channel attack, then I can make a system
+with the detection and recovery from side-channel attack, then I can make a system
 
 140
 00:12:30,880 --> 00:12:36,460
@@ -809,8 +808,7 @@ I'll get to examples. A fault-tolerant
 
 163
 00:14:26,880 --> 00:14:31,260
-system. So when I use the term fault
--tolerant, detects and recovers from a
+system. So when I use the term fault-tolerant, detects and recovers from a
 
 164
 00:14:31,260 --> 00:14:36,440
@@ -1778,7 +1776,7 @@ the ACDC. So you have to compromise the
 
 357
 00:31:57,900 --> 00:32:03,040
-registry. not just the ACDC. Okay. Got it.
+registry, not just the ACDC. Okay. Got it.
 Does that make sense? Yeah. Now, if they
 
 358
@@ -2028,7 +2026,7 @@ stuff to do guardianship. Guardianship was
 407
 00:36:23,100 --> 00:36:28,400
 the driving factor. They passed a law in
-2023. for social media access with no idea
+2023 for social media access with no idea
 
 408
 00:36:28,400 --> 00:36:34,040
@@ -2266,7 +2264,7 @@ it can be an AI harness. It doesn't matter
 455
 00:41:11,020 --> 00:41:20,400
 from the standpoint of the tooling. It's
-the same. An agent has its own AID. this
+the same. An agent has its own AID. This
 
 456
 00:41:20,400 --> 00:41:24,180
@@ -2390,7 +2388,7 @@ resources in an ACDC, right? You can use
 480
 00:43:43,240 --> 00:43:50,880
 those edges to bind resources to
-access. with. And that edge is part of a
+access with. And that edge is part of a
 
 481
 00:43:50,880 --> 00:43:55,620
@@ -2665,7 +2663,7 @@ right? Safety requires accountability.
 535
 00:48:36,980 --> 00:48:39,480
 Does anybody disagree with me that safety
-requires accountability? accountability.
+requires accountability?
 
 536
 00:48:46,040 --> 00:48:50,660
@@ -2947,7 +2945,7 @@ means we can identify people. We'll use it
 592
 00:53:40,520 --> 00:53:46,700
 for authentication. We won't use it for
-re -identification. We'll just use it for
+re-identification. We'll just use it for
 
 593
 00:53:46,700 --> 00:53:50,600
@@ -3107,11 +3105,11 @@ best interest. That means they can't do
 624
 00:56:27,080 --> 00:56:34,320
 something like trick you into saying
-things like, oh, we're going to de
+things like, oh, we're going to de-identify
 
 625
 00:56:34,320 --> 00:56:41,280
--identify this data and then it's not data
+this data and then it's not data
 about you. That's a lie, right? But what
 
 626
@@ -3162,4 +3160,3 @@ don't like it. And I'm done. So, all
 635
 00:57:28,640 --> 00:57:35,340
 right.
-

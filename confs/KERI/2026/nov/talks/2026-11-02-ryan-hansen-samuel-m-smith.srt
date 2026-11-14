@@ -516,7 +516,7 @@ it and I need to make that independent
 105
 00:09:42,140 --> 00:09:46,200
 verification cheap enough that they afford
-to do it. but it's not zero. That's the
+to do it, but it's not zero. That's the
 
 106
 00:09:46,200 --> 00:09:50,700
@@ -660,8 +660,7 @@ guaranteed the most efficient, but you do
 
 134
 00:12:40,900 --> 00:12:46,920
-guarantee that you don't have non
--portability because everybody's power is
+guarantee that you don't have non-portability because everybody's power is
 
 135
 00:12:46,920 --> 00:12:51,680
@@ -1042,7 +1041,7 @@ $100 a year? – It's a year. I couldn't even
 
 211
 00:20:29,740 --> 00:20:34,780
-guess. but it's, you can run a lot. –
+guess, but it's, you can run a lot. –
 Right. So, I mean, we have four droplets
 
 212
@@ -1138,7 +1137,7 @@ person at the bank. Show me how I would
 230
 00:22:23,760 --> 00:22:28,460
 spin up free witnesses and watcher
-services. because I don't want to pay
+services, because I don't want to pay
 
 231
 00:22:28,460 --> 00:22:33,640
@@ -1355,7 +1354,7 @@ for KERI because it's probably the worst
 274
 00:26:43,520 --> 00:26:48,620
 for that. It's the single biggest sector in
-the economy and it has the worst fraud.
+the economy and it has the worst fraud
 
 275
 00:26:48,620 --> 00:26:55,280
@@ -1537,7 +1536,7 @@ it's free, they could, and it would just
 
 311
 00:30:22,480 --> 00:30:27,440
-augment in a very synergistic way. like
+augment in a very synergistic way, like
 I know in the insurance industry, there's,
 
 312
@@ -1651,7 +1650,7 @@ the state, an issuing agent.
 
 334
 00:32:22,200 --> 00:32:27,900
-So, So, so the point is, is that that's the
+So, so the point is that that's the
 place where you can make money in the
 
 335
@@ -1881,8 +1880,8 @@ by pretty much any industry in the identity
 
 380
 00:36:46,660 --> 00:36:56,260
-space. So, So if true, which we won't know
-in until two weeks at the SEDI summit, it
+space. So if true, which we won't know
+until two weeks at the SEDI summit, it
 
 381
 00:36:56,260 --> 00:37:01,020
@@ -2518,7 +2517,7 @@ will not go away. There will be an opt-out
 
 508
 00:48:05,120 --> 00:48:12,460
-clause. – Yes. option for citizens. But
+clause. – Yes, option for citizens. But
 you have to think that most citizens and
 
 509
@@ -2564,11 +2563,11 @@ a digital identity. – Yes. – Let's say it
 517
 00:48:51,200 --> 00:48:56,880
 that way. – And what will happen is
-demographically as people die off, the opt
+demographically as people die off, the opt-inners
 
 518
 00:48:56,880 --> 00:49:03,340
--inners will go up. And at some point in
+will go up. And at some point in
 like one generation, you'll have a teeny
 
 519
@@ -2763,8 +2762,7 @@ suddenly companies or organizations can
 
 557
 00:52:38,680 --> 00:52:46,200
-tap these of services. – Yeah, if forward
--looking companies do something like say,
+tap these sorts of services. – Yeah, if forward-looking companies do something like say,
 
 558
 00:52:46,320 --> 00:52:50,420
@@ -2950,4 +2948,3 @@ just offering. Anyway, so before everybody
 00:55:43,460 --> 00:55:50,920
 leaves, should we close
 the session? Thank you.
-

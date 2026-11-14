@@ -183,8 +183,7 @@ end to end with KERI version 1. There is a
 
 38
 00:03:34,300 --> 00:03:37,740
-significant amount of work that's non
--trivial to do to make it work for KERI 2.
+significant amount of work that's non-trivial to do to make it work for KERI 2.
 
 39
 00:03:38,240 --> 00:03:42,700
@@ -1778,7 +1777,7 @@ something. So it was a natural fit for
 
 357
 00:29:48,620 --> 00:29:54,060
-did:webs. did:webs based on KERI with KERI
+did:webs. did:webs, based on KERI with KERI
 multisig. We just needed a way to define,
 
 358
@@ -2208,11 +2207,11 @@ equivalence either in the event log or any
 443
 00:36:58,440 --> 00:37:06,940
 of the delegation mechanisms for assigning
-proof purpose to keys to not the pre
+proof purpose to keys to not the pre-rotation
 
 444
 00:37:06,940 --> 00:37:11,120
--rotation keys but to regular document
+keys but to regular document
 keys. Can you say this key can only be
 
 445
@@ -2586,8 +2585,8 @@ finish out the diff process. And so to
 
 519
 00:43:43,180 --> 00:43:50,180
-get to where we redo we really do want
-did:webs to be a a fully accepted fully
+get to where we really do want
+did:webs to be a fully accepted, fully
 
 520
 00:43:50,180 --> 00:43:55,924
@@ -3220,7 +3219,7 @@ an inception event, but it's a vacuous
 646
 00:55:02,220 --> 00:55:06,900
 inception event, which means a
-non -transferable KERI identifier is
+non-transferable KERI identifier is
 
 647
 00:55:06,900 --> 00:55:13,560
@@ -3255,11 +3254,11 @@ could derive if you knew what domain you
 653
 00:55:37,640 --> 00:55:40,840
 wanted to commit to, you could derive
-a DID document just from having a non
+a DID document just from having a non-transferable
 
 654
 00:55:40,840 --> 00:55:43,520
--transferable identifier. – Yeah, you just
+identifier. – Yeah, you just
 don't get the security benefits of a KEL.
 
 655
@@ -3275,11 +3274,11 @@ anybody that might not have heard it. So
 657
 00:55:55,160 --> 00:55:59,880
 if you're familiar with the concept of a
-non-transferable identifier in KERI, non
+non-transferable identifier in KERI, non-transferable
 
 658
 00:55:59,880 --> 00:56:03,340
--transferable means you can't rotate keys.
+means you can't rotate keys.
 And you might say, well, why design a key
 
 659
@@ -3295,11 +3294,11 @@ things you get from KERI. There are a lot
 661
 00:56:10,880 --> 00:56:15,860
 of instances where you don't need key
-rotation. For example… – Witnesses have non
+rotation. For example… – Witnesses have non-transferable
 
 662
 00:56:15,860 --> 00:56:20,460
--transferable AIDs. They don't need
+AIDs. They don't need
 KELs. The witness itself doesn't need a KEL
 
 663
@@ -3469,4 +3468,3 @@ me after this as well but I want to make
 696
 00:59:15,500 --> 00:59:19,440
 room.
-

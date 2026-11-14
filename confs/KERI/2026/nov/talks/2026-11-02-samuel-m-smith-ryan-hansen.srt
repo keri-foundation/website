@@ -424,7 +424,7 @@ is as good as any other watcher because
 86
 00:08:53,620 --> 00:08:58,020
 you don't trust the watcher. It just
-proves to you its odd duplicity. So the
+proves to you its own duplicity. So the
 
 87
 00:08:58,020 --> 00:09:03,740
@@ -433,11 +433,11 @@ watch. – So to that point, if you want
 
 88
 00:09:03,740 --> 00:09:09,360
-to weaken the security and anti
+to weaken the security and anti-fraud
 
 89
 00:09:09,360 --> 00:09:13,980
--fraud properties of KERI, then as they
+properties of KERI, then as they
 say in the movie, get rid of that monkey.
 
 90
@@ -687,8 +687,8 @@ a company building KERI based stuff in the
 
 139
 00:14:04,180 --> 00:14:09,600
-healthcare sector. – Yeah good call
-out. healthKERI has given us a lot of good
+healthcare sector. – Yeah, good call-out.
+healthKERI has given us a lot of good
 
 140
 00:14:09,600 --> 00:14:13,780
@@ -810,7 +810,7 @@ then, you know, there's lots of latent
 
 164
 00:16:38,040 --> 00:16:43,720
-questions. and saw him use the whiteboard
+questions and saw him use the whiteboard
 to answer those. – I've got a question about
 
 165
@@ -928,7 +928,7 @@ then that wallet could say, Oh, I want
 
 188
 00:18:35,300 --> 00:18:41,360
-witnesses from this service. and I want a
+witnesses from this service and I want a
 watcher from this service. – Part of why I
 
 189
@@ -1816,7 +1816,7 @@ there's a well-known protocol called a
 
 366
 00:33:59,720 --> 00:34:05,540
-“Well-Known” protocol. that you can
+“Well-Known” protocol that you can
 publish and just say, witness and here's
 
 367
@@ -1836,8 +1836,7 @@ So that's one thing. And then we have
 
 370
 00:34:19,920 --> 00:34:26,460
-something called an OOBI, right? The out
--of-band introduction and you can publish
+something called an OOBI, right? The out-of-band introduction and you can publish
 
 371
 00:34:26,460 --> 00:34:35,720
@@ -3136,4 +3135,3 @@ what KERI provides. But it's complicated,
 00:58:23,940 --> 00:58:28,740
 right? You have to complicate your
 system. Okay, I'm done.
-
