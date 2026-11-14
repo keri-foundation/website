@@ -523,18 +523,20 @@ bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=
 ### How it works
 
 1. Fetches all videos from the YouTube playlist
-2. For each video, searches for matching `.srt` files in the directory you passed
-3. Matches by video title; language comes from the filename suffix
-4. Uploads each language track to the video
+2. Loads the conference `index.json` next to the media folder you passed (for example `confs/KERI/2026/nov/index.json` for `…/nov/talks`)
+3. Matches each YouTube title to a `videos[].title` entry, then uses that entry’s `subtitle` path
+4. Also uploads sibling language tracks that share the same basename stem (`*.nl.srt`, `*.es.srt`, …)
 5. If a caption track for that language already exists, it updates it
 
-**Filename convention**
+If no `index.json` is found, the uploader falls back to matching the YouTube title against the `.srt` filename stem.
 
-- `Video Title.srt` → English (`en`)
-- `Video Title.nl.srt` → Dutch (`nl`)
-- `Video Title.es.srt` → Spanish (`es`)
+**Language filename convention**
 
-The part before the optional `.xx` language code must match the YouTube video title.
+- `stem.srt` → English (`en`)
+- `stem.nl.srt` → Dutch (`nl`)
+- `stem.es.srt` → Spanish (`es`)
+
+`stem` is whatever the gallery already uses in `index.json` (a slug like `2026-11-02-kent-bull`, or a full talk title).
 
 ### Troubleshooting
 
@@ -555,8 +557,9 @@ The part before the optional `.xx` language code must match the YouTube video ti
 
 **"No matching .srt file"**
 
-- Make sure the video title in the subtitle filename matches the YouTube video title exactly
-- For other languages, keep that same title and add a language suffix, for example `Video Title.nl.srt`
+- Check that the YouTube title matches a `videos[].title` in that conference’s `index.json`
+- Check that `videos[].subtitle` points at a real file under the directory you passed
+- For other languages, keep the same basename stem and add a language suffix, for example `2026-11-02-kent-bull.nl.srt`
 - Edited subtitle files live next to the videos, for example `confs/KERI/2026/apr/talks/*.srt`
 
 **Authentication issues**
