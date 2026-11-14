@@ -1462,9 +1462,10 @@
 
         .video-link {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             gap: 0.65rem;
             width: 100%;
+            max-width: 100%;
             margin: 0;
             padding: 0.7rem 0.65rem;
             border-radius: 8px;
@@ -1472,9 +1473,10 @@
             font-size: 0.95rem;
             line-height: 1.35;
             text-decoration: none;
-            word-break: break-all;
             box-sizing: border-box;
             min-height: 2.75rem;
+            min-width: 0;
+            overflow: hidden;
         }
 
         .video-link:hover {
@@ -1490,13 +1492,15 @@
 
         .video-link-icon {
             flex: 0 0 auto;
-            margin-top: 0.12rem;
             opacity: 0.85;
         }
 
         .video-link-text {
             flex: 1 1 auto;
             min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .video-modal-header-actions .chapters-toggle-btn,
@@ -6094,7 +6098,6 @@
                 modalChaptersToggleBtn = document.createElement('button');
                 modalChaptersToggleBtn.type = 'button';
                 modalChaptersToggleBtn.className = 'chapters-toggle-btn';
-                modalChaptersToggleBtn.hidden = true;
                 modalChaptersToggleBtn.setAttribute('aria-expanded', 'false');
                 modalChaptersToggleBtn.setAttribute('aria-haspopup', 'dialog');
                 modalChaptersToggleBtn.addEventListener('click', (e) => {
@@ -6108,7 +6111,6 @@
                 modalLinksToggleBtn = document.createElement('button');
                 modalLinksToggleBtn.type = 'button';
                 modalLinksToggleBtn.className = 'links-toggle-btn';
-                modalLinksToggleBtn.hidden = true;
                 modalLinksToggleBtn.setAttribute('aria-expanded', 'false');
                 modalLinksToggleBtn.setAttribute('aria-haspopup', 'dialog');
                 modalLinksToggleBtn.addEventListener('click', (e) => {
@@ -6121,15 +6123,12 @@
 
                 modalPdfBtn = document.createElement('a');
                 modalPdfBtn.className = 'view-presentation-btn';
-                modalPdfBtn.hidden = true;
                 modalPdfBtn.target = '_blank';
                 modalPdfBtn.rel = 'noopener noreferrer';
                 modalPdfBtn.addEventListener('click', (e) => e.stopPropagation());
 
+                // Chapters / Links / PDF are mounted only when the open video has them.
                 headerActions.appendChild(modalCopyHint);
-                headerActions.appendChild(modalChaptersToggleBtn);
-                headerActions.appendChild(modalLinksToggleBtn);
-                headerActions.appendChild(modalPdfBtn);
                 headerActions.appendChild(modalCopyBtn);
                 headerActions.appendChild(modalClearTimestampsBtn);
 
@@ -7198,42 +7197,51 @@
                 return btn;
             }
 
+            function mountModalHeaderAction(el, beforeEl) {
+                if (!el || !beforeEl?.parentElement) return;
+                beforeEl.parentElement.insertBefore(el, beforeEl);
+            }
+
             function updateModalChaptersToggle(video) {
-                if (!modalChaptersToggleBtn) return;
+                if (!modalChaptersToggleBtn || !modalCopyBtn) return;
                 if (!chaptersForVideo(video).length) {
-                    modalChaptersToggleBtn.hidden = true;
                     modalChaptersToggleBtn.setAttribute('aria-expanded', 'false');
+                    modalChaptersToggleBtn.remove();
                     return;
                 }
-                modalChaptersToggleBtn.hidden = false;
                 labelChaptersToggle(modalChaptersToggleBtn, video);
+                const before = (modalLinksToggleBtn?.isConnected && modalLinksToggleBtn)
+                    || (modalPdfBtn?.isConnected && modalPdfBtn)
+                    || modalCopyBtn;
+                mountModalHeaderAction(modalChaptersToggleBtn, before);
             }
 
             function updateModalLinksToggle(video) {
-                if (!modalLinksToggleBtn) return;
+                if (!modalLinksToggleBtn || !modalCopyBtn) return;
                 if (!linksForVideo(video).length) {
-                    modalLinksToggleBtn.hidden = true;
                     modalLinksToggleBtn.setAttribute('aria-expanded', 'false');
+                    modalLinksToggleBtn.remove();
                     return;
                 }
-                modalLinksToggleBtn.hidden = false;
                 labelLinksToggle(modalLinksToggleBtn, video);
+                const before = (modalPdfBtn?.isConnected && modalPdfBtn) || modalCopyBtn;
+                mountModalHeaderAction(modalLinksToggleBtn, before);
             }
 
             function updateModalPdfButton(video) {
-                if (!modalPdfBtn) return;
+                if (!modalPdfBtn || !modalCopyBtn) return;
                 const pdfUrl = video?.presentation ? resolveAssetUrl(video.presentation) : '';
                 if (!pdfUrl) {
-                    modalPdfBtn.hidden = true;
                     modalPdfBtn.removeAttribute('href');
                     modalPdfBtn.removeAttribute('aria-label');
                     modalPdfBtn.replaceChildren();
+                    modalPdfBtn.remove();
                     return;
                 }
-                modalPdfBtn.hidden = false;
                 modalPdfBtn.href = pdfUrl;
                 modalPdfBtn.setAttribute('aria-label', `Open presentation PDF for ${video.title} in a new tab`);
                 modalPdfBtn.innerHTML = `${OPEN_PDF_ICON_SVG} PDF`;
+                mountModalHeaderAction(modalPdfBtn, modalCopyBtn);
             }
 
             function isChaptersSheetOpen() {
@@ -7384,6 +7392,7 @@
                     a.target = '_blank';
                     a.rel = 'noopener noreferrer';
                     a.setAttribute('aria-label', `${link.label} (opens in a new tab)`);
+                    a.title = link.url;
                     a.insertAdjacentHTML('beforeend', LINK_EXTERNAL_ICON_SVG);
                     const text = document.createElement('span');
                     text.className = 'video-link-text';
