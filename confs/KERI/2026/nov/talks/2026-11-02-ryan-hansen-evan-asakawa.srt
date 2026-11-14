@@ -1,7 +1,7 @@
 1
 00:00:00,000 --> 00:00:09,620
 Okay. So this is a little bit of an
-audible on what we're going to present.
+overview on what we're going to present.
 
 2
 00:00:11,840 --> 00:00:15,060
@@ -21,11 +21,11 @@ then, but I'll kind of update on the fly
 5
 00:00:24,940 --> 00:00:31,820
 as we go through this to where we are now.
-demo. We already showed you these repos
+Now, the demo. We already showed you these
 
 6
 00:00:31,820 --> 00:00:35,440
-that we'll be dealing with. There's a
+repos that we'll be dealing with. There's a
 setup guide out there which I mentioned is
 
 7
@@ -45,7 +45,7 @@ services. So and there's the there's a QR
 
 10
 00:00:50,260 --> 00:00:56,640
-code to the oops sorry if people want
+code to the… oops, sorry, if people want
 to follow along with the setup guide you
 
 11
@@ -71,7 +71,7 @@ quickly till we get to the well let me
 15
 00:01:23,900 --> 00:01:31,980
 just jump to the more important stuff.
-off. Okay, so as Sam showed this one
+Okay, so as Sam showed this one
 
 16
 00:01:31,980 --> 00:01:37,540
@@ -180,11 +180,11 @@ should do or you have to do, but maybe
 37
 00:03:42,100 --> 00:03:46,640
 that's what it would look like. That is
-not what this looks like. Yeah, yeah, Ken.
+not what this looks like. Yeah, yeah, Kent.
 
 38
 00:03:46,720 --> 00:03:52,580
-So is it intentional to have only one KF
+So is it intentional to have only one kf-boot
 on each data center? It doesn't really…
 
 39
@@ -194,8 +194,8 @@ and it doesn't really matter. Actually,
 
 40
 00:03:58,020 --> 00:04:01,800
-there's two on both. Right. So, you
-can run advantage. You can make it as
+there's two on both. Right. So you
+can run it to your advantage. You can make it as
 
 41
 00:04:01,800 --> 00:04:07,260
@@ -210,7 +210,7 @@ redundant. But, I mean, if you want a
 43
 00:04:12,060 --> 00:04:15,880
 really resilient service, obviously, you
-won't at least spread it out across zones
+want to at least spread it out across zones
 
 44
 00:04:15,880 --> 00:04:19,520
@@ -279,7 +279,7 @@ make a really solid KERI ecosystem that is
 
 57
 00:05:17,600 --> 00:05:20,880
-very resilient and powerful. but that's
+very resilient and powerful. But that's
 not really what we're solving in the
 
 58
@@ -294,7 +294,7 @@ think that's the latest LTS or maybe 24
 
 60
 00:05:37,900 --> 00:05:46,640
-.10. Yeah, 24.4, I think. Libsodium, which
+.10. Yeah, 24.04, I think. Libsodium, which
 is the crypto library. PySodium, which
 
 61
@@ -319,7 +319,7 @@ for this setup.
 65
 00:06:11,560 --> 00:06:18,520
 The way we set it up was we created a
-service user called KERI There's no login
+service user called KERI. There's no login
 
 66
 00:06:18,520 --> 00:06:22,400
@@ -407,8 +407,8 @@ URLs are that will be available
 to Locksmith when it connects in.
 
 83
-00:08:00,060 --> 00:08:10,320
-Sorry. And the watcher one looks very
+00:08:03,366 --> 00:08:10,320
+And the watcher one looks very
 similar. Just need one of those. Launch
 
 84
@@ -419,16 +419,16 @@ actually launch the commands that run the
 85
 00:08:16,500 --> 00:08:24,500
 services. So again, anybody have any
-questions? Caller out or… Yeah, just some
+questions? Holler out or… – Yeah, just some
 
 86
 00:08:24,500 --> 00:08:28,420
-tips for our… Microphone.
+tips for our…
 
 87
 00:08:30,280 --> 00:08:37,580
-So, thank you. So is the WitOPnet and
-the WotOpNet, is that just one per process?
+So is the witopnet and
+the watopnet, is that just one per process?
 
 88
 00:08:37,800 --> 00:08:40,920
@@ -467,7 +467,7 @@ is mostly just to kind of give you some
 
 95
 00:09:13,640 --> 00:09:17,380
-view of it. in
+view of it in
 this setting here.
 
 96
@@ -514,8 +514,8 @@ end up with four
 
 105
 00:10:25,700 --> 00:10:33,700
-witness processes, watchers, and a KF
-boot. And right now I have this running.
+witness processes, watchers, and a kf-boot.
+And right now I have this running.
 
 106
 00:10:33,900 --> 00:10:38,560
@@ -535,7 +535,7 @@ DigitalOcean. So the kf-boot is running on
 109
 00:10:49,400 --> 00:10:55,760
 one host with a witness and a watcher.
-And on the all subsequent hosts, there's
+And on all subsequent hosts, there's
 
 110
 00:10:55,760 --> 00:11:00,880
@@ -568,13 +568,13 @@ demo.
 
 116
 00:11:28,800 --> 00:11:34,760
-I'm going to add a this part here
+I'm going to add… this part here,
 I'm actually creating my ID, my AID.
 
 117
 00:11:37,900 --> 00:11:45,140
 And now you see there that KERI Foundation
-is the that's the plugin. in itself. And I
+is… that's the plugin in itself. And I
 
 118
 00:11:45,140 --> 00:11:51,000
@@ -583,7 +583,7 @@ my local Docker to hit those hosts. And
 
 119
 00:11:51,000 --> 00:11:55,200
-you can see that it's the connection is
+you can see that the connection is
 connected here. So it's able to make that
 
 120
@@ -613,7 +613,7 @@ is actually doing stuff for real. It's not
 
 125
 00:12:26,920 --> 00:12:30,680
-we're not just kind of vapor wearing this.
+we're not just kind of vaporware-ing this.
 This is actually doing what it's supposed
 
 126
@@ -632,8 +632,8 @@ it's just that I'm tired. It's the end of
 
 129
 00:12:46,720 --> 00:12:49,560
-the day. All right. So this locks what
-I'm looking at and I want to make sure I'm
+the day. All right. So this Locksmith I'm
+looking at and I want to make sure I'm
 
 130
 00:12:49,560 --> 00:12:53,040
@@ -782,8 +782,8 @@ local files. – LMDB. – LMDB. – So you need
 
 159
 00:15:23,760 --> 00:15:32,740
-to use a staple set. – Use a what? –
-Staple set like in Kubernetes. – Yes, yes,
+to use a StatefulSet. – Use a what? –
+StatefulSet like in Kubernetes. – Yes, yes,
 
 160
 00:15:33,000 --> 00:15:35,920
@@ -808,12 +808,12 @@ vulnerabilities. Right. Most people don't
 164
 00:15:57,440 --> 00:16:01,980
 know this, but NIST released a report that
-says anybody that care I'm paraphrasing
+says anybody that cares — I'm paraphrasing —
 
 165
 00:16:01,980 --> 00:16:05,900
 anybody that cares about security does
-not use Kubernetes. because it's a single
+not use Kubernetes, because it's a single
 
 166
 00:16:05,900 --> 00:16:09,780
@@ -842,7 +842,7 @@ captured all the Kubernetes credentials for
 
 171
 00:16:30,280 --> 00:16:35,300
-everybody's cubes over the whole internet
+everybody's clusters over the whole internet
 if it had had time. And so it would
 
 172
@@ -991,7 +991,7 @@ folder of code in the repository, register
 201
 00:19:14,960 --> 00:19:20,820
 a new plugin here and then change your
-UI to your heart's computer. So I'd really
+UI to your heart's content. So I'd really
 
 202
 00:19:20,820 --> 00:19:25,020
@@ -1020,7 +1020,7 @@ I want to connect my Locksmith to my
 
 207
 00:19:47,540 --> 00:19:52,500
-testnet. Do I would I then write a plugin
+testnet. Would I then write a plugin
 so the Locksmith knows where to look or
 
 208
@@ -1084,7 +1084,7 @@ between two wallets working. These are
 
 220
 00:20:54,160 --> 00:20:59,440
-version two. Yeah, this is version two. of
+version two. Yeah, this is version two of
 KERI and ACDCs. – When you say credential,
 
 221
@@ -1135,11 +1135,11 @@ one remaining edge operator that has to be
 230
 00:21:56,820 --> 00:22:00,700
 implemented, which we have an actual
-PR for which hasn't emerged yet, but it's
+PR for which hasn't been merged yet, but it's
 
 231
 00:22:00,700 --> 00:22:06,800
-very close. So we're we are well on our
+very close. So we are well on our
 way and should be ready to go for the SEDI
 
 232
@@ -1154,7 +1154,7 @@ let's say I'm a city and I want to set up
 
 234
 00:22:20,200 --> 00:22:30,020
-a witness for my the residents of my city.
+a witness for the residents of my city.
 So I set up what I set up one, two, three,
 
 235
@@ -1179,7 +1179,7 @@ witness. Okay. And then let's say my bank
 
 239
 00:22:53,760 --> 00:23:01,320
-sets up a one witness and then let's say
+sets up one witness and then let's say
 my university sets up one witness. And so
 
 240
@@ -1190,16 +1190,16 @@ say, okay, I want my city and my bank and
 241
 00:23:10,920 --> 00:23:17,820
 my university to then witness my logs. And
-that's a secure way. Is that am I is this
+that's a secure way. Am I
 
 242
 00:23:17,820 --> 00:23:22,020
-am I saying right stuff here? Each of
+saying the right stuff here? Each of
 those would be the currently the way it's
 
 243
 00:23:22,020 --> 00:23:26,220
-built. each of those would be a separate
+built, each of those would be a separate
 plugin in the wallet and you could do a
 
 244
@@ -1234,7 +1234,7 @@ can support all of my residents. So I can
 
 250
 00:24:02,940 --> 00:24:08,460
-have there'll be multiple AIDs and all
+have… there'll be multiple AIDs and all
 those AIDs can use the one witness. I
 
 251
@@ -1250,7 +1250,7 @@ recommend you do it that way. I would
 253
 00:24:17,780 --> 00:24:24,720
 recommend that you have one witness
-service. and then that witness service is
+service, and then that witness service is
 
 254
 00:24:24,720 --> 00:24:29,860
@@ -1294,7 +1294,7 @@ distinction between the witness service,
 
 262
 00:25:17,260 --> 00:25:24,480
-like WitOPnet is a witness service and
+like witopnet is a witness service and
 each one that… – Yeah, each AID gets its
 
 263
@@ -1304,7 +1304,7 @@ own witness within the witness service.
 
 264
 00:25:27,540 --> 00:25:32,400
-saying this is that you your bank would
+saying is that your bank would
 set up a witness service, but it wouldn't
 
 265
@@ -1344,7 +1344,7 @@ any load tests on this service? We haven't
 
 272
 00:26:16,880 --> 00:26:21,040
-gotten that point of really hitting it
+gotten to that point of really hitting it
 with a lot of load. No. But I don't know.
 
 273
@@ -1359,7 +1359,7 @@ throw that much at it just yet. But it's a
 
 275
 00:26:28,780 --> 00:26:33,820
-fairly lightweight services though. So
+fairly lightweight service though. So
 it's hard to imagine that it would… It's
 
 276
@@ -1399,7 +1399,7 @@ ecosystem. And that was in order to be
 
 283
 00:27:19,060 --> 00:27:25,520
-able one of the considerations with scale.
+about one of the considerations with scale.
 Yeah, we haven't put it through major
 
 284
@@ -1440,7 +1440,7 @@ its own witness service. So it's the same
 291
 00:28:17,820 --> 00:28:26,140
 endpoints and stuff like that. You're just
-allowing it to have to create AIDs on the
+allowing it to create AIDs on the
 
 292
 00:28:26,140 --> 00:28:34,860
@@ -1454,18 +1454,18 @@ witness service. Now, would that be a
 
 294
 00:28:41,660 --> 00:28:47,860
-consideration right now? mostly everything
+consideration right now? Mostly everything
 is running on a custodial wallet from the
 
 295
 00:28:47,860 --> 00:28:53,320
-QVI's that offer that. Would they have to
+QVIs that offer that. Would they have to
 do that? No, for a custodial wallet, they
 
 296
 00:28:53,320 --> 00:29:00,960
 may want to do it a different way. Right?
-The thing is, is it from it's really we're
+The thing is, it's really… we're
 
 297
 00:29:00,960 --> 00:29:07,820
@@ -1515,7 +1515,7 @@ I sign it with what AID? Well, if I have
 306
 00:29:55,820 --> 00:30:00,500
 one, I sign every KEL I witness with the
-same ID. If I have one AID per KEL, then
+same AID. If I have one AID per KEL, then
 
 307
 00:30:00,500 --> 00:30:04,020
@@ -1549,12 +1549,12 @@ KEL that it witnesses. And so that's why
 
 313
 00:30:30,760 --> 00:30:35,560
-it's that's why it'd be better to have an
-AID per KEL than one KEL shared across
+that's why it'd be better to have an
+AID per KEL than one AID shared across
 
 314
 00:30:35,560 --> 00:30:43,800
-multiple AIDs. So on that note, is there
+multiple KELs. So on that note, is there
 anything with regard to provisioning or a
 
 315
@@ -1574,7 +1574,7 @@ Like the way that the code that we got was
 
 318
 00:31:00,500 --> 00:31:10,320
-set up is that like the witness HK to
+set up is that like the witness-hk to
 create witnesses you had to hit like its
 
 319
@@ -1595,7 +1595,7 @@ So it does provision. Oh, so help me
 322
 00:31:28,580 --> 00:31:35,140
 understand that. So the boot service
-can talk to the WitOPnet and the WotOpNet
+can talk to the witopnet and the watopnet
 
 323
 00:31:35,140 --> 00:31:39,620
@@ -1609,12 +1609,12 @@ repository. The readme is good. Oops.
 
 325
 00:31:43,140 --> 00:31:47,780
-Sorry. Pretty good. Browser
+Sorry. Pretty good. Browsing
 around here somewhere.
 
 326
 00:31:59,940 --> 00:32:00,860
-Just gonna win.
+Just gonna wing it.
 
 327
 00:32:05,000 --> 00:32:07,020
@@ -1633,7 +1633,7 @@ like boot server ports.
 330
 00:32:32,180 --> 00:32:37,880
 And then to like actually talk to your
-witnesses. is there's a different port to
+witnesses, there's a different port to
 
 331
 00:32:37,880 --> 00:32:46,480
@@ -1713,7 +1713,7 @@ it's just there to use for Locksmith? –
 346
 00:33:54,700 --> 00:33:58,400
 Wait, say that again. Sorry. – Like it's
-the same provision or approach being taken
+the same provisioner approach being taken
 
 347
 00:33:58,400 --> 00:34:02,360
@@ -1738,7 +1738,7 @@ try to keep it as consistent as we can,
 351
 00:34:14,160 --> 00:34:18,820
 but we're not sure yet exactly how
-that's going to last. Okay. I have another
+that's going to land. Okay. I have another
 
 352
 00:34:18,820 --> 00:34:25,540
@@ -1777,7 +1777,7 @@ if you want the KERI ecosystem as it's
 
 359
 00:35:02,060 --> 00:35:06,640
-designed And you're always going to want
+designed. And you're always going to want
 at least a watcher watching. Yeah. But my
 
 360
@@ -1823,7 +1823,7 @@ normally people think of as watchers,
 368
 00:35:55,400 --> 00:35:59,000
 right? The outside watcher network is
-watching other people's infrastructure
+watching other people's infrastructure to
 
 369
 00:35:59,000 --> 00:36:03,880
@@ -1948,7 +1948,7 @@ look like duplicity, which is a good thing
 393
 00:37:55,440 --> 00:38:00,100
 because if you see duplicity, you know,
-don't trust. trust. Because it doesn't
+don't trust. Because it doesn't
 
 394
 00:38:00,100 --> 00:38:03,800
@@ -1973,12 +1973,12 @@ my customers or whatever. – Yeah. – Yeah.
 398
 00:38:23,700 --> 00:38:29,540
 Okay. I think that's pretty much it. – I
-don't think You can just the demo, right?
+don't think… You can just do the demo, right?
 
 399
 00:38:30,160 --> 00:38:36,740
 I mean, is there anything else that people
-want to show? We're going to want. Can you
+want to show? We're going to wrap. Can you
 
 400
 00:38:36,740 --> 00:38:37,740
@@ -2034,7 +2034,7 @@ Oh, wait.
 
 411
 00:39:58,780 --> 00:40:05,080
-to see it to going to do an ubi here. I
+Let's see. I'm going to do an OOBI here. I
 just exported this local identifier. Let's
 
 412
@@ -2083,7 +2083,7 @@ service, but we haven't quite finished
 
 421
 00:41:00,080 --> 00:41:03,780
-with the implementation on thing. Yeah,
+with the implementation on that thing. Yeah,
 so it might not work because we might not
 
 422
@@ -2132,7 +2132,7 @@ mailbox. You've done it locally, right?
 
 431
 00:41:57,220 --> 00:41:59,980
-Yeah. That's my I don't know what
+Yeah. That's why I don't know what
 you're saying. – Yeah, I don't know what's
 
 432
@@ -2177,8 +2177,8 @@ to these two vaults I guess with AIDs in
 
 440
 00:42:47,100 --> 00:42:53,160
-there they need to ubi each other or
-something? Is that in that little We need
+there they need to OOBI each other or
+something? Is that in that little… We need
 
 441
 00:42:53,160 --> 00:43:00,820
@@ -2202,7 +2202,7 @@ include the mailbox. We had to write our
 
 445
 00:43:17,680 --> 00:43:22,720
-own mailbox. and stuff like that. Yeah.
+own mailbox and stuff like that. Yeah.
 But yeah, and then for like a… Oh, yeah,
 
 446
@@ -2387,7 +2387,7 @@ their perspective. – Okay. Thanks. – So
 
 482
 00:46:51,840 --> 00:46:56,520
-can what's that automatic anchoring
+what's that automatic anchoring
 you were just referring to? – Identity
 
 483
@@ -2428,11 +2428,11 @@ agent sends a challenge over a non
 490
 00:47:34,700 --> 00:47:39,140
 Bluetooth something, you know, well
-maybe not even Bluetooth, but or optic
+maybe not even Bluetooth, but optically,
 
 491
 00:47:39,140 --> 00:47:43,580
-optically, right? Like a QR code. It can't
+right? Like a QR code. It can't
 be Bluetooth or anything that somebody can
 
 492
@@ -2493,7 +2493,7 @@ stole their signing keys, if they were
 503
 00:48:40,400 --> 00:48:45,180
 compromised, then at least they could
-detect that they were compromise. So
+detect that they were compromised. So
 
 504
 00:48:45,180 --> 00:48:48,560
@@ -2553,12 +2553,12 @@ and things that, you know. So schema
 515
 00:49:46,060 --> 00:49:50,900
 discovery is what you're talking about.
-Yeah. Yeah. The schema isn't to do with KF
+Yeah. Yeah. The schema isn't to do with
 
 516
 00:49:50,900 --> 00:49:53,680
-boot. It has nothing to do with your
-infrastructure. The schema are only for
+kf-boot. It has nothing to do with your
+infrastructure. The schemas are only for
 
 517
 00:49:53,680 --> 00:50:00,620
@@ -2577,8 +2577,8 @@ said something about credentials for the
 
 520
 00:50:09,040 --> 00:50:12,700
-schema for kf-boot. That's what That's
-what confused me. – I guess I was bundling
+schema for kf-boot. That's what
+confused me. – I guess I was bundling
 
 521
 00:50:12,700 --> 00:50:16,240
@@ -2617,13 +2617,13 @@ go find that. So like they could publish
 
 528
 00:50:45,660 --> 00:50:51,420
-all of their credential schemas as dot
-well-knowns for example. And then anybody
+all of their credential schemas as .well-knowns
+for example. And then anybody
 
 529
 00:50:51,420 --> 00:50:55,000
 that wanted to talk to the university
-would go go say, oh, here's the schema
+would go say, oh, here's the schema
 
 530
 00:50:55,000 --> 00:50:59,020
@@ -2673,7 +2673,7 @@ you know, there's an advantage for people
 539
 00:51:40,820 --> 00:51:44,000
 in the university ecosystem to just
-pre -configure their wallets with those
+pre-configure their wallets with those
 
 540
 00:51:44,000 --> 00:51:48,760
