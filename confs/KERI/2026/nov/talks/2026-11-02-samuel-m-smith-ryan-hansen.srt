@@ -15,7 +15,7 @@ team that Sam put together to kind of help
 
 4
 00:00:15,640 --> 00:00:20,260
-bring the five Ws to life. So I'm going to
+bring the five W's to life. So I'm going to
 give you a quick rundown of what the five
 
 5
@@ -46,7 +46,7 @@ my slides line up with these slides. So,
 10
 00:00:52,920 --> 00:00:59,340
 first of all, I'll give you a quick why
-when it comes to the five Ws. KERI, as
+when it comes to the five W's. KERI, as
 
 11
 00:00:59,340 --> 00:01:05,180
@@ -125,8 +125,8 @@ slide but we'll move through these pretty
 
 26
 00:02:38,860 --> 00:02:50,140
-quickly. Wallet, witnesses, watchers,
-web, and wizard. So each one of these are
+quickly. Wallet, Witnesses, Watchers,
+Web, and Wizard. So each one of these are
 
 27
 00:02:50,140 --> 00:02:54,560
@@ -643,7 +643,7 @@ to use and then make it easy for them to
 130
 00:13:05,300 --> 00:13:15,080
 do so. So that's the intro to what the
-five Ws are. So now as far as the state of
+five W's are. So now as far as the state of
 
 131
 00:13:15,080 --> 00:13:24,223
@@ -893,7 +893,7 @@ orchestration like Ryan's. – Kind of like a
 
 181
 00:17:59,700 --> 00:18:03,300
-plug-in infrastructure, right? So
+plugin infrastructure, right? So
 anybody that creates witnesses,
 
 182
@@ -1117,18 +1117,18 @@ is that eventually we want to have that
 
 226
 00:22:09,480 --> 00:22:14,440
-sort of plug-in architecture. It's just,
+sort of plugin architecture. It's just,
 you know, it's a resource thing. – So, as
 
 227
 00:22:14,440 --> 00:22:17,620
 you see here, this KERI Foundation, that's
-actually a plug-in within this wallet
+actually a plugin within this wallet
 
 228
 00:22:17,620 --> 00:22:22,720
 infrastructure. The idea would be that
-many providers could provide plug-ins that
+many providers could provide plugins that
 
 229
 00:22:22,720 --> 00:22:25,400
@@ -1138,7 +1138,7 @@ just choose from them and see what
 230
 00:22:25,400 --> 00:22:29,320
 services they have available and set up
-based on that. – So, we do have the plug-in
+based on that. – So, we do have the plugin
 
 231
 00:22:29,320 --> 00:22:34,580

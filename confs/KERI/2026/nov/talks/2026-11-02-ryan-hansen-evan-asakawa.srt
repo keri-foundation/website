@@ -155,7 +155,7 @@ If you were to imagine the wallet having
 32
 00:03:18,860 --> 00:03:24,860
 connections to multiple different
-providers of plug-ins in the wallet itself
+providers of plugins in the wallet itself
 
 33
 00:03:24,860 --> 00:03:29,240
@@ -244,7 +244,7 @@ of the wallet allows is that you could
 
 50
 00:04:45,720 --> 00:04:50,140
-have like let's say a KERify.net, which
+have like let's say a kerify.net, which
 I don't know who owns that? It might be
 
 51
@@ -294,12 +294,12 @@ think that's the latest LTS or maybe 24
 
 60
 00:05:37,900 --> 00:05:46,640
-.10. Yeah, 24.04, I think. Libsodium, which
-is the crypto library. PySodium, which
+.10. Yeah, 24.04, I think. libsodium, which
+is the crypto library. pysodium, which
 
 61
 00:05:46,640 --> 00:05:54,620
-wraps Libsodium. Nginx, which handles
+wraps libsodium. Nginx, which handles
 the reverse proxying and TLS termination.
 
 62
@@ -491,11 +491,11 @@ Yeah. Yeah.
 100
 00:09:49,220 --> 00:09:55,460
 Okay. And then pretty
-simple circus install.
+simple Circus install.
 
 101
 00:09:59,520 --> 00:10:05,240
-And then certbot and all that stuff gets
+And then Certbot and all that stuff gets
 set up as well. So that's the core pieces
 
 102
@@ -569,7 +569,7 @@ demo.
 116
 00:11:28,800 --> 00:11:34,760
 I'm going to add… this part here,
-I'm actually creating my ID, my AID.
+I'm actually creating my ID — my AID.
 
 117
 00:11:37,900 --> 00:11:45,140
@@ -619,7 +619,7 @@ This is actually doing what it's supposed
 126
 00:12:30,680 --> 00:12:36,800
 to do. And on this side. Can I ask a
-question? Yeah. So this is locksmith on
+question? Yeah. So this is Locksmith on
 
 127
 00:12:36,800 --> 00:12:37,880
@@ -638,7 +638,7 @@ looking at and I want to make sure I'm
 130
 00:12:49,560 --> 00:12:53,040
 understanding what I'm seeing here. Sure.
-Yeah. This locksmith you're running on
+Yeah. This Locksmith you're running on
 
 131
 00:12:53,040 --> 00:12:58,060
@@ -648,7 +648,7 @@ ocean machines that you've got. And it's…
 132
 00:12:58,060 --> 00:13:02,880
 No, not right now. Okay. This is my
-local locksmith that's pointing to my local
+local Locksmith that's pointing to my local
 
 133
 00:13:02,880 --> 00:13:10,160

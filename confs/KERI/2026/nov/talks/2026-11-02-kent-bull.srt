@@ -1008,7 +1008,7 @@ protocol method at the front did:webs for
 203
 00:16:51,020 --> 00:16:59,080
 domain which we'll get into the designated
-alias ACDC later and you've got a path.
+aliases ACDC later and you've got a path.
 
 204
 00:16:59,220 --> 00:17:02,020
@@ -1087,8 +1087,8 @@ Maverick. Maverick says give me your
 
 219
 00:18:17,320 --> 00:18:20,860
-driver license and you give me your
-digital driver license and it's a SEDI one
+driver's license and you give me your
+digital driver's license and it's a SEDI one
 
 220
 00:18:20,860 --> 00:18:25,480
@@ -1317,7 +1317,7 @@ have the resources to spend to get full
 
 265
 00:22:04,660 --> 00:22:09,420
-infrastructure support for the I and KERI.
+infrastructure support for the I in KERI.
 Or they've got a really good reason why,
 
 266
@@ -2166,7 +2166,7 @@ credential because they can't come from
 
 435
 00:36:19,020 --> 00:36:21,880
-these places in the DID Document. And
+these places in the DID document. And
 we could walk through this example, but
 
 436
@@ -2581,7 +2581,7 @@ that needs to be done later. So, but where
 518
 00:43:39,100 --> 00:43:43,180
 we're going though is we want to
-finish out the diff process. And so to
+finish out the DIF process. And so to
 
 519
 00:43:43,180 --> 00:43:50,180
@@ -2590,7 +2590,7 @@ did:webs to be a fully accepted, fully
 
 520
 00:43:50,180 --> 00:43:55,924
-supported diff recommended DID method.
+supported DIF recommended DID method.
 And we were pretty close earlier this year.
 
 521
@@ -2626,7 +2626,7 @@ It would help. But the more important
 527
 00:44:29,720 --> 00:44:35,200
 thing is that we have two implementations
-and that the DIF recommended DIF methods
+and that the DIF recommended DID methods
 
 528
 00:44:35,200 --> 00:44:41,620
@@ -2706,7 +2706,7 @@ did:webplus and there might be a couple of
 543
 00:46:05,540 --> 00:46:09,060
 others now. We do want to be a DIF
-recommended did method. It just looks
+recommended DID method. It just looks
 
 544
 00:46:09,060 --> 00:46:15,800

@@ -1183,7 +1183,7 @@ detectable that they're trying to use one.
 238
 00:20:44,720 --> 00:20:50,960
 I know that one set of keys has been
-compromised. I can do multi-sig for my
+compromised. I can do multisig for my
 
 239
 00:20:50,960 --> 00:20:55,820
@@ -1192,7 +1192,7 @@ signing keys for low friction, but I can
 
 240
 00:20:55,820 --> 00:21:00,740
-have multi-sig rotation keys when I
+have multisig rotation keys when I
 need to recover. So now they can say, well,
 
 241
@@ -1552,7 +1552,7 @@ subterfuge that you're doing that you
 
 312
 00:27:39,180 --> 00:27:46,140
-didn't? No, no. It's state endorsed
+didn't? No, no. It's state-endorsed
 digital identity, citizen sourced, right?
 
 313
