@@ -2223,7 +2223,7 @@ that, right? Is that fair?
 
 448
 00:41:25,860 --> 00:41:31,600
-Yeah, they're not. Okay. I will contribute
+Yeah, they're not. Okay. – I will contribute
 though from a blank perspective. It might
 
 449
@@ -2268,12 +2268,12 @@ where the public sector is much better
 
 457
 00:42:26,880 --> 00:42:33,100
-placed in order to be able to do such a
-thing. This gentleman here had to do it.
+placed in order to be
+able to do such a thing.
 
 458
 00:42:33,640 --> 00:42:40,960
-So I wanted to add another. So SEDI is an
+– So I wanted to add another. So SEDI is an
 adoption vector that is trying to that has
 
 459
@@ -2404,12 +2404,12 @@ can be the same wallet because it's the
 484
 00:44:40,740 --> 00:44:46,440
 same protocol under the hood. And now
-you start to get that flywheel effect. – I
+you start to get that flywheel effect.
 
 485
 00:44:46,440 --> 00:44:50,320
-assume. – Yes. – Wasn't the case
-already HIPAA took care of that just by the
+– Wasn't the case already
+HIPAA took care of that just by the
 
 486
 00:44:50,320 --> 00:44:54,460
@@ -2428,7 +2428,7 @@ been done. – Yes, it's manual, right? And
 
 489
 00:45:01,600 --> 00:45:05,380
-it takes weeks. – Right. – And if you're
+it takes weeks. And if you're
 suffering from a serious illness and you
 
 490
@@ -2443,18 +2443,18 @@ middle man. – Yes.
 
 492
 00:45:12,740 --> 00:45:17,500
-So back on the topic of public
-infrastructure. Yeah. I'm curious if
+– So back on the topic of public
+infrastructure. I'm curious if
 
 493
-00:45:17,500 --> 00:45:22,200
+00:45:17,500 --> 00:45:23,823
 you're familiar with the app protocol
-ecosystem and their identity system did
+ecosystem and their identity system did:plc?
 
 494
-00:45:22,200 --> 00:45:28,140
-PLC. Yeah, I've heard of that. Yeah, I
-see it is kind of like a it's not KERI, but
+00:45:23,823 --> 00:45:28,140
+– Yeah, I've heard of that.
+– I see it's not KERI, but
 
 495
 00:45:28,140 --> 00:45:31,920
@@ -2483,12 +2483,12 @@ of it because like de facto it's a
 
 500
 00:45:51,660 --> 00:45:55,720
-centralized directory. Yeah, that's right.
-But it's interesting relative to this
+centralized directory. – Yeah, that's
+right. – But it's interesting relative to this
 
 501
 00:45:55,720 --> 00:46:00,000
-question. Yeah. So if I centralize things,
+question. – So if I centralize things,
 it makes it much easier. The world becomes
 
 502
@@ -2558,13 +2558,13 @@ what has happened before. So we need to
 
 515
 00:47:10,440 --> 00:47:16,120
-watch them because that will say, you
-know, how does this actually work? Yeah.
+watch them because that will
+say, how does this actually work?
 
 516
 00:47:16,380 --> 00:47:21,240
-Yeah. Yeah. That's what that's given
-me. That's why I'm optimistic because I see
+– Yeah. That's why I'm
+optimistic because I see
 
 517
 00:47:21,240 --> 00:47:26,560
@@ -2577,579 +2577,570 @@ away. There's regulations involved. All
 of those things are forcing functions that
 
 519
-00:47:30,880 --> 00:47:37,760
-will force things. And let me say
-something about, I mean, I don't want to,
+00:47:30,880 --> 00:47:38,806
+will force things. And let
+me say something about
 
 520
-00:47:37,880 --> 00:47:38,220
-I mean,
-
-521
-00:47:41,180 --> 00:47:47,940
+00:47:38,830 --> 00:47:47,940
 did:plc, did:webvh, there's a couple of
 other ones, have adopted many of the
 
-522
+521
 00:47:47,940 --> 00:47:54,160
 mechanisms in KERI for key state. What
 they have not adopted are the mechanisms
 
-523
+522
 00:47:54,160 --> 00:48:00,400
 for perpetually verifiable issuances,
 which means you can't use them for many of
 
-524
+523
 00:48:00,400 --> 00:48:05,300
 the applications that people want to use
 them for. It's similar to my criticisms of
 
-525
+524
 00:48:05,300 --> 00:48:10,020
-zero knowledge proofs. You can't use them
-for things that for issuances that need to
+zero knowledge proofs. You can't
+use them for issuances that need to
 
-526
+525
 00:48:10,020 --> 00:48:13,840
 survive a long time because there's no way
 to verify them once you rotate keys. You
 
-527
+526
 00:48:13,840 --> 00:48:17,360
 know you rotated keys, but everything
 issued under the old keys becomes
 
-528
+527
 00:48:17,360 --> 00:48:21,900
 unverifiable the moment you do it unless
-you're anchoring those issuances to your e
+you're anchoring those issuances to your
 
-529
+528
 00:48:21,900 --> 00:48:25,480
--state. That means they have to change
+key-state. That means they have to change
 their protocols and as soon as they do
 
-530
+529
 00:48:25,480 --> 00:48:30,960
-that, they now become as complicated as
-KERI and why do it that way then? Yes. –
+that, they now become as complicated
+as KERI and why do it that way then?
 
-531
+530
 00:48:30,960 --> 00:48:37,100
-So I wanted to add to that to what you
+– So I wanted to add to that to what you
 said. So I'm involved in did:webvh and
 
-532
+531
 00:48:37,100 --> 00:48:42,780
 involved in decentralized social protocols
 such as AT protocol. I'm familiar with
 
-533
+532
 00:48:42,780 --> 00:48:53,220
 did:plc, etc. To add to what Sam is saying
 that there first of all, there is osmosis
 
-534
+533
 00:48:53,220 --> 00:49:00,500
 of KERI security properties to some of the
 DID methods for those exact same reasons
 
-535
+534
 00:49:00,500 --> 00:49:05,880
 because it's same shape of the problem,
 same security space, very similar shaped
 
-536
+535
 00:49:05,880 --> 00:49:10,420
 solutions and
-things like that part
+things like that… Part
 
-537
+536
 00:49:10,420 --> 00:49:16,980
 of the unsolved problem in both did:webvh
 space, in the social media space and in
 
-538
+537
 00:49:16,980 --> 00:49:21,300
 KERI as we've been discussing is exactly
 who's going to run the infrastructure,
 
-539
+538
 00:49:21,800 --> 00:49:28,220
 right? In social media space, it's always
 been Twitter. Okay. Twitter's running the
 
-540
+539
 00:49:28,220 --> 00:49:34,120
 infrastructure or Facebook or whatever
 in the hopes of monetizing. Bluesky came
 
-541
+540
 00:49:34,120 --> 00:49:38,780
 along who is operating did:plc,
-the servers. and they're providing the
+the servers. And they're providing the
 
-542
+541
 00:49:38,780 --> 00:49:45,020
 infrastructure and they're venture capital
 funded in the hopes of finding a business
 
-543
+542
 00:49:45,020 --> 00:49:50,300
 model and monetizing, right? What's
 the alternative? The essentially one and a
 
-544
+543
 00:49:50,300 --> 00:49:55,060
 half to two things that we have been
-mentioned governments, right? So on the
+mentioned, governments, right? So on the
 
-545
+544
 00:49:55,060 --> 00:50:00,860
 federal state or city level like SEDI
 or what we've been seeing in the
 
-546
+545
 00:50:00,860 --> 00:50:05,840
 decentralized social media space such as
 Mastodon, basically small communities and
 
-547
+546
 00:50:05,840 --> 00:50:11,440
-volunteers. Right. Yeah. It was run the
-common infrastructure of the… Yeah. And
+volunteers. Right. It was run
+the common infrastructure of the…
+
+547
+00:50:11,440 --> 00:50:17,471
+– Yeah, so it has its challenges.
+I'm not saying that it's not challenging.
 
 548
-00:50:11,440 --> 00:50:16,840
-yeah, so it has its challenges.
-I'm not saying that it's not
+00:50:23,177 --> 00:50:27,780
+– Yeah, I was going to say, did
+PLC? They can't hear you on the
 
 549
-00:50:16,840 --> 00:50:22,580
-challenging. So how much, we got 10
-minutes left? You got a question? Somebody
-
-550
-00:50:22,580 --> 00:50:27,780
-else had a question. Yeah, I was going to
-say, did PLC? They can't hear you on the
-
-551
 00:50:27,780 --> 00:50:28,180
 recording.
 
-552
+550
 00:50:32,180 --> 00:50:39,080
 So there's delegation and multisig are
 challenging to get right in a way that is
 
-553
+551
 00:50:39,080 --> 00:50:43,420
 usable. And those are things two things
 that KERI does that no other DID method
 
-554
+552
 00:50:43,420 --> 00:50:47,040
 does. I've looked and I could be wrong.
 It's been a while since I've looked at
 
-555
+553
 00:50:47,040 --> 00:50:53,040
 did:webvh. But when the last time I looked
 at did:plc… – Well, I read the did:webvh
 
-556
+554
 00:50:53,040 --> 00:50:58,200
 latest spec as of like three weeks ago
 and it doesn't have any of those in it. –
 
-557
+555
 00:50:58,200 --> 00:51:05,960
 Yeah, so I… – Is that right? – It's it has
 a new user space. It has it in application
 
-558
+556
 00:51:05,960 --> 00:51:12,960
 space, not in the protocol. So for those
 listening to the recording, did:webvh is
 
-559
+557
 00:51:12,960 --> 00:51:19,240
 working on multisig in sort of application
 space, not in the signature space. So
 
-560
+558
 00:51:19,240 --> 00:51:24,040
 they're trying, they're working on it.
 Yes. Once you decide to accept you need
 
-561
+559
 00:51:24,040 --> 00:51:29,800
 multisig and delegation and anchored
 issuances, you have KERI. Completely.
 
-562
+560
 00:51:30,180 --> 00:51:41,100
 You've recreated exactly the same thing.
 I got one. Yeah, we got 10 minutes left. 10
 
-563
+561
 00:51:41,100 --> 00:51:45,860
 minutes left. Well, I could talk seven
 minutes. I could talk a little bit about
 
-564
+562
 00:51:45,860 --> 00:52:01,260
 how witnesses and how witnesses solve the
 detectability problem and the availability
 
-565
+563
 00:52:01,260 --> 00:52:09,380
 problem. You guys interested in that? So
 a lot of KERI infrastructure, a lot of KERI
 
-566
+564
 00:52:09,380 --> 00:52:20,220
 protocol does multiple duty. It's like
 for me a sign of a good design is that I
 
-567
+565
 00:52:20,220 --> 00:52:27,140
 design something to solve one problem
 and then serendipitously it solves other
 
-568
+566
 00:52:27,140 --> 00:52:32,080
 problems that I hadn't yet got to yet.
 And they go, oh, wait a minute. this also
 
-569
+567
 00:52:32,080 --> 00:52:37,600
 solves that problem. So delegation,
 delegated AIDs solve multiple problems.
 
-570
+568
 00:52:38,760 --> 00:52:45,300
 Witnesses solve two different problems.
 The first problem they solve and Ryan
 
-571
+569
 00:52:45,300 --> 00:52:54,020
 mentioned this, the first problem
 is availability. So originally, one
 
-572
+570
 00:52:54,020 --> 00:52:57,980
 of the problems that people complain about
 is, well, if I have a wallet and all my
 
-573
+571
 00:52:57,980 --> 00:53:03,240
 keys are in my wallet and my wallet it's
 offline, nobody can verify my key state
 
-574
+572
 00:53:03,240 --> 00:53:11,180
 because my wallet's offline. I can't have
 a presence because my wallet has to be
 
-575
+573
 00:53:11,180 --> 00:53:14,820
 online. And a lot of people approach it
 and say, well, then I need a hosted wallet
 
-576
+574
 00:53:14,820 --> 00:53:20,840
 so that my host has my stuff. And so a lot
 of people solve it that way. I have hosted
 
-577
+575
 00:53:20,840 --> 00:53:25,640
 wallets. Now they go to the host to
 get it. But the problem is, is the host now
 
-578
+576
 00:53:25,640 --> 00:53:32,660
 becomes something I don't control and
 I can't trust. And so now I've basically
 
-579
+577
 00:53:32,660 --> 00:53:37,800
 solved the availability problem, but I've
 introduced an even worse security problem.
 
-580
+578
 00:53:38,580 --> 00:53:42,500
 So witnesses solve the availability
 problem without introducing a security
 
-581
+579
 00:53:42,500 --> 00:53:50,680
 problem. Yeah. What's the threat model
 on the host? You said something you can't
 
-582
+580
 00:53:50,680 --> 00:53:59,180
 control. Aren't the key event logs still
 secured by the user's keys? Well, my copy
 
-583
+581
 00:53:59,180 --> 00:54:05,520
 is secured, right? But the host could
 publish a key event log to anybody they
 
-584
+582
 00:54:05,520 --> 00:54:09,900
 wanted to and I wouldn't know they were
 publishing a duplicate copy. I wouldn't be
 
-585
+583
 00:54:09,900 --> 00:54:14,940
 able to tell that they were cheating. Got
 it. Right? So because they because my host
 
-586
+584
 00:54:14,940 --> 00:54:20,100
 can eclipse me. So I'm subject to an
 eclipse attack if I just have a host. So I
 
-587
+585
 00:54:20,100 --> 00:54:25,620
 need an eclipse attack proof availability
 mechanism. Well, the only eclipse attack
 
-588
+586
 00:54:25,620 --> 00:54:30,260
 proof availability building mechanism is a
 Byzantine fault tolerant distributed pool.
 
-589
+587
 00:54:30,920 --> 00:54:38,260
 Now, it doesn't have to be total
 ordering. It just has to be eclipse
 
-590
+588
 00:54:38,260 --> 00:54:44,460
 proof. So when I say deconstructed
 blockchain, I said I've got to solve this
 
-591
+589
 00:54:44,460 --> 00:54:48,020
 eclipse attack problem. The only way
 to solve an eclipse attack problem is a
 
-592
+590
 00:54:48,020 --> 00:54:52,540
 distributed pool, but I don't need the
 distributed pool to do a total ordered
 
-593
+591
 00:54:52,540 --> 00:54:58,860
 replicable state machine, which I need for
 double spend proof. I don't have to do a
 
-594
+592
 00:54:58,860 --> 00:55:03,460
 double spend proof. I just have to know
 that there's duplicity. Double spend proof
 
-595
+593
 00:55:03,460 --> 00:55:08,740
 is actually duplicity hiding. It says
 there's only ever one valid copy and if
 
-596
+594
 00:55:08,740 --> 00:55:14,920
 somebody cheats then we'll just take the
 cheat and say yeah that's the true state
 
-597
+595
 00:55:14,920 --> 00:55:19,300
 because the cheating is they've
 compromised your keys. So I need to detect
 
-598
+596
 00:55:19,300 --> 00:55:24,480
 that my keys have been compromised. I'll
 also have it be highly available and so
 
-599
+597
 00:55:24,480 --> 00:55:30,080
 that's why it's solves multiple problems
 because it solves availability with a
 
-600
+598
 00:55:30,080 --> 00:55:34,940
 distributed pool. There's lots of ways to
 solve availability. You can have master
 
-601
+599
 00:55:34,940 --> 00:55:40,120
 slay or whatever they call it nowadays.
 Sharded. You can have a sharded
 
-602
+600
 00:55:40,120 --> 00:55:42,500
 architecture. You have a host
 architecture. There's lots of ways to
 
-603
+601
 00:55:42,500 --> 00:55:52,500
 solve availability, but a distributed pool
 of independent servers that exchange data
 
-604
+602
 00:55:52,500 --> 00:55:59,260
 using a fault tolerant exchange change
 algorithm is a way to do it. The reason
 
-605
+603
 00:55:59,260 --> 00:56:04,300
 you pick that way is because it doesn't
 just solve the availability problem, it
 
-606
+604
 00:56:04,300 --> 00:56:12,640
 solves the eclipse problem. So it prevents
 you from being eclipsed. Now you need to
 
-607
+605
 00:56:12,640 --> 00:56:17,520
 control that pool so that you don't
 have to trust anybody. So it's under your
 
-608
+606
 00:56:17,520 --> 00:56:23,340
 control which means that ultimately they
 can't trust what you published because you
 
-609
+607
 00:56:23,340 --> 00:56:28,620
 could publish, you could do an eclipse
 attack on the people reading from your
 
-610
+608
 00:56:28,620 --> 00:56:32,600
 watcher pool. That's why, I mean, reading
 from your witness pool, that's why you
 
-611
+609
 00:56:32,600 --> 00:56:36,280
 need to have a watcher pool that they
 control because they can then detect that
 
-612
+610
 00:56:36,280 --> 00:56:41,800
 you're not eclipsing them. So it's just
 one step after another to go, okay, I have
 
-613
+611
 00:56:41,800 --> 00:56:46,560
 to solve this problem. And then once
 I solve it, then it's done. Yeah. So you
 
-614
+612
 00:56:46,560 --> 00:56:53,160
 have availability, eclipse attack, and
 then detection. The third one is detect
 
-615
+613
 00:56:53,160 --> 00:57:04,620
 key compromise. Now
 here's the thing. If I'm doing a
 
-616
+614
 00:57:04,620 --> 00:57:09,240
 key event log, the key event log doesn't
 enable me to detect key compromise.
 
-617
+615
 00:57:09,600 --> 00:57:16,180
 There's no key compromise detection in
 a key event log. The witness pool gives me
 
-618
+616
 00:57:16,180 --> 00:57:21,680
 key compromise detection, but only if I'm
 anchoring issuances. If I anchor issues,
 
-619
+617
 00:57:21,780 --> 00:57:26,280
 the only way I can get anchored is it
 gets entered in the key event log that a
 
-620
+618
 00:57:26,280 --> 00:57:32,340
 witness witnesses. And if I have my own
 copy of the key event log and I check my
 
-621
+619
 00:57:32,340 --> 00:57:35,520
 witness and the witness has a different
 copy than I have and there's stuff in the
 
-622
+620
 00:57:35,520 --> 00:57:39,620
 witnesses copy that is anchored that I did
 and the only way I can get there is if my
 
-623
+621
 00:57:39,620 --> 00:57:43,120
 keys have been compromised then I detect
 the key compromised. But until you anchor
 
-624
+622
 00:57:43,120 --> 00:57:46,740
 issuances you can't actually detect key
 compromised. So you don't get the most
 
-625
+623
 00:57:46,740 --> 00:57:52,780
 important security property of KERI which
 is I can detect key compromised. You have
 
-626
+624
 00:57:52,780 --> 00:57:55,580
 to trust that there's some other mechanism
 to detect your keys. So yeah, you can
 
-627
+625
 00:57:55,580 --> 00:57:59,160
 rotate your keys, but you don't know when
 to rotate. With a witness pool, you know
 
-628
+626
 00:57:59,160 --> 00:58:02,360
 when to rotate. But the witness pool
 doesn't tell you when to when to rotate
 
-629
+627
 00:58:02,360 --> 00:58:06,320
 unless you're anchoring issuances.
 Any issuances that aren't anchored are not
 
-630
+628
 00:58:06,320 --> 00:58:10,680
 detectable when you get your keys
 compromised. So you don't need to anchor
 
-631
+629
 00:58:10,680 --> 00:58:13,760
 everything because not everything's
 important enough. But the important stuff
 
-632
+630
 00:58:13,760 --> 00:58:18,160
 you anchor and that allows you to detect
 it. So without anchoring, you've missed
 
-633
+631
 00:58:18,160 --> 00:58:23,700
 most of the security properties of
 what KERI provides. But it's complicated,
 
-634
+632
 00:58:23,940 --> 00:58:28,740
 right? You have to complicate your
 system. Okay, I'm done. Thank you.
