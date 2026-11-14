@@ -123,11 +123,33 @@
     "Evan Asakawa": "https://kericonf.com/wp-content/uploads/2026/04/EvanAsakawa_v1.0-scaled.jpg",
     "Ryan Hansen": "https://kericonf.com/wp-content/uploads/2026/04/RyanHansen_v1.0.jpeg"
   },
+  "targetGroups": [
+    {
+      "id": "developer",
+      "label": "Developer"
+    },
+    {
+      "id": "policymaker",
+      "label": "Policymaker"
+    },
+    {
+      "id": "legal-professional",
+      "label": "Legal Professional"
+    },
+    {
+      "id": "general-citizen",
+      "label": "General Citizen"
+    }
+  ],
   "videos": [
     {
       "order": 1,
       "day": "Mini Conference nov 2026",
       "title": "Samuel M. Smith: The state and the future of the KERI Suite",
+      "targetGroups": [
+        "developer",
+        "policymaker"
+      ],
       "path": "talks/2026-11-02-samuel-m-smith-1.mp4",
       "duration": "57:37",
       "subtitle": "talks/2026-11-02-samuel-m-smith-1.srt",
@@ -160,6 +182,11 @@
       "order": 6,
       "day": "Mini Conference nov 2026",
       "title": "Ryan Hansen & Samuel M. Smith –  Open infrastructure for KERI-based digital identity",
+      "targetGroups": [
+        "developer",
+        "policymaker",
+        "general-citizen"
+      ],
       "path": "talks/2026-11-02-ryan-hansen-samuel-m-smith.mp4",
       "duration": "55:51",
       "subtitle": "talks/2026-11-02-ryan-hansen-samuel-m-smith.srt",
@@ -191,6 +218,9 @@
       "order": 3,
       "day": "Mini Conference nov 2026",
       "title": "Kent Bull – did:webs, why the ‘s’ matters most",
+      "targetGroups": [
+        "developer"
+      ],
       "path": "talks/2026-11-02-kent-bull.mp4",
       "duration": "59:26",
       "subtitle": "talks/2026-11-02-kent-bull.srt",
@@ -223,6 +253,12 @@
       "order": 4,
       "day": "Mini Conference nov 2026",
       "title": "Samuel M. Smith – Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
+      "targetGroups": [
+        "developer",
+        "policymaker",
+        "legal-professional",
+        "general-citizen"
+      ],
       "path": "talks/2026-11-02-samuel-m-smith-2.mp4",
       "duration": "57:36",
       "subtitle": "talks/2026-11-02-samuel-m-smith-2.srt",
@@ -255,6 +291,9 @@
       "order": 5,
       "day": "Mini Conference nov 2026",
       "title": "Ryan Hansen & Evan Asakawa – Demonstration KERISuite",
+      "targetGroups": [
+        "developer"
+      ],
       "path": "talks/2026-11-02-ryan-hansen-evan-asakawa.mp4",
       "duration": "52:31",
       "subtitle": "talks/2026-11-02-ryan-hansen-evan-asakawa.srt",
@@ -286,6 +325,10 @@
       "order": 2,
       "day": "Mini Conference nov 2026",
       "title": "Samuel M. Smith & Ryan Hansen – Progress report: The 5W’s of KERI: Witnesses, Watchers, Wallet, Web, and Wizard PLUS Bulk issuances and anchoring in Merkle Trees",
+      "targetGroups": [
+        "developer",
+        "policymaker"
+      ],
       "path": "talks/2026-11-02-samuel-m-smith-ryan-hansen.mp4",
       "duration": "58:33",
       "subtitle": "talks/2026-11-02-samuel-m-smith-ryan-hansen.srt",
