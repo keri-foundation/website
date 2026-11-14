@@ -5,8 +5,8 @@
     "headingHref": "/confs/KERI/2026/apr/",
     "statusNotice": "",
     "subtitle": "A collection of presentations and talks from the KERI community",
-    "footer": "KERI Foundation \u2022 Conference Videos Collection",
-    "searchPlaceholder": "Type to search across all talks\u2026",
+    "footer": "KERI Foundation • Conference Videos Collection",
+    "searchPlaceholder": "Type to search across all talks…",
     "searchLabel": "Search all transcripts",
     "nav": [
       {
@@ -42,7 +42,7 @@
   "topClips": {
     "enabled": true,
     "title": "Top Ten Clips",
-    "subtitle": "Ten bite-size moments from the talks \u2014 each clip plays for 10\u201320 seconds.",
+    "subtitle": "Ten bite-size moments from the talks — each clip plays for 10–20 seconds.",
     "clips": [
       {
         "videoTitle": "The Future of KERI - Samuel Smith",
@@ -58,7 +58,7 @@
         "talk": "Open Verifiable Communications",
         "start": 67,
         "end": 85,
-        "quote": "Just don't answer your phone \u2014 or just stop sending texts. That's a pretty bad indictment of a technical infrastructure when the best advice we can give is just stop using it."
+        "quote": "Just don't answer your phone — or just stop sending texts. That's a pretty bad indictment of a technical infrastructure when the best advice we can give is just stop using it."
       },
       {
         "videoTitle": "State of the KERI Suite - Samuel Smith",
@@ -90,7 +90,7 @@
         "talk": "KERIA Tutorial",
         "start": 672,
         "end": 689,
-        "quote": "They're encrypted with the key derived from the passcode you have at the edge. This passcode never moves over here \u2014 ever. That's why it's called a signing-at-the-edge architecture."
+        "quote": "They're encrypted with the key derived from the passcode you have at the edge. This passcode never moves over here — ever. That's why it's called a signing-at-the-edge architecture."
       },
       {
         "videoTitle": "Mobile Wallet - Evan Asakawa",
@@ -98,7 +98,7 @@
         "talk": "Mobile Wallet",
         "start": 46,
         "end": 66,
-        "quote": "We wanted everything to happen in the browser \u2014 all of your keys created and stored on your device. Don't worry about them sitting on some server. We send you the app, and you get your in-browser wallet."
+        "quote": "We wanted everything to happen in the browser — all of your keys created and stored on your device. Don't worry about them sitting on some server. We send you the app, and you get your in-browser wallet."
       },
       {
         "videoTitle": "FHIR and CMS - Jared Jefferey",
@@ -114,7 +114,7 @@
         "talk": "ACDCs for Enterprises",
         "start": 522,
         "end": 535,
-        "quote": "Everybody will be their own identity provider \u2014 which is how it should be. I'm the only person who knows that I am me."
+        "quote": "Everybody will be their own identity provider — which is how it should be. I'm the only person who knows that I am me."
       },
       {
         "videoTitle": "Contract Credentials & Verifiable Identity - Cole Davis",
@@ -122,7 +122,7 @@
         "talk": "Contract Credentials & Verifiable Identity",
         "start": 251,
         "end": 268,
-        "quote": "What if the contract is the credential? What if you can hold your lease up to the smart lock \u2014 or the stock purchase agreement is the stock certificate?"
+        "quote": "What if the contract is the credential? What if you can hold your lease up to the smart lock — or the stock purchase agreement is the stock certificate?"
       }
     ]
   },
@@ -187,9 +187,12 @@
         "developer",
         "policymaker"
       ],
-      "path": "talks/Samuel Smith \uff5c State of the KERI Suite \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Samuel Smith ｜ State of the KERI Suite ｜ KERI Conference 2026.mp4",
       "duration": "50:10",
-      "subtitle": "talks/Samuel Smith \uff5c State of the KERI Suite \uff5c KERI Conference 2026.srt"
+      "subtitle": "talks/Samuel Smith ｜ State of the KERI Suite ｜ KERI Conference 2026.srt",
+      "links": [
+        "https://keri.foundation"
+      ]
     },
     {
       "order": 2,
@@ -201,10 +204,10 @@
         "legal-professional",
         "general-citizen"
       ],
-      "path": "talks/Daniel Hardman \uff5c Open Verifiable Communications \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Daniel Hardman ｜ Open Verifiable Communications ｜ KERI Conference 2026.mp4",
       "duration": "39:55",
-      "subtitle": "talks/Daniel Hardman \uff5c Open Verifiable Communications \uff5c KERI Conference 2026.srt",
-      "presentation": "slides/Daniel Hardman \uff5c Open Verifiable Communications \uff5c KERI Conference 2026.pdf"
+      "subtitle": "talks/Daniel Hardman ｜ Open Verifiable Communications ｜ KERI Conference 2026.srt",
+      "presentation": "slides/Daniel Hardman ｜ Open Verifiable Communications ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 3,
@@ -215,9 +218,9 @@
         "policymaker",
         "general-citizen"
       ],
-      "path": "talks/Scott Stuewe Mark Scrimshire Jared Jeffery \uff5c Provenanting Patient's Medical Records \uff5c KERI Conf 2026.mp4",
+      "path": "talks/Scott Stuewe Mark Scrimshire Jared Jeffery ｜ Provenanting Patient's Medical Records ｜ KERI Conf 2026.mp4",
       "duration": "35:40",
-      "subtitle": "talks/Scott Stuewe Mark Scrimshire Jared Jeffery \uff5c Provenanting Patient's Medical Records \uff5c KERI Conf 2026.srt"
+      "subtitle": "talks/Scott Stuewe Mark Scrimshire Jared Jeffery ｜ Provenanting Patient's Medical Records ｜ KERI Conf 2026.srt"
     },
     {
       "order": 4,
@@ -228,10 +231,10 @@
         "legal-professional",
         "general-citizen"
       ],
-      "path": "talks/George McEwan \uff5c The Landscape of SEDI \uff5c KERI Conference 2026.mp4",
+      "path": "talks/George McEwan ｜ The Landscape of SEDI ｜ KERI Conference 2026.mp4",
       "duration": "38:35",
-      "subtitle": "talks/George McEwan \uff5c The Landscape of SEDI \uff5c KERI Conference 2026.srt",
-      "presentation": "slides/George McEwan \uff5c The Landscape of SEDI \uff5c KERI Conference 2026.pdf"
+      "subtitle": "talks/George McEwan ｜ The Landscape of SEDI ｜ KERI Conference 2026.srt",
+      "presentation": "slides/George McEwan ｜ The Landscape of SEDI ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 5,
@@ -241,10 +244,10 @@
         "developer",
         "legal-professional"
       ],
-      "path": "talks/Cole Davis \uff5c Contract Credentials & Verifiable Identity \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Cole Davis ｜ Contract Credentials & Verifiable Identity ｜ KERI Conference 2026.mp4",
       "duration": "39:10",
-      "subtitle": "talks/Cole Davis \uff5c Contract Credentials & Verifiable Identity \uff5c KERI Conference 2026.srt",
-      "presentation": "slides/Cole Davis \uff5c Contract Credentials & Verifiable Identity \uff5c KERI Conference 2026.pdf"
+      "subtitle": "talks/Cole Davis ｜ Contract Credentials & Verifiable Identity ｜ KERI Conference 2026.srt",
+      "presentation": "slides/Cole Davis ｜ Contract Credentials & Verifiable Identity ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 6,
@@ -253,9 +256,9 @@
       "targetGroups": [
         "developer"
       ],
-      "path": "talks/Phil Feairheller \uff5c Infrastructure for Security \uff5c Keri Conference 2026.mp4",
+      "path": "talks/Phil Feairheller ｜ Infrastructure for Security ｜ Keri Conference 2026.mp4",
       "duration": "41:15",
-      "subtitle": "talks/Phil Feairheller \uff5c Infrastructure for Security \uff5c Keri Conference 2026.srt"
+      "subtitle": "talks/Phil Feairheller ｜ Infrastructure for Security ｜ Keri Conference 2026.srt"
     },
     {
       "order": 7,
@@ -264,10 +267,13 @@
       "targetGroups": [
         "developer"
       ],
-      "path": "talks/Jay Alexander Elliot \uff5c Open KERI Infrastructure \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Jay Alexander Elliot ｜ Open KERI Infrastructure ｜ KERI Conference 2026.mp4",
       "duration": "42:50",
-      "subtitle": "talks/Jay Alexander Elliot \uff5c Open KERI Infrastructure \uff5c KERI Conference 2026.srt",
-      "presentation": "slides/Jay Alexander Elliot \uff5c Open KERI Infrastructure \uff5c KERI Conference 2026.pdf"
+      "subtitle": "talks/Jay Alexander Elliot ｜ Open KERI Infrastructure ｜ KERI Conference 2026.srt",
+      "presentation": "slides/Jay Alexander Elliot ｜ Open KERI Infrastructure ｜ KERI Conference 2026.pdf",
+      "links": [
+        "https://github.com/jaelliot/locksmith-demo"
+      ]
     },
     {
       "order": 8,
@@ -276,9 +282,9 @@
       "targetGroups": [
         "developer"
       ],
-      "path": "talks/Ari Argoud \uff5c KRAM IT! with Ari \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Ari Argoud ｜ KRAM IT! with Ari ｜ KERI Conference 2026.mp4",
       "duration": "37:20",
-      "subtitle": "talks/Ari Argoud \uff5c KRAM IT! with Ari \uff5c KERI Conference 2026.srt"
+      "subtitle": "talks/Ari Argoud ｜ KRAM IT! with Ari ｜ KERI Conference 2026.srt"
     },
     {
       "order": 9,
@@ -287,10 +293,10 @@
       "targetGroups": [
         "developer"
       ],
-      "path": "talks/Fergal O'Conner \uff5c Signify Security Architecture \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Fergal O'Conner ｜ Signify Security Architecture ｜ KERI Conference 2026.mp4",
       "duration": "37:45",
-      "subtitle": "talks/Fergal O'Conner \uff5c Signify Security Architecture \uff5c KERI Conference 2026.srt",
-      "presentation": "slides/Fergal O'Conner \uff5c Signify Security Architecture \uff5c KERI Conference 2026.pdf"
+      "subtitle": "talks/Fergal O'Conner ｜ Signify Security Architecture ｜ KERI Conference 2026.srt",
+      "presentation": "slides/Fergal O'Conner ｜ Signify Security Architecture ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 10,
@@ -299,9 +305,9 @@
       "targetGroups": [
         "developer"
       ],
-      "path": "talks/Ryan Hansen \uff5c Witnesses & Watchers \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Ryan Hansen ｜ Witnesses & Watchers ｜ KERI Conference 2026.mp4",
       "duration": "40:30",
-      "subtitle": "talks/Ryan Hansen \uff5c Witnesses & Watchers \uff5c KERI Conference 2026.srt"
+      "subtitle": "talks/Ryan Hansen ｜ Witnesses & Watchers ｜ KERI Conference 2026.srt"
     },
     {
       "order": 11,
@@ -311,10 +317,10 @@
         "developer",
         "policymaker"
       ],
-      "path": "talks/Jared Jefferey \uff5c FHIR and CMS \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Jared Jefferey ｜ FHIR and CMS ｜ KERI Conference 2026.mp4",
       "duration": "38:25",
-      "subtitle": "talks/Jared Jefferey \uff5c FHIR and CMS \uff5c KERI Conference 2026.srt",
-      "presentation": "slides/Jared Jefferey \uff5c FHIR and CMS \uff5c KERI Conference 2026.pdf"
+      "subtitle": "talks/Jared Jefferey ｜ FHIR and CMS ｜ KERI Conference 2026.srt",
+      "presentation": "slides/Jared Jefferey ｜ FHIR and CMS ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 12,
@@ -324,9 +330,9 @@
         "developer",
         "policymaker"
       ],
-      "path": "talks/Samuel Smith \uff5c The Digital Identity Tradespace \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Samuel Smith ｜ The Digital Identity Tradespace ｜ KERI Conference 2026.mp4",
       "duration": "45:30",
-      "subtitle": "talks/Samuel Smith \uff5c The Digital Identity Tradespace \uff5c KERI Conference 2026.srt"
+      "subtitle": "talks/Samuel Smith ｜ The Digital Identity Tradespace ｜ KERI Conference 2026.srt"
     },
     {
       "order": 13,
@@ -335,10 +341,10 @@
       "targetGroups": [
         "developer"
       ],
-      "path": "talks/Kent Bull \uff5c KERIA Tutorial \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Kent Bull ｜ KERIA Tutorial ｜ KERI Conference 2026.mp4",
       "duration": "51:20",
-      "subtitle": "talks/Kent Bull \uff5c KERIA Tutorial \uff5c KERI Conference 2026.srt",
-      "presentation": "slides/Kent Bull \uff5c KERIA Tutorial \uff5c KERI Conference 2026.pdf"
+      "subtitle": "talks/Kent Bull ｜ KERIA Tutorial ｜ KERI Conference 2026.srt",
+      "presentation": "slides/Kent Bull ｜ KERIA Tutorial ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 14,
@@ -348,9 +354,9 @@
         "policymaker",
         "general-citizen"
       ],
-      "path": "talks/George McEwan \uff5c How KERI Enables Better Private-Public Partnerships \uff5c KERI Conference 2026.mp4",
+      "path": "talks/George McEwan ｜ How KERI Enables Better Private-Public Partnerships ｜ KERI Conference 2026.mp4",
       "duration": "44:20",
-      "subtitle": "talks/George McEwan \uff5c How KERI Enables Better Private-Public Partnerships \uff5c KERI Conference 2026.srt"
+      "subtitle": "talks/George McEwan ｜ How KERI Enables Better Private-Public Partnerships ｜ KERI Conference 2026.srt"
     },
     {
       "order": 1,
@@ -361,9 +367,9 @@
         "policymaker",
         "general-citizen"
       ],
-      "path": "talks/Samuel Smith \uff5c The Future of KERI \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Samuel Smith ｜ The Future of KERI ｜ KERI Conference 2026.mp4",
       "duration": "52:10",
-      "subtitle": "talks/Samuel Smith \uff5c The Future of KERI \uff5c KERI Conference 2026.srt"
+      "subtitle": "talks/Samuel Smith ｜ The Future of KERI ｜ KERI Conference 2026.srt"
     },
     {
       "order": 2,
@@ -374,9 +380,9 @@
         "policymaker",
         "general-citizen"
       ],
-      "path": "talks/Phil Feairheller \uff5c ACDCs for Authorization \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Phil Feairheller ｜ ACDCs for Authorization ｜ KERI Conference 2026.mp4",
       "duration": "36:15",
-      "subtitle": "talks/Phil Feairheller \uff5c ACDCs for Authorization \uff5c KERI Conference 2026.srt"
+      "subtitle": "talks/Phil Feairheller ｜ ACDCs for Authorization ｜ KERI Conference 2026.srt"
     },
     {
       "order": 3,
@@ -387,9 +393,9 @@
         "policymaker",
         "general-citizen"
       ],
-      "path": "talks/Thomas Mayfield \uff5c KERI Infrastructure & the 5 W's \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Thomas Mayfield ｜ KERI Infrastructure & the 5 W's ｜ KERI Conference 2026.mp4",
       "duration": "43:20",
-      "subtitle": "talks/Thomas Mayfield \uff5c KERI Infrastructure & the 5 W's \uff5c KERI Conference 2026.srt"
+      "subtitle": "talks/Thomas Mayfield ｜ KERI Infrastructure & the 5 W's ｜ KERI Conference 2026.srt"
     },
     {
       "order": 4,
@@ -400,10 +406,10 @@
         "policymaker",
         "general-citizen"
       ],
-      "path": "talks/Alan Davies \uff5c ACDCs for Enterprises \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Alan Davies ｜ ACDCs for Enterprises ｜ KERI Conference 2026.mp4",
       "duration": "35:55",
-      "subtitle": "talks/Alan Davies \uff5c ACDCs for Enterprises \uff5c KERI Conference 2026.srt",
-      "presentation": "slides/Alan Davies \uff5c ACDCs for Enterprises \uff5c KERI Conference 2026.pdf"
+      "subtitle": "talks/Alan Davies ｜ ACDCs for Enterprises ｜ KERI Conference 2026.srt",
+      "presentation": "slides/Alan Davies ｜ ACDCs for Enterprises ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 5,
@@ -412,10 +418,10 @@
       "targetGroups": [
         "developer"
       ],
-      "path": "talks/Jonathan Rayback \uff5c KERI Bridge to the DID World \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Jonathan Rayback ｜ KERI Bridge to the DID World ｜ KERI Conference 2026.mp4",
       "duration": "41:35",
-      "subtitle": "talks/Jonathan Rayback \uff5c KERI Bridge to the DID World \uff5c KERI Conference 2026.srt",
-      "presentation": "slides/Jonathan Rayback \uff5c KERI Bridge to the DID World \uff5c KERI Conference 2026.pdf"
+      "subtitle": "talks/Jonathan Rayback ｜ KERI Bridge to the DID World ｜ KERI Conference 2026.srt",
+      "presentation": "slides/Jonathan Rayback ｜ KERI Bridge to the DID World ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 6,
@@ -424,10 +430,10 @@
       "targetGroups": [
         "developer"
       ],
-      "path": "talks/Evan Asakawa \uff5c Mobile Wallet \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Evan Asakawa ｜ Mobile Wallet ｜ KERI Conference 2026.mp4",
       "duration": "40:15",
-      "subtitle": "talks/Evan Asakawa \uff5c Mobile Wallet \uff5c KERI Conference 2026.srt",
-      "presentation": "slides/Evan Asakawa \uff5c Mobile Wallet \uff5c KERI Conference 2026.pdf"
+      "subtitle": "talks/Evan Asakawa ｜ Mobile Wallet ｜ KERI Conference 2026.srt",
+      "presentation": "slides/Evan Asakawa ｜ Mobile Wallet ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 7,
@@ -438,9 +444,12 @@
         "legal-professional",
         "general-citizen"
       ],
-      "path": "talks/Phil Windley \uff5c Digital Identity Needs a Legal Foundation \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Phil Windley ｜ Digital Identity Needs a Legal Foundation ｜ KERI Conference 2026.mp4",
       "duration": "43:10",
-      "subtitle": "talks/Phil Windley \uff5c Digital Identity Needs a Legal Foundation \uff5c KERI Conference 2026.srt"
+      "subtitle": "talks/Phil Windley ｜ Digital Identity Needs a Legal Foundation ｜ KERI Conference 2026.srt",
+      "links": [
+        "https://thetrustgraph.substack.com/p/the-proof-gap"
+      ]
     },
     {
       "order": 8,
@@ -449,10 +458,14 @@
       "targetGroups": [
         "developer"
       ],
-      "path": "talks/Kent Bull \uff5c KERIpy Async Architecture \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Kent Bull ｜ KERIpy Async Architecture ｜ KERI Conference 2026.mp4",
       "duration": "43:30",
-      "subtitle": "talks/Kent Bull \uff5c KERIpy Async Architecture \uff5c KERI Conference 2026.srt",
-      "presentation": "slides/Kent Bull \uff5c KERIpy Async Architecture \uff5c KERI Conference 2026.pdf"
+      "subtitle": "talks/Kent Bull ｜ KERIpy Async Architecture ｜ KERI Conference 2026.srt",
+      "presentation": "slides/Kent Bull ｜ KERIpy Async Architecture ｜ KERI Conference 2026.pdf",
+      "links": [
+        "https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/",
+        "https://www.fluentpython.com/"
+      ]
     },
     {
       "order": 9,
@@ -462,9 +475,9 @@
         "developer",
         "legal-professional"
       ],
-      "path": "talks/Ned Smith \uff5c Secure Asset Transfer Protocol \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Ned Smith ｜ Secure Asset Transfer Protocol ｜ KERI Conference 2026.mp4",
       "duration": "36:50",
-      "subtitle": "talks/Ned Smith \uff5c Secure Asset Transfer Protocol \uff5c KERI Conference 2026.srt"
+      "subtitle": "talks/Ned Smith ｜ Secure Asset Transfer Protocol ｜ KERI Conference 2026.srt"
     },
     {
       "order": 10,
@@ -474,9 +487,9 @@
         "policymaker",
         "general-citizen"
       ],
-      "path": "talks/Nicholas Racz \uff5c Investigating the Game of Trust \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Nicholas Racz ｜ Investigating the Game of Trust ｜ KERI Conference 2026.mp4",
       "duration": "39:15",
-      "subtitle": "talks/Nicholas Racz \uff5c Investigating the Game of Trust \uff5c KERI Conference 2026.srt"
+      "subtitle": "talks/Nicholas Racz ｜ Investigating the Game of Trust ｜ KERI Conference 2026.srt"
     },
     {
       "order": 11,
@@ -486,10 +499,10 @@
         "developer",
         "legal-professional"
       ],
-      "path": "talks/Daniel Hardman \uff5c Applying KERI to General Evidence Problems \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Daniel Hardman ｜ Applying KERI to General Evidence Problems ｜ KERI Conference 2026.mp4",
       "duration": "39:45",
-      "subtitle": "talks/Daniel Hardman \uff5c Applying KERI to General Evidence Problems \uff5c KERI Conference 2026.srt",
-      "presentation": "slides/Daniel Hardman \uff5c Applying KERI to General Evidence Problems \uff5c KERI Conference 2026.pdf"
+      "subtitle": "talks/Daniel Hardman ｜ Applying KERI to General Evidence Problems ｜ KERI Conference 2026.srt",
+      "presentation": "slides/Daniel Hardman ｜ Applying KERI to General Evidence Problems ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 12,
@@ -498,10 +511,10 @@
       "targetGroups": [
         "developer"
       ],
-      "path": "talks/Keanu Pahio \uff5c KERI Developement & Deployment \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Keanu Pahio ｜ KERI Developement & Deployment ｜ KERI Conference 2026.mp4",
       "duration": "48:15",
-      "subtitle": "talks/Keanu Pahio \uff5c KERI Developement & Deployment \uff5c KERI Conference 2026.srt",
-      "presentation": "slides/Keanu Pahio \uff5c KERI Developement & Deployment \uff5c KERI Conference 2026.pdf"
+      "subtitle": "talks/Keanu Pahio ｜ KERI Developement & Deployment ｜ KERI Conference 2026.srt",
+      "presentation": "slides/Keanu Pahio ｜ KERI Developement & Deployment ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 13,
@@ -513,9 +526,9 @@
         "legal-professional",
         "general-citizen"
       ],
-      "path": "talks/Samuel Smith \uff5c SPAC & TSP \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Samuel Smith ｜ SPAC & TSP ｜ KERI Conference 2026.mp4",
       "duration": "42:25",
-      "subtitle": "talks/Samuel Smith \uff5c SPAC & TSP \uff5c KERI Conference 2026.srt"
+      "subtitle": "talks/Samuel Smith ｜ SPAC & TSP ｜ KERI Conference 2026.srt"
     },
     {
       "order": 14,
@@ -524,10 +537,10 @@
       "targetGroups": [
         "developer"
       ],
-      "path": "talks/Fergal O'Connor \uff5c KERIA & Signify Path to Production \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Fergal O'Connor ｜ KERIA & Signify Path to Production ｜ KERI Conference 2026.mp4",
       "duration": "38:45",
-      "subtitle": "talks/Fergal O'Connor \uff5c KERIA & Signify Path to Production \uff5c KERI Conference 2026.srt",
-      "presentation": "slides/Fergal O'Connor \uff5c KERIA & Signify Path to Production \uff5c KERI Conference 2026.pdf"
+      "subtitle": "talks/Fergal O'Connor ｜ KERIA & Signify Path to Production ｜ KERI Conference 2026.srt",
+      "presentation": "slides/Fergal O'Connor ｜ KERIA & Signify Path to Production ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 15,
@@ -538,9 +551,9 @@
         "policymaker",
         "general-citizen"
       ],
-      "path": "talks/Ryan Hansen Pannel \uff5c What KERI allows us to do that we couldn't before \uff5c KERI Conference 2026.mp4",
+      "path": "talks/Ryan Hansen Pannel ｜ What KERI allows us to do that we couldn't before ｜ KERI Conference 2026.mp4",
       "duration": "37:30",
-      "subtitle": "talks/Ryan Hansen Pannel \uff5c What KERI allows us to do that we couldn't before \uff5c KERI Conference 2026.srt"
+      "subtitle": "talks/Ryan Hansen Pannel ｜ What KERI allows us to do that we couldn't before ｜ KERI Conference 2026.srt"
     },
     {
       "order": 1,

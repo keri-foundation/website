@@ -1206,7 +1206,8 @@
         .read-transcript-btn,
         .download-presentation-btn,
         .view-presentation-btn,
-        .chapters-toggle-btn {
+        .chapters-toggle-btn,
+        .links-toggle-btn {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1230,28 +1231,38 @@
         .read-transcript-btn:hover,
         .download-presentation-btn:hover,
         .view-presentation-btn:hover,
-        .chapters-toggle-btn:hover {
+        .chapters-toggle-btn:hover,
+        .links-toggle-btn:hover {
             background: color-mix(in srgb, var(--accent) 32%, transparent);
         }
 
         .open-video-modal-btn:focus-visible,
         .download-presentation-btn:focus-visible,
         .view-presentation-btn:focus-visible,
-        .chapters-toggle-btn:focus-visible {
+        .chapters-toggle-btn:focus-visible,
+        .links-toggle-btn:focus-visible {
             outline: 2px solid var(--accent);
             outline-offset: 2px;
         }
 
-        .chapters-toggle-btn[aria-expanded="true"] {
+        .video-card-actions .chapters-toggle-btn,
+        .video-card-actions .links-toggle-btn {
+            flex: 1 1 7rem;
+        }
+
+        .chapters-toggle-btn[aria-expanded="true"],
+        .links-toggle-btn[aria-expanded="true"] {
             background: color-mix(in srgb, var(--accent) 32%, transparent);
         }
 
-        .chapters-toggle-btn .chapters-toggle-chevron {
+        .chapters-toggle-btn .chapters-toggle-chevron,
+        .links-toggle-btn .links-toggle-chevron {
             margin-left: 2px;
             transition: transform 0.18s ease;
         }
 
-        .chapters-toggle-btn[aria-expanded="true"] .chapters-toggle-chevron {
+        .chapters-toggle-btn[aria-expanded="true"] .chapters-toggle-chevron,
+        .links-toggle-btn[aria-expanded="true"] .links-toggle-chevron {
             transform: rotate(180deg);
         }
 
@@ -1449,7 +1460,47 @@
             color: var(--ink);
         }
 
+        .video-link {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.65rem;
+            width: 100%;
+            margin: 0;
+            padding: 0.7rem 0.65rem;
+            border-radius: 8px;
+            color: var(--accent);
+            font-size: 0.95rem;
+            line-height: 1.35;
+            text-decoration: none;
+            word-break: break-all;
+            box-sizing: border-box;
+            min-height: 2.75rem;
+        }
+
+        .video-link:hover {
+            background: color-mix(in srgb, var(--accent) 14%, transparent);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .video-link:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .video-link-icon {
+            flex: 0 0 auto;
+            margin-top: 0.12rem;
+            opacity: 0.85;
+        }
+
+        .video-link-text {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
         .video-modal-header-actions .chapters-toggle-btn,
+        .video-modal-header-actions .links-toggle-btn,
         .video-modal-header-actions .view-presentation-btn {
             flex: 0 0 auto;
             width: auto;
@@ -1462,12 +1513,16 @@
 
         .video-modal-header-actions .chapters-toggle-btn:hover,
         .video-modal-header-actions .chapters-toggle-btn[aria-expanded="true"],
+        .video-modal-header-actions .links-toggle-btn:hover,
+        .video-modal-header-actions .links-toggle-btn[aria-expanded="true"],
         .video-modal-header-actions .view-presentation-btn:hover {
             background: color-mix(in srgb, var(--accent) 28%, transparent);
         }
 
         .video-modal-header-actions .chapters-toggle-btn .chapters-toggle-label-count,
-        .video-modal-header-actions .chapters-toggle-btn .chapters-toggle-chevron {
+        .video-modal-header-actions .chapters-toggle-btn .chapters-toggle-chevron,
+        .video-modal-header-actions .links-toggle-btn .links-toggle-label-count,
+        .video-modal-header-actions .links-toggle-btn .links-toggle-chevron {
             display: none;
         }
 
@@ -1504,7 +1559,8 @@
         @media (prefers-reduced-motion: reduce) {
             .chapters-sheet-backdrop,
             .chapters-sheet-panel,
-            .chapters-toggle-btn .chapters-toggle-chevron {
+            .chapters-toggle-btn .chapters-toggle-chevron,
+            .links-toggle-btn .links-toggle-chevron {
                 transition: none;
             }
         }
@@ -2716,12 +2772,14 @@
 
             .video-modal-header-actions > .copy-button,
             .video-modal-header-actions > .chapters-toggle-btn,
+            .video-modal-header-actions > .links-toggle-btn,
             .video-modal-header-actions > .view-presentation-btn {
                 flex: 1 1 0;
                 min-width: 0;
             }
 
             .video-modal-header-actions .chapters-toggle-btn,
+            .video-modal-header-actions .links-toggle-btn,
             .video-modal-header-actions .view-presentation-btn {
                 justify-content: center;
                 padding: 0.45rem 0.55rem;
@@ -5301,6 +5359,7 @@
             const captionCueFollowTracks = new WeakSet();
             let modalLinksSection = null;
             let modalChaptersToggleBtn = null;
+            let modalLinksToggleBtn = null;
             let modalPdfBtn = null;
             let modalTitleEl = null;
             let chaptersSheet = null;
@@ -5312,6 +5371,7 @@
             let chaptersSheetVideo = null;
             let chaptersSheetPreviousFocus = null;
             let chaptersSheetOpenToken = 0;
+            let sheetMode = null; // 'chapters' | 'links'
             let modalCopyBtn = null;
             let modalClearTimestampsBtn = null;
             let modalCopyHint = null;
@@ -6045,6 +6105,20 @@
                     else openChaptersSheet(video, modalChaptersToggleBtn);
                 });
 
+                modalLinksToggleBtn = document.createElement('button');
+                modalLinksToggleBtn.type = 'button';
+                modalLinksToggleBtn.className = 'links-toggle-btn';
+                modalLinksToggleBtn.hidden = true;
+                modalLinksToggleBtn.setAttribute('aria-expanded', 'false');
+                modalLinksToggleBtn.setAttribute('aria-haspopup', 'dialog');
+                modalLinksToggleBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const video = findVideoById(modalVideoId);
+                    if (!video) return;
+                    if (isLinksSheetOpenFor(video)) closeChaptersSheet();
+                    else openLinksSheet(video, modalLinksToggleBtn);
+                });
+
                 modalPdfBtn = document.createElement('a');
                 modalPdfBtn.className = 'view-presentation-btn';
                 modalPdfBtn.hidden = true;
@@ -6054,6 +6128,7 @@
 
                 headerActions.appendChild(modalCopyHint);
                 headerActions.appendChild(modalChaptersToggleBtn);
+                headerActions.appendChild(modalLinksToggleBtn);
                 headerActions.appendChild(modalPdfBtn);
                 headerActions.appendChild(modalCopyBtn);
                 headerActions.appendChild(modalClearTimestampsBtn);
@@ -6124,11 +6199,6 @@
                 playerWrap.appendChild(modalClipTimer);
 
                 videoContent.appendChild(playerWrap);
-
-                modalLinksSection = document.createElement('div');
-                modalLinksSection.className = 'video-modal-links';
-                modalLinksSection.hidden = true;
-                videoContent.appendChild(modalLinksSection);
 
                 initPlyrVideo(modalVideoEl, { subtitleSize: true });
                 // Keep the clip timer above Plyr's rebuilt player chrome
@@ -6265,42 +6335,6 @@
                 });
 
                 document.body.appendChild(videoModalOverlay);
-            }
-
-            function renderModalLinks(rawSrt) {
-                if (!modalLinksSection) return;
-                modalLinksSection.innerHTML = '';
-                modalLinksSection.hidden = true;
-                if (!rawSrt) return;
-
-                const urls = extractUrlsFromSrt(rawSrt);
-                if (!urls.length) return;
-
-                modalLinksSection.hidden = false;
-
-                const heading = document.createElement('h3');
-                heading.className = 'video-modal-links-heading';
-                heading.textContent = 'Links';
-
-                const list = document.createElement('ul');
-                list.className = 'subtitle-links';
-                for (const link of urls) {
-                    const li = document.createElement('li');
-                    const a = document.createElement('a');
-                    a.href = link;
-                    a.target = '_blank';
-                    a.rel = 'noopener noreferrer';
-                    a.textContent = link;
-                    const hint = document.createElement('span');
-                    hint.className = 'visually-hidden';
-                    hint.textContent = ' (opens in a new tab)';
-                    a.appendChild(hint);
-                    li.appendChild(a);
-                    list.appendChild(li);
-                }
-
-                modalLinksSection.appendChild(heading);
-                modalLinksSection.appendChild(list);
             }
 
             function clearModalTranscriptSearch() {
@@ -6548,8 +6582,8 @@
                 modalTranscriptBody.innerHTML = '<p class="transcript-loading">Loading transcript…</p>';
                 setModalTranscriptHandleLabel(null);
                 updateModalChaptersToggle(video);
+                updateModalLinksToggle(video);
                 updateModalPdfButton(video);
-                renderModalLinks(null);
 
                 Promise.all([loadTranscript(video), loadAllCaptionTracks(video)]).then(([store, captionStore]) => {
                     if (modalSourceVideoPath !== video.path) return;
@@ -6564,7 +6598,6 @@
                     const displayStore = (track && track.status === 'ready' && track.cues.length) ? track : store;
                     modalTranscriptLang = (displayStore === track) ? lang : (primarySubtitleLang(video) || null);
                     populateModalTranscript(displayStore, video.path, modalTranscriptSearchInput?.value ?? '');
-                    renderModalLinks(store.rawText);
                     updateVideoUrlForModal(modalVideoId, time, hasClipEnd ? endTime : null);
                 });
 
@@ -6612,6 +6645,7 @@
                     updateModalTranscriptViewBtn();
                     clearModalTranscriptSearch();
                     updateModalChaptersToggle(null);
+                    updateModalLinksToggle(null);
                     updateModalPdfButton(null);
                     if (isChaptersSheetOpen()) closeChaptersSheet({ restoreFocus: false });
                     clearVideoUrlHash();
@@ -7000,10 +7034,38 @@
             // ─────────────────────────────────────────────────────────────────────
             const CHAPTERS_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></svg>';
             const CHAPTERS_CHEVRON_SVG = '<svg class="chapters-toggle-chevron" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+            const LINKS_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l1.92-1.92a5 5 0 0 0-7.07-7.07l-1.41 1.41"/><path d="M14 11a5 5 0 0 0-7.54-.54L4.54 12.39a5 5 0 0 0 7.07 7.07l1.41-1.41"/></svg>';
+            const LINKS_CHEVRON_SVG = '<svg class="links-toggle-chevron" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+            const LINK_EXTERNAL_ICON_SVG = '<svg class="video-link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
             const OPEN_PDF_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
 
             function chaptersForVideo(video) {
                 return Array.isArray(video?.chapters) ? video.chapters : [];
+            }
+
+            function normalizeLinks(raw) {
+                if (!Array.isArray(raw)) return [];
+                const links = [];
+                const seen = new Set();
+                for (const item of raw) {
+                    let url = '';
+                    let label = '';
+                    if (typeof item === 'string') {
+                        url = item.trim();
+                    } else if (item && typeof item === 'object') {
+                        url = String(item.url || item.href || '').trim();
+                        label = String(item.label || item.title || '').trim();
+                    }
+                    if (!url || seen.has(url)) continue;
+                    seen.add(url);
+                    if (!label) label = url;
+                    links.push({ url, label });
+                }
+                return links;
+            }
+
+            function linksForVideo(video) {
+                return normalizeLinks(video?.links);
             }
 
             function currentTimeForVideo(video) {
@@ -7057,14 +7119,21 @@
                 syncChaptersSheetActive();
             }
 
-            function setChaptersToggleExpanded(expanded) {
-                document.querySelectorAll('.chapters-toggle-btn[aria-expanded="true"]').forEach((btn) => {
+            function setSheetToggleExpanded(expanded, mode) {
+                document.querySelectorAll(
+                    '.chapters-toggle-btn[aria-expanded="true"], .links-toggle-btn[aria-expanded="true"]'
+                ).forEach((btn) => {
                     btn.setAttribute('aria-expanded', 'false');
                 });
-                if (!expanded || !chaptersSheetPreviousFocus) return;
-                if (chaptersSheetPreviousFocus.classList?.contains('chapters-toggle-btn')) {
+                if (!expanded || !chaptersSheetPreviousFocus || !mode) return;
+                const cls = mode === 'links' ? 'links-toggle-btn' : 'chapters-toggle-btn';
+                if (chaptersSheetPreviousFocus.classList?.contains(cls)) {
                     chaptersSheetPreviousFocus.setAttribute('aria-expanded', 'true');
                 }
+            }
+
+            function setChaptersToggleExpanded(expanded) {
+                setSheetToggleExpanded(expanded, expanded ? (sheetMode || 'chapters') : null);
             }
 
             function labelChaptersToggle(btn, video) {
@@ -7083,6 +7152,22 @@
                 btn.setAttribute('aria-label', `Show ${count} chapters for ${video.title}`);
             }
 
+            function labelLinksToggle(btn, video) {
+                const count = linksForVideo(video).length;
+                btn.replaceChildren();
+                btn.insertAdjacentHTML('beforeend', LINKS_ICON_SVG);
+                const label = document.createElement('span');
+                label.className = 'links-toggle-label';
+                label.appendChild(document.createTextNode('Links'));
+                const countEl = document.createElement('span');
+                countEl.className = 'links-toggle-label-count';
+                countEl.textContent = ` (${count})`;
+                label.appendChild(countEl);
+                btn.appendChild(label);
+                btn.insertAdjacentHTML('beforeend', LINKS_CHEVRON_SVG);
+                btn.setAttribute('aria-label', `Show ${count} links for ${video.title}`);
+            }
+
             function createChaptersToggleButton(video) {
                 const btn = document.createElement('button');
                 btn.type = 'button';
@@ -7098,6 +7183,21 @@
                 return btn;
             }
 
+            function createLinksToggleButton(video) {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'links-toggle-btn';
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-haspopup', 'dialog');
+                labelLinksToggle(btn, video);
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    if (isLinksSheetOpenFor(video)) closeChaptersSheet();
+                    else openLinksSheet(video, btn);
+                });
+                return btn;
+            }
+
             function updateModalChaptersToggle(video) {
                 if (!modalChaptersToggleBtn) return;
                 if (!chaptersForVideo(video).length) {
@@ -7107,6 +7207,17 @@
                 }
                 modalChaptersToggleBtn.hidden = false;
                 labelChaptersToggle(modalChaptersToggleBtn, video);
+            }
+
+            function updateModalLinksToggle(video) {
+                if (!modalLinksToggleBtn) return;
+                if (!linksForVideo(video).length) {
+                    modalLinksToggleBtn.hidden = true;
+                    modalLinksToggleBtn.setAttribute('aria-expanded', 'false');
+                    return;
+                }
+                modalLinksToggleBtn.hidden = false;
+                labelLinksToggle(modalLinksToggleBtn, video);
             }
 
             function updateModalPdfButton(video) {
@@ -7130,7 +7241,11 @@
             }
 
             function isChaptersSheetOpenFor(video) {
-                return isChaptersSheetOpen() && chaptersSheetVideo?.path === video?.path;
+                return isChaptersSheetOpen() && sheetMode === 'chapters' && chaptersSheetVideo?.path === video?.path;
+            }
+
+            function isLinksSheetOpenFor(video) {
+                return isChaptersSheetOpen() && sheetMode === 'links' && chaptersSheetVideo?.path === video?.path;
             }
 
             function ensureChaptersSheet() {
@@ -7258,21 +7373,51 @@
                 });
             }
 
+            function fillLinksList(listEl, video) {
+                const links = linksForVideo(video);
+                listEl.replaceChildren();
+                links.forEach((link) => {
+                    const item = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.className = 'video-link';
+                    a.href = link.url;
+                    a.target = '_blank';
+                    a.rel = 'noopener noreferrer';
+                    a.setAttribute('aria-label', `${link.label} (opens in a new tab)`);
+                    a.insertAdjacentHTML('beforeend', LINK_EXTERNAL_ICON_SVG);
+                    const text = document.createElement('span');
+                    text.className = 'video-link-text';
+                    text.textContent = link.label;
+                    a.appendChild(text);
+                    item.appendChild(a);
+                    listEl.appendChild(item);
+                });
+            }
+
+            function setSheetChrome(mode) {
+                const label = mode === 'links' ? 'Close links' : 'Close chapters';
+                const backdrop = chaptersSheet?.querySelector('.chapters-sheet-backdrop');
+                if (backdrop) backdrop.setAttribute('aria-label', label);
+                if (chaptersSheetCloseBtn) chaptersSheetCloseBtn.setAttribute('aria-label', label);
+            }
+
             function openChaptersSheet(video, triggerBtn) {
                 if (!chaptersForVideo(video).length) return;
                 ensureChaptersSheet();
                 const token = ++chaptersSheetOpenToken;
+                sheetMode = 'chapters';
                 chaptersSheetVideo = video;
                 chaptersSheetPreviousFocus = triggerBtn || document.activeElement;
                 fillChaptersList(chaptersSheetList, video);
                 chaptersSheetTitle.textContent = 'Chapters';
                 chaptersSheetSubtitle.textContent = video.title;
+                setSheetChrome('chapters');
                 chaptersSheet.hidden = false;
                 // Force layout before adding is-open so the slide-in animates.
                 void chaptersSheet.offsetWidth;
                 chaptersSheet.classList.add('is-open');
                 document.body.dataset.chaptersSheetOpen = '1';
-                setChaptersToggleExpanded(true);
+                setSheetToggleExpanded(true, 'chapters');
                 syncChaptersSheetActive({ scroll: true });
                 requestAnimationFrame(() => {
                     if (token !== chaptersSheetOpenToken) return;
@@ -7281,15 +7426,39 @@
                 });
             }
 
+            function openLinksSheet(video, triggerBtn) {
+                if (!linksForVideo(video).length) return;
+                ensureChaptersSheet();
+                const token = ++chaptersSheetOpenToken;
+                sheetMode = 'links';
+                chaptersSheetVideo = video;
+                chaptersSheetPreviousFocus = triggerBtn || document.activeElement;
+                fillLinksList(chaptersSheetList, video);
+                chaptersSheetTitle.textContent = 'Links';
+                chaptersSheetSubtitle.textContent = video.title;
+                setSheetChrome('links');
+                chaptersSheet.hidden = false;
+                void chaptersSheet.offsetWidth;
+                chaptersSheet.classList.add('is-open');
+                document.body.dataset.chaptersSheetOpen = '1';
+                setSheetToggleExpanded(true, 'links');
+                requestAnimationFrame(() => {
+                    if (token !== chaptersSheetOpenToken) return;
+                    const firstLink = chaptersSheetList.querySelector('.video-link');
+                    (firstLink || chaptersSheetCloseBtn || chaptersSheetPanel).focus();
+                });
+            }
+
             function closeChaptersSheet({ restoreFocus = true } = {}) {
                 if (!chaptersSheet || chaptersSheet.hidden) return;
                 chaptersSheetOpenToken += 1;
                 chaptersSheet.classList.remove('is-open');
                 delete document.body.dataset.chaptersSheetOpen;
-                setChaptersToggleExpanded(false);
+                setSheetToggleExpanded(false, null);
                 const focusEl = chaptersSheetPreviousFocus;
                 chaptersSheetVideo = null;
                 chaptersSheetPreviousFocus = null;
+                sheetMode = null;
 
                 const finish = () => {
                     chaptersSheet.hidden = true;
@@ -7510,7 +7679,7 @@
                 metaDiv.appendChild(durSpan);
                 infoDiv.appendChild(metaDiv);
 
-                if (hasSubtitles(video) || video.presentation || chaptersForVideo(video).length) {
+                if (hasSubtitles(video) || video.presentation || chaptersForVideo(video).length || linksForVideo(video).length) {
                     const actionsRow = document.createElement('div');
                     actionsRow.className = 'video-card-actions';
 
@@ -7540,6 +7709,10 @@
 
                     if (chaptersForVideo(video).length) {
                         actionsRow.appendChild(createChaptersToggleButton(video));
+                    }
+
+                    if (linksForVideo(video).length) {
+                        actionsRow.appendChild(createLinksToggleButton(video));
                     }
 
                     if (video.presentation) {
@@ -7615,6 +7788,7 @@
                 await attachConventionalSubtitles(videos);
                 videos.forEach((v) => {
                     v.chapters = normalizeChapters(v.chapters);
+                    v.links = normalizeLinks(v.links);
                     applyDiscoveredSubtitleLangs(v);
                     if (v.subtitle) v.subtitle = resolveAssetUrl(v.subtitle);
                     if (v.subtitles && typeof v.subtitles === 'object') {

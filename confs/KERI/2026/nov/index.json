@@ -5,8 +5,8 @@
     "headingHref": "/confs/KERI/2026/nov/",
     "statusNotice": "",
     "subtitle": "The videos from the KERI Mini Conference in November 2026 are now available.",
-    "footer": "KERI Foundation \u2022 Conference Videos Collection",
-    "searchPlaceholder": "Type to search across all talks\u2026",
+    "footer": "KERI Foundation • Conference Videos Collection",
+    "searchPlaceholder": "Type to search across all talks…",
     "searchLabel": "Search all transcripts",
     "nav": [
       {
@@ -34,10 +34,10 @@
   "topClips": {
     "enabled": true,
     "title": "Top Clips",
-    "subtitle": "A few bite-size moments from the talks \u2014 each clip plays for 10\u201320 seconds.",
+    "subtitle": "A few bite-size moments from the talks — each clip plays for 10–20 seconds.",
     "clips": [
       {
-        "videoTitle": "Samuel M. Smith \u2013 Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
+        "videoTitle": "Samuel M. Smith – Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
         "speaker": "Samuel M. Smith",
         "talk": "AI Agent Surveillance Protection",
         "start": 180.697,
@@ -45,7 +45,7 @@
         "quote": "Does that feel like a world you'd like to live in? But you understand that that is the world we're in right now."
       },
       {
-        "videoTitle": "Samuel M. Smith \u2013 Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
+        "videoTitle": "Samuel M. Smith – Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
         "speaker": "Samuel M. Smith",
         "talk": "AI Agent Surveillance Protection",
         "start": 63,
@@ -53,7 +53,7 @@
         "quote": "Continuous identity means I determine who you are by continuously surveilling everything that you do."
       },
       {
-        "videoTitle": "Samuel M. Smith \u2013 Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
+        "videoTitle": "Samuel M. Smith – Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
         "speaker": "Samuel M. Smith",
         "talk": "AI Agent Surveillance Protection",
         "start": 341,
@@ -61,7 +61,7 @@
         "quote": "That just means you've created an arms race of surveillance."
       },
       {
-        "videoTitle": "Samuel M. Smith \u2013 Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
+        "videoTitle": "Samuel M. Smith – Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
         "speaker": "Samuel M. Smith",
         "talk": "AI Agent Surveillance Protection",
         "start": 758.5,
@@ -77,7 +77,7 @@
         "quote": "I call it the era of the ledger wars. Everybody decided that digital identity based on blockchain was the coolest thing."
       },
       {
-        "videoTitle": "Samuel M. Smith & Ryan Hansen \u2013 Progress report: The 5W\u2019s of KERI: Witnesses, Watchers, Wallet, Web, and Wizard PLUS Bulk issuances and anchoring in Merkle Trees",
+        "videoTitle": "Samuel M. Smith & Ryan Hansen – Progress report: The 5W’s of KERI: Witnesses, Watchers, Wallet, Web, and Wizard PLUS Bulk issuances and anchoring in Merkle Trees",
         "speaker": "Samuel M. Smith & Ryan Hansen",
         "talk": "5W's Progress Report",
         "start": 3493,
@@ -85,7 +85,7 @@
         "quote": "Without anchoring, you've missed most of the security properties of what KERI provides."
       },
       {
-        "videoTitle": "Ryan Hansen & Samuel M. Smith \u2013  Open infrastructure for KERI-based digital identity",
+        "videoTitle": "Ryan Hansen & Samuel M. Smith –  Open infrastructure for KERI-based digital identity",
         "speaker": "Ryan Hansen & Samuel M. Smith",
         "talk": "Open Infrastructure",
         "start": 71,
@@ -311,6 +311,9 @@
           "start": "51:45",
           "description": "Witnesses: availability, eclipse attacks, and detection"
         }
+      ],
+      "links": [
+        "https://github.com/keri-foundation"
       ]
     }
   ]

@@ -6,7 +6,7 @@
     "statusNotice": "",
     "subtitle": "Talks from the conference",
     "footer": "Conference Videos",
-    "searchPlaceholder": "Type to search across all talks\u2026",
+    "searchPlaceholder": "Type to search across all talks…",
     "searchLabel": "Search all transcripts",
     "nav": [
       {
@@ -78,6 +78,9 @@
           "start": "15:00",
           "description": "Closing"
         }
+      ],
+      "links": [
+        "https://example.com/related"
       ]
     },
     {
