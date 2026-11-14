@@ -1462,9 +1462,10 @@
 
         .video-link {
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             gap: 0.65rem;
             width: 100%;
+            max-width: 100%;
             margin: 0;
             padding: 0.7rem 0.65rem;
             border-radius: 8px;
@@ -1472,9 +1473,10 @@
             font-size: 0.95rem;
             line-height: 1.35;
             text-decoration: none;
-            word-break: break-all;
             box-sizing: border-box;
             min-height: 2.75rem;
+            min-width: 0;
+            overflow: hidden;
         }
 
         .video-link:hover {
@@ -1490,13 +1492,15 @@
 
         .video-link-icon {
             flex: 0 0 auto;
-            margin-top: 0.12rem;
             opacity: 0.85;
         }
 
         .video-link-text {
             flex: 1 1 auto;
             min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
 
         .video-modal-header-actions .chapters-toggle-btn,
@@ -7388,6 +7392,7 @@
                     a.target = '_blank';
                     a.rel = 'noopener noreferrer';
                     a.setAttribute('aria-label', `${link.label} (opens in a new tab)`);
+                    a.title = link.url;
                     a.insertAdjacentHTML('beforeend', LINK_EXTERNAL_ICON_SVG);
                     const text = document.createElement('span');
                     text.className = 'video-link-text';
