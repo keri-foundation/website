@@ -374,7 +374,7 @@ it in. Again, this is all just how we set
 76
 00:06:38,060 --> 00:06:43,420
 this one up. It doesn't mean you have to
-do it that way. We also use UV and Python
+do it that way. We also use uv and Python
 
 77
 00:06:43,420 --> 00:06:49,040
@@ -778,7 +778,7 @@ into the witness structures and MFA. So
 
 158
 00:14:52,880 --> 00:14:59,160
-you don't do pass keys right now.
+you don't do passkeys right now.
 You just do authenticator apps,
 
 159
@@ -1084,7 +1084,7 @@ through credential exchanges.
 
 220
 00:20:34,520 --> 00:20:42,060
-So you're able to load in schema
+So you're able to load in schemas
 and then apply for credentials and issue
 
 221
@@ -2041,7 +2041,7 @@ witness code. I'll show you. And those
 412
 00:39:36,840 --> 00:39:45,140
 schemas are again ACDCs? Schema for ACDCs.
-Schema for ACDCs. They're JSON schema.
+Schema for ACDCs. They're JSON Schema.
 
 413
 00:39:49,140 --> 00:39:50,080
@@ -2631,7 +2631,7 @@ go find that. So like they could publish
 
 531
 00:50:45,660 --> 00:50:51,420
-all of their credential schemas as .well-knowns
+all of their credential schemas as .well-known
 for example. And then anybody
 
 532
