@@ -468,7 +468,7 @@ the watopnet, is that just one per process?
 95
 00:08:37,800 --> 00:08:40,920
 So it's not like something that provisions
-many, it's just one per process. –Just one.
+many, it's just one per process. – Just one.
 
 96
 00:08:40,920 --> 00:08:48,600
@@ -649,7 +649,7 @@ This is actually doing what it's supposed
 
 132
 00:12:30,680 --> 00:12:36,800
-to do. And on this side. –Can I ask a
+to do. And on this side. – Can I ask a
 question? So this is Locksmith on
 
 133
@@ -673,7 +673,7 @@ ocean machines that you've got. And it's…
 
 137
 00:12:58,060 --> 00:13:02,880
-–No, not right now. This is my
+– No, not right now. This is my
 local Locksmith that's pointing to my local
 
 138
@@ -693,12 +693,12 @@ as the actual structure of it, it's set up
 
 141
 00:13:19,360 --> 00:13:22,800
-the same way. –Got it. So it's just using
+the same way. – Got it. So it's just using
 local URLs? Is that the only difference?
 
 142
 00:13:22,800 --> 00:13:26,740
-–This is all done locally
+– This is all done locally
 here. That's it. So it's a little bit
 
 143
@@ -728,8 +728,8 @@ watcher that got connected to the wallet.
 
 148
 00:13:52,280 --> 00:13:59,280
-–What is the QR code
-for? –You can scan it
+– What is the QR code
+for? – You can scan it
 
 149
 00:13:59,280 --> 00:14:03,160
@@ -743,12 +743,12 @@ can steal his local witnesses.
 
 151
 00:14:08,720 --> 00:14:14,300
-–Right. So at this point I'm going to
+– Right. So at this point I'm going to
 turn it over to you to give a little more.
 
 152
 00:14:14,600 --> 00:14:22,760
-–So because a controller controls
+– So because a controller controls
 their own witnesses, you can add MFA to
 
 153
@@ -789,7 +789,7 @@ app that you'd have to also pass in
 160
 00:15:02,780 --> 00:15:09,580
 addition to sending a signed key event
-to the witnesses. Right. –So any questions
+to the witnesses. Right. – So any questions
 
 161
 00:15:09,580 --> 00:15:13,000
@@ -817,7 +817,7 @@ would need to. Yeah, for sure.
 
 166
 00:15:36,760 --> 00:15:46,660
-–The reason he's using Circus is
+– The reason he's using Circus is
 so that you could run your witnesses
 
 167
@@ -903,16 +903,16 @@ in Kubernetes, by all means, at
 183
 00:17:03,280 --> 00:17:06,820
 your own risk, but you can use this
-bare metal if you want to. –I was tired of
+bare metal if you want to. – I was tired of
 
 184
 00:17:06,820 --> 00:17:10,880
 running on bare metal.
-–I know bare metal hurts.
+– I know bare metal hurts.
 
 185
 00:17:14,740 --> 00:17:20,620
-–It's true. All right. We'll give the mic
+– It's true. All right. We'll give the mic
 over to Evan for a minute to show a little
 
 186
@@ -922,7 +922,7 @@ more about that specifically.
 
 187
 00:17:35,940 --> 00:17:42,100
-–Locksmith as a whole, you can go back and
+– Locksmith as a whole, you can go back and
 you have these isolated vault environments
 
 188
@@ -1006,7 +1006,7 @@ folder of code in the repository, register
 204
 00:19:14,960 --> 00:19:20,820
 a new plugin here and then change your
-UI to your heart's content. –So I'd really
+UI to your heart's content. – So I'd really
 
 205
 00:19:20,820 --> 00:19:25,020
@@ -1025,7 +1025,7 @@ just the KERI Foundation. Just saying.
 
 208
 00:19:35,460 --> 00:19:42,920
-–On that note, so is the plugin just
+– On that note, so is the plugin just
 essentially discoverability for let's say
 
 209
@@ -1079,7 +1079,7 @@ of the code.
 
 219
 00:20:29,200 --> 00:20:31,980
-–We also are working
+– We also are working
 through credential exchanges.
 
 220
@@ -1095,17 +1095,17 @@ getting Sam's full IPEX exchanges, which
 222
 00:20:48,240 --> 00:20:54,160
 are issuance and presentation exchanges
-between two wallets working. –These are
+between two wallets working. – These are
 
 223
 00:20:54,160 --> 00:20:59,440
-version two. –Yeah, this is version two of
+version two. – Yeah, this is version two of
 KERI and ACDCs. – When you say credential,
 
 224
 00:20:59,600 --> 00:21:04,660
-that's ACDC. – Correct. – Right. – Yeah.
-So the IPEX exchanges will allow us to
+that's ACDC. – Correct. So the
+IPEX exchanges will allow us to
 
 225
 00:21:04,660 --> 00:21:10,780
@@ -1164,18 +1164,18 @@ exchange in place. So that's coming along
 
 236
 00:22:11,060 --> 00:22:20,200
-quick. Yeah, good question. So let's say
-let's say I'm a city and I want to set up
+quick. – So let's say I'm
+a city and I want to set up
 
 237
 00:22:20,200 --> 00:22:30,020
 a witness for the residents of my city.
-So I set up what I set up one, two, three,
+So would I set up one, two, three,
 
 238
 00:22:30,120 --> 00:22:34,560
 four of those maybe. Well, our
-recommendation is either it's either one,
+recommendation it's either one,
 
 239
 00:22:34,740 --> 00:22:39,840
@@ -1184,13 +1184,13 @@ one or it's four. So you can do a three of
 
 240
 00:22:39,840 --> 00:22:46,380
-four. Right. Okay. So, but ideally again,
-if I'm just checking my knowledge here. So
+four. – But ideally again, if I'm
+just checking my knowledge here.
 
 241
 00:22:46,380 --> 00:22:53,760
-like let's say my city sets up one
-witness. Okay. And then let's say my bank
+Let's say my city sets up one
+witness. And then let's say my bank
 
 242
 00:22:53,760 --> 00:23:01,320
@@ -1199,18 +1199,18 @@ my university sets up one witness. And so
 
 243
 00:23:01,320 --> 00:23:10,920
-then I now I make an identity and then I
-say, okay, I want my city and my bank and
+now I make an identity and then I say,
+okay, I want my city and my bank and
 
 244
 00:23:10,920 --> 00:23:17,820
-my university to then witness my logs. And
-that's a secure way. Am I
+my university to then witness my
+logs. And that's a secure way. Am I
 
 245
 00:23:17,820 --> 00:23:22,020
-saying the right stuff here? Each of
-those would be the currently the way it's
+saying the right stuff here? – Each of
+those would be currently the way it's
 
 246
 00:23:22,020 --> 00:23:26,220
@@ -1219,8 +1219,8 @@ plugin in the wallet and you could do a
 
 247
 00:23:26,220 --> 00:23:33,880
-configuration of one per each of those. So
-my bank and my university and my… Yeah. So
+configuration of one per each of those. –
+So my bank and my university and my… – So
 
 248
 00:23:33,880 --> 00:23:37,780
@@ -1234,13 +1234,13 @@ witnesses from four different plugins.
 
 250
 00:23:44,160 --> 00:23:50,660
-Okay. Different organizations. Yeah.
-Yeah. Yeah. Okay. And so, okay. Follow-up
+– Okay. Different
+organizations. Follow-up
 
 251
 00:23:50,660 --> 00:23:55,320
-question to that. Yeah. So if I'm again,
-I'm a city. So let's say I set up one
+question to that. So again,
+I'm a city. So I set up one
 
 252
 00:23:55,320 --> 00:24:02,940
@@ -1254,12 +1254,12 @@ those AIDs can use the one witness. I
 
 254
 00:24:08,460 --> 00:24:12,840
-don't have to like I don't have to
-instantiate another witness per AID. No,
+don't have to instantiate
+another witness per AID. – No,
 
 255
 00:24:12,840 --> 00:24:17,780
-no, no. Yeah, yeah. So I wouldn't
+– So I wouldn't
 recommend you do it that way. I would
 
 256
@@ -1275,17 +1275,17 @@ each witness for each person could have a
 258
 00:24:29,860 --> 00:24:37,580
 different identifier. But if you did one
-witness, it would work. So you can do one
+witness, it would work. – So you can do one
 
 259
 00:24:37,580 --> 00:24:41,660
 witness with multiple AIDs, but that's not
-recommended? Is that what you said? Well,
+recommended? Is that what you said? – Well…
 
 260
 00:24:42,380 --> 00:24:51,560
-it's just… Again, I'll have the other ones
-too. Yeah. But if my university does that
+– Again, I'll have the other ones too.
+Yeah. But if my university does that
 
 261
 00:24:51,560 --> 00:24:57,060
@@ -1294,13 +1294,13 @@ locations do that and I'm using all of
 
 262
 00:24:57,060 --> 00:25:06,240
-those, then it's okay for just the city to
-do that. Yeah, it'll work. It's okay. It's
+those, then it's okay for just the city
+to do that. – It'll work. It's okay. It's
 
 263
 00:25:06,240 --> 00:25:13,840
 not ideal. But you got to understand that
-I live in this ideal world. Right. So. And
+I live in this ideal world. Right. – And
 
 264
 00:25:13,840 --> 00:25:17,260
@@ -1329,8 +1329,8 @@ wallet. It would just spin up a separate
 
 269
 00:25:37,880 --> 00:25:45,260
-witness. All that… so that separate
-witness is really just an AID that says
+witness. So that separate witness
+is really just an AID that says
 
 270
 00:25:45,260 --> 00:25:50,720
@@ -1349,13 +1349,13 @@ endpoint where people send events to it
 
 273
 00:26:00,680 --> 00:26:07,040
-and it has one database and it's storing
-the stuff in the database. Sorry, Karla
+and it has one database and it's
+storing the stuff in the database. – […]
 
 274
 00:26:07,040 --> 00:26:16,880
-had a question. Oh, yeah. Have you made
-any load tests on this service? We haven't
+had a question. – Have you made
+any load tests on this service? – We haven't
 
 275
 00:26:16,880 --> 00:26:21,040
@@ -1375,12 +1375,12 @@ throw that much at it just yet. But it's a
 278
 00:26:28,780 --> 00:26:33,820
 fairly lightweight service though. So
-it's hard to imagine that it would… It's
+it's hard to imagine that it would… – It's
 
 279
 00:26:33,820 --> 00:26:39,620
 in my to-do list. I would share results
-whenever I get to it. For sure. Yeah,
+whenever I get to it. – For sure. – Yeah,
 
 280
 00:26:39,760 --> 00:26:43,360
@@ -1414,8 +1414,8 @@ ecosystem. And that was in order to be
 
 286
 00:27:19,060 --> 00:27:25,520
-about one of the considerations with scale.
-Yeah, we haven't put it through major
+able… one of the considerations with scale.
+– We haven't put it through major
 
 287
 00:27:25,520 --> 00:27:29,980
@@ -1425,12 +1425,12 @@ clear that you're talking about witness
 288
 00:27:29,980 --> 00:27:35,480
 services, right? Not witnesses
-themselves. Witnesses themselves.
+themselves. – Witnesses themselves.
 
 289
 00:27:40,020 --> 00:27:47,660
-So witness service of every two of them.
-My own. Take my own. My own advice. Each
+So witness service of every
+two of them. My own advice. Each
 
 290
 00:27:47,660 --> 00:27:54,900
@@ -1444,7 +1444,7 @@ five witnesses or more of that witness
 
 292
 00:28:00,480 --> 00:28:12,100
-service. Okay. So it's not a big code
+service. – So it's not a big code
 change to change the witness so that what
 
 293
@@ -1465,7 +1465,7 @@ witness service. Right? And so it creates
 296
 00:28:34,860 --> 00:28:41,660
 the AID for the wallet, not for the whole
-witness service. Now, would that be a
+witness service. – Now, would that be a
 
 297
 00:28:41,660 --> 00:28:47,860
@@ -1475,7 +1475,7 @@ is running on a custodial wallet from the
 298
 00:28:47,860 --> 00:28:53,320
 QVIs that offer that. Would they have to
-do that? No, for a custodial wallet, they
+do that? – No, for a custodial wallet, they
 
 299
 00:28:53,320 --> 00:29:00,960
@@ -1494,7 +1494,7 @@ identifier that you designate as the
 
 302
 00:29:13,280 --> 00:29:18,820
-witness for your KEL and when and you need
+witness for your KEL and you need
 a witness service and a witness service
 
 303
@@ -1564,12 +1564,12 @@ KEL that it witnesses. And so that's why
 
 316
 00:30:30,760 --> 00:30:35,560
-that's why it'd be better to have an
-AID per KEL than one AID shared across
+it'd be better to have an
+AID per KEL than one KEL shared across
 
 317
 00:30:35,560 --> 00:30:43,800
-multiple KELs. So on that note, is there
+multiple AIDs. – So on that note, is there
 anything with regard to provisioning or a
 
 318
@@ -1584,7 +1584,7 @@ plugin to discover already provisioned
 
 320
 00:30:55,180 --> 00:31:00,500
-infrastructure? No, we do provisioning.
+infrastructure? – No, we do provisioning.
 Like the way that the code that we got was
 
 321
