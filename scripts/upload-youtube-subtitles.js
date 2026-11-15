@@ -280,41 +280,6 @@ async function getPlaylistVideos(youtube, playlistId) {
   return videos;
 }
 
-// Find matching subtitle file for a video
-function normalizeTitle(value) {
-  return value
-    .normalize('NFKC')
-    .toLowerCase()
-    .replace(/[’`]/g, "'")
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-function simplifyTitle(value) {
-  return normalizeTitle(value)
-    .replace(/[^a-z0-9]+/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-function titlesMatch(left, right) {
-  const leftNormalized = normalizeTitle(left);
-  const rightNormalized = normalizeTitle(right);
-  const leftSimplified = simplifyTitle(left);
-  const rightSimplified = simplifyTitle(right);
-
-  if (!leftSimplified || !rightSimplified) return false;
-
-  return (
-    leftNormalized === rightNormalized ||
-    leftNormalized.includes(rightNormalized) ||
-    rightNormalized.includes(leftNormalized) ||
-    leftSimplified === rightSimplified ||
-    leftSimplified.includes(rightSimplified) ||
-    rightSimplified.includes(leftSimplified)
-  );
-}
-
 const LANGUAGE_TRACK_NAMES = {
   en: 'English',
   nl: 'Dutch',
@@ -349,17 +314,13 @@ function parseSubtitleFilename(fileName) {
   const base = path.basename(fileName).replace(/\.srt$/i, '');
   const match = base.match(LANGUAGE_SUFFIX_RE);
   if (!match) {
-    return { title: base, language: 'en' };
+    return { stem: base, language: 'en' };
   }
 
   return {
-    title: base.slice(0, -match[0].length),
+    stem: base.slice(0, -match[0].length),
     language: match[1].toLowerCase(),
   };
-}
-
-function subtitleTitleFromPath(subtitlePath) {
-  return parseSubtitleFilename(subtitlePath).title;
 }
 
 function resolveConferenceIndexPath(fixedDir) {
@@ -385,7 +346,7 @@ function loadIndexSubtitleEntries(indexPath, fixedDir) {
   const entries = [];
 
   for (const video of videos) {
-    if (!video?.title || !video?.subtitle) continue;
+    if (!video?.subtitle || !video?.youtubeId) continue;
 
     const subtitleRel = String(video.subtitle).replace(/\\/g, '/');
     const firstSegment = subtitleRel.includes('/')
@@ -394,87 +355,52 @@ function loadIndexSubtitleEntries(indexPath, fixedDir) {
 
     if (firstSegment !== mediaDirName) continue;
 
-    const subtitleFile = path.basename(subtitleRel);
-    const mediaTitle = parseSubtitleFilename(subtitleFile).title;
-    const pathTitle = video.path
-      ? parseSubtitleFilename(String(video.path).replace(/\.[^.]+$/, '.srt')).title
-      : mediaTitle;
-
     entries.push({
-      title: video.title,
-      youtubeId: video.youtubeId || null,
-      mediaTitle,
-      pathTitle,
-      subtitleFile,
+      title: video.title || video.youtubeId,
+      youtubeId: video.youtubeId,
+      subtitleFile: path.basename(subtitleRel),
     });
   }
 
   return entries;
 }
 
-function indexEntryMatchesVideoTitle(entry, videoTitle) {
-  return (
-    titlesMatch(videoTitle, entry.title) ||
-    titlesMatch(videoTitle, entry.mediaTitle) ||
-    (entry.pathTitle && titlesMatch(videoTitle, entry.pathTitle))
-  );
-}
-
 function findIndexEntryForPlaylistVideo(indexEntries, video) {
-  if (video?.videoId) {
-    const byId = indexEntries.find((entry) => entry.youtubeId && entry.youtubeId === video.videoId);
-    if (byId) return byId;
-  }
-
-  if (!video?.title) return null;
-
-  return (
-    indexEntries.find((entry) => !entry.youtubeId && indexEntryMatchesVideoTitle(entry, video.title)) ||
-    null
-  );
+  if (!video?.videoId) return null;
+  return indexEntries.find((entry) => entry.youtubeId === video.videoId) || null;
 }
 
 function loadSubtitleCatalog(fixedDir) {
   const indexPath = resolveConferenceIndexPath(fixedDir);
   if (!indexPath) {
-    console.log(`No conference index.json found near ${fixedDir}; falling back to filename matching.\n`);
-    return { indexPath: null, entries: [] };
+    throw new Error(
+      `No conference index.json found near ${fixedDir}. Add videos[].youtubeId entries there before uploading.`
+    );
   }
 
   const entries = loadIndexSubtitleEntries(indexPath, fixedDir);
-  console.log(`Matching subtitles via ${path.relative(process.cwd(), indexPath) || indexPath} (${entries.length} entries for ${path.basename(path.resolve(fixedDir))})\n`);
+  if (entries.length === 0) {
+    throw new Error(
+      `No videos with youtubeId + subtitle found in ${path.relative(process.cwd(), indexPath) || indexPath} for ${path.basename(path.resolve(fixedDir))}.`
+    );
+  }
+
+  console.log(
+    `Matching subtitles via youtubeId in ${path.relative(process.cwd(), indexPath) || indexPath} (${entries.length} entries for ${path.basename(path.resolve(fixedDir))})\n`
+  );
   return { indexPath, entries };
 }
 
 function collectLanguageTracksForPrimary(fixedDir, primaryFileName) {
-  const primaryStem = parseSubtitleFilename(primaryFileName).title;
+  const primaryStem = parseSubtitleFilename(primaryFileName).stem;
   const files = fs.readdirSync(fixedDir);
   const tracks = [];
 
   for (const file of files) {
     if (!file.toLowerCase().endsWith('.srt')) continue;
 
-    const { title, language } = parseSubtitleFilename(file);
-    if (title !== primaryStem) continue;
-
-    tracks.push({
-      path: path.join(fixedDir, file),
-      language,
-    });
-  }
-
-  return tracks.sort((a, b) => a.language.localeCompare(b.language));
-}
-
-function findSubtitleTracksByFilename(videoTitle, fixedDir) {
-  const files = fs.readdirSync(fixedDir);
-  const tracks = [];
-
-  for (const file of files) {
-    if (!file.toLowerCase().endsWith('.srt')) continue;
-
-    const { title, language } = parseSubtitleFilename(file);
-    if (!titlesMatch(videoTitle, title)) continue;
+    const { stem, language } = parseSubtitleFilename(file);
+    if (stem !== primaryStem) continue;
 
     tracks.push({
       path: path.join(fixedDir, file),
@@ -486,44 +412,27 @@ function findSubtitleTracksByFilename(videoTitle, fixedDir) {
 }
 
 function findSubtitleTracks(video, fixedDir, indexEntries = []) {
-  const playlistVideo = typeof video === 'string' ? { title: video } : video;
-  const videoTitle = playlistVideo?.title || '';
-
-  if (indexEntries.length > 0) {
-    const entry = findIndexEntryForPlaylistVideo(indexEntries, playlistVideo);
-    if (entry) {
-      return collectLanguageTracksForPrimary(fixedDir, entry.subtitleFile);
-    }
-  }
-
-  return findSubtitleTracksByFilename(videoTitle, fixedDir);
+  const entry = findIndexEntryForPlaylistVideo(indexEntries, video);
+  if (!entry) return [];
+  return collectLanguageTracksForPrimary(fixedDir, entry.subtitleFile);
 }
 
 function findIndexEntryForSubtitleFile(indexEntries, subtitlePath) {
   const fileName = path.basename(subtitlePath);
-  const fileStem = parseSubtitleFilename(fileName).title;
+  const fileStem = parseSubtitleFilename(fileName).stem;
 
   return (
     indexEntries.find((entry) => {
-      const entryStem = parseSubtitleFilename(entry.subtitleFile).title;
+      const entryStem = parseSubtitleFilename(entry.subtitleFile).stem;
       return entry.subtitleFile === fileName || entryStem === fileStem;
     }) || null
   );
 }
 
 function findVideoForSubtitleFile(videos, subtitlePath, indexEntries = []) {
-  if (indexEntries.length > 0) {
-    const entry = findIndexEntryForSubtitleFile(indexEntries, subtitlePath);
-    if (entry?.youtubeId) {
-      return videos.find((video) => video.videoId === entry.youtubeId) || null;
-    }
-    if (entry) {
-      return videos.find((video) => indexEntryMatchesVideoTitle(entry, video.title)) || null;
-    }
-  }
-
-  const subtitleTitle = subtitleTitleFromPath(subtitlePath);
-  return videos.find((video) => titlesMatch(video.title, subtitleTitle)) || null;
+  const entry = findIndexEntryForSubtitleFile(indexEntries, subtitlePath);
+  if (!entry) return null;
+  return videos.find((video) => video.videoId === entry.youtubeId) || null;
 }
 
 function findExistingCaptionTrack(captions, language, trackName) {
@@ -618,7 +527,7 @@ async function uploadSingleSubtitle(youtube, videos, fixedDir, singleFile, state
   const { language } = parseSubtitleFilename(subtitlePath);
   const matchingVideo = findVideoForSubtitleFile(videos, subtitlePath, indexEntries);
   if (!matchingVideo) {
-    throw new Error(`No matching video found in playlist for subtitle file: ${path.basename(subtitlePath)}`);
+    throw new Error(`No playlist video matches youtubeId for subtitle file: ${path.basename(subtitlePath)}`);
   }
 
   console.log(`Uploading single subtitle file: ${path.basename(subtitlePath)} [${language}]`);
@@ -665,7 +574,7 @@ async function uploadPlaylistSubtitles(youtube, videos, fixedDir, state, options
     const tracks = findSubtitleTracks(video, fixedDir, indexEntries);
 
     if (tracks.length === 0) {
-      console.log(`⊘ Skipped: ${video.title} (no matching .srt file)\n`);
+      console.log(`⊘ Skipped: ${video.title} (no videos[].youtubeId match in index.json)\n`);
       counts.skippedCount++;
       continue;
     }
@@ -726,7 +635,6 @@ export {
   findVideoForSubtitleFile,
   loadSubtitleCatalog,
   resolveConferenceIndexPath,
-  titlesMatch,
 };
 
 // Main upload function

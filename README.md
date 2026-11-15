@@ -528,7 +528,7 @@ bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=
 4. Also uploads sibling language tracks that share the same basename stem (`*.nl.srt`, `*.es.srt`, …)
 5. If a caption track for that language already exists, it updates it
 
-Entries without `youtubeId` still fall back to title and filename matching.
+Every uploadable gallery entry needs a `youtubeId`. Titles and filenames are not used for matching.
 
 **Language filename convention**
 
@@ -555,13 +555,13 @@ Entries without `youtubeId` still fall back to title and filename matching.
 - Use the full URL: `https://www.youtube.com/playlist?list=PLAYLIST_ID`
 - You can copy this from your browser address bar
 
-**"No matching .srt file"**
+**"No videos[].youtubeId match in index.json"**
 
-- Check that `videos[].youtubeId` in that conference’s `index.json` is the YouTube video id from the playlist
+- Add the YouTube video id as `videos[].youtubeId` in that conference’s `index.json`
 - Check that `videos[].subtitle` points at a real file under the directory you passed
 - For other languages, keep the same basename stem and add a language suffix, for example `2026-11-02-kent-bull.nl.srt`
 - Edited subtitle files live next to the videos, for example `confs/KERI/2026/apr/talks/*.srt`
-- A skip with `(no matching .srt file)` means nothing was uploaded for that video; unchanged-hash skips say `(subtitle unchanged)` instead. Pass `--force` to upload even when the local hash is unchanged
+- Unchanged-hash skips say `(subtitle unchanged)`. Pass `--force` to upload even when the local hash is unchanged
 
 **Authentication issues**
 
