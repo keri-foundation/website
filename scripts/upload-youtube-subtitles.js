@@ -392,13 +392,29 @@ function loadIndexSubtitleEntries(indexPath, fixedDir) {
 
     if (firstSegment !== mediaDirName) continue;
 
+    const subtitleFile = path.basename(subtitleRel);
+    const mediaTitle = parseSubtitleFilename(subtitleFile).title;
+    const pathTitle = video.path
+      ? parseSubtitleFilename(String(video.path).replace(/\.[^.]+$/, '.srt')).title
+      : mediaTitle;
+
     entries.push({
       title: video.title,
-      subtitleFile: path.basename(subtitleRel),
+      mediaTitle,
+      pathTitle,
+      subtitleFile,
     });
   }
 
   return entries;
+}
+
+function indexEntryMatchesVideoTitle(entry, videoTitle) {
+  return (
+    titlesMatch(videoTitle, entry.title) ||
+    titlesMatch(videoTitle, entry.mediaTitle) ||
+    (entry.pathTitle && titlesMatch(videoTitle, entry.pathTitle))
+  );
 }
 
 function loadSubtitleCatalog(fixedDir) {
@@ -454,9 +470,10 @@ function findSubtitleTracksByFilename(videoTitle, fixedDir) {
 
 function findSubtitleTracks(videoTitle, fixedDir, indexEntries = []) {
   if (indexEntries.length > 0) {
-    const entry = indexEntries.find((item) => titlesMatch(videoTitle, item.title));
-    if (!entry) return [];
-    return collectLanguageTracksForPrimary(fixedDir, entry.subtitleFile);
+    const entry = indexEntries.find((item) => indexEntryMatchesVideoTitle(item, videoTitle));
+    if (entry) {
+      return collectLanguageTracksForPrimary(fixedDir, entry.subtitleFile);
+    }
   }
 
   return findSubtitleTracksByFilename(videoTitle, fixedDir);
@@ -478,7 +495,9 @@ function findVideoForSubtitleFile(videos, subtitlePath, indexEntries = []) {
   if (indexEntries.length > 0) {
     const entry = findIndexEntryForSubtitleFile(indexEntries, subtitlePath);
     if (entry) {
-      return videos.find((video) => titlesMatch(video.title, entry.title)) || null;
+      return (
+        videos.find((video) => indexEntryMatchesVideoTitle(entry, video.title)) || null
+      );
     }
   }
 
