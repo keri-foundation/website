@@ -41,7 +41,7 @@ opposed to what we have now which is four
 9
 00:00:44,260 --> 00:00:50,260
 different hosts to spread out the
-services. So and there's the QR
+services. So there's the QR
 
 10
 00:00:50,260 --> 00:00:56,640
@@ -56,17 +56,17 @@ code and pull it up.
 12
 00:01:07,820 --> 00:01:14,380
 This is a little longer now than it was
-originally. So core concepts here is I
+originally. So core concepts here — I
 
 13
 00:01:14,380 --> 00:01:20,420
-mean obviously we've talked about
+mean, obviously we've talked about
 KERI being all about keys, key events. I'm
 
 14
 00:01:20,420 --> 00:01:23,900
 going to kind of jump through these fairly
-quickly till we get to the well let me
+quickly till we get to… well, let me
 
 15
 00:01:23,900 --> 00:01:31,980
@@ -129,22 +129,22 @@ movies.
 
 27
 00:02:25,729 --> 00:02:30,547
-This peticular guide is very opinionated,
+This particular guide is very opinionated,
 meaning there are many ways you
 
 28
 00:02:30,571 --> 00:02:33,188
 can go about doing this with those
-services, you go looking at the code
+services. You go looking at the code
 
 29
 00:02:33,233 --> 00:02:37,970
-itself. There are lot's of ways you
+itself. There are lots of ways you
 can go through this and deploy it.
 
 30
 00:02:37,994 --> 00:02:42,132
-But this peticular guide
+But this particular guide
 has an opinion of its own
 
 31
@@ -165,7 +165,7 @@ apps, just so you know.
 34
 00:02:51,923 --> 00:02:58,280
 It's all Python code. It's not as
-early anymore. This was several
+early-stage anymore. This was several
 
 35
 00:02:58,280 --> 00:03:04,460
@@ -462,8 +462,8 @@ tips for our…
 
 94
 00:08:30,280 --> 00:08:37,580
-So is the witopnet and
-the watopnet, is that just one per process?
+– So is the witopnet and
+the watopnet just one per process?
 
 95
 00:08:37,800 --> 00:08:40,920
@@ -1210,11 +1210,11 @@ logs. And that's a secure way. Am I
 245
 00:23:17,820 --> 00:23:22,020
 saying the right stuff here? – Each of
-those would be currently the way it's
+those would be, currently the way it's
 
 246
 00:23:22,020 --> 00:23:26,220
-built, each of those would be a separate
+built — each of those would be a separate
 plugin in the wallet and you could do a
 
 247
@@ -1565,16 +1565,16 @@ KEL that it witnesses. And so that's why
 316
 00:30:30,760 --> 00:30:35,560
 it'd be better to have an
-AID per KEL than one KEL shared across
+AID per KEL than one AID shared across
 
 317
 00:30:35,560 --> 00:30:43,800
-multiple AIDs. – So on that note, is there
+multiple KELs. – So on that note, is there
 anything with regard to provisioning or a
 
 318
 00:30:43,800 --> 00:30:50,900
-provisioner in kf-boot or is right now
+provisioner in kf-boot or right now
 is kf-boot more just an interface for
 
 319
@@ -1594,8 +1594,8 @@ create witnesses you had to hit like its
 
 322
 00:31:10,320 --> 00:31:16,940
-local endpoints. And so you have to put
-like a we had to put the boot service on
+local endpoints. And so you have to put…
+we had to put the boot service on
 
 323
 00:31:16,940 --> 00:31:24,400
@@ -1615,7 +1615,7 @@ can talk to the witopnet and the watopnet
 326
 00:31:35,140 --> 00:31:39,620
 to provision witnesses and watchers on
-demand. Correct. Do you have the you can
+demand. Correct. Do you have… you can
 
 327
 00:31:39,620 --> 00:31:42,620
@@ -1633,7 +1633,7 @@ Just gonna wing it.
 
 330
 00:32:05,000 --> 00:32:07,020
-Yeah. So like in here
+Yeah. So like in here…
 
 331
 00:32:15,900 --> 00:32:25,580
@@ -1647,13 +1647,13 @@ like boot server ports.
 
 333
 00:32:32,180 --> 00:32:37,880
-And then to like actually talk to your
-witnesses, there's a different port to
+And then to actually talk to your
+witnesses, there's a different port for
 
 334
 00:32:37,880 --> 00:32:46,480
 that. So you said securely provision these
-things. Is there a what's the relationship
+things. What's the relationship
 
 335
 00:32:46,480 --> 00:32:51,260
@@ -1667,7 +1667,7 @@ part of the plugin configuration? And is it
 
 337
 00:32:55,120 --> 00:33:00,540
-just okay? You probably want to use like
+just… okay? You probably want to use like
 CESR to talk to your things, but I don't
 
 338
@@ -1768,31 +1768,31 @@ Like I have a lot of cars and I want to
 357
 00:34:34,760 --> 00:34:40,380
 you know get financing or somebody and
-so that is that a situation where then I
+so is that a situation where then I
 
 358
 00:34:40,380 --> 00:34:48,320
-would I would need some watchers then
-to to watch people or is that not? Well
+would need some watchers then
+to watch people, or is that not? Well,
 
 359
 00:34:48,320 --> 00:34:53,400
-watchers are watching witnesses. Right
-so then yeah so then they would watch the
+watchers are watching witnesses. Right,
+so then yeah, they would watch the
 
 360
 00:34:53,400 --> 00:34:57,560
-witnesses of like I said those other
+witnesses of, like I said, those other
 ones like the university and the bank and
 
 361
 00:34:57,560 --> 00:35:02,060
-all that stuff. And if you want I mean
+all that stuff. And if you want — I mean,
 if you want the KERI ecosystem as it's
 
 362
 00:35:02,060 --> 00:35:06,640
-designed. And you're always going to want
+designed, you're always going to want
 at least a watcher watching. Yeah. But my
 
 363
@@ -1808,11 +1808,11 @@ it's my infrastructure as a controller and
 365
 00:35:21,420 --> 00:35:30,000
 then a watcher is more of a validator's
-concern. Like I want the watchers so that
+concern. Like I want the watchers so that…
 
 366
 00:35:30,000 --> 00:35:36,460
-I can. Is that true? Yes. That's one
+Is that true? – Yes. That's one
 exception. Every controller should have a
 
 367
@@ -1867,7 +1867,7 @@ want to have something watching your
 
 377
 00:36:23,900 --> 00:36:28,020
-infrastructure. And the reason is is that
+infrastructure. And the reason is that
 the only way you can tell whether your
 
 378
@@ -1988,12 +1988,12 @@ my customers or whatever. – Yeah. – Yeah.
 401
 00:38:23,700 --> 00:38:29,540
 Okay. I think that's pretty much it. – I
-don't think… You can just do the demo, right?
+don't think… Can you just do the demo, right?
 
 402
 00:38:30,160 --> 00:38:36,740
 I mean, is there anything else that people
-want to show? We're going to wrap. Can you
+want to show? We're going to wrap up. Can you
 
 403
 00:38:36,740 --> 00:38:37,740
@@ -2001,12 +2001,12 @@ do a credential issue?
 
 404
 00:38:40,440 --> 00:38:44,160
-I don't have to get someone to the normal
-ones. Probably not from my machine. I
+I don't have… To get someone to do the normal
+ones — probably not from my machine. I
 
 405
 00:38:44,160 --> 00:38:49,740
-don't have the or you can go get those
+don't have them. Or you can go get those
 schemas. Yes, they're built in, aren't
 
 406
@@ -2031,7 +2031,7 @@ schemas, load it in.
 
 410
 00:39:18,460 --> 00:39:24,300
-And then
+And then…
 
 411
 00:39:30,240 --> 00:39:36,840
@@ -2098,7 +2098,7 @@ service, but we haven't quite finished
 
 424
 00:41:00,080 --> 00:41:03,780
-with the implementation on that thing. Yeah,
+with the implementation on that. Yeah,
 so it might not work because we might not
 
 425
@@ -2147,7 +2147,7 @@ mailbox. You've done it locally, right?
 
 434
 00:41:57,220 --> 00:41:59,980
-Yeah. That's why I don't know what
+Yeah. That's why — I don't know what
 you're saying. – Yeah, I don't know what's
 
 435
@@ -2187,17 +2187,17 @@ the mailbox and they would show up here.
 
 442
 00:42:41,120 --> 00:42:47,100
-So the problem is that do they need
-to these two vaults I guess with AIDs in
+So the problem is: do they need to…
+these two vaults, I guess with AIDs in
 
 443
 00:42:47,100 --> 00:42:53,160
-there they need to OOBI each other or
-something? Is that in that little… We need
+there, they need to OOBI each other or
+something? Is that… We need
 
 444
 00:42:53,160 --> 00:43:00,820
-to get their mailboxes to configure to
+to get their mailboxes configured to
 each other to send like messages between
 
 445
@@ -2258,7 +2258,7 @@ as a liquor store as an individual. So my
 456
 00:44:03,860 --> 00:44:08,860
 question is on the original issuance of
-the credentials. You said that that was
+the credentials. You said that was
 
 457
 00:44:08,860 --> 00:44:15,460
