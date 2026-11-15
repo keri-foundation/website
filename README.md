@@ -524,11 +524,11 @@ bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=
 
 1. Fetches all videos from the YouTube playlist
 2. Loads the conference `index.json` next to the media folder you passed (for example `confs/KERI/2026/nov/index.json` for `…/nov/talks`)
-3. Matches each YouTube title to a gallery entry via `videos[].title` and/or the media basename in `videos[].subtitle` / `videos[].path`, then uploads that entry’s subtitle file
+3. Matches each playlist video id to `videos[].youtubeId`, then uploads that entry’s subtitle file
 4. Also uploads sibling language tracks that share the same basename stem (`*.nl.srt`, `*.es.srt`, …)
 5. If a caption track for that language already exists, it updates it
 
-If no `index.json` entry matches, the uploader falls back to matching the YouTube title against the `.srt` filename stem.
+Entries without `youtubeId` still fall back to title and filename matching.
 
 **Language filename convention**
 
@@ -557,11 +557,11 @@ If no `index.json` entry matches, the uploader falls back to matching the YouTub
 
 **"No matching .srt file"**
 
-- Check that the YouTube title matches either the gallery `videos[].title` or the basename of `videos[].subtitle` / `videos[].path` in that conference’s `index.json`
+- Check that `videos[].youtubeId` in that conference’s `index.json` is the YouTube video id from the playlist
 - Check that `videos[].subtitle` points at a real file under the directory you passed
 - For other languages, keep the same basename stem and add a language suffix, for example `2026-11-02-kent-bull.nl.srt`
 - Edited subtitle files live next to the videos, for example `confs/KERI/2026/apr/talks/*.srt`
-- A skip with `(no matching .srt file)` means nothing was uploaded for that video; unchanged-hash skips say `(subtitle unchanged)` instead
+- A skip with `(no matching .srt file)` means nothing was uploaded for that video; unchanged-hash skips say `(subtitle unchanged)` instead. Pass `--force` to upload even when the local hash is unchanged
 
 **Authentication issues**
 
