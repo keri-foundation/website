@@ -139,8 +139,8 @@ services, you go looking at the code
 
 29
 00:02:33,233 --> 00:02:37,970
-itself. So there are lot's of ways
-you can go through this and deploy it.
+itself. There are lot's of ways you
+can go through this and deploy it.
 
 30
 00:02:37,994 --> 00:02:42,132
@@ -148,13 +148,14 @@ But this peticular guide
 has an opinion of its own
 
 31
-00:02:42,156 --> 00:02:47,260
-about how we set it up. It
+00:02:42,156 --> 00:02:46,694
+about how we've set it up. So it
 doesn't mean this is the right way.
 
 32
-00:02:47,284 --> 00:02:49,090
-It is a way to get up and running.
+00:02:46,718 --> 00:02:49,090
+It just means it is a way
+to get up and running.
 
 33
 00:02:49,114 --> 00:02:51,899
@@ -214,12 +215,12 @@ should do or you have to do, but maybe
 44
 00:03:42,100 --> 00:03:46,640
 that's what it would look like. That is
-not what this looks like. Yeah, yeah, Kent.
+not what this looks like. Yeah, Kent.
 
 45
 00:03:46,720 --> 00:03:52,580
-So is it intentional to have only one kf-boot
-on each data center? It doesn't really…
+– So is it intentional to have only one kf-boot
+on each data center? – It doesn't really…
 
 46
 00:03:52,580 --> 00:03:57,940
@@ -228,8 +229,8 @@ and it doesn't really matter. Actually,
 
 47
 00:03:58,020 --> 00:04:01,800
-there's two on both. Right. So you
-can run it to your advantage. You can make it as
+there's two on both. So you
+can run it […]. You can make it as
 
 48
 00:04:01,800 --> 00:04:07,260
@@ -248,8 +249,8 @@ want to at least spread it out across zones
 
 51
 00:04:15,880 --> 00:04:19,520
-or something like that. So, can I
-say something? Yeah. Yeah. In a full
+or something like that. – So,
+can I say something? In a full
 
 52
 00:04:19,520 --> 00:04:26,280
@@ -269,11 +270,11 @@ all of these services have to sit behind a
 55
 00:04:34,460 --> 00:04:39,400
 load balancer, otherwise somebody could
-just DDoS them out of existence. For sure.
+just DDoS them out of existence. – For sure
 
 56
 00:04:39,680 --> 00:04:45,720
-Yeah. And so what the plugin architecture
+And so what the plugin architecture
 of the wallet allows is that you could
 
 57
@@ -289,12 +290,12 @@ particular domain. But that particular one
 59
 00:04:55,940 --> 00:05:00,560
 might be two different data centers
-that's spread out across their entire
+that's spread out across… their entire
 
 60
 00:05:00,560 --> 00:05:04,260
-infrastructure is spread out across
-two different entirely different cloud
+infrastructure is spread out
+across two entirely different cloud
 
 61
 00:05:04,260 --> 00:05:07,920
@@ -324,11 +325,11 @@ requirements for this as it is right now.
 66
 00:05:30,480 --> 00:05:37,900
 Ubuntu 24.04 is what we built it on. I
-think that's the latest LTS or maybe 24
+think that's the latest LTS or maybe 24.10
 
 67
 00:05:37,900 --> 00:05:46,640
-.10. Yeah, 24.04, I think. libsodium, which
+Yeah, 24.04, I think. libsodium, which
 is the crypto library. pysodium, which
 
 68
