@@ -120,7 +120,7 @@ me to describe it? – No, no, no. Absolutely
 
 25
 00:02:06,660 --> 00:02:11,180
-call it KERI 2. I just I also spent a
+call it KERI 2. I just… I also spent a
 bunch of time trying to figure that out.
 
 26
@@ -828,7 +828,7 @@ I see credential verifier checks issuer
 167
 00:14:01,360 --> 00:14:06,720
 proof and part of what I wanted to say
-up front as the as the TL;DRs a big part of
+up front as the TL;DR — a big part of
 
 168
 00:14:06,720 --> 00:14:11,280
@@ -1682,7 +1682,7 @@ that you've got on your web server.
 
 338
 00:28:06,400 --> 00:28:11,720
-And if they if they're the same
+And if they're the same
 document, you verify. You're good. So we
 
 339
@@ -2310,7 +2310,7 @@ a reason to have… I never came up with a
 
 464
 00:39:04,920 --> 00:39:09,520
-reason to have to have some generic
+reason to have some generic
 semantic thing for keys because in
 
 465
@@ -2655,7 +2655,7 @@ approved matter doesn't matter. It's just
 
 533
 00:45:03,360 --> 00:45:09,020
-whoever it is that's that's
+whoever it is that's
 working under the aegis of DIF has
 
 534

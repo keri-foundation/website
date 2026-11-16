@@ -1167,8 +1167,8 @@ the multisig is really hard to do. Well, I
 
 235
 00:20:27,400 --> 00:20:33,120
-can have two of three. Now they can they
-can phish one set of keys, but they got to
+can have two of three. Now they can
+phish one set of keys, but they got to
 
 236
 00:20:33,120 --> 00:20:39,400
@@ -1533,7 +1533,7 @@ digital ID for you. You have to use paper.
 308
 00:27:17,100 --> 00:27:22,140
 If you decide not to create it, there is
-no there is no identifier. There is no way
+no identifier. There is no way
 
 309
 00:27:22,140 --> 00:27:28,440
@@ -2106,7 +2106,7 @@ guardian instantaneously and say, no, no,
 423
 00:37:55,160 --> 00:37:59,460
 you're not guardian anymore. You can't
-check the kid out of school. So, so it's,
+check the kid out of school. So it's,
 
 424
 00:37:59,580 --> 00:38:05,180
@@ -2150,8 +2150,8 @@ two weeks, then they, then they are going
 
 432
 00:38:43,400 --> 00:38:50,020
-to say that. That's the plan. Okay. So,
-so I have to be careful because it's very
+to say that. That's the plan. Okay. So
+I have to be careful because it's very
 
 433
 00:38:50,020 --> 00:38:57,840
@@ -2175,7 +2175,7 @@ AI delegation? – Well, yes.
 
 437
 00:39:19,340 --> 00:39:23,160
-So, So, all
+So, all
 
 438
 00:39:23,160 --> 00:39:23,440
@@ -2319,7 +2319,7 @@ out. Like are you using MCP? You know,
 466
 00:42:13,920 --> 00:42:18,360
 what are the APIs look like? What are
-the details? Are you are you bridging from
+the details? Are you bridging from
 
 467
 00:42:18,360 --> 00:42:26,940
@@ -2790,7 +2790,7 @@ controversial. People don't think that
 
 561
 00:51:03,660 --> 00:51:09,620
-privacy requires accountability. So So
+privacy requires accountability. So
 think about it. Second parties to repeated
 
 562

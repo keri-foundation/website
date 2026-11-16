@@ -1701,7 +1701,7 @@ about. But there are lots of things like
 
 343
 00:32:37,340 --> 00:32:46,920
-that that do move across domains and a
+that do move across domains and a
 lot of them are identity-based. So you can
 
 344
@@ -2035,7 +2035,7 @@ watcher and all watchers do is detect
 
 410
 00:38:47,140 --> 00:38:50,540
-duplicity. So, so they don't, they don't
+duplicity. So they don't
 have anything else that they have to do.
 
 411

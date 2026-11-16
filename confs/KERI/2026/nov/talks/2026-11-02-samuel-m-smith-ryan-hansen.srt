@@ -384,7 +384,7 @@ than just trust me on telling you this my
 78
 00:08:04,000 --> 00:08:08,780
 identity. This is with all these
-mechanisms you can you can actually verify
+mechanisms you can actually verify
 
 79
 00:08:08,780 --> 00:08:13,000
@@ -3104,7 +3104,7 @@ to rotate. With a witness pool, you know
 625
 00:57:59,160 --> 00:58:02,360
 when to rotate. But the witness pool
-doesn't tell you when to when to rotate
+doesn't tell you when to rotate
 
 626
 00:58:02,360 --> 00:58:06,320
