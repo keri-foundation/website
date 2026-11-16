@@ -20,8 +20,8 @@ then, but I'll kind of update on the fly
 
 5
 00:00:24,940 --> 00:00:31,820
-as we go through this to where we are now.
-We already showed you these
+as we go through this to where we
+are now. We already showed you these
 
 6
 00:00:31,820 --> 00:00:35,440
@@ -40,8 +40,8 @@ opposed to what we have now which is four
 
 9
 00:00:44,260 --> 00:00:50,260
-different hosts to spread out the
-services. So there's the QR
+different hosts to spread out
+the services. So there's the QR
 
 10
 00:00:50,260 --> 00:00:56,640
@@ -65,13 +65,13 @@ KERI being all about keys, key events. I'm
 
 14
 00:01:20,420 --> 00:01:23,900
-going to kind of jump through these fairly
-quickly till we get to… well, let me
+going to kind of jump through these
+fairly quickly till we get to… well, let me
 
 15
 00:01:23,900 --> 00:01:31,980
-just jump to the more important stuff.
-Okay, so as Sam showed this one
+just jump to the more important
+stuff. Okay, so as Sam showed this one
 
 16
 00:01:31,980 --> 00:01:37,540
@@ -279,8 +279,8 @@ of the wallet allows is that you could
 
 57
 00:04:45,720 --> 00:04:50,140
-have like let's say a kerify.net, which
-I don't know who owns that? It might be
+have like let's say a kerify.net, which I
+don't know who owns that? It might be
 
 58
 00:04:50,140 --> 00:04:55,940
@@ -314,8 +314,8 @@ make a really solid KERI ecosystem that is
 
 64
 00:05:17,600 --> 00:05:20,880
-very resilient and powerful. But that's
-not really what we're solving in the
+very resilient and powerful. But
+that's not really what we're solving in the
 
 65
 00:05:20,880 --> 00:05:29,560
@@ -462,8 +462,8 @@ tips for our…
 
 94
 00:08:30,280 --> 00:08:37,580
-– So is the witopnet and
-the watopnet just one per process?
+– So is the witopnet and the
+watopnet just one per process?
 
 95
 00:08:37,800 --> 00:08:40,920
@@ -477,8 +477,8 @@ like one watcher, for example,
 
 97
 00:08:48,740 --> 00:08:53,963
-or one witness, for example. So as many
-of those as you run would be…
+or one witness, for example. So as
+many of those as you run would be…
 
 98
 00:08:53,963 --> 00:08:56,980
@@ -502,13 +502,12 @@ is mostly just to kind of give you some
 
 102
 00:09:13,640 --> 00:09:17,380
-view of it in
-this setting here.
+view of it in this setting here.
 
 103
 00:09:21,800 --> 00:09:27,280
-Just one of the environment
-variables to…
+Just one of the
+environment variables to…
 
 104
 00:09:31,300 --> 00:09:35,540
@@ -545,8 +544,8 @@ end up with four
 
 111
 00:10:25,700 --> 00:10:33,700
-witness processes, watchers, and a kf-boot.
-And right now I have this running.
+witness processes, watchers, and a
+kf-boot. And right now I have this running.
 
 112
 00:10:33,900 --> 00:10:38,560
@@ -649,8 +648,8 @@ This is actually doing what it's supposed
 
 132
 00:12:30,680 --> 00:12:36,800
-to do. And on this side. – Can I ask a
-question? So this is Locksmith on
+to do. And on this side. – Can I ask
+a question? So this is Locksmith on
 
 133
 00:12:36,800 --> 00:12:37,880
@@ -663,8 +662,8 @@ at and I want to make sure I'm
 
 135
 00:12:49,560 --> 00:12:53,040
-understanding what I'm seeing here.
-This Locksmith you're running on
+understanding what I'm seeing
+here. This Locksmith you're running on
 
 136
 00:12:53,040 --> 00:12:58,060
@@ -673,8 +672,8 @@ ocean machines that you've got. And it's…
 
 137
 00:12:58,060 --> 00:13:02,880
-– No, not right now. This is my
-local Locksmith that's pointing to my local
+– No, not right now. This is my local
+Locksmith that's pointing to my local
 
 138
 00:13:02,880 --> 00:13:10,160
@@ -708,8 +707,8 @@ code, it's all running the same code. It's
 
 144
 00:13:30,200 --> 00:13:35,960
-deployed exactly the same way. I'm just
-running it on my local host here. Any
+deployed exactly the same way. I'm
+just running it on my local host here. Any
 
 145
 00:13:35,960 --> 00:13:39,940
@@ -788,8 +787,8 @@ app that you'd have to also pass in
 
 160
 00:15:02,780 --> 00:15:09,580
-addition to sending a signed key event
-to the witnesses. Right. – So any questions
+addition to sending a signed key event to
+the witnesses. Right. – So any questions
 
 161
 00:15:09,580 --> 00:15:13,000
@@ -917,8 +916,8 @@ over to Evan for a minute to show a little
 
 186
 00:17:20,620 --> 00:17:24,020
-more of Locksmith. Maybe talk a little
-more about that specifically.
+more of Locksmith. Maybe talk a
+little more about that specifically.
 
 187
 00:17:35,940 --> 00:17:42,100
@@ -1035,8 +1034,8 @@ I want to connect my Locksmith to my
 
 210
 00:19:47,540 --> 00:19:52,500
-testnet. Would I then write a plugin
-so the Locksmith knows where to look or
+testnet. Would I then write a plugin so
+the Locksmith knows where to look or
 
 211
 00:19:52,500 --> 00:19:56,600
@@ -1149,13 +1148,13 @@ one remaining edge operator that has to be
 
 233
 00:21:56,820 --> 00:22:00,700
-implemented, which we have an actual
-PR for which hasn't been merged yet, but it's
+implemented, which we have an actual PR
+for which hasn't been merged yet, but it's
 
 234
 00:22:00,700 --> 00:22:06,800
-very close. So we are well on our
-way and should be ready to go for the SEDI
+very close. So we are well on our way
+and should be ready to go for the SEDI
 
 235
 00:22:06,800 --> 00:22:11,060
@@ -1169,8 +1168,8 @@ a city and I want to set up
 
 237
 00:22:20,200 --> 00:22:30,020
-a witness for the residents of my city.
-So would I set up one, two, three,
+a witness for the residents of my
+city. So would I set up one, two, three,
 
 238
 00:22:30,120 --> 00:22:34,560
@@ -1249,8 +1248,8 @@ can support all of my residents. So I can
 
 253
 00:24:02,940 --> 00:24:08,460
-have… there'll be multiple AIDs and all
-those AIDs can use the one witness. I
+have… there'll be multiple AIDs and
+all those AIDs can use the one witness. I
 
 254
 00:24:08,460 --> 00:24:12,840
@@ -1259,8 +1258,8 @@ another witness per AID. – No,
 
 255
 00:24:12,840 --> 00:24:17,780
-– So I wouldn't
-recommend you do it that way. I would
+– So I wouldn't recommend
+you do it that way. I would
 
 256
 00:24:17,780 --> 00:24:24,720
@@ -1319,8 +1318,8 @@ own witness within the witness service.
 
 267
 00:25:27,540 --> 00:25:32,400
-saying is that your bank would
-set up a witness service, but it wouldn't
+saying is that your bank would set
+up a witness service, but it wouldn't
 
 268
 00:25:32,400 --> 00:25:37,880
@@ -1354,8 +1353,8 @@ storing the stuff in the database. – […]
 
 274
 00:26:07,040 --> 00:26:16,880
-had a question. – Have you made
-any load tests on this service? – We haven't
+had a question. – Have you made any
+load tests on this service? – We haven't
 
 275
 00:26:16,880 --> 00:26:21,040
@@ -1414,8 +1413,8 @@ ecosystem. And that was in order to be
 
 286
 00:27:19,060 --> 00:27:25,520
-able… one of the considerations with scale.
-– We haven't put it through major
+able… one of the considerations with
+scale. – We haven't put it through major
 
 287
 00:27:25,520 --> 00:27:29,980
@@ -1454,8 +1453,8 @@ its own witness service. So it's the same
 
 294
 00:28:17,820 --> 00:28:26,140
-endpoints and stuff like that. You're just
-allowing it to create AIDs on the
+endpoints and stuff like that. You're
+just allowing it to create AIDs on the
 
 295
 00:28:26,140 --> 00:28:34,860
@@ -1479,8 +1478,8 @@ do that? – No, for a custodial wallet, they
 
 299
 00:28:53,320 --> 00:29:00,960
-may want to do it a different way. Right?
-The thing is, it's really… we're
+may want to do it a different way.
+Right? The thing is, it's really… we're
 
 300
 00:29:00,960 --> 00:29:07,820
@@ -1494,8 +1493,8 @@ identifier that you designate as the
 
 302
 00:29:13,280 --> 00:29:18,820
-witness for your KEL and you need
-a witness service and a witness service
+witness for your KEL and you need a
+witness service and a witness service
 
 303
 00:29:18,820 --> 00:29:26,820
@@ -1564,8 +1563,8 @@ KEL that it witnesses. And so that's why
 
 316
 00:30:30,760 --> 00:30:35,560
-it'd be better to have an
-AID per KEL than one AID shared across
+it'd be better to have an AID per
+KEL than one AID shared across
 
 317
 00:30:35,560 --> 00:30:43,800
@@ -1594,8 +1593,8 @@ create witnesses you had to hit like its
 
 322
 00:31:10,320 --> 00:31:16,940
-local endpoints. And so you have to put…
-we had to put the boot service on
+local endpoints. And so you have to
+put… we had to put the boot service on
 
 323
 00:31:16,940 --> 00:31:24,400
@@ -1639,8 +1638,8 @@ witnesses, there's a different port for
 
 331
 00:32:37,880 --> 00:32:46,480
-that. – So you said securely provision these
-things. What's the relationship
+that. – So you said securely provision
+these things. What's the relationship
 
 332
 00:32:46,480 --> 00:32:51,260
@@ -1669,8 +1668,8 @@ same infrastructure where it's allowed to
 
 337
 00:33:11,060 --> 00:33:18,100
-provision through these boot ports. Okay,
-I gotcha. – That's the config
+provision through these boot ports.
+Okay, I gotcha. – That's the config
 
 338
 00:33:18,100 --> 00:33:22,580
@@ -1709,8 +1708,8 @@ Foundation is that there's like a boot
 
 345
 00:33:49,180 --> 00:33:54,700
-port where you can boot one up and then
-it's just there to use for Locksmith?
+port where you can boot one up and
+then it's just there to use for Locksmith?
 
 346
 00:33:54,700 --> 00:33:58,400
@@ -1754,18 +1753,18 @@ Like I have a lot of cars and I want to
 
 354
 00:34:34,760 --> 00:34:40,380
-you know get financing or somebody and
-so is that a situation where then I
+you know get financing or somebody
+and so is that a situation where then I
 
 355
 00:34:40,380 --> 00:34:48,320
-would need some watchers then
-to watch people, or is that not? – Well,
+would need some watchers then to
+watch people, or is that not? – Well,
 
 356
 00:34:48,320 --> 00:34:53,400
-watchers are watching witnesses. – Right,
-so then they would watch the
+watchers are watching witnesses. –
+Right, so then they would watch the
 
 357
 00:34:53,400 --> 00:34:57,560
@@ -1915,7 +1914,7 @@ then it's not highly available, you know,
 386
 00:37:21,180 --> 00:37:28,140
 so that's a trade-off as well. Does that
-make sense? Yes. And then to round out the
+make sense? – Yes. And then to round out the
 
 387
 00:37:28,140 --> 00:37:33,800
@@ -1924,18 +1923,18 @@ reason why I might want to watch other
 
 388
 00:37:33,800 --> 00:37:38,540
-people's witnesses? To detect duplicity,
-whether they've been compromised. So like
+people's witnesses? – To detect duplicity,
+whether they've been compromised. – So like
 
 389
 00:37:38,540 --> 00:37:43,060
-in a business sense, right? Like if that's
-where if I'm dealing with somebody and I
+in a business sense, right? Like
+if I'm dealing with somebody and I
 
 390
 00:37:43,060 --> 00:37:47,060
 want to make sure that this person I'm
-dealing with is reputable. Yeah, because
+dealing with is reputable. – Yeah, because
 
 391
 00:37:47,060 --> 00:37:51,480
@@ -1949,8 +1948,8 @@ look like duplicity, which is a good thing
 
 393
 00:37:55,440 --> 00:38:00,100
-because if you see duplicity, you know,
-don't trust. Because it doesn't
+because if you see duplicity, you
+know, don't trust. Because it doesn't
 
 394
 00:38:00,100 --> 00:38:03,800
@@ -1969,744 +1968,698 @@ could choose to watch those witnesses of
 
 397
 00:38:14,680 --> 00:38:23,400
-my customers or whatever. – Yeah. – Yeah.
-– Okay. Thank you. – Yeah, we're good.
+my customers or whatever.
+– Okay. Thank you.
 
 398
-00:38:23,700 --> 00:38:29,540
-Okay. I think that's pretty much it. – I
-don't think… Can you just do the demo, right?
+00:38:49,740 --> 00:38:58,580
+Oh, yeah. So Sam has published a
+draft of some of the SEDI schemas in a
 
 399
-00:38:30,160 --> 00:38:36,740
-I mean, is there anything else that people
-want to show? We're going to wrap up. Can you
-
-400
-00:38:36,740 --> 00:38:37,740
-do a credential issue?
-
-401
-00:38:40,440 --> 00:38:44,160
-I don't have… To get someone to do the normal
-ones — probably not from my machine. I
-
-402
-00:38:44,160 --> 00:38:49,740
-don't have them. Or you can go get those
-schemas. Yes, they're built in, aren't
-
-403
-00:38:49,740 --> 00:38:58,580
-they? Oh, yeah. So Sam has published
-a draft of some of the SEDI schemas in a
-
-404
 00:38:58,580 --> 00:39:03,820
 repository called SEDI in the KERI
 Foundation GitHub. And so I grabbed them
 
-405
+400
 00:39:03,820 --> 00:39:10,600
 and built them in here so that you don't
 have to think about it. And so you can
 
-406
-00:39:10,600 --> 00:39:15,440
+401
+00:39:10,600 --> 00:39:15,985
 grab one of these
 schemas, load it in.
 
-407
-00:39:18,460 --> 00:39:24,300
+402
+00:39:23,979 --> 00:39:25,920
 And then…
 
-408
+403
 00:39:30,240 --> 00:39:36,840
 I might have needed to grab the previous
-witness code. I'll show you. And those
+witness code. I'll show you. – And those
 
-409
+404
 00:39:36,840 --> 00:39:45,140
-schemas are again ACDCs? Schema for ACDCs.
-Schema for ACDCs. They're JSON Schema.
+schemas are again ACDCs? – Schema
+for ACDCs. They're JSON Schema.
 
-410
-00:39:49,140 --> 00:39:50,080
-Oh, wait.
-
-411
+405
 00:39:58,780 --> 00:40:05,080
-Let's see. I'm going to do an OOBI here. I
+I'm going to do an OOBI here. I
 just exported this local identifier. Let's
 
-412
+406
 00:40:05,080 --> 00:40:07,860
 see if I can import
 it into this one.
 
-413
+407
 00:40:12,460 --> 00:40:17,720
-And why are you switching vaults? Just
+– And why are you switching vaults? – Just
 to have two vaults talk to each other to
 
-414
+408
 00:40:17,720 --> 00:40:21,260
-prove that you know because the two vaults
+prove that you know… because the two vaults
 are isolated key environments. So it'd be
 
-415
+409
 00:40:21,260 --> 00:40:22,780
 the same as if I just
 had two wallets running.
 
-416
+410
 00:40:26,240 --> 00:40:32,960
-So let's see.
+[…]
 
-417
+411
 00:40:33,260 --> 00:40:40,640
-I think I need to also take this one, put
-it in the other vault. Oh, that shouldn't.
+I think I need to also take
+this one, put it in the other vault.
 
-418
-00:40:46,840 --> 00:40:53,520
-And so is this going
-through a mailbox or is it all or
+412
+00:40:46,840 --> 00:40:54,824
+– And so is this going through a mailbox
+or is there no mailbox involved here yet?
 
-419
-00:40:53,520 --> 00:40:56,280
-is there no mailbox involved here
-yet? Well, that's a good question. Did you
+413
+00:40:54,848 --> 00:40:56,280
+– Well, that's a good
+question. – Did you
 
-420
+414
 00:40:56,280 --> 00:41:00,080
 connect it up yet? We have the mailbox
 service, but we haven't quite finished
 
-421
+415
 00:41:00,080 --> 00:41:03,780
-with the implementation on that. Yeah,
+with the implementation on that. – Yeah,
 so it might not work because we might not
 
-422
+416
 00:41:03,780 --> 00:41:04,920
 have the mailbox
-service running. Okay.
+service running.
 
-423
-00:41:08,080 --> 00:41:18,680
+417
+00:41:07,796 --> 00:41:11,218
 So I can apply for a
-credential from… All
+credential from…
 
-424
+418
 00:41:18,680 --> 00:41:19,960
-right, the contact
+The contact
 isn't showing up.
 
-425
+419
 00:41:23,560 --> 00:41:28,740
-Yeah, you'd be able to apply for a
+You'd be able to apply for a
 credential from one of your remote
 
-426
+420
 00:41:28,740 --> 00:41:29,360
 identifiers,
 
-427
-00:41:33,660 --> 00:41:37,280
+421
+00:41:32,752 --> 00:41:37,280
 and from there you'd be
 able to do an exchange.
 
-428
-00:41:40,040 --> 00:41:41,740
-I don't know where it is. I don't
-know why it's not showing yet.
-
-429
+422
 00:41:48,060 --> 00:41:53,120
-Yeah, it might just be we need the mailbox
-set up to send messages between and
+It might just be we need the mailbox
+set up to send messages between and […]
 
-430
-00:41:53,120 --> 00:41:56,220
-[…]. Yeah, so we're working on the
-mailbox. You've done it locally, right?
+423
+00:41:53,414 --> 00:41:56,903
+– You've done it locally, right?
 
-431
-00:41:57,220 --> 00:41:59,980
-Yeah. That's why — I don't know what
-you're saying. – Yeah, I don't know what's
-
-432
-00:41:59,980 --> 00:42:05,180
-running on my box right now either.
-Yeah, then you would have like, we have
-
-433
-00:42:05,180 --> 00:42:15,040
-notifications here. And so you would
+424
+00:42:04,348 --> 00:42:15,040
+We have notifications here. And so you would
 send like an application message to an
 
-434
+425
 00:42:15,040 --> 00:42:19,840
 identifier. It would show up in your
 notifications and then you could see each
 
-435
+426
 00:42:19,840 --> 00:42:24,120
 of the steps in your exchange
 where you're disclosing which fields
 
-436
+427
 00:42:27,220 --> 00:42:31,620
 for a presentation that you would want or
 to create a credential and then send that
 
-437
+428
 00:42:31,620 --> 00:42:35,740
 credential to somebody who would
 be applying for that credential. And then
 
-438
+429
 00:42:35,740 --> 00:42:40,740
 you'd be just sending the notifications to
 the mailbox and they would show up here.
 
-439
+430
 00:42:41,120 --> 00:42:47,100
-So the problem is: do they need to…
+– So the problem is: do they need to…
 these two vaults, I guess with AIDs in
 
-440
+431
 00:42:47,100 --> 00:42:53,160
-there, they need to OOBI each other or
-something? Is that… We need
+there, they need to OOBI each
+other or something? Is that… – We need
 
-441
+432
 00:42:53,160 --> 00:43:00,820
 to get their mailboxes configured to
-each other to send like messages between
+each other to send messages between
 
-442
+433
 00:43:00,820 --> 00:43:07,860
-each other. The issuance exchange would go
+each other. – The issuance exchange would go
 over the mailbox. It could use a different
 
-443
+434
 00:43:07,860 --> 00:43:12,980
 transport but the way Locksmith is
 set up is to use the mailbox. Just the
 
-444
+435
 00:43:12,980 --> 00:43:17,680
 contributed version of Locksmith didn't
 include the mailbox. We had to write our
 
-445
-00:43:17,680 --> 00:43:22,720
-own mailbox and stuff like that. Yeah.
-But yeah, and then for like a… Oh, yeah,
+436
+00:43:17,680 --> 00:43:21,359
+own mailbox and stuff like that.
 
-446
-00:43:22,780 --> 00:43:26,820
-sorry. No, go ahead. No, I was just
-going to say that for example, for a
+437
+00:43:26,242 --> 00:43:26,820
+– For example, for a
 
-447
+438
 00:43:26,820 --> 00:43:34,000
 presentation where you're going to
 the liquor store and you want to buy like a
 
-448
+439
 00:43:34,000 --> 00:43:40,700
 beer, you would show your credential and
 then you could choose to disclose that you
 
-449
+440
 00:43:40,700 --> 00:43:44,880
 were, for example, over 21, but then
 you wouldn't have to disclose some of the
 
-450
+441
 00:43:44,880 --> 00:43:48,800
 other information about yourself within
-that credential. And so then, you know, we
+that credential. And so then, we
 
-451
+442
 00:43:48,800 --> 00:43:55,660
 would have a field where you would be able
 to choose which information you would like
 
-452
+443
 00:43:55,660 --> 00:44:03,860
 to disclose and send to a verifier such
-as a liquor store as an individual. So my
+as a liquor store as an individual. – So my
 
-453
+444
 00:44:03,860 --> 00:44:08,860
-question is on the original issuance of
-the credentials. You said that was
+question is on the original issuance
+of the credentials. You said that was
 
-454
+445
 00:44:08,860 --> 00:44:15,460
 also going to use a communication with
 an application through the mailbox. Did I
 
-455
+446
 00:44:15,460 --> 00:44:20,220
-misunderstand or understand that? Sorry,
-what was that? For original issuance of a
+misunderstand or understand
+that? For original issuance of a
 
-456
+447
 00:44:20,220 --> 00:44:25,860
 credential, there was going to be an
 application function that was then going
 
-457
+448
 00:44:25,860 --> 00:44:32,280
 to send a request to have a credential
 issued and then send that credential to
 
-458
+449
 00:44:32,280 --> 00:44:35,480
 the person who was supposed to get
-it. Right. Correct. Okay. So I understood
+it. – Correct. – So I understood
 
-459
+450
 00:44:35,480 --> 00:44:41,360
-that. Yeah. All right. In that, I think
+that. In that, I think
 that what Joe was asking was, so for the
 
-460
+451
 00:44:41,360 --> 00:44:46,480
 vLEI, we have an identity authentication
 layer that does a challenge response
 
-461
+452
 00:44:46,480 --> 00:44:52,300
 process before actually giving the
 credential to the person who's supposed to
 
-462
+453
 00:44:52,300 --> 00:44:57,340
 get it. Is that part of this in the
-background somewhere? Yes. I'm also
+background somewhere? – Yes. I'm also
 
-463
+454
 00:44:57,340 --> 00:45:02,660
 working on like a identity proofing
 challenge response. That's just exactly
 
-464
+455
 00:45:02,660 --> 00:45:08,960
-what you're describing. So yes. So
+what you're describing. So yes. – So
 for SEDI, the state has defined their own
 
-465
+456
 00:45:08,960 --> 00:45:13,220
 challenge response mechanism
 that's slightly different from the GLEIF
 
-466
+457
 00:45:13,220 --> 00:45:20,820
-ecosystem challenge response. Okay. So
+ecosystem challenge response. So
 to support both of those, the wallet would
 
-467
+458
 00:45:20,820 --> 00:45:26,040
 have to support both types of challenge
-response. Okay. So it might be worth
+response. – Okay. So it might be worth
 
-468
+459
 00:45:26,040 --> 00:45:30,500
 taking a look in order to be able to see
-what they've done and compare. What they
+what they've done and compare.
 
-469
+460
 00:45:30,500 --> 00:45:36,720
-do, the main difference is that instead
+– The main difference is that instead
 of just signing both sides of the challenge
 
-470
+461
 00:45:36,720 --> 00:45:42,700
 response, which is what the GLEIF one
 does, which is simpler, because the state
 
-471
+462
 00:45:42,700 --> 00:45:48,500
 of Utah is planning to use external
 proofing agents for the identity assurance
 
-472
+463
 00:45:48,500 --> 00:45:57,100
 instead of a GLEIF authorized
-representative or a QVI like in the case
+representative or a QVI,
 
-473
+464
 00:45:57,100 --> 00:46:01,540
-of or a qualification like in case of
-DirectTrust they would just hire they
+a qualification like in case of
+DirectTrust, they
 
-474
+465
 00:46:01,540 --> 00:46:08,220
 might just hire somebody that they're
 requiring that the response be anchored in
 
-475
+466
 00:46:08,220 --> 00:46:14,700
 the KEL of the user as opposed to just
-signed by the user. So it's more secure.
+signed by the user. – So it's more secure.
 
-476
+467
 00:46:14,700 --> 00:46:20,920
-It's more secure. Yeah. Because we're
+– It's more secure. – Ah. Because we're
 having issues with people coming to us and
 
-477
+468
 00:46:20,920 --> 00:46:26,280
-telling us that it's too much the way that
+telling us that it's too much, the way that
 we're doing it. And this is on top of what
 
-478
+469
 00:46:26,280 --> 00:46:30,980
-we're doing. The state is now going to
+we're doing. – The state is now going to
 have millions of people who are going to
 
-479
+470
 00:46:30,980 --> 00:46:38,060
 be really lax with their key management.
 So basically by anchoring, having the
 
-480
+471
 00:46:38,060 --> 00:46:44,800
 wallets automatically anchor, then we take
 that away from them. They don't get to be
 
-481
+472
 00:46:44,800 --> 00:46:51,840
 so lax. But it happens under the hood from
 their perspective. – Okay. Thanks. – So
 
-482
+473
 00:46:51,840 --> 00:46:56,520
 what's that automatic anchoring
 you were just referring to? – Identity
 
-483
+474
 00:46:56,520 --> 00:47:03,260
 proofing. – Identity authentication. –
-Yeah. Yeah. In an identity and an IAL,
+Yeah. In an identity and an IAL,
 
-484
+475
 00:47:03,380 --> 00:47:07,660
 NIST IAL level three. So it's not
 two plus, it's level three for the state of
 
-485
+476
 00:47:07,660 --> 00:47:11,700
 Utah. – Well, we do the identity proofing
 first and then as a second step the
 
-486
+477
 00:47:11,700 --> 00:47:15,180
 identity authentication. – But then an
 IAL level three, the last step in identity
 
-487
+478
 00:47:15,180 --> 00:47:21,600
 proofing is you have to bind an account or
 an identifier to the proofing session. So
 
-488
+479
 00:47:21,600 --> 00:47:27,300
-it has to be done in session. In session.
-In session. So in session, the proofing
+it has to be done in session.
+So in session, the proofing
 
-489
+480
 00:47:27,300 --> 00:47:34,700
-agent sends a challenge over a non-internet channel. So either an NFC or
+agent sends a challenge over a
+non-internet channel. So either an NFC or
 
-490
+481
 00:47:34,700 --> 00:47:39,140
-Bluetooth something, you know, well
+Bluetooth, something, well
 maybe not even Bluetooth, but optically,
 
-491
+482
 00:47:39,140 --> 00:47:43,580
-right? Like a QR code. It can't
-be Bluetooth or anything that somebody can
+right? Like a QR code. It can't be
+Bluetooth or anything that somebody can
 
-492
+483
 00:47:43,580 --> 00:47:50,560
 surveil. And then you anchor the challenge
 in your KEL, which means you're signing it
 
-493
+484
 00:47:50,560 --> 00:47:57,220
 to anchor it. But now it becomes
 detectable if somebody showed up and
 
-494
+485
 00:47:57,220 --> 00:48:02,220
 impersonated you. Let's say somebody
 who looks like you stole your identity
 
-495
+486
 00:48:02,220 --> 00:48:07,900
 documents and showed up at the proofing
 agent. And they said, okay, you're just a
 
-496
+487
 00:48:07,900 --> 00:48:10,800
 person. So you don't have all of the
 security that you have at GLEIF because
 
-497
+488
 00:48:10,800 --> 00:48:15,860
 you're dealing with people that represent
 entities that have layers of management
 
-498
+489
 00:48:15,860 --> 00:48:20,400
-for them to show up. You just have, you
-know, a homeless person off the street,
+for them to show up. You just have
+a homeless person off the street,
 
-499
+490
 00:48:20,520 --> 00:48:24,700
 for example, show up and say, Hey, I want
-an ID, right? And they go, Well, here's my
+an ID, right? And they go, well, here's my
 
-500
+491
 00:48:24,700 --> 00:48:28,560
-documents, right? And they may not, you
-know, and they may have a grainy picture
+documents, right? And they may have a grainy picture
 
-501
+492
 00:48:28,560 --> 00:48:31,960
-that, you know, doesn't look really good
-and they go, Well, it's the best you got.
+that doesn't look really good
+and they go, well, it's the best you got.
 
-502
+493
 00:48:32,180 --> 00:48:40,400
-So, so this way, if somebody
+So, this way, if somebody
 stole their signing keys, if they were
 
-503
+494
 00:48:40,400 --> 00:48:45,180
 compromised, then at least they could
 detect that they were compromised. So
 
-504
+495
 00:48:45,180 --> 00:48:48,560
 between the proofing session when they
 actually go back to the state and apply
 
-505
+496
 00:48:48,560 --> 00:48:57,320
 for their SEDI, there's an opportunity
 to verify those anchors. So it adds some
 
-506
+497
 00:48:57,320 --> 00:49:00,040
 extra security that
 might be useful.
 
-507
+498
 00:49:03,220 --> 00:49:09,520
-Okay. I'm sorry. I have
-one more question. So the
+– I have one more
+question. So the
 
-508
+499
 00:49:09,520 --> 00:49:17,380
-kf-boot thing. Okay. I noticed you had to
+kf-boot thing. I noticed you had to
 add a schema here. So I assume that means
 
-509
+500
 00:49:17,380 --> 00:49:21,680
 that when you booted stuff up, there were
 no… Is there a way to include schemas?
 
-510
+501
 00:49:21,760 --> 00:49:25,780
 Because for example, like again, if I
 was a university and let's say I made my
 
-511
+502
 00:49:25,780 --> 00:49:32,100
 plugin, I would probably have my diplomas
 or the things that I offer and everything
 
-512
+503
 00:49:32,100 --> 00:49:38,380
 like that. And so when I have my plugin
 and my boot, not only am I going to be
 
-513
+504
 00:49:38,380 --> 00:49:41,480
-like, okay, here's you can set up
+like, okay, here you can set up
 witnesses and watchers for your
 
-514
+505
 00:49:41,480 --> 00:49:46,060
 university, but these are all the schemas
-and things that, you know. So schema
+and things that… – So schema
 
-515
+506
 00:49:46,060 --> 00:49:50,900
 discovery is what you're talking about.
-Yeah. Yeah. The schema isn't to do with
+– Yeah. – The schema hasn't to do with
 
-516
+507
 00:49:50,900 --> 00:49:53,680
 kf-boot. It has nothing to do with your
 infrastructure. The schemas are only for
 
-517
+508
 00:49:53,680 --> 00:50:00,620
-the actual credentials. Yeah, but a
+the actual credentials. – Yeah, but a
 credential, an ACDC credential. And if I'm
 
-518
+509
 00:50:00,620 --> 00:50:04,200
 a university, wouldn't that be the
-diploma? Like I'm… Yes, but it doesn't
+diploma? Like I'm… – Yes, but it doesn't
 
-519
+510
 00:50:04,200 --> 00:50:09,040
 have anything to do with kf-boot. You just
 said something about credentials for the
 
-520
+511
 00:50:09,040 --> 00:50:12,700
 schema for kf-boot. That's what
 confused me. – I guess I was bundling
 
-521
+512
 00:50:12,700 --> 00:50:16,240
-it in there because it's like I'm trying
+it in there because it's like
 if I'm a university and I'm trying to
 
-522
+513
 00:50:16,240 --> 00:50:22,480
 bootstrap my university infrastructure, I
 don't know. I would suspect that might be
 
-523
+514
 00:50:22,480 --> 00:50:27,880
 a good place to just put all the schemas
 in there. – Well, we have a plan for
 
-524
+515
 00:50:27,880 --> 00:50:31,240
 schema discovery within the wallet.
 Doesn't really have anything to do with
 
-525
+516
 00:50:31,240 --> 00:50:36,120
 the booting and onboarding of the
 infrastructure. Just a separate mechanism.
 
-526
+517
 00:50:36,300 --> 00:50:40,320
 So you could publish, for example, or
 the university could publish their list of
 
-527
+518
 00:50:40,320 --> 00:50:45,660
 approved schemas and then the wallet could
-go find that. So like they could publish
+go find that. – So they could publish
 
-528
+519
 00:50:45,660 --> 00:50:51,420
-all of their credential schemas as .well-known
-for example. And then anybody
+all of their credential schemas as
+.well-known for example. And then anybody
 
-529
+520
 00:50:51,420 --> 00:50:55,000
 that wanted to talk to the university
 would go say, oh, here's the schema
 
-530
+521
 00:50:55,000 --> 00:50:59,020
 that the university uses for their ACDCs.
 And they can publish them in multiple
 
-531
+522
 00:50:59,020 --> 00:51:06,280
 places. And because each schema has a
 hash as its identifier, anybody changes the
 
-532
+523
 00:51:06,280 --> 00:51:11,440
 schema, it's a different hash. So you
 can detect that it's been tampered with. So
 
-533
+524
 00:51:11,440 --> 00:51:15,740
 you know it's not the right one. You just
 have to get the authoritative publication
 
-534
+525
 00:51:15,740 --> 00:51:21,180
 of the hash someplace and say, yeah,
 this is the one the university uses. So the
 
-535
+526
 00:51:21,180 --> 00:51:25,540
 university would have a vested interest in
 making sure that the hashes and schema
 
-536
+527
 00:51:25,540 --> 00:51:29,940
 they use are published in well-known
 locations that people can verify came from
 
-537
+528
 00:51:29,940 --> 00:51:35,500
 the university and then any wallet can
 be preconfigured with those if they want to
 
-538
+529
 00:51:35,500 --> 00:51:40,820
 or they can discover them on the fly. But
-you know, there's an advantage for people
+there's an advantage for people
 
-539
+530
 00:51:40,820 --> 00:51:44,000
 in the university ecosystem to just
 pre-configure their wallets with those
 
-540
+531
 00:51:44,000 --> 00:51:48,760
 schema. – So kf-boot wouldn't be the
 right place for it anyway because it's even
 
-541
+532
 00:51:48,760 --> 00:51:53,280
 though they're kind of related in a way
 in the sense it's KERI ecosystem, kf-boot
 
-542
+533
 00:51:53,280 --> 00:51:57,520
 itself doesn't really have any
 understanding of schemas or credentials or
 
-543
+534
 00:51:57,520 --> 00:52:00,980
 any of that stuff. So it's really not the
 right place for that kind of stuff to be.
 
-544
+535
 00:52:02,280 --> 00:52:10,560
 So separate consideration. – Thank
-you. – Cool. Cool. Anything else? Any other
+you. – Cool. Anything else? Any other
 
-545
+536
 00:52:10,560 --> 00:52:20,220
 questions? We pretty much
 run through the time. All right.
 
-546
+537
 00:52:21,540 --> 00:52:26,580
-Thanks everyone. Thank you.
+Thanks everyone.
 
