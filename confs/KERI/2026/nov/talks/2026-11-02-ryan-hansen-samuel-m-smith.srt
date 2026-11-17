@@ -1413,7 +1413,7 @@ and 13 plus is allowed, right? So the
 286
 00:27:55,880 --> 00:28:00,740
 point is, is that if you think about it,
-And you think about the core thing is
+and you think about the core thing, is
 
 287
 00:28:00,740 --> 00:28:07,360
@@ -1531,32 +1531,32 @@ it's free, they could, and it would just
 
 310
 00:30:22,480 --> 00:30:27,440
-augment in a very synergistic way, like
-I know in the insurance industry, there's,
+augment in a very synergistic way, I
+know in the insurance industry,
 
 311
 00:30:27,540 --> 00:30:31,840
-you know, you have to, the insurance
-companies have approved, you know, people
+the insurance companies
+have approved people
 
 312
 00:30:31,840 --> 00:30:37,320
-who fix things for, you know, whatever
+who fix things for whatever
 was damaged. And so that could be
 
 313
 00:30:37,320 --> 00:30:41,620
-used by adjusters, right? Yeah, adjusters
-or even like thing like the auto mechanic
+used by adjusters or
+even the auto mechanic
 
 314
 00:30:41,620 --> 00:30:46,480
-shops themselves. Oh, yeah. Or the
-shops that do like home repair and things
+shops themselves. Or the shops
+that do home repair and things
 
 315
 00:30:46,480 --> 00:30:49,680
-like that. They could even use that.
+like that. They could even use that. –
 Yeah. So there's a bigger ecosystem. So the
 
 316
@@ -1571,8 +1571,8 @@ spinning up witnesses and watchers. I'm
 
 318
 00:31:02,100 --> 00:31:06,920
-sorry. It's just not that — only the
-people that can operate at huge scale
+sorry. — Only the people
+that can operate at huge scale
 
 319
 00:31:06,920 --> 00:31:13,660
@@ -1597,7 +1597,7 @@ state of Utah is paying for this. That's
 323
 00:31:31,840 --> 00:31:39,020
 the opportunity. Yeah. – So, what concrete
-ways have has the state of Utah indicated
+ways has the state of Utah indicated
 
 324
 00:31:39,020 --> 00:31:43,640
@@ -1616,18 +1616,18 @@ a SEDI, you're going to get an IAL level
 
 327
 00:31:53,040 --> 00:31:59,160
-three identity assurance process.
-Wow. Yeah. Did they say they're going to
+three identity assurance process. –
+Wow. Did they say they're going to
 
 328
 00:31:59,160 --> 00:32:02,900
 like integrate it into the DMV or
-something? Yeah. Wow. Or they might hire
+something? – Yeah. – Wow. Or they might hire
 
 329
 00:32:02,900 --> 00:32:07,380
-ID.me to do it for them. I see. Or anybody
-that shows up and says we're good enough
+id.me to do it for them. Or anybody that
+shows up and says we're good enough
 
 330
 00:32:07,380 --> 00:32:12,020
@@ -1650,17 +1650,17 @@ where you can make money in the
 
 334
 00:32:27,900 --> 00:32:33,860
-KERI ACDC ecosystem, not infrastructure.
-You want the infrastructure, you want to
+KERI ACDC ecosystem,
+not infrastructure. You want to
 
 335
 00:32:33,860 --> 00:32:38,420
-give it away. You want to essentially, you
-want to give away KERI infrastructure and
+give it away. Essentially, you want
+to give away KERI infrastructure and
 
 336
 00:32:38,420 --> 00:32:44,920
-then make money on the fact that the that
+then make money on the fact that
 you get IAL3 forever and the state paid
 
 337
@@ -1680,13 +1680,13 @@ for doing the social media stuff for the 13
 
 340
 00:32:58,700 --> 00:33:02,900
-and above. – So now they backed themselves
+and above. So now they backed themselves
 into a corner for that. – Yes, they backed
 
 341
 00:33:02,900 --> 00:33:07,400
-themselves into a corner. – So this is my,
-I'm going to look at the magic ball here.
+themselves into a corner. – I'm
+going to look at the magic ball here.
 
 342
 00:33:07,920 --> 00:33:12,360
@@ -1700,17 +1700,17 @@ you think there's a possibility that there
 
 344
 00:33:17,200 --> 00:33:22,060
-would be kind of a cross-state line
-legislation? – Yes. – Yes. They want to
+would be kind of a cross-state
+line legislation? – Yes. They want to
 
 345
 00:33:22,060 --> 00:33:28,380
-have – They have reciprocity. They want
-to have reciprocity between states. So that
+have reciprocity
+between states. So that
 
 346
 00:33:28,380 --> 00:33:34,120
-if one state does IAL level 3, that you can
+if one state does IAL3, that you can
 move to a different state and not have to
 
 347
@@ -1725,8 +1725,8 @@ proofing instruments that you have to
 
 349
 00:33:48,360 --> 00:33:57,960
-produce? – Well, IAL level 3. Yeah. Says you
-have to use so many first class documents.
+produce? – Well, IAL3. Says you have
+to use so many first class documents.
 
 350
 00:33:58,420 --> 00:34:06,000
@@ -1741,17 +1741,17 @@ then you have to have a secure way within
 352
 00:34:09,980 --> 00:34:16,000
 session to bind that proofing session to
-an identifier. Okay. So, this is a future
+an identifier. – Okay. So, this is a future
 
 353
 00:34:16,000 --> 00:34:20,900
-question. Okay. Okay. That's how we would
-have to back end into something like this.
+question. That's how we would have
+to back end into something like this.
 
 354
 00:34:20,900 --> 00:34:26,400
-But let's go to the future where, you
-know, the baby that was just born last
+But let's go to the future where
+the baby that was just born last
 
 355
 00:34:26,400 --> 00:34:32,940
@@ -1765,13 +1765,13 @@ age or… – No, no. They could get it at
 
 357
 00:34:37,480 --> 00:34:49,400
-birth. And the reason they can get it at
-birth is that in general, they trust the…
+birth. And the reason they can
+get it at birth is that in general
 
 358
 00:34:49,400 --> 00:34:56,420
-in general, states trust the chain of
-custody from the womb to the form that you
+states trust the chain of custody
+from the womb to the form that you
 
 359
 00:34:56,420 --> 00:35:01,540
@@ -1780,8 +1780,8 @@ They trust the hospital, not you. – Yeah,
 
 360
 00:35:01,780 --> 00:35:06,580
-well, I said the chain of custody. – Yeah.
-– Which is you're in the hospital – Yeah,
+well, I said the chain of custody.
+Which is you're in the hospital – Yeah,
 
 361
 00:35:06,620 --> 00:35:10,220
@@ -1800,13 +1800,13 @@ form. – Yeah, but mom doesn't fill out.
 
 364
 00:35:18,920 --> 00:35:23,080
-fills it out for the mom. Well, actually,
+fills it out for the mom. – Well, actually,
 birth certificates are done differently in
 
 365
 00:35:23,080 --> 00:35:28,100
 every state. So, that's what I'm
-getting to. So, there will have to be a
+getting to. – So, there will have to be a
 
 366
 00:35:28,100 --> 00:35:31,220
@@ -1825,8 +1825,8 @@ birth certificates. And George McEwan,
 
 369
 00:35:46,660 --> 00:35:51,460
-he likes to give the example of he
-was in a state And the way they did birth
+he likes to give the example of, he
+was in a state, and the way they did birth
 
 370
 00:35:51,460 --> 00:35:57,300
@@ -1835,23 +1835,23 @@ That was a birth certificate from some
 
 371
 00:35:57,300 --> 00:36:03,020
-little town where somebody signed it. And
-even today, it's so, I mean, you look at,
+little town where somebody signed
+it. – And even today, you look at,
 
 372
 00:36:03,020 --> 00:36:08,260
-you know, in California, you want your
-birth certificate altered. It's not even a
+in California, you want your birth
+certificate altered. It's not even a
 
 373
 00:36:08,260 --> 00:36:13,640
-court process or anything. You just
-ask for it. Yeah. So, that is, so that will
+court process or
+anything. You just ask for it.
 
 374
 00:36:13,640 --> 00:36:20,120
-require some, so the thing is, it won't
-happen overnight. Those sorts of things
+– It won't happen overnight.
+Those sorts of things
 
 375
 00:36:20,120 --> 00:36:26,280
