@@ -1856,17 +1856,17 @@ Those sorts of things
 375
 00:36:20,120 --> 00:36:26,280
 will take time to iron out, but yes,
-that's where it's going to end up. Yeah.
+that's where it's going to end up.
 
 376
 00:36:26,700 --> 00:36:35,960
-Yes. There you go. The rumor is that
-there may be as many as 15 states in the
+– The rumor is that there may
+be as many as 15 states in the
 
 377
 00:36:35,960 --> 00:36:40,780
-consortium. Yes. I've heard it's double
-digit. That is true. It's about a third of
+consortium. – Yes. I've heard it's double
+digit. – If that is true, it's about a third of
 
 378
 00:36:40,780 --> 00:36:46,660
@@ -1879,18 +1879,18 @@ space. So if true, which we won't know
 until two weeks at the SEDI summit, it
 
 380
-00:36:56,260 --> 00:37:01,020
+00:36:56,260 --> 00:36:59,567
 will be like a bomb went off in the
-identity industry. It will be a really big
+identity industry.
 
 381
-00:37:01,020 --> 00:37:01,240
-deal.
+00:36:59,591 --> 00:37:01,587
+It will be a really big deal.
 
 382
 00:37:04,280 --> 00:37:11,320
-And the fear, I'll tell you the fear, is
-that they will say KERI and ACDC isn't
+– I'll tell you the fear, is that
+they will say KERI and ACDC isn't
 
 383
 00:37:11,320 --> 00:37:16,860
@@ -1914,1033 +1914,1012 @@ you don't have anybody else in any other
 
 387
 00:37:38,140 --> 00:37:45,560
-vertical paying for the IAL level three.
-But SEDI, you have that forcing function.
+vertical paying for the IAL3. But
+SEDI, you have that forcing function.
 
 388
-00:37:45,780 --> 00:37:51,140
-Go ahead. Oh, you have a question? Yeah,
-I was going to say something. Okay. I think
+00:37:52,074 --> 00:37:55,940
+– I wanted to give some
+experience that we've
 
 389
-00:37:51,140 --> 00:37:55,940
-we have another mic over here. Yeah, I
-wanted to give some experience that we've
+00:37:55,940 --> 00:38:05,660
+been having with the vLEI and in
+seeing this situation here,
 
 390
-00:37:55,940 --> 00:38:05,660
-been having with the vLEI and in seeing,
-you know, this situation here that SEDI is
+00:38:05,660 --> 00:38:10,280
+the requirements that SEDI is
+putting forward, it's only going
 
 391
-00:38:05,660 --> 00:38:10,280
-putting forward or the requirements that
-SEDI is putting forward, it's only going
+00:38:10,280 --> 00:38:18,400
+to work because there is regulation
+and legislation behind it and
 
 392
-00:38:10,280 --> 00:38:18,400
-to work because there's there is
-regulation and legislation behind it and
-
-393
 00:38:18,400 --> 00:38:25,000
 the states are behind it because the
 actual experience that we're having with
 
-394
+393
 00:38:25,000 --> 00:38:32,640
 the vLEI is that I'm being told time and
 time again that even though I say that
 
-395
+394
 00:38:32,640 --> 00:38:39,140
 these are long-lived credentials and we're
 trying to be able to put the work in at
 
-396
+395
 00:38:39,140 --> 00:38:44,340
 the beginning in order to be able to
 make them secure enough to be long-lived
 
-397
+396
 00:38:44,340 --> 00:38:51,440
 credentials. I always get thrown back that
 it's too complicated. It takes too much
 
-398
+397
 00:38:51,440 --> 00:38:58,200
 time. It's too costly. You can't take
 somebody who's a board chair or the CEO of
 
-399
+398
 00:38:58,200 --> 00:39:03,560
 a multi-million dollar company sitting
 down even for two minutes to be able to do
 
-400
+399
 00:39:03,560 --> 00:39:08,580
 this. And I'm there like, isn't the threat
 of compromise because they're important
 
-401
+400
 00:39:08,580 --> 00:39:14,440
 people incentive enough for them to want
 to be able to have this kind of credential
 
-402
+401
 00:39:14,440 --> 00:39:20,280
 and still the same arguments keep on
 getting thrown back because people are
 
-403
+402
 00:39:20,280 --> 00:39:28,520
-only familiar with the processes that are
-not even not being carried out by CAs now.
+only familiar with the processes that not
+even not being carried out by CAs now.
+
+403
+00:39:28,780 --> 00:39:32,960
+So they're comparing already
+flawed processes to something that's…
 
 404
-00:39:28,780 --> 00:39:32,960
-So they're comparing already flawed
-processes to something that's – Yeah,
-
-405
 00:39:33,040 --> 00:39:37,960
-they're saying, well, this flawed process
+– This flawed process
 is low friction. – Yeah. – Your flawed
 
-406
+405
 00:39:37,960 --> 00:39:44,640
 process is high friction. The problem is
-this is not a flawed process that is, but
+this is not a flawed process… that is, but
+
+406
+00:39:44,640 --> 00:39:49,260
+they don't see the advantages.
+It's a challenge. It's a
 
 407
-00:39:44,640 --> 00:39:49,260
-they don't see the advantages
-in the and so it's a challenge. It's a
-
-408
 00:39:49,260 --> 00:39:53,100
 hard thing. User experience is a difficult
-thing to solve. – I would never have a CEO
+thing to solve.
 
-409
-00:39:53,100 --> 00:39:58,520
-be in charge of credentials for a company.
-– Yeah. – They're unreachable people and
-
-410
-00:39:58,520 --> 00:40:02,460
-like I'll have ADHD in the business,
-right? – I can't hear you with that in my
-
-411
-00:40:02,460 --> 00:40:03,580
-online.
-
-412
+408
 00:40:06,840 --> 00:40:10,080
 – CEOs are inappropriate people to
 be in charge of the company's basic
 
-413
+409
 00:40:10,080 --> 00:40:14,720
-infrastructure, right? They're not
-responsible people. They don't usually
+infrastructure, right? They're
+not responsible people.
 
-414
+410
 00:40:14,720 --> 00:40:20,900
-like they you need someone like very
-responsible like a CFO, a COO like someone
+You need someone like a
+CFO, a COO, someone
 
-415
+411
 00:40:20,900 --> 00:40:25,960
 who is a execution focused someone lowered
-down even. We're talking about the CEO
+down even. – We're talking about the CEO
 
-416
+412
 00:40:25,960 --> 00:40:30,940
 receiving one of these credentials and not
 taking the time in order to be able to get
 
-417
+413
 00:40:30,940 --> 00:40:35,400
 one. So they're the receiver. They're not
-managing anything about the process. Yeah,
+managing anything about the process.
 
-418
+414
 00:40:35,460 --> 00:40:38,660
-they shouldn't be involved at all. I don't
-think. Well, they need to be involved in
+– They shouldn't be involved at all.
+– They need to be involved in
 
-419
+415
 00:40:38,660 --> 00:40:43,600
 the process to receive their digital
 identity credential. – But why do they
 
-420
+416
 00:40:43,600 --> 00:40:48,900
 need a… – Yeah, so if they go to a board
 meeting and they want to vote as CEO and
 
-421
+417
 00:40:48,900 --> 00:40:57,620
 they want to prove their identity. –
 They sign regulatory reports. – Yeah, they
 
-422
+418
 00:40:57,620 --> 00:41:02,780
 impose liability upon themselves every
 time they sign their 10-K or whatever it is
 
-423
+419
 00:41:02,780 --> 00:41:08,040
-for their annual report in the US. –
-So they don't understand that they the
+for their annual report in the US.
+So they don't understand the
 
-424
+420
 00:41:08,040 --> 00:41:12,860
 liability that they subjected themselves
-to when they So, yeah, but it's a valid
+to when they… So, yeah, but it's a valid
 
-425
+421
 00:41:12,860 --> 00:41:19,280
-point. They don't think that they have to
-care about that. You had a comment? Oh,
+point. They don't think that
+they have to care about that.
 
-426
+422
 00:41:19,440 --> 00:41:25,860
-okay. Sorry. So anyway, I don't have a…
-When did we end? In 15 minutes? Huh? –
+So anyway, I don't have a…
 
-427
+423
 00:41:25,860 --> 00:41:32,500
-Yeah. – Two things. One about the
+– Two things. One about the
 complexity of KERI. We've been hearing
 
-428
+424
 00:41:32,500 --> 00:41:39,600
 that criticism for years. And I think that
 now has to melt away because people
 
-429
+425
 00:41:39,600 --> 00:41:47,740
-use a AI to do their coding and handle
+use AI to do their coding and handle
 complex things. And my experience with the
 
-430
+426
 00:41:47,740 --> 00:41:52,420
 frontier models is they are big fans of
 KERI. When you ask hard problems about key
 
-431
+427
 00:41:52,420 --> 00:41:57,740
-management and if they don't have to if
-the model is not completely familiar and
+management and if the model
+is not completely familiar and
 
-432
+428
 00:41:57,740 --> 00:42:01,800
 you give it material to make it familiar,
 it immediately becomes a fan and all of a
 
-433
+429
 00:42:01,800 --> 00:42:05,740
 sudden has answers for a lot of
 hard questions it didn't have. And if it's
 
-434
+430
 00:42:05,740 --> 00:42:09,440
 already familiar, it recommends it. I
 mean, Zach was here earlier today and the
 
-435
+431
 00:42:09,440 --> 00:42:13,460
 reason he's part of the community is
 because Claude recommended KERI to him.
 
-436
+432
 00:42:13,880 --> 00:42:18,000
 And it's the reason why he even knows
 about KERI is because Claude has that. So
 
-437
+433
 00:42:18,000 --> 00:42:24,220
 I think that complexity argument is going
 to start to go away. Secondly, the cold
 
-438
+434
 00:42:24,220 --> 00:42:28,980
 start problem that you referred to
 earlier. Yes. That's something that's part
 
-439
+435
 00:42:28,980 --> 00:42:33,600
 and parcel of any two-sided market, right?
-Yep. You have supply and demand and you
+You have supply and demand and you
 
-440
+436
 00:42:33,600 --> 00:42:37,560
 try to get the supply going and the demand
 going at the same time and it's hard to
 
-441
+437
 00:42:37,560 --> 00:42:42,760
 juice both parts of the market. With Utah
 doing what they're doing and potentially
 
-442
+438
 00:42:42,760 --> 00:42:47,280
 15 states, if it's could be 10 states,
 could be five states, might be 20, who
 
-443
+439
 00:42:47,280 --> 00:42:50,820
 knows what the real number is, but a
 good number of states joining them moving
 
-444
+440
 00:42:50,820 --> 00:42:55,520
 forward. What they're doing is they're
-priming the market with demand. Yeah. And
+priming the market with demand. And
 
-445
+441
 00:42:55,520 --> 00:43:01,300
 what we've been waiting for years and
 it's coming to IIW and talking about these
 
-446
+442
 00:43:01,300 --> 00:43:05,320
 different identity technologies, we've
 been playing on the supply side. We've
 
-447
+443
 00:43:05,320 --> 00:43:09,360
 been playing on, oh, there's this cool
 thing that we want everybody to want. We
 
-448
+444
 00:43:09,360 --> 00:43:12,200
 want everybody to have self-sovereign
 identity. We want them to have these
 
-449
+445
 00:43:12,200 --> 00:43:12,880
 technologies.
 
-450
+446
 00:43:15,240 --> 00:43:19,140
 But we couldn't make them want it because
 we are all staring at the cold start
 
-451
+447
 00:43:19,140 --> 00:43:24,080
 problem of the two-sided market. So
 there is a kind of a once in a lifetime
 
-452
+448
 00:43:24,080 --> 00:43:28,640
 opportunity where you have a bunch
 of states that are banding together
 
-453
+449
 00:43:28,640 --> 00:43:33,560
 potentially led by our home state of Utah,
 your and my home state of Utah, who are
 
-454
+450
 00:43:33,560 --> 00:43:39,720
 priming the pump and putting their
 thumb on the scales on the side of demand,
 
-455
+451
 00:43:40,060 --> 00:43:45,720
 which means money. That means revenue.
 That means business opportunity for those
 
-456
+452
 00:43:45,720 --> 00:43:50,280
 that can come in and provide this supply.
 So it's going to happen. It's only a
 
-457
+453
 00:43:50,280 --> 00:43:54,820
 matter of which companies can come
 in and provide that supply and satisfy the
 
-458
+454
 00:43:54,820 --> 00:44:00,480
 demand, but the demand is absolutely
-coming. Yeah, I firmly believe that it's
+coming. – Yeah, I firmly believe that it's
 
-459
+455
 00:44:00,480 --> 00:44:06,380
 going to happen, but there is a risk that
 it doesn't. And if it doesn't happen, then
 
-460
+456
 00:44:06,380 --> 00:44:12,420
 it may never happen because continuous
 identity will be what the market provides.
 
-461
+457
 00:44:13,300 --> 00:44:20,820
 And everybody will say, well, we have
 no choice. They will just say, there isn't
 
-462
+458
 00:44:20,820 --> 00:44:26,300
-another option. You know, I think it needs
+another option. – I think it needs
 to be said why the state of Utah is moving
 
-463
+459
 00:44:26,300 --> 00:44:30,860
 forward because it was speculated a little
 bit earlier what the motivation is. And
 
-464
+460
 00:44:30,860 --> 00:44:35,800
 people need to understand what Utah's
 motivation is for doing this. It's not
 
-465
+461
 00:44:35,800 --> 00:44:42,500
 because they want everybody to have
 digital identity. It's because of privacy.
 
-466
+462
 00:44:42,780 --> 00:44:48,060
 It's their chief privacy officer has
 gotten everybody motivated and frankly
 
-467
+463
 00:44:48,060 --> 00:44:54,380
-scared about the identity options that are
+scared about the identity options that
 that exist. The alternatives are bad. And
 
-468
+464
 00:44:54,380 --> 00:44:57,700
 if they don't do something positive, then
 everyone's going to end up with something
 
-469
+465
 00:44:57,700 --> 00:45:01,880
 negative from a privacy and liberty
 standpoint. So that's the argument that's
 
-470
+466
 00:45:01,880 --> 00:45:06,120
 winning. And that's why it's unanimous on
-both sides of the aisle, left and right. –
+both sides of the aisle, left and right.
 
-471
+467
 00:45:06,120 --> 00:45:09,780
-Yeah, because everybody cares about
-liberty. Completely unanimous. – It's less
+– Because everybody cares about liberty.
+– Completely unanimous. – It's less
 
-472
+468
 00:45:09,780 --> 00:45:14,000
 about privacy, more about liberty. – Yeah,
 it's more about liberty. They've gotten it
 
-473
+469
 00:45:14,000 --> 00:45:18,820
 that if you're against this, you're like,
 hate your mom and hate apple pie and hate
 
-474
+470
 00:45:18,820 --> 00:45:24,260
 baseball. And they've really gotten
 it politically toxic to oppose it from a
 
-475
+471
 00:45:24,260 --> 00:45:29,320
 liberty standpoint. And so when you
 say that it might not happen and that the
 
-476
+472
 00:45:29,320 --> 00:45:34,180
 continuous identity of AI, that
 surveillance identity, is what the market
 
-477
+473
 00:45:34,180 --> 00:45:38,640
 will offer, I can almost guarantee you,
 because you and I have been meeting with
 
-478
+474
 00:45:38,640 --> 00:45:42,420
 state of Utah for how many years now?
-Three. Almost four years. Almost four,
+– Three. Almost four years.
 
-479
+475
 00:45:42,560 --> 00:45:46,980
-yeah. Yeah, coming in March, it'll be the
+– Coming in March, it'll be the
 fourth anniversary or April of our fateful
 
-480
+476
 00:45:46,980 --> 00:45:54,940
 first meeting with them. And Utah, if they
 have to go it alone and it'd be one state.
 
-481
+477
 00:45:55,100 --> 00:45:58,180
-They would do it. Utah would go it alone.
-Utah would go it alone and be the only
+– They would do it. – Utah
+would go it alone and be the only
 
-482
+478
 00:45:58,180 --> 00:46:02,200
 ones with their own identity technology
 because they're going to do what's best
 
-483
+479
 00:46:02,200 --> 00:46:06,800
 for the citizens of Utah for privacy and
 liberty even if no one else follows them.
 
-484
+480
 00:46:07,460 --> 00:46:11,940
 And others will. I think they'll get other
 states. But that is the principle. It's
 
-485
+481
 00:46:11,940 --> 00:46:17,560
 freedom, it's liberty, and it's privacy.
 That's what's motivating them. – So, I
 
-486
+482
 00:46:17,560 --> 00:46:21,440
 have a question about the consortium.
 You know, this started with legislation and
 
-487
+483
 00:46:21,440 --> 00:46:24,860
 that's what's driving it, not the
 technology. – That's right. – And then the
 
-488
+484
 00:46:24,860 --> 00:46:30,080
 legislation had to find technology that
 matched what they wrote. – Well, it's both
 
-489
+485
 00:46:30,080 --> 00:46:37,220
-ways, right? So, the original social bill,
-right, was written without any technology.
+ways, right? So, the original social bill
+was written without any technology.
 
-490
+486
 00:46:37,660 --> 00:46:42,460
 Every bill since then has been written
 with the influence of people from the KERI
 
-491
+487
 00:46:42,460 --> 00:46:49,600
 community guiding it, right? So, they know
 the end point, but they can't jump there.
 
-492
+488
 00:46:49,800 --> 00:46:53,880
 They have to say, well, no, we have to lay
 the groundwork. We know that we want to
 
-493
+489
 00:46:53,880 --> 00:46:57,260
 get to there. We know the technology will
 allow us to get where we're going. When
 
-494
+490
 00:46:57,260 --> 00:47:01,200
 they did the social engineering one, they
 didn't know that. But the next bill, you
 
-495
+491
 00:47:01,200 --> 00:47:06,560
-know, that they wrote in 2024 and then
-in 2025 and then 20 and then 2026, all of
+know, that they wrote in 2024 and
+then in 2025 and then 2026, all of
 
-496
+492
 00:47:06,560 --> 00:47:11,680
 those were based on they now had a roadmap
 at that point. – Yeah. So, but this state
 
-497
+493
 00:47:11,680 --> 00:47:17,140
 has this legislation which has been
-developed over, you know, four years,
+developed over four years, right?
 
-498
+494
 00:47:17,280 --> 00:47:23,880
-right? – Yep. – So, the consortium, is
+– Yep. – So, the consortium, is
 it more going to focus on getting similar
 
-499
+495
 00:47:23,880 --> 00:47:30,160
 legislation into other states? – Yeah,
 they're using Utah as a model legislation.
 
-500
+496
 00:47:30,620 --> 00:47:35,920
-– So that, you know, they can go to
-their states and however their legislative
+– So that they can go to their
+states and however their legislative
 
-501
+497
 00:47:35,920 --> 00:47:41,660
 process works. Cause so that to me
 it's several more years that these states
 
-502
+498
 00:47:41,660 --> 00:47:44,720
 will actually have the legislation. –
 Yeah, they will roll out slowly over but
 
-503
+499
 00:47:44,720 --> 00:47:47,840
 they'll go faster than Utah. – Because
 they have a blueprint to follow. – They
 
-504
+500
 00:47:47,840 --> 00:47:52,460
 have a blueprint. So they can jump to
 the head of the line. – I also think that
 
-505
+501
 00:47:52,460 --> 00:47:59,980
-there's something else that another
+there's something else, another
 benefit that comes along with this. You
 
-506
+502
 00:47:59,980 --> 00:48:05,120
 mentioned earlier today that the paper
 will not go away. There will be an opt-out
 
-507
+503
 00:48:05,120 --> 00:48:12,460
-clause. – Yes, option for citizens. But
-you have to think that most citizens and
+clause option for citizens. But you
+have to think that most citizens and
 
-508
+504
 00:48:12,460 --> 00:48:18,640
 businesses and the government itself
 will try to be able to digitalize as many
 
-509
+505
 00:48:18,640 --> 00:48:24,400
 services as they possibly can. Security
 will be up, cost will be down. – But in
 
-510
+506
 00:48:24,400 --> 00:48:29,900
-the state, in the SEDI bill in the state,
-every citizen has a right to opt out. –
+the SEDI bill in the state, every
+citizen has a right to opt out.
 
-511
+507
 00:48:29,900 --> 00:48:34,940
-But I'm banking on the fact that most
-citizens will opt in. – Oh, yeah. – So,
+– But I'm banking on the fact that most
+citizens will opt in. – Oh, yeah.
 
-512
+508
 00:48:35,000 --> 00:48:38,460
-therefore… – And what The cost of
-delivering the service. – What will happen
+What will happen
 
-513
+509
 00:48:38,460 --> 00:48:43,480
 is that… – It's not opt out. It's opt in.
-– It's opt in. Yeah, you have to opt in.
+– Yeah, you have to opt in.
 
-514
+510
 00:48:43,580 --> 00:48:47,160
 It's a positive opt in. Sorry, I said it
 wrong, but you're right. – Okay. – They
 
-515
+511
 00:48:47,160 --> 00:48:51,200
 have to opt in. – They will choose to get
-a digital identity. – Yes. – Let's say it
+a digital identity. – Yes.
 
-516
+512
 00:48:51,200 --> 00:48:56,880
-that way. – And what will happen is
-demographically as people die off, the opt-inners
+And what will happen is demographically
+as people die off, the opt-inners
 
-517
+513
 00:48:56,880 --> 00:49:03,340
 will go up. And at some point in like
 one generation, you'll have a teeny
 
-518
+514
 00:49:03,340 --> 00:49:08,180
 fraction of the population that won't opt
-in. And so then as a byproduct, a natural
+in. – And so then as a byproduct, a natural
 
-519
+515
 00:49:08,180 --> 00:49:15,280
 byproduct as more opt-in, then the cost
 of services will go down. The ability to
 
-520
+516
 00:49:15,280 --> 00:49:25,300
 deliver services faster will go down. And
 there will be a net positive effect of the
 
-521
+517
 00:49:25,300 --> 00:49:30,940
-state being able just to be more
-efficient. And so that also to the privacy
+state being able just to be
+more efficient. And to the privacy
 
-522
+518
 00:49:30,940 --> 00:49:35,440
 and liberty, that should also be pointed
-out to the other states. I don't know if
+out to the other states. – I don't know if
 
-523
+519
 00:49:35,440 --> 00:49:39,120
 people know this, but for the last 10
 years, the state of Utah has been ranked
 
-524
+520
 00:49:39,120 --> 00:49:46,000
 as the number one state as a business
 friendly, well-run state. So they get that
 
-525
+521
 00:49:46,000 --> 00:49:52,600
 running the state efficiently matters.
 And so it's not lost on them that having a
 
-526
+522
 00:49:52,600 --> 00:49:56,540
 digital identity system that allows
 them to run it even more efficiently, but
 
-527
+523
 00:49:56,540 --> 00:50:03,360
 protects the liberty of its citizens is
 part of maintaining their lead over other
 
-528
+524
 00:50:03,360 --> 00:50:08,440
 states in terms of how the state is run.
 And I'm bragging on my home state, but you
 
-529
+525
 00:50:08,440 --> 00:50:12,040
 just go look, which states are the best
 run states? The state of Utah is always
 
-530
+526
 00:50:12,040 --> 00:50:19,500
-one or two every year. Yeah, go ahead. I
+one or two every year. Yeah, go ahead. – I
 think the adoption is going to be slow and
 
-531
+527
 00:50:19,500 --> 00:50:23,900
 then fast. And it's going to be a tipping
 point that I think will be like tap to
 
-532
+528
 00:50:23,900 --> 00:50:29,180
 pay. I remember I was a slow adopter
 of tap to pay. It took me a couple of years
 
-533
+529
 00:50:29,180 --> 00:50:34,280
 before I was willing to do that. I can't
 remember why if I had any good reason. But
 
-534
+530
 00:50:34,280 --> 00:50:42,260
 as soon as I switched, oh my gosh, I would
 never go back. And so, every place I go, I
 
-535
+531
 00:50:42,260 --> 00:50:46,640
 can pull out my credit card, but I moan
 and groan if I have to go through that
 
-536
+532
 00:50:46,640 --> 00:50:50,620
 amazingly difficult effort of pulling out
 a credit card. And I'm exaggerating, of
 
-537
+533
 00:50:50,620 --> 00:50:55,540
 course. But now my wife, she saw me doing
 it and she was a slow adopter. And now
 
-538
+534
 00:50:55,540 --> 00:50:59,640
 she's got her Apple watch and now she just
 taps her watch and just taps her wrist.
 
-539
+535
 00:51:00,020 --> 00:51:04,200
 And now it's like whenever we see someone
 else pulling out a card when we're doing
 
-540
+536
 00:51:04,200 --> 00:51:09,660
 it like the right way, the cool way, the
 fast way. And now everyone around us is
 
-541
+537
 00:51:09,660 --> 00:51:13,740
 tapped to pay and I rarely see someone
 pull out a card. And it seemed like it was
 
-542
+538
 00:51:13,740 --> 00:51:18,680
 slow and then all of a sudden, but there's
 still always the right to still use the
 
-543
+539
 00:51:18,680 --> 00:51:22,240
 card, but the tapped to pay becomes the
 obvious thing to do. I think that's going
 
-544
+540
 00:51:22,240 --> 00:51:25,860
 to happen and I think it'll be a five to
-10 year. Yeah, it'll probably be five to
+10 year. – Yeah, it'll probably be five to
 
-545
+541
 00:51:25,860 --> 00:51:30,920
 10 years because we have to work out
 the user experience and it'll take a while
 
-546
+542
 00:51:30,920 --> 00:51:39,880
-just to figure that out. Yeah. Yeah. Pass
-in the mic. So I was asking you before
+just to figure that out. Yeah.
+– So I was asking you before
 
-547
+543
 00:51:39,880 --> 00:51:47,480
 regarding running this open infrastructure
 at the edge and the problem I was thinking
 
-548
+544
 00:51:47,480 --> 00:51:56,120
 to solve was this code stack. Do we have
 a plan B? Does this sound like a plan B?
 
-549
+545
 00:51:56,620 --> 00:52:03,800
 Like growing this infrastructure more
-organically, more sovereignly? Well, like
+organically, more sovereignly? – Well, like
 
-550
+546
 00:52:03,800 --> 00:52:09,660
 for example, healthKERI doesn't need SEDI
 for it to be successful in the healthcare
 
-551
+547
 00:52:09,660 --> 00:52:17,260
 sector. Organizational identity will
 pay for KERI-like infrastructure in those
 
-552
+548
 00:52:17,260 --> 00:52:22,140
 things. It's just that it's a two-sided
 network problem. And so a startup has a
 
-553
+549
 00:52:22,140 --> 00:52:27,660
 lot of stuff they have to do to bootstrap
 that. It takes time. Right? So that's
 
-554
+550
 00:52:27,660 --> 00:52:33,160
-always been the problem. Let's say if
+always been the problem. – Let's say if
 we start bundling witnesses on watchers in
 
-555
+551
 00:52:33,160 --> 00:52:38,680
 our wallet. – Yeah, absolutely. – And
 suddenly companies or organizations can
 
-556
+552
 00:52:38,680 --> 00:52:46,200
 tap these sorts of services. – Yeah, if
-forward-looking companies do something like say,
+forward-looking companies do something like
 
-557
+553
 00:52:46,320 --> 00:52:50,420
-you know what, we're going to raise, if
+we're going to raise, if
 you have the ability to say raise an extra
 
-558
+554
 00:52:50,420 --> 00:52:56,220
 10 million, right? And you say, what we're
 going to do is we're going to bootstrap by
 
-559
+555
 00:52:56,220 --> 00:53:00,660
 scaling, by hyper scaling, right? So
 how you hyper scale is you give everything
 
-560
+556
 00:53:00,660 --> 00:53:05,320
 away, right? So it doesn't cost anything
 for anybody. You just give everything away
 
-561
+557
 00:53:05,320 --> 00:53:10,200
 and you know that you have a runway that
 says we're going to spend 10 million or in
 
-562
+558
 00:53:10,200 --> 00:53:14,680
 some cases 100 million. If you're an
 AI company, it's 100 billion that you're
 
-563
+559
 00:53:14,680 --> 00:53:20,060
 going to give away to bootstrap the
 adoption. And then once you reach the
 
-564
+560
 00:53:20,060 --> 00:53:23,940
 tipping point, then you can start
 selling tokens, right? ChatGPT didn't cost
 
-565
+561
 00:53:23,940 --> 00:53:27,380
 anything for how many years, right? A
 couple of years. And then all of a sudden
 
-566
+562
 00:53:27,380 --> 00:53:30,940
 it's like, oh, well, if you want really
 good ChatGPT, you're going to buy tokens,
 
-567
+563
 00:53:31,160 --> 00:53:37,860
 right? But they spent billions in those
 first two years. Right? So, if you have
 
-568
+564
 00:53:37,860 --> 00:53:42,920
 that kind of resource that you say,
 you know what? Digital identity that looks
 
-569
+565
 00:53:42,920 --> 00:53:47,080
 like this, that it's secure, that solves
 fraud, that does all those things. We have
 
-570
+566
 00:53:47,080 --> 00:53:50,760
 a business model that we'll be able to
 monetize. You're not going to monetize the
 
-571
+567
 00:53:50,760 --> 00:53:54,480
 infrastructure. You're going to monetize
 all of the services you build on top of
 
-572
+568
 00:53:54,480 --> 00:53:59,500
 that infrastructure. Then you would just
 give it away. You would just say, you know
 
-573
+569
 00:53:59,500 --> 00:54:02,300
 what? We're going to go do what the
 state of Utah is doing. We're going to
 
-574
+570
 00:54:02,300 --> 00:54:05,880
 find 10 million people. We're going to
 give them wallets and we're going to give
 
-575
+571
 00:54:05,880 --> 00:54:10,420
 them witnesses and we're going to give
 them watchers and we're going to then, you
 
-576
+572
 00:54:10,420 --> 00:54:14,220
 know, let them play with it. And they'll
 go, what am I doing with this? And they
 
-577
+573
 00:54:14,220 --> 00:54:17,720
 go, well, here's a place you can use
 it. And it'll be like the tap to pay. Well,
 
-578
+574
 00:54:18,040 --> 00:54:22,020
 yeah, maybe I don't want to go there.
 But at some point, people will find the
 
-579
+575
 00:54:22,020 --> 00:54:26,360
 utility and then all of a sudden it'll be
 like, why weren't we investing in your
 
-580
+576
 00:54:26,360 --> 00:54:29,900
 company three years ago when you were
 giving away millions of dollars worth of
 
-581
+577
 00:54:29,900 --> 00:54:34,080
 infrastructure and it looked like bad
 business model. But you got to have that
 
-582
+578
 00:54:34,080 --> 00:54:38,400
 kind of money and I don't have that kind
 of money. So, yeah. And I don't know how
 
-583
+579
 00:54:38,400 --> 00:54:44,320
 to convince people to have that kind of
 money. But you're welcome. If you can do
 
-584
+580
 00:54:44,320 --> 00:54:51,640
 that, I say go for it. – I was thinking of
 our phones as infrastructure. – Yeah.
 
-585
+581
 00:54:52,060 --> 00:54:58,060
 Well, the way I imagine this is presenting
 credentials from my phone, not from my
 
-586
+582
 00:54:58,060 --> 00:55:04,580
 desktop app most of the time. So you will
 be running this mobile wallet anyways, if
 
-587
+583
 00:55:04,580 --> 00:55:09,580
 we could expose this. So the biggest
 problem is exposing the services running
 
-588
+584
 00:55:09,580 --> 00:55:17,200
 in your phone to the outside internet. But
-yeah, might be doable. Well, every phone
+yeah, might be doable. – Well, every phone
 
-589
+585
 00:55:17,200 --> 00:55:22,520
 does have an IPv6 static IP address. So
-you technically could run… …snap networks
+you technically could run… – Snap networks
 
-590
+586
 00:55:22,520 --> 00:55:32,120
 using IPFS or … So technically you could
 do it. That's great. – Yeah, I think the
 
-591
+587
 00:55:32,120 --> 00:55:36,940
 desktop would be a good thing for the CEO
 from our CEO's conversation. – Yeah. – If
 
-592
+588
 00:55:36,940 --> 00:55:43,460
 they had a nice desktop app. – So I'm
 just offering. Anyway, so before everybody
 
-593
+589
 00:55:43,460 --> 00:55:50,920
 leaves, should we close
 the session? Thank you.
