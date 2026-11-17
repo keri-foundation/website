@@ -76,7 +76,7 @@ source, but they allow vendor lock-in. So
 16
 00:01:24,080 --> 00:01:32,280
 they're not open infrastructure. So
-for example, if you have a mail server is
+for example, if you have a mail server. Is
 
 17
 00:01:32,280 --> 00:01:35,700
@@ -94,17 +94,17 @@ mail from say one
 
 20
 00:01:49,880 --> 00:01:59,000
-mail server to another? Theoretically,
-right? Right? Yeah. Does your mail client
+mail server to another? – Theoretically,
+right? – Right? Does your mail client
 
 21
 00:01:59,000 --> 00:02:04,740
 let you do that?
-Not usually. Huh?
+Not usually..
 
 22
 00:02:07,400 --> 00:02:13,760
-Yeah, right. You have to do a lot. It's
+You have to do a lot. It's
 not easily. Right. Okay. So it's not. So
 
 23
@@ -119,13 +119,13 @@ is wrong. So to be open infrastructure, it
 
 25
 00:02:27,620 --> 00:02:33,920
-should be designed so that the
-incentive structure fosters cooperation and
+should be designed so that the incentive
+structure fosters “coopertition” and
 
 26
 00:02:33,920 --> 00:02:36,640
 portability. What do I mean by
-cooperation? Have you guys heard that
+“coopertition”? Have you guys heard that
 
 27
 00:02:36,640 --> 00:02:41,720
@@ -175,11 +175,11 @@ stuff from another watcher and what
 36
 00:03:33,200 --> 00:03:38,020
 incentive does the other watcher have
-to share that with me? Ground source and
+to share that with me? – Ground source and
 
 37
 00:03:38,020 --> 00:03:47,960
-reputation. Yes. Right. A watcher is most
+reputation. – Yes. Right. A watcher is most
 effective if it has maximized scope. If I
 
 38
@@ -204,17 +204,17 @@ witnesses that they don't have the same
 
 42
 00:04:12,820 --> 00:04:17,740
-incentive to see, to spend the resources,
-and I say, well, I'll give you my, I'll
+incentive to see, to spend the
+resources, and I say, well, I'll give you
 
 43
 00:04:17,740 --> 00:04:22,420
-give you the witnesses I watch if you give
-me the witnesses you watch. Do you have a,
+the witnesses I watch if you
+give me the witnesses you watch.
 
 44
 00:04:22,540 --> 00:04:26,500
-is there an opportunity to cooperate?
+Is there an opportunity to cooperate?
 Absolutely. So if I'm building witnesses
 
 45
@@ -2948,3 +2948,4 @@ just offering. Anyway, so before everybody
 00:55:43,460 --> 00:55:50,920
 leaves, should we close
 the session? Thank you.
+
