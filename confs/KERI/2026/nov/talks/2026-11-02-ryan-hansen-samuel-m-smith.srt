@@ -75,8 +75,8 @@ source, but they allow vendor lock-in. So
 
 16
 00:01:24,080 --> 00:01:32,280
-they're not open infrastructure. So
-for example, if you have a mail server. Is
+they're not open infrastructure. So for
+example, if you have a mail server. Is
 
 17
 00:01:32,280 --> 00:01:35,700
@@ -99,13 +99,12 @@ right? – Right? Does your mail client
 
 21
 00:01:59,000 --> 00:02:04,740
-let you do that?
-Not usually..
+let you do that? Not usually..
 
 22
 00:02:07,400 --> 00:02:13,760
-You have to do a lot. It's
-not easily. Right. Okay. So it's not. So
+You have to do a lot. It's not
+easily. Right. Okay. So it's not. So
 
 23
 00:02:13,760 --> 00:02:20,800
@@ -174,8 +173,8 @@ stuff from another watcher and what
 
 36
 00:03:33,200 --> 00:03:38,020
-incentive does the other watcher have
-to share that with me? – Ground source and
+incentive does the other watcher have to
+share that with me? – Ground source and
 
 37
 00:03:38,020 --> 00:03:47,960
@@ -264,8 +263,8 @@ to cooperate, then you incentivize
 
 54
 00:05:19,760 --> 00:05:25,620
-cooperation. So you build things so
-that marginal cost is the side of marginal
+cooperation. So you build
+things so that marginal
 
 55
 00:05:25,620 --> 00:05:31,200
@@ -354,8 +353,8 @@ of duplicity is a small fraction of the
 
 72
 00:06:43,920 --> 00:06:51,040
-total amount of traffic. So if I have a if
-every ecosystem shares with every other
+total amount of traffic. So if every
+ecosystem shares with every other
 
 73
 00:06:51,040 --> 00:06:56,200
@@ -418,40 +417,40 @@ in infrastructure that's open and
 portable until you reach scale. Nobody
 
 85
-00:07:54,660 --> 00:07:58,740
+00:07:54,660 --> 00:07:57,035
 makes money in it, right? So you have
-what's called a bootstrap or cold start
 
 86
-00:07:58,740 --> 00:07:59,180
-problem.
+00:07:57,035 --> 00:07:59,180
+what's called a bootstrap
+or cold start problem.
 
 87
 00:08:01,840 --> 00:08:10,460
 So we've kind of talked about this before,
-but the everything in KERI is designed so
+but everything in KERI is designed so
 
 88
 00:08:10,460 --> 00:08:20,740
 that there is open
-decentralized centralized, not
+decentralized, not
 
 89
-00:08:20,740 --> 00:08:25,820
+00:08:20,740 --> 00:08:26,806
 shared infrastructure.
 
 90
-00:08:29,460 --> 00:08:34,140
+00:08:30,670 --> 00:08:34,140
 So you have shared data,
 
 91
-00:08:35,120 --> 00:08:39,340
+00:08:35,120 --> 00:08:39,761
 but no shared governance.
 
 92
 00:08:42,220 --> 00:08:46,780
-Okay, that's a critical
-property. What does that mean to have
+Okay, that's a critical property.
+What does that mean to have
 
 93
 00:08:46,780 --> 00:08:50,760
@@ -480,8 +479,8 @@ everybody has to trust the governance.
 
 98
 00:09:10,160 --> 00:09:13,120
-They have to trust the… Usually the
-governance is a distributed consensus
+Usually the governance
+is a distributed consensus
 
 99
 00:09:13,120 --> 00:09:19,020
@@ -505,8 +504,8 @@ expensive. So what I need to do is make it
 
 103
 00:09:34,020 --> 00:09:39,440
-so that it's truly totally zero trust. So
-it so I don't need shared governance
+so that it's truly totally zero trust.
+So I don't need shared governance
 
 104
 00:09:39,440 --> 00:09:42,140
@@ -546,7 +545,7 @@ scale and the people providing the
 111
 00:10:09,900 --> 00:10:14,500
 infrastructure to be able to afford to
-provide it to until it reaches scale so
+provide it until it reaches scale so
 
 112
 00:10:14,500 --> 00:10:18,280
@@ -584,13 +583,13 @@ state of Utah primes the pump, everybody
 else that wants to be in that ecosystem is
 
 119
-00:11:01,660 --> 00:11:09,260
-incentivized. So
-a public identity
+00:11:01,660 --> 00:11:13,867
+incentivized. So a
+Public Identity Utility.
 
 120
-00:11:12,820 --> 00:11:21,940
-Utility. That's the term that we came up
+00:11:13,891 --> 00:11:21,940
+That's the term that we came up
 with. So what is a utility in a regulated
 
 121
@@ -600,8 +599,8 @@ Electricity. – Electricity. Okay. Power. –
 
 122
 00:11:29,260 --> 00:11:37,840
-Garbage. – Telecom. Right? Garbage.
-Sewers. Right? And the reason why do we
+Garbage. – Telecom. Right?
+Garbage. Sewers. Right? And why do we
 
 123
 00:11:37,840 --> 00:11:43,380
@@ -630,7 +629,7 @@ get to make money, but they can't make
 
 128
 00:12:07,040 --> 00:12:14,940
-money without about getting approval
+money without getting approval
 for any rate increases, any changes in
 
 129
@@ -649,18 +648,19 @@ get a monopoly, right? So they get a
 monopoly, so they don't have to compete
 
 132
-00:12:32,060 --> 00:12:36,460
-with anybody, but in return, you get to
-regulate them. So they're not the most,
+00:12:32,060 --> 00:12:35,530
+with anybody, but in return,
+you get to regulate them.
 
 133
-00:12:36,660 --> 00:12:40,900
-they're not, they don't, you're not
-guaranteed the most efficient, but you do
+00:12:35,554 --> 00:12:40,900
+So they're not guaranteed
+the most efficient, but you do
 
 134
 00:12:40,900 --> 00:12:46,920
-guarantee that you don't have non-portability because everybody's power is
+guarantee that you don't have non-
+portability because everybody's power is
 
 135
 00:12:46,920 --> 00:12:51,680
@@ -699,7 +699,7 @@ they're going to ensure that there's
 142
 00:13:30,140 --> 00:13:34,020
 enough money to build
-out the infrastructure. Sure.
+out the infrastructure.
 
 143
 00:13:37,300 --> 00:13:48,580
@@ -792,12 +792,12 @@ piece of information in that certificate
 
 161
 00:15:19,200 --> 00:15:28,100
-when they reissue it. What's that called?
-Let's encrypt? Yeah. Okay. Right. Okay. So
+when they reissue it. What's
+that called? “Let's encrypt”?
 
 162
 00:15:28,100 --> 00:15:34,840
-that's the problem — is that if you can't
+The problem is that if you can't
 amortize this cost, you're incentivizing
 
 163
@@ -846,8 +846,8 @@ to bootstrap it would be for providers of
 
 172
 00:16:27,740 --> 00:16:36,000
-witnesses and watcher services to have
-a market opportunity that allows them
+witnesses and watcher services to
+have a market opportunity that allows them
 
 173
 00:16:36,000 --> 00:16:44,380
@@ -1650,8 +1650,8 @@ the state, an issuing agent.
 
 334
 00:32:22,200 --> 00:32:27,900
-So the point is that that's the
-place where you can make money in the
+So the point is that that's the place
+where you can make money in the
 
 335
 00:32:27,900 --> 00:32:33,860
@@ -2567,8 +2567,8 @@ demographically as people die off, the opt-inners
 
 518
 00:48:56,880 --> 00:49:03,340
-will go up. And at some point in
-like one generation, you'll have a teeny
+will go up. And at some point in like
+one generation, you'll have a teeny
 
 519
 00:49:03,340 --> 00:49:08,180
@@ -2762,7 +2762,8 @@ suddenly companies or organizations can
 
 557
 00:52:38,680 --> 00:52:46,200
-tap these sorts of services. – Yeah, if forward-looking companies do something like say,
+tap these sorts of services. – Yeah, if
+forward-looking companies do something like say,
 
 558
 00:52:46,320 --> 00:52:50,420
