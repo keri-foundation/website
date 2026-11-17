@@ -2148,11 +2148,10 @@
         }
 
         .video-modal-transcript-body .transcript-plain {
-            margin: 8px 4px 0;
+            margin: 0 0 0.75em;
             font-size: 1.125rem;
-            line-height: 1.75;
+            line-height: 1.6;
             color: #1a1a2e;
-            white-space: pre-wrap;
         }
 
         .video-modal-transcript-body .transcript-plain-lang {
@@ -5979,6 +5978,61 @@
                     .trim();
             }
 
+            // One paragraph per sentence, and per speaker turn marked with " – ".
+            function splitReadableParagraphs(text) {
+                const paragraphs = [];
+                const push = (chunk) => {
+                    const cleaned = chunk.replace(/^[\s–—]+/, '').trim();
+                    if (cleaned) paragraphs.push(cleaned);
+                };
+                const isAbbrev = (word) => {
+                    // "Dr." is a title. "TL;DR." is an acronym, so all-caps is not a title.
+                    if (word.length > 1 && word === word.toUpperCase()) return false;
+                    return /^(?:mr|mrs|ms|mss|dr|prof|sr|jr|st|vs|etc|inc|ltd)$/i.test(word);
+                };
+
+                let start = 0;
+                const re = /[.!?…]+["'”’)\]]*/g;
+                let match;
+                while ((match = re.exec(text)) !== null) {
+                    const end = match.index + match[0].length;
+                    const after = text.slice(end);
+                    if (after && !/^\s/.test(after)) continue;
+
+                    const word = text.slice(0, match.index).match(/([A-Za-z]+)$/)?.[1] || '';
+                    const throughPunct = text.slice(0, end);
+                    if (isAbbrev(word)) continue;
+                    if (/^no$/i.test(word) && /^\s+\d/.test(after)) continue;
+                    if (/(?:^|\s)(?:[A-Za-z]\.){2,}$/.test(throughPunct)) continue;
+                    if (/(?:^|\s)[A-Za-z](?:\.[A-Za-z])+\.$/.test(throughPunct)) continue;
+
+                    const nextWord = after.match(/^\s+["'“‘(\[]*(\S+)/)?.[1] || '';
+                    const sentenceSoFar = text.slice(start, match.index).trim();
+                    const nextIsName = /^[A-Z]/.test(nextWord) && !/^(?:A|An|And|But|Or|So|The|This|That|These|Those|What|When|Where|Who|Why|How|If|It|Its|We|I|He|She|They|You|There|Then|Now|Well|Yes|No|OK|Okay|Not|For|In|On|At|To|Of|As|Is|Are|Was|Were|Do|Did|Can|Could|Would|Should|Will|Just|Here|Also|All|Let)$/i.test(nextWord);
+                    // "Samuel M. Smith" is an initial. "with a T. What" is a new sentence.
+                    if (/^\.["'”’)\]]*$/.test(match[0]) && /^[A-Z]$/.test(word) && sentenceSoFar.length > word.length && nextIsName) continue;
+                    if ((match[0].includes('…') || /^\.{3,}/.test(match[0])) && /^[a-z]/.test(nextWord)) continue;
+
+                    for (const turn of text.slice(start, end).split(/\s+–\s+/)) push(turn);
+                    start = end;
+                }
+                for (const turn of text.slice(start).split(/\s+–\s+/)) push(turn);
+                return paragraphs;
+            }
+
+            function appendReadableTranscript(cues, query) {
+                const paragraphs = splitReadableParagraphs(concatenateCueTexts(cues));
+                const frag = document.createDocumentFragment();
+                for (const paragraph of paragraphs) {
+                    const p = document.createElement('p');
+                    p.className = 'transcript-plain';
+                    if (query) p.innerHTML = highlightMatch(paragraph, query);
+                    else p.textContent = paragraph;
+                    frag.appendChild(p);
+                }
+                modalTranscriptBody.appendChild(frag);
+            }
+
             function updateModalTranscriptViewBtn() {
                 if (!modalTranscriptViewBtn) return;
                 modalTranscriptViewBtn.setAttribute('aria-pressed', modalTranscriptPlainView ? 'true' : 'false');
@@ -6401,15 +6455,7 @@
                 }
 
                 if (modalTranscriptPlainView) {
-                    const plain = document.createElement('p');
-                    plain.className = 'transcript-plain';
-                    const fullText = concatenateCueTexts(store.cues);
-                    if (normalizedQuery) {
-                        plain.innerHTML = highlightMatch(fullText, trimmedQuery);
-                    } else {
-                        plain.textContent = fullText;
-                    }
-                    modalTranscriptBody.appendChild(plain);
+                    appendReadableTranscript(store.cues, normalizedQuery ? trimmedQuery : '');
                     if (normalizedQuery) {
                         const extras = new Map();
                         for (const hit of matchingHits) {
@@ -6421,11 +6467,8 @@
                             const heading = document.createElement('p');
                             heading.className = 'transcript-plain-lang';
                             heading.textContent = languageLabel(lang);
-                            const extra = document.createElement('p');
-                            extra.className = 'transcript-plain';
-                            extra.innerHTML = highlightMatch(concatenateCueTexts(cues), trimmedQuery);
                             modalTranscriptBody.appendChild(heading);
-                            modalTranscriptBody.appendChild(extra);
+                            appendReadableTranscript(cues, trimmedQuery);
                         }
                     }
                     setModalTranscriptSyncEnabled(false);
