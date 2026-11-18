@@ -1,3 +1,5 @@
+AI generated summary, if a statement needs explication, see the video.
+
 Ryan Hansen reports on the five Ws that carry KERI's infrastructure: wallet, witnesses, watchers, web, and wizard. The wallet holds an identifier, its keys, and the events it emits — inception, rotation, and interaction — in a key event log. Witnesses are independent of the controller. They receipt those events so the key state stays available when the wallet is offline. Watchers make duplicity something anyone can prove. A watcher fails by not watching, not by lying about what it saw.
 
 Web means discovery and transport. Infrastructure can be found, and messages can move, over ordinary protocols without KERI trusting the network that carries them. Wizard is the push to make that usable: safe defaults, thinner APIs, and product around the protocol.

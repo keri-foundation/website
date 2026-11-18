@@ -1,3 +1,5 @@
+AI generated summary, if a statement needs explication, see the video.
+
 Samuel M. Smith connects Utah's SEDI public identity utility to AI anxiety: the prospect that software will identify people by watching them all the time. Automated attacks, he argues, do not beat cryptography by brute force. The attacks that matter are side channels — phishing, software bugs, stolen signing keys — and the usual answer has been continuous identity, which is continuous surveillance. Breaches are often announced by the attacker, months later, which is why that answer feels urgent.
 
 KERI's alternative is nested threshold structure rather than more observation. Separate signing and rotation thresholds, delegation, and a witness pool mean an attacker has to compromise many keys at once, including keys the verifier's watchers do not share with the controller. Smith calls that practically infeasible, so an identifier can stay secure against that class of attack without surveilling the person.

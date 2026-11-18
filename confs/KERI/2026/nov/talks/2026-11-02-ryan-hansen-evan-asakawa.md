@@ -1,3 +1,5 @@
+AI generated summary, if a statement needs explication, see the video.
+
 Ryan Hansen and Evan Asakawa demonstrate the KERISuite stack as it runs now, updating a setup earlier viewers may remember as a single host. Witnesses, watchers, and the related services are spread across several machines. Each process is one instance, and a deployment runs as many as it needs. Launch scripts, the kf-boot configuration, and the setup guide are how someone reproduces it. Samuel M. Smith, in the discussion, argues for bare metal rather than a cluster control plane: one stolen administrator credential should not be able to take down every service.
 
 The live walkthrough is Locksmith. They create a vault and an autonomic identifier, install the browser plugin, and point the wallet at a boot server that provisions witnesses. Provisioning and talking to those witnesses use different ports. One witness service can host many identifiers, and a city, a bank, and a university can each contribute witnesses. The arrangement they recommend still gives each controller its own witness identifier, rather than one signing identity reused for every resident.

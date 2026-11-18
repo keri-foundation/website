@@ -1,3 +1,5 @@
+AI generated summary, if a statement needs explication, see the video.
+
 Samuel M. Smith opens with the state of the KERI suite and the properties it is built to guarantee. He calls the design minimally sufficient: only as complicated as those properties require. The path runs from earlier work on perpetual identity into the ledger wars, when each blockchain project wanted identifiers rooted on its own ledger. KERI keeps control in a key event log a controller can reconstitute from any copy, so the root of trust is not one shared chain.
 
 Two commitments carry the talk. Cryptographic agility is built in, so a broken hash can be retired by switching algorithms instead of rewriting every tool on the suite. The security claim is fault-tolerant key management: more cryptography does not fix stolen keys, and a real system has to keep working after a compromise. Issuance and observation are split. A registrar publishes state, and a verifier checks an ACDC through an observer the issuer does not control, so revocation does not become a correlation point.
