@@ -689,7 +689,8 @@ threshold structures that have combined
 
 139
 00:12:25,360 --> 00:12:30,880
-with the detection and recovery from side-channel attack, then I can make a system
+with the detection and recovery from
+side-channel attack, then I can make a system
 
 140
 00:12:30,880 --> 00:12:36,460
@@ -808,7 +809,8 @@ I'll get to examples. A fault-tolerant
 
 163
 00:14:26,880 --> 00:14:31,260
-system. So when I use the term fault-tolerant, detects and recovers from a
+system. So when I use the term
+fault-tolerant, detects and recovers from a
 
 164
 00:14:31,260 --> 00:14:36,440
@@ -1192,8 +1194,8 @@ signing keys for low friction, but I can
 
 240
 00:20:55,820 --> 00:21:00,740
-have multisig rotation keys when I
-need to recover. So now they can say, well,
+have multisig rotation keys when I need
+to recover. So now they can say, well,
 
 241
 00:21:00,820 --> 00:21:06,080
@@ -1532,8 +1534,8 @@ digital ID for you. You have to use paper.
 
 308
 00:27:17,100 --> 00:27:22,140
-If you decide not to create it, there is
-no identifier. There is no way
+If you decide not to create it,
+there is no identifier. There is no way
 
 309
 00:27:22,140 --> 00:27:28,440
@@ -2105,8 +2107,8 @@ guardian instantaneously and say, no, no,
 
 423
 00:37:55,160 --> 00:37:59,460
-you're not guardian anymore. You can't
-check the kid out of school. So it's,
+you're not guardian anymore. You
+can't check the kid out of school. So it's,
 
 424
 00:37:59,580 --> 00:38:05,180
@@ -2318,8 +2320,8 @@ out. Like are you using MCP? You know,
 
 466
 00:42:13,920 --> 00:42:18,360
-what are the APIs look like? What are
-the details? Are you bridging from
+what are the APIs look like? What
+are the details? Are you bridging from
 
 467
 00:42:18,360 --> 00:42:26,940
@@ -2662,8 +2664,8 @@ right? Safety requires accountability.
 
 535
 00:48:36,980 --> 00:48:39,480
-Does anybody disagree with me that safety
-requires accountability?
+Does anybody disagree with me
+that safety requires accountability?
 
 536
 00:48:46,040 --> 00:48:50,660
@@ -2678,12 +2680,12 @@ held accountable for harming you?
 538
 00:48:58,200 --> 00:49:04,360
 If they can get away with harming you,
-what's to stop them from harming you? I
+what's to stop them from harming you?
 
 539
 00:49:04,360 --> 00:49:07,200
-mean, if you, I mean, you could say,
-well, you personally could hold them
+I mean, you could say, well,
+you personally could hold them
 
 540
 00:49:07,200 --> 00:49:09,660
@@ -2722,7 +2724,7 @@ significant amount of time? Okay. What was
 
 547
 00:49:40,860 --> 00:49:46,320
-it like? Yeah, you completely off-grid?
+it like? […] You're completely off-grid?
 You're one of the ones that doesn't want
 
 548
@@ -2731,8 +2733,8 @@ to be on the camera? Okay. So what things
 did you have to give up to live off-grid?
 
 549
-00:49:59,240 --> 00:49:59,600
-Okay.
+00:49:51,824 --> 00:50:04,036
+[…]
 
 550
 00:50:04,060 --> 00:50:10,000
@@ -2741,12 +2743,12 @@ right? So you can't use a bank online,
 
 551
 00:50:10,200 --> 00:50:14,540
-right? But not be off-grid.
+right? […] But not be off-grid.
 
 552
 00:50:17,360 --> 00:50:22,920
-Okay. So off-grid more than just power.
-I don't mean off-grid power. I mean truly
+Okay. – So off-grid more than just power.
+– I don't mean off-grid power. I mean truly
 
 553
 00:50:22,920 --> 00:50:27,440
@@ -2756,11 +2758,11 @@ purpose. Because I'm talking about the
 554
 00:50:27,440 --> 00:50:32,220
 internet as a dangerous place, not whether
-your neighborhood's a dangerous place. All
+your neighborhood's a dangerous place.
 
 555
 00:50:32,220 --> 00:50:37,200
-right. So I know people that are off-grid
+So I know people that are off-grid
 on the internet and they live in the
 
 556
@@ -2771,32 +2773,32 @@ do anything because as soon as they leave
 557
 00:50:42,980 --> 00:50:48,600
 their enclave, they become observable.
-They become surveillable. Huh? Like Stephen
+They become surveillable. – Like Stephen
 
 558
 00:50:48,600 --> 00:50:54,640
-Hawking in World Wargate. Yeah, that
-kind of that level. Yeah, that level of it.
+Hawking in WarGames?
+– Yeah, that kind of level.
 
 559
 00:50:54,760 --> 00:51:00,080
-Okay. So safety requires accountability.
-That means privacy requires
+Okay. So “safety requires accountability”.
+That means “privacy requires
 
 560
 00:51:00,080 --> 00:51:03,660
-accountability. This is where it gets
+accountability”. This is where it gets
 controversial. People don't think that
 
 561
 00:51:03,660 --> 00:51:09,620
 privacy requires accountability. So
-think about it. Second parties to repeated
+think about it. “Second parties to repeated
 
 562
 00:51:09,620 --> 00:51:12,880
 interactions can correlate
-the first parties. That's true.
+the first parties.” That's true.
 
 563
 00:51:16,600 --> 00:51:23,200
@@ -2821,11 +2823,11 @@ correlate me, then eventually they knew
 567
 00:51:38,800 --> 00:51:43,520
 who I am, which means that eventually they
-can harm me. Right? You heard the phrase,
+can harm me. You heard the phrase:
 
 568
 00:51:43,640 --> 00:51:48,320
-right? I know where you live. What does
+“I know where you live”. What does
 that mean? It means, well, I know where
 
 569
@@ -2835,8 +2837,8 @@ me, I know where to go to harm you, to get
 
 570
 00:51:53,900 --> 00:51:58,740
-revenge, to get to, you know, restitution
-for the harm you did me because I know
+revenge, to get restitution for the
+harm you did me because I know
 
 571
 00:51:58,740 --> 00:52:02,540
@@ -2846,7 +2848,7 @@ vulnerable, right? Well, if you're on the
 572
 00:52:02,540 --> 00:52:05,860
 internet and you're interacting on
-the internet, at you've made yourself
+the internet, you've made yourself
 
 573
 00:52:05,860 --> 00:52:10,940
@@ -2859,7 +2861,7 @@ if you truly want to be private,
 
 575
 00:52:15,240 --> 00:52:20,340
-you need to be the whole anybody you
+you need to be able to hold anybody you
 interact with accountable for what they do
 
 576
@@ -2874,18 +2876,18 @@ with them with a third party and the third
 
 578
 00:52:27,740 --> 00:52:32,680
-party is the one that harms you. But that
-the source of the harm came from the party
+party is the one that harms you. But the
+source of the harm came from the party
 
 579
 00:52:32,680 --> 00:52:38,920
-that you interacted with who didn't
-respect your privacy. All right. Using the
+that you interacted with who
+didn't respect your privacy. Using the
 
 580
 00:52:38,920 --> 00:52:43,120
-wrong definition of the word privacy.
-Any interaction system that does not enable
+wrong definition of the word privacy. “Any
+interaction system that does not enable
 
 581
 00:52:43,120 --> 00:52:46,480
@@ -2894,7 +2896,7 @@ accountable is fundamentally incompatible
 
 582
 00:52:46,480 --> 00:52:51,440
-with privacy. That's my argument. If you
+with privacy”. That's my argument. If you
 can't hold people accountable, you can't
 
 583
@@ -2904,8 +2906,8 @@ the idea that privacy comes from hiding.
 
 584
 00:52:59,300 --> 00:53:03,840
-If you're interacting, you're not, you
-can't hide. There's no way to hide if
+If you're interacting, you can't
+hide. There's no way to hide if
 
 585
 00:53:03,840 --> 00:53:08,440
@@ -2914,7 +2916,7 @@ do always leaks information. And when you
 
 586
 00:53:08,440 --> 00:53:16,540
-have surveillance that it has sufficient
+have surveillance that has sufficient
 coverage, sufficient scope, every piece of
 
 587
@@ -2929,8 +2931,8 @@ just using correlation. They're already
 
 589
 00:53:27,980 --> 00:53:31,900
-doing it. Everybody's already the reason
-they can even propose it is they've been
+doing it. The reason they can
+even propose it is they've been
 
 590
 00:53:31,900 --> 00:53:34,560
@@ -2949,12 +2951,12 @@ re-identification. We'll just use it for
 
 593
 00:53:46,700 --> 00:53:50,600
-first, you know, you go to their websites
-and say, Oh, use continuous identity. What
+first…, you go to their websites
+and say, oh, use continuous identity. What
 
 594
 00:53:50,600 --> 00:53:55,320
-it says is, Well, you can improve the user
+it says is, well, you can improve the user
 experience because as soon as the user
 
 595
@@ -3000,7 +3002,7 @@ and log in because if they stole it, they
 603
 00:54:35,340 --> 00:54:40,340
 wouldn't be in your bedroom at 4am, right?
-They'd be someplace else at 4am, right? So
+They'd be someplace else at 4am. So
 
 604
 00:54:40,340 --> 00:54:44,040
@@ -3015,7 +3017,7 @@ remove that friction of you supplying us an
 606
 00:54:50,220 --> 00:54:55,660
 authenticator. That's what continuous
-identity is saying, right? So if you think
+identity is saying. So if you think
 
 607
 00:54:55,660 --> 00:54:59,340
@@ -3034,8 +3036,8 @@ respect that the data you share with them
 
 610
 00:55:08,440 --> 00:55:14,480
-stays between you. It's confidential to
-you too. It doesn't nobody else has any
+stays between you. It's confidential
+to you too. Nobody else has any
 
 611
 00:55:14,480 --> 00:55:20,100
@@ -3110,7 +3112,7 @@ things like, oh, we're going to de-identify
 625
 00:56:34,320 --> 00:56:41,280
 this data and then it's not data
-about you. That's a lie, right? But what
+about you. That's a lie. But what
 
 626
 00:56:41,280 --> 00:56:48,060
@@ -3155,8 +3157,5 @@ in the Utah state law. And we snuck that
 634
 00:57:22,180 --> 00:57:28,640
 in, honestly, because the data aggregators
-don't like it. And I'm done. So, all
+don't like it. And I'm done. So, all right.
 
-635
-00:57:28,640 --> 00:57:35,340
-right.
