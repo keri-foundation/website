@@ -262,7 +262,7 @@ talks/2026-11-02-kent-bull.mp4
 talks/2026-11-02-kent-bull.md
 ```
 
-The same rule applies in `interviews/` and in any later media folder: `path` ending in `.mp4` or `.mp3` looks for that path with `.md`. Nothing in `index.json` points at the file. If the file is missing, or empty, that video simply has no summary. `landing-pages` writes the text into the gallery `index.html` as real HTML (so a crawler sees it, and the page script moves it onto the talk card). `transcripts` puts the same text at the top of that talk’s transcript page and uses the opening as the page description. Those transcript pages are already in the sitemap.
+The same rule applies in `interviews/` and in any later media folder: `path` ending in `.mp4` or `.mp3` looks for that path with `.md`. Nothing in `index.json` points at the file. If the file is missing, or empty, that video simply has no summary. `landing-pages` writes the text into the gallery `index.html` as real HTML (so a crawler sees it, and the page script moves it onto the talk card). `transcripts` puts the same text at the top of that talk’s transcript page and uses the opening as the page description. Those transcript pages are already in the sitemap. `pdfs` prints the same summary at the start of that talk’s chapter in All Transcripts (PDF). A talk with no summary file is unchanged in all three.
 
 Write plain paragraphs separated by a blank line, about 200 words. A block that is only a Markdown heading is ignored. Inline Markdown is not interpreted.
 

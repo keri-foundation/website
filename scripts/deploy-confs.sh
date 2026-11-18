@@ -38,7 +38,7 @@ Commands (run in the order given):
   landing-pages   Copy the shared template into every gallery and stamp social meta, header, transcript links, and optional talk summaries from index.json. Also write confs/index.html and vids/index.html from the overview template
   audio           Write a spoken-word MP3 beside each gallery MP4 when that MP3 does not exist yet
   transcripts     Regenerate the static transcript HTML pages from the .srt files (a sibling .md summary is included when present)
-  pdfs            Build concatenated transcript PDFs under each gallery's transcripts/pdf/
+  pdfs            Build concatenated transcript PDFs under each gallery's transcripts/pdf/ (a sibling .md summary opens that talk's chapter when present)
   sitemap         Write confs/sitemap.xml and vids/sitemap.xml (overviews, galleries, transcript HTML)
   verify          Check every file referenced by each index.json exists locally
   unused          List gallery files that nothing on the gallery page references
