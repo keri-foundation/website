@@ -35,9 +35,9 @@ Usage: scripts/deploy-confs.sh [options] <command>...
 Commands (run in the order given):
   list            Show galleries: confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/
   subtitles       Copy curated .srt files from scripts/subtitle-sources.tsv (no-op when that file has no sources; edit SRTs in place under the gallery)
-  landing-pages   Copy the shared template into every gallery and stamp social meta, header, and transcript links from index.json. Also write confs/index.html and vids/index.html from the overview template
+  landing-pages   Copy the shared template into every gallery and stamp social meta, header, transcript links, and optional talk summaries from index.json. Also write confs/index.html and vids/index.html from the overview template
   audio           Write a spoken-word MP3 beside each gallery MP4 when that MP3 does not exist yet
-  transcripts     Regenerate the static transcript HTML pages from the .srt files
+  transcripts     Regenerate the static transcript HTML pages from the .srt files (a sibling .md summary is included when present)
   pdfs            Build concatenated transcript PDFs under each gallery's transcripts/pdf/
   sitemap         Write confs/sitemap.xml and vids/sitemap.xml (overviews, galleries, transcript HTML)
   verify          Check every file referenced by each index.json exists locally

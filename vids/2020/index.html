@@ -8,12 +8,15 @@
   "brand" object on a gallery index.json overrides it for that gallery.
   The same step writes the page header and page.transcriptLinks into the HTML,
   and appends talk / interview / PDF links discovered under transcripts/.
+  Optional talk summaries are stamped from a sibling .md of each video
+  (talks/foo.mp4 → talks/foo.md, any media folder). A missing file is skipped.
   Do not edit per-gallery index.html by hand.
 -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <script>document.documentElement.classList.add("js");</script>
     <title>2020 Videos</title>
     <meta name="description" content="Samuel Smith's Nonconformist keynote on the economics of its and bits">
     <link rel="canonical" href="https://keri.foundation/vids/2020/">
@@ -2408,6 +2411,69 @@
             color: var(--ink);
         }
 
+        /* Summaries are real HTML for crawlers and for browsers without JS.
+           With JS they move onto the matching card; the holding section stays clipped. */
+        .talk-summaries {
+            max-width: 48rem;
+            margin: 0 auto 8px;
+        }
+
+        .talk-summaries:not(:has(.talk-summary)) {
+            display: none;
+        }
+
+        html.js .talk-summaries {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: 0;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            white-space: nowrap;
+        }
+
+        html.js .talk-summaries.is-visible {
+            position: static;
+            width: auto;
+            height: auto;
+            margin: 0 auto 28px;
+            overflow: visible;
+            clip: auto;
+            clip-path: none;
+            white-space: normal;
+        }
+
+        .talk-summaries > h2 {
+            font-size: 1.4rem;
+            margin: 0 0 14px;
+        }
+
+        .talk-summaries > .talk-summary {
+            margin: 0 0 22px;
+        }
+
+        .talk-summary-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 0 0 8px;
+            line-height: 1.4;
+        }
+
+        .talk-summary-body p {
+            margin: 0 0 0.75rem;
+            font-size: 0.98rem;
+            line-height: 1.55;
+        }
+
+        .talk-summary-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .video-info .talk-summary {
+            margin-top: 14px;
+        }
+
         .copy-button {
             display: flex;
             align-items: center;
@@ -2971,6 +3037,8 @@
             <button id="toggleAllVideos" type="button" aria-pressed="false"
                 title="Toggle condensed view for all videos">Show only titles</button>
         </div>
+
+        <section class="talk-summaries" id="talkSummaries" aria-label="Talk summaries"></section>
 
         <div class="video-container" id="videoContainer">
             <!-- Video cards generated from index.json -->
@@ -7566,6 +7634,31 @@
                 if (newUrl !== currentUrl) history.replaceState(null, '', newUrl);
             }
 
+            function takeTalkSummary(video) {
+                const root = document.getElementById('talkSummaries');
+                const media = video && video.path;
+                if (!root || !media) return null;
+                const articles = root.querySelectorAll('.talk-summary');
+                for (let i = 0; i < articles.length; i++) {
+                    if (articles[i].getAttribute('data-media') === media) return articles[i];
+                }
+                return null;
+            }
+
+            function attachTalkSummary(infoDiv, video) {
+                const summary = takeTalkSummary(video);
+                if (!summary) return;
+                const heading = summary.querySelector('.talk-summary-title');
+                if (heading) heading.hidden = true;
+                infoDiv.appendChild(summary);
+            }
+
+            function settleTalkSummaries() {
+                const root = document.getElementById('talkSummaries');
+                if (!root) return;
+                if (root.querySelector('.talk-summary')) root.classList.add('is-visible');
+            }
+
             function createVideoCard(video) {
                 const card = document.createElement('article');
                 card.className = 'video-card';
@@ -7793,6 +7886,8 @@
                     infoDiv.appendChild(actionsRow);
                 }
 
+                attachTalkSummary(infoDiv, video);
+
                 card.appendChild(infoDiv);
 
                 const toggleAllBtn = document.querySelector('#toggleAllVideos');
@@ -7896,6 +7991,8 @@
                     section.appendChild(grid);
                     container.appendChild(section);
                 });
+
+                settleTalkSummaries();
 
                 // Initialize videoCardMap after all cards are created
                 const videoCardMap = new Map();

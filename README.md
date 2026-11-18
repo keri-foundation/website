@@ -14,6 +14,7 @@
   - [Conference galleries (`/confs/<ORG>/<YEAR>/<month>/`)](#conference-galleries-confsorgyearmonth)
     - [Top clips (`topClips`)](#top-clips-topclips)
     - [Chapters (`videos[].chapters`)](#chapters-videoschapters)
+    - [Talk summaries](#talk-summaries)
   - [Yearly videos (`/vids/<YEAR>/`)](#yearly-videos-vidsyear)
     - [New conference](#new-conference)
     - [Build and deploy](#build-and-deploy)
@@ -251,6 +252,19 @@ Optional jump list on a talk card and in the full-screen player. Add a `chapters
 ```
 
 A **Chapters** button on the talk card (and in the full-screen player) opens a slide-up sheet on mobile / centered panel on larger screens. Choosing a chapter seeks that video, plays from there, updates the URL hash (`&t=`), and closes the sheet. Chapters with unparseable times or an empty description are skipped. See `vids/2026/index.json` (“It's KERI or Surveillance”) for a full example.
+
+### Talk summaries
+
+Optional. A summary is a sibling of the media file, same basename, Markdown:
+
+```text
+talks/2026-11-02-kent-bull.mp4
+talks/2026-11-02-kent-bull.md
+```
+
+The same rule applies in `interviews/` and in any later media folder: `path` ending in `.mp4` or `.mp3` looks for that path with `.md`. Nothing in `index.json` points at the file. If the file is missing, or empty, that video simply has no summary. `landing-pages` writes the text into the gallery `index.html` as real HTML (so a crawler sees it, and the page script moves it onto the talk card). `transcripts` puts the same text at the top of that talk’s transcript page and uses the opening as the page description. Those transcript pages are already in the sitemap.
+
+Write plain paragraphs separated by a blank line, about 200 words. A block that is only a Markdown heading is ignored. Inline Markdown is not interpreted.
 
 <a id="yearly-videos"></a>
 

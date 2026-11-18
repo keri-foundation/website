@@ -32,7 +32,9 @@
  *                 referenced .srt file's filesystem mtime (ISO) for the
  *                 transcript panel. An omitted `subtitle` means the English file
  *                 is the media basename with `.srt` (`talks/foo.mp4` →
- *                 `talks/foo.srt`) when that file exists.
+ *                 `talks/foo.srt`) when that file exists. Stamps optional talk
+ *                 summaries from a sibling Markdown file (`talks/foo.mp4` →
+ *                 `talks/foo.md`, any media folder). A missing file is omitted.
  *                 Then writes confs/index.html and vids/index.html from
  *                 template-presentations-landingpage/overview.html, using each
  *                 tree's overview.json for page copy and each gallery index.json
@@ -75,6 +77,7 @@ import { basename, dirname, extname, join, relative, resolve, sep } from "node:p
 import { fileURLToPath } from "node:url";
 import { homedir } from "node:os";
 import { absoluteAsset, brandThemeStyle, loadBrand, mergeBrand } from "./brand.mjs";
+import { summaryMarkdownRel, summaryParagraphsFor } from "./talk-summary.mjs";
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const SITE_ROOT = resolve(SCRIPT_DIR, "..");
@@ -123,6 +126,7 @@ const BRAND_THEME_RE = /<style id="brand-theme">[\s\S]*?<\/style>/;
 const TRANSCRIPT_NAV_MARKER =
   '<nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Gallery links" hidden><!--__TRANSCRIPT_LINKS__--></nav>';
 const GALLERY_HEADER_MARKER = "<!--__GALLERY_HEADER__-->";
+const TALK_SUMMARIES_MARKER = "<!--__TALK_SUMMARIES__-->";
 const OVERVIEW_CARDS_MARKER = "<!--__OVERVIEW_CARDS__-->";
 const OVERVIEW_FOOTER_MARKER = "<!--__OVERVIEW_FOOTER__-->";
 const MONTH_INDEX = {
@@ -416,6 +420,41 @@ function renderGalleryHeader(page, pageUrl) {
   return html;
 }
 
+/**
+ * Optional summaries, one article per video that has a sibling .md.
+ * The gallery script moves each article onto its card. With JavaScript off,
+ * this section is the readable copy. Search engines get the text either way.
+ */
+function renderTalkSummaries(config, confDir) {
+  const videos = Array.isArray(config?.videos) ? config.videos : [];
+  const articles = [];
+  for (const video of videos) {
+    const { paragraphs } = summaryParagraphsFor(confDir, video);
+    if (!paragraphs.length || !video?.path) continue;
+    const body = paragraphs.map((paragraph) => `        <p>${escHtml(paragraph)}</p>`).join("\n");
+    articles.push(
+      `    <article class="talk-summary" data-media="${escHtml(video.path)}">\n` +
+        `      <h3 class="talk-summary-title">${escHtml(video.title || "")}</h3>\n` +
+        `      <div class="talk-summary-body">\n${body}\n      </div>\n` +
+        `    </article>`
+    );
+  }
+  if (!articles.length) return "";
+  return (
+    `\n    <h2 id="talkSummariesHeading">Talk summaries</h2>\n` +
+    articles.join("\n") +
+    "\n    "
+  );
+}
+
+function stampTalkSummaries(html, config, confDir) {
+  if (!html.includes(TALK_SUMMARIES_MARKER)) {
+    throw new Error("landing-pages: template missing talk summaries marker");
+  }
+  // Replacer function so a "$" in a summary is not treated as a replacement pattern.
+  return html.replace(TALK_SUMMARIES_MARKER, () => renderTalkSummaries(config, confDir));
+}
+
 function stampGalleryHeader(html, page, pageUrl) {
   if (!html.includes(GALLERY_HEADER_MARKER)) {
     throw new Error("landing-pages: template missing gallery header marker");
@@ -508,6 +547,9 @@ async function cmdLandingPages(opts) {
   if (!templateHtml.includes(GALLERY_HEADER_MARKER)) {
     throw new Error("landing-pages: template missing gallery header marker");
   }
+  if (!templateHtml.includes(TALK_SUMMARIES_MARKER)) {
+    throw new Error("landing-pages: template missing talk summaries marker");
+  }
   let updated = 0;
   let unchanged = 0;
   for (const id of await selectedConferences(opts)) {
@@ -521,18 +563,22 @@ async function cmdLandingPages(opts) {
     const confDir = galleryDir(id);
     const langMap = discoveredSubtitleLangs(config, confDir);
     const mtimeMap = await discoveredSubtitleMtimes(config, confDir);
-    const html = stampGalleryHeader(
-      stampTranscriptLinks(
-        stampLandingMeta(templateHtml, { title, description, url, brand })
-          .replace(SUBTITLE_LANG_MARKER, embedJson(langMap))
-          .replace(SUBTITLE_MTIME_MARKER, embedJson(mtimeMap)),
+    const html = stampTalkSummaries(
+      stampGalleryHeader(
+        stampTranscriptLinks(
+          stampLandingMeta(templateHtml, { title, description, url, brand })
+            .replace(SUBTITLE_LANG_MARKER, embedJson(langMap))
+            .replace(SUBTITLE_MTIME_MARKER, embedJson(mtimeMap)),
+          page,
+          confDir,
+          id,
+          brand
+        ),
         page,
-        confDir,
-        id,
-        brand
+        url
       ),
-      page,
-      url
+      config,
+      confDir
     );
     const dest = join(galleryDir(id), "index.html");
     let previous = null;
@@ -978,6 +1024,10 @@ function collectRefs(config, confDir = null, galleryId = null) {
     for (const sub of collectSubtitlePaths(v, confDir)) add("subtitle", v.title, sub);
     add("slides", v.title, v.presentation);
     add("poster", v.title, v.poster);
+    const summaryRel = summaryMarkdownRel(v);
+    if (summaryRel && confDir && existsSync(join(confDir, ...summaryRel.split("/")))) {
+      add("summary", v.title, summaryRel);
+    }
     const page = transcriptPageRel(config, v, confDir);
     if (page) {
       add("transcript", v.title, page);
