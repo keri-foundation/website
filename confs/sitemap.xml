@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://keri.foundation/confs/</loc>
-    <lastmod>2026-11-10</lastmod>
+    <lastmod>2026-11-23</lastmod>
   </url>
   <url>
     <loc>https://keri.foundation/confs/KERI/2026/apr/</loc>
@@ -311,5 +311,21 @@
   <url>
     <loc>https://keri.foundation/confs/SEDI/2025/nov/transcripts/html/talks/wayne-chang.html</loc>
     <lastmod>2026-11-17</lastmod>
+  </url>
+  <url>
+    <loc>https://keri.foundation/confs/SEDI/2026/nov/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://keri.foundation/confs/SEDI/2026/nov/transcripts/html/talks/</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://keri.foundation/confs/SEDI/2026/nov/transcripts/html/talks/sam-smith-sedi-acdcs-for-utah-s-state-endorsed-digital-identity.html</loc>
+    <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://keri.foundation/confs/SEDI/2026/nov/transcripts/html/talks/sam-smith-survivability-engineering-basis-of-keri-s-fault-tolerant-security-model-tradespace-ux-friction-security.html</loc>
+    <lastmod>2026-11-23</lastmod>
   </url>
 </urlset>
