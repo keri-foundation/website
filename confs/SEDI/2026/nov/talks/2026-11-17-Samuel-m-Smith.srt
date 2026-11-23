@@ -1324,12 +1324,12 @@ for you? Okay, so what is on the priority
 266
 00:24:53,120 --> 00:24:58,460
 list? Should detectability of compromise
-be near the top? And is six months
+be near the top? And is six months…
 
 267
 00:24:58,460 --> 00:25:04,340
 in my book isn't detectability. Six
-months is the attacker said, well, we've
+months is… the attacker said, well, we've
 
 268
 00:25:04,340 --> 00:25:07,700
@@ -1344,12 +1344,12 @@ more for our next attack. That's not
 270
 00:25:11,940 --> 00:25:19,140
 detectability by you, the exploited.
-That's their, them just what do you call
+That's them just, what do you call
 
 271
 00:25:19,140 --> 00:25:23,340
-it? They're just sort of So they're
-advertising. Yeah, they're advertising at
+it? They're just sort of…
+They're advertising at
 
 272
 00:25:23,340 --> 00:25:32,680
@@ -1363,18 +1363,18 @@ presentations and all of the presentations
 
 274
 00:25:36,020 --> 00:25:40,760
-could share one registry because they're
-not it's just anchoring the presentations.
+could share one registry because
+it's just anchoring the presentations.
 
 275
 00:25:40,920 --> 00:25:45,980
-It's not managing state of the ACDC.
-That's in the issuer log. All right. We
+It's not managing state of the
+ACDC. That's in the issuer log. We
 
 276
 00:25:45,980 --> 00:25:52,240
-have a KERI Foundation SEDI implementation
-documentation guide draft. It's now about
+have a KERI Foundation SEDI
+implementation guide draft. It's now about
 
 277
 00:25:52,240 --> 00:26:00,680
@@ -1403,13 +1403,13 @@ governor and the CIO and the CTO and a few
 
 282
 00:26:28,540 --> 00:26:33,560
-other people. I don't know who's
-in that. Chris, do you know? I
+other people. I don't know who's in
+that. Chris (Bramwell), do you know?
 
 283
 00:26:33,560 --> 00:26:40,660
-respect my email. Oh, okay. Who's
-going to be? Do you know who's
+– […] – Oh, okay.
+Do you know who's
 
 284
 00:26:40,660 --> 00:26:44,500
@@ -1513,8 +1513,8 @@ politicians shouldn't be managing keys.
 
 304
 00:28:11,740 --> 00:28:16,440
-Everybody's going, what is he?
-There's no way that's not going to happen.
+Everybody's going: there's no
+way that's going to happen.
 
 305
 00:28:16,440 --> 00:28:22,540
@@ -1533,8 +1533,8 @@ that might be once every two years you do
 
 308
 00:28:33,260 --> 00:28:40,460
-a rotation. These guys here might be
-doing stuff with their keys like, you know,
+a rotation. These guys here might
+be doing stuff with their keys like
 
 309
 00:28:40,520 --> 00:28:45,280
@@ -1573,8 +1573,8 @@ him how to do it, but only he can do it.
 
 316
 00:29:11,140 --> 00:29:16,840
-So you can still manage the fact
-that politicians, you know, by virtue of
+So you can still manage the
+fact that politicians by virtue of
 
 317
 00:29:16,840 --> 00:29:20,580
@@ -1649,7 +1649,7 @@ going to be coming that want to break
 331
 00:30:16,420 --> 00:30:20,360
 trust. They want to compromise these
-records. They want to in your systems.
+records. They want to beat your systems.
 
 332
 00:30:20,460 --> 00:30:23,680
@@ -1679,16 +1679,16 @@ to prove it otherwise unless you have this
 337
 00:30:42,820 --> 00:30:48,500
 type of structure to say, well, that's not
-true. Here's the truth. but this rule of
+true. Here's the truth. But this rule of
 
 338
 00:30:48,500 --> 00:30:55,100
 authority and this training is very
-important. Digital determinism. Yeah. Yes.
+important. – Digital determinism. – Yes.
 
 339
 00:30:57,640 --> 00:31:03,460
-I think something especially exciting
+– I think something especially exciting
 about the structure is not that you have
 
 340
