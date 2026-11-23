@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ryan Hansen &amp; Evan Asakawa – Demonstration KERISuite — Transcript</title>
-  <meta name="description" content="Ryan Hansen and Evan Asakawa demonstrate the KERISuite stack as it runs now, updating a setup earlier viewers may remember as a single host. Witnesses, watchers, and the related…">
+  <meta name="description" content="AI generated summary, if a statement needs explication, see the video. Ryan Hansen and Evan Asakawa demonstrate the KERISuite stack as it runs now, updating a setup earlier…">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
@@ -202,6 +202,7 @@
     </header>
     <section class="summary" aria-labelledby="summary-heading">
       <h2 id="summary-heading">Summary</h2>
+      <p>AI generated summary, if a statement needs explication, see the video.</p>
       <p>Ryan Hansen and Evan Asakawa demonstrate the KERISuite stack as it runs now, updating a setup earlier viewers may remember as a single host. Witnesses, watchers, and the related services are spread across several machines. Each process is one instance, and a deployment runs as many as it needs. Launch scripts, the kf-boot configuration, and the setup guide are how someone reproduces it. Samuel M. Smith, in the discussion, argues for bare metal rather than a cluster control plane: one stolen administrator credential should not be able to take down every service.</p>
       <p>The live walkthrough is Locksmith. They create a vault and an autonomic identifier, install the browser plugin, and point the wallet at a boot server that provisions witnesses. Provisioning and talking to those witnesses use different ports. One witness service can host many identifiers, and a city, a bank, and a university can each contribute witnesses. The arrangement they recommend still gives each controller its own witness identifier, rather than one signing identity reused for every resident.</p>
       <p>Graduated disclosure, the IPEX version 2 behavior current vLEI deployments do not yet exercise, is in the infrastructure and not yet in the wallet. The mailbox between two vaults is unfinished, so the demo does not complete a credential request end to end. The questions that follow are about when a witness is required, when a watcher is required, and how an anchor between proofing and a later identity application can surface stolen signing keys first.</p>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samuel M. Smith &amp; Ryan Hansen – Progress report: The 5W’s of KERI: Witnesses, Watchers, Wallet, Web, and Wizard PLUS Bulk issuances and anchoring in Merkle Trees — Transcript</title>
-  <meta name="description" content="Ryan Hansen reports on the five Ws that carry KERI's infrastructure: wallet, witnesses, watchers, web, and wizard. The wallet holds an identifier, its keys, and the events it…">
+  <meta name="description" content="AI generated summary, if a statement needs explication, see the video. Ryan Hansen reports on the five Ws that carry KERI's infrastructure: wallet, witnesses, watchers, web, and…">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
@@ -202,6 +202,7 @@
     </header>
     <section class="summary" aria-labelledby="summary-heading">
       <h2 id="summary-heading">Summary</h2>
+      <p>AI generated summary, if a statement needs explication, see the video.</p>
       <p>Ryan Hansen reports on the five Ws that carry KERI's infrastructure: wallet, witnesses, watchers, web, and wizard. The wallet holds an identifier, its keys, and the events it emits — inception, rotation, and interaction — in a key event log. Witnesses are independent of the controller. They receipt those events so the key state stays available when the wallet is offline. Watchers make duplicity something anyone can prove. A watcher fails by not watching, not by lying about what it saw.</p>
       <p>Web means discovery and transport. Infrastructure can be found, and messages can move, over ordinary protocols without KERI trusting the network that carries them. Wizard is the push to make that usable: safe defaults, thinner APIs, and product around the protocol.</p>
       <p>He then locates the code. Locksmith is the desktop wallet, donated by healthKERI. Fortweb is the browser build, and FortiOS the mobile apps. kf-boot onboards an identifier and sets up its witnesses. With Samuel M. Smith he covers what a relying party should do when duplicity appears: events from before the fork can still be trusted, and new signatures cannot, until key state is reconciled. A witness pool the controller alone operates is not enough, because that controller can eclipse the readers. The other party needs watchers they control. Without anchoring, issuances do not survive a rotation.</p>
