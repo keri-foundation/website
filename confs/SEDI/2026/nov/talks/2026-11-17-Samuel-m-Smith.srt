@@ -1306,7 +1306,7 @@ state, do you want you as a state to be
 
 263
 00:24:32,060 --> 00:24:39,620
-impersonated by attackers? Right? You
+impersonated by attackers? You
 I mean you're like, of course not.
 
 264
@@ -2041,17 +2041,17 @@ use 64 bits of entropy? Because, you know,
 410
 00:37:22,460 --> 00:37:29,880
 it'll be exponentially faster. Or four
-bits. Or four bits. Or two bits. Right?
+bits. Or four bits. Or two bits.
 
 411
 00:37:30,120 --> 00:37:35,960
-The number four. Right? From
+The number four. From
 the beginning, I said, no, no, the world is
 
 412
 00:37:35,960 --> 00:37:39,040
-only going to get worse. Right? It's only
-going to get worse. Right? going to get
+only going to get worse. It's only
+going to get worse, going to get
 
 413
 00:37:39,040 --> 00:37:45,560
@@ -2420,18 +2420,18 @@ Merkle tree. Who knows what a Merkle tree
 
 486
 00:43:52,520 --> 00:43:58,080
-is? Okay, most of you. Right? A Merkle
+is? Okay, most of you. A Merkle
 tree is a binary tree and ACDC is an MERI
 
 487
 00:43:58,080 --> 00:44:06,620
-Merkle tree. Right? Each of these blocks
+Merkle tree. Each of these blocks
 is an edge in a tree that is hash chained
 
 488
 00:44:06,620 --> 00:44:12,460
 up to the root. This is the root. Here's
-the root. Right? And so these are all
+the root. And so these are all
 
 489
 00:44:12,460 --> 00:44:17,320
@@ -2579,7 +2579,7 @@ an attack that reduces its cryptographic
 518
 00:46:45,320 --> 00:46:50,140
 strength from 128 bits to something much
-smaller. Right? So what you need then is
+smaller. So what you need then is
 
 519
 00:46:50,140 --> 00:46:54,900
@@ -2649,12 +2649,12 @@ and penalty. All that stuff can wait till
 532
 00:47:46,260 --> 00:47:50,580
 quantum attacks actually start happening.
-Right? We'll probably we'll do it before
+We'll probably we'll do it before
 
 533
 00:47:50,580 --> 00:47:54,960
 then. 2030 is the date. So, you know, but
-we don't have to do it today. Right? And
+we don't have to do it today. And
 
 534
 00:47:54,960 --> 00:47:58,700
@@ -2969,7 +2969,7 @@ to do it, it sounds like a good idea. And
 596
 00:53:50,540 --> 00:53:54,960
 then it goes, oh, it doesn't really work.
-Right? And then they throw it away. Right?
+And then they throw it away.
 
 597
 00:53:55,080 --> 00:53:59,520
@@ -3003,13 +3003,13 @@ it could be much longer than 18 years.
 
 603
 00:54:25,860 --> 00:54:35,060
-Right? You know, my kids are already
+You know, my kids are already
 telling me that I need to, you know, They
 
 604
 00:54:35,060 --> 00:54:41,580
 need to be in charge of what I
-do. Right? Anyway, the point is...
+do. Anyway, the point is...
 
 605
 00:54:41,580 --> 00:54:47,800
@@ -3163,7 +3163,7 @@ HSM. They just need a phone and a couple of
 
 635
 00:57:21,640 --> 00:57:27,580
-smart cards. Right? So it's not a lot
+smart cards. So it's not a lot
 of infrastructure. Now, this person, this
 
 636
@@ -3174,7 +3174,7 @@ hundreds of credentials a day, they might
 637
 00:57:31,860 --> 00:57:36,440
 want to have a little bit better
-infrastructure. Right? But hundreds is not
+infrastructure. But hundreds is not
 
 638
 00:57:36,440 --> 00:57:42,700
@@ -3374,7 +3374,7 @@ get their credentials revoked? Of the
 677
 01:01:07,040 --> 01:01:13,160
 total population? People who drunk
-drivers. How many of those? Right?
+drivers. How many of those?
 
 678
 01:01:13,300 --> 01:01:16,900
