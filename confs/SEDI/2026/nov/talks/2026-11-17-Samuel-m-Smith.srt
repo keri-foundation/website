@@ -20,7 +20,7 @@ KERI suite of protocols includes also a
 
 5
 00:00:27,180 --> 00:00:32,160
-standard called CESER. The trust of
+standard called CESR. The trust of
 IP foundation is where those are being
 
 6
@@ -3459,7 +3459,7 @@ Blake? It's perfectly cryptographically
 694
 01:02:30,580 --> 01:02:38,920
 agile. When I go, so here, I go back to
-the code. We have a protocol called CESER.
+the code. We have a protocol called CESR.
 
 695
 01:02:39,120 --> 01:02:45,020
