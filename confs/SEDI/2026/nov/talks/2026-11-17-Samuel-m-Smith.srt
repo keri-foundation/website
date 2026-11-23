@@ -1118,11 +1118,11 @@ KERI protocol is all about managing this
 225
 00:20:57,400 --> 00:21:04,220
 thing called a key event log. And so it
-feels like a blockchain technically under
+feels like a blockchain, technically under
 
 226
 00:21:04,220 --> 00:21:07,580
-the hood. It's a little bit of a
+the hood, it's a little bit of a
 blockchain, but it's a blockchain per
 
 227
@@ -1136,14 +1136,14 @@ distributed consensus ledger with this
 high cost floor. It's a really low cost
 
 229
-00:21:17,400 --> 00:21:24,600
-floor. So that's the innovation of those
-protocols. Was there a question? What?
+00:21:17,400 --> 00:21:22,982
+floor. So that's the
+innovation of those protocols.
 
 230
-00:21:27,120 --> 00:21:33,280
-Oh, she sneezed. Okay. Okay. One of the
-things when you have these registries that
+00:21:30,918 --> 00:21:33,280
+One of the things when
+you have these registries that
 
 231
 00:21:33,280 --> 00:21:38,920
@@ -1157,8 +1157,7 @@ think about it, we've been talking about
 
 233
 00:21:45,920 --> 00:21:50,840
-the issuer having their keys compromised,
-right? And the issuer doesn't want to be
+the issuer having their keys compromised. And the issuer doesn't want to be
 
 234
 00:21:50,840 --> 00:21:53,920
