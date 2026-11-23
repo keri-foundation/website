@@ -5,22 +5,23 @@ knew that I would be identity challenged
 
 2
 00:00:06,600 --> 00:00:08,800
-so they gave me a name I couldn't forget.
+so they gave me a
+name I couldn't forget.
 
 3
 00:00:13,040 --> 00:00:21,800
-I'm co-chair of the KERI Foundation. It is
-a organization that is promulgating the
+I'm co-chair of the KERI Foundation. It
+is a organization that is promulgating the
 
 4
 00:00:21,800 --> 00:00:27,180
-KERI and ACDC standards. There's a KERI
-suite of protocols includes also a
+KERI and ACDC standards. There's a
+KERI suite of protocols includes also a
 
 5
 00:00:27,180 --> 00:00:32,160
-standard called CESER. The trust of IP
-foundation is where those are being
+standard called CESER. The trust of
+IP foundation is where those are being
 
 6
 00:00:32,160 --> 00:00:38,060
@@ -29,8 +30,8 @@ Linux foundation as of January. And then
 
 7
 00:00:38,060 --> 00:00:45,340
-once they pass that process, they're now
-starting the to climb the hill of IETF
+once they pass that process, they're
+now starting to climb the hill of IETF
 
 8
 00:00:45,340 --> 00:00:51,180
@@ -39,13 +40,13 @@ whatever time it takes. So these are open
 
 9
 00:00:51,180 --> 00:00:55,880
-standards. There's a there's a library of
-well several libraries open source
+standards. Well,
+several open source
 
 10
 00:00:55,880 --> 00:01:02,440
-libraries of various parts that implement
-the the different specs. Some of the
+libraries of various parts that
+implement the different specs. Some of the
 
 11
 00:01:02,440 --> 00:01:05,920
@@ -59,7 +60,7 @@ Veridian wallet is all based on the stuff
 
 13
 00:01:10,960 --> 00:01:15,940
-I'm you know KERI ACDCs. The demo for
+you know, KERI and ACDCs. The demo for
 health KERI is based on that. That's kind
 
 14
@@ -69,8 +70,8 @@ have been in development for quite some
 
 15
 00:01:22,260 --> 00:01:29,480
-time and the KERI Foundation has been
-developing new versions of of the
+time and the KERI Foundation has
+been developing new versions of the
 
 16
 00:01:29,480 --> 00:01:35,360
@@ -89,13 +90,13 @@ identity. So a lot of the tooling was
 
 19
 00:01:44,700 --> 00:01:51,040
-focused on organizational identity and now
-we're adding tooling for citizen-based
+focused on organizational identity and
+now we're adding tooling for citizen-based
 
 20
 00:01:51,040 --> 00:01:58,860
-identity in the state of Utah and SEDI. So
-and if you if this will be a technical a
+identity in the state of Utah
+and SEDI. So if this will be a
 
 21
 00:01:58,860 --> 00:02:06,400
@@ -119,7 +120,7 @@ Chain Data Container. Now, we've heard a
 
 25
 00:02:25,240 --> 00:02:30,040
-lot today about verifiable credentials.
+lot today about verifiable
 credentials. ACDCs intentionally didn't
 
 26
@@ -144,13 +145,13 @@ access to something or a credential might
 
 30
 00:02:47,600 --> 00:02:52,740
-be an entitlement. But an ACDC could just
-have evidence. It could have whatever
+be an entitlement. But an ACDC
+could just have evidence. It could have
 
 31
 00:02:52,740 --> 00:02:56,940
-whatever's in there. So, so, so it's a
-it's a more generic approach. approach.
+whatever's in there. So it's
+a more generic approach.
 
 32
 00:02:58,000 --> 00:03:05,020
@@ -159,8 +160,8 @@ a graph fragment that has edges which are
 
 33
 00:03:05,020 --> 00:03:09,280
-normative property. And that's one of the
-most that's one of the superpowers of
+normative property. And
+that's one of the superpowers of
 
 34
 00:03:09,280 --> 00:03:13,920
@@ -179,8 +180,8 @@ properties which you would call maybe
 
 37
 00:03:22,980 --> 00:03:30,320
-claims, you know, attributes, attributes,
-but these are just the properties. What
+claims, you know, attributes, but
+these are just the properties. What
 
 38
 00:03:30,320 --> 00:03:37,320
@@ -189,13 +190,13 @@ application. You can take a bunch of ACDCs
 
 39
 00:03:37,320 --> 00:03:45,880
-and graph them together. So, you can link
-them in a graph where each ACDC is a
+and graph them together. So, you can
+link them in a graph where each ACDC is a
 
 40
 00:03:45,880 --> 00:03:51,040
-fragment of the graph. So, now what you
-have is a graph of
+fragment of the graph. So,
+now what you have is a graph of
 
 41
 00:03:53,240 --> 00:03:58,380
@@ -209,8 +210,8 @@ get their mind around. This graph isn't
 
 43
 00:04:02,900 --> 00:04:08,540
-sourced from one issuer. Every node in
-this graph is sourced from a could be
+sourced from one issuer.
+Every node in this graph could be
 
 44
 00:04:08,540 --> 00:04:13,140
@@ -259,8 +260,8 @@ authenticated differently. So you don't
 
 53
 00:04:54,700 --> 00:04:59,020
-put them in a big glob, authenticate the
-whole glob from a single issuer. You
+put them in a big glob, authenticate
+the whole glob from a single issuer. You
 
 54
 00:04:59,020 --> 00:05:05,980
@@ -279,8 +280,8 @@ structures. That's the hard problem. If I
 
 57
 00:05:15,900 --> 00:05:20,560
-want to model how the real world works, it
-doesn't work the way most people build
+want to model how the real world works,
+it doesn't work the way most people build
 
 58
 00:05:20,560 --> 00:05:27,840
@@ -309,8 +310,8 @@ has some aspect of this delegable
 
 63
 00:05:51,520 --> 00:05:55,380
-authority. Are we short chairs? Here's a…
-– I just didn't want to walk in front of
+authority. Are we short chairs? Here's
+a… – I just didn't want to walk in front of
 
 64
 00:05:55,380 --> 00:05:59,020
@@ -319,8 +320,8 @@ being videotaped, you can walk in front of
 
 65
 00:05:59,020 --> 00:06:06,500
-it. Okay. – All right. All right. So, so,
-so we went out of our way to model that.
+it. Okay. – All right. All right. So
+we went out of our way to model that.
 
 66
 00:06:06,640 --> 00:06:11,720
@@ -334,13 +335,13 @@ structures made no meaningful effort
 
 68
 00:06:18,180 --> 00:06:24,080
-effort to model delegable authority
+to model delegable authority
 structures. And so we said, well, there's
 
 69
 00:06:24,080 --> 00:06:28,100
-a need for that. So we're going to build a
-standard that does that as a first order
+a need for that. So we're going to build
+a standard that does that as a first order
 
 70
 00:06:28,100 --> 00:06:33,680
@@ -354,13 +355,13 @@ authorizations. And these authorizations
 
 72
 00:06:37,780 --> 00:06:43,160
-meet the model of what most people want to
-do for agentic delegation, right?
+meet the model of what most people
+want to do for agentic delegation, right?
 
 73
 00:06:43,420 --> 00:06:48,120
-Delegation, whether I'm delegating to
-humans or delegating to agents or
+Delegation, whether I'm delegating
+to humans or delegating to agents or
 
 74
 00:06:48,120 --> 00:06:52,940
@@ -389,13 +390,13 @@ difference. So the talk from Sarah from
 
 79
 00:07:10,220 --> 00:07:14,460
-NIST where she had that diagram. One of
-the things on there was delegation. She
+NIST where she had that diagram. One
+of the things on there was delegation. She
 
 80
 00:07:14,460 --> 00:07:20,000
-had a few other things. You'll see some of
-those show up in this ACDC support
+had a few other things. You'll see some
+of those show up in this ACDC support
 
 81
 00:07:20,000 --> 00:07:25,460
@@ -449,23 +450,23 @@ was going on under the hood. So it can
 
 91
 00:08:10,780 --> 00:08:17,700
-happen. So one of the things that I think
-Chris mentioned, Brandwell is about a
+happen. So one of the things that I
+think Chris mentioned, Brandwell is about a
 
 92
 00:08:17,700 --> 00:08:24,180
-public utility, a digital identity or
-digital public utility, right? Well,
+public utility, a digital identity
+or digital public utility, right? Well,
 
 93
 00:08:24,260 --> 00:08:31,360
-public utility is necessary because if I
-want to be able to operate in a
+public utility is necessary because
+if I want to be able to operate in a
 
 94
 00:08:31,360 --> 00:08:38,200
-decentralized world where I don't have a
-central single trust domain, I have to
+decentralized world where I don't have
+a central single trust domain, I have to
 
 95
 00:08:38,200 --> 00:08:44,980
@@ -484,18 +485,18 @@ want to do is build infrastructure that is
 
 98
 00:08:53,920 --> 00:08:58,820
-at has the lowest possible cost floor. So
-I spent years working in the blockchain
+at has the lowest possible cost floor.
+So I spent years working in the blockchain
 
 99
 00:08:58,820 --> 00:09:05,000
-space building identity on blockchains and
-it has problems. One of the problems is
+space building identity on blockchains
+and it has problems. One of the problems is
 
 100
 00:09:05,000 --> 00:09:09,200
-the cost floor is really high, right? You
-put anything on blockchain, every
+the cost floor is really high, right?
+You put anything on blockchain, every
 
 101
 00:09:09,200 --> 00:09:11,700
@@ -523,18 +524,18 @@ infrastructure. That means somebody has to
 
 106
 00:09:34,160 --> 00:09:38,360
-stand up the infrastructure. All right? So
-there so it has to be monetized in some
+stand up the infrastructure. All right?
+So it has to be monetized in some
 
 107
 00:09:38,360 --> 00:09:43,280
 way. Right? And there are different
-strategies for monetizing that. that. Phil
+strategies for monetizing that. Phil
 
 108
 00:09:43,280 --> 00:09:47,760
-Windley, he's here, but I don't see him in
-the audience. He wrote a couple of blog
+Windley, he's here, but I don't see him
+in the audience. He wrote a couple of blog
 
 109
 00:09:47,760 --> 00:09:52,980
@@ -543,8 +544,8 @@ one of the adoption problems of digital
 
 110
 00:09:52,980 --> 00:09:59,520
-identity has been that no one wanted to
-pay for identity assurance. And so the
+identity has been that no one wanted
+to pay for identity assurance. And so the
 
 111
 00:09:59,520 --> 00:10:05,420
@@ -563,7 +564,7 @@ assurance, then that cost adoption barrier
 
 114
 00:10:17,720 --> 00:10:23,960
-goes away. Now you have you sort of primed
+goes away. Now you've sort of primed
 the pump, you spun up the flywheel sort of
 
 115
@@ -598,13 +599,13 @@ we'll just sell it off. – Yeah, we want a
 
 121
 00:10:59,920 --> 00:11:04,740
-vibrant market of multiple suppliers. –
-What I will say is identity is going to
+vibrant market of multiple suppliers.
+– What I will say is identity is going to
 
 122
 00:11:04,740 --> 00:11:09,620
-solve hundreds of billions of dollars. We
-just talked about fraud, but the things
+solve hundreds of billions of dollars.
+We just talked about fraud, but the things
 
 123
 00:11:09,620 --> 00:11:13,980
@@ -623,8 +624,8 @@ identity, it has essentially it's
 
 126
 00:11:24,060 --> 00:11:29,340
-inelastic and we need trusted identity. So
-the risk is people saying, well, let's
+inelastic and we need trusted identity.
+So the risk is people saying, well, let's
 
 127
 00:11:29,340 --> 00:11:33,800
@@ -643,13 +644,13 @@ figure out the right government models for
 
 130
 00:11:40,400 --> 00:11:44,480
-it, you can get the best of all worlds and
-you can still have a rise for five or
+it, you can get the best of all worlds
+and you can still have a rise for five or
 
 131
 00:11:44,480 --> 00:11:47,300
-three market where people make money, but
-it's not exploding.
+three market where people
+make money, but it's not exploding.
 
 132
 00:11:49,860 --> 00:11:55,640
@@ -673,18 +674,18 @@ demo in the demo alley of KERI Foundation
 
 136
 00:12:08,380 --> 00:12:14,480
-engineers owners. They can show you the a
-full set of infrastructure running in the
+engineers owners. They can show you the
+a full set of infrastructure running in the
 
 137
 00:12:14,480 --> 00:12:18,480
-cloud. So if you want to see it running in
-the cloud, you can look at you can look at
+cloud. So if you want to see it
+running in the cloud, you can look at
 
 138
 00:12:18,480 --> 00:12:26,560
-strings scrolling by on terminals, but
-it's running in the cloud. So and it's all
+strings scrolling by on terminals,
+but it's running in the cloud. And it's all
 
 139
 00:12:26,560 --> 00:12:30,740
@@ -698,7 +699,7 @@ it set up. The other KERI infrastructure
 
 141
 00:12:37,580 --> 00:12:46,300
-for for revocable credentials is
+for revocable credentials is
 registrars and observers. And these are
 
 142
@@ -708,8 +709,8 @@ visibility to the points of validation. So
 
 143
 00:12:51,920 --> 00:12:57,600
-how the credentials are being used. So
-this gives herd privacy to solve the
+how the credentials are being used.
+So this gives herd privacy to solve the
 
 144
 00:12:57,600 --> 00:13:03,040
@@ -723,8 +724,8 @@ trees in there as well for managing that.
 
 146
 00:13:07,900 --> 00:13:10,780
-So I'm going to this is where I'm going to
-start to be a little technical.
+So I'm going to this is where I'm
+going to start to be a little technical.
 
 147
 00:13:15,000 --> 00:13:22,400
@@ -733,7 +734,7 @@ arrows, then you know what this is. All
 
 148
 00:13:22,400 --> 00:13:29,840
-right. So, anyway, so one of the unique
+right. So, anyway, one of the unique
 features of the KERI ACDC design is we're
 
 149
@@ -748,8 +749,8 @@ protect privacy. So the way we do that
 
 151
 00:13:48,560 --> 00:13:54,320
-with revocable credentials. So if you take
-those three things and you put them
+with revocable credentials. So if you
+take those three things and you put them
 
 152
 00:13:54,320 --> 00:13:59,020
@@ -764,7 +765,7 @@ degree because of what we've done. So
 154
 00:14:04,920 --> 00:14:08,340
 normally if you have a revocation
-registry, you lose privacy. privacy
+registry, you lose privacy.
 
 155
 00:14:08,340 --> 00:14:13,480
@@ -778,8 +779,8 @@ they just say, well, you know, I did this
 
 157
 00:14:18,820 --> 00:14:21,900
-and here you go look at this. So you have
-vendor vendor linkability because the
+and here you go look at this. So
+you have vendor linkability because the
 
 158
 00:14:21,900 --> 00:14:25,420
@@ -788,13 +789,13 @@ problem with something called a blindable
 
 159
 00:14:25,420 --> 00:14:32,800
-registry. And the way it works is is that
+registry. And the way it works is that
 the issuer issues an ACDC to an issuee.
 
 160
 00:14:32,900 --> 00:14:37,520
-You've seen this in the demo. They do a
-presentation to a verifier. The verifier
+You've seen this in the demo. They do
+a presentation to a verifier. The verifier
 
 161
 00:14:37,520 --> 00:14:43,120
@@ -808,8 +809,8 @@ see what the observer is giving out, but
 
 163
 00:14:51,080 --> 00:14:57,400
-the observer can get the latest state of
-the ACDC and this state is actually
+the observer can get the latest state
+of the ACDC and this state is actually
 
 164
 00:14:57,400 --> 00:15:02,740
@@ -818,8 +819,8 @@ knows the state is the issuee unblinds it
 
 165
 00:15:02,740 --> 00:15:07,740
-at the presentation and then it can be re
--blinded after the presentation, which
+at the presentation and then it can be
+re -blinded after the presentation, which
 
 166
 00:15:07,740 --> 00:15:11,700
@@ -828,8 +829,8 @@ once you unblind it, it's unblinded
 
 167
 00:15:11,700 --> 00:15:17,320
-forever. And so that means that if for
-example, if I go, let's say I have a
+forever. And so that means that if
+for example, if I go, let's say I have a
 
 168
 00:15:17,320 --> 00:15:25,220
@@ -838,8 +839,8 @@ And I go to a job interview and they want
 
 169
 00:15:25,220 --> 00:15:32,720
-my transcript. So I present my transcript
-and it's no, not my transcript, my work
+my transcript. So I present my
+transcript. No, not my transcript, my work
 
 170
 00:15:32,720 --> 00:15:38,880
@@ -863,8 +864,8 @@ employment and we actually wanted to hire
 
 174
 00:15:56,900 --> 00:16:00,480
-him, but the timing wasn't right. But now
-we know that he's looking for a job
+him, but the timing wasn't right. But
+now we know that he's looking for a job
 
 175
 00:16:00,480 --> 00:16:05,520
@@ -903,8 +904,8 @@ log. So I'm going to explain how ACDCs are
 
 182
 00:16:44,760 --> 00:16:49,760
-durable. Now you saw an example, a
-simplified example of a verifiable
+durable. Now you saw an example,
+a simplified example of a verifiable
 
 183
 00:16:49,760 --> 00:16:56,960
@@ -928,8 +929,8 @@ rotate my keys. Why would I have rotated
 
 187
 00:17:11,520 --> 00:17:16,760
-my keys? Anybody have a good reason why
-someone would rotate their keys? – You
+my keys? Anybody have a good reason
+why someone would rotate their keys? – You
 
 188
 00:17:16,760 --> 00:17:21,600
@@ -953,13 +954,13 @@ if I want to protect myself from fraud,
 
 192
 00:17:34,980 --> 00:17:38,980
-what do I have to soon when the keys are
-rotated? – Compromised. – That they've
+what do I have to soon when the keys
+are rotated? – Compromised. – That they've
 
 193
 00:17:38,980 --> 00:17:43,840
-been compromised. That's the only safe
-policy. That means the signature is no
+been compromised. That's the only
+safe policy. That means the signature is no
 
 194
 00:17:43,840 --> 00:17:49,180
@@ -973,8 +974,8 @@ that ink disappears the minute you rotate
 
 196
 00:17:54,460 --> 00:18:00,400
-your keys. So imagine that you've issued a
-million ACDCs, a million credentials of
+your keys. So imagine that you've issued
+a million ACDCs, a million credentials of
 
 197
 00:18:00,400 --> 00:18:04,020
@@ -983,8 +984,8 @@ And then the issuer rotates their keys
 
 198
 00:18:04,020 --> 00:18:09,660
-after 18 months. good hygiene according to
-NIST special publication, right? 857-1.
+after 18 months. good hygiene according
+to NIST special publication, right? 857-1.
 
 199
 00:18:10,400 --> 00:18:14,140
@@ -992,8 +993,8 @@ Part revision 5.
 
 200
 00:18:17,760 --> 00:18:27,740
-So I don't remember the paragraph. It's 50
-pages. It's a long document. Anyway, so
+So I don't remember the paragraph. It's
+50 pages. It's a long document. Anyway, so
 
 201
 00:18:27,740 --> 00:18:34,220
@@ -1002,8 +1003,8 @@ by rotating my keys invalidated all
 
 202
 00:18:34,220 --> 00:18:39,860
-million issuances. What happens now is I
-have a catastrophe because now what if
+million issuances. What happens now
+is I have a catastrophe because now what if
 
 203
 00:18:39,860 --> 00:18:43,860
@@ -1022,8 +1023,8 @@ credential means that it's really only
 
 206
 00:18:57,220 --> 00:19:03,260
-good for ephemeral use cases where the
-likelihood that you're going to rotate
+good for ephemeral use cases where
+the likelihood that you're going to rotate
 
 207
 00:19:03,260 --> 00:19:12,160
@@ -1042,8 +1043,8 @@ that's using X509s to rotate their keys
 
 210
 00:19:23,660 --> 00:19:33,700
-every 45 days. Okay, so every X509 on the
-planet for web is going to get a churn.
+every 45 days. Okay, so every X509 on
+the planet for web is going to get a churn.
 
 211
 00:19:33,700 --> 00:19:38,700
@@ -1057,8 +1058,8 @@ threat is putting downward pressure on key
 
 213
 00:19:43,900 --> 00:19:49,700
-on crypto key periods, right? So if you
-say that a year is reasonable today, I
+on crypto key periods, right? So if
+you say that a year is reasonable today, I
 
 214
 00:19:49,700 --> 00:19:52,420
@@ -1067,18 +1068,18 @@ going to be reasonable in 10 years with
 
 215
 00:19:52,420 --> 00:19:59,000
-cyber AI threats. So we have to have a way
-to issue things that are durable that
+cyber AI threats. So we have to have a
+way to issue things that are durable that
 
 216
 00:19:59,000 --> 00:20:03,620
-survive key rotations. And that's what
-That's what when we say perpetual or
+survive key rotations. And that's
+what, when we say perpetual or
 
 217
 00:20:03,620 --> 00:20:09,480
-durable issuances, we have a mechanism for
-that. So the mechanism we use is a key
+durable issuances, we have a mechanism
+for that. So the mechanism we use is a key
 
 218
 00:20:09,480 --> 00:20:13,540
@@ -1107,8 +1108,8 @@ that it's anchored in some way means that
 
 223
 00:20:36,160 --> 00:20:41,340
-now when I rotate my keys, the seal in my
-key event log is still there despite the
+now when I rotate my keys, the seal in
+my key event log is still there despite the
 
 224
 00:20:41,340 --> 00:20:45,720
@@ -1127,7 +1128,7 @@ KERI protocol is all about managing this
 
 227
 00:20:57,400 --> 00:21:04,220
-thing called a key event log. And so So it
+thing called a key event log. And so it
 feels like a blockchain technically under
 
 228
@@ -1157,8 +1158,8 @@ things when you have these registries that
 
 233
 00:21:33,280 --> 00:21:38,920
-you can do is you can do something else
-that's unique to this technology. User
+you can do is you can do something
+else that's unique to this technology. User
 
 234
 00:21:38,920 --> 00:21:45,920
@@ -1187,7 +1188,7 @@ you got attacked and you made a mistake
 
 239
 00:22:07,120 --> 00:22:12,480
-and you know it's really hard you know
+and it's really hard. You know,
 private keys are much harder to phish
 
 240
@@ -1202,13 +1203,13 @@ say well you know pretty much every cell
 
 242
 00:22:21,480 --> 00:22:26,440
-phone is hackable so anything that's
-stored on a cell phone is potentially you
+phone is hackable so anything
+that's stored on a cell phone potentially
 
 243
 00:22:26,440 --> 00:22:31,500
-know potentially won't survive, you know,
-so you have to worry about that, right?
+won't survive, so you have
+to worry about that, right?
 
 244
 00:22:31,640 --> 00:22:38,260
@@ -1237,7 +1238,7 @@ they'll accept the credential. And what
 
 249
 00:22:57,020 --> 00:23:02,420
-that does is it means means that a
+that does is it means that a
 fraudster who is presenting your
 
 250
@@ -1272,8 +1273,8 @@ months. What's the average time to contain
 
 256
 00:23:34,100 --> 00:23:43,280
-a breach? Three what? Three months. So an
-attacker has nine months to exploit,
+a breach? Three what? Three months.
+So an attacker has nine months to exploit,
 
 257
 00:23:44,400 --> 00:23:50,100
@@ -1297,8 +1298,8 @@ latency and the time that it takes for you
 
 261
 00:24:07,940 --> 00:24:14,780
-to respond to recover from it. So that's a
-fantastic security property. And so any
+to respond to recover from it. So that's
+a fantastic security property. And so any
 
 262
 00:24:14,780 --> 00:24:20,940
@@ -1307,18 +1308,18 @@ what my audience looked like. You got too
 
 263
 00:24:20,940 --> 00:24:25,980
-many people, but how many people are here
-are from states? States? Okay, fair
+many people, but how many people
+here are from states? States? Okay, fair
 
 264
 00:24:25,980 --> 00:24:32,060
-number. So as a representative of a state,
-do you want you as a state to be
+number. So as a representative of a
+state, do you want you as a state to be
 
 265
 00:24:32,060 --> 00:24:39,620
-impersonated by attackers? Right? You I
-mean you're like, of course not, right?
+impersonated by attackers? Right? You
+I mean you're like, of course not, right?
 
 266
 00:24:39,800 --> 00:24:46,100
@@ -1327,8 +1328,8 @@ it so that you can't detect that you've
 
 267
 00:24:46,100 --> 00:24:53,120
-been impersonated, is that a problem for
-you? Okay, so what is on the priority
+been impersonated, is that a problem
+for you? Okay, so what is on the priority
 
 268
 00:24:53,120 --> 00:24:58,460
@@ -1337,8 +1338,8 @@ be near the top, right? And is six months
 
 269
 00:24:58,460 --> 00:25:04,340
-in my book isn't detectability. Six months
-is the attacker said, well, we've
+in my book isn't detectability. Six
+months is the attacker said, well, we've
 
 270
 00:25:04,340 --> 00:25:07,700
@@ -1347,8 +1348,8 @@ going to tell the world that we did this
 
 271
 00:25:07,700 --> 00:25:11,940
-to get cred so that we can charge more for
-our next attack, right? That's not
+to get cred so that we can charge
+more for our next attack, right? That's not
 
 272
 00:25:11,940 --> 00:25:19,140
@@ -1362,8 +1363,8 @@ advertising. Yeah, they're advertising at
 
 274
 00:25:23,340 --> 00:25:32,680
-your expense, right? So same thing. The
-issuee has their own key event log and
+your expense, right? So same thing.
+The issuee has their own key event log and
 
 275
 00:25:32,680 --> 00:25:36,020
@@ -1392,8 +1393,8 @@ go through what are proposed ACDCs that
 
 280
 00:26:00,680 --> 00:26:08,440
-satisfy the SEDI requirements. And so the
-first one of the one of the first things
+satisfy the SEDI requirements.
+And so one of the first things
 
 281
 00:26:08,440 --> 00:26:16,960
@@ -1417,18 +1418,18 @@ in that, right? Chris, do you know? I
 
 285
 00:26:33,560 --> 00:26:40,660
-respect my email. Oh, okay. Who are going
-to be? Do you know who are who's who are
+respect my email. Oh, okay. Who's
+going to be? Do you know who's
 
 286
 00:26:40,660 --> 00:26:44,500
-going to be of the signers on
+going to be the signers on
 the Root of Trust? – Oh, it's an
 
 287
 00:26:44,500 --> 00:26:47,980
-interesting discussion. I'm going to put
-this out here. This is where it gets
+interesting discussion. I'm going to
+put this out here. This is where it gets
 
 288
 00:26:47,980 --> 00:26:51,000
@@ -1447,13 +1448,13 @@ is important. The people elect officials
 
 291
 00:27:00,800 --> 00:27:04,640
-and then they have authority from us to
-represent us. But we haven't built
+and then they have authority from
+us to represent us. But we haven't built
 
 292
 00:27:04,640 --> 00:27:08,200
-technology that way. We've created tons of
-silos where every entity is their own
+technology that way. We've created tons
+of silos where every entity is their own
 
 293
 00:27:08,200 --> 00:27:12,160
@@ -1467,8 +1468,8 @@ to think hard of what does this look like
 
 295
 00:27:16,280 --> 00:27:20,860
-in a constitutional republic because we're
-essentially saying here's the root of
+in a constitutional republic because
+we're essentially saying here's the root of
 
 296
 00:27:20,860 --> 00:27:24,520
@@ -1487,8 +1488,8 @@ government for this new type of digital
 
 299
 00:27:33,480 --> 00:27:37,300
-world. So I'm not going to say who's going
-to be in it. This is very important.
+world. So I'm not going to say who's
+going to be in it. This is very important.
 
 300
 00:27:37,500 --> 00:27:42,060
@@ -1527,8 +1528,8 @@ way that's not going to happen, right? So
 
 307
 00:28:16,440 --> 00:28:22,540
-the reason you use a delegation chain is
-so that you can push away the friction.
+the reason you use a delegation chain
+is so that you can push away the friction.
 
 308
 00:28:23,420 --> 00:28:27,740
@@ -1542,8 +1543,8 @@ that might be once every two years you do
 
 310
 00:28:33,260 --> 00:28:40,460
-a rotation. These guys here might be doing
-stuff with their keys like, you know,
+a rotation. These guys here might be
+doing stuff with their keys like, you know,
 
 311
 00:28:40,520 --> 00:28:45,280
@@ -1552,18 +1553,18 @@ definitely, you know, daily hourly, right?
 
 312
 00:28:45,580 --> 00:28:50,920
-The more delegation levels you have, the
-more you can push the work down at the
+The more delegation levels you have,
+the more you can push the work down at the
 
 313
 00:28:50,920 --> 00:28:54,480
-lower levels. But it's the same root of
-trust. There's one root of trust.
+lower levels. But it's the same
+root of trust. There's one root of trust.
 
 314
 00:28:54,900 --> 00:28:59,260
-Everything verifies back to that root of
-trust. So the ultimate control rests in
+Everything verifies back to that root
+of trust. So the ultimate control rests in
 
 315
 00:28:59,260 --> 00:29:02,380
@@ -1572,13 +1573,13 @@ president of the United States doesn't
 
 316
 00:29:02,380 --> 00:29:06,980
-know how to actually type in the codes on
-the football, right? There's somebody
+know how to actually type in the codes
+on the football, right? There's somebody
 
 317
 00:29:06,980 --> 00:29:11,020
-walking around that's going to tell him
-how to do it, but only he can do it,
+walking around that's going to tell
+him how to do it, but only he can do it,
 
 318
 00:29:11,140 --> 00:29:16,840
@@ -1587,8 +1588,8 @@ that politicians, you know, by virtue of
 
 319
 00:29:16,840 --> 00:29:20,580
-being elected are the only ones with
-signing authority and they can still
+being elected are the only ones
+with signing authority and they can still
 
 320
 00:29:20,580 --> 00:29:26,900
@@ -1617,8 +1618,8 @@ the processes in government from the
 
 325
 00:29:44,500 --> 00:29:48,080
-elected authority and the legislators in
-the different branches and there's a
+elected authority and the legislators
+in the different branches and there's a
 
 326
 00:29:48,080 --> 00:29:52,140
@@ -1647,8 +1648,8 @@ these need to last centuries for property
 
 331
 00:30:08,060 --> 00:30:13,120
-records and things like that. So, what we
-design here is critical for what's going
+records and things like that. So, what
+we design here is critical for what's going
 
 332
 00:30:13,120 --> 00:30:16,420
@@ -1672,8 +1673,8 @@ and they're not keeping paper records
 
 336
 00:30:28,160 --> 00:30:32,880
-anymore. I can assure you AI is going to
-go in there and create issues where it's
+anymore. I can assure you AI is going
+to go in there and create issues where it's
 
 337
 00:30:32,880 --> 00:30:38,060
@@ -1682,8 +1683,8 @@ here's a fake easement, here's a fake
 
 338
 00:30:38,060 --> 00:30:42,820
-change and you're not going to be able to
-prove it otherwise unless you have this
+change and you're not going to be able
+to prove it otherwise unless you have this
 
 339
 00:30:42,820 --> 00:30:48,500
@@ -1722,8 +1723,8 @@ breaking anything that his predecessor
 
 346
 00:31:28,340 --> 00:31:35,560
-did. – Yes. So when I showed the KEL and I
-say it survives a key rotation, the key
+did. – Yes. So when I showed the KEL and
+I say it survives a key rotation, the key
 
 347
 00:31:35,560 --> 00:31:41,720
@@ -1747,8 +1748,8 @@ breaking the work that was done by your
 
 351
 00:31:56,860 --> 00:32:02,320
-predecessor. – But everything that I did
-is still still in the ledger, in the log.
+predecessor. – But everything that
+I did is still in the ledger, in the log.
 
 352
 00:32:02,500 --> 00:32:07,080
@@ -1762,17 +1763,17 @@ has basically built this architecture in
 
 354
 00:32:14,320 --> 00:32:18,480
-in reality. So it's not just it's not just
-market texture stuff that Sam's put on the
+reality. So it's not just market
+texture stuff that Sam's put on the
 
 355
 00:32:18,480 --> 00:32:24,500
-slide and talks very convincingly about. I
-like how you use how you use technical
+slide and talks very convincingly
+about. I like how you use technical
 
 356
 00:32:24,500 --> 00:32:28,980
-terms for for non-technical stuff. Yes.
+terms for non-technical stuff. Yes.
 I'm glad you waited for five minutes to
 
 357
@@ -1797,8 +1798,8 @@ to be do with this tax credit. – So, thank
 
 361
 00:32:47,320 --> 00:32:53,700
-you for that. Any more questions? – Oh,
-you wasn't. – Oh, okay. So, in blue, we
+you for that. Any more questions? –
+Oh, you wasn't. – Oh, okay. So, in blue, we
 
 362
 00:32:53,700 --> 00:32:58,620
@@ -1827,8 +1828,8 @@ and authority come with this office that
 
 367
 00:33:21,080 --> 00:33:26,600
-that person is sitting in as indicated by
-that. When they leave that office, it's
+that person is sitting in as indicated
+by that. When they leave that office, it's
 
 368
 00:33:26,600 --> 00:33:33,180
@@ -1842,12 +1843,12 @@ go and they give you a set of keys to get
 
 370
 00:33:38,560 --> 00:33:42,680
-into the building, right? And then when
-you leave, they say, oh, turn in your
+into the building, right? And then
+when you leave, they say, oh, turn in your
 
 371
 00:33:42,680 --> 00:33:46,720
-keys. keys, right? That doesn't happen
+keys, right? That doesn't happen
 here. You're not turning your keys in.
 
 372
@@ -1858,7 +1859,7 @@ authority, right? They're changing the
 373
 00:33:52,720 --> 00:33:57,340
 locks, not changing the keys. Yes. All
-right. So, so we've got the organizational
+right. So we've got the organizational
 
 374
 00:33:57,340 --> 00:34:04,180
@@ -1887,13 +1888,13 @@ within a state agency. So, yeah. So, now
 
 379
 00:34:26,960 --> 00:34:31,100
-the actual identity credentials that go to
-the citizen are issued by this person,
+the actual identity credentials that go
+to the citizen are issued by this person,
 
 380
 00:34:31,740 --> 00:34:38,420
-right? And see this binds? That's the edge
-that goes back that says this thing is
+right? And see this binds? That's the
+edge that goes back that says this thing is
 
 381
 00:34:38,420 --> 00:34:42,180
@@ -1927,8 +1928,8 @@ have to do everything by the book. And if
 
 387
 00:35:11,120 --> 00:35:18,120
-the legislation doesn't authorize it, we
-don't just go do it, right? Which is
+the legislation doesn't authorize it,
+we don't just go do it, right? Which is
 
 388
 00:35:18,120 --> 00:35:23,440
@@ -1937,8 +1938,8 @@ It's like, no, we go do the tech stuff and
 
 389
 00:35:23,440 --> 00:35:28,600
-then we try to convince the powers that be
-that that's their only choice, right? So
+then we try to convince the powers that
+be that that's their only choice, right? So
 
 390
 00:35:28,600 --> 00:35:33,080
@@ -1952,7 +1953,7 @@ at the bottom layer now. We're all the way
 
 392
 00:35:38,780 --> 00:35:45,140
-down to the bottom. Okay. This is what
+down to the bottom. Okay. This is
 what an ACDC looks like. This is in JSON,
 
 393
@@ -1967,8 +1968,8 @@ things. See all of these things. Those are
 
 395
 00:35:57,500 --> 00:36:03,760
-all cryptographic primitives. We're a
-security first protocol. That means
+all cryptographic primitives. We're
+a security first protocol. That means
 
 396
 00:36:03,760 --> 00:36:09,240
@@ -1992,8 +1993,8 @@ stuff because that's a different measure,
 
 400
 00:36:25,780 --> 00:36:32,240
-but pre-quantum, right? This is the
-standard and it means that it's
+but pre-quantum, right? This is
+the standard and it means that it's
 
 401
 00:36:32,240 --> 00:36:36,440
@@ -2017,8 +2018,8 @@ right? Like I can't break your signature.
 
 405
 00:36:49,360 --> 00:36:54,420
-I can't forge a signature. That would be a
-brute force attack. But if I can get your
+I can't forge a signature. That would be
+a brute force attack. But if I can get your
 
 406
 00:36:54,420 --> 00:36:58,760
@@ -2027,8 +2028,8 @@ that I didn't have to brute force the
 
 407
 00:36:58,760 --> 00:37:03,400
-signatures you created, right? So that
-means that attacks go from trying to
+signatures you created, right? So
+that means that attacks go from trying to
 
 408
 00:37:03,400 --> 00:37:06,720
@@ -2037,7 +2038,7 @@ strong crypto. And that's not always been
 
 409
 00:37:06,720 --> 00:37:11,760
-the case, right? The the world of
+the case, right? The world of
 protocols that use crypto over the last 30
 
 410
@@ -2057,8 +2058,8 @@ bits. Or four bits. Or two bits. Right?
 
 413
 00:37:30,120 --> 00:37:35,960
-The number four. Right? So, from the
-beginning, I said, no, no, the world is
+The number four. Right? So, from
+the beginning, I said, no, no, the world is
 
 414
 00:37:35,960 --> 00:37:39,040
@@ -2072,13 +2073,13 @@ less than full cryptographic strength is a
 
 416
 00:37:45,560 --> 00:37:51,540
-temptation that we're just not we just no
-don't ever go there, right? So we did
+temptation that we're just not we just
+no don't ever go there, right? So we did
 
 417
 00:37:51,540 --> 00:37:54,580
-things that people complain, why do you
-put that in there? And it says, no, we
+things that people complain, why do
+you put that in there? And it says, no, we
 
 418
 00:37:54,580 --> 00:37:58,320
@@ -2092,8 +2093,8 @@ out there. Everything has to be protected.
 
 420
 00:38:02,860 --> 00:38:06,660
-So we invented something called the SED
-protocol, which is now actually an IANA
+So we invented something called the
+SED protocol, which is now actually an IANA
 
 421
 00:38:06,660 --> 00:38:12,000
@@ -2102,8 +2103,8 @@ that I have that has data in it is going
 
 422
 00:38:12,000 --> 00:38:15,020
-to have a field in it and this happens to
-be the D field and one of the reasons
+to have a field in it and this happens
+to be the D field and one of the reasons
 
 423
 00:38:15,020 --> 00:38:20,320
@@ -2137,13 +2138,13 @@ because I don't drink. But anyway, so this
 
 429
 00:38:45,840 --> 00:38:50,960
-said is a hash of this data that is inside
-the data. And so there's a protocol
+said is a hash of this data that is
+inside the data. And so there's a protocol
 
 430
 00:38:50,960 --> 00:38:55,140
-because basically you can't hash data and
-put it inside. We put dummy variables
+because basically you can't hash data
+and put it inside. We put dummy variables
 
 431
 00:38:55,140 --> 00:38:59,320
@@ -2157,8 +2158,8 @@ integrity protected in an interoperable
 
 433
 00:39:03,960 --> 00:39:09,200
-cryptographic agile way. And so just we
-just have these these SEDs everywhere
+cryptographic agile way. And so
+we just have these SEDs everywhere
 
 434
 00:39:09,200 --> 00:39:14,920
@@ -2182,7 +2183,7 @@ through the field. So this is the SED.
 
 438
 00:39:34,140 --> 00:39:39,180
-This is unique entropy. This This protects
+This is unique entropy. This protects
 this data structure from what's called a
 
 439
@@ -2237,18 +2238,18 @@ the issue date in the SEDI program office.
 
 449
 00:40:26,480 --> 00:40:29,600
-And then down here in the rule section, we
-don't have any rules because I can't get
+And then down here in the rule section,
+we don't have any rules because I can't get
 
 450
 00:40:29,600 --> 00:40:32,880
-the lawyers to put rules in there. But
-this is this is where all the legal
+the lawyers to put rules in there.
+But this is where all the legal
 
 451
 00:40:32,880 --> 00:40:37,800
-language goes, right? So that's a big to
-do item for the for the I think is there
+language goes, right? So that's a big
+to do item for the... I think, is there an
 
 452
 00:40:37,800 --> 00:40:42,300
@@ -2272,13 +2273,13 @@ it's in text, but it's expressed in a way
 
 456
 00:41:01,820 --> 00:41:06,580
-that you can also do machine operations on
-it. So you can embed the you can either
+that you can also do machine operations
+on it. So you can embed the you can either
 
 457
 00:41:06,580 --> 00:41:10,420
-embed references to the legal structure or
-you can put the actual legal structure.
+embed references to the legal structure
+or you can put the actual legal structure.
 
 458
 00:41:10,500 --> 00:41:14,160
@@ -2287,7 +2288,7 @@ want. You can put it inside that so that
 
 459
 00:41:14,160 --> 00:41:19,700
-it it's carried with the data. The data
+it's carried with the data. The data
 carries its own legal constraints, which
 
 460
@@ -2302,18 +2303,18 @@ that's another normative feature of ACDCs
 
 462
 00:41:28,880 --> 00:41:34,600
-that you don't find anywhere else. So this
-is actually a pretty simple credential
+that you don't find anywhere else. So
+this is actually a pretty simple credential
 
 463
 00:41:34,600 --> 00:41:42,160
-because all I'm doing is is all I'm doing
-is designated program office role for
+because all I'm doing is the
+designated program office role for
 
 464
 00:41:42,160 --> 00:41:48,560
-whoever has this credential, that AID, the
-issue AID. Here's the next delegation
+whoever has this credential, that AID,
+the issue AID. Here's the next delegation
 
 465
 00:41:48,560 --> 00:41:53,240
@@ -2327,8 +2328,8 @@ case, the name has its own block so that
 
 467
 00:42:01,540 --> 00:42:06,740
-it can be hidden and it's Susan Park. And
-then here's my edge section that links
+it can be hidden and it's Susan Park.
+And then here's my edge section that links
 
 468
 00:42:06,740 --> 00:42:11,780
@@ -2337,8 +2338,8 @@ I've got SEDS everywhere. I've got unique
 
 469
 00:42:11,780 --> 00:42:17,020
-IDs everywhere. And then I've got the data
-and the edge operator tells me how to
+IDs everywhere. And then I've got the
+data and the edge operator tells me how to
 
 470
 00:42:17,020 --> 00:42:23,680
@@ -2347,8 +2348,8 @@ for a delegated issuer to issuee. It says
 
 471
 00:42:23,680 --> 00:42:27,520
-this edge represents a delegation. That's
-all that that's what it does. But now my
+this edge represents a delegation.
+That's what it does. But now my
 
 472
 00:42:27,520 --> 00:42:33,760
@@ -2362,8 +2363,8 @@ field that I decided meant that. It's in
 
 474
 00:42:38,640 --> 00:42:42,720
-its own section. Now, the thing is you see
-all this extra crypto and that extra
+its own section. Now, the thing is you
+see all this extra crypto and that extra
 
 475
 00:42:42,720 --> 00:42:46,600
@@ -2462,13 +2463,13 @@ Merkle tree. We made it an mary tree
 
 494
 00:44:25,820 --> 00:44:29,980
-because real data isn't isn't expressed in
-binary structures. It's expressed in
+because real data isn't expressed
+in binary structures. It's expressed in
 
 495
 00:44:29,980 --> 00:44:34,380
-groups that are non-binary. So we so we
-and and I didn't mean that politically.
+groups that are non-binary.
+And I didn't mean that politically.
 
 496
 00:44:34,380 --> 00:44:34,420
@@ -2491,8 +2492,8 @@ else in the world about an ACDC. All
 
 500
 00:44:53,740 --> 00:44:57,760
-right. Yes. Okay. Let's pursue my follow
--up.
+right. Yes. Okay. Let's
+pursue my follow -up.
 
 501
 00:45:01,720 --> 00:45:09,500
@@ -2506,13 +2507,13 @@ hashing also has 120 bits of entropy. And
 
 503
 00:45:16,420 --> 00:45:22,320
-the reason is is that if I have a schema
+the reason is that if I have a schema
 that says this field, its values are,
 
 504
 00:45:22,420 --> 00:45:31,480
-let's say, a zip code. How many zip codes
-are there? Not very many. Right. The
+let's say, a zip code. How many zip
+codes are there? Not very many. Right. The
 
 505
 00:45:31,480 --> 00:45:35,740
@@ -2521,8 +2522,8 @@ small. So if I have a block of data that
 
 506
 00:45:35,740 --> 00:45:43,280
-has a zip code, a street address, right? A
-country and a county for address, the
+has a zip code, a street address, right?
+A country and a county for address, the
 
 507
 00:45:43,280 --> 00:45:48,140
@@ -2546,8 +2547,8 @@ guess all the values of the field by doing
 
 511
 00:46:01,960 --> 00:46:06,580
-a rainbow table attack. But if If one of
-the fields is high entropy is a random
+a rainbow table attack. But if one of
+the fields is high entropy, a random
 
 512
 00:46:06,580 --> 00:46:12,760
@@ -2561,8 +2562,8 @@ worrying about quantum supremacy or you're
 
 514
 00:46:16,340 --> 00:46:21,140
-going to pull over to two. Okay. So, so,
-so hashes, cryptographic strength hashes
+going to pull over to two. Okay. So
+hashes, cryptographic strength hashes
 
 515
 00:46:21,140 --> 00:46:28,540
@@ -2586,8 +2587,8 @@ invert the public key and get the private
 
 519
 00:46:40,980 --> 00:46:45,320
-key with crypto because you can use an
-attack that reduces its cryptographic
+key with crypto because you can use
+an attack that reduces its cryptographic
 
 520
 00:46:45,320 --> 00:46:50,140
@@ -2602,22 +2603,22 @@ to have a crypto strength public-private
 522
 00:46:54,900 --> 00:46:58,360
 key pair. That's all you need for this
-because we're not doing encryption. I
+because we're not doing encryption.
 
 523
 00:46:58,360 --> 00:47:01,740
-didn't do an encryption. I mean, we do
-encryption, but KERI isn't about
+We do encryption,
+but KERI isn't about
 
 524
 00:47:01,740 --> 00:47:06,620
-encryption. It's about authentication with
-private private key fears. Now, because
+encryption. It's about authentication
+with private key pairs. Now, because
 
 525
 00:47:06,620 --> 00:47:11,120
-which I haven't talked about KERI, this is
-ACDCs. We have something called pre
+which I haven't talked about KERI, this
+is ACDCs. We have something called pre
 
 526
 00:47:11,120 --> 00:47:16,040
@@ -2631,8 +2632,8 @@ means that they can get my signing keys
 
 528
 00:47:21,160 --> 00:47:25,380
-because they know the public key. But then
-if I have a way to detect that they've
+because they know the public key. But
+then if I have a way to detect that they've
 
 529
 00:47:25,380 --> 00:47:28,240
@@ -2651,8 +2652,8 @@ I can wait to the last possible minute to
 
 532
 00:47:37,740 --> 00:47:41,760
-have to migrate. So I don't have to incur
-the cost of migration now. We're pre
+have to migrate. So I don't have to
+incur the cost of migration now. We're pre
 
 533
 00:47:41,760 --> 00:47:46,260
@@ -2671,8 +2672,8 @@ we don't have to do it today. Right? And
 
 536
 00:47:54,960 --> 00:47:58,700
-so that's an advantage, especially if
-you're trying to roll it out today to
+so that's an advantage, especially
+if you're trying to roll it out today to
 
 537
 00:47:58,700 --> 00:48:04,220
@@ -2686,8 +2687,8 @@ when this only just barely, you know, and
 
 539
 00:48:10,160 --> 00:48:16,660
-maybe a couple years of seasoning is a
-good idea, right? There's lots. Okay, so
+maybe a couple years of seasoning is
+a good idea, right? There's lots. Okay, so
 
 540
 00:48:16,660 --> 00:48:22,480
@@ -2696,13 +2697,13 @@ partial disclosure. Okay, so here's my
 
 541
 00:48:22,480 --> 00:48:29,260
-same credential, but I've collapsed my
-Merkle tree to the roots of each of the
+same credential, but I've collapsed
+my Merkle tree to the roots of each of the
 
 542
 00:48:29,260 --> 00:48:35,100
-nodes. So given name instead of being
-block is a hash, right? So now I can
+nodes. So given name instead of
+being block is a hash, right? So now I can
 
 543
 00:48:35,100 --> 00:48:39,440
@@ -2721,13 +2722,13 @@ that I choose at the time of presentation
 
 546
 00:48:53,140 --> 00:48:56,800
-without disclosing any of the other ones.
-I didn't have to do anything fancy. I
+without disclosing any of the other
+ones. I didn't have to do anything fancy. I
 
 547
 00:48:56,800 --> 00:49:01,120
-didn't need blackmagic crypto, crypto,
-which is an advantage because we want to
+didn't need black-magic crypto, which
+is an advantage because we want to
 
 548
 00:49:01,120 --> 00:49:05,260
@@ -2746,8 +2747,8 @@ stable, people before ECC, crypto meant
 
 551
 00:49:17,780 --> 00:49:22,040
-that every two or three years you had to
-double the size of your keys because it
+that every two or three years you had
+to double the size of your keys because it
 
 552
 00:49:22,040 --> 00:49:27,660
@@ -2756,8 +2757,8 @@ subject to Moore's law attack. But ECC has
 
 553
 00:49:27,660 --> 00:49:32,280
-maintained its strength over the last 20
-years despite, you know, a thousand
+maintained its strength over the last
+20 years despite, you know, a thousand
 
 554
 00:49:32,280 --> 00:49:37,460
@@ -2776,13 +2777,13 @@ post-quantum but then hopefully we'll have
 
 557
 00:49:46,760 --> 00:49:51,300
-a stable period for the next 50 years or
-so before we have to have to redo
+a stable period for the next 50
+years or so before we have to redo
 
 558
 00:49:51,300 --> 00:49:57,580
-everything again. But during the 80s and
-90s and 2000s it was like, you know,
+everything again. But during the 80s
+and 90s and 2000s it was like, you know,
 
 559
 00:49:57,580 --> 00:50:01,980
@@ -2791,13 +2792,13 @@ like 2011. So even though it was around
 
 560
 00:50:01,980 --> 00:50:05,560
-for 10 years before that, nobody could use
-it because it's patented. I got 10
+for 10 years before that, nobody could
+use it because it's patented. I got 10
 
 561
 00:50:05,560 --> 00:50:12,200
-minutes. Okay. Well, I'm just about done.
-Right. So, I'm going to talk about
+minutes. Okay. Well, I'm just about
+done. Right. So, I'm going to talk about
 
 562
 00:50:12,200 --> 00:50:16,480
@@ -2806,13 +2807,13 @@ sophisticated delegation chain. Here's the
 
 563
 00:50:16,480 --> 00:50:23,620
-same one here, but now I'm delegating to a
-citizen. So here's their AID that they're
+same one here, but now I'm delegating to
+a citizen. So here's their AID that they're
 
 564
 00:50:23,620 --> 00:50:31,180
-a guardian of a different AID. So this one
-is is this ACDC is saying that this
+a guardian of a different AID.
+So this ACDC is saying that this
 
 565
 00:50:31,180 --> 00:50:37,940
@@ -2821,12 +2822,12 @@ citizen ward AID and this citizen guardian
 
 566
 00:50:37,940 --> 00:50:46,280
-now, not the state, can now issue an ACDC
-as an authorization to the ward or the
+now, not the state, can now issue an
+ACDC as an authorization to the ward or the
 
 567
 00:50:46,280 --> 00:50:51,200
-child in this case that that ward can
+child in this case, that ward can
 present to social media. And so what we've
 
 568
@@ -2846,22 +2847,22 @@ this citizen might be over 13, which the
 
 571
 00:51:08,840 --> 00:51:15,180
-law says, if the parent says, no, no, no,
-I want to control the access when and how
+law says, if the parent says, no, no, no, I
+want to control the access when and how
 
 572
 00:51:15,180 --> 00:51:20,100
-much and how often and not just let the
-state determine that they're over 13 so
+much and how often and not just let
+the state determine that they're over 13 so
 
 573
 00:51:20,100 --> 00:51:24,080
-they can do whenever they want to, now
-they can issue this social media
+they can do whenever they want to,
+now they can issue this social media
 
 574
 00:51:24,080 --> 00:51:28,120
-authorization. And we're using the same
+authorization. And we're using the
 same technology all the way down. All
 
 575
@@ -2871,8 +2872,8 @@ is of this. This person is the issuer of
 
 576
 00:51:33,920 --> 00:51:43,180
-that. So, I can show this… Oh, yeah, I
-don't want to show that credential. It's
+that. So, I can show this… Oh, yeah,
+I don't want to show that credential. It's
 
 577
 00:51:43,180 --> 00:51:46,720
@@ -2896,8 +2897,8 @@ What don't you get about that? So here's a
 
 581
 00:52:20,940 --> 00:52:28,160
-problem with delegation. Up until ACDCs as
-far as I could tell when people built
+problem with delegation. Up until ACDCs
+as far as I could tell when people built
 
 582
 00:52:28,160 --> 00:52:37,420
@@ -2906,8 +2907,8 @@ structures, these delegations were signed.
 
 583
 00:52:37,700 --> 00:52:44,240
-They weren't durable. Which means that if
-I have a chain of any length and that
+They weren't durable. Which means that
+if I have a chain of any length and that
 
 584
 00:52:44,240 --> 00:52:51,340
@@ -2936,18 +2937,18 @@ myself, right? And why are they DDoSing
 
 589
 00:53:12,760 --> 00:53:16,040
-themselves? Because every time anybody in
-the chain rotates their keys, it breaks
+themselves? Because every time anybody
+in the chain rotates their keys, it breaks
 
 590
 00:53:16,040 --> 00:53:19,860
-their credentials. And they go, well,
-wait, you rotated your keys. My
+their credentials. And they go,
+well, wait, you rotated your keys. My
 
 591
 00:53:19,860 --> 00:53:23,620
-credentials should be valid. No, no, no,
-no. No, the authority is based on your
+credentials should be valid. No, no,
+no, no. No, the authority is based on your
 
 592
 00:53:23,620 --> 00:53:30,780
@@ -2966,8 +2967,8 @@ like, oh, we can do delegation. Delegation
 
 595
 00:53:39,260 --> 00:53:42,340
-actually becomes something that's not that
-difficult to do once you solve the
+actually becomes something that's
+not that difficult to do once you solve the
 
 596
 00:53:42,340 --> 00:53:46,960
@@ -2991,8 +2992,8 @@ have delegation in them, but they're not
 
 600
 00:53:59,520 --> 00:54:06,720
-used very much. So the idea is that if you
-don't start with durability, you can't
+used very much. So the idea is that if
+you don't start with durability, you can't
 
 601
 00:54:06,720 --> 00:54:10,140
@@ -3001,8 +3002,8 @@ do like guardianship because guardianship
 
 602
 00:54:10,140 --> 00:54:12,520
-is durable. How long does the guardian
-relationship last?
+is durable. How long does
+the guardian relationship last?
 
 603
 00:54:15,340 --> 00:54:21,320
@@ -3021,12 +3022,12 @@ telling me that I need to, you know, They
 
 606
 00:54:35,060 --> 00:54:41,580
-need to be in charge of what I do. Right?
-So, so anyway, so the point is, is that is
+need to be in charge of what I
+do. Right? So anyway, the point is...
 
 607
 00:54:41,580 --> 00:54:47,800
-that there now don't get me wrong. There
+Now, don't get me wrong. There
 are lots of really, really, really good
 
 608
@@ -3041,8 +3042,8 @@ lower friction so they can be used more
 
 610
 00:54:58,740 --> 00:55:03,700
-easily at scale, but they don't solve the
-hardest problems that are essential to
+easily at scale, but they don't solve
+the hardest problems that are essential to
 
 611
 00:55:03,700 --> 00:55:11,160
@@ -3061,7 +3062,7 @@ trying to be saying, well, can't we just
 
 614
 00:55:20,160 --> 00:55:25,500
-do this this way? And what you end up with
+do this way? And what you end up with
 is ephemeral systems trying to emulate
 
 615
@@ -3071,8 +3072,8 @@ difficult thing to do because it means
 
 616
 00:55:28,680 --> 00:55:32,560
-you're just reissuing all the time. – It's
-what the internet's built on right now
+you're just reissuing all the time. –
+It's what the internet's built on right now
 
 617
 00:55:32,560 --> 00:55:36,500
@@ -3086,8 +3087,8 @@ billion dollar company that rents itself
 
 619
 00:55:41,000 --> 00:55:44,320
-the fact that you have to rotate your keys
-and they take advantage of that. So
+the fact that you have to rotate your
+keys and they take advantage of that. So
 
 620
 00:55:44,320 --> 00:55:49,340
@@ -3126,8 +3127,8 @@ is, That's really expensive and do they
 
 627
 00:56:21,240 --> 00:56:25,620
-all have those already? Well, okay. So
-when you use the term HSM, if you're
+all have those already? Well, okay.
+So when you use the term HSM, if you're
 
 628
 00:56:25,620 --> 00:56:32,540
@@ -3136,8 +3137,8 @@ which are like $10,000 a piece. Okay.
 
 629
 00:56:33,200 --> 00:56:41,600
-Okay. So, so tomorrow I'm going to do a
-talk a dinner talk on the security
+So tomorrow I'm going to
+do a dinner talk on the security
 
 630
 00:56:41,600 --> 00:56:46,820
@@ -3156,8 +3157,8 @@ properties as expensive infrastructure. So
 
 633
 00:56:58,240 --> 00:57:05,060
-an HSM could be a $10,000 server that has,
-you know, signing infrastructure or it
+an HSM could be a $10,000 server that
+has, you know, signing infrastructure or it
 
 634
 00:57:05,060 --> 00:57:09,180
@@ -3171,13 +3172,13 @@ just talking about each of these people
 
 636
 00:57:16,000 --> 00:57:21,640
-don't necessarily need an expensive HSM.
-They just need a phone and a couple of
+don't necessarily need an expensive
+HSM. They just need a phone and a couple of
 
 637
 00:57:21,640 --> 00:57:27,580
-smart cards. Right? So, it's not a lot of
-infrastructure. Now, this person, this
+smart cards. Right? So, it's not a lot
+of infrastructure. Now, this person, this
 
 638
 00:57:27,580 --> 00:57:31,860
@@ -3196,8 +3197,8 @@ you could have a hundred issuers and it
 
 641
 00:57:42,700 --> 00:57:47,660
-doesn't matter. You can horizontally scale
-with with issuers that don't issue a lot.
+doesn't matter. You can horizontally
+scale with issuers that don't issue a lot.
 
 642
 00:57:48,220 --> 00:57:53,860
@@ -3241,8 +3242,8 @@ question? It did actually. Okay. Great.
 
 650
 00:58:31,320 --> 00:58:36,220
-Any more any more questions? Yes. Yeah.
-I'm curious how latency and timeouts on
+Any more questions? Yes. Yeah. I'm
+curious how latency and timeouts on
 
 651
 00:58:36,220 --> 00:58:41,400
@@ -3251,8 +3252,8 @@ this especially if you get into a doom.
 
 652
 00:58:41,600 --> 00:58:49,400
-Can you get into a doom with this over?
-No. No. That's because the the proof is
+Can you get into a doom with this
+over? No. No. That's because the proof is
 
 653
 00:58:49,400 --> 00:58:55,240
@@ -3261,8 +3262,8 @@ something called percolated discovery. So
 
 654
 00:58:55,240 --> 00:58:58,860
-if I go back and I got to go back a few
-diagrams.
+if I go back and I got to
+go back a few diagrams.
 
 655
 00:59:03,120 --> 00:59:11,540
@@ -3276,7 +3277,7 @@ an issuance. Okay. This KEL up to that
 
 657
 00:59:17,320 --> 00:59:24,260
-that point and seal is immutable. It
+point and seal is immutable. It
 doesn't change. So if I give this much to
 
 658
@@ -3291,13 +3292,13 @@ durable portable proof. Nobody has to go
 
 660
 00:59:32,880 --> 00:59:37,720
-back to the issuer. Nobody has to go back
-actually even to the network to verify
+back to the issuer. Nobody has to go
+back actually even to the network to verify
 
 661
 00:59:37,720 --> 00:59:42,480
-that proof. No phone home. No phone home
-anywhere. So there's no there's no network
+that proof. No phone home
+anywhere. So there's no network
 
 662
 00:59:42,480 --> 00:59:46,020
@@ -3316,8 +3317,8 @@ events past that, you can see that there
 
 665
 00:59:53,860 --> 00:59:57,420
-wasn't a recovery or something like that
-that could have invalidated it. So,
+wasn't a recovery or something like
+that that could have invalidated it. So,
 
 666
 00:59:57,620 --> 01:00:02,760
@@ -3351,8 +3352,8 @@ credential, I can't detect it. But guess
 
 672
 01:00:27,020 --> 01:00:31,820
-what? Even if they did, it wouldn't be
-valid for 24 hours till the next day
+what? Even if they did, it wouldn't
+be valid for 24 hours till the next day
 
 673
 01:00:31,820 --> 01:00:36,020
@@ -3371,8 +3372,8 @@ the actual issuance isn't affected. It's
 
 676
 01:00:53,860 --> 01:00:58,020
-only the revokability. And you might get a
-few people that had their credentials
+only the revokability. And you might
+get a few people that had their credentials
 
 677
 01:00:58,020 --> 01:01:02,000
@@ -3396,8 +3397,8 @@ right? But the rest of the year, not too
 
 681
 01:01:16,900 --> 01:01:21,640
-many. So does that answer your question? I
-mean, I'd have to go into you'd have to
+many. So does that answer your question?
+I mean, I'd have to go into you'd have to
 
 682
 01:01:21,640 --> 01:01:28,000
@@ -3411,13 +3412,13 @@ Well, the way it's a small blockchain.
 
 684
 01:01:34,140 --> 01:01:39,800
-Blockchain stores data. Where are we
-storing? You're just storing it in a key
+Blockchain stores data. Where are
+we storing? You're just storing it in a key
 
 685
 01:01:39,800 --> 01:01:44,200
-value store. Okay. And then and so that
-amount of data you're talking about
+value store. Okay. And then and so
+that amount of data you're talking about
 
 686
 01:01:44,200 --> 01:01:50,760
@@ -3436,8 +3437,8 @@ fundamentally though, is it stirring it in
 
 689
 01:01:59,420 --> 01:02:04,140
-some kind of a block? Is it stirring it in
-some kind of a text file? It doesn't
+some kind of a block? Is it stirring it
+in some kind of a text file? It doesn't
 
 690
 01:02:04,140 --> 01:02:12,040
@@ -3451,8 +3452,8 @@ store used for you. You're familiar with
 
 692
 01:02:17,380 --> 01:02:23,100
-it. Okay. Thank you. Yeah. Okay. Yes. So
-then you found the confusion earlier.
+it. Okay. Thank you. Yeah. Okay. Yes.
+So then you found the confusion earlier.
 
 693
 01:02:23,760 --> 01:02:30,580
@@ -3467,7 +3468,7 @@ the code. We have a protocol called CESER.
 695
 01:02:39,120 --> 01:02:45,020
 It's called Compact Event Streaming
-Representation. It's a protocol that that
+Representation. It's a protocol that
 
 696
 01:02:45,020 --> 01:02:50,800
@@ -3486,13 +3487,13 @@ an F. If it was SHA 3, it would be a G or
 
 699
 01:03:05,860 --> 01:03:10,860
-an H. And if it was SHA 3 512, it'd be a
-different letter. If it's SHA, you'd be,
+an H. And if it was SHA 3 512, it'd be
+a different letter. If it's SHA, you'd be,
 
 700
 01:03:11,080 --> 01:03:16,440
-you know, so all of the hashes are in the
-table. and anybody that's processing it
+you know, so all of the hashes are in
+the table. and anybody that's processing it
 
 701
 01:03:16,440 --> 01:03:20,240
@@ -3526,10 +3527,11 @@ okay. Yes. We'll go back here. Okay. So,
 
 707
 01:03:41,660 --> 01:03:49,420
-so tomorrow's talk, I will answer that.
+tomorrow's talk, I will answer that.
 Okay. All right. To be continued. All
 
 708
 01:03:49,420 --> 01:03:55,200
-right. Well, thank you so much. Thank you.
+right. Well, thank you
+so much. Thank you.
 
