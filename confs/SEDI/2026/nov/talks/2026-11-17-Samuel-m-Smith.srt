@@ -2043,8 +2043,8 @@ use 64 bits of entropy? Because, you know,
 
 410
 00:37:22,460 --> 00:37:29,880
-it'll be exponentially faster. Or
-four bits. Or four bits. Or two bits.
+it'll be exponentially faster.
+Or four bits. Or two bits.
 
 411
 00:37:30,120 --> 00:37:35,960
@@ -2053,8 +2053,8 @@ beginning, I said, no, no, the world is
 
 412
 00:37:35,960 --> 00:37:39,040
-only going to get worse. It's only
-going to get worse, going to get
+only going to get
+worse, going to get
 
 413
 00:37:39,040 --> 00:37:45,560
@@ -2063,8 +2063,8 @@ less than full cryptographic strength is a
 
 414
 00:37:45,560 --> 00:37:51,540
-temptation that we're just not we
-just no don't ever go there. We did
+temptation that we just
+don't ever go there. We did
 
 415
 00:37:51,540 --> 00:37:54,580
@@ -2083,7 +2083,7 @@ out there. Everything has to be protected.
 
 418
 00:38:02,860 --> 00:38:06,660
-We invented something called the SED
+We invented something called the SAID
 protocol, which is now actually an IANA
 
 419
@@ -2114,21 +2114,21 @@ would be a problem. Anyway, but you can
 424
 00:38:29,280 --> 00:38:32,720
 see we have some that aren't because
-they're not reserved labels. Anyway… – You
+they're not reserved labels. Anyway… – They
 
 425
 00:38:32,720 --> 00:38:41,060
-make jokes about the DUI. – Yes. Yes, DUI
-right there. There you go. Driving under
+make jokes about the 'd' 'u' 'i'. –
+'d' 'u' 'i' right there. “Driving under
 
 426
 00:38:41,060 --> 00:38:45,840
-the influence, which can't be said of me
+influence”, which can't be said of me
 because I don't drink. But anyway, so this
 
 427
 00:38:45,840 --> 00:38:50,960
-said is a hash of this data that is
+SAID is a hash of this data that is
 inside the data. And so there's a protocol
 
 428
@@ -2149,7 +2149,7 @@ integrity protected in an interoperable
 431
 00:39:03,960 --> 00:39:09,200
 cryptographic agile way. And so
-we just have these SEDs everywhere
+we just have these SAIDs everywhere
 
 432
 00:39:09,200 --> 00:39:14,920
@@ -2169,7 +2169,7 @@ document. So that means that I can manage
 435
 00:39:28,720 --> 00:39:33,620
 things really well. I'm going to go
-through the field. This is the SED.
+through the field. This is the SAID.
 
 436
 00:39:34,140 --> 00:39:39,180
@@ -2208,7 +2208,7 @@ identifier. Notice the schema itself has a
 
 443
 00:40:08,320 --> 00:40:12,640
-hash or a sed, which means the schema are
+hash or a SAID, which means the schema are
 immutable. So nobody can play games with
 
 444
@@ -2218,7 +2218,7 @@ of this. Here the attribute block.
 
 445
 00:40:17,360 --> 00:40:21,900
-The attribute block itself has a sed. It
+The attribute block itself has a SAID. It
 has unique entropy. It has an issuee.
 
 446
@@ -2248,8 +2248,8 @@ Oh, we got a couple other. Where's Micah?
 
 451
 00:40:42,500 --> 00:40:49,100
-All right. Anyway, but this means that the
-actual that you can actually embed what's
+But this means that you
+can actually embed what's
 
 452
 00:40:49,100 --> 00:40:55,180
@@ -2263,8 +2263,8 @@ it's in text, but it's expressed in a way
 
 454
 00:41:01,820 --> 00:41:06,580
-that you can also do machine operations
-on it. So you can embed the you can either
+that you can also do machine
+operations on it. So you can either
 
 455
 00:41:06,580 --> 00:41:10,420
@@ -2304,7 +2304,7 @@ designated program office role for
 462
 00:41:42,160 --> 00:41:48,560
 whoever has this credential, that AID,
-the issue AID. Here's the next delegation
+the issuee AID. Here's the next delegation
 
 463
 00:41:48,560 --> 00:41:53,240
@@ -2324,7 +2324,7 @@ And then here's my edge section that links
 466
 00:42:06,740 --> 00:42:11,780
 back to the other one. You see that
-I've got SEDS everywhere. I've got unique
+I've got SAIDs everywhere. I've got unique
 
 467
 00:42:11,780 --> 00:42:17,020
