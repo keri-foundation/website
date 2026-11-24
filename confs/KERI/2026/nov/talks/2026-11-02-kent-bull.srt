@@ -30,8 +30,8 @@ last couple of years. Things went fast. All
 
 7
 00:00:31,500 --> 00:00:38,060
-right. So did:webs, what's the why the
-s matters is the s matters most. And of
+right. Did:webs, what's the why the s
+matters is the s matters most. And of
 
 8
 00:00:38,060 --> 00:00:43,200
@@ -55,7 +55,7 @@ the domains and the keys that you say you
 
 12
 00:00:58,840 --> 00:01:06,220
-control. So let's start with the TL;DR. For
+control. Let's start with the TL;DR. For
 those, there are enough people in the room
 
 13
@@ -65,12 +65,12 @@ did:webs that know kind of where things are
 
 14
 00:01:11,360 --> 00:01:15,820
-at. So let me give you a quick update
+at. Let me give you a quick update
 before we dive into the next 23, 24 slides
 
 15
 00:01:15,820 --> 00:01:23,580
-that will go in depth. So essentially
+that will go in depth. Essentially
 did:webs today works with KERI ACDC, I'm
 
 16
@@ -105,7 +105,7 @@ spend most of my time in keripy,
 
 22
 00:01:52,400 --> 00:01:56,340
-so when I say KERI 2, it's really 1.1
+when I say KERI 2, it's really 1.1
 of the specs. Just sort of keep that in
 
 23
@@ -130,18 +130,18 @@ super confusing. – It's because KERI as a
 
 27
 00:02:19,620 --> 00:02:25,380
-code base existed for several years before
-we started the standards track. And so we
+code base existed for several years
+before we started the standards track. We
 
 28
 00:02:25,380 --> 00:02:32,100
-had already advanced to well into the one
-point whatever you know and so the spec
+had already advanced well into the
+one point whatever you know and the spec
 
 29
 00:02:32,100 --> 00:02:39,340
 actually incorporated a bunch of lessons
-learned so it was already anticipating you
+learned, so it was already anticipating you
 
 30
 00:02:39,340 --> 00:02:44,660
@@ -156,7 +156,7 @@ right? – 1.1 formerly known as KERI 2
 32
 00:02:49,880 --> 00:02:57,600
 – Yes, exactly. I'll state that for
-everybody to hear. So spec version 1.1
+everybody to hear. Spec version 1.1
 
 33
 00:02:57,600 --> 00:02:59,739
@@ -164,7 +164,7 @@ formerly known as KERI 2. […]
 
 34
 00:03:14,128 --> 00:03:16,640
-[…] So the TL;DR is
+[…] The TL;DR is
 
 35
 00:03:16,640 --> 00:03:22,500
@@ -187,13 +187,13 @@ significant amount of work that's non-trivial to do to make it work for KERI 2.
 
 39
 00:03:38,240 --> 00:03:42,700
-So as a part of this presentation, we'll
+As a part of this presentation, we'll
 get into later the differences between
 
 40
 00:03:42,700 --> 00:03:50,860
 KERI ACDC version 1 and KERI ACDC version
-2. Before we get there, so we do have some
+2. Before we get there, we do have some
 
 41
 00:03:50,860 --> 00:03:54,280
@@ -232,8 +232,8 @@ TELs that are a step above what KERI
 
 48
 00:04:21,740 --> 00:04:25,940
-applies. All right. So now let's get back
-to, with the TL;DR done, and we're going to
+applies. All right. Now let's get back to,
+with the TL;DR done, and we're going to
 
 49
 00:04:25,940 --> 00:04:31,620
@@ -247,8 +247,8 @@ not, I'll just dive right into it. Great.
 
 51
 00:04:37,840 --> 00:04:43,600
-So the idea is that we have the web. And
-if you look at so many implementations out
+The idea is that we have the web. And if
+you look at so many implementations out
 
 52
 00:04:43,600 --> 00:04:48,420
@@ -323,7 +323,7 @@ when you change your keys? That's when you
 66
 00:05:46,100 --> 00:05:50,820
 need did:webs because did:web doesn't
-support key rotation. So now we actually
+support key rotation. Now we actually
 
 67
 00:05:50,820 --> 00:05:55,980
@@ -387,8 +387,8 @@ resolve a did:webs DID? What are the
 
 79
 00:06:48,680 --> 00:06:53,680
-different capabilities that are in the
-that are in or need to be in the did:webs
+different capabilities that are in
+- or need to be in the did:webs
 
 80
 00:06:53,680 --> 00:06:58,640
@@ -398,7 +398,7 @@ little bit later how you even though keys
 81
 00:06:58,640 --> 00:07:04,140
 change you still maintain control of the
-identifier and then I'll get to a current
+identifier. And then I'll get to a current
 
 82
 00:07:04,140 --> 00:07:07,260
@@ -467,8 +467,8 @@ you'll know where the reference
 
 95
 00:08:01,140 --> 00:08:06,000
-implementation is. So you can go start
-to play with this if you'd like. So as I
+implementation is. So you can go
+start to play with this if you'd like. As I
 
 96
 00:08:06,000 --> 00:08:12,740
@@ -503,7 +503,7 @@ wire protocol for how you express KERI
 102
 00:08:42,700 --> 00:08:47,880
 data structures, KERI and ACDC data
-structures. So we take this extra file and
+structures. We take this extra file and
 
 103
 00:08:47,880 --> 00:08:52,180
@@ -558,7 +558,7 @@ keys and KERI credentials, you can derive
 113
 00:09:36,600 --> 00:09:45,160
 a DID document as you'll see in just
-a couple slides. All right. So when your
+a couple slides. All right. When your
 
 114
 00:09:45,160 --> 00:09:52,360
@@ -648,7 +648,7 @@ and I'm going to use that to verify what
 131
 00:11:07,540 --> 00:11:11,800
 you're telling me in the DID document.
-So a couple of purposes that you might use
+A couple of purposes that you might use
 
 132
 00:11:11,800 --> 00:11:18,560
@@ -657,13 +657,13 @@ need identity for security for in general.
 
 133
 00:11:18,680 --> 00:11:22,580
-So let's take this ACME corporation.
+Let's take this ACME corporation.
 They're going to host two things at example
 
 134
 00:11:22,580 --> 00:11:27,600
 .org, they might want to be able to take
-the same identity as a company. So GLEIF
+the same identity as a company. GLEIF
 
 135
 00:11:27,600 --> 00:11:32,420
@@ -673,7 +673,7 @@ identity. We're going to model a little
 136
 00:11:32,420 --> 00:11:38,900
 bit of an organizational identity problem
-here, but with did:webs. So what the vLEI
+here, but with did:webs. What the vLEI
 
 137
 00:11:38,900 --> 00:11:43,660
@@ -852,7 +852,7 @@ data integrity proof specification. Anybody
 
 172
 00:14:26,820 --> 00:14:31,160
-heard of that? So if you know data
+heard of that? If you know data
 integrity proofs, well, it helps your
 
 173
@@ -862,7 +862,7 @@ to verify a credential signature. Is that
 
 174
 00:14:36,320 --> 00:14:40,720
-correct? So we have to do that. I just
+correct? We have to do that. I just
 want to thank you for being here so I
 
 175
@@ -878,11 +878,11 @@ thing for the did:webs world. And this is
 177
 00:14:49,040 --> 00:14:55,400
 a significant piece of work that
-we didn't quite have time to get to.
+we don't quite have time to get to.
 
 178
 00:14:55,400 --> 00:15:00,980
-So KERI has this amazing capability
+KERI has this amazing capability
 for multisig. I said nested weighted
 
 179
@@ -908,7 +908,7 @@ you're going to define what's called the
 183
 00:15:17,920 --> 00:15:22,000
 verification methods and I'll just let me
-just skip ahead a little bit. So here's a
+just skip ahead a little bit. Here's a
 
 184
 00:15:22,000 --> 00:15:27,760
@@ -937,7 +937,7 @@ conceptual domain model doesn't mean the
 
 189
 00:15:44,580 --> 00:15:48,780
-verifiers have that domain model. So when
+verifiers have that domain model. When
 I'm talking about that fourth box that I
 
 190
@@ -977,7 +977,7 @@ what a multisig nested weighted threshold
 
 197
 00:16:22,600 --> 00:16:26,940
-multisig group is. And so it's pretty
+multisig group is. It's pretty
 straightforward for people that know KERI,
 
 198
@@ -988,7 +988,7 @@ clear, which means we need to write a spec
 199
 00:16:31,940 --> 00:16:36,340
 and then write a library that'll do that.
-So I'm seeing at least one nodding head in
+I'm seeing at least one nodding head in
 
 200
 00:16:36,340 --> 00:16:41,860
@@ -997,7 +997,7 @@ a total failure. That's great. Anyway, all
 
 201
 00:16:41,860 --> 00:16:46,300
-right. So this is an example of a did:webs
+right. This is an example of a did:webs
 DID. Let's just walk through it slowly.
 
 202
@@ -1047,7 +1047,7 @@ for this identifier. Because remember I
 
 211
 00:17:41,720 --> 00:17:45,400
-said key rotation, so you could have lots
+said key rotation, you could have lots
 of rotations and lots of history. That's
 
 212
@@ -1072,7 +1072,7 @@ put our minds in the mindset of who's
 
 216
 00:18:01,440 --> 00:18:07,820
-using this. So let's say you're at a gas
+using this. Let's say you're at a gas
 station and you see this young looking
 
 217
@@ -1123,11 +1123,11 @@ that they look at the history for this
 226
 00:18:48,580 --> 00:18:54,920
 identifier and say, okay, what's
-the current key right now today? So I
+the current key right now today?
 
 227
 00:18:54,920 --> 00:18:59,920
-mentioned two files. So what I
+I mentioned two files. What I
 wanted to say with that example is
 
 228
@@ -1167,7 +1167,7 @@ that's not did:web. That's what this keri.cesr
 
 235
 00:19:34,140 --> 00:19:38,220
-stream is. So when they verify or
+stream is. When they verify or
 they're trying to make a decision, should
 
 236
@@ -1267,7 +1267,7 @@ introductions (OOBI). We send everything across
 
 255
 00:21:14,640 --> 00:21:19,300
-the wire that's necessary. So if you're
+the wire that's necessary. If you're
 already going to pay the architectural and
 
 256
@@ -1298,7 +1298,7 @@ are some of those. – Some big ones, notable
 261
 00:21:46,280 --> 00:21:51,260
 ones that have said almost exactly that.
-– So we're like, okay, fine. We'll call it
+– We're like, okay, fine. We'll call it
 
 262
 00:21:51,260 --> 00:21:57,740
@@ -1323,12 +1323,12 @@ Or they've got a really good reason why,
 266
 00:22:09,500 --> 00:22:15,080
 hey, this for the risk profile here, we
-can accept these risks. So just a plain
+can accept these risks. Just a plain
 
 267
 00:22:15,080 --> 00:22:22,960
-did:webs, that's fine. And so what
-I'm leading to here is that you're doing a
+did:webs, that's fine. What I'm
+leading to here is that you're doing a
 
 268
 00:22:22,960 --> 00:22:28,240
@@ -1348,7 +1348,7 @@ yes, you can take this tobacco out of the
 271
 00:22:36,600 --> 00:22:40,520
 store to the young man he's trying to buy
-it, that might be enough. So you send that
+it, that might be enough. You send that
 
 272
 00:22:40,520 --> 00:22:44,800
@@ -1373,11 +1373,11 @@ members of the community that didn't
 276
 00:23:00,800 --> 00:23:04,240
 know about this fourth thing on the slide.
-So I'm going to walk you through it. This
+I'm going to walk you through it. This
 
 277
 00:23:04,240 --> 00:23:08,940
-is a little bit deeper. And so if
+is a little bit deeper. If
 you're new to KERI, don't worry too
 
 278
@@ -1387,7 +1387,7 @@ if you need to do did:webs. This is maybe a
 
 279
 00:23:13,260 --> 00:23:17,360
-little bit deeper. Okay, so this is the
+little bit deeper. Okay, this is the
 keri.cesr. If you want to go inside that
 
 280
@@ -1492,7 +1492,7 @@ to example.com or to whatever your domain
 
 300
 00:25:00,840 --> 00:25:06,360
-is. So the reason why you have ACDCs
+is. The reason why you have ACDCs
 is because it's a 100% requirement that if
 
 301
@@ -1637,7 +1637,7 @@ right. Now that's about as deep as we need
 
 329
 00:27:22,960 --> 00:27:27,000
-to get. So those that are new to KERI, the
+to get. Those that are new to KERI, the
 rest of the presentation shouldn't be as
 
 330
@@ -1657,7 +1657,7 @@ aliases and that's where when I say
 
 333
 00:27:42,180 --> 00:27:45,860
-authorized DID names here. So we go
+authorized DID names here. We go
 through the verification process and we
 
 334
@@ -1682,8 +1682,8 @@ that you've got on your web server.
 
 338
 00:28:06,400 --> 00:28:11,720
-And if they're the same
-document, you verify. You're good. So we
+And if they if they're the same
+document, you verify. You're good. We
 
 339
 00:28:11,720 --> 00:28:14,500
@@ -1722,12 +1722,12 @@ them do. Now I might have jumped ahead of
 
 346
 00:28:45,520 --> 00:28:52,900
-myself here. So some of your designated
+myself here. Some of your designated
 aliases will be placed in the alsoKnownAs
 
 347
 00:28:52,900 --> 00:28:57,200
-section. So let's say you're
+section. Let's say you're
 essentially trying to tell the world: this
 
 348
@@ -1752,7 +1752,7 @@ the alsoKnownAs and those come from
 
 352
 00:29:15,800 --> 00:29:24,140
-your designated aliases ACDC. So now
+your designated aliases ACDC. Now
 to the multisig stuff. We do have multisig
 
 353
@@ -1798,7 +1798,7 @@ structure, but it gets deeper than that.
 361
 00:30:10,480 --> 00:30:16,180
 ConditionalProof2022 also allows you
-to do nesting. So the really fancy cool
+to do nesting. The really fancy cool
 
 362
 00:30:16,180 --> 00:30:21,140
@@ -1818,7 +1818,7 @@ But the way that it works is it's how many
 365
 00:30:32,240 --> 00:30:38,180
 people here are new to multisig in KERI?
-Just a couple. All right. So I'll walk
+Just a couple. All right. I'll walk
 
 366
 00:30:38,180 --> 00:30:39,220
@@ -1827,12 +1827,12 @@ a little bit slower.
 
 367
 00:30:43,800 --> 00:30:49,020
-So let me introduce this from
+Let me introduce this from
 why would you actually use this?
 
 368
 00:30:50,200 --> 00:30:55,360
-And I'll mention a GLEIF example. So we
+And I'll mention a GLEIF example. We
 have defined in the ecosystem governance
 
 369
@@ -2018,7 +2018,7 @@ bit through a waiting signing threshold
 405
 00:33:50,020 --> 00:33:55,160
 thing. We can sort of move on. There's
-plenty to discuss later. All right. So I
+plenty to discuss later. All right. I
 
 406
 00:33:55,160 --> 00:34:00,300
@@ -2043,7 +2043,7 @@ have an agent and that has a relationship
 410
 00:34:18,780 --> 00:34:25,240
 to the identifier that is giving you this
-DID Doc. And so the way we represent that
+DID Doc. And the way we represent that
 
 411
 00:34:25,240 --> 00:34:29,420
@@ -2103,7 +2103,7 @@ mailbox or the agent, maybe we don't
 422
 00:35:15,960 --> 00:35:21,260
 actually need this, but it seemed
-invaluable and so we kept it in there. But
+invaluable and we kept it in there. But
 
 423
 00:35:21,260 --> 00:35:24,060
@@ -2225,7 +2225,7 @@ agreement?
 
 447
 00:37:20,860 --> 00:37:24,880
-– So is the question is there something
+– Is the question is there something
 in the KERI data model that would support
 
 448
@@ -2235,7 +2235,7 @@ model? – Yes. That's the question. – Can I
 
 449
 00:37:30,700 --> 00:37:35,300
-answer that? So signing
+answer that? Signing
 keys can only be used to sign.
 
 450
@@ -2266,7 +2266,7 @@ other thing in the whole KERI ecosystem.
 455
 00:38:11,920 --> 00:38:16,480
 Signing is general. You can do anything
-you want with signing. Right? So you could
+you want with signing. Right? You could
 
 456
 00:38:16,480 --> 00:38:26,640
@@ -2281,7 +2281,7 @@ keys, right? And then witnesses have their
 458
 00:38:32,100 --> 00:38:37,540
 own set of keys. But witness keys are
-only used for receding. So we define keys
+only used for receding. We define keys
 
 459
 00:38:37,540 --> 00:38:44,120
@@ -2291,7 +2291,7 @@ don't have keys that you assign to proof
 460
 00:38:44,120 --> 00:38:49,800
 purpose because where the key appears
-in KERI determines its purpose. So witness
+in KERI determines its purpose. Witness
 
 461
 00:38:49,800 --> 00:38:54,580
@@ -2301,7 +2301,7 @@ key appears in the signing key list and
 462
 00:38:54,580 --> 00:38:58,480
 the rotation keys appear in the
-next rotated key list. So those key lists
+next rotated key list. Those key lists
 
 463
 00:38:58,480 --> 00:39:04,920
@@ -2320,7 +2320,7 @@ very useful. Bare signatures are highly
 
 466
 00:39:13,820 --> 00:39:17,920
-insecure. They're not very useful. So you
+insecure. They're not very useful. You
 only use them for ephemeral things. And
 
 467
@@ -2341,7 +2341,7 @@ deterministically in the KERI ecosystem.
 470
 00:39:35,000 --> 00:39:40,440
 Would you be open to having that? –
-So yes, that's a really good question. KERI
+Yes, that's a really good question. KERI
 
 471
 00:39:40,440 --> 00:39:45,840
@@ -2361,7 +2361,7 @@ that's not defined in KERI.
 474
 00:39:58,720 --> 00:40:05,040
 Encryption is a different protocol
-from KERI. So yes. – So is that
+from KERI. Yes. – Is that
 
 475
 00:40:05,040 --> 00:40:11,300
@@ -2376,7 +2376,7 @@ technical depths. I like going there. I
 477
 00:40:15,960 --> 00:40:20,000
 know we've got sort of our time is getting
-shorter. So what I'd like to do is look
+shorter. What I'd like to do is look
 
 478
 00:40:20,000 --> 00:40:22,840
@@ -2386,12 +2386,12 @@ We're going to go pretty quickly through
 479
 00:40:22,840 --> 00:40:27,780
 the rest of the technical stuff. I will
-be at IIW. So I'll be here for the rest
+be at IIW. I'll be here for the rest
 
 480
 00:40:27,780 --> 00:40:33,760
 of the week in case anybody wants to
-go deeper. All right. So we talked about a
+go deeper. All right. We talked about a
 
 481
 00:40:33,760 --> 00:40:37,120
@@ -2435,7 +2435,7 @@ Let's go right to where the spec is at.
 
 489
 00:41:12,680 --> 00:41:17,600
-Okay. So the spec we're on version 0.10.3
+Okay. The spec we're on version 0.10.3
 of the did:webs spec. That's where we're at
 
 490
@@ -2566,7 +2566,7 @@ more of a credential proofing spec. And
 515
 00:43:24,720 --> 00:43:29,660
 it's not just a spec. You'd want a
-library as well. That's easy to use. So if
+library as well. That's easy to use. If
 
 516
 00:43:29,660 --> 00:43:33,600
@@ -2581,7 +2581,7 @@ that needs to be done later. So, but where
 518
 00:43:39,100 --> 00:43:43,180
 we're going though is we want to
-finish out the DIF process. And so to
+finish out the diff process. And to
 
 519
 00:43:43,180 --> 00:43:50,180
@@ -2595,7 +2595,7 @@ And we were pretty close earlier this year.
 
 521
 00:43:55,924 --> 00:44:06,240
-– So is the spec being approved at Trust
+– Is the spec being approved at Trust
 over IP, a prerequisite for DIF to recognize
 
 522
@@ -2610,7 +2610,7 @@ so we can all hear. It's a good
 
 524
 00:44:15,220 --> 00:44:21,800
-question. So is ToIP approval of the
+question. Is ToIP approval of the
 did:webs spec required in order for the DIF
 
 525
@@ -2660,7 +2660,7 @@ working under the aegis of DIF has
 
 534
 00:45:09,020 --> 00:45:14,100
-to follow the DIF rules. And so that's
+to follow the DIF rules. And that's
 you and Jonathan. And all you're doing is
 
 535
@@ -2686,12 +2686,12 @@ allows approved specs from just anybody
 539
 00:45:39,360 --> 00:45:45,300
 that wants to contribute it under
-DIF. So it has its own approval
+DIF. It has its own approval
 
 540
 00:45:45,300 --> 00:45:51,840
-process. – Got it. So it sounds like
-the answer is no. – So there's no there's
+process. – Got it. It sounds like
+the answer is no. –
 
 541
 00:45:51,840 --> 00:46:01,780
@@ -2710,13 +2710,13 @@ recommended DID method. It just looks
 
 544
 00:46:09,060 --> 00:46:15,800
-good. So once we have the KERI v2 stuff in
+good. Once we have the KERI v2 stuff in
 there and all the open points addressed, I
 
 545
 00:46:15,800 --> 00:46:21,260
 don't see why we wouldn't be. So, all
-right. So there I mentioned some review
+right. There I mentioned some review
 
 546
 00:46:21,260 --> 00:46:25,900
@@ -2761,7 +2761,7 @@ ordinary did:webs consumer receive? We need
 554
 00:46:59,440 --> 00:47:05,460
 to walk you through, okay, what does a W3C
-credential proof looks like? And so we're
+credential proof looks like? And we're
 
 555
 00:47:05,460 --> 00:47:09,680
@@ -2781,7 +2781,7 @@ there to be able to give you a pretty good
 558
 00:47:18,720 --> 00:47:22,860
 illustration of how do I actually use
-this? And so we're going to add some
+this? We're going to add some
 
 559
 00:47:22,860 --> 00:47:28,040
@@ -2805,7 +2805,7 @@ complicated one, the other ones are piece
 
 563
 00:47:42,180 --> 00:47:49,820
-of cake. Okay, so we've got… there's other
+of cake. Okay, we've got… there's other
 things that need to be… other open points,
 
 564
@@ -2860,7 +2860,7 @@ unblinding life cycle of the registry
 
 574
 00:48:35,300 --> 00:48:40,280
-state? So we just need to be more clear
+state? We just need to be more clear
 and explicit about everything that KERI
 
 575
@@ -2890,8 +2890,8 @@ the existing repositories, show you where
 
 580
 00:49:08,460 --> 00:49:12,740
-things are at so that you can go play with
-it yourself. So right now the if you look
+things are at, so that you can go play with
+it yourself. Right now the if you look
 
 581
 00:49:12,740 --> 00:49:18,020
@@ -2916,7 +2916,7 @@ beyond that. So, I'm going to skip forward
 585
 00:49:31,180 --> 00:49:36,980
 a little bit to show you some resources.
-Okay, so we do have the Trust over IP
+Okay, we do have the Trust over IP
 
 586
 00:49:36,980 --> 00:49:41,880
@@ -2951,7 +2951,7 @@ state. That's what this is useful for.
 592
 00:50:13,620 --> 00:50:19,340
 It's actually useful for from TypeScript
-resolving key state. So you're not
+resolving key state. You're not
 
 593
 00:50:19,340 --> 00:50:24,180
@@ -2985,7 +2985,7 @@ implementation?
 599
 00:50:50,380 --> 00:50:55,480
 And I'm like, no, it doesn't, but it will
-soon. And so I started on a TypeScript
+soon. I started on a TypeScript
 
 600
 00:50:55,480 --> 00:50:59,600
@@ -3030,7 +3030,7 @@ could be tens of thousands closer to a
 608
 00:51:36,740 --> 00:51:41,760
 hundred thousand. There's a lot more
-complexity going on. So personally, I
+complexity going on. Personally, I
 
 609
 00:51:41,760 --> 00:51:45,800
@@ -3040,7 +3040,7 @@ implementation, but to a truly secure
 610
 00:51:45,800 --> 00:51:53,820
 complete implementation of KERI ACDC is
-non-trivial. It's a big deal. So I'm going
+non-trivial. It's a big deal. I'm going
 
 611
 00:51:53,820 --> 00:51:57,840
@@ -3075,12 +3075,12 @@ the repositories hosted. But there's a
 617
 00:52:16,340 --> 00:52:23,620
 informational website you can point
-your AI agent to at didwebs.info. So some
+your AI agent to at didwebs.info. Some
 
 618
 00:52:23,620 --> 00:52:34,080
 other work. Go ahead.
-So we got a question in
+We got a question in
 
 619
 00:52:34,080 --> 00:52:34,880
@@ -3088,7 +3088,7 @@ the back from Phil.
 
 620
 00:52:39,580 --> 00:52:52,920
-– So one of my primary interests in this is
+– One of my primary interests in this is
 being able to do DIDComm on top of KERI. So
 
 621
@@ -3104,12 +3104,12 @@ anytime? Do they change as you rotate
 623
 00:53:08,780 --> 00:53:13,000
 keys? I mean, what's happening under the
-covers? I was a little late, so maybe you
+covers? I was a little late, maybe you
 
 624
 00:53:13,000 --> 00:53:18,380
 already answered this, but… – That's a good
-question. So how do we support? I'll just
+question. How do we support? I'll just
 
 625
 00:53:18,380 --> 00:53:23,460
@@ -3143,7 +3143,7 @@ designated aliases ACDC and you self-issue
 
 631
 00:53:45,940 --> 00:53:50,080
-that. So that's the only other decision
+that. That's the only other decision
 you have to make. But other than that, the
 
 632
@@ -3168,13 +3168,13 @@ able to know enough about DIDComm to answer
 
 636
 00:54:11,120 --> 00:54:16,020
-your question. I would imagine. So if
+your question. I would imagine. If
 you just think about the inventory of what
 
 637
 00:54:16,020 --> 00:54:19,540
 KERI gives you or what did:webs gives you.
-So you've got a full key event log, you've
+You've got a full key event log, you've
 
 638
 00:54:19,540 --> 00:54:24,080
@@ -3188,7 +3188,7 @@ it's a DID document to say, well, what's
 
 640
 00:54:29,660 --> 00:54:35,540
-my latest key state? So without knowing
+my latest key state? Without knowing
 anything about DIDComm, if DIDComm needs to
 
 641
@@ -3198,7 +3198,7 @@ state to do communication, did:webs could
 
 642
 00:54:39,500 --> 00:54:44,260
-fully support that. – So I had a
+fully support that. – I had a
 conversation at lunch And what a lot of
 
 643
@@ -3268,7 +3268,7 @@ and no more complicated than the
 
 656
 00:55:51,140 --> 00:55:55,160
-did:key did:web. So just to repeat that for
+did:key did:web. Just to repeat that for
 anybody that might not have heard it. So
 
 657
@@ -3309,16 +3309,16 @@ of the controller. The witness's AID is its
 664
 00:56:27,920 --> 00:56:32,720
 public key and it's a key in the KEL of
-the controller. So it's rotated when you
+the controller. It's rotated when you
 
 665
 00:56:32,720 --> 00:56:39,340
-rotate witnesses. So it doesn't need
-its own KEL. So it is trivially just a key
+rotate witnesses. It doesn't need
+its own KEL. It is trivially just a key
 
 666
 00:56:39,340 --> 00:56:44,100
-pair like did:key. So we use them all the
+pair like did:key. We use them all the
 time in KERI infrastructure. Whenever we
 
 667
@@ -3348,7 +3348,7 @@ a transferable identifier, but use it in
 
 672
 00:57:06,960 --> 00:57:13,060
-indirect mode. So it's transferable, but
+indirect mode. It's transferable, but
 it does not have a witness, right? Which
 
 673
@@ -3364,7 +3364,7 @@ it's full KERI normative spec because it
 675
 00:57:23,980 --> 00:57:29,120
 doesn't need witnesses. It has a key event
-log. So it's better than did:peer. It's
+log. It's better than did:peer. It's
 
 676
 00:57:29,120 --> 00:57:32,940
@@ -3378,13 +3378,13 @@ direct mode to exchange your KEL.
 
 678
 00:57:38,360 --> 00:57:42,160
-So you don't have witnesses
+You don't have witnesses
 to publish your KEL because
 
 679
 00:57:42,160 --> 00:57:47,340
 did:peer assumes that you can communicate
-directly. So if you can communicate
+directly. If you can communicate
 
 680
 00:57:47,340 --> 00:57:51,400
@@ -3447,18 +3447,18 @@ just say, well, I don't understand KERI.
 
 692
 00:58:56,980 --> 00:59:00,220
-So give them the did:web. – I understand
+Give them the did:web. – I understand
 keys and I can get the key from the DID
 
 693
 00:59:00,220 --> 00:59:05,700
 doc and I'm good.
-– So I will say that
+– I will say that
 
 694
 00:59:05,700 --> 00:59:11,720
 I've been told by the staff that my
-presentation is done and so my hour is up
+presentation is done and my hour is up
 
 695
 00:59:11,720 --> 00:59:15,500
