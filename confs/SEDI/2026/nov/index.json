@@ -26,7 +26,11 @@
       "duration": "01:03:59",
       "subtitle": "talks/2026-11-17-Samuel-m-Smith.srt",
       "poster": "talks/2026-11-17-Samuel-m-Smith.jpg",
-      "presentation": "talks/2026-11-17-Samuel-m-Smith.pdf"
+      "presentation": "talks/2026-11-17-Samuel-m-Smith.pdf",
+      "links": [
+        "https://sedi.utah.gov",
+        "https://www.sedisummit.com"
+      ]
     },
     {
       "order": 2,
