@@ -180,7 +180,7 @@ what you're attacking is the key
 
 37
 00:03:23,180 --> 00:03:28,680
-management. So you can't break the crypto,
+management. You can't break the crypto,
 but you can break the key management.
 
 38
@@ -205,8 +205,8 @@ your private keys have been exposed, then
 
 42
 00:03:48,080 --> 00:03:54,160
-nothing that we said above works because
-it's all broken. And so if you go
+nothing that we said above works
+because it's all broken. If you go
 
 43
 00:03:54,160 --> 00:03:59,600
@@ -225,8 +225,8 @@ brute force attack. And they do a really
 
 46
 00:04:10,620 --> 00:04:15,640
-good job of that. So key management is
-the principal weakness and because that's
+good job of that. Key management is the
+principal weakness and because that's
 
 47
 00:04:15,640 --> 00:04:20,020
@@ -240,12 +240,12 @@ management. What are they phishing? Your
 
 49
 00:04:25,140 --> 00:04:31,200
-keys or your password, which is
-your secret. So vulnerabilities are
+keys or your password,
+which is your secret. Vulnerabilities are
 
 50
 00:04:31,200 --> 00:04:37,840
-almost always side channel attacks. So
+almost always side channel attacks.
 KERI uses a signed everything node shared
 
 51
@@ -265,8 +265,8 @@ weak because two parties know the secret.
 
 54
 00:04:58,820 --> 00:05:04,840
-It's shared. That means either party is
-a vulnerability. So a key compromised
+It's shared. That means either party
+is a vulnerability. A key compromised
 
 55
 00:05:04,840 --> 00:05:13,300
@@ -276,7 +276,7 @@ has really, really good security and the
 56
 00:05:13,300 --> 00:05:17,760
 client has really, really bad security.
-And so they don't attack the host, they
+They don't attack the host, they
 
 57
 00:05:17,760 --> 00:05:22,140
@@ -291,7 +291,7 @@ the thing you want to get into is not the
 59
 00:05:27,400 --> 00:05:31,340
 client. You want to get into the host.
-Well, you've now made it so that some
+You've now made it so that some
 
 60
 00:05:31,340 --> 00:05:35,640
@@ -310,7 +310,7 @@ the first step in a recursive privilege
 
 63
 00:05:46,020 --> 00:05:52,260
-escalation attack. So by saying no shared
+escalation attack. By saying no shared
 secrets anywhere, we've eliminated the
 
 64
@@ -325,18 +325,18 @@ said those don't apply to us. All right.
 
 66
 00:06:02,340 --> 00:06:07,140
-So that's one of the principal basis of
-KERI is saying we're going to avoid being
+That's one of the principal basis of KERI
+is saying we're going to avoid being
 
 67
 00:06:07,140 --> 00:06:11,580
 vulnerable to things by not using those
-things that make us vulnerable. So it's a
+things that make us vulnerable. It's a
 
 68
 00:06:11,580 --> 00:06:16,920
 signed everything no shared secret
-approach. So principal weakness, side
+approach. Principal weakness, side
 
 69
 00:06:16,920 --> 00:06:19,880
@@ -385,8 +385,8 @@ their secrets if they're shared secrets.
 
 78
 00:07:06,660 --> 00:07:12,160
-How do I log in with a password? I have
-to share my secret. So phishing is about
+How do I log in with a password?
+I have to share my secret. Phishing is about
 
 79
 00:07:12,160 --> 00:07:18,740
@@ -400,7 +400,7 @@ but that's why I say it's phish-resistant.
 
 81
 00:07:22,560 --> 00:07:26,300
-So, the idea is we're starting
+The idea is we're starting
 with the hardest thing for an
 
 82
@@ -470,12 +470,12 @@ system sufficiently fault tolerant, it will
 
 95
 00:08:36,020 --> 00:08:43,160
-always cost them more to succeed in
-an attack than they get from the attack. So
+always cost them more to succeed in an
+attack than they get from the attack.
 
 96
 00:08:43,160 --> 00:08:46,860
-they won't attack. Does that make sense?
+They won't attack. Does that make sense?
 Does that definition resonate with you
 
 97
@@ -505,8 +505,8 @@ maximum return. They're not going to
 
 102
 00:09:12,320 --> 00:09:19,980
-attack the things that don't give them
-return. So, the design ethos of KERI is to
+attack the things that don't give them return.
+The design ethos of KERI is to
 
 103
 00:09:19,980 --> 00:09:25,400
@@ -549,8 +549,8 @@ drive anymore. If you have a flat
 
 111
 00:10:06,260 --> 00:10:14,180
-tire for most cars, that's a system
-failure. So lots of systems
+tire for most cars,
+that's a system failure. Lots of systems
 
 112
 00:10:14,180 --> 00:10:19,660
@@ -580,7 +580,7 @@ they could afford to produce five Sherman
 117
 00:10:45,840 --> 00:10:52,980
 tanks or even 10 or 15 Sherman tanks for
-every German Tiger tank. So five Sherman
+every German Tiger tank. Five Sherman
 
 118
 00:10:52,980 --> 00:10:58,080
@@ -604,8 +604,8 @@ and shoot it in the behind, the armor back
 
 122
 00:11:13,000 --> 00:11:18,920
-there is thin enough that you can take it
-out. So the whole strategy is to send five
+there is thin enough that you can take it out.
+The whole strategy is to send five
 
 123
 00:11:18,920 --> 00:11:22,920
@@ -634,13 +634,12 @@ away and then the other ones manage to
 
 128
 00:11:40,420 --> 00:11:47,740
-kill it. So a squadron
-of Sherman tanks is fault
+kill it. A squadron of Sherman tanks is fault
 
 129
 00:11:47,740 --> 00:11:54,720
-tolerant. Much more so than the
-one tiger tank. So what we call a fault is
+tolerant. Much more so than the one
+tiger tank. What we call a fault is
 
 130
 00:11:54,720 --> 00:11:59,160
@@ -659,8 +658,8 @@ mission, you're fault tolerant. In other
 
 133
 00:12:06,780 --> 00:12:11,080
-words, the faults occur, but it doesn't
-matter. You can continue. you.
+words, the faults occur,
+but it doesn't matter. You can continue. You.
 
 134
 00:12:11,080 --> 00:12:14,600
@@ -670,7 +669,7 @@ able to cleave its mission, then we call
 135
 00:12:14,600 --> 00:12:18,400
 that a system failure or a failure.
-So what we're trying to do is prevent
+What we're trying to do is prevent
 
 136
 00:12:18,400 --> 00:12:23,520
@@ -679,18 +678,18 @@ in a fault tolerant design is you look for
 
 137
 00:12:23,520 --> 00:12:29,680
-single points of failure. So if I got
-a car with four wheels and I can't
+single points of failure.
+If I got a car with four wheels and I can't
 
 138
 00:12:29,680 --> 00:12:34,860
-drive with three, then every wheel is
-a single point of failure. So I've got four
+drive with three, then every wheel is a
+single point of failure. I've got four
 
 139
 00:12:34,860 --> 00:12:40,760
 single points of failure. That's not a
-really good design. fine. Okay? It's just
+really good design. Fine. Okay? It's just
 
 140
 00:12:40,760 --> 00:12:45,120
@@ -705,7 +704,7 @@ the same failure mode. The same thing takes
 142
 00:12:49,260 --> 00:12:55,520
 them out. And in computer security
-systems, you know, the FAAs routers with
+systems the FAAs routers with
 
 143
 00:12:55,520 --> 00:13:03,300
@@ -714,13 +713,13 @@ FAA system, that's called a common mode
 
 144
 00:13:03,300 --> 00:13:07,540
-failure. So you just experienced
-a common mode. In fact, we had multiple
+failure. You just experienced a common mode.
+In fact, we had multiple
 
 145
 00:13:07,540 --> 00:13:10,900
 common mode failures this last week.
-That's right. Yeah. In multiple
+That's right. In multiple
 
 146
 00:13:10,900 --> 00:13:16,620
@@ -749,8 +748,8 @@ because cryptographers in general don't
 
 151
 00:13:36,460 --> 00:13:42,660
-care. about key management. They
-care about brute force attacks so that it's
+care. About key management.
+They care about brute force attacks so that it's
 
 152
 00:13:42,660 --> 00:13:47,560
@@ -769,13 +768,13 @@ on key management. It's just not. It's just
 
 155
 00:13:55,140 --> 00:13:58,920
-like, ah, that's just boring, dumb
-something called key management that's
+like, that's just boring,
+dumb something called key management that's
 
 156
 00:13:58,920 --> 00:14:09,360
-about user interfaces. So the key
-is if you can repair faults as they occur
+about user interfaces. The key is if
+you can repair faults as they occur
 
 157
 00:14:09,360 --> 00:14:15,580
@@ -784,8 +783,8 @@ to failure, then you have a really fault
 
 158
 00:14:15,580 --> 00:14:19,940
--tolerant system. So if you have
-just redundancy, let's say you have five
+-tolerant system. If you have just
+redundancy, let's say you have five
 
 159
 00:14:19,940 --> 00:14:23,840
@@ -809,13 +808,13 @@ as they get killed. Like today you
 
 163
 00:14:37,700 --> 00:14:41,940
-fought, you lost two, and then two more
-show up on, you know, get dropped from the
+fought, you lost two, and then two
+more show up on get dropped from the
 
 164
 00:14:41,940 --> 00:14:46,540
-sky and, you know, with new guys and the
-next day you're back to full strength. If
+sky and with new guys and the next
+day you're back to full strength. If
 
 165
 00:14:46,540 --> 00:14:51,400
@@ -824,18 +823,18 @@ never fail. You go the whole war and you
 
 166
 00:14:51,400 --> 00:14:56,000
-never fail. They'd have to take all five
-of you out, you know, in the battle for
+never fail. They'd have to take all
+five of you out in the battle for
 
 167
 00:14:56,000 --> 00:15:01,940
-you to fail. So, the goal of really good
+you to fail. The goal of really good
 fault-tolerant systems is recovery from
 
 168
 00:15:01,940 --> 00:15:10,940
-fault, not redundancy, not resiliency, but
-recovery. So if I want to recover from a
+fault, not redundancy, not resiliency,
+but recovery. If I want to recover from a
 
 169
 00:15:10,940 --> 00:15:15,460
@@ -869,8 +868,8 @@ faults were detected until it was too late
 
 175
 00:15:51,560 --> 00:15:56,860
-and then you had the breach. So failure
-to detect describes pretty much every
+and then you had the breach.
+Failure to detect describes pretty much every
 
 176
 00:15:56,860 --> 00:16:04,100
@@ -934,8 +933,8 @@ those faults only occur once in every 10
 
 188
 00:16:57,140 --> 00:17:02,400
-,000 times. So that you just
-don't have faults. So you build your
+000 times. So that you just
+don't have faults. You build your
 
 189
 00:17:02,400 --> 00:17:07,680
@@ -994,13 +993,13 @@ accelerated pace means that at some point
 
 200
 00:18:03,860 --> 00:18:08,340
-you're going to have a leak. In fact, that
-was… Well, never mind. I won't say that
+you're going to have a leak. In fact,
+that was… Never mind. I won't say that
 
 201
 00:18:08,340 --> 00:18:15,180
 story. Anyway, hazardous environments.
-So, what we did is we take the reliability
+What we did is we take the reliability
 
 202
 00:18:15,180 --> 00:18:19,020
@@ -1014,7 +1013,7 @@ we come up with risk mitigation design
 
 204
 00:18:23,020 --> 00:18:28,420
-techniques. So, what critical engineering
+techniques. What critical engineering
 infrastructure engineering, which is
 
 205
@@ -1029,18 +1028,18 @@ bad things from happening? Who in here
 
 207
 00:18:37,180 --> 00:18:42,140
-knows? So, what it says is you take the
+knows? What it says is you take the
 likelihood of failure, you multiply it by
 
 208
 00:18:42,140 --> 00:18:48,060
-the significance of failure. So, and
-usually we do it, usually typically what
+the significance of failure.
+And usually we do it, usually typically what
 
 209
 00:18:48,060 --> 00:18:53,140
-you do is you just assign a dollar
-value. You know that the actuarial
+you do is you just assign a dollar value.
+That the actuarial
 
 210
 00:18:53,140 --> 00:19:00,020
@@ -1069,13 +1068,13 @@ anywhere on the Earth, what would happen?
 
 215
 00:19:26,900 --> 00:19:31,360
-Instinction level event. So the
-significance of that failure is all the
+Instinction level event.
+The significance of that failure is all the
 
 216
 00:19:31,360 --> 00:19:35,860
-value of everything on the earth as
-we know it. So it is as high a
+value of everything on the earth
+as we know it. It is as high a
 
 217
 00:19:35,860 --> 00:19:39,880
@@ -1089,8 +1088,8 @@ earth? It's a really, really, really teeny
 
 219
 00:19:44,980 --> 00:19:49,440
-number. So the criticality is
-actually quite low. So we don't spend
+number. The criticality is
+actually quite low. We don't spend
 
 220
 00:19:49,440 --> 00:19:53,900
@@ -1130,7 +1129,7 @@ infrastructure. We wouldn't have
 227
 00:20:23,820 --> 00:20:27,960
 electricity. Everybody would starve and
-die of food and die of disease. and we'd
+die of food and die of disease. And we'd
 
 228
 00:20:27,960 --> 00:20:33,700
@@ -1169,7 +1168,7 @@ But the likelihood is so small that
 
 235
 00:21:02,820 --> 00:21:08,240
-it's not worth the resources. Okay, so
+it's not worth the resources. Okay,
 could an attacker compromise grandma's
 
 236
@@ -1189,8 +1188,8 @@ of effort to actually compromise grandma's
 
 239
 00:21:25,500 --> 00:21:32,560
-cell phone? Zero. So, the point is
-that unless you weight every failure mode
+cell phone? Zero. The point is that
+unless you weight every failure mode
 
 240
 00:21:32,560 --> 00:21:41,020
@@ -1200,7 +1199,7 @@ that there's a failure mode because it
 241
 00:21:41,020 --> 00:21:45,960
 won't happen because there's no incentive.
-So, you rate and rank infrastructure
+You rate and rank infrastructure
 
 242
 00:21:45,960 --> 00:21:51,860
@@ -1295,7 +1294,7 @@ hit. And then because that was to solve
 260
 00:23:11,600 --> 00:23:16,880
 blue water Navy problems and not brown
-water Navy problems. And so the Iran-Iraq
+water Navy problems. The Iran-Iraq
 
 261
 00:23:16,880 --> 00:23:22,300
@@ -1324,8 +1323,8 @@ because everybody after 9-11 was worried
 
 266
 00:23:42,180 --> 00:23:48,880
-that all of their buildings would get
-bombed. And so they spent time on it.
+that all of their buildings would
+get bombed. They spent time on it.
 
 267
 00:23:48,880 --> 00:23:52,840
@@ -1344,7 +1343,7 @@ repair of damage at a given level of
 
 270
 00:24:01,780 --> 00:24:10,240
-significance before failure. So damage is a fault. I have a
+significance before failure. Damage is a fault. I have a
 
 271
 00:24:10,240 --> 00:24:16,140
@@ -1378,8 +1377,8 @@ they attack the fast one. Right. And if
 
 277
 00:24:44,020 --> 00:24:48,300
-there are enough slow fat ones, they never
-get to the fast one. So you only have to
+there are enough slow fat ones,
+they never get to the fast one. You only have to
 
 278
 00:24:48,300 --> 00:24:54,040
@@ -1393,17 +1392,17 @@ of the attacker have been multiplied so
 
 280
 00:25:01,040 --> 00:25:07,660
-that everybody looks slow and fat compared
-to the AI. So that's a problem. But
+that everybody looks slow and fat
+compared to the AI. That's a problem. But
 
 281
 00:25:07,660 --> 00:25:12,640
-still, you know, low value targets are low
-value targets even if they're easy to eat.
+still low value targets are low value
+targets even if they're easy to eat.
 
 282
 00:25:12,920 --> 00:25:17,580
-And so you're still not going to expend
+You're still not going to expend
 resources to get them. In other words, the
 
 283
@@ -1448,8 +1447,8 @@ and agile and they can move around and it
 
 291
 00:25:53,620 --> 00:25:57,860
-might get one or two of them, but it
-won't get all five of them. So, the
+might get one or two of them,
+but it won't get all five of them. The
 
 292
 00:25:57,860 --> 00:26:06,240
@@ -1463,8 +1462,8 @@ is the damage only a fault that you can
 
 294
 00:26:10,700 --> 00:26:15,960
-recover from? And so recoverability
-is the likelihood of timely repair, which
+recover from? Recoverability is the
+likelihood of timely repair, which
 
 295
 00:26:15,960 --> 00:26:21,180
@@ -1474,7 +1473,7 @@ failure. And if I can repair the
 296
 00:26:21,180 --> 00:26:25,320
 damage before failure, then my likelihood
-of failure goes way down. So likelihood of
+of failure goes way down. Likelihood of
 
 297
 00:26:25,320 --> 00:26:28,420
@@ -1489,22 +1488,22 @@ recoverability, which means if I have
 299
 00:26:34,020 --> 00:26:40,300
 failure because zero times anything
-is still zero. So if I have one of
+is still zero. If I have one of
 
 300
 00:26:40,300 --> 00:26:45,400
 my recoverability, then my likelihood
-of failure is zero. So that's an important
+of failure is zero. That's an important
 
 301
 00:26:45,400 --> 00:26:48,780
-insight. And so we did some work,
+insight. We did some work,
 especially when we were doing the
 
 302
 00:26:48,780 --> 00:26:54,160
-shipboard automation. We used AI back in
-the 90s. when nobody knew what it was to
+shipboard automation. We used AI back in the 90s.
+When nobody knew what it was to
 
 303
 00:26:54,160 --> 00:27:00,500
@@ -1513,8 +1512,8 @@ networks and figure out which ones had the
 
 304
 00:27:00,500 --> 00:27:06,400
-highest survivability for cost. So you
-do a cost survivability trade-off and guess
+highest survivability for cost.
+You do a cost survivability trade-off and guess
 
 305
 00:27:06,400 --> 00:27:13,660
@@ -1524,7 +1523,7 @@ much more cost-effective at survivability
 306
 00:27:13,660 --> 00:27:19,740
 than networks that were highly redundant.
-So if I had 5x redundancy, it was actually
+If I had 5x redundancy, it was actually
 
 307
 00:27:19,740 --> 00:27:26,600
@@ -1534,17 +1533,17 @@ but where I could repurpose the redundant
 308
 00:27:26,600 --> 00:27:31,520
 components to smartly repair failures
-where they occurred on the network. So I
+where they occurred on the network. I
 
 309
 00:27:31,520 --> 00:27:36,800
 needed a different topology than I
-would with just hot backups everywhere. So
+would with just hot backups everywhere.
 
 310
 00:27:36,800 --> 00:27:41,120
-what's a threshold structure? A
-threshold structure multiplies the number
+What's a threshold structure?
+A threshold structure multiplies the number
 
 311
 00:27:41,120 --> 00:27:44,360
@@ -1563,13 +1562,13 @@ tiger out unless the tiger kills all five
 
 314
 00:27:53,580 --> 00:28:00,340
-of them first. If one's left and is
-behind the tiger, he wins. So that
+of them first. If one's left and
+is behind the tiger, he wins. That
 
 315
 00:28:00,340 --> 00:28:05,180
-means the tiger has a… They should be
-afraid. They should be going, yeah,
+means the tiger has a…
+They should be afraid. They should be going,
 
 316
 00:28:05,320 --> 00:28:09,780
@@ -1598,13 +1597,13 @@ it and kill it before it can turn and bring
 
 321
 00:28:29,880 --> 00:28:33,440
-its gun to bear. So you have to be really
-brave. You have to get in close. You have
+its gun to bear. You have to be really brave.
+You have to get in close. You have
 
 322
 00:28:33,440 --> 00:28:39,600
 to fight dirty, but you can win.
-So a fault-tolerant system detects
+A fault-tolerant system detects
 
 323
 00:28:39,600 --> 00:28:43,300
@@ -1638,8 +1637,8 @@ resources they spent to attack you? Futily
 
 329
 00:29:03,820 --> 00:29:11,560
-with no return. Well, that's part
-of the ROI. So recoverable systems that
+with no return. That's part of the ROI.
+Recoverable systems that
 
 330
 00:29:11,560 --> 00:29:18,580
@@ -1664,7 +1663,7 @@ doesn't want to attack you. In
 334
 00:29:33,740 --> 00:29:40,320
 KERI, a recoverable fault is a successful
-side channel attack on signing keys. So
+side channel attack on signing keys.
 
 335
 00:29:40,320 --> 00:29:44,820
@@ -1688,8 +1687,8 @@ compromised, they can take all of your
 
 339
 00:29:59,880 --> 00:30:03,160
-money and there's no way for you to
-recover. – Well, if they have a
+money and there's no way for
+you to recover. – If they have a
 
 340
 00:30:03,160 --> 00:30:07,560
@@ -1698,8 +1697,8 @@ There are some, they're working on it.
 
 341
 00:30:07,660 --> 00:30:13,300
-But, you know, the point is, but if I have
-a passkey that allows me to access my bank
+But the point is, but if I have a
+passkey that allows me to access my bank
 
 342
 00:30:13,300 --> 00:30:18,840
@@ -1708,8 +1707,8 @@ compromised, I'm done. Now,
 
 343
 00:30:18,840 --> 00:30:24,900
-Yeah. So that means that in KERI, we
-say that the fault isn't compromising the
+Yeah. That means that in KERI,
+we say that the fault isn't compromising the
 
 344
 00:30:24,900 --> 00:30:30,480
@@ -1778,8 +1777,8 @@ signing keys, it's a recoverable fault for
 
 357
 00:31:24,640 --> 00:31:29,220
-us. So we're already just in a
-different regime. By design, KERI is
+us. We're already just in a different regime.
+By design, KERI is
 
 358
 00:31:29,220 --> 00:31:34,340
@@ -1794,7 +1793,7 @@ key management. KERI less about the
 360
 00:31:39,100 --> 00:31:45,500
 cryptography. I'm just using vanilla dumb,
-I mean, what do I call it? White magic
+what do I call it? White magic
 
 361
 00:31:45,500 --> 00:31:50,000
@@ -1808,8 +1807,8 @@ nothing like even now with the post
 
 363
 00:31:53,120 --> 00:31:56,800
-people are saying is, well, yeah, NIST is
-standard on all these post-quantum crypto
+people are saying is, NIST is standard
+on all these post-quantum crypto
 
 364
 00:31:56,800 --> 00:32:01,440
@@ -1829,7 +1828,7 @@ confident that there aren't any lurking
 367
 00:32:10,820 --> 00:32:16,380
 vulnerabilities? More than a decade.
-– Yeah, but with the Gentic
+– but with the Gentic
 
 368
 00:32:16,380 --> 00:32:23,840
@@ -1853,8 +1852,8 @@ around for over 30 years. It was on patent
 
 372
 00:32:42,160 --> 00:32:49,760
-for 19 years. But since 2011, it's been
-off patent. So since 2011, it's proven
+for 19 years. But since 2011,
+it's been off patent. Since 2011, it's proven
 
 373
 00:32:49,760 --> 00:32:53,560
@@ -1874,7 +1873,7 @@ computers can break it. All right. We
 376
 00:33:03,560 --> 00:33:08,820
 start by designing the system so that
-faults are always exposed. So, the rule is
+faults are always exposed. The rule is
 
 377
 00:33:08,820 --> 00:33:12,340
@@ -1928,8 +1927,8 @@ and then we resume. We don't just keep
 
 387
 00:33:59,740 --> 00:34:04,140
-going and ignoring the fault. So it's
-better the fault you know about but can't
+going and ignoring the fault.
+It's better the fault you know about but can't
 
 388
 00:34:04,140 --> 00:34:08,300
@@ -1938,13 +1937,13 @@ know about even if you don't need to fix it
 
 389
 00:34:08,300 --> 00:34:12,880
-just yet. So you think, well, wait, I
-don't need to fix it yet. Why do I
+just yet. You think, well, wait,
+I don't need to fix it yet. Why do I
 
 390
 00:34:12,880 --> 00:34:19,780
-care? Because a failure is a cascade
-of faults. So if I don't know about faults,
+care? Because a failure is a cascade of faults.
+If I don't know about faults,
 
 391
 00:34:20,040 --> 00:34:24,600
@@ -1964,7 +1963,7 @@ see it coming. And that describes pretty
 394
 00:34:34,020 --> 00:34:38,000
 much every security breach.
-So the first thing we have to do is build
+The first thing we have to do is build
 
 395
 00:34:38,000 --> 00:34:43,660
@@ -2034,22 +2033,22 @@ the life it doesn't prevent failure. It
 408
 00:35:45,320 --> 00:35:49,720
 just means you won't fail today,
-but you'll eventually fail. So external
+but you'll eventually fail. External
 
 409
 00:35:49,720 --> 00:35:54,600
-inconsistency looks like duplicity. And
-I'll define that in a little bit. But so
+inconsistency looks like duplicity.
+And I'll define that in a little bit.
 
 410
 00:35:54,600 --> 00:36:03,380
-the policy is that I can trust KERI as
+The policy is that I can trust KERI as
 long as all the non-reputable signatures
 
 411
 00:36:03,380 --> 00:36:08,560
-verify and there's no evidence of
-duplicity. So I verify everything and then
+verify and there's no evidence of duplicity.
+I verify everything and then
 
 412
 00:36:08,560 --> 00:36:13,140
@@ -2063,7 +2062,7 @@ say, I can't trust that controller.
 
 414
 00:36:17,420 --> 00:36:23,480
-So very first line of duplicity, I stop.
+Very first line of duplicity, I stop.
 That protects me from that fault causing
 
 415
@@ -2079,7 +2078,7 @@ controller that's been compromised and
 417
 00:36:32,160 --> 00:36:37,680
 there's the relying party that's
-interacting with the controller. So the
+interacting with the controller. The
 
 418
 00:36:37,680 --> 00:36:43,080
@@ -2098,8 +2097,8 @@ Half of the interacting parties are
 
 421
 00:36:52,880 --> 00:36:58,400
-protected. Now, I have to worry about the
-controller. Okay? So, we force all faults
+protected. Now, I have to worry about
+the controller. Okay? We force all faults
 
 422
 00:36:58,400 --> 00:37:03,320
@@ -2129,7 +2128,7 @@ security. If I tried to get the same level
 427
 00:37:24,580 --> 00:37:29,960
 of security not using KERI's properties,
-it would be way more complicated. So if
+it would be way more complicated. If
 
 428
 00:37:29,960 --> 00:37:33,180
@@ -2143,18 +2142,18 @@ because it's too complicated. They don't
 
 430
 00:37:36,920 --> 00:37:41,680
-even try. I was stupid enough
-to try and it actually worked. So I'm like,
+even try. I was stupid enough to try
+and it actually worked. I'm like,
 
 431
 00:37:41,800 --> 00:37:47,720
-Okay. You know, but it took a while.
-So, I simplified fault detection. I made
+Okay. But it took a while.
+I simplified fault detection. I made
 
 432
 00:37:47,720 --> 00:37:55,580
 it as simple as possible, but no simpler,
-to quote a phrase. So, if I only have one
+to quote a phrase. If I only have one
 
 433
 00:37:55,580 --> 00:38:02,680
@@ -2173,8 +2172,8 @@ endemically fault-tolerant system because
 
 436
 00:38:14,720 --> 00:38:18,540
-I'm just detecting one thing and repairing
-one thing over and over and over again.
+I'm just detecting one thing and
+repairing one thing over and over again.
 
 437
 00:38:19,060 --> 00:38:25,440
@@ -2193,8 +2192,8 @@ they attack. How do we make things
 
 440
 00:38:38,440 --> 00:38:45,200
-duplicity detectable? Well, we sign
-and hash chain everything. Everything is
+duplicity detectable? We sign and
+hash chain everything. Everything is
 
 441
 00:38:45,200 --> 00:38:49,760
@@ -2278,8 +2277,8 @@ that are supposed to do the same thing,
 
 457
 00:40:05,240 --> 00:40:12,080
-then you have duplicity. So this
-signed hashchain data structures make
+then you have duplicity.
+This signed hashchain data structures make
 
 458
 00:40:12,080 --> 00:40:16,300
@@ -2288,8 +2287,8 @@ means that I don't have to trust anybody.
 
 459
 00:40:16,540 --> 00:40:21,240
-Anybody that detects duplicity can publish
-the detection in a provable way. So I
+Anybody that detects duplicity can
+publish the detection in a provable way. I
 
 460
 00:40:21,240 --> 00:40:26,760
@@ -2298,17 +2297,17 @@ Everybody can become a detector and I can
 
 461
 00:40:26,760 --> 00:40:31,440
-verify that it happened. So a verifier can
-say, you know, I don't have to have any
+verify that it happened.
+A verifier can say I don't have to have any
 
 462
 00:40:31,440 --> 00:40:38,120
 trusted third parties. I just need to have
-mechanisms that prove to me duplicity. and
+mechanisms that prove to me duplicity. And
 
 463
 00:40:38,120 --> 00:40:44,440
-then I'm protected. So that means that
+then I'm protected. That means that
 successful attacks are forced to exhibit
 
 464
@@ -2328,8 +2327,8 @@ look like. What KERI does is that we
 
 467
 00:41:03,840 --> 00:41:09,880
-have multiple threshold
-structures. So we have a single fault
+have multiple threshold structures.
+We have a single fault
 
 468
 00:41:09,880 --> 00:41:13,100
@@ -2369,7 +2368,7 @@ And then I layer on top of that another
 475
 00:41:44,520 --> 00:41:50,860
 five squadrons. Now to be successful,
-they have to take out, you know, five times
+they have to take out five times
 
 476
 00:41:50,860 --> 00:41:55,520
@@ -2378,13 +2377,13 @@ another five times every one of those
 
 477
 00:41:55,520 --> 00:42:01,000
-five. So now they have to take out 125,
-you know, to be successful. So that's why
+five. Now they have to take out
+125 to be successful. That's why
 
 478
 00:42:01,000 --> 00:42:05,920
-it's exponential. So if it's low cost for
-me to layer threshold structure, which it
+it's exponential. If it's low cost for me
+to layer threshold structure, which it
 
 479
 00:42:05,920 --> 00:42:12,600
@@ -2403,8 +2402,8 @@ the cost of building the systems. And then
 
 482
 00:42:23,380 --> 00:42:26,760
-I build in recovery mechanisms. So
-even if the attacker attacks is partially
+I build in recovery mechanisms.
+Even if the attacker attacks is partially
 
 483
 00:42:26,760 --> 00:42:33,780
@@ -2413,13 +2412,13 @@ progress, recover from it, and make the
 
 484
 00:42:33,780 --> 00:42:40,920
-attacker start over. And so, tunability
-is that I can take those layered threshold
+attacker start over. Tunability is that
+I can take those layered threshold
 
 485
 00:42:40,920 --> 00:42:46,980
 structures and tune them down to the
-particular risk profile. So, grandma may
+particular risk profile. Grandma may
 
 486
 00:42:46,980 --> 00:42:55,580
@@ -2448,8 +2447,8 @@ at the same time. You can add all kinds of
 
 491
 00:43:18,400 --> 00:43:25,180
-stuff to make it so the attacker can't
-get to it. So, tunability means that
+stuff to make it so the attacker
+can't get to it. Tunability means that
 
 492
 00:43:25,180 --> 00:43:29,100
@@ -2458,8 +2457,8 @@ is friction. If there's too much
 
 493
 00:43:29,100 --> 00:43:33,960
-friction, nobody will use it. So, you
-want to reduce the friction to the point to
+friction, nobody will use it.
+You want to reduce the friction to the point to
 
 494
 00:43:33,960 --> 00:43:37,760
@@ -2473,7 +2472,7 @@ the tunability is there, then you can find
 
 496
 00:43:43,680 --> 00:43:51,880
-a solution that fits the risk profile. So
+a solution that fits the risk profile.
 KERI is complicated because it's tunable.
 
 497
@@ -2488,8 +2487,8 @@ profile may say, I don't really need more
 
 499
 00:44:04,480 --> 00:44:10,680
-security than X. I mean, if a
-passkey is really, really strong compared
+security than X. if a passkey is really,
+really strong compared
 
 500
 00:44:10,680 --> 00:44:15,000
@@ -2499,17 +2498,17 @@ then KERI is already stronger than a
 501
 00:44:15,000 --> 00:44:18,740
 passkey. Just a single SIG KERI is
-stronger than a passkey. So, that's all
+stronger than a passkey. That's all
 
 502
 00:44:18,740 --> 00:44:22,740
-you'd ever need. And so, the friction
-is really, really, really small. But
+you'd ever need. The friction is really,
+really, really small. But
 
 503
 00:44:22,740 --> 00:44:27,180
-if I'm trying to protect, you know, a
-large enterprise like the state of Utah or
+if I'm trying to protect a large
+enterprise like the state of Utah or
 
 504
 00:44:27,180 --> 00:44:31,220
@@ -2524,11 +2523,11 @@ little bit stronger. What are those
 506
 00:44:35,040 --> 00:44:40,540
 threshold structures? Key event logs,
-signing keys, and pre-rotating keys. So
+signing keys, and pre-rotating keys.
 
 507
 00:44:40,540 --> 00:44:45,160
-there's two different sets of keys.
+There's two different sets of keys.
 That's a threshold structure. Multi-sig
 
 508
@@ -2543,12 +2542,12 @@ have two and then each of those two could
 
 510
 00:44:56,860 --> 00:45:04,460
-be five or four or three. So now I
-have six. Okay? So I went from, you
+be five or four or three.
+Now I have six. Okay? I went from, you
 
 511
 00:45:04,460 --> 00:45:10,900
-know, two to six just by multiplying.
+Two to six just by multiplying.
 Hierarchy of delegated AIDs. If I
 
 512
@@ -2558,7 +2557,7 @@ the delegation chain protects all the AIDs
 
 513
 00:45:15,680 --> 00:45:20,060
-below it. So the only way I can compromise
+below it. The only way I can compromise
 this AID and gain control of it is I have
 
 514
@@ -2613,8 +2612,8 @@ a delegation every time they hire and fire
 
 524
 00:46:00,100 --> 00:46:04,860
-somebody, which is might be months,
-you know? – Same. – Yeah. – 10 minutes. –
+somebody, which is might be months?
+– Same. – Yeah. – 10 minutes.
 
 525
 00:46:04,860 --> 00:46:09,160
@@ -2638,18 +2637,18 @@ time. It's not instantaneous.
 
 529
 00:46:22,940 --> 00:46:25,600
-People always say, well, yeah, but you've
-got network latency, so you won't detect
+People always say, but you've got
+network latency, so you won't detect
 
 530
 00:46:25,600 --> 00:46:31,000
 the detection in time to stop the fault.
-So what I do is I make failure a multi
+What I do is I make failure a multi
 
 531
 00:46:31,000 --> 00:46:38,780
--step process. So I designed the system
-so that the attack starts with an event
+-step process. I designed the system so
+that the attack starts with an event
 
 532
 00:46:38,780 --> 00:46:43,960
@@ -2659,7 +2658,7 @@ can see. And then the next event happens
 533
 00:46:43,960 --> 00:46:51,140
 at a time delay greater than my detection
-recovery latency. So they can't actually
+recovery latency. They can't actually
 
 534
 00:46:51,140 --> 00:46:56,580
@@ -2668,7 +2667,7 @@ that the first step of the attack has
 
 535
 00:46:56,580 --> 00:47:00,440
-already been detected. it, which means
+already been detected. It, which means
 that I can stop the attack before it gets
 
 536
@@ -2728,7 +2727,7 @@ in the key event log is if they control the
 
 547
 00:47:53,260 --> 00:47:57,680
-signing keys. So either you're stupid and
+signing keys. Either you're stupid and
 you're borrowing money and you know what
 
 548
@@ -2738,13 +2737,13 @@ have been compromised. Either way, it's
 
 549
 00:48:02,600 --> 00:48:06,740
-detectable. So, gets anchored in your key
-event log. So, all of a sudden, you get a
+detectable. Gets anchored in your key
+event log. All of a sudden, you get a
 
 550
 00:48:06,740 --> 00:48:12,500
-notification on your phone that says, hey,
-did you intend to borrow, you know, half a
+notification on your phone that says,
+hey, did you intend to borrow half a
 
 551
 00:48:12,500 --> 00:48:17,060
@@ -2758,8 +2757,8 @@ You go, no, I didn't. In fact, I didn't put
 
 553
 00:48:22,700 --> 00:48:27,060
-any of that stuff in there. So, you do a
-key rotation to recover from it and then
+any of that stuff in there.
+You do a key rotation to recover from it and then
 
 554
 00:48:27,620 --> 00:48:32,340
@@ -2768,7 +2767,7 @@ bank says, come back in 72 hours and then
 
 555
 00:48:32,340 --> 00:48:36,540
-we'll give you the money. So the imposter
+we'll give you the money. The imposter
 comes back in 72 hours and goes, give me
 
 556
@@ -2778,13 +2777,13 @@ promissory note you anchored three days
 
 557
 00:48:39,580 --> 00:48:44,260
-ago isn't there anymore. So we're not
-loaning you the money. And so they can't
+ago isn't there anymore.
+We're not loaning you the money. They can't
 
 558
 00:48:44,260 --> 00:48:50,160
 ever steal your identity because you've
-extended it. Yeah. So in this case, right,
+extended it. In this case, right,
 
 559
 00:48:50,300 --> 00:48:56,400
@@ -2798,8 +2797,8 @@ and have anchored this promissory note in
 
 561
 00:49:01,340 --> 00:49:06,740
-their KEL might be the same device that
-also was… – Well, it depends on how the
+their KEL might be the same device
+that also was… – It depends on how the
 
 562
 00:49:06,740 --> 00:49:09,320
@@ -2808,8 +2807,8 @@ right. But let's just presume it's both
 
 563
 00:49:09,320 --> 00:49:12,900
-like the same… – Well, yeah, but you could
-have it. You could have a watcher that's
+like the same… – but you could have it.
+You could have a watcher that's
 
 564
 00:49:12,900 --> 00:49:15,860
@@ -2848,8 +2847,8 @@ establish so that that signal could get to
 
 571
 00:49:43,320 --> 00:49:46,800
-you. – Yes. – Even if your device… –
-So, if you have multiple watching devices,
+you. – Yes. – Even if your device…
+– If you have multiple watching devices,
 
 572
 00:49:46,960 --> 00:49:49,720
@@ -2888,13 +2887,13 @@ they're always detectable. Right. Okay.
 
 579
 00:50:15,780 --> 00:50:20,140
-And that means that no harm comes to
-me. I'm not disagreeing with you. Yeah.
+And that means that no harm comes to me.
+I'm not disagreeing with you.
 
 580
 00:50:20,320 --> 00:50:26,240
-Oh, yeah. Yeah. And then TELs
-plus ACDCs just extend fault detection. to
+Yeah. And then TELs plus ACDCs
+just extend fault detection. To
 
 581
 00:50:26,240 --> 00:50:29,480
@@ -2983,28 +2982,28 @@ witness to witness something, it has to be
 
 598
 00:51:48,620 --> 00:51:52,380
-verifiably signed. So the only way a
+verifiably signed. The only way a
 witness can witness something is if it's
 
 599
 00:51:52,380 --> 00:51:57,140
-signed with the private keys. So if
-something shows up that the witness says,
+signed with the private keys.
+If something shows up that the witness says,
 
 600
 00:51:57,320 --> 00:52:02,120
-hey, somebody gave me an event. It's
-signed. So I witnessed it and a majority
+hey, somebody gave me an event.
+It's signed. I witnessed it and a majority
 
 601
 00:52:02,120 --> 00:52:06,560
-of the witnesses witness it. Then
-the watcher says, well, yeah, but the
+of the witnesses witness it.
+Then the watcher says, but the
 
 602
 00:52:06,560 --> 00:52:13,620
-controller didn't tell me that that was an
-event that was valid. So I can notify the
+controller didn't tell me that that was
+an event that was valid. I can notify the
 
 603
 00:52:13,620 --> 00:52:19,660
@@ -3038,8 +3037,8 @@ witnesses. Now you can detect any events
 
 609
 00:52:41,520 --> 00:52:48,960
-that are anchored. So the only way that
-I can issue an issuance if I have a policy
+that are anchored. The only way that I
+can issue an issuance if I have a policy
 
 610
 00:52:48,960 --> 00:52:55,160
@@ -3049,12 +3048,12 @@ anchored, I forced all issuances to that
 611
 00:52:55,160 --> 00:52:59,500
 to make any key compromise detectable
-for those issuances. So now I just have to
+for those issuances. Now I just have to
 
 612
 00:52:59,500 --> 00:53:03,700
-detect that one thing. So the witness
-pool is my detection mechanism and it's a
+detect that one thing. The witness pool
+is my detection mechanism and it's a
 
 613
 00:53:03,700 --> 00:53:08,600
@@ -3063,8 +3062,8 @@ That's why it's there. It's not just for
 
 614
 00:53:08,600 --> 00:53:12,520
-availability, it's for detection. So now I
-can detect the events, which means now I
+availability, it's for detection.
+Now I can detect the events, which means now I
 
 615
 00:53:12,520 --> 00:53:17,020
@@ -3078,8 +3077,8 @@ they can't attack the pre-rotated keys if
 
 617
 00:53:20,880 --> 00:53:25,720
-they're air-gapped or I do appropriate
-things. So the attack surface for the
+they're air-gapped or I do appropriate things.
+The attack surface for the
 
 618
 00:53:25,720 --> 00:53:30,340
@@ -3123,8 +3122,8 @@ link. And they clicked on the link and it
 
 626
 00:54:04,380 --> 00:54:10,920
-downloaded a compromised wallet and then
-it explored, you know, the so yes.
+downloaded a compromised wallet
+and then it explored the so yes.
 
 627
 00:54:11,440 --> 00:54:16,520
@@ -3148,7 +3147,7 @@ duplicity which allows us to detect key
 
 631
 00:54:31,040 --> 00:54:36,580
-compromise. So key compromise exhibits
+compromise. Key compromise exhibits
 as duplicity. Did you guys get that?
 
 632
@@ -3168,8 +3167,8 @@ other things but we're out of time. Any
 
 635
 00:54:51,200 --> 00:55:02,640
-questions? – Make sense? – Yes. – This
-is all great. You see the duplicity. –
+questions? – Make sense? – Yes.
+– This is all great. You see the duplicity.
 
 636
 00:55:02,640 --> 00:55:07,380
@@ -3178,8 +3177,8 @@ have pre-retreated keys that you can go
 
 637
 00:55:07,380 --> 00:55:13,200
-straight to? – Yes. – That… because
-what I'm looking at is, yeah, they can't
+straight to? – Yes. – That…
+because what I'm looking at is, they can't
 
 638
 00:55:13,200 --> 00:55:16,400
@@ -3188,8 +3187,8 @@ give a denial of service attack. – Yes,
 
 639
 00:55:16,600 --> 00:55:21,300
-absolutely. – And just keep doing that to
-where… – Well, it depends on how you do
+absolutely. – And just keep doing that
+to where… – It depends on how you do
 
 640
 00:55:21,300 --> 00:55:25,540
@@ -3219,12 +3218,12 @@ Less than 10 bucks. I have two of those.
 645
 00:55:45,980 --> 00:55:51,760
 They're air-gapped. They're NFC.
-So they're not using a network. I have to
+They're not using a network. I have to
 
 646
 00:55:51,760 --> 00:55:57,620
-actually touch the device. So I can
-store them in my safe. I can put one in a
+actually touch the device.
+I can store them in my safe. I can put one in a
 
 647
 00:55:57,620 --> 00:56:02,500
@@ -3233,7 +3232,7 @@ device, I just get a new device and I can
 
 648
 00:56:02,500 --> 00:56:07,000
-recover to a new device. So even if they
+recover to a new device. Even if they
 get my phone and compromise my phone.
 
 649
@@ -3243,8 +3242,8 @@ that I get someplace, which could be any
 
 650
 00:56:14,640 --> 00:56:19,120
-of my devices could notify me that A, you
-know, that my keys have been compromised,
+of my devices could notify me that A
+that my keys have been compromised,
 
 651
 00:56:19,120 --> 00:56:24,200
@@ -3268,7 +3267,7 @@ recover on a device they don't know exists
 
 655
 00:56:43,840 --> 00:56:48,060
-until I get the new device. So, they don't
+until I get the new device. They don't
 know that it's a device to attack unless
 
 656
@@ -3283,8 +3282,8 @@ me around. They're across the ocean
 
 658
 00:56:55,140 --> 00:57:01,320
-someplace. So it's not hard to build
-these systems to be really, really, really
+someplace. It's not hard to build these
+systems to be really, really, really
 
 659
 00:57:01,320 --> 00:57:08,140

@@ -6,21 +6,21 @@ get quite a bit done. I am… looks like
 2
 00:00:06,940 --> 00:00:11,980
 this mic is live since I'm going to leave
-this here. I'll make this quick here. So,
+this here. I'll make this quick here.
 
 3
 00:00:12,520 --> 00:00:17,540
-I've been in working for companies like
-Google, Microsoft, Amazon, and others for
+I've been in working for companies like Google,
+Microsoft, Amazon, and others for
 
 4
 00:00:17,540 --> 00:00:24,360
-the last 30 something years focusing on
-technologies like authentication. And so,
+the last 30 something years focusing
+on technologies like authentication.
 
 5
 00:00:24,460 --> 00:00:27,660
-today what I'm going to talk to you about
+Today what I'm going to talk to you about
 is what is digital identity. And this was
 
 6
@@ -30,8 +30,8 @@ going to try to get through about 30 years
 
 7
 00:00:32,720 --> 00:00:41,360
-of lessons in what I have left here. So
-identity is not new. This is a picture of
+of lessons in what I have left here.
+Identity is not new. This is a picture of
 
 8
 00:00:41,360 --> 00:00:46,580
@@ -85,7 +85,7 @@ that you can follow for a paper on
 18
 00:01:24,720 --> 00:01:30,060
 successes and failures in this space as
-I'm going to go fairly fast here. So what
+I'm going to go fairly fast here. What
 
 19
 00:01:30,060 --> 00:01:34,700
@@ -114,8 +114,8 @@ governance problem. This is not a
 
 24
 00:01:57,120 --> 00:02:04,540
-technology problem. So why is this
-important? Because seven out of ten of the
+technology problem. Why is this important?
+Because seven out of ten of the
 
 25
 00:02:04,540 --> 00:02:08,740
@@ -134,17 +134,17 @@ as a technology problem as IT or
 
 28
 00:02:15,860 --> 00:02:20,060
-procurement. And so that's why it's
-important that we're all here today and
+procurement. That's why it's important
+that we're all here today and
 
 29
 00:02:20,060 --> 00:02:25,160
 I'm really excited to be involved in this
-conversation. So this is a model shift.
+conversation. This is a model shift.
 
 30
 00:02:25,660 --> 00:02:30,240
-State issues document you carry it it,
+State issues document you carry it,
 verifier inspects it. That's what we're
 
 31
@@ -194,8 +194,8 @@ and we have to start with a set of guiding
 
 40
 00:03:14,240 --> 00:03:20,620
-principles which is why again I think SEDI
-is an important project. So one of the
+principles which is why again I think
+SEDI is an important project. One of the
 
 41
 00:03:20,620 --> 00:03:24,360
@@ -215,11 +215,11 @@ because now when you make a change, that
 44
 00:03:36,740 --> 00:03:41,060
 digital document and the systems that
-verify it may also need to be changing. So
+verify it may also need to be changing.
 
 45
 00:03:41,060 --> 00:03:44,720
-we have to think a little bit more
+We have to think a little bit more
 holistically than that issuance moment. We
 
 46
@@ -243,8 +243,8 @@ back at the failed systems.
 
 50
 00:04:02,300 --> 00:04:07,400
-So what is maintained over time? Well,
-there's a lot of status changes. Licenses
+What is maintained over time?
+There's a lot of status changes. Licenses
 
 51
 00:04:07,400 --> 00:04:12,680
@@ -274,11 +274,11 @@ faster than ever before. And this all
 56
 00:04:31,980 --> 00:04:37,680
 means that how we govern these systems is
-going to become increasingly important. So
+going to become increasingly important.
 
 57
 00:04:37,680 --> 00:04:43,380
-if we look at these failure patterns,
+If we look at these failure patterns,
 there's many that we can point at. One of
 
 58
@@ -308,13 +308,13 @@ complicated to adopt. They didn't have a
 
 63
 00:05:11,040 --> 00:05:17,020
-core utility. So it was massive amounts of
+core utility. It was massive amounts of
 money spent with no return on investment.
 
 64
 00:05:17,180 --> 00:05:22,320
-So not something that we can afford. UK is
-another great example. I can't go into the
+Not something that we can afford.
+UK is another great example. I can't go into the
 
 65
 00:05:22,320 --> 00:05:26,540
@@ -363,8 +363,8 @@ have elements of success but we'll go into
 
 74
 00:06:04,740 --> 00:06:10,200
-those later in that paper I mentioned. So
-why is this important? I'm from the state
+those later in that paper I mentioned.
+Why is this important? I'm from the state
 
 75
 00:06:10,200 --> 00:06:14,520
@@ -373,8 +373,8 @@ believe being the largest COVID fraud for
 
 76
 00:06:14,520 --> 00:06:22,060
-distribution of COVID funds. I think
-Africa got more than we did. So this is a
+distribution of COVID funds.
+I think Africa got more than we did. This is a
 
 77
 00:06:22,060 --> 00:06:26,620
@@ -389,7 +389,7 @@ government to be able to identify its
 79
 00:06:29,960 --> 00:06:37,400
 citizens online and we can't let this
-pattern repeat again. So why does this
+pattern repeat again. Why does this
 
 80
 00:06:37,400 --> 00:06:41,500
@@ -418,8 +418,8 @@ You cannot rely on a video call to
 
 85
 00:07:00,340 --> 00:07:03,920
-authenticate who you're talking to
-anymore. And so this means that we have to
+authenticate who you're talking to anymore.
+This means that we have to
 
 86
 00:07:03,920 --> 00:07:07,280
@@ -449,7 +449,7 @@ but very similar, were just using stolen
 91
 00:07:26,200 --> 00:07:31,440
 credentials. They didn't hack anything.
-They logged in. And so it's important that
+They logged in. It's important that
 
 92
 00:07:31,440 --> 00:07:36,260
@@ -473,8 +473,8 @@ we have to solve this problem. This is not
 
 96
 00:07:49,520 --> 00:07:58,040
-something that we can ignore. So why does
-this matter for you? You don't manage
+something that we can ignore.
+Why does this matter for you? You don't manage
 
 97
 00:07:58,040 --> 00:08:01,720
@@ -519,7 +519,7 @@ have to use, that the state produces, that
 105
 00:08:30,240 --> 00:08:35,120
 the rest of the world relies on to verify
-who we are. So before you commit to any
+who we are. Before you commit to any
 
 106
 00:08:35,120 --> 00:08:42,700
@@ -529,7 +529,7 @@ understand what digital identity tells you
 107
 00:08:42,700 --> 00:08:48,980
 or what questions to ask. I didn't word
-that particularly well. So since this is a
+that particularly well. Since this is a
 
 108
 00:08:48,980 --> 00:08:52,500
@@ -538,7 +538,7 @@ policy changes, how does the digital
 
 109
 00:08:52,500 --> 00:08:58,020
-identity get affected? it. Because it's
+identity get affected? It. Because it's
 policy-based, how are you actually going
 
 110
@@ -573,8 +573,8 @@ to pay attention to who's excluded. My
 
 116
 00:09:22,760 --> 00:09:26,640
-parents are not particularly good at using
-things online anymore. And so we don't
+parents are not particularly good at
+using things online anymore. We don't
 
 117
 00:09:26,640 --> 00:09:29,840
@@ -583,7 +583,7 @@ society and there's of course other
 
 118
 00:09:29,840 --> 00:09:34,940
-examples as well. So what does success
+examples as well. What does success
 look like? You've identified anchor
 
 119
@@ -619,10 +619,9 @@ so that you can make sure that your system
 125
 00:10:01,660 --> 00:10:06,180
 is delivering on the promises that you
-should have set out to do. So that is my
+should have set out to do. That is my
 
 126
 00:10:06,180 --> 00:10:09,500
 presentations. Ladies and gentlemen, I
 appreciate your time today.!
-

@@ -10,8 +10,8 @@ just did a session on using the VLEI in
 
 3
 00:00:10,920 --> 00:00:15,880
-healthcare to basically solve the problem
-of organizational identity. So with
+healthcare to basically solve the
+problem of organizational identity. With
 
 4
 00:00:15,880 --> 00:00:20,840
@@ -20,13 +20,13 @@ not a good identifier to help you
 
 5
 00:00:20,840 --> 00:00:25,320
-understand which organization you're
-talking to. So as just a quick example, if
+understand which organization you're talking to.
+As just a quick example, if
 
 6
 00:00:25,320 --> 00:00:31,820
-you talk about St. Mary's, well, which St.
-Mary's? There's, you know, 17 of them. And
+you talk about St. Mary's, well,
+which St. Mary's? There's 17 of them. And
 
 7
 00:00:31,820 --> 00:00:35,060
@@ -36,17 +36,17 @@ organization? Because several St. Mary's
 8
 00:00:35,060 --> 00:00:38,580
 are owned by the same organization.
-Several are owned, you know, by other
+Several are owned by other
 
 9
 00:00:38,580 --> 00:00:44,180
-organizations. So really what we're trying
+organizations. Really what we're trying
 to solve here is can we bootstrap rapid
 
 10
 00:00:44,180 --> 00:00:49,480
 connectivity using KERI and the VLEI?
-Yeah, so I think one of the things that I
+I think one of the things that I
 
 11
 00:00:49,480 --> 00:00:54,160
@@ -55,8 +55,8 @@ world here is that everybody else has kind
 
 12
 00:00:54,160 --> 00:01:00,240
-of adopted now 25-year-old security
-technology, you know, tokens, OAuth,
+of adopted now 25-year-old
+security technology tokens, OAuth,
 
 13
 00:01:00,740 --> 00:01:06,200
@@ -65,7 +65,7 @@ really never designed for an ecosystem
 
 14
 00:01:06,200 --> 00:01:11,780
-that exists here today. So we've kind of
+that exists here today. We've kind of
 carried this legacy architecture into the
 
 15
@@ -75,13 +75,13 @@ way more organizations doing connections,
 
 16
 00:01:17,220 --> 00:01:23,840
-you know, real time, but you also have
-things like not just AI internally being
+real time, but you also have things
+like not just AI internally being
 
 17
 00:01:23,840 --> 00:01:30,480
-used in LLMs, but agentic AI. So you have
-kind of created an entirely new entity
+used in LLMs, but agentic AI.
+You have kind of created an entirely new entity
 
 18
 00:01:30,480 --> 00:01:35,660
@@ -95,18 +95,18 @@ peg of last year's cybersecurity
 
 20
 00:01:41,740 --> 00:01:48,360
-protocols. So what would the decentralized
+protocols. What would the decentralized
 identity system lose if all of our work at
 
 21
 00:01:48,360 --> 00:01:54,360
-HealthKERI had evaporated? Well, I think
-the easiest answer is as of today, we put
+HealthKERI had evaporated? I think the
+easiest answer is as of today, we put
 
 22
 00:01:54,360 --> 00:02:00,540
-a ton of code into the open source. So one
-of the biggest complaints we heard about
+a ton of code into the open source.
+One of the biggest complaints we heard about
 
 23
 00:02:00,540 --> 00:02:04,440
@@ -121,7 +121,7 @@ complicated and the infrastructure wasn't
 25
 00:02:09,860 --> 00:02:15,280
 there. We recognize that a rising tide
-raises all boats. And so we just recently
+raises all boats. We just recently
 
 26
 00:02:15,280 --> 00:02:21,100
@@ -141,7 +141,7 @@ are being asked for from the KERI that are
 29
 00:02:30,900 --> 00:02:33,420
 being asked for from the KERI Foundation.
-So by putting those into open source,
+By putting those into open source,
 
 30
 00:02:33,680 --> 00:02:37,900
@@ -155,8 +155,8 @@ be successful come to the table and
 
 32
 00:02:42,720 --> 00:02:48,540
-collaborate with us. So if all of that
-went away today, you would lose probably
+collaborate with us. If all of that went
+away today, you would lose probably
 
 33
 00:02:48,540 --> 00:02:54,740

@@ -124,7 +124,7 @@ Nice to meet you.
 
 32
 00:01:00,800 --> 00:01:04,280
-So, what this tutorial is for you
+What this tutorial is for you
 
 33
 00:01:04,280 --> 00:01:07,200
@@ -176,7 +176,7 @@ Trade Go.
 
 45
 00:01:29,800 --> 00:01:31,720
-Certizen, that's correct. So, the
+Certizen, that's correct. The
 
 46
 00:01:31,720 --> 00:01:34,080
@@ -308,7 +308,7 @@ non-technical people. This wallet is
 
 78
 00:02:39,360 --> 00:02:41,520
-geared for you all. So, if you want to
+geared for you all. If you want to
 
 79
 00:02:41,520 --> 00:02:43,040
@@ -336,7 +336,7 @@ already way too complicated. This is a
 
 85
 00:02:51,880 --> 00:02:54,680
-developer user experience. So, it's for
+developer user experience. It's for
 
 86
 00:02:54,680 --> 00:02:56,680
@@ -352,7 +352,7 @@ area for me to worry about. Did you have
 
 89
 00:03:00,560 --> 00:03:01,760
-a question, Matthew? – So, this is
+a question, Matthew? – This is
 
 90
 00:03:01,760 --> 00:03:03,640
@@ -392,7 +392,7 @@ What is this intended to be used for?
 
 99
 00:03:20,320 --> 00:03:21,519
-So, let's actually
+Let's actually
 
 100
 00:03:21,519 --> 00:03:23,640
@@ -400,7 +400,7 @@ Or a browser extension. Or a browser
 
 101
 00:03:23,640 --> 00:03:26,519
-extension. So, let's actually pause and
+extension. Let's actually pause and
 
 102
 00:03:26,519 --> 00:03:27,880
@@ -416,7 +416,7 @@ question. I can tell you're thinking.
 
 105
 00:03:31,840 --> 00:03:34,000
-Okay, so then we ask what is KERIA? When
+Okay, then we ask what is KERIA? When
 
 106
 00:03:34,000 --> 00:03:35,600
@@ -444,7 +444,7 @@ away.
 
 112
 00:03:44,400 --> 00:03:47,360
-So, that web app that you were seeing
+That web app that you were seeing
 
 113
 00:03:47,360 --> 00:03:49,760
@@ -484,7 +484,7 @@ Sumo,
 
 122
 00:04:06,560 --> 00:04:07,920
-that can that can work with React
+that can work with React
 
 123
 00:04:07,920 --> 00:04:10,400
@@ -492,11 +492,11 @@ Native, you can run the Signify and
 
 124
 00:04:10,400 --> 00:04:12,800
-KERIA architecture. Well, why would you
+KERIA architecture. Why would you
 
 125
 00:04:12,800 --> 00:04:14,720
-want to do that? Well, let's understand
+want to do that? Let's understand
 
 126
 00:04:14,720 --> 00:04:16,720
@@ -692,7 +692,7 @@ wallet has a server agent, and you might
 
 174
 00:06:01,560 --> 00:06:03,600
-say, "Well, is that okay from a security
+say, "Is that okay from a security
 
 175
 00:06:03,600 --> 00:06:05,160
@@ -804,7 +804,7 @@ scheme records and endpoint rule records
 
 202
 00:06:59,120 --> 00:07:01,200
-for a witness. Well, an agent is a
+for a witness. An agent is a
 
 203
 00:07:01,200 --> 00:07:02,720
@@ -892,7 +892,7 @@ battery.
 
 224
 00:07:41,400 --> 00:07:44,360
-So, what you do is there's a mailbox.
+What you do is there's a mailbox.
 
 225
 00:07:44,360 --> 00:07:45,720
@@ -1192,7 +1192,7 @@ delegation event. You send it over here.
 
 299
 00:10:21,920 --> 00:10:24,400
-You request from the agency. So, you
+You request from the agency. You
 
 300
 00:10:24,400 --> 00:10:26,080
@@ -1368,7 +1368,7 @@ Let's move on.
 
 343
 00:12:04,160 --> 00:12:06,120
-So is there anybody that has any
+Is there anybody that has any
 
 344
 00:12:06,120 --> 00:12:07,600
@@ -1388,7 +1388,7 @@ just the one component?
 
 348
 00:12:14,934 --> 00:12:16,272
-– So this is multi-tenant in the sense
+– This is multi-tenant in the sense
 
 349
 00:12:16,296 --> 00:12:17,880
@@ -1400,7 +1400,7 @@ agents. I expanded out what you're going
 
 351
 00:12:20,560 --> 00:12:22,840
-to have inside of an agent. – So there's
+to have inside of an agent. – There's
 
 352
 00:12:22,840 --> 00:12:25,200
@@ -1408,7 +1408,7 @@ multiple clients.
 
 353
 00:12:25,200 --> 00:12:26,680
-– Well, there can be multiple clients.
+– There can be multiple clients.
 
 354
 00:12:26,680 --> 00:12:29,400
@@ -1432,7 +1432,7 @@ process.
 
 359
 00:12:37,560 --> 00:12:40,120
-– So therefore one agent per Signify
+– Therefore one agent per Signify
 
 360
 00:12:40,120 --> 00:12:43,320
@@ -1488,7 +1488,7 @@ means.
 
 373
 00:13:12,600 --> 00:13:14,320
-So it actually originated
+It actually originated
 
 374
 00:13:14,320 --> 00:13:15,560
@@ -1724,7 +1724,7 @@ And we're going to get to the KERIA
 
 432
 00:15:05,240 --> 00:15:06,640
-configuration. So that's sort of what
+configuration. That's sort of what
 
 433
 00:15:06,640 --> 00:15:08,520
@@ -1752,7 +1752,7 @@ make sure we get to that. Question.
 
 439
 00:15:18,280 --> 00:15:20,440
-– Credential issuance. So, is
+– Credential issuance. Is
 
 440
 00:15:20,440 --> 00:15:21,920
@@ -1772,11 +1772,11 @@ Is that? – No, that's a good question.
 
 444
 00:15:27,520 --> 00:15:29,520
-Let's actually go back. So,
+Let's actually go back.
 
 445
 00:15:29,520 --> 00:15:32,840
-which identifier does the issuance?
+Which identifier does the issuance?
 
 446
 00:15:32,840 --> 00:15:34,600
@@ -1796,7 +1796,7 @@ the issuance.
 
 450
 00:15:42,440 --> 00:15:44,160
-So, the Signify controller delegates to
+The Signify controller delegates to
 
 451
 00:15:44,160 --> 00:15:46,600
@@ -1816,7 +1816,7 @@ signed event."
 
 455
 00:15:50,400 --> 00:15:52,880
-So, you create the key locally
+You create the key locally
 
 456
 00:15:52,880 --> 00:15:54,360
@@ -1864,7 +1864,7 @@ going to start to issue credentials.
 
 467
 00:16:12,840 --> 00:16:15,600
-So, it's actually one layer deep below
+It's actually one layer deep below
 
 468
 00:16:15,600 --> 00:16:18,000
@@ -1884,7 +1884,7 @@ Or enough for now?
 
 472
 00:16:23,880 --> 00:16:25,786
-Yeah, so we'll have a demo later. It'll
+We'll have a demo later. It'll
 
 473
 00:16:25,810 --> 00:16:27,960
@@ -1944,7 +1944,7 @@ which is why it's called the signing at
 
 487
 00:16:50,800 --> 00:16:53,480
-the edge architecture. – I see. So, you're
+the edge architecture. – I see. You're
 
 488
 00:16:53,480 --> 00:16:55,120
@@ -2012,7 +2012,7 @@ Question.
 
 504
 00:17:27,403 --> 00:17:30,303
-Well, think about it. If you lose
+Think about it. If you lose
 
 505
 00:17:30,327 --> 00:17:31,200
@@ -2068,11 +2068,11 @@ reconnect to your agent and reconstitute
 
 518
 00:17:53,840 --> 00:17:56,200
-the keys locally by decrypting them. So,
+the keys locally by decrypting them.
 
 519
 00:17:56,200 --> 00:17:57,880
-storing them in the agent
+Storing them in the agent
 
 520
 00:17:57,880 --> 00:18:00,160
@@ -2152,7 +2152,7 @@ than 21, it doesn't let you do it.
 
 539
 00:18:32,680 --> 00:18:34,320
-So, it doesn't do any stretching right
+It doesn't do any stretching right
 
 540
 00:18:34,320 --> 00:18:36,880
@@ -2176,7 +2176,7 @@ Yeah.
 
 545
 00:18:44,200 --> 00:18:45,320
-Okay, so we went into the features
+Okay, we went into the features
 
 546
 00:18:45,320 --> 00:18:46,320
@@ -2220,7 +2220,7 @@ as Backers.
 
 556
 00:19:14,120 --> 00:19:15,680
-Well, yeah, it's not the agent.
+It's not the agent.
 
 557
 00:19:17,280 --> 00:19:20,790
@@ -2272,7 +2272,7 @@ Did you have a question?
 
 569
 00:19:44,390 --> 00:19:47,080
-So a quick demo to answer your question
+A quick demo to answer your question
 
 570
 00:19:47,080 --> 00:19:49,040
@@ -2284,7 +2284,7 @@ signing? Let's actually run through a
 
 572
 00:19:50,400 --> 00:19:52,240
-wallet. So this is the wallet that I
+wallet. This is the wallet that I
 
 573
 00:19:52,240 --> 00:19:54,120
@@ -2332,11 +2332,11 @@ days
 
 584
 00:20:16,080 --> 00:20:17,840
-to get this in this in this state. So
+to get this in this state.
 
 585
 00:20:17,840 --> 00:20:19,240
-we've got a heck of a lot more features
+We've got a heck of a lot more features
 
 586
 00:20:19,240 --> 00:20:20,880
@@ -2404,7 +2404,7 @@ Good security consciousness.
 
 602
 00:20:54,014 --> 00:20:56,354
-Oh, thank you. Yeah. Good point.
+Oh, thank you. Good point.
 
 603
 00:20:56,378 --> 00:20:59,160
@@ -2424,7 +2424,7 @@ something I saw on X about a person who
 
 607
 00:21:08,080 --> 00:21:09,960
-Oh, yeah, they had a
+They had a
 
 608
 00:21:09,960 --> 00:21:11,560
@@ -2496,7 +2496,7 @@ know.
 
 625
 00:21:36,920 --> 00:21:38,960
-Now, this generate here. So, by the
+Now, this generate here. By the
 
 626
 00:21:38,960 --> 00:21:41,680
@@ -2512,7 +2512,7 @@ I'll just make a new one.
 
 629
 00:21:46,000 --> 00:21:47,520
-So, and then I'm going to copy and
+And then I'm going to copy and
 
 630
 00:21:47,520 --> 00:21:49,600
@@ -2576,7 +2576,7 @@ credentials.
 
 645
 00:22:14,560 --> 00:22:16,360
-I have to create an identifier. So, I'm
+I have to create an identifier. I'm
 
 646
 00:22:16,360 --> 00:22:18,520
@@ -2612,7 +2612,7 @@ salty which is deterministic…
 
 654
 00:22:33,480 --> 00:22:35,160
-So, this is if you saw the healthKERI
+This is if you saw the healthKERI
 
 655
 00:22:35,160 --> 00:22:36,480
@@ -2720,11 +2720,11 @@ connected to the agent. And actually, I
 
 681
 00:23:23,520 --> 00:23:26,880
-can I have a page for that. So
+can I have a page for that.
 
 682
 00:23:26,880 --> 00:23:28,880
-if we go to the client, let's scroll up
+If we go to the client, let's scroll up
 
 683
 00:23:28,880 --> 00:23:30,960
@@ -2784,7 +2784,7 @@ they're both transferable identifiers.
 
 697
 00:23:59,320 --> 00:24:01,360
-So you could rotate keys for either the
+You could rotate keys for either the
 
 698
 00:24:01,360 --> 00:24:03,320
@@ -2804,7 +2804,7 @@ number 1.
 
 702
 00:24:07,400 --> 00:24:09,200
-And so you as you see, (remember how I
+You as you see, (remember how I
 
 703
 00:24:09,200 --> 00:24:11,040
@@ -2828,7 +2828,7 @@ is delegated inception.
 
 708
 00:24:18,240 --> 00:24:19,840
-So this is the little control panel that
+This is the little control panel that
 
 709
 00:24:19,840 --> 00:24:21,880
@@ -2892,7 +2892,7 @@ going here. Let me zoom in a little bit.
 
 724
 00:24:50,040 --> 00:24:54,070
-So what if we wanted to see
+What if we wanted to see
 
 725
 00:24:54,094 --> 00:24:55,635
@@ -2900,7 +2900,7 @@ what the Key Event Log is for that
 
 726
 00:24:55,659 --> 00:24:57,200
-identifier we just created? Well, we
+identifier we just created? We
 
 727
 00:24:57,200 --> 00:24:58,560
@@ -2928,7 +2928,7 @@ Let's format it so it's a little bit
 
 733
 00:25:07,760 --> 00:25:10,480
-easier to read. So, let's do
+easier to read. Let's do
 
 734
 00:25:10,480 --> 00:25:12,680
@@ -2952,7 +2952,7 @@ pretty
 
 739
 00:25:21,560 --> 00:25:23,760
-Okay. So, it's a little bit colorized.
+Okay. It's a little bit colorized.
 
 740
 00:25:23,760 --> 00:25:25,080
@@ -2964,7 +2964,7 @@ slowly.
 
 742
 00:25:26,880 --> 00:25:29,160
-So, you'll see
+You'll see
 
 743
 00:25:29,160 --> 00:25:30,720
@@ -3108,7 +3108,7 @@ AIDs?
 
 778
 00:26:44,640 --> 00:26:47,240
-– So, it could be that one of your [identifiers]… Let's
+– It could be that one of your [identifiers]… Let's
 
 779
 00:26:47,240 --> 00:26:49,800
@@ -3192,7 +3192,7 @@ different identifiers. It really just
 
 799
 00:27:33,000 --> 00:27:36,160
-depends. – Okay, so the root controller
+depends. – Okay, the root controller
 
 800
 00:27:36,160 --> 00:27:37,880
@@ -3268,11 +3268,11 @@ Right. And the company would have
 
 818
 00:28:14,520 --> 00:28:17,280
-one or more KERIA instances. Yeah,
+one or more KERIA instances.
 
 819
 00:28:17,280 --> 00:28:19,000
-that's right.
+That's right.
 
 820
 00:28:19,000 --> 00:28:20,800
@@ -3296,7 +3296,7 @@ prevent cross-context correlation.
 
 825
 00:28:31,080 --> 00:28:33,120
-And so we've been looking at managed IDs
+We've been looking at managed IDs
 
 826
 00:28:33,120 --> 00:28:35,200
@@ -3360,7 +3360,7 @@ But a credential is not an
 
 841
 00:29:13,871 --> 00:29:14,560
-Well, what he's getting at
+What he's getting at
 
 842
 00:29:14,560 --> 00:29:16,120
@@ -3388,7 +3388,7 @@ want to segment, for your own privacy, the
 
 848
 00:29:28,520 --> 00:29:30,720
-usage of a given identifier. – So you can
+usage of a given identifier. – You can
 
 849
 00:29:30,720 --> 00:29:33,440
@@ -3404,7 +3404,7 @@ endorsement.
 
 852
 00:29:37,360 --> 00:29:38,520
-So it's effectively your steady
+It's effectively your steady
 
 853
 00:29:38,520 --> 00:29:40,720
@@ -3424,11 +3424,11 @@ your ID from being a main
 
 857
 00:29:49,160 --> 00:29:49,600
-Okay. So
+Okay.
 
 858
 00:29:49,600 --> 00:29:51,240
-So it's like sharding
+It's like sharding
 
 859
 00:29:51,240 --> 00:29:53,440
@@ -3440,7 +3440,7 @@ if
 
 861
 00:29:54,520 --> 00:29:56,320
-you know, I might want to have a
+I might want to have a
 
 862
 00:29:56,320 --> 00:29:59,600
@@ -3460,7 +3460,7 @@ whatever. Just
 
 866
 00:30:07,000 --> 00:30:10,080
-like so sharding pieces of me. Yeah.
+like so sharding pieces of me.
 
 867
 00:30:10,080 --> 00:30:12,440
@@ -3516,7 +3516,7 @@ it's not [inaudible]. – Good
 
 880
 00:30:43,120 --> 00:30:45,320
-question. So, encryption.
+question. Encryption.
 
 881
 00:30:45,320 --> 00:30:46,120
@@ -3572,7 +3572,7 @@ never use your keys.
 
 894
 00:31:15,360 --> 00:31:17,080
-– Got it. So, the signing goes up in at
+– Got it. The signing goes up in at
 
 895
 00:31:17,080 --> 00:31:19,440
@@ -3628,7 +3628,7 @@ I could show you exactly where. But
 
 908
 00:31:43,040 --> 00:31:46,710
-yeah, all signing happens at the edge.
+all signing happens at the edge.
 
 909
 00:31:46,735 --> 00:31:48,873
@@ -3692,7 +3692,7 @@ And the latest version of SignifyPy is
 
 924
 00:32:16,840 --> 00:32:19,320
-0.2.0. I should I should re-release that
+0.2.0. I should re-release that
 
 925
 00:32:19,320 --> 00:32:23,080
@@ -3708,7 +3708,7 @@ it's 0.4.0. Even worse.
 
 928
 00:32:27,960 --> 00:32:29,760
-I got to align the version numbers. So,
+I got to align the version numbers.
 
 929
 00:32:29,760 --> 00:32:32,360
@@ -3772,7 +3772,7 @@ Anyway,
 
 944
 00:32:58,000 --> 00:32:59,040
-yeah, that's what we've got: two
+that's what we've got: two
 
 945
 00:32:59,040 --> 00:33:00,600
@@ -3816,7 +3816,7 @@ implementation. It's very, very close.
 
 955
 00:33:18,960 --> 00:33:20,520
-And so it's if you needed the Java
+It's if you needed the Java
 
 956
 00:33:20,520 --> 00:33:22,600
@@ -3840,7 +3840,7 @@ gotchas. This is what's going to
 
 961
 00:33:30,040 --> 00:33:32,120
-save you time. And I was okay, so we
+save you time. And I was okay, we
 
 962
 00:33:32,120 --> 00:33:34,040
@@ -3912,7 +3912,7 @@ keys?" They're going to ask exactly what
 
 979
 00:34:01,200 --> 00:34:02,560
-you asked, "Well, what if somebody
+you asked, "What if somebody
 
 980
 00:34:02,560 --> 00:34:03,920
@@ -3956,7 +3956,7 @@ misconception or misunderstanding that
 
 990
 00:34:23,720 --> 00:34:25,600
-people often have with KERIA. So, you're
+people often have with KERIA. You're
 
 991
 00:34:25,600 --> 00:34:27,480
@@ -4084,7 +4084,7 @@ reconnect, which this can be annoying if
 
 1022
 00:35:31,160 --> 00:35:32,760
-you're doing a ver- a very rapid
+you're doing a very rapid
 
 1023
 00:35:32,760 --> 00:35:35,160
@@ -4092,7 +4092,7 @@ iterative development loop.
 
 1024
 00:35:35,160 --> 00:35:36,240
-So, as you might you want to say, "Well,
+As you might you want to say, "Well,
 
 1025
 00:35:36,240 --> 00:35:37,960
@@ -4220,7 +4220,7 @@ options requests.
 
 1056
 00:36:34,760 --> 00:36:36,800
-So, make sure when you're viewing your
+Make sure when you're viewing your
 
 1057
 00:36:36,800 --> 00:36:38,640
@@ -4368,7 +4368,7 @@ of some bugs we've had over the last
 
 1093
 00:37:45,880 --> 00:37:47,240
-year. Yeah, for all intents and
+year. For all intents and
 
 1094
 00:37:47,240 --> 00:37:48,680
@@ -4392,7 +4392,7 @@ Okay, this is the only the other thing.
 
 1099
 00:37:54,720 --> 00:37:56,880
-So, we're looking at 5 minutes. Good.
+We're looking at 5 minutes. Good.
 
 1100
 00:37:56,880 --> 00:37:58,840
@@ -4404,7 +4404,7 @@ do have a blog post that goes through
 
 1102
 00:38:00,480 --> 00:38:02,240
-this pretty exhaustively. So, if you go
+this pretty exhaustively. If you go
 
 1103
 00:38:02,240 --> 00:38:04,040
@@ -4540,7 +4540,7 @@ might say, "What would I use
 
 1136
 00:39:14,480 --> 00:39:16,120
-the other parts for?" So, IURLs are
+the other parts for?" IURLs are
 
 1137
 00:39:16,120 --> 00:39:19,440
@@ -4576,7 +4576,7 @@ and then it copies its config to every
 
 1145
 00:39:36,000 --> 00:39:39,000
-agent. So, if you want to bootstrap ..,
+agent. If you want to bootstrap ..,
 
 1146
 00:39:39,000 --> 00:39:40,920
@@ -4636,7 +4636,7 @@ notice
 
 1160
 00:40:07,080 --> 00:40:08,720
-these are all witnesses. So, what I'm
+these are all witnesses. What I'm
 
 1161
 00:40:08,720 --> 00:40:13,120
@@ -4660,11 +4660,11 @@ every single time.
 
 1166
 00:40:21,800 --> 00:40:23,600
-Anyway, so there's some tocks. This is
+Anyway, there's some tocks. This is
 
 1167
 00:40:23,600 --> 00:40:25,200
-some more some more advanced stuff if
+some more advanced stuff if
 
 1168
 00:40:25,200 --> 00:40:26,920
@@ -4676,11 +4676,11 @@ tuning. This is where you're getting
 
 1170
 00:40:28,440 --> 00:40:30,920
-more low-level into the async. So,
+more low-level into the async.
 
 1171
 00:40:30,920 --> 00:40:33,120
-tomorrow I have a talk, HIO async
+Tomorrow I have a talk, HIO async
 
 1172
 00:40:33,120 --> 00:40:34,920
@@ -4765,4 +4765,3 @@ behind them and your steady agents.
 1192
 00:41:13,963 --> 00:41:15,983
 [applause]
-

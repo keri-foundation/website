@@ -30,7 +30,7 @@ convenient or imposed or anything else.
 
 7
 00:00:29,980 --> 00:00:33,980
-else, right? So I think we're all here for
+else, right? I think we're all here for
 the same thing. And being able to move
 
 8
@@ -115,7 +115,7 @@ way that minimizes the harms, but we're
 
 24
 00:01:50,480 --> 00:01:56,360
-able to derive most of the benefits. So
+able to derive most of the benefits.
 I'm really happy that we're in a room with
 
 25
@@ -135,8 +135,8 @@ privacy aspects of it, adoption, change
 
 28
 00:02:10,000 --> 00:02:16,720
-management and user experience. So I think
-that we're very excited to show how these
+management and user experience.
+I think that we're very excited to show how these
 
 29
 00:02:16,720 --> 00:02:22,380
@@ -170,8 +170,8 @@ million on machines that can accept the
 
 35
 00:02:48,960 --> 00:02:54,320
-MDL. So is that all to waste if it doesn't
-comply? Or what are we thinking about
+MDL. Is that all to waste if it doesn't comply?
+Or what are we thinking about
 
 36
 00:02:54,320 --> 00:02:59,260
@@ -180,8 +180,8 @@ fortunately, you might even be able to
 
 37
 00:02:59,260 --> 00:03:02,360
-shed some more light on this. Yeah.
-Thanks, Soren. And thanks for taking all
+shed some more light on this. Thanks,
+Soren. And thanks for taking all
 
 38
 00:03:02,360 --> 00:03:12,140
@@ -220,8 +220,8 @@ experience and knowledge and technology to
 
 45
 00:03:47,620 --> 00:03:57,880
-make whatever next steps Utah chooses to
-take successful. So it's amazing. So what
+make whatever next steps Utah chooses
+to take successful. It's amazing. What
 
 46
 00:03:57,880 --> 00:04:03,380
@@ -271,11 +271,11 @@ of the ecosystem we all operate in. Can
 55
 00:04:52,760 --> 00:04:57,940
 you talk about what's going to happen
-between this SEDI wallet and And what kind
+between this SEDI wallet and what kind
 
 56
 00:04:57,940 --> 00:05:03,340
-of, you know, how is the data transmitted?
+of how is the data transmitted?
 What happens between this application
 
 57
@@ -285,8 +285,8 @@ that holds a credential on my phone? Well,
 
 58
 00:05:08,940 --> 00:05:14,240
-yeah, originally the ISO standard, which
-is what the Utah MDL is complying to,
+originally the ISO standard,
+which is what the Utah MDL is complying to,
 
 59
 00:05:14,520 --> 00:05:18,960
@@ -296,7 +296,7 @@ jurisdictions that issue an MDL that
 60
 00:05:18,960 --> 00:05:29,640
 complies to the ISO 18013-5, which is the
-in-person standard. it had a phone home,
+in-person standard. It had a phone home,
 
 61
 00:05:29,980 --> 00:05:34,240
@@ -340,8 +340,8 @@ over device. That's actually the best
 
 69
 00:06:11,660 --> 00:06:15,460
-privacy profile you could hope for, right?
-So there are parts that have had
+privacy profile you could hope for,
+right? There are parts that have had
 
 70
 00:06:15,460 --> 00:06:19,860
@@ -365,8 +365,8 @@ SEDI credential is that it conforms to the
 
 74
 00:06:37,680 --> 00:06:43,500
-code in SEDI, right? Is the idea. So if we
-start looking over here, I told you it
+code in SEDI, right? Is the idea.
+If we start looking over here, I told you it
 
 75
 00:06:43,500 --> 00:06:48,320
@@ -390,8 +390,8 @@ And thank you to representative and
 
 79
 00:07:03,560 --> 00:07:09,140
-senator for the work and the whole
-coalition. So it's really about controls.
+senator for the work and the whole coalition.
+It's really about controls.
 
 80
 00:07:09,460 --> 00:07:13,060
@@ -401,7 +401,7 @@ we're expecting this credential to do and
 81
 00:07:13,060 --> 00:07:19,940
 operate, right? That's what it represents.
-So data formats, everything else, those
+Data formats, everything else, those
 
 82
 00:07:19,940 --> 00:07:25,200
@@ -420,8 +420,8 @@ agreed upon controls if someone is to
 
 85
 00:07:33,560 --> 00:07:39,300
-participate in the system. So we just want
-to demonstrate that this model, right, can
+participate in the system. We just want to
+demonstrate that this model, right, can
 
 86
 00:07:39,300 --> 00:07:43,240
@@ -430,8 +430,8 @@ for existing systems that have been
 
 87
 00:07:43,240 --> 00:07:48,160
-significant and growing in adoption. So we
-have looked into the mobile driver's
+significant and growing in adoption.
+We have looked into the mobile driver's
 
 88
 00:07:48,160 --> 00:07:53,600
@@ -450,8 +450,8 @@ are other pieces that we can build up to
 
 91
 00:08:02,360 --> 00:08:07,660
-that we can agree with and are aligned to
-the SEDI framework. So that is the idea
+that we can agree with and are aligned
+to the SEDI framework. That is the idea
 
 92
 00:08:07,660 --> 00:08:11,180
@@ -470,13 +470,13 @@ information, it's not copied, you don't
 
 95
 00:08:19,740 --> 00:08:26,720
-flash past so-called whatever it is on the
-phone. and it respects the privacy of the
+flash past so-called whatever it is on the phone.
+And it respects the privacy of the
 
 96
 00:08:26,720 --> 00:08:34,900
 user and you only share what you choose.
-So if you want just your age to enter a
+If you want just your age to enter a
 
 97
 00:08:34,900 --> 00:08:40,580
@@ -505,7 +505,7 @@ like, okay, that sounds pretty good. Let's
 
 102
 00:08:58,380 --> 00:09:02,060
-take that part. Right. So we're going to
+take that part. Right. We're going to
 demonstrate and there's no contact. You
 
 103
@@ -516,22 +516,22 @@ via Bluetooth through a good range or a
 104
 00:09:11,360 --> 00:09:17,900
 tap NFC just like as everyone is familiar
-with the Apple pay and so on. Yep. So
+with the Apple pay and so on. Yep.
 
 105
 00:09:17,900 --> 00:09:22,180
-let's say that we're in a use case where
+Let's say that we're in a use case where
 let's call it law enforcement. Let's say
 
 106
 00:09:22,180 --> 00:09:27,220
 there is warranted ability to request
-information, right? So there's going to be
+information, right? There's going to be
 
 107
 00:09:27,220 --> 00:09:31,940
-a lot of it being requested. – So you can
-see there it says all info. So I'm asking
+a lot of it being requested.
+– You can see there it says all info. I'm asking
 
 108
 00:09:31,940 --> 00:09:37,360
@@ -545,8 +545,8 @@ that's the really important policy work we
 
 110
 00:09:40,980 --> 00:09:50,260
-need help with to figure out. So I'm going
-to share the identity by creating a QR
+need help with to figure out.
+I'm going to share the identity by creating a QR
 
 111
 00:09:50,260 --> 00:09:54,200
@@ -555,8 +555,8 @@ code to share it. What it does is it
 
 112
 00:09:54,200 --> 00:09:58,580
-brokers a secure connection over
-Bluetooth. So it adds encryption on top of
+brokers a secure connection over Bluetooth.
+It adds encryption on top of
 
 113
 00:09:58,580 --> 00:10:02,740
@@ -570,8 +570,8 @@ seemed to be pretty promising. And we were
 
 115
 00:10:08,700 --> 00:10:14,240
-able to show a QR code. So we're bringing
-up the scanner. No contact.
+able to show a QR code.
+We're bringing up the scanner. No contact.
 
 116
 00:10:17,280 --> 00:10:26,180
@@ -595,13 +595,13 @@ basically the Bluetooth connection peer-to
 
 120
 00:10:40,280 --> 00:10:44,280
--peer. So this would work in the mountains
+-peer. This would work in the mountains
 without any kind of external connectivity,
 
 121
 00:10:44,660 --> 00:10:49,060
-right? And again, this is being used at a
-ton of airports already, right? So we're
+right? And again, this is being used at
+a ton of airports already, right? We're
 
 122
 00:10:49,060 --> 00:10:52,560
@@ -610,7 +610,7 @@ the technology can also work for SEDI
 
 123
 00:10:52,560 --> 00:11:00,320
-credentials. – So you can see that I'm
+credentials. – You can see that I'm
 seeing the information that he shared. I
 
 124
@@ -620,18 +620,18 @@ visual check if I wish. And it has the
 
 125
 00:11:07,080 --> 00:11:12,720
-document information. So I know it's from
-Utah, the document number and that's about
+document information. I know it's from Utah,
+the document number and that's about
 
 126
 00:11:12,720 --> 00:11:18,260
-it. Yeah. – As simple as that. Plus, of
-course, I have the verification on the age
+it. – As simple as that. Plus, of course,
+I have the verification on the age
 
 127
 00:11:18,260 --> 00:11:23,200
-verification. – Yeah. Well, let's say I'm
-I'm at a bar right at night and I want to
+verification. – Yeah. Let's say I'm
+at a bar right at night and I want to
 
 128
 00:11:23,200 --> 00:11:27,560
@@ -640,13 +640,13 @@ you to know my full name and where I live,
 
 129
 00:11:27,660 --> 00:11:34,040
-my address, right? How do we do that? –
-So, I will just the one that is asking for
+my address, right? How do we do that?
+– I will just the one that is asking for
 
 130
 00:11:34,040 --> 00:11:42,580
-the information can can ask only for the
-age. So, unlike of what you choose, I can
+the information can ask only for the age.
+Unlike of what you choose, I can
 
 131
 00:11:42,580 --> 00:11:48,360
@@ -665,13 +665,13 @@ that. And you cannot get a screenshot.
 
 134
 00:12:01,540 --> 00:12:05,520
-Yeah. So the policy consideration here is
+Yeah. The policy consideration here is
 that there are many different attributes
 
 135
 00:12:05,520 --> 00:12:09,840
-that you could add to this thing and ask
-for, right? So those are the really
+that you could add to this thing and ask for,
+right? Those are the really
 
 136
 00:12:09,840 --> 00:12:14,720
@@ -690,8 +690,8 @@ access, but we also want to eliminate the
 
 139
 00:12:23,040 --> 00:12:27,640
-fraud, right? So, and because it's the
-user consenting to display the
+fraud, right? And because it's
+the user consenting to display the
 
 140
 00:12:27,640 --> 00:12:32,900
@@ -705,13 +705,13 @@ present an opportunity consent for people,
 
 142
 00:12:38,380 --> 00:12:41,740
-right? So, if it's tough to do across
+right? If it's tough to do across
 agencies and coordinate, just give it to
 
 143
 00:12:41,740 --> 00:12:47,840
-the person and let them decide, right? All
-right. So, I know your age. You're looking
+the person and let them decide, right?
+All right. I know your age. You're looking
 
 144
 00:12:47,840 --> 00:12:49,320
@@ -725,7 +725,7 @@ requested? Did you configure it to just
 146
 00:13:02,040 --> 00:13:06,040
 select the age only? – Just the age only.
-– Well, see, now I have the opportunity to
+– See, now I have the opportunity to
 
 147
 00:13:06,040 --> 00:13:13,780
@@ -734,7 +734,7 @@ want to deny all this new age. Try again?
 
 148
 00:13:14,000 --> 00:13:14,480
-– Yeah. Yeah.
+– Yeah.
 
 149
 00:13:20,000 --> 00:13:20,500
@@ -748,11 +748,11 @@ I need find info or to project that one.
 151
 00:13:30,560 --> 00:13:37,100
 Right. Because that was on. Oh for age.
-Okay. Yeah. Okay. So now I can let him in.
+Okay. Okay. Now I can let him in.
 
 152
 00:13:37,300 --> 00:13:38,260
-So you turn on the safety.
+You turn on the safety.
 
 153
 00:13:42,480 --> 00:13:47,560
@@ -771,7 +771,7 @@ And the Verify will have to deal with it.
 
 156
 00:13:58,620 --> 00:14:01,700
-So I think there is a setting where I've
+I think there is a setting where I've
 definitely seen that work with this app
 
 157
@@ -781,13 +781,13 @@ Let's give it an answer. Right.
 
 158
 00:14:12,640 --> 00:14:21,300
-And you say okay. So those are the only
+And you say okay. Those are the only
 data fields that ever left the wallet,
 
 159
 00:14:21,440 --> 00:14:27,080
-right? During that specific interaction.
-So yeah. See us after will definitely show
+right? During that specific interaction..
+See us after will definitely show
 
 160
 00:14:27,080 --> 00:14:32,040
@@ -796,13 +796,13 @@ think that I have a version of the GT
 
 161
 00:14:32,040 --> 00:14:36,640
-mobile app where I can just ask for the
-age of mine. But But you'll see other
+mobile app where I can just ask for
+the age of mine. But you'll see other
 
 162
 00:14:36,640 --> 00:14:43,540
-profiles where we can get it. So great. We
-have two more things to show you really
+profiles where we can get it. Great.
+We have two more things to show you really
 
 163
 00:14:43,540 --> 00:14:49,420
@@ -811,12 +811,12 @@ What's the floor? – Okay, great. – And
 
 164
 00:14:49,420 --> 00:14:55,160
-those I'm on setter by the way. – Yeah. –
-Okay. – Welcome. Thank you. All right. So
+those I'm on setter by the way. – Yeah.
+– Okay. – Welcome. Thank you. All right.
 
 165
 00:14:55,160 --> 00:14:58,120
-the other two use cases.
+The other two use cases.
 
 166
 00:15:02,000 --> 00:15:06,140
@@ -835,8 +835,8 @@ out eligibility and identity verification
 
 169
 00:15:15,460 --> 00:15:28,620
-for some of those things, right? So this
-is a generally useful flow. In fact, NIST
+for some of those things, right?
+This is a generally useful flow. In fact, NIST
 
 170
 00:15:28,620 --> 00:15:33,020
@@ -845,8 +845,8 @@ Excellence, right? And we're trying to
 
 171
 00:15:33,020 --> 00:15:36,680
-figure out how are we going to do banking
-KYC? privacy with the mobile driver's
+figure out how are we going to do banking KYC?
+Privacy with the mobile driver's
 
 172
 00:15:36,680 --> 00:15:40,160
@@ -855,7 +855,7 @@ actually formal participants in this
 
 173
 00:15:40,160 --> 00:15:44,240
-program. So that's great because a lot of
+program. That's great because a lot of
 federal agencies and other states are
 
 174
@@ -894,7 +894,7 @@ kind of the only thing that popped up,
 
 181
 00:16:20,760 --> 00:16:25,180
-right? So to have a credential that has
+right? To have a credential that has
 steady controls over it would be very
 
 182
@@ -904,8 +904,8 @@ banking example, and this is where a lot
 
 183
 00:16:31,280 --> 00:16:35,600
-of tech companies have invested a ton of
-effort. They're best UX people. their best
+of tech companies have invested a ton of effort.
+They're best UX people. Their best
 
 184
 00:16:35,600 --> 00:16:42,620
@@ -920,12 +920,12 @@ that, hey, other things might be
 186
 00:16:47,700 --> 00:16:53,340
 acceptable here. Passports, EIDs in Europe
-are not driver's licenses, right? So MDL
+are not driver's licenses, right? MDL
 
 187
 00:16:53,340 --> 00:16:58,040
-isn't so strongly applicable in some
-areas. So how do we allow a diversity of
+isn't so strongly applicable in some areas.
+How do we allow a diversity of
 
 188
 00:16:58,040 --> 00:17:03,760
@@ -934,8 +934,8 @@ And there have been great strides in the
 
 189
 00:17:03,760 --> 00:17:07,840
-user experience towards this. So we're
-going to basically open a fictitious bank
+user experience towards this.
+We're going to basically open a fictitious bank
 
 190
 00:17:07,840 --> 00:17:08,160
@@ -948,18 +948,18 @@ show you what happens in the wallet
 
 192
 00:17:17,060 --> 00:17:26,080
-alongside that if I can figure out how to
-make this small again. There we go. So
+alongside that if I can figure out how
+to make this small again. There we go.
 
 193
 00:17:26,080 --> 00:17:31,340
-we're at Arch's bank. We're going to open
+We're at Arch's bank. We're going to open
 an account. We're going to begin our
 
 194
 00:17:31,340 --> 00:17:41,080
-banking application. and type in our
-email. I'll just imagine that I get a
+banking application. And type in our email.
+I'll just imagine that I get a
 
 195
 00:17:41,080 --> 00:17:43,900
@@ -968,8 +968,8 @@ this before. Go to your email, you find
 
 196
 00:17:43,900 --> 00:17:48,920
-the code, you put it in. Multi-factor. So
-right now it's a phone number, but you
+the code, you put it in. Multi-factor.
+Right now it's a phone number, but you
 
 197
 00:17:48,920 --> 00:17:52,760
@@ -978,8 +978,8 @@ digital credentials will hopefully leave
 
 198
 00:17:52,760 --> 00:17:58,240
-the need for this. So put a phone number
-in there. Same deal. Again, many banking
+the need for this. Put a phone number in there.
+Same deal. Again, many banking
 
 199
 00:17:58,240 --> 00:18:04,020
@@ -989,12 +989,12 @@ social security number is required by
 200
 00:18:04,020 --> 00:18:08,120
 FinCEN's customer identification program.
-So that's a Bank Secrecy Act requirement.
+That's a Bank Secrecy Act requirement.
 
 201
 00:18:08,400 --> 00:18:12,580
-So, you know, you'll just see it as a
-requirement for banks. But at this stage,
+You'll just see it as a requirement
+for banks. But at this stage,
 
 202
 00:18:12,840 --> 00:18:18,840
@@ -1068,8 +1068,8 @@ privacy protections with the screen share,
 
 216
 00:19:20,520 --> 00:19:25,060
-but you'll be able to see the important
-parts. So it tells me only connect to
+but you'll be able to see the important parts.
+It tells me only connect to
 
 217
 00:19:25,060 --> 00:19:32,100
@@ -1104,7 +1104,7 @@ cryptographic payload is sent along with
 223
 00:19:54,800 --> 00:19:59,740
 the data fields and that can be verified
-by a server. So it goes to from the phone
+by a server. It goes to from the phone
 
 224
 00:19:59,740 --> 00:20:05,720
@@ -1118,7 +1118,7 @@ those different documents. You submit and
 
 226
 00:20:11,560 --> 00:20:17,800
-you're good to go. So getting easy access
+you're good to go. Getting easy access
 to financial services benefits a slew of
 
 227
@@ -1128,8 +1128,8 @@ we can't compromise on individual rights.
 
 228
 00:20:22,460 --> 00:20:26,360
-We can't compromise on security as we get
-there, right? So let's take those existing
+We can't compromise on security as we get there,
+right? Let's take those existing
 
 229
 00:20:26,360 --> 00:20:30,820
@@ -1138,8 +1138,8 @@ UX and security people on and apply it to
 
 230
 00:20:30,820 --> 00:20:35,100
-a framework that is individual rights
-driven, right? So that's the proposal for
+a framework that is individual rights driven,
+right? That's the proposal for
 
 231
 00:20:35,100 --> 00:20:38,480
@@ -1164,12 +1164,12 @@ technology harness. Thank you for the
 235
 00:20:53,400 --> 00:20:56,680
 Veridian team for providing their issuance
-portal for this part of the demo. So
+portal for this part of the demo.
 
 236
 00:20:56,680 --> 00:21:00,000
-different company, not Spruce ID. It's not
-like one company built all this stuff.
+Different company, not Spruce ID.
+It's not like one company built all this stuff.
 
 237
 00:21:00,260 --> 00:21:05,040
@@ -1189,7 +1189,7 @@ know who we're doing business with if a
 240
 00:21:14,480 --> 00:21:19,880
 company wants to get a benefit or
-something else, right? So basically, I
+something else, right? Basically, I
 
 241
 00:21:19,880 --> 00:21:25,300
@@ -1218,7 +1218,7 @@ you're not trying to just coerce someone
 
 246
 00:21:40,340 --> 00:21:46,540
-to do something, right? So you can issue a
+to do something, right? You can issue a
 credential for this. There's some numbers
 
 247
@@ -1263,6 +1263,5 @@ entirely, but following the same control
 
 255
 00:22:31,480 --> 00:22:34,020
-principles, right? So that's the end of my
-demo. Thank you.
-
+principles, right?
+That's the end of my demo. Thank you.

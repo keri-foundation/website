@@ -48,7 +48,7 @@ this and I don't think we realize
 
 13
 00:00:36,719 --> 00:00:39,360
-how cool that potential is. So, I hope I
+how cool that potential is. I hope I
 
 14
 00:00:39,360 --> 00:00:40,559
@@ -140,7 +140,7 @@ that people can't solve elsewhere.
 
 36
 00:01:43,840 --> 00:01:47,840
-So let me describe the problem as I
+Let me describe the problem as I
 
 37
 00:01:47,840 --> 00:01:51,200
@@ -176,7 +176,7 @@ interaction with the verifier.
 
 45
 00:02:08,000 --> 00:02:09,759
-Right? the verifier sends you a proof
+Right? The verifier sends you a proof
 
 46
 00:02:09,759 --> 00:02:12,160
@@ -248,7 +248,7 @@ yet.
 
 63
 00:02:52,080 --> 00:02:54,959
-So we needed basically one-way
+We needed basically one-way
 
 64
 00:02:54,959 --> 00:02:59,830
@@ -304,7 +304,7 @@ fundamental problems which are, you
 
 77
 00:03:32,480 --> 00:03:34,480
-know, verifiable credentials have
+Verifiable credentials have
 
 78
 00:03:34,480 --> 00:03:36,480
@@ -364,7 +364,7 @@ credential workflows:
 
 92
 00:04:13,200 --> 00:04:15,360
-some subset of the driver's license,"
+some subset of the driver's license, "
 
 93
 00:04:15,360 --> 00:04:18,720
@@ -396,11 +396,11 @@ them under kind of headings because I
 
 100
 00:04:36,800 --> 00:04:39,440
-see these patterns showing up. So,
+see these patterns showing up.
 
 101
 00:04:39,440 --> 00:04:41,360
-there's all kinds of processes in the
+There's all kinds of processes in the
 
 102
 00:04:41,360 --> 00:04:43,440
@@ -460,7 +460,7 @@ There's also research activities that
 
 116
 00:05:19,759 --> 00:05:22,400
-happen. you're conducting a scientific
+happen. You're conducting a scientific
 
 117
 00:05:22,400 --> 00:05:24,240
@@ -672,7 +672,7 @@ lifespans,
 
 169
 00:07:37,680 --> 00:07:39,599
-right? So, one piece of evidence that
+right? One piece of evidence that
 
 170
 00:07:39,599 --> 00:07:41,280
@@ -704,7 +704,7 @@ minutes. But nobody ever analyzes it
 
 177
 00:07:53,840 --> 00:07:55,840
-that way. And so, they're the very naive
+that way. They're the very naive
 
 178
 00:07:55,840 --> 00:08:00,080
@@ -712,7 +712,7 @@ views about lifespan of evidence.
 
 179
 00:08:00,080 --> 00:08:02,879
-And you know, I just kind of
+And I just kind of
 
 180
 00:08:02,879 --> 00:08:05,440
@@ -836,7 +836,7 @@ together introduce some interesting
 
 210
 00:09:13,839 --> 00:09:16,480
-complexity. So in this particular slide,
+complexity. In this particular slide,
 
 211
 00:09:16,480 --> 00:09:19,440
@@ -856,7 +856,7 @@ just profiled four
 
 215
 00:09:27,760 --> 00:09:29,200
-different kinds. So one piece of
+different kinds. One piece of
 
 216
 00:09:29,200 --> 00:09:31,040
@@ -872,7 +872,7 @@ Right? Now, how those last three pay
 
 219
 00:09:37,760 --> 00:09:40,160
-stubs are stubs are verified is pretty
+stubs are verified is pretty
 
 220
 00:09:40,160 --> 00:09:41,600
@@ -888,11 +888,11 @@ be useful is different from some of the
 
 223
 00:09:46,480 --> 00:09:48,959
-other things up here and so forth. So,
+other things up here and so forth.
 
 224
 00:09:48,959 --> 00:09:51,440
-that's the last three paystubs. And the
+That's the last three paystubs. And the
 
 225
 00:09:51,440 --> 00:09:53,440
@@ -920,7 +920,7 @@ consecutive paystubs and they have to be
 
 231
 00:10:05,360 --> 00:10:06,959
-recent and you know all these other
+recent all these other
 
 232
 00:10:06,959 --> 00:10:09,920
@@ -1008,7 +1008,7 @@ evidence to achieve what Sam said years
 
 253
 00:11:02,079 --> 00:11:04,399
-ago about, you know, a verifiable data
+ago about a verifiable data
 
 254
 00:11:04,399 --> 00:11:06,320
@@ -1084,7 +1084,7 @@ After funding, they don't get evaluated
 
 272
 00:11:48,000 --> 00:11:50,320
-anymore. So, you have to kind of know
+anymore. You have to kind of know
 
 273
 00:11:50,320 --> 00:11:51,839
@@ -1112,11 +1112,11 @@ it forever, but in the context of the
 
 279
 00:12:02,000 --> 00:12:03,519
-event that was important. So,
+event that was important.
 
 280
 00:12:03,519 --> 00:12:05,120
-you're never going to ask the question,
+You're never going to ask the question,
 
 281
 00:12:05,120 --> 00:12:08,399
@@ -1156,7 +1156,7 @@ here just so that you wouldn't think I'm
 
 290
 00:12:29,839 --> 00:12:32,240
-only thinking about telco, but you know,
+only thinking about telco, but
 
 291
 00:12:32,240 --> 00:12:34,000
@@ -1200,7 +1200,7 @@ credit to before."
 
 301
 00:12:53,120 --> 00:12:56,639
-So first of all, we started
+First of all, we started
 
 302
 00:12:56,639 --> 00:12:58,959
@@ -1364,7 +1364,7 @@ certain sources really took place or
 
 342
 00:14:36,880 --> 00:14:39,199
-whatever. So, it's not the simple model
+whatever. It's not the simple model
 
 343
 00:14:39,199 --> 00:14:40,959
@@ -1408,7 +1408,7 @@ metadata.
 
 353
 00:15:09,279 --> 00:15:12,160
-So let's take the case of SMS. When you
+Let's take the case of SMS. When you
 
 354
 00:15:12,160 --> 00:15:14,079
@@ -1424,7 +1424,7 @@ Nowadays, phones will send stuff over
 
 357
 00:15:19,120 --> 00:15:21,360
-RCS instead of SMS. And so you can
+RCS instead of SMS. You can
 
 358
 00:15:21,360 --> 00:15:24,240
@@ -1548,7 +1548,7 @@ contexts that's the way security is
 
 388
 00:16:40,959 --> 00:16:44,720
-enforced. So in the case of
+enforced. In the case of
 
 389
 00:16:44,720 --> 00:16:47,120
@@ -1564,11 +1564,11 @@ with every .., well it can, it's built to
 
 392
 00:16:53,680 --> 00:16:57,920
-carry a JWT with every SIP invite. So
+carry a JWT with every SIP invite.
 
 393
 00:16:57,920 --> 00:17:00,240
-when you pull out your phone and you
+When you pull out your phone and you
 
 394
 00:17:00,240 --> 00:17:02,079
@@ -1656,11 +1656,11 @@ HTTP and everything
 
 415
 00:17:52,799 --> 00:17:54,799
-Yeah, they very deliberately copied
+They very deliberately copied
 
 416
 00:17:54,799 --> 00:17:58,880
-HTTP when they built SIP. So all that
+HTTP when they built SIP. All that
 
 417
 00:17:58,880 --> 00:18:01,120
@@ -1732,7 +1732,7 @@ And that's why I'm interested in this.
 
 434
 00:18:48,960 --> 00:18:50,799
-So you can derive any number of tokens
+You can derive any number of tokens
 
 435
 00:18:50,799 --> 00:18:52,480
@@ -1780,7 +1780,7 @@ evidence doesn't change.
 
 446
 00:19:17,374 --> 00:19:21,473
-So what does a dossier actually
+What does a dossier actually
 
 447
 00:19:21,497 --> 00:19:23,039
@@ -1864,7 +1864,7 @@ edges.
 
 467
 00:20:16,880 --> 00:20:18,880
-So, you're just saying
+You're just saying
 
 468
 00:20:18,880 --> 00:20:20,880
@@ -1908,7 +1908,7 @@ And this is where we get verifiable data
 
 478
 00:20:42,640 --> 00:20:48,720
-graphs. Yeah.
+graphs.
 
 479
 00:20:48,720 --> 00:20:53,039
@@ -2000,7 +2000,7 @@ actually want to put them in an ACDC.
 
 501
 00:21:47,280 --> 00:21:50,720
-We just want to put a hash. So like a
+We just want to put a hash. Like a
 
 502
 00:21:50,720 --> 00:21:53,520
@@ -2032,7 +2032,7 @@ that.
 
 509
 00:22:07,200 --> 00:22:10,480
-Anyway, so these two techniques,
+Anyway, these two techniques,
 
 510
 00:22:10,480 --> 00:22:12,159
@@ -2056,15 +2056,15 @@ that's important.
 
 515
 00:22:21,440 --> 00:22:23,440
-Scientific readings you know, all
+Scientific readings all
 
 516
 00:22:23,440 --> 00:22:25,280
-these other examples I went through. So,
+these other examples I went through.
 
 517
 00:22:25,280 --> 00:22:27,919
-you want your assembly of evidence to
+You want your assembly of evidence to
 
 518
 00:22:27,919 --> 00:22:30,000
@@ -2124,7 +2124,7 @@ data, but it's what I would call foreign
 
 532
 00:23:08,000 --> 00:23:12,400
-to the ACDC world. So if you have an
+to the ACDC world. If you have an
 
 533
 00:23:12,400 --> 00:23:14,640
@@ -2156,7 +2156,7 @@ that's a good idea and I'll explain why
 
 540
 00:23:28,720 --> 00:23:30,640
-in a second. So what I would recommend
+in a second. What I would recommend
 
 541
 00:23:30,640 --> 00:23:32,080
@@ -2212,7 +2212,7 @@ in the ACDC land, I'm not going to
 
 554
 00:24:02,640 --> 00:24:04,799
-reflect the revocation status. So all
+reflect the revocation status. All
 
 555
 00:24:04,799 --> 00:24:06,240
@@ -2560,7 +2560,7 @@ metadata about that dossier.
 
 641
 00:27:35,520 --> 00:27:38,240
-Right? So maybe I'm assembling all of
+Right? Maybe I'm assembling all of
 
 642
 00:27:38,240 --> 00:27:40,400
@@ -2568,11 +2568,11 @@ the evidence from somebody who lied
 
 643
 00:27:40,400 --> 00:27:42,159
-to me because I want to, you know, take
+to me because I want to take
 
 644
 00:27:42,159 --> 00:27:45,120
-him to court later. So it could be
+him to court later. It could be
 
 645
 00:27:45,120 --> 00:27:46,799
@@ -2720,7 +2720,7 @@ want to attach to a dossier I think that
 
 681
 00:29:07,760 --> 00:29:10,240
-It needs a spec. So we're writing
+It needs a spec. We're writing
 
 682
 00:29:10,240 --> 00:29:14,399
@@ -2748,7 +2748,7 @@ Oh, Phil.
 
 688
 00:29:27,039 --> 00:29:28,559
-Yeah, two questions. This is one I think
+Two questions. This is one I think
 
 689
 00:29:28,559 --> 00:29:30,880
@@ -2760,7 +2760,7 @@ point to another dossier?
 
 691
 00:29:31,840 --> 00:29:32,799
-Yeah, for sure.
+For sure.
 
 692
 00:29:32,799 --> 00:29:35,600
@@ -2812,7 +2812,7 @@ add as many properties in an edge as you
 
 704
 00:30:04,640 --> 00:30:06,640
-want. So it's just a matter of saying
+want. It's just a matter of saying
 
 705
 00:30:06,640 --> 00:30:09,200
@@ -2836,16 +2836,15 @@ that the dossier spec needs to say is
 
 710
 00:30:15,520 --> 00:30:17,360
-here's a really useful way to, you know,
+here's a really useful way to
 
 711
 00:30:17,360 --> 00:30:21,909
-make this more powerful. Yeah.
+make this more powerful.
 
 712
 00:30:29,029 --> 00:30:31,200
 Since your voice is quiet, why don't you use the [mic]?
-
 
 713
 00:30:31,200 --> 00:30:32,240
@@ -2861,7 +2860,7 @@ thing.
 
 716
 00:30:35,840 --> 00:30:37,039
-Yeah, for the camera.
+For the camera.
 
 717
 00:30:37,039 --> 00:30:39,120
@@ -2869,7 +2868,7 @@ The gent speaking to his name.
 
 718
 00:30:39,120 --> 00:30:41,360
-Yeah, I got
+I got
 
 719
 00:30:41,360 --> 00:30:43,600
@@ -2949,7 +2948,7 @@ do it. And all the data is aggregated
 
 738
 00:31:35,279 --> 00:31:36,720
-differently. So you have a whole family
+differently. You have a whole family
 
 739
 00:31:36,720 --> 00:31:38,960
@@ -2961,7 +2960,7 @@ have connections between all of your
 
 741
 00:31:40,799 --> 00:31:43,600
-sensors and you know sensors
+sensors sensors
 
 742
 00:31:43,600 --> 00:31:45,919
@@ -2977,7 +2976,7 @@ complex graph and all I had to do was
 
 745
 00:31:49,840 --> 00:31:51,919
-say "Well, if I want to make a
+say "If I want to make a
 
 746
 00:31:51,919 --> 00:31:54,080
@@ -2985,7 +2984,7 @@ trust decision that's no different than
 
 747
 00:31:54,080 --> 00:31:56,159
-any other automated reasoning." So we
+any other automated reasoning." We
 
 748
 00:31:56,159 --> 00:31:59,440
@@ -3009,7 +3008,7 @@ divorced from the actual way you make
 
 753
 00:32:08,960 --> 00:32:11,760
-you make decisions. And so ACDCs
+you make decisions. ACDCs
 
 754
 00:32:11,760 --> 00:32:13,440
@@ -3049,7 +3048,7 @@ of evidence and evaluating it and .., yeah.
 
 763
 00:32:31,039 --> 00:32:34,559
-Go ahead. – So very different approach to
+Go ahead. – Very different approach to
 
 764
 00:32:34,559 --> 00:32:36,720
@@ -3133,7 +3132,7 @@ claim they need a data lake.
 
 784
 00:33:36,320 --> 00:33:39,440
-So this allows you to decentralize
+This allows you to decentralize
 
 785
 00:33:39,440 --> 00:33:42,320
@@ -3141,7 +3140,7 @@ that none of them is in effect the
 
 786
 00:33:42,320 --> 00:33:44,399
-steward. they are just the steward of
+steward. They are just the steward of
 
 787
 00:33:44,399 --> 00:33:46,960
@@ -3317,7 +3316,7 @@ thing with the different AID, but
 
 830
 00:35:29,760 --> 00:35:31,359
-everything else is the same. And so it's
+everything else is the same. It's
 
 831
 00:35:31,359 --> 00:35:33,599
@@ -3373,7 +3372,7 @@ everybody that already signed and you
 
 844
 00:36:00,400 --> 00:36:02,240
-can go verify it." So, that would
+can go verify it." That would
 
 845
 00:36:02,240 --> 00:36:04,320
@@ -3413,11 +3412,11 @@ There's no N in it, right? It's just
 
 854
 00:36:23,200 --> 00:36:26,640
-this is the threshold is M, you know. So
+this is the threshold is M.
 
 855
 00:36:26,640 --> 00:36:28,160
-anyway, there's some really neat things
+Anyway, there's some really neat things
 
 856
 00:36:28,160 --> 00:36:30,160
@@ -3517,7 +3516,7 @@ amounts of what's needed.
 
 880
 00:37:29,680 --> 00:37:31,839
-So in telco when you have the rule
+In telco when you have the rule
 
 881
 00:37:31,839 --> 00:37:34,720
@@ -3553,7 +3552,7 @@ show less I will do it.
 
 889
 00:37:52,000 --> 00:37:54,400
-So are you using selective disclosure to
+Are you using selective disclosure to
 
 890
 00:37:54,400 --> 00:37:56,640
@@ -3573,7 +3572,7 @@ of the other variations of disclosure?
 
 894
 00:38:05,200 --> 00:38:07,520
-Well, the original title of this slide
+The original title of this slide
 
 895
 00:38:07,520 --> 00:38:09,200
@@ -3593,7 +3592,7 @@ around with this. Oh, I could stick it,
 
 899
 00:38:15,520 --> 00:38:17,200
-you know, I could take contractually
+I could take contractually
 
 900
 00:38:17,200 --> 00:38:18,720
@@ -3653,7 +3652,7 @@ tracing it out, but the hashes
 
 914
 00:38:56,960 --> 00:38:59,440
-along the way are generated. So you
+along the way are generated. You
 
 915
 00:38:59,440 --> 00:39:01,920
@@ -3673,7 +3672,7 @@ at that point saying, "Oh, here's what
 
 919
 00:39:07,920 --> 00:39:12,720
-it is." So, it's a non-binary
+it is." It's a non-binary
 
 920
 00:39:12,720 --> 00:39:15,359
@@ -3685,7 +3684,7 @@ booster.
 
 922
 00:39:16,240 --> 00:39:18,160
-So, if I had to use a different
+If I had to use a different
 
 923
 00:39:18,160 --> 00:39:20,880
@@ -3750,4 +3749,3 @@ least put more names on the spec besides
 938
 00:39:50,240 --> 00:39:53,240
 me.
-

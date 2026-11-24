@@ -24,7 +24,7 @@ Title of my talk, as you can see, is
 
 7
 00:00:19,680 --> 00:00:22,640
-Foundation”. So if you were at SEDI
+Foundation”. If you were at SEDI
 
 8
 00:00:22,640 --> 00:00:24,400
@@ -48,7 +48,7 @@ little bit more detail on how the legal
 
 13
 00:00:34,800 --> 00:00:37,520
-foundation actually helps us out. So we
+foundation actually helps us out. We
 
 14
 00:00:37,520 --> 00:00:39,840
@@ -96,7 +96,7 @@ gives us the foundation for making all
 
 25
 00:01:10,799 --> 00:01:13,920
-of this work. So, think about where
+of this work. Think about where
 
 26
 00:01:13,920 --> 00:01:16,159
@@ -116,7 +116,7 @@ some implementations, open- source code.
 
 30
 00:01:27,414 --> 00:01:30,880
-So, the technical foundations
+The technical foundations
 
 31
 00:01:30,880 --> 00:01:32,560
@@ -188,7 +188,7 @@ there's a couple of them that I think we
 
 48
 00:02:10,879 --> 00:02:16,959
-can help solve. So Sankarshan
+can help solve. Sankarshan
 
 49
 00:02:16,959 --> 00:02:20,239
@@ -229,7 +229,7 @@ be able to prove things about ourselves.
 
 58
 00:02:42,000 --> 00:02:45,040
-So, our education, employment, whatever
+Our education, employment, whatever
 
 59
 00:02:45,040 --> 00:02:47,840
@@ -253,11 +253,11 @@ digitally in a way that somebody else
 
 64
 00:02:58,480 --> 00:03:03,200
-can easily verify. So even worse, I
+can easily verify. Even worse, I
 
 65
 00:03:03,200 --> 00:03:05,680
-mean, if we lose that proof, we have to
+If we lose that proof, we have to
 
 66
 00:03:05,680 --> 00:03:07,200
@@ -269,11 +269,11 @@ institutions one at a time and confirm
 
 68
 00:03:10,239 --> 00:03:12,239
-something about ourselves, right? So
+something about ourselves, right?
 
 69
 00:03:12,239 --> 00:03:16,800
-that could be a real problem.
+That could be a real problem.
 
 70
 00:03:16,800 --> 00:03:18,560
@@ -317,7 +317,7 @@ and move it forward.
 
 80
 00:03:36,745 --> 00:03:40,799
-So sometimes people think of the proof gap
+Sometimes people think of the proof gap
 
 81
 00:03:40,799 --> 00:03:43,440
@@ -409,7 +409,7 @@ Sears cards that you could use at Sears
 
 103
 00:04:47,120 --> 00:04:49,360
-and nowhere else, right? So they were
+and nowhere else, right? They were
 
 104
 00:04:49,360 --> 00:04:53,680
@@ -429,7 +429,7 @@ coalition of banks put together ways
 
 108
 00:05:03,759 --> 00:05:05,600
-that they can work together. So this
+that they can work together. This
 
 109
 00:05:05,600 --> 00:05:08,000
@@ -669,7 +669,7 @@ And that's always going to be a problem.
 
 168
 00:07:35,840 --> 00:07:39,440
-So a different way to solve this problem
+A different way to solve this problem
 
 169
 00:07:39,440 --> 00:07:43,520
@@ -693,7 +693,7 @@ Monday and that is an economic problem.
 
 174
 00:07:53,840 --> 00:07:56,479
-So in the mid 1990s,
+In the mid 1990s,
 
 175
 00:07:56,479 --> 00:07:59,039
@@ -705,7 +705,7 @@ digital identity problem for at least
 
 177
 00:08:01,759 --> 00:08:04,960
-the web. I mean, they had
+the web. They had
 
 178
 00:08:04,960 --> 00:08:08,240
@@ -729,7 +729,7 @@ identify you. We'll proof your identity
 
 183
 00:08:21,199 --> 00:08:23,919
-with these certificates. I mean, in
+with these certificates. In
 
 184
 00:08:23,919 --> 00:08:26,560
@@ -781,11 +781,11 @@ themselves out there and saying “this
 
 196
 00:08:53,680 --> 00:08:55,200
-information is correct”. So, they're
+information is correct”. They're
 
 197
 00:08:55,200 --> 00:08:58,480
-liable. So, they cost money.
+liable. They cost money.
 
 198
 00:08:58,480 --> 00:09:00,480
@@ -801,11 +801,11 @@ and all of those things. They wanted it
 
 201
 00:09:04,560 --> 00:09:08,480
-all to be free. So
+all to be free.
 
 202
 00:09:08,480 --> 00:09:11,519
-we standardized on "Servers will have
+We standardized on "Servers will have
 
 203
 00:09:11,519 --> 00:09:13,360
@@ -825,7 +825,7 @@ away because there was money to be made.
 
 207
 00:09:21,360 --> 00:09:23,279
-So here's the two problems. How
+Here's the two problems. How
 
 208
 00:09:23,279 --> 00:09:25,600
@@ -885,7 +885,7 @@ foundation that trust frameworks can sit
 
 222
 00:10:07,200 --> 00:10:10,160
-on. So we have something that is
+on. We have something that is
 
 223
 00:10:10,160 --> 00:10:13,279
@@ -961,7 +961,7 @@ It means the state proofed your identity.
 
 241
 00:10:54,160 --> 00:10:59,920
-So this was started in 2005
+This was started in 2005
 
 242
 00:10:59,920 --> 00:11:03,279
@@ -985,11 +985,11 @@ when they started talking about this.
 
 247
 00:11:12,160 --> 00:11:15,120
-This was early 2000s, right? So,
+This was early 2000s, right?
 
 248
 00:11:15,120 --> 00:11:16,720
-proofing your identity. And at the time,
+Proofing your identity. And at the time,
 
 249
 00:11:16,720 --> 00:11:18,640
@@ -1009,15 +1009,15 @@ an identity
 
 253
 00:11:25,519 --> 00:11:28,640
-provider. This is not us." Well, let's
+provider. This is not us." Let's
 
 254
 00:11:28,640 --> 00:11:30,079
-see how that worked out for them. So,
+see how that worked out for them.
 
 255
 00:11:30,079 --> 00:11:31,760
-anyway, you have the old star. They
+Anyway, you have the old star. They
 
 256
 00:11:31,760 --> 00:11:34,160
@@ -1025,7 +1025,7 @@ already proofed your identity.
 
 257
 00:11:34,160 --> 00:11:36,160
-So, let's talk for a minute. I think
+Let's talk for a minute. I think
 
 258
 00:11:36,160 --> 00:11:38,240
@@ -1109,7 +1109,7 @@ control). In a cryptographic way.
 
 278
 00:12:32,800 --> 00:12:34,959
-So, you can kind of think of this like a
+You can kind of think of this like a
 
 279
 00:12:34,959 --> 00:12:37,760
@@ -1145,7 +1145,7 @@ part of your SEDI."
 
 287
 00:12:56,560 --> 00:13:02,710
-So SEDI not just one credential.
+SEDI not just one credential.
 
 288
 00:13:02,735 --> 00:13:05,769
@@ -1205,7 +1205,7 @@ credentials to people for different
 
 302
 00:13:46,320 --> 00:13:49,360
-things, right? So, states have lots of
+things, right? States have lots of
 
 303
 00:13:49,360 --> 00:13:52,000
@@ -1249,7 +1249,7 @@ But also, other institutions can give
 
 313
 00:14:12,720 --> 00:14:15,600
-you credentials. So, you could use your
+you credentials. You could use your
 
 314
 00:14:15,600 --> 00:14:18,399
@@ -1273,7 +1273,7 @@ registering for school and you would get
 
 319
 00:14:27,440 --> 00:14:29,279
-a school ID. So all of these other
+a school ID. All of these other
 
 320
 00:14:29,279 --> 00:14:31,519
@@ -1313,7 +1313,7 @@ But it's not just people.
 
 329
 00:14:54,993 --> 00:14:57,519
-So there's also organizations. Now this
+There's also organizations. Now this
 
 330
 00:14:57,519 --> 00:15:00,720
@@ -1325,11 +1325,11 @@ but it's related to SEDI and important
 
 332
 00:15:02,800 --> 00:15:05,279
-for what we're talking about. So,
+for what we're talking about.
 
 333
 00:15:05,279 --> 00:15:07,760
-organizations already have firm legal
+Organizations already have firm legal
 
 334
 00:15:07,760 --> 00:15:10,480
@@ -1549,7 +1549,7 @@ statute. They're in law. It also
 
 388
 00:17:27,199 --> 00:17:29,600
-includes selective disclosure. So the
+includes selective disclosure. The
 
 389
 00:17:29,600 --> 00:17:33,039
@@ -1581,7 +1581,7 @@ That it's not a proprietary system MDL.
 
 396
 00:17:53,120 --> 00:17:57,919
-So, no vendor lock-in. Anyone can
+No vendor lock-in. Anyone can
 
 397
 00:17:57,919 --> 00:17:59,360
@@ -1597,7 +1597,7 @@ wallets, it mandates a choice of
 
 400
 00:18:04,880 --> 00:18:06,559
-wallets, right? So, there's not just one
+wallets, right? There's not just one
 
 401
 00:18:06,559 --> 00:18:09,360
@@ -1693,11 +1693,11 @@ word I was looking for. Nice simple
 
 424
 00:19:09,919 --> 00:19:13,360
-word, not carry out duties. Okay. So,
+word, not carry out duties. Okay.
 
 425
 00:19:13,360 --> 00:19:15,760
-these are all part of the statute and
+These are all part of the statute and
 
 426
 00:19:15,760 --> 00:19:19,760
@@ -1753,7 +1753,7 @@ that you have enforcable rights
 
 439
 00:19:56,000 --> 00:19:58,799
-related to your SEDI. So you have the
+related to your SEDI. You have the
 
 440
 00:19:58,799 --> 00:20:02,160
@@ -1805,7 +1805,7 @@ what's it called? A digital privacy
 
 452
 00:20:31,600 --> 00:20:34,320
-ombudsman and the attorney general. Yeah.
+ombudsman and the attorney general.
 
 453
 00:20:34,320 --> 00:20:37,120
@@ -1817,7 +1817,7 @@ give you the ability to seek redress if
 
 455
 00:20:40,240 --> 00:20:42,960
-something happens. So yeah…
+something happens. …
 
 456
 00:20:42,960 --> 00:20:44,880
@@ -1837,7 +1837,7 @@ behalf.
 
 460
 00:20:50,720 --> 00:20:52,320
-–– Yeah, we tried to get that in there, but
+–– we tried to get that in there, but
 
 461
 00:20:52,320 --> 00:20:54,240
@@ -1845,11 +1845,11 @@ they decided that was reach too far.
 
 462
 00:20:54,640 --> 00:21:00,159
-Reach too far. Yeah. So,
+Reach too far.
 
 463
 00:21:00,159 --> 00:21:03,120
-these aren't just like consent
+These aren't just like consent
 
 464
 00:21:03,120 --> 00:21:05,360
@@ -1981,7 +1981,7 @@ can work. But it's equally important
 
 496
 00:22:34,080 --> 00:22:35,840
-here. So there are two different
+here. There are two different
 
 497
 00:22:35,840 --> 00:22:40,000
@@ -2033,7 +2033,7 @@ because it's essentially how we
 
 509
 00:23:06,559 --> 00:23:09,679
-bootstrap things. So the top of
+bootstrap things. The top of
 
 510
 00:23:09,679 --> 00:23:12,640
@@ -2133,7 +2133,7 @@ is that a good institution? I honestly
 
 534
 00:24:18,240 --> 00:24:22,640
-don't know. But who does? Well, the way
+don't know. But who does? The way
 
 535
 00:24:22,640 --> 00:24:26,080
@@ -2169,7 +2169,7 @@ university's credentials and
 
 543
 00:24:45,760 --> 00:24:49,440
-identifiers. So they probably have an
+identifiers. They probably have an
 
 544
 00:24:49,440 --> 00:24:51,679
@@ -2185,7 +2185,7 @@ body. And there's not just one, right?
 
 547
 00:24:55,840 --> 00:24:57,760
-So there would be an accrediting body
+There would be an accrediting body
 
 548
 00:24:57,760 --> 00:24:59,360
@@ -2217,11 +2217,11 @@ this a legal business? Is it even
 
 555
 00:25:13,840 --> 00:25:17,760
-recognized as a business? So
+recognized as a business?
 
 556
 00:25:17,760 --> 00:25:19,600
-that would be your commerce department
+That would be your commerce department
 
 557
 00:25:19,600 --> 00:25:22,320
@@ -2289,7 +2289,7 @@ you might want to know about it.
 
 573
 00:26:01,679 --> 00:26:04,559
-So that's reputation by reference
+That's reputation by reference
 
 574
 00:26:04,559 --> 00:26:06,240
@@ -2349,11 +2349,11 @@ going to let you babysit my kids, right?
 
 588
 00:26:36,080 --> 00:26:37,760
-So, there's different domains of
+There's different domains of
 
 589
 00:26:37,760 --> 00:26:40,400
-behavior that we that we look for.
+behavior that we look for.
 
 590
 00:26:40,400 --> 00:26:43,679
@@ -2385,7 +2385,7 @@ at reviews online to see, okay, they've
 
 597
 00:26:59,760 --> 00:27:02,880
-got a pretty good thing. Yeah, Timothy…
+got a pretty good thing. Timothy…
 
 598
 00:27:02,880 --> 00:27:05,200
@@ -2401,7 +2401,7 @@ It is!, but it's at a distance.
 
 601
 00:27:13,695 --> 00:27:16,159
-So, we go back to this.
+We go back to this.
 
 602
 00:27:16,159 --> 00:27:19,120
@@ -2413,7 +2413,7 @@ away from the actual thing that I give
 
 604
 00:27:21,360 --> 00:27:24,320
-you. So there are accumulated
+you. There are accumulated
 
 605
 00:27:24,320 --> 00:27:27,440
@@ -2437,7 +2437,7 @@ the degree and you're believing the
 
 610
 00:27:38,559 --> 00:27:41,120
-university. So there's an indirectness,
+university. There's an indirectness,
 
 611
 00:27:41,120 --> 00:27:44,000
@@ -2465,7 +2465,7 @@ Correct.
 
 617
 00:27:52,159 --> 00:27:54,640
-– And so if it's a good restaurant, it's
+– If it's a good restaurant, it's
 
 618
 00:27:54,640 --> 00:27:57,039
@@ -2509,7 +2509,7 @@ the direct behavior, the only person
 
 628
 00:28:17,600 --> 00:28:19,600
-you're trusting is yourself. So, the
+you're trusting is yourself. The
 
 629
 00:28:19,600 --> 00:28:22,080
@@ -2553,7 +2553,7 @@ you don't have to trust.
 
 639
 00:28:50,799 --> 00:28:55,039
-So the question here is, am I trusting
+The question here is, am I trusting
 
 640
 00:28:55,039 --> 00:28:57,360
@@ -2609,7 +2609,7 @@ whether it's indirect or direct,
 
 653
 00:29:24,480 --> 00:29:33,029
-so a different dimension, but yeah.
+so a different dimension.
 
 654
 00:29:33,054 --> 00:29:36,985
@@ -2621,7 +2621,7 @@ works, one example of that is credit
 
 656
 00:29:38,799 --> 00:29:41,760
-bureaus. So credit bureaus
+bureaus. Credit bureaus
 
 657
 00:29:41,760 --> 00:29:44,000
@@ -2669,7 +2669,7 @@ that credit score and get that for you.
 
 668
 00:30:10,480 --> 00:30:14,159
-So that's one way that we do
+That's one way that we do
 
 669
 00:30:14,159 --> 00:30:19,200
@@ -2733,7 +2733,7 @@ big problem here.
 
 684
 00:30:54,320 --> 00:30:58,320
-I can admit bad behavior. So, doesn't
+I can admit bad behavior. Doesn't
 
 685
 00:30:58,320 --> 00:31:00,080
@@ -2741,7 +2741,7 @@ mean that these things are ever
 
 686
 00:31:00,080 --> 00:31:01,360
-going to go away. I mean, I think
+going to go away. I think
 
 687
 00:31:01,384 --> 00:31:05,962
@@ -2749,7 +2749,7 @@ there's always room for things that
 
 688
 00:31:05,987 --> 00:31:09,840
-are looking for bad behavior. Yeah.
+are looking for bad behavior.
 
 689
 00:31:09,840 --> 00:31:11,840
@@ -2789,11 +2789,11 @@ And for transparency in algorithms.
 
 698
 00:31:32,159 --> 00:31:33,440
-Somebody might say, "Oh, yeah.
+Somebody might say, "
 
 699
 00:31:33,440 --> 00:31:35,520
-Well, we use this algorithm for how we
+We use this algorithm for how we
 
 700
 00:31:35,520 --> 00:31:37,840
@@ -2849,7 +2849,7 @@ in, but no one owns the underlying
 
 713
 00:32:07,279 --> 00:32:11,519
-facts. So the solution to that is to
+facts. The solution to that is to
 
 714
 00:32:11,519 --> 00:32:14,320
@@ -2865,7 +2865,7 @@ navigable waters or the air we breathe,
 
 717
 00:32:21,360 --> 00:32:23,679
-someone has to be responsible. So going
+someone has to be responsible. Going
 
 718
 00:32:23,679 --> 00:32:25,440
@@ -2945,11 +2945,11 @@ the company goes out and says “we
 
 737
 00:33:05,919 --> 00:33:07,840
-own this”. So it's a legal fiction.
+own this”. It's a legal fiction.
 
 738
 00:33:07,840 --> 00:33:10,480
-– Yeah, I probably shouldn't say
+– I probably shouldn't say
 
 739
 00:33:10,480 --> 00:33:12,799
@@ -2993,11 +2993,11 @@ that. And of course, that's just
 
 749
 00:33:39,120 --> 00:33:41,360
-two-party. It could be multi-party. So,
+two-party. It could be multi-party.
 
 750
 00:33:41,360 --> 00:33:44,320
-so yeah, it's about you have access
+It's about you have access
 
 751
 00:33:44,320 --> 00:33:47,120
@@ -3021,7 +3021,7 @@ always sort of say, well, the newspaper
 
 756
 00:33:54,159 --> 00:33:57,519
-costs a dollar. Well, if I'm buying the
+costs a dollar. If I'm buying the
 
 757
 00:33:57,519 --> 00:34:00,399
@@ -3033,11 +3033,11 @@ than the dollar and the publisher values
 
 759
 00:34:04,399 --> 00:34:06,559
-the dollar more than the newspaper. So
+the dollar more than the newspaper.
 
 760
 00:34:06,559 --> 00:34:08,000
-otherwise, the transaction wouldn't
+Otherwise, the transaction wouldn't
 
 761
 00:34:08,000 --> 00:34:09,040
@@ -3053,7 +3053,7 @@ There's cost, price, and value.
 
 764
 00:34:13,679 --> 00:34:16,000
-And they're not the same. Yeah.
+And they're not the same.
 
 765
 00:34:16,000 --> 00:34:21,270
@@ -3061,7 +3061,7 @@ And they're not the same. Yeah.
 
 766
 00:34:21,295 --> 00:34:26,399
-– “data about you”. Yeah.
+– “data about you”.
 
 767
 00:34:26,399 --> 00:34:30,320
@@ -3133,7 +3133,7 @@ you employ that are evaluators. You
 
 784
 00:35:22,720 --> 00:35:24,320
-know, we talked about having a
+We talked about having a
 
 785
 00:35:24,320 --> 00:35:27,440
@@ -3249,7 +3249,7 @@ all extremely difficult problems to
 
 813
 00:36:41,760 --> 00:36:45,760
-solve. So it's not a no-brainer
+solve. It's not a no-brainer
 
 814
 00:36:45,760 --> 00:36:48,480
@@ -3377,7 +3377,7 @@ ship.
 
 845
 00:37:54,240 --> 00:37:55,119
-– Yeah, absolutely.
+– Absolutely.
 
 846
 00:37:55,119 --> 00:37:57,040
@@ -3497,7 +3497,7 @@ but nevertheless we're on the
 
 875
 00:39:25,599 --> 00:39:29,760
-road to getting there. So
+road to getting there.
 
 876
 00:39:29,760 --> 00:39:31,760
@@ -3524,34 +3524,29 @@ And what we have now starting in May
 is a legal foundation for all of that.
 
 882
-00:39:49,599 --> 00:39:52,079
-So,
+00:39:52,079 --> 00:39:53,680
+We've had some discussion going back.
 
 883
-00:39:52,079 --> 00:39:53,680
-we've had some discussion going back.
-
-884
 00:39:53,680 --> 00:39:55,440
 I've got like two or three minutes I
 
-885
+884
 00:39:55,440 --> 00:39:56,880
 think if there are questions. Two
 
-886
+885
 00:39:56,880 --> 00:39:59,839
-minutes I'm told. So, is there
+minutes I'm told. Is there
 
-887
+886
 00:39:59,839 --> 00:40:01,040
 questions? Happy to answer them.
 
-888
+887
 00:40:01,040 --> 00:40:03,839
 Otherwise, I will turn you over to the
 
-889
+888
 00:40:03,839 --> 00:40:07,079
 next one. [Applause]
-

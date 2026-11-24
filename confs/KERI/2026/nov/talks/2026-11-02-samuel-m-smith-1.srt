@@ -1,7 +1,7 @@
 1
 00:00:00,000 --> 00:00:04,580
-So we start off today with Sam who's
-going to first talk about the state and the
+We start off today with Sam who's going
+to first talk about the state and the
 
 2
 00:00:04,580 --> 00:00:08,520
@@ -15,13 +15,13 @@ ask a question, we'll pass around the mic
 
 4
 00:00:17,120 --> 00:00:22,360
-so that your question gets on the
-recording. We have a couple of mics. So I
+so that your question gets on the recording.
+We have a couple of mics. I
 
 5
 00:00:22,360 --> 00:00:26,120
 recognize most of the people here,
-but there's some that I don't. So is there
+but there's some that I don't. Is there
 
 6
 00:00:26,120 --> 00:00:30,440
@@ -36,11 +36,11 @@ of KERI. Is there anybody here that just
 8
 00:00:35,100 --> 00:00:43,220
 really doesn't know that much about KERI?
-Oh, come on. All right. So a couple. Okay.
+Oh, come on. All right. A couple. Okay.
 
 9
 00:00:43,880 --> 00:00:52,200
-So KERI is sometimes described as
+KERI is sometimes described as
 complicated and I like to say it's no more
 
 10
@@ -56,7 +56,7 @@ to achieve those properties. But those
 12
 00:01:02,000 --> 00:01:16,720
 properties are significant
-and difficult to achieve. So if
+and difficult to achieve. If
 
 13
 00:01:16,720 --> 00:01:23,660
@@ -70,7 +70,7 @@ has been publishing videos of a lot of the
 
 15
 00:01:32,300 --> 00:01:38,700
-talks. So we now have a fairly big set of
+talks. We now have a fairly big set of
 videos that you can go watch and learn
 
 16
@@ -81,7 +81,7 @@ or a mini conference, we're attempting to
 17
 00:01:44,160 --> 00:01:53,860
 add to that corpus of knowledge there.
-So I want to talk a little bit about KERI.
+I want to talk a little bit about KERI.
 
 18
 00:01:54,160 --> 00:02:00,480
@@ -110,8 +110,8 @@ were instrumental in getting there are
 
 23
 00:02:20,140 --> 00:02:26,980
-here today. So thanks for all that. The
-KERI Foundation was founded in 2025, but
+here today. Thanks for all that.
+The KERI Foundation was founded in 2025, but
 
 24
 00:02:26,980 --> 00:02:35,000
@@ -139,17 +139,17 @@ that is functionally
 
 29
 00:03:01,720 --> 00:03:12,140
-in production. So Microsoft has gone
-public and announced that they're using a
+in production. Microsoft has gone public
+and announced that they're using a
 
 30
 00:03:12,140 --> 00:03:16,440
 software stack developed by company
-called Provenant to solve call spam. And so
+called Provenant to solve call spam.
 
 31
 00:03:16,440 --> 00:03:23,420
-that's just growing organically that
+That's just growing organically that
 eventually call spam will be a thing of
 
 32
@@ -159,8 +159,8 @@ won't be complaining about call spam.
 
 33
 00:03:27,000 --> 00:03:31,740
-Yeah, that's how significant that is. And
-that includes text as well. It's going to
+That's how significant that is.
+And that includes text as well. It's going to
 
 34
 00:03:31,740 --> 00:03:38,980
@@ -175,7 +175,7 @@ digital identity. That's a first. No one's
 36
 00:03:44,000 --> 00:03:50,640
 ever done that before. It passed both
-houses unanimously. So it's a significant
+houses unanimously. It's a significant
 
 37
 00:03:50,640 --> 00:03:55,160
@@ -194,13 +194,13 @@ constitutional principles as opposed to
 
 40
 00:04:07,360 --> 00:04:14,820
-other principles. So, some other
-things. There's a vital initiative in the
+other principles. Some other things.
+There's a vital initiative in the
 
 41
 00:04:14,820 --> 00:04:20,980
 healthcare industry and actually that's
-now deepened GLEIF and DirectTrust. So,
+now deepened GLEIF and DirectTrust.
 
 42
 00:04:21,180 --> 00:04:27,140
@@ -228,7 +228,7 @@ agent, which will then qualify
 
 47
 00:04:49,720 --> 00:04:56,580
-qualified vLEI issuers. So this is an
+qualified vLEI issuers. This is an
 example of deepening and extending the
 
 48
@@ -243,8 +243,8 @@ largest single market sector in the United
 
 50
 00:05:07,360 --> 00:05:12,300
-States, the healthcare sector. So and
-they've done some proof of concepts pilot
+States, the healthcare sector.
+And they've done some proof of concepts pilot
 
 51
 00:05:12,300 --> 00:05:19,000
@@ -303,7 +303,7 @@ we'll be shortly releasing observers and
 
 62
 00:06:14,660 --> 00:06:22,900
-registrars. So this is the KERI MiniConf.
+registrars. This is the KERI MiniConf.
 And in two weeks in Utah will be the fall
 
 63
@@ -318,13 +318,13 @@ will announce their participation in a
 
 65
 00:06:35,940 --> 00:06:40,680
-multi-state SEDI consortium. So those are
-significant things that have happened just
+multi-state SEDI consortium.
+Those are significant things that have happened just
 
 66
 00:06:40,680 --> 00:06:48,620
-in 2026. So 2027 looks to be even better.
-So to give you a little bit of history,
+in 2026. 2027 looks to be even better.
+To give you a little bit of history,
 
 67
 00:06:49,480 --> 00:06:57,340
@@ -353,8 +353,8 @@ things, but the key management was always
 
 72
 00:07:23,080 --> 00:07:28,220
-a sticky thing that I like, you know, we
-didn't really work. The key management, if
+a sticky thing that I like we didn't
+really work. The key management, if
 
 73
 00:07:28,220 --> 00:07:32,420
@@ -403,8 +403,8 @@ papers as part of Evernym and the Sovrin
 
 82
 00:08:12,040 --> 00:08:22,600
-Foundation on this path to perpetual
-identity. So that takes us to 2016, 2017,
+Foundation on this path to perpetual identity.
+That takes us to 2016, 2017,
 
 83
 00:08:23,240 --> 00:08:27,620
@@ -459,7 +459,7 @@ portability and just created a host of new
 93
 00:09:16,120 --> 00:09:21,400
 problems. And those are all governance
-problems. So I call that the ledger war
+problems. I call that the ledger war
 
 94
 00:09:21,400 --> 00:09:28,520
@@ -478,22 +478,22 @@ and said, we don't want to be on that
 
 97
 00:09:40,920 --> 00:09:47,000
-battlefield. We want a ledger agnostic
-approach to identity. And so, you know, we
+battlefield. We want a ledger
+agnostic approach to identity. We
 
 98
 00:09:47,000 --> 00:09:51,400
-have it here and we have, you know, Phil's
-here too. I pointed out Timothy, but Phil
+have it here and we have Phil's here too.
+I pointed out Timothy, but Phil
 
 99
 00:09:51,400 --> 00:09:57,240
-was the founding chairman of Sovrin. So
-we have some of the original ones there.
+was the founding chairman of Sovrin.
+We have some of the original ones there.
 
 100
 00:09:58,860 --> 00:10:06,940
-So the result of that was that in 2018,
+The result of that was that in 2018,
 they started developing, actually solving
 
 101
@@ -503,8 +503,8 @@ which is the hard problem, which is key
 
 102
 00:10:10,360 --> 00:10:18,760
-management. And so wrote a
-white paper on fault tolerant key
+management. Wrote a white
+paper on fault tolerant key
 
 103
 00:10:18,760 --> 00:10:28,920
@@ -538,8 +538,8 @@ the blockchain bros would beat me up and
 
 109
 00:10:51,980 --> 00:10:56,240
-just say, no, no, no, you got to have a
-blockchain, right? So I fought, I have a
+just say, no, no, no, you got to have
+a blockchain, right? I fought, I have a
 
 110
 00:10:56,240 --> 00:11:01,820
@@ -584,7 +584,7 @@ solve the ability
 118
 00:11:39,780 --> 00:11:47,320
 to basically be protected from surprise
-quantum attacks. So that provides surprise
+quantum attacks. That provides surprise
 
 119
 00:11:47,320 --> 00:11:52,180
@@ -618,12 +618,12 @@ identity with KERI.
 125
 00:12:23,340 --> 00:12:29,320
 We started the Trust over IP (ToIP) task force
-for ACDCs in 2020. So a lot of these protocols
+for ACDCs in 2020. A lot of these protocols
 
 126
 00:12:29,320 --> 00:12:35,120
 got started in that day. And then in 2022,
-GLEIF vLEI went into production. So that
+GLEIF vLEI went into production. That
 
 127
 00:12:35,120 --> 00:12:44,100
@@ -637,12 +637,12 @@ spanning protocol. And we have Wenjing Chu,
 
 129
 00:12:49,620 --> 00:12:54,680
-the co-author there, and it's now in final
-draft. We voted on it, right? So it should
+the co-author there, and it's now in final draft.
+We voted on it, right? It should
 
 130
 00:12:54,680 --> 00:13:04,680
-go to spec. So this is the fourth spec in
+go to spec. This is the fourth spec in
 the suite of protocols. Although usually
 
 131
@@ -661,8 +661,8 @@ what you need to start using some of these
 
 134
 00:13:20,400 --> 00:13:29,340
-things in different applications. 2023, as
-I mentioned, SEDI work begins. And so it
+things in different applications. 2023,
+as I mentioned, SEDI work begins. It
 
 135
 00:13:29,340 --> 00:13:37,360
@@ -676,7 +676,7 @@ out how to get legislation through the
 
 137
 00:13:43,420 --> 00:13:49,020
-system. So it wasn't an overnight thing.
+system. It wasn't an overnight thing.
 It's not like in January of 2026, some
 
 138
@@ -711,8 +711,8 @@ KERI. We have some of the Cardano. Well,
 
 144
 00:14:18,640 --> 00:14:23,520
-I guess they're Veridian now, right? Yeah.
-So, Cardano has spun off a company called
+I guess they're Veridian now, right?
+Cardano has spun off a company called
 
 145
 00:14:23,520 --> 00:14:30,040
@@ -731,13 +731,13 @@ Linux Foundation standards went final in
 
 148
 00:14:40,380 --> 00:14:49,520
-2026. So that's sort of how we got
-started. So a lot has happened and
+2026. That's sort of how we got started.
+A lot has happened and
 
 149
 00:14:49,520 --> 00:14:54,320
-it's happening faster. So the rate is
-accelerating and you know, it's been
+it's happening faster.
+The rate is accelerating and it's been
 
 150
 00:14:54,320 --> 00:14:59,800
@@ -786,8 +786,8 @@ system that started with cryptographic
 
 159
 00:15:43,400 --> 00:15:48,800
-agility as a first order property of the
-whole system. And so the CESR protocol is
+agility as a first order property of
+the whole system. The CESR protocol is
 
 160
 00:15:48,800 --> 00:15:53,600
@@ -796,8 +796,8 @@ which means that we're future-proofed. New
 
 161
 00:15:53,600 --> 00:15:59,240
-crypto comes along. We don't have to start
-from scratch. I mean, anybody's… I mean,
+crypto comes along. We don't have to
+start from scratch. Anybody's… I mean,
 
 162
 00:15:59,440 --> 00:16:07,160
@@ -821,8 +821,8 @@ they can't because there's just the lift
 
 166
 00:16:28,920 --> 00:16:34,280
-is too heavy. And so they keep patching it
-around it. But fundamentally, if they had
+is too heavy. They keep patching it around it.
+But fundamentally, if they had
 
 167
 00:16:34,280 --> 00:16:37,260
@@ -831,8 +831,8 @@ could have just switched to a different
 
 168
 00:16:37,260 --> 00:16:42,200
-hash and not have to change any of the
-tooling. So you get that for free anytime
+hash and not have to change any of the tooling.
+You get that for free anytime
 
 169
 00:16:42,200 --> 00:16:45,760
@@ -861,18 +861,18 @@ fault tolerant because you can't make it
 
 174
 00:17:14,680 --> 00:17:27,520
-perfect. Every type of crypto has side
-channel attacks that are viable. And so
+perfect. Every type of crypto has
+side channel attacks that are viable.
 
 175
 00:17:27,520 --> 00:17:33,680
-no matter what you do, you will fail
-at some point. So the only way that it
+No matter what you do, you will fail
+at some point. The only way that it
 
 176
 00:17:33,680 --> 00:17:39,200
-actually will work is if you make it so
-that it's fault tolerant. And so a lot of
+actually will work is if you make it
+so that it's fault tolerant. A lot of
 
 177
 00:17:39,200 --> 00:17:43,860
@@ -887,7 +887,7 @@ you really want to build things with fault
 179
 00:17:49,200 --> 00:17:53,740
 tolerance using first principle fault
-tolerance. So a lot of people hear the
+tolerance. A lot of people hear the
 
 180
 00:17:53,740 --> 00:17:59,480
@@ -896,8 +896,8 @@ in the blockchain world are familiar with a
 
 181
 00:17:59,480 --> 00:18:04,380
-brand of fault tolerance, you know,
-like Byzantine fault tolerance, but in the
+brand of fault tolerance like
+Byzantine fault tolerance, but in the
 
 182
 00:18:04,380 --> 00:18:11,980
@@ -921,8 +921,8 @@ design… there are a well-known set of
 
 186
 00:18:28,960 --> 00:18:32,680
-techniques. And so what I did is I took
-those techniques and I applied them to key
+techniques. What I did is I took those
+techniques and I applied them to key
 
 187
 00:18:32,680 --> 00:18:36,080
@@ -931,8 +931,8 @@ management, all of a sudden key management
 
 188
 00:18:36,080 --> 00:18:42,100
-became a solvable problem. And so the
-first solution is you have identity that
+became a solvable problem.
+The first solution is you have identity that
 
 189
 00:18:42,100 --> 00:18:48,060
@@ -952,7 +952,7 @@ It's really, really hard to get to those
 192
 00:18:56,920 --> 00:19:06,160
 private keys. But it's not impossible.
-So if I don't have a way to recover from
+If I don't have a way to recover from
 
 193
 00:19:06,160 --> 00:19:12,780
@@ -962,17 +962,17 @@ only survives as long as the first exploit
 194
 00:19:12,780 --> 00:19:17,560
 of my private keys. And then once I lose
-my private keys, I have to start over. So
+my private keys, I have to start over.
 
 195
 00:19:17,560 --> 00:19:24,140
-it can't be perpetual if I can't recover
+It can't be perpetual if I can't recover
 from a compromise. I have to build
 
 196
 00:19:24,140 --> 00:19:30,780
-compromise recovery into my system. So
-the very first thing we did is we assume in
+compromise recovery into my system.
+The very first thing we did is we assume in
 
 197
 00:19:30,780 --> 00:19:37,640
@@ -986,8 +986,8 @@ are compromised, you're done. It's a
 
 199
 00:19:41,780 --> 00:19:46,460
-catastrophic failure. That's what it
-means. I mean, if you lose your Bitcoin
+catastrophic failure. That's what it means.
+If you lose your Bitcoin
 
 200
 00:19:46,460 --> 00:19:52,620
@@ -1007,7 +1007,7 @@ than the money in your bank account. It is
 203
 00:20:03,740 --> 00:20:09,020
 you. It is your identity that you want to
-control perpetually. So it has to be fault
+control perpetually. It has to be fault
 
 204
 00:20:09,020 --> 00:20:13,840
@@ -1031,23 +1031,23 @@ an identity. I can improved control over
 
 208
 00:20:26,100 --> 00:20:30,720
-identity, but what am I going to do with
-it? Well, how do you do things with it?
+identity, but what am I going to do with it?
+How do you do things with it?
 
 209
 00:20:30,820 --> 00:20:34,980
-Well, you issue things. People issue
-things to you. You issue things to other
+You issue things. People issue things to you.
+You issue things to other
 
 210
 00:20:34,980 --> 00:20:38,900
 people. You present things issued to
-you to other people. So you need to have
+you to other people. You need to have
 
 211
 00:20:38,900 --> 00:20:42,980
 issuances that have similar properties.
-So you need issuances that are perpetually
+You need issuances that are perpetually
 
 212
 00:20:42,980 --> 00:20:48,360
@@ -1062,7 +1062,7 @@ that same mechanism to anchor
 214
 00:20:56,000 --> 00:21:01,160
 and make issuances perpetually verifiable.
-So we got a two for one. It's like we
+We got a two for one. It's like we
 
 215
 00:21:01,160 --> 00:21:05,140
@@ -1072,7 +1072,7 @@ solved a whole other set of problems
 216
 00:21:05,140 --> 00:21:07,900
 without having to build additional
-infrastructure. Well, we had to build some
+infrastructure. We had to build some
 
 217
 00:21:07,900 --> 00:21:10,460
@@ -1086,8 +1086,8 @@ if I'm going to do things with identity,
 
 219
 00:21:17,620 --> 00:21:24,120
-especially in organizations, I need
-delegation. So delegation wasn't an ad hoc
+especially in organizations,
+I need delegation. Delegation wasn't an ad hoc
 
 220
 00:21:24,120 --> 00:21:29,940
@@ -1097,7 +1097,7 @@ property of both KERI with delegated AIDs
 221
 00:21:29,940 --> 00:21:36,060
 and ACDC with edges and delegated
-issuances. So we have two types of
+issuances. We have two types of
 
 222
 00:21:36,060 --> 00:21:43,620
@@ -1156,8 +1156,8 @@ verifiable, all of those properties. And
 
 233
 00:22:32,580 --> 00:22:37,860
-we have six years of doing that. So KERI
-is no half measures for security. We don't
+we have six years of doing that.
+KERI is no half measures for security. We don't
 
 234
 00:22:37,860 --> 00:22:44,720
@@ -1170,8 +1170,8 @@ can practically make it.
 
 236
 00:22:50,480 --> 00:22:57,860
-So another way to think about what KERI
-and ACDC do, I call the four A's of data
+Another way to think about what KERI and ACDC do,
+I call the four A's of data
 
 237
 00:22:57,860 --> 00:23:02,440
@@ -1180,8 +1180,8 @@ this is to have data that's more valuable,
 
 238
 00:23:02,600 --> 00:23:07,980
-to be able to exchange data that's
-valuable. So the first thing in the four
+to be able to exchange data that's valuable.
+The first thing in the four
 
 239
 00:23:07,980 --> 00:23:12,540
@@ -1190,8 +1190,8 @@ able to have a stable source of that
 
 240
 00:23:12,540 --> 00:23:20,120
-information that you can, that you know,
-that who authored that data. You want to
+information that you can,
+that that who authored that data. You want to
 
 241
 00:23:20,120 --> 00:23:25,820
@@ -1231,7 +1231,7 @@ are operating, but who's accountable for
 248
 00:23:56,500 --> 00:24:00,680
 what the agent does? Is the agent
-accountable? I mean, this question came up
+accountable? This question came up
 
 249
 00:24:00,680 --> 00:24:06,240
@@ -1240,8 +1240,8 @@ noticed we passed, I think it was seven
 
 250
 00:24:06,240 --> 00:24:13,380
-Waymo autonomous vehicles that did
-not have drivers, right? So when I was here
+Waymo autonomous vehicles that did not
+have drivers, right? When I was here
 
 251
 00:24:13,380 --> 00:24:19,680
@@ -1274,8 +1274,8 @@ people. Our whole legal system, our whole
 
 257
 00:24:48,040 --> 00:24:52,860
-society is based on the fact that people
-are the accountable agents. And so you
+society is based on the fact that
+people are the accountable agents. You
 
 258
 00:24:52,860 --> 00:24:57,400
@@ -1319,8 +1319,8 @@ lying when they said it. We just know who
 
 266
 00:25:38,460 --> 00:25:44,740
-said it. How do we trust the data? Well,
-one of the ways you trust is by reference,
+said it. How do we trust the data?
+One of the ways you trust is by reference,
 
 267
 00:25:44,940 --> 00:25:52,660
@@ -1339,8 +1339,8 @@ real world, the bootstrap of trust comes
 
 270
 00:26:03,840 --> 00:26:09,940
-by reference. And so for example, GLEIF
-is a global root of trust for the ultimate
+by reference. For example, GLEIF is a
+global root of trust for the ultimate
 
 271
 00:26:09,940 --> 00:26:16,900
@@ -1379,7 +1379,7 @@ is trustworthy all goes back to the start
 278
 00:26:55,000 --> 00:27:00,140
 from the authored part and goes back in.
-– Yeah, you can't have reputation if you
+– you can't have reputation if you
 
 279
 00:27:00,140 --> 00:27:03,340
@@ -1393,13 +1393,13 @@ information. Like I have a PhD, right? And
 
 281
 00:27:08,280 --> 00:27:13,740
-so you would say, well, I can trust you
-because you have a PhD. Well, why can you
+so you would say, well, I can trust
+you because you have a PhD. Why can you
 
 282
 00:27:13,740 --> 00:27:19,680
-trust me? Well, because the institution
-that granted the PhD was accredited to
+trust me? Because the institution that
+granted the PhD was accredited to
 
 283
 00:27:19,680 --> 00:27:25,420
@@ -1419,7 +1419,7 @@ well, wait a minute. What's your PhD in? I
 286
 00:27:38,760 --> 00:27:42,320
 say, well, it's electrical computer
-engineering. Well, I don't think they
+engineering. I don't think they
 
 287
 00:27:42,320 --> 00:27:46,660
@@ -1428,8 +1428,7 @@ to make explosives. That would be like a
 
 288
 00:27:46,660 --> 00:27:53,420
-chemical engineer. So
-already the authoritativeness
+chemical engineer. Already the authoritativeness
 
 289
 00:27:53,420 --> 00:28:00,080
@@ -1439,7 +1438,7 @@ reputation that tells you whether or not
 290
 00:28:00,080 --> 00:28:08,940
 there's some basis for trusting me.
-Right? So without this ability to security
+Right? Without this ability to security
 
 291
 00:28:08,940 --> 00:28:15,400
@@ -1454,12 +1453,12 @@ the internet. And we certainly can't trust
 293
 00:28:20,140 --> 00:28:24,980
 agents that are operating electronically
-without that. So we have to solve that
+without that. We have to solve that
 
 294
 00:28:24,980 --> 00:28:28,940
-problem. So the mission of the
-KERI Foundation is to foster open
+problem. The mission of the KERI
+Foundation is to foster open
 
 295
 00:28:28,940 --> 00:28:34,240
@@ -1483,8 +1482,8 @@ make that infrastructure work in a certain
 
 299
 00:28:48,600 --> 00:28:56,500
-way. So I use the phrase, I use the
-acronym DKMI for decentralized key
+way. I use the phrase,
+I use the acronym DKMI for decentralized key
 
 300
 00:28:56,500 --> 00:29:01,600
@@ -1503,18 +1502,18 @@ solve the cost floor problem of blockchain.
 
 303
 00:29:11,780 --> 00:29:15,060
-So they said, well, blockchain is way too
-expensive. The cost floor is way too high,
+They said, well, blockchain is way too expensive.
+The cost floor is way too high,
 
 304
 00:29:15,400 --> 00:29:20,480
-right? So we want it to be web scalable. We
-want an ultra low cost floor because it's
+right? We want it to be web scalable.
+We want an ultra low cost floor because it's
 
 305
 00:29:20,480 --> 00:29:27,120
-infrastructure and infrastructure costs
-money. It's not free. So you want to at
+infrastructure and infrastructure costs money.
+It's not free. You want to at
 
 306
 00:29:27,120 --> 00:29:30,520
@@ -1549,7 +1548,7 @@ that infrastructure, but you can't trust
 312
 00:29:49,280 --> 00:29:55,280
 it. It's not secure. It doesn't satisfy
-the minimal properties. So, you either
+the minimal properties. You either
 
 313
 00:29:55,280 --> 00:30:00,300
@@ -1572,7 +1571,7 @@ source open standard things
 
 317
 00:30:15,820 --> 00:30:23,140
-that run at web scale. So the idea is that
+that run at web scale. The idea is that
 we have a cooperative model so we can get
 
 318
@@ -1588,7 +1587,7 @@ transfers across trust domains that you
 320
 00:30:32,580 --> 00:30:39,300
 get a meta network effect of that value.
-And so reputation and the four A's of
+Reputation and the four A's of
 
 321
 00:30:39,300 --> 00:30:46,240
@@ -1611,8 +1610,8 @@ have talked about reputation as being three
 
 325
 00:30:59,580 --> 00:31:08,320
-things. It's competence, honesty, and
-reliability. So if I can trust somebody, I
+things. It's competence, honesty,
+and reliability. If I can trust somebody, I
 
 326
 00:31:08,320 --> 00:31:13,820
@@ -1651,18 +1650,18 @@ you have people and a lot of people think,
 
 333
 00:31:42,840 --> 00:31:48,040
-well, it's, you know, are they dishonest?
-Well, dishonesty is only one part of being
+well, it's are they dishonest?
+Dishonesty is only one part of being
 
 334
 00:31:48,040 --> 00:31:57,480
-able to trust. So what you want is those
-things that move across trust domains. So
+able to trust. What you want is those
+things that move across trust domains.
 
 335
 00:31:57,480 --> 00:32:03,640
-if I hire somebody to mow my lawn
-and they're reliable, like they show up on
+If I hire somebody to mow my lawn and
+they're reliable, like they show up on
 
 336
 00:32:03,640 --> 00:32:07,640
@@ -1676,8 +1675,8 @@ starting a business where I'm going to be
 
 338
 00:32:13,020 --> 00:32:18,800
-shoveling snow. Okay. Well, right off
-the bat, I know that they're reliable. They
+shoveling snow. Okay. Right off the bat,
+I know that they're reliable. They
 
 339
 00:32:18,800 --> 00:32:22,040
@@ -1686,13 +1685,13 @@ snow, although it doesn't take much to be
 
 340
 00:32:22,040 --> 00:32:25,760
-competent at shoveling snow. So would I
-trust them? Well, I would trust them a lot
+competent at shoveling snow.
+Would I trust them? I would trust them a lot
 
 341
 00:32:25,760 --> 00:32:32,860
 more than somebody who was not reliably
-mowing my lawn, right? So it's not a
+mowing my lawn, right? It's not a
 
 342
 00:32:32,860 --> 00:32:37,340
@@ -1701,8 +1700,8 @@ about. But there are lots of things like
 
 343
 00:32:37,340 --> 00:32:46,920
-that do move across domains and a
-lot of them are identity-based. So you can
+that do move across domains and a lot
+of them are identity-based. You can
 
 344
 00:32:46,920 --> 00:32:53,880
@@ -1726,8 +1725,7 @@ as long as somebody has a copy, you can
 
 348
 00:33:11,500 --> 00:33:16,560
-reconstitute it. So
-that makes it portable,
+reconstitute it. That makes it portable,
 
 349
 00:33:17,180 --> 00:33:20,600
@@ -1741,13 +1739,13 @@ providers. We have non-cooperative key
 
 351
 00:33:25,400 --> 00:33:32,220
-custodianship. So a lot of people that
-say, well, keeping my private keys is too
+custodianship. A lot of people that say,
+well, keeping my private keys is too
 
 352
 00:33:32,220 --> 00:33:36,940
 difficult. Grandma can't manage
-your private keys. Well, if I have a keys
+your private keys. If I have a keys
 
 353
 00:33:36,940 --> 00:33:42,940
@@ -1761,8 +1759,8 @@ provider without requiring the cooperation
 
 355
 00:33:48,760 --> 00:33:56,720
-of the original provider. I mean, if for
-some reason they die in a snowmobiling
+of the original provider.
+If for some reason they die in a snowmobiling
 
 356
 00:33:56,720 --> 00:34:04,640
@@ -1825,13 +1823,13 @@ which aren't as cool as a Mars landers,
 
 368
 00:35:12,200 --> 00:35:17,140
-but they're still pretty cool. Right. So
-anyway, so I was trying to learn from them
+but they're still pretty cool. Right.
+Anyway, I was trying to learn from them
 
 369
 00:35:17,140 --> 00:35:21,140
-and they said, you know, and so the whole
-thing was about fault tolerance. It's like
+and they said and so the whole thing
+was about fault tolerance. It's like
 
 370
 00:35:21,140 --> 00:35:24,660
@@ -1841,7 +1839,7 @@ how they put fault tolerance in the Mars
 371
 00:35:24,660 --> 00:35:29,340
 lander. And the key insight they said
-is, you know, we realize that we just can't
+is we realize that we just can't
 
 372
 00:35:29,340 --> 00:35:38,240
@@ -1865,7 +1863,7 @@ could build a system that never failed to
 
 376
 00:35:53,660 --> 00:35:58,000
-detect a failure. So we can't prevent it
+detect a failure. We can't prevent it
 from failing, but we can certainly always
 
 377
@@ -1895,13 +1893,13 @@ things, stuff like that, they could boot it
 
 382
 00:36:20,360 --> 00:36:24,620
-in a particular mode where they could
-download a recovery program, you know, and
+in a particular mode where they
+could download a recovery program and
 
 383
 00:36:24,620 --> 00:36:30,660
-they were eventually able to recover it,
-you know, so the point is detect failures.
+they were eventually able to recover
+it so the point is detect failures.
 
 384
 00:36:31,220 --> 00:36:38,700
@@ -1910,8 +1908,8 @@ most important piece of infrastructure.
 
 385
 00:36:39,260 --> 00:36:47,560
-Then you can build on top of that. And so
-duplicity, once I only had one thing I had
+Then you can build on top of that.
+Duplicity, once I only had one thing I had
 
 386
 00:36:47,560 --> 00:36:51,660
@@ -1930,13 +1928,13 @@ successfully benefit from exhibits as
 
 389
 00:37:01,200 --> 00:37:05,600
-duplicity. And so the duplicity detection
-then detects it so I can recover from it
+duplicity. The duplicity detection then
+detects it so I can recover from it
 
 390
 00:37:05,600 --> 00:37:11,640
 before they gain full control over my
-identifier. So we have something called
+identifier. We have something called
 
 391
 00:37:11,640 --> 00:37:17,820
@@ -1966,12 +1964,12 @@ we'll say that they're part of the web
 396
 00:37:37,360 --> 00:37:41,920
 infrastructure and we'll talk about those.
-So that's what KERI infrastructure looks
+That's what KERI infrastructure looks
 
 397
 00:37:41,920 --> 00:37:50,480
-like. So you see that it's always two
-parties, You have entity A and entity B.
+like. You see that it's always two parties,
+You have entity A and entity B.
 
 398
 00:37:51,040 --> 00:37:54,880
@@ -1980,13 +1978,13 @@ infrastructure. The infrastructure that's
 
 399
 00:37:54,880 --> 00:37:59,340
-shared is the watcher network. So entity
-A controls their own witnesses. Entity B
+shared is the watcher network.
+Entity A controls their own witnesses. Entity B
 
 400
 00:37:59,340 --> 00:38:03,380
-controls their own witnesses, which
-means you can't trust them. So the watcher
+controls their own witnesses,
+which means you can't trust them. The watcher
 
 401
 00:38:03,380 --> 00:38:08,260
@@ -2005,8 +2003,8 @@ because in blockchain the watcher network
 
 404
 00:38:17,420 --> 00:38:22,080
-and the witness network are the same
-network. So you then have to have shared
+and the witness network are the same network.
+You then have to have shared
 
 405
 00:38:22,080 --> 00:38:27,360
@@ -2015,8 +2013,8 @@ if they don't agree to shared governance,
 
 406
 00:38:27,800 --> 00:38:32,160
-then you have the ledger wars. So we
-got rid of the ledger wars by separating
+then you have the ledger wars.
+We got rid of the ledger wars by separating
 
 407
 00:38:32,160 --> 00:38:38,060
@@ -2035,18 +2033,17 @@ watcher and all watchers do is detect
 
 410
 00:38:47,140 --> 00:38:50,540
-duplicity. So they don't
-have anything else that they have to do.
+duplicity. They don't have anything
+else that they have to do.
 
 411
 00:38:51,100 --> 00:38:56,120
-Um, and so, and so, uh, any watchers is
-good. You know, the watcher network, uh,
+Any watchers is good. The watcher network,
 
 412
 00:38:56,480 --> 00:39:02,000
-is, is mutually benefits everybody. Uh,
-and nobody, nobody has to, nobody cares
+is mutually benefits everybody.
+And nobody, nobody has to, nobody cares
 
 413
 00:39:02,000 --> 00:39:06,760
@@ -2055,13 +2052,13 @@ benefit them any more than anybody
 
 414
 00:39:06,760 --> 00:39:11,480
-else. So that, that was the, that was, so
-we call that deconstructed blockchain. So
+else. That, that was the, that was,
+so we call that deconstructed blockchain.
 
 415
 00:39:11,480 --> 00:39:14,460
-I told that to some people and they
-go, Oh, okay, that makes sense. Now we
+I told that to some people and they go,
+Oh, okay, that makes sense. Now we
 
 416
 00:39:14,460 --> 00:39:19,020
@@ -2100,7 +2097,7 @@ so that you don't have any surveillability
 
 423
 00:39:54,580 --> 00:39:59,480
-back to the issuer. So we solved the
+back to the issuer. We solved the
 privacy problem, but yet we still have
 
 424
@@ -2110,8 +2107,8 @@ correlatable because of that separation.
 
 425
 00:40:04,060 --> 00:40:08,140
-So we also did a split, right? We split
-the registrar which is controlled by the
+We also did a split, right?
+We split the registrar which is controlled by the
 
 426
 00:40:08,140 --> 00:40:13,420
@@ -2125,11 +2122,11 @@ verifiers
 428
 00:40:17,400 --> 00:40:23,020
 can observe the state, but the issuer
-can't observe the verification action. So
+can't observe the verification action.
 
 429
 00:40:23,020 --> 00:40:26,140
-it also deconstructed blockchain because
+It also deconstructed blockchain because
 those used to be on the same network as
 
 430
@@ -2179,8 +2176,8 @@ use like a like the W3C is their standard
 
 439
 00:41:17,780 --> 00:41:24,280
-is a bitstring status list, which is perfectly
-correlatable. Yeah. Is there a problem
+is a bitstring status list,
+which is perfectly correlatable. Is there a problem
 
 440
 00:41:24,280 --> 00:41:29,040
@@ -2189,13 +2186,13 @@ too difficult? Too difficult. It's just
 
 441
 00:41:29,040 --> 00:41:31,860
-they're just too difficult. The
-performance, I mean, you know, Sovrin
+they're just too difficult.
+The performance, I mean Sovrin
 
 442
 00:41:31,860 --> 00:41:37,080
 spent years trying to get the performance
-to where it was reasonable. So technically
+to where it was reasonable. Technically
 
 443
 00:41:37,080 --> 00:41:43,720
@@ -2204,12 +2201,12 @@ but practically they just it just never
 
 444
 00:41:43,720 --> 00:41:49,040
-worked out. So I said, well, I got to do
+worked out. I said, well, I got to do
 something that's web scale that works
 
 445
 00:41:49,040 --> 00:41:57,260
-cheaply. And so separating into pieces
+cheaply. Separating into pieces
 actually solves the problem in a and we
 
 446
@@ -2219,7 +2216,7 @@ before. In fact, I'll do the next slide.
 
 447
 00:42:03,040 --> 00:42:10,440
-So with bulk issuance, we can get herd
+With bulk issuance, we can get herd
 privacy with sparse Merkle trees, with bulk
 
 448
@@ -2234,13 +2231,13 @@ But here's a cool thing that we came up
 
 450
 00:42:24,820 --> 00:42:35,220
-with in the specification. And I call it
-perfect forward privacy. So by going to
+with in the specification. And I call
+it perfect forward privacy. By going to
 
 451
 00:42:35,220 --> 00:42:39,800
-this registry approach, which you can't do
-with a cryptographic accumulator. So this
+this registry approach, which you can't
+do with a cryptographic accumulator. This
 
 452
 00:42:39,800 --> 00:42:45,420
@@ -2259,8 +2256,8 @@ the issuer can issue an update that's a
 
 455
 00:43:00,020 --> 00:43:03,900
-vacuous update, no change, right? So
-you can have a no change update. It doesn't
+vacuous update, no change, right?
+You can have a no change update. It doesn't
 
 456
 00:43:03,900 --> 00:43:08,560
@@ -2279,8 +2276,8 @@ to verify the state, they can verify it
 
 459
 00:43:16,760 --> 00:43:26,440
-indefinitely. So that is a unique feature
-of this approach that we use now with KERI
+indefinitely. That is a unique feature of
+this approach that we use now with KERI
 
 460
 00:43:26,440 --> 00:43:32,480
@@ -2310,17 +2307,17 @@ way they can know is then to have a new
 465
 00:43:45,280 --> 00:43:50,580
 presentation with a new unblinding that
-tells them what the current state is. So
+tells them what the current state is.
 
 466
 00:43:50,580 --> 00:43:57,460
-it solves all the privacy problems
-associated with dynamic updates. So it
+It solves all the privacy problems
+associated with dynamic updates. It
 
 467
 00:43:57,460 --> 00:44:01,700
-doesn't become, you know, it's a really
-good solution, I guess is the way I'm
+doesn't become it's a really good
+solution, I guess is the way I'm
 
 468
 00:44:01,700 --> 00:44:07,800
@@ -2329,8 +2326,8 @@ because remember I said the key to key
 
 469
 00:44:07,800 --> 00:44:15,160
-management is detecting faults. So
-in the conventional world of verifiable
+management is detecting faults.
+In the conventional world of verifiable
 
 470
 00:44:15,160 --> 00:44:21,280
@@ -2354,33 +2351,33 @@ sign it. I sign that presentation and they
 
 474
 00:44:42,620 --> 00:44:46,420
-go, okay, yes, it was signed. So at the
-time of presentation, whoever's presenting
+go, okay, yes, it was signed.
+At the time of presentation, whoever's presenting
 
 475
 00:44:46,420 --> 00:44:50,680
 it controls the keys that control the
-identity that to which it was issued. So
+identity that to which it was issued.
 
 476
 00:44:50,680 --> 00:44:55,440
-we'll trust it, right? The verifier has
-to trust it. Well, we can do better than
+We'll trust it, right? The verifier
+has to trust it. We can do better than
 
 477
 00:44:55,440 --> 00:45:00,360
-that. So we can make it so that an
-issuance requires a presentation registry.
+that. We can make it so that an issuance
+requires a presentation registry.
 
 478
 00:45:00,740 --> 00:45:05,660
-So it's a registry just like an issuer
-registry, but the registry in this case
+It's a registry just like an issuer registry,
+but the registry in this case
 
 479
 00:45:05,660 --> 00:45:11,240
-controlled by the holder, not by the
-issuer. So when the holder presents the
+controlled by the holder, not by the issuer.
+When the holder presents the
 
 480
 00:45:11,240 --> 00:45:16,960
@@ -2418,8 +2415,8 @@ approve, they know their keys have been
 
 487
 00:45:48,220 --> 00:45:54,380
-compromised. So now they can recover from
-it. So they can limit the damage. So you
+compromised. Now they can recover from it.
+They can limit the damage. You
 
 488
 00:45:54,380 --> 00:45:58,400
@@ -2447,13 +2444,13 @@ does something that you can detect. And
 
 493
 00:46:20,180 --> 00:46:25,740
-now you know that you need to fix
-your keys. So here's how it looks like. So
+that you need to fix your keys.
+Here's how it looks like.
 
 494
 00:46:25,740 --> 00:46:32,940
-here's the issue has a has their key event
-log. Here's their registry. Each time that
+Here's the issue has a has their key event log.
+Here's their registry. Each time that
 
 495
 00:46:32,940 --> 00:46:38,740
@@ -2473,7 +2470,7 @@ successful presentation, the holder can
 498
 00:46:50,500 --> 00:46:56,040
 detect it because this has to be anchored
-in their KEL. So, they can't put it here
+in their KEL. They can't put it here
 
 499
 00:46:56,040 --> 00:47:00,840
@@ -2497,13 +2494,13 @@ KEL. They have to get the witnesses to
 
 503
 00:47:14,760 --> 00:47:21,760
-witness it. So these are things that don't
-happen in key management. Yeah, we got a
+witness it. These are things that don't
+happen in key management. We got a
 
 504
 00:47:21,760 --> 00:47:26,660
-couple minutes left. Right. So I'm
-going to I'll cover more of this stuff, but
+couple minutes left. Right.
+I'm going to I'll cover more of this stuff, but
 
 505
 00:47:26,660 --> 00:47:32,660
@@ -2537,8 +2534,8 @@ keys are compromised, then all sorts of bad
 
 511
 00:47:59,700 --> 00:48:04,840
-stuff happens and this protocol isn't
-secure. So they already assume away the
+stuff happens and this protocol isn't secure.
+They already assume away the
 
 512
 00:48:04,840 --> 00:48:09,580
@@ -2572,8 +2569,8 @@ because we solved the hard problem in key
 
 518
 00:48:31,820 --> 00:48:40,240
-management. So I try to come up with
-a simplified way to think about KERI. So
+management. I try to come up with a
+simplified way to think about KERI.
 
 519
 00:48:40,240 --> 00:48:47,040
@@ -2592,8 +2589,8 @@ perpetual. You can attach reputation to it
 
 522
 00:48:57,540 --> 00:49:02,320
-and the reputation sticks. So you
-can trust it. Autonomic means the user
+and the reputation sticks.
+You can trust it. Autonomic means the user
 
 523
 00:49:02,320 --> 00:49:06,600
@@ -2603,22 +2600,22 @@ the user controlled identity, not some
 524
 00:49:06,600 --> 00:49:14,340
 other entity. And pseudonymity means that
-it's an identifier. It isn't your name. So
+it's an identifier. It isn't your name.
 
 525
 00:49:14,340 --> 00:49:18,240
-you can have some degree of separation
+You can have some degree of separation
 between the identity and the natural
 
 526
 00:49:18,240 --> 00:49:23,480
 person or the identity and whatever.
-So you can have as much privacy as
+You can have as much privacy as
 
 527
 00:49:23,480 --> 00:49:30,480
-practically possible, right? So it's
-pseudonymity and you use a cryptonyms. The
+practically possible, right?
+It's pseudonymity and you use a cryptonyms. The
 
 528
 00:49:30,480 --> 00:49:36,080
@@ -2627,8 +2624,8 @@ context. This has to do with what do you
 
 529
 00:49:36,080 --> 00:49:42,800
-do with this side? Well, if I want to
-exchange data with somebody, I want to be
+do with this side? If I want to exchange
+data with somebody, I want to be
 
 530
 00:49:42,800 --> 00:49:47,940
@@ -2637,8 +2634,8 @@ want that exchange to have the four A's.
 
 531
 00:49:48,220 --> 00:49:56,820
-Author, authenticated, authorized, and
-authoritative. How do I do that? Well, I
+Author, authenticated, authorized,
+and authoritative. How do I do that? I
 
 532
 00:49:56,820 --> 00:50:02,220
@@ -2647,8 +2644,8 @@ can exchange data like that, but we don't
 
 533
 00:50:02,220 --> 00:50:06,580
-want any third parties to see that. And
-so I need a way to control a confidential
+want any third parties to see that.
+I need a way to control a confidential
 
 534
 00:50:06,580 --> 00:50:11,160
@@ -2662,8 +2659,8 @@ is really intimate knowledge that
 
 536
 00:50:17,120 --> 00:50:21,680
-only you know. So when I say private
-key, that's using the true definition of
+only you know. When I say private key,
+that's using the true definition of
 
 537
 00:50:21,680 --> 00:50:25,900
@@ -2682,8 +2679,8 @@ exchanging data and you're not going to
 
 540
 00:50:38,380 --> 00:50:42,120
-share it with somebody else. Well,
-confidential is a very clear meaning. You
+share it with somebody else.
+Confidential is a very clear meaning. You
 
 541
 00:50:42,120 --> 00:50:46,260
@@ -2728,7 +2725,7 @@ technically cannot stop them. Once they
 549
 00:51:19,140 --> 00:51:23,160
 know something, they can share it with
-anybody they want. So there's no technical
+anybody they want. There's no technical
 
 550
 00:51:23,160 --> 00:51:28,020
@@ -2756,13 +2753,13 @@ ways. Yes.
 
 555
 00:51:45,080 --> 00:51:52,500
-So I call this control over confidential
-context. Anyway, so the shorthand for this
+I call this control over confidential context.
+Anyway, the shorthand for this
 
 556
 00:51:52,500 --> 00:52:01,500
-is RAPC3 or Rhapsody. So my only comment
-Sam was if you had a mechanism in the data
+is RAPC3 or Rhapsody. My only comment Sam
+was if you had a mechanism in the data
 
 557
 00:52:01,500 --> 00:52:07,680
@@ -2781,8 +2778,8 @@ copy it then you can't stop that. Right but
 
 560
 00:52:16,980 --> 00:52:22,280
-there is a window. Well yeah but like I
-said it doesn't fundamentally prevent the
+there is a window. But like I said
+it doesn't fundamentally prevent the
 
 561
 00:52:22,280 --> 00:52:27,320
@@ -2796,8 +2793,8 @@ leaks out, somebody else can correlate it,
 
 563
 00:52:32,540 --> 00:52:36,100
-re-identify it, all of that works. Yeah,
-there's lots of little tricks that people
+re-identify it, all of that works.
+There's lots of little tricks that people
 
 564
 00:52:36,100 --> 00:52:40,400
@@ -2827,7 +2824,7 @@ a zero-knowledge proof is any proof that
 569
 00:53:04,900 --> 00:53:12,540
 discloses some data without forcing you to
-disclose other data. So a Merkle tree is a
+disclose other data. A Merkle tree is a
 
 570
 00:53:12,540 --> 00:53:16,960
@@ -2851,7 +2848,7 @@ signature without disclosing the private
 
 574
 00:53:28,100 --> 00:53:31,320
-key or their nonce. So that's technically
+key or their nonce. That's technically
 a zero-knowledge proof. Now, there are
 
 575
@@ -2876,8 +2873,8 @@ because as soon as the issuer's keys are
 
 579
 00:53:52,800 --> 00:53:57,780
-rotated, you can't trust any of those
-proofs. And so they've been misused. When
+rotated, you can't trust any of those proofs.
+They've been misused. When
 
 580
 00:53:57,780 --> 00:54:02,520
@@ -2926,8 +2923,8 @@ rotation? It's something called a crypto
 
 589
 00:54:41,580 --> 00:54:47,100
-period. So a crypto period is a
-statistical concept. But for example, if
+period. A crypto period is a statistical concept.
+But for example, if
 
 590
 00:54:47,100 --> 00:54:53,020
@@ -2936,8 +2933,8 @@ NIST, one of the things that determines
 
 591
 00:54:53,020 --> 00:54:58,400
-the maximum crypto period for a set
-of keys is your IT staff turnover. So let's
+the maximum crypto period for a set of
+keys is your IT staff turnover. Let's
 
 592
 00:54:58,400 --> 00:55:01,920
@@ -2981,8 +2978,8 @@ no control over them once he walks out the
 
 600
 00:55:29,460 --> 00:55:34,100
-door. So the idea of using those sorts
-of zero knowledge proofs for long-term
+door. The idea of using those sorts of
+zero knowledge proofs for long-term
 
 601
 00:55:34,100 --> 00:55:39,780
@@ -3016,8 +3013,8 @@ are compromised, there's no security. It
 
 607
 00:56:06,080 --> 00:56:09,780
-says that. So they assume already that
-your key that the issuer's keys can never
+says that. They assume already that your
+key that the issuer's keys can never
 
 608
 00:56:09,780 --> 00:56:13,540
@@ -3077,12 +3074,12 @@ it's because the assumptions don't apply
 619
 00:56:58,540 --> 00:57:02,580
 to the application and so you can't use
-it in that application. So that's what I
+it in that application. That's what I
 
 620
 00:57:02,580 --> 00:57:05,660
-think is zero knowledge proof. So I hate
-it when people say Sam doesn't like zero
+think is zero knowledge proof.
+I hate it when people say Sam doesn't like zero
 
 621
 00:57:05,660 --> 00:57:09,620
@@ -3101,8 +3098,8 @@ knowledge proof, you shouldn't be using
 
 624
 00:57:17,120 --> 00:57:23,280
-them just because it's a cool name. Right?
-That's a bad idea. Yeah. So anyway, are we
+them just because it's a cool name.
+Right? That's a bad idea. Anyway, are we
 
 625
 00:57:23,280 --> 00:57:27,320

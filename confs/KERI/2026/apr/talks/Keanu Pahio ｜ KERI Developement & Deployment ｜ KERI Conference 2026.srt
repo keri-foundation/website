@@ -72,7 +72,7 @@ watchers.
 
 19
 00:01:15,840 --> 00:01:18,000
-So I want to talk first about the KERI
+I want to talk first about the KERI
 
 20
 00:01:18,000 --> 00:01:20,034
@@ -176,7 +176,7 @@ And then we're going to go through
 
 45
 00:02:28,879 --> 00:02:31,120
-deploying it. So we have just three
+deploying it. We have just three
 
 46
 00:02:31,120 --> 00:02:32,640
@@ -272,7 +272,7 @@ I'm just going to show you a bit through
 
 69
 00:03:30,959 --> 00:03:34,159
-those docs. So the developer guide in
+those docs. The developer guide in
 
 70
 00:03:34,159 --> 00:03:37,120
@@ -280,7 +280,7 @@ those docs explain what I
 
 71
 00:03:37,120 --> 00:03:39,680
-explained before. So if you need a
+explained before. If you need a
 
 72
 00:03:39,680 --> 00:03:41,280
@@ -356,7 +356,7 @@ activate the virtual environment
 
 90
 00:05:10,917 --> 00:05:12,637
-So here we have our Locksmith.
+Here we have our Locksmith.
 
 91
 00:05:13,083 --> 00:05:16,720
@@ -376,7 +376,7 @@ No passcode and then, here you go.
 
 95
 00:05:27,440 --> 00:05:29,199
-So here…
+Here…
 
 96
 00:05:29,199 --> 00:05:32,320
@@ -436,7 +436,7 @@ we have.
 
 110
 00:06:04,560 --> 00:06:06,240
-So the boot server, what is the boot
+The boot server, what is the boot
 
 111
 00:06:06,240 --> 00:06:09,039
@@ -520,11 +520,11 @@ problem is that the boot server is
 
 131
 00:07:02,000 --> 00:07:03,599
-private. So it's not publicly
+private. It's not publicly
 
 132
 00:07:03,599 --> 00:07:05,840
-accessible. So even if you try to send a
+accessible. Even if you try to send a
 
 133
 00:07:05,840 --> 00:07:09,039
@@ -536,11 +536,11 @@ But the witness server and the
 
 135
 00:07:11,680 --> 00:07:14,400
-watcher server, those two are public. So
+watcher server, those two are public.
 
 136
 00:07:14,400 --> 00:07:16,479
-once you have your witnesses and your
+Once you have your witnesses and your
 
 137
 00:07:16,479 --> 00:07:19,039
@@ -552,7 +552,7 @@ however you want. And same for the
 
 139
 00:07:21,759 --> 00:07:24,639
-watcher API this is also private. So the
+watcher API this is also private. The
 
 140
 00:07:24,639 --> 00:07:28,639
@@ -648,7 +648,7 @@ plugin before we go through the boot
 
 163
 00:08:40,800 --> 00:08:42,399
-server. So I want to go to the plugin
+server. I want to go to the plugin
 
 164
 00:08:42,399 --> 00:08:45,200
@@ -784,7 +784,7 @@ witnesses and watcher. The kf-boot is
 
 197
 00:10:09,519 --> 00:10:11,680
-also available publicly. So if you want
+also available publicly. If you want
 
 198
 00:10:11,680 --> 00:10:13,360
@@ -856,7 +856,7 @@ I'm going to go here, paste these,
 
 215
 00:11:09,279 --> 00:11:12,320
-and then run it. So now you can see that
+and then run it. Now you can see that
 
 216
 00:11:12,320 --> 00:11:17,372
@@ -876,7 +876,7 @@ address for the
 
 220
 00:12:00,160 --> 00:12:03,920
-boot server. So here and then if I run
+boot server. Here and then if I run
 
 221
 00:12:03,920 --> 00:12:06,156
@@ -896,7 +896,7 @@ can get in.
 
 225
 00:12:53,680 --> 00:12:59,279
-So, I actually can't see it, but
+I actually can't see it, but
 
 226
 00:12:59,279 --> 00:13:03,360
@@ -940,7 +940,7 @@ I could…
 
 236
 00:13:26,000 --> 00:13:27,120
-– Yeah, go ahead.
+– Go ahead.
 
 237
 00:13:27,120 --> 00:13:28,720
@@ -956,7 +956,7 @@ the whole slide and maybe I'll do
 
 240
 00:13:33,200 --> 00:13:36,639
-another demo. But so let me finish the
+another demo. Let me finish the
 
 241
 00:13:36,639 --> 00:13:40,959
@@ -984,7 +984,7 @@ of course, because they're the witnesses.
 
 247
 00:13:54,000 --> 00:13:55,360
-So same thing, we're going to go through
+Same thing, we're going to go through
 
 248
 00:13:55,360 --> 00:13:58,240
@@ -996,7 +996,7 @@ how to run it locally.
 
 250
 00:14:01,360 --> 00:14:03,600
-So first you can get the code on the
+First you can get the code on the
 
 251
 00:14:03,600 --> 00:14:06,480
@@ -1008,7 +1008,7 @@ Foundation.
 
 253
 00:14:08,320 --> 00:14:12,959
-It also has docs. So I have the
+It also has docs. I have the
 
 254
 00:14:12,959 --> 00:14:15,760
@@ -1036,7 +1036,7 @@ If you were here last time Ryan (Hansen),
 
 260
 00:14:29,839 --> 00:14:32,399
-you talked about it and how it works. So
+you talked about it and how it works.
 
 261
 00:14:32,399 --> 00:14:34,720
@@ -1072,7 +1072,7 @@ show it here.
 
 269
 00:15:02,072 --> 00:15:07,440
-So I have it here. Let me activate the ..,
+I have it here. Let me activate the ..,
 
 270
 00:15:27,990 --> 00:15:28,881
@@ -1184,7 +1184,7 @@ gets the OOBIs and sends the data
 
 297
 00:16:43,680 --> 00:16:46,000
-back. That's all it does. So, if you
+back. That's all it does. If you
 
 298
 00:16:46,000 --> 00:16:49,440
@@ -1228,11 +1228,11 @@ which would also be under
 
 308
 00:17:14,559 --> 00:17:17,280
-under this. So it's in
+under this. It's in
 
 309
 00:17:17,280 --> 00:17:19,600
-”src/witopnet/witnessing.py”. So if you want to
+”src/witopnet/witnessing.py”. If you want to
 
 310
 00:17:19,600 --> 00:17:22,207
@@ -1272,11 +1272,11 @@ I don't think we can install from Pypy
 
 319
 00:17:48,720 --> 00:17:50,960
-yet. Correct me if I'm wrong. Yeah, we
+yet. Correct me if I'm wrong. We
 
 320
 00:17:50,960 --> 00:17:53,200
-can't install it from PyPy yet. So, just
+can't install it from PyPy yet. Just
 
 321
 00:17:53,200 --> 00:17:56,640
@@ -1348,7 +1348,7 @@ see that it's going up because the
 
 338
 00:19:19,840 --> 00:19:21,760
-witnesses are running. So, they're all
+witnesses are running. They're all
 
 339
 00:19:21,760 --> 00:19:26,310
@@ -1376,7 +1376,7 @@ running. They have to be together.
 
 345
 00:19:41,679 --> 00:19:43,520
-So, first would be the witnesses and
+First would be the witnesses and
 
 346
 00:19:43,520 --> 00:19:45,440
@@ -1408,7 +1408,7 @@ provision the watcher.
 
 353
 00:20:03,600 --> 00:20:08,320
-So to finish: what we have is this
+To finish: what we have is this
 
 354
 00:20:08,320 --> 00:20:10,000
@@ -1460,7 +1460,7 @@ Given that KERI is a protocol and again
 
 366
 00:20:42,953 --> 00:20:43,840
-protocols not companies. So why
+protocols not companies. Why
 
 367
 00:20:43,840 --> 00:20:45,280
@@ -1520,11 +1520,11 @@ for example for the plugin if I can
 
 381
 00:21:21,120 --> 00:21:24,640
-find it. I think it was here. Oh yeah.
+find it. I think it was here.
 
 382
 00:21:24,640 --> 00:21:25,760
-So, for example, for the KERI
+For example, for the KERI
 
 383
 00:21:25,760 --> 00:21:27,600
@@ -1532,7 +1532,7 @@ Foundation plugin, all it does right now
 
 384
 00:21:27,600 --> 00:21:29,280
-is just onboarding. So, it's pretty
+is just onboarding. It's pretty
 
 385
 00:21:29,280 --> 00:21:31,840
@@ -1544,7 +1544,7 @@ can make your own plugin where you
 
 387
 00:21:33,280 --> 00:21:35,520
-include payment. So, people go through
+include payment. People go through
 
 388
 00:21:35,520 --> 00:21:37,360
@@ -1564,7 +1564,7 @@ money was transferred.
 
 392
 00:21:43,039 --> 00:21:44,559
-– Yeah. So, it could it could go through
+– Yeah. It could go through
 
 393
 00:21:44,559 --> 00:21:47,039
@@ -1652,7 +1652,7 @@ so you can expand…
 
 414
 00:22:31,760 --> 00:22:34,320
-– So you're really not modifying any other…
+– You're really not modifying any other…
 
 415
 00:22:34,320 --> 00:22:35,919
@@ -1708,7 +1708,7 @@ stats if you wanted to but that's up to
 
 428
 00:23:11,200 --> 00:23:13,280
-you. So I'm just trying to give you an
+you. I'm just trying to give you an
 
 429
 00:23:13,280 --> 00:23:16,240
@@ -1736,7 +1736,7 @@ into the KERIpy.
 
 435
 00:23:29,120 --> 00:23:31,600
-– Yeah, no problem. If you don't have
+– No problem. If you don't have
 
 436
 00:23:31,600 --> 00:23:33,600
@@ -1745,4 +1745,3 @@ any questions, then I think I'll give
 437
 00:23:33,600 --> 00:23:37,559
 you back 20 minutes.
-

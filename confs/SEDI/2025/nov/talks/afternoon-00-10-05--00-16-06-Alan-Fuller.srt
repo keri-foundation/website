@@ -15,8 +15,8 @@ want to talk about digital identity as
 
 4
 00:00:15,800 --> 00:00:20,780
-critical infrastructure. So as Phil
-Windley talked about earlier, the purpose
+critical infrastructure.
+As Phil Windley talked about earlier, the purpose
 
 5
 00:00:20,780 --> 00:00:26,520
@@ -70,7 +70,7 @@ online age changes the nature of these
 
 15
 00:01:15,520 --> 00:01:22,540
-things. Okay, so in the digital age where
+things. Okay, in the digital age where
 so much of our lives have moved online
 
 16
@@ -100,8 +100,8 @@ dollars in fraud and a lot of that fraud
 
 21
 00:01:48,320 --> 00:01:54,680
-is tied directly to not having good
-identity verification. So, you know, for
+is tied directly to not having
+good identity verification. For
 
 22
 00:01:54,680 --> 00:02:00,780
@@ -180,8 +180,8 @@ then we have many different online
 
 37
 00:03:17,600 --> 00:03:24,240
-commercial and travel related needs. But
-we have a big problem. And so as part of
+commercial and travel related needs.
+But we have a big problem. As part of
 
 38
 00:03:24,240 --> 00:03:29,580
@@ -201,7 +201,7 @@ numerous efforts by malicious actors
 41
 00:03:43,340 --> 00:03:50,480
 trying to create fraud, trying to create
-ransomware attacks. And so what we see is
+ransomware attacks. What we see is
 
 42
 00:03:50,480 --> 00:03:57,780
@@ -215,8 +215,8 @@ attack vector most often used, is
 
 44
 00:04:03,000 --> 00:04:11,740
-identity. And so because digital identity
-is critical infrastructure, incomplete and
+identity. Because digital identity is
+critical infrastructure, incomplete and
 
 45
 00:04:11,740 --> 00:04:18,500
@@ -240,13 +240,13 @@ that is available. And we know that
 
 49
 00:04:33,880 --> 00:04:41,020
-nothing is perfect. So we need an ability
-if compromise occurs, or I should say when
+nothing is perfect. We need an ability if
+compromise occurs, or I should say when
 
 50
 00:04:41,020 --> 00:04:46,760
-compromise occurs, we must have a way to
-recover. So when we think about SEDI and
+compromise occurs, we must have a way to recover.
+When we think about SEDI and
 
 51
 00:04:46,760 --> 00:04:52,780
@@ -270,8 +270,8 @@ ability to recover if those are
 
 55
 00:05:07,500 --> 00:05:12,740
-compromised, you know, short of canceling
-and reissuing credentials. So the ability
+compromised short of canceling and
+reissuing credentials. The ability
 
 56
 00:05:12,740 --> 00:05:20,900
@@ -293,5 +293,4 @@ All righty.
 
 60
 00:05:47,440 --> 00:05:52,800
-They said wait 30 seconds. something
-
+They said wait 30 seconds. Something

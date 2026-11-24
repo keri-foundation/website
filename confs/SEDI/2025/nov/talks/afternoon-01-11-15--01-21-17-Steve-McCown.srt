@@ -41,12 +41,12 @@ produce actionable intelligence. And in
 9
 00:00:52,920 --> 00:01:00,320
 that capacity, I was able to be given
-target sites and and pull together enough
+target sites and pull together enough
 
 10
 00:01:00,320 --> 00:01:06,960
 information from the internet that
-resulted in classified reports. So the
+resulted in classified reports. The
 
 11
 00:01:06,960 --> 00:01:12,600
@@ -86,12 +86,12 @@ forces attacking the other forces. In
 18
 00:01:57,980 --> 00:02:02,400
 modern times, let's talk about
-surveillance for modern times. So how do
+surveillance for modern times. How do
 
 19
 00:02:02,400 --> 00:02:07,040
-email marketers know when to call you? So
-sometimes, and this happened to me
+email marketers know when to call you?
+Sometimes, and this happened to me
 
 20
 00:02:07,040 --> 00:02:11,300
@@ -110,8 +110,8 @@ Here's an example, one of many examples of
 
 23
 00:02:24,540 --> 00:02:30,820
-what we call tracking beacons. So what
-they'll do, an email is simply like a web
+what we call tracking beacons.
+What they'll do, an email is simply like a web
 
 24
 00:02:30,820 --> 00:02:37,120
@@ -150,7 +150,7 @@ client allows, you can then send that off.
 
 31
 00:03:13,920 --> 00:03:21,120
-So that's a modern example of open source
+That's a modern example of open source
 intelligence. And this leads us into what
 
 32
@@ -196,17 +196,17 @@ University with the Army, they did a study
 40
 00:04:08,600 --> 00:04:15,780
 back in 2023 about data brokers and the
-sale of data on US military personnel. So
+sale of data on US military personnel.
 
 41
 00:04:15,780 --> 00:04:19,920
-data brokers using these kinds of methods
-were able to collect sufficient
+Data brokers using these kinds of
+methods were able to collect sufficient
 
 42
 00:04:19,920 --> 00:04:25,680
-information that it became of interest to
-foreign entities. And so as part of the
+information that it became of interest
+to foreign entities. As part of the
 
 43
 00:04:25,680 --> 00:04:31,360
@@ -215,7 +215,7 @@ brokers originating from either US domains
 
 44
 00:04:31,360 --> 00:04:39,400
-or .Asia domains and purchase information
+or.Asia domains and purchase information
 on US service members and veterans. And
 
 45
@@ -246,12 +246,12 @@ legislation and also to restrict the
 50
 00:05:13,660 --> 00:05:20,580
 collection of data on current and former
-military personnel. So how SEDI helps
+military personnel. How SEDI helps
 
 51
 00:05:20,580 --> 00:05:28,480
-protect our identity. So one of the
-things, if you look back to SB 260, it
+protect our identity. One of the things,
+if you look back to SB 260, it
 
 52
 00:05:28,480 --> 00:05:35,540
@@ -261,11 +261,11 @@ state-endorsed digital identity enables an
 53
 00:05:35,540 --> 00:05:42,800
 individual to selectively disclose
-elements of an individual's identity. So
+elements of an individual's identity.
 
 54
 00:05:42,800 --> 00:05:47,640
-taking the driver's license as an example,
+Taking the driver's license as an example,
 when you go to a government entity, say
 
 55
@@ -280,7 +280,7 @@ information in order to get a driver's
 
 57
 00:05:56,080 --> 00:06:00,560
-license credential. So we don't really
+license credential. We don't really
 have an expectation of privacy in that
 
 58
@@ -295,8 +295,8 @@ and your weight and your donor status and
 
 60
 00:06:09,820 --> 00:06:14,160
-all that kind of stuff. And so you can
-selectively disclose what the bank
+all that kind of stuff.
+You can selectively disclose what the bank
 
 61
 00:06:14,160 --> 00:06:19,820
@@ -311,7 +311,7 @@ need your address to ship whatever it is
 63
 00:06:24,600 --> 00:06:30,040
 you're buying. They don't need your
-driver's license number. And so over the
+driver's license number. Over the
 
 64
 00:06:30,040 --> 00:06:36,120
@@ -326,7 +326,7 @@ the transfer of information.
 66
 00:06:43,920 --> 00:06:51,240
 Another aspect of SB260 is asserting with
-zero correlation. So part of the one of
+zero correlation. Part of the one of
 
 67
 00:06:51,240 --> 00:06:57,520
@@ -336,7 +336,7 @@ the individual's age satisfies an age
 68
 00:06:57,520 --> 00:07:03,600
 requirement without revealing the
-individual's age or date of birth. So for
+individual's age or date of birth. For
 
 69
 00:07:03,600 --> 00:07:10,080
@@ -360,8 +360,8 @@ should be a way to give only the
 
 73
 00:07:26,700 --> 00:07:32,440
-information that is required. And that's
-what SEDI is after. So when I go to a
+information that is required.
+And that's what SEDI is after. When I go to a
 
 74
 00:07:32,440 --> 00:07:40,360
@@ -405,8 +405,8 @@ donor, my height, my weight, my address,
 
 82
 00:08:22,760 --> 00:08:30,500
-all these things that are unnecessary for
-that transaction. So SEDI gives you a
+all these things that are unnecessary
+for that transaction. SEDI gives you a
 
 83
 00:08:30,500 --> 00:08:38,680
@@ -455,13 +455,13 @@ McNeely from Sun Microsystems said back in
 
 92
 00:09:26,020 --> 00:09:34,340
-over it. And so SEDI is giving you the
-choice of what you disclose and when you
+over it. SEDI is giving you the choice
+of what you disclose and when you
 
 93
 00:09:34,340 --> 00:09:40,500
 disclose it and they put that choice in
-the hands of the holder. So that's what I
+the hands of the holder. That's what I
 
 94
 00:09:40,500 --> 00:09:45,440
@@ -470,10 +470,10 @@ and you would go back to your respective
 
 95
 00:09:45,440 --> 00:09:52,740
-companies, departments and states and and
+companies, departments and states and
 pose this to your constituents because we
 
 96
 00:09:52,740 --> 00:10:01,200
 want a private identity system that keeps
-individuals safe. So thank you very much.
+individuals safe. Thank you very much.

@@ -4,15 +4,15 @@ Samuel Smith ｜ SPAC & TSP ｜ KERI Conference 2026
 
 2
 00:00:03,280 --> 00:00:06,270
-And so we need to so accountability is
+We need to so accountability is
 
 3
 00:00:06,295 --> 00:00:09,360
-about imposing those things. So
+about imposing those things.
 
 4
 00:00:09,360 --> 00:00:12,000
-since any since you can be correlated
+Since any since you can be correlated
 
 5
 00:00:12,000 --> 00:00:13,360
@@ -60,11 +60,11 @@ I'm not going to share this data. I'm
 
 16
 00:00:36,000 --> 00:00:38,480
-going to respect your data rights. So
+going to respect your data rights.
 
 17
 00:00:38,480 --> 00:00:40,399
-any interaction system that does not
+Any interaction system that does not
 
 18
 00:00:40,399 --> 00:00:42,000
@@ -76,7 +76,7 @@ parties accountable is fundamentally
 
 20
 00:00:43,920 --> 00:00:46,239
-incompatible with privacy. It's it's not
+incompatible with privacy. It's not
 
 21
 00:00:46,239 --> 00:00:48,320
@@ -92,7 +92,7 @@ data and violate your privacy rights.
 
 24
 00:01:02,723 --> 00:01:05,590
-So how we do it?
+How we do it?
 
 25
 00:01:05,669 --> 00:01:08,640
@@ -140,7 +140,7 @@ regulatory means and potentially
 
 36
 00:01:40,880 --> 00:01:42,799
-criminal means. You know, I think one of
+criminal means. I think one of
 
 37
 00:01:42,799 --> 00:01:45,040
@@ -172,7 +172,7 @@ the law for treason is
 
 44
 00:01:59,520 --> 00:02:02,640
-death."  So anyway, it was a joke, but
+death." Anyway, it was a joke, but
 
 45
 00:02:02,640 --> 00:02:05,040
@@ -180,7 +180,7 @@ I thought it was fun to talk about
 
 46
 00:02:05,040 --> 00:02:07,119
-that. So, we want to create
+that. We want to create
 
 47
 00:02:07,119 --> 00:02:09,440
@@ -216,7 +216,7 @@ We also want to hold them accountable
 
 55
 00:02:22,080 --> 00:02:25,280
-for what they what they do, right?
+for what they do, right?
 
 56
 00:02:25,280 --> 00:02:28,400
@@ -252,7 +252,7 @@ badly in my presence. That's all part of
 
 64
 00:02:46,400 --> 00:02:48,080
-the environment. So you need to hold
+the environment. You need to hold
 
 65
 00:02:48,080 --> 00:02:49,440
@@ -280,7 +280,7 @@ versus what interactions the
 
 71
 00:03:03,040 --> 00:03:05,440
-internet forces on you. So we use this
+internet forces on you. We use this
 
 72
 00:03:05,440 --> 00:03:07,760
@@ -360,7 +360,7 @@ interaction without it eventually being
 
 91
 00:03:54,720 --> 00:03:57,120
-correlated. So what you have to
+correlated. What you have to
 
 92
 00:03:57,120 --> 00:03:58,959
@@ -388,7 +388,7 @@ data and no protections for non-content
 
 98
 00:04:12,879 --> 00:04:16,000
-metadata. So I can encrypt the content.
+metadata. I can encrypt the content.
 
 99
 00:04:16,000 --> 00:04:17,840
@@ -404,7 +404,7 @@ leaky. It'll always provide correlatable
 
 102
 00:04:22,000 --> 00:04:24,320
-information. So what I have to do is I
+information. What I have to do is I
 
 103
 00:04:24,320 --> 00:04:29,040
@@ -448,7 +448,7 @@ protected that it can't be surveiled
 
 113
 00:04:53,440 --> 00:04:55,600
-from the outside. So we can make a
+from the outside. We can make a
 
 114
 00:04:55,600 --> 00:04:58,800
@@ -456,7 +456,7 @@ highly surveillance-resistant
 
 115
 00:04:58,800 --> 00:05:03,520
-communication channel, right? So if
+communication channel, right? If
 
 116
 00:05:03,520 --> 00:05:06,720
@@ -472,11 +472,11 @@ they're using intermediaries, then
 
 119
 00:05:11,840 --> 00:05:14,000
-they can surveil that. if there's any
+they can surveil that. If there's any
 
 120
 00:05:14,000 --> 00:05:19,120
-kind of collusion, right? So, the way
+kind of collusion, right? The way
 
 121
 00:05:19,120 --> 00:05:21,919
@@ -504,7 +504,7 @@ parties have no knowledge of what is
 
 127
 00:05:32,080 --> 00:05:36,720
-what was shared. So if the second party
+what was shared. If the second party
 
 128
 00:05:36,720 --> 00:05:38,880
@@ -528,7 +528,7 @@ or who's in the party, then they broke
 
 133
 00:05:47,360 --> 00:05:49,919
-privacy. And so that follows the Supreme
+privacy. That follows the Supreme
 
 134
 00:05:49,919 --> 00:05:52,240
@@ -556,11 +556,11 @@ confused when we start talking about it.
 
 140
 00:06:03,440 --> 00:06:05,120
-So I try to be really clear and not
+I try to be really clear and not
 
 141
 00:06:05,120 --> 00:06:07,680
-get confused about it. So this is the
+get confused about it. This is the
 
 142
 00:06:07,680 --> 00:06:10,800
@@ -604,7 +604,7 @@ confidentiality.
 
 152
 00:06:33,039 --> 00:06:34,960
-So we start with the strongest possible
+We start with the strongest possible
 
 153
 00:06:34,960 --> 00:06:37,120
@@ -680,15 +680,15 @@ have to make a judgment decision
 
 171
 00:07:20,800 --> 00:07:22,080
-saying, "Well, what's what's more
+saying, "What's more
 
 172
 00:07:22,080 --> 00:07:24,560
-important? they know who you are or they
+important? They know who you are or they
 
 173
 00:07:24,560 --> 00:07:27,199
-steal all your money," right? For most
+steal all your money, "right? For most
 
 174
 00:07:27,199 --> 00:07:29,360
@@ -724,7 +724,7 @@ worried about being repressed.
 
 182
 00:07:44,880 --> 00:07:46,960
-So, the core of the protocol is a triple
+The core of the protocol is a triple
 
 183
 00:07:46,960 --> 00:07:49,120
@@ -732,7 +732,7 @@ tunnel.
 
 184
 00:07:49,120 --> 00:07:52,639
-So, we have a tunnel between A3 and B3.
+We have a tunnel between A3 and B3.
 
 185
 00:07:52,639 --> 00:07:54,240
@@ -753,7 +753,7 @@ it disappeared. All right. Anyway,
 
 189
 00:08:06,639 --> 00:08:10,400
-so it's a triple tunnel. So I
+so it's a triple tunnel. I
 
 190
 00:08:10,400 --> 00:08:13,680
@@ -761,7 +761,7 @@ have three pairs of identifiers. A3 B3
 
 191
 00:08:13,680 --> 00:08:20,080
-A2 B2 A1 B1. So endpoint A has three
+A2 B2 A1 B1. Endpoint A has three
 
 192
 00:08:20,080 --> 00:08:21,840
@@ -797,7 +797,7 @@ correlated them, but they're
 
 200
 00:08:37,919 --> 00:08:40,560
-high-entropy identifier. So they
+high-entropy identifier. They
 
 201
 00:08:40,560 --> 00:08:43,120
@@ -809,7 +809,7 @@ information that says they're related.
 
 203
 00:08:44,880 --> 00:08:47,200
-So the fact that it's B1, B2, and B3
+The fact that it's B1, B2, and B3
 
 204
 00:08:47,200 --> 00:08:48,959
@@ -817,7 +817,7 @@ doesn't mean anything. They're just ran,
 
 205
 00:08:48,959 --> 00:08:51,920
-you know, pseudo-random numbers, right?
+pseudo-random numbers, right?
 
 206
 00:08:51,920 --> 00:08:54,800
@@ -925,7 +925,7 @@ covert, they're confused. They go "Wait,
 
 232
 00:09:59,440 --> 00:10:02,240
-well, no, he's he's not a problem,"
+well, no, he's not a problem, "
 
 233
 00:10:02,240 --> 00:10:05,200
@@ -941,7 +941,7 @@ things in ways that I can't hide it if
 
 236
 00:10:08,880 --> 00:10:11,279
-I'm clandestine. So the idea is that
+I'm clandestine. The idea is that
 
 237
 00:10:11,279 --> 00:10:13,279
@@ -949,7 +949,7 @@ we're basically creating two cover
 
 238
 00:10:13,279 --> 00:10:16,959
-identities to hide this guy. And so they
+identities to hide this guy. They
 
 239
 00:10:16,959 --> 00:10:19,200
@@ -969,7 +969,7 @@ it's two covers is because of the
 
 243
 00:10:24,320 --> 00:10:27,920
-intermediaries. So what happens is,
+intermediaries. What happens is,
 
 244
 00:10:27,920 --> 00:10:31,839
@@ -981,11 +981,11 @@ I'm going to introduce the concept of
 
 246
 00:10:33,600 --> 00:10:35,279
-relationships. So remember I have three
+relationships. Remember I have three
 
 247
 00:10:35,279 --> 00:10:37,600
-three pairs of identifiers. So I have
+three pairs of identifiers. I have
 
 248
 00:10:37,600 --> 00:10:39,920
@@ -1017,7 +1017,7 @@ that removes a form of correlation of
 
 255
 00:10:57,920 --> 00:11:00,480
-metadata. So we don't necessarily want
+metadata. We don't necessarily want
 
 256
 00:11:00,480 --> 00:11:02,640
@@ -1117,7 +1117,7 @@ graphs.
 
 280
 00:12:00,480 --> 00:12:03,839
-Right? So when I go when I was here,
+Right? When I go when I was here,
 
 281
 00:12:03,839 --> 00:12:06,399
@@ -1129,7 +1129,7 @@ got multiple identifiers A 1 through 4.
 
 283
 00:12:09,760 --> 00:12:12,399
-Right? So his identity graph is that
+Right? His identity graph is that
 
 284
 00:12:12,399 --> 00:12:15,519
@@ -1145,7 +1145,7 @@ then those two graphs intersect.
 
 287
 00:12:20,880 --> 00:12:23,760
-So, if you haven't figured out .., 
+If you haven't figured out ..,
 
 288
 00:12:23,760 --> 00:12:27,519
@@ -1165,7 +1165,7 @@ I can graph that!", right. And then I can
 
 292
 00:12:33,760 --> 00:12:37,040
-reason about it. So relationships
+reason about it. Relationships
 
 293
 00:12:37,040 --> 00:12:39,279
@@ -1225,15 +1225,15 @@ generic version of it. They don't
 
 307
 00:13:08,720 --> 00:13:11,279
-understand these things. So
+understand these things.
 
 308
 00:13:11,279 --> 00:13:14,399
-relationship is just a pair of two AIDs.
+Relationship is just a pair of two AIDs.
 
 309
 00:13:14,399 --> 00:13:17,600
-So two AIDs because they're cryptonyms with high
+Two AIDs because they're cryptonyms with high
 
 310
 00:13:17,600 --> 00:13:21,440
@@ -1285,7 +1285,7 @@ totally random. That's what high entropy
 
 322
 00:13:47,279 --> 00:13:50,079
-means. So, if I don't use them in the
+means. If I don't use them in the
 
 323
 00:13:50,079 --> 00:13:52,480
@@ -1317,7 +1317,7 @@ supercorrelator not the identifiers.
 
 330
 00:14:05,360 --> 00:14:08,079
-So a context is a set of events. So we
+A context is a set of events. We
 
 331
 00:14:08,079 --> 00:14:10,240
@@ -1345,7 +1345,7 @@ they're not correlatable.
 
 337
 00:14:21,360 --> 00:14:24,639
-Right? So the goal is build 
+Right? The goal is build
 
 338
 00:14:24,639 --> 00:14:26,560
@@ -1369,7 +1369,7 @@ communication channel may be a context
 
 343
 00:14:35,760 --> 00:14:39,120
-for the AIDs in relationship. So as
+for the AIDs in relationship. As
 
 344
 00:14:39,120 --> 00:14:40,959
@@ -1409,11 +1409,11 @@ of relationships using one relationships
 
 353
 00:15:01,760 --> 00:15:04,160
-identifiers may form a partition. So
+identifiers may form a partition.
 
 354
 00:15:04,160 --> 00:15:07,120
-that's how we get
+That's how we get
 
 355
 00:15:07,120 --> 00:15:12,480
@@ -1521,7 +1521,7 @@ designing protocols to understand that
 
 381
 00:16:12,240 --> 00:16:16,399
-subtlety. So an AID common to any set
+subtlety. An AID common to any set
 
 382
 00:16:16,399 --> 00:16:18,079
@@ -1561,7 +1561,7 @@ can't do something and not have me know
 
 391
 00:16:38,880 --> 00:16:40,880
-that you did it. So I have
+that you did it. I have
 
 392
 00:16:40,880 --> 00:16:43,759
@@ -1577,11 +1577,11 @@ did that. If you leak
 
 395
 00:16:48,000 --> 00:16:51,440
-information, I know you leaked it. So
+information, I know you leaked it.
 
 396
 00:16:51,440 --> 00:16:55,279
-as soon as we weaken this and
+As soon as we weaken this and
 
 397
 00:16:55,279 --> 00:16:57,839
@@ -1593,7 +1593,7 @@ correlatable, we lose accountability.
 
 399
 00:17:00,480 --> 00:17:02,639
-And so the whole goal of what we're
+The whole goal of what we're
 
 400
 00:17:02,639 --> 00:17:04,959
@@ -1625,7 +1625,7 @@ have to isolate the context.
 
 407
 00:17:18,799 --> 00:17:21,199
-So within a context secure
+Within a context secure
 
 408
 00:17:21,199 --> 00:17:23,520
@@ -1665,7 +1665,7 @@ want to not have accountability?
 
 417
 00:17:43,039 --> 00:17:44,400
-Oh, yeah. There's lots of situations
+There's lots of situations
 
 418
 00:17:44,400 --> 00:17:46,799
@@ -1697,7 +1697,7 @@ accountability. Yes.
 
 425
 00:18:01,919 --> 00:18:04,080
-So the Signal people really
+The Signal people really
 
 426
 00:18:04,080 --> 00:18:06,559
@@ -1705,7 +1705,7 @@ emphasize deniability.
 
 427
 00:18:06,559 --> 00:18:09,360
-Yeah, that's a really good question. So,
+That's a really good question.
 
 428
 00:18:09,360 --> 00:18:12,240
@@ -1877,7 +1877,7 @@ says, "Oh, you're a criminal then, so
 
 470
 00:19:32,000 --> 00:19:34,080
-we're going to go after you anyway." So,
+we're going to go after you anyway."
 
 471
 00:19:34,080 --> 00:19:36,080
@@ -1933,7 +1933,7 @@ votes. You want to have a blind vote.
 
 484
 00:20:02,000 --> 00:20:04,799
-And so if you can tell what a voter did
+If you can tell what a voter did
 
 485
 00:20:04,799 --> 00:20:06,640
@@ -1949,7 +1949,7 @@ kinds of bad effects.
 
 488
 00:20:09,520 --> 00:20:11,840
-So you would use your 
+You would use your
 
 489
 00:20:11,840 --> 00:20:12,799
@@ -1985,7 +1985,7 @@ reason why we talk about partitions.
 
 497
 00:20:27,360 --> 00:20:29,760
-They balance these two things. strong
+They balance these two things. Strong
 
 498
 00:20:29,760 --> 00:20:32,159
@@ -1993,7 +1993,7 @@ authenticity and strong confidentiality
 
 499
 00:20:32,159 --> 00:20:35,600
-within a context. So that's one side. We
+within a context. That's one side. We
 
 500
 00:20:35,600 --> 00:20:37,039
@@ -2041,11 +2041,11 @@ because that's where most of the value
 
 511
 00:21:00,320 --> 00:21:04,960
-is. But I want to have a partition. So
+is. But I want to have a partition.
 
 512
 00:21:04,960 --> 00:21:07,280
-what can I do to make the partitions as
+What can I do to make the partitions as
 
 513
 00:21:07,280 --> 00:21:09,360
@@ -2133,7 +2133,7 @@ work to make the partition strong. Yes.
 
 534
 00:21:57,440 --> 00:21:59,120
-You mean you mean privacy or
+You mean privacy or
 
 535
 00:21:59,120 --> 00:22:01,120
@@ -2169,7 +2169,7 @@ The parties in each context you
 
 543
 00:22:16,960 --> 00:22:20,559
-can correlate. So if I go to a bank and
+can correlate. If I go to a bank and
 
 544
 00:22:20,559 --> 00:22:23,280
@@ -2193,7 +2193,7 @@ that they broke the partition.
 
 549
 00:22:32,320 --> 00:22:34,720
-There wasn't a partition there." And so
+There wasn't a partition there."
 
 550
 00:22:34,720 --> 00:22:36,400
@@ -2229,7 +2229,7 @@ tracking you across contexts.
 
 558
 00:22:52,640 --> 00:22:54,559
-So, you're saying "if you think about
+You're saying "if you think about
 
 559
 00:22:54,559 --> 00:22:56,960
@@ -2237,7 +2237,7 @@ all of those interactions as building a
 
 560
 00:22:56,960 --> 00:22:59,039
-a connection graph,"
+a connection graph, "
 
 561
 00:22:59,039 --> 00:23:00,400
@@ -2269,11 +2269,11 @@ is no correlated build
 
 568
 00:23:12,720 --> 00:23:15,600
-metadata whenever I interact, right? So
+metadata whenever I interact, right?
 
 569
 00:23:15,600 --> 00:23:17,280
-that they can't build the interaction
+That they can't build the interaction
 
 570
 00:23:17,280 --> 00:23:20,400
@@ -2301,7 +2301,7 @@ surveillers to build interaction graphs.
 
 576
 00:23:38,880 --> 00:23:41,679
-So they would know that if you're
+They would know that if you're
 
 577
 00:23:41,679 --> 00:23:43,200
@@ -2317,7 +2317,7 @@ network they're talking to somebody that
 
 580
 00:23:47,120 --> 00:23:49,840
-that is a bad person. And so when
+that is a bad person. When
 
 581
 00:23:49,840 --> 00:23:52,159
@@ -2333,7 +2333,7 @@ a one hop fight a warrant, a two hop or
 
 584
 00:23:56,320 --> 00:23:58,880
-a three hop?," right? Well, one hop is
+a three hop?, "right? One hop is
 
 585
 00:23:58,880 --> 00:24:00,720
@@ -2345,11 +2345,11 @@ interaction gap. Two hops is two hops
 
 587
 00:24:02,799 --> 00:24:05,600
-out. Well, seven hops is the whole
+out. Seven hops is the whole
 
 588
 00:24:05,600 --> 00:24:08,080
-world, right? So, a three hop FISA
+world, right? A three hop FISA
 
 589
 00:24:08,080 --> 00:24:11,440
@@ -2361,7 +2361,7 @@ right? And people go, "Oh, well, you
 
 591
 00:24:13,279 --> 00:24:16,320
-know, right?" So it doesn't take
+Right?" It doesn't take
 
 592
 00:24:16,320 --> 00:24:18,159
@@ -2369,11 +2369,11 @@ much, but it takes a lot of work to
 
 593
 00:24:18,159 --> 00:24:21,840
-to fight that. So, let's see how
+to fight that. Let's see how
 
 594
 00:24:21,840 --> 00:24:24,559
-we do that. All right. So here another
+we do that. All right. Here another
 
 595
 00:24:24,559 --> 00:24:27,760
@@ -2389,7 +2389,7 @@ that doesn't roll off the tongue very well.
 
 598
 00:24:33,919 --> 00:24:37,440
-All right. So first we have to
+All right. First we have to
 
 599
 00:24:37,440 --> 00:24:40,480
@@ -2425,7 +2425,7 @@ cipher data, I have the source identifier.
 
 607
 00:24:58,320 --> 00:25:01,360
-So that's encrypt sender. Here's
+That's encrypt sender. Here's
 
 608
 00:25:01,360 --> 00:25:04,559
@@ -2449,7 +2449,7 @@ verify the signature, I need to send the
 
 613
 00:25:13,600 --> 00:25:14,960
-source identifier. So the source
+source identifier. The source
 
 614
 00:25:14,960 --> 00:25:16,720
@@ -2493,7 +2493,7 @@ sign then encrypt, sign and encrypt,
 
 624
 00:25:43,679 --> 00:25:46,400
-right? Well, these are the properties I
+right? These are the properties I
 
 625
 00:25:46,400 --> 00:25:49,200
@@ -2525,11 +2525,11 @@ And signed and encrypt only gives me
 
 632
 00:26:02,880 --> 00:26:06,640
-one of these. So it's really bad.
+one of these. It's really bad.
 
 633
 00:26:06,640 --> 00:26:08,400
-So what I want to do is
+What I want to do is
 
 634
 00:26:08,400 --> 00:26:10,400
@@ -2565,7 +2565,7 @@ Hybrid public key encryption standard
 
 642
 00:26:32,640 --> 00:26:35,440
-basically says, "Oh yeah, you can't do
+basically says, "you can't do
 
 643
 00:26:35,440 --> 00:26:38,240
@@ -2589,15 +2589,15 @@ impersonation attack." But ESSR isn't and
 
 648
 00:26:49,919 --> 00:26:52,480
-so they say you got to sign. So if you're
+so they say you got to sign. If you're
 
 649
 00:26:52,480 --> 00:26:55,919
-not signing, you're vulnerable. So
+not signing, you're vulnerable.
 
 650
 00:26:55,919 --> 00:26:57,360
-every protocol on the planet that
+Every protocol on the planet that
 
 651
 00:26:57,360 --> 00:26:59,279
@@ -2673,7 +2673,7 @@ Okay.
 
 669
 00:27:30,640 --> 00:27:33,520
-How many? But you have you have one P
+How many? But you have one P
 
 670
 00:27:33,520 --> 00:27:36,799
@@ -2697,15 +2697,15 @@ have to explain how the triple tunnel
 
 675
 00:27:43,679 --> 00:27:44,960
-works. So I
+works. I
 
 676
 00:27:44,960 --> 00:27:46,080
-– So Sam,
+– Sam,
 
 677
 00:27:46,080 --> 00:27:48,159
-I think I need to Oh, there I Yeah, here
+I think I need to Oh, there I here
 
 678
 00:27:48,159 --> 00:27:50,240
@@ -2713,7 +2713,7 @@ we go. Seeing a single tunnel. Yes.
 
 679
 00:27:50,240 --> 00:27:52,960
-– So one of the things you said a bit ago
+– One of the things you said a bit ago
 
 680
 00:27:52,960 --> 00:27:57,679
@@ -2777,11 +2777,11 @@ that.
 
 695
 00:28:32,320 --> 00:28:33,200
-No. Yeah,
+No.
 
 696
 00:28:33,200 --> 00:28:34,159
-that's important.
+That's important.
 
 697
 00:28:34,159 --> 00:28:36,399
@@ -2797,7 +2797,7 @@ two AIDs that are cover identities,
 
 700
 00:28:41,200 --> 00:28:43,360
-So, what is a 
+What is a
 
 701
 00:28:43,360 --> 00:28:46,480
@@ -2805,7 +2805,7 @@ covert op? A covert op says I have a
 
 702
 00:28:46,480 --> 00:28:50,640
-cover identity. So, let's say I'm
+cover identity. Let's say I'm
 
 703
 00:28:50,640 --> 00:28:52,960
@@ -2833,7 +2833,7 @@ station as the ticket taker at the
 
 709
 00:29:05,039 --> 00:29:06,880
-train station. So, I'm going to spend
+train station. I'm going to spend
 
 710
 00:29:06,880 --> 00:29:10,720
@@ -2909,27 +2909,27 @@ But if I'm a ticket taker, I'm there
 
 728
 00:29:54,399 --> 00:29:57,279
-every day. It's my job to be there. So,
+every day. It's my job to be there.
 
 729
 00:29:57,279 --> 00:29:59,360
-yeah, give me your ticket. Oh, okay. Who
+Give me your ticket. Oh, okay. Who
 
 730
 00:29:59,360 --> 00:30:01,919
-are you? Oh, yeah. Who are you? Okay.
+are you? Who are you? Okay.
 
 731
 00:30:01,919 --> 00:30:03,600
-Yeah, I know who is everybody getting
+I know who is everybody getting
 
 732
 00:30:03,600 --> 00:30:06,559
- in and off the train, right? So,
+in and off the train, right?
 
 733
 00:30:06,559 --> 00:30:08,880
-nobody suspects me as surveilling
+Nobody suspects me as surveilling
 
 734
 00:30:08,880 --> 00:30:11,360
@@ -2937,11 +2937,11 @@ because I'm supposed to surveil as part
 
 735
 00:30:11,360 --> 00:30:13,840
-of my cover identity. So, this is great.
+of my cover identity. This is great.
 
 736
 00:30:13,840 --> 00:30:15,600
-So, what we want is a cover identity
+What we want is a cover identity
 
 737
 00:30:15,600 --> 00:30:17,919
@@ -2965,7 +2965,7 @@ the surveillor can't see through. Right?
 
 742
 00:30:26,720 --> 00:30:30,240
-So, the first cover identity is that I
+The first cover identity is that I
 
 743
 00:30:30,240 --> 00:30:32,159
@@ -3001,7 +3001,7 @@ between them. Right? I can encrypt
 
 751
 00:30:50,000 --> 00:30:52,240
-the content. So I have confidentiality
+the content. I have confidentiality
 
 752
 00:30:52,240 --> 00:30:55,600
@@ -3021,7 +3021,7 @@ together. Right? And then I've got a Q
 
 756
 00:31:04,080 --> 00:31:07,279
-to B1. So here's the path. So my
+to B1. Here's the path. My
 
 757
 00:31:07,279 --> 00:31:09,600
@@ -3041,7 +3041,7 @@ is that an intermediary .., what does an
 
 761
 00:31:17,919 --> 00:31:20,960
-intermediary do? It routes. So if it's
+intermediary do? It routes. If it's
 
 762
 00:31:20,960 --> 00:31:24,240
@@ -3057,7 +3057,7 @@ Q's that P talks to.
 
 765
 00:31:32,960 --> 00:31:36,480
-So when Q when P sends out a packet,
+When Q when P sends out a packet,
 
 766
 00:31:36,480 --> 00:31:38,320
@@ -3105,11 +3105,11 @@ The problem is that intermediary P has
 
 777
 00:32:02,559 --> 00:32:07,760
-to know which Q A wants to send to. So
+to know which Q A wants to send to.
 
 778
 00:32:07,760 --> 00:32:10,080
-he's now a problem.
+He's now a problem.
 
 779
 00:32:10,080 --> 00:32:12,720
@@ -3117,11 +3117,11 @@ And intermediary Q needs to know how to
 
 780
 00:32:12,720 --> 00:32:16,720
-send to B, right? So he's a problem.
+send to B, right? He's a problem.
 
 781
 00:32:16,720 --> 00:32:19,600
-So I can't just tunnel once because
+I can't just tunnel once because
 
 782
 00:32:19,600 --> 00:32:21,760
@@ -3129,7 +3129,7 @@ the intermediaries can disclose the
 
 783
 00:32:21,760 --> 00:32:24,480
-tunnel. So what do I do? I add a second
+tunnel. What do I do? I add a second
 
 784
 00:32:24,480 --> 00:32:27,919
@@ -3141,7 +3141,7 @@ encrypted.
 
 786
 00:32:29,760 --> 00:32:33,279
-So intermediary P doesn't see A2
+Intermediary P doesn't see A2
 
 787
 00:32:33,279 --> 00:32:35,360
@@ -3149,7 +3149,7 @@ because it's content data relative to
 
 788
 00:32:35,360 --> 00:32:39,360
-the pink. So now inter[mediary] P doesn't know
+the pink. Now inter[mediary] P doesn't know
 
 789
 00:32:39,360 --> 00:32:41,840
@@ -3173,11 +3173,11 @@ the one that has to unwrap this one to
 
 794
 00:32:54,640 --> 00:32:57,600
-know to get it to B2. So he's still a
+know to get it to B2. He's still a
 
 795
 00:32:57,600 --> 00:33:02,159
-problem. So now I do the triple tunnel
+problem. Now I do the triple tunnel
 
 796
 00:33:02,159 --> 00:33:05,600
@@ -3189,7 +3189,7 @@ the intermediaries. They can't see it.
 
 798
 00:33:08,400 --> 00:33:10,241
-So the reason I need three
+The reason I need three
 
 799
 00:33:10,240 --> 00:33:13,760
@@ -3205,7 +3205,7 @@ it either and they're second parties,
 
 802
 00:33:19,279 --> 00:33:22,559
-right? So I have third parties that
+right? I have third parties that
 
 803
 00:33:22,559 --> 00:33:25,039
@@ -3217,7 +3217,7 @@ parties that can surveil this, but
 
 805
 00:33:27,519 --> 00:33:30,720
-nobody can surveil this. So, I don't
+nobody can surveil this. I don't
 
 806
 00:33:30,720 --> 00:33:34,000
@@ -3233,7 +3233,7 @@ with high fan out and high fan in.
 
 809
 00:33:38,399 --> 00:33:40,960
-That's it. So, it's inherently easier to
+That's it. It's inherently easier to
 
 810
 00:33:40,960 --> 00:33:44,080
@@ -3241,7 +3241,7 @@ build. Any internet service provider can
 
 811
 00:33:44,080 --> 00:33:46,080
-build this. And they and they're not
+build this. And they're not
 
 812
 00:33:46,080 --> 00:33:48,000
@@ -3257,7 +3257,7 @@ just doing what they're supposed to do
 
 815
 00:33:52,960 --> 00:33:55,440
-efficiently route lots of packets. Yeah.
+efficiently route lots of packets.
 
 816
 00:33:55,440 --> 00:33:57,760
@@ -3273,7 +3273,7 @@ layer versus routing at an IP layer.
 
 819
 00:34:02,000 --> 00:34:05,039
-Well, no, it's both,
+No, it's both,
 
 820
 00:34:05,039 --> 00:34:07,919
@@ -3289,7 +3289,7 @@ layer.
 
 823
 00:34:12,240 --> 00:34:14,720
-Well, no,
+No,
 
 824
 00:34:14,720 --> 00:34:17,200
@@ -3309,7 +3309,7 @@ layer, then yes, IP's gone at that
 
 828
 00:34:25,919 --> 00:34:28,560
-layer. No more IP. So, I've done two
+layer. No more IP. I've done two
 
 829
 00:34:28,560 --> 00:34:30,639
@@ -3337,11 +3337,11 @@ took me a while to figure it out. I had
 
 835
 00:34:41,760 --> 00:34:43,440
-to li, you know, that's why I have these
+to li that's why I have these
 
 836
 00:34:43,440 --> 00:34:46,800
-diagrams with all these, you know, 50,
+diagrams with all these 50,
 
 837
 00:34:46,800 --> 00:34:48,879
@@ -3393,7 +3393,7 @@ route is the same route ..
 
 849
 00:35:08,079 --> 00:35:09,760
-Oh, yeah. That's why I said you have to
+That's why I said you have to
 
 850
 00:35:09,760 --> 00:35:11,520
@@ -3421,7 +3421,7 @@ No, you just have to have white noise of
 
 856
 00:35:19,599 --> 00:35:21,920
-the fan out. So there's two ways to
+the fan out. There's two ways to
 
 857
 00:35:21,920 --> 00:35:24,480
@@ -3433,7 +3433,7 @@ or two is you make sure that the
 
 859
 00:35:28,400 --> 00:35:31,119
-probability is uniform. So you have a
+probability is uniform. You have a
 
 860
 00:35:31,119 --> 00:35:32,720
@@ -3501,7 +3501,7 @@ It does that anyway.
 
 876
 00:36:07,680 --> 00:36:10,560
-So, we're not adding
+We're not adding
 
 877
 00:36:10,560 --> 00:36:12,720
@@ -3517,7 +3517,7 @@ Huh?
 
 880
 00:36:14,560 --> 00:36:17,359
-Yeah, it can. But, then you do 
+It can. But, then you do
 
 881
 00:36:17,359 --> 00:36:20,240
@@ -3525,7 +3525,7 @@ scaling. You do elastic scaling to
 
 882
 00:36:20,240 --> 00:36:21,920
-handle the burst. So what we're saying
+handle the burst. What we're saying
 
 883
 00:36:21,920 --> 00:36:24,160
@@ -3553,7 +3553,7 @@ right? And every packet is the same
 
 889
 00:36:35,839 --> 00:36:37,760
-length. So yes, if you're trying to
+length. Yes, if you're trying to
 
 890
 00:36:37,760 --> 00:36:40,400
@@ -3593,7 +3593,7 @@ Okay,
 
 899
 00:37:01,680 --> 00:37:05,599
-– Just real quick. So on that diagram, P
+– Just real quick. On that diagram, P
 
 900
 00:37:05,599 --> 00:37:08,079
@@ -3605,7 +3605,7 @@ Oh, sorry.
 
 902
 00:37:10,480 --> 00:37:13,599
-And Q is aware of P and Q. Well, in
+And Q is aware of P and Q. In
 
 903
 00:37:13,599 --> 00:37:16,400
@@ -3649,15 +3649,15 @@ route. That's all you can do. They can't
 
 913
 00:37:43,920 --> 00:37:46,720
-expose it. They can just break it. So
+expose it. They can just break it.
 
 914
 00:37:46,720 --> 00:37:48,560
-that's you're always vulnerable to that.
+That's you're always vulnerable to that.
 
 915
 00:37:48,560 --> 00:37:50,560
-So if you're worried about that, then
+If you're worried about that, then
 
 916
 00:37:50,560 --> 00:37:52,400
@@ -3673,7 +3673,7 @@ multi-perspective routing so that you
 
 919
 00:37:56,640 --> 00:37:58,960
-have multiple intermediaries. So if two
+have multiple intermediaries. If two
 
 920
 00:37:58,960 --> 00:38:01,680
@@ -3733,11 +3733,11 @@ the first I was looking for the first
 
 934
 00:38:35,920 --> 00:38:40,400
-shirt like this. Yes. So,
+shirt like this. Yes.
 
 935
 00:38:40,400 --> 00:38:42,079
-you do things like that to protect it.
+You do things like that to protect it.
 
 936
 00:38:42,079 --> 00:38:44,560
@@ -3745,11 +3745,11 @@ But those are good, those are all
 
 937
 00:38:44,560 --> 00:38:47,040
-good questions. So, we added to the
+good questions. We added to the
 
 938
 00:38:47,040 --> 00:38:50,640
-protocol. So, we just need that
+protocol. We just need that
 
 939
 00:38:50,640 --> 00:38:52,800
@@ -3809,7 +3809,7 @@ And we'll form a relationship with
 
 953
 00:39:26,400 --> 00:39:30,160
-those two. So now within this context I
+those two. Now within this context I
 
 954
 00:39:30,160 --> 00:39:34,160
@@ -3829,7 +3829,7 @@ a different set of intermediaries.
 
 958
 00:39:44,480 --> 00:39:46,960
-So now I can use one of these. I can
+Now I can use one of these. I can
 
 959
 00:39:46,960 --> 00:39:51,520
@@ -3869,7 +3869,7 @@ send a message every day we just create
 
 968
 00:40:09,280 --> 00:40:11,359
-a new one. So every day we have so we're
+a new one. Every day we have so we're
 
 969
 00:40:11,359 --> 00:40:14,640
@@ -3905,7 +3905,7 @@ secure context that is
 
 977
 00:40:28,400 --> 00:40:29,920
-a partition. So you can create
+a partition. You can create
 
 978
 00:40:29,920 --> 00:40:32,560
@@ -3934,4 +3934,3 @@ confidentiality or authenticity.
 984
 00:40:45,440 --> 00:40:49,400
 We're done. All right.
-

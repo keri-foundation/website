@@ -40,7 +40,7 @@ and people to adopt this sort of
 
 9
 00:00:47,760 --> 00:00:52,400
-architecture. And so we'd have to re
+architecture. We'd have to re
 -engineer a server architecture with an
 
 10
@@ -61,4 +61,3 @@ Signify and KERIA were to go away today.
 13
 00:01:06,120 --> 00:01:07,320
 Thank you.
-

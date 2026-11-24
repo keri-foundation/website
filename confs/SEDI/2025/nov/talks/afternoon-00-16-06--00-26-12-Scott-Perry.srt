@@ -1,12 +1,12 @@
 1
 00:00:01,760 --> 00:00:08,340
-There we go. Yay. All right. So my name is
+There we go. Yay. All right. My name is
 Scott Perry. I'm here to talk about open
 
 2
 00:00:08,340 --> 00:00:14,600
-standards and open protocols. And so when
-you're looking at a SEDI project, okay,
+standards and open protocols.
+When you're looking at a SEDI project, okay,
 
 3
 00:00:14,720 --> 00:00:19,860
@@ -41,7 +41,7 @@ going to work to add internet, to add the
 9
 00:00:49,640 --> 00:00:56,260
 kind of trust that we're trying to do with
-the SEDI project. So just a quick little
+the SEDI project. Just a quick little
 
 10
 00:00:56,260 --> 00:01:01,500
@@ -70,7 +70,7 @@ leading some open source and open
 
 15
 00:01:26,320 --> 00:01:32,760
-standards projects. projects that are
+standards projects. Projects that are
 listed here, but I want to focus on the
 
 16
@@ -100,8 +100,8 @@ value in all of the work that that they've
 
 21
 00:01:59,160 --> 00:02:03,980
-been doing for over 10 years. And so when
-we start about that, I'm going to give you
+been doing for over 10 years.
+When we start about that, I'm going to give you
 
 22
 00:02:03,980 --> 00:02:08,240
@@ -116,7 +116,7 @@ products that can be leveraged into the
 24
 00:02:14,440 --> 00:02:19,680
 SEDI project. And it starts with the Linux
-Foundation. So I don't know if you know,
+Foundation. I don't know if you know,
 
 25
 00:02:19,800 --> 00:02:24,000
@@ -130,13 +130,13 @@ supercomputers and 62.7 of servers run the
 
 27
 00:02:31,360 --> 00:02:39,860
-Linux kernel. And so they decided to get
-involved in decentralized trust. There was
+Linux kernel. They decided to get involved
+in decentralized trust. There was
 
 28
 00:02:39,860 --> 00:02:46,560
-a number of projects that was driving some
-of this type of thinking. And so they
+a number of projects that was driving
+some of this type of thinking. They
 
 29
 00:02:46,560 --> 00:02:53,680
@@ -296,7 +296,7 @@ organizational attribution to any digital
 60
 00:05:51,540 --> 00:05:58,100
 object based on the content credential
-created by the C2PA. So I would look that
+created by the C2PA. I would look that
 
 61
 00:05:58,100 --> 00:06:04,680
@@ -355,13 +355,13 @@ identity, authentication, and federation.
 
 72
 00:07:14,000 --> 00:07:18,960
-So what's the case for open standards? How
-do you use it? Okay. At the end of the
+What's the case for open standards?
+How do you use it? Okay. At the end of the
 
 73
 00:07:18,960 --> 00:07:26,980
 day, it enhances interoperability and
-compatibility. accessibility. Okay? It
+compatibility. Accessibility. Okay? It
 
 74
 00:07:26,980 --> 00:07:32,460
@@ -405,13 +405,13 @@ along and they're free. State loves free,
 
 82
 00:08:18,700 --> 00:08:24,260
-right? And the best way to leverage it is
-steal. this technology and steal these
+right? And the best way to leverage it is steal.
+This technology and steal these
 
 83
 00:08:24,260 --> 00:08:30,480
 standards because it's there for the
-taking and they work. So I'm going to just
+taking and they work. I'm going to just
 
 84
 00:08:30,480 --> 00:08:33,840
@@ -425,8 +425,8 @@ these are the some of the ones as a
 
 86
 00:08:38,360 --> 00:08:44,220
-governance you know professional have
-leveraged on and you know we've realized
+governance you know professional
+have leveraged on we've realized
 
 87
 00:08:44,220 --> 00:08:50,120
@@ -460,8 +460,8 @@ complicated it is. And we've done a lot of
 
 93
 00:09:17,260 --> 00:09:21,800
-the baked in work. So governance
-framework, it's already built. the
+the baked in work. Governance framework,
+it's already built. The
 
 94
 00:09:21,800 --> 00:09:25,540
@@ -475,8 +475,8 @@ and then you could leverage the time and
 
 96
 00:09:29,840 --> 00:09:35,940
-energy to get this to market. So I'm going
-to quickly go through the reasons why you
+energy to get this to market.
+I'm going to quickly go through the reasons why you
 
 97
 00:09:35,940 --> 00:09:37,320
@@ -506,4 +506,3 @@ in the videotape so that you could access
 00:10:02,200 --> 00:10:05,960
 this at your leisure. Thank you very much
 for your time.
-

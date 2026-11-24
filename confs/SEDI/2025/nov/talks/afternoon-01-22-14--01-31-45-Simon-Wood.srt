@@ -50,7 +50,7 @@ that this has happened and the sort of
 
 11
 00:00:50,640 --> 00:00:56,640
-values that can be expected from that. So,
+values that can be expected from that.
 Simon Wood, I've been involved in identity
 
 12
@@ -150,8 +150,8 @@ have a chain of delegation. Fiknish's
 
 31
 00:02:26,460 --> 00:02:32,940
-example here, we'll look at setting up new
-company in Utah. So, the CEO of that
+example here, we'll look at setting up
+new company in Utah. The CEO of that
 
 32
 00:02:32,940 --> 00:02:38,240
@@ -180,8 +180,8 @@ assume that there's a secure mailbox
 
 37
 00:02:57,920 --> 00:03:03,180
-capability from a SEDI implementation. So
-you can securely contact people who have
+capability from a SEDI implementation.
+You can securely contact people who have
 
 38
 00:03:03,180 --> 00:03:08,240
@@ -200,13 +200,13 @@ delegate that capability to the CFO of the
 
 41
 00:03:18,340 --> 00:03:22,040
-organization. So that delegation will be
+organization. That delegation will be
 done through the website. The CEO will
 
 42
 00:03:22,040 --> 00:03:28,300
-invite the CFO to that system using their
-SEDI identity as well. And so a delegation
+invite the CFO to that system using
+their SEDI identity as well. A delegation
 
 43
 00:03:28,300 --> 00:03:32,040
@@ -230,8 +230,8 @@ employment tax is outsourced to an
 
 47
 00:03:45,820 --> 00:03:50,700
-organization. So that organization can be
-invited in and delegated to. The
+organization. That organization can
+be invited in and delegated to. The
 
 48
 00:03:50,700 --> 00:03:54,140
@@ -240,8 +240,8 @@ that up and then onwards delegate to an
 
 49
 00:03:54,140 --> 00:03:57,860
-internal accountant. So we've got a chain
-of delegations running through individuals
+internal accountant. We've got a chain of
+delegations running through individuals
 
 50
 00:03:57,860 --> 00:04:03,880
@@ -265,7 +265,7 @@ great scenario. If that were true, what
 
 54
 00:04:17,560 --> 00:04:25,220
-would deliver us? Well, that does happen
+would deliver us? That does happen
 already in Finland. There is a platform
 
 55
@@ -279,7 +279,7 @@ That will help.
 
 57
 00:04:44,260 --> 00:04:52,420
-How's that? So, just to reiterate that
+How's that? Just to reiterate that
 previous slide so you can see what was
 
 58
@@ -302,7 +302,7 @@ Is that okay?
 
 62
 00:05:24,560 --> 00:05:30,140
-I think that's okay. So, So this platform
+I think that's okay. This platform
 was delivered or it is delivered in
 
 63
@@ -332,8 +332,8 @@ Finnish government published stats on the
 
 68
 00:05:55,100 --> 00:05:59,600
-savings as a result of of having that
-platform. And when they published that at
+savings as a result of having that platform.
+And when they published that at
 
 69
 00:05:59,600 --> 00:06:04,560
@@ -462,7 +462,7 @@ entities as well to take advantage of that
 94
 00:07:59,040 --> 00:08:06,860
 massive uplift in utility and economic
-potential that comes from there. So to
+potential that comes from there. To
 
 95
 00:08:06,860 --> 00:08:14,300
@@ -537,15 +537,14 @@ I realize this is remote and a little bit
 109
 00:09:15,840 --> 00:09:21,000
 more complicated. But I believe the slides
-in this recording will be out later. So
+in this recording will be out later.
 
 110
 00:09:21,000 --> 00:09:24,880
-you can always contact me afterwards or
+You can always contact me afterwards or
 Chris can put you in contact and I can
 
 111
 00:09:24,880 --> 00:09:27,380
 provide more information if that's useful.
 Thank you very much.
-

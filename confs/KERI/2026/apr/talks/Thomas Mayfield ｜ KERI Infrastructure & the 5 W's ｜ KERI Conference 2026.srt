@@ -52,7 +52,7 @@ Testing better. Excellent. Okay.
 
 14
 00:00:45,685 --> 00:00:46,879
-So my name is Thomas Mayfield. I'm
+My name is Thomas Mayfield. I'm
 
 15
 00:00:46,879 --> 00:00:49,120
@@ -140,7 +140,7 @@ Henk doesn't have to give me a reminder.
 
 36
 00:01:32,799 --> 00:01:34,000
-All right. So, today I'm going to walk
+All right. Today I'm going to walk
 
 37
 00:01:34,000 --> 00:01:35,759
@@ -172,11 +172,11 @@ together as a system and also how Veridian
 
 44
 00:01:50,560 --> 00:01:53,520
-is building all of this in the open. So,
+is building all of this in the open.
 
 45
 00:01:53,520 --> 00:01:56,640
-let's start with the problem. Digital
+Let's start with the problem. Digital
 
 46
 00:01:56,640 --> 00:01:59,360
@@ -248,7 +248,7 @@ and it is yours.
 
 63
 00:02:45,360 --> 00:02:48,800
-So what is KERI exactly?
+What is KERI exactly?
 
 64
 00:02:48,800 --> 00:02:50,720
@@ -260,7 +260,7 @@ the acronym in the last few days.
 
 66
 00:02:54,959 --> 00:02:58,000
-So KERI stands for key event receipt
+KERI stands for key event receipt
 
 67
 00:02:58,000 --> 00:03:00,560
@@ -356,7 +356,7 @@ and you can read a bit more about this.
 
 90
 00:03:58,879 --> 00:04:02,080
-So this combination of concepts, this is
+This combination of concepts, this is
 
 91
 00:04:02,080 --> 00:04:04,080
@@ -372,7 +372,7 @@ truly portable trust.
 
 94
 00:04:10,480 --> 00:04:12,480
-So let's make this concrete. In KERI,
+Let's make this concrete. In KERI,
 
 95
 00:04:12,480 --> 00:04:14,560
@@ -501,11 +501,11 @@ five roles. And conveniently, Sam has
 
 126
 00:05:29,919 --> 00:05:32,400
-started them all with a letter W. So,
+started them all with a letter W.
 
 127
 00:05:32,400 --> 00:05:35,120
-let's move on to the wallet. And this is
+Let's move on to the wallet. And this is
 
 128
 00:05:35,120 --> 00:05:37,280
@@ -742,7 +742,7 @@ independent.
 
 186
 00:08:04,639 --> 00:08:08,240
-This is what turns 'trust me!' into 'check
+This is what turns 'trust me!' Into 'check
 
 187
 00:08:08,240 --> 00:08:12,400
@@ -835,7 +835,7 @@ transport agnostic.
 
 209
 00:09:12,959 --> 00:09:16,240
-So today it runs over HTTP, but the
+Today it runs over HTTP, but the
 
 210
 00:09:16,240 --> 00:09:18,480
@@ -932,7 +932,7 @@ to the product. Without KERI, sorry,
 
 233
 00:10:19,519 --> 00:10:24,389
-without wizards, ...
+without wizards...
 
 234
 00:10:26,710 --> 00:10:28,800
@@ -1001,7 +1001,7 @@ be independently replaced.
 
 250
 00:11:07,920 --> 00:11:10,320
-So that's the friendly overview. We're
+That's the friendly overview. We're
 
 251
 00:11:10,320 --> 00:11:12,079
@@ -1033,7 +1033,7 @@ and ACDCs.
 
 258
 00:11:25,440 --> 00:11:27,680
-So we'll start with pre-rotation. And
+We'll start with pre-rotation. And
 
 259
 00:11:27,680 --> 00:11:29,920
@@ -1297,7 +1297,7 @@ is signed and anchored into an issuer's
 
 324
 00:14:09,040 --> 00:14:12,000
-KEL. So, its provenance is always
+KEL. Its provenance is always
 
 325
 00:14:12,000 --> 00:14:13,519
@@ -1389,7 +1389,7 @@ the keys that allow you to prove
 
 347
 00:15:02,720 --> 00:15:04,959
-ownership of those credentials. So, as
+ownership of those credentials. As
 
 348
 00:15:04,959 --> 00:15:07,040
@@ -1506,7 +1506,7 @@ root.
 
 376
 00:16:21,424 --> 00:16:27,759
-So, at Veridian, we are building all five
+At Veridian, we are building all five
 of the W's. The open- source mobile
 
 377
@@ -1647,7 +1647,7 @@ Veridian, the digital trust every industry needs.
 
 408
 00:18:19,669 --> 00:18:22,880
-So I leave you with these takeaways.
+I leave you with these takeaways.
 
 409
 00:18:22,880 --> 00:18:24,400
@@ -1819,7 +1819,7 @@ itself provides.
 
 451
 00:20:18,880 --> 00:20:22,480
-So the Cardano Foundation
+The Cardano Foundation
 
 452
 00:20:22,480 --> 00:20:24,960
@@ -1867,7 +1867,7 @@ through the process of becoming the
 
 463
 00:20:52,240 --> 00:20:55,280
-first Swiss-based QVI. So Cardano is
+first Swiss-based QVI. Cardano is
 
 464
 00:20:55,280 --> 00:20:57,200
@@ -1991,7 +1991,7 @@ verification across chains just using
 
 494
 00:22:15,520 --> 00:22:18,400
-KERI as that identity layer. So we have
+KERI as that identity layer. We have
 
 495
 00:22:18,400 --> 00:22:20,400
@@ -2055,7 +2055,7 @@ space.
 
 510
 00:22:53,919 --> 00:22:56,720
-So a very long-winded way is we are
+A very long-winded way is we are
 
 511
 00:22:56,720 --> 00:22:58,720
@@ -2099,7 +2099,7 @@ attestations and anchoring them on-chain.
 
 521
 00:23:19,520 --> 00:23:21,360
-So this is the sort of direction we are
+This is the sort of direction we are
 
 522
 00:23:21,360 --> 00:23:23,679
@@ -2112,7 +2112,7 @@ blockchain itself.
 524
 00:23:41,430 --> 00:23:44,640
 When Midnight came out I thought
-there was a you know a lot of overlap
+there was a lot of overlap
 
 525
 00:23:44,640 --> 00:23:46,080
@@ -2184,11 +2184,11 @@ Cardano blockchain that Web3 and
 
 542
 00:24:28,320 --> 00:24:30,480
-blockchain technology drives forward. So
+blockchain technology drives forward.
 
 543
 00:24:30,480 --> 00:24:32,480
-the mandate of the Cardano Foundation
+The mandate of the Cardano Foundation
 
 544
 00:24:32,480 --> 00:24:35,440
@@ -2269,7 +2269,7 @@ the wild.
 
 563
 00:25:23,360 --> 00:25:25,840
-Sure. Absolutely. Well, nothing is
+Sure. Absolutely. Nothing is
 
 564
 00:25:25,840 --> 00:25:28,880
@@ -2285,7 +2285,7 @@ building tech that we can deploy across
 
 567
 00:25:32,960 --> 00:25:34,799
-five verticals. So we initially have
+five verticals. We initially have
 
 568
 00:25:34,799 --> 00:25:36,480
@@ -2329,7 +2329,7 @@ team. One of the challenges here is
 
 578
 00:26:00,640 --> 00:26:03,919
-regulation. So specifically in
+regulation. Specifically in
 
 579
 00:26:03,919 --> 00:26:05,520
@@ -2377,7 +2377,7 @@ We are uniquely positioned to lower
 
 590
 00:26:31,679 --> 00:26:33,840
-the curve of adoption. So we are going
+the curve of adoption. We are going
 
 591
 00:26:33,840 --> 00:26:35,440
@@ -2434,11 +2434,11 @@ uplift. And then the final kind of
 
 604
 00:27:05,840 --> 00:27:08,240
-caveat or carrot is you know increase
+caveat or carrot is increase
 
 605
 00:27:08,240 --> 00:27:11,760
-market share. So the real
+market share. The real
 
 606
 00:27:11,760 --> 00:27:15,360
@@ -2466,7 +2466,7 @@ end-client's wallet where you now have this
 
 612
 00:27:28,320 --> 00:27:30,559
-end-to-end Root of Trust. So when you
+end-to-end Root of Trust. When you
 
 613
 00:27:30,559 --> 00:27:34,559
@@ -2555,7 +2555,7 @@ is?
 
 634
 00:28:33,039 --> 00:28:35,679
-So I mean effectively what you have with
+I mean effectively what you have with
 
 635
 00:28:35,679 --> 00:28:37,520
@@ -2627,7 +2627,7 @@ implementation of 5Ws
 
 652
 00:29:21,440 --> 00:29:24,880
-and as you know we have collected
+and we have collected
 
 653
 00:29:24,880 --> 00:29:29,440
@@ -2639,7 +2639,7 @@ the development of 5WS in the foundation
 
 655
 00:29:32,480 --> 00:29:35,919
-as well. So I wonder how is that
+as well. I wonder how is that
 
 656
 00:29:35,919 --> 00:29:39,750
@@ -2647,8 +2647,8 @@ synchronized
 
 657
 00:29:42,630 --> 00:29:45,279
-In what regard? Well, we are building
-code and you have been building code for
+In what regard? We are building code
+and you have been building code for
 
 658
 00:29:45,279 --> 00:29:48,799
@@ -2680,7 +2680,7 @@ Conference.
 
 665
 00:29:57,520 --> 00:29:59,600
-Yeah. Yeah. Of course. That's the
+Yeah. Of course. That's the
 
 666
 00:29:59,600 --> 00:30:00,240
@@ -2700,7 +2700,7 @@ WebofTrust,  KERI Foundation.
 
 670
 00:30:07,919 --> 00:30:10,799
-So, so there's a way that we could
+There's a way that we could
 
 671
 00:30:10,799 --> 00:30:14,640
@@ -2716,19 +2716,19 @@ to have multi-vendor suppliers of
 
 674
 00:30:19,760 --> 00:30:22,159
-witnesses and watcher services. So
+witnesses and watcher services.
 
 675
 00:30:22,159 --> 00:30:24,559
-standardizing on plugins that various
+Standardizing on plugins that various
 
 676
 00:30:24,559 --> 00:30:27,440
-vendors can contribute to wallets. So
+vendors can contribute to wallets.
 
 677
 00:30:27,440 --> 00:30:30,320
-all wallets support multiple vendors of
+All wallets support multiple vendors of
 
 678
 00:30:30,320 --> 00:30:32,159
@@ -2764,7 +2764,7 @@ Go ahead, Phil.
 
 686
 00:30:48,720 --> 00:30:51,279
-Can I can I add to that? I think
+Can I add to that? I think
 
 687
 00:30:51,279 --> 00:30:52,960
@@ -2788,7 +2788,7 @@ vendors and the way we synchronize with
 
 692
 00:31:02,080 --> 00:31:04,640
-each other is the KERI protocol. And so
+each other is the KERI protocol.
 
 693
 00:31:04,640 --> 00:31:06,080
@@ -2828,7 +2828,7 @@ multiple vendors running the code so
 
 702
 00:31:23,600 --> 00:31:25,440
-that people can. So, for example, we
+that people can. For example, we
 
 703
 00:31:25,440 --> 00:31:27,520
@@ -2848,7 +2848,7 @@ they have the security needed from the
 
 707
 00:31:32,559 --> 00:31:34,559
-protocol. So, I yeah, there's some
+protocol. I there's some
 
 708
 00:31:34,559 --> 00:31:35,679
@@ -2856,11 +2856,11 @@ double work, but these guys have
 
 709
 00:31:35,679 --> 00:31:38,399
-contributed a ton to open source. So
+contributed a ton to open source.
 
 710
 00:31:38,399 --> 00:31:40,080
-I think it's I think it's working well
+I think it's working well
 
 711
 00:31:40,080 --> 00:31:41,120
@@ -2970,7 +2970,7 @@ and with the ESOS of caring ACDC,
 
 737
 00:32:49,279 --> 00:32:50,799
-We wouldn't be here today. So, I
+We wouldn't be here today. I
 
 738
 00:32:50,799 --> 00:32:52,640
@@ -3024,4 +3024,3 @@ I will end it here. Thank you.
 750
 00:33:21,279 --> 00:33:24,919
 Thank you very much.
-

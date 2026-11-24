@@ -84,7 +84,7 @@ questions go?
 
 22
 00:00:45,680 --> 00:00:47,440
-Sounds good. All right. So, the
+Sounds good. All right. The
 
 23
 00:00:47,440 --> 00:00:51,760
@@ -96,7 +96,7 @@ we're going to do some overview of three
 
 25
 00:00:53,360 --> 00:00:55,840
-of the five W's. the witnesses,
+of the five W's. The witnesses,
 
 26
 00:00:55,840 --> 00:00:58,879
@@ -116,7 +116,7 @@ the web. Three of those five W's.
 
 30
 00:01:07,520 --> 00:01:09,439
-So, we'll talk about all of those things
+We'll talk about all of those things
 
 31
 00:01:09,439 --> 00:01:11,920
@@ -200,7 +200,7 @@ witnesses and stuff. We'll go
 
 51
 00:01:49,200 --> 00:01:53,119
-through that. So, here are the repos
+through that. Here are the repos
 
 52
 00:01:53,119 --> 00:01:54,799
@@ -208,11 +208,11 @@ we'll be dealing with. They're all under
 
 53
 00:01:54,799 --> 00:01:58,240
-the KERI Foundation GitHub account. So,
+the KERI Foundation GitHub account.
 
 54
 00:01:58,240 --> 00:01:59,600
-if you go to KERI Foundation, these are
+If you go to KERI Foundation, these are
 
 55
 00:01:59,600 --> 00:02:01,040
@@ -288,11 +288,11 @@ wasn't looking at the right one.
 
 73
 00:02:42,160 --> 00:02:43,760
-So, but we've got some new people coming
+But we've got some new people coming
 
 74
 00:02:43,760 --> 00:02:45,599
-in. So, these are the repos we're going
+in. These are the repos we're going
 
 75
 00:02:45,599 --> 00:02:48,720
@@ -324,7 +324,7 @@ the code in this the setup guide because
 
 82
 00:03:00,720 --> 00:03:02,640
-I've already done it. So, but we are
+I've already done it. But we are
 
 83
 00:03:02,640 --> 00:03:04,720
@@ -332,7 +332,7 @@ going to go through it at high
 
 84
 00:03:04,720 --> 00:03:06,560
-level. So, it'll be easier for
+level. It'll be easier for
 
 85
 00:03:06,560 --> 00:03:08,000
@@ -352,11 +352,11 @@ it. And it's all broken out into steps.
 
 89
 00:03:13,440 --> 00:03:18,229
-So should be pretty easy to follow.
+Should be pretty easy to follow.
 
 90
 00:03:18,936 --> 00:03:21,080
-So everybody got that?
+Everybody got that?
 
 91
 00:03:21,104 --> 00:03:24,720
@@ -364,7 +364,7 @@ Okay, we'll go on to… I want to just… I
 
 92
 00:03:24,720 --> 00:03:26,400
-mean, I probably don't need to do this
+I probably don't need to do this
 
 93
 00:03:26,400 --> 00:03:29,599
@@ -424,7 +424,7 @@ Signing and…
 
 107
 00:03:53,280 --> 00:03:55,920
-rotation keys. So, those are the keys we
+rotation keys. Those are the keys we
 
 108
 00:03:55,920 --> 00:03:56,959
@@ -452,7 +452,7 @@ of these core concepts is Key Events
 
 114
 00:04:08,480 --> 00:04:10,879
-themselves. anything Events related to
+themselves. Anything Events related to
 
 115
 00:04:10,879 --> 00:04:12,239
@@ -516,7 +516,7 @@ support of this set of things.
 
 130
 00:04:50,639 --> 00:04:53,520
-So keep that in mind as we talk about
+Keep that in mind as we talk about
 
 131
 00:04:53,520 --> 00:04:55,600
@@ -544,7 +544,7 @@ are.
 
 137
 00:05:05,520 --> 00:05:07,199
-So, the best place to go and get a real
+The best place to go and get a real
 
 138
 00:05:07,199 --> 00:05:10,639
@@ -568,7 +568,7 @@ slide deck, which is related to his
 
 143
 00:05:19,520 --> 00:05:22,240
-white paper. So, I definitely recommend
+white paper. I definitely recommend
 
 144
 00:05:22,240 --> 00:05:24,080
@@ -616,7 +616,7 @@ Witness.
 
 155
 00:05:42,240 --> 00:05:45,680
-So the first core concept or component
+The first core concept or component
 
 156
 00:05:45,680 --> 00:05:50,629
@@ -648,7 +648,7 @@ Keeping that movie theme alive.
 
 163
 00:06:03,840 --> 00:06:06,400
-So those are the kind of the core
+Those are the kind of the core
 
 164
 00:06:06,400 --> 00:06:07,759
@@ -692,7 +692,7 @@ whatever.
 
 174
 00:06:29,680 --> 00:06:32,720
-– Yeah. So for a lot of what we're going
+– Yeah. For a lot of what we're going
 
 175
 00:06:32,720 --> 00:06:33,919
@@ -704,7 +704,7 @@ level walkthrough of some deployment
 
 177
 00:06:35,280 --> 00:06:37,520
-stuff. So you'll want to go back. Let me
+stuff. You'll want to go back. Let me
 
 178
 00:06:37,520 --> 00:06:41,120
@@ -712,11 +712,11 @@ just back up and I'll show you.
 
 179
 00:06:41,120 --> 00:06:44,720
-So you can get to
+You can get to
 
 180
 00:06:44,720 --> 00:06:47,520
-So for those that are just coming in,
+For those that are just coming in,
 
 181
 00:06:47,520 --> 00:06:49,919
@@ -776,7 +776,7 @@ on any infrastructure you've got and it
 
 195
 00:07:18,800 --> 00:07:20,880
-should work for you great. So anyway,
+should work for you great. Anyway,
 
 196
 00:07:20,880 --> 00:07:22,639
@@ -816,11 +816,11 @@ recognize that there's a lot
 
 205
 00:07:41,039 --> 00:07:42,880
-of ways you could actually do this. So,
+of ways you could actually do this.
 
 206
 00:07:42,880 --> 00:07:45,759
-this one's going to pick one track and
+This one's going to pick one track and
 
 207
 00:07:45,759 --> 00:07:47,919
@@ -832,7 +832,7 @@ Doesn't mean that's the only way to do
 
 209
 00:07:49,120 --> 00:07:51,360
-it. So, keep that in mind. Second of
+it. Keep that in mind. Second of
 
 210
 00:07:51,360 --> 00:07:53,520
@@ -844,15 +844,15 @@ services that they run are Falcon apps,
 
 212
 00:07:55,199 --> 00:07:59,440
-which is just Python – HTTP; in the end. So
+which is just Python – HTTP; in the end.
 
 213
 00:07:59,440 --> 00:08:01,919
-they're all Python processes. It's all
+They're all Python processes. It's all
 
 214
 00:08:01,919 --> 00:08:04,560
-Python under the hood. So there nothing
+Python under the hood. There nothing
 
 215
 00:08:04,560 --> 00:08:06,560
@@ -864,7 +864,7 @@ stuff. It's all early work in progress
 
 217
 00:08:09,680 --> 00:08:12,240
-still as well. Well, I mean the
+still as well. I mean the
 
 218
 00:08:12,240 --> 00:08:16,319
@@ -884,7 +884,7 @@ using it in production.
 
 222
 00:08:23,280 --> 00:08:24,879
-So, it's pretty proven in that sense.
+It's pretty proven in that sense.
 
 223
 00:08:24,879 --> 00:08:26,879
@@ -912,7 +912,7 @@ it will certainly get better and better.
 
 229
 00:08:39,519 --> 00:08:41,839
-So don't be too harsh in judgment of how
+Don't be too harsh in judgment of how
 
 230
 00:08:41,839 --> 00:08:45,040
@@ -1004,7 +1004,7 @@ availability zones or the
 
 252
 00:09:41,839 --> 00:09:45,760
-horizontals. So in theory anybody who's
+horizontals. In theory anybody who's
 
 253
 00:09:45,760 --> 00:09:47,519
@@ -1080,7 +1080,7 @@ availability and redundancy and all
 
 271
 00:10:22,480 --> 00:10:24,800
-that as possible. So that's the
+that as possible. That's the
 
 272
 00:10:24,800 --> 00:10:26,000
@@ -1100,7 +1100,7 @@ different ways to do that, but that's
 
 276
 00:10:31,519 --> 00:10:34,160
-that's what it might look like. So with
+that's what it might look like. With
 
 277
 00:10:34,160 --> 00:10:36,240
@@ -1112,7 +1112,7 @@ let's get into the actual setup guide
 
 279
 00:10:38,320 --> 00:10:41,120
-itself. So base requirements step, which
+itself. Base requirements step, which
 
 280
 00:10:41,120 --> 00:10:45,920
@@ -1128,7 +1128,7 @@ using Ubuntu 24.04.
 
 283
 00:10:50,640 --> 00:10:53,279
-So the latest LTS.
+The latest LTS.
 
 284
 00:10:53,279 --> 00:10:57,519
@@ -1160,11 +1160,11 @@ and certbot, just to set up
 
 291
 00:11:17,040 --> 00:11:18,800
-certificates and stuff like that. So,
+certificates and stuff like that.
 
 292
 00:11:18,800 --> 00:11:21,746
-that's just the base guide setups.
+That's just the base guide setups.
 
 293
 00:11:29,286 --> 00:11:33,920
@@ -1173,7 +1173,7 @@ mention it. Never mind. Sorry.)
 
 294
 00:11:33,920 --> 00:11:37,120
-So, no real magic there. If
+No real magic there. If
 
 295
 00:11:37,120 --> 00:11:38,640
@@ -1201,7 +1201,7 @@ whatever. Our we set ours up on Digital
 
 301
 00:11:48,320 --> 00:11:50,480
-Ocean. I did want… Yeah.
+Ocean. I did want…
 
 302
 00:11:50,480 --> 00:11:52,480
@@ -1213,7 +1213,7 @@ Do you throw that in a Docker container or?
 
 304
 00:11:54,619 --> 00:11:57,519
-No, I mean, you could. Don't
+No, you could. Don't
 
 305
 00:11:57,519 --> 00:12:00,079
@@ -1233,7 +1233,7 @@ deployment for security reasons, which is…
 
 309
 00:12:06,320 --> 00:12:07,680
-… valid. I mean, for development, sure,
+… valid. For development, sure,
 
 310
 00:12:07,680 --> 00:12:10,560
@@ -1265,15 +1265,15 @@ some major security concerns about that
 
 317
 00:12:23,760 --> 00:12:26,079
-approach. So, just be aware of that. So,
+approach. Just be aware of that.
 
 318
 00:12:26,079 --> 00:12:27,440
-this is pretty much bare metal.
+This is pretty much bare metal.
 
 319
 00:12:27,440 --> 00:12:29,200
-So, no production.
+No production.
 
 320
 00:12:29,200 --> 00:12:31,440
@@ -1281,7 +1281,7 @@ Yeah. According to Sam, he
 
 321
 00:12:31,440 --> 00:12:34,240
-would not do that. And so this guide
+would not do that. This guide
 
 322
 00:12:34,240 --> 00:12:36,959
@@ -1357,7 +1357,7 @@ witness pool watcher and KF boot.
 
 340
 00:13:20,880 --> 00:13:23,360
-So there's some… the guide as you'll
+There's some… the guide as you'll
 
 341
 00:13:23,360 --> 00:13:25,760
@@ -1421,7 +1421,7 @@ dependency there for that
 
 356
 00:13:58,639 --> 00:14:01,040
-particular version. So we just kind
+particular version. We just kind
 
 357
 00:14:01,040 --> 00:14:03,519
@@ -1457,7 +1457,7 @@ into a little bit more of the guts of
 
 365
 00:14:19,839 --> 00:14:25,279
-this install. So the witness
+this install. The witness
 
 366
 00:14:25,279 --> 00:14:28,320
@@ -1477,11 +1477,11 @@ witopnet is the name of the package that
 
 370
 00:14:36,480 --> 00:14:39,440
-will go into PyPy. It's not there yet. So
+will go into PyPy. It's not there yet.
 
 371
 00:14:39,440 --> 00:14:41,199
-the install in the guide is just an
+The install in the guide is just an
 
 372
 00:14:41,199 --> 00:14:44,160
@@ -1489,7 +1489,7 @@ install straight from GitHub over
 
 373
 00:14:44,160 --> 00:14:48,320
-HTTP. So it's just a uv install from
+HTTP. It's just a uv install from
 
 374
 00:14:48,320 --> 00:14:50,000
@@ -1560,1914 +1560,1909 @@ provisioning and communication
 and stuff.
 
 391
-00:15:31,420 --> 00:15:33,360
-So.
+00:15:33,360 --> 00:15:35,519
+Anybody following along actually doing
 
 392
-00:15:33,360 --> 00:15:35,519
-anybody following along actually doing
-
-393
 00:15:35,519 --> 00:15:37,839
 it?
 
-394
+393
 00:15:37,839 --> 00:15:39,600
 Nobody's actually installing it. I
 
-395
+394
 00:15:39,600 --> 00:15:41,600
 wouldn't figure you would. But any
 
-396
+395
 00:15:41,600 --> 00:15:43,440
 questions yet? We'll I'm kind of
 
-397
+396
 00:15:43,440 --> 00:15:45,360
 going a little bit quick through this to
 
-398
+397
 00:15:45,360 --> 00:15:46,560
 get to more of a demo and then we can
 
-399
+398
 00:15:46,560 --> 00:15:48,959
 get to questions about anything related.
 
-400
+399
 00:15:51,920 --> 00:15:53,839
 Okay, next part of the setup is just the
 
-401
+400
 00:15:53,839 --> 00:15:56,639
 config. And there are various
 
-402
+401
 00:15:56,639 --> 00:15:58,000
 different config files that we'll have
 
-403
+402
 00:15:58,000 --> 00:16:00,399
 to set up to make this work. The witness
 
-404
+403
 00:16:00,399 --> 00:16:03,040
 config is called witopnet.json. The
 
-405
+404
 00:16:03,040 --> 00:16:05,120
 paths are all there on the setup guide
 
-406
+405
 00:16:05,120 --> 00:16:09,120
 itself. In this particular instance, the
 
-407
+406
 00:16:09,120 --> 00:16:11,360
 wallet will allow for a one-witness
 
-408
+407
 00:16:11,360 --> 00:16:13,120
 configuration where, with your
 
-409
+408
 00:16:13,120 --> 00:16:15,199
 AID, you're going to set up one witness
 
-410
+409
 00:16:15,199 --> 00:16:17,759
 or if you've got your configuration set
 
-411
+410
 00:16:17,759 --> 00:16:20,560
 up right on the server, it'll allow a
 
-412
+411
 00:16:20,560 --> 00:16:22,480
 three of four, meaning that it'll the
 
-413
+412
 00:16:22,480 --> 00:16:24,560
 threshold, it'll have four
 
-414
+413
 00:16:24,560 --> 00:16:26,320
 witnesses available and it'll require
 
-415
+414
 00:16:26,320 --> 00:16:28,480
 three of the four for it to be
 
-416
+415
 00:16:28,480 --> 00:16:32,079
-considered fully witnessed. So by
+considered fully witnessed. By
 
-417
+416
 00:16:32,079 --> 00:16:34,560
 doing this four times, four different
 
-418
+417
 00:16:34,560 --> 00:16:37,600
 instances of the witness service, we're
 
-419
+418
 00:16:37,600 --> 00:16:40,880
 kind of faking on one host being able to
 
-420
+419
 00:16:40,880 --> 00:16:41,614
 have that three or four
 
-421
+420
 00:16:41,639 --> 00:16:44,399
 configurations and test
 
-422
+421
 00:16:44,399 --> 00:16:47,440
 it out without actually having to spread
 
-423
+422
 00:16:47,440 --> 00:16:48,880
 that across multiple different servers
 
-424
+423
 00:16:48,880 --> 00:16:51,519
 or data centers or whatever.
 
-425
+424
 00:16:51,519 --> 00:16:53,040
 And that's what the configuration file
 
-426
+425
 00:16:53,040 --> 00:16:56,079
 looks like. That curl is that
 
-427
+426
 00:16:56,079 --> 00:17:01,600
 URL will be the base URL of what
 
-428
+427
 00:17:01,600 --> 00:17:04,319
 the witness communicates back to the
 
-429
+428
 00:17:04,319 --> 00:17:07,600
 wallet for OOBIs and things like that,
 
-430
+429
 00:17:07,600 --> 00:17:10,079
 as we get into that point.
 
-431
+430
 00:17:10,079 --> 00:17:14,000
 As the guide
 
-432
+431
 00:17:14,000 --> 00:17:16,640
 describes, you'd have a different copy
 
-433
+432
 00:17:16,640 --> 00:17:18,880
 of that with a different port for each
 
-434
+433
 00:17:18,880 --> 00:17:20,799
 one of those. Whatever ports you want
 
-435
+434
 00:17:20,799 --> 00:17:24,319
 really, but in our case, we did 5632,
 
-436
+435
 00:17:24,319 --> 00:17:27,919
 5642, 52, and 62. Those are the ports
 
-437
+436
 00:17:27,919 --> 00:17:29,120
 that we're running on our
 
-438
+437
 00:17:29,120 --> 00:17:32,789
 infrastructure.
 
-439
+438
 00:17:33,858 --> 00:17:36,597
 watopnet.json is the watcher config.
 
-440
+439
 00:17:36,621 --> 00:17:39,360
 It's very similar pretty much the same
 
-441
+440
 00:17:39,360 --> 00:17:41,600
 structure just slight differences in
 
-442
+441
 00:17:41,600 --> 00:17:44,400
 naming and the different port. And in
 
-443
+442
 00:17:44,400 --> 00:17:46,799
 theory you can .., I have not done this yet,
 
-444
+443
 00:17:46,799 --> 00:17:48,799
 but in theory the design is such
 
-445
+444
 00:17:48,799 --> 00:17:51,360
 that you can run a network of watchers
 
-446
+445
 00:17:51,360 --> 00:17:53,520
 as well we won't talk about that in this
 
-447
+446
 00:17:53,520 --> 00:17:55,760
 particular session because we I haven't
 
-448
+447
 00:17:55,760 --> 00:17:57,840
 actually done it so we're not quite to
 
-449
+448
 00:17:57,840 --> 00:18:01,600
 that point but you can do that.
 
-450
+449
 00:18:01,600 --> 00:18:03,840
 And then next
 
-451
+450
 00:18:03,840 --> 00:18:05,919
 we'll set up some launch
 
-452
+451
 00:18:05,919 --> 00:18:08,400
 scripts for each of these services,
 
-453
+452
 00:18:08,400 --> 00:18:11,360
 these are just shell scripts that invoke
 
-454
+453
 00:18:11,360 --> 00:18:13,200
-the various different packages. Well, in
+the various different packages. In
 
-455
+454
 00:18:13,200 --> 00:18:14,640
 this case, it's just the witnesses with
 
-456
+455
 00:18:14,640 --> 00:18:16,960
 the setups. Again, pay a special
 
-457
+456
 00:18:16,960 --> 00:18:20,880
 attention to the HTTP and boot port.
 
-458
+457
 00:18:20,880 --> 00:18:23,440
 Those will have to
 
-459
+458
 00:18:23,465 --> 00:18:25,600
 coincide with what we put into the
 
-460
+459
 00:18:25,600 --> 00:18:27,039
 previous config. Make sure that those
 
-461
+460
 00:18:27,039 --> 00:18:29,840
 ports align.
 
-462
+461
 00:18:29,840 --> 00:18:32,559
 And that will be used for the public and
 
-463
+462
 00:18:32,583 --> 00:18:35,520
 the internal private communication ports
 
-464
+463
 00:18:35,520 --> 00:18:38,160
 that it'll use.
 
-465
+464
 00:18:38,160 --> 00:18:40,559
 The 5631 in this case is the
 
-466
+465
 00:18:40,559 --> 00:18:43,039
 internal local loop-back communication
 
-467
+466
 00:18:43,039 --> 00:18:48,070
 port that it uses.
 
-468
+467
 00:18:48,080 --> 00:18:50,968
 And then the watopnet similar, watcher
 
-469
+468
 00:18:50,992 --> 00:18:53,360
 network same thing. Same kind of
 
-470
+469
 00:18:53,360 --> 00:18:56,720
 stuff. Set this up to your liking,
 
-471
+470
 00:18:56,720 --> 00:19:00,480
 but for the most part that's
 
-472
+471
 00:19:00,480 --> 00:19:03,280
-the pattern. So,
+the pattern.
+
+472
+00:19:03,280 --> 00:19:06,000
+And then the boot script, the KF boot
 
 473
-00:19:03,280 --> 00:19:06,000
-and then the boot script, the KF boot
-
-474
 00:19:06,000 --> 00:19:07,919
 boot service has a bunch of environment
 
-475
+474
 00:19:07,919 --> 00:19:10,559
 variables that we have to set up to
 
-476
+475
 00:19:10,559 --> 00:19:13,360
 make this system work, make it all
 
-477
+476
 00:19:13,360 --> 00:19:15,039
 communicate well and keep track of
 
-478
+477
 00:19:15,039 --> 00:19:16,799
 itself and all that stuff. The one that
 
-479
+478
 00:19:16,799 --> 00:19:18,640
 we want to pay special attention to
 
-480
+479
 00:19:18,640 --> 00:19:21,679
 in this particular thing, this
 
-481
+480
 00:19:21,679 --> 00:19:25,039
 particular demo is the boot witness
 
-482
+481
 00:19:25,039 --> 00:19:28,559
 backends. This is a string of multiple
 
-483
+482
 00:19:28,559 --> 00:19:31,600
 witness IPs with the following
 
-484
+483
 00:19:31,600 --> 00:19:35,280
 pattern: witness ID, internal IP and
 
-485
+484
 00:19:35,280 --> 00:19:37,600
 port and external IP and port. As you
 
-486
+485
 00:19:37,600 --> 00:19:39,280
 can see at the end of this string here,
 
-487
+486
 00:19:39,280 --> 00:19:41,200
 it starts after the comment starts into
 
-488
+487
 00:19:41,200 --> 00:19:45,120
-the next one. So, by doing that with the
+the next one. By doing that with the
 
-489
+488
 00:19:45,120 --> 00:19:48,400
 the all four of those
 
-490
+489
 00:19:48,400 --> 00:19:50,720
 configurations, that's basically what's
 
-491
+490
 00:19:50,720 --> 00:19:53,120
 going to tell the wallet to allow a
 
-492
+491
 00:19:53,120 --> 00:19:55,120
 three of four configuration because
 
-493
+492
 00:19:55,120 --> 00:19:56,559
 we're telling it there's four different
 
-494
+493
 00:19:56,559 --> 00:19:59,120
-witnesses to choose from. So, we've met
+witnesses to choose from. We've met
 
-495
+494
 00:19:59,120 --> 00:20:00,960
 that requirement for the wallet to be
 
-496
+495
 00:20:00,960 --> 00:20:02,480
 able to enable it.
 
-497
+496
 00:20:02,480 --> 00:20:04,799
 – Those IDs are AIDs or?
 
-498
+497
 00:20:04,799 --> 00:20:06,080
 – They're just arbitrary
 
-499
+498
 00:20:06,080 --> 00:20:07,679
 witness IDs. You can call them whatever
 
-500
+499
 00:20:07,679 --> 00:20:11,520
 you want. They're just an identifier
 
-501
+500
 00:20:11,520 --> 00:20:15,750
 internally.
 
-502
+501
 00:20:15,774 --> 00:20:18,675
-So they're actually like literal wit
+They're actually like literal wit
 
-503
+502
 00:20:18,699 --> 00:20:21,600
 wit one wit two, that's the literal
 
-504
+503
 00:20:21,600 --> 00:20:23,693
 name or ID for this purpose.
 
-505
+504
 00:20:28,000 --> 00:20:32,559
 And then next step is
 
-506
+505
 00:20:32,559 --> 00:20:35,200
 Circus install. Now technically in the
 
-507
+506
 00:20:35,200 --> 00:20:37,840
 guide I think the Circus install is at
 
-508
+507
 00:20:37,840 --> 00:20:40,159
 like set step four or five and then the
 
-509
+508
 00:20:40,159 --> 00:20:42,400
 Circus configuration is at step eight or
 
-510
+509
 00:20:42,400 --> 00:20:45,919
 nine. For this presentation, I kind of
 
-511
+510
 00:20:45,919 --> 00:20:47,760
 combined those. Circus install you can
 
-512
+511
 00:20:47,760 --> 00:20:49,520
-do whenever you want and you know before
+do whenever you want before
 
-513
+512
 00:20:49,520 --> 00:20:52,240
 you configure it. And Circus, anybody
 
-514
+513
 00:20:52,240 --> 00:20:54,559
-know what Circus is? Anybody? Okay. So
+know what Circus is? Anybody? Okay.
+
+514
+00:20:54,559 --> 00:20:57,679
+Circus is a process manager. It's
 
 515
-00:20:54,559 --> 00:20:57,679
-Circus is a process manager. So, it's
-
-516
 00:20:57,679 --> 00:20:59,280
 the thing that's going to actually
 
-517
+516
 00:20:59,280 --> 00:21:02,480
 manage the launch and the state of the
 
-518
+517
 00:21:02,480 --> 00:21:05,600
 Python processes themselves, the
 
-519
+518
 00:21:05,600 --> 00:21:08,799
 witness and watcher and boot service
 
-520
+519
 00:21:08,799 --> 00:21:11,200
-processes themselves. So, we're going to
+processes themselves. We're going to
 
-521
+520
 00:21:11,200 --> 00:21:13,039
 put together a config file as it shows
 
-522
+521
 00:21:13,039 --> 00:21:15,600
 in the guide there. And any
 
-523
+522
 00:21:15,600 --> 00:21:17,840
 file that has all the run scripts for
 
-524
+523
 00:21:17,840 --> 00:21:19,600
 all those different things and Circus is
 
-525
+524
 00:21:19,600 --> 00:21:21,280
-going to manage all that. So all you
+going to manage all that. All you
 
-526
+525
 00:21:21,280 --> 00:21:23,520
 have to do is run one Circus command to
 
-527
+526
 00:21:23,520 --> 00:21:25,200
 start them all up and you can get status
 
-528
+527
 00:21:25,200 --> 00:21:27,200
 from it and all that stuff as opposed to
 
-529
+528
 00:21:27,200 --> 00:21:30,400
 running them all independently.
 
-530
+529
 00:21:30,400 --> 00:21:31,840
 And then along with Circus we're going
 
-531
+530
 00:21:31,840 --> 00:21:34,159
 to set up 'systemd' unit
 
-532
+531
 00:21:34,159 --> 00:21:36,480
 so that systemd can manage Circus so
 
-533
+532
 00:21:36,480 --> 00:21:38,960
 that it boots on startup and you know
 
-534
+533
 00:21:38,960 --> 00:21:40,640
 keeps the state and the logging of
 
-535
+534
 00:21:40,640 --> 00:21:42,880
-the Circus process itself. So it's a
+the Circus process itself. It's a
 
-536
+535
 00:21:42,880 --> 00:21:44,559
 little bit two layers deep when it comes
 
-537
+536
 00:21:44,559 --> 00:21:46,480
 to that.
 
-538
+537
 00:21:46,480 --> 00:21:48,799
-So you can restart these services
+You can restart these services
 
-539
+538
 00:21:48,799 --> 00:21:50,880
 either with Circus
 
-540
+539
 00:21:50,880 --> 00:21:55,039
 Or at the global level
 
-541
+540
 00:21:55,039 --> 00:21:57,919
 with systemd
 
-542
+541
 00:21:57,919 --> 00:22:00,640
 and then finally
 
-543
+542
 00:22:00,640 --> 00:22:03,200
 Nginx setup
 
-544
+543
 00:22:03,200 --> 00:22:06,000
 to be able to… if you want to have TLS
 
-545
+544
 00:22:06,000 --> 00:22:08,320
 termination… in our case we wanted
 
-546
+545
 00:22:08,320 --> 00:22:12,720
 TLS for the initial communication so
 
-547
+546
 00:22:12,720 --> 00:22:17,679
 that was all encrypted and then
 
-548
+547
 00:22:17,679 --> 00:22:19,840
 subsequent communications all signed and
 
-549
+548
 00:22:19,840 --> 00:22:22,960
-all that stuff anyway. So you don't
+all that stuff anyway. You don't
 
-550
+549
 00:22:22,960 --> 00:22:25,039
 have to set up the TLS stuff, but we did
 
-551
+550
 00:22:25,039 --> 00:22:28,559
 in our case.
 
-552
+551
 00:22:28,559 --> 00:22:30,000
 And I've done this on two different
 
-553
+552
 00:22:30,024 --> 00:22:31,600
 machines. I've done it on… KERI
 
-554
+553
 00:22:31,600 --> 00:22:33,440
 Foundation is providing
 
-555
+554
 00:22:33,440 --> 00:22:36,000
 the one I'll show. I also
 
-556
+555
 00:22:36,000 --> 00:22:39,360
 have my own that I set it up on as
 
-557
+556
 00:22:39,360 --> 00:22:42,240
 well that is fully TLS, all the
 
-558
+557
 00:22:42,240 --> 00:22:44,720
 endpoints are encrypted,
 
-559
+558
 00:22:44,720 --> 00:22:47,632
 running over TLS.
 
-560
+559
 00:22:48,415 --> 00:22:51,158
 And that's pretty much the long and
 
-561
+560
 00:22:51,182 --> 00:22:54,240
-short of the actual setup. So if you do
+short of the actual setup. If you do
 
-562
+561
 00:22:54,240 --> 00:22:58,640
 want to try this out, by all means, go
 
-563
+562
 00:22:58,640 --> 00:23:00,640
 ahead and follow through that
 
-564
+563
 00:23:00,640 --> 00:23:02,559
 setup guide. If you've got servers of
 
-565
+564
 00:23:02,559 --> 00:23:04,080
 your own you want to try it
 
-566
+565
 00:23:04,080 --> 00:23:05,360
-on. I mean, you're going to have to have
+on. You're going to have
 
-567
+566
 00:23:05,360 --> 00:23:06,799
 them, obviously, or a Docker container,
 
-568
+567
 00:23:06,799 --> 00:23:08,720
 whatever. You can just follow along
 
-569
+568
 00:23:08,720 --> 00:23:14,559
 through that. And it should get you
 
-570
+569
 00:23:14,559 --> 00:23:16,559
 up to where you're ready to try it
 
-571
+570
 00:23:16,559 --> 00:23:19,600
-out and see how it all goes. So, that's
+out and see how it all goes. That's
 
-572
+571
 00:23:19,600 --> 00:23:23,360
 pretty much it for the setup guide
 
-573
+572
 00:23:23,360 --> 00:23:25,039
 itself. And there's a couple more steps
 
-574
+573
 00:23:25,039 --> 00:23:26,400
 in the guide, but they're mostly, you
 
-575
+574
 00:23:26,400 --> 00:23:28,720
-know, setting up the firewall.
+Setting up the firewall.
 
-576
+575
 00:23:28,720 --> 00:23:30,640
 That's because my slideshow's over.
 
-577
+576
 00:23:52,366 --> 00:23:58,870
 You guys aren't going to see this yet, but…
 
-578
+577
 00:24:03,748 --> 00:24:05,930
 Any questions so far?
 
-579
+578
 00:24:07,113 --> 00:24:08,657
 Anybody have any…
 
-580
+579
 00:24:14,870 --> 00:24:17,520
-– So, what is the boot doing exactly? It's
+– What is the boot doing exactly? It's
 
-581
+580
 00:24:17,520 --> 00:24:20,799
 it's going to… it will create the [inaudible]
 
-582
+581
 00:24:20,799 --> 00:24:22,880
 – It's basically the control
 
-583
+582
 00:24:22,880 --> 00:24:26,080
 plan for the witness and watcher
 
-584
+583
 00:24:26,080 --> 00:24:28,799
-network themselves. So when we
+network themselves. When we
 
-585
+584
 00:24:28,799 --> 00:24:31,039
 first launch the… I'll kind of walk you
 
-586
+585
 00:24:31,039 --> 00:24:33,221
 through it. Let me… oops wrong thing.
 
-587
+586
 00:24:36,425 --> 00:24:38,815
 Let me get my display in the right place…
 
-588
+587
 00:24:43,957 --> 00:24:44,935
 There we go.
 
-589
+588
 00:24:46,334 --> 00:24:49,010
 Let me open up the right project here.
 
-590
+589
 00:25:06,956 --> 00:25:09,789
 In theory, I think I cleaned
 
-591
+590
 00:25:09,814 --> 00:25:12,400
 myself off enough, my environment
 
-592
+591
 00:25:12,400 --> 00:25:14,960
 off, that we're starting entirely fresh
 
-593
+592
 00:25:14,960 --> 00:25:19,440
-with a new deployment. So we're
+with a new deployment. We're
 
-594
+593
 00:25:19,440 --> 00:25:21,039
 going to initialize a new vault. We'll
 
-595
+594
 00:25:21,039 --> 00:25:24,159
 just call it 'test'.
 
-596
+595
 00:25:24,159 --> 00:25:24,806
 I'll give it a
 
-597
+596
 00:25:27,039 --> 00:25:28,475
 passcode.
 
-598
+597
 00:25:35,011 --> 00:25:37,893
-… a new AID. So now I have the new AID.
+… a new AID. Now I have the new AID.
 
-599
+598
 00:25:37,917 --> 00:25:40,799
 Nothing special yet. Now all that does
 
-600
+599
 00:25:40,799 --> 00:25:46,880
 is the local key, the local AID and in
 
-601
+600
 00:25:46,880 --> 00:25:49,440
 the inception event in the KEL
 
-602
+601
 00:25:49,440 --> 00:25:51,120
-locally. So I'm not talking to anybody
+locally. I'm not talking to anybody
 
-603
+602
 00:25:51,120 --> 00:25:53,279
 yet. It's just a local KEL, has an
 
-604
+603
 00:25:53,279 --> 00:25:54,640
 inception event in it. You're not going
 
-605
+604
 00:25:54,640 --> 00:25:56,960
 to see that here but that's where we are
 
-606
+605
 00:25:56,960 --> 00:25:59,520
 at this point. And then from here I can
 
-607
+606
 00:25:59,520 --> 00:26:01,440
 go into this KERI-Foundation
 
-608
+607
 00:26:01,440 --> 00:26:04,240
 plugin. This is an adaptation of
 
-609
+608
 00:26:04,240 --> 00:26:07,039
-what healthKERI provided for us. So Evan
+what healthKERI provided for us. Evan
 
-610
+609
 00:26:07,039 --> 00:26:10,720
 did a bunch of good work to turn
 
-611
+610
 00:26:10,720 --> 00:26:13,200
 this into something more useful for us.
 
-612
+611
 00:26:13,200 --> 00:26:16,080
 Good job!
 
-613
+612
 00:26:16,080 --> 00:26:18,480
-And for all you to use. So you can see
+And for all you to use. You can see
 
-614
+613
 00:26:18,480 --> 00:26:20,320
 it's connected
 
-615
+614
 00:26:20,320 --> 00:26:24,080
 to this particular host which is the
 
-616
+615
 00:26:24,080 --> 00:26:27,360
 KERI Foundation host. I'm going to
 
-617
+616
 00:26:27,360 --> 00:26:28,880
 choose
 
-618
+617
 00:26:28,880 --> 00:26:32,400
 my AID and the profile that I want,
 
-619
+618
 00:26:32,400 --> 00:26:35,200
 which in this case is “three of four”. And
 
-620
+619
 00:26:35,200 --> 00:26:37,120
 then when I click this "begin onboarding"
 
-621
+620
 00:26:37,120 --> 00:26:39,039
 to answer your question, Joseph, it's
 
-622
+621
 00:26:39,039 --> 00:26:41,120
 going to hit that boot service to
 
-623
+622
 00:26:41,120 --> 00:26:44,240
 basically make the introduction and
 
-624
+623
 00:26:44,240 --> 00:26:47,279
 initialize the process of provisioning
 
-625
+624
 00:26:47,279 --> 00:26:50,159
 witnesses, sending back the URLs for the
 
-626
+625
 00:26:50,159 --> 00:26:53,520
 OOBIs and taking it through that whole
 
-627
+626
 00:26:53,520 --> 00:26:57,520
 process of introducing the
 
-628
+627
 00:26:57,520 --> 00:27:00,400
 witnesses, sending a rotation. Since
 
-629
+628
 00:27:00,400 --> 00:27:01,679
 we've already done an inception, it's
 
-630
+629
 00:27:01,679 --> 00:27:03,760
 going to do a rotation to rotate the
 
-631
+630
 00:27:03,760 --> 00:27:05,679
 witnesses in based on what the boot
 
-632
+631
 00:27:05,679 --> 00:27:08,080
 service is returning back from the
 
-633
+632
 00:27:08,080 --> 00:27:09,919
 witness service. Does that make sense?
 
-634
+633
 00:27:09,919 --> 00:27:11,279
 Ish.
 
-635
+634
 00:27:11,279 --> 00:27:13,760
 Well enough. Get into the code, you'll
 
-636
+635
 00:27:13,760 --> 00:27:17,039
 you'll get it.
 
-637
+636
 00:27:17,039 --> 00:27:20,559
-So now fingers crossed. If I did
+Now fingers crossed. If I did
 
-638
+637
 00:27:20,583 --> 00:27:22,400
 everything right, this is the big moment
 
-639
+638
 00:27:22,400 --> 00:27:24,000
 of truth when I'm going to click a
 
-640
+639
 00:27:24,000 --> 00:27:26,496
 button and hope it does something.
 
-641
+640
 00:27:30,894 --> 00:27:33,465
 It's going to give me the beach ball…
 
-642
+641
 00:27:37,378 --> 00:27:39,335
 for some reason. I've literally never
 
-643
+642
 00:27:39,360 --> 00:27:40,373
 seen that.
 
-644
+643
 00:27:50,145 --> 00:27:52,150
 Looks like it's trying to do something.
 
-645
+644
 00:27:53,770 --> 00:27:55,174
 Oh, it failed.
 
-646
+645
 00:28:42,744 --> 00:28:44,484
 Am I connected to the internet?
 
-647
+646
 00:28:44,509 --> 00:28:46,598
 Make sure that all works.
 
-648
+647
 00:28:48,320 --> 00:28:51,907
 The Wi-Fi here isn't super fast, so…
 
-649
+648
 00:28:56,230 --> 00:28:58,757
-Yeah, we could try that.
+We could try that.
+
+649
+00:29:06,727 --> 00:29:10,918
+You can see it's doing some stuff,
 
 650
-00:29:06,727 --> 00:29:10,918
-So, you can see it's doing some stuff,
-
-651
 00:29:10,943 --> 00:29:12,880
 but it's bailing. I don't know what
 
-652
+651
 00:29:12,880 --> 00:29:16,230
 that's about.
 
-653
+652
 00:29:21,651 --> 00:29:25,093
 Oh, I might know what it is. Sorry.
 
-654
+653
 00:29:25,118 --> 00:29:27,141
 I'm gonna kill my session there.
 
-655
+654
 00:29:31,881 --> 00:29:33,894
 I was running in debug mode. I wonder if
 
-656
+655
 00:29:33,919 --> 00:29:36,295
 that's just slowing it down too much.
 
-657
+656
 00:29:50,504 --> 00:29:52,010
 There we go. Getting a little bit
 
-658
+657
 00:29:52,035 --> 00:29:54,480
 better. Can see all the stuff that's
 
-659
+658
 00:29:54,480 --> 00:29:55,573
 happening here.
 
-660
+659
 00:29:58,282 --> 00:30:01,528
 Does take a minute for this to finish.
 
-661
+660
 00:30:13,756 --> 00:30:14,956
 This is gripping…
 
-662
+661
 00:30:15,831 --> 00:30:18,880
 watching this work, right? Everyone's on
 
-663
+662
 00:30:18,880 --> 00:30:20,480
 pins and needles like, is it
 
-664
+663
 00:30:20,480 --> 00:30:21,402
 gonna work?
 
-665
+664
 00:30:24,236 --> 00:30:25,165
 Shazam.
 
-666
+665
 00:30:26,175 --> 00:30:28,002
 – What made the difference?
 
-667
+666
 00:30:28,027 --> 00:30:32,240
 – I was running in debug mode on my IDE,
 
-668
+667
 00:30:32,240 --> 00:30:35,279
 which was just puts too much overhead
 
-669
+668
 00:30:35,279 --> 00:30:37,679
 into the process. It was just too slow.
 
-670
+669
 00:30:37,679 --> 00:30:42,399
-So, what I can do now with this
+What I can do now with this
 
-671
+670
 00:30:42,399 --> 00:30:44,320
 QR code
 
-672
+671
 00:30:44,320 --> 00:30:47,120
 is I'm going to scan it into
 
-673
+672
 00:30:47,120 --> 00:30:49,760
 I'll use Authy for this one. Any
 
-674
+673
 00:30:49,760 --> 00:30:52,274
 authenticator app should work fine.
 
-675
+674
 00:31:01,028 --> 00:31:02,512
-Okay, so now it's… I've got it in my
+Okay, now it's… I've got it in my
 
-676
+675
 00:31:02,537 --> 00:31:06,799
 authenticator app and then I can go
 
-677
+676
 00:31:06,799 --> 00:31:09,200
 back into the plugin
 
-678
+677
 00:31:09,200 --> 00:31:11,520
 and this is just a demonstration but
 
-679
+678
 00:31:11,520 --> 00:31:13,279
 I'll go to the credentials. I have
 
-680
+679
 00:31:13,279 --> 00:31:15,039
 a schema that's a test schema that we
 
-681
+680
 00:31:15,039 --> 00:31:18,320
 use for issuing credentials and I
 
-682
+681
 00:31:18,320 --> 00:31:21,039
 will
 
-683
+682
 00:31:21,039 --> 00:31:24,720
 … local ident… oh I got to upload
 
-684
+683
 00:31:24,720 --> 00:31:26,493
 the schema first. Sorry.
 
-685
+684
 00:31:36,720 --> 00:31:38,676
 Downloads I think.
 
-686
+685
 00:31:40,874 --> 00:31:42,691
-So I'm adding this particular credential
+I'm adding this particular credential
 
-687
+686
 00:31:42,716 --> 00:31:44,880
 schema. Going to use that for issuance.
 
-688
+687
 00:31:44,880 --> 00:31:48,159
-– So is that's an ACDC?
+– Is that's an ACDC?
 
-689
+688
 00:31:48,159 --> 00:31:50,640
 – It's just a credential just a schema
 
-690
+689
 00:31:50,640 --> 00:31:52,480
 for a credential. It's not necessarily
 
-691
+690
 00:31:52,480 --> 00:31:54,240
 an A… or is it an ACDC?
 
-692
+691
 00:31:54,240 --> 00:31:55,392
 That's a good question.
 
-693
+692
 00:31:55,417 --> 00:31:58,399
 I think it's just a credential, but that
 
-694
+693
 00:31:58,399 --> 00:32:00,080
 is a good question. I have to look at
 
-695
+694
 00:32:00,080 --> 00:32:04,480
 it. It's just a test one that we've got.
 
-696
+695
 00:32:04,480 --> 00:32:07,679
 And now I have to authenticate with my
 
-697
+696
 00:32:07,679 --> 00:32:09,048
 authenticator.
 
-698
+697
 00:32:16,436 --> 00:32:18,677
 And now I've issued a credential, which
 
-699
+698
 00:32:18,702 --> 00:32:20,720
 is nothing more than a little test just
 
-700
+699
 00:32:20,720 --> 00:32:23,020
 to show that it worked.
 
-701
+700
 00:32:25,400 --> 00:32:29,215
 And there you go. That's a basic rundown
 
-702
+701
 00:32:29,239 --> 00:32:32,480
 of setting up the wit… using the code
 
-703
+702
 00:32:32,480 --> 00:32:34,960
 that healthKERI
 
-704
+703
 00:32:34,960 --> 00:32:38,720
 has open sourced providing it to you
 
-705
+704
 00:32:38,720 --> 00:32:42,000
 guys to all of us to start to build
 
-706
+705
 00:32:42,000 --> 00:32:44,880
 on, deploy on, test with, all that kind of
 
-707
+706
 00:32:44,880 --> 00:32:46,320
-stuff. We're we're fairly new to it,
+stuff. We're fairly new to it,
 
-708
+707
 00:32:46,320 --> 00:32:48,159
 ourselves on the KERI Foundation team.
 
-709
+708
 00:32:48,159 --> 00:32:51,039
-So it's it's been a cool
+It's been a cool
+
+709
+00:32:51,039 --> 00:32:54,159
+exploration and a cool process.
 
 710
-00:32:51,039 --> 00:32:54,159
-exploration and a cool process. So,
-
-711
 00:32:54,159 --> 00:32:56,640
 Any questions…
 
-712
+711
 00:32:56,640 --> 00:32:58,399
 any…
 
-713
+712
 00:32:58,399 --> 00:32:59,840
 Anything else you want to know about
 
-714
+713
 00:32:59,840 --> 00:33:02,880
 witnesses, watchers deployment, any
 
-715
+714
 00:33:02,880 --> 00:33:05,120
 of that stuff?
 
-716
+715
 00:33:05,120 --> 00:33:05,600
 Yeah.
 
-717
+716
 00:33:05,600 --> 00:33:07,840
 – How is this whole infrastructure
 
-718
+717
 00:33:07,840 --> 00:33:11,120
 different from what the packaging was three
 
-719
+718
 00:33:11,120 --> 00:33:13,440
 months ago when we done doing the
 
-720
+719
 00:33:13,440 --> 00:33:14,480
 hackathon?
 
-721
+720
 00:33:14,480 --> 00:33:16,000
 packaging.
 
-722
+721
 00:33:16,000 --> 00:33:18,320
 – Oh, I honestly don't know because I
 
-723
+722
 00:33:18,320 --> 00:33:19,279
 don't know what was going on with the
 
-724
+723
 00:33:19,279 --> 00:33:20,880
 hackathon.
 
-725
+724
 00:33:20,880 --> 00:33:23,360
 This all this code came from
 
-726
+725
 00:33:23,360 --> 00:33:25,120
-healthKERI. So, it could be the same
+healthKERI. It could be the same
 
-727
+726
 00:33:25,120 --> 00:33:26,559
 stuff to be honest,
 
-728
+727
 00:33:26,559 --> 00:33:28,640
 but I don't know what the hackathon was
 
-729
+728
 00:33:28,640 --> 00:33:29,120
-doing. So,
+doing.
 
-730
+729
 00:33:29,120 --> 00:33:30,218
 – I mean the witness
 
-731
+730
 00:33:30,218 --> 00:33:33,200
 is from KERIPy.
 
-732
+731
 00:33:33,200 --> 00:33:36,159
 There's a witness inside KERIPy
 
-733
+732
 00:33:36,159 --> 00:33:38,640
 but that was added by Phil in the
 
-734
+733
 00:33:38,640 --> 00:33:42,080
 early days. It's wasn't like, as you
 
-735
+734
 00:33:42,080 --> 00:33:44,399
-said, production grade. So a separate
+said, production grade. A separate
+
+735
+00:33:44,399 --> 00:33:46,000
+service because KERIPy is
 
 736
-00:33:44,399 --> 00:33:46,000
-service because you know KERIPy is
-
-737
 00:33:46,000 --> 00:33:47,840
 just [inaudible] core.
 
-738
+737
 00:33:47,840 --> 00:33:50,000
-Right. Yeah. So this is
+Right. This is
 
-739
+738
 00:33:50,000 --> 00:33:53,519
 a separate deployment a
 
-740
+739
 00:33:53,519 --> 00:33:55,360
 whole separate project that is for
 
-741
+740
 00:33:55,360 --> 00:33:58,240
 deploying a witness network
 
-742
+741
 00:33:58,240 --> 00:34:00,640
-being able to put up a whole… so as I
+being able to put up a whole… As I
 
-743
+742
 00:34:00,640 --> 00:34:03,840
 went back to… in my earlier slides
 
-744
+743
 00:34:03,840 --> 00:34:06,000
 in a production demo or a production
 
-745
+744
 00:34:06,000 --> 00:34:08,485
 environment that variable that I was
 
-746
+745
 00:34:08,510 --> 00:34:10,399
 showing you, that had all the different
 
-747
+746
 00:34:10,399 --> 00:34:12,560
 configuration in it, that wouldn't be all
 
-748
+747
 00:34:12,560 --> 00:34:14,320
 on the same host those would be pointing
 
-749
+748
 00:34:14,320 --> 00:34:16,800
 to ..., the boot service itself
 
-750
+749
 00:34:16,800 --> 00:34:18,960
 would probably run independently
 
-751
+750
 00:34:18,960 --> 00:34:21,919
 pointing to various different endpoints
 
-752
+751
 00:34:21,919 --> 00:34:24,000
 across cloud and whatever other
 
-753
+752
 00:34:24,000 --> 00:34:27,119
-infrastructure you want. So…
+infrastructure you want.
 
-754
+753
 00:34:27,119 --> 00:34:29,200
 – And you can run with a single
 
-755
+754
 00:34:29,200 --> 00:34:30,720
 witness, but the wallet can't connect to
 
-756
+755
 00:34:30,720 --> 00:34:31,277
 a single witness?
 
-757
+756
 00:34:31,302 --> 00:34:33,040
-– It can. Yeah, actually that's one
+– It can. Actually that's one
 
-758
+757
 00:34:33,040 --> 00:34:36,000
 of the options in here. I'd have to
 
-759
+758
 00:34:36,000 --> 00:34:37,599
-create a new one to go back to it. So,
+create a new one to go back to it.
+
+759
+00:34:37,599 --> 00:34:40,079
+You can choose one witness and deploy it
 
 760
-00:34:37,599 --> 00:34:40,079
-you can choose one witness and deploy it
-
-761
 00:34:40,079 --> 00:34:43,280
 that way if you want. The ultimate
 
-762
+761
 00:34:43,280 --> 00:34:45,200
 KERI idea is that you want to have a
 
-763
+762
 00:34:45,200 --> 00:34:46,399
 lot of witnesses, but if you want to
 
-764
+763
 00:34:46,399 --> 00:34:48,560
 just run one, you can certainly do that.
 
-765
+764
 00:34:48,560 --> 00:34:50,560
 And it works just the same way
 
-766
+765
 00:34:50,560 --> 00:34:52,362
 it does here.
 
-767
+766
 00:34:54,320 --> 00:34:57,135
-It did in the demo anyway. So, any other
+It did in the demo anyway. Any other
 
-768
+767
 00:34:57,160 --> 00:34:58,334
 questions?
 
-769
+768
 00:35:00,292 --> 00:35:01,498
-Is this useful? Yeah.
+Is this useful?
 
-770
+769
 00:35:01,522 --> 00:35:03,599
 – What does Circus add instead of just
 
-771
+770
 00:35:03,599 --> 00:35:06,560
 using systemd? – Nothing really other
 
-772
+771
 00:35:06,560 --> 00:35:08,079
 than it's just a nice little wrapper for
 
-773
+772
 00:35:08,079 --> 00:35:10,160
 all the Python stuff, but you could do
 
-774
+773
 00:35:10,160 --> 00:35:13,680
 it all with systemd for sure.
 
-775
+774
 00:35:13,680 --> 00:35:17,920
 Handle it that way just as easily.
 
-776
+775
 00:35:17,920 --> 00:35:19,920
 – Circus is just the Python native way of
 
-777
+776
 00:35:19,920 --> 00:35:21,680
 doing systemd type stuff, right? Service
 
-778
+777
 00:35:21,680 --> 00:35:22,160
 management…
 
-779
+778
 00:35:22,160 --> 00:35:23,599
-– Kind of. Yeah, it's not service
+– Kind of. It's not service
 
-780
+779
 00:35:23,599 --> 00:35:25,280
 management, process management really. I
 
-781
+780
 00:35:25,280 --> 00:35:28,720
-guess it's service management. Yeah.
+guess it's service management.
 
-782
+781
 00:35:28,720 --> 00:35:31,708
 It's kind of scoped at the project
 
-783
+782
 00:35:31,733 --> 00:35:34,640
-level. I mean, Circus gets installed
+level. Circus gets installed
 
-784
+783
 00:35:34,640 --> 00:35:37,040
 with the project as opposed to at the
 
-785
+784
 00:35:37,040 --> 00:35:39,040
 system level. Generally, I guess you
 
-786
+785
 00:35:39,040 --> 00:35:40,400
 could maybe do it that way if you wanted
 
-787
+786
 00:35:40,400 --> 00:35:44,560
 to, but generally at least what I've
 
-788
+787
 00:35:44,560 --> 00:35:47,359
 seen, Circus is usually kind of part of
 
-789
+788
 00:35:47,359 --> 00:35:48,960
 it's a Python thing that gets installed
 
-790
+789
 00:35:48,960 --> 00:35:50,240
 with your dependencies as opposed to
 
-791
+790
 00:35:50,240 --> 00:35:52,400
 being part of the server infra or server
 
-792
+791
 00:35:52,400 --> 00:35:55,454
 toolkit.
 
-793
+792
 00:36:01,895 --> 00:36:03,157
 And now I would like to do some tap
 
-794
+793
 00:36:03,182 --> 00:36:04,515
 dancing for you.
 
-795
+794
 00:36:08,763 --> 00:36:11,036
 Is that good? Anybody questions? Is this
 
-796
+795
 00:36:11,061 --> 00:36:13,599
 useful to you?
 
-797
+796
 00:36:13,599 --> 00:36:15,839
 We want to see everybody get out
 
-798
+797
 00:36:15,839 --> 00:36:18,800
 there and start trying to use it. Get
 
-799
+798
 00:36:18,800 --> 00:36:21,200
 it deployed, give us feedback, make
 
-800
+799
 00:36:21,200 --> 00:36:23,680
 suggestions, whatever. Like I
 
-801
+800
 00:36:23,680 --> 00:36:27,119
 mentioned, this particular
 
-802
+801
 00:36:27,119 --> 00:36:28,640
 infrastructure that I connected to is
 
-803
+802
 00:36:28,640 --> 00:36:31,520
 the healthKERI… sorry is the KERI
 
-804
+803
 00:36:31,520 --> 00:36:33,200
 Foundation
 
-805
+804
 00:36:33,200 --> 00:36:36,880
 deployment of these services which
 
-806
+805
 00:36:36,880 --> 00:36:38,960
 right now is for just demo purposes.
 
-807
+806
 00:36:38,960 --> 00:36:40,800
 You're welcome to actually use it. I
 
-808
+807
 00:36:40,800 --> 00:36:42,960
 guess I'll show you one .., I don't
 
-809
+808
 00:36:42,960 --> 00:36:45,520
 remember if Jay covered this or I
 
-810
+809
 00:36:45,520 --> 00:36:47,680
 might have missed it in his demo,
 
-811
+810
 00:36:47,680 --> 00:36:50,643
 but as it is right now, when you launch…
 
-812
+811
 00:36:55,695 --> 00:37:01,760
 the Locksmith code, there's a few
 
-813
+812
 00:37:01,760 --> 00:37:03,359
 environment variables that you have to
 
-814
+813
 00:37:03,359 --> 00:37:06,160
 set up so that it knows how to go and
 
-815
+814
 00:37:06,160 --> 00:37:10,240
 discover the witnesses that are avail…
 
-816
+815
 00:37:10,240 --> 00:37:12,160
 or the witness services that's available.
 
-817
+816
 00:37:12,160 --> 00:37:14,400
 And those are right here that I
 
-818
+817
 00:37:14,400 --> 00:37:16,480
 set up in my configuration for running
 
-819
+818
 00:37:16,480 --> 00:37:19,280
 Locksmith locally.
 
-820
+819
 00:37:19,280 --> 00:37:22,800
-So that's the host if you were going
+That's the host if you were going
 
-821
+820
 00:37:22,800 --> 00:37:25,119
 to try to use this. That's the host you
 
-822
+821
 00:37:25,119 --> 00:37:27,760
 would want to use, to use our
 
-823
+822
 00:37:27,760 --> 00:37:29,119
 infrastructure. We'll put that out there
 
-824
+823
 00:37:29,119 --> 00:37:32,139
 somewhere at some point publicly.
 
-825
+824
 00:37:32,164 --> 00:37:34,640
 – That means that's part of where
 
-826
+825
 00:37:34,640 --> 00:37:36,320
 the OOBI…
 
-827
+826
 00:37:36,320 --> 00:37:39,359
-– Yeah. So the first phase of it
+– Yeah. The first phase of it
 
-828
+827
 00:37:39,359 --> 00:37:41,599
 when you first create an AID and click
 
-829
+828
 00:37:41,599 --> 00:37:43,760
 the button it's going to hit this URL
 
-830
+829
 00:37:43,760 --> 00:37:46,960
 here for onboarding to make its kind of
 
-831
+830
 00:37:46,960 --> 00:37:48,720
 initial introduction. It'll use a an
 
-832
+831
 00:37:48,720 --> 00:37:51,200
 ephemeral AID to make the first
 
-833
+832
 00:37:51,200 --> 00:37:53,520
 connection and say that it wants to
 
-834
+833
 00:37:53,520 --> 00:37:56,800
 connect and then from then on it'll use
 
-835
+834
 00:37:56,800 --> 00:37:58,880
 the account after it's set up what's
 
-836
+835
 00:37:58,880 --> 00:38:00,320
 called basically an account
 
-837
+836
 00:38:00,320 --> 00:38:01,920
 relationship.
 
-838
+837
 00:38:01,920 --> 00:38:05,119
 It will use the account URL for
 
-839
+838
 00:38:05,119 --> 00:38:06,640
 subsequent ...,
 
-840
+839
 00:38:06,640 --> 00:38:08,480
 some of the subsequent calls, some of
 
-841
+840
 00:38:08,480 --> 00:38:10,320
 them go straight to the witnesses, some
 
-842
+841
 00:38:10,320 --> 00:38:12,640
 of them go through the boot service.
 
-843
+842
 00:38:12,640 --> 00:38:14,000
 Yeah.
 
-844
+843
 00:38:14,000 --> 00:38:17,599
 – A little tangential, but [inaudible] between the web
 
-845
+844
 00:38:17,599 --> 00:38:21,119
 GitHub or the KERI Foundation GitHub
 
-846
+845
 00:38:21,119 --> 00:38:22,720
 work?
 
-847
+846
 00:38:22,720 --> 00:38:24,880
 – it's a thin… it's sort of a blurry
 
-848
+847
 00:38:24,880 --> 00:38:26,880
 line at this point, but the KERI
 
-849
+848
 00:38:26,880 --> 00:38:28,160
 Foundation one came along later because
 
-850
+849
 00:38:28,160 --> 00:38:29,920
 the KERI Foundation itself came along
 
-851
+850
 00:38:29,920 --> 00:38:33,280
 later. And probably
 
-852
+851
 00:38:33,280 --> 00:38:35,680
 if I were to guess eventually KERIPy
 
-853
+852
 00:38:35,680 --> 00:38:38,320
 will move into the KERI Foundation org
 
-854
+853
 00:38:38,320 --> 00:38:40,960
 if it's worth the trouble of moving it.
 
-855
+854
 00:38:40,960 --> 00:38:44,240
 Maybe not. They're both Sam's… that
 
-856
+855
 00:38:44,240 --> 00:38:47,599
-created both of them. So the
+created both of them. The
 
-857
+856
 00:38:47,599 --> 00:38:51,359
 distinction is more logical than
 
-858
+857
 00:38:51,359 --> 00:38:55,040
-physical. You know, it's not much in
+physical. It's not much in
 
-859
+858
 00:38:55,040 --> 00:38:57,200
 other words. We created these ones in
 
-860
+859
 00:38:57,200 --> 00:38:59,119
 KERI Foundation just because now that
 
-861
+860
 00:38:59,119 --> 00:39:01,520
 the foundation exists, we want to start
 
-862
+861
 00:39:01,520 --> 00:39:03,599
 kind of centralizing some of this open
 
-863
+862
 00:39:03,599 --> 00:39:05,200
 source stuff related to
 
-864
+863
 00:39:05,200 --> 00:39:08,149
 KERI into that particular org.
 
-865
+864
 00:39:11,236 --> 00:39:12,957
 Cool. I mean I have nothing further
 
-866
+865
 00:39:12,982 --> 00:39:15,287
 unless you have any other questions?
 
-867
+866
 00:39:21,428 --> 00:39:22,931
 All right. Thanks everyone.
 
-868
+867
 00:39:22,956 --> 00:39:26,597
 [applause]
-

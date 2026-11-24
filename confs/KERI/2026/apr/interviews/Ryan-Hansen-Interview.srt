@@ -60,7 +60,7 @@ assertion is true, then it ultimately
 
 13
 00:01:00,220 --> 00:01:07,000
-doesn't matter. So in practice the witness
+doesn't matter. In practice the witness
 and watcher network infrastructure is
 
 14

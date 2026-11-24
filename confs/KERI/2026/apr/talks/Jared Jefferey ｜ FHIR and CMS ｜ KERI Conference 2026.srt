@@ -116,7 +116,7 @@ about CMS-0057-F and then we'll talk about
 
 30
 00:01:05,920 --> 00:01:08,640
-The VITAL initiative. So just as a as
+The VITAL initiative. Just as a as
 
 31
 00:01:08,640 --> 00:01:10,880
@@ -132,11 +132,11 @@ that is in the industry of the
 
 34
 00:01:16,000 --> 00:01:18,479
-missing trust layer for healthcare. So
+missing trust layer for healthcare.
 
 35
 00:01:18,479 --> 00:01:20,880
-we have adopted some open source open
+We have adopted some open source open
 
 36
 00:01:20,880 --> 00:01:22,320
@@ -212,7 +212,7 @@ say take your hats off. Let's
 
 54
 00:02:02,320 --> 00:02:03,759
-actually solve problems. And so they've
+actually solve problems. They've
 
 55
 00:02:03,759 --> 00:02:06,079
@@ -236,7 +236,7 @@ blows was I think actually a miracle.
 
 60
 00:02:14,640 --> 00:02:17,280
-And then previously, you know, my
+And then previously my
 
 61
 00:02:17,280 --> 00:02:19,440
@@ -244,7 +244,7 @@ educational credentials come both
 
 62
 00:02:19,440 --> 00:02:22,080
-from UVU. So happy to be back at
+from UVU. Happy to be back at
 
 63
 00:02:22,080 --> 00:02:25,040
@@ -264,7 +264,7 @@ quickly why it is we're doing this in
 
 67
 00:02:32,959 --> 00:02:36,720
-healthcare. So my background is one
+healthcare. My background is one
 
 68
 00:02:36,720 --> 00:02:38,879
@@ -276,7 +276,7 @@ I'm also a brain cancer survivor and
 
 70
 00:02:41,200 --> 00:02:43,599
-patient myself. So at one point I was
+patient myself. At one point I was
 
 71
 00:02:43,599 --> 00:02:45,360
@@ -328,7 +328,7 @@ ER doctor at the time they need an ER
 
 83
 00:03:11,120 --> 00:03:12,959
-doctor. And so one of the things that
+doctor. One of the things that
 
 84
 00:03:12,959 --> 00:03:15,200
@@ -352,7 +352,7 @@ the targeting of this industry has
 
 89
 00:03:23,440 --> 00:03:25,920
-real world implications. So the why for
+real world implications. The why for
 
 90
 00:03:25,920 --> 00:03:27,680
@@ -372,7 +372,7 @@ increasingly make the risk to patients
 
 94
 00:03:36,720 --> 00:03:38,879
-explode. And why is that? Well, if you
+explode. And why is that? If you
 
 95
 00:03:38,879 --> 00:03:41,599
@@ -404,7 +404,7 @@ in the US that ecosystem is incredibly
 
 102
 00:03:55,920 --> 00:03:57,760
-fragile. And so if you're talking about
+fragile. If you're talking about
 
 103
 00:03:57,760 --> 00:04:01,120
@@ -428,7 +428,7 @@ not have the same training, they may not
 
 108
 00:04:08,159 --> 00:04:10,480
-have a level one trauma center. So if
+have a level one trauma center. If
 
 109
 00:04:10,480 --> 00:04:12,720
@@ -456,7 +456,7 @@ be considered as disastrous as a
 
 115
 00:04:24,720 --> 00:04:27,040
-natural disaster. So a
+natural disaster. A
 
 116
 00:04:27,040 --> 00:04:29,680
@@ -484,7 +484,7 @@ ransomware attacks that are happening in
 
 122
 00:04:39,919 --> 00:04:42,960
-the industry. So a little bit of data
+the industry. A little bit of data
 
 123
 00:04:42,960 --> 00:04:45,600
@@ -508,7 +508,7 @@ this. They're also the most
 
 128
 00:04:54,720 --> 00:04:56,800
-expensive. So, this is part of what's
+expensive. This is part of what's
 
 129
 00:04:56,800 --> 00:04:58,160
@@ -524,11 +524,11 @@ throat of an organization that has to
 
 132
 00:05:02,720 --> 00:05:05,040
-pay you or people will die. And so,
+pay you or people will die.
 
 133
 00:05:05,040 --> 00:05:06,880
-attackers know this. This is a
+Attackers know this. This is a
 
 134
 00:05:06,880 --> 00:05:09,199
@@ -544,7 +544,7 @@ decade. Healthcare has been the most
 
 137
 00:05:12,880 --> 00:05:16,400
-targeted industry. So one of the
+targeted industry. One of the
 
 138
 00:05:16,400 --> 00:05:19,120
@@ -652,7 +652,7 @@ much as I'd love to call Capital One and
 
 164
 00:06:10,800 --> 00:06:12,319
-say, "Hey, you know, I've got brain
+say, "Hey I've got brain
 
 165
 00:06:12,319 --> 00:06:14,000
@@ -680,7 +680,7 @@ for as long as the data is valid,
 
 171
 00:06:25,600 --> 00:06:29,440
-which is forever. So with that data,
+which is forever. With that data,
 
 172
 00:06:29,440 --> 00:06:30,560
@@ -688,7 +688,7 @@ there are a number of different things
 
 173
 00:06:30,560 --> 00:06:32,720
-that they can do. So one is just selling
+that they can do. One is just selling
 
 174
 00:06:32,720 --> 00:06:34,960
@@ -804,7 +804,7 @@ now go after individual patients as
 
 202
 00:07:48,479 --> 00:07:51,199
-well. So they'll go after .., a recent
+well. They'll go after .., a recent
 
 203
 00:07:51,199 --> 00:07:53,440
@@ -840,7 +840,7 @@ $2,000 or we're going to put these out
 
 211
 00:08:06,080 --> 00:08:08,160
-on the dark web." And so it used to be
+on the dark web." It used to be
 
 212
 00:08:08,160 --> 00:08:10,479
@@ -908,7 +908,7 @@ healthcare's data incredibly valuable,
 
 228
 00:08:42,719 --> 00:08:45,279
-it is also incredibly complex. So you
+it is also incredibly complex. You
 
 229
 00:08:45,279 --> 00:08:46,560
@@ -928,7 +928,7 @@ ecosystems will on average have about
 
 233
 00:08:53,760 --> 00:08:56,080
-1,500 connections. So the average health
+1,500 connections. The average health
 
 234
 00:08:56,080 --> 00:08:58,480
@@ -960,7 +960,7 @@ of actually originate in an external
 
 241
 00:09:14,320 --> 00:09:17,839
-party. So I think a good example of [inaudible]
+party. I think a good example of [inaudible]
 
 242
 00:09:17,839 --> 00:09:21,404
@@ -980,7 +980,7 @@ Target got stolen. The way that they got
 
 246
 00:09:28,399 --> 00:09:30,240
-in was through the HVAC vendor. So the
+in was through the HVAC vendor. The
 
 247
 00:09:30,240 --> 00:09:31,760
@@ -1040,7 +1040,7 @@ keys of the kingdom. You execute your
 
 261
 00:09:53,839 --> 00:09:56,080
-ransomware. You know, within a month,
+ransomware. Within a month,
 
 262
 00:09:56,080 --> 00:09:58,720
@@ -1056,15 +1056,15 @@ hospital's got to get back up and
 
 265
 00:10:01,600 --> 00:10:04,399
-running. So that's the attack in
+running. That's the attack in
 
 266
 00:10:04,399 --> 00:10:08,080
-a nutshell and this is the risk. So
+a nutshell and this is the risk.
 
 267
 00:10:08,080 --> 00:10:10,320
-again thousands of connections coming
+Again thousands of connections coming
 
 268
 00:10:10,320 --> 00:10:12,000
@@ -1076,7 +1076,7 @@ representing a potential attack surface
 
 270
 00:10:14,160 --> 00:10:18,399
-for bad actors to enter in. So we used
+for bad actors to enter in. We used
 
 271
 00:10:18,399 --> 00:10:20,079
@@ -1272,7 +1272,7 @@ that they did say, "Hey, there's no
 
 319
 00:12:04,959 --> 00:12:07,600
-TLS on this connection. So you guys are
+TLS on this connection. You guys are
 
 320
 00:12:07,600 --> 00:12:08,959
@@ -1312,7 +1312,7 @@ into what CMS is, what they actually do,
 
 329
 00:12:28,160 --> 00:12:31,440
-why they matter. So very high level CMS
+why they matter. Very high level CMS
 
 330
 00:12:31,440 --> 00:12:32,720
@@ -1328,7 +1328,7 @@ the elderly, Medicaid is for low-income
 
 333
 00:12:38,399 --> 00:12:40,480
-individuals. So we care about our
+individuals. We care about our
 
 334
 00:12:40,480 --> 00:12:42,480
@@ -1360,7 +1360,7 @@ dollars? 1.2…
 
 341
 00:12:57,723 --> 00:12:59,581
-1.8. So round up, you've
+1.8. Round up, you've
 
 342
 00:12:59,605 --> 00:13:01,519
@@ -1376,7 +1376,7 @@ means across years it's trillions and
 
 345
 00:13:04,800 --> 00:13:07,200
-trillions of dollars. So even if you are
+trillions of dollars. Even if you are
 
 346
 00:13:07,200 --> 00:13:09,519
@@ -1392,11 +1392,11 @@ Medicaid dollars this is the 800 lb
 
 349
 00:13:13,760 --> 00:13:16,240
-gorilla in the room. So when they speak,
+gorilla in the room. When they speak,
 
 350
 00:13:16,240 --> 00:13:18,079
-typically everybody listens. Yeah. Mark
+typically everybody listens. Mark
 
 351
 00:13:18,079 --> 00:13:22,880
@@ -1516,7 +1516,7 @@ put it into regulation and say this is
 
 380
 00:14:26,399 --> 00:14:28,079
-how we want to see things done. So, for
+how we want to see things done. For
 
 381
 00:14:28,079 --> 00:14:29,920
@@ -1548,7 +1548,7 @@ whether or not they have a FHIR API
 
 388
 00:14:45,680 --> 00:14:47,440
-endpoint. So again, you start to see
+endpoint. Again, you start to see
 
 389
 00:14:47,440 --> 00:14:49,760
@@ -1576,11 +1576,11 @@ would argue the most effective ones
 
 395
 00:15:02,079 --> 00:15:04,079
-are when they tie those to payments. So
+are when they tie those to payments.
 
 396
 00:15:04,079 --> 00:15:05,120
-if they say, "Hey, you're going to get
+If they say, "Hey, you're going to get
 
 397
 00:15:05,120 --> 00:15:06,160
@@ -1600,7 +1600,7 @@ actually see the industry move. And
 
 401
 00:15:11,680 --> 00:15:12,639
-then yeah, they'll come
+then they'll come
 
 402
 00:15:12,639 --> 00:15:14,800
@@ -1612,7 +1612,7 @@ you want to see Y happen
 
 404
 00:15:17,760 --> 00:15:20,720
-within the industry. So let's talk
+within the industry. Let's talk
 
 405
 00:15:20,720 --> 00:15:22,240
@@ -1660,7 +1660,7 @@ I want to give a couple of
 
 416
 00:15:44,320 --> 00:15:46,560
-definitions here. So a foundational
+definitions here. A foundational
 
 417
 00:15:46,560 --> 00:15:48,240
@@ -1720,11 +1720,11 @@ start to get structure and coding into
 
 431
 00:16:12,160 --> 00:16:13,759
-it," which basically lets you say things
+it, "which basically lets you say things
 
 432
 00:16:13,759 --> 00:16:15,920
-like: " Hey, this is a glucose test, it needs
+like: "Hey, this is a glucose test, it needs
 
 433
 00:16:15,920 --> 00:16:18,639
@@ -1732,7 +1732,7 @@ to go into the doctor's decision support
 
 434
 00:16:18,639 --> 00:16:20,399
-tool." Right? So as you build the
+tool." Right? As you build the
 
 435
 00:16:20,399 --> 00:16:22,240
@@ -1756,11 +1756,11 @@ these are I would say adopted
 
 440
 00:16:31,519 --> 00:16:34,720
-nomenclature. I've been adding this. So
+nomenclature. I've been adding this.
 
 441
 00:16:34,720 --> 00:16:36,720
-this is new to healthKERI. My argument
+This is new to healthKERI. My argument
 
 442
 00:16:36,720 --> 00:16:38,720
@@ -1792,7 +1792,7 @@ still I think currently grappling with.
 
 449
 00:16:51,279 --> 00:16:54,480
-So let's talk about a few of the
+Let's talk about a few of the
 
 450
 00:16:54,480 --> 00:16:57,519
@@ -1800,7 +1800,7 @@ ways that this lays out in terms of
 
 451
 00:16:57,519 --> 00:17:01,199
-manual effort. So if you have a
+manual effort. If you have a
 
 452
 00:17:01,199 --> 00:17:02,959
@@ -1852,7 +1852,7 @@ we can answer the question affirmatively,
 
 464
 00:17:24,480 --> 00:17:26,000
-will this improve patient care?" and
+will this improve patient care?" And
 
 465
 00:17:26,000 --> 00:17:28,000
@@ -1860,15 +1860,15 @@ that's what we're trying to get to
 
 466
 00:17:28,000 --> 00:17:30,320
-with interoperability standards. So
+with interoperability standards.
 
 467
 00:17:30,320 --> 00:17:32,480
-let's talk about what some of these
+Let's talk about what some of these
 
 468
 00:17:32,480 --> 00:17:35,760
-standards are. So back in the 80s
+standards are. Back in the 80s
 
 469
 00:17:35,760 --> 00:17:38,640
@@ -1928,7 +1928,7 @@ is HL7v2. HL7v2 is the precursor to
 
 483
 00:18:10,720 --> 00:18:12,720
-FHIR. So this is probably and correct me
+FHIR. This is probably and correct me
 
 484
 00:18:12,720 --> 00:18:15,120
@@ -1944,7 +1944,7 @@ Most data flows on HL7v2.
 
 487
 00:18:22,720 --> 00:18:25,600
-So it's HL7v2 dot
+It's HL7v2 dot
 
 488
 00:18:25,600 --> 00:18:26,720
@@ -1952,11 +1952,11 @@ question mark…
 
 489
 00:18:26,720 --> 00:18:30,400
-– It's standard. – Yeah, standard adjacent.
+– It's standard. – standard adjacent.
 
 490
 00:18:30,400 --> 00:18:32,480
-And so that was back in 95 that this
+That was back in 95 that this
 
 491
 00:18:32,480 --> 00:18:33,840
@@ -1964,7 +1964,7 @@ came out. You can see that
 
 492
 00:18:33,840 --> 00:18:36,000
-healthcare is… Yeah, go ahead.
+healthcare is… go ahead.
 
 493
 00:18:36,000 --> 00:18:37,600
@@ -2004,11 +2004,11 @@ let you put whatever you want in there
 
 502
 00:18:52,480 --> 00:18:55,039
-and define them for your local use. So
+and define them for your local use.
 
 503
 00:18:55,039 --> 00:18:56,799
-it's a local extension and they're
+It's a local extension and they're
 
 504
 00:18:56,799 --> 00:18:59,120
@@ -2056,7 +2056,7 @@ encounters with the systems that are
 
 515
 00:19:24,960 --> 00:19:27,200
-back. So that's why they could be
+back. That's why they could be
 
 516
 00:19:27,200 --> 00:19:29,919
@@ -2080,7 +2080,7 @@ standards
 
 521
 00:19:38,720 --> 00:19:41,360
-were effectively proprietary. So in
+were effectively proprietary. In
 
 522
 00:19:41,360 --> 00:19:43,360
@@ -2092,7 +2092,7 @@ to those just like you do today with
 
 524
 00:19:45,520 --> 00:19:48,400
-X12. So if you want to do a financial
+X12. If you want to do a financial
 
 525
 00:19:48,400 --> 00:19:51,280
@@ -2124,11 +2124,11 @@ obviously not comprehensive. We're just
 
 532
 00:20:09,760 --> 00:20:12,080
-trying to do a high level here. So
+trying to do a high level here.
 
 533
 00:20:12,080 --> 00:20:14,160
-then back in 2011… you'll be happy
+Then back in 2011… you'll be happy
 
 534
 00:20:14,160 --> 00:20:15,919
@@ -2148,11 +2148,11 @@ then there's been a lot of work in the
 
 538
 00:20:24,400 --> 00:20:26,400
-FHIR space. I think at this point. So
+FHIR space. I think at this point.
 
 539
 00:20:26,400 --> 00:20:29,919
-when I got into healthcare we were
+When I got into healthcare we were
 
 540
 00:20:29,919 --> 00:20:31,440
@@ -2184,7 +2184,7 @@ didn't see the need to change and
 
 547
 00:20:43,440 --> 00:20:45,039
-we're still faxing things anyway. So why
+we're still faxing things anyway. Why
 
 548
 00:20:45,039 --> 00:20:47,120
@@ -2204,7 +2204,7 @@ industry has started to say yes FHIR is
 
 552
 00:20:54,000 --> 00:20:55,760
-the go forward standard. So even if
+the go forward standard. Even if
 
 553
 00:20:55,760 --> 00:20:57,840
@@ -2228,7 +2228,7 @@ their world and again we'll talk more
 
 558
 00:21:05,679 --> 00:21:08,000
-about what FHIR is in a second. So I
+about what FHIR is in a second. I
 
 559
 00:21:08,000 --> 00:21:11,360
@@ -2240,7 +2240,7 @@ kind of the network level of
 
 561
 00:21:13,120 --> 00:21:15,919
-interoperability standards. So for
+interoperability standards. For
 
 562
 00:21:15,919 --> 00:21:18,000
@@ -2264,11 +2264,11 @@ They are actually using FHIR in TEFCA.
 
 567
 00:21:27,760 --> 00:21:30,640
-So this isn't a morphing of this
+This isn't a morphing of this
 
 568
 00:21:30,640 --> 00:21:33,840
-standard here. Well, sorry, they talk a
+standard here. Sorry, they talk a
 
 569
 00:21:33,840 --> 00:21:36,080
@@ -2284,7 +2284,7 @@ use it.
 
 572
 00:21:41,215 --> 00:21:45,071
-CDA or HL7v2 .
+CDA or HL7v2.
 
 573
 00:21:45,095 --> 00:21:47,200
@@ -2296,7 +2296,7 @@ the direction they're going to go (FHIR).
 
 575
 00:21:49,679 --> 00:21:52,480
-So this isn't a new standard as much
+This isn't a new standard as much
 
 576
 00:21:52,480 --> 00:21:56,559
@@ -2304,7 +2304,7 @@ as it is a new set of guidelines.
 
 577
 00:21:56,559 --> 00:21:59,039
-So that common agreement is the
+That common agreement is the
 
 578
 00:21:59,039 --> 00:22:01,360
@@ -2316,7 +2316,7 @@ to instantiate on top of existing
 
 580
 00:22:04,640 --> 00:22:06,480
-frameworks. So the other one that I
+frameworks. The other one that I
 
 581
 00:22:06,480 --> 00:22:07,520
@@ -2364,7 +2364,7 @@ effective mechanism for governance and
 
 592
 00:22:38,480 --> 00:22:41,600
-trust on the frameworks. So and
+trust on the frameworks. And
 
 593
 00:22:41,600 --> 00:22:43,200
@@ -2380,7 +2380,7 @@ that. But let's switch just very
 
 596
 00:22:47,360 --> 00:22:50,000
-quickly to talk about FHIR. So FHIR
+quickly to talk about FHIR. FHIR
 
 597
 00:22:50,000 --> 00:22:52,480
@@ -2392,7 +2392,7 @@ healthcare interoperability resources.
 
 599
 00:22:54,799 --> 00:22:57,280
-It's a lot of things. So, it's an
+It's a lot of things. It's an
 
 600
 00:22:57,280 --> 00:22:59,200
@@ -2408,11 +2408,11 @@ just modern API connectivity. It's a
 
 603
 00:23:04,080 --> 00:23:06,880
-set of tool sets. So, it's
+set of tool sets. It's
 
 604
 00:23:06,880 --> 00:23:08,400
-developers kits. it's,
+developers kits. It's,
 
 605
 00:23:08,400 --> 00:23:10,480
@@ -2424,7 +2424,7 @@ HL7 actually does maintain public FHIR
 
 607
 00:23:13,039 --> 00:23:14,480
-test servers. So, if people are looking
+test servers. If people are looking
 
 608
 00:23:14,480 --> 00:23:16,240
@@ -2484,7 +2484,7 @@ here is that the data structure piece is
 
 622
 00:23:44,080 --> 00:23:47,039
-actually incredibly valuable. So, a CCDA
+actually incredibly valuable. A CCDA
 
 623
 00:23:47,039 --> 00:23:50,000
@@ -2516,7 +2516,7 @@ to go through and kind of parse through
 
 630
 00:24:01,600 --> 00:24:03,440
-that to get to value. Yeah.
+that to get to value.
 
 631
 00:24:03,440 --> 00:24:05,600
@@ -2540,7 +2540,7 @@ health records. I'm not sure if
 
 636
 00:24:14,640 --> 00:24:18,640
-– Yeah. So, with EHRs it's
+– Yeah. With EHRs it's
 
 637
 00:24:18,640 --> 00:24:21,679
@@ -2568,7 +2568,7 @@ multiple EHRs?
 
 643
 00:24:31,919 --> 00:24:37,679
-– There's lots of EHRs out there. Yeah, the ONC
+– There's lots of EHRs out there. The ONC
 
 644
 00:24:37,679 --> 00:24:40,559
@@ -2592,7 +2592,7 @@ health.
 
 649
 00:24:50,000 --> 00:24:53,120
-– And so they, a number of years ago,
+– They, a number of years ago,
 
 650
 00:24:53,120 --> 00:24:55,039
@@ -2656,7 +2656,7 @@ players are actually using.
 
 665
 00:25:32,880 --> 00:25:36,000
-Yeah, it is a standard that
+It is a standard that
 
 666
 00:25:36,000 --> 00:25:38,240
@@ -2668,7 +2668,7 @@ because they're trying to get
 
 668
 00:25:39,200 --> 00:25:42,720
-data in and out. So back to
+data in and out. Back to
 
 669
 00:25:42,720 --> 00:25:44,880
@@ -2708,7 +2708,7 @@ discrete data elements from the FHIR
 
 678
 00:25:59,679 --> 00:26:01,039
-record. So, when you're talking about a
+record. When you're talking about a
 
 679
 00:26:01,039 --> 00:26:03,360
@@ -2728,7 +2728,7 @@ and say, I just want these blood tests,
 
 683
 00:26:08,799 --> 00:26:10,720
-I just want this, you know, from this
+I just want this from this
 
 684
 00:26:10,720 --> 00:26:12,960
@@ -2788,7 +2788,7 @@ Yeah.
 
 698
 00:26:36,240 --> 00:26:38,080
-Right. So, they're going to put that
+Right. They're going to put that
 
 699
 00:26:38,080 --> 00:26:39,919
@@ -2840,11 +2840,11 @@ elements from the data that I actually
 
 711
 00:27:04,240 --> 00:27:08,880
-want. So this is the objectives of
+want. This is the objectives of
 
 712
 00:27:08,880 --> 00:27:10,960
-FHIR that's that's stated by HL7 who's
+FHIR that's stated by HL7 who's
 
 713
 00:27:10,960 --> 00:27:13,279
@@ -2856,7 +2856,7 @@ They wanted to be built for
 
 715
 00:27:14,720 --> 00:27:16,240
-implementers. So this isn't something
+implementers. This isn't something
 
 716
 00:27:16,240 --> 00:27:19,600
@@ -2900,7 +2900,7 @@ that's very valuable is that they
 
 726
 00:27:37,440 --> 00:27:39,760
-operate on an 80 / 20 rule. So they're
+operate on an 80 / 20 rule. They're
 
 727
 00:27:39,760 --> 00:27:41,120
@@ -2948,7 +2948,7 @@ tries to do is to make it incredibly
 
 738
 00:28:05,600 --> 00:28:08,240
-easy. So that's kind of the FHIR
+easy. That's kind of the FHIR
 
 739
 00:28:08,240 --> 00:28:10,762
@@ -2956,7 +2956,7 @@ in a nutshell. Let's talk about CMS-0057.
 
 740
 00:28:10,762 --> 00:28:13,600
-So this is the latest version of
+This is the latest version of
 
 741
 00:28:13,600 --> 00:28:16,159
@@ -3020,7 +3020,7 @@ familiar with what prior authorization
 
 756
 00:28:49,120 --> 00:28:50,559
-is? We've we've thrown that around
+is? We've thrown that around
 
 757
 00:28:50,559 --> 00:28:52,559
@@ -3040,19 +3040,19 @@ took 3 months to get the prior
 
 761
 00:28:59,760 --> 00:29:02,399
-authorization approved on that. So
+authorization approved on that.
 
 762
 00:29:02,399 --> 00:29:04,159
-if we can streamline that, I would be
+If we can streamline that, I would be
 
 763
 00:29:04,159 --> 00:29:07,440
-very, very pleased. So,
+very, very pleased.
 
 764
 00:29:07,440 --> 00:29:08,799
-let's talk about how the connections
+Let's talk about how the connections
 
 765
 00:29:08,799 --> 00:29:10,399
@@ -3080,7 +3080,7 @@ the org identity is assumed not
 
 771
 00:29:21,200 --> 00:29:23,039
-proven. So they have some evidence of
+proven. They have some evidence of
 
 772
 00:29:23,039 --> 00:29:24,880
@@ -3092,11 +3092,11 @@ evidence. It's not something that would
 
 774
 00:29:26,399 --> 00:29:29,840
-necessarily hold up in court. And so
+necessarily hold up in court.
 
 775
 00:29:29,840 --> 00:29:32,159
-with this idea that healthcare is the
+With this idea that healthcare is the
 
 776
 00:29:32,159 --> 00:29:34,080
@@ -3112,7 +3112,7 @@ parties this is a disaster waiting
 
 779
 00:29:38,320 --> 00:29:40,480
-to happen. So CMS has come in and said
+to happen. CMS has come in and said
 
 780
 00:29:40,480 --> 00:29:42,000
@@ -3220,7 +3220,7 @@ foundational to the value that FHIR
 
 806
 00:30:32,640 --> 00:30:36,720
-drives. So really FHIR fixes today
+drives. Really FHIR fixes today
 
 807
 00:30:36,720 --> 00:30:38,960
@@ -3240,7 +3240,7 @@ alarm.) But what it doesn't solve is the
 
 811
 00:30:46,720 --> 00:30:49,919
-who. So right now in the industry,
+who. Right now in the industry,
 
 812
 00:30:49,919 --> 00:30:51,919
@@ -3256,7 +3256,7 @@ lawsuits? Are we up to 15 yet?
 
 815
 00:30:55,679 --> 00:30:57,039
-– Yeah. Okay. So, we're somewhere
+– Yeah. Okay. We're somewhere
 
 816
 00:30:57,039 --> 00:30:59,120
@@ -3316,7 +3316,7 @@ to be able to treat patients and you're
 
 830
 00:31:25,120 --> 00:31:27,039
-not giving us that info." And so they
+not giving us that info." They
 
 831
 00:31:27,039 --> 00:31:28,480
@@ -3348,7 +3348,7 @@ decided to go out and sue one of the
 
 838
 00:31:42,799 --> 00:31:45,440
-on-ramps to the networks. So, Particle
+on-ramps to the networks. Particle
 
 839
 00:31:45,440 --> 00:31:46,960
@@ -3368,7 +3368,7 @@ the data. The networks aren't
 
 843
 00:31:51,120 --> 00:31:52,720
-trustworthy." And so they went and sued
+trustworthy." They went and sued
 
 844
 00:31:52,720 --> 00:31:54,000
@@ -3392,7 +3392,7 @@ actors onto the network without proper
 
 849
 00:32:01,200 --> 00:32:04,559
-vetting. And so Epic now can kind of
+vetting. Epic now can kind of
 
 850
 00:32:04,559 --> 00:32:07,919
@@ -3436,7 +3436,7 @@ other lawsuits that have all started to
 
 860
 00:32:22,960 --> 00:32:24,559
-spawn out of this same thing. So you've
+spawn out of this same thing. You've
 
 861
 00:32:24,559 --> 00:32:26,320
@@ -3464,11 +3464,11 @@ contentions is: well can we trust the
 
 867
 00:32:39,120 --> 00:32:42,559
-other side of the ecosystem? And so
+other side of the ecosystem?
 
 868
 00:32:42,559 --> 00:32:44,240
-coming all the way back to the lawsuit
+Coming all the way back to the lawsuit
 
 869
 00:32:44,240 --> 00:32:48,000
@@ -3484,7 +3484,7 @@ actually hold Epic to account and say,
 
 872
 00:32:52,240 --> 00:32:54,000
-"Yeah, you're info blocking. You're just
+"You're info blocking. You're just
 
 873
 00:32:54,000 --> 00:32:56,240
@@ -3532,7 +3532,7 @@ Now, the question is, can we trust those
 
 884
 00:33:19,760 --> 00:33:22,080
-connections? So this is a slide I
+connections? This is a slide I
 
 885
 00:33:22,080 --> 00:33:25,120
@@ -3540,7 +3540,7 @@ also stole from Mark. I did
 
 886
 00:33:25,120 --> 00:33:28,320
-beautify it a bit. So but if we are
+beautify it a bit. But if we are
 
 887
 00:33:28,320 --> 00:33:31,120
@@ -3704,11 +3704,11 @@ answer that question of can we trust the
 
 927
 00:35:01,839 --> 00:35:03,920
-connection. So it starts with the
+connection. It starts with the
 
 928
 00:35:03,920 --> 00:35:05,839
-trust anchors. Yeah, go ahead. Okay,
+trust anchors. Go ahead. Okay,
 
 929
 00:35:05,839 --> 00:35:07,839
@@ -3748,7 +3748,7 @@ stack plays very nicely with the rest of
 
 938
 00:35:25,920 --> 00:35:27,920
-this. So the way that the vLEI stack
+this. The way that the vLEI stack
 
 939
 00:35:27,920 --> 00:35:30,079
@@ -3788,7 +3788,7 @@ is cryptographically attestable all the
 
 948
 00:35:48,400 --> 00:35:50,320
-way back to the Root of Trust. So, I now
+way back to the Root of Trust. I now
 
 949
 00:35:50,320 --> 00:35:53,680
@@ -3812,11 +3812,11 @@ doing. And that you are chained back to
 
 954
 00:36:02,400 --> 00:36:04,640
-GLEIF as a Root of Trust. So, super
+GLEIF as a Root of Trust. Super
 
 955
 00:36:04,640 --> 00:36:08,560
-important. the end result is ,we can
+important. The end result is, we can
 
 956
 00:36:08,560 --> 00:36:12,400
@@ -3896,7 +3896,7 @@ we trust this connection is answered by
 
 975
 00:36:58,240 --> 00:37:00,800
-KERI through the vLEI. So as you
+KERI through the vLEI. As you
 
 976
 00:37:00,800 --> 00:37:03,119
@@ -3960,7 +3960,7 @@ problem. We want to get this solved.
 
 991
 00:37:31,920 --> 00:37:34,240
-So I'll stop there. What questions do
+I'll stop there. What questions do
 
 992
 00:37:34,265 --> 00:37:36,172
@@ -3972,7 +3972,7 @@ you have for me?
 
 994
 00:37:43,359 --> 00:37:46,640
-points to Epic. So do you foresee this
+points to Epic. Do you foresee this
 
 995
 00:37:46,640 --> 00:37:50,079
@@ -3996,7 +3996,7 @@ do you actually implement this?
 
 1000
 00:38:00,000 --> 00:38:02,240
-– Yeah. So we would we would see it as
+– Yeah. We would see it as
 
 1001
 00:38:02,240 --> 00:38:06,160
@@ -4004,7 +4004,7 @@ embedded within the FHIR API, the call
 
 1002
 00:38:06,160 --> 00:38:08,160
-itself. So every time you reach out and
+itself. Every time you reach out and
 
 1003
 00:38:08,160 --> 00:38:09,680
@@ -4060,11 +4060,11 @@ API.
 
 1016
 00:38:35,839 --> 00:38:38,480
-– So the next step for us really… so
+– The next step for us really…
 
 1017
 00:38:38,480 --> 00:38:42,320
-this is the simplest version, right ,we're
+this is the simplest version, right, we're
 
 1018
 00:38:42,320 --> 00:38:44,160
@@ -4180,13 +4180,12 @@ earlier today oftentimes that can take a
 
 1046
 00:39:49,680 --> 00:39:52,079
-couple of weeks to get things done. So,
+couple of weeks to get things done.
 
 1047
 00:39:52,079 --> 00:39:55,282
-okay. And we are at time. So, thank you
+Okay. And we are at time. Thank you
 
 1048
 00:39:55,306 --> 00:39:59,103
 [Applaus]
-

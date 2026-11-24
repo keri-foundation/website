@@ -12,7 +12,7 @@ an open-source stripped down
 
 4
 00:00:09,760 --> 00:00:11,440
-version of what healthKERI has. So, if
+version of what healthKERI has. If
 
 5
 00:00:11,440 --> 00:00:13,360
@@ -160,7 +160,7 @@ and that separation must be real and
 
 41
 00:01:57,600 --> 00:01:59,200
-verifiable. So, with that in mind,
+verifiable. With that in mind,
 
 42
 00:01:59,200 --> 00:02:01,520
@@ -380,7 +380,7 @@ that pattern through more
 
 96
 00:04:18,639 --> 00:04:21,440
-completely. So the architecture for now
+completely. The architecture for now
 
 97
 00:04:21,440 --> 00:04:24,080
@@ -588,7 +588,7 @@ progress.
 
 148
 00:06:54,206 --> 00:07:00,142
-So, in order to install this
+In order to install this
 
 149
 00:07:00,166 --> 00:07:03,809
@@ -796,7 +796,7 @@ have?
 
 200
 00:11:05,920 --> 00:11:08,399
-Yeah. So essentially is what you've
+Yeah. Essentially is what you've
 
 201
 00:11:08,399 --> 00:11:12,399
@@ -824,7 +824,7 @@ That's not in this demo. Okay.
 
 207
 00:11:26,550 --> 00:11:28,143
-So this is the open- source wallet that
+This is the open- source wallet that
 
 208
 00:11:28,167 --> 00:11:29,760
@@ -856,7 +856,7 @@ You'll see that in my demo, but you and
 
 215
 00:11:43,279 --> 00:11:44,720
-I are competing with each other. So now
+I are competing with each other. Now
 
 216
 00:11:44,720 --> 00:11:45,600
@@ -868,7 +868,7 @@ now we're not gonna now you're not going
 
 218
 00:11:47,040 --> 00:11:52,470
-to see it ever. Ah,
+to see it ever.
 
 219
 00:11:54,790 --> 00:11:58,000
@@ -929,7 +929,7 @@ so you would configure the witness here
 
 233
 00:12:22,800 --> 00:12:24,560
-Yeah, you'll see that in my demo if you
+You'll see that in my demo if you
 
 234
 00:12:24,560 --> 00:12:25,519
@@ -945,7 +945,7 @@ When did you demo?
 
 237
 00:12:28,079 --> 00:12:32,079
-It's Yeah, big
+It's big
 
 238
 00:12:32,079 --> 00:12:35,279
@@ -1037,7 +1037,7 @@ credential issuing.
 
 260
 00:13:17,120 --> 00:13:20,079
-Yeah. So the benefit of the TEL you're
+Yeah. The benefit of the TEL you're
 
 261
 00:13:20,079 --> 00:13:21,680
@@ -1089,7 +1089,7 @@ what the credential is ..,
 
 273
 00:13:44,639 --> 00:13:48,000
-– Like revocation status state Yeah. Yeah.
+– Like revocation status state Yeah.
 
 274
 00:13:48,000 --> 00:13:50,240
@@ -1109,7 +1109,7 @@ Tells everybody
 
 278
 00:13:53,440 --> 00:13:54,800
-if he's doing one then. Yeah.
+if he's doing one then.
 
 279
 00:13:54,800 --> 00:13:56,240
@@ -1117,7 +1117,7 @@ Yeah. He's talking about ACDC tomorrow
 
 280
 00:13:56,240 --> 00:13:57,519
-morning. So if you have more questions
+morning. If you have more questions
 
 281
 00:13:57,519 --> 00:14:00,079
@@ -1133,11 +1133,11 @@ guess.
 
 284
 00:14:05,360 --> 00:14:08,000
-So about the repos again.
+About the repos again.
 
 285
 00:14:08,000 --> 00:14:11,279
-So the Locksmith demo one is this one.
+The Locksmith demo one is this one.
 
 286
 00:14:11,279 --> 00:14:13,199
@@ -1157,7 +1157,7 @@ healthKERI is proprietary.
 
 290
 00:14:18,399 --> 00:14:19,199
-Yeah,
+Yeah.
 
 291
 00:14:19,199 --> 00:14:21,600
@@ -1193,7 +1193,7 @@ connect to a provider such as healthKERI
 
 299
 00:14:39,120 --> 00:14:41,120
-through a plugin. So the KERI
+through a plugin. The KERI
 
 300
 00:14:41,120 --> 00:14:42,720
@@ -1237,7 +1237,7 @@ witnesses and watchers.
 
 310
 00:15:01,680 --> 00:15:05,440
-So basically what you want is creating
+Basically what you want is creating
 
 311
 00:15:05,440 --> 00:15:08,320
@@ -1245,7 +1245,7 @@ a vault
 
 312
 00:15:08,320 --> 00:15:10,000
-Encryption storage right Yeah, it's just
+Encryption storage right it's just
 
 313
 00:15:10,000 --> 00:15:11,120
@@ -1253,7 +1253,7 @@ a place to store keys.
 
 314
 00:15:11,120 --> 00:15:13,360
-Yeah, but it is like for per wallet
+But it is like for per wallet
 
 315
 00:15:13,360 --> 00:15:14,800
@@ -1309,7 +1309,7 @@ Yeah.
 
 328
 00:15:30,959 --> 00:15:32,079
-So you can't move them across.
+You can't move them across.
 
 329
 00:15:33,360 --> 00:15:35,440
@@ -1441,11 +1441,11 @@ There's one for iOS, there's a web app,
 
 361
 00:16:32,480 --> 00:16:35,040
-and one for Android. Yeah.
+and one for Android.
 
 362
 00:16:35,040 --> 00:16:37,920
-Okay. But there's there's the fort
+Okay. But there's the fort
 
 363
 00:16:37,920 --> 00:16:39,680
@@ -1477,11 +1477,11 @@ Okay.
 
 370
 00:16:54,800 --> 00:16:58,320
-Well, the Fort Web and Locksmith are
+The Fort Web and Locksmith are
 
 371
 00:16:58,320 --> 00:16:59,920
-they're they're they're both desktop
+they're both desktop
 
 372
 00:16:59,920 --> 00:17:00,959
@@ -1509,7 +1509,7 @@ UI.
 
 378
 00:17:08,799 --> 00:17:09,919
-So, my question is, why would you pick
+My question is, why would you pick
 
 379
 00:17:09,919 --> 00:17:10,880
@@ -1549,7 +1549,7 @@ Oh, this is native desktop.
 
 388
 00:17:19,919 --> 00:17:22,799
-Yeah, it's a PIDE 6 applic. Okay, that
+It's a PIDE 6 applic. Okay, that
 
 389
 00:17:22,799 --> 00:17:24,640
@@ -1565,7 +1565,7 @@ It's multiplatform source bundle. It's
 
 392
 00:17:28,319 --> 00:17:32,240
-it's all it the web or yeah they
+it's all it the web or they
 
 393
 00:17:32,240 --> 00:17:34,480
@@ -1577,11 +1577,11 @@ stuff the same code is getting deployed
 
 395
 00:17:36,000 --> 00:17:37,919
-to all those all those different
+to all those different
 
 396
 00:17:37,919 --> 00:17:40,880
-platforms. So for web is just the
+platforms. For web is just the
 
 397
 00:17:40,880 --> 00:17:44,240
@@ -1685,7 +1685,7 @@ tomorrow.
 
 422
 00:18:40,549 --> 00:18:41,382
-Yeah, I guess I mean the question I have
+I guess I mean the question I have
 
 423
 00:18:41,406 --> 00:18:42,240
@@ -1721,7 +1721,7 @@ infrastructure side
 
 431
 00:18:58,000 --> 00:18:59,600
-for the plugin kind of. Yeah.
+for the plugin kind of.
 
 432
 00:18:59,600 --> 00:19:01,679
@@ -1745,11 +1745,11 @@ own plug-in demo.
 
 437
 00:19:06,559 --> 00:19:08,080
-Yeah, that'd be great.
+That'd be great.
 
 438
 00:19:08,080 --> 00:19:10,080
-Yeah, it's pretty cool. A good idea
+It's pretty cool. A good idea
 
 439
 00:19:10,080 --> 00:19:11,760
@@ -1761,7 +1761,7 @@ I want to help other people learn too.
 
 441
 00:19:13,120 --> 00:19:14,960
-I mean it's it's all there in the repo
+I mean it's all there in the repo
 
 442
 00:19:14,960 --> 00:19:17,200
@@ -1789,15 +1789,15 @@ Okay.
 
 448
 00:19:23,120 --> 00:19:24,320
-So that would be a good thing.
+That would be a good thing.
 
 449
 00:19:24,320 --> 00:19:26,160
-There is yeah healthKERI shipped like a
+There is healthKERI shipped like a
 
 450
 00:19:26,160 --> 00:19:27,679
-plug-in based flask. So they basically
+plug-in based flask. They basically
 
 451
 00:19:27,679 --> 00:19:29,600
@@ -1813,11 +1813,11 @@ own plugin.
 
 454
 00:19:32,080 --> 00:19:34,480
-Awesome. Yeah,
+Awesome.
 
 455
 00:19:34,480 --> 00:19:37,360
-that's what I want to know.
+That's what I want to know.
 
 456
 00:19:37,360 --> 00:19:38,559
@@ -1869,11 +1869,11 @@ most complete one in the world by far.
 
 468
 00:19:57,919 --> 00:19:59,280
-Well, health KERI's is
+Health KERI's is
 
 469
 00:19:59,280 --> 00:20:00,640
-Yeah, healthKERI's is I guess
+HealthKERI's is I guess
 
 470
 00:20:00,640 --> 00:20:02,799
@@ -1881,7 +1881,7 @@ this is sort of a stripped down
 
 471
 00:20:02,799 --> 00:20:05,200
-slightest. So I guess health carries is
+slightest. I guess health carries is
 
 472
 00:20:05,200 --> 00:20:06,720
@@ -1993,7 +1993,7 @@ Just to show it.
 
 499
 00:21:16,240 --> 00:21:20,240
-Yep. So, this is the iOS app.
+Yep. This is the iOS app.
 
 500
 00:21:20,240 --> 00:21:24,253
@@ -2001,7 +2001,7 @@ Suppose I should
 
 501
 00:21:24,277 --> 00:21:30,338
-So yeah, it's functionally speaking
+It's functionally speaking
 
 502
 00:21:30,362 --> 00:21:35,360
@@ -2021,7 +2021,7 @@ Locksmith code
 
 506
 00:21:43,440 --> 00:21:46,480
-and yeah it's just this functionally
+it's just this functionally
 
 507
 00:21:46,480 --> 00:21:50,400
@@ -2037,7 +2037,7 @@ fixed this yet.
 
 510
 00:21:54,480 --> 00:21:56,320
-So, I'm noticing that this looks very
+I'm noticing that this looks very
 
 511
 00:21:56,320 --> 00:21:59,520
@@ -2053,7 +2053,7 @@ Mhm.
 
 514
 00:22:02,640 --> 00:22:05,200
-Yeah. Well, healthKERI basically just
+Yeah. HealthKERI basically just
 
 515
 00:22:05,200 --> 00:22:07,520
@@ -2061,7 +2061,7 @@ translated the flat app into Pyite 6.
 
 516
 00:22:07,520 --> 00:22:11,039
-Okay. So, the flat app is,
+Okay. The flat app is,
 
 517
 00:22:11,039 --> 00:22:13,280
@@ -2073,7 +2073,7 @@ did they lift the CSS styling when they
 
 519
 00:22:16,000 --> 00:22:18,559
-This is CS. Yeah, I just I left it as
+This is CS. I just I left it as
 
 520
 00:22:18,559 --> 00:22:22,240
@@ -2094,4 +2094,3 @@ Nice work.
 524
 00:22:41,039 --> 00:22:43,520
 Thank you.
-

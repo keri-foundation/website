@@ -276,7 +276,7 @@ brain.
 
 70
 00:02:30,040 --> 00:02:31,720
-Who's going to ask a question? So I
+Who's going to ask a question? I
 
 71
 00:02:31,720 --> 00:02:33,640
@@ -312,7 +312,7 @@ with Go co-routines?
 
 79
 00:02:45,840 --> 00:02:48,200
-– Not in Python. So, it's a lightweight
+– Not in Python. It's a lightweight
 
 80
 00:02:48,200 --> 00:02:51,400
@@ -416,7 +416,7 @@ think from a non-blocking mindset. Often
 
 105
 00:03:46,800 --> 00:03:49,920
-it's called a reactive mindset. So zero
+it's called a reactive mindset. Zero
 
 106
 00:03:49,920 --> 00:03:53,519
@@ -452,7 +452,7 @@ essentially chop up your IO reads and
 
 114
 00:04:08,200 --> 00:04:10,840
-writes into chunks and then you… So,
+writes into chunks and then you…
 
 115
 00:04:10,840 --> 00:04:14,080
@@ -512,11 +512,11 @@ co-routine again.
 
 129
 00:04:36,880 --> 00:04:38,400
-Okay. So,
+Okay.
 
 130
 00:04:38,400 --> 00:04:39,520
-we're still at the first two
+We're still at the first two
 
 131
 00:04:39,520 --> 00:04:42,040
@@ -524,7 +524,7 @@ slides two slides, so you're good.
 
 132
 00:04:42,040 --> 00:04:43,320
-So, we're talking about what structured
+We're talking about what structured
 
 133
 00:04:43,320 --> 00:04:45,480
@@ -576,7 +576,7 @@ Now, you might say, let's dive deep into
 
 145
 00:05:06,960 --> 00:05:08,600
-structured concurrency. Well, let's go
+structured concurrency. Let's go
 
 146
 00:05:08,600 --> 00:05:11,120
@@ -680,11 +680,11 @@ And we'll give you a bit of a…
 
 171
 00:06:00,160 --> 00:06:01,920
-I'm going to give you a visual here. So,
+I'm going to give you a visual here.
 
 172
 00:06:01,920 --> 00:06:03,760
-this is flowmatic. It's
+This is flowmatic. It's
 
 173
 00:06:03,760 --> 00:06:05,360
@@ -712,7 +712,7 @@ happens, go to operation two."
 
 179
 00:06:14,320 --> 00:06:17,280
-Well, that seems like it might be okay
+That seems like it might be okay
 
 180
 00:06:17,280 --> 00:06:19,919
@@ -752,7 +752,7 @@ code.
 
 189
 00:06:33,080 --> 00:06:34,720
-Right? Well, that's where the name
+Right? That's where the name
 
 190
 00:06:34,720 --> 00:06:36,280
@@ -880,7 +880,7 @@ the states of our system.
 
 221
 00:07:38,080 --> 00:07:40,080
-Well, that only works if our
+That only works if our
 
 222
 00:07:40,080 --> 00:07:41,880
@@ -960,7 +960,7 @@ And I'm not going to go into the deep…
 
 241
 00:08:19,720 --> 00:08:21,520
-So, we have so much to cover today.
+We have so much to cover today.
 
 242
 00:08:21,520 --> 00:08:22,640
@@ -1084,7 +1084,7 @@ later in this presentation.
 
 272
 00:09:16,560 --> 00:09:18,320
-So, you If you want to understand in
+You If you want to understand in
 
 273
 00:09:18,320 --> 00:09:22,640
@@ -1148,7 +1148,7 @@ yourself an hour or two.
 
 288
 00:09:51,080 --> 00:09:52,840
-So, what is structured concurrency?
+What is structured concurrency?
 
 289
 00:09:52,840 --> 00:09:56,000
@@ -1164,11 +1164,11 @@ Smith.
 
 292
 00:10:08,360 --> 00:10:10,240
-So, what's
+What's
 
 293
 00:10:10,240 --> 00:10:11,280
-interesting, you might say, “Well, let's
+interesting, you might say, “Let's
 
 294
 00:10:11,280 --> 00:10:13,840
@@ -1188,7 +1188,7 @@ function that has async in the function,
 
 298
 00:10:19,800 --> 00:10:22,080
-right? So, the way in Python
+right? The way in Python
 
 299
 00:10:22,080 --> 00:10:24,800
@@ -1260,7 +1260,7 @@ it won't get scheduled, and then it'll
 
 316
 00:10:57,200 --> 00:10:59,280
-never get run. Well, now let's take that
+never get run. Now let's take that
 
 317
 00:10:59,280 --> 00:11:01,240
@@ -1300,7 +1300,7 @@ construct. You can run many child tasks,
 
 326
 00:11:23,480 --> 00:11:25,120
-and it can schedule them. So, the
+and it can schedule them. The
 
 327
 00:11:25,120 --> 00:11:27,040
@@ -1344,7 +1344,7 @@ as and Effection as we go on.
 
 337
 00:11:47,280 --> 00:11:48,920
-So at a high-level architecture
+At a high-level architecture
 
 338
 00:11:48,920 --> 00:11:50,200
@@ -1392,7 +1392,7 @@ Schedulable task group.
 
 349
 00:12:13,720 --> 00:12:15,896
-So the guy who wrote this article about
+The guy who wrote this article about
 
 350
 00:12:15,920 --> 00:12:18,320
@@ -1492,7 +1492,7 @@ all of those should complete by the time
 
 374
 00:13:08,240 --> 00:13:10,520
-the function returns. Okay. And so what
+the function returns. Okay. What
 
 375
 00:13:10,520 --> 00:13:11,720
@@ -1524,7 +1524,7 @@ Erlang or Elixir?
 
 382
 00:13:23,520 --> 00:13:25,200
-No. so it's there's a process super
+No. It's there's a process super
 
 383
 00:13:25,200 --> 00:13:26,640
@@ -1584,7 +1584,7 @@ What that does is now you don't have any…
 
 397
 00:13:52,000 --> 00:13:54,640
-So, the promises break this
+The promises break this
 
 398
 00:13:54,640 --> 00:13:57,520
@@ -1596,7 +1596,7 @@ my outer scope cancels and returns and
 
 400
 00:14:02,200 --> 00:14:03,680
-then my promise returns later. Well, now
+then my promise returns later. Now
 
 401
 00:14:03,680 --> 00:14:05,000
@@ -1620,7 +1620,7 @@ of a callback.
 
 406
 00:14:11,920 --> 00:14:13,440
-But, promises break this. So, what
+But, promises break this. What
 
 407
 00:14:13,440 --> 00:14:15,680
@@ -1796,7 +1796,7 @@ reason.
 
 450
 00:15:35,880 --> 00:15:37,440
-Well, Venkat Subramaniam, he's one of the most
+Venkat Subramaniam, he's one of the most
 
 451
 00:15:37,440 --> 00:15:39,720
@@ -1824,7 +1824,7 @@ more onto how my brain thinks."
 
 457
 00:15:50,160 --> 00:15:51,800
-So, there's a little bit of upfront
+There's a little bit of upfront
 
 458
 00:15:51,800 --> 00:15:53,240
@@ -2080,7 +2080,7 @@ parts and still preserve the structured
 
 521
 00:17:46,480 --> 00:17:48,800
-concurrency guarantees. So, Python had
+concurrency guarantees. Python had
 
 522
 00:17:48,800 --> 00:17:50,240
@@ -2104,7 +2104,7 @@ there's libraries.
 
 527
 00:17:57,200 --> 00:18:00,200
-Okay, so other important guarantees of
+Okay, other important guarantees of
 
 528
 00:18:00,200 --> 00:18:02,480
@@ -2136,7 +2136,7 @@ to the done state before the DoDoer
 
 535
 00:18:16,160 --> 00:18:18,760
-finishes. So, the Doist
+finishes. The Doist
 
 536
 00:18:18,760 --> 00:18:20,920
@@ -2216,7 +2216,7 @@ well written.
 
 555
 00:18:59,040 --> 00:19:01,440
-Okay, so and exceptions are carried all
+Okay, and exceptions are carried all
 
 556
 00:19:01,440 --> 00:19:02,680
@@ -2252,7 +2252,7 @@ exceptions.
 
 564
 00:19:18,000 --> 00:19:19,480
-So, consistent, predictable exception
+Consistent, predictable exception
 
 565
 00:19:19,480 --> 00:19:20,960
@@ -2280,7 +2280,7 @@ an example from his article…
 
 571
 00:19:29,920 --> 00:19:32,680
-So, he uses “async with”, his
+He uses “async with”, his
 
 572
 00:19:32,680 --> 00:19:35,120
@@ -2296,7 +2296,7 @@ of it as a Doist.
 
 575
 00:19:39,360 --> 00:19:41,240
-So, you start one task, which might
+You start one task, which might
 
 576
 00:19:41,240 --> 00:19:42,680
@@ -2360,7 +2360,7 @@ like this.
 
 591
 00:20:10,880 --> 00:20:12,400
-Okay, so I talked about HIO and Doers
+Okay, I talked about HIO and Doers
 
 592
 00:20:12,400 --> 00:20:13,440
@@ -2384,7 +2384,7 @@ only got 19 minutes left.
 
 597
 00:20:19,920 --> 00:20:21,240
-So, now we're getting into the HIO
+Now we're getting into the HIO
 
 598
 00:20:21,240 --> 00:20:23,840
@@ -2404,7 +2404,7 @@ some code.
 
 602
 00:20:28,280 --> 00:20:29,640
-So, we mentioned the Doist is the root
+We mentioned the Doist is the root
 
 603
 00:20:29,640 --> 00:20:31,200
@@ -2580,7 +2580,7 @@ hit that as a bug.
 
 646
 00:21:51,360 --> 00:21:53,320
-So, you realize LLMs are going to
+You realize LLMs are going to
 
 647
 00:21:53,320 --> 00:21:55,640
@@ -2604,7 +2604,7 @@ glad it wasn't hundreds.
 
 652
 00:22:01,560 --> 00:22:03,400
-So, remember, Doist has its own concept
+Remember, Doist has its own concept
 
 653
 00:22:03,400 --> 00:22:04,680
@@ -2724,7 +2724,7 @@ function that runs the system.
 
 682
 00:23:01,120 --> 00:23:03,000
-So, this is the entry point of the HIO
+This is the entry point of the HIO
 
 683
 00:23:03,000 --> 00:23:05,000
@@ -2744,7 +2744,7 @@ through this.
 
 687
 00:23:09,280 --> 00:23:11,371
-And so, here's the whole class outline
+Here's the whole class outline
 
 688
 00:23:11,395 --> 00:23:13,320
@@ -2760,7 +2760,7 @@ These enter, recur, exit.
 
 691
 00:23:17,760 --> 00:23:19,880
-So, think if for enter think
+Think if for enter think
 
 692
 00:23:19,880 --> 00:23:22,080
@@ -2780,7 +2780,7 @@ for every task
 
 696
 00:23:29,560 --> 00:23:31,880
-in the HIO ecosystem. So, every Doer has
+in the HIO ecosystem. Every Doer has
 
 697
 00:23:31,880 --> 00:23:33,640
@@ -2828,7 +2828,7 @@ have automated cleanup [of processes, red.]
 
 708
 00:23:54,760 --> 00:23:57,000
-And so, what the enter and the exit do
+What the enter and the exit do
 
 709
 00:23:57,000 --> 00:23:58,640
@@ -2908,7 +2908,7 @@ functions. That would be equivalent of
 
 728
 00:24:33,800 --> 00:24:35,840
-handlers. Okay, so now let's go deeper
+handlers. Okay, now let's go deeper
 
 729
 00:24:35,840 --> 00:24:37,840
@@ -2916,7 +2916,7 @@ into the Do function. You'll see.
 
 730
 00:24:37,840 --> 00:24:39,920
-So, the red arrows
+The red arrows
 
 731
 00:24:39,920 --> 00:24:41,400
@@ -2992,7 +2992,7 @@ your tasks and runs enter on every task.
 
 749
 00:25:18,440 --> 00:25:20,520
-So, by the time that finishes, all your
+By the time that finishes, all your
 
 750
 00:25:20,520 --> 00:25:22,000
@@ -3024,7 +3024,7 @@ essentially.
 
 757
 00:25:34,120 --> 00:25:35,360
-So, that readies all the tasks for
+That readies all the tasks for
 
 758
 00:25:35,360 --> 00:25:38,200
@@ -3072,11 +3072,11 @@ things about structured concurrency.
 
 769
 00:25:57,480 --> 00:25:58,680
-Okay, so we're going to jump in. Let's
+Okay, we're going to jump in. Let's
 
 770
 00:25:58,680 --> 00:26:00,200
-jump in. So, now this is recur,
+jump in. Now this is recur,
 
 771
 00:26:00,200 --> 00:26:02,440
@@ -3096,7 +3096,7 @@ This is the recur function. The main
 
 775
 00:26:08,440 --> 00:26:10,840
-So, what actually runs…
+What actually runs…
 
 776
 00:26:10,840 --> 00:26:12,640
@@ -3104,7 +3104,7 @@ We're still in the scheduler. When are
 
 777
 00:26:12,640 --> 00:26:14,400
-we going to get to the task? Well, right
+we going to get to the task? Right
 
 778
 00:26:14,400 --> 00:26:15,920
@@ -3144,7 +3144,7 @@ Claude or Codex about it.
 
 787
 00:26:34,400 --> 00:26:36,600
-There's also a really excellent… So,
+There's also a really excellent…
 
 788
 00:26:36,600 --> 00:26:38,240
@@ -3188,7 +3188,7 @@ that awesome content on co-routines, but
 
 798
 00:26:56,320 --> 00:26:58,280
-it's on his website. So, you can go to I
+it's on his website. You can go to I
 
 799
 00:26:58,280 --> 00:27:00,680
@@ -3220,7 +3220,7 @@ High-density, high-value content.
 
 806
 00:27:10,960 --> 00:27:12,680
-Anyway, so this is what runs it. We
+Anyway, this is what runs it. We
 
 807
 00:27:12,680 --> 00:27:13,840
@@ -3228,7 +3228,7 @@ won't worry about the rest of the stuff.
 
 808
 00:27:13,840 --> 00:27:15,480
-So, this interest interestingly enough,
+This interest interestingly enough,
 
 809
 00:27:15,480 --> 00:27:17,480
@@ -3256,7 +3256,7 @@ occur.
 
 815
 00:27:29,320 --> 00:27:30,440
-Okay, so now let's go into the
+Okay, now let's go into the
 
 816
 00:27:30,440 --> 00:27:33,240
@@ -3284,7 +3284,7 @@ And what the Doer does is it says
 
 822
 00:27:44,440 --> 00:27:48,080
-self.do. So, what that send does,
+self.do. What that send does,
 
 823
 00:27:48,080 --> 00:27:49,200
@@ -3320,7 +3320,7 @@ that is the subtask.
 
 831
 00:28:03,120 --> 00:28:05,120
-The "dog". So, we're doing the send
+The "dog". We're doing the send
 
 832
 00:28:05,120 --> 00:28:07,520
@@ -3344,7 +3344,7 @@ look at that. Here's the Doer.do.
 
 837
 00:28:17,840 --> 00:28:19,600
-So, look at that. We've got an enter,
+Look at that. We've got an enter,
 
 838
 00:28:19,600 --> 00:28:21,200
@@ -3384,7 +3384,7 @@ startup teardown, and you see the <i>recur</i>.
 
 847
 00:28:35,720 --> 00:28:37,840
-So, self.recur. This will actually
+Self.recur. This will actually
 
 848
 00:28:37,840 --> 00:28:39,360
@@ -3476,7 +3476,7 @@ That's what generators are used for in
 
 870
 00:29:17,720 --> 00:29:20,240
-Python. So, you need to use yield from
+Python. You need to use yield from
 
 871
 00:29:20,240 --> 00:29:22,640
@@ -3496,7 +3496,7 @@ a "yield from."
 
 875
 00:29:28,080 --> 00:29:30,240
-So, if you have a recur function in a
+If you have a recur function in a
 
 876
 00:29:30,240 --> 00:29:32,320
@@ -3568,7 +3568,7 @@ to some questions.
 
 893
 00:30:02,800 --> 00:30:06,560
-So, we went to the from the Doist.do
+We went to the from the Doist.do
 
 894
 00:30:06,560 --> 00:30:08,360
@@ -3596,7 +3596,7 @@ recur of the task.
 
 900
 00:30:19,280 --> 00:30:21,400
-So, and you'll see it's empty except for
+And you'll see it's empty except for
 
 901
 00:30:21,400 --> 00:30:23,560
@@ -3604,7 +3604,7 @@ return false. You have to subclass it if
 
 902
 00:30:23,560 --> 00:30:25,600
-you want to do work, right? So, the
+you want to do work, right? The
 
 903
 00:30:25,600 --> 00:30:27,440
@@ -3628,11 +3628,11 @@ business logic function.
 
 908
 00:30:35,800 --> 00:30:37,400
-And the false there is interesting. So,
+And the false there is interesting.
 
 909
 00:30:37,400 --> 00:30:39,640
-if you return false, it'll keep
+If you return false, it'll keep
 
 910
 00:30:39,640 --> 00:30:42,040
@@ -3648,7 +3648,7 @@ return true cuz it's the done or not
 
 913
 00:30:45,680 --> 00:30:48,200
-status. So, return true sets done to
+status. Return true sets done to
 
 914
 00:30:48,200 --> 00:30:50,040
@@ -3736,7 +3736,7 @@ We need an enter and an exit function.
 
 935
 00:31:28,640 --> 00:31:30,720
-So, this is not as good as it could
+This is not as good as it could
 
 936
 00:31:30,720 --> 00:31:32,400
@@ -3744,7 +3744,7 @@ be, but it's sort of sufficient for now.
 
 937
 00:31:32,400 --> 00:31:33,920
-So, we run all this business logic, we
+We run all this business logic, we
 
 938
 00:31:33,920 --> 00:31:36,800
@@ -3760,7 +3760,7 @@ true, and it's done.
 
 941
 00:31:39,760 --> 00:31:42,640
-So, this is a basic task. If I do
+This is a basic task. If I do
 
 942
 00:31:42,640 --> 00:31:44,720
@@ -3860,7 +3860,7 @@ intuitive sense.
 
 966
 00:32:38,520 --> 00:32:41,280
-And so, I'll give you an example here.
+I'll give you an example here.
 
 967
 00:32:41,280 --> 00:32:42,520
@@ -3868,7 +3868,7 @@ Oh, so and actually there's a
 
 968
 00:32:42,520 --> 00:32:43,960
-difference. So, this is the DoDoer
+difference. This is the DoDoer
 
 969
 00:32:43,960 --> 00:32:44,920
@@ -3876,11 +3876,11 @@ function. You'll notice there's a
 
 970
 00:32:44,920 --> 00:32:46,840
-critical difference. So, the reason why
+critical difference. The reason why
 
 971
 00:32:46,840 --> 00:32:49,160
-you use doify is because there's there's
+you use doify is because there's
 
 972
 00:32:49,160 --> 00:32:50,360
@@ -3940,11 +3940,11 @@ one slide over, here's the Doer.
 
 986
 00:33:15,080 --> 00:33:17,360
-We say if is generator yield from. So,
+We say if is generator yield from.
 
 987
 00:33:17,360 --> 00:33:19,800
-what this means is a DoDoer will not
+What this means is a DoDoer will not
 
 988
 00:33:19,800 --> 00:33:21,960
@@ -4024,7 +4024,7 @@ generator check and run it that way in
 
 1007
 00:33:58,760 --> 00:34:00,600
-my opinion. And you'll see why. So, now
+my opinion. And you'll see why. Now
 
 1008
 00:34:00,600 --> 00:34:02,560
@@ -4044,7 +4044,7 @@ call recur.
 
 1012
 00:34:10,440 --> 00:34:13,679
-So, the DoDoer
+The DoDoer
 
 1013
 00:34:13,679 --> 00:34:15,280
@@ -4068,7 +4068,7 @@ it's extend or remove. You can add tasks
 
 1018
 00:34:24,720 --> 00:34:26,560
-to it or remove tasks to it. So, it's an
+to it or remove tasks to it. It's an
 
 1019
 00:34:26,560 --> 00:34:30,679
@@ -4076,7 +4076,7 @@ aggregation construct. The Doer is not.
 
 1020
 00:34:30,679 --> 00:34:33,679
-So, you can see how the DoDoer is a bit
+You can see how the DoDoer is a bit
 
 1021
 00:34:33,679 --> 00:34:36,320
@@ -4088,11 +4088,11 @@ and a task, but the Doer is just a task.
 
 1023
 00:34:44,559 --> 00:34:45,906
-There's an example. So,
+There's an example.
 
 1024
 00:34:45,931 --> 00:34:47,604
-back to the [inaudible] incept.
+Back to the [inaudible] incept.
 
 1025
 00:34:47,604 --> 00:34:49,120
@@ -4120,7 +4120,7 @@ Here's the incept do. You see we have a
 
 1031
 00:34:59,960 --> 00:35:03,360
-yield from yield from. It's
+yield from. It's
 
 1032
 00:35:03,360 --> 00:35:05,280
@@ -4316,7 +4316,7 @@ like smaller functions versus larger
 
 1080
 00:36:30,120 --> 00:36:31,600
-functions. So it is more hygienic in
+functions. It is more hygienic in
 
 1081
 00:36:31,600 --> 00:36:32,960
@@ -4324,7 +4324,7 @@ some senses, a little bit more
 
 1082
 00:36:32,960 --> 00:36:34,240
-convoluted. So it's a bit of a
+convoluted. It's a bit of a
 
 1083
 00:36:34,240 --> 00:36:36,520
@@ -4332,7 +4332,7 @@ trade-off.
 
 1084
 00:36:37,800 --> 00:36:39,760
-Now I'm just mention Effection. So
+Now I'm just mention Effection.
 
 1085
 00:36:39,760 --> 00:36:41,720
@@ -4376,7 +4376,7 @@ co-routine
 
 1095
 00:36:59,000 --> 00:37:01,040
-from that spot. So this is using the
+from that spot. This is using the
 
 1096
 00:37:01,040 --> 00:37:03,390
@@ -4649,4 +4649,3 @@ That's HIO.
 1163
 00:39:04,927 --> 00:39:06,947
 [applause]
-
