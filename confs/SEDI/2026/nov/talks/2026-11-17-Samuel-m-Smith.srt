@@ -2074,7 +2074,7 @@ you put that in there? And it says, no, we
 416
 00:37:54,580 --> 00:37:58,320
 want zero malleability attacks. That means
-everything has to be protected with ashes.
+everything has to be protected with hashes.
 
 417
 00:37:58,640 --> 00:38:02,780
@@ -2389,12 +2389,12 @@ But now we have more attributes and each
 479
 00:43:15,680 --> 00:43:19,660
 attribute gets its own block. I've got
-given name, bin name, family name, name
+given name, middle name, family name, name
 
 480
 00:43:19,660 --> 00:43:25,440
-suffix. Let's just do one block given
-name. Has a said. It's a said of just this
+suffix. Let's just do one block: given
+name. Has a SAID. It's a SAID of just this
 
 481
 00:43:25,440 --> 00:43:29,900
@@ -2403,7 +2403,7 @@ can't guess the value of the given name
 
 482
 00:43:29,900 --> 00:43:35,740
-just by giving its said and the schema.
+just by giving its SAID and the schema.
 And each of these blocks have the same
 
 483
@@ -2418,13 +2418,13 @@ it and the cryptographic commitment still
 
 485
 00:43:48,060 --> 00:43:52,520
-verifies. In here are familiar with a
+verifies. Who in here are familiar with a
 Merkle tree. Who knows what a Merkle tree
 
 486
 00:43:52,520 --> 00:43:58,080
 is? Okay, most of you. A Merkle tree
-is a binary tree and ACDC is an MERI
+is a binary tree and ACDC is an n-ary
 
 487
 00:43:58,080 --> 00:44:06,620
@@ -2449,7 +2449,7 @@ disclosing any of the other branches.
 491
 00:44:21,420 --> 00:44:25,820
 That's the fundamental property of a
-Merkle tree. We made it an mary tree
+Merkle tree. We made it an n-ary tree
 
 492
 00:44:25,820 --> 00:44:29,980
@@ -2478,1049 +2478,1044 @@ Utah agent. So that's the structure of an
 497
 00:44:47,420 --> 00:44:53,740
 ACDC. You now know as much as anybody
-else in the world about an ACDC. All
+else in the world about an ACDC.
 
 498
-00:44:53,740 --> 00:44:57,760
-right. Yes. Okay. Let's
-pursue my follow -up.
+00:45:01,720 --> 00:45:09,500
+– The thing you're hashing has 128 bits
+of entropy. Or the hash? – The hash itself
 
 499
-00:45:01,720 --> 00:45:09,500
-The thing you're hashing is has 128 bits
-of entropy. Or the hash. The hash itself
-
-500
 00:45:09,500 --> 00:45:16,420
-has 128 bits of entropy. But what you're
+has 120 bits of entropy. But what you're
 hashing also has 120 bits of entropy. And
 
-501
+500
 00:45:16,420 --> 00:45:22,320
 the reason is that if I have a schema
 that says this field, its values are,
 
-502
+501
 00:45:22,420 --> 00:45:31,480
 let's say, a zip code. How many zip
-codes are there? Not very many. Right. The
+codes are there? Not very many. The
 
-503
+502
 00:45:31,480 --> 00:45:35,740
-entropy of a zip code is really, really
+entropy of a zip code is really
 small. So if I have a block of data that
 
-504
+503
 00:45:35,740 --> 00:45:43,280
 has a zip code, a street address. A
 country and a county for address, the
 
-505
+504
 00:45:43,280 --> 00:45:48,140
 entropy of all of those fields for all of
 the address in the United States is way,
 
-506
+505
 00:45:48,200 --> 00:45:53,260
 way, way less than 120 bits. It's
 like maybe 40 bits. Which means that's
 
-507
+506
 00:45:53,260 --> 00:45:58,040
 attackable. All I need to know is the
 schema that says this field is a street
 
-508
+507
 00:45:58,040 --> 00:46:01,960
 address, this field is zip code. I can
 guess all the values of the field by doing
 
-509
+508
 00:46:01,960 --> 00:46:06,580
 a rainbow table attack. But if one of
 the fields is high entropy, a random
 
-510
+509
 00:46:06,580 --> 00:46:12,760
 number, I can't do a rainbow table attack.
-I'm with you on that. Oh, okay. You're
+– I'm with you on that. – Okay. – You're
 
-511
+510
 00:46:12,760 --> 00:46:16,340
 making the assertion that you're just not
 worrying about quantum supremacy or you're
 
-512
+511
 00:46:16,340 --> 00:46:21,140
-going to pull over to two. Okay.
-Hashes, cryptographic strength hashes
+[…] – Okay. Hashes,
+cryptographic strength hashes
 
-513
+512
 00:46:21,140 --> 00:46:28,540
 are already post quantum secure.
-Yes. Okay. If you go look it up. The crypto
+If you go look it up. – The crypto
 
-514
+513
 00:46:28,540 --> 00:46:32,520
-agility element. Yeah. Okay. I haven't
+agility element. – I haven't
 talked about crypto agility. The place
 
-515
+514
 00:46:32,520 --> 00:46:37,180
 where quantum attacks is not the hashes.
 It's the signatures. The public-private
 
-516
+515
 00:46:37,180 --> 00:46:40,980
 key pair generation algorithm, you can
 invert the public key and get the private
 
-517
+516
 00:46:40,980 --> 00:46:45,320
 key with crypto because you can use
 an attack that reduces its cryptographic
 
-518
+517
 00:46:45,320 --> 00:46:50,140
 strength from 128 bits to something
 much smaller. So what you need then is
 
-519
+518
 00:46:50,140 --> 00:46:54,900
 for the public-private key pairs, you need
 to have a crypto strength public-private
 
-520
+519
 00:46:54,900 --> 00:46:58,360
 key pair. That's all you need for this
 because we're not doing encryption.
 
-521
+520
 00:46:58,360 --> 00:47:01,740
 We do encryption,
 but KERI isn't about
 
-522
+521
 00:47:01,740 --> 00:47:06,620
 encryption. It's about authentication
-with private key pairs. Now, because
+with public private key pairs. Now, because
 
-523
+522
 00:47:06,620 --> 00:47:11,120
 which I haven't talked about KERI, this
 is ACDCs. We have something called pre
 
-524
+523
 00:47:11,120 --> 00:47:16,040
 -rotation. The pre-rotated keys are
 protected with a hash, which means that
 
-525
+524
 00:47:16,040 --> 00:47:21,160
 they're already post-quantum proof, which
 means that they can get my signing keys
 
-526
+525
 00:47:21,160 --> 00:47:25,380
 because they know the public key. But
 then if I have a way to detect that they've
 
-527
+526
 00:47:25,380 --> 00:47:28,240
 compromised me because they entered
 something in my key event log and I see
 
-528
+527
 00:47:28,240 --> 00:47:33,320
 that they entered it, then I can do a
 rotation at the time of attack to a post
 
-529
+528
 00:47:33,320 --> 00:47:37,740
 -quantum safe public-private key pair. So
 I can wait to the last possible minute to
 
-530
+529
 00:47:37,740 --> 00:47:41,760
 have to migrate. So I don't have to
 incur the cost of migration now. We're pre
 
-531
+530
 00:47:41,760 --> 00:47:46,260
 -migrated. I don't have to incur the size
 and penalty. All that stuff can wait till
 
-532
+531
 00:47:46,260 --> 00:47:50,580
 quantum attacks actually start happening.
 We'll probably we'll do it before
 
-533
+532
 00:47:50,580 --> 00:47:54,960
 then. 2030 is the date. So, you know,
 but we don't have to do it today. And
 
-534
+533
 00:47:54,960 --> 00:47:58,700
 so that's an advantage, especially
 if you're trying to roll it out today to
 
-535
+534
 00:47:58,700 --> 00:48:04,220
 millions of people in the state of Utah.
 So, and you don't have to at day one say,
 
-536
+535
 00:48:04,320 --> 00:48:10,160
 well, we've got to be already post-quantum
 when this only just barely, you know, and
 
-537
+536
 00:48:10,160 --> 00:48:16,660
 maybe a couple years of seasoning
 is a good idea. There's lots. Okay, so
 
-538
+537
 00:48:16,660 --> 00:48:22,480
 now we're going to do something called
 partial disclosure. Okay, so here's my
 
-539
+538
 00:48:22,480 --> 00:48:29,260
 same credential, but I've collapsed
 my Merkle tree to the roots of each of the
 
-540
+539
 00:48:29,260 --> 00:48:35,100
 nodes. Given name instead of
 being block is a hash. So now I can
 
-541
+540
 00:48:35,100 --> 00:48:39,440
 present this without disclosing any of
 these field values. They don't know what
 
-542
+541
 00:48:39,440 --> 00:48:45,920
 they are and they can't guess them
 because of the unique entropy in them. So
 
-543
+542
 00:48:45,920 --> 00:48:53,140
 that now allows me to present any subset
 that I choose at the time of presentation
 
-544
+543
 00:48:53,140 --> 00:48:56,800
 without disclosing any of the other
 ones. I didn't have to do anything fancy. I
 
-545
+544
 00:48:56,800 --> 00:49:01,120
 didn't need black-magic crypto, which
 is an advantage because we want to
 
-546
+545
 00:49:01,120 --> 00:49:05,260
 adopt this at scale. We want to use
 well -seasoned crypto that's everywhere.
 
-547
+546
 00:49:05,820 --> 00:49:10,100
 I mean, we're using stuff that's been
 around for 20 years. ECC has been around
 
-548
+547
 00:49:10,100 --> 00:49:17,780
 for 20 years. It's been stable. When I say
 stable, people before ECC, crypto meant
 
-549
+548
 00:49:17,780 --> 00:49:22,040
 that every two or three years you had
 to double the size of your keys because it
 
-550
+549
 00:49:22,040 --> 00:49:27,660
 just, you know, prime factorization was
 subject to Moore's law attack. But ECC has
 
-551
+550
 00:49:27,660 --> 00:49:32,280
 maintained its strength over the last
 20 years despite, you know, a thousand
 
-552
+551
 00:49:32,280 --> 00:49:37,460
 Moore's law doubling of computation power
 because it always has been computationally
 
-553
+552
 00:49:37,460 --> 00:49:42,300
 feasible and they haven't come up with
 any way to break it. Now post-quantum
 
-554
+553
 00:49:42,300 --> 00:49:46,760
 has. Now we'll get a we'll jump to the
 post-quantum but then hopefully we'll have
 
-555
+554
 00:49:46,760 --> 00:49:51,300
 a stable period for the next 50
 years or so before we have to redo
 
-556
+555
 00:49:51,300 --> 00:49:57,580
 everything again. But during the 80s
 and 90s and 2000s it was like, you know,
 
-557
+556
 00:49:57,580 --> 00:50:01,980
 because ECC didn't go off patent until
 like 2011. So even though it was around
 
-558
+557
 00:50:01,980 --> 00:50:05,560
 for 10 years before that, nobody could
 use it because it's patented. I got 10
 
-559
+558
 00:50:05,560 --> 00:50:12,200
 minutes. Okay. Well, I'm just about
 done. Right. I'm going to talk about
 
-560
+559
 00:50:12,200 --> 00:50:16,480
 guardianship. A little more
 sophisticated delegation chain. Here's the
 
-561
+560
 00:50:16,480 --> 00:50:23,620
 same one here, but now I'm delegating
 to a citizen. Here's their AID that they're
 
-562
+561
 00:50:23,620 --> 00:50:31,180
 a guardian of a different AID.
 This ACDC is saying that this
 
-563
+562
 00:50:31,180 --> 00:50:37,940
 citizen guardian AID is a guardian of this
 citizen ward AID and this citizen guardian
 
-564
+563
 00:50:37,940 --> 00:50:46,280
 now, not the state, can now issue an
 ACDC as an authorization to the ward or the
 
-565
+564
 00:50:46,280 --> 00:50:51,200
 child in this case, that ward can
 present to social media. And so what we've
 
-566
+565
 00:50:51,200 --> 00:50:57,420
 done is that we've inserted the parent as
 now the authority structure. The authority
 
-567
+566
 00:50:57,420 --> 00:51:03,000
 isn't going from the state to here. The
 authority to access the social media is
 
-568
+567
 00:51:03,000 --> 00:51:08,840
 going through the parent. So even though
 this citizen might be over 13, which the
 
-569
+568
 00:51:08,840 --> 00:51:15,180
 law says, if the parent says, no, no, no, I
 want to control the access when and how
 
-570
+569
 00:51:15,180 --> 00:51:20,100
 much and how often and not just let
 the state determine that they're over 13 so
 
-571
+570
 00:51:20,100 --> 00:51:24,080
 they can do whenever they want to,
 now they can issue this social media
 
-572
+571
 00:51:24,080 --> 00:51:28,120
 authorization. And we're using the
 same technology all the way down. All
 
-573
+572
 00:51:28,120 --> 00:51:33,920
 we've done is we've changed to the issuer
 is of this. This person is the issuer of
 
-574
+573
 00:51:33,920 --> 00:51:43,180
 that. I can show this… Oh, yeah, I
 don't want to show that credential. It's
 
-575
+574
 00:51:43,180 --> 00:51:46,720
 going one line at a time. But it's not
 fundamentally different from what I showed
 
-576
+575
 00:51:46,720 --> 00:51:59,740
 before. I'm at the point where without
 going into more detail Do you kind of get
 
-577
+576
 00:51:59,740 --> 00:52:08,160
 a sense of why delegation solves the
 problem of modeling authority structures?
 
-578
+577
 00:52:10,600 --> 00:52:20,940
 That was a bad way to ask the question.
 What don't you get about that? Here's a
 
-579
+578
 00:52:20,940 --> 00:52:28,160
 problem with delegation. Up until ACDCs
 as far as I could tell when people built
 
-580
+579
 00:52:28,160 --> 00:52:37,420
 cryptographically verifiable delegation
 structures, these delegations were signed.
 
-581
+580
 00:52:37,700 --> 00:52:44,240
 They weren't durable. Which means that
 if I have a chain of any length and that
 
-582
+581
 00:52:44,240 --> 00:52:51,340
 chain will break whenever anybody rotates
 their keys. Not because they wanted it to
 
-583
+582
 00:52:51,340 --> 00:52:57,900
 break, but because their key management
 forced it to break. And so DNSSEC is an
 
-584
+583
 00:52:57,900 --> 00:53:01,740
 example of that. You read the spec
 and you go, oh, this is a great idea. I'm
 
-585
+584
 00:53:01,740 --> 00:53:06,480
 going to delegate stuff. But does anybody
 use DNSSEC? Most people use DNSSEC say,
 
-586
+585
 00:53:06,700 --> 00:53:12,760
 can't really use it because I keep
 DDoSing myself. And why are they DDoSing
 
-587
+586
 00:53:12,760 --> 00:53:16,040
 themselves? Because every time anybody
 in the chain rotates their keys, it breaks
 
-588
+587
 00:53:16,040 --> 00:53:19,860
 their credentials. And they go,
 well, wait, you rotated your keys. My
 
-589
+588
 00:53:19,860 --> 00:53:23,620
 credentials should be valid. No, no,
 no, no. No, the authority is based on your
 
-590
+589
 00:53:23,620 --> 00:53:30,780
 current key state, not based on some
 other mechanism that is durable. So we
 
-591
+590
 00:53:30,780 --> 00:53:35,240
 couldn't do this if we hadn't solved the
 durability problem a long time ago. Once
 
-592
+591
 00:53:35,240 --> 00:53:39,260
 we solve the durability problem, then it's
 like, oh, we can do delegation. Delegation
 
-593
+592
 00:53:39,260 --> 00:53:42,340
 actually becomes something that's
 not that difficult to do once you solve the
 
-594
+593
 00:53:42,340 --> 00:53:46,960
 durability problem. And if you don't solve
 the durable problem, then delegation is
 
-595
+594
 00:53:46,960 --> 00:53:50,540
 fragile in every case. And when people try
 to do it, it sounds like a good idea. And
 
-596
+595
 00:53:50,540 --> 00:53:54,960
 then it goes, oh, it doesn't really
 work. And then they throw it away.
 
-597
+596
 00:53:55,080 --> 00:53:59,520
 And there have been lots of specs that
 have delegation in them, but they're not
 
-598
+597
 00:53:59,520 --> 00:54:06,720
 used very much. So the idea is that if
 you don't start with durability, you can't
 
-599
+598
 00:54:06,720 --> 00:54:10,140
 get… there's certain things you just can't
 do like guardianship because guardianship
 
-600
+599
 00:54:10,140 --> 00:54:12,520
 is durable. How long does
 the guardian relationship last?
 
-601
+600
 00:54:15,340 --> 00:54:21,320
 Well, 18 years. Sometimes longer
 than that. Yes. Yes. Well, actually, if
 
-602
+601
 00:54:21,320 --> 00:54:25,640
 you're on the other end of the age scale,
 it could be much longer than 18 years.
 
-603
+602
 00:54:25,860 --> 00:54:35,060
 You know, my kids are already
 telling me that I need to, you know, They
 
-604
+603
 00:54:35,060 --> 00:54:41,580
 need to be in charge of what
 I do. Anyway, the point is...
 
-605
+604
 00:54:41,580 --> 00:54:47,800
 Now, don't get me wrong. There
 are lots of really, really, really good
 
-606
+605
 00:54:47,800 --> 00:54:53,420
 valuable applications of ephemeral
 permissions and verifiable credentials. No
 
-607
+606
 00:54:53,420 --> 00:54:58,740
 doubt about it. And ephemeral things have
 lower friction so they can be used more
 
-608
+607
 00:54:58,740 --> 00:55:03,700
 easily at scale, but they don't solve
 the hardest problems that are essential to
 
-609
+608
 00:55:03,700 --> 00:55:11,160
 government function. And so if you can't
 solve the hardest problem, adopting things
 
-610
+609
 00:55:11,160 --> 00:55:16,520
 that can never solve it means that you're
 just going to have years of heartache and
 
-611
+610
 00:55:16,520 --> 00:55:20,160
 headache because you're going to keep
 trying to be saying, well, can't we just
 
-612
+611
 00:55:20,160 --> 00:55:25,500
 do this way? And what you end up with
 is ephemeral systems trying to emulate
 
-613
+612
 00:55:25,500 --> 00:55:28,680
 durable systems and that's a really
 difficult thing to do because it means
 
-614
+613
 00:55:28,680 --> 00:55:32,560
 you're just reissuing all the time. –
 It's what the internet's built on right now
 
-615
+614
 00:55:32,560 --> 00:55:36,500
 with certificate orders. – Yeah, yeah.
 – The whole mechanism is you have a
 
-616
+615
 00:55:36,500 --> 00:55:41,000
 DigiCert up their own. It's a billion
 dollar company that rents itself
 
-617
+616
 00:55:41,000 --> 00:55:44,320
 the fact that you have to rotate your
 keys and they take advantage of that. So
 
-618
+617
 00:55:44,320 --> 00:55:49,340
 there's… – Well, yeah, there's a
 business model for churn. And I hope I know
 
-619
+618
 00:55:49,340 --> 00:55:52,720
 I don't want to criticize certificate
 authorities, but yeah. – Can I ask a dumb
 
-620
+619
 00:55:52,720 --> 00:55:56,820
 business guy question? – Yes. –
 Absolutely. – The dumb business guy
 
-621
+620
 00:55:56,820 --> 00:56:03,420
 question is this, would it be correct to
 assume that each delegation step has to
 
-622
+621
 00:56:03,420 --> 00:56:07,580
 have its own key management
 infrastructure? – Yes. Yeah. Every
 
-623
+622
 00:56:07,580 --> 00:56:14,820
 identifier is independent. – So each one's
 got its own HS7, each one's got its own. –
 
-624
+623
 00:56:14,820 --> 00:56:21,240
 Yep. – The business guy nerd question
 is, That's really expensive and do they
 
-625
+624
 00:56:21,240 --> 00:56:25,620
 all have those already? Well, okay.
 When you use the term HSM, if you're
 
-626
+625
 00:56:25,620 --> 00:56:32,540
 talking about like enterprise class HSMs,
 which are like $10,000 a piece. Okay.
 
-627
+626
 00:56:33,200 --> 00:56:41,600
 Tomorrow I'm going to do
 a dinner talk on the security
 
-628
+627
 00:56:41,600 --> 00:56:46,820
 properties of KERI. This is ACDC.
 Tomorrow is KERI and we'll talk about
 
-629
+628
 00:56:46,820 --> 00:56:52,720
 tunable parameters that allow you to use
 relatively weak infrastructure, low cost
 
-630
+629
 00:56:52,720 --> 00:56:58,240
 infrastructure to get the same security
 properties as expensive infrastructure.
 
-631
+630
 00:56:58,240 --> 00:57:05,060
 An HSM could be a $10,000 server that
 has, you know, signing infrastructure or it
 
-632
+631
 00:57:05,060 --> 00:57:09,180
 could be a $10 smart card. And these guys
 have a demo. The reading guys have a demo
 
-633
+632
 00:57:09,180 --> 00:57:16,000
 of a $10 smart card. Yeah. So now you're
 just talking about each of these people
 
-634
+633
 00:57:16,000 --> 00:57:21,640
 don't necessarily need an expensive
 HSM. They just need a phone and a couple of
 
-635
+634
 00:57:21,640 --> 00:57:27,580
 smart cards. So it's not a lot of
 infrastructure. Now, this person, this
 
-636
+635
 00:57:27,580 --> 00:57:31,860
 agent who might be issuing, you know,
 hundreds of credentials a day, they might
 
-637
+636
 00:57:31,860 --> 00:57:36,440
 want to have a little bit better
 infrastructure. But hundreds is not
 
-638
+637
 00:57:36,440 --> 00:57:42,700
 10,000. And because of this delegation,
 you could have a hundred issuers and it
 
-639
+638
 00:57:42,700 --> 00:57:47,660
 doesn't matter. You can horizontally
 scale with issuers that don't issue a lot.
 
-640
+639
 00:57:48,220 --> 00:57:53,860
 and guess what happens if somebody's keys
 get compromised? The whole infrastructure
 
-641
+640
 00:57:53,860 --> 00:57:58,960
 doesn't go down. Just that one
 person. So you've minimized the blast
 
-642
+641
 00:57:58,960 --> 00:58:03,280
 radius by distributing the signing
 authority, which is why we delegate in
 
-643
+642
 00:58:03,280 --> 00:58:08,200
 organizations anyway. Can anybody by
 themselves run an organization of 20,000
 
-644
+643
 00:58:08,200 --> 00:58:12,560
 employees? No, they got to have 10 layers
 of management and each layer of management
 
-645
+644
 00:58:12,560 --> 00:58:17,880
 has at max 20 direct reports.
 Anybody with more than 20 direct reports
 
-646
+645
 00:58:17,880 --> 00:58:27,000
 is either working 80 hours a week or you
 know. Yeah. Okay. Yes. I know there are
 
-647
+646
 00:58:27,000 --> 00:58:30,840
 people to do that. Did that answer your
 question? It did actually. Okay. Great.
 
-648
+647
 00:58:31,320 --> 00:58:36,220
 Any more questions? Yes. Yeah. I'm
 curious how latency and timeouts on
 
-649
+648
 00:58:36,220 --> 00:58:41,400
 the network actually impact like impact
 this especially if you get into a doom.
 
-650
+649
 00:58:41,600 --> 00:58:49,400
 Can you get into a doom with this
 over? No. No. That's because the proof is
 
-651
+650
 00:58:49,400 --> 00:58:55,240
 static. What happens that we have
 something called percolated discovery.
 
-652
+651
 00:58:55,240 --> 00:58:58,860
 If I go back and I got to
 go back a few diagrams.
 
-653
+652
 00:59:03,120 --> 00:59:11,540
 It's all right. Just start at the top.
 Here we go. Okay. See this seal right
 
-654
+653
 00:59:11,540 --> 00:59:17,320
 here, this little box, that's an anchor to
 an issuance. Okay. This KEL up to that
 
-655
+654
 00:59:17,320 --> 00:59:24,260
 point and seal is immutable. It
 doesn't change. So if I give this much to
 
-656
+655
 00:59:24,260 --> 00:59:28,080
 the issuee and they put it in their
 wallet, they can now present that to
 
-657
+656
 00:59:28,080 --> 00:59:32,880
 anybody and prove it's a proof. It's a
 durable portable proof. Nobody has to go
 
-658
+657
 00:59:32,880 --> 00:59:37,720
 back to the issuer. Nobody has to go
 back actually even to the network to verify
 
-659
+658
 00:59:37,720 --> 00:59:42,480
 that proof. No phone home
 anywhere. So there's no network
 
-660
+659
 00:59:42,480 --> 00:59:46,020
 latency problem there because the
 verification is just a static proof. It's
 
-661
+660
 00:59:46,020 --> 00:59:49,920
 just a verifiable set of things that say
 at this point in this key event log that
 
-662
+661
 00:59:49,920 --> 00:59:53,860
 was issued. And if I go a few events
 past that, you can see that there
 
-663
+662
 00:59:53,860 --> 00:59:57,420
 wasn't a recovery or something
 like that that could have invalidated it.
 
-664
+663
 00:59:57,620 --> 01:00:02,760
 There's sort of like, well, up to this
 rotation, nothing can change. So, that's
 
-665
+664
 01:00:02,760 --> 01:00:07,680
 good. You're set. You're static. Everybody
 just has static proofs. And if and the
 
-666
+665
 01:00:07,680 --> 01:00:13,200
 only thing that the network affects
 is revokability. But revokability can
 
-667
+666
 01:00:13,200 --> 01:00:17,580
 be batched. I can say I got a 24-hour
 revocation time period, which corresponds
 
-668
+667
 01:00:17,580 --> 01:00:21,720
 with most legal basis for revocation,
 which means that if I don't have network
 
-669
+668
 01:00:21,720 --> 01:00:27,020
 for 24 hours, somebody who had a revoked
 credential, I can't detect it. But guess
 
-670
+669
 01:00:27,020 --> 01:00:31,820
 what? Even if they did, it wouldn't
 be valid for 24 hours till the next day
 
-671
+670
 01:00:31,820 --> 01:00:36,020
 anyway. So it didn't really hurt me.
 There's only a few cases where they do
 
-672
+671
 01:00:36,020 --> 01:00:42,840
 revocation faster than that. And so
 absent, you know, somebody upgrading the
 
-673
+672
 01:00:42,840 --> 01:00:53,860
 FAA's routers. Yes. Once again. Right. But
 the actual issuance isn't affected. It's
 
-674
+673
 01:00:53,860 --> 01:00:58,020
 only the revokability. And you might
 get a few people that had their credentials
 
-675
+674
 01:00:58,020 --> 01:01:02,000
 revoked that got away with it for two or
 three days. And that's a pretty minimal
 
-676
+675
 01:01:02,000 --> 01:01:07,040
 damage. Because how many people actually
 get their credentials revoked? Of the
 
-677
+676
 01:01:07,040 --> 01:01:13,160
 total population? People who
 drunk drivers. How many of those?
 
-678
+677
 01:01:13,300 --> 01:01:16,900
 Well, on New Year's Day, there's a
 few. But the rest of the year, not too
 
-679
+678
 01:01:16,900 --> 01:01:21,640
 many. Does that answer your question?
 I mean, I'd have to go into you'd have to
 
-680
+679
 01:01:21,640 --> 01:01:28,000
 see but that's the idea. Yes. Where and
 how are you storing your raw data? What do
 
-681
+680
 01:01:28,000 --> 01:01:33,820
 you mean by raw data? Everything. Okay.
 Well, the way it's a small blockchain.
 
-682
+681
 01:01:34,140 --> 01:01:39,800
 Blockchain stores data. Where are
 we storing? You're just storing it in a key
 
-683
+682
 01:01:39,800 --> 01:01:44,200
 value store. Okay. And then and so
 that amount of data you're talking about
 
-684
+683
 01:01:44,200 --> 01:01:50,760
 millions of people, how does that get
 secured? The hashes of all the data in the
 
-685
+684
 01:01:50,760 --> 01:01:55,800
 hash chains are self-securing. So if
 somebody tampers with it, you can detect
 
-686
+685
 01:01:55,800 --> 01:01:59,420
 it. I'm just wondering, I mean,
 fundamentally though, is it stirring it in
 
-687
+686
 01:01:59,420 --> 01:02:04,140
 some kind of a block? Is it stirring it
 in some kind of a text file? It doesn't
 
-688
+687
 01:02:04,140 --> 01:02:12,040
 matter. Any data Yeah, any database will
 work. What we use in our code is we use
 
-689
+688
 01:02:12,040 --> 01:02:17,380
 LMDB. LMDB is a really fast key value
 store used for you. You're familiar with
 
-690
+689
 01:02:17,380 --> 01:02:23,100
 it. Okay. Thank you. Yeah. Okay. Yes.
 Then you found the confusion earlier.
 
-691
+690
 01:02:23,760 --> 01:02:30,580
 Which hash scheme are you using now? SHA3,
 Blake? It's perfectly cryptographically
 
-692
+691
 01:02:30,580 --> 01:02:38,920
 agile. When I go, so here, I go back to
 the code. We have a protocol called CESR.
 
-693
+692
 01:02:39,120 --> 01:02:45,020
 It's called Compact Event Streaming
 Representation. It's a protocol that
 
-694
+693
 01:02:45,020 --> 01:02:50,800
 has a compact encoding scheme for
 all cryptographic primitives. For example,
 
-695
+694
 01:02:51,280 --> 01:02:56,800
 this first character is actually not part
 of the hash. It is the algorithm. This is
 
-696
+695
 01:02:56,800 --> 01:03:05,860
 Blake 3. If it was Blake 2B, it would be
 an F. If it was SHA 3, it would be a G or
 
-697
+696
 01:03:05,860 --> 01:03:10,860
 an H. And if it was SHA 3 512, it'd be
 a different letter. If it's SHA, you'd be,
 
-698
+697
 01:03:11,080 --> 01:03:16,440
 you know, so all of the hashes are in
 the table. and anybody that's processing it
 
-699
+698
 01:03:16,440 --> 01:03:20,240
 just looks it up and go, oh, yeah, I know
 what, so I know how to verify that hash.
 
-700
+699
 01:03:21,680 --> 01:03:25,720
 Yeah. No, that's all right. In the
 distributed authority world, I know how
 
-701
+700
 01:03:25,720 --> 01:03:28,580
 this happens when something goes bad. You
 know, you're looking at those statements,
 
-702
+701
 01:03:29,000 --> 01:03:32,940
 transparency logs, the distributed
 authority tells you. Yes. There was
 
-703
+702
 01:03:32,940 --> 01:03:36,420
 a slide here where it's like, and you will
 know something has gone bad and the word
 
-704
+703
 01:03:36,420 --> 01:03:41,660
 you was carrying a lot of weight. Oh,
 okay. Yes. We'll go back here. Okay.
 
-705
+704
 01:03:41,660 --> 01:03:49,420
 Tomorrow's talk, I will answer that.
 Okay. All right. To be continued. All
 
-706
+705
 01:03:49,420 --> 01:03:55,200
 right. Well, thank you
 so much. Thank you.
