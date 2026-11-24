@@ -8,7 +8,8 @@
  *   3. Parse SRT cues and group them into readable paragraphs.
  *      A sibling summary (`foo.srt` → `foo.md`) is included when present.
  *   4. Render an HTML document with a cover page, table of contents,
- *      and one chapter per talk
+ *      and one chapter per talk, using the keri.foundation look:
+ *      pale ground, cream header, gold marks, and waves-kim-1.png
  *   5. Drive the locally installed Google Chrome (via puppeteer-core)
  *      to print the HTML to a paged PDF
  *
@@ -265,19 +266,19 @@ async function resolvePdfOutputPath(eventDir, slug) {
 
 function coverTitleParts(event) {
   const acronym = event.name.match(/\(([A-Z][A-Z0-9]+)\)/)?.[1];
+  let parts;
   if (acronym) {
     const after = event.name.replace(/.*\)\s*/, "").trim();
-    return { line1: acronym, line2: after || "Transcripts", accent: event.year };
+    parts = { line1: acronym, line2: after || "Transcripts", accent: event.year };
+  } else {
+    const words = (event.shortName || event.name).split(/\s+/).filter(Boolean);
+    parts = words.length >= 2
+      ? { line1: words[0], line2: words.slice(1).join(" "), accent: event.year }
+      : { line1: event.shortName || event.slug, line2: "Transcripts", accent: event.year };
   }
-  const words = (event.shortName || event.name).split(/\s+/).filter(Boolean);
-  if (words.length >= 2) {
-    return {
-      line1: words[0],
-      line2: words.slice(1).join(" "),
-      accent: event.year,
-    };
-  }
-  return { line1: event.shortName || event.slug, line2: "Transcripts", accent: event.year };
+  const shown = `${parts.line1} ${parts.line2}`;
+  if (parts.accent && shown.includes(parts.accent)) parts.accent = "";
+  return parts;
 }
 
 // ─── SRT parsing ────────────────────────────────────────────────────────────
@@ -484,10 +485,6 @@ function esc(s) {
     .replace(/"/g, "&quot;");
 }
 
-function cssStr(s) {
-  return String(s).replace(/\\/g, "\\\\").replace(/"/g, '\\"');
-}
-
 const romanNumerals = [
   "I", "II", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X",
   "XI", "XII", "XIII", "XIV", "XV", "XVI", "XVII", "XVIII", "XIX", "XX",
@@ -495,11 +492,6 @@ const romanNumerals = [
 ];
 function toRoman(n) {
   return romanNumerals[n - 1] ?? String(n);
-}
-
-function initialOf(speaker) {
-  const parts = speaker.split(/\s+/).filter(Boolean);
-  return parts.length ? parts[0][0].toUpperCase() : "•";
 }
 
 function chapterHeading(talk) {
@@ -536,10 +528,25 @@ function summaryHtml(paragraphs) {
 
 // ─── HTML assembly ──────────────────────────────────────────────────────────
 
+// Same files the foundation theme paints on the header, titles, and asides.
+const BRAND = {
+  waves: "custom/img/waves-kim-1.png",
+  mark: "custom/img/logo-horizontal-line.png",
+  logo: "custom/img/logo-keri-foundation-color-transparent.png",
+  corner: "custom/img/logo-F.png",
+};
+
+function markRow(label, labelClass) {
+  return `
+        <div class="mark-row">
+          <img class="brush" src="${BRAND.mark}" alt="">
+          <div class="${labelClass}">${label}</div>
+          <img class="brush flip" src="${BRAND.mark}" alt="">
+        </div>`;
+}
+
 function buildHtml(talks, generatedOn, event) {
   const cover = coverTitleParts(event);
-  const footerLabel = event.shortName || event.name;
-  const coverMark = [cover.line1, event.year].filter(Boolean).join(" · ");
   const coverSub = event.date
     ? `A complete transcript of every recorded talk from the ${event.name} — ${event.date}.`
     : `A complete transcript of every recorded talk from the ${event.name}.`;
@@ -547,12 +554,14 @@ function buildHtml(talks, generatedOn, event) {
   const talkRows = talks
     .map((t, i) => {
       const num = String(i + 1).padStart(2, "0");
+      const speaker = t.speaker || t.title;
       const tocTitle = t.style === "conference" ? t.title : t.session || t.title;
+      const distinct = tocTitle && tocTitle !== speaker;
       return `
         <a class="toc-row" href="#talk-${i}">
           <span class="toc-num">${num}</span>
-          <span class="toc-speaker">${esc(t.speaker || t.title)}</span>
-          <span class="toc-title">${esc(tocTitle)}</span>
+          <span class="${distinct ? "toc-speaker" : "toc-speaker toc-span"}">${esc(speaker)}</span>
+          ${distinct ? `<span class="toc-title">${esc(tocTitle)}</span>` : ""}
           <span class="toc-dots"></span>
           <span class="toc-page-no">${formatTimestamp(t.duration)}</span>
         </a>`;
@@ -569,11 +578,16 @@ function buildHtml(talks, generatedOn, event) {
       return `
       <section class="chapter">
         <div class="chapter-opener">
+          <img class="hero-wave hero-wave-tl" src="${BRAND.waves}" alt="">
+          <img class="hero-wave hero-wave-br" src="${BRAND.waves}" alt="">
           <div class="chapter-opener-inner">
-            <div class="chapter-mark">Talk ${toRoman(i + 1)}</div>
-            <div class="chapter-initial">${esc(initialOf(t.speaker || heading.title))}</div>
+            ${markRow(`Talk ${toRoman(i + 1)}`, "chapter-mark")}
             <h1 class="chapter-title">${esc(heading.title)}</h1>
-            <div class="chapter-speaker">${esc(heading.speaker)}</div>
+            ${
+              heading.speaker && heading.speaker !== heading.title
+                ? `<div class="chapter-speaker">${esc(heading.speaker)}</div>`
+                : ""
+            }
             <div class="chapter-meta">${esc(chapterMeta(t, event))}</div>
           </div>
         </div>
@@ -591,189 +605,250 @@ function buildHtml(talks, generatedOn, event) {
 <meta charset="utf-8">
 <title>${esc(event.name)} — Transcripts</title>
 <style>
+  /* keri.foundation: pale ground, cream header (#e8e6de), gold #986c32, sage #61783e.
+     Waves and the gold corner mark are the theme images. */
   @page {
     size: A4;
-    margin: 22mm 18mm 20mm 18mm;
+    margin: 0 0 12mm 0;
     @bottom-left {
-      content: "${cssStr(footerLabel)}";
-      font-family: "Iowan Old Style", "Palatino", Georgia, serif;
-      font-size: 8.5pt;
-      color: #8a8f98;
+      content: "KERI Foundation";
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 8pt;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: #61783e;
+      margin-left: 14mm;
     }
     @bottom-right {
       content: counter(page);
-      font-family: "Iowan Old Style", "Palatino", Georgia, serif;
-      font-size: 8.5pt;
-      color: #8a8f98;
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      font-size: 8pt;
+      font-weight: 700;
+      color: #986c32;
+      margin-right: 14mm;
     }
   }
-  @page cover { margin: 0; @bottom-left { content: ""; } @bottom-right { content: ""; } }
-  @page opener { margin: 0; @bottom-left { content: ""; } @bottom-right { content: ""; } }
+  @page cover { @bottom-left { content: none; } @bottom-right { content: none; } }
+  @page opener { @bottom-left { content: none; } @bottom-right { content: none; } }
   @page toc { @bottom-right { content: counter(page); } }
 
   html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   body {
     margin: 0;
-    font-family: "Iowan Old Style", "Palatino", "Palatino Linotype", Georgia, serif;
-    color: #1b1f24;
-    font-size: 10.5pt;
-    line-height: 1.55;
+    font-family: "Helvetica Neue", Helvetica, Arial, "Segoe UI", sans-serif;
+    color: #1f2937;
+    font-size: 11pt;
+    line-height: 1.5;
+    letter-spacing: -0.006em;
     text-rendering: optimizeLegibility;
+    background: linear-gradient(to right, #f3f9f9, #f2f7f9);
+  }
+
+  /* Waves repeat the foundation theme: rotated under the header (header::after)
+     and sitting in the bottom-right corner (aside). */
+  .wave-tl, .wave-br { position: fixed; pointer-events: none; z-index: 0; }
+  .wave-tl {
+    left: 0;
+    top: 16mm;
+    width: 110mm;
+    height: 63mm;
+    object-fit: fill;
+    transform: rotate(180deg);
+    opacity: 0.55;
+  }
+  .wave-br {
+    right: 0;
+    bottom: 10mm;
+    width: 92mm;
+    height: 53mm;
+    object-fit: fill;
+    opacity: 0.8;
+  }
+  table.sheet { width: 100%; border-collapse: collapse; }
+  table.sheet td { padding: 0; vertical-align: top; }
+  thead { display: table-header-group; }
+  .running-head {
+    position: relative;
+    height: 16mm;
+    box-sizing: border-box;
+    padding: 2mm 18mm 2mm 6mm;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6mm;
+    background: #e8e6de;
+    z-index: 5;
+  }
+  .running-head .logo { height: 12mm; width: auto; }
+  .corner-f {
+    position: absolute;
+    right: 4mm;
+    bottom: 1mm;
+    width: 8mm;
+    height: 7mm;
+    object-fit: contain;
+    transform: rotate(180deg);
+  }
+  .running-event {
+    font-size: 9pt;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: #111827;
+    text-align: right;
+    max-width: 115mm;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mark-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4mm;
+  }
+  .brush { width: 12mm; height: 4.5mm; object-fit: contain; }
+  .brush.flip { transform: rotate(180deg); }
+  .cover-eyebrow, .chapter-mark, .toc-heading {
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #986c32;
   }
 
   /* ─── Cover ─── */
+  .hero-wave { position: absolute; z-index: 0; pointer-events: none; }
+  .hero-wave-tl {
+    left: 0;
+    top: 14mm;
+    width: 125mm;
+    height: 72mm;
+    object-fit: fill;
+    transform: rotate(180deg);
+    opacity: 0.8;
+  }
+  .hero-wave-br {
+    right: 0;
+    bottom: 0;
+    width: 120mm;
+    height: 69mm;
+    object-fit: fill;
+    opacity: 0.95;
+  }
   .cover {
     page: cover;
     page-break-after: always;
     position: relative;
-    height: 297mm;
     box-sizing: border-box;
-    padding: 0;
-    background:
-      radial-gradient(120% 80% at 85% 8%, rgba(120, 190, 255, 0.18), transparent 60%),
-      radial-gradient(90% 70% at 10% 95%, rgba(255, 180, 120, 0.10), transparent 55%),
-      linear-gradient(160deg, #0b1f3a 0%, #112a52 45%, #0a1730 100%);
-    color: #f4f6fb;
+    width: 100%;
+    height: 269mm;
+    margin: 0;
+    background: linear-gradient(to right, #f3f9f9, #f2f7f9);
+    color: #111827;
     overflow: hidden;
-  }
-  .cover::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.045) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.045) 1px, transparent 1px);
-    background-size: 28mm 28mm;
-    pointer-events: none;
   }
   .cover-inner {
     position: relative;
+    z-index: 1;
     height: 100%;
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    padding: 28mm 22mm;
+    justify-content: flex-end;
+    gap: 14mm;
+    padding: 28mm 18mm 26mm 18mm;
   }
-  .cover-top { display: flex; justify-content: space-between; align-items: flex-start; }
-  .cover-mark {
-    font-family: "SF Mono", "Menlo", monospace;
-    font-size: 9pt;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: #7fb6ff;
-  }
-  .cover-glyph {
-    width: 14mm; height: 14mm;
-    border: 1.5px solid rgba(255,255,255,0.45);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: "Iowan Old Style", Georgia, serif;
-    font-size: 16pt; font-style: italic; color: #fff;
-  }
-  .cover-center { margin-top: -8mm; }
-  .cover-eyebrow {
-    font-family: "SF Mono", "Menlo", monospace;
-    font-size: 10pt;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    color: #9fc7ff;
-    margin-bottom: 14mm;
-  }
+  .cover-eyebrow { font-size: 12pt; }
   .cover-title {
-    font-family: "Iowan Old Style", "Palatino", Georgia, serif;
     font-weight: 700;
-    font-size: 64pt;
-    line-height: 1.02;
-    letter-spacing: -0.01em;
-    margin: 0;
+    font-size: 40pt;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: #111827;
+    margin: 5mm 0 0;
+    max-width: 150mm;
   }
-  .cover-title .accent { color: #7fb6ff; font-style: italic; font-weight: 400; }
+  .cover-title .accent { color: #986c32; font-weight: 700; }
   .cover-sub {
-    margin-top: 10mm;
-    font-size: 16pt;
-    font-style: italic;
-    color: #c9d6ee;
-    max-width: 130mm;
+    margin: 6mm 0 0;
+    font-size: 13pt;
+    color: #4b5563;
+    max-width: 125mm;
     line-height: 1.4;
-  }
-  .cover-rule {
-    margin-top: 14mm;
-    width: 60mm;
-    height: 1px;
-    background: linear-gradient(90deg, #7fb6ff, transparent);
   }
   .cover-bottom {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    font-family: "SF Mono", "Menlo", monospace;
-    font-size: 9pt;
-    letter-spacing: 0.18em;
+    max-width: 125mm;
+    font-size: 8.5pt;
+    font-weight: 700;
+    letter-spacing: 0.14em;
     text-transform: uppercase;
-    color: #aab9d6;
+    color: #61783e;
   }
-  .cover-bottom .stats { display: flex; gap: 14mm; }
+  .cover-bottom .stats { display: flex; gap: 12mm; }
   .cover-bottom .stat-num {
     display: block;
-    font-family: "Iowan Old Style", Georgia, serif;
     font-size: 22pt;
     font-weight: 700;
-    letter-spacing: 0;
+    letter-spacing: -0.03em;
     text-transform: none;
-    color: #fff;
-    margin-bottom: 2mm;
+    color: #111827;
+    margin-bottom: 1mm;
+  }
+  .cover-date {
+    letter-spacing: 0.04em;
+    text-transform: none;
+    font-weight: 600;
+    color: #4b5563;
+    padding-bottom: 1mm;
   }
 
   /* ─── Table of contents ─── */
-  .toc-page { page: toc; page-break-after: always; }
-  .toc-heading {
-    font-family: "Iowan Old Style", Georgia, serif;
-    font-size: 30pt;
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    margin: 0 0 2mm 0;
-  }
+  .toc-page { page: toc; page-break-after: always; position: relative; z-index: 1; padding: 5mm 16mm 0; }
+  .toc-heading { font-size: 14pt; margin: 0; }
+  .toc-page .mark-row { justify-content: flex-start; margin: 0 0 4mm; }
   .toc-lede {
-    font-style: italic;
-    color: #5a6270;
-    margin: 0 0 10mm 0;
+    color: #4b5563;
+    margin: 0 0 8mm;
     font-size: 11pt;
+    max-width: 150mm;
   }
   .toc-list { display: flex; flex-direction: column; }
   .toc-row {
     display: grid;
-    grid-template-columns: 10mm 38mm 1fr auto;
+    grid-template-columns: 12mm minmax(0, 1.05fr) minmax(0, 1.5fr) auto;
     align-items: baseline;
     gap: 3mm;
-    padding: 2.2mm 0;
-    border-bottom: 0.5px solid #e4e7ec;
+    padding: 2.4mm 0;
+    border-bottom: 0.4pt solid #d1d5db;
     text-decoration: none;
     color: inherit;
+    break-inside: avoid;
   }
   .toc-num {
-    font-family: "SF Mono", "Menlo", monospace;
     font-size: 9pt;
-    color: #9aa3b0;
+    font-weight: 700;
+    color: #986c32;
   }
   .toc-speaker {
     font-weight: 700;
     font-size: 10.5pt;
+    color: #111827;
   }
+  .toc-span { grid-column: 2 / 4; }
   .toc-title {
-    font-style: italic;
-    color: #444b56;
+    color: #4b5563;
     font-size: 10.5pt;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
   .toc-dots { display: none; }
   .toc-page-no {
-    font-family: "SF Mono", "Menlo", monospace;
     font-size: 9pt;
-    color: #9aa3b0;
+    font-weight: 700;
+    color: #61783e;
     text-align: right;
-    min-width: 16mm;
+    white-space: nowrap;
   }
 
   /* ─── Chapter opener ─── */
@@ -781,132 +856,115 @@ function buildHtml(talks, generatedOn, event) {
   .chapter-opener {
     page: opener;
     page-break-after: always;
-    height: 257mm;
+    position: relative;
     box-sizing: border-box;
-    background: linear-gradient(165deg, #0b1f3a 0%, #112a52 100%);
-    color: #f4f6fb;
+    width: 100%;
+    height: 269mm;
+    margin: 0;
+    background: linear-gradient(to right, #f3f9f9, #f2f7f9);
+    color: #111827;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
     overflow: hidden;
-  }
-  .chapter-opener::before {
-    content: "";
-    position: absolute; inset: 0;
-    background-image:
-      linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
-    background-size: 24mm 24mm;
   }
   .chapter-opener-inner {
     position: relative;
+    z-index: 1;
     text-align: center;
-    padding: 0 30mm;
+    padding: 20mm 18mm 28mm;
+    max-width: 170mm;
   }
-  .chapter-mark {
-    font-family: "SF Mono", "Menlo", monospace;
-    font-size: 10pt;
-    letter-spacing: 0.4em;
-    text-transform: uppercase;
-    color: #7fb6ff;
-    margin-bottom: 18mm;
-  }
-  .chapter-initial {
-    width: 26mm; height: 26mm;
-    margin: 0 auto 14mm;
-    border: 1.5px solid rgba(255,255,255,0.5);
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-family: "Iowan Old Style", Georgia, serif;
-    font-style: italic;
-    font-size: 30pt;
-    color: #fff;
-  }
+  .chapter-mark { font-size: 11pt; }
   .chapter-title {
-    font-family: "Iowan Old Style", Georgia, serif;
     font-weight: 700;
-    font-size: 30pt;
+    font-size: 26pt;
     line-height: 1.15;
-    letter-spacing: -0.01em;
-    margin: 0 auto 10mm;
-    max-width: 150mm;
+    letter-spacing: -0.03em;
+    color: #111827;
+    margin: 8mm auto 6mm;
   }
   .chapter-speaker {
-    font-size: 15pt;
-    font-style: italic;
-    color: #c9d6ee;
-    margin-bottom: 6mm;
+    font-size: 14pt;
+    font-weight: 700;
+    color: #61783e;
+    margin-bottom: 4mm;
   }
   .chapter-meta {
-    font-family: "SF Mono", "Menlo", monospace;
-    font-size: 9pt;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #9fc7ff;
+    font-size: 10pt;
+    color: #4b5563;
   }
 
   /* ─── Optional summary, then the transcript body ─── */
   .summary {
-    margin: 0 0 8mm 0;
-    padding: 0 0 2mm 0;
-    border-bottom: 0.4pt solid #d5dbe3;
+    position: relative;
+    z-index: 1;
+    margin: 5mm 16mm 7mm;
+    padding: 4mm 5mm 1.5mm;
+    background: #e8e6de;
+    border-radius: 2mm;
+    border-left: 1.4mm solid #986c32;
   }
   .summary h2 {
-    font-family: "SF Mono", "Menlo", monospace;
     font-size: 8.5pt;
-    font-weight: 600;
-    letter-spacing: 0.22em;
+    font-weight: 700;
+    letter-spacing: 0.16em;
     text-transform: uppercase;
-    color: #5c6b82;
-    margin: 0 0 3.5mm 0;
+    color: #986c32;
+    margin: 0 0 2.5mm;
   }
   .summary p {
-    margin: 0 0 2.6mm 0;
-    text-indent: 0;
-    text-align: justify;
-    hyphens: auto;
+    margin: 0 0 2.4mm;
     orphans: 3;
     widows: 3;
   }
-  .transcript { columns: 1; }
+  .transcript { position: relative; z-index: 1; padding: 0 16mm; }
   .transcript p {
-    margin: 0 0 2.4mm 0;
-    text-indent: 6mm;
+    margin: 0 0 2.6mm;
     orphans: 3;
     widows: 3;
-    text-align: justify;
-    hyphens: auto;
   }
-  .transcript p:first-child { text-indent: 0; }
-
-  /* First paragraph after opener: drop cap */
   .transcript p:first-child::first-letter {
-    font-family: "Iowan Old Style", Georgia, serif;
-    font-size: 32pt;
+    font-size: 26pt;
     font-weight: 700;
     float: left;
-    line-height: 0.9;
-    padding: 1.5mm 2mm 0 0;
-    color: #0b1f3a;
+    line-height: 0.85;
+    padding: 1mm 1.6mm 0 0;
+    color: #986c32;
   }
 </style>
 </head>
 <body>
 
+  <img class="wave-tl" src="${BRAND.waves}" alt="">
+  <img class="wave-br" src="${BRAND.waves}" alt="">
+
+  <table class="sheet">
+    <thead>
+      <tr>
+        <td>
+          <header class="running-head">
+            <img class="logo" src="${BRAND.logo}" alt="KERI Foundation">
+            <div class="running-event">${esc(event.name)}</div>
+            <img class="corner-f" src="${BRAND.corner}" alt="">
+          </header>
+        </td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>
+
   <div class="cover">
+    <img class="hero-wave hero-wave-tl" src="${BRAND.waves}" alt="">
+    <img class="hero-wave hero-wave-br" src="${BRAND.waves}" alt="">
     <div class="cover-inner">
-      <div class="cover-top">
-        <div class="cover-mark">${esc(coverMark)}</div>
-        <div class="cover-glyph">${esc((cover.line1 || "T")[0])}</div>
-      </div>
       <div class="cover-center">
-        <div class="cover-eyebrow">Transcripts</div>
+        ${markRow("Transcripts", "cover-eyebrow")}
         <h1 class="cover-title">${esc(cover.line1)}<br>${esc(cover.line2)}${
           cover.accent ? `<br><span class="accent">${esc(cover.accent)}</span>` : ""
         }</h1>
-        <div class="cover-sub">${esc(coverSub)}</div>
-        <div class="cover-rule"></div>
+        <p class="cover-sub">${esc(coverSub)}</p>
       </div>
       <div class="cover-bottom">
         <div class="stats">
@@ -915,18 +973,23 @@ function buildHtml(talks, generatedOn, event) {
             talks.reduce((a, t) => a + t.duration, 0)
           )}</span>Runtime</div>
         </div>
-        <div>${esc(generatedOn)}</div>
+        <div class="cover-date">${esc(generatedOn)}</div>
       </div>
     </div>
   </div>
 
   <div class="toc-page">
-    <h2 class="toc-heading">Contents</h2>
+    ${markRow("Contents", "toc-heading")}
     <p class="toc-lede">Full transcripts of all ${talks.length} recorded sessions, in the order they appear in the archive.</p>
     <div class="toc-list">${talkRows}</div>
   </div>
 
   ${chapters}
+
+        </td>
+      </tr>
+    </tbody>
+  </table>
 
 </body>
 </html>`;
