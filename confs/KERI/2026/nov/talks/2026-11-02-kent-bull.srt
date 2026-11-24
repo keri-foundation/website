@@ -120,7 +120,7 @@ me to describe it? – No, no, no. Absolutely
 
 25
 00:02:06,660 --> 00:02:11,180
-call it KERI 2. I just I also spent a
+call it KERI 2. I just… I also spent a
 bunch of time trying to figure that out.
 
 26
@@ -183,8 +183,7 @@ end to end with KERI version 1. There is a
 
 38
 00:03:34,300 --> 00:03:37,740
-significant amount of work that's non
--trivial to do to make it work for KERI 2.
+significant amount of work that's non-trivial to do to make it work for KERI 2.
 
 39
 00:03:38,240 --> 00:03:42,700
@@ -829,7 +828,7 @@ I see credential verifier checks issuer
 167
 00:14:01,360 --> 00:14:06,720
 proof and part of what I wanted to say
-up front as the as the TL;DRs a big part of
+up front as the TL;DR — a big part of
 
 168
 00:14:06,720 --> 00:14:11,280
@@ -1009,7 +1008,7 @@ protocol method at the front did:webs for
 203
 00:16:51,020 --> 00:16:59,080
 domain which we'll get into the designated
-alias ACDC later and you've got a path.
+aliases ACDC later and you've got a path.
 
 204
 00:16:59,220 --> 00:17:02,020
@@ -1088,8 +1087,8 @@ Maverick. Maverick says give me your
 
 219
 00:18:17,320 --> 00:18:20,860
-driver license and you give me your
-digital driver license and it's a SEDI one
+driver's license and you give me your
+digital driver's license and it's a SEDI one
 
 220
 00:18:20,860 --> 00:18:25,480
@@ -1318,7 +1317,7 @@ have the resources to spend to get full
 
 265
 00:22:04,660 --> 00:22:09,420
-infrastructure support for the I and KERI.
+infrastructure support for the I in KERI.
 Or they've got a really good reason why,
 
 266
@@ -1778,7 +1777,7 @@ something. So it was a natural fit for
 
 357
 00:29:48,620 --> 00:29:54,060
-did:webs. did:webs based on KERI with KERI
+did:webs. did:webs, based on KERI with KERI
 multisig. We just needed a way to define,
 
 358
@@ -2167,7 +2166,7 @@ credential because they can't come from
 
 435
 00:36:19,020 --> 00:36:21,880
-these places in the DID Document. And
+these places in the DID document. And
 we could walk through this example, but
 
 436
@@ -2208,11 +2207,11 @@ equivalence either in the event log or any
 443
 00:36:58,440 --> 00:37:06,940
 of the delegation mechanisms for assigning
-proof purpose to keys to not the pre
+proof purpose to keys to not the pre-rotation
 
 444
 00:37:06,940 --> 00:37:11,120
--rotation keys but to regular document
+keys but to regular document
 keys. Can you say this key can only be
 
 445
@@ -2311,7 +2310,7 @@ a reason to have… I never came up with a
 
 464
 00:39:04,920 --> 00:39:09,520
-reason to have to have some generic
+reason to have some generic
 semantic thing for keys because in
 
 465
@@ -2586,12 +2585,12 @@ finish out the diff process. And to
 
 519
 00:43:43,180 --> 00:43:50,180
-get to where we redo we really do want
-did:webs to be a a fully accepted fully
+get to where we really do want
+did:webs to be a fully accepted, fully
 
 520
 00:43:50,180 --> 00:43:55,924
-supported diff recommended DID method.
+supported DIF recommended DID method.
 And we were pretty close earlier this year.
 
 521
@@ -2627,7 +2626,7 @@ It would help. But the more important
 527
 00:44:29,720 --> 00:44:35,200
 thing is that we have two implementations
-and that the DIF recommended DIF methods
+and that the DIF recommended DID methods
 
 528
 00:44:35,200 --> 00:44:41,620
@@ -2656,7 +2655,7 @@ approved matter doesn't matter. It's just
 
 533
 00:45:03,360 --> 00:45:09,020
-whoever it is that's that's
+whoever it is that's
 working under the aegis of DIF has
 
 534
@@ -2707,7 +2706,7 @@ did:webplus and there might be a couple of
 543
 00:46:05,540 --> 00:46:09,060
 others now. We do want to be a DIF
-recommended did method. It just looks
+recommended DID method. It just looks
 
 544
 00:46:09,060 --> 00:46:15,800
@@ -3220,7 +3219,7 @@ an inception event, but it's a vacuous
 646
 00:55:02,220 --> 00:55:06,900
 inception event, which means a
-non -transferable KERI identifier is
+non-transferable KERI identifier is
 
 647
 00:55:06,900 --> 00:55:13,560
@@ -3255,11 +3254,11 @@ could derive if you knew what domain you
 653
 00:55:37,640 --> 00:55:40,840
 wanted to commit to, you could derive
-a DID document just from having a non
+a DID document just from having a non-transferable
 
 654
 00:55:40,840 --> 00:55:43,520
--transferable identifier. – Yeah, you just
+identifier. – Yeah, you just
 don't get the security benefits of a KEL.
 
 655
@@ -3275,11 +3274,11 @@ anybody that might not have heard it. So
 657
 00:55:55,160 --> 00:55:59,880
 if you're familiar with the concept of a
-non-transferable identifier in KERI, non
+non-transferable identifier in KERI, non-transferable
 
 658
 00:55:59,880 --> 00:56:03,340
--transferable means you can't rotate keys.
+means you can't rotate keys.
 And you might say, well, why design a key
 
 659
@@ -3295,11 +3294,11 @@ things you get from KERI. There are a lot
 661
 00:56:10,880 --> 00:56:15,860
 of instances where you don't need key
-rotation. For example… – Witnesses have non
+rotation. For example… – Witnesses have non-transferable
 
 662
 00:56:15,860 --> 00:56:20,460
--transferable AIDs. They don't need
+AIDs. They don't need
 KELs. The witness itself doesn't need a KEL
 
 663
@@ -3469,4 +3468,3 @@ me after this as well but I want to make
 696
 00:59:15,500 --> 00:59:19,440
 room.
-

@@ -6,6 +6,8 @@
  * those pages are relative to the gallery index.html so the tree can be moved later.
  * Uses English (`subtitle`, or the same-named `.srt` beside the media when that
  * field is omitted); sibling language tracks (`foo.nl.srt`) are ignored here.
+ * A sibling summary (`talks/foo.mp4` → `talks/foo.md`) is included when present
+ * and used as the page description. A missing summary leaves the page unchanged.
  *
  * Usage:
  *   node scripts/generate-transcript-pages.mjs \
@@ -31,6 +33,7 @@ import { existsSync } from "node:fs";
 import { dirname, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import { loadBrand, mergeBrand, themeDeclarations } from "./brand.mjs";
+import { summaryDescription, summaryParagraphsFor } from "./talk-summary.mjs";
 
 const BOM = "\uFEFF";
 const TIME_PAT =
@@ -214,6 +217,16 @@ function pageChrome(page, brand) {
   };
 }
 
+function renderSummarySection(paragraphs) {
+  if (!paragraphs.length) return "";
+  const body = paragraphs.map((paragraph) => `      <p>${escHtml(paragraph)}</p>`).join("\n");
+  return `    <section class="summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+${body}
+    </section>
+`;
+}
+
 function renderTalkPage({
   video,
   videoId,
@@ -223,11 +236,40 @@ function renderTalkPage({
   listingHref,
   watchTopHref,
   themeCss,
+  summaryParagraphs = [],
 }) {
   const title = video.title || videoId;
   const day = video.day || "";
   const duration = video.duration || "";
   const metaBits = [day, duration].filter(Boolean).join(" · ");
+  const description = summaryDescription(
+    summaryParagraphs,
+    `Transcript: ${title}${metaBits ? ` (${metaBits})` : ""}`
+  );
+  const summaryHtml = renderSummarySection(summaryParagraphs);
+  const summaryCss = summaryParagraphs.length
+    ? `    .summary {
+      background: var(--panel);
+      border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+      border-radius: 10px;
+      padding: 1rem 1.25rem 0.35rem;
+      margin-bottom: 1.5rem;
+    }
+    .summary h2 {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.65rem;
+    }
+    .summary p {
+      margin: 0 0 0.85rem;
+      font-size: 1.05rem;
+    }
+`
+    : "";
 
   const cueHtml = cues
     .map((cue) => {
@@ -246,7 +288,7 @@ function renderTalkPage({
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${escHtml(title)} — Transcript</title>
-  <meta name="description" content="${escHtml(`Transcript: ${title}${metaBits ? ` (${metaBits})` : ""}`)}">
+  <meta name="description" content="${escHtml(description)}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
@@ -336,7 +378,7 @@ ${themeCss}
       border-color: var(--ink);
     }
     .actions a.primary:hover { background: #0a1270; }
-    article {
+${summaryCss}    article {
       background: var(--panel);
       border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
       border-radius: 10px;
@@ -416,7 +458,7 @@ ${themeCss}
         <a href="${escHtml(galleryHref)}">Video gallery</a>
       </div>
     </header>
-    <article>
+${summaryHtml}    <article>
 ${cueHtml || "      <p>No subtitle cues found.</p>"}
     </article>
     <footer>${escHtml(chrome.footer)}</footer>
@@ -647,6 +689,7 @@ async function main() {
 
     const raw = await readFile(srtAbs, "utf8");
     const cues = parseSrt(raw);
+    const { paragraphs: summaryParagraphs } = summaryParagraphsFor(galleryDir, video);
 
     const galleryHref = relativeHref(outFileAbs, galleryIndexFile).replace(/index\.html$/, "") || "./";
     const listingHref = "./";
@@ -661,6 +704,7 @@ async function main() {
       listingHref,
       watchTopHref,
       themeCss,
+      summaryParagraphs,
     });
 
     if (!listings.has(outDirRel)) {

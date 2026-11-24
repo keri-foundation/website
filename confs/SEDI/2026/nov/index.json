@@ -1,0 +1,46 @@
+{
+  "page": {
+    "title": "State Endorsed Digital Identity Summit (SEDI) 2026",
+    "heading": "State Endorsed Digital Identity Summit (SEDI) 2026",
+    "headingHref": "/confs/SEDI/2026/nov/",
+    "statusNotice": "",
+    "subtitle": "KERI talks at the SEDI Summit 2026",
+    "footer": "State Endorsed Digital Identity Summit (SEDI) 2026",
+    "searchPlaceholder": "Type to search across all sessions\u2026",
+    "searchLabel": "Search all transcripts"
+  },
+  "topClips": {
+    "enabled": true,
+    "title": "Top Ten Clips",
+    "subtitle": "Ten bite-size moments from the talks \u2014 each clip plays for 10\u201320 seconds.",
+    "clips": [
+    ]
+  },
+  "transcriptsDir": "transcripts/html",
+  "videos": [
+    {
+      "order": 1,
+      "day": "SEDI Summit 2026",
+      "title": "Sam Smith – SEDI ACDCs for Utah's State Endorsed Digital Identity",
+      "path": "talks/2026-11-17-Samuel-m-Smith.mp4",
+      "duration": "01:03:59",
+      "subtitle": "talks/2026-11-17-Samuel-m-Smith.srt",
+      "poster": "talks/2026-11-17-Samuel-m-Smith.jpg",
+      "presentation": "talks/2026-11-17-Samuel-m-Smith.pdf",
+      "links": [
+        "https://sedi.utah.gov",
+        "https://www.sedisummit.com"
+      ]
+    },
+    {
+      "order": 2,
+      "day": "SEDI Summit 2026",
+      "title": "Sam Smith – Survivability Engineering Basis of KERI's Fault Tolerant Security Model Tradespace UX Friction – Security",
+      "path": "talks/2026-11-18-Samuel-m-Smith.mp4",
+      "duration": "57:16",
+      "subtitle": "talks/2026-11-18-Samuel-m-Smith.srt",
+      "poster": "talks/2026-11-18-Samuel-m-Smith.jpg",
+      "presentation": "talks/2026-11-18-Samuel-m-Smith.pdf"
+    }
+  ]
+}

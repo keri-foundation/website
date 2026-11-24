@@ -1,0 +1,170 @@
+
+33
+00:02:58,000 --> 00:03:03,080
+Surveil You presenteert namens jou,
+toch? Maakt dit iemand bang? Is
+
+34
+00:03:03,080 --> 00:03:06,900
+er iemand die zich hier zorgen over maakt? Oké. Goed
+dan. Een andere term die ze gebruiken, en die
+
+35
+00:03:06,900 --> 00:03:10,340
+iets vriendelijker klinkt, is ‘gedragsbiometrie’.
+Het is gewoon een andere vorm van
+
+36
+00:03:10,340 --> 00:03:14,480
+biometrie. Het betekent dat we alles
+over je weten en dat is je biometrie,
+
+37
+00:03:14,680 --> 00:03:19,000
+toch? Het is gedragsbiometrie omdat
+het niets te maken heeft met je DNA of je
+
+38
+00:03:19,000 --> 00:03:22,360
+huid of je vingerafdrukken. Het heeft te maken
+met al het andere aan jou, behalve
+
+39
+00:03:22,360 --> 00:03:30,060
+die dingen, toch? Een andere, vriendelijkere term:
+participatieve identiteit. Je neemt deel aan
+
+40
+00:03:30,060 --> 00:03:35,560
+je identiteit door je identiteitsprovider
+alles over jezelf te laten weten. Is
+
+41
+00:03:35,560 --> 00:03:39,600
+dat niet leuk? Persona-gebaseerde authenticatie,
+toch? Dat is de meer technische term.
+
+42
+00:03:41,100 --> 00:03:46,500
+Het is in wezen authenticatie via
+statistische correlatie. Je gebruikt in feite
+
+43
+00:03:46,500 --> 00:03:51,020
+alle mogelijkheden van datawetenschap om statistisch
+meer over jezelf te correleren dan de aanvaller
+
+44
+00:03:51,020 --> 00:03:55,100
+kan correleren, toch? Als je nadenkt over
+wat authenticatiefactoren zijn. Dingen
+
+45
+00:03:55,100 --> 00:04:00,960
+je weet wel, dingen die je hebt, dingen die je bent,
+toch? Het zijn gewoon gegevenspunten die je
+
+46
+00:04:00,960 --> 00:04:06,140
+kunt laten zien, maar die de aanvaller
+niet kan laten zien, toch? Maar aangezien alle
+
+47
+00:04:06,140 --> 00:04:11,120
+standaard authenticatiemiddelen de laatste tijd heel
+gemakkelijk gehackt kunnen worden, toch? Dan is het
+
+48
+00:04:11,120 --> 00:04:16,120
+de vraag: hoe maken we authenticatiemiddelen
+die moeilijker te hacken zijn? En als je een
+
+49
+00:04:16,120 --> 00:04:23,100
+bedrijf bent dat draait op correlatie, dan is het
+logisch om te denken: „Wacht eens even, als we
+
+50
+00:04:23,100 --> 00:04:26,600
+gewoon alles over
+jou in de gaten zouden kunnen houden, dan kunnen we een heel gedetailleerd
+
+51
+00:04:26,600 --> 00:04:31,960
+profiel opbouwen waar de aanvallers niet
+zoveel van weten. En raad eens? Je kunt
+
+52
+00:04:31,960 --> 00:04:36,840
+niets doen of ergens heen gaan, tenzij je
+alles over jezelf met ons deelt, want de
+
+53
+00:04:36,840 --> 00:04:41,360
+manier waarop je je identificeert, is door ons te vragen
+deze persona te tonen die we hebben gegenereerd
+
+54
+00:04:41,360 --> 00:04:46,080
+door jou te observeren. Voelt dat
+als een wereld waarin je zou willen leven
+
+55
+00:04:46,080 --> 00:04:51,240
+? Maar je begrijpt dat dat
+de wereld is waarin we ons op dit moment bevinden. Je
+
+56
+00:04:51,240 --> 00:04:55,820
+gaat online op zoek en bezoekt beveiligingsbedrijven,
+kijkt naar de grootste miljardenbedrijven
+
+57
+00:04:55,820 --> 00:04:59,920
+beveiligingsbedrijven en raad eens wat hun
+nieuwe producten zijn? “Continuous identity”,
+
+58
+00:05:00,560 --> 00:05:04,520
+“gedragsbiometrie”. Dat is wat ze
+verkopen. Iedereen waar je naartoe wilt gaan, dit
+
+59
+00:05:04,520 --> 00:05:09,940
+is nou ja, weet je wat? De AI
+kan alles opvissen. Ze kunnen
+
+60
+00:05:09,940 --> 00:05:15,060
+alles aanvallen. Dus wat we moeten doen, is zorgen voor
+een tegen-AI die ertegen vecht. En
+
+61
+00:05:15,060 --> 00:05:21,460
+waar maakt die tegen-AI gebruik van? Nou, waar
+maken AI’s gebruik van? Correlatie, toch? Dat is
+
+62
+00:05:21,460 --> 00:05:26,800
+hoe ze werken. Een LLM is gewoon een
+correlatiemachine. Dus je bouwt een model
+
+63
+00:05:26,800 --> 00:05:30,860
+dat jou beter in kaart brengt dan de deep
+fake dat kan. Dat is alles.
+
+64
+00:05:31,260 --> 00:05:36,420
+En raad eens waar dat toe leidt? Hoe
+wijdverbreider de bewaking, hoe hoger
+
+65
+00:05:36,420 --> 00:05:40,160
+de nauwkeurigheid van het model, hoe groter de kans
+dat het een echt persoon van een
+
+66
+00:05:40,160 --> 00:05:45,500
+nep-persoon kan onderscheiden. Maar dat betekent alleen maar dat je
+een wapenwedloop op het gebied van bewaking hebt gecreëerd. Je hebt

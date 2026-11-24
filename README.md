@@ -13,6 +13,8 @@
   - [Site customizations (`/custom/`)](#site-customizations-custom)
   - [Conference galleries (`/confs/<ORG>/<YEAR>/<month>/`)](#conference-galleries-confsorgyearmonth)
     - [Top clips (`topClips`)](#top-clips-topclips)
+    - [Chapters (`videos[].chapters`)](#chapters-videoschapters)
+    - [Talk summaries](#talk-summaries)
   - [Yearly videos (`/vids/<YEAR>/`)](#yearly-videos-vidsyear)
     - [New conference](#new-conference)
     - [Build and deploy](#build-and-deploy)
@@ -233,6 +235,37 @@ Optional teaser row on the gallery. Set `topClips.enabled` and list clips under 
 
 Clips with unparseable times or `end` ≤ `start` are skipped. Numeric seconds remain valid.
 
+### Chapters (`videos[].chapters`)
+
+Optional jump list on a talk card and in the full-screen player. Add a `chapters` array on any `videos[]` entry:
+
+| Field | Role |
+| ----- | ---- |
+| `start` | Chapter start (same clock / seconds forms as `topClips`) |
+| `description` | Label shown next to the timestamp (`title` is accepted as an alias) |
+
+```json
+{
+  "start": "14:44",
+  "description": "Why KERI does not need AI to defend against AI"
+}
+```
+
+A **Chapters** button on the talk card (and in the full-screen player) opens a slide-up sheet on mobile / centered panel on larger screens. Choosing a chapter seeks that video, plays from there, updates the URL hash (`&t=`), and closes the sheet. Chapters with unparseable times or an empty description are skipped. See `vids/2026/index.json` (“It's KERI or Surveillance”) for a full example.
+
+### Talk summaries
+
+Optional. A summary is a sibling of the media file, same basename, Markdown:
+
+```text
+talks/2026-11-02-kent-bull.mp4
+talks/2026-11-02-kent-bull.md
+```
+
+The same rule applies in `interviews/` and in any later media folder: `path` ending in `.mp4` or `.mp3` looks for that path with `.md`. Nothing in `index.json` points at the file. If the file is missing, or empty, that video simply has no summary. `landing-pages` writes the text into the gallery `index.html` as real HTML (so a crawler sees it, and the page script moves it onto the talk card). `transcripts` puts the same text at the top of that talk’s transcript page and uses the opening as the page description. Those transcript pages are already in the sitemap. `pdfs` prints the same summary at the start of that talk’s chapter in All Transcripts (PDF). A talk with no summary file is unchanged in all three.
+
+Write plain paragraphs separated by a blank line, about 200 words. A block that is only a Markdown heading is ignored. Inline Markdown is not interpreted.
+
 <a id="yearly-videos"></a>
 
 ## Yearly videos (`/vids/<YEAR>/`)
@@ -282,9 +315,12 @@ scripts/deploy-confs.sh verify-videos    # optional gallery MP4 encode checks (n
 scripts/deploy-confs.sh -n push          # preview what would be uploaded
 scripts/deploy-confs.sh deploy           # build + push (rsync --delete) + check the live site
 scripts/deploy-confs.sh check-remote     # HEAD-request every referenced file on keri.foundation
+scripts/deploy-confs.sh --conf KERI/2026/nov deploy
 scripts/deploy-confs.sh --conf SEDI/2025/nov push
 scripts/deploy-confs.sh --conf vids/2026 push
 ```
+
+`--conf` takes a gallery id, not a filesystem path from the repo root. Conference ids are relative to `confs/` (the script prepends that tree), so use `KERI/2026/nov`, not `confs/KERI/2026/nov`. Yearly video galleries live outside `confs/`, so they keep the tree prefix: `vids/2026`. Passing `confs/KERI/2026/nov` would look for `confs/confs/KERI/2026/nov` and miss.
 
 `audio` (included in `build` and `deploy`) writes `talks/foo.mp3` from `talks/foo.mp4` when that MP3 is absent. The encode is mono, 44.1 kHz, 64 kbps MP3: about 28 MB per hour, clear enough for a spoken-word podcast. It needs `ffmpeg` with LAME. MP3s are gitignored; `push` uploads them with the gallery. An MP4 that is not on this machine is skipped, and `verify` still reports that file missing.
 
@@ -501,18 +537,20 @@ bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=
 ### How it works
 
 1. Fetches all videos from the YouTube playlist
-2. For each video, searches for matching `.srt` files in the directory you passed
-3. Matches by video title; language comes from the filename suffix
-4. Uploads each language track to the video
+2. Loads the conference `index.json` next to the media folder you passed (for example `confs/KERI/2026/nov/index.json` for `…/nov/talks`)
+3. Matches each playlist video id to `videos[].youtubeId`, then uploads that entry’s subtitle file
+4. Also uploads sibling language tracks that share the same basename stem (`*.nl.srt`, `*.es.srt`, …)
 5. If a caption track for that language already exists, it updates it
 
-**Filename convention**
+Every uploadable gallery entry needs a `youtubeId`. Titles and filenames are not used for matching.
 
-- `Video Title.srt` → English (`en`)
-- `Video Title.nl.srt` → Dutch (`nl`)
-- `Video Title.es.srt` → Spanish (`es`)
+**Language filename convention**
 
-The part before the optional `.xx` language code must match the YouTube video title.
+- `stem.srt` → English (`en`)
+- `stem.nl.srt` → Dutch (`nl`)
+- `stem.es.srt` → Spanish (`es`)
+
+`stem` is whatever the gallery already uses in `index.json` (a slug like `2026-11-02-kent-bull`, or a full talk title).
 
 ### Troubleshooting
 
@@ -531,11 +569,13 @@ The part before the optional `.xx` language code must match the YouTube video ti
 - Use the full URL: `https://www.youtube.com/playlist?list=PLAYLIST_ID`
 - You can copy this from your browser address bar
 
-**"No matching .srt file"**
+**"No videos[].youtubeId match in index.json"**
 
-- Make sure the video title in the subtitle filename matches the YouTube video title exactly
-- For other languages, keep that same title and add a language suffix, for example `Video Title.nl.srt`
+- Add the YouTube video id as `videos[].youtubeId` in that conference’s `index.json`
+- Check that `videos[].subtitle` points at a real file under the directory you passed
+- For other languages, keep the same basename stem and add a language suffix, for example `2026-11-02-kent-bull.nl.srt`
 - Edited subtitle files live next to the videos, for example `confs/KERI/2026/apr/talks/*.srt`
+- Unchanged-hash skips say `(subtitle unchanged)`. Pass `--force` to upload even when the local hash is unchanged
 
 **Authentication issues**
 

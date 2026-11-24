@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ryan Hansen &amp; Samuel M. Smith –  Open infrastructure for KERI-based digital identity — Transcript</title>
-  <meta name="description" content="Transcript: Ryan Hansen &amp; Samuel M. Smith –  Open infrastructure for KERI-based digital identity (Mini Conference nov 2026 · 55:51)">
+  <meta name="description" content="AI generated summary, if a statement needs explication, see the video. Ryan Hansen and Samuel M. Smith use the last session to define open infrastructure. Open standards and open…">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
@@ -100,6 +100,26 @@
       border-color: var(--ink);
     }
     .actions a.primary:hover { background: #0a1270; }
+    .summary {
+      background: var(--panel);
+      border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+      border-radius: 10px;
+      padding: 1rem 1.25rem 0.35rem;
+      margin-bottom: 1.5rem;
+    }
+    .summary h2 {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.65rem;
+    }
+    .summary p {
+      margin: 0 0 0.85rem;
+      font-size: 1.05rem;
+    }
     article {
       background: var(--panel);
       border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
@@ -180,6 +200,13 @@
         <a href="../../../">Video gallery</a>
       </div>
     </header>
+    <section class="summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <p>AI generated summary, if a statement needs explication, see the video.</p>
+      <p>Ryan Hansen and Samuel M. Smith use the last session to define open infrastructure. Open standards and open source are the start, not the test. If a user still cannot leave a vendor, the infrastructure is not open. Smith's distinction is shared data without shared governance. A verifier who can check a key event log does not have to trust the sender, or a token-funded consensus set. Blockchain identity, in this account, asks everyone to trust the governance. KERI refuses that cost: data can be shared because each recipient verifies it alone.</p>
+      <p>The practical problem is the cold start. Witnesses and watchers have to exist at scale before anyone but the first deployer benefits. A public identity utility is one bootstrap. The state already needs that infrastructure to transact with its own citizens, and once millions of people have it, others can sell witness service into the market the state created. A bank, an insurer, or an employer can also give the infrastructure away, because portable identity checks, claims, and hiring cost them more than the witnesses do.</p>
+      <p>The money, Smith argues, is not in selling the rails. It is in assurance on top of rails that stay cheap because a high-assurance root was already paid for, often by the state. On SEDI, citizens opt in rather than being enrolled by default.</p>
+    </section>
     <article>
     <p class="cue" id="t0">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity">0:00</a>
@@ -243,7 +270,7 @@
     </p>
     <p class="cue" id="t84">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=84">1:24</a>
-      <span class="cue-text">they're not open infrastructure. So for example, if you have a mail server is</span>
+      <span class="cue-text">they're not open infrastructure. So for example, if you have a mail server. Is</span>
     </p>
     <p class="cue" id="t92">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=92">1:32</a>
@@ -259,15 +286,15 @@
     </p>
     <p class="cue" id="t109">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=109">1:49</a>
-      <span class="cue-text">mail server to another? Theoretically, right? Right? Yeah. Does your mail client</span>
+      <span class="cue-text">mail server to another? – Theoretically, right? – Right? Does your mail client</span>
     </p>
     <p class="cue" id="t119">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=119">1:59</a>
-      <span class="cue-text">let you do that? Not usually. Huh?</span>
+      <span class="cue-text">let you do that? Not usually..</span>
     </p>
     <p class="cue" id="t127">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=127">2:07</a>
-      <span class="cue-text">Yeah, right. You have to do a lot. It's not easily. Right. Okay. So it's not. So</span>
+      <span class="cue-text">You have to do a lot. It's not easily. Right. Okay. So it's not. So</span>
     </p>
     <p class="cue" id="t133">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=133">2:13</a>
@@ -279,11 +306,11 @@
     </p>
     <p class="cue" id="t147">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=147">2:27</a>
-      <span class="cue-text">should be designed so that the incentive structure fosters cooperation and</span>
+      <span class="cue-text">should be designed so that the incentive structure fosters “coopertition” and</span>
     </p>
     <p class="cue" id="t153">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=153">2:33</a>
-      <span class="cue-text">portability. What do I mean by cooperation? Have you guys heard that</span>
+      <span class="cue-text">portability. What do I mean by “coopertition”? Have you guys heard that</span>
     </p>
     <p class="cue" id="t156">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=156">2:36</a>
@@ -323,11 +350,11 @@
     </p>
     <p class="cue" id="t213">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=213">3:33</a>
-      <span class="cue-text">incentive does the other watcher have to share that with me? Ground source and</span>
+      <span class="cue-text">incentive does the other watcher have to share that with me? – Ground source and</span>
     </p>
     <p class="cue" id="t218">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=218">3:38</a>
-      <span class="cue-text">reputation. Yes. Right. A watcher is most effective if it has maximized scope. If I</span>
+      <span class="cue-text">reputation. – Yes. Right. A watcher is most effective if it has maximized scope. If I</span>
     </p>
     <p class="cue" id="t227">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=227">3:47</a>
@@ -347,15 +374,15 @@
     </p>
     <p class="cue" id="t252">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=252">4:12</a>
-      <span class="cue-text">incentive to see, to spend the resources, and I say, well, I'll give you my, I'll</span>
+      <span class="cue-text">incentive to see, to spend the resources, and I say, well, I'll give you</span>
     </p>
     <p class="cue" id="t257">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=257">4:17</a>
-      <span class="cue-text">give you the witnesses I watch if you give me the witnesses you watch. Do you have a,</span>
+      <span class="cue-text">the witnesses I watch if you give me the witnesses you watch.</span>
     </p>
     <p class="cue" id="t262">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=262">4:22</a>
-      <span class="cue-text">is there an opportunity to cooperate? Absolutely. So if I'm building witnesses</span>
+      <span class="cue-text">Is there an opportunity to cooperate? Absolutely. So if I'm building witnesses</span>
     </p>
     <p class="cue" id="t266">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=266">4:26</a>
@@ -395,7 +422,7 @@
     </p>
     <p class="cue" id="t319">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=319">5:19</a>
-      <span class="cue-text">cooperation. So you build things so that marginal cost is the side of marginal</span>
+      <span class="cue-text">cooperation. So you build things so that marginal</span>
     </p>
     <p class="cue" id="t325">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=325">5:25</a>
@@ -467,7 +494,7 @@
     </p>
     <p class="cue" id="t403">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=403">6:43</a>
-      <span class="cue-text">total amount of traffic. So if I have a if every ecosystem shares with every other</span>
+      <span class="cue-text">total amount of traffic. So if every ecosystem shares with every other</span>
     </p>
     <p class="cue" id="t411">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=411">6:51</a>
@@ -519,26 +546,26 @@
     </p>
     <p class="cue" id="t474">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=474">7:54</a>
-      <span class="cue-text">makes money in it, right? So you have what's called a bootstrap or cold start</span>
+      <span class="cue-text">makes money in it, right? So you have</span>
     </p>
-    <p class="cue" id="t478">
-      <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=478">7:58</a>
-      <span class="cue-text">problem.</span>
+    <p class="cue" id="t477">
+      <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=477">7:57</a>
+      <span class="cue-text">what's called a bootstrap or cold start problem.</span>
     </p>
     <p class="cue" id="t481">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=481">8:01</a>
-      <span class="cue-text">So we've kind of talked about this before, but the everything in KERI is designed so</span>
+      <span class="cue-text">So we've kind of talked about this before, but everything in KERI is designed so</span>
     </p>
     <p class="cue" id="t490">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=490">8:10</a>
-      <span class="cue-text">that there is open decentralized centralized, not</span>
+      <span class="cue-text">that there is open decentralized, not</span>
     </p>
     <p class="cue" id="t500">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=500">8:20</a>
       <span class="cue-text">shared infrastructure.</span>
     </p>
-    <p class="cue" id="t509">
-      <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=509">8:29</a>
+    <p class="cue" id="t510">
+      <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=510">8:30</a>
       <span class="cue-text">So you have shared data,</span>
     </p>
     <p class="cue" id="t515">
@@ -547,7 +574,7 @@
     </p>
     <p class="cue" id="t522">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=522">8:42</a>
-      <span class="cue-text">Okay, that's the that's a critical property. What does that mean to have</span>
+      <span class="cue-text">Okay, that's a critical property. What does that mean to have</span>
     </p>
     <p class="cue" id="t526">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=526">8:46</a>
@@ -571,7 +598,7 @@
     </p>
     <p class="cue" id="t550">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=550">9:10</a>
-      <span class="cue-text">They have to trust the… Usually the governance is a distributed consensus</span>
+      <span class="cue-text">Usually the governance is a distributed consensus</span>
     </p>
     <p class="cue" id="t553">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=553">9:13</a>
@@ -591,7 +618,7 @@
     </p>
     <p class="cue" id="t574">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=574">9:34</a>
-      <span class="cue-text">so that it's truly totally zero trust. So it so I don't need shared governance</span>
+      <span class="cue-text">so that it's truly totally zero trust. So I don't need shared governance</span>
     </p>
     <p class="cue" id="t579">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=579">9:39</a>
@@ -599,7 +626,7 @@
     </p>
     <p class="cue" id="t582">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=582">9:42</a>
-      <span class="cue-text">verification cheap enough that they afford to do it. but it's not zero. That's the</span>
+      <span class="cue-text">verification cheap enough that they afford to do it, but it's not zero. That's the</span>
     </p>
     <p class="cue" id="t586">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=586">9:46</a>
@@ -623,7 +650,7 @@
     </p>
     <p class="cue" id="t609">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=609">10:09</a>
-      <span class="cue-text">infrastructure to be able to afford to provide it to until it reaches scale so</span>
+      <span class="cue-text">infrastructure to be able to afford to provide it until it reaches scale so</span>
     </p>
     <p class="cue" id="t614">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=614">10:14</a>
@@ -655,11 +682,11 @@
     </p>
     <p class="cue" id="t661">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=661">11:01</a>
-      <span class="cue-text">incentivized. So a public identity</span>
+      <span class="cue-text">incentivized. So a Public Identity Utility.</span>
     </p>
-    <p class="cue" id="t672">
-      <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=672">11:12</a>
-      <span class="cue-text">Utility. That's the term that we came up with. So what is a utility in a regulated</span>
+    <p class="cue" id="t673">
+      <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=673">11:13</a>
+      <span class="cue-text">That's the term that we came up with. So what is a utility in a regulated</span>
     </p>
     <p class="cue" id="t681">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=681">11:21</a>
@@ -667,7 +694,7 @@
     </p>
     <p class="cue" id="t689">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=689">11:29</a>
-      <span class="cue-text">Garbage. – Telecom. Right? Garbage. Sewers. Right? And the reason why do we</span>
+      <span class="cue-text">Garbage. – Telecom. Right? Garbage. Sewers. Right? And why do we</span>
     </p>
     <p class="cue" id="t697">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=697">11:37</a>
@@ -691,7 +718,7 @@
     </p>
     <p class="cue" id="t727">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=727">12:07</a>
-      <span class="cue-text">money without about getting approval for any rate increases, any changes in</span>
+      <span class="cue-text">money without getting approval for any rate increases, any changes in</span>
     </p>
     <p class="cue" id="t734">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=734">12:14</a>
@@ -707,15 +734,15 @@
     </p>
     <p class="cue" id="t752">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=752">12:32</a>
-      <span class="cue-text">with anybody, but in return, you get to regulate them. So they're not the most,</span>
+      <span class="cue-text">with anybody, but in return, you get to regulate them.</span>
     </p>
-    <p class="cue" id="t756">
-      <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=756">12:36</a>
-      <span class="cue-text">they're not, they don't, you're not guaranteed the most efficient, but you do</span>
+    <p class="cue" id="t755">
+      <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=755">12:35</a>
+      <span class="cue-text">So they're not guaranteed the most efficient, but you do</span>
     </p>
     <p class="cue" id="t760">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=760">12:40</a>
-      <span class="cue-text">guarantee that you don't have non -portability because everybody's power is</span>
+      <span class="cue-text">guarantee that you don't have non- portability because everybody's power is</span>
     </p>
     <p class="cue" id="t766">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=766">12:46</a>
@@ -747,7 +774,7 @@
     </p>
     <p class="cue" id="t810">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=810">13:30</a>
-      <span class="cue-text">enough money to build out the infrastructure. Sure.</span>
+      <span class="cue-text">enough money to build out the infrastructure.</span>
     </p>
     <p class="cue" id="t817">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=817">13:37</a>
@@ -755,7 +782,7 @@
     </p>
     <p class="cue" id="t828">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=828">13:48</a>
-      <span class="cue-text">identity assurance.</span>
+      <span class="cue-text">Identity Assurance Level 3.</span>
     </p>
     <p class="cue" id="t832">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=832">13:52</a>
@@ -823,11 +850,11 @@
     </p>
     <p class="cue" id="t919">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=919">15:19</a>
-      <span class="cue-text">when they reissue it. What's that called? Let's encrypt? Yeah. Okay. Right. Okay. So</span>
+      <span class="cue-text">when they reissue it. What's that called? “Let's encrypt”?</span>
     </p>
     <p class="cue" id="t928">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=928">15:28</a>
-      <span class="cue-text">that's the problem is is that if you can't amortize this cost, you're incentivizing</span>
+      <span class="cue-text">The problem is that if you can't amortize this cost, you're incentivizing</span>
     </p>
     <p class="cue" id="t934">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=934">15:34</a>
@@ -867,7 +894,7 @@
     </p>
     <p class="cue" id="t987">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=987">16:27</a>
-      <span class="cue-text">witnesses and watcher services to have have a market opportunity that allows them</span>
+      <span class="cue-text">witnesses and watcher services to have a market opportunity that allows them</span>
     </p>
     <p class="cue" id="t996">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=996">16:36</a>
@@ -879,15 +906,15 @@
     </p>
     <p class="cue" id="t1013">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1013">16:53</a>
-      <span class="cue-text">the state and the federal government, this is a big if, but I think they just passed</span>
+      <span class="cue-text">the state and the federal government (this is a big if, but I think they just passed</span>
     </p>
     <p class="cue" id="t1021">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1021">17:01</a>
-      <span class="cue-text">a law allowing it. I think that just happened. That allows one bank's KYC</span>
+      <span class="cue-text">a law allowing it) allows one bank's KYC</span>
     </p>
     <p class="cue" id="t1034">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1034">17:14</a>
-      <span class="cue-text">to be used by another bank. What did I just do? I lowered the cost for every bank</span>
+      <span class="cue-text">to be used by another bank… What did I just do? I lowered the cost for every bank</span>
     </p>
     <p class="cue" id="t1043">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1043">17:23</a>
@@ -895,7 +922,7 @@
     </p>
     <p class="cue" id="t1050">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1050">17:30</a>
-      <span class="cue-text">full cost of the KYC every time. So portability is expensive. Well that and</span>
+      <span class="cue-text">full cost of the KYC every time. So portability is expensive. And</span>
     </p>
     <p class="cue" id="t1056">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1056">17:36</a>
@@ -907,7 +934,7 @@
     </p>
     <p class="cue" id="t1063">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1063">17:43</a>
-      <span class="cue-text">customer can just say, you know, I want to transfer them. I want to move to a new</span>
+      <span class="cue-text">customer can just say, I want to move to a new</span>
     </p>
     <p class="cue" id="t1066">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1066">17:46</a>
@@ -931,15 +958,15 @@
     </p>
     <p class="cue" id="t1086">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1086">18:06</a>
-      <span class="cue-text">KYC. Well, if you have an IAL level three and a regulation that allows one IAL level</span>
+      <span class="cue-text">KYC. Well, if you have an IAL3 and a regulation that allows one IAL3</span>
     </p>
     <p class="cue" id="t1093">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1093">18:13</a>
-      <span class="cue-text">three to move between banks, then all you have to do as a customer is issue an</span>
+      <span class="cue-text">to move between banks, then all you have to do as a customer is issue an</span>
     </p>
     <p class="cue" id="t1103">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1103">18:23</a>
-      <span class="cue-text">authorization to the new bank to use your existing identity in the IAL level three</span>
+      <span class="cue-text">authorization to the new bank to use your existing identity in the IAL3</span>
     </p>
     <p class="cue" id="t1110">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1110">18:30</a>
@@ -951,11 +978,11 @@
     </p>
     <p class="cue" id="t1124">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1124">18:44</a>
-      <span class="cue-text">Because your portable KERI SEDI endorsed identity now becomes a savings to them. So</span>
+      <span class="cue-text">Because your portable KERI SEDI-endorsed identity now becomes a savings to them. So</span>
     </p>
     <p class="cue" id="t1133">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1133">18:53</a>
-      <span class="cue-text">that's an example of how if you do this right, if you think it through, you can</span>
+      <span class="cue-text">that's an example of how, if you do this right, if you think it through, you can</span>
     </p>
     <p class="cue" id="t1140">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1140">19:00</a>
@@ -999,7 +1026,7 @@
     </p>
     <p class="cue" id="t1194">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1194">19:54</a>
-      <span class="cue-text">person for KYC? What does it cost the bank? I don't know what the exact figure</span>
+      <span class="cue-text">person for KYC? What does it cost the bank? – I don't know what the exact figure</span>
     </p>
     <p class="cue" id="t1199">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1199">19:59</a>
@@ -1023,7 +1050,7 @@
     </p>
     <p class="cue" id="t1229">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1229">20:29</a>
-      <span class="cue-text">guess. but it's, you can run a lot. – Right. So, I mean, we have four droplets</span>
+      <span class="cue-text">guess, but it's, you can run a lot. – Right. So, I mean, we have four droplets</span>
     </p>
     <p class="cue" id="t1234">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1234">20:34</a>
@@ -1063,7 +1090,7 @@
     </p>
     <p class="cue" id="t1292">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1292">21:32</a>
-      <span class="cue-text">do we have to carry the freight, right? Every industry that does identity has a</span>
+      <span class="cue-text">carry the freight, right? Every industry that does identity has a</span>
     </p>
     <p class="cue" id="t1298">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1298">21:38</a>
@@ -1091,7 +1118,7 @@
     </p>
     <p class="cue" id="t1332">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1332">22:12</a>
-      <span class="cue-text">state funding that is to be able to and the thing and for this to work, a bank has</span>
+      <span class="cue-text">state funding. And for this to work, a bank has</span>
     </p>
     <p class="cue" id="t1339">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1339">22:19</a>
@@ -1099,7 +1126,7 @@
     </p>
     <p class="cue" id="t1343">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1343">22:23</a>
-      <span class="cue-text">spin up free witnesses and watcher services. because I don't want to pay</span>
+      <span class="cue-text">spin up free witnesses and watcher services, because I don't want to pay</span>
     </p>
     <p class="cue" id="t1348">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1348">22:28</a>
@@ -1111,7 +1138,7 @@
     </p>
     <p class="cue" id="t1357">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1357">22:37</a>
-      <span class="cue-text">attempting to do is build enough open source code to set up so that people like</span>
+      <span class="cue-text">attempting to do, is build enough open source code to set up so that people like</span>
     </p>
     <p class="cue" id="t1364">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1364">22:44</a>
@@ -1123,7 +1150,7 @@
     </p>
     <p class="cue" id="t1372">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1372">22:52</a>
-      <span class="cue-text">– Insurance. – Insurance. Absolutely. Absolutely.</span>
+      <span class="cue-text">– Insurance. – Insurance. Absolutely.</span>
     </p>
     <p class="cue" id="t1380">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1380">23:00</a>
@@ -1163,7 +1190,7 @@
     </p>
     <p class="cue" id="t1436">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1436">23:56</a>
-      <span class="cue-text">insurance claims for all of this healthcare work with and they and they had</span>
+      <span class="cue-text">insurance claims for all of this healthcare work and they had</span>
     </p>
     <p class="cue" id="t1440">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1440">24:00</a>
@@ -1175,7 +1202,7 @@
     </p>
     <p class="cue" id="t1448">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1448">24:08</a>
-      <span class="cue-text">could steal all of that the that information so they could submit</span>
+      <span class="cue-text">could steal all of that information so they could submit</span>
     </p>
     <p class="cue" id="t1452">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1452">24:12</a>
@@ -1183,7 +1210,7 @@
     </p>
     <p class="cue" id="t1459">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1459">24:19</a>
-      <span class="cue-text">– Any messaging? – Huh? – All kinds of messaging. Yeah, but money. Messaging</span>
+      <span class="cue-text">– All kinds of messaging. – Yeah, but money. Messaging</span>
     </p>
     <p class="cue" id="t1466">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1466">24:26</a>
@@ -1199,11 +1226,11 @@
     </p>
     <p class="cue" id="t1485">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1485">24:45</a>
-      <span class="cue-text">people to say, well, to get this, I'm willing to spin up with free witnesses and</span>
+      <span class="cue-text">people to say, well, to get this, I'm willing to spin up free witnesses and</span>
     </p>
     <p class="cue" id="t1490">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1490">24:50</a>
-      <span class="cue-text">watchers. Yeah. All of employment. All of employment. Yes. Every HR department of</span>
+      <span class="cue-text">watchers. – All of employment. – All of employment. Yes. Every HR department of</span>
     </p>
     <p class="cue" id="t1497">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1497">24:57</a>
@@ -1219,7 +1246,7 @@
     </p>
     <p class="cue" id="t1517">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1517">25:17</a>
-      <span class="cue-text">what is it? – Convictions. – Yeah, prior convictions. Yes. That too. Huh?</span>
+      <span class="cue-text">what is it? – Convictions. – Yeah, prior convictions.</span>
     </p>
     <p class="cue" id="t1527">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1527">25:27</a>
@@ -1235,11 +1262,11 @@
     </p>
     <p class="cue" id="t1547">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1547">25:47</a>
-      <span class="cue-text">Well, certainly every Well, okay. So the state, since the state provides those, the</span>
+      <span class="cue-text">Since the state provides those, the</span>
     </p>
     <p class="cue" id="t1554">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1554">25:54</a>
-      <span class="cue-text">state has an incentive to use its own IAL level three. We're talking about people</span>
+      <span class="cue-text">state has an incentive to use its own IAL3. We're talking about people</span>
     </p>
     <p class="cue" id="t1559">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1559">25:59</a>
@@ -1247,15 +1274,15 @@
     </p>
     <p class="cue" id="t1565">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1565">26:05</a>
-      <span class="cue-text">Who else? A lot of times now what I'm seeing is that they are sharing that</span>
+      <span class="cue-text">Who else? – A lot of times now what I'm seeing is that they are sharing that</span>
     </p>
     <p class="cue" id="t1571">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1571">26:11</a>
-      <span class="cue-text">information. So like in the state of California. Oh, yeah. Or in my city</span>
+      <span class="cue-text">information. So like in the state of California. Or in my city</span>
     </p>
     <p class="cue" id="t1576">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1576">26:16</a>
-      <span class="cue-text">anyway. If you've got, I'm sorry. So like in my city, if you've got PG&amp;E care,</span>
+      <span class="cue-text">anyway. So in my city, if you've got PG&amp;E care,</span>
     </p>
     <p class="cue" id="t1584">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1584">26:24</a>
@@ -1267,7 +1294,7 @@
     </p>
     <p class="cue" id="t1594">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1594">26:34</a>
-      <span class="cue-text">can get all these other services more easily. And that's one of the reasons why</span>
+      <span class="cue-text">can get all these other services more easily. – And that's one of the reasons why</span>
     </p>
     <p class="cue" id="t1598">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1598">26:38</a>
@@ -1275,7 +1302,7 @@
     </p>
     <p class="cue" id="t1603">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1603">26:43</a>
-      <span class="cue-text">for that. It's the single biggest sector in the economy and it has the worst fraud.</span>
+      <span class="cue-text">for that. It's the single biggest sector in the economy and it has the worst fraud</span>
     </p>
     <p class="cue" id="t1608">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1608">26:48</a>
@@ -1303,15 +1330,15 @@
     </p>
     <p class="cue" id="t1635">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1635">27:15</a>
-      <span class="cue-text">fact that they don't have really good provenance. So all consumer services that</span>
+      <span class="cue-text">fact that they don't have really good provenance. – So all consumer services that</span>
     </p>
     <p class="cue" id="t1640">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1640">27:20</a>
-      <span class="cue-text">have to verify something about somebody who buys their services? Yes. Like buying</span>
+      <span class="cue-text">have to verify something about somebody who buys their services? – Yes. – Like buying</span>
     </p>
     <p class="cue" id="t1646">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1646">27:26</a>
-      <span class="cue-text">cigarettes, buying alcohol, buying… Yeah, every regulated denied</span>
+      <span class="cue-text">cigarettes, buying alcohol, buying… – Yeah, every regulated denied</span>
     </p>
     <p class="cue" id="t1656">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1656">27:36</a>
@@ -1323,7 +1350,7 @@
     </p>
     <p class="cue" id="t1675">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1675">27:55</a>
-      <span class="cue-text">point is, is that if you think about it, And you think about the core thing is</span>
+      <span class="cue-text">point is, is that if you think about it, and you think about the core thing, is</span>
     </p>
     <p class="cue" id="t1680">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1680">28:00</a>
@@ -1331,11 +1358,11 @@
     </p>
     <p class="cue" id="t1687">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1687">28:07</a>
-      <span class="cue-text">was here because he wrote two, he wrote a white paper where he said, he said, and I</span>
+      <span class="cue-text">was here because he wrote a white paper where he said,</span>
     </p>
     <p class="cue" id="t1693">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1693">28:13</a>
-      <span class="cue-text">didn't prompt him to write it. He said, the thing that's always killed digital</span>
+      <span class="cue-text">(I didn't prompt him to write it) the thing that's always killed digital</span>
     </p>
     <p class="cue" id="t1696">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1696">28:16</a>
@@ -1371,23 +1398,19 @@
     </p>
     <p class="cue" id="t1744">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1744">29:04</a>
-      <span class="cue-text">even worse for them. Right? If I'm doing this as a CA, every time I churn my certificate,</span>
+      <span class="cue-text">even worse for them. Right? If I'm doing DNS CA, every time I churn my certificate,</span>
     </p>
     <p class="cue" id="t1750">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1750">29:10</a>
-      <span class="cue-text">I have to re-incur that KYC. But KERI not because perpetual identity. That's the</span>
+      <span class="cue-text">I have to re-incur that KYC. But KERI not because perpetual identity.</span>
     </p>
     <p class="cue" id="t1756">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1756">29:16</a>
-      <span class="cue-text">perpetual identity means I get to. So here's the equation. Perpetual identity</span>
+      <span class="cue-text">So here's the equation. Perpetual identity</span>
     </p>
     <p class="cue" id="t1761">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1761">29:21</a>
-      <span class="cue-text">equals IAL3</span>
-    </p>
-    <p class="cue" id="t1766">
-      <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1766">29:26</a>
-      <span class="cue-text">forever.</span>
+      <span class="cue-text">equals IAL3 forever.</span>
     </p>
     <p class="cue" id="t1769">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1769">29:29</a>
@@ -1411,7 +1434,7 @@
     </p>
     <p class="cue" id="t1809">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1809">30:09</a>
-      <span class="cue-text">enabling their customers to use a perpetual identity system. Yes. I think</span>
+      <span class="cue-text">enabling their customers to use a perpetual identity system. Yes. – I think</span>
     </p>
     <p class="cue" id="t1813">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1813">30:13</a>
@@ -1419,31 +1442,31 @@
     </p>
     <p class="cue" id="t1817">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1817">30:17</a>
-      <span class="cue-text">identity assurance right now, they, if it's free, they could, and it would just</span>
+      <span class="cue-text">identity assurance right now, if it's free, they could, and it would just</span>
     </p>
     <p class="cue" id="t1822">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1822">30:22</a>
-      <span class="cue-text">augment in a very synergistic way. like I know in the insurance industry, there's,</span>
+      <span class="cue-text">augment in a very synergistic way, I know in the insurance industry,</span>
     </p>
     <p class="cue" id="t1827">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1827">30:27</a>
-      <span class="cue-text">you know, you have to, the insurance companies have approved, you know, people</span>
+      <span class="cue-text">the insurance companies have approved people</span>
     </p>
     <p class="cue" id="t1831">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1831">30:31</a>
-      <span class="cue-text">who fix things for, you know, whatever was damaged. And so that could be</span>
+      <span class="cue-text">who fix things for whatever was damaged. And so that could be</span>
     </p>
     <p class="cue" id="t1837">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1837">30:37</a>
-      <span class="cue-text">used by adjusters, right? Yeah, adjusters or even like thing like the auto mechanic</span>
+      <span class="cue-text">used by adjusters or even the auto mechanic</span>
     </p>
     <p class="cue" id="t1841">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1841">30:41</a>
-      <span class="cue-text">shops themselves. Oh, yeah. Or the shops that do like home repair and things</span>
+      <span class="cue-text">shops themselves. Or the shops that do home repair and things</span>
     </p>
     <p class="cue" id="t1846">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1846">30:46</a>
-      <span class="cue-text">like that. They could even use that. Yeah. So there's a bigger ecosystem. So the</span>
+      <span class="cue-text">like that. They could even use that. – Yeah. So there's a bigger ecosystem. So the</span>
     </p>
     <p class="cue" id="t1849">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1849">30:49</a>
@@ -1455,7 +1478,7 @@
     </p>
     <p class="cue" id="t1862">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1862">31:02</a>
-      <span class="cue-text">sorry. It's just not that only the only the people that can operate at huge scale</span>
+      <span class="cue-text">sorry. — Only the people that can operate at huge scale</span>
     </p>
     <p class="cue" id="t1866">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1866">31:06</a>
@@ -1475,7 +1498,7 @@
     </p>
     <p class="cue" id="t1891">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1891">31:31</a>
-      <span class="cue-text">the opportunity. Yeah. – So, what concrete ways have has the state of Utah indicated</span>
+      <span class="cue-text">the opportunity. Yeah. – So, what concrete ways has the state of Utah indicated</span>
     </p>
     <p class="cue" id="t1899">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1899">31:39</a>
@@ -1491,15 +1514,15 @@
     </p>
     <p class="cue" id="t1913">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1913">31:53</a>
-      <span class="cue-text">three identity assurance process. Wow. Yeah. Did they say they're going to</span>
+      <span class="cue-text">three identity assurance process. – Wow. Did they say they're going to</span>
     </p>
     <p class="cue" id="t1919">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1919">31:59</a>
-      <span class="cue-text">like integrate it into the DMV or something? Yeah. Wow. Or they might hire</span>
+      <span class="cue-text">like integrate it into the DMV or something? – Yeah. – Wow. Or they might hire</span>
     </p>
     <p class="cue" id="t1922">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1922">32:02</a>
-      <span class="cue-text">ID.me to do it for them. I see. Or anybody that shows up and says we're good enough</span>
+      <span class="cue-text">id.me to do it for them. Or anybody that shows up and says we're good enough</span>
     </p>
     <p class="cue" id="t1927">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1927">32:07</a>
@@ -1515,19 +1538,19 @@
     </p>
     <p class="cue" id="t1942">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1942">32:22</a>
-      <span class="cue-text">So, So, so the point is, is that that's the place where you can make money in the</span>
+      <span class="cue-text">So the point is that that's the place where you can make money in the</span>
     </p>
     <p class="cue" id="t1947">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1947">32:27</a>
-      <span class="cue-text">KERI ACDC ecosystem, not infrastructure. You want the infrastructure, you want to</span>
+      <span class="cue-text">KERI ACDC ecosystem, not infrastructure. You want to</span>
     </p>
     <p class="cue" id="t1953">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1953">32:33</a>
-      <span class="cue-text">give it away. You want to essentially, you want to give away KERI infrastructure and</span>
+      <span class="cue-text">give it away. Essentially, you want to give away KERI infrastructure and</span>
     </p>
     <p class="cue" id="t1958">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1958">32:38</a>
-      <span class="cue-text">then make money on the fact that the that you get IAL3 forever and the state paid</span>
+      <span class="cue-text">then make money on the fact that you get IAL3 forever and the state paid</span>
     </p>
     <p class="cue" id="t1964">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1964">32:44</a>
@@ -1543,11 +1566,11 @@
     </p>
     <p class="cue" id="t1978">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1978">32:58</a>
-      <span class="cue-text">and above. – So now they backed themselves into a corner for that. – Yes, they backed</span>
+      <span class="cue-text">and above. So now they backed themselves into a corner for that. – Yes, they backed</span>
     </p>
     <p class="cue" id="t1982">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1982">33:02</a>
-      <span class="cue-text">themselves into a corner. – So this is my, I'm going to look at the magic ball here.</span>
+      <span class="cue-text">themselves into a corner. – I'm going to look at the magic ball here.</span>
     </p>
     <p class="cue" id="t1987">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1987">33:07</a>
@@ -1559,15 +1582,15 @@
     </p>
     <p class="cue" id="t1997">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=1997">33:17</a>
-      <span class="cue-text">would be kind of a cross-state line legislation? – Yes. – Yes. They want to</span>
+      <span class="cue-text">would be kind of a cross-state line legislation? – Yes. They want to</span>
     </p>
     <p class="cue" id="t2002">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2002">33:22</a>
-      <span class="cue-text">have – They have reciprocity. They want to have reciprocity between states. So that</span>
+      <span class="cue-text">have reciprocity between states. So that</span>
     </p>
     <p class="cue" id="t2008">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2008">33:28</a>
-      <span class="cue-text">if one state does IAL level 3, that you can move to a different state and not have to</span>
+      <span class="cue-text">if one state does IAL3, that you can move to a different state and not have to</span>
     </p>
     <p class="cue" id="t2014">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2014">33:34</a>
@@ -1579,7 +1602,7 @@
     </p>
     <p class="cue" id="t2028">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2028">33:48</a>
-      <span class="cue-text">produce? – Well, IAL level 3 Yeah. Says you have to use so many first class documents.</span>
+      <span class="cue-text">produce? – Well, IAL3. Says you have to use so many first class documents.</span>
     </p>
     <p class="cue" id="t2038">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2038">33:58</a>
@@ -1591,15 +1614,15 @@
     </p>
     <p class="cue" id="t2049">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2049">34:09</a>
-      <span class="cue-text">session to bind that proofing session to an identifier. Okay. So, this is a future</span>
+      <span class="cue-text">session to bind that proofing session to an identifier. – Okay. So, this is a future</span>
     </p>
     <p class="cue" id="t2056">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2056">34:16</a>
-      <span class="cue-text">question. Okay. Okay. That's how we would have to back end into something like this.</span>
+      <span class="cue-text">question. That's how we would have to back end into something like this.</span>
     </p>
     <p class="cue" id="t2060">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2060">34:20</a>
-      <span class="cue-text">But let's go to the future where, you know, the baby that was just born last</span>
+      <span class="cue-text">But let's go to the future where the baby that was just born last</span>
     </p>
     <p class="cue" id="t2066">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2066">34:26</a>
@@ -1611,11 +1634,11 @@
     </p>
     <p class="cue" id="t2077">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2077">34:37</a>
-      <span class="cue-text">birth. And the reason they can get it at birth is that in general, they trust the…</span>
+      <span class="cue-text">birth. And the reason they can get it at birth is that in general</span>
     </p>
     <p class="cue" id="t2089">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2089">34:49</a>
-      <span class="cue-text">in general, states trust the chain of custody from the womb to the form that you</span>
+      <span class="cue-text">states trust the chain of custody from the womb to the form that you</span>
     </p>
     <p class="cue" id="t2096">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2096">34:56</a>
@@ -1623,7 +1646,7 @@
     </p>
     <p class="cue" id="t2101">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2101">35:01</a>
-      <span class="cue-text">well, I said the chain of custody. – Yeah. – Which is you're in the hospital – Yeah,</span>
+      <span class="cue-text">well, I said the chain of custody. Which is you're in the hospital – Yeah,</span>
     </p>
     <p class="cue" id="t2106">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2106">35:06</a>
@@ -1635,15 +1658,15 @@
     </p>
     <p class="cue" id="t2114">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2114">35:14</a>
-      <span class="cue-text">form. – Yeah, but mom doesn't fill out. – So, so – Yeah, well, okay. The hospital</span>
+      <span class="cue-text">form. – Yeah, but mom doesn't fill out. – So… – Yeah, well, okay. The hospital</span>
     </p>
     <p class="cue" id="t2118">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2118">35:18</a>
-      <span class="cue-text">fills it out for the mom. Well, actually, birth certificates are done differently in</span>
+      <span class="cue-text">fills it out for the mom. – Well, actually, birth certificates are done differently in</span>
     </p>
     <p class="cue" id="t2123">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2123">35:23</a>
-      <span class="cue-text">every state. So, that's what I'm getting to. So, there will have to be a</span>
+      <span class="cue-text">every state. So, that's what I'm getting to. – So, there will have to be a</span>
     </p>
     <p class="cue" id="t2128">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2128">35:28</a>
@@ -1659,7 +1682,7 @@
     </p>
     <p class="cue" id="t2146">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2146">35:46</a>
-      <span class="cue-text">he likes to give the example of he was in a state And the way they did birth</span>
+      <span class="cue-text">he likes to give the example of, he was in a state, and the way they did birth</span>
     </p>
     <p class="cue" id="t2151">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2151">35:51</a>
@@ -1667,31 +1690,31 @@
     </p>
     <p class="cue" id="t2157">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2157">35:57</a>
-      <span class="cue-text">little town where somebody signed it. And even today, it's so, I mean, you look at,</span>
+      <span class="cue-text">little town where somebody signed it. – And even today, you look at,</span>
     </p>
     <p class="cue" id="t2163">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2163">36:03</a>
-      <span class="cue-text">you know, in California, you want your birth certificate altered. It's not even a</span>
+      <span class="cue-text">in California, you want your birth certificate altered. It's not even a</span>
     </p>
     <p class="cue" id="t2168">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2168">36:08</a>
-      <span class="cue-text">court process or anything. You just ask for it. Yeah. So, that is, so that will</span>
+      <span class="cue-text">court process or anything. You just ask for it.</span>
     </p>
     <p class="cue" id="t2173">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2173">36:13</a>
-      <span class="cue-text">require some, so the thing is, it won't happen overnight. Those sorts of things</span>
+      <span class="cue-text">– It won't happen overnight. Those sorts of things</span>
     </p>
     <p class="cue" id="t2180">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2180">36:20</a>
-      <span class="cue-text">will take time to iron out, but yes, that's where it's going to end up. Yeah.</span>
+      <span class="cue-text">will take time to iron out, but yes, that's where it's going to end up.</span>
     </p>
     <p class="cue" id="t2186">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2186">36:26</a>
-      <span class="cue-text">Yes. There you go. The rumor is that there may be as many as 15 states in the</span>
+      <span class="cue-text">– The rumor is that there may be as many as 15 states in the</span>
     </p>
     <p class="cue" id="t2195">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2195">36:35</a>
-      <span class="cue-text">consortium. Yes. I've heard it's double digit. That is true. It's about a third of</span>
+      <span class="cue-text">consortium. – Yes. I've heard it's double digit. – If that is true, it's about a third of</span>
     </p>
     <p class="cue" id="t2200">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2200">36:40</a>
@@ -1699,19 +1722,19 @@
     </p>
     <p class="cue" id="t2206">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2206">36:46</a>
-      <span class="cue-text">space. So, So if true, which we won't know in until two weeks at the SEDI summit, it</span>
+      <span class="cue-text">space. So if true, which we won't know until two weeks at the SEDI summit, it</span>
     </p>
     <p class="cue" id="t2216">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2216">36:56</a>
-      <span class="cue-text">will be like a bomb went off in the identity industry. It will be a really big</span>
+      <span class="cue-text">will be like a bomb went off in the identity industry.</span>
     </p>
-    <p class="cue" id="t2221">
-      <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2221">37:01</a>
-      <span class="cue-text">deal.</span>
+    <p class="cue" id="t2219">
+      <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2219">36:59</a>
+      <span class="cue-text">It will be a really big deal.</span>
     </p>
     <p class="cue" id="t2224">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2224">37:04</a>
-      <span class="cue-text">And the fear, I'll tell you the fear, is that they will say KERI and ACDC isn't</span>
+      <span class="cue-text">– I'll tell you the fear, is that they will say KERI and ACDC isn't</span>
     </p>
     <p class="cue" id="t2231">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2231">37:11</a>
@@ -1731,27 +1754,23 @@
     </p>
     <p class="cue" id="t2258">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2258">37:38</a>
-      <span class="cue-text">vertical paying for the IAL level three. But SEDI, you have that forcing function.</span>
+      <span class="cue-text">vertical paying for the IAL3. But SEDI, you have that forcing function.</span>
     </p>
-    <p class="cue" id="t2265">
-      <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2265">37:45</a>
-      <span class="cue-text">Go ahead. Oh, you have a question? Yeah, I was going to say something. Okay. I think</span>
-    </p>
-    <p class="cue" id="t2271">
-      <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2271">37:51</a>
-      <span class="cue-text">we have another mic over here. Yeah, I wanted to give some experience that we've</span>
+    <p class="cue" id="t2272">
+      <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2272">37:52</a>
+      <span class="cue-text">– I wanted to give some experience that we've</span>
     </p>
     <p class="cue" id="t2275">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2275">37:55</a>
-      <span class="cue-text">been having with the vLEI and in seeing, you know, this situation here that SEDI is</span>
+      <span class="cue-text">been having with the vLEI and in seeing this situation here,</span>
     </p>
     <p class="cue" id="t2285">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2285">38:05</a>
-      <span class="cue-text">putting forward or the requirements that SEDI is putting forward, it's only going</span>
+      <span class="cue-text">the requirements that SEDI is putting forward, it's only going</span>
     </p>
     <p class="cue" id="t2290">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2290">38:10</a>
-      <span class="cue-text">to work because there's there is regulation and legislation behind it and</span>
+      <span class="cue-text">to work because there is regulation and legislation behind it and</span>
     </p>
     <p class="cue" id="t2298">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2298">38:18</a>
@@ -1795,39 +1814,27 @@
     </p>
     <p class="cue" id="t2360">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2360">39:20</a>
-      <span class="cue-text">only familiar with the processes that are not even not being carried out by CAs now.</span>
+      <span class="cue-text">only familiar with the processes that not even not being carried out by CAs now.</span>
     </p>
     <p class="cue" id="t2368">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2368">39:28</a>
-      <span class="cue-text">So they're comparing already flawed processes to something that's – Yeah,</span>
+      <span class="cue-text">So they're comparing already flawed processes to something that's…</span>
     </p>
     <p class="cue" id="t2373">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2373">39:33</a>
-      <span class="cue-text">they're saying, well, this flawed process is low friction. – Yeah. – Your flawed</span>
+      <span class="cue-text">– This flawed process is low friction. – Yeah. – Your flawed</span>
     </p>
     <p class="cue" id="t2377">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2377">39:37</a>
-      <span class="cue-text">process is high friction. The problem is this is not a flawed process that is, but</span>
+      <span class="cue-text">process is high friction. The problem is this is not a flawed process… that is, but</span>
     </p>
     <p class="cue" id="t2384">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2384">39:44</a>
-      <span class="cue-text">they don't see the advantages in the and so it's a challenge. It's a</span>
+      <span class="cue-text">they don't see the advantages. It's a challenge. It's a</span>
     </p>
     <p class="cue" id="t2389">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2389">39:49</a>
-      <span class="cue-text">hard thing. User experience is a difficult thing to solve. – I would never have a CEO</span>
-    </p>
-    <p class="cue" id="t2393">
-      <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2393">39:53</a>
-      <span class="cue-text">be in charge of credentials for a company. – Yeah. – They're unreachable people and</span>
-    </p>
-    <p class="cue" id="t2398">
-      <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2398">39:58</a>
-      <span class="cue-text">like I'll have ADHD in the business, right? – I can't hear you with that in my</span>
-    </p>
-    <p class="cue" id="t2402">
-      <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2402">40:02</a>
-      <span class="cue-text">online.</span>
+      <span class="cue-text">hard thing. User experience is a difficult thing to solve.</span>
     </p>
     <p class="cue" id="t2406">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2406">40:06</a>
@@ -1835,15 +1842,15 @@
     </p>
     <p class="cue" id="t2410">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2410">40:10</a>
-      <span class="cue-text">infrastructure, right? They're not responsible people. They don't usually</span>
+      <span class="cue-text">infrastructure, right? They're not responsible people.</span>
     </p>
     <p class="cue" id="t2414">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2414">40:14</a>
-      <span class="cue-text">like they you need someone like very responsible like a CFO, a COO like someone</span>
+      <span class="cue-text">You need someone like a CFO, a COO, someone</span>
     </p>
     <p class="cue" id="t2420">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2420">40:20</a>
-      <span class="cue-text">who is a execution focused someone lowered down even. We're talking about the CEO</span>
+      <span class="cue-text">who is a execution focused someone lowered down even. – We're talking about the CEO</span>
     </p>
     <p class="cue" id="t2425">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2425">40:25</a>
@@ -1851,11 +1858,11 @@
     </p>
     <p class="cue" id="t2430">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2430">40:30</a>
-      <span class="cue-text">one. So they're the receiver. They're not managing anything about the process. Yeah,</span>
+      <span class="cue-text">one. So they're the receiver. They're not managing anything about the process.</span>
     </p>
     <p class="cue" id="t2435">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2435">40:35</a>
-      <span class="cue-text">they shouldn't be involved at all. I don't think. Well, they need to be involved in</span>
+      <span class="cue-text">– They shouldn't be involved at all. – They need to be involved in</span>
     </p>
     <p class="cue" id="t2438">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2438">40:38</a>
@@ -1875,31 +1882,31 @@
     </p>
     <p class="cue" id="t2462">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2462">41:02</a>
-      <span class="cue-text">for their annual report in the US. – So they don't understand that they the</span>
+      <span class="cue-text">for their annual report in the US. So they don't understand the</span>
     </p>
     <p class="cue" id="t2468">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2468">41:08</a>
-      <span class="cue-text">liability that they subjected themselves to when they So, yeah, but it's a valid</span>
+      <span class="cue-text">liability that they subjected themselves to when they… So, yeah, but it's a valid</span>
     </p>
     <p class="cue" id="t2472">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2472">41:12</a>
-      <span class="cue-text">point. They don't think that they have to care about that. You had a comment? Oh,</span>
+      <span class="cue-text">point. They don't think that they have to care about that.</span>
     </p>
     <p class="cue" id="t2479">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2479">41:19</a>
-      <span class="cue-text">okay. Sorry. So anyway, I don't have a… When did we end? In 15 minutes? Huh? –</span>
+      <span class="cue-text">So anyway, I don't have a…</span>
     </p>
     <p class="cue" id="t2485">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2485">41:25</a>
-      <span class="cue-text">Yeah. – Two things. One about the complexity of KERI. We've been hearing</span>
+      <span class="cue-text">– Two things. One about the complexity of KERI. We've been hearing</span>
     </p>
     <p class="cue" id="t2492">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2492">41:32</a>
-      <span class="cue-text">that criticism for years. And I think that that now has to melt away because people</span>
+      <span class="cue-text">that criticism for years. And I think that now has to melt away because people</span>
     </p>
     <p class="cue" id="t2499">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2499">41:39</a>
-      <span class="cue-text">use a AI to do their coding and handle complex things. And my experience with the</span>
+      <span class="cue-text">use AI to do their coding and handle complex things. And my experience with the</span>
     </p>
     <p class="cue" id="t2507">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2507">41:47</a>
@@ -1907,7 +1914,7 @@
     </p>
     <p class="cue" id="t2512">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2512">41:52</a>
-      <span class="cue-text">management and if they don't have to if the model is not completely familiar and</span>
+      <span class="cue-text">management and if the model is not completely familiar and</span>
     </p>
     <p class="cue" id="t2517">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2517">41:57</a>
@@ -1939,7 +1946,7 @@
     </p>
     <p class="cue" id="t2548">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2548">42:28</a>
-      <span class="cue-text">and parcel of any two-sided market, right? Yep. You have supply and demand and you</span>
+      <span class="cue-text">and parcel of any two-sided market, right? You have supply and demand and you</span>
     </p>
     <p class="cue" id="t2553">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2553">42:33</a>
@@ -1959,11 +1966,11 @@
     </p>
     <p class="cue" id="t2570">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2570">42:50</a>
-      <span class="cue-text">forward. What they're doing is they're priming the market with demand. Yeah. And</span>
+      <span class="cue-text">forward. What they're doing is they're priming the market with demand. And</span>
     </p>
     <p class="cue" id="t2575">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2575">42:55</a>
-      <span class="cue-text">what we've been waiting for for years and it's coming to IIW and talking about these</span>
+      <span class="cue-text">what we've been waiting for years and it's coming to IIW and talking about these</span>
     </p>
     <p class="cue" id="t2581">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2581">43:01</a>
@@ -2015,7 +2022,7 @@
     </p>
     <p class="cue" id="t2634">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2634">43:54</a>
-      <span class="cue-text">demand, but the demand is absolutely coming. Yeah, I firmly believe that it's</span>
+      <span class="cue-text">demand, but the demand is absolutely coming. – Yeah, I firmly believe that it's</span>
     </p>
     <p class="cue" id="t2640">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2640">44:00</a>
@@ -2031,7 +2038,7 @@
     </p>
     <p class="cue" id="t2660">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2660">44:20</a>
-      <span class="cue-text">another option. You know, I think it needs to be said why the state of Utah is moving</span>
+      <span class="cue-text">another option. – I think it needs to be said why the state of Utah is moving</span>
     </p>
     <p class="cue" id="t2666">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2666">44:26</a>
@@ -2051,7 +2058,7 @@
     </p>
     <p class="cue" id="t2688">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2688">44:48</a>
-      <span class="cue-text">scared about the identity options that are that exist. The alternatives are bad. And</span>
+      <span class="cue-text">scared about the identity options that that exist. The alternatives are bad. And</span>
     </p>
     <p class="cue" id="t2694">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2694">44:54</a>
@@ -2063,11 +2070,11 @@
     </p>
     <p class="cue" id="t2701">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2701">45:01</a>
-      <span class="cue-text">winning. And that's why it's unanimous on both sides of the aisle, left and right. –</span>
+      <span class="cue-text">winning. And that's why it's unanimous on both sides of the aisle, left and right.</span>
     </p>
     <p class="cue" id="t2706">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2706">45:06</a>
-      <span class="cue-text">Yeah, because everybody cares about liberty. Completely unanimous. – It's less</span>
+      <span class="cue-text">– Because everybody cares about liberty. – Completely unanimous. – It's less</span>
     </p>
     <p class="cue" id="t2709">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2709">45:09</a>
@@ -2095,11 +2102,11 @@
     </p>
     <p class="cue" id="t2738">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2738">45:38</a>
-      <span class="cue-text">state of Utah for how many years now? Three. Almost four years. Almost four,</span>
+      <span class="cue-text">state of Utah for how many years now? – Three. Almost four years.</span>
     </p>
     <p class="cue" id="t2742">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2742">45:42</a>
-      <span class="cue-text">yeah. Yeah, coming in March, it'll be the fourth anniversary or April of our fateful</span>
+      <span class="cue-text">– Coming in March, it'll be the fourth anniversary or April of our fateful</span>
     </p>
     <p class="cue" id="t2746">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2746">45:46</a>
@@ -2107,7 +2114,7 @@
     </p>
     <p class="cue" id="t2755">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2755">45:55</a>
-      <span class="cue-text">They would do it. Utah would go it alone. Utah would go it alone and be the only</span>
+      <span class="cue-text">– They would do it. – Utah would go it alone and be the only</span>
     </p>
     <p class="cue" id="t2758">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2758">45:58</a>
@@ -2139,7 +2146,7 @@
     </p>
     <p class="cue" id="t2790">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2790">46:30</a>
-      <span class="cue-text">ways, right? So, the original social bill, right, was written without any technology.</span>
+      <span class="cue-text">ways, right? So, the original social bill was written without any technology.</span>
     </p>
     <p class="cue" id="t2797">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2797">46:37</a>
@@ -2163,7 +2170,7 @@
     </p>
     <p class="cue" id="t2821">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2821">47:01</a>
-      <span class="cue-text">know, that they wrote in 2024 and then in 2025 and then 20 and then 2026, all of</span>
+      <span class="cue-text">know, that they wrote in 2024 and then in 2025 and then 2026, all of</span>
     </p>
     <p class="cue" id="t2826">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2826">47:06</a>
@@ -2171,11 +2178,11 @@
     </p>
     <p class="cue" id="t2831">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2831">47:11</a>
-      <span class="cue-text">has this legislation which has been developed over, you know, four years,</span>
+      <span class="cue-text">has this legislation which has been developed over four years, right?</span>
     </p>
     <p class="cue" id="t2837">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2837">47:17</a>
-      <span class="cue-text">right? – Yep. – So, the consortium, is it more going to focus on getting similar</span>
+      <span class="cue-text">– Yep. – So, the consortium, is it more going to focus on getting similar</span>
     </p>
     <p class="cue" id="t2843">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2843">47:23</a>
@@ -2183,7 +2190,7 @@
     </p>
     <p class="cue" id="t2850">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2850">47:30</a>
-      <span class="cue-text">– So that, you know, they can go to their states and however their legislative</span>
+      <span class="cue-text">– So that they can go to their states and however their legislative</span>
     </p>
     <p class="cue" id="t2855">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2855">47:35</a>
@@ -2203,7 +2210,7 @@
     </p>
     <p class="cue" id="t2872">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2872">47:52</a>
-      <span class="cue-text">there's something else that another benefit that comes along with this. You</span>
+      <span class="cue-text">there's something else, another benefit that comes along with this. You</span>
     </p>
     <p class="cue" id="t2879">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2879">47:59</a>
@@ -2211,7 +2218,7 @@
     </p>
     <p class="cue" id="t2885">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2885">48:05</a>
-      <span class="cue-text">clause. – Yes. option for citizens. But you have to think that most citizens and</span>
+      <span class="cue-text">clause option for citizens. But you have to think that most citizens and</span>
     </p>
     <p class="cue" id="t2892">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2892">48:12</a>
@@ -2223,19 +2230,19 @@
     </p>
     <p class="cue" id="t2904">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2904">48:24</a>
-      <span class="cue-text">the state, in the SEDI bill in the state, every citizen has a right to opt out. –</span>
+      <span class="cue-text">the SEDI bill in the state, every citizen has a right to opt out.</span>
     </p>
     <p class="cue" id="t2909">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2909">48:29</a>
-      <span class="cue-text">But I'm banking on the fact that most citizens will opt in. – Oh, yeah. – So,</span>
+      <span class="cue-text">– But I'm banking on the fact that most citizens will opt in. – Oh, yeah.</span>
     </p>
     <p class="cue" id="t2915">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2915">48:35</a>
-      <span class="cue-text">therefore… – And what The cost of delivering the service. – What will happen</span>
+      <span class="cue-text">What will happen</span>
     </p>
     <p class="cue" id="t2918">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2918">48:38</a>
-      <span class="cue-text">is that… – It's not opt out. It's opt in. – It's opt in. Yeah, you have to opt in.</span>
+      <span class="cue-text">is that… – It's not opt out. It's opt in. – Yeah, you have to opt in.</span>
     </p>
     <p class="cue" id="t2923">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2923">48:43</a>
@@ -2243,19 +2250,19 @@
     </p>
     <p class="cue" id="t2927">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2927">48:47</a>
-      <span class="cue-text">have to opt in. – They will choose to get a digital identity. – Yes. – Let's say it</span>
+      <span class="cue-text">have to opt in. – They will choose to get a digital identity. – Yes.</span>
     </p>
     <p class="cue" id="t2931">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2931">48:51</a>
-      <span class="cue-text">that way. – And what will happen is demographically as people die off, the opt</span>
+      <span class="cue-text">And what will happen is demographically as people die off, the opt-inners</span>
     </p>
     <p class="cue" id="t2936">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2936">48:56</a>
-      <span class="cue-text">-inners will go up. And at some point in like one generation, you'll have a teeny</span>
+      <span class="cue-text">will go up. And at some point in like one generation, you'll have a teeny</span>
     </p>
     <p class="cue" id="t2943">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2943">49:03</a>
-      <span class="cue-text">fraction of the population that won't opt in. And so then as a byproduct, a natural</span>
+      <span class="cue-text">fraction of the population that won't opt in. – And so then as a byproduct, a natural</span>
     </p>
     <p class="cue" id="t2948">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2948">49:08</a>
@@ -2267,11 +2274,11 @@
     </p>
     <p class="cue" id="t2965">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2965">49:25</a>
-      <span class="cue-text">state being able just to be more efficient. And so that also to the privacy</span>
+      <span class="cue-text">state being able just to be more efficient. And to the privacy</span>
     </p>
     <p class="cue" id="t2970">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2970">49:30</a>
-      <span class="cue-text">and liberty, that should also be pointed out to the other states. I don't know if</span>
+      <span class="cue-text">and liberty, that should also be pointed out to the other states. – I don't know if</span>
     </p>
     <p class="cue" id="t2975">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=2975">49:35</a>
@@ -2303,7 +2310,7 @@
     </p>
     <p class="cue" id="t3012">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=3012">50:12</a>
-      <span class="cue-text">one or two every year. Yeah, go ahead. I think the adoption is going to be slow and</span>
+      <span class="cue-text">one or two every year. Yeah, go ahead. – I think the adoption is going to be slow and</span>
     </p>
     <p class="cue" id="t3019">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=3019">50:19</a>
@@ -2359,7 +2366,7 @@
     </p>
     <p class="cue" id="t3082">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=3082">51:22</a>
-      <span class="cue-text">to happen and I think it'll be a five to 10 year. Yeah, it'll probably be five to</span>
+      <span class="cue-text">to happen and I think it'll be a five to 10 year. – Yeah, it'll probably be five to</span>
     </p>
     <p class="cue" id="t3085">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=3085">51:25</a>
@@ -2367,7 +2374,7 @@
     </p>
     <p class="cue" id="t3090">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=3090">51:30</a>
-      <span class="cue-text">just to figure that out. Yeah. Yeah. Pass in the mic. So I was asking you before</span>
+      <span class="cue-text">just to figure that out. Yeah. – So I was asking you before</span>
     </p>
     <p class="cue" id="t3099">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=3099">51:39</a>
@@ -2379,11 +2386,11 @@
     </p>
     <p class="cue" id="t3116">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=3116">51:56</a>
-      <span class="cue-text">Like growing this infrastructure more organically, more sovereignly? Well, like</span>
+      <span class="cue-text">Like growing this infrastructure more organically, more sovereignly? – Well, like</span>
     </p>
     <p class="cue" id="t3123">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=3123">52:03</a>
-      <span class="cue-text">for example, HealthKERI doesn't need SEDI for it to be successful in the healthcare</span>
+      <span class="cue-text">for example, healthKERI doesn't need SEDI for it to be successful in the healthcare</span>
     </p>
     <p class="cue" id="t3129">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=3129">52:09</a>
@@ -2399,7 +2406,7 @@
     </p>
     <p class="cue" id="t3147">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=3147">52:27</a>
-      <span class="cue-text">always been the problem. Let's say if we start bundling witnesses on watchers in</span>
+      <span class="cue-text">always been the problem. – Let's say if we start bundling witnesses on watchers in</span>
     </p>
     <p class="cue" id="t3153">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=3153">52:33</a>
@@ -2407,11 +2414,11 @@
     </p>
     <p class="cue" id="t3158">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=3158">52:38</a>
-      <span class="cue-text">tap these of services. – Yeah, if forward -looking companies do something like say,</span>
+      <span class="cue-text">tap these sorts of services. – Yeah, if forward-looking companies do something like</span>
     </p>
     <p class="cue" id="t3166">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=3166">52:46</a>
-      <span class="cue-text">you know what, we're going to raise, if you have the ability to say raise an extra</span>
+      <span class="cue-text">we're going to raise, if you have the ability to say raise an extra</span>
     </p>
     <p class="cue" id="t3170">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=3170">52:50</a>
@@ -2535,11 +2542,11 @@
     </p>
     <p class="cue" id="t3309">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=3309">55:09</a>
-      <span class="cue-text">in your phone to the outside internet. But yeah, might be doable. Well, every phone</span>
+      <span class="cue-text">in your phone to the outside internet. But yeah, might be doable. – Well, every phone</span>
     </p>
     <p class="cue" id="t3317">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=3317">55:17</a>
-      <span class="cue-text">does have an IPv6 static IP address. So you technically could run… …snap networks</span>
+      <span class="cue-text">does have an IPv6 static IP address. So you technically could run… – Snap networks</span>
     </p>
     <p class="cue" id="t3322">
       <a class="cue-time" href="../../../#ryan-hansen-samuel-m-smith-open-infrastructure-for-keri-based-digital-identity&amp;t=3322">55:22</a>

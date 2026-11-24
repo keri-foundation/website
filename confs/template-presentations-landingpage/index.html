@@ -8,12 +8,15 @@
   "brand" object on a gallery index.json overrides it for that gallery.
   The same step writes the page header and page.transcriptLinks into the HTML,
   and appends talk / interview / PDF links discovered under transcripts/.
+  Optional talk summaries are stamped from a sibling .md of each video
+  (talks/foo.mp4 → talks/foo.md, any media folder). A missing file is skipped.
   Do not edit per-gallery index.html by hand.
 -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <script>document.documentElement.classList.add("js");</script>
     <title>Videos</title>
     <meta name="description" content="Presentations and talks.">
     <link rel="canonical" href="./">
@@ -1205,7 +1208,9 @@
         .open-video-modal-btn,
         .read-transcript-btn,
         .download-presentation-btn,
-        .view-presentation-btn {
+        .view-presentation-btn,
+        .chapters-toggle-btn,
+        .links-toggle-btn {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -1228,15 +1233,343 @@
         .open-video-modal-btn:hover,
         .read-transcript-btn:hover,
         .download-presentation-btn:hover,
-        .view-presentation-btn:hover {
+        .view-presentation-btn:hover,
+        .chapters-toggle-btn:hover,
+        .links-toggle-btn:hover {
             background: color-mix(in srgb, var(--accent) 32%, transparent);
         }
 
         .open-video-modal-btn:focus-visible,
         .download-presentation-btn:focus-visible,
-        .view-presentation-btn:focus-visible {
+        .view-presentation-btn:focus-visible,
+        .chapters-toggle-btn:focus-visible,
+        .links-toggle-btn:focus-visible {
             outline: 2px solid var(--accent);
             outline-offset: 2px;
+        }
+
+        .video-card-actions .chapters-toggle-btn,
+        .video-card-actions .links-toggle-btn {
+            flex: 1 1 7rem;
+        }
+
+        .chapters-toggle-btn[aria-expanded="true"],
+        .links-toggle-btn[aria-expanded="true"] {
+            background: color-mix(in srgb, var(--accent) 32%, transparent);
+        }
+
+        .chapters-toggle-btn .chapters-toggle-chevron,
+        .links-toggle-btn .links-toggle-chevron {
+            margin-left: 2px;
+            transition: transform 0.18s ease;
+        }
+
+        .chapters-toggle-btn[aria-expanded="true"] .chapters-toggle-chevron,
+        .links-toggle-btn[aria-expanded="true"] .links-toggle-chevron {
+            transform: rotate(180deg);
+        }
+
+        /* ── Chapters sheet (slide-up menu) ── */
+        .chapters-sheet {
+            position: fixed;
+            inset: 0;
+            z-index: 3200;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            padding: 0;
+            pointer-events: none;
+        }
+
+        .chapters-sheet[hidden] {
+            display: none !important;
+        }
+
+        .chapters-sheet.is-open {
+            pointer-events: auto;
+        }
+
+        .chapters-sheet-backdrop {
+            position: absolute;
+            inset: 0;
+            background: rgba(10, 14, 24, 0.46);
+            border: 0;
+            padding: 0;
+            cursor: pointer;
+            opacity: 0;
+            transition: opacity 0.2s ease;
+        }
+
+        .chapters-sheet.is-open .chapters-sheet-backdrop {
+            opacity: 1;
+        }
+
+        .chapters-sheet-panel {
+            position: relative;
+            z-index: 1;
+            width: min(36rem, 100%);
+            max-height: min(78vh, 40rem);
+            display: flex;
+            flex-direction: column;
+            background: var(--panel-bg);
+            color: var(--ink);
+            border-radius: 16px 16px 0 0;
+            border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+            border-bottom: 0;
+            box-shadow: 0 -12px 40px rgba(0, 0, 0, 0.18);
+            transform: translateY(110%);
+            transition: transform 0.22s ease;
+            padding-bottom: env(safe-area-inset-bottom, 0px);
+        }
+
+        .chapters-sheet.is-open .chapters-sheet-panel {
+            transform: translateY(0);
+        }
+
+        .chapters-sheet-handle {
+            flex: 0 0 auto;
+            width: 2.5rem;
+            height: 4px;
+            margin: 10px auto 0;
+            border-radius: 999px;
+            background: color-mix(in srgb, var(--ink) 22%, transparent);
+        }
+
+        .chapters-sheet-header {
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px 10px;
+            border-bottom: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+        }
+
+        .chapters-sheet-title-wrap {
+            flex: 1 1 auto;
+            min-width: 0;
+        }
+
+        .chapters-sheet-title {
+            margin: 0;
+            font-family: var(--heading-font);
+            font-size: 1.05rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .chapters-sheet-subtitle {
+            margin: 0.35rem 0 0;
+            font-size: 0.85rem;
+            color: var(--muted);
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 2;
+            overflow: hidden;
+            line-height: 1.3;
+        }
+
+        @media (max-width: 520px) {
+            .chapters-sheet-header {
+                align-items: flex-start;
+                padding: 10px 14px 10px;
+            }
+
+            .chapters-sheet-subtitle {
+                -webkit-line-clamp: 3;
+            }
+        }
+
+        .chapters-sheet-close {
+            flex: 0 0 auto;
+            width: 2.25rem;
+            height: 2.25rem;
+            border: 0;
+            border-radius: 8px;
+            background: color-mix(in srgb, var(--ink) 8%, transparent);
+            color: var(--ink);
+            font-size: 1.4rem;
+            line-height: 1;
+            cursor: pointer;
+        }
+
+        .chapters-sheet-close:hover {
+            background: color-mix(in srgb, var(--ink) 16%, transparent);
+        }
+
+        .chapters-sheet-close:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .chapters-sheet-list {
+            list-style: none;
+            margin: 0;
+            padding: 8px 10px 14px;
+            overflow: auto;
+            -webkit-overflow-scrolling: touch;
+            flex: 1 1 auto;
+            min-height: 0;
+        }
+
+        .video-chapter {
+            display: grid;
+            grid-template-columns: 4.25rem minmax(0, 1fr);
+            gap: 0.55rem 0.75rem;
+            align-items: start;
+            width: 100%;
+            margin: 0;
+            padding: 0.7rem 0.65rem;
+            border: 0;
+            border-radius: 8px;
+            background: transparent;
+            color: inherit;
+            font: inherit;
+            text-align: left;
+            cursor: pointer;
+            transition: background 0.15s ease;
+            min-height: 2.75rem;
+        }
+
+        .video-chapter:hover {
+            background: color-mix(in srgb, var(--accent) 14%, transparent);
+        }
+
+        .video-chapter:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .video-chapter.is-active {
+            background: color-mix(in srgb, var(--accent) 22%, transparent);
+        }
+
+        .video-chapter-time {
+            font-family: var(--heading-font);
+            font-size: 0.82rem;
+            font-weight: 700;
+            color: var(--accent);
+            line-height: 1.35;
+            padding-top: 0.05rem;
+        }
+
+        .video-chapter.is-active .video-chapter-time {
+            color: var(--ink);
+        }
+
+        .video-chapter-desc {
+            font-size: 0.95rem;
+            line-height: 1.35;
+            color: var(--ink);
+        }
+
+        .video-link {
+            display: flex;
+            align-items: center;
+            gap: 0.65rem;
+            width: 100%;
+            max-width: 100%;
+            margin: 0;
+            padding: 0.7rem 0.65rem;
+            border-radius: 8px;
+            color: var(--accent);
+            font-size: 0.95rem;
+            line-height: 1.35;
+            text-decoration: none;
+            box-sizing: border-box;
+            min-height: 2.75rem;
+            min-width: 0;
+            overflow: hidden;
+        }
+
+        .video-link:hover {
+            background: color-mix(in srgb, var(--accent) 14%, transparent);
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .video-link:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .video-link-icon {
+            flex: 0 0 auto;
+            opacity: 0.85;
+        }
+
+        .video-link-text {
+            flex: 1 1 auto;
+            min-width: 0;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        .video-modal-header-actions .chapters-toggle-btn,
+        .video-modal-header-actions .links-toggle-btn,
+        .video-modal-header-actions .view-presentation-btn {
+            flex: 0 0 auto;
+            width: auto;
+            min-height: 2.25rem;
+            padding: 0.35rem 0.75rem;
+            font-size: 0.82rem;
+            background: color-mix(in srgb, var(--ink) 8%, transparent);
+            border-color: color-mix(in srgb, var(--ink) 16%, transparent);
+        }
+
+        .video-modal-header-actions .chapters-toggle-btn:hover,
+        .video-modal-header-actions .chapters-toggle-btn[aria-expanded="true"],
+        .video-modal-header-actions .links-toggle-btn:hover,
+        .video-modal-header-actions .links-toggle-btn[aria-expanded="true"],
+        .video-modal-header-actions .view-presentation-btn:hover {
+            background: color-mix(in srgb, var(--accent) 28%, transparent);
+        }
+
+        .video-modal-header-actions .chapters-toggle-btn .chapters-toggle-label-count,
+        .video-modal-header-actions .chapters-toggle-btn .chapters-toggle-chevron,
+        .video-modal-header-actions .links-toggle-btn .links-toggle-label-count,
+        .video-modal-header-actions .links-toggle-btn .links-toggle-chevron {
+            display: none;
+        }
+
+        @media (min-width: 720px) {
+            .chapters-sheet {
+                align-items: center;
+                padding: 24px;
+            }
+
+            .chapters-sheet-panel {
+                max-height: min(70vh, 36rem);
+                border-radius: 14px;
+                border-bottom: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+                box-shadow: 0 18px 50px rgba(0, 0, 0, 0.22);
+                transform: translateY(1.25rem) scale(0.98);
+                opacity: 0;
+                transition: transform 0.2s ease, opacity 0.2s ease;
+            }
+
+            .chapters-sheet.is-open .chapters-sheet-panel {
+                transform: translateY(0) scale(1);
+                opacity: 1;
+            }
+
+            .chapters-sheet-handle {
+                display: none;
+            }
+        }
+
+        body[data-chapters-sheet-open="1"] {
+            overflow: hidden;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .chapters-sheet-backdrop,
+            .chapters-sheet-panel,
+            .chapters-toggle-btn .chapters-toggle-chevron,
+            .links-toggle-btn .links-toggle-chevron {
+                transition: none;
+            }
         }
 
         /* ── Card media kind labels (Audio above Video) ── */
@@ -1818,11 +2151,10 @@
         }
 
         .video-modal-transcript-body .transcript-plain {
-            margin: 8px 4px 0;
+            margin: 0 0 0.75em;
             font-size: 1.125rem;
-            line-height: 1.75;
+            line-height: 1.6;
             color: #1a1a2e;
-            white-space: pre-wrap;
         }
 
         .video-modal-transcript-body .transcript-plain-lang {
@@ -2077,6 +2409,69 @@
             padding: 3px 8px;
             border-radius: 20px;
             color: var(--ink);
+        }
+
+        /* Summaries are real HTML for crawlers and for browsers without JS.
+           With JS they move onto the matching card; the holding section stays clipped. */
+        .talk-summaries {
+            max-width: 48rem;
+            margin: 0 auto 8px;
+        }
+
+        .talk-summaries:not(:has(.talk-summary)) {
+            display: none;
+        }
+
+        html.js .talk-summaries {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            margin: 0;
+            overflow: hidden;
+            clip: rect(0 0 0 0);
+            clip-path: inset(50%);
+            white-space: nowrap;
+        }
+
+        html.js .talk-summaries.is-visible {
+            position: static;
+            width: auto;
+            height: auto;
+            margin: 0 auto 28px;
+            overflow: visible;
+            clip: auto;
+            clip-path: none;
+            white-space: normal;
+        }
+
+        .talk-summaries > h2 {
+            font-size: 1.4rem;
+            margin: 0 0 14px;
+        }
+
+        .talk-summaries > .talk-summary {
+            margin: 0 0 22px;
+        }
+
+        .talk-summary-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin: 0 0 8px;
+            line-height: 1.4;
+        }
+
+        .talk-summary-body p {
+            margin: 0 0 0.75rem;
+            font-size: 0.98rem;
+            line-height: 1.55;
+        }
+
+        .talk-summary-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        .video-info .talk-summary {
+            margin-top: 14px;
         }
 
         .copy-button {
@@ -2418,16 +2813,51 @@
             }
 
             .video-modal-header {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) auto;
+                grid-template-areas:
+                    "title close"
+                    "actions actions";
                 align-items: center;
-                gap: 8px;
-                padding: 8px 10px 8px 12px;
+                gap: 8px 10px;
+                padding: 10px 10px 10px 12px;
+            }
+
+            .video-modal-header-text {
+                grid-area: title;
+                min-width: 0;
             }
 
             .video-modal-header-actions {
+                grid-area: actions;
                 max-width: none;
-                flex-shrink: 1;
-                min-width: 0;
+                width: 100%;
+                flex-shrink: 0;
+                flex-wrap: nowrap;
+                justify-content: stretch;
                 gap: 6px;
+                min-width: 0;
+            }
+
+            .video-modal-header-actions > .copy-button,
+            .video-modal-header-actions > .chapters-toggle-btn,
+            .video-modal-header-actions > .links-toggle-btn,
+            .video-modal-header-actions > .view-presentation-btn {
+                flex: 1 1 0;
+                min-width: 0;
+            }
+
+            .video-modal-header-actions .chapters-toggle-btn,
+            .video-modal-header-actions .links-toggle-btn,
+            .video-modal-header-actions .view-presentation-btn {
+                justify-content: center;
+                padding: 0.45rem 0.55rem;
+            }
+
+            .video-modal-close {
+                grid-area: close;
+                align-self: center;
+                margin: 0;
             }
 
             .copy-pending-hint,
@@ -2438,6 +2868,10 @@
             .video-modal-title {
                 font-size: 0.95rem;
                 padding-right: 0;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                overflow: hidden;
             }
 
             .video-modal-workspace {
@@ -2603,6 +3037,8 @@
             <button id="toggleAllVideos" type="button" aria-pressed="false"
                 title="Toggle condensed view for all videos">Show only titles</button>
         </div>
+
+        <section class="talk-summaries" id="talkSummaries" aria-label="Talk summaries"><!--__TALK_SUMMARIES__--></section>
 
         <div class="video-container" id="videoContainer">
             <!-- Video cards generated from index.json -->
@@ -3454,8 +3890,9 @@
                 return h * 3600 + m * 60 + s + Number(ms) / 1000;
             }
 
-            // topClips start/end: seconds (730), or clock strings ("12:10", "00:12:10",
-            // optional fractional "12:10.5" / "00:12:10,500").
+            // Clip stamps (topClips, chapters, and #…&t=&e=) are seconds with
+            // millisecond resolution: 730, 730.5, 730.050, or clock strings
+            // ("12:10", "00:12:10", "12:10.5", "00:12:10,500").
             function parseClipTime(value) {
                 if (typeof value === 'number') {
                     return Number.isFinite(value) && value >= 0 ? value : Number.NaN;
@@ -3482,12 +3919,42 @@
                 return hours * 3600 + minutes * 60 + seconds + frac;
             }
 
+            // Share URLs and copied clip points use the same millisecond grid.
+            // Whole seconds stay whole (t=90), so older integer links are unchanged.
+            function quantizeClipSeconds(seconds) {
+                if (typeof seconds !== 'number' || !Number.isFinite(seconds) || seconds < 0) return Number.NaN;
+                return Math.round(seconds * 1000) / 1000;
+            }
+
+            function formatClipSeconds(seconds) {
+                const q = quantizeClipSeconds(seconds);
+                if (!Number.isFinite(q)) return '';
+                return q.toFixed(3).replace(/\.?0+$/, '');
+            }
+
             function normalizeTopClip(clip) {
                 if (!clip || typeof clip !== 'object') return null;
                 const start = parseClipTime(clip.start);
                 const end = parseClipTime(clip.end);
                 if (!Number.isFinite(start) || !Number.isFinite(end) || end <= start) return null;
                 return { ...clip, start, end };
+            }
+
+            // videos[].chapters: [{ start, description }] — start uses the same
+            // clock / seconds forms as topClips. description (or title) is required.
+            function normalizeChapters(raw) {
+                if (!Array.isArray(raw)) return [];
+                const chapters = [];
+                for (const item of raw) {
+                    if (!item || typeof item !== 'object') continue;
+                    const start = parseClipTime(item.start ?? item.time ?? item.timestamp);
+                    if (!Number.isFinite(start)) continue;
+                    const description = String(item.description ?? item.title ?? '').trim();
+                    if (!description) continue;
+                    chapters.push({ start, description });
+                }
+                chapters.sort((a, b) => a.start - b.start);
+                return chapters;
             }
 
             function formatTime(totalSec) {
@@ -4962,7 +5429,20 @@
             let modalTranscriptScrollLock = 0;
             const captionCueFollowTracks = new WeakSet();
             let modalLinksSection = null;
+            let modalChaptersToggleBtn = null;
+            let modalLinksToggleBtn = null;
+            let modalPdfBtn = null;
             let modalTitleEl = null;
+            let chaptersSheet = null;
+            let chaptersSheetPanel = null;
+            let chaptersSheetTitle = null;
+            let chaptersSheetSubtitle = null;
+            let chaptersSheetList = null;
+            let chaptersSheetCloseBtn = null;
+            let chaptersSheetVideo = null;
+            let chaptersSheetPreviousFocus = null;
+            let chaptersSheetOpenToken = 0;
+            let sheetMode = null; // 'chapters' | 'links'
             let modalCopyBtn = null;
             let modalClearTimestampsBtn = null;
             let modalCopyHint = null;
@@ -5566,6 +6046,61 @@
                     .trim();
             }
 
+            // One paragraph per sentence, and per speaker turn marked with " – ".
+            function splitReadableParagraphs(text) {
+                const paragraphs = [];
+                const push = (chunk) => {
+                    const cleaned = chunk.replace(/^[\s–—]+/, '').trim();
+                    if (cleaned) paragraphs.push(cleaned);
+                };
+                const isAbbrev = (word) => {
+                    // "Dr." is a title. "TL;DR." is an acronym, so all-caps is not a title.
+                    if (word.length > 1 && word === word.toUpperCase()) return false;
+                    return /^(?:mr|mrs|ms|mss|dr|prof|sr|jr|st|vs|etc|inc|ltd)$/i.test(word);
+                };
+
+                let start = 0;
+                const re = /[.!?…]+["'”’)\]]*/g;
+                let match;
+                while ((match = re.exec(text)) !== null) {
+                    const end = match.index + match[0].length;
+                    const after = text.slice(end);
+                    if (after && !/^\s/.test(after)) continue;
+
+                    const word = text.slice(0, match.index).match(/([A-Za-z]+)$/)?.[1] || '';
+                    const throughPunct = text.slice(0, end);
+                    if (isAbbrev(word)) continue;
+                    if (/^no$/i.test(word) && /^\s+\d/.test(after)) continue;
+                    if (/(?:^|\s)(?:[A-Za-z]\.){2,}$/.test(throughPunct)) continue;
+                    if (/(?:^|\s)[A-Za-z](?:\.[A-Za-z])+\.$/.test(throughPunct)) continue;
+
+                    const nextWord = after.match(/^\s+["'“‘(\[]*(\S+)/)?.[1] || '';
+                    const sentenceSoFar = text.slice(start, match.index).trim();
+                    const nextIsName = /^[A-Z]/.test(nextWord) && !/^(?:A|An|And|But|Or|So|The|This|That|These|Those|What|When|Where|Who|Why|How|If|It|Its|We|I|He|She|They|You|There|Then|Now|Well|Yes|No|OK|Okay|Not|For|In|On|At|To|Of|As|Is|Are|Was|Were|Do|Did|Can|Could|Would|Should|Will|Just|Here|Also|All|Let)$/i.test(nextWord);
+                    // "Samuel M. Smith" is an initial. "with a T. What" is a new sentence.
+                    if (/^\.["'”’)\]]*$/.test(match[0]) && /^[A-Z]$/.test(word) && sentenceSoFar.length > word.length && nextIsName) continue;
+                    if ((match[0].includes('…') || /^\.{3,}/.test(match[0])) && /^[a-z]/.test(nextWord)) continue;
+
+                    for (const turn of text.slice(start, end).split(/\s+–\s+/)) push(turn);
+                    start = end;
+                }
+                for (const turn of text.slice(start).split(/\s+–\s+/)) push(turn);
+                return paragraphs;
+            }
+
+            function appendReadableTranscript(cues, query) {
+                const paragraphs = splitReadableParagraphs(concatenateCueTexts(cues));
+                const frag = document.createDocumentFragment();
+                for (const paragraph of paragraphs) {
+                    const p = document.createElement('p');
+                    p.className = 'transcript-plain';
+                    if (query) p.innerHTML = highlightMatch(paragraph, query);
+                    else p.textContent = paragraph;
+                    frag.appendChild(p);
+                }
+                modalTranscriptBody.appendChild(frag);
+            }
+
             function updateModalTranscriptViewBtn() {
                 if (!modalTranscriptViewBtn) return;
                 modalTranscriptViewBtn.setAttribute('aria-pressed', modalTranscriptPlainView ? 'true' : 'false');
@@ -5630,7 +6165,8 @@
                 modalCopyBtn.innerHTML = COPY_ICON_SVG;
                 modalCopyBtn.addEventListener('click', () => {
                     if (!modalVideoId || !modalVideoEl) return;
-                    const currentTime = Math.floor(modalVideoEl.currentTime);
+                    const currentTime = quantizeClipSeconds(modalVideoEl.currentTime);
+                    if (!Number.isFinite(currentTime)) return;
 
                     if (copyRangeStart === null) {
                         // Starting a new cycle: drop any existing t/e stamps first
@@ -5681,6 +6217,39 @@
                 closeBtn.setAttribute('aria-label', 'Close video');
                 closeBtn.innerHTML = '&times;';
 
+                modalChaptersToggleBtn = document.createElement('button');
+                modalChaptersToggleBtn.type = 'button';
+                modalChaptersToggleBtn.className = 'chapters-toggle-btn';
+                modalChaptersToggleBtn.setAttribute('aria-expanded', 'false');
+                modalChaptersToggleBtn.setAttribute('aria-haspopup', 'dialog');
+                modalChaptersToggleBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const video = findVideoById(modalVideoId);
+                    if (!video) return;
+                    if (isChaptersSheetOpenFor(video)) closeChaptersSheet();
+                    else openChaptersSheet(video, modalChaptersToggleBtn);
+                });
+
+                modalLinksToggleBtn = document.createElement('button');
+                modalLinksToggleBtn.type = 'button';
+                modalLinksToggleBtn.className = 'links-toggle-btn';
+                modalLinksToggleBtn.setAttribute('aria-expanded', 'false');
+                modalLinksToggleBtn.setAttribute('aria-haspopup', 'dialog');
+                modalLinksToggleBtn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const video = findVideoById(modalVideoId);
+                    if (!video) return;
+                    if (isLinksSheetOpenFor(video)) closeChaptersSheet();
+                    else openLinksSheet(video, modalLinksToggleBtn);
+                });
+
+                modalPdfBtn = document.createElement('a');
+                modalPdfBtn.className = 'view-presentation-btn';
+                modalPdfBtn.target = '_blank';
+                modalPdfBtn.rel = 'noopener noreferrer';
+                modalPdfBtn.addEventListener('click', (e) => e.stopPropagation());
+
+                // Chapters / Links / PDF are mounted only when the open video has them.
                 headerActions.appendChild(modalCopyHint);
                 headerActions.appendChild(modalCopyBtn);
                 headerActions.appendChild(modalClearTimestampsBtn);
@@ -5719,6 +6288,7 @@
                         rememberClock(modalSourceVideoPath, modalVideoEl.currentTime);
                     }
                     followModalTranscriptCaption();
+                    syncModalChaptersActive();
                 });
                 modalVideoEl.addEventListener('pause', () => {
                     if (modalSourceVideoPath && shouldAcceptMediaTime(modalSourceVideoPath, modalVideoEl.currentTime)) {
@@ -5728,6 +6298,7 @@
                 modalVideoEl.addEventListener('seeked', () => {
                     if (modalSourceVideoPath) rememberClock(modalSourceVideoPath, modalVideoEl.currentTime);
                     followModalTranscriptCaption();
+                    syncModalChaptersActive();
                 });
 
                 const source = document.createElement('source');
@@ -5749,11 +6320,6 @@
                 playerWrap.appendChild(modalClipTimer);
 
                 videoContent.appendChild(playerWrap);
-
-                modalLinksSection = document.createElement('div');
-                modalLinksSection.className = 'video-modal-links';
-                modalLinksSection.hidden = true;
-                videoContent.appendChild(modalLinksSection);
 
                 initPlyrVideo(modalVideoEl, { subtitleSize: true });
                 // Keep the clip timer above Plyr's rebuilt player chrome
@@ -5864,6 +6430,10 @@
                 videoModalOverlay.addEventListener('keydown', (e) => {
                     if (e.key === 'Escape') {
                         e.preventDefault();
+                        if (isChaptersSheetOpen()) {
+                            closeChaptersSheet();
+                            return;
+                        }
                         closeVideoModal();
                         return;
                     }
@@ -5886,42 +6456,6 @@
                 });
 
                 document.body.appendChild(videoModalOverlay);
-            }
-
-            function renderModalLinks(rawSrt) {
-                if (!modalLinksSection) return;
-                modalLinksSection.innerHTML = '';
-                modalLinksSection.hidden = true;
-                if (!rawSrt) return;
-
-                const urls = extractUrlsFromSrt(rawSrt);
-                if (!urls.length) return;
-
-                modalLinksSection.hidden = false;
-
-                const heading = document.createElement('h3');
-                heading.className = 'video-modal-links-heading';
-                heading.textContent = 'Links';
-
-                const list = document.createElement('ul');
-                list.className = 'subtitle-links';
-                for (const link of urls) {
-                    const li = document.createElement('li');
-                    const a = document.createElement('a');
-                    a.href = link;
-                    a.target = '_blank';
-                    a.rel = 'noopener noreferrer';
-                    a.textContent = link;
-                    const hint = document.createElement('span');
-                    hint.className = 'visually-hidden';
-                    hint.textContent = ' (opens in a new tab)';
-                    a.appendChild(hint);
-                    li.appendChild(a);
-                    list.appendChild(li);
-                }
-
-                modalLinksSection.appendChild(heading);
-                modalLinksSection.appendChild(list);
             }
 
             function clearModalTranscriptSearch() {
@@ -5989,15 +6523,7 @@
                 }
 
                 if (modalTranscriptPlainView) {
-                    const plain = document.createElement('p');
-                    plain.className = 'transcript-plain';
-                    const fullText = concatenateCueTexts(store.cues);
-                    if (normalizedQuery) {
-                        plain.innerHTML = highlightMatch(fullText, trimmedQuery);
-                    } else {
-                        plain.textContent = fullText;
-                    }
-                    modalTranscriptBody.appendChild(plain);
+                    appendReadableTranscript(store.cues, normalizedQuery ? trimmedQuery : '');
                     if (normalizedQuery) {
                         const extras = new Map();
                         for (const hit of matchingHits) {
@@ -6009,11 +6535,8 @@
                             const heading = document.createElement('p');
                             heading.className = 'transcript-plain-lang';
                             heading.textContent = languageLabel(lang);
-                            const extra = document.createElement('p');
-                            extra.className = 'transcript-plain';
-                            extra.innerHTML = highlightMatch(concatenateCueTexts(cues), trimmedQuery);
                             modalTranscriptBody.appendChild(heading);
-                            modalTranscriptBody.appendChild(extra);
+                            appendReadableTranscript(cues, trimmedQuery);
                         }
                     }
                     setModalTranscriptSyncEnabled(false);
@@ -6168,7 +6691,9 @@
                 if (modalTranscriptSearchInput) modalTranscriptSearchInput.disabled = true;
                 modalTranscriptBody.innerHTML = '<p class="transcript-loading">Loading transcript…</p>';
                 setModalTranscriptHandleLabel(null);
-                renderModalLinks(null);
+                updateModalChaptersToggle(video);
+                updateModalLinksToggle(video);
+                updateModalPdfButton(video);
 
                 Promise.all([loadTranscript(video), loadAllCaptionTracks(video)]).then(([store, captionStore]) => {
                     if (modalSourceVideoPath !== video.path) return;
@@ -6183,7 +6708,6 @@
                     const displayStore = (track && track.status === 'ready' && track.cues.length) ? track : store;
                     modalTranscriptLang = (displayStore === track) ? lang : (primarySubtitleLang(video) || null);
                     populateModalTranscript(displayStore, video.path, modalTranscriptSearchInput?.value ?? '');
-                    renderModalLinks(store.rawText);
                     updateVideoUrlForModal(modalVideoId, time, hasClipEnd ? endTime : null);
                 });
 
@@ -6230,6 +6754,10 @@
                     resetModalTranscriptFollow();
                     updateModalTranscriptViewBtn();
                     clearModalTranscriptSearch();
+                    updateModalChaptersToggle(null);
+                    updateModalLinksToggle(null);
+                    updateModalPdfButton(null);
+                    if (isChaptersSheetOpen()) closeChaptersSheet({ restoreFocus: false });
                     clearVideoUrlHash();
                 }
 
@@ -6239,7 +6767,13 @@
             }
 
             document.addEventListener('keydown', (e) => {
-                if (e.key === 'Escape' && videoModalOverlay && !videoModalOverlay.hidden) {
+                if (e.key !== 'Escape') return;
+                if (isChaptersSheetOpen()) {
+                    e.preventDefault();
+                    closeChaptersSheet();
+                    return;
+                }
+                if (videoModalOverlay && !videoModalOverlay.hidden) {
                     closeVideoModal();
                 }
             });
@@ -6316,13 +6850,16 @@
             }
 
             function buildVideoHash(videoId, time, endTime) {
-                const t = Math.floor(typeof time === 'number' ? time : 0);
+                const t = quantizeClipSeconds(typeof time === 'number' ? time : 0);
+                const safeT = Number.isFinite(t) ? t : 0;
+                const e = quantizeClipSeconds(endTime);
+                const hasEnd = Number.isFinite(e);
                 let hash = `#${videoId}`;
-                if (t > 0 || (typeof endTime === 'number' && Number.isFinite(endTime))) {
-                    hash += `&t=${Math.max(0, t)}`;
+                if (safeT > 0 || hasEnd) {
+                    hash += `&t=${formatClipSeconds(safeT)}`;
                 }
-                if (typeof endTime === 'number' && Number.isFinite(endTime) && endTime > t) {
-                    hash += `&e=${Math.floor(endTime)}`;
+                if (hasEnd && e > safeT) {
+                    hash += `&e=${formatClipSeconds(e)}`;
                 }
                 const lang = captionLangPreference || readCaptionLangFromLocation();
                 if (lang && lang !== 'en') {
@@ -6355,12 +6892,15 @@
                     const eq = param.indexOf('=');
                     const key = eq === -1 ? param : param.substring(0, eq);
                     const raw = eq === -1 ? '' : param.substring(eq + 1);
-                    if (key === 't') {
-                        const timestamp = parseFloat(raw);
-                        if (!isNaN(timestamp) && timestamp >= 0) result.start = timestamp;
-                    } else if (key === 'e') {
-                        const timestamp = parseFloat(raw);
-                        if (!isNaN(timestamp) && timestamp >= 0) result.end = timestamp;
+                    if (key === 't' || key === 'e') {
+                        let rawValue = raw;
+                        try { rawValue = decodeURIComponent(raw); } catch {
+                            rawValue = raw;
+                        }
+                        const timestamp = quantizeClipSeconds(parseClipTime(rawValue));
+                        if (!Number.isFinite(timestamp)) continue;
+                        if (key === 't') result.start = timestamp;
+                        else result.end = timestamp;
                     } else if (key === 'from') {
                         try {
                             result.from = decodeURIComponent(raw);
@@ -6602,6 +7142,523 @@
             // ─────────────────────────────────────────────────────────────────────
             //  Build a video card
             // ─────────────────────────────────────────────────────────────────────
+            const CHAPTERS_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13"/><path d="M8 12h13"/><path d="M8 18h13"/><path d="M3 6h.01"/><path d="M3 12h.01"/><path d="M3 18h.01"/></svg>';
+            const CHAPTERS_CHEVRON_SVG = '<svg class="chapters-toggle-chevron" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+            const LINKS_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l1.92-1.92a5 5 0 0 0-7.07-7.07l-1.41 1.41"/><path d="M14 11a5 5 0 0 0-7.54-.54L4.54 12.39a5 5 0 0 0 7.07 7.07l1.41-1.41"/></svg>';
+            const LINKS_CHEVRON_SVG = '<svg class="links-toggle-chevron" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>';
+            const LINK_EXTERNAL_ICON_SVG = '<svg class="video-link-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
+            const OPEN_PDF_ICON_SVG = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>';
+
+            function chaptersForVideo(video) {
+                return Array.isArray(video?.chapters) ? video.chapters : [];
+            }
+
+            function normalizeLinks(raw) {
+                if (!Array.isArray(raw)) return [];
+                const links = [];
+                const seen = new Set();
+                for (const item of raw) {
+                    let url = '';
+                    let label = '';
+                    if (typeof item === 'string') {
+                        url = item.trim();
+                    } else if (item && typeof item === 'object') {
+                        url = String(item.url || item.href || '').trim();
+                        label = String(item.label || item.title || '').trim();
+                    }
+                    if (!url || seen.has(url)) continue;
+                    seen.add(url);
+                    if (!label) label = url;
+                    links.push({ url, label });
+                }
+                return links;
+            }
+
+            function linksForVideo(video) {
+                return normalizeLinks(video?.links);
+            }
+
+            function currentTimeForVideo(video) {
+                if (!video?.path) return 0;
+                const modalOpen = !!(
+                    videoModalOverlay
+                    && !videoModalOverlay.hidden
+                    && modalSourceVideoPath === video.path
+                    && modalVideoEl
+                );
+                if (modalOpen) return modalVideoEl.currentTime || 0;
+                const videoEl = videoElementMap[video.path];
+                const audioEl = audioElementMap[video.path];
+                if (videoEl && !videoEl.paused) return videoEl.currentTime || 0;
+                if (audioEl && !audioEl.paused) return audioEl.currentTime || 0;
+                if (videoEl) return videoEl.currentTime || 0;
+                if (audioEl) return audioEl.currentTime || 0;
+                return readClock(video.path) || 0;
+            }
+
+            function setActiveChapterButtons(root, time, { scroll = false } = {}) {
+                if (!root) return;
+                const buttons = root.querySelectorAll('.video-chapter');
+                if (!buttons.length) return;
+                let active = null;
+                for (const btn of buttons) {
+                    const start = Number.parseFloat(btn.dataset.chapterStart);
+                    if (Number.isFinite(start) && start <= time) active = btn;
+                }
+                buttons.forEach((btn) => {
+                    const isActive = btn === active;
+                    btn.classList.toggle('is-active', isActive);
+                    if (isActive) btn.setAttribute('aria-current', 'true');
+                    else btn.removeAttribute('aria-current');
+                });
+                if (scroll && active) {
+                    active.scrollIntoView({ block: 'nearest', behavior: motionSafeBehavior() });
+                }
+            }
+
+            function syncChaptersSheetActive({ scroll = false } = {}) {
+                if (!isChaptersSheetOpen() || !chaptersSheetVideo || !chaptersSheetList) return;
+                setActiveChapterButtons(
+                    chaptersSheetList,
+                    currentTimeForVideo(chaptersSheetVideo),
+                    { scroll }
+                );
+            }
+
+            function syncModalChaptersActive() {
+                syncChaptersSheetActive();
+            }
+
+            function setSheetToggleExpanded(expanded, mode) {
+                document.querySelectorAll(
+                    '.chapters-toggle-btn[aria-expanded="true"], .links-toggle-btn[aria-expanded="true"]'
+                ).forEach((btn) => {
+                    btn.setAttribute('aria-expanded', 'false');
+                });
+                if (!expanded || !chaptersSheetPreviousFocus || !mode) return;
+                const cls = mode === 'links' ? 'links-toggle-btn' : 'chapters-toggle-btn';
+                if (chaptersSheetPreviousFocus.classList?.contains(cls)) {
+                    chaptersSheetPreviousFocus.setAttribute('aria-expanded', 'true');
+                }
+            }
+
+            function setChaptersToggleExpanded(expanded) {
+                setSheetToggleExpanded(expanded, expanded ? (sheetMode || 'chapters') : null);
+            }
+
+            function labelChaptersToggle(btn, video) {
+                const count = chaptersForVideo(video).length;
+                btn.replaceChildren();
+                btn.insertAdjacentHTML('beforeend', CHAPTERS_ICON_SVG);
+                const label = document.createElement('span');
+                label.className = 'chapters-toggle-label';
+                label.appendChild(document.createTextNode('Chapters'));
+                const countEl = document.createElement('span');
+                countEl.className = 'chapters-toggle-label-count';
+                countEl.textContent = ` (${count})`;
+                label.appendChild(countEl);
+                btn.appendChild(label);
+                btn.insertAdjacentHTML('beforeend', CHAPTERS_CHEVRON_SVG);
+                btn.setAttribute('aria-label', `Show ${count} chapters for ${video.title}`);
+            }
+
+            function labelLinksToggle(btn, video) {
+                const count = linksForVideo(video).length;
+                btn.replaceChildren();
+                btn.insertAdjacentHTML('beforeend', LINKS_ICON_SVG);
+                const label = document.createElement('span');
+                label.className = 'links-toggle-label';
+                label.appendChild(document.createTextNode('Links'));
+                const countEl = document.createElement('span');
+                countEl.className = 'links-toggle-label-count';
+                countEl.textContent = ` (${count})`;
+                label.appendChild(countEl);
+                btn.appendChild(label);
+                btn.insertAdjacentHTML('beforeend', LINKS_CHEVRON_SVG);
+                btn.setAttribute('aria-label', `Show ${count} links for ${video.title}`);
+            }
+
+            function createChaptersToggleButton(video) {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'chapters-toggle-btn';
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-haspopup', 'dialog');
+                labelChaptersToggle(btn, video);
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    if (isChaptersSheetOpenFor(video)) closeChaptersSheet();
+                    else openChaptersSheet(video, btn);
+                });
+                return btn;
+            }
+
+            function createLinksToggleButton(video) {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'links-toggle-btn';
+                btn.setAttribute('aria-expanded', 'false');
+                btn.setAttribute('aria-haspopup', 'dialog');
+                labelLinksToggle(btn, video);
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    if (isLinksSheetOpenFor(video)) closeChaptersSheet();
+                    else openLinksSheet(video, btn);
+                });
+                return btn;
+            }
+
+            function mountModalHeaderAction(el, beforeEl) {
+                if (!el || !beforeEl?.parentElement) return;
+                beforeEl.parentElement.insertBefore(el, beforeEl);
+            }
+
+            function updateModalChaptersToggle(video) {
+                if (!modalChaptersToggleBtn || !modalCopyBtn) return;
+                if (!chaptersForVideo(video).length) {
+                    modalChaptersToggleBtn.setAttribute('aria-expanded', 'false');
+                    modalChaptersToggleBtn.remove();
+                    return;
+                }
+                labelChaptersToggle(modalChaptersToggleBtn, video);
+                const before = (modalLinksToggleBtn?.isConnected && modalLinksToggleBtn)
+                    || (modalPdfBtn?.isConnected && modalPdfBtn)
+                    || modalCopyBtn;
+                mountModalHeaderAction(modalChaptersToggleBtn, before);
+            }
+
+            function updateModalLinksToggle(video) {
+                if (!modalLinksToggleBtn || !modalCopyBtn) return;
+                if (!linksForVideo(video).length) {
+                    modalLinksToggleBtn.setAttribute('aria-expanded', 'false');
+                    modalLinksToggleBtn.remove();
+                    return;
+                }
+                labelLinksToggle(modalLinksToggleBtn, video);
+                const before = (modalPdfBtn?.isConnected && modalPdfBtn) || modalCopyBtn;
+                mountModalHeaderAction(modalLinksToggleBtn, before);
+            }
+
+            function updateModalPdfButton(video) {
+                if (!modalPdfBtn || !modalCopyBtn) return;
+                const pdfUrl = video?.presentation ? resolveAssetUrl(video.presentation) : '';
+                if (!pdfUrl) {
+                    modalPdfBtn.removeAttribute('href');
+                    modalPdfBtn.removeAttribute('aria-label');
+                    modalPdfBtn.replaceChildren();
+                    modalPdfBtn.remove();
+                    return;
+                }
+                modalPdfBtn.href = pdfUrl;
+                modalPdfBtn.setAttribute('aria-label', `Open presentation PDF for ${video.title} in a new tab`);
+                modalPdfBtn.innerHTML = `${OPEN_PDF_ICON_SVG} PDF`;
+                mountModalHeaderAction(modalPdfBtn, modalCopyBtn);
+            }
+
+            function isChaptersSheetOpen() {
+                return !!(chaptersSheet && !chaptersSheet.hidden && chaptersSheet.classList.contains('is-open'));
+            }
+
+            function isChaptersSheetOpenFor(video) {
+                return isChaptersSheetOpen() && sheetMode === 'chapters' && chaptersSheetVideo?.path === video?.path;
+            }
+
+            function isLinksSheetOpenFor(video) {
+                return isChaptersSheetOpen() && sheetMode === 'links' && chaptersSheetVideo?.path === video?.path;
+            }
+
+            function ensureChaptersSheet() {
+                if (chaptersSheet) return;
+
+                chaptersSheet = document.createElement('div');
+                chaptersSheet.className = 'chapters-sheet';
+                chaptersSheet.hidden = true;
+                chaptersSheet.setAttribute('role', 'presentation');
+
+                const backdrop = document.createElement('button');
+                backdrop.type = 'button';
+                backdrop.className = 'chapters-sheet-backdrop';
+                backdrop.setAttribute('aria-label', 'Close chapters');
+                backdrop.addEventListener('click', () => closeChaptersSheet());
+
+                chaptersSheetPanel = document.createElement('div');
+                chaptersSheetPanel.className = 'chapters-sheet-panel';
+                chaptersSheetPanel.setAttribute('role', 'dialog');
+                chaptersSheetPanel.setAttribute('aria-modal', 'true');
+                chaptersSheetPanel.setAttribute('aria-labelledby', 'chaptersSheetTitle');
+                chaptersSheetPanel.tabIndex = -1;
+
+                const handle = document.createElement('div');
+                handle.className = 'chapters-sheet-handle';
+                handle.setAttribute('aria-hidden', 'true');
+
+                const header = document.createElement('div');
+                header.className = 'chapters-sheet-header';
+
+                const titleWrap = document.createElement('div');
+                titleWrap.className = 'chapters-sheet-title-wrap';
+
+                chaptersSheetTitle = document.createElement('h2');
+                chaptersSheetTitle.className = 'chapters-sheet-title';
+                chaptersSheetTitle.id = 'chaptersSheetTitle';
+                chaptersSheetTitle.textContent = 'Chapters';
+
+                chaptersSheetSubtitle = document.createElement('p');
+                chaptersSheetSubtitle.className = 'chapters-sheet-subtitle';
+
+                titleWrap.appendChild(chaptersSheetTitle);
+                titleWrap.appendChild(chaptersSheetSubtitle);
+
+                chaptersSheetCloseBtn = document.createElement('button');
+                chaptersSheetCloseBtn.type = 'button';
+                chaptersSheetCloseBtn.className = 'chapters-sheet-close';
+                chaptersSheetCloseBtn.setAttribute('aria-label', 'Close chapters');
+                chaptersSheetCloseBtn.innerHTML = '&times;';
+                chaptersSheetCloseBtn.addEventListener('click', () => closeChaptersSheet());
+
+                header.appendChild(titleWrap);
+                header.appendChild(chaptersSheetCloseBtn);
+
+                chaptersSheetList = document.createElement('ol');
+                chaptersSheetList.className = 'chapters-sheet-list';
+
+                chaptersSheetPanel.appendChild(handle);
+                chaptersSheetPanel.appendChild(header);
+                chaptersSheetPanel.appendChild(chaptersSheetList);
+
+                chaptersSheet.appendChild(backdrop);
+                chaptersSheet.appendChild(chaptersSheetPanel);
+                document.body.appendChild(chaptersSheet);
+
+                chaptersSheet.addEventListener('keydown', (e) => {
+                    if (!isChaptersSheetOpen()) return;
+                    if (e.key === 'Escape') {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        closeChaptersSheet();
+                        return;
+                    }
+                    if (e.key !== 'Tab') return;
+                    const focusable = getFocusableElements(chaptersSheetPanel);
+                    if (!focusable.length) {
+                        e.preventDefault();
+                        chaptersSheetPanel.focus();
+                        return;
+                    }
+                    const first = focusable[0];
+                    const last = focusable[focusable.length - 1];
+                    if (e.shiftKey && document.activeElement === first) {
+                        e.preventDefault();
+                        last.focus();
+                    } else if (!e.shiftKey && document.activeElement === last) {
+                        e.preventDefault();
+                        first.focus();
+                    }
+                });
+            }
+
+            function fillChaptersList(listEl, video) {
+                const chapters = chaptersForVideo(video);
+                listEl.replaceChildren();
+                chapters.forEach((chapter) => {
+                    const item = document.createElement('li');
+                    const btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.className = 'video-chapter';
+                    btn.dataset.chapterStart = String(chapter.start);
+                    btn.setAttribute(
+                        'aria-label',
+                        `Jump to ${formatTime(chapter.start)}: ${chapter.description}`
+                    );
+
+                    const timeEl = document.createElement('span');
+                    timeEl.className = 'video-chapter-time';
+                    timeEl.setAttribute('aria-hidden', 'true');
+                    timeEl.textContent = formatTime(chapter.start);
+
+                    const descEl = document.createElement('span');
+                    descEl.className = 'video-chapter-desc';
+                    descEl.textContent = chapter.description;
+
+                    btn.appendChild(timeEl);
+                    btn.appendChild(descEl);
+                    btn.addEventListener('click', (e) => {
+                        e.stopPropagation();
+                        seekVideoToChapter(video, chapter.start);
+                        closeChaptersSheet({ restoreFocus: false });
+                    });
+                    item.appendChild(btn);
+                    listEl.appendChild(item);
+                });
+            }
+
+            function fillLinksList(listEl, video) {
+                const links = linksForVideo(video);
+                listEl.replaceChildren();
+                links.forEach((link) => {
+                    const item = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.className = 'video-link';
+                    a.href = link.url;
+                    a.target = '_blank';
+                    a.rel = 'noopener noreferrer';
+                    a.setAttribute('aria-label', `${link.label} (opens in a new tab)`);
+                    a.title = link.url;
+                    a.insertAdjacentHTML('beforeend', LINK_EXTERNAL_ICON_SVG);
+                    const text = document.createElement('span');
+                    text.className = 'video-link-text';
+                    text.textContent = link.label;
+                    a.appendChild(text);
+                    item.appendChild(a);
+                    listEl.appendChild(item);
+                });
+            }
+
+            function setSheetChrome(mode) {
+                const label = mode === 'links' ? 'Close links' : 'Close chapters';
+                const backdrop = chaptersSheet?.querySelector('.chapters-sheet-backdrop');
+                if (backdrop) backdrop.setAttribute('aria-label', label);
+                if (chaptersSheetCloseBtn) chaptersSheetCloseBtn.setAttribute('aria-label', label);
+            }
+
+            function openChaptersSheet(video, triggerBtn) {
+                if (!chaptersForVideo(video).length) return;
+                ensureChaptersSheet();
+                const token = ++chaptersSheetOpenToken;
+                sheetMode = 'chapters';
+                chaptersSheetVideo = video;
+                chaptersSheetPreviousFocus = triggerBtn || document.activeElement;
+                fillChaptersList(chaptersSheetList, video);
+                chaptersSheetTitle.textContent = 'Chapters';
+                chaptersSheetSubtitle.textContent = video.title;
+                setSheetChrome('chapters');
+                chaptersSheet.hidden = false;
+                // Force layout before adding is-open so the slide-in animates.
+                void chaptersSheet.offsetWidth;
+                chaptersSheet.classList.add('is-open');
+                document.body.dataset.chaptersSheetOpen = '1';
+                setSheetToggleExpanded(true, 'chapters');
+                syncChaptersSheetActive({ scroll: true });
+                requestAnimationFrame(() => {
+                    if (token !== chaptersSheetOpenToken) return;
+                    const active = chaptersSheetList.querySelector('.video-chapter.is-active');
+                    (active || chaptersSheetCloseBtn || chaptersSheetPanel).focus();
+                });
+            }
+
+            function openLinksSheet(video, triggerBtn) {
+                if (!linksForVideo(video).length) return;
+                ensureChaptersSheet();
+                const token = ++chaptersSheetOpenToken;
+                sheetMode = 'links';
+                chaptersSheetVideo = video;
+                chaptersSheetPreviousFocus = triggerBtn || document.activeElement;
+                fillLinksList(chaptersSheetList, video);
+                chaptersSheetTitle.textContent = 'Links';
+                chaptersSheetSubtitle.textContent = video.title;
+                setSheetChrome('links');
+                chaptersSheet.hidden = false;
+                void chaptersSheet.offsetWidth;
+                chaptersSheet.classList.add('is-open');
+                document.body.dataset.chaptersSheetOpen = '1';
+                setSheetToggleExpanded(true, 'links');
+                requestAnimationFrame(() => {
+                    if (token !== chaptersSheetOpenToken) return;
+                    const firstLink = chaptersSheetList.querySelector('.video-link');
+                    (firstLink || chaptersSheetCloseBtn || chaptersSheetPanel).focus();
+                });
+            }
+
+            function closeChaptersSheet({ restoreFocus = true } = {}) {
+                if (!chaptersSheet || chaptersSheet.hidden) return;
+                chaptersSheetOpenToken += 1;
+                chaptersSheet.classList.remove('is-open');
+                delete document.body.dataset.chaptersSheetOpen;
+                setSheetToggleExpanded(false, null);
+                const focusEl = chaptersSheetPreviousFocus;
+                chaptersSheetVideo = null;
+                chaptersSheetPreviousFocus = null;
+                sheetMode = null;
+
+                const finish = () => {
+                    chaptersSheet.hidden = true;
+                    if (chaptersSheetList) chaptersSheetList.replaceChildren();
+                    if (restoreFocus && focusEl && typeof focusEl.focus === 'function' && !isCoarsePointer()) {
+                        focusEl.focus();
+                    }
+                };
+
+                if (prefersReducedMotion()) {
+                    finish();
+                    return;
+                }
+                window.setTimeout(finish, 220);
+            }
+
+            function seekVideoToChapter(video, start) {
+                if (!video?.path || !Number.isFinite(start) || start < 0) return;
+                const videoId = generateVideoId(video);
+                rememberClock(video.path, start);
+                clearClipPlayback();
+
+                const modalOpen = !!(
+                    videoModalOverlay
+                    && !videoModalOverlay.hidden
+                    && modalSourceVideoPath === video.path
+                    && modalVideoEl
+                );
+
+                if (modalOpen) {
+                    try { modalVideoEl.currentTime = start; } catch {
+                        // Ignore seek errors if metadata is not ready yet.
+                    }
+                    playMedia(modalVideoEl);
+                    updateVideoUrlForModal(videoId, start);
+                    return;
+                }
+
+                const videoEl = videoElementMap[video.path];
+                const audioEl = audioElementMap[video.path];
+                if (audioEl) seekWhenReady(audioEl, start);
+                if (videoEl) {
+                    seekWhenReady(videoEl, start);
+                    playMedia(videoEl);
+                    videoEl.scrollIntoView({ behavior: motionSafeBehavior(), block: 'center' });
+                } else if (audioEl) {
+                    playMedia(audioEl);
+                }
+
+                const hash = buildVideoHash(videoId, start);
+                const newUrl = `${window.location.pathname}${window.location.search}${hash}`;
+                const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+                if (newUrl !== currentUrl) history.replaceState(null, '', newUrl);
+            }
+
+            function takeTalkSummary(video) {
+                const root = document.getElementById('talkSummaries');
+                const media = video && video.path;
+                if (!root || !media) return null;
+                const articles = root.querySelectorAll('.talk-summary');
+                for (let i = 0; i < articles.length; i++) {
+                    if (articles[i].getAttribute('data-media') === media) return articles[i];
+                }
+                return null;
+            }
+
+            function attachTalkSummary(infoDiv, video) {
+                const summary = takeTalkSummary(video);
+                if (!summary) return;
+                const heading = summary.querySelector('.talk-summary-title');
+                if (heading) heading.hidden = true;
+                infoDiv.appendChild(summary);
+            }
+
+            function settleTalkSummaries() {
+                const root = document.getElementById('talkSummaries');
+                if (!root) return;
+                if (root.querySelector('.talk-summary')) root.classList.add('is-visible');
+            }
+
             function createVideoCard(video) {
                 const card = document.createElement('article');
                 card.className = 'video-card';
@@ -6708,6 +7765,18 @@
                     pauseAllVideos(videoEl);
                     syncMediaToClock(videoEl, video.path);
                 });
+                if (chaptersForVideo(video).length) {
+                    const syncSheetFromCard = () => {
+                        if (isChaptersSheetOpenFor(video)) syncChaptersSheetActive();
+                    };
+                    videoEl.addEventListener('timeupdate', syncSheetFromCard);
+                    videoEl.addEventListener('seeked', syncSheetFromCard);
+                    const cardAudioForChapters = audioElementMap[video.path];
+                    if (cardAudioForChapters) {
+                        cardAudioForChapters.addEventListener('timeupdate', syncSheetFromCard);
+                        cardAudioForChapters.addEventListener('seeked', syncSheetFromCard);
+                    }
+                }
 
                 // ── info ──
                 const infoDiv = document.createElement('div');
@@ -6755,7 +7824,7 @@
                 metaDiv.appendChild(durSpan);
                 infoDiv.appendChild(metaDiv);
 
-                if (hasSubtitles(video) || video.presentation) {
+                if (hasSubtitles(video) || video.presentation || chaptersForVideo(video).length || linksForVideo(video).length) {
                     const actionsRow = document.createElement('div');
                     actionsRow.className = 'video-card-actions';
 
@@ -6783,6 +7852,14 @@
                         }
                     }
 
+                    if (chaptersForVideo(video).length) {
+                        actionsRow.appendChild(createChaptersToggleButton(video));
+                    }
+
+                    if (linksForVideo(video).length) {
+                        actionsRow.appendChild(createLinksToggleButton(video));
+                    }
+
                     if (video.presentation) {
                         const pdfUrl = resolveAssetUrl(video.presentation);
 
@@ -6801,13 +7878,15 @@
                         pdfView.target = '_blank';
                         pdfView.rel = 'noopener noreferrer';
                         pdfView.setAttribute('aria-label', `Open presentation PDF for ${video.title} in a new tab`);
-                        pdfView.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg> Open PDF';
+                        pdfView.innerHTML = `${OPEN_PDF_ICON_SVG} Open PDF`;
                         pdfView.addEventListener('click', (e) => e.stopPropagation());
                         actionsRow.appendChild(pdfView);
                     }
 
                     infoDiv.appendChild(actionsRow);
                 }
+
+                attachTalkSummary(infoDiv, video);
 
                 card.appendChild(infoDiv);
 
@@ -6855,6 +7934,8 @@
                     : '';
                 await attachConventionalSubtitles(videos);
                 videos.forEach((v) => {
+                    v.chapters = normalizeChapters(v.chapters);
+                    v.links = normalizeLinks(v.links);
                     applyDiscoveredSubtitleLangs(v);
                     if (v.subtitle) v.subtitle = resolveAssetUrl(v.subtitle);
                     if (v.subtitles && typeof v.subtitles === 'object') {
@@ -6910,6 +7991,8 @@
                     section.appendChild(grid);
                     container.appendChild(section);
                 });
+
+                settleTalkSummaries();
 
                 // Initialize videoCardMap after all cards are created
                 const videoCardMap = new Map();
@@ -7226,7 +8309,7 @@
                         const duration = document.createElement('span');
                         duration.className = 'top-clip-duration';
                         duration.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>';
-                        duration.appendChild(document.createTextNode(`${clip.end - clip.start}s`));
+                        duration.appendChild(document.createTextNode(`${formatClipSeconds(clip.end - clip.start)}s`));
 
                         const quote = document.createElement('p');
                         quote.className = 'top-clip-quote';

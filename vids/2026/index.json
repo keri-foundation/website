@@ -56,7 +56,34 @@
       "speaker": "Samuel Smith",
       "path": "talks/Its-KERI-or-Surveillance.mp4",
       "duration": "54:25",
-      "subtitle": "talks/Its-KERI-or-Surveillance.srt"
+      "subtitle": "talks/Its-KERI-or-Surveillance.srt",
+      "presentation": "talks/Its-KERI-or-Surveillance.pdf",
+      "chapters": [
+        {
+          "start": "08:44",
+          "description": "AI & Human Authority"
+        },
+        {
+          "start": "18:26",
+          "description": "Cyber Resilience After Breach"
+        },
+        {
+          "start": "27:00",
+          "description": "Privacy Without Surveillance"
+        },
+        {
+          "start": "34:52",
+          "description": "The Stark Choice Of Security"
+        },
+        {
+          "start": "42:08",
+          "description": "The Race Against Time; Keeping Humans Digitally Free"
+        },
+        {
+          "start": "51:25",
+          "description": "State Endorsed Digital Identity"
+        }
+      ]
     }
   ]
 }

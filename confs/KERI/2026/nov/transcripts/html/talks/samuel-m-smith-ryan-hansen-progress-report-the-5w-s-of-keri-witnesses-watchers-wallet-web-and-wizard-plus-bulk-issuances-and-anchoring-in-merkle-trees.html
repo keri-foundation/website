@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samuel M. Smith &amp; Ryan Hansen – Progress report: The 5W’s of KERI: Witnesses, Watchers, Wallet, Web, and Wizard PLUS Bulk issuances and anchoring in Merkle Trees — Transcript</title>
-  <meta name="description" content="Transcript: Samuel M. Smith &amp; Ryan Hansen – Progress report: The 5W’s of KERI: Witnesses, Watchers, Wallet, Web, and Wizard PLUS Bulk issuances and anchoring in Merkle Trees (Mini Conference nov 2026 · 58:33)">
+  <meta name="description" content="AI generated summary, if a statement needs explication, see the video. Ryan Hansen reports on the five Ws that carry KERI's infrastructure: wallet, witnesses, watchers, web, and…">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
@@ -100,6 +100,26 @@
       border-color: var(--ink);
     }
     .actions a.primary:hover { background: #0a1270; }
+    .summary {
+      background: var(--panel);
+      border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+      border-radius: 10px;
+      padding: 1rem 1.25rem 0.35rem;
+      margin-bottom: 1.5rem;
+    }
+    .summary h2 {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.65rem;
+    }
+    .summary p {
+      margin: 0 0 0.85rem;
+      font-size: 1.05rem;
+    }
     article {
       background: var(--panel);
       border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
@@ -180,6 +200,13 @@
         <a href="../../../">Video gallery</a>
       </div>
     </header>
+    <section class="summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <p>AI generated summary, if a statement needs explication, see the video.</p>
+      <p>Ryan Hansen reports on the five Ws that carry KERI's infrastructure: wallet, witnesses, watchers, web, and wizard. The wallet holds an identifier, its keys, and the events it emits — inception, rotation, and interaction — in a key event log. Witnesses are independent of the controller. They receipt those events so the key state stays available when the wallet is offline. Watchers make duplicity something anyone can prove. A watcher fails by not watching, not by lying about what it saw.</p>
+      <p>Web means discovery and transport. Infrastructure can be found, and messages can move, over ordinary protocols without KERI trusting the network that carries them. Wizard is the push to make that usable: safe defaults, thinner APIs, and product around the protocol.</p>
+      <p>He then locates the code. Locksmith is the desktop wallet, donated by healthKERI. Fortweb is the browser build, and FortiOS the mobile apps. kf-boot onboards an identifier and sets up its witnesses. With Samuel M. Smith he covers what a relying party should do when duplicity appears: events from before the fork can still be trusted, and new signatures cannot, until key state is reconciled. A witness pool the controller alone operates is not enough, because that controller can eclipse the readers. The other party needs watchers they control. Without anchoring, issuances do not survive a rotation.</p>
+    </section>
     <article>
     <p class="cue" id="t0">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees">0:00</a>
@@ -195,7 +222,7 @@
     </p>
     <p class="cue" id="t15">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=15">0:15</a>
-      <span class="cue-text">bring the five Ws to life. So I'm going to give you a quick rundown of what the five</span>
+      <span class="cue-text">bring the five W's to life. So I'm going to give you a quick rundown of what the five</span>
     </p>
     <p class="cue" id="t20">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=20">0:20</a>
@@ -219,7 +246,7 @@
     </p>
     <p class="cue" id="t52">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=52">0:52</a>
-      <span class="cue-text">first of all, I'll give you a quick why when it comes to the five Ws. KERI, as</span>
+      <span class="cue-text">first of all, I'll give you a quick why when it comes to the five W's. KERI, as</span>
     </p>
     <p class="cue" id="t59">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=59">0:59</a>
@@ -283,7 +310,7 @@
     </p>
     <p class="cue" id="t158">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=158">2:38</a>
-      <span class="cue-text">quickly. Wallet, witnesses, watchers, web, and wizard. So each one of these are</span>
+      <span class="cue-text">quickly. Wallet, Witnesses, Watchers, Web, and Wizard. So each one of these are</span>
     </p>
     <p class="cue" id="t170">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=170">2:50</a>
@@ -491,7 +518,7 @@
     </p>
     <p class="cue" id="t484">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=484">8:04</a>
-      <span class="cue-text">identity. This is with all these mechanisms you can you can actually verify</span>
+      <span class="cue-text">identity. This is with all these mechanisms you can actually verify</span>
     </p>
     <p class="cue" id="t488">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=488">8:08</a>
@@ -499,11 +526,11 @@
     </p>
     <p class="cue" id="t493">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=493">8:13</a>
-      <span class="cue-text">So duplicity is in no I got a mic. Duplicity is independently verifiable. It</span>
+      <span class="cue-text">– So duplicity is independently verifiable. It</span>
     </p>
     <p class="cue" id="t499">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=499">8:19</a>
-      <span class="cue-text">isn't something you ever have to trust somebody fund. Anybody that detects</span>
+      <span class="cue-text">isn't something you ever have to trust somebody on. Anybody that detects</span>
     </p>
     <p class="cue" id="t503">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=503">8:23</a>
@@ -511,15 +538,11 @@
     </p>
     <p class="cue" id="t507">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=507">8:27</a>
-      <span class="cue-text">it's duplicity. You don't have to trust me. Yeah. Yeah. Great. Thanks for that. So</span>
-    </p>
-    <p class="cue" id="t515">
-      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=515">8:35</a>
-      <span class="cue-text">really</span>
+      <span class="cue-text">it's duplicity. You don't have to trust me. – Thanks for that.</span>
     </p>
     <p class="cue" id="t522">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=522">8:42</a>
-      <span class="cue-text">the key thing for watcher is somebody bothered to watch with. You just it</span>
+      <span class="cue-text">– So really the key thing for watcher is somebody bothered to watch with. – It</span>
     </p>
     <p class="cue" id="t529">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=529">8:49</a>
@@ -527,19 +550,19 @@
     </p>
     <p class="cue" id="t533">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=533">8:53</a>
-      <span class="cue-text">you don't trust the watcher. It just proves to you its odd duplicity. So the</span>
+      <span class="cue-text">you don't trust the watcher. It just proves to you its own duplicity. So the</span>
     </p>
     <p class="cue" id="t538">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=538">8:58</a>
-      <span class="cue-text">worst that a watcher can do is not watch. Right. Yes. So to that point, if you want</span>
+      <span class="cue-text">worst that a watcher can do is not watch. – So to that point, if you want</span>
     </p>
     <p class="cue" id="t543">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=543">9:03</a>
-      <span class="cue-text">to weaken the security and anti</span>
+      <span class="cue-text">to weaken the security and anti-fraud</span>
     </p>
     <p class="cue" id="t549">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=549">9:09</a>
-      <span class="cue-text">-fraud properties of KERI, then as they say in the movie, get rid of that monkey.</span>
+      <span class="cue-text">properties of KERI, then as they say in the movie, get rid of that monkey.</span>
     </p>
     <p class="cue" id="t554">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=554">9:14</a>
@@ -555,7 +578,7 @@
     </p>
     <p class="cue" id="t572">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=572">9:32</a>
-      <span class="cue-text">enough to remember. Remember that one. But there's a number of things that web</span>
+      <span class="cue-text">enough to remember that one. But there's a number of things that web</span>
     </p>
     <p class="cue" id="t580">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=580">9:40</a>
@@ -563,11 +586,11 @@
     </p>
     <p class="cue" id="t588">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=588">9:48</a>
-      <span class="cue-text">know, how would you describe it, Sam? and discovery of other witnesses. Yeah,</span>
+      <span class="cue-text">know, how would you describe it, Sam? Discovery of other witnesses…</span>
     </p>
     <p class="cue" id="t594">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=594">9:54</a>
-      <span class="cue-text">discovery of infrastructure. We don't need a secure discovery mechanism. We just need</span>
+      <span class="cue-text">– Discovery of infrastructure. We don't need a secure discovery mechanism. We just need</span>
     </p>
     <p class="cue" id="t598">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=598">9:58</a>
@@ -575,7 +598,7 @@
     </p>
     <p class="cue" id="t603">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=603">10:03</a>
-      <span class="cue-text">discovery instead of inventing a new discovery mechanism. Right. Yeah. The</span>
+      <span class="cue-text">discovery instead of inventing a new discovery mechanism. – The</span>
     </p>
     <p class="cue" id="t608">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=608">10:08</a>
@@ -591,7 +614,7 @@
     </p>
     <p class="cue" id="t619">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=619">10:19</a>
-      <span class="cue-text">that. like that between these different parts of the infrastructure wallets and</span>
+      <span class="cue-text">that between these different parts of the infrastructure wallets and</span>
     </p>
     <p class="cue" id="t623">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=623">10:23</a>
@@ -611,15 +634,15 @@
     </p>
     <p class="cue" id="t651">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=651">10:51</a>
-      <span class="cue-text">without any particular issues or any special needs. It doesn't trust anything</span>
+      <span class="cue-text">without any particular issues or any special needs. – It doesn't trust anything</span>
     </p>
     <p class="cue" id="t658">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=658">10:58</a>
-      <span class="cue-text">that the web does. Right. It doesn't need to trust, but it can certainly use it to</span>
+      <span class="cue-text">that the web does. It doesn't need to trust, but it can certainly use it to</span>
     </p>
     <p class="cue" id="t664">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=664">11:04</a>
-      <span class="cue-text">send stuff. Now, it's kind of it's interesting because we talk about trust a</span>
+      <span class="cue-text">send stuff. – Now, it's interesting because we talk about trust a</span>
     </p>
     <p class="cue" id="t667">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=667">11:07</a>
@@ -631,7 +654,7 @@
     </p>
     <p class="cue" id="t676">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=676">11:16</a>
-      <span class="cue-text">trusting anything and being making it verifiable and provable. And that's what</span>
+      <span class="cue-text">trusting anything and making it verifiable and provable. And that's what</span>
     </p>
     <p class="cue" id="t682">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=682">11:22</a>
@@ -643,7 +666,7 @@
     </p>
     <p class="cue" id="t695">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=695">11:35</a>
-      <span class="cue-text">guess it's a little more, a little harder to describe exactly. The idea would be</span>
+      <span class="cue-text">guess it's a little harder to describe exactly. The idea would be</span>
     </p>
     <p class="cue" id="t701">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=701">11:41</a>
@@ -655,7 +678,7 @@
     </p>
     <p class="cue" id="t710">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=710">11:50</a>
-      <span class="cue-text">suggest with Wizard. Making KERI as usable as possible for as many people as possible</span>
+      <span class="cue-text">suggest with wizard. Making KERI as usable as possible for as many people as possible</span>
     </p>
     <p class="cue" id="t719">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=719">11:59</a>
@@ -687,7 +710,7 @@
     </p>
     <p class="cue" id="t760">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=760">12:40</a>
-      <span class="cue-text">easier path. And ultimately what we what wizard concerns itself with is trying KERI</span>
+      <span class="cue-text">easier path. And ultimately what wizard concerns itself with is trying KERI</span>
     </p>
     <p class="cue" id="t768">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=768">12:48</a>
@@ -703,15 +726,15 @@
     </p>
     <p class="cue" id="t785">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=785">13:05</a>
-      <span class="cue-text">do so. So that's the intro to what the five Ws are. So now as far as the state of</span>
+      <span class="cue-text">do so. So that's the intro to what the five W's are. So now as far as the state of</span>
     </p>
     <p class="cue" id="t795">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=795">13:15</a>
-      <span class="cue-text">those five W's itself. We have the KERI Foundation has a repository or a presence</span>
+      <span class="cue-text">those five W's itself. The KERI Foundation has a repository on GitHub</span>
     </p>
-    <p class="cue" id="t803">
-      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=803">13:23</a>
-      <span class="cue-text">on GitHub under KERI Foundation and within that organization</span>
+    <p class="cue" id="t804">
+      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=804">13:24</a>
+      <span class="cue-text">under https://github.com/keri-foundation and within that organization</span>
     </p>
     <p class="cue" id="t809">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=809">13:29</a>
@@ -727,7 +750,7 @@
     </p>
     <p class="cue" id="t826">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=826">13:46</a>
-      <span class="cue-text">funnels down from Locksmith to these other repos. One of them we have one called</span>
+      <span class="cue-text">funnels down from Locksmith to these other repos. We have one called</span>
     </p>
     <p class="cue" id="t833">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=833">13:53</a>
@@ -735,11 +758,11 @@
     </p>
     <p class="cue" id="t838">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=838">13:58</a>
-      <span class="cue-text">KERI Foundation from HealthKERI which is a company building KERI based stuff in the</span>
+      <span class="cue-text">KERI Foundation from healthKERI which is a company building KERI based stuff in the</span>
     </p>
     <p class="cue" id="t844">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=844">14:04</a>
-      <span class="cue-text">healthcare sector. – Yeah good call out. HealthKERI has given us a lot of good</span>
+      <span class="cue-text">healthcare sector. – Yeah, good call-out. healthKERI has given us a lot of good</span>
     </p>
     <p class="cue" id="t849">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=849">14:09</a>
@@ -751,7 +774,7 @@
     </p>
     <p class="cue" id="t858">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=858">14:18</a>
-      <span class="cue-text">environment. And from FortWeb, we're able to bundle and create FortiOS or FortiOS,</span>
+      <span class="cue-text">environment. And from Fortweb, we're able to bundle and create Fortios or FortiOS,</span>
     </p>
     <p class="cue" id="t866">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=866">14:26</a>
@@ -779,11 +802,11 @@
     </p>
     <p class="cue" id="t904">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=904">15:04</a>
-      <span class="cue-text">We have WitnessHK and we have WatcherHK, both of which the HK in those once again</span>
+      <span class="cue-text">We have witness-hk and we have watcher-hk, both of which the HK in those once again</span>
     </p>
     <p class="cue" id="t910">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=910">15:10</a>
-      <span class="cue-text">is HealthKERI. They were the originators of those libraries and donated them very</span>
+      <span class="cue-text">is healthKERI. They were the originators of those libraries and donated them very</span>
     </p>
     <p class="cue" id="t915">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=915">15:15</a>
@@ -791,7 +814,7 @@
     </p>
     <p class="cue" id="t920">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=920">15:20</a>
-      <span class="cue-text">build on even more. And then we have also KF mailbox which has a little asterisk</span>
+      <span class="cue-text">build on even more. And then we have also kf-mailbox which has a little asterisk</span>
     </p>
     <p class="cue" id="t927">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=927">15:27</a>
@@ -807,7 +830,7 @@
     </p>
     <p class="cue" id="t942">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=942">15:42</a>
-      <span class="cue-text">And then, so, I mean, this basically… There we go. The state of the key state</span>
+      <span class="cue-text">The state of the key state</span>
     </p>
     <p class="cue" id="t953">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=953">15:53</a>
@@ -819,19 +842,15 @@
     </p>
     <p class="cue" id="t966">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=966">16:06</a>
-      <span class="cue-text">able to prove our key state. And with it, that's where we are. So silly pictures. So</span>
-    </p>
-    <p class="cue" id="t974">
-      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=974">16:14</a>
-      <span class="cue-text">that's</span>
+      <span class="cue-text">able to prove our key state. And with it, that's where we are. So silly pictures.</span>
     </p>
     <p class="cue" id="t979">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=979">16:19</a>
-      <span class="cue-text">pretty much it for my particular slide. Sam, unless there's any questions, I got</span>
+      <span class="cue-text">So that's pretty much it for my particular slide. Sam, unless there's any questions, I got</span>
     </p>
     <p class="cue" id="t983">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=983">16:23</a>
-      <span class="cue-text">through that quicker than I anticipated, but well, we can certainly go into in more</span>
+      <span class="cue-text">through that quicker than I anticipated… – Well, we can certainly go into in more</span>
     </p>
     <p class="cue" id="t987">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=987">16:27</a>
@@ -843,15 +862,15 @@
     </p>
     <p class="cue" id="t998">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=998">16:38</a>
-      <span class="cue-text">questions. and saw him use the whiteboard to answer those. I've got a question about</span>
+      <span class="cue-text">questions and saw him use the whiteboard to answer those. – I've got a question about</span>
     </p>
     <p class="cue" id="t1003">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1003">16:43</a>
-      <span class="cue-text">kf-boot. Is this on? Okay. It's going to the video. If the light's on, it's on.</span>
+      <span class="cue-text">kf-boot.</span>
     </p>
-    <p class="cue" id="t1011">
-      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1011">16:51</a>
-      <span class="cue-text">It's just the reverb of like boom. Yeah. All right. So for kf-boot, you said that it</span>
+    <p class="cue" id="t1014">
+      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1014">16:54</a>
+      <span class="cue-text">So for kf-boot, you said that it</span>
     </p>
     <p class="cue" id="t1016">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1016">16:56</a>
@@ -879,7 +898,7 @@
     </p>
     <p class="cue" id="t1040">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1040">17:20</a>
-      <span class="cue-text">then we can sort of come to some questions to the other parts? Evan could probably</span>
+      <span class="cue-text">then we can sort of come to some questions to the other parts? – Evan could probably</span>
     </p>
     <p class="cue" id="t1044">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1044">17:24</a>
@@ -887,11 +906,11 @@
     </p>
     <p class="cue" id="t1049">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1049">17:29</a>
-      <span class="cue-text">and that communication process. Yeah. So, I mean, you came from when we got this</span>
+      <span class="cue-text">and that communication process. – Yeah. So, I mean, you came from when we got this</span>
     </p>
     <p class="cue" id="t1055">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1055">17:35</a>
-      <span class="cue-text">infrastructure from HealthKERI, they had their like healthcare platform that they</span>
+      <span class="cue-text">infrastructure from healthKERI, they had their like healthcare platform that they</span>
     </p>
     <p class="cue" id="t1059">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1059">17:39</a>
@@ -907,15 +926,15 @@
     </p>
     <p class="cue" id="t1074">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1074">17:54</a>
-      <span class="cue-text">an open source identity infrastructure orchestration like Ryan's. Kind of like a</span>
+      <span class="cue-text">an open source identity infrastructure orchestration like Ryan's. – Kind of like a</span>
     </p>
     <p class="cue" id="t1079">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1079">17:59</a>
-      <span class="cue-text">plug-in infrastructure, right? Exactly. Yeah. So anybody that creates witnesses,</span>
+      <span class="cue-text">plugin infrastructure, right? So anybody that creates witnesses,</span>
     </p>
     <p class="cue" id="t1083">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1083">18:03</a>
-      <span class="cue-text">anybody that creates a watch or service could register with kf-boot, right? Do</span>
+      <span class="cue-text">anybody that creates a watcher service could register with kf-boot, right? Do</span>
     </p>
     <p class="cue" id="t1089">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1089">18:09</a>
@@ -927,11 +946,11 @@
     </p>
     <p class="cue" id="t1100">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1100">18:20</a>
-      <span class="cue-text">Yeah, like when we set everything up on DigitalOcean. Yeah. So you'd have to</span>
+      <span class="cue-text">– Yeah, like when we set everything up on DigitalOcean.</span>
     </p>
     <p class="cue" id="t1105">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1105">18:25</a>
-      <span class="cue-text">they'd have to add up like a connector. But if you have that connector, then</span>
+      <span class="cue-text">– They'd have to add up like a connector. But if you have that connector, then</span>
     </p>
     <p class="cue" id="t1110">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1110">18:30</a>
@@ -939,7 +958,7 @@
     </p>
     <p class="cue" id="t1115">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1115">18:35</a>
-      <span class="cue-text">witnesses from this service. and I want a watcher from this service. Part of why I</span>
+      <span class="cue-text">witnesses from this service and I want a watcher from this service. – Part of why I</span>
     </p>
     <p class="cue" id="t1121">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1121">18:41</a>
@@ -983,7 +1002,7 @@
     </p>
     <p class="cue" id="t1175">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1175">19:35</a>
-      <span class="cue-text">really what it's doing. at this point is kind of facilitating that initial</span>
+      <span class="cue-text">really what it's doing at this point is kind of facilitating that initial</span>
     </p>
     <p class="cue" id="t1181">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1181">19:41</a>
@@ -999,7 +1018,7 @@
     </p>
     <p class="cue" id="t1193">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1193">19:53</a>
-      <span class="cue-text">much to be done on that. So, yeah. So, I guess I have one. I guess for GLEIF, the</span>
+      <span class="cue-text">much to be done on that. – So, I guess I have one. I guess for GLEIF, the</span>
     </p>
     <p class="cue" id="t1202">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1202">20:02</a>
@@ -1035,19 +1054,19 @@
     </p>
     <p class="cue" id="t1258">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1258">20:58</a>
-      <span class="cue-text">That's not kf-boot I think. No, no, that doesn't sound like it to me, but we</span>
+      <span class="cue-text">– That's not kf-boot I think. – No, no, that doesn't sound like it to me, but we</span>
     </p>
     <p class="cue" id="t1262">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1262">21:02</a>
-      <span class="cue-text">probably need to go into that a little bit more and understand because I would need</span>
+      <span class="cue-text">probably need to go into that a little bit more because that would need</span>
     </p>
     <p class="cue" id="t1265">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1265">21:05</a>
-      <span class="cue-text">to understand implications of what you're I think what she's asking is it that's</span>
+      <span class="cue-text">to understand implications of what you're… – I think what she's asking is it that's</span>
     </p>
     <p class="cue" id="t1270">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1270">21:10</a>
-      <span class="cue-text">really the wallet the open source wallets would be able to do that kf-boot is</span>
+      <span class="cue-text">really the wallet the open source wallets would be able to do that. kf-boot is</span>
     </p>
     <p class="cue" id="t1275">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1275">21:15</a>
@@ -1091,15 +1110,15 @@
     </p>
     <p class="cue" id="t1329">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1329">22:09</a>
-      <span class="cue-text">sort of plug-in architecture. It's just, you know, it's a resource thing. So, as</span>
+      <span class="cue-text">sort of plugin architecture. It's just, you know, it's a resource thing. – So, as</span>
     </p>
     <p class="cue" id="t1334">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1334">22:14</a>
-      <span class="cue-text">you see here, this KERI Foundation, that's actually a plug-in within this wallet</span>
+      <span class="cue-text">you see here, this KERI Foundation, that's actually a plugin within this wallet</span>
     </p>
     <p class="cue" id="t1337">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1337">22:17</a>
-      <span class="cue-text">infrastructure. The idea would be that many providers could provide plug-ins that</span>
+      <span class="cue-text">infrastructure. The idea would be that many providers could provide plugins that</span>
     </p>
     <p class="cue" id="t1342">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1342">22:22</a>
@@ -1107,11 +1126,11 @@
     </p>
     <p class="cue" id="t1345">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1345">22:25</a>
-      <span class="cue-text">services they have available and set up based on that. So, we do have the plug-in</span>
+      <span class="cue-text">services they have available and set up based on that. – So, we do have the plugin</span>
     </p>
     <p class="cue" id="t1349">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1349">22:29</a>
-      <span class="cue-text">stuff, but not the other provider. Thanks for the clarification. So, I'm always</span>
+      <span class="cue-text">stuff, but not the other provider. – Thanks for the clarification. – So, I'm always</span>
     </p>
     <p class="cue" id="t1354">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1354">22:34</a>
@@ -1123,11 +1142,11 @@
     </p>
     <p class="cue" id="t1372">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1372">22:52</a>
-      <span class="cue-text">How does that surface to the user? To the Verify, for example. I mean, there's… it's</span>
+      <span class="cue-text">How does that surface to the user? To the verifier, for example?</span>
     </p>
-    <p class="cue" id="t1378">
-      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1378">22:58</a>
-      <span class="cue-text">pretty open to however an organization wants to implement that kind of</span>
+    <p class="cue" id="t1377">
+      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1377">22:57</a>
+      <span class="cue-text">– It's pretty open to however an organization wants to implement that kind of</span>
     </p>
     <p class="cue" id="t1382">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1382">23:02</a>
@@ -1159,7 +1178,7 @@
     </p>
     <p class="cue" id="t1413">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1413">23:33</a>
-      <span class="cue-text">organization. So the mailbox can help with that because you can post duplicity</span>
+      <span class="cue-text">organization. – So the mailbox can help with that because you can post duplicity</span>
     </p>
     <p class="cue" id="t1418">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1418">23:38</a>
@@ -1223,19 +1242,19 @@
     </p>
     <p class="cue" id="t1493">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1493">24:53</a>
-      <span class="cue-text">did a recovery rotation. It cleaned up their key state. Now I can trust it. I</span>
+      <span class="cue-text">did a recovery rotation. It cleaned up their key state. Now I can trust it.</span>
     </p>
     <p class="cue" id="t1498">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1498">24:58</a>
-      <span class="cue-text">can, but for that, so it is an important an important user experience that we</span>
+      <span class="cue-text">So it is an important user experience that we</span>
     </p>
     <p class="cue" id="t1504">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1504">25:04</a>
-      <span class="cue-text">haven't we're just at the point where people building wallets need to address</span>
+      <span class="cue-text">haven't… we're just at the point where people building wallets need to address</span>
     </p>
     <p class="cue" id="t1510">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1510">25:10</a>
-      <span class="cue-text">that. So it's a really good problem to solve. And just to reiterate this, we</span>
+      <span class="cue-text">that. So it's a really good problem to solve. – And just to reiterate this, we</span>
     </p>
     <p class="cue" id="t1515">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1515">25:15</a>
@@ -1267,7 +1286,7 @@
     </p>
     <p class="cue" id="t1548">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1548">25:48</a>
-      <span class="cue-text">now in the foundation. I want to go back to the point about the wallet being the</span>
+      <span class="cue-text">now in the foundation. – I want to go back to the point about the wallet being the</span>
     </p>
     <p class="cue" id="t1552">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1552">25:52</a>
@@ -1295,19 +1314,19 @@
     </p>
     <p class="cue" id="t1584">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1584">26:24</a>
-      <span class="cue-text">be verified by a copy of the events. Yeah, well your witnesses hold a copy of your</span>
+      <span class="cue-text">be verified by a copy of the events. – Yeah, well your witnesses hold a copy of your</span>
     </p>
     <p class="cue" id="t1589">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1589">26:29</a>
-      <span class="cue-text">log. Yeah, witnesses have a copy. That's recovery aspect of things. No, no. That's</span>
+      <span class="cue-text">log. – Witnesses have a copy. That's recovery aspect of things. – No, no. That's</span>
     </p>
     <p class="cue" id="t1593">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1593">26:33</a>
-      <span class="cue-text">for anybody to verify. Right. Okay. So they don't have to look in your wallet to</span>
+      <span class="cue-text">for anybody to verify. So they don't have to look in your wallet to</span>
     </p>
     <p class="cue" id="t1597">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1597">26:37</a>
-      <span class="cue-text">know what your log looks like. They just ask your witnesses. Do I only have one</span>
+      <span class="cue-text">know what your log looks like. They just ask your witnesses. – Do I only have one</span>
     </p>
     <p class="cue" id="t1600">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1600">26:40</a>
@@ -1315,11 +1334,11 @@
     </p>
     <p class="cue" id="t1604">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1604">26:44</a>
-      <span class="cue-text">my phone? Well, there's different wallet architectures. I know the rooting guys are</span>
+      <span class="cue-text">my phone? – Well, there's different wallet architectures. I know the rooting guys are</span>
     </p>
     <p class="cue" id="t1607">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1607">26:47</a>
-      <span class="cue-text">here and there's an open source wallet that Gleif uses called the Signify TS</span>
+      <span class="cue-text">here and there's an open source wallet that GLEIF uses called the signify-ts</span>
     </p>
     <p class="cue" id="t1612">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1612">26:52</a>
@@ -1327,7 +1346,7 @@
     </p>
     <p class="cue" id="t1618">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1618">26:58</a>
-      <span class="cue-text">your private keys. Everything else is in the cloud. Well, right. That's kind of</span>
+      <span class="cue-text">your private keys. Everything else is in the cloud. – Well, right. That's kind of</span>
     </p>
     <p class="cue" id="t1623">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1623">27:03</a>
@@ -1347,7 +1366,7 @@
     </p>
     <p class="cue" id="t1641">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1641">27:21</a>
-      <span class="cue-text">somewhere under my control. I mean as we've been implemented right now that's</span>
+      <span class="cue-text">somewhere under my control. – As we're implementing right now that's</span>
     </p>
     <p class="cue" id="t1645">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1645">27:25</a>
@@ -1383,7 +1402,7 @@
     </p>
     <p class="cue" id="t1687">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1687">28:07</a>
-      <span class="cue-text">in a secure enclave, secure enclaves have the property that you can't export the</span>
+      <span class="cue-text">in a secure enclave, they have the property that you can't export the</span>
     </p>
     <p class="cue" id="t1692">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1692">28:12</a>
@@ -1395,7 +1414,7 @@
     </p>
     <p class="cue" id="t1706">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1706">28:26</a>
-      <span class="cue-text">them don't. So it's a property of what they can do. because KERI supports</span>
+      <span class="cue-text">them don't. So it's a property of what they can do. Because KERI supports</span>
     </p>
     <p class="cue" id="t1712">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1712">28:32</a>
@@ -1403,7 +1422,7 @@
     </p>
     <p class="cue" id="t1720">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1720">28:40</a>
-      <span class="cue-text">your identifier, each key stored on a different device. And as long, then you'd</span>
+      <span class="cue-text">your identifier, each key stored on a different device. Then you'd</span>
     </p>
     <p class="cue" id="t1724">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1724">28:44</a>
@@ -1415,7 +1434,7 @@
     </p>
     <p class="cue" id="t1735">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1735">28:55</a>
-      <span class="cue-text">just changed your security property, right? Or you could decide that if you're</span>
+      <span class="cue-text">just changed your security property, right? Or you could decide</span>
     </p>
     <p class="cue" id="t1739">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1739">28:59</a>
@@ -1423,7 +1442,7 @@
     </p>
     <p class="cue" id="t1744">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1744">29:04</a>
-      <span class="cue-text">share them across devices but you share them in a secure out-of-band way. So for</span>
+      <span class="cue-text">share them across devices but you share them in a secure out-of-band way. – So for</span>
     </p>
     <p class="cue" id="t1749">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1749">29:09</a>
@@ -1431,23 +1450,23 @@
     </p>
     <p class="cue" id="t1755">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1755">29:15</a>
-      <span class="cue-text">Yes. But the extension of that where that was now on Apple cloud service is less</span>
+      <span class="cue-text">But the extension of that where that was now on Apple cloud service is less</span>
     </p>
     <p class="cue" id="t1759">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1759">29:19</a>
-      <span class="cue-text">secure just because those keys are not encrypted there. Well, no, you would want</span>
+      <span class="cue-text">secure just because those keys are not encrypted there. – Well, no, you would want</span>
     </p>
     <p class="cue" id="t1764">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1764">29:24</a>
-      <span class="cue-text">to do that. I know, but is there a way? If you do end-to-end encryption on Apple,</span>
+      <span class="cue-text">to do that. – I know, but is there a way? – If you do end-to-end encryption on Apple,</span>
     </p>
     <p class="cue" id="t1768">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1768">29:28</a>
-      <span class="cue-text">then they're encrypted and Apple can't see them. Okay, so that would be a viable…</span>
+      <span class="cue-text">then they're encrypted and Apple can't see them. – Okay, so that would be a viable…</span>
     </p>
     <p class="cue" id="t1772">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1772">29:32</a>
-      <span class="cue-text">Yes, that's a layer. That's a different… I mean, one of the things is you have to</span>
+      <span class="cue-text">– Yes, I mean, one of the things is you have to</span>
     </p>
     <p class="cue" id="t1778">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1778">29:38</a>
@@ -1515,7 +1534,7 @@
     </p>
     <p class="cue" id="t1869">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1869">31:09</a>
-      <span class="cue-text">management. I'm just looking for a way to make the use of the wallet manageable. So,</span>
+      <span class="cue-text">management. – I'm just looking for a way to make the use of the wallet manageable. So,</span>
     </p>
     <p class="cue" id="t1873">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1873">31:13</a>
@@ -1535,7 +1554,7 @@
     </p>
     <p class="cue" id="t1892">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1892">31:32</a>
-      <span class="cue-text">keys in the cloud encrypted with an end in encryption is a viable place to store</span>
+      <span class="cue-text">keys in the cloud encrypted with an end to end encryption is a viable place to store</span>
     </p>
     <p class="cue" id="t1896">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1896">31:36</a>
@@ -1543,11 +1562,11 @@
     </p>
     <p class="cue" id="t1901">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1901">31:41</a>
-      <span class="cue-text">forget your decryption key. Well, if you have one password and you're storing</span>
+      <span class="cue-text">forget your decryption key. Well, if you have 1Password and you're storing</span>
     </p>
     <p class="cue" id="t1904">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1904">31:44</a>
-      <span class="cue-text">secrets in one password, then you have to say, well, is one password sufficiently</span>
+      <span class="cue-text">secrets in 1Password, then you have to say, well, is 1Password sufficiently</span>
     </p>
     <p class="cue" id="t1908">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1908">31:48</a>
@@ -1555,7 +1574,7 @@
     </p>
     <p class="cue" id="t1915">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1915">31:55</a>
-      <span class="cue-text">that are available to you as a wallet designer. When people are doctrine error</span>
+      <span class="cue-text">that are available to you as a wallet designer. When people are doctrinair</span>
     </p>
     <p class="cue" id="t1921">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1921">32:01</a>
@@ -1567,7 +1586,7 @@
     </p>
     <p class="cue" id="t1929">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1929">32:09</a>
-      <span class="cue-text">is they're over securing things and adding too much friction to users they don't need</span>
+      <span class="cue-text">is they're over securing things and adding too much friction to users who don't need</span>
     </p>
     <p class="cue" id="t1933">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1933">32:13</a>
@@ -1579,11 +1598,11 @@
     </p>
     <p class="cue" id="t1943">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1943">32:23</a>
-      <span class="cue-text">need more friction and need more security, can't have it. Is there a way for KERI to</span>
+      <span class="cue-text">need more friction and need more security, can't have it. – Is there a way for KERI to</span>
     </p>
     <p class="cue" id="t1947">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1947">32:27</a>
-      <span class="cue-text">actually play a part in rotating those encryption keys? Well, KERI is a protocol,</span>
+      <span class="cue-text">actually play a part in rotating those encryption keys? – Well, KERI is a protocol</span>
     </p>
     <p class="cue" id="t1952">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1952">32:32</a>
@@ -1591,35 +1610,35 @@
     </p>
     <p class="cue" id="t1956">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1956">32:36</a>
-      <span class="cue-text">KERI. We can ask her as a separate application of a KERI service to keep</span>
+      <span class="cue-text">KERI. We can ask her… – As a separate application of a KERI service to keep</span>
     </p>
     <p class="cue" id="t1961">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1961">32:41</a>
-      <span class="cue-text">track of other forms of encryption. Yeah, that's not part of the KERI protocol, but</span>
+      <span class="cue-text">track of other forms of encryption. – Yeah, that's not part of the KERI protocol, but</span>
     </p>
     <p class="cue" id="t1966">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1966">32:46</a>
-      <span class="cue-text">certainly it's something that people could. Well, I talked about hosted key</span>
+      <span class="cue-text">certainly it's something that people could… Well, I talked about hosted key</span>
     </p>
     <p class="cue" id="t1969">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1969">32:49</a>
-      <span class="cue-text">management. Right. So KERI enables hosted key management. So if people want to</span>
+      <span class="cue-text">management. So KERI enables hosted key management. So if people want to</span>
     </p>
     <p class="cue" id="t1973">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1973">32:53</a>
-      <span class="cue-text">provide a hosted key management service, Absolutely. I mean, I could have a</span>
+      <span class="cue-text">provide a hosted key management service, absolutely. – I could have a</span>
     </p>
     <p class="cue" id="t1977">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1977">32:57</a>
-      <span class="cue-text">separate KERI account just for managing my own encryption keys. Yeah, that's right.</span>
+      <span class="cue-text">separate KERI account just for managing my own encryption keys. – Yeah, that's right.</span>
     </p>
     <p class="cue" id="t1981">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1981">33:01</a>
-      <span class="cue-text">That's what I'm talking about. Yeah. All of those are available. Good questions.</span>
+      <span class="cue-text">That's what I'm talking about. – All of those are available. Good questions.</span>
     </p>
     <p class="cue" id="t1988">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1988">33:08</a>
-      <span class="cue-text">Let's keep passing the mic. Oh, he's got one. Speaking of discoverability, I think</span>
+      <span class="cue-text">Let's keep passing the mic. Oh, he's got one. – Speaking of discoverability, I think</span>
     </p>
     <p class="cue" id="t1996">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=1996">33:16</a>
@@ -1631,11 +1650,11 @@
     </p>
     <p class="cue" id="t2011">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2011">33:31</a>
-      <span class="cue-text">weaving this network? The way we use DNS right now is we use well it's technically</span>
+      <span class="cue-text">weaving this network? – The way we use DNS right now is…</span>
     </p>
     <p class="cue" id="t2018">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2018">33:38</a>
-      <span class="cue-text">it's part of DNS right is the well-known protocol.</span>
+      <span class="cue-text">Part of DNS is the “Well-Known” protocol.</span>
     </p>
     <p class="cue" id="t2026">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2026">33:46</a>
@@ -1643,15 +1662,15 @@
     </p>
     <p class="cue" id="t2031">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2031">33:51</a>
-      <span class="cue-text">infrastructure is discoverable by public publishing that those infrastructure</span>
+      <span class="cue-text">infrastructure is discoverable by publishing those infrastructure</span>
     </p>
     <p class="cue" id="t2035">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2035">33:55</a>
-      <span class="cue-text">endpoints as well-knowns, right? So there's a well-known protocol called a</span>
+      <span class="cue-text">endpoints as “Well-Knowns”, right? So there's a well-known protocol called a</span>
     </p>
     <p class="cue" id="t2039">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2039">33:59</a>
-      <span class="cue-text">well-known protocol that you can publish and just say, you know, witness and here's</span>
+      <span class="cue-text">“Well-Known” protocol that you can publish and just say, witness and here's</span>
     </p>
     <p class="cue" id="t2045">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2045">34:05</a>
@@ -1663,11 +1682,11 @@
     </p>
     <p class="cue" id="t2055">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2055">34:15</a>
-      <span class="cue-text">everybody's watchers from the well-knowns. So that's one thing. And then we have</span>
+      <span class="cue-text">everybody's watchers from the Well-Knowns. So that's one thing. And then we have</span>
     </p>
     <p class="cue" id="t2059">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2059">34:19</a>
-      <span class="cue-text">something called an OOBI, right? The out -of-band introduction and you can publish</span>
+      <span class="cue-text">something called an OOBI, right? The out-of-band introduction and you can publish</span>
     </p>
     <p class="cue" id="t2066">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2066">34:26</a>
@@ -1675,7 +1694,7 @@
     </p>
     <p class="cue" id="t2075">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2075">34:35</a>
-      <span class="cue-text">itself, you know, yes, you could publish in X.509s anything you want, right? It's a</span>
+      <span class="cue-text">itself, yes, you could publish in X.509s anything you want, right? It's a</span>
     </p>
     <p class="cue" id="t2084">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2084">34:44</a>
@@ -1703,7 +1722,7 @@
     </p>
     <p class="cue" id="t2115">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2115">35:15</a>
-      <span class="cue-text">next? Oh, yeah. Oh, sorry. Yes. So since it's about the current state of these</span>
+      <span class="cue-text">next? Question. – So since it's about the current state of these</span>
     </p>
     <p class="cue" id="t2123">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2123">35:23</a>
@@ -1711,7 +1730,7 @@
     </p>
     <p class="cue" id="t2130">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2130">35:30</a>
-      <span class="cue-text">people plug into that are live today? Okay. Sorry, I forgot to mention that</span>
+      <span class="cue-text">people plug into that are live today? – Okay. Sorry, I forgot to mention that</span>
     </p>
     <p class="cue" id="t2135">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2135">35:35</a>
@@ -1719,11 +1738,11 @@
     </p>
     <p class="cue" id="t2140">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2140">35:40</a>
-      <span class="cue-text">handful of servers that are running on DigitalOcean that are available. We'll</span>
+      <span class="cue-text">handful of servers that are running on DigitalOcean that are available.</span>
     </p>
     <p class="cue" id="t2146">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2146">35:46</a>
-      <span class="cue-text">publish, I don't have those up yet, but we'll publish the like that information of</span>
+      <span class="cue-text">I don't have those up yet, but we'll publish that information of</span>
     </p>
     <p class="cue" id="t2150">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2150">35:50</a>
@@ -1743,7 +1762,7 @@
     </p>
     <p class="cue" id="t2172">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2172">36:12</a>
-      <span class="cue-text">that kind of stuff. But that's a good question. So, HealthKERI, they provide</span>
+      <span class="cue-text">that kind of stuff. – But that's a good question. So, healthKERI, they provide</span>
     </p>
     <p class="cue" id="t2178">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2178">36:18</a>
@@ -1759,11 +1778,11 @@
     </p>
     <p class="cue" id="t2196">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2196">36:36</a>
-      <span class="cue-text">main outcomes of the state of Utah SEDI initiative is that you will, it will</span>
+      <span class="cue-text">main outcomes of the state of Utah SEDI initiative is that</span>
     </p>
     <p class="cue" id="t2201">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2201">36:41</a>
-      <span class="cue-text">force, it will be a forcing function for providers of KERI infrastructure to all of</span>
+      <span class="cue-text">it will be a forcing function for providers of KERI infrastructure to all of</span>
     </p>
     <p class="cue" id="t2208">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2208">36:48</a>
@@ -1795,11 +1814,11 @@
     </p>
     <p class="cue" id="t2245">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2245">37:25</a>
-      <span class="cue-text">over the next couple of years. So that brings a follow-on question. So you said</span>
+      <span class="cue-text">over the next couple of years. – So that brings a follow-on question. So you said</span>
     </p>
     <p class="cue" id="t2250">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2250">37:30</a>
-      <span class="cue-text">HealthKERI has theirs that are working in their ecosystem. GLEIF has theirs that are</span>
+      <span class="cue-text">healthKERI has theirs that are working in their ecosystem. GLEIF has theirs that are</span>
     </p>
     <p class="cue" id="t2255">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2255">37:35</a>
@@ -1807,27 +1826,27 @@
     </p>
     <p class="cue" id="t2262">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2262">37:42</a>
-      <span class="cue-text">then my question is as this… Well, they're publicly available to the extent you're</span>
+      <span class="cue-text">then my question is as this… – Well, they're publicly available to the extent you're</span>
     </p>
     <p class="cue" id="t2266">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2266">37:46</a>
-      <span class="cue-text">using a vLEI. Okay. So, but what are the advantages and disadvantages for</span>
+      <span class="cue-text">using a vLEI. – Okay. So, but what are the advantages and disadvantages for</span>
     </p>
     <p class="cue" id="t2273">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2273">37:53</a>
-      <span class="cue-text">ecosystems such as HealthKERI, GLEIF's setup to make those publicly available for</span>
+      <span class="cue-text">ecosystems such as healthKERI, GLEIF's setup to make those publicly available for</span>
     </p>
     <p class="cue" id="t2280">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2280">38:00</a>
-      <span class="cue-text">other ecosystems to be able to auto to use as the watcher network? I think</span>
+      <span class="cue-text">other ecosystems to be able to use as the watcher network?</span>
     </p>
     <p class="cue" id="t2287">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2287">38:07</a>
-      <span class="cue-text">advantages, disadvantages, why you would have your own versus you know, putting it</span>
+      <span class="cue-text">Advantages, disadvantages, why you would have your own versus you know, putting it</span>
     </p>
     <p class="cue" id="t2293">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2293">38:13</a>
-      <span class="cue-text">out into the global infrastructure. So, so that's a really good question because it's</span>
+      <span class="cue-text">out into the global infrastructure. – So, that's a really good question because it's</span>
     </p>
     <p class="cue" id="t2299">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2299">38:19</a>
@@ -1839,7 +1858,7 @@
     </p>
     <p class="cue" id="t2308">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2308">38:28</a>
-      <span class="cue-text">presentations about this. One of the challenges is the identity infrastructure</span>
+      <span class="cue-text">presentations about this. One of the challenges in the identity infrastructure</span>
     </p>
     <p class="cue" id="t2311">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2311">38:31</a>
@@ -1875,23 +1894,19 @@
     </p>
     <p class="cue" id="t2348">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2348">39:08</a>
-      <span class="cue-text">It's sort of how do you bootstrap that kind of infrastructure. And so with SEDI,</span>
-    </p>
-    <p class="cue" id="t2352">
-      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2352">39:12</a>
-      <span class="cue-text">do you think… And I don't know if Phil had a comment. Oh, sorry. Okay. We've said it.</span>
+      <span class="cue-text">It's sort of how do you bootstrap that kind of infrastructure. – And so with SEDI,</span>
     </p>
     <p class="cue" id="t2357">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2357">39:17</a>
-      <span class="cue-text">Do you see as this goes beyond the state of Utah and this new consortium that's…</span>
+      <span class="cue-text">do you see as this goes beyond the state of Utah and this new consortium that's…</span>
     </p>
     <p class="cue" id="t2362">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2362">39:22</a>
-      <span class="cue-text">Yeah, that's the idea. If other states adopt it… …that they'll start helping that</span>
+      <span class="cue-text">– Yeah, that's the idea. If other states adopt it… – they'll start helping that</span>
     </p>
     <p class="cue" id="t2366">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2366">39:26</a>
-      <span class="cue-text">to happen. Yeah, it's the classical cold start problem for infrastructure, right?</span>
+      <span class="cue-text">to happen. – Yeah, it's the classical cold start problem for infrastructure, right?</span>
     </p>
     <p class="cue" id="t2371">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2371">39:31</a>
@@ -1919,7 +1934,7 @@
     </p>
     <p class="cue" id="t2399">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2399">39:59</a>
-      <span class="cue-text">to solve the cold start problem. Yes. And this state is also both an issuer and a</span>
+      <span class="cue-text">to solve the cold start problem. – And this state is also both an issuer and a</span>
     </p>
     <p class="cue" id="t2408">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2408">40:08</a>
@@ -1927,11 +1942,11 @@
     </p>
     <p class="cue" id="t2413">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2413">40:13</a>
-      <span class="cue-text">go, oh, that's working. Maybe I should sit on top of this or you sit beside it sit</span>
+      <span class="cue-text">go, oh, that's working. Maybe I should sit on top of this or you sit beside it</span>
     </p>
     <p class="cue" id="t2419">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2419">40:19</a>
-      <span class="cue-text">beside it and use it so yeah so the state needs witnesses and watchers at scale to</span>
+      <span class="cue-text">and use it. – So the state needs witnesses and watchers at scale to</span>
     </p>
     <p class="cue" id="t2424">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2424">40:24</a>
@@ -1947,7 +1962,7 @@
     </p>
     <p class="cue" id="t2439">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2439">40:39</a>
-      <span class="cue-text">becomes easy for other people to say well wait there's already a there's already</span>
+      <span class="cue-text">becomes easy for other people to say well wait there's already</span>
     </p>
     <p class="cue" id="t2443">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2443">40:43</a>
@@ -1971,7 +1986,7 @@
     </p>
     <p class="cue" id="t2472">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2472">41:12</a>
-      <span class="cue-text">build those utilities. We're just providing the stuff for else to do it. So</span>
+      <span class="cue-text">build those utilities. We're just providing the stuff for somebody else to do it. So</span>
     </p>
     <p class="cue" id="t2476">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2476">41:16</a>
@@ -1983,7 +1998,7 @@
     </p>
     <p class="cue" id="t2485">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2485">41:25</a>
-      <span class="cue-text">Yeah, they're not. Okay. I will contribute though from a blank perspective. It might</span>
+      <span class="cue-text">Yeah, they're not. Okay. – I will contribute though from a blank perspective. It might</span>
     </p>
     <p class="cue" id="t2491">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2491">41:31</a>
@@ -2019,11 +2034,11 @@
     </p>
     <p class="cue" id="t2546">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2546">42:26</a>
-      <span class="cue-text">placed in order to be able to do such a thing. This gentleman here had to do it.</span>
+      <span class="cue-text">placed in order to be able to do such a thing.</span>
     </p>
     <p class="cue" id="t2553">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2553">42:33</a>
-      <span class="cue-text">So I wanted to add another. So SEDI is an adoption vector that is trying to that has</span>
+      <span class="cue-text">– So I wanted to add another. So SEDI is an adoption vector that is trying to that has</span>
     </p>
     <p class="cue" id="t2560">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2560">42:40</a>
@@ -2127,11 +2142,11 @@
     </p>
     <p class="cue" id="t2680">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2680">44:40</a>
-      <span class="cue-text">same protocol under the hood. And now you start to get that flywheel effect. – I</span>
+      <span class="cue-text">same protocol under the hood. And now you start to get that flywheel effect.</span>
     </p>
     <p class="cue" id="t2686">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2686">44:46</a>
-      <span class="cue-text">assume. – Yes. – Wasn't the case already HIPAA took care of that just by the</span>
+      <span class="cue-text">– Wasn't the case already HIPAA took care of that just by the</span>
     </p>
     <p class="cue" id="t2690">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2690">44:50</a>
@@ -2147,7 +2162,7 @@
     </p>
     <p class="cue" id="t2701">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2701">45:01</a>
-      <span class="cue-text">it takes weeks. – Right. – And if you're suffering from a serious illness and you</span>
+      <span class="cue-text">it takes weeks. And if you're suffering from a serious illness and you</span>
     </p>
     <p class="cue" id="t2705">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2705">45:05</a>
@@ -2159,15 +2174,15 @@
     </p>
     <p class="cue" id="t2712">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2712">45:12</a>
-      <span class="cue-text">So back on the topic of public infrastructure. Yeah. I'm curious if</span>
+      <span class="cue-text">– So back on the topic of public infrastructure. I'm curious if</span>
     </p>
     <p class="cue" id="t2717">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2717">45:17</a>
-      <span class="cue-text">you're familiar with the app protocol ecosystem and their identity system did</span>
+      <span class="cue-text">you're familiar with the app protocol ecosystem and their identity system did:plc?</span>
     </p>
-    <p class="cue" id="t2722">
-      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2722">45:22</a>
-      <span class="cue-text">PLC. Yeah, I've heard of that. Yeah, I see it is kind of like a it's not KERI, but</span>
+    <p class="cue" id="t2723">
+      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2723">45:23</a>
+      <span class="cue-text">– Yeah, I've heard of that. – I see it's not KERI, but</span>
     </p>
     <p class="cue" id="t2728">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2728">45:28</a>
@@ -2191,11 +2206,11 @@
     </p>
     <p class="cue" id="t2751">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2751">45:51</a>
-      <span class="cue-text">centralized directory. Yeah, that's right. But it's interesting relative to this</span>
+      <span class="cue-text">centralized directory. – Yeah, that's right. – But it's interesting relative to this</span>
     </p>
     <p class="cue" id="t2755">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2755">45:55</a>
-      <span class="cue-text">question. Yeah. So if I centralize things, it makes it much easier. The world becomes</span>
+      <span class="cue-text">question. – So if I centralize things, it makes it much easier. The world becomes</span>
     </p>
     <p class="cue" id="t2760">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2760">46:00</a>
@@ -2243,7 +2258,7 @@
     </p>
     <p class="cue" id="t2819">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2819">46:59</a>
-      <span class="cue-text">Provenant, those kinds of things. – Yeah. – So state of Utah, HealthKERI,</span>
+      <span class="cue-text">Provenant, those kinds of things. – Yeah. – So state of Utah, healthKERI,</span>
     </p>
     <p class="cue" id="t2825">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2825">47:05</a>
@@ -2251,11 +2266,11 @@
     </p>
     <p class="cue" id="t2830">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2830">47:10</a>
-      <span class="cue-text">watch them because that will say, you know, how does this actually work? Yeah.</span>
+      <span class="cue-text">watch them because that will say, how does this actually work?</span>
     </p>
     <p class="cue" id="t2836">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2836">47:16</a>
-      <span class="cue-text">Yeah. Yeah. That's what that's given me. That's why I'm optimistic because I see</span>
+      <span class="cue-text">– Yeah. That's why I'm optimistic because I see</span>
     </p>
     <p class="cue" id="t2841">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2841">47:21</a>
@@ -2267,14 +2282,10 @@
     </p>
     <p class="cue" id="t2850">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2850">47:30</a>
-      <span class="cue-text">will force things. And let me say something about, I mean, I don't want to,</span>
+      <span class="cue-text">will force things. And let me say something about</span>
     </p>
-    <p class="cue" id="t2857">
-      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2857">47:37</a>
-      <span class="cue-text">I mean,</span>
-    </p>
-    <p class="cue" id="t2861">
-      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2861">47:41</a>
+    <p class="cue" id="t2858">
+      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2858">47:38</a>
       <span class="cue-text">did:plc, did:webvh, there's a couple of other ones, have adopted many of the</span>
     </p>
     <p class="cue" id="t2867">
@@ -2291,7 +2302,7 @@
     </p>
     <p class="cue" id="t2885">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2885">48:05</a>
-      <span class="cue-text">zero knowledge proofs. You can't use them for things that for issuances that need to</span>
+      <span class="cue-text">zero knowledge proofs. You can't use them for issuances that need to</span>
     </p>
     <p class="cue" id="t2890">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2890">48:10</a>
@@ -2303,19 +2314,19 @@
     </p>
     <p class="cue" id="t2897">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2897">48:17</a>
-      <span class="cue-text">unverifiable the moment you do it unless you're anchoring those issuances to your e</span>
+      <span class="cue-text">unverifiable the moment you do it unless you're anchoring those issuances to your</span>
     </p>
     <p class="cue" id="t2901">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2901">48:21</a>
-      <span class="cue-text">-state. That means they have to change their protocols and as soon as they do</span>
+      <span class="cue-text">key-state. That means they have to change their protocols and as soon as they do</span>
     </p>
     <p class="cue" id="t2905">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2905">48:25</a>
-      <span class="cue-text">that, they now become as complicated as KERI and why do it that way then? Yes. –</span>
+      <span class="cue-text">that, they now become as complicated as KERI and why do it that way then?</span>
     </p>
     <p class="cue" id="t2910">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2910">48:30</a>
-      <span class="cue-text">So I wanted to add to that to what you said. So I'm involved in did:webvh and</span>
+      <span class="cue-text">– So I wanted to add to that to what you said. So I'm involved in did:webvh and</span>
     </p>
     <p class="cue" id="t2917">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2917">48:37</a>
@@ -2335,7 +2346,7 @@
     </p>
     <p class="cue" id="t2945">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2945">49:05</a>
-      <span class="cue-text">solutions and things like that part</span>
+      <span class="cue-text">solutions and things like that… Part</span>
     </p>
     <p class="cue" id="t2950">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2950">49:10</a>
@@ -2355,7 +2366,7 @@
     </p>
     <p class="cue" id="t2974">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2974">49:34</a>
-      <span class="cue-text">along who is operating did:plc, the servers. and they're providing the</span>
+      <span class="cue-text">along who is operating did:plc, the servers. And they're providing the</span>
     </p>
     <p class="cue" id="t2978">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2978">49:38</a>
@@ -2367,7 +2378,7 @@
     </p>
     <p class="cue" id="t2990">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2990">49:50</a>
-      <span class="cue-text">half to two things that we have been mentioned governments, right? So on the</span>
+      <span class="cue-text">half to two things that we have been mentioned, governments, right? So on the</span>
     </p>
     <p class="cue" id="t2995">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=2995">49:55</a>
@@ -2379,31 +2390,23 @@
     </p>
     <p class="cue" id="t3005">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3005">50:05</a>
-      <span class="cue-text">volunteers. Right. Yeah. It was run the common infrastructure of the… Yeah. And</span>
+      <span class="cue-text">volunteers. Right. It was run the common infrastructure of the…</span>
     </p>
     <p class="cue" id="t3011">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3011">50:11</a>
-      <span class="cue-text">yeah, so it has its challenges. I'm not saying that it's not</span>
+      <span class="cue-text">– Yeah, so it has its challenges. I'm not saying that it's not challenging.</span>
     </p>
-    <p class="cue" id="t3016">
-      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3016">50:16</a>
-      <span class="cue-text">challenging. So how much, we got 10 minutes left? You got a question? Somebody</span>
-    </p>
-    <p class="cue" id="t3022">
-      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3022">50:22</a>
-      <span class="cue-text">else had a question. Yeah, I was going to say, did PLC? They can't hear you on the</span>
-    </p>
-    <p class="cue" id="t3027">
-      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3027">50:27</a>
-      <span class="cue-text">recording.</span>
+    <p class="cue" id="t3023">
+      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3023">50:23</a>
+      <span class="cue-text">– Yeah, I was going to say, did:plc?</span>
     </p>
     <p class="cue" id="t3032">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3032">50:32</a>
-      <span class="cue-text">So there's delegation and multisig are challenging to get right in a way that is</span>
+      <span class="cue-text">So delegation and multisig are challenging to get right in a way that is</span>
     </p>
     <p class="cue" id="t3039">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3039">50:39</a>
-      <span class="cue-text">usable. And those are things two things that KERI does that no other DID method</span>
+      <span class="cue-text">usable. And those are two things that KERI does that no other DID method</span>
     </p>
     <p class="cue" id="t3043">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3043">50:43</a>
@@ -2415,11 +2418,11 @@
     </p>
     <p class="cue" id="t3053">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3053">50:53</a>
-      <span class="cue-text">latest spec as of like three weeks ago and it doesn't have any of those in it. –</span>
+      <span class="cue-text">latest spec as of like three weeks ago and it doesn't have any of those in it.</span>
     </p>
     <p class="cue" id="t3058">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3058">50:58</a>
-      <span class="cue-text">Yeah, so I… – Is that right? – It's it has a new user space. It has it in application</span>
+      <span class="cue-text">– Yeah, so I… – Is that right? – It's it has a new user space. It has it in application</span>
     </p>
     <p class="cue" id="t3065">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3065">51:05</a>
@@ -2431,7 +2434,7 @@
     </p>
     <p class="cue" id="t3079">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3079">51:19</a>
-      <span class="cue-text">they're trying, they're working on it. Yes. Once you decide to accept you need</span>
+      <span class="cue-text">they're trying, they're working on it. –Yes. Once you decide to accept you need</span>
     </p>
     <p class="cue" id="t3084">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3084">51:24</a>
@@ -2439,15 +2442,15 @@
     </p>
     <p class="cue" id="t3090">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3090">51:30</a>
-      <span class="cue-text">You've recreated exactly the same thing. I got one. Yeah, we got 10 minutes left. 10</span>
+      <span class="cue-text">You've recreated exactly the same thing.</span>
     </p>
-    <p class="cue" id="t3101">
-      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3101">51:41</a>
-      <span class="cue-text">minutes left. Well, I could talk seven minutes. I could talk a little bit about</span>
+    <p class="cue" id="t3102">
+      <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3102">51:42</a>
+      <span class="cue-text">– I could talk a little bit about</span>
     </p>
     <p class="cue" id="t3105">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3105">51:45</a>
-      <span class="cue-text">how witnesses and how witnesses solve the detectability problem and the availability</span>
+      <span class="cue-text">how witnesses solve the detectability problem and the availability</span>
     </p>
     <p class="cue" id="t3121">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3121">52:01</a>
@@ -2463,7 +2466,7 @@
     </p>
     <p class="cue" id="t3147">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3147">52:27</a>
-      <span class="cue-text">problems that I hadn't yet got to yet. And they go, oh, wait a minute. this also</span>
+      <span class="cue-text">problems that I hadn't yet got to yet. And they go, oh, wait a minute, this also</span>
     </p>
     <p class="cue" id="t3152">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3152">52:32</a>
@@ -2515,11 +2518,11 @@
     </p>
     <p class="cue" id="t3222">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3222">53:42</a>
-      <span class="cue-text">problem. Yeah. What's the threat model on the host? You said something you can't</span>
+      <span class="cue-text">problem. Yeah. – What's the threat model on the host? You said something you can't</span>
     </p>
     <p class="cue" id="t3230">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3230">53:50</a>
-      <span class="cue-text">control. Aren't the key event logs still secured by the user's keys? Well, my copy</span>
+      <span class="cue-text">control. Aren't the key event logs still secured by the user's keys? – Well, my copy</span>
     </p>
     <p class="cue" id="t3239">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3239">53:59</a>
@@ -2531,7 +2534,7 @@
     </p>
     <p class="cue" id="t3249">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3249">54:09</a>
-      <span class="cue-text">able to tell that they were cheating. Got it. Right? So because they because my host</span>
+      <span class="cue-text">able to tell that they were cheating. So because my host</span>
     </p>
     <p class="cue" id="t3254">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3254">54:14</a>
@@ -2583,7 +2586,7 @@
     </p>
     <p class="cue" id="t3319">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3319">55:19</a>
-      <span class="cue-text">that my keys have been compromised. I'll also have it be highly available and so</span>
+      <span class="cue-text">that my keys have been compromised. Also have it be highly available and so</span>
     </p>
     <p class="cue" id="t3324">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3324">55:24</a>
@@ -2595,7 +2598,7 @@
     </p>
     <p class="cue" id="t3334">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3334">55:34</a>
-      <span class="cue-text">slay or whatever they call it nowadays. Sharded. You can have a sharded</span>
+      <span class="cue-text">slave or whatever they call it nowadays. Sharded. You can have a sharded</span>
     </p>
     <p class="cue" id="t3340">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3340">55:40</a>
@@ -2607,7 +2610,7 @@
     </p>
     <p class="cue" id="t3352">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3352">55:52</a>
-      <span class="cue-text">using a fault tolerant exchange change algorithm is a way to do it. The reason</span>
+      <span class="cue-text">using a fault tolerant exchange algorithm is a way to do it. The reason</span>
     </p>
     <p class="cue" id="t3359">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3359">55:59</a>
@@ -2631,7 +2634,7 @@
     </p>
     <p class="cue" id="t3388">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3388">56:28</a>
-      <span class="cue-text">watcher pool. That's why, I mean, reading from your witness pool, that's why you</span>
+      <span class="cue-text">witness pool, that's why you</span>
     </p>
     <p class="cue" id="t3392">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3392">56:32</a>
@@ -2679,7 +2682,7 @@
     </p>
     <p class="cue" id="t3455">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3455">57:35</a>
-      <span class="cue-text">witnesses copy that is anchored that I did and the only way I can get there is if my</span>
+      <span class="cue-text">witnesses copy that is anchored and the only way I can get there is if my</span>
     </p>
     <p class="cue" id="t3459">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3459">57:39</a>
@@ -2703,7 +2706,7 @@
     </p>
     <p class="cue" id="t3479">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3479">57:59</a>
-      <span class="cue-text">when to rotate. But the witness pool doesn't tell you when to when to rotate</span>
+      <span class="cue-text">when to rotate. But the witness pool doesn't tell you when to rotate</span>
     </p>
     <p class="cue" id="t3482">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3482">58:02</a>
@@ -2727,7 +2730,7 @@
     </p>
     <p class="cue" id="t3503">
       <a class="cue-time" href="../../../#samuel-m-smith-ryan-hansen-progress-report-the-5w-s-of-keri-witnesses-watchers-wallet-web-and-wizard-plus-bulk-issuances-and-anchoring-in-merkle-trees&amp;t=3503">58:23</a>
-      <span class="cue-text">right? You have to complicate your system. Okay, I'm done. Thank you.</span>
+      <span class="cue-text">right? You have to complicate your system. Okay, I'm done.</span>
     </p>
     </article>
     <footer>KERI Foundation • Conference Videos Collection</footer>

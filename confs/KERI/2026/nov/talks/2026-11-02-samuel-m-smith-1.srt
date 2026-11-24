@@ -1463,7 +1463,7 @@ KERI Foundation is to foster open
 
 295
 00:28:28,940 --> 00:28:34,240
-infrastructure. It's the eye in KERI.
+infrastructure. It's the I in KERI.
 There's a reason KERI is infrastructure.
 
 296
@@ -1701,7 +1701,7 @@ about. But there are lots of things like
 
 343
 00:32:37,340 --> 00:32:46,920
-that that do move across domains and a
+that do move across domains and a
 lot of them are identity-based. So you can
 
 344
@@ -1940,7 +1940,7 @@ identifier. So we have something called
 
 391
 00:37:11,640 --> 00:37:17,820
-the five Ws and we're going to have some
+the five W's and we're going to have some
 more talks about that. These are shorthand
 
 392
@@ -1956,7 +1956,7 @@ the web and the wizard is smarts behind the
 394
 00:37:29,840 --> 00:37:33,260
 scene. Now we have two other ones
-that didn't fit in the five Ws. These are
+that didn't fit in the five W's. These are
 
 395
 00:37:33,260 --> 00:37:37,360
@@ -1981,7 +1981,7 @@ infrastructure. The infrastructure that's
 399
 00:37:54,880 --> 00:37:59,340
 shared is the watcher network. So entity
-A controls their own witnesses. entity B
+A controls their own witnesses. Entity B
 
 400
 00:37:59,340 --> 00:38:03,380
@@ -2035,7 +2035,7 @@ watcher and all watchers do is detect
 
 410
 00:38:47,140 --> 00:38:50,540
-duplicity. So, so they don't, they don't
+duplicity. So they don't
 have anything else that they have to do.
 
 411
@@ -2149,7 +2149,7 @@ the state of the ACDC at the time of
 
 433
 00:40:41,820 --> 00:40:49,020
-presentation is still valid. without
+presentation is still valid without
 creating a correlation point. There are
 
 434
@@ -2732,7 +2732,7 @@ anybody they want. So there's no technical
 
 550
 00:51:23,160 --> 00:51:28,020
-solution to the privacy problem. if
+solution to the privacy problem if
 privacy includes sharing data. You can
 
 551
@@ -3107,4 +3107,3 @@ That's a bad idea. Yeah. So anyway, are we
 625
 00:57:23,280 --> 00:57:27,320
 done? Okay, I'm done. Thank you.
-

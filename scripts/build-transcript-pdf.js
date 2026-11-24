@@ -5,7 +5,8 @@
  * Pipeline:
  *   1. Resolve a gallery directory (confs/<ORG>/<YEAR>/<month> or vids/<YEAR>)
  *   2. Recursively collect every `*.srt` file in that directory
- *   3. Parse SRT cues and group them into readable paragraphs
+ *   3. Parse SRT cues and group them into readable paragraphs.
+ *      A sibling summary (`foo.srt` → `foo.md`) is included when present.
  *   4. Render an HTML document with a cover page, table of contents,
  *      and one chapter per talk
  *   5. Drive the locally installed Google Chrome (via puppeteer-core)
@@ -27,6 +28,7 @@ import { existsSync, statSync } from "node:fs";
 import { basename, dirname, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 import puppeteer from "puppeteer-core";
+import { readSummaryParagraphs } from "./talk-summary.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const CONFS_DIR = join(ROOT, "confs");
@@ -517,6 +519,21 @@ function chapterMeta(talk, event) {
   return parts.filter(Boolean).join(" · ");
 }
 
+/** Sibling `foo.md` of an `.srt`, or [] when that file is missing or empty. */
+function summaryForSrt(srtPath) {
+  return readSummaryParagraphs(srtPath.replace(/\.srt$/i, ".md"));
+}
+
+function summaryHtml(paragraphs) {
+  if (!paragraphs?.length) return "";
+  const body = paragraphs.map((paragraph) => `<p>${esc(paragraph)}</p>`).join("\n");
+  return `
+        <div class="summary">
+          <h2>Summary</h2>
+          ${body}
+        </div>`;
+}
+
 // ─── HTML assembly ──────────────────────────────────────────────────────────
 
 function buildHtml(talks, generatedOn, event) {
@@ -560,6 +577,7 @@ function buildHtml(talks, generatedOn, event) {
             <div class="chapter-meta">${esc(chapterMeta(t, event))}</div>
           </div>
         </div>
+        ${summaryHtml(t.summary)}
         <div class="transcript" id="talk-${i}">
           ${paragraphs}
         </div>
@@ -828,7 +846,29 @@ function buildHtml(talks, generatedOn, event) {
     color: #9fc7ff;
   }
 
-  /* ─── Transcript body ─── */
+  /* ─── Optional summary, then the transcript body ─── */
+  .summary {
+    margin: 0 0 8mm 0;
+    padding: 0 0 2mm 0;
+    border-bottom: 0.4pt solid #d5dbe3;
+  }
+  .summary h2 {
+    font-family: "SF Mono", "Menlo", monospace;
+    font-size: 8.5pt;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #5c6b82;
+    margin: 0 0 3.5mm 0;
+  }
+  .summary p {
+    margin: 0 0 2.6mm 0;
+    text-indent: 0;
+    text-align: justify;
+    hyphens: auto;
+    orphans: 3;
+    widows: 3;
+  }
   .transcript { columns: 1; }
   .transcript p {
     margin: 0 0 2.4mm 0;
@@ -940,7 +980,8 @@ async function main() {
     const meta = parseTalkMeta(path, eventDir, event.byStem);
     const paragraphs = groupIntoParagraphs(cues);
     const duration = cues.length ? cues[cues.length - 1].end : 0;
-    talks.push({ filename, paragraphs, duration, ...meta });
+    const summary = summaryForSrt(path);
+    talks.push({ filename, paragraphs, duration, summary, ...meta });
   }
 
   sortTalks(talks);

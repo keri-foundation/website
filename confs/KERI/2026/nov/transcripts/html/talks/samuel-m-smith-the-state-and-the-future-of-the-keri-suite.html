@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samuel M. Smith: The state and the future of the KERI Suite — Transcript</title>
-  <meta name="description" content="Transcript: Samuel M. Smith: The state and the future of the KERI Suite (Mini Conference nov 2026 · 57:37)">
+  <meta name="description" content="AI generated summary, if a statement needs explication, see the video. Samuel M. Smith opens with the state of the KERI suite and the properties it is built to guarantee. He…">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
@@ -100,6 +100,26 @@
       border-color: var(--ink);
     }
     .actions a.primary:hover { background: #0a1270; }
+    .summary {
+      background: var(--panel);
+      border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+      border-radius: 10px;
+      padding: 1rem 1.25rem 0.35rem;
+      margin-bottom: 1.5rem;
+    }
+    .summary h2 {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.65rem;
+    }
+    .summary p {
+      margin: 0 0 0.85rem;
+      font-size: 1.05rem;
+    }
     article {
       background: var(--panel);
       border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
@@ -180,6 +200,13 @@
         <a href="../../../">Video gallery</a>
       </div>
     </header>
+    <section class="summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <p>AI generated summary, if a statement needs explication, see the video.</p>
+      <p>Samuel M. Smith opens with the state of the KERI suite and the properties it is built to guarantee. He calls the design minimally sufficient: only as complicated as those properties require. The path runs from earlier work on perpetual identity into the ledger wars, when each blockchain project wanted identifiers rooted on its own ledger. KERI keeps control in a key event log a controller can reconstitute from any copy, so the root of trust is not one shared chain.</p>
+      <p>Two commitments carry the talk. Cryptographic agility is built in, so a broken hash can be retired by switching algorithms instead of rewriting every tool on the suite. The security claim is fault-tolerant key management: more cryptography does not fix stolen keys, and a real system has to keep working after a compromise. Issuance and observation are split. A registrar publishes state, and a verifier checks an ACDC through an observer the issuer does not control, so revocation does not become a correlation point.</p>
+      <p>That same infrastructure is what makes a software agent accountable. An autonomous vehicle, or any other agent, needs a chain of authority back to the person or organization that holds the liability. Smith sets this against approaches, including many long-lived zero-knowledge proofs, that assume an issuer's keys are never compromised. Anchoring an issuance to key state is how a proof stays verifiable after those keys rotate.</p>
+    </section>
     <article>
     <p class="cue" id="t0">
       <a class="cue-time" href="../../../#samuel-m-smith-the-state-and-the-future-of-the-keri-suite">0:00</a>
@@ -1359,7 +1386,7 @@
     </p>
     <p class="cue" id="t1708">
       <a class="cue-time" href="../../../#samuel-m-smith-the-state-and-the-future-of-the-keri-suite&amp;t=1708">28:28</a>
-      <span class="cue-text">infrastructure. It's the eye in KERI. There's a reason KERI is infrastructure.</span>
+      <span class="cue-text">infrastructure. It's the I in KERI. There's a reason KERI is infrastructure.</span>
     </p>
     <p class="cue" id="t1714">
       <a class="cue-time" href="../../../#samuel-m-smith-the-state-and-the-future-of-the-keri-suite&amp;t=1714">28:34</a>
@@ -1551,7 +1578,7 @@
     </p>
     <p class="cue" id="t1957">
       <a class="cue-time" href="../../../#samuel-m-smith-the-state-and-the-future-of-the-keri-suite&amp;t=1957">32:37</a>
-      <span class="cue-text">that that do move across domains and a lot of them are identity-based. So you can</span>
+      <span class="cue-text">that do move across domains and a lot of them are identity-based. So you can</span>
     </p>
     <p class="cue" id="t1966">
       <a class="cue-time" href="../../../#samuel-m-smith-the-state-and-the-future-of-the-keri-suite&amp;t=1966">32:46</a>
@@ -1743,7 +1770,7 @@
     </p>
     <p class="cue" id="t2231">
       <a class="cue-time" href="../../../#samuel-m-smith-the-state-and-the-future-of-the-keri-suite&amp;t=2231">37:11</a>
-      <span class="cue-text">the five Ws and we're going to have some more talks about that. These are shorthand</span>
+      <span class="cue-text">the five W's and we're going to have some more talks about that. These are shorthand</span>
     </p>
     <p class="cue" id="t2237">
       <a class="cue-time" href="../../../#samuel-m-smith-the-state-and-the-future-of-the-keri-suite&amp;t=2237">37:17</a>
@@ -1755,7 +1782,7 @@
     </p>
     <p class="cue" id="t2249">
       <a class="cue-time" href="../../../#samuel-m-smith-the-state-and-the-future-of-the-keri-suite&amp;t=2249">37:29</a>
-      <span class="cue-text">scene. Now we have two other ones that didn't fit in the five Ws. These are</span>
+      <span class="cue-text">scene. Now we have two other ones that didn't fit in the five W's. These are</span>
     </p>
     <p class="cue" id="t2253">
       <a class="cue-time" href="../../../#samuel-m-smith-the-state-and-the-future-of-the-keri-suite&amp;t=2253">37:33</a>
@@ -1775,7 +1802,7 @@
     </p>
     <p class="cue" id="t2274">
       <a class="cue-time" href="../../../#samuel-m-smith-the-state-and-the-future-of-the-keri-suite&amp;t=2274">37:54</a>
-      <span class="cue-text">shared is the watcher network. So entity A controls their own witnesses. entity B</span>
+      <span class="cue-text">shared is the watcher network. So entity A controls their own witnesses. Entity B</span>
     </p>
     <p class="cue" id="t2279">
       <a class="cue-time" href="../../../#samuel-m-smith-the-state-and-the-future-of-the-keri-suite&amp;t=2279">37:59</a>
@@ -1819,7 +1846,7 @@
     </p>
     <p class="cue" id="t2327">
       <a class="cue-time" href="../../../#samuel-m-smith-the-state-and-the-future-of-the-keri-suite&amp;t=2327">38:47</a>
-      <span class="cue-text">duplicity. So, so they don't, they don't have anything else that they have to do.</span>
+      <span class="cue-text">duplicity. So they don't have anything else that they have to do.</span>
     </p>
     <p class="cue" id="t2331">
       <a class="cue-time" href="../../../#samuel-m-smith-the-state-and-the-future-of-the-keri-suite&amp;t=2331">38:51</a>
@@ -1911,7 +1938,7 @@
     </p>
     <p class="cue" id="t2441">
       <a class="cue-time" href="../../../#samuel-m-smith-the-state-and-the-future-of-the-keri-suite&amp;t=2441">40:41</a>
-      <span class="cue-text">presentation is still valid. without creating a correlation point. There are</span>
+      <span class="cue-text">presentation is still valid without creating a correlation point. There are</span>
     </p>
     <p class="cue" id="t2449">
       <a class="cue-time" href="../../../#samuel-m-smith-the-state-and-the-future-of-the-keri-suite&amp;t=2449">40:49</a>
@@ -2379,7 +2406,7 @@
     </p>
     <p class="cue" id="t3083">
       <a class="cue-time" href="../../../#samuel-m-smith-the-state-and-the-future-of-the-keri-suite&amp;t=3083">51:23</a>
-      <span class="cue-text">solution to the privacy problem. if privacy includes sharing data. You can</span>
+      <span class="cue-text">solution to the privacy problem if privacy includes sharing data. You can</span>
     </p>
     <p class="cue" id="t3088">
       <a class="cue-time" href="../../../#samuel-m-smith-the-state-and-the-future-of-the-keri-suite&amp;t=3088">51:28</a>

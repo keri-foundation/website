@@ -6,7 +6,7 @@
     "statusNotice": "",
     "subtitle": "Talks from the conference",
     "footer": "Conference Videos",
-    "searchPlaceholder": "Type to search across all talks\u2026",
+    "searchPlaceholder": "Type to search across all talks…",
     "searchLabel": "Search all transcripts",
     "nav": [
       {
@@ -59,17 +59,36 @@
       "order": 1,
       "day": "Day 1",
       "title": "Talk Title - Speaker Name",
+      "youtubeId": "YOUTUBE_VIDEO_ID",
       "speaker": "Speaker Name",
       "path": "talks/Speaker-Name-Talk-Title.mp4",
       "duration": "20:00",
       "subtitle": "talks/Speaker-Name-Talk-Title.srt",
       "presentation": "slides/Speaker-Name-Talk-Title.pdf",
-      "poster": "speaker-photos/Speaker-Name.jpg"
+      "poster": "speaker-photos/Speaker-Name.jpg",
+      "chapters": [
+        {
+          "start": "00:00",
+          "description": "Introduction"
+        },
+        {
+          "start": "05:30",
+          "description": "Main topic"
+        },
+        {
+          "start": "15:00",
+          "description": "Closing"
+        }
+      ],
+      "links": [
+        "https://example.com/related"
+      ]
     },
     {
       "order": 1,
       "day": "Interviews",
       "title": "Interview - Speaker Name",
+      "youtubeId": "YOUTUBE_VIDEO_ID",
       "speaker": "Speaker Name",
       "path": "interviews/Speaker-Name-Interview.mp4",
       "duration": "1:30",
