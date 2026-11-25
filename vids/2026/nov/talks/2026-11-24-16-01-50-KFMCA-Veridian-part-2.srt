@@ -1,6 +1,6 @@
 1
 00:00:01,280 --> 00:00:13,140
-Cool. So, as I was sharing in an ideal
+Cool. As I was sharing in an ideal
 world… I have a bar here, but it's
 
 2
@@ -16,17 +16,17 @@ credentials and sessions in a different
 4
 00:00:26,900 --> 00:00:34,660
 way. But unfortunately, we are not there
-yet. So, my name is Roberto Carlos and I'm
+yet. My name is Roberto Carlos and I'm
 
 5
 00:00:34,660 --> 00:00:42,760
-a lead devot advocate at Veridian and I
+a Lead DevRel Advocate at Veridian and I
 need to protect systems from… I need to
 
 6
 00:00:42,760 --> 00:00:47,840
 authenticate and authorize access to
-systems. So, I decided to build something
+systems. I decided to build something
 
 7
 00:00:47,840 --> 00:00:56,840
@@ -40,13 +40,13 @@ infrastructure to check verifiable
 
 9
 00:01:05,060 --> 00:01:15,520
-credentials and then expedites openID
+credentials and then emits OpenID
 tokens that applications can understand
 
 10
 00:01:15,520 --> 00:01:24,520
 because they are native to this protocol
-that the internet uses broadly today. So,
+that the internet uses broadly today.
 
 11
 00:01:25,480 --> 00:01:31,240
@@ -55,17 +55,17 @@ are kind of too technical and we'll go
 
 12
 00:01:31,240 --> 00:01:41,720
-directly to the demo. So, build an
+directly to the demo. I built an
 organization manager where I can invite
 
 13
 00:01:41,720 --> 00:01:50,960
-people from to join our organization, our
+people to join our organization, our
 KERI infrastructure and where I can grant
 
 14
 00:01:50,960 --> 00:01:55,680
-them credentials that they can use to to
+them credentials that they can use to
 access applications. I'm going to be
 
 15
@@ -76,7 +76,7 @@ proxy to protect some dummy applications.
 16
 00:02:05,500 --> 00:02:10,560
 In this case, an organization-wide
-application that will affect any
+application that will accept any
 
 17
 00:02:10,560 --> 00:02:19,240
@@ -86,7 +86,7 @@ manager. And two more that let's say they
 18
 00:02:19,240 --> 00:02:26,000
 are Department 0 application for ACME
-company and department one for Veridian,
+company and Department 1 for Veridian,
 
 19
 00:02:26,880 --> 00:02:33,460
@@ -100,12 +100,12 @@ little bit more maybe interesting for some
 
 21
 00:02:45,920 --> 00:02:55,160
-demo that I will keep for myself by the
-moment. So let me invite what I call KERI
+demo that I will keep for myself for the
+moment. Let me invite what I call KERI
 
 22
 00:02:55,160 --> 00:03:04,880
-OEDC proof of concept users that we have
+OIDC proof of concept users that we have
 under our organization. He has a Google
 
 23
@@ -131,21 +131,21 @@ will do that using my phone.
 27
 00:03:40,000 --> 00:03:47,620
 I'm going to skip biometrics and password
-by the moment. Got connected. I'm going to
+for the moment. Got connected. I'm going to
 
 28
 00:03:47,620 --> 00:03:59,100
-paste here the connection ur… this one is
-correct. The connection URLs. else.
+paste here the connection UR… this one is
+correct. The connection URL.
 
 29
 00:04:22,560 --> 00:04:31,940
-Cool. And now I'm gonna introduce our our
+Cool. And now I'm gonna introduce our
 Veridian wallet to my organization manager
 
 30
 00:04:31,940 --> 00:04:43,000
-and the other way around. So I'm gonna add
+and the other way around. I'm gonna add
 a connection, scan the platform QR code.
 
 31
@@ -166,21 +166,21 @@ to the organization manager where I have a
 34
 00:05:07,680 --> 00:05:19,540
 few people waiting for some credentials.
-So let's do that. Okay. Maybe we can try
+Let's do that. Okay. Maybe we can try
 
 35
 00:05:19,540 --> 00:05:30,560
-and try to connect to these the org-wide
+to connect to this org-wide
 application. And obviously it shouldn't
 
 36
 00:05:30,560 --> 00:05:42,080
 work because we don't have any credential
-to present. So it should say that. Let's
+to present. It should say that. Let's
 
 37
 00:05:42,080 --> 00:05:52,020
-give this user environment zero. Let's say
+give this user Department 0. Let's say
 we are an advisor for this one.
 
 38
@@ -201,16 +201,16 @@ looks like. It includes an email that we
 41
 00:06:30,300 --> 00:06:36,540
 could say it's a verified email because we
-send the user an email to onboard and he
+sent the user an email to onboard and he
 
 42
 00:06:36,540 --> 00:06:42,720
-click on the link to verify and onboard it
-and present on himself. And this is how
+clicked on the link to verify and onboard
+and present himself. And this is how
 
 43
 00:06:42,720 --> 00:06:51,800
-the openID connect ID token will look
+the OpenID Connect ID token will look
 like. It's a preview. It's fake. But yeah,
 
 44
@@ -226,7 +226,7 @@ Yeah, we have here the organization and
 46
 00:07:09,040 --> 00:07:18,680
 the role, etc. that our OpenID Connect
-native applications could use to run DAX.
+native applications could use for authz.
 
 47
 00:07:19,220 --> 00:07:27,540
@@ -235,7 +235,7 @@ now we should be able to log into this
 
 48
 00:07:27,540 --> 00:07:30,060
-organization by app.
+organization-wide app.
 
 49
 00:07:33,060 --> 00:07:39,540
@@ -244,12 +244,12 @@ request, credential presentation request
 
 50
 00:07:39,540 --> 00:07:45,020
-from the app. You can see some some
+from the app. You can see some
 details here.
 
 51
 00:07:53,100 --> 00:07:59,860
-And we're in. So the demo apps in the case
+And we're in. The demo apps in the case
 of the three of them, it's just a WhoAmI
 
 52
@@ -264,13 +264,13 @@ login. Okay. Then we can try with the ACME
 
 54
 00:08:17,520 --> 00:08:26,000
-department 0 and it's already logged in
+Department 0 and it's already logged in
 because the credential is valid. It
 
 55
 00:08:26,000 --> 00:08:32,540
 automatically gave me a cookie to access
-that one. But Veridian department one, no.
+that one. But Veridian Department 1, no.
 
 56
 00:08:33,620 --> 00:08:44,520
@@ -293,7 +293,7 @@ Let's accept it.
 60
 00:09:09,260 --> 00:09:15,840
 Let me login. Now that I hold the
-credential, let me log into the Verion
+credential, let me log into the Veridian
 
 61
 00:09:15,840 --> 00:09:17,020
@@ -311,16 +311,16 @@ going to use the correct one, which is
 
 64
 00:09:38,640 --> 00:09:44,160
-this one, showing the written department
-one. If I use the other one, I will get
+this one, showing the Veridian Department
+1. If I use the other one, I will get
 
 65
 00:09:44,160 --> 00:09:45,340
-the same result than before.
+the same result as before.
 
 66
 00:09:53,900 --> 00:10:00,580
-And we are in. So we now have two
+And we are in. We now have two
 credentials that allow us access to three
 
 67
@@ -331,12 +331,12 @@ is… Oh, I forgot to show that these… and
 68
 00:10:11,420 --> 00:10:17,500
 you need to excuse me because I'm an
-infrastructure guy and this was my one of
+infrastructure guy and this was one of
 
 69
 00:10:17,500 --> 00:10:24,840
 my first UIs that I put together in a long
-time. So, it's super ugly. I can revoke
+time. It's super ugly. I can revoke
 
 70
 00:10:24,840 --> 00:10:27,720
@@ -349,18 +349,18 @@ credential is gone. And that means I
 
 72
 00:10:40,300 --> 00:10:51,080
-should be able to access the first orgwide
-app. Not ACME, but yes, very young. Cool.
+should be able to access the first org-wide
+app. Not ACME, but yes, Veridian. Cool.
 
 73
 00:10:51,460 --> 00:10:59,420
-So that's the first part of the demo. I
+That's the first part of the demo. I
 don't know if you have any questions,
 
 74
 00:10:59,660 --> 00:11:07,380
 suggestions. This is a proof of concept
-I'm building as we speak. as you see there
+I'm building as we speak. As you see there
 
 75
 00:11:07,380 --> 00:11:13,940
@@ -379,28 +379,28 @@ confronted with this all the time every
 
 78
 00:11:26,960 --> 00:11:35,040
-day or is it just a one-off to UBI to do
-an out-of-band introduction and then than
+day or is it just a one-off OOBI to do
+an out-of-band introduction and then
 
 79
 00:11:35,040 --> 00:11:43,580
-you're up and running. Yeah, so it's a
+you're up and running. Yeah, it's a
 good question. Thank you. It depends on
 
 80
 00:11:43,580 --> 00:11:49,980
 the policy you set in your application.
-For example, for this breach, I don't
+For example, for this bridge, I don't
 
 81
 00:11:49,980 --> 00:11:57,780
-remember what is the time to leave for the
+remember what is the time to live for the
 tokens. Could be one hour, five minutes,
 
 82
 00:11:58,200 --> 00:12:03,980
 whatever makes sense depending on what
-application are you protecting. So each of
+application you are protecting. Each of
 
 83
 00:12:03,980 --> 00:12:10,540
@@ -430,7 +430,7 @@ depends on your needs and requirements.
 88
 00:12:45,280 --> 00:12:50,280
 The good thing about this specific setup
-is when I revoke a credential, the breach
+is when I revoke a credential, the bridge
 
 89
 00:12:50,280 --> 00:12:59,060
@@ -440,7 +440,7 @@ if the token is bound to a credential that
 90
 00:12:59,060 --> 00:13:05,480
 is still valid. So that's a lot of work
-and a lot of computing I mean, not heavy
+and a lot of computing. I mean, not heavy
 
 91
 00:13:05,480 --> 00:13:12,740
@@ -450,7 +450,7 @@ high volume, it can be costly. But it's
 92
 00:13:12,740 --> 00:13:21,680
 also very convenient for me to revoke the
-access for any like immediately to any
+access immediately to any
 
 93
 00:13:21,680 --> 00:13:30,440
@@ -480,21 +480,21 @@ a decentralized, distributed identity
 98
 00:13:53,860 --> 00:14:00,940
 provider for this infrastructure. But
-yeah, once you're set up, it's your
+yeah, once you're set up, your
 
 99
 00:14:00,940 --> 00:14:06,100
-sessions works like any other service. and
+sessions work like any other service and
 you don't need to do much in your wallet.
 
 100
 00:14:07,180 --> 00:14:12,620
 Only once the session is expired, you will
-need to scan to login again, which is, you
+need to scan to login again, which is, in
 
 101
 00:14:12,620 --> 00:14:18,660
-know, in my opinion, more convenient than
+my opinion, more convenient than
 remembering and managing passwords which
 
 102
@@ -508,8 +508,8 @@ everything. – And why is this Veridian
 
 104
 00:14:28,120 --> 00:14:38,940
-KERI approach an enhancement of the the
-OpenIDs, OpenIDC here. So, I like to say
+KERI approach an enhancement of
+OpenID, OIDC here. I like to say
 
 105
 00:14:38,940 --> 00:14:46,220
@@ -523,18 +523,18 @@ extra security
 
 107
 00:14:55,440 --> 00:15:04,600
-because you could probably let me go for
+because you could… probably let me go for
 the next part of the demo, you could, for
 
 108
 00:15:04,600 --> 00:15:14,980
 example, back your Google account with a
-multi-seed credential that is back. So,
+multisig credential that is backed. So,
 
 109
 00:15:15,260 --> 00:15:25,400
 whose rotated rotation keys are backed by
-smart cards, you know, build more security
+smart cards, build more security
 
 110
 00:15:25,400 --> 00:15:29,680
@@ -547,7 +547,7 @@ with the… I should probably open
 
 112
 00:15:44,680 --> 00:15:57,220
-a private window. So imagine that you have
+a private window. Imagine that you have
 your marketing social
 
 113
@@ -557,12 +557,12 @@ Google to connect to X. For example, we
 
 114
 00:16:06,260 --> 00:16:11,560
-would use KODC POC at Beredian ID.
+would use OIDC POC at Veridian ID.
 
 115
 00:16:14,240 --> 00:16:20,740
 And now we are presented with a scan to
-login that could be backed by a multi-C
+login that could be backed by a multisig
 
 116
 00:16:20,740 --> 00:16:23,800
@@ -570,8 +570,8 @@ where
 
 117
 00:16:23,800 --> 00:16:32,960
-you will require two of N sequencers to
-present the credential. and then you're
+you will require two of N signers to
+present the credential. And then you're
 
 118
 00:16:32,960 --> 00:16:42,100
@@ -581,7 +581,7 @@ your social media accounts. It's not the
 119
 00:16:42,100 --> 00:16:51,620
 case. This is… I'm gonna scan this. It's
-not the case because this is a single SIG
+not the case because this is a single sig
 
 120
 00:16:51,620 --> 00:16:54,580
@@ -589,27 +589,27 @@ profile.
 
 121
 00:16:56,940 --> 00:17:04,740
-Ah, sorry. I forgot Google workspace
-logging. is asking me which one to
+Ah, sorry. I forgot Google Workspace
+login. It's asking me which one to
 
 122
 00:17:04,740 --> 00:17:12,900
-present. I could present wherever because
+present. I could present whichever because
 any of these has a valid email that Google
 
 123
 00:17:12,900 --> 00:17:21,760
-will check through our breach if it's
-valid. So, yeah,
+will check through our bridge if it's
+valid. Yeah,
 
 124
 00:17:21,860 --> 00:17:36,000
-if I present my ACDC, I'm asked probably
+if I present my ACDC, I'm asked probably…
 Probably I should not put this into…
 
 125
 00:18:02,560 --> 00:18:09,520
-And now we are logged to X. instead of
+And now we are logged in to X. Instead of
 using a password, using our Google
 
 126
@@ -625,12 +625,12 @@ Google. That's a feature from Google
 128
 00:18:26,520 --> 00:18:34,720
 Workspace that is from last September,
-September, 2025. So it's kind of recent,
+September 2025. So it's kind of recent,
 
 129
 00:18:34,720 --> 00:18:43,600
-But it's a possibility now. You will only
-need to configure your Google workspace to
+but it's a possibility now. You will only
+need to configure your Google Workspace to
 
 130
 00:18:43,600 --> 00:18:52,980
@@ -645,7 +645,7 @@ account or organizational unit connected
 132
 00:18:58,840 --> 00:19:08,180
 to this IDP which will be the bridge for
-any service Obviously, we are using here
+any service. Obviously, we are using here
 
 133
 00:19:08,180 --> 00:19:11,100
@@ -674,11 +674,11 @@ or maybe we can if you know someone at
 138
 00:19:43,940 --> 00:19:50,720
 Google, it would be cool to be able to
-talk back to Google from this breach to
+talk back to Google from this bridge to
 
 139
 00:19:50,720 --> 00:19:56,920
-say, hey, this session bond to this
+say, hey, this session bound to this
 credential is no longer valid and you
 
 140
@@ -694,7 +694,7 @@ question, but yeah. No, thank you.
 142
 00:20:17,400 --> 00:20:28,740
 That's all from my side for this KERI
-ACDCSAS OIDC IDP. That's a lot of letters,
+ACDCs as OIDC IDP. That's a lot of letters,
 
 143
 00:20:29,260 --> 00:20:39,460
@@ -708,7 +708,7 @@ either?
 
 145
 00:20:53,580 --> 00:21:03,180
-And so just to be clear, the last demo
+And just to be clear, the last demo
 imposed a different level of security on
 
 146
@@ -717,11 +717,11 @@ an existing less secure access capability.
 
 147
 00:21:13,420 --> 00:21:17,180
-So, it's an interoperability opportunity.
+So it's an interoperability opportunity.
 
 148
 00:21:19,500 --> 00:21:25,840
-Yeah. So, instead of using, I don't know,
+Yeah. Instead of using, I don't know,
 hardware keys, I mean, passkeys or
 
 149
@@ -732,79 +732,14 @@ leverage all the features that KERI brings
 150
 00:21:35,000 --> 00:21:44,240
 and offers to back your login with Google
-or any other IDC compatible system, which
+or any other OIDC compatible system, which
 
 151
 00:21:44,240 --> 00:21:54,280
 I think it's very good. Great. Thank you.
-Any other questions? know how to know how
+Any other questions?
 
 152
-00:21:54,280 --> 00:21:54,320
-to know how to know how to know how to
-know how to know how to know how to know
-
-153
-00:21:54,320 --> 00:21:54,320
-how to know how to know how to know how to
-know how to know how to know how to know
-
-154
-00:21:54,320 --> 00:21:54,500
-how to know how know how know how know
-know know know know know know know know
-
-155
-00:21:54,500 --> 00:21:54,500
-know know know know know know know know
-know know know know know know know know
-
-156
-00:21:54,500 --> 00:21:54,500
-know know know know know know know know
-know know know know know know know know
-
-157
-00:21:54,500 --> 00:21:54,500
-know know know know know know know know
-know know know know know know know know
-
-158
-00:21:54,500 --> 00:21:54,500
-know know know know know know know know
-know know know know know know know know
-
-159
-00:21:54,500 --> 00:21:54,520
-know know know know know know know know
-know know know know know know know know
-
-160
-00:21:54,520 --> 00:21:55,300
-know know know know know know know know
-know know know know know know know know
-
-161
-00:21:55,300 --> 00:21:55,340
-know know know know know know know know
-know know know know know know know know
-
-162
-00:21:55,340 --> 00:21:55,340
-know know know know know know know know
-know know know know know know know know
-
-163
-00:21:55,340 --> 00:21:55,340
-know know know know know know know know
-know know know know know know know know
-
-164
-00:21:55,340 --> 00:21:57,260
-know know know know know know know know
-know know know know know know know know
-
-165
 00:21:57,260 --> 00:21:57,880
 Thank you.
 
