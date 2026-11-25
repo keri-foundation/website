@@ -1,0 +1,770 @@
+1
+00:00:00,000 --> 00:00:08,940
+Over to you. Okay. Thank you, Karla. Thank
+you for having us today. I can start. So
+
+2
+00:00:08,940 --> 00:00:13,200
+yeah, my name is Jaime Caso. I work as
+Innovation Engineer at Bolivian. I'm here
+
+3
+00:00:13,200 --> 00:00:21,180
+with Roberto, Lead of Ops Advocate. And we
+are going to present Breida Wallet with
+
+4
+00:00:21,180 --> 00:00:26,740
+KERI protocol and GC-based wallet. And
+we're going to present two demos. Same
+
+5
+00:00:26,740 --> 00:00:33,100
+demos that we presented three weeks ago, I
+think, in IWG. And yes, as you say, Carla,
+
+6
+00:00:33,560 --> 00:00:38,100
+the first one is about wallet recovery
+using biometric smart cards. And the
+
+7
+00:00:38,100 --> 00:00:43,680
+second one by Roby is going to be about
+openID connect loading with ACDC. So yeah,
+
+8
+00:00:43,720 --> 00:00:48,080
+I'm going to reuse my slides from IWG. So
+let me share my screen.
+
+9
+00:00:56,320 --> 00:00:57,380
+Share screen.
+
+10
+00:01:00,920 --> 00:01:08,240
+I sent a request. Okay, perfect.
+
+11
+00:01:14,300 --> 00:01:25,420
+Perfect. Thank you. Thank you.
+
+12
+00:01:27,320 --> 00:01:36,400
+I guess you already can see the screen,
+right? Yes, we can. Thank you. Yeah, so
+
+13
+00:01:36,400 --> 00:01:45,300
+let's go for the first demo before going
+to the demo. Let's explain a bit about it.
+
+14
+00:01:45,300 --> 00:01:53,180
+So, so far in RIDAN wallet everything
+starts from a secret. In KERI we call this
+
+15
+00:01:53,180 --> 00:02:02,420
+secret the brand and in RIDAN wallet we
+call it the seed phrase because we use a
+
+16
+00:02:02,420 --> 00:02:11,580
+human readable representation of this of
+this brand of this entropy and then from
+
+17
+00:02:11,580 --> 00:02:20,220
+this entropy we can derive all the keys
+signing keys and rotation keys. But this
+
+18
+00:02:20,220 --> 00:02:25,140
+is this seed phrase has a few problems
+like if you lose the words, you lose the
+
+19
+00:02:25,140 --> 00:02:31,860
+wallet or if someone sees the words, they
+can take control of the wallet. And it's
+
+20
+00:02:31,860 --> 00:02:37,380
+true that sometimes it's hard to keep safe
+this seed phrase over time because maybe
+
+21
+00:02:37,380 --> 00:02:45,180
+you lose the USB or the paper or even you
+can forget where you put the the Swift
+
+22
+00:02:45,180 --> 00:02:54,120
+phrase. So the idea is to separate the
+sign-in key from the rotation key. Being
+
+23
+00:02:54,120 --> 00:03:02,420
+the sign-in key as in the SIG which stays
+in the phone and you can use this key for
+
+24
+00:03:02,420 --> 00:03:07,500
+your daily request of the controller to
+sign and secure the communication between
+
+25
+00:03:07,500 --> 00:03:12,420
+the wallet and the cloud agent and get
+access to the identities. In Brilliant
+
+26
+00:03:12,420 --> 00:03:16,780
+Wallet, we call this these identities as
+profiles. And then we have the rotation
+
+27
+00:03:16,780 --> 00:03:22,440
+power, the rotation key, which is a multi
+-seek with a threshold one of two in this
+
+28
+00:03:22,440 --> 00:03:29,260
+case for this demo. This means that you
+can use one card or the other to rotate
+
+29
+00:03:29,260 --> 00:03:36,340
+the wallet, to rotate the controller. It's
+important to mention that these cards stay
+
+30
+00:03:36,340 --> 00:03:41,980
+in different places, isolated, offline.
+And we don't expose these cards, these
+
+31
+00:03:41,980 --> 00:03:47,840
+pivot keys, as we expose the sending key
+every day. We just use them when we need
+
+32
+00:03:47,840 --> 00:03:53,560
+it on demand. We can think that for
+example one of the card could be safe at
+
+33
+00:03:53,560 --> 00:04:02,460
+home and the other card could be safe by
+an accredited custodian like a bank. We
+
+34
+00:04:02,460 --> 00:04:09,240
+have these two cards here and the great
+one comes from directly from the from
+
+35
+00:04:09,240 --> 00:04:15,040
+China from the factory and here you can
+see the a biometric sensor for the
+
+36
+00:04:15,040 --> 00:04:20,980
+fingerprint. And then we have the second
+one, the black one, again with the
+
+37
+00:04:20,980 --> 00:04:27,840
+fingerprint. And this comes from a US
+provider, I think is from CIDL-CID. So
+
+38
+00:04:27,840 --> 00:04:35,900
+let's go for the demo. For the demo, I'm
+going to use two devices, a Samsung and
+
+39
+00:04:35,900 --> 00:04:43,040
+then an iPhone and these two cars. So I'm
+going to hold a bit the the camera of my
+
+40
+00:04:43,040 --> 00:04:52,080
+laptop so you can see how I handle the
+phone and the cards. So, just a second.
+
+41
+00:04:55,520 --> 00:05:03,700
+Okay. Let me remove the blur background.
+No, it's perfect. Cool.
+
+42
+00:05:10,660 --> 00:05:15,600
+Okay. And also let me share the screen of
+the first device, the Samsung. I'm going
+
+43
+00:05:15,600 --> 00:05:24,540
+to start with the Samsung device. So,
+which is this one. I already onboarded the
+
+44
+00:05:24,540 --> 00:05:29,700
+wallet and as you can see in the screen,
+in the top, there is a banner that says
+
+45
+00:05:29,700 --> 00:05:36,000
+that I should verify my recovery phrase,
+the C phrase. Actually, we can take a look
+
+46
+00:05:36,000 --> 00:05:37,420
+quickly. It looks.
+
+47
+00:05:41,080 --> 00:05:48,940
+Okay. And this is the words, the order
+words. So, we want to separate the signing
+
+48
+00:05:48,940 --> 00:05:54,980
+key from the rotation key. So, we want to
+do the backup using these two smart cards.
+
+49
+00:05:55,280 --> 00:06:03,740
+Okay. So, let's go back to home and now we
+need to go to settings. And in setting we
+
+50
+00:06:03,740 --> 00:06:09,760
+have a new option here which is called
+backup with a card. And this is the option
+
+51
+00:06:09,760 --> 00:06:15,360
+we need to select in order to go ahead and
+do the backup with the smart cards to move
+
+52
+00:06:15,360 --> 00:06:20,400
+the rotation power from the seed phrase
+which is actually in the phone right now
+
+53
+00:06:20,400 --> 00:06:29,460
+to the to these new smart cards. So let's
+go to the option and now we're going to
+
+54
+00:06:29,460 --> 00:06:35,900
+present these two cards to the phone in
+order to do the rotation. And let's say
+
+55
+00:06:35,900 --> 00:06:41,420
+activate these cards for the rotation
+power. So let's go for it. Let's go one by
+
+56
+00:06:41,420 --> 00:06:49,740
+one. So I click on start and now the
+wallet is asking me to tap with the first
+
+57
+00:06:49,740 --> 00:06:56,060
+card. So let's go for it. I touch with my
+fingerprint in the sensor and I already
+
+58
+00:06:56,060 --> 00:07:02,000
+presented the first card. So next I need
+to do the same with the second So, I click
+
+59
+00:07:02,000 --> 00:07:11,340
+on add as a second card. I tap. I touch
+the fingerprint sensor and it's done. Now,
+
+60
+00:07:11,600 --> 00:07:19,800
+I'm ready to do the rotation and to go
+from seed phrase to smart cards. So, I can
+
+61
+00:07:19,800 --> 00:07:24,920
+click on confirm backup and
+
+62
+00:07:24,920 --> 00:07:34,660
+voila, it's done. No. So we can actually
+double check it. Here we see that we have
+
+63
+00:07:34,660 --> 00:07:45,400
+the two cards, the great one and the black
+one. So before the demo, before this call,
+
+64
+00:07:45,660 --> 00:07:53,800
+I already populated this wallet with… –
+Jared? Sorry, can you go unmute? Thank
+
+65
+00:07:53,800 --> 00:08:00,540
+you. Sorry. – Thank you. No No worries.
+Thank you. So yeah, before the demo, I
+
+66
+00:08:00,540 --> 00:08:05,980
+populated the world with a few
+credentials, one connection and
+
+67
+00:08:05,980 --> 00:08:14,500
+notification. So the recovery is more
+interesting. So now let's go for the
+
+68
+00:08:14,500 --> 00:08:21,580
+situation where I lose my phone or someone
+take it. So what is going to happen is
+
+69
+00:08:21,580 --> 00:08:28,380
+that I don't have access to this device
+anymore. I lost it. So what I'm going to
+
+70
+00:08:28,380 --> 00:08:34,260
+do, I'm going to recover all the wallet,
+all the identities, credentials and
+
+71
+00:08:34,260 --> 00:08:43,900
+everything in a new phone. So for that, I
+bought a new phone. Let me this one, which
+
+72
+00:08:43,900 --> 00:08:53,840
+is a it's an iPhone. Oh, sorry. Oh, sorry.
+Let me do it. Yeah.
+
+73
+00:08:55,980 --> 00:09:01,540
+Which is an iPhone. And I already
+installed the Veriden wallet.
+
+74
+00:09:06,660 --> 00:09:12,740
+So in this case, I need to do the
+onboarding. And I need to select that I
+
+75
+00:09:12,740 --> 00:09:20,720
+already have a wallet. So I click on the
+option. Accept the terms. Create the pin
+
+76
+00:09:20,720 --> 00:09:21,400
+code.
+
+77
+00:09:25,740 --> 00:09:33,680
+I'm going to enable Biometrics. Okay. No
+password this time. And now I need to do
+
+78
+00:09:33,680 --> 00:09:38,160
+the recovery. So I need to present the
+cards. In this case, as I said, this is a
+
+79
+00:09:38,160 --> 00:09:41,980
+three-sword one of two. So I just need to
+present one card. So I'm going to use the
+
+80
+00:09:41,980 --> 00:09:51,460
+gray one in this case. And so let's go for
+it. Now the one is asking me to tap. I
+
+81
+00:09:51,460 --> 00:09:57,540
+need to touch the sensor with my
+fingerprint. And now it's asking if I
+
+82
+00:09:57,540 --> 00:10:03,420
+still have the second one. I have it. So I
+click on I have it. I touch again the
+
+83
+00:10:03,420 --> 00:10:03,800
+sensor.
+
+84
+00:10:12,840 --> 00:10:13,940
+And one more time.
+
+85
+00:10:24,180 --> 00:10:31,000
+And boom, the recovery is done. I can get
+access again to the wallet. I can go to
+
+86
+00:10:31,000 --> 00:10:35,260
+the credentials. I have everything, both
+credentials. I have the connection and I
+
+87
+00:10:35,260 --> 00:10:41,940
+have all the notifications. And one thing
+that is really important is that in the
+
+88
+00:10:41,940 --> 00:10:47,560
+other phone, in the Samsung, you see the
+white screen saying that this wallet was
+
+89
+00:10:47,560 --> 00:10:54,020
+moved to another phone. You recovered this
+wallet on another device. For security,
+
+90
+00:10:54,700 --> 00:11:00,360
+the keys on this phone were rotated. So
+this phone can no longer be used. Your
+
+91
+00:11:00,360 --> 00:11:06,220
+identity and credentials are safe on the
+new device. So what we did is we rotated
+
+92
+00:11:06,220 --> 00:11:13,620
+the controller and the old controller, the
+one in the Samsung can't use the wallet
+
+93
+00:11:13,620 --> 00:11:21,360
+anymore. It lost access to it. So yeah,
+this is basically the demo. It was quick.
+
+94
+00:11:25,480 --> 00:11:30,880
+In IIW, there was some questions like if
+the signing key is a single seek. It's
+
+95
+00:11:30,880 --> 00:11:37,680
+not. As I said in the beginning, it's a
+single seek. Also, there was a question
+
+96
+00:11:37,680 --> 00:11:45,700
+about how many keys can I store in the the
+car. And the thing is that we don't store
+
+97
+00:11:45,700 --> 00:11:51,620
+keys. I mean the raw data of the key in
+the car. What we store in the car is the
+
+98
+00:11:51,620 --> 00:12:00,900
+master seat, which is 32 bytes. Also the
+counter the index of the current rotation
+
+99
+00:12:00,900 --> 00:12:08,420
+key. And if we do the numbers, the match
+in one slot of this car, we can have more
+
+100
+00:12:08,420 --> 00:12:19,460
+than 65,000 rotations. And this means one
+rotation per day in 170 years. I mean,
+
+101
+00:12:19,640 --> 00:12:29,540
+that's a lot. And yeah, in each car has
+actually 256 slots. So this means if you
+
+102
+00:12:29,540 --> 00:12:36,120
+do the math again, this is 17 million
+rotations. Of course, you will never reach
+
+103
+00:12:36,120 --> 00:12:42,380
+that number. Probably you will lose the
+car before or rotate to a new car before.
+
+104
+00:12:44,140 --> 00:12:51,040
+Yeah, and that's the demo. It was quick.
+So, I'm going to pass the ball to Roberto.
+
+105
+00:12:52,520 --> 00:12:58,580
+Maybe… – Question, Jamie. – Yeah,
+definitely. – Key rotation in KERI is
+
+106
+00:12:58,580 --> 00:13:09,060
+agnostic about… You don't need to use
+hierarchical deterministic key management
+
+107
+00:13:09,060 --> 00:13:15,040
+there. So, it's not one seed that you have
+to use use. But in this case, you use one
+
+108
+00:13:15,040 --> 00:13:23,660
+seed, don't you? You use the HDKM
+functionality of it. – Yeah. And this seed
+
+109
+00:13:23,660 --> 00:13:29,120
+is in the secure element of the chip. It
+never, never leaves the secure element.
+
+110
+00:13:29,380 --> 00:13:35,960
+And you use the index to go to the next to
+the next rotation key. – Yeah. And that is
+
+111
+00:13:35,960 --> 00:13:42,560
+a derivation from the master key. – Yeah.
+That's it. Got it.
+
+112
+00:13:46,140 --> 00:13:55,460
+Can I comment on that? Yeah. Can I comment
+on that? Yeah. So, by using by putting the
+
+113
+00:13:55,460 --> 00:14:03,740
+derivation of the HD keychain in an
+external hardware HSM, then you eliminate
+
+114
+00:14:03,740 --> 00:14:10,900
+a lot of the attack vectors where you're
+attacking the client
+
+115
+00:14:10,900 --> 00:14:14,540
+that's running in a web browser or
+something like that when you're entering
+
+116
+00:14:14,540 --> 00:14:21,160
+the seed phrase to be able to regenerate
+your keys. So this eliminates a whole host
+
+117
+00:14:21,160 --> 00:14:28,900
+of attack vectors by putting it
+externally. So it's a balance between
+
+118
+00:14:28,900 --> 00:14:35,960
+security and user friction. Whereas if you
+had to use a different seed phrase, then
+
+119
+00:14:35,960 --> 00:14:39,420
+you'd have to create a new, you'd have to
+have a new spark card every time you
+
+120
+00:14:39,420 --> 00:14:45,200
+rotated. So that would be really a lot of
+friction. Yep.
+
+121
+00:14:49,240 --> 00:14:56,320
+Thank you, Sam. Yeah, so that's all for
+the first demo. I can pass the ball if no
+
+122
+00:14:56,320 --> 00:14:58,440
+more questions to Roberto.
+
+123
+00:15:04,780 --> 00:15:12,140
+I would say this is great. This is like,
+you know, Sol is one of the friction
+
+124
+00:15:12,140 --> 00:15:20,800
+problems with pre-rotated keys in a nice
+way using inexpensive hardware. – So if I
+
+125
+00:15:20,800 --> 00:15:24,920
+understand it correctly, you have two
+smart cards because if you lose one, you
+
+126
+00:15:24,920 --> 00:15:33,620
+will not lose your access to your pre
+-rotated keys. – Yeah, I mean you can have
+
+127
+00:15:33,620 --> 00:15:38,420
+an arbitrary number of cards. This is just
+for to simplify the demo and to
+
+128
+00:15:38,420 --> 00:15:44,540
+demonstrate the multi-sick. You can have
+four, you can have 10. Yeah. Okay. As much
+
+129
+00:15:44,540 --> 00:15:52,800
+as you feel safe. Yeah. And you could also
+you could also you could also do you could
+
+130
+00:15:52,800 --> 00:15:57,940
+do like a different threshold. So you
+could have instead of one of n in this
+
+131
+00:15:57,940 --> 00:16:02,540
+case one of two or one of three or one of
+four you could do two of six and then
+
+132
+00:16:02,540 --> 00:16:10,680
+you'd have six spark cards and any two
+would be required. Yep. Got it. And we can
+
+133
+00:16:10,680 --> 00:16:19,480
+use different custodians for them. So you
+diversify the risk of them being installed
+
+134
+00:16:19,480 --> 00:16:26,080
+and pulled together. I mean, they are
+protected with biometrics, but… No, but a
+
+135
+00:16:26,080 --> 00:16:32,000
+lot of key recovery algorithms are based
+on sharding a single key. And in this
+
+136
+00:16:32,000 --> 00:16:37,340
+case, you're not sharding a single key,
+you're sharding control amongst multiple
+
+137
+00:16:37,340 --> 00:16:42,900
+keys, which is actually a more secure
+path. So for example, you could think of
+
+138
+00:16:42,900 --> 00:16:50,540
+your shard as each card is one of the
+shards of the control over your
+
+139
+00:16:50,540 --> 00:17:00,760
+identifier. And so you could have social
+recovery where you gave a card to your
+
+140
+00:17:00,760 --> 00:17:08,800
+relatives and then have, instead of one of
+n, have some you know, three of a minimum
+
+141
+00:17:08,800 --> 00:17:13,440
+of three that they have to get together to
+do it. So you can replicate the same sort
+
+142
+00:17:13,440 --> 00:17:18,240
+of social recovery, but in a much more
+secure way without sharding a single key,
+
+143
+00:17:18,360 --> 00:17:23,700
+but by effectively sharding your control
+amongst a bunch of cards. I don't know if
+
+144
+00:17:23,700 --> 00:17:29,200
+you guys ever thought of it that way, but
+that's obviously a place you could go with
+
+145
+00:17:29,200 --> 00:17:29,440
+this.
+
+146
+00:17:37,560 --> 00:17:45,000
+Sorry, that's all I had to say. Sorry.
+Interruption. No worries. Yeah, there was
+
+147
+00:17:45,000 --> 00:17:52,860
+one last thing I want to mention about the
+these R providers. So they are working
+
+148
+00:17:52,860 --> 00:17:59,300
+also the next version of the KARS to
+support post-quantum signatures.
+
+149
+00:17:59,300 --> 00:18:12,360
+signatures, specifically MLDSA. The target
+is 2027. So yeah, thanks to KERI, to CSR
+
+150
+00:18:12,360 --> 00:18:19,140
+and KIP2 Agility. Maybe at some point we
+can support also these kind of signatures.
+
+151
+00:18:19,980 --> 00:18:25,920
+One thing worth of mention that one year
+ago, I think September last year, iOS in
+
+152
+00:18:25,920 --> 00:18:40,420
+iOS 26, They included this type of
+signatures, MLDSA in the secure and slave
+
+153
+00:18:40,420 --> 00:18:49,500
+of the iPhones. And then this year it was
+June in June. Yeah. Also Android did the
+
+154
+00:18:49,500 --> 00:18:56,560
+same for Android 17. So yeah, this means
+that millions of users will be exposed to
+
+155
+00:18:56,560 --> 00:19:02,020
+this new kind of signatures, post-quantum
+signatures, this new standard approved by
+
+156
+00:19:02,020 --> 00:19:06,220
+NIST. So yeah, it's nice to be aware of
+that. know what.
+
