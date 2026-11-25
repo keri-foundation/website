@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KERI ACDCs as OpenID Connect - Roberto C. Morano — Transcript</title>
-  <meta name="description" content="Transcript: KERI ACDCs as OpenID Connect - Roberto C. Morano (November 2026 · 21:58)">
+  <meta name="description" content="AI generated summary, if a statement needs explication, see the video. Roberto C. Morano, Lead DevRel Advocate at Veridian, shows a bridge that treats KERI ACDCs as an OpenID…">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
@@ -100,6 +100,26 @@
       border-color: var(--ink);
     }
     .actions a.primary:hover { background: #0a1270; }
+    .summary {
+      background: var(--panel);
+      border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+      border-radius: 10px;
+      padding: 1rem 1.25rem 0.35rem;
+      margin-bottom: 1.5rem;
+    }
+    .summary h2 {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.65rem;
+    }
+    .summary p {
+      margin: 0 0 0.85rem;
+      font-size: 1.05rem;
+    }
     article {
       background: var(--panel);
       border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
@@ -180,6 +200,13 @@
         <a href="../../../">Video gallery</a>
       </div>
     </header>
+    <section class="summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <p>AI generated summary, if a statement needs explication, see the video.</p>
+      <p>Roberto C. Morano, Lead DevRel Advocate at Veridian, shows a bridge that treats KERI ACDCs as an OpenID Connect identity provider. Ideal apps would speak KERI natively; until they do, his proxy verifies credentials against KERI infrastructure and emits OIDC tokens that ordinary web apps already understand.</p>
+      <p>He walks an organization manager that invites users, issues role credentials, and protects demo apps behind an OAuth proxy: an org-wide app that accepts any credential from that issuer, plus Department 0 (ACME) and Department 1 (Veridian) apps that require the matching credential. After OOBI connection and issuance into the Veridian wallet, presentation unlocks the right apps; revocation drops access on the next check even while other credentials still work. Once set up, sessions behave like single sign-on until TTL expiry or revoke.</p>
+      <p>He argues this supercharges OpenID rather than replacing it: Google or other OIDC logins can be backed by KERI credentials, including multisig profiles whose rotation keys sit on smart cards, so social and workspace access inherit stronger key control without rewriting every relying party.</p>
+    </section>
     <article>
     <p class="cue" id="t1">
       <a class="cue-time" href="../../../#keri-acdcs-as-openid-connect-roberto-c-morano&amp;t=1">0:01</a>

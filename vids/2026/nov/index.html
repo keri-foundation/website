@@ -3038,7 +3038,34 @@
                 title="Toggle condensed view for all videos">Show only titles</button>
         </div>
 
-        <section class="talk-summaries" id="talkSummaries" aria-label="Talk summaries"></section>
+        <section class="talk-summaries" id="talkSummaries" aria-label="Talk summaries">
+    <h2 id="talkSummariesHeading">Talk summaries</h2>
+    <article class="talk-summary" data-media="talks/2026-11-24-16-01-50-KFMCA-Veridian-intro.mp4">
+      <h3 class="talk-summary-title">Veridian Wallet Demos Intro - Karla McKenna</h3>
+      <div class="talk-summary-body">
+        <p>AI generated summary, if a statement needs explication, see the video.</p>
+        <p>Karla McKenna introduces a reprise of Veridian’s IIW demos for the KFMCA meetup. Jaime Caso and Roberto C. Morano will show two pieces of the CESR-based Veridian wallet on KERI: biometric smart cards that replace the seed phrase so a user can move the wallet to a new phone with one card, and KERI credentials used to log into websites through OpenID Connect.</p>
+      </div>
+    </article>
+    <article class="talk-summary" data-media="talks/2026-11-24-16-01-50-KFMCA-Veridian-part-1.mp4">
+      <h3 class="talk-summary-title">Veridian Wallet Recovery with Smart Cards - Jaime Caso</h3>
+      <div class="talk-summary-body">
+        <p>AI generated summary, if a statement needs explication, see the video.</p>
+        <p>Jaime Caso, Innovation Engineer at Veridian, demos wallet recovery that replaces the seed phrase with biometric smart cards. In the Veridian wallet every key still derives from a bran, shown to the user as a seed phrase, but that phrase is easy to lose or steal. The design separates daily signing keys on the phone from rotation power held offline on cards.</p>
+        <p>For the demo, rotation is a threshold one-of-two multisig: either of two fingerprint-backed cards can rotate the controller. One card might stay at home and the other with a custodian. Jaime backups a populated Samsung wallet onto a gray factory card and a black HID card, then recovers the same profiles, credentials, connections, and notifications onto a fresh iPhone with a single tap. The old phone’s keys rotate out and the Samsung shows that the wallet moved, so the lost device can no longer act as controller.</p>
+        <p>The cards store a 32-byte master seed and a rotation index in the secure element, not raw keys, which never leave the chip. Hierarchical derivation from that seed avoids issuing a new card on every rotation while still keeping the high-risk material off the phone. Q&amp;A with Samuel Smith covers why HDKM on external hardware cuts seed-entry attack surface without forcing a new card per rotation.</p>
+      </div>
+    </article>
+    <article class="talk-summary" data-media="talks/2026-11-24-16-01-50-KFMCA-Veridian-part-2.mp4">
+      <h3 class="talk-summary-title">KERI ACDCs as OpenID Connect - Roberto C. Morano</h3>
+      <div class="talk-summary-body">
+        <p>AI generated summary, if a statement needs explication, see the video.</p>
+        <p>Roberto C. Morano, Lead DevRel Advocate at Veridian, shows a bridge that treats KERI ACDCs as an OpenID Connect identity provider. Ideal apps would speak KERI natively; until they do, his proxy verifies credentials against KERI infrastructure and emits OIDC tokens that ordinary web apps already understand.</p>
+        <p>He walks an organization manager that invites users, issues role credentials, and protects demo apps behind an OAuth proxy: an org-wide app that accepts any credential from that issuer, plus Department 0 (ACME) and Department 1 (Veridian) apps that require the matching credential. After OOBI connection and issuance into the Veridian wallet, presentation unlocks the right apps; revocation drops access on the next check even while other credentials still work. Once set up, sessions behave like single sign-on until TTL expiry or revoke.</p>
+        <p>He argues this supercharges OpenID rather than replacing it: Google or other OIDC logins can be backed by KERI credentials, including multisig profiles whose rotation keys sit on smart cards, so social and workspace access inherit stronger key control without rewriting every relying party.</p>
+      </div>
+    </article>
+    </section>
 
         <div class="video-container" id="videoContainer">
             <!-- Video cards generated from index.json -->

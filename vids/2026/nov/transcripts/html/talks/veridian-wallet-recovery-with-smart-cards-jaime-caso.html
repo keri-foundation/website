@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Veridian Wallet Recovery with Smart Cards - Jaime Caso — Transcript</title>
-  <meta name="description" content="Transcript: Veridian Wallet Recovery with Smart Cards - Jaime Caso (November 2026 · 19:07)">
+  <meta name="description" content="AI generated summary, if a statement needs explication, see the video. Jaime Caso, Innovation Engineer at Veridian, demos wallet recovery that replaces the seed phrase with…">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
@@ -100,6 +100,26 @@
       border-color: var(--ink);
     }
     .actions a.primary:hover { background: #0a1270; }
+    .summary {
+      background: var(--panel);
+      border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+      border-radius: 10px;
+      padding: 1rem 1.25rem 0.35rem;
+      margin-bottom: 1.5rem;
+    }
+    .summary h2 {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin: 0 0 0.65rem;
+    }
+    .summary p {
+      margin: 0 0 0.85rem;
+      font-size: 1.05rem;
+    }
     article {
       background: var(--panel);
       border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
@@ -180,6 +200,13 @@
         <a href="../../../">Video gallery</a>
       </div>
     </header>
+    <section class="summary" aria-labelledby="summary-heading">
+      <h2 id="summary-heading">Summary</h2>
+      <p>AI generated summary, if a statement needs explication, see the video.</p>
+      <p>Jaime Caso, Innovation Engineer at Veridian, demos wallet recovery that replaces the seed phrase with biometric smart cards. In the Veridian wallet every key still derives from a bran, shown to the user as a seed phrase, but that phrase is easy to lose or steal. The design separates daily signing keys on the phone from rotation power held offline on cards.</p>
+      <p>For the demo, rotation is a threshold one-of-two multisig: either of two fingerprint-backed cards can rotate the controller. One card might stay at home and the other with a custodian. Jaime backups a populated Samsung wallet onto a gray factory card and a black HID card, then recovers the same profiles, credentials, connections, and notifications onto a fresh iPhone with a single tap. The old phone’s keys rotate out and the Samsung shows that the wallet moved, so the lost device can no longer act as controller.</p>
+      <p>The cards store a 32-byte master seed and a rotation index in the secure element, not raw keys, which never leave the chip. Hierarchical derivation from that seed avoids issuing a new card on every rotation while still keeping the high-risk material off the phone. Q&amp;A with Samuel Smith covers why HDKM on external hardware cuts seed-entry attack surface without forcing a new card per rotation.</p>
+    </section>
     <article>
     <p class="cue" id="t0">
       <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso">0:00</a>
