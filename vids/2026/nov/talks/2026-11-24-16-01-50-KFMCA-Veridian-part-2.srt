@@ -61,7 +61,7 @@ organization manager where I can invite
 13
 00:01:41,720 --> 00:01:50,960
 people to join our organization, our
-KERI infrastructure and where I can grant
+KERI infrastructure, and where I can grant
 
 14
 00:01:50,960 --> 00:01:55,680
@@ -81,7 +81,7 @@ application that will accept any
 17
 00:02:10,560 --> 00:02:19,240
 credential issued by this organization
-manager. And two more that let's say they
+manager. And two more that, let's say, they
 
 18
 00:02:19,240 --> 00:02:26,000
@@ -96,22 +96,22 @@ credential for them, not only if the
 20
 00:02:33,460 --> 00:02:45,920
 issuer is valid. And then I will do a
-little bit more maybe interesting for some
+little bit more, maybe interesting for some
 
 21
 00:02:45,920 --> 00:02:55,160
 demo that I will keep for myself for the
-moment. Let me invite what I call KERI
+moment. Let me invite what I call a KERI
 
 22
 00:02:55,160 --> 00:03:04,880
-OIDC proof of concept users that we have
+OIDC proof-of-concept user that we have
 under our organization. He has a Google
 
 23
 00:03:04,880 --> 00:03:13,580
 account, but now we want to grant him some
-credentials he can use to use some other
+credentials he can use for some other
 
 24
 00:03:13,580 --> 00:03:19,880
@@ -135,27 +135,27 @@ for the moment. Got connected. I'm going to
 
 28
 00:03:47,620 --> 00:03:59,100
-paste here the connection UR… this one is
-correct. The connection URL.
+paste here the connection URL. This one is
+correct.
 
 29
 00:04:22,560 --> 00:04:31,940
-Cool. And now I'm gonna introduce our
+Cool. And now I'm going to introduce our
 Veridian wallet to my organization manager
 
 30
 00:04:31,940 --> 00:04:43,000
-and the other way around. I'm gonna add
+and the other way around. I'm going to add
 a connection, scan the platform QR code.
 
 31
 00:04:45,560 --> 00:04:54,440
 The platform should automatically accept
-that connection and I'm gonna do the other
+that connection and I'm going to do the other
 
 32
 00:04:54,440 --> 00:05:02,700
-way around. And also by showing my QR
+way around, also by showing my QR
 code. Cool. Now that we are connected, I
 
 33
@@ -195,12 +195,12 @@ issuance and it's now showing in the ACME
 
 40
 00:06:22,500 --> 00:06:30,300
-the org chart. This is how the credential
-looks like. It includes an email that we
+org chart. This is how the credential
+looks. It includes an email that we
 
 41
 00:06:30,300 --> 00:06:36,540
-could say it's a verified email because we
+could say is a verified email because we
 sent the user an email to onboard and he
 
 42
@@ -210,8 +210,8 @@ and present himself. And this is how
 
 43
 00:06:42,720 --> 00:06:51,800
-the OpenID Connect ID token will look
-like. It's a preview. It's fake. But yeah,
+the OpenID Connect ID token will look.
+It's a preview. It's fake. But yeah,
 
 44
 00:06:51,980 --> 00:06:59,720
@@ -220,17 +220,17 @@ between the credential and what an OpenID
 
 45
 00:06:59,720 --> 00:07:09,040
-token would look like. Yeah, we could…
-Yeah, we have here the organization and
+token would look like.
+We have here the organization and
 
 46
 00:07:09,040 --> 00:07:18,680
 the role, etc. that our OpenID Connect
-native applications could use for authz.
+native applications could use for authorization.
 
 47
 00:07:19,220 --> 00:07:27,540
-Okay. Okay. Let's start the new login. And
+Okay. Let's start the new login. And
 now we should be able to log into this
 
 48
@@ -240,7 +240,7 @@ organization-wide app.
 49
 00:07:33,060 --> 00:07:39,540
 Should be presented with a credential
-request, credential presentation request
+request, a credential presentation request
 
 50
 00:07:39,540 --> 00:07:45,020
@@ -249,8 +249,8 @@ details here.
 
 51
 00:07:53,100 --> 00:07:59,860
-And we're in. The demo apps in the case
-of the three of them, it's just a WhoAmI
+And we're in. The demo apps, in the case
+of all three of them, are just a WhoAmI
 
 52
 00:07:59,860 --> 00:08:07,780
@@ -260,7 +260,7 @@ the OAuth proxy that checks the validity
 53
 00:08:07,780 --> 00:08:17,520
 of the credentials and gives you tokens to
-login. Okay. Then we can try with the ACME
+log in. Okay. Then we can try with the ACME
 
 54
 00:08:17,520 --> 00:08:26,000
@@ -292,7 +292,7 @@ Let's accept it.
 
 60
 00:09:09,260 --> 00:09:15,840
-Let me login. Now that I hold the
+Let me log in. Now that I hold the
 credential, let me log into the Veridian
 
 61
@@ -349,7 +349,7 @@ credential is gone. And that means I
 
 72
 00:10:40,300 --> 00:10:51,080
-should be able to access the first org-wide
+should still be able to access the first org-wide
 app. Not ACME, but yes, Veridian. Cool.
 
 73
@@ -394,7 +394,7 @@ For example, for this bridge, I don't
 
 81
 00:11:49,980 --> 00:11:57,780
-remember what is the time to live for the
+remember what the time to live is for the
 tokens. Could be one hour, five minutes,
 
 82
@@ -424,7 +424,7 @@ convenient OAuth proxy that I use to
 
 87
 00:12:34,400 --> 00:12:44,540
-manage sessions very easily. But yeah, it
+manage sessions very easily. But it
 depends on your needs and requirements.
 
 88
@@ -434,7 +434,7 @@ is when I revoke a credential, the bridge
 
 89
 00:12:50,280 --> 00:12:59,060
-will check for every request, will check
+will check, for every request,
 if the token is bound to a credential that
 
 90
@@ -449,13 +449,13 @@ high volume, it can be costly. But it's
 
 92
 00:13:12,740 --> 00:13:21,680
-also very convenient for me to revoke the
+also very convenient for me to revoke
 access immediately to any
 
 93
 00:13:21,680 --> 00:13:30,440
 application that I'm protecting with this.
-That was probably a too long answer to
+That was probably too long an answer to
 
 94
 00:13:30,440 --> 00:13:36,080
@@ -490,7 +490,7 @@ you don't need to do much in your wallet.
 100
 00:14:07,180 --> 00:14:12,620
 Only once the session is expired, you will
-need to scan to login again, which is, in
+need to scan to log in again, which is, in
 
 101
 00:14:12,620 --> 00:14:18,660
@@ -529,12 +529,12 @@ the next part of the demo, you could, for
 108
 00:15:04,600 --> 00:15:14,980
 example, back your Google account with a
-multisig credential that is backed. So,
+multisig credential that is backed —
 
 109
 00:15:15,260 --> 00:15:25,400
-whose rotated rotation keys are backed by
-smart cards, build more security
+whose rotation keys are backed by
+smart cards — to build more security
 
 110
 00:15:25,400 --> 00:15:29,680
@@ -542,8 +542,8 @@ into your current
 
 111
 00:15:29,680 --> 00:15:44,680
-OpenID setup. Let me try this. Illustrated
-with the… I should probably open
+OpenID setup. Let me try this. I'll illustrate
+with… I should probably open
 
 112
 00:15:44,680 --> 00:15:57,220
@@ -552,7 +552,7 @@ your marketing social
 
 113
 00:15:57,220 --> 00:16:06,260
-media account wherever they are using
+media account, wherever they are, using
 Google to connect to X. For example, we
 
 114
@@ -562,7 +562,7 @@ would use OIDC POC at Veridian ID.
 115
 00:16:14,240 --> 00:16:20,740
 And now we are presented with a scan to
-login that could be backed by a multisig
+log in that could be backed by a multisig
 
 116
 00:16:20,740 --> 00:16:23,800
@@ -580,8 +580,8 @@ your social media accounts. It's not the
 
 119
 00:16:42,100 --> 00:16:51,620
-case. This is… I'm gonna scan this. It's
-not the case because this is a single sig
+case. This is… I'm going to scan this. It's
+not the case because this is a single-sig
 
 120
 00:16:51,620 --> 00:16:54,580
@@ -600,17 +600,17 @@ any of these has a valid email that Google
 123
 00:17:12,900 --> 00:17:21,760
 will check through our bridge if it's
-valid. Yeah,
+valid.
 
 124
 00:17:21,860 --> 00:17:36,000
-if I present my ACDC, I'm asked probably…
+If I present my ACDC, I'm asked probably…
 Probably I should not put this into…
 
 125
 00:18:02,560 --> 00:18:09,520
 And now we are logged in to X. Instead of
-using a password, using our Google
+using a password, we're using our Google
 
 126
 00:18:09,520 --> 00:18:19,880
@@ -653,13 +653,13 @@ regular sessions.
 
 134
 00:19:12,180 --> 00:19:20,820
-We cannot because Google Workspace doesn't
+We cannot do back-channel logout because Google Workspace doesn't
 implement the OpenID back channel for
 
 135
 00:19:20,820 --> 00:19:27,300
 logging out. If we revoke the ACDC, Google
-won't automatically kill the session on
+won't automatically kill the session;
 
 136
 00:19:27,300 --> 00:19:37,120
@@ -669,7 +669,7 @@ consider these sessions and these tokens
 137
 00:19:37,120 --> 00:19:43,940
 valid. But hopefully they implement that
-or maybe we can if you know someone at
+or maybe we can — if you know someone at
 
 138
 00:19:43,940 --> 00:19:50,720
@@ -684,12 +684,12 @@ credential is no longer valid and you
 140
 00:19:56,920 --> 00:20:07,700
 should kill any session and that should
-propagate. But yeah, that's again, sorry,
+propagate. But again, sorry,
 
 141
 00:20:08,120 --> 00:20:13,420
-probably a too long answer to your
-question, but yeah. No, thank you.
+probably too long an answer to your
+question. No, thank you.
 
 142
 00:20:17,400 --> 00:20:28,740
@@ -721,22 +721,22 @@ So it's an interoperability opportunity.
 
 148
 00:21:19,500 --> 00:21:25,840
-Yeah. Instead of using, I don't know,
-hardware keys, I mean, passkeys or
+Yeah. Instead of using
+hardware keys, I mean passkeys or
 
 149
 00:21:25,840 --> 00:21:35,000
-whatever, you could use, you could
+whatever, you could
 leverage all the features that KERI brings
 
 150
 00:21:35,000 --> 00:21:44,240
 and offers to back your login with Google
-or any other OIDC compatible system, which
+or any other OIDC-compatible system, which
 
 151
 00:21:44,240 --> 00:21:54,280
-I think it's very good. Great. Thank you.
+I think is very good. Great. Thank you.
 Any other questions?
 
 152

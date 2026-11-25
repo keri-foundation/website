@@ -5,7 +5,7 @@ you for having us today. I can start.
 
 2
 00:00:08,940 --> 00:00:13,200
-Yeah, my name is Jaime Caso. I work as
+My name is Jaime Caso. I work as
 Innovation Engineer at Veridian. I'm here
 
 3
@@ -30,7 +30,7 @@ using biometric smart cards. And the
 
 7
 00:00:38,100 --> 00:00:43,680
-second one by Roby is going to be about
+second one by Roberto is going to be about
 OpenID Connect login with ACDC.
 
 8
@@ -53,11 +53,11 @@ Perfect. Thank you. Thank you.
 12
 00:01:27,320 --> 00:01:36,400
 I guess you already can see the screen,
-right? Yes, we can. Thank you. Yeah,
+right? Yes, we can. Thank you.
 
 13
 00:01:36,400 --> 00:01:45,300
-let's go for the first demo. Before going
+Let's go for the first demo. Before going
 to the demo, let's explain a bit about it.
 
 14
@@ -72,7 +72,7 @@ call it the seed phrase because we use a
 
 16
 00:02:02,420 --> 00:02:11,580
-human readable representation of this
+human-readable representation of this
 bran, of this entropy, and then from
 
 17
@@ -107,12 +107,12 @@ signing key from the rotation key. Being
 
 23
 00:02:54,120 --> 00:03:02,420
-the signing key as in the sig which stays
+the signing key, as in the sig, which stays
 in the phone and you can use this key for
 
 24
 00:03:02,420 --> 00:03:07,500
-your daily request of the controller to
+your daily requests as the controller to
 sign and secure the communication between
 
 25
@@ -152,22 +152,22 @@ every day. We just use them when we need
 
 32
 00:03:47,840 --> 00:03:53,560
-it on demand. We can think that for
-example one of the cards could be safe at
+them on demand. We can think that for
+example one of the cards could be kept safe at
 
 33
 00:03:53,560 --> 00:04:02,460
-home and the other card could be safe by
+home and the other card could be kept safe by
 an accredited custodian like a bank. We
 
 34
 00:04:02,460 --> 00:04:09,240
 have these two cards here and the gray
-one comes directly from the
+one comes directly from
 
 35
 00:04:09,240 --> 00:04:15,040
-China from the factory and here you can
+China, from the factory, and here you can
 see the biometric sensor for the
 
 36
@@ -178,7 +178,7 @@ one, the black one, again with the
 37
 00:04:20,980 --> 00:04:27,840
 fingerprint. And this comes from a US
-provider, I think it's from HID. 
+provider, I think it's from HID.
 
 38
 00:04:27,840 --> 00:04:35,900
@@ -188,11 +188,11 @@ going to use two devices, a Samsung and
 39
 00:04:35,900 --> 00:04:43,040
 then an iPhone and these two cards. I'm
-going to hold a bit the camera of my
+going to hold back the camera of my
 
 40
 00:04:43,040 --> 00:04:52,080
-laptop so you can see how I handle the
+laptop a bit so you can see how I handle the
 phone and the cards. Just a second.
 
 41
@@ -212,8 +212,8 @@ which is this one. I already onboarded the
 
 44
 00:05:24,540 --> 00:05:29,700
-wallet and as you can see in the screen,
-in the top, there is a banner that says
+wallet and as you can see on the screen,
+at the top, there is a banner that says
 
 45
 00:05:29,700 --> 00:05:36,000
@@ -222,7 +222,7 @@ the seed phrase. Actually, we can take a look
 
 46
 00:05:36,000 --> 00:05:37,420
-quickly. It looks.
+quickly.
 
 47
 00:05:41,080 --> 00:05:48,940
@@ -277,7 +277,7 @@ wallet is asking me to tap with the first
 57
 00:06:49,740 --> 00:06:56,060
 card. Let's go for it. I touch with my
-fingerprint in the sensor and I already
+fingerprint on the sensor and I already
 
 58
 00:06:56,060 --> 00:07:02,000
@@ -301,7 +301,7 @@ click on confirm backup and
 62
 00:07:24,920 --> 00:07:34,660
 voila, it's done. We can actually
-double check it. Here we see that we have
+double-check it. Here we see that we have
 
 63
 00:07:34,660 --> 00:07:45,400
@@ -316,7 +316,7 @@ Jared? Sorry, can you unmute? Thank
 65
 00:07:53,800 --> 00:08:00,540
 you. Sorry. Thank you. No worries.
-Thank you. Yeah, before the demo, I
+Thank you. Before the demo, I
 
 66
 00:08:00,540 --> 00:08:05,980
@@ -340,18 +340,18 @@ anymore. I lost it. What I'm going to
 
 70
 00:08:28,380 --> 00:08:34,260
-do, I'm going to recover all the wallet,
+do is recover the whole wallet,
 all the identities, credentials and
 
 71
 00:08:34,260 --> 00:08:43,900
-everything in a new phone. For that, I
-bought a new phone. Let me… this one, which
+everything on a new phone. For that, I
+bought a new phone. Let me show this one, which
 
 72
 00:08:43,900 --> 00:08:53,840
 is an iPhone. Oh, sorry. Oh, sorry.
-Let me do it. Yeah.
+Let me do it.
 
 73
 00:08:55,980 --> 00:09:01,540
@@ -448,12 +448,12 @@ new device. What we did is we rotated
 92
 00:11:06,220 --> 00:11:13,620
 the controller and the old controller, the
-one in the Samsung can't use the wallet
+one in the Samsung, can't use the wallet
 
 93
 00:11:13,620 --> 00:11:21,360
-anymore. It lost access to it. Yeah,
-this is basically the demo. It was quick.
+anymore. It lost access to it.
+This is basically the demo. It was quick.
 
 94
 00:11:25,480 --> 00:11:30,880
@@ -462,7 +462,7 @@ the signing key is a single sig. It's
 
 95
 00:11:30,880 --> 00:11:37,680
-not. As I said in the beginning, it's a
+not a multisig. As I said in the beginning, it's a
 single sig. Also, there was a question
 
 96
@@ -488,11 +488,11 @@ in one slot of this card, we can have more
 100
 00:12:08,420 --> 00:12:19,460
 than 65,000 rotations. And this means one
-rotation per day in 170 years. I mean,
+rotation per day for 170 years.
 
 101
 00:12:19,640 --> 00:12:29,540
-that's a lot. And yeah, each card has
+That's a lot. And each card has
 actually 256 slots. This means if you
 
 102
@@ -507,7 +507,7 @@ card before or rotate to a new card before.
 
 104
 00:12:44,140 --> 00:12:51,040
-Yeah, and that's the demo. It was quick.
+And that's the demo. It was quick.
 I'm going to pass the ball to Roberto.
 
 105
@@ -533,7 +533,7 @@ functionality of it. – Yeah. And this seed
 109
 00:13:23,660 --> 00:13:29,120
 is in the secure element of the chip. It
-never, never leaves the secure element.
+never leaves the secure element.
 
 110
 00:13:29,380 --> 00:13:35,960
@@ -547,8 +547,8 @@ That's it. Got it.
 
 112
 00:13:46,140 --> 00:13:55,460
-Can I comment on that? Yeah. Can I comment
-on that? Yeah. By putting the
+Can I comment on that? Yeah.
+By putting the
 
 113
 00:13:55,460 --> 00:14:03,740
@@ -582,8 +582,8 @@ had to use a different seed phrase, then
 
 119
 00:14:35,960 --> 00:14:39,420
-you'd have to create a new, you'd have to
-have a new smart card every time you
+you'd have to have a new smart card every
+time you
 
 120
 00:14:39,420 --> 00:14:45,200
@@ -592,7 +592,7 @@ friction. Yep.
 
 121
 00:14:49,240 --> 00:14:56,320
-Thank you, Sam. Yeah, that's all for
+Thank you, Sam. That's all for
 the first demo. I can pass the ball if no
 
 122
@@ -601,7 +601,7 @@ more questions to Roberto.
 
 123
 00:15:04,780 --> 00:15:12,140
-I would say this is great. This is like,
+I would say this is great. This
 solves one of the friction
 
 124
@@ -617,7 +617,7 @@ smart cards because if you lose one, you
 126
 00:15:24,920 --> 00:15:33,620
 will not lose your access to your
-pre-rotated keys. – Yeah, I mean you can have
+pre-rotated keys. – Yeah, you can have
 
 127
 00:15:33,620 --> 00:15:38,420
@@ -632,7 +632,7 @@ four, you can have 10. Yeah. Okay. As much
 129
 00:15:44,540 --> 00:15:52,800
 as you feel safe. Yeah. And you could also
-do like a different threshold. You
+do a different threshold. You
 
 130
 00:15:52,800 --> 00:15:57,940
@@ -686,7 +686,7 @@ recovery where you gave a card to your
 140
 00:17:00,760 --> 00:17:08,800
 relatives and then have, instead of one of
-n, have some three of a minimum
+n, have three of a minimum
 
 141
 00:17:08,800 --> 00:17:13,440
@@ -725,36 +725,36 @@ these card providers. They are working
 148
 00:17:52,860 --> 00:17:59,300
 also on the next version of the cards to
-support post-quantum signatures.
+support post-quantum signatures,
 
 149
 00:17:59,300 --> 00:18:12,360
-Signatures, specifically ML-DSA. The target
+specifically ML-DSA. The target
 is 2027. Thanks to KERI, to CESR
 
 150
 00:18:12,360 --> 00:18:19,140
 and KIP-2 agility. Maybe at some point we
-can support also these kind of signatures.
+can also support these kinds of signatures.
 
 151
 00:18:19,980 --> 00:18:25,920
-One thing worth of mention that one year
+One thing worth mentioning: one year
 ago, I think September last year, in
 
 152
 00:18:25,920 --> 00:18:40,420
 iOS 26, they included this type of
-signatures, ML-DSA in the Secure Enclave
+signatures, ML-DSA, in the Secure Enclave
 
 153
 00:18:40,420 --> 00:18:49,500
 of the iPhones. And then this year it was
-June. Yeah. Also Android did the
+June. Also Android did the
 
 154
 00:18:49,500 --> 00:18:56,560
-same for Android 17. Yeah, this means
+same for Android 17. This means
 that millions of users will be exposed to
 
 155
@@ -764,6 +764,6 @@ signatures, this new standard approved by
 
 156
 00:19:02,020 --> 00:19:06,220
-NIST. Yeah, it's nice to be aware of
+NIST. It's nice to be aware of
 that.
 
