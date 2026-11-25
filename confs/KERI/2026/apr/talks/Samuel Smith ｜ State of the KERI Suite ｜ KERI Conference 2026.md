@@ -1,0 +1,3 @@
+AI generated summary, if a statement needs explication, see the video.
+
+Samuel Smith reviews the state of the KERI Suite and the journey toward adoption in 2026. He highlights early milestones—Linux Foundation standards, funded open infrastructure, SEDI, telecom and healthcare pilots—and relates them to tipping-point dynamics. He also sketches a brief history from RAET and OpenReputation to today's conference moment.

@@ -3210,48 +3210,46 @@ Anybody with more than 20 direct reports
 
 644
 00:58:17,880 --> 00:58:27,000
-is either working 80 hours a week or you know.
-Okay. Yes. I know there are
+is either working 80 hours
+a week or… I know there are
 
 645
 00:58:27,000 --> 00:58:30,840
-people to do that. Did that answer your
-question? It did actually. Okay. Great.
+people who do that. Did that answer
+your question? – It did actually. – Great.
 
 646
 00:58:31,320 --> 00:58:36,220
-Any more questions? Yes.
-I'm curious how latency and timeouts on
+Any more questions? Yes. – I'm
+curious how latency and timeouts on
 
 647
 00:58:36,220 --> 00:58:41,400
-the network actually impact like impact
-this especially if you get into a doom.
+the network actually impact this
+especially if you get into a doom.
 
 648
 00:58:41,600 --> 00:58:49,400
-Can you get into a doom with this
-over? No. No. That's because the proof is
+Can you get into a doom loop with this over
+network? No. That's because the proof is
 
 649
 00:58:49,400 --> 00:58:55,240
-static. What happens that we have
+static. What happens is that we have
 something called percolated discovery.
 
 650
 00:58:55,240 --> 00:58:58,860
-If I go back and I got to
-go back a few diagrams.
+I got to go back a few diagrams.
 
 651
-00:59:03,120 --> 00:59:11,540
-It's all right. Just start at the top.
-Here we go. Okay. See this seal right
+00:59:10,044 --> 00:59:11,540
+See this seal right
 
 652
 00:59:11,540 --> 00:59:17,320
-here, this little box, that's an anchor to
-an issuance. Okay. This KEL up to that
+here, this little box, that's an anchor
+to an issuance. This KEL up to that
 
 653
 00:59:17,320 --> 00:59:24,260
@@ -3265,7 +3263,7 @@ wallet, they can now present that to
 
 655
 00:59:28,080 --> 00:59:32,880
-anybody and prove it's a proof. It's a
+anybody and prove. It's a proof. It's a
 durable portable proof. Nobody has to go
 
 656
@@ -3275,8 +3273,8 @@ back actually even to the network to verify
 
 657
 00:59:37,720 --> 00:59:42,480
-that proof. No phone home anywhere.
-There's no network
+that proof. No phone home
+anywhere. There's no network
 
 658
 00:59:42,480 --> 00:59:46,020
@@ -3285,8 +3283,8 @@ verification is just a static proof. It's
 
 659
 00:59:46,020 --> 00:59:49,920
-just a verifiable set of things that say
-at this point in this key event log that
+just a verifiable set of things
+in this key event log that
 
 660
 00:59:49,920 --> 00:59:53,860
@@ -3300,13 +3298,13 @@ like that that could have invalidated it.
 
 662
 00:59:57,620 --> 01:00:02,760
-There's sort of like, well,
-up to this rotation, nothing can change. That's
+There's sort of like, well, up to this
+rotation, nothing can change. That's
 
 663
 01:00:02,760 --> 01:00:07,680
-good. You're set. You're static. Everybody
-just has static proofs. And if and the
+good. You're set. You're static.
+Everybody just has static proofs. And the
 
 664
 01:00:07,680 --> 01:00:13,200
@@ -3345,8 +3343,8 @@ Absent somebody upgrading the
 
 671
 01:00:42,840 --> 01:00:53,860
-FAA's routers. Yes. Once again. Right. But
-the actual issuance isn't affected. It's
+FAA's routers… But the
+actual issuance isn't affected. It's
 
 672
 01:00:53,860 --> 01:00:58,020
@@ -3365,8 +3363,8 @@ get their credentials revoked? Of the
 
 675
 01:01:07,040 --> 01:01:13,160
-total population? People who
-drunk drivers. How many of those?
+total population? Drunk
+drivers. How many of those?
 
 676
 01:01:13,300 --> 01:01:16,900
@@ -3375,37 +3373,37 @@ But the rest of the year, not too
 
 677
 01:01:16,900 --> 01:01:21,640
-many. Does that answer your question?
-I'd have to go into you'd have to
+many. Does that answer
+your question? You'd have to
 
 678
 01:01:21,640 --> 01:01:28,000
-see but that's the idea. Yes. Where and
-how are you storing your raw data? What do
+see but that's the idea. – Where and how
+are you storing your raw data? – What do
 
 679
 01:01:28,000 --> 01:01:33,820
-you mean by raw data? Everything.
-Okay. The way it's a small blockchain.
+you mean by raw data? –
+Everything. It's a small blockchain.
 
 680
 01:01:34,140 --> 01:01:39,800
-Blockchain stores data. Where are
-we storing? You're just storing it in a key
+Blockchain stores data. Where are we
+storing? – You're just storing it in a key
 
 681
 01:01:39,800 --> 01:01:44,200
-value store. Okay. And then and so
-that amount of data you're talking about
+value store. – So that amount
+of data you're talking about
 
 682
 01:01:44,200 --> 01:01:50,760
 millions of people, how does that get
-secured? The hashes of all the data in the
+secured? – The hashes of all data in the
 
 683
 01:01:50,760 --> 01:01:55,800
-hash chains are self-securing.
+hash chains is self-securing.
 If somebody tampers with it, you can detect
 
 684

@@ -1,0 +1,3 @@
+AI generated summary, if a statement needs explication, see the video.
+
+Samuel Smith looks ahead for the KERI suite, emphasizing ACDCs as perpetually verifiable graph fragments that model real-world authority, bridge trust domains, and resist recursive privilege escalation. He proposes authority reversion when delegations lapse and foresees broader applications for credentials, authorization, and fixing the broken internet.
