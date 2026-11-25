@@ -103,16 +103,18 @@
       "speaker": "Jaime Caso",
       "path": "talks/2026-11-24-16-01-50-KFMCA-Veridian-part-1.mp4",
       "duration": "19:07",
-      "subtitle": "talks/2026-11-24-16-01-50-KFMCA-Veridian-part-1.srt"
+      "subtitle": "talks/2026-11-24-16-01-50-KFMCA-Veridian-part-1.srt",
+      "poster": "talks/2026-11-24-16-01-50-KFMCA-Veridian-part-1.jpg"
     },
     {
       "order": 5,
       "day": "November 2026",
-      "title": "KERI ACDCs as OpenID Connect - Roberto Carlos",
-      "speaker": "Roberto Carlos",
+      "title": "KERI ACDCs as OpenID Connect - Roberto C. Morano",
+      "speaker": "Roberto C. Morano",
       "path": "talks/2026-11-24-16-01-50-KFMCA-Veridian-part-2.mp4",
       "duration": "21:58",
-      "subtitle": "talks/2026-11-24-16-01-50-KFMCA-Veridian-part-2.srt"
+      "subtitle": "talks/2026-11-24-16-01-50-KFMCA-Veridian-part-2.srt",
+      "poster": "talks/2026-11-24-16-01-50-KFMCA-Veridian-part-2.jpg"
     },
     {
       "order": 6,

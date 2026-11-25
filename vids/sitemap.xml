@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://keri.foundation/vids/</loc>
-    <lastmod>2026-10-28</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://keri.foundation/vids/2020/</loc>
@@ -30,18 +30,34 @@
   </url>
   <url>
     <loc>https://keri.foundation/vids/2026/</loc>
-    <lastmod>2026-11-18</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://keri.foundation/vids/2026/transcripts/html/talks/</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://keri.foundation/vids/2026/transcripts/html/talks/introduction-to-keri-part-1-samuel-smith.html</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-25</lastmod>
   </url>
   <url>
     <loc>https://keri.foundation/vids/2026/transcripts/html/talks/it-s-keri-or-surveillance-samuel-smith.html</loc>
-    <lastmod>2026-11-24</lastmod>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://keri.foundation/vids/2026/transcripts/html/talks/keri-acdcs-as-openid-connect-roberto-c-morano.html</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://keri.foundation/vids/2026/transcripts/html/talks/kfmca-closing-karla-mckenna.html</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://keri.foundation/vids/2026/transcripts/html/talks/veridian-wallet-demos-intro-karla-mckenna.html</loc>
+    <lastmod>2026-11-25</lastmod>
+  </url>
+  <url>
+    <loc>https://keri.foundation/vids/2026/transcripts/html/talks/veridian-wallet-recovery-with-smart-cards-jaime-caso.html</loc>
+    <lastmod>2026-11-25</lastmod>
   </url>
 </urlset>
