@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Helper for the galleries under confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/.
+ * Helper for the galleries under confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/<month>/.
  *
  * Usage:
  *   node scripts/confs.mjs list
@@ -13,7 +13,7 @@
  *   node scripts/confs.mjs sitemap [--dry-run]
  *
  * list            Print every gallery id that has an index.json.
- *                 Conferences are ORG/YEAR/month. Video galleries are vids/YEAR.
+ *                 Conferences are ORG/YEAR/month. Video galleries are vids/YEAR/month.
  * landing-pages   Copy the shared template into every gallery and stamp title /
  *                 description / canonical URL into the social meta tags from that
  *                 gallery's index.json. Site name, icons, share image, wave, and
@@ -629,7 +629,7 @@ function overviewScopesFor(opts) {
 }
 
 function gallerySortKey(id) {
-  if (isVidsGallery(id)) return Number(id.slice("vids/".length)) * 100;
+  // vids/YEAR/month or ORG/YEAR/month — year and month are always parts[1]/[2]
   const parts = id.split("/");
   const year = Number(parts[1]);
   const month = MONTH_INDEX[String(parts[2] || "").toLowerCase()] || 0;
@@ -637,7 +637,6 @@ function gallerySortKey(id) {
 }
 
 function galleryWhen(id) {
-  if (isVidsGallery(id)) return id.slice("vids/".length);
   const parts = id.split("/");
   const month = MONTH_NAME[String(parts[2] || "").toLowerCase()] || parts[2] || "";
   return `${month} ${parts[1]}`.trim();
@@ -831,7 +830,7 @@ function isVidsGallery(id) {
   return id.startsWith("vids/");
 }
 
-/** Absolute directory of a gallery (confs/ORG/YEAR/month or vids/YEAR). */
+/** Absolute directory of a gallery (confs/ORG/YEAR/month or vids/YEAR/month). */
 function galleryDir(id) {
   return isVidsGallery(id) ? join(SITE_ROOT, id) : join(CONFS_ROOT, id);
 }
@@ -859,8 +858,10 @@ async function findConferences() {
   if (await isDir(VIDS_ROOT)) {
     for (const year of (await readdir(VIDS_ROOT)).sort()) {
       if (!YEAR_RE.test(year) || !(await isDir(join(VIDS_ROOT, year)))) continue;
-      if (existsSync(join(VIDS_ROOT, year, "index.json"))) {
-        ids.push(`vids/${year}`);
+      for (const month of (await readdir(join(VIDS_ROOT, year))).sort()) {
+        if (existsSync(join(VIDS_ROOT, year, month, "index.json"))) {
+          ids.push(`vids/${year}/${month}`);
+        }
       }
     }
   }
@@ -1379,13 +1380,17 @@ async function readSources() {
     let conf;
     let folder;
     if (parts[0] === "vids") {
-      if (parts.length < 3 || !YEAR_RE.test(parts[1])) {
-        throw new Error(`Target must be vids/<YEAR>/<folder> (e.g. vids/2026/talks): ${target}`);
+      if (parts.length < 4 || !YEAR_RE.test(parts[1])) {
+        throw new Error(
+          `Target must be vids/<YEAR>/<month>/<folder> (e.g. vids/2026/jul/talks): ${target}`
+        );
       }
-      conf = parts.slice(0, 2).join("/");
-      folder = parts.slice(2).join("/");
+      conf = parts.slice(0, 3).join("/");
+      folder = parts.slice(3).join("/");
     } else if (parts.length < 4) {
-      throw new Error(`Target must be <gallery id>/<folder> (e.g. KERI/2026/apr/talks or vids/2026/talks): ${target}`);
+      throw new Error(
+        `Target must be <gallery id>/<folder> (e.g. KERI/2026/apr/talks or vids/2026/jul/talks): ${target}`
+      );
     } else {
       conf = parts.slice(0, 3).join("/");
       folder = parts.slice(3).join("/");
@@ -1828,7 +1833,7 @@ async function main() {
       break;
     default:
       console.log(
-        "Usage: node scripts/confs.mjs <list|landing-pages|sync-subtitles|audio|verify|unused|verify-videos|sitemap> [--conf ORG/YEAR/month|vids/YEAR] [--dry-run] [--remote URL]"
+        "Usage: node scripts/confs.mjs <list|landing-pages|sync-subtitles|audio|verify|unused|verify-videos|sitemap> [--conf ORG/YEAR/month|vids/YEAR/month] [--dry-run] [--remote URL]"
       );
       process.exit(opts.command ? 1 : 0);
   }

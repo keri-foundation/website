@@ -1,0 +1,79 @@
+{
+  "page": {
+    "title": "July 2026 Videos",
+    "heading": "July 2026 Videos",
+    "headingHref": "/vids/2026/jul/",
+    "statusNotice": "",
+    "subtitle": "Why the choice is KERI or surveillance",
+    "footer": "KERI Foundation • Videos",
+    "searchPlaceholder": "Type to search this talk…",
+    "searchLabel": "Search transcript",
+    "nav": [
+      {
+        "label": "May 2026 Videos",
+        "href": "/vids/2026/may/",
+        "external": false
+      },
+      {
+        "label": "November 2026 Videos",
+        "href": "/vids/2026/nov/",
+        "external": false
+      },
+      {
+        "label": "KERI Conference April 2026",
+        "href": "/confs/KERI/2026/apr/",
+        "external": false
+      },
+      {
+        "label": "SEDI Summit November 2025",
+        "href": "/confs/SEDI/2025/nov/",
+        "external": false
+      }
+    ]
+  },
+  "days": [
+    "July 2026"
+  ],
+  "transcriptsDir": "transcripts/html",
+  "speakerPhotos": {
+    "Samuel Smith": "https://kericonf.com/wp-content/uploads/2025/11/Samuel-Smith.jpg"
+  },
+  "videos": [
+    {
+      "order": 1,
+      "day": "July 2026",
+      "title": "It's KERI or Surveillance - Samuel Smith",
+      "speaker": "Samuel Smith",
+      "path": "talks/Its-KERI-or-Surveillance.mp4",
+      "duration": "54:25",
+      "subtitle": "talks/Its-KERI-or-Surveillance.srt",
+      "presentation": "talks/Its-KERI-or-Surveillance.pdf",
+      "chapters": [
+        {
+          "start": "08:44",
+          "description": "AI & Human Authority"
+        },
+        {
+          "start": "18:26",
+          "description": "Cyber Resilience After Breach"
+        },
+        {
+          "start": "27:00",
+          "description": "Privacy Without Surveillance"
+        },
+        {
+          "start": "34:52",
+          "description": "The Stark Choice Of Security"
+        },
+        {
+          "start": "42:08",
+          "description": "The Race Against Time; Keeping Humans Digitally Free"
+        },
+        {
+          "start": "51:25",
+          "description": "State Endorsed Digital Identity"
+        }
+      ]
+    }
+  ]
+}

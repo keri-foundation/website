@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Build and deploy galleries:
 #   confs/<ORG>/<YEAR>/<month>/   conferences (e.g. confs/KERI/2026/apr/)
-#   vids/<YEAR>/                  yearly videos (e.g. vids/2026/)
+#   vids/<YEAR>/<month>/          non-conference videos (e.g. vids/2026/jul/)
 # The server mirrors those trees. /videos/ is left for WordPress.
 #
 # The legacy tree confs/2026/ is never pushed or deleted by this script. Old gallery
@@ -33,7 +33,7 @@ usage() {
 Usage: scripts/deploy-confs.sh [options] <command>...
 
 Commands (run in the order given):
-  list            Show galleries: confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/
+  list            Show galleries: confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/<month>/
   subtitles       Copy curated .srt files from scripts/subtitle-sources.tsv (no-op when that file has no sources; edit SRTs in place under the gallery)
   landing-pages   Copy the shared template into every gallery and stamp social meta, header, transcript links, and optional talk summaries from index.json. Also write confs/index.html and vids/index.html from the overview template
   audio           Write a spoken-word MP3 beside each gallery MP4 when that MP3 does not exist yet
@@ -51,7 +51,7 @@ Commands (run in the order given):
 
 Options:
   -n, --dry-run   Show what would change; write nothing locally or remotely
-  --conf ID       Limit to one gallery, e.g. --conf KERI/2026/apr or --conf vids/2026 (repeatable)
+  --conf ID       Limit to one gallery, e.g. --conf KERI/2026/apr or --conf vids/2026/jul (repeatable)
   -y, --yes       Do not ask for confirmation before changing the server
   -h, --help      Show this help
 
@@ -67,7 +67,7 @@ Examples:
   scripts/deploy-confs.sh -n push                   # preview upload
   scripts/deploy-confs.sh deploy                    # build, upload, check live site
   scripts/deploy-confs.sh --conf SEDI/2025/nov push
-  scripts/deploy-confs.sh --conf vids/2026 push
+  scripts/deploy-confs.sh --conf vids/2026/jul push
 EOF
 }
 
@@ -127,7 +127,7 @@ conferences() {
     run_node "$SCRIPT_DIR/confs.mjs" list
 }
 
-# Local directory for a gallery id (KERI/2026/apr or vids/2026).
+# Local directory for a gallery id (KERI/2026/apr or vids/2026/jul).
 gallery_dir() {
     case "$1" in
         vids/*) printf '%s\n' "$SITE_ROOT/$1" ;;

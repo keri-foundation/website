@@ -15,7 +15,7 @@
     - [Top clips (`topClips`)](#top-clips-topclips)
     - [Chapters (`videos[].chapters`)](#chapters-videoschapters)
     - [Talk summaries](#talk-summaries)
-  - [Yearly videos (`/vids/<YEAR>/`)](#yearly-videos-vidsyear)
+  - [Videos (`/vids/<YEAR>/<month>/`)](#videos-vidsyearmonth)
     - [New conference](#new-conference)
     - [Build and deploy](#build-and-deploy)
     - [Dependencies (`ffmpeg` / `ffprobe`)](#dependencies-ffmpeg--ffprobe)
@@ -64,7 +64,7 @@ public_html/
 ├── wp-includes/               WordPress core
 ├── digistate_logo.jpg
 ├── confs/                     conference galleries — described below
-├── vids/                      yearly video galleries — described below
+├── vids/                      non-conference video galleries — described below
 ├── custom/                    WordPress look-and-feel — described below
 ├── edu/                       KERI Learning Hub (kerioke)
 ├── kerisse/                   Kerisse search index and dataset
@@ -75,7 +75,7 @@ public_html/
 | ---- | ---- |
 | WordPress (`wp-admin/`, `wp-content/`, `wp-includes/`, the `wp-*.php` files, `.htaccess`, `index.php`) | The site |
 | `confs/` | Conference galleries: videos, audio, subtitles, slides, promo, transcripts |
-| `vids/` | Yearly video galleries, same media layout, for recordings that are not a conference |
+| `vids/` | Non-conference video galleries (`/vids/<YEAR>/<month>/`), same media layout as `confs/` |
 | `custom/` | Stylesheet, page scripts, and the `[kc_banner]` shortcode, served from the document root |
 | `edu/` | Static KERI learning site, built and deployed from the kerioke project |
 | `kerisse/` | Search-index shards and the scraped corpus for the Kerisse search engine |
@@ -251,7 +251,7 @@ Optional jump list on a talk card and in the full-screen player. Add a `chapters
 }
 ```
 
-A **Chapters** button on the talk card (and in the full-screen player) opens a slide-up sheet on mobile / centered panel on larger screens. Choosing a chapter seeks that video, plays from there, updates the URL hash (`&t=`), and closes the sheet. Chapters with unparseable times or an empty description are skipped. See `vids/2026/index.json` (“It's KERI or Surveillance”) for a full example.
+A **Chapters** button on the talk card (and in the full-screen player) opens a slide-up sheet on mobile / centered panel on larger screens. Choosing a chapter seeks that video, plays from there, updates the URL hash (`&t=`), and closes the sheet. Chapters with unparseable times or an empty description are skipped. See `vids/2026/jul/index.json` (“It's KERI or Surveillance”) for a full example.
 
 ### Talk summaries
 
@@ -267,34 +267,34 @@ The same rule applies in `interviews/` and in any later media folder: `path` end
 Write plain paragraphs separated by a blank line, about 200 words. A block that is only a Markdown heading is ignored. Inline Markdown is not interpreted.
 
 <a id="yearly-videos"></a>
+<a id="videos-vidsyearmonth"></a>
 
-## Yearly videos (`/vids/<YEAR>/`)
+## Videos (`/vids/<YEAR>/<month>/`)
 
-Same gallery app as the conferences, for videos that are not part of a conference. The public path is `/vids/` so WordPress can keep `/videos/`.
+Same gallery app as the conferences, for videos that are not part of a conference. Layout matches `confs/<ORG>/<YEAR>/<month>/` (year and month folders; no org prefix). The public path is `/vids/` so WordPress can keep `/videos/`.
 
 ```text
 vids/
-├── .htaccess                       directory listing rewrite (see below)
+├── .htaccess                       directory listing rewrite + legacy redirects
 ├── overview.json                   page copy for the /vids/ overview
-├── index.html                      generated overview of yearly galleries
+├── index.html                      generated overview of month galleries
 ├── index.php                       folder browser for bare subdirectories
-├── 2024/                           → https://keri.foundation/vids/2024/
-│   ├── index.html                  gallery app (synced from the template on build)
-│   ├── index.json                  page copy and video list
-│   ├── talks/                      *.mp4 + *.mp3 + *.srt side by side
-│   └── transcripts/html/talks/     generated static transcript pages
-└── 2026/                           → https://keri.foundation/vids/2026/
-    ├── index.html
-    ├── index.json
-    ├── talks/
-    └── transcripts/html/talks/
+├── 2020/jul/                       → https://keri.foundation/vids/2020/jul/
+├── 2024/jan/                       → https://keri.foundation/vids/2024/jan/
+├── 2026/may/                       → https://keri.foundation/vids/2026/may/
+├── 2026/jul/                       → https://keri.foundation/vids/2026/jul/
+└── 2026/nov/                       → https://keri.foundation/vids/2026/nov/
+    ├── index.html                  gallery app (synced from the template on build)
+    ├── index.json                  page copy and video list
+    ├── talks/                      *.mp4 + *.mp3 + *.srt side by side
+    └── transcripts/html/talks/     generated static transcript pages
 ```
 
-The old standalone player redirects here:
+Legacy URLs:
 
-`/videos/sam-smith/Its-KERI-or-Surveillance/Its-KERI-or-Surveillance.html` → `/vids/2026/#it-s-keri-or-surveillance-samuel-smith`
-
-`/vids/2026/jul/` redirects to `/vids/2026/` via `vids/.htaccess`.
+- `/videos/sam-smith/Its-KERI-or-Surveillance/Its-KERI-or-Surveillance.html` → `/vids/2026/jul/#it-s-keri-or-surveillance-samuel-smith` (site-root `.htaccess`)
+- `/vids/2026/#it-s-keri-or-surveillance-samuel-smith` and `/vids/2026/#introduction-to-keri-part-1-samuel-smith` → month galleries via `vids/2026/index.html`
+- Year-level talk media and transcript paths redirect in `vids/.htaccess`
 
 ### New conference
 
@@ -317,10 +317,10 @@ scripts/deploy-confs.sh deploy           # build + push (rsync --delete) + check
 scripts/deploy-confs.sh check-remote     # HEAD-request every referenced file on keri.foundation
 scripts/deploy-confs.sh --conf KERI/2026/nov deploy
 scripts/deploy-confs.sh --conf SEDI/2025/nov push
-scripts/deploy-confs.sh --conf vids/2026 push
+scripts/deploy-confs.sh --conf vids/2026/jul push
 ```
 
-`--conf` takes a gallery id, not a filesystem path from the repo root. Conference ids are relative to `confs/` (the script prepends that tree), so use `KERI/2026/nov`, not `confs/KERI/2026/nov`. Yearly video galleries live outside `confs/`, so they keep the tree prefix: `vids/2026`. Passing `confs/KERI/2026/nov` would look for `confs/confs/KERI/2026/nov` and miss.
+`--conf` takes a gallery id, not a filesystem path from the repo root. Conference ids are relative to `confs/` (the script prepends that tree), so use `KERI/2026/nov`, not `confs/KERI/2026/nov`. Video galleries live outside `confs/`, so they keep the tree prefix: `vids/2026/jul`. Passing `confs/KERI/2026/nov` would look for `confs/confs/KERI/2026/nov` and miss.
 
 `audio` (included in `build` and `deploy`) writes `talks/foo.mp3` from `talks/foo.mp4` when that MP3 is absent. The encode is mono, 44.1 kHz, 64 kbps MP3: about 28 MB per hour, clear enough for a spoken-word podcast. It needs `ffmpeg` with LAME. MP3s are gitignored; `push` uploads them with the gallery. An MP4 that is not on this machine is skipped, and `verify` still reports that file missing.
 

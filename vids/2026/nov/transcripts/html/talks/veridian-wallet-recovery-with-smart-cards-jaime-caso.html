@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veridian Wallet Recovery with Smart Cards - Jaime Caso — Transcript</title>
+  <meta name="description" content="Transcript: Veridian Wallet Recovery with Smart Cards - Jaime Caso (November 2026 · 19:07)">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #060b6f;
+      --muted: #2e3a7a;
+      --bg: #fdefde;
+      --panel: #f4f0e8;
+      --accent: #986c32;
+      --link: #0450a8;
+      --waves: url("/custom/img/waves-kim-1.png");
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Source Serif 4", Georgia, serif;
+      background: var(--bg);
+      color: var(--ink);
+      padding: 24px 16px 48px;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 44rem; margin: 0 auto; }
+    nav {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.9rem;
+      margin-bottom: 1.25rem;
+    }
+    nav a { color: var(--link); }
+    nav a:hover { color: var(--ink); }
+    header {
+      position: relative;
+      z-index: 0;
+      overflow: hidden;
+      background: var(--panel);
+      border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+      border-radius: 10px;
+      padding: 1.25rem 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+    header > * { position: relative; z-index: 1; }
+    header::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 360px;
+      height: 208px;
+      background-image: var(--waves);
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: 360px 208px;
+      transform: rotate(180deg);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.55;
+    }
+    h1 {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      font-size: clamp(1.45rem, 3vw, 2rem);
+      margin: 0 0 0.4rem;
+    }
+    .meta {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin: 0 0 1rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .actions a {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-weight: 600;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: var(--ink);
+      background: rgba(152, 108, 50, 0.18);
+      border: 1px solid rgba(152, 108, 50, 0.35);
+      border-radius: 8px;
+      padding: 0.55rem 0.9rem;
+    }
+    .actions a:hover { background: rgba(152, 108, 50, 0.32); }
+    .actions a.primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+    .actions a.primary:hover { background: #0a1270; }
+    article {
+      background: var(--panel);
+      border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+      border-radius: 10px;
+      padding: 1rem 1.25rem 1.5rem;
+    }
+    .cue {
+      display: grid;
+      grid-template-columns: 4.5rem 1fr;
+      gap: 0.65rem 0.85rem;
+      margin: 0;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
+    }
+    .cue:last-child { border-bottom: none; }
+    .cue-time {
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      padding-top: 0.15rem;
+    }
+    .cue-time:hover { color: var(--ink); text-decoration: underline; }
+    .cue-text { font-size: 1.05rem; }
+    footer {
+      position: relative;
+      z-index: 0;
+      font-family: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+      margin-top: 2rem;
+      padding-bottom: 7.5rem;
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-align: center;
+    }
+    footer::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 220px;
+      height: 126px;
+      background: var(--waves) right bottom / 220px 126px no-repeat;
+      pointer-events: none;
+      z-index: -1;
+      opacity: 0.85;
+    }
+    @media (max-width: 768px) {
+      header::after {
+        width: 220px;
+        height: 126px;
+        background-size: 220px 126px;
+      }
+      footer { padding-bottom: 5.5rem; }
+      footer::after {
+        width: 160px;
+        height: 92px;
+        background-size: 160px 92px;
+      }
+    }
+    @media (max-width: 520px) {
+      .cue { grid-template-columns: 1fr; gap: 0.2rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <nav>
+      <a href="../../../">November 2026 Videos</a>
+      · <a href="./">All transcripts</a>
+    </nav>
+    <header>
+      <h1>Veridian Wallet Recovery with Smart Cards - Jaime Caso</h1>
+      <p class="meta">November 2026 · 19:07</p>
+      <div class="actions">
+        <a class="primary" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso">Watch video</a>
+        <a href="./">All transcripts</a>
+        <a href="../../../">Video gallery</a>
+      </div>
+    </header>
+    <article>
+    <p class="cue" id="t0">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso">0:00</a>
+      <span class="cue-text">Over to you. Okay. Thank you, Karla. Thank you for having us today. I can start. So</span>
+    </p>
+    <p class="cue" id="t8">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=8">0:08</a>
+      <span class="cue-text">yeah, my name is Jaime Caso. I work as Innovation Engineer at Bolivian. I'm here</span>
+    </p>
+    <p class="cue" id="t13">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=13">0:13</a>
+      <span class="cue-text">with Roberto, Lead of Ops Advocate. And we are going to present Breida Wallet with</span>
+    </p>
+    <p class="cue" id="t21">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=21">0:21</a>
+      <span class="cue-text">KERI protocol and GC-based wallet. And we're going to present two demos. Same</span>
+    </p>
+    <p class="cue" id="t26">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=26">0:26</a>
+      <span class="cue-text">demos that we presented three weeks ago, I think, in IWG. And yes, as you say, Carla,</span>
+    </p>
+    <p class="cue" id="t33">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=33">0:33</a>
+      <span class="cue-text">the first one is about wallet recovery using biometric smart cards. And the</span>
+    </p>
+    <p class="cue" id="t38">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=38">0:38</a>
+      <span class="cue-text">second one by Roby is going to be about openID connect loading with ACDC. So yeah,</span>
+    </p>
+    <p class="cue" id="t43">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=43">0:43</a>
+      <span class="cue-text">I'm going to reuse my slides from IWG. So let me share my screen.</span>
+    </p>
+    <p class="cue" id="t56">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=56">0:56</a>
+      <span class="cue-text">Share screen.</span>
+    </p>
+    <p class="cue" id="t60">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=60">1:00</a>
+      <span class="cue-text">I sent a request. Okay, perfect.</span>
+    </p>
+    <p class="cue" id="t74">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=74">1:14</a>
+      <span class="cue-text">Perfect. Thank you. Thank you.</span>
+    </p>
+    <p class="cue" id="t87">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=87">1:27</a>
+      <span class="cue-text">I guess you already can see the screen, right? Yes, we can. Thank you. Yeah, so</span>
+    </p>
+    <p class="cue" id="t96">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=96">1:36</a>
+      <span class="cue-text">let's go for the first demo before going to the demo. Let's explain a bit about it.</span>
+    </p>
+    <p class="cue" id="t105">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=105">1:45</a>
+      <span class="cue-text">So, so far in RIDAN wallet everything starts from a secret. In KERI we call this</span>
+    </p>
+    <p class="cue" id="t113">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=113">1:53</a>
+      <span class="cue-text">secret the brand and in RIDAN wallet we call it the seed phrase because we use a</span>
+    </p>
+    <p class="cue" id="t122">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=122">2:02</a>
+      <span class="cue-text">human readable representation of this of this brand of this entropy and then from</span>
+    </p>
+    <p class="cue" id="t131">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=131">2:11</a>
+      <span class="cue-text">this entropy we can derive all the keys signing keys and rotation keys. But this</span>
+    </p>
+    <p class="cue" id="t140">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=140">2:20</a>
+      <span class="cue-text">is this seed phrase has a few problems like if you lose the words, you lose the</span>
+    </p>
+    <p class="cue" id="t145">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=145">2:25</a>
+      <span class="cue-text">wallet or if someone sees the words, they can take control of the wallet. And it's</span>
+    </p>
+    <p class="cue" id="t151">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=151">2:31</a>
+      <span class="cue-text">true that sometimes it's hard to keep safe this seed phrase over time because maybe</span>
+    </p>
+    <p class="cue" id="t157">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=157">2:37</a>
+      <span class="cue-text">you lose the USB or the paper or even you can forget where you put the the Swift</span>
+    </p>
+    <p class="cue" id="t165">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=165">2:45</a>
+      <span class="cue-text">phrase. So the idea is to separate the sign-in key from the rotation key. Being</span>
+    </p>
+    <p class="cue" id="t174">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=174">2:54</a>
+      <span class="cue-text">the sign-in key as in the SIG which stays in the phone and you can use this key for</span>
+    </p>
+    <p class="cue" id="t182">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=182">3:02</a>
+      <span class="cue-text">your daily request of the controller to sign and secure the communication between</span>
+    </p>
+    <p class="cue" id="t187">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=187">3:07</a>
+      <span class="cue-text">the wallet and the cloud agent and get access to the identities. In Brilliant</span>
+    </p>
+    <p class="cue" id="t192">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=192">3:12</a>
+      <span class="cue-text">Wallet, we call this these identities as profiles. And then we have the rotation</span>
+    </p>
+    <p class="cue" id="t196">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=196">3:16</a>
+      <span class="cue-text">power, the rotation key, which is a multi -seek with a threshold one of two in this</span>
+    </p>
+    <p class="cue" id="t202">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=202">3:22</a>
+      <span class="cue-text">case for this demo. This means that you can use one card or the other to rotate</span>
+    </p>
+    <p class="cue" id="t209">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=209">3:29</a>
+      <span class="cue-text">the wallet, to rotate the controller. It's important to mention that these cards stay</span>
+    </p>
+    <p class="cue" id="t216">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=216">3:36</a>
+      <span class="cue-text">in different places, isolated, offline. And we don't expose these cards, these</span>
+    </p>
+    <p class="cue" id="t221">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=221">3:41</a>
+      <span class="cue-text">pivot keys, as we expose the sending key every day. We just use them when we need</span>
+    </p>
+    <p class="cue" id="t227">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=227">3:47</a>
+      <span class="cue-text">it on demand. We can think that for example one of the card could be safe at</span>
+    </p>
+    <p class="cue" id="t233">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=233">3:53</a>
+      <span class="cue-text">home and the other card could be safe by an accredited custodian like a bank. We</span>
+    </p>
+    <p class="cue" id="t242">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=242">4:02</a>
+      <span class="cue-text">have these two cards here and the great one comes from directly from the from</span>
+    </p>
+    <p class="cue" id="t249">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=249">4:09</a>
+      <span class="cue-text">China from the factory and here you can see the a biometric sensor for the</span>
+    </p>
+    <p class="cue" id="t255">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=255">4:15</a>
+      <span class="cue-text">fingerprint. And then we have the second one, the black one, again with the</span>
+    </p>
+    <p class="cue" id="t260">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=260">4:20</a>
+      <span class="cue-text">fingerprint. And this comes from a US provider, I think is from CIDL-CID. So</span>
+    </p>
+    <p class="cue" id="t267">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=267">4:27</a>
+      <span class="cue-text">let's go for the demo. For the demo, I'm going to use two devices, a Samsung and</span>
+    </p>
+    <p class="cue" id="t275">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=275">4:35</a>
+      <span class="cue-text">then an iPhone and these two cars. So I'm going to hold a bit the the camera of my</span>
+    </p>
+    <p class="cue" id="t283">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=283">4:43</a>
+      <span class="cue-text">laptop so you can see how I handle the phone and the cards. So, just a second.</span>
+    </p>
+    <p class="cue" id="t295">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=295">4:55</a>
+      <span class="cue-text">Okay. Let me remove the blur background. No, it's perfect. Cool.</span>
+    </p>
+    <p class="cue" id="t310">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=310">5:10</a>
+      <span class="cue-text">Okay. And also let me share the screen of the first device, the Samsung. I'm going</span>
+    </p>
+    <p class="cue" id="t315">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=315">5:15</a>
+      <span class="cue-text">to start with the Samsung device. So, which is this one. I already onboarded the</span>
+    </p>
+    <p class="cue" id="t324">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=324">5:24</a>
+      <span class="cue-text">wallet and as you can see in the screen, in the top, there is a banner that says</span>
+    </p>
+    <p class="cue" id="t329">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=329">5:29</a>
+      <span class="cue-text">that I should verify my recovery phrase, the C phrase. Actually, we can take a look</span>
+    </p>
+    <p class="cue" id="t336">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=336">5:36</a>
+      <span class="cue-text">quickly. It looks.</span>
+    </p>
+    <p class="cue" id="t341">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=341">5:41</a>
+      <span class="cue-text">Okay. And this is the words, the order words. So, we want to separate the signing</span>
+    </p>
+    <p class="cue" id="t348">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=348">5:48</a>
+      <span class="cue-text">key from the rotation key. So, we want to do the backup using these two smart cards.</span>
+    </p>
+    <p class="cue" id="t355">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=355">5:55</a>
+      <span class="cue-text">Okay. So, let's go back to home and now we need to go to settings. And in setting we</span>
+    </p>
+    <p class="cue" id="t363">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=363">6:03</a>
+      <span class="cue-text">have a new option here which is called backup with a card. And this is the option</span>
+    </p>
+    <p class="cue" id="t369">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=369">6:09</a>
+      <span class="cue-text">we need to select in order to go ahead and do the backup with the smart cards to move</span>
+    </p>
+    <p class="cue" id="t375">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=375">6:15</a>
+      <span class="cue-text">the rotation power from the seed phrase which is actually in the phone right now</span>
+    </p>
+    <p class="cue" id="t380">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=380">6:20</a>
+      <span class="cue-text">to the to these new smart cards. So let's go to the option and now we're going to</span>
+    </p>
+    <p class="cue" id="t389">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=389">6:29</a>
+      <span class="cue-text">present these two cards to the phone in order to do the rotation. And let's say</span>
+    </p>
+    <p class="cue" id="t395">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=395">6:35</a>
+      <span class="cue-text">activate these cards for the rotation power. So let's go for it. Let's go one by</span>
+    </p>
+    <p class="cue" id="t401">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=401">6:41</a>
+      <span class="cue-text">one. So I click on start and now the wallet is asking me to tap with the first</span>
+    </p>
+    <p class="cue" id="t409">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=409">6:49</a>
+      <span class="cue-text">card. So let's go for it. I touch with my fingerprint in the sensor and I already</span>
+    </p>
+    <p class="cue" id="t416">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=416">6:56</a>
+      <span class="cue-text">presented the first card. So next I need to do the same with the second So, I click</span>
+    </p>
+    <p class="cue" id="t422">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=422">7:02</a>
+      <span class="cue-text">on add as a second card. I tap. I touch the fingerprint sensor and it's done. Now,</span>
+    </p>
+    <p class="cue" id="t431">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=431">7:11</a>
+      <span class="cue-text">I'm ready to do the rotation and to go from seed phrase to smart cards. So, I can</span>
+    </p>
+    <p class="cue" id="t439">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=439">7:19</a>
+      <span class="cue-text">click on confirm backup and</span>
+    </p>
+    <p class="cue" id="t444">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=444">7:24</a>
+      <span class="cue-text">voila, it's done. No. So we can actually double check it. Here we see that we have</span>
+    </p>
+    <p class="cue" id="t454">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=454">7:34</a>
+      <span class="cue-text">the two cards, the great one and the black one. So before the demo, before this call,</span>
+    </p>
+    <p class="cue" id="t465">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=465">7:45</a>
+      <span class="cue-text">I already populated this wallet with… – Jared? Sorry, can you go unmute? Thank</span>
+    </p>
+    <p class="cue" id="t473">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=473">7:53</a>
+      <span class="cue-text">you. Sorry. – Thank you. No No worries. Thank you. So yeah, before the demo, I</span>
+    </p>
+    <p class="cue" id="t480">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=480">8:00</a>
+      <span class="cue-text">populated the world with a few credentials, one connection and</span>
+    </p>
+    <p class="cue" id="t485">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=485">8:05</a>
+      <span class="cue-text">notification. So the recovery is more interesting. So now let's go for the</span>
+    </p>
+    <p class="cue" id="t494">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=494">8:14</a>
+      <span class="cue-text">situation where I lose my phone or someone take it. So what is going to happen is</span>
+    </p>
+    <p class="cue" id="t501">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=501">8:21</a>
+      <span class="cue-text">that I don't have access to this device anymore. I lost it. So what I'm going to</span>
+    </p>
+    <p class="cue" id="t508">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=508">8:28</a>
+      <span class="cue-text">do, I'm going to recover all the wallet, all the identities, credentials and</span>
+    </p>
+    <p class="cue" id="t514">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=514">8:34</a>
+      <span class="cue-text">everything in a new phone. So for that, I bought a new phone. Let me this one, which</span>
+    </p>
+    <p class="cue" id="t523">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=523">8:43</a>
+      <span class="cue-text">is a it's an iPhone. Oh, sorry. Oh, sorry. Let me do it. Yeah.</span>
+    </p>
+    <p class="cue" id="t535">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=535">8:55</a>
+      <span class="cue-text">Which is an iPhone. And I already installed the Veriden wallet.</span>
+    </p>
+    <p class="cue" id="t546">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=546">9:06</a>
+      <span class="cue-text">So in this case, I need to do the onboarding. And I need to select that I</span>
+    </p>
+    <p class="cue" id="t552">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=552">9:12</a>
+      <span class="cue-text">already have a wallet. So I click on the option. Accept the terms. Create the pin</span>
+    </p>
+    <p class="cue" id="t560">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=560">9:20</a>
+      <span class="cue-text">code.</span>
+    </p>
+    <p class="cue" id="t565">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=565">9:25</a>
+      <span class="cue-text">I'm going to enable Biometrics. Okay. No password this time. And now I need to do</span>
+    </p>
+    <p class="cue" id="t573">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=573">9:33</a>
+      <span class="cue-text">the recovery. So I need to present the cards. In this case, as I said, this is a</span>
+    </p>
+    <p class="cue" id="t578">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=578">9:38</a>
+      <span class="cue-text">three-sword one of two. So I just need to present one card. So I'm going to use the</span>
+    </p>
+    <p class="cue" id="t581">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=581">9:41</a>
+      <span class="cue-text">gray one in this case. And so let's go for it. Now the one is asking me to tap. I</span>
+    </p>
+    <p class="cue" id="t591">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=591">9:51</a>
+      <span class="cue-text">need to touch the sensor with my fingerprint. And now it's asking if I</span>
+    </p>
+    <p class="cue" id="t597">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=597">9:57</a>
+      <span class="cue-text">still have the second one. I have it. So I click on I have it. I touch again the</span>
+    </p>
+    <p class="cue" id="t603">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=603">10:03</a>
+      <span class="cue-text">sensor.</span>
+    </p>
+    <p class="cue" id="t612">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=612">10:12</a>
+      <span class="cue-text">And one more time.</span>
+    </p>
+    <p class="cue" id="t624">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=624">10:24</a>
+      <span class="cue-text">And boom, the recovery is done. I can get access again to the wallet. I can go to</span>
+    </p>
+    <p class="cue" id="t631">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=631">10:31</a>
+      <span class="cue-text">the credentials. I have everything, both credentials. I have the connection and I</span>
+    </p>
+    <p class="cue" id="t635">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=635">10:35</a>
+      <span class="cue-text">have all the notifications. And one thing that is really important is that in the</span>
+    </p>
+    <p class="cue" id="t641">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=641">10:41</a>
+      <span class="cue-text">other phone, in the Samsung, you see the white screen saying that this wallet was</span>
+    </p>
+    <p class="cue" id="t647">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=647">10:47</a>
+      <span class="cue-text">moved to another phone. You recovered this wallet on another device. For security,</span>
+    </p>
+    <p class="cue" id="t654">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=654">10:54</a>
+      <span class="cue-text">the keys on this phone were rotated. So this phone can no longer be used. Your</span>
+    </p>
+    <p class="cue" id="t660">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=660">11:00</a>
+      <span class="cue-text">identity and credentials are safe on the new device. So what we did is we rotated</span>
+    </p>
+    <p class="cue" id="t666">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=666">11:06</a>
+      <span class="cue-text">the controller and the old controller, the one in the Samsung can't use the wallet</span>
+    </p>
+    <p class="cue" id="t673">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=673">11:13</a>
+      <span class="cue-text">anymore. It lost access to it. So yeah, this is basically the demo. It was quick.</span>
+    </p>
+    <p class="cue" id="t685">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=685">11:25</a>
+      <span class="cue-text">In IIW, there was some questions like if the signing key is a single seek. It's</span>
+    </p>
+    <p class="cue" id="t690">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=690">11:30</a>
+      <span class="cue-text">not. As I said in the beginning, it's a single seek. Also, there was a question</span>
+    </p>
+    <p class="cue" id="t697">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=697">11:37</a>
+      <span class="cue-text">about how many keys can I store in the the car. And the thing is that we don't store</span>
+    </p>
+    <p class="cue" id="t705">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=705">11:45</a>
+      <span class="cue-text">keys. I mean the raw data of the key in the car. What we store in the car is the</span>
+    </p>
+    <p class="cue" id="t711">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=711">11:51</a>
+      <span class="cue-text">master seat, which is 32 bytes. Also the counter the index of the current rotation</span>
+    </p>
+    <p class="cue" id="t720">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=720">12:00</a>
+      <span class="cue-text">key. And if we do the numbers, the match in one slot of this car, we can have more</span>
+    </p>
+    <p class="cue" id="t728">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=728">12:08</a>
+      <span class="cue-text">than 65,000 rotations. And this means one rotation per day in 170 years. I mean,</span>
+    </p>
+    <p class="cue" id="t739">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=739">12:19</a>
+      <span class="cue-text">that's a lot. And yeah, in each car has actually 256 slots. So this means if you</span>
+    </p>
+    <p class="cue" id="t749">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=749">12:29</a>
+      <span class="cue-text">do the math again, this is 17 million rotations. Of course, you will never reach</span>
+    </p>
+    <p class="cue" id="t756">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=756">12:36</a>
+      <span class="cue-text">that number. Probably you will lose the car before or rotate to a new car before.</span>
+    </p>
+    <p class="cue" id="t764">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=764">12:44</a>
+      <span class="cue-text">Yeah, and that's the demo. It was quick. So, I'm going to pass the ball to Roberto.</span>
+    </p>
+    <p class="cue" id="t772">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=772">12:52</a>
+      <span class="cue-text">Maybe… – Question, Jamie. – Yeah, definitely. – Key rotation in KERI is</span>
+    </p>
+    <p class="cue" id="t778">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=778">12:58</a>
+      <span class="cue-text">agnostic about… You don't need to use hierarchical deterministic key management</span>
+    </p>
+    <p class="cue" id="t789">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=789">13:09</a>
+      <span class="cue-text">there. So, it's not one seed that you have to use use. But in this case, you use one</span>
+    </p>
+    <p class="cue" id="t795">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=795">13:15</a>
+      <span class="cue-text">seed, don't you? You use the HDKM functionality of it. – Yeah. And this seed</span>
+    </p>
+    <p class="cue" id="t803">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=803">13:23</a>
+      <span class="cue-text">is in the secure element of the chip. It never, never leaves the secure element.</span>
+    </p>
+    <p class="cue" id="t809">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=809">13:29</a>
+      <span class="cue-text">And you use the index to go to the next to the next rotation key. – Yeah. And that is</span>
+    </p>
+    <p class="cue" id="t815">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=815">13:35</a>
+      <span class="cue-text">a derivation from the master key. – Yeah. That's it. Got it.</span>
+    </p>
+    <p class="cue" id="t826">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=826">13:46</a>
+      <span class="cue-text">Can I comment on that? Yeah. Can I comment on that? Yeah. So, by using by putting the</span>
+    </p>
+    <p class="cue" id="t835">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=835">13:55</a>
+      <span class="cue-text">derivation of the HD keychain in an external hardware HSM, then you eliminate</span>
+    </p>
+    <p class="cue" id="t843">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=843">14:03</a>
+      <span class="cue-text">a lot of the attack vectors where you're attacking the client</span>
+    </p>
+    <p class="cue" id="t850">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=850">14:10</a>
+      <span class="cue-text">that's running in a web browser or something like that when you're entering</span>
+    </p>
+    <p class="cue" id="t854">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=854">14:14</a>
+      <span class="cue-text">the seed phrase to be able to regenerate your keys. So this eliminates a whole host</span>
+    </p>
+    <p class="cue" id="t861">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=861">14:21</a>
+      <span class="cue-text">of attack vectors by putting it externally. So it's a balance between</span>
+    </p>
+    <p class="cue" id="t868">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=868">14:28</a>
+      <span class="cue-text">security and user friction. Whereas if you had to use a different seed phrase, then</span>
+    </p>
+    <p class="cue" id="t875">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=875">14:35</a>
+      <span class="cue-text">you'd have to create a new, you'd have to have a new spark card every time you</span>
+    </p>
+    <p class="cue" id="t879">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=879">14:39</a>
+      <span class="cue-text">rotated. So that would be really a lot of friction. Yep.</span>
+    </p>
+    <p class="cue" id="t889">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=889">14:49</a>
+      <span class="cue-text">Thank you, Sam. Yeah, so that's all for the first demo. I can pass the ball if no</span>
+    </p>
+    <p class="cue" id="t896">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=896">14:56</a>
+      <span class="cue-text">more questions to Roberto.</span>
+    </p>
+    <p class="cue" id="t904">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=904">15:04</a>
+      <span class="cue-text">I would say this is great. This is like, you know, Sol is one of the friction</span>
+    </p>
+    <p class="cue" id="t912">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=912">15:12</a>
+      <span class="cue-text">problems with pre-rotated keys in a nice way using inexpensive hardware. – So if I</span>
+    </p>
+    <p class="cue" id="t920">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=920">15:20</a>
+      <span class="cue-text">understand it correctly, you have two smart cards because if you lose one, you</span>
+    </p>
+    <p class="cue" id="t924">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=924">15:24</a>
+      <span class="cue-text">will not lose your access to your pre -rotated keys. – Yeah, I mean you can have</span>
+    </p>
+    <p class="cue" id="t933">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=933">15:33</a>
+      <span class="cue-text">an arbitrary number of cards. This is just for to simplify the demo and to</span>
+    </p>
+    <p class="cue" id="t938">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=938">15:38</a>
+      <span class="cue-text">demonstrate the multi-sick. You can have four, you can have 10. Yeah. Okay. As much</span>
+    </p>
+    <p class="cue" id="t944">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=944">15:44</a>
+      <span class="cue-text">as you feel safe. Yeah. And you could also you could also you could also do you could</span>
+    </p>
+    <p class="cue" id="t952">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=952">15:52</a>
+      <span class="cue-text">do like a different threshold. So you could have instead of one of n in this</span>
+    </p>
+    <p class="cue" id="t957">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=957">15:57</a>
+      <span class="cue-text">case one of two or one of three or one of four you could do two of six and then</span>
+    </p>
+    <p class="cue" id="t962">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=962">16:02</a>
+      <span class="cue-text">you'd have six spark cards and any two would be required. Yep. Got it. And we can</span>
+    </p>
+    <p class="cue" id="t970">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=970">16:10</a>
+      <span class="cue-text">use different custodians for them. So you diversify the risk of them being installed</span>
+    </p>
+    <p class="cue" id="t979">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=979">16:19</a>
+      <span class="cue-text">and pulled together. I mean, they are protected with biometrics, but… No, but a</span>
+    </p>
+    <p class="cue" id="t986">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=986">16:26</a>
+      <span class="cue-text">lot of key recovery algorithms are based on sharding a single key. And in this</span>
+    </p>
+    <p class="cue" id="t992">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=992">16:32</a>
+      <span class="cue-text">case, you're not sharding a single key, you're sharding control amongst multiple</span>
+    </p>
+    <p class="cue" id="t997">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=997">16:37</a>
+      <span class="cue-text">keys, which is actually a more secure path. So for example, you could think of</span>
+    </p>
+    <p class="cue" id="t1002">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1002">16:42</a>
+      <span class="cue-text">your shard as each card is one of the shards of the control over your</span>
+    </p>
+    <p class="cue" id="t1010">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1010">16:50</a>
+      <span class="cue-text">identifier. And so you could have social recovery where you gave a card to your</span>
+    </p>
+    <p class="cue" id="t1020">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1020">17:00</a>
+      <span class="cue-text">relatives and then have, instead of one of n, have some you know, three of a minimum</span>
+    </p>
+    <p class="cue" id="t1028">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1028">17:08</a>
+      <span class="cue-text">of three that they have to get together to do it. So you can replicate the same sort</span>
+    </p>
+    <p class="cue" id="t1033">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1033">17:13</a>
+      <span class="cue-text">of social recovery, but in a much more secure way without sharding a single key,</span>
+    </p>
+    <p class="cue" id="t1038">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1038">17:18</a>
+      <span class="cue-text">but by effectively sharding your control amongst a bunch of cards. I don't know if</span>
+    </p>
+    <p class="cue" id="t1043">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1043">17:23</a>
+      <span class="cue-text">you guys ever thought of it that way, but that's obviously a place you could go with</span>
+    </p>
+    <p class="cue" id="t1049">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1049">17:29</a>
+      <span class="cue-text">this.</span>
+    </p>
+    <p class="cue" id="t1057">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1057">17:37</a>
+      <span class="cue-text">Sorry, that's all I had to say. Sorry. Interruption. No worries. Yeah, there was</span>
+    </p>
+    <p class="cue" id="t1065">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1065">17:45</a>
+      <span class="cue-text">one last thing I want to mention about the these R providers. So they are working</span>
+    </p>
+    <p class="cue" id="t1072">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1072">17:52</a>
+      <span class="cue-text">also the next version of the KARS to support post-quantum signatures.</span>
+    </p>
+    <p class="cue" id="t1079">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1079">17:59</a>
+      <span class="cue-text">signatures, specifically MLDSA. The target is 2027. So yeah, thanks to KERI, to CSR</span>
+    </p>
+    <p class="cue" id="t1092">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1092">18:12</a>
+      <span class="cue-text">and KIP2 Agility. Maybe at some point we can support also these kind of signatures.</span>
+    </p>
+    <p class="cue" id="t1099">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1099">18:19</a>
+      <span class="cue-text">One thing worth of mention that one year ago, I think September last year, iOS in</span>
+    </p>
+    <p class="cue" id="t1105">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1105">18:25</a>
+      <span class="cue-text">iOS 26, They included this type of signatures, MLDSA in the secure and slave</span>
+    </p>
+    <p class="cue" id="t1120">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1120">18:40</a>
+      <span class="cue-text">of the iPhones. And then this year it was June in June. Yeah. Also Android did the</span>
+    </p>
+    <p class="cue" id="t1129">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1129">18:49</a>
+      <span class="cue-text">same for Android 17. So yeah, this means that millions of users will be exposed to</span>
+    </p>
+    <p class="cue" id="t1136">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1136">18:56</a>
+      <span class="cue-text">this new kind of signatures, post-quantum signatures, this new standard approved by</span>
+    </p>
+    <p class="cue" id="t1142">
+      <a class="cue-time" href="../../../#veridian-wallet-recovery-with-smart-cards-jaime-caso&amp;t=1142">19:02</a>
+      <span class="cue-text">NIST. So yeah, it's nice to be aware of that. know what.</span>
+    </p>
+    </article>
+    <footer>KERI Foundation • Videos</footer>
+  </div>
+</body>
+</html>

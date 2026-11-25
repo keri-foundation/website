@@ -3,7 +3,7 @@
  * Build a designed PDF of transcripts from the `.srt` files in one event folder.
  *
  * Pipeline:
- *   1. Resolve a gallery directory (confs/<ORG>/<YEAR>/<month> or vids/<YEAR>)
+ *   1. Resolve a gallery directory (confs/<ORG>/<YEAR>/<month> or vids/<YEAR>/<month>)
  *   2. Recursively collect every `*.srt` file in that directory
  *   3. Parse SRT cues and group them into readable paragraphs.
  *      A sibling summary (`foo.srt` → `foo.md`) is included when present.
@@ -16,7 +16,7 @@
  * Usage:
  *   node scripts/build-transcript-pdf.js KERI/2026/apr [--open]
  *   node scripts/build-transcript-pdf.js SEDI/2025/nov [--open]
- *   node scripts/build-transcript-pdf.js vids/2026 [--open]
+ *   node scripts/build-transcript-pdf.js vids/2026/jul [--open]
  *
  * Output (under the gallery):
  *   transcripts/pdf/talks/{slug-with-dashes}-Transcripts.pdf
@@ -63,7 +63,7 @@ function usage() {
   console.error("Usage: node scripts/build-transcript-pdf.js <gallery-id> [--open] [--dry-run]");
   console.error("Examples:");
   console.error("  node scripts/build-transcript-pdf.js KERI/2026/apr");
-  console.error("  node scripts/build-transcript-pdf.js vids/2026");
+  console.error("  node scripts/build-transcript-pdf.js vids/2026/jul");
 }
 
 // ─── Event directory ────────────────────────────────────────────────────────
@@ -89,7 +89,7 @@ async function findEventDir(slug) {
   }
 
   throw new Error(
-    `Could not find a gallery directory "${slug}". Examples: KERI/2026/apr (under ${CONFS_DIR}) or vids/2026.`
+    `Could not find a gallery directory "${slug}". Examples: KERI/2026/apr (under ${CONFS_DIR}) or vids/2026/jul.`
   );
 }
 
@@ -131,10 +131,17 @@ function eventFromSlug(slug) {
     const month = MONTHS[conf[3].toLowerCase()] || conf[3];
     return { slug, year, shortName: org, name: `${org} ${month} ${year}`, date: "" };
   }
-  const vids = slug.match(/^vids\/(\d{4})$/i);
+  const vids = slug.match(/^vids\/(\d{4})\/([a-z]{3})$/i);
   if (vids) {
     const year = vids[1];
-    return { slug, year, shortName: `${year} Videos`, name: `${year} Videos`, date: "" };
+    const month = MONTHS[vids[2].toLowerCase()] || vids[2];
+    return {
+      slug,
+      year,
+      shortName: `${month} ${year} Videos`,
+      name: `${month} ${year} Videos`,
+      date: "",
+    };
   }
   const match = slug.match(/^(\d{4})(?:-(\d{2}))?-([A-Za-z0-9][A-Za-z0-9-]*)$/);
   if (!match) {
