@@ -3403,43 +3403,42 @@ secured? – The hashes of all data in the
 
 683
 01:01:50,760 --> 01:01:55,800
-hash chains is self-securing.
-If somebody tampers with it, you can detect
+hash chains is self-securing. If
+somebody tampers with it, you can detect
 
 684
 01:01:55,800 --> 01:01:59,420
-it. I'm just wondering,
-fundamentally though, is it stirring it in
+it. – I'm just wondering,
+fundamentally though, is it storing it in
 
 685
 01:01:59,420 --> 01:02:04,140
-some kind of a block? Is it stirring it
-in some kind of a text file? It doesn't
+some kind of a block? Is it storing it
+in some kind of a text file? – It doesn't
 
 686
 01:02:04,140 --> 01:02:12,040
-matter. Any data any database will work.
+matter. Any database will work.
 What we use in our code is we use
 
 687
 01:02:12,040 --> 01:02:17,380
 LMDB. LMDB is a really fast key value
-store used for you. You're familiar with
+store… You're familiar with
 
 688
 01:02:17,380 --> 01:02:23,100
-it. Okay. Thank you. Okay. Yes.
-Then you found the confusion earlier.
+it. – Thank you. – Okay. Yes.
 
 689
 01:02:23,760 --> 01:02:30,580
-Which hash scheme are you using now? SHA3,
-Blake? It's perfectly cryptographically
+– Which hash scheme are you using now? SHA3,
+Blake? – It's perfectly cryptographically
 
 690
 01:02:30,580 --> 01:02:38,920
-agile. When I go, so here, I go back to
-the code. We have a protocol called CESR.
+agile. We have a
+protocol called CESR.
 
 691
 01:02:39,120 --> 01:02:45,020
@@ -3463,23 +3462,23 @@ an F. If it was SHA 3, it would be a G or
 
 695
 01:03:05,860 --> 01:03:10,860
-an H. And if it was SHA 3 512, it'd be
-a different letter. If it's SHA, you'd be,
+an H. And if it was SHA
+3-512, it'd be a different letter.
 
 696
 01:03:11,080 --> 01:03:16,440
-all of the hashes are in the table.
+All of the hashes are in the table.
 And anybody that's processing it
 
 697
 01:03:16,440 --> 01:03:20,240
-just looks it up and go, I know what,
-so I know how to verify that hash.
+just looks it up and go, I
+know how to verify that hash.
 
 698
 01:03:21,680 --> 01:03:25,720
-Yeah. No, that's all right. In the
-distributed authority world, I know how
+– In the distributed
+authority world, I know how
 
 699
 01:03:25,720 --> 01:03:28,580
@@ -3489,7 +3488,7 @@ You're looking at those statements,
 700
 01:03:29,000 --> 01:03:32,940
 transparency logs, the distributed
-authority tells you. Yes. There was
+authority tells you. There was
 
 701
 01:03:32,940 --> 01:03:36,420
@@ -3498,15 +3497,15 @@ know something has gone bad and the word
 
 702
 01:03:36,420 --> 01:03:41,660
-you was carrying a lot of weight. Oh,
-okay. Yes. We'll go back here. Okay.
+you was carrying a lot of weight.
+– Yes. We'll go back here.
 
 703
 01:03:41,660 --> 01:03:49,420
-Tomorrow's talk, I will answer that.
-Okay. All right. To be continued. All
+Tomorrow's talk, I will answer
+that. – To be continued. - All
 
 704
 01:03:49,420 --> 01:03:55,200
-right. Thank you so much. Thank you.
+right. Thank you so much.
 
