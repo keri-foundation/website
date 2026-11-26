@@ -398,16 +398,18 @@ function ariaCurrentForHref(href, pageUrl) {
 
 const NAV_LABEL_KF_HOME = "KF Home";
 const NAV_LABEL_VIDEOS_HOME = "Videos Home";
+const NAV_LABEL_CONFERENCE_VIDEOS = "Conference videos";
+const NAV_LABEL_OTHER_VIDEOS = "Other videos";
 
 function galleryBreadcrumbs(galleryId, page) {
   const crumbs = [{ label: NAV_LABEL_VIDEOS_HOME, href: "/v/" }];
   if (isSessionsGallery(galleryId)) {
-    crumbs.push({ label: "Other videos", href: "/v/sessions/" });
+    crumbs.push({ label: NAV_LABEL_OTHER_VIDEOS, href: "/v/sessions/" });
     const parts = galleryId.split("/");
     const year = parts[1];
     if (year) crumbs.push({ label: year, href: `/v/sessions/${year}/` });
   } else {
-    crumbs.push({ label: "Conferences", href: "/v/confs/" });
+    crumbs.push({ label: NAV_LABEL_CONFERENCE_VIDEOS, href: "/v/confs/" });
   }
   const heading = (page && (page.heading || page.title)) || galleryWhen(galleryId);
   const href = (page && page.headingHref) || `/${galleryPrefix(galleryId)}/`;
@@ -417,8 +419,8 @@ function galleryBreadcrumbs(galleryId, page) {
 
 function overviewBreadcrumbs(scope) {
   const crumbs = [{ label: NAV_LABEL_VIDEOS_HOME, href: "/v/" }];
-  if (scope === "confs") crumbs.push({ label: "Conferences", href: "/v/confs/", current: true });
-  else if (scope === "sessions") crumbs.push({ label: "Other videos", href: "/v/sessions/", current: true });
+  if (scope === "confs") crumbs.push({ label: NAV_LABEL_CONFERENCE_VIDEOS, href: "/v/confs/", current: true });
+  else if (scope === "sessions") crumbs.push({ label: NAV_LABEL_OTHER_VIDEOS, href: "/v/sessions/", current: true });
   else crumbs[0].current = true;
   return crumbs;
 }
@@ -595,10 +597,10 @@ function renderSiteNavHtml({ page, pageUrl, galleryId, scope, confs, sessions, d
   primary.push(renderPrimaryNavLink({ label: NAV_LABEL_KF_HOME, href: "/" }, pageUrl));
   primary.push(renderPrimaryNavLink({ label: NAV_LABEL_VIDEOS_HOME, href: "/v/" }, pageUrl));
   primary.push(
-    `<button type="button" id="vNavTriggerConfs" class="${navTriggerClass("confs", active)}" data-panel="confs" aria-expanded="false" aria-controls="vNavPanelConfs" aria-haspopup="true">Conferences</button>`
+    `<button type="button" id="vNavTriggerConfs" class="${navTriggerClass("confs", active)}" data-panel="confs" aria-expanded="false" aria-controls="vNavPanelConfs" aria-haspopup="true">${NAV_LABEL_CONFERENCE_VIDEOS}</button>`
   );
   primary.push(
-    `<button type="button" id="vNavTriggerSessions" class="${navTriggerClass("sessions", active)}" data-panel="sessions" aria-expanded="false" aria-controls="vNavPanelSessions" aria-haspopup="true">Other videos</button>`
+    `<button type="button" id="vNavTriggerSessions" class="${navTriggerClass("sessions", active)}" data-panel="sessions" aria-expanded="false" aria-controls="vNavPanelSessions" aria-haspopup="true">${NAV_LABEL_OTHER_VIDEOS}</button>`
   );
 
   const confsPanel = renderConfsPanel(confs, pageUrl);
