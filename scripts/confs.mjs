@@ -421,7 +421,8 @@ function overviewBreadcrumbs(scope) {
 }
 
 function defaultNavPanel(pageUrl, galleryId, scope) {
-  if (galleryId) return isSessionsGallery(galleryId) ? "sessions" : "confs";
+  // Gallery pages: never auto-open a panel (saves space, especially on mobile).
+  if (galleryId) return "";
   const path = pathFromPageUrl(pageUrl);
   if (scope === "confs" || path === "/v/confs") return "confs";
   if (scope === "sessions" || path === "/v/sessions") return "sessions";
