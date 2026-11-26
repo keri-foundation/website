@@ -620,6 +620,17 @@ function renderSiteNavHtml({ page, pageUrl, galleryId, scope, confs, sessions, d
   return breadcrumbs ? `${navBlock}${breadcrumbs}` : navBlock;
 }
 
+/** Site nav submenu labels; strip trailing “Videos” from page titles when present. */
+function siteNavGalleryLabel(page, id) {
+  const raw =
+    page?.heading ||
+    page?.title ||
+    (isSessionsGallery(id) ? galleryWhen(id) : `${galleryOrg(id)} ${galleryWhen(id)}`.trim());
+  return String(raw)
+    .replace(/\s+videos\s*$/i, "")
+    .trim();
+}
+
 async function buildSiteNavCatalog() {
   const ids = await findConferences();
   const confs = [];
@@ -627,10 +638,7 @@ async function buildSiteNavCatalog() {
   for (const id of ids) {
     const config = await loadConfig(id);
     const copy = config.page || {};
-    const label =
-      copy.heading ||
-      copy.title ||
-      (isSessionsGallery(id) ? galleryWhen(id) : `${galleryOrg(id)} ${galleryWhen(id)}`.trim());
+    const label = siteNavGalleryLabel(copy, id);
     const entry = { href: `/${galleryPrefix(id)}/`, label, sortKey: gallerySortKey(id) };
     if (isSessionsGallery(id)) sessions.push(entry);
     else confs.push(entry);
