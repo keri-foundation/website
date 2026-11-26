@@ -153,6 +153,7 @@ const TRANSCRIPT_NAV_MARKER =
 const GALLERY_HEADER_MARKER = "<!--__GALLERY_HEADER__-->";
 const TALK_SUMMARIES_MARKER = "<!--__TALK_SUMMARIES__-->";
 const OVERVIEW_CARDS_MARKER = "<!--__OVERVIEW_CARDS__-->";
+const OVERVIEW_INTRO_MARKER = "<!--__OVERVIEW_INTRO__-->";
 const OVERVIEW_FOOTER_MARKER = "<!--__OVERVIEW_FOOTER__-->";
 const MONTH_INDEX = {
   jan: 1,
@@ -763,6 +764,13 @@ function renderOverviewCards(cards) {
   return `${cards.map(renderOverviewCard).join("\n")}\n`;
 }
 
+/** Optional lead copy between the masthead and the video grid. */
+function renderOverviewIntro(text) {
+  const intro = String(text || "").trim();
+  if (!intro) return "";
+  return `<p class="overview-intro">${escapeText(intro)}</p>\n`;
+}
+
 async function cmdOverviewPages(opts) {
   if (!existsSync(OVERVIEW_TEMPLATE)) {
     throw new Error(`Missing template: ${OVERVIEW_TEMPLATE}`);
@@ -773,6 +781,9 @@ async function cmdOverviewPages(opts) {
   }
   if (!templateHtml.includes(OVERVIEW_CARDS_MARKER)) {
     throw new Error("overview: template missing overview cards marker");
+  }
+  if (!templateHtml.includes(OVERVIEW_INTRO_MARKER)) {
+    throw new Error("overview: template missing overview intro marker");
   }
   if (!templateHtml.includes(OVERVIEW_FOOTER_MARKER)) {
     throw new Error("overview: template missing overview footer marker");
@@ -828,6 +839,7 @@ async function cmdOverviewPages(opts) {
       null,
       brand
     )
+      .replace(OVERVIEW_INTRO_MARKER, renderOverviewIntro(pageCopy.introduction))
       .replace(OVERVIEW_CARDS_MARKER, renderOverviewCards(cards))
       .replace(OVERVIEW_FOOTER_MARKER, escapeText(pageCopy.footer || ""));
     const label = `${page.urlPath}index.html`;
