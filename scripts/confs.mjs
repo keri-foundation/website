@@ -432,20 +432,28 @@ function defaultNavPanel(pageUrl, galleryId, scope) {
 /** Which primary nav control matches this URL (for bold “you are here”). */
 function activeNavSection(pageUrl, galleryId, scope) {
   if (galleryId) {
-    return {
-      section: isSessionsGallery(galleryId) ? "sessions" : "confs",
-      here: true,
-    };
+    return { section: isSessionsGallery(galleryId) ? "sessions" : "confs" };
   }
   const path = pathFromPageUrl(pageUrl);
-  if (scope === "confs" || path === "/v/confs") return { section: "confs", here: false };
-  if (scope === "sessions" || path === "/v/sessions") return { section: "sessions", here: false };
-  return { section: "", here: false };
+  if (scope === "confs" || path === "/v/confs") return { section: "confs" };
+  if (scope === "sessions" || path === "/v/sessions") return { section: "sessions" };
+  return { section: "" };
 }
 
 function navTriggerClass(panel, active) {
-  const isActive = panel === active.section || (panel === "here" && active.here);
-  return isActive ? "v-site-nav-trigger is-active" : "v-site-nav-trigger";
+  return panel === active.section ? "v-site-nav-trigger is-active" : "v-site-nav-trigger";
+}
+
+function siteNavBreadcrumbList(galleryId, page, scope) {
+  if (galleryId) return galleryBreadcrumbs(galleryId, page);
+  if (scope && scope !== "all") return overviewBreadcrumbs(scope);
+  return null;
+}
+
+function renderInlineBreadcrumbs(galleryId, page, scope, pageUrl) {
+  const crumbs = siteNavBreadcrumbList(galleryId, page, scope);
+  if (!crumbs) return "";
+  return `<nav class="v-site-breadcrumbs" aria-label="Breadcrumb">${renderSiteNavCrumbs(crumbs, pageUrl)}</nav>`;
 }
 
 /** Transcript / PDF links for the gallery header (not the site-wide top nav). */
@@ -594,25 +602,10 @@ function renderSiteNavHtml({ page, pageUrl, galleryId, scope, confs, sessions, d
 
   const sessionsPanel = renderSessionsPanel(sessions, pageUrl);
 
-  let herePanel = "";
-  if (galleryId) {
-    herePanel += renderSiteNavCrumbs(galleryBreadcrumbs(galleryId, page), pageUrl);
-  } else if (scope && scope !== "all") {
-    herePanel += renderSiteNavCrumbs(overviewBreadcrumbs(scope), pageUrl);
-  }
-  const showHere = !!(galleryId || (scope && scope !== "all"));
-  if (showHere) {
-    primary.push(
-      `<button type="button" id="vNavTriggerHere" class="${navTriggerClass("here", active)}" data-panel="here" aria-expanded="false" aria-controls="vNavPanelHere" aria-haspopup="true">This page</button>`
-    );
-  }
-
   const defaultAttr = defaultPanel ? ` data-default-panel="${escapeAttr(defaultPanel)}"` : "";
-  const hereBlock = showHere
-    ? `<div class="v-site-nav-panel" id="vNavPanelHere" data-panel="here" role="region" aria-labelledby="vNavTriggerHere" hidden>${herePanel}</div>`
-    : "";
+  const breadcrumbs = renderInlineBreadcrumbs(galleryId, page, scope, pageUrl);
 
-  return `<nav class="v-site-nav" id="vSiteNav" aria-label="Video library navigation"${defaultAttr}>
+  const navBlock = `<nav class="v-site-nav" id="vSiteNav" aria-label="Video library navigation"${defaultAttr}>
     <button type="button" class="v-site-nav-mobile-toggle" id="vNavMobileToggle" aria-expanded="false" aria-controls="vSiteNavBody">Menu</button>
     <div class="v-site-nav-body" id="vSiteNavBody">
       <div class="v-site-nav-bar">
@@ -621,10 +614,10 @@ function renderSiteNavHtml({ page, pageUrl, galleryId, scope, confs, sessions, d
       <div class="v-site-nav-panels">
         <div class="v-site-nav-panel" id="vNavPanelConfs" data-panel="confs" role="region" aria-labelledby="vNavTriggerConfs" hidden>${confsPanel}</div>
         <div class="v-site-nav-panel" id="vNavPanelSessions" data-panel="sessions" role="region" aria-labelledby="vNavTriggerSessions" hidden>${sessionsPanel}</div>
-        ${hereBlock}
       </div>
     </div>
   </nav>`;
+  return breadcrumbs ? `${navBlock}${breadcrumbs}` : navBlock;
 }
 
 async function buildSiteNavCatalog() {

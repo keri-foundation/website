@@ -412,17 +412,25 @@
             text-underline-offset: 2px;
         }
 
+        .v-site-breadcrumbs {
+            margin: -12px auto 18px;
+            max-width: 1100px;
+            padding: 10px 16px 0;
+        }
+
+        .v-site-breadcrumbs .v-site-nav-crumbs {
+            margin: 0;
+            padding: 0;
+            border-bottom: 0;
+        }
+
         .v-site-nav-crumbs {
-            flex-basis: 100%;
             display: flex;
             flex-wrap: wrap;
             align-items: baseline;
             gap: 0;
             font-size: 0.9375rem;
             color: var(--muted);
-            margin: 0 0 12px;
-            padding-bottom: 12px;
-            border-bottom: 1px solid color-mix(in srgb, var(--ink) 8%, transparent);
         }
 
         .v-site-nav-crumbs .v-site-nav-link {
@@ -448,7 +456,8 @@
         .v-site-nav-primary > a:focus-visible,
         .v-site-nav-trigger:focus-visible,
         .v-site-nav-link:focus-visible,
-        .v-site-nav-mobile-toggle:focus-visible {
+        .v-site-nav-mobile-toggle:focus-visible,
+        .v-site-breadcrumbs .v-site-nav-link:focus-visible {
             outline: 2px solid var(--accent);
             outline-offset: 2px;
         }
@@ -552,16 +561,6 @@
             .v-site-nav-panel .v-site-nav-link + .v-site-nav-link::before,
             .v-site-nav-index:not(:last-child)::after {
                 content: none;
-            }
-
-            .v-site-nav-crumbs {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 8px;
-            }
-
-            .v-site-nav-crumb-sep {
-                display: none;
             }
         }
 
@@ -760,15 +759,14 @@
     <button type="button" class="v-site-nav-mobile-toggle" id="vNavMobileToggle" aria-expanded="false" aria-controls="vSiteNavBody">Menu</button>
     <div class="v-site-nav-body" id="vSiteNavBody">
       <div class="v-site-nav-bar">
-        <div class="v-site-nav-primary"><a href="/">Home</a><a href="/v/">All videos</a><button type="button" id="vNavTriggerConfs" class="v-site-nav-trigger" data-panel="confs" aria-expanded="false" aria-controls="vNavPanelConfs" aria-haspopup="true">Conferences</button><button type="button" id="vNavTriggerSessions" class="v-site-nav-trigger is-active" data-panel="sessions" aria-expanded="false" aria-controls="vNavPanelSessions" aria-haspopup="true">Other videos</button><button type="button" id="vNavTriggerHere" class="v-site-nav-trigger" data-panel="here" aria-expanded="false" aria-controls="vNavPanelHere" aria-haspopup="true">This page</button></div>
+        <div class="v-site-nav-primary"><a href="/">Home</a><a href="/v/">All videos</a><button type="button" id="vNavTriggerConfs" class="v-site-nav-trigger" data-panel="confs" aria-expanded="false" aria-controls="vNavPanelConfs" aria-haspopup="true">Conferences</button><button type="button" id="vNavTriggerSessions" class="v-site-nav-trigger is-active" data-panel="sessions" aria-expanded="false" aria-controls="vNavPanelSessions" aria-haspopup="true">Other videos</button></div>
       </div>
       <div class="v-site-nav-panels">
         <div class="v-site-nav-panel" id="vNavPanelConfs" data-panel="confs" role="region" aria-labelledby="vNavTriggerConfs" hidden><a class="v-site-nav-link v-site-nav-index" href="/v/confs/">Conference index</a><span class="v-site-nav-group-label">2026</span><a class="v-site-nav-link" href="/v/confs/KERI/2026/nov/">KERI Mini Conference November 2026</a><a class="v-site-nav-link" href="/v/confs/SEDI/2026/nov/">State Endorsed Digital Identity Summit (SEDI) 2026</a><a class="v-site-nav-link" href="/v/confs/KERI/2026/apr/">KERI Conference April 2026</a><span class="v-site-nav-group-label">2025</span><a class="v-site-nav-link" href="/v/confs/SEDI/2025/nov/">State Endorsed Digital Identity Summit (SEDI) 2025</a></div>
         <div class="v-site-nav-panel" id="vNavPanelSessions" data-panel="sessions" role="region" aria-labelledby="vNavTriggerSessions" hidden><a class="v-site-nav-link v-site-nav-index" href="/v/sessions/" aria-current="page">All session videos</a><span class="v-site-nav-group-label"><a href="/v/sessions/2026/">2026</a></span><a class="v-site-nav-link" href="/v/sessions/2026/nov/">November 2026 Videos</a><a class="v-site-nav-link" href="/v/sessions/2026/jul/">July 2026 Videos</a><a class="v-site-nav-link" href="/v/sessions/2026/may/">May 2026 Videos</a><span class="v-site-nav-group-label"><a href="/v/sessions/2024/">2024</a></span><a class="v-site-nav-link" href="/v/sessions/2024/jan/">January 2024 Videos</a><span class="v-site-nav-group-label"><a href="/v/sessions/2020/">2020</a></span><a class="v-site-nav-link" href="/v/sessions/2020/jul/">July 2020 Videos</a></div>
-        <div class="v-site-nav-panel" id="vNavPanelHere" data-panel="here" role="region" aria-labelledby="vNavTriggerHere" hidden><div class="v-site-nav-crumbs"><a class="v-site-nav-link" href="/v/">All videos</a><span class="v-site-nav-crumb-sep" aria-hidden="true">›</span><span class="v-site-nav-crumb-current" aria-current="location">Other videos</span></div></div>
       </div>
     </div>
-  </nav>
+  </nav><nav class="v-site-breadcrumbs" aria-label="Breadcrumb"><div class="v-site-nav-crumbs"><a class="v-site-nav-link" href="/v/">All videos</a><span class="v-site-nav-crumb-sep" aria-hidden="true">›</span><span class="v-site-nav-crumb-current" aria-current="location">Other videos</span></div></nav>
     <div class="page">
         <header id="galleryHeader"><h1><a href="/v/sessions/">Videos</a></h1><p class="subtitle">Talks from the KERI Foundation that are not part of a conference</p></header>
 
