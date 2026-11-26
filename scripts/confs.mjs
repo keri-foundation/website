@@ -428,27 +428,68 @@ function defaultNavPanel(pageUrl, galleryId, scope) {
   return "";
 }
 
-function pageNavExtras(page, pageUrl, galleryId, confDir, brand) {
+/** Transcript / PDF links for the gallery header (not the site-wide top nav). */
+function galleryTranscriptLinks(page, confDir, galleryId, brand) {
   const siteHrefs = new Set(siteGalleryLinks(brand).map((item) => item.href.trim()));
   const merged = mergeTranscriptLinks(page, confDir, galleryId, brand);
-  const extras = merged.filter((item) => !siteHrefs.has(item.href.trim()));
-  const nav = Array.isArray(page?.nav) ? page.nav : [];
+  return merged.filter((item) => !siteHrefs.has(item.href.trim()));
+}
+
+function catalogGalleryPaths(catalog) {
+  const paths = new Set();
+  for (const item of [...(catalog?.confs || []), ...(catalog?.sessions || [])]) {
+    try {
+      paths.add(normalizeUrlPath(new URL(item.href, SITE_URL).pathname));
+    } catch {
+      // Ignore invalid href values from config.
+    }
+  }
+  return paths;
+}
+
+/** page.nav items that are not another gallery already listed in the site nav. */
+function galleryHeaderNavItems(page, pageUrl, catalog) {
+  const catalogPaths = catalogGalleryPaths(catalog);
   const pagePath = pathFromPageUrl(pageUrl);
-  for (const item of nav) {
+  const out = [];
+  for (const item of Array.isArray(page?.nav) ? page.nav : []) {
     if (!item?.href || !item.label) continue;
     try {
       const itemPath = normalizeUrlPath(new URL(item.href, pageUrl).pathname);
       if (itemPath === pagePath) continue;
+      if (catalogPaths.has(itemPath)) continue;
     } catch {
       // Ignore invalid href values from config.
     }
-    extras.push({
-      label: String(item.label).trim(),
-      href: String(item.href).trim(),
-      external: item.external === true,
-    });
+    out.push(item);
   }
-  return extras;
+  return out;
+}
+
+function renderGalleryHeaderNavItem(item, pageUrl) {
+  const openInNewTab = item.external === true;
+  const target = openInNewTab ? ' target="_blank" rel="noopener noreferrer"' : "";
+  let label = escHtml(item.label || "");
+  if (item.icon === "youtube") {
+    label = `<img src="${YOUTUBE_ICON}" alt="" width="24" height="24" style="vertical-align: middle; margin-right: 5px;">${label}`;
+  }
+  const prefix = item.prefix ? `${escHtml(item.prefix)} ` : "";
+  const hint = openInNewTab ? ' <span class="visually-hidden">(opens in a new tab)</span>' : "";
+  return `${prefix}<a href="${escHtml(item.href)}"${target}>${label}${hint}</a>`;
+}
+
+function renderGalleryHeaderLinks(transcripts, relatedNav, pageUrl) {
+  if (!transcripts.length && !relatedNav.length) return "";
+  const parts = [];
+  transcripts.forEach((item, i) => {
+    if (i > 0) parts.push('<span class="sep" aria-hidden="true">|</span>');
+    parts.push(`<a href="${escHtml(item.href)}">${escHtml(item.label)}</a>`);
+  });
+  relatedNav.forEach((item, i) => {
+    if (parts.length || i > 0) parts.push('<span class="sep" aria-hidden="true">|</span>');
+    parts.push(renderGalleryHeaderNavItem(item, pageUrl));
+  });
+  return `<nav class="gallery-header-links" aria-label="Transcripts and related links">${parts.join("")}</nav>`;
 }
 
 function renderPrimaryNavLink(item, pageUrl) {
@@ -499,7 +540,7 @@ function renderSessionsPanel(sessions, pageUrl) {
   return chunks.join("");
 }
 
-function renderSiteNavHtml({ page, pageUrl, galleryId, scope, confs, sessions, pageExtras, defaultPanel }) {
+function renderSiteNavHtml({ page, pageUrl, galleryId, scope, confs, sessions, defaultPanel }) {
   const primary = [];
   primary.push(renderPrimaryNavLink({ label: "Home", href: "/" }, pageUrl));
   primary.push(renderPrimaryNavLink({ label: "All videos", href: "/v/" }, pageUrl));
@@ -523,9 +564,7 @@ function renderSiteNavHtml({ page, pageUrl, galleryId, scope, confs, sessions, p
   } else if (scope && scope !== "all") {
     herePanel += renderSiteNavCrumbs(overviewBreadcrumbs(scope), pageUrl);
   }
-  for (const item of pageExtras) herePanel += renderSiteNavLink(item, pageUrl);
-
-  const showHere = !!(galleryId || (scope && scope !== "all") || pageExtras.length);
+  const showHere = !!(galleryId || (scope && scope !== "all"));
   if (showHere) {
     primary.push(
       '<button type="button" id="vNavTriggerHere" class="v-site-nav-trigger" data-panel="here" aria-expanded="false" aria-controls="vNavPanelHere" aria-haspopup="true">This page</button>'
@@ -580,7 +619,6 @@ function stampSiteNav(
     throw new Error("landing-pages: template missing site nav marker");
   }
   const cat = catalog || { confs: [], sessions: [] };
-  const extras = pageNavExtras(page, pageUrl, galleryId, confDir, brand);
   const defaultPanel = defaultNavPanel(pageUrl, galleryId, scope);
   const navHtml = renderSiteNavHtml({
     page,
@@ -589,7 +627,6 @@ function stampSiteNav(
     scope,
     confs: cat.confs,
     sessions: cat.sessions,
-    pageExtras: extras,
     defaultPanel,
   });
   let out = html.replace(V_SITE_NAV_MARKER, navHtml);
@@ -601,7 +638,7 @@ function stampSiteNav(
 }
 
 /** Same header markup as renderPageChrome() in the gallery template. */
-function renderGalleryHeader(page, pageUrl) {
+function renderGalleryHeader(page, pageUrl, options = {}) {
   const heading = page.heading || page.title || "";
   const href = page.headingHref || "./";
   let html = `<h1><a href="${escHtml(href)}">${escHtml(heading)}</a></h1>`;
@@ -610,6 +647,12 @@ function renderGalleryHeader(page, pageUrl) {
   }
   if (page.subtitle) {
     html += `<p class="subtitle">${escHtml(page.subtitle)}</p>`;
+  }
+  const { confDir, galleryId, brand, catalog } = options;
+  if (confDir && galleryId) {
+    const transcripts = galleryTranscriptLinks(page, confDir, galleryId, brand);
+    const relatedNav = galleryHeaderNavItems(page, pageUrl, catalog);
+    html += renderGalleryHeaderLinks(transcripts, relatedNav, pageUrl);
   }
   return html;
 }
@@ -649,11 +692,11 @@ function stampTalkSummaries(html, config, confDir) {
   return html.replace(TALK_SUMMARIES_MARKER, () => renderTalkSummaries(config, confDir));
 }
 
-function stampGalleryHeader(html, page, pageUrl) {
+function stampGalleryHeader(html, page, pageUrl, options = {}) {
   if (!html.includes(GALLERY_HEADER_MARKER)) {
     throw new Error("landing-pages: template missing gallery header marker");
   }
-  return html.replace(GALLERY_HEADER_MARKER, renderGalleryHeader(page, pageUrl));
+  return html.replace(GALLERY_HEADER_MARKER, renderGalleryHeader(page, pageUrl, options));
 }
 
 function originOf(pageUrl) {
@@ -767,7 +810,8 @@ async function cmdLandingPages(opts) {
           { page, pageUrl: url, galleryId: id, confDir, brand, catalog: navCatalog }
         ),
         page,
-        url
+        url,
+        { confDir, galleryId: id, brand, catalog: navCatalog }
       ),
       config,
       confDir

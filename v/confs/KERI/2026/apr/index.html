@@ -652,6 +652,38 @@
             margin: 0 auto;
         }
 
+        .gallery-header-links {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 0.35rem 0;
+            max-width: 840px;
+            margin: 18px auto 0;
+            padding: 14px 16px 0;
+            border-top: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+            font-size: 0.9375rem;
+            line-height: 1.55;
+        }
+
+        .gallery-header-links .sep {
+            margin: 0 11px;
+            color: color-mix(in srgb, var(--ink) 22%, transparent);
+            font-weight: 400;
+        }
+
+        .gallery-header-links a {
+            color: var(--link);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .gallery-header-links a:hover {
+            color: var(--ink);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+
         /* ── Search bar ── */
         .search-section {
             display: block;
@@ -3283,11 +3315,11 @@
       <div class="v-site-nav-panels">
         <div class="v-site-nav-panel" id="vNavPanelConfs" data-panel="confs" role="region" aria-labelledby="vNavTriggerConfs" hidden><a class="v-site-nav-link v-site-nav-index" href="/v/confs/">Conference index</a><a class="v-site-nav-link" href="/v/confs/KERI/2026/nov/">KERI Mini Conference November 2026</a><a class="v-site-nav-link" href="/v/confs/SEDI/2026/nov/">State Endorsed Digital Identity Summit (SEDI) 2026</a><a class="v-site-nav-link" href="/v/confs/KERI/2026/apr/" aria-current="page">KERI Conference April 2026</a><a class="v-site-nav-link" href="/v/confs/SEDI/2025/nov/">State Endorsed Digital Identity Summit (SEDI) 2025</a></div>
         <div class="v-site-nav-panel" id="vNavPanelSessions" data-panel="sessions" role="region" aria-labelledby="vNavTriggerSessions" hidden><a class="v-site-nav-link v-site-nav-index" href="/v/sessions/">All session videos</a><span class="v-site-nav-group-label"><a href="/v/sessions/2026/">2026</a></span><a class="v-site-nav-link" href="/v/sessions/2026/nov/">November 2026 Videos</a><a class="v-site-nav-link" href="/v/sessions/2026/jul/">July 2026 Videos</a><a class="v-site-nav-link" href="/v/sessions/2026/may/">May 2026 Videos</a><span class="v-site-nav-group-label"><a href="/v/sessions/2024/">2024</a></span><a class="v-site-nav-link" href="/v/sessions/2024/jan/">January 2024 Videos</a><span class="v-site-nav-group-label"><a href="/v/sessions/2020/">2020</a></span><a class="v-site-nav-link" href="/v/sessions/2020/jul/">July 2020 Videos</a></div>
-        <div class="v-site-nav-panel" id="vNavPanelHere" data-panel="here" role="region" aria-labelledby="vNavTriggerHere" hidden><div class="v-site-nav-crumbs"><a class="v-site-nav-link" href="/v/">All videos</a><span class="v-site-nav-crumb-sep" aria-hidden="true">›</span><a class="v-site-nav-link" href="/v/confs/">Conferences</a><span class="v-site-nav-crumb-sep" aria-hidden="true">›</span><span class="v-site-nav-crumb-current" aria-current="location">KERI Conference April 2026</span></div><a class="v-site-nav-link" href="transcripts/html/talks/">Talk transcripts</a><a class="v-site-nav-link" href="transcripts/html/interviews/">Interview transcripts</a><a class="v-site-nav-link" href="transcripts/pdf/talks/KERI-2026-apr-Transcripts.pdf">All Transcripts (PDF)</a><a class="v-site-nav-link" href="https://kericonf.com/archive/kericonf26/program/">Conference april 2026 Program</a><a class="v-site-nav-link" href="https://kericonf.com/archive/kericonf26/speakers-2026/">Speakers april 2026</a><a class="v-site-nav-link" href="https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL">Day 1</a><a class="v-site-nav-link" href="https://www.youtube.com/playlist?list=PLnHy2ee5UksMjwBseKJ7ivXiYukRvI65a">Day 2</a></div>
+        <div class="v-site-nav-panel" id="vNavPanelHere" data-panel="here" role="region" aria-labelledby="vNavTriggerHere" hidden><div class="v-site-nav-crumbs"><a class="v-site-nav-link" href="/v/">All videos</a><span class="v-site-nav-crumb-sep" aria-hidden="true">›</span><a class="v-site-nav-link" href="/v/confs/">Conferences</a><span class="v-site-nav-crumb-sep" aria-hidden="true">›</span><span class="v-site-nav-crumb-current" aria-current="location">KERI Conference April 2026</span></div></div>
       </div>
     </div>
   </nav>
-    <header id="galleryHeader"><h1><a href="/v/confs/KERI/2026/apr/">KERI Conference April 2026</a></h1><p class="subtitle">A collection of presentations and talks from the KERI community</p></header>
+    <header id="galleryHeader"><h1><a href="/v/confs/KERI/2026/apr/">KERI Conference April 2026</a></h1><p class="subtitle">A collection of presentations and talks from the KERI community</p><nav class="gallery-header-links" aria-label="Transcripts and related links"><a href="transcripts/html/talks/">Talk transcripts</a><span class="sep" aria-hidden="true">|</span><a href="transcripts/html/interviews/">Interview transcripts</a><span class="sep" aria-hidden="true">|</span><a href="transcripts/pdf/talks/KERI-2026-apr-Transcripts.pdf">All Transcripts (PDF)</a><span class="sep" aria-hidden="true">|</span><a href="https://kericonf.com/archive/kericonf26/program/">Conference april 2026 Program</a><span class="sep" aria-hidden="true">|</span><a href="https://kericonf.com/archive/kericonf26/speakers-2026/">Speakers april 2026</a><span class="sep" aria-hidden="true">|</span>All videos on YouTube: <a href="https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiA4djggbC00LTIuNXYtMy4yTDggMTJ6Ii8+PC9zdmc+" alt="" width="24" height="24" style="vertical-align: middle; margin-right: 5px;">Day 1</a><span class="sep" aria-hidden="true">|</span><a href="https://www.youtube.com/playlist?list=PLnHy2ee5UksMjwBseKJ7ivXiYukRvI65a"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiA4djggbC00LTIuNXYtMy4yTDggMTJ6Ii8+PC9zdmc+" alt="" width="24" height="24" style="vertical-align: middle; margin-right: 5px;">Day 2</a></nav></header>
 
     <main id="mainContent">
         <div class="featured-media" id="featuredMedia">
@@ -4611,37 +4643,16 @@
                 return String(path || '').replace(/\/+$/, '') || '/';
             }
 
-            function appendSiteNavLink(parent, item, pagePath) {
-                const openInNewTab = item.external === true;
-                const a = document.createElement('a');
-                a.className = 'v-site-nav-link';
-                a.href = item.href;
-                a.textContent = item.label;
-                if (openInNewTab) {
-                    a.target = '_blank';
-                    a.rel = 'noopener noreferrer';
-                    const hint = document.createElement('span');
-                    hint.className = 'visually-hidden';
-                    hint.textContent = ' (opens in a new tab)';
-                    a.appendChild(hint);
-                }
+            function isCatalogGalleryHref(href) {
                 try {
-                    const itemPath = normalizeUrlPath(new URL(item.href, window.location.href).pathname);
-                    if (itemPath === pagePath) a.setAttribute('aria-current', 'page');
+                    const path = normalizeUrlPath(new URL(href, window.location.href).pathname);
+                    return /^\/v\/(confs|sessions)\//.test(path);
                 } catch {
-                    // Ignore invalid href values from config.
+                    return false;
                 }
-                parent.appendChild(a);
             }
 
-            function updateSiteNavHerePanel(page) {
-                initVSiteNav();
-                const panel = document.getElementById('vNavPanelHere');
-                if (!panel) return;
-
-                const pagePath = normalizeUrlPath(window.location.pathname);
-                panel.querySelectorAll(':scope > .v-site-nav-link').forEach((el) => el.remove());
-
+            function collectGalleryTranscriptLinks(page) {
                 const site = SITE_BRAND && Array.isArray(SITE_BRAND.galleryLinks)
                     ? SITE_BRAND.galleryLinks
                     : [];
@@ -4655,44 +4666,63 @@
                     ? DISCOVERED_TRANSCRIPT_LINKS
                     : [];
                 const seen = new Set();
-                const extras = [];
-                const collect = (item) => {
+                const out = [];
+                for (const item of [...manual, ...discovered]) {
                     if (
                         !item
                         || typeof item.href !== 'string'
                         || !item.href.trim()
                         || typeof item.label !== 'string'
                         || !item.label.trim()
-                    ) return;
+                    ) continue;
                     const href = item.href.trim();
-                    if (seen.has(href)) return;
+                    if (seen.has(href) || siteHrefs.has(href)) continue;
                     seen.add(href);
-                    if (siteHrefs.has(href)) return;
-                    extras.push({
-                        label: item.label.trim(),
-                        href,
-                        external: item.external === true,
-                    });
-                };
-                for (const item of [...manual, ...discovered]) collect(item);
+                    out.push({ label: item.label.trim(), href });
+                }
+                return out;
+            }
 
-                const nav = Array.isArray(page && page.nav) ? page.nav : [];
-                for (const item of nav) {
+            function collectGalleryHeaderNav(page) {
+                const pagePath = normalizeUrlPath(window.location.pathname);
+                const items = Array.isArray(page && page.nav) ? page.nav : [];
+                const out = [];
+                for (const item of items) {
                     if (!item || !item.href || !item.label) continue;
                     try {
                         const itemPath = normalizeUrlPath(new URL(item.href, window.location.href).pathname);
                         if (itemPath === pagePath) continue;
+                        if (isCatalogGalleryHref(item.href)) continue;
                     } catch {
                         // Ignore invalid href values from config.
                     }
-                    collect({
-                        label: String(item.label).trim(),
-                        href: String(item.href).trim(),
-                        external: item.external === true,
-                    });
+                    out.push(item);
                 }
+                return out;
+            }
 
-                for (const item of extras) appendSiteNavLink(panel, item, pagePath);
+            function renderGalleryHeaderLinksHtml(transcripts, relatedNav) {
+                if (!transcripts.length && !relatedNav.length) return '';
+                const parts = [];
+                transcripts.forEach((item, i) => {
+                    if (i > 0) parts.push('<span class="sep" aria-hidden="true">|</span>');
+                    parts.push(`<a href="${escHtml(item.href)}">${escHtml(item.label)}</a>`);
+                });
+                relatedNav.forEach((item, i) => {
+                    if (parts.length || i > 0) parts.push('<span class="sep" aria-hidden="true">|</span>');
+                    const openInNewTab = item.external === true;
+                    const target = openInNewTab ? ' target="_blank" rel="noopener noreferrer"' : '';
+                    let label = escHtml(item.label || '');
+                    if (item.icon === 'youtube') {
+                        label = `<img src="${YOUTUBE_ICON}" alt="" width="24" height="24" style="vertical-align: middle; margin-right: 5px;">${label}`;
+                    }
+                    const prefix = item.prefix ? `${escHtml(item.prefix)} ` : '';
+                    const newTabHint = openInNewTab
+                        ? ' <span class="visually-hidden">(opens in a new tab)</span>'
+                        : '';
+                    parts.push(`${prefix}<a href="${escHtml(item.href)}"${target}>${label}${newTabHint}</a>`);
+                });
+                return `<nav class="gallery-header-links" aria-label="Transcripts and related links">${parts.join('')}</nav>`;
             }
 
             function setMetaContent(selector, content, attr = 'content') {
@@ -4775,7 +4805,6 @@
                 applySocialMeta(page, brand);
 
                 initVSiteNav();
-                updateSiteNavHerePanel(page);
 
                 const header = document.getElementById('galleryHeader');
                 if (header) {
@@ -4788,6 +4817,10 @@
                     if (page.subtitle) {
                         html += `<p class="subtitle">${escHtml(page.subtitle)}</p>`;
                     }
+                    html += renderGalleryHeaderLinksHtml(
+                        collectGalleryTranscriptLinks(page),
+                        collectGalleryHeaderNav(page)
+                    );
                     header.innerHTML = html;
                 }
 
