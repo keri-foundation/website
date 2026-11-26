@@ -550,7 +550,7 @@ function renderSiteNavCrumbs(crumbs, pageUrl) {
 
 function renderSessionsPanel(sessions, pageUrl) {
   const chunks = [
-    `<a class="v-site-nav-link v-site-nav-index" href="/v/sessions/"${ariaCurrentForHref("/v/sessions/", pageUrl)}>All session videos</a>`,
+    `<a class="v-site-nav-link v-site-nav-index" href="/v/sessions/"${ariaCurrentForHref("/v/sessions/", pageUrl)}>Other videos index</a>`,
   ];
   const byYear = new Map();
   for (const item of sessions) {
