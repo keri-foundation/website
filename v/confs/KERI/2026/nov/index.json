@@ -97,7 +97,7 @@
   "transcriptsDir": "transcripts/html",
   "defaultPoster": "https://kericonf.com/wp-content/uploads/2026/05/KERI-mini-CONF26-scaled.png",
   "speakerPhotos": {
-    "Samuel M. Smith": "https://kericonf.com/wp-content/uploads/2025/11/Samuel-Smith.jpg",
+    "Samuel M. Smith": "/v/assets/Samuel-Smith-icon.jpg",
     "Phil Feairheller": "https://kericonf.com/wp-content/uploads/2026/01/PhilFeairheller_v1.0-edited.jpeg",
     "Daniel Hardman": "https://kericonf.com/wp-content/uploads/2026/01/DanielHardman_v1.0.png",
     "George McEwan": "https://kericonf.com/wp-content/uploads/2026/01/GeorgeMcEwan_v1.0-scaled.jpg",

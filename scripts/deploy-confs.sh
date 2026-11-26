@@ -342,10 +342,15 @@ step_push() {
             exit 1
         fi
     done
-    [ "$DRY_RUN" -eq 1 ] || ssh "$REMOTE_HOST" "mkdir -p '$REMOTE_ROOT/v/confs' '$REMOTE_ROOT/v/sessions'"
+    [ "$DRY_RUN" -eq 1 ] || ssh "$REMOTE_HOST" "mkdir -p '$REMOTE_ROOT/v/confs' '$REMOTE_ROOT/v/sessions' '$REMOTE_ROOT/v/assets'"
     rsync "${ht_rsync[@]}" "$SITE_ROOT/.htaccess" "$REMOTE_HOST:$REMOTE_ROOT/.htaccess"
     rsync "${ht_rsync[@]}" "$SITE_ROOT/robots.txt" "$REMOTE_HOST:$REMOTE_ROOT/robots.txt"
     rsync "${ht_rsync[@]}" "$V/sitemap.xml" "$REMOTE_HOST:$REMOTE_ROOT/v/sitemap.xml"
+
+    if [ -d "$V/assets" ]; then
+        echo "── Shared assets (v/assets/)"
+        rsync "${ht_rsync[@]}" --delete "$V/assets/" "$REMOTE_HOST:$REMOTE_ROOT/v/assets/"
+    fi
 
     echo "── Directory indexes (v/, v/confs/, v/sessions/ overview HTML, plus PHP for bare subdirs)"
     local tree_index_rsync=(-av --human-readable)
