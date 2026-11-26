@@ -38,14 +38,22 @@ RewriteRule ^confs/2026/videos/?$ /v/confs/KERI/2026/apr/ [R=301,L]
 RewriteRule ^confs/2026/videos/index\.html$ /v/confs/KERI/2026/apr/ [R=301,L]
 RewriteRule ^confs/2026/videos/index\.json$ /v/confs/KERI/2026/apr/index.json [R=301,L]
 
-RewriteRule ^confs/2026/videos/KERICONF26/subtitles/([^/]+)$ /v/confs/KERI/2026/apr/talks/$1 [R=301,L]
-RewriteRule ^confs/2026/videos/KERICONF26/presentations/([^/]+)$ /v/confs/KERI/2026/apr/slides/$1 [R=301,L]
-RewriteRule ^confs/2026/videos/KERICONF26/transcripts/(.*)$ /v/confs/KERI/2026/apr/transcripts/html/talks/$1 [R=301,L]
-RewriteRule ^confs/2026/videos/KERICONF26/([^/]+\.(mp4|mp3))$ /v/confs/KERI/2026/apr/talks/$1 [R=301,L]
+# Filename is taken from THE_REQUEST so ｜ stays percent-encoded. See the prefix rules below.
+RewriteCond %{THE_REQUEST} \s(?:https?://[^/\s]+)?/confs/2026/videos/KERICONF26/subtitles/([^?\s]+)
+RewriteRule ^confs/2026/videos/KERICONF26/subtitles/[^/]+$ /v/confs/KERI/2026/apr/talks/%1 [R=301,L,NE]
+RewriteCond %{THE_REQUEST} \s(?:https?://[^/\s]+)?/confs/2026/videos/KERICONF26/presentations/([^?\s]+)
+RewriteRule ^confs/2026/videos/KERICONF26/presentations/[^/]+$ /v/confs/KERI/2026/apr/slides/%1 [R=301,L,NE]
+RewriteCond %{THE_REQUEST} \s(?:https?://[^/\s]+)?/confs/2026/videos/KERICONF26/transcripts/([^?\s]*)
+RewriteRule ^confs/2026/videos/KERICONF26/transcripts/ /v/confs/KERI/2026/apr/transcripts/html/talks/%1 [R=301,L,NE]
+RewriteCond %{THE_REQUEST} \s(?:https?://[^/\s]+)?/confs/2026/videos/KERICONF26/([^/?\s]+\.(?:mp4|mp3))
+RewriteRule ^confs/2026/videos/KERICONF26/[^/]+\.(mp4|mp3)$ /v/confs/KERI/2026/apr/talks/%1 [R=301,L,NE]
 
-RewriteRule ^confs/2026/videos/KERICONF26-interviews/subtitles/([^/]+\.srt)$ /v/confs/KERI/2026/apr/interviews/$1 [R=301,L]
-RewriteRule ^confs/2026/videos/KERICONF26-interviews/transcripts/(.*)$ /v/confs/KERI/2026/apr/transcripts/html/interviews/$1 [R=301,L]
-RewriteRule ^confs/2026/videos/KERICONF26-interviews/([^/]+\.(mp4|mp3))$ /v/confs/KERI/2026/apr/interviews/$1 [R=301,L]
+RewriteCond %{THE_REQUEST} \s(?:https?://[^/\s]+)?/confs/2026/videos/KERICONF26-interviews/subtitles/([^?\s]+\.srt)
+RewriteRule ^confs/2026/videos/KERICONF26-interviews/subtitles/[^/]+\.srt$ /v/confs/KERI/2026/apr/interviews/%1 [R=301,L,NE]
+RewriteCond %{THE_REQUEST} \s(?:https?://[^/\s]+)?/confs/2026/videos/KERICONF26-interviews/transcripts/([^?\s]*)
+RewriteRule ^confs/2026/videos/KERICONF26-interviews/transcripts/ /v/confs/KERI/2026/apr/transcripts/html/interviews/%1 [R=301,L,NE]
+RewriteCond %{THE_REQUEST} \s(?:https?://[^/\s]+)?/confs/2026/videos/KERICONF26-interviews/([^/?\s]+\.(?:mp4|mp3))
+RewriteRule ^confs/2026/videos/KERICONF26-interviews/[^/]+\.(mp4|mp3)$ /v/confs/KERI/2026/apr/interviews/%1 [R=301,L,NE]
 
 RewriteRule ^confs/2026/videos/KERICONF26-promo/Keri2026Promo\.(mp4|jpg)$ /v/confs/KERI/2026/apr/promo/promo.$1 [R=301,L]
 
@@ -54,14 +62,20 @@ RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/?$ /v/confs/SEDI/2025/nov/ [R=3
 RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/index\.html$ /v/confs/SEDI/2025/nov/ [R=301,L]
 RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/index\.json$ /v/confs/SEDI/2025/nov/index.json [R=301,L]
 
-RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Morning-Session/speakers/([^/]+)$ /v/confs/SEDI/2025/nov/talks/morning-$1 [R=301,L]
-RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Lunch-Panel/speakers/([^/]+)$ /v/confs/SEDI/2025/nov/talks/lunch-$1 [R=301,L]
-RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Afternoon-Session/speakers/([^/]+)$ /v/confs/SEDI/2025/nov/talks/afternoon-$1 [R=301,L]
+RewriteCond %{THE_REQUEST} \s(?:https?://[^/\s]+)?/confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Morning-Session/speakers/([^?\s]+)
+RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Morning-Session/speakers/[^/]+$ /v/confs/SEDI/2025/nov/talks/morning-%1 [R=301,L,NE]
+RewriteCond %{THE_REQUEST} \s(?:https?://[^/\s]+)?/confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Lunch-Panel/speakers/([^?\s]+)
+RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Lunch-Panel/speakers/[^/]+$ /v/confs/SEDI/2025/nov/talks/lunch-%1 [R=301,L,NE]
+RewriteCond %{THE_REQUEST} \s(?:https?://[^/\s]+)?/confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Afternoon-Session/speakers/([^?\s]+)
+RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Afternoon-Session/speakers/[^/]+$ /v/confs/SEDI/2025/nov/talks/afternoon-%1 [R=301,L,NE]
 
-RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/speaker-photos/([^/]+)$ /v/confs/SEDI/2025/nov/speaker-photos/$1 [R=301,L]
+RewriteCond %{THE_REQUEST} \s(?:https?://[^/\s]+)?/confs/2026/videos/SEDI/2025-11-SEDI/speaker-photos/([^?\s]+)
+RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/speaker-photos/[^/]+$ /v/confs/SEDI/2025/nov/speaker-photos/%1 [R=301,L,NE]
 RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/poster-sedi-summit\.jpg$ /v/confs/SEDI/2025/nov/promo/poster-sedi-summit.jpg [R=301,L]
-RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/transcripts/(.*)$ /v/confs/SEDI/2025/nov/transcripts/html/talks/$1 [R=301,L]
-RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/pdf/([^/]+)$ /v/confs/SEDI/2025/nov/transcripts/pdf/talks/$1 [R=301,L]
+RewriteCond %{THE_REQUEST} \s(?:https?://[^/\s]+)?/confs/2026/videos/SEDI/2025-11-SEDI/transcripts/([^?\s]*)
+RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/transcripts/ /v/confs/SEDI/2025/nov/transcripts/html/talks/%1 [R=301,L,NE]
+RewriteCond %{THE_REQUEST} \s(?:https?://[^/\s]+)?/confs/2026/videos/SEDI/2025-11-SEDI/pdf/([^?\s]+)
+RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/pdf/[^/]+$ /v/confs/SEDI/2025/nov/transcripts/pdf/talks/%1 [R=301,L,NE]
 
 # Former year-level session galleries (/vids/<YEAR>/talks/...) now in month folders.
 RewriteRule ^vids/2026/talks/(2026-05-05-Introduction-to-KERI-Part-1-XYohZTh3yEw(?:\.[a-z]{2,3})?\.(?:mp4|mp3|srt))$ /v/sessions/2026/may/talks/$1 [R=301,L]
@@ -82,10 +96,16 @@ RewriteRule ^(?:confs|vids)/sitemap\.xml$ /v/sitemap.xml [R=301,L]
 RewriteRule ^vids/(\d{4})/([a-z]{3})/transcripts/pdf/talks/vids-\d{4}-[a-z]{3}-Transcripts\.pdf$ /v/sessions/$1/$2/transcripts/pdf/talks/sessions-$1-$2-Transcripts.pdf [R=301,L]
 
 # Everything else keeps its path below the new prefix.
+# Copy the path from THE_REQUEST (still percent-encoded, as the client sent it)
+# and do not let the server escape it again (NE). A normal $1 backreference is
+# decoded first; LiteSpeed then leaves bytes such as the fullwidth bar (｜,
+# UTF-8 EF BD 9C) raw in Location, and the browser requests ï½ instead.
 RewriteRule ^confs/?$ /v/confs/ [R=301,L]
 RewriteRule ^vids/?$ /v/sessions/ [R=301,L]
-RewriteRule ^confs/(.*)$ /v/confs/$1 [R=301,L]
-RewriteRule ^vids/(.*)$ /v/sessions/$1 [R=301,L]
+RewriteCond %{THE_REQUEST} \s(?:https?://[^/\s]+)?/confs/([^?\s]*)
+RewriteRule ^confs/ /v/confs/%1 [R=301,L,NE]
+RewriteCond %{THE_REQUEST} \s(?:https?://[^/\s]+)?/vids/([^?\s]*)
+RewriteRule ^vids/ /v/sessions/%1 [R=301,L,NE]
 </IfModule>
 # END media redirects
 
