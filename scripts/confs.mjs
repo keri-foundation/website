@@ -560,6 +560,24 @@ function renderSessionsPanel(sessions, pageUrl) {
   return chunks.join("");
 }
 
+function renderConfsPanel(confs, pageUrl) {
+  const chunks = [
+    `<a class="v-site-nav-link v-site-nav-index" href="/v/confs/"${ariaCurrentForHref("/v/confs/", pageUrl)}>Conference index</a>`,
+  ];
+  const byYear = new Map();
+  for (const item of confs) {
+    const match = String(item.href).match(/\/v\/confs\/[^/]+\/(\d{4})\//);
+    const year = match ? match[1] : "";
+    if (!byYear.has(year)) byYear.set(year, []);
+    byYear.get(year).push(item);
+  }
+  for (const year of [...byYear.keys()].sort((a, b) => Number(b) - Number(a))) {
+    chunks.push(`<span class="v-site-nav-group-label">${escapeText(year)}</span>`);
+    for (const item of byYear.get(year)) chunks.push(renderSiteNavLink(item, pageUrl));
+  }
+  return chunks.join("");
+}
+
 function renderSiteNavHtml({ page, pageUrl, galleryId, scope, confs, sessions, defaultPanel }) {
   const active = activeNavSection(pageUrl, galleryId, scope);
   const primary = [];
@@ -572,10 +590,7 @@ function renderSiteNavHtml({ page, pageUrl, galleryId, scope, confs, sessions, d
     `<button type="button" id="vNavTriggerSessions" class="${navTriggerClass("sessions", active)}" data-panel="sessions" aria-expanded="false" aria-controls="vNavPanelSessions" aria-haspopup="true">Other videos</button>`
   );
 
-  const confsPanel = [
-    `<a class="v-site-nav-link v-site-nav-index" href="/v/confs/"${ariaCurrentForHref("/v/confs/", pageUrl)}>Conference index</a>`,
-    ...confs.map((item) => renderSiteNavLink(item, pageUrl)),
-  ].join("");
+  const confsPanel = renderConfsPanel(confs, pageUrl);
 
   const sessionsPanel = renderSessionsPanel(sessions, pageUrl);
 
