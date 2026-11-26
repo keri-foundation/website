@@ -199,8 +199,10 @@
         }
 
         .v-site-nav-trigger[aria-expanded="true"],
+        .v-site-nav-trigger.is-active,
         .v-site-nav-primary > a[aria-current="page"] {
             color: var(--ink);
+            font-weight: 800;
             border-bottom-color: var(--accent);
         }
 
@@ -268,7 +270,7 @@
 
         .v-site-nav-link[aria-current="page"] {
             color: var(--ink);
-            font-weight: 600;
+            font-weight: 800;
             text-decoration: none;
             background: none;
         }
@@ -356,7 +358,7 @@
         }
 
         .v-site-nav-crumb-current {
-            font-weight: 600;
+            font-weight: 800;
             color: var(--ink);
         }
 

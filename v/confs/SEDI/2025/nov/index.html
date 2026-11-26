@@ -199,8 +199,10 @@
         }
 
         .v-site-nav-trigger[aria-expanded="true"],
+        .v-site-nav-trigger.is-active,
         .v-site-nav-primary > a[aria-current="page"] {
             color: var(--ink);
+            font-weight: 800;
             border-bottom-color: var(--accent);
         }
 
@@ -268,7 +270,7 @@
 
         .v-site-nav-link[aria-current="page"] {
             color: var(--ink);
-            font-weight: 600;
+            font-weight: 800;
             text-decoration: none;
             background: none;
         }
@@ -356,7 +358,7 @@
         }
 
         .v-site-nav-crumb-current {
-            font-weight: 600;
+            font-weight: 800;
             color: var(--ink);
         }
 
@@ -3310,7 +3312,7 @@
     <button type="button" class="v-site-nav-mobile-toggle" id="vNavMobileToggle" aria-expanded="false" aria-controls="vSiteNavBody">Menu</button>
     <div class="v-site-nav-body" id="vSiteNavBody">
       <div class="v-site-nav-bar">
-        <div class="v-site-nav-primary"><a href="/">Home</a><a href="/v/">All videos</a><button type="button" id="vNavTriggerConfs" class="v-site-nav-trigger" data-panel="confs" aria-expanded="false" aria-controls="vNavPanelConfs" aria-haspopup="true">Conferences</button><button type="button" id="vNavTriggerSessions" class="v-site-nav-trigger" data-panel="sessions" aria-expanded="false" aria-controls="vNavPanelSessions" aria-haspopup="true">Other videos</button><button type="button" id="vNavTriggerHere" class="v-site-nav-trigger" data-panel="here" aria-expanded="false" aria-controls="vNavPanelHere" aria-haspopup="true">This page</button></div>
+        <div class="v-site-nav-primary"><a href="/">Home</a><a href="/v/">All videos</a><button type="button" id="vNavTriggerConfs" class="v-site-nav-trigger is-active" data-panel="confs" aria-expanded="false" aria-controls="vNavPanelConfs" aria-haspopup="true">Conferences</button><button type="button" id="vNavTriggerSessions" class="v-site-nav-trigger" data-panel="sessions" aria-expanded="false" aria-controls="vNavPanelSessions" aria-haspopup="true">Other videos</button><button type="button" id="vNavTriggerHere" class="v-site-nav-trigger is-active" data-panel="here" aria-expanded="false" aria-controls="vNavPanelHere" aria-haspopup="true">This page</button></div>
       </div>
       <div class="v-site-nav-panels">
         <div class="v-site-nav-panel" id="vNavPanelConfs" data-panel="confs" role="region" aria-labelledby="vNavTriggerConfs" hidden><a class="v-site-nav-link v-site-nav-index" href="/v/confs/">Conference index</a><a class="v-site-nav-link" href="/v/confs/KERI/2026/nov/">KERI Mini Conference November 2026</a><a class="v-site-nav-link" href="/v/confs/SEDI/2026/nov/">State Endorsed Digital Identity Summit (SEDI) 2026</a><a class="v-site-nav-link" href="/v/confs/KERI/2026/apr/">KERI Conference April 2026</a><a class="v-site-nav-link" href="/v/confs/SEDI/2025/nov/" aria-current="page">State Endorsed Digital Identity Summit (SEDI) 2025</a></div>

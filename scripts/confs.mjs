@@ -429,6 +429,25 @@ function defaultNavPanel(pageUrl, galleryId, scope) {
   return "";
 }
 
+/** Which primary nav control matches this URL (for bold “you are here”). */
+function activeNavSection(pageUrl, galleryId, scope) {
+  if (galleryId) {
+    return {
+      section: isSessionsGallery(galleryId) ? "sessions" : "confs",
+      here: true,
+    };
+  }
+  const path = pathFromPageUrl(pageUrl);
+  if (scope === "confs" || path === "/v/confs") return { section: "confs", here: false };
+  if (scope === "sessions" || path === "/v/sessions") return { section: "sessions", here: false };
+  return { section: "", here: false };
+}
+
+function navTriggerClass(panel, active) {
+  const isActive = panel === active.section || (panel === "here" && active.here);
+  return isActive ? "v-site-nav-trigger is-active" : "v-site-nav-trigger";
+}
+
 /** Transcript / PDF links for the gallery header (not the site-wide top nav). */
 function galleryTranscriptLinks(page, confDir, galleryId, brand) {
   const siteHrefs = new Set(siteGalleryLinks(brand).map((item) => item.href.trim()));
@@ -542,14 +561,15 @@ function renderSessionsPanel(sessions, pageUrl) {
 }
 
 function renderSiteNavHtml({ page, pageUrl, galleryId, scope, confs, sessions, defaultPanel }) {
+  const active = activeNavSection(pageUrl, galleryId, scope);
   const primary = [];
   primary.push(renderPrimaryNavLink({ label: "Home", href: "/" }, pageUrl));
   primary.push(renderPrimaryNavLink({ label: "All videos", href: "/v/" }, pageUrl));
   primary.push(
-    '<button type="button" id="vNavTriggerConfs" class="v-site-nav-trigger" data-panel="confs" aria-expanded="false" aria-controls="vNavPanelConfs" aria-haspopup="true">Conferences</button>'
+    `<button type="button" id="vNavTriggerConfs" class="${navTriggerClass("confs", active)}" data-panel="confs" aria-expanded="false" aria-controls="vNavPanelConfs" aria-haspopup="true">Conferences</button>`
   );
   primary.push(
-    '<button type="button" id="vNavTriggerSessions" class="v-site-nav-trigger" data-panel="sessions" aria-expanded="false" aria-controls="vNavPanelSessions" aria-haspopup="true">Other videos</button>'
+    `<button type="button" id="vNavTriggerSessions" class="${navTriggerClass("sessions", active)}" data-panel="sessions" aria-expanded="false" aria-controls="vNavPanelSessions" aria-haspopup="true">Other videos</button>`
   );
 
   const confsPanel = [
@@ -568,7 +588,7 @@ function renderSiteNavHtml({ page, pageUrl, galleryId, scope, confs, sessions, d
   const showHere = !!(galleryId || (scope && scope !== "all"));
   if (showHere) {
     primary.push(
-      '<button type="button" id="vNavTriggerHere" class="v-site-nav-trigger" data-panel="here" aria-expanded="false" aria-controls="vNavPanelHere" aria-haspopup="true">This page</button>'
+      `<button type="button" id="vNavTriggerHere" class="${navTriggerClass("here", active)}" data-panel="here" aria-expanded="false" aria-controls="vNavPanelHere" aria-haspopup="true">This page</button>`
     );
   }
 
