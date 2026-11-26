@@ -504,10 +504,10 @@ function renderSiteNavHtml({ page, pageUrl, galleryId, scope, confs, sessions, p
   primary.push(renderPrimaryNavLink({ label: "Home", href: "/" }, pageUrl));
   primary.push(renderPrimaryNavLink({ label: "All videos", href: "/v/" }, pageUrl));
   primary.push(
-    '<button type="button" class="v-site-nav-trigger" data-panel="confs" aria-expanded="false" aria-controls="vNavPanelConfs">Conferences</button>'
+    '<button type="button" id="vNavTriggerConfs" class="v-site-nav-trigger" data-panel="confs" aria-expanded="false" aria-controls="vNavPanelConfs" aria-haspopup="true">Conferences</button>'
   );
   primary.push(
-    '<button type="button" class="v-site-nav-trigger" data-panel="sessions" aria-expanded="false" aria-controls="vNavPanelSessions">Other videos</button>'
+    '<button type="button" id="vNavTriggerSessions" class="v-site-nav-trigger" data-panel="sessions" aria-expanded="false" aria-controls="vNavPanelSessions" aria-haspopup="true">Other videos</button>'
   );
 
   const confsPanel = [
@@ -520,31 +520,34 @@ function renderSiteNavHtml({ page, pageUrl, galleryId, scope, confs, sessions, p
   let herePanel = "";
   if (galleryId) {
     herePanel += renderSiteNavCrumbs(galleryBreadcrumbs(galleryId, page), pageUrl);
-  } else if (scope) {
+  } else if (scope && scope !== "all") {
     herePanel += renderSiteNavCrumbs(overviewBreadcrumbs(scope), pageUrl);
   }
   for (const item of pageExtras) herePanel += renderSiteNavLink(item, pageUrl);
 
-  const showHere = !!(galleryId || scope || pageExtras.length);
+  const showHere = !!(galleryId || (scope && scope !== "all") || pageExtras.length);
   if (showHere) {
     primary.push(
-      '<button type="button" class="v-site-nav-trigger" data-panel="here" aria-expanded="false" aria-controls="vNavPanelHere">This page</button>'
+      '<button type="button" id="vNavTriggerHere" class="v-site-nav-trigger" data-panel="here" aria-expanded="false" aria-controls="vNavPanelHere" aria-haspopup="true">This page</button>'
     );
   }
 
   const defaultAttr = defaultPanel ? ` data-default-panel="${escapeAttr(defaultPanel)}"` : "";
   const hereBlock = showHere
-    ? `<div class="v-site-nav-panel" id="vNavPanelHere" data-panel="here" hidden>${herePanel}</div>`
+    ? `<div class="v-site-nav-panel" id="vNavPanelHere" data-panel="here" role="region" aria-labelledby="vNavTriggerHere" hidden>${herePanel}</div>`
     : "";
 
   return `<nav class="v-site-nav" id="vSiteNav" aria-label="Video library navigation"${defaultAttr}>
-    <div class="v-site-nav-bar">
-      <div class="v-site-nav-primary">${primary.join("")}</div>
-    </div>
-    <div class="v-site-nav-panels">
-      <div class="v-site-nav-panel" id="vNavPanelConfs" data-panel="confs" hidden>${confsPanel}</div>
-      <div class="v-site-nav-panel" id="vNavPanelSessions" data-panel="sessions" hidden>${sessionsPanel}</div>
-      ${hereBlock}
+    <button type="button" class="v-site-nav-mobile-toggle" id="vNavMobileToggle" aria-expanded="false" aria-controls="vSiteNavBody">Menu</button>
+    <div class="v-site-nav-body" id="vSiteNavBody">
+      <div class="v-site-nav-bar">
+        <div class="v-site-nav-primary">${primary.join("")}</div>
+      </div>
+      <div class="v-site-nav-panels">
+        <div class="v-site-nav-panel" id="vNavPanelConfs" data-panel="confs" role="region" aria-labelledby="vNavTriggerConfs" hidden>${confsPanel}</div>
+        <div class="v-site-nav-panel" id="vNavPanelSessions" data-panel="sessions" role="region" aria-labelledby="vNavTriggerSessions" hidden>${sessionsPanel}</div>
+        ${hereBlock}
+      </div>
     </div>
   </nav>`;
 }
