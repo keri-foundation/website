@@ -5,11 +5,11 @@
   "footerFallback": "KERI Foundation",
   "galleryLinks": [
     {
-      "label": "Home",
+      "label": "KF Home",
       "href": "/"
     },
     {
-      "label": "All videos",
+      "label": "Videos Home",
       "href": "/v/"
     },
     {

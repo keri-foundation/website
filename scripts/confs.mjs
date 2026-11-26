@@ -24,7 +24,7 @@
  *                 colors come from template-presentations-landingpage/brand.json
  *                 (a gallery index.json "brand" object overrides that gallery).
  *                 Also writes the page header into the HTML as real content.
- *                 The shared top-left links (Home, All videos, Conference
+ *                 The shared top-left links (KF Home, Videos Home, Conference
  *                 index, Other videos) come from brand.json galleryLinks. Talk / interview /
  *                 PDF links are discovered from transcripts/html/ and
  *                 transcripts/pdf/ and appended (stamped as
@@ -396,8 +396,11 @@ function ariaCurrentForHref(href, pageUrl) {
   return "";
 }
 
+const NAV_LABEL_KF_HOME = "KF Home";
+const NAV_LABEL_VIDEOS_HOME = "Videos Home";
+
 function galleryBreadcrumbs(galleryId, page) {
-  const crumbs = [{ label: "All videos", href: "/v/" }];
+  const crumbs = [{ label: NAV_LABEL_VIDEOS_HOME, href: "/v/" }];
   if (isSessionsGallery(galleryId)) {
     crumbs.push({ label: "Other videos", href: "/v/sessions/" });
     const parts = galleryId.split("/");
@@ -413,7 +416,7 @@ function galleryBreadcrumbs(galleryId, page) {
 }
 
 function overviewBreadcrumbs(scope) {
-  const crumbs = [{ label: "All videos", href: "/v/" }];
+  const crumbs = [{ label: NAV_LABEL_VIDEOS_HOME, href: "/v/" }];
   if (scope === "confs") crumbs.push({ label: "Conferences", href: "/v/confs/", current: true });
   else if (scope === "sessions") crumbs.push({ label: "Other videos", href: "/v/sessions/", current: true });
   else crumbs[0].current = true;
@@ -589,8 +592,8 @@ function renderConfsPanel(confs, pageUrl) {
 function renderSiteNavHtml({ page, pageUrl, galleryId, scope, confs, sessions, defaultPanel }) {
   const active = activeNavSection(pageUrl, galleryId, scope);
   const primary = [];
-  primary.push(renderPrimaryNavLink({ label: "Home", href: "/" }, pageUrl));
-  primary.push(renderPrimaryNavLink({ label: "All videos", href: "/v/" }, pageUrl));
+  primary.push(renderPrimaryNavLink({ label: NAV_LABEL_KF_HOME, href: "/" }, pageUrl));
+  primary.push(renderPrimaryNavLink({ label: NAV_LABEL_VIDEOS_HOME, href: "/v/" }, pageUrl));
   primary.push(
     `<button type="button" id="vNavTriggerConfs" class="${navTriggerClass("confs", active)}" data-panel="confs" aria-expanded="false" aria-controls="vNavPanelConfs" aria-haspopup="true">Conferences</button>`
   );
