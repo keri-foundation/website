@@ -3,7 +3,7 @@
  * Build a designed PDF of transcripts from the `.srt` files in one event folder.
  *
  * Pipeline:
- *   1. Resolve a gallery directory (confs/<ORG>/<YEAR>/<month> or vids/<YEAR>/<month>)
+ *   1. Resolve a gallery directory (v/confs/<ORG>/<YEAR>/<month> or v/sessions/<YEAR>/<month>)
  *   2. Recursively collect every `*.srt` file in that directory
  *   3. Parse SRT cues and group them into readable paragraphs.
  *      A sibling summary (`foo.srt` → `foo.md`) is included when present.
@@ -16,7 +16,7 @@
  * Usage:
  *   node scripts/build-transcript-pdf.js KERI/2026/apr [--open]
  *   node scripts/build-transcript-pdf.js SEDI/2025/nov [--open]
- *   node scripts/build-transcript-pdf.js vids/2026/jul [--open]
+ *   node scripts/build-transcript-pdf.js sessions/2026/jul [--open]
  *
  * Output (under the gallery):
  *   transcripts/pdf/talks/{slug-with-dashes}-Transcripts.pdf
@@ -32,8 +32,8 @@ import puppeteer from "puppeteer-core";
 import { readSummaryParagraphs } from "./talk-summary.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const CONFS_DIR = join(ROOT, "confs");
-const VIDS_DIR = join(ROOT, "vids");
+const V_DIR = join(ROOT, "v");
+const CONFS_DIR = join(V_DIR, "confs");
 
 const BOM = "\uFEFF";
 const TIMESTAMP_RE = /^(\d{2}:\d{2}:\d{2},\d{3})\s*-->\s*(\d{2}:\d{2}:\d{2},\d{3})/;
@@ -63,7 +63,16 @@ function usage() {
   console.error("Usage: node scripts/build-transcript-pdf.js <gallery-id> [--open] [--dry-run]");
   console.error("Examples:");
   console.error("  node scripts/build-transcript-pdf.js KERI/2026/apr");
-  console.error("  node scripts/build-transcript-pdf.js vids/2026/jul");
+  console.error("  node scripts/build-transcript-pdf.js sessions/2026/jul");
+}
+
+/** Same rules as normalizeGalleryId() in confs.mjs (old confs/… and vids/… ids still work). */
+function normalizeGalleryId(raw) {
+  let id = String(raw || "").trim().replace(/^\/+|\/+$/g, "");
+  id = id.replace(/^v\//, "");
+  if (id.startsWith("confs/")) return id.slice("confs/".length);
+  if (id.startsWith("vids/")) return `sessions/${id.slice("vids/".length)}`;
+  return id;
 }
 
 // ─── Event directory ────────────────────────────────────────────────────────
@@ -76,20 +85,18 @@ function isDirectory(path) {
   }
 }
 
-async function findEventDir(slug) {
-  const normalized = slug.replace(/^\/+|\/+$/g, "");
+async function findEventDir(rawSlug, slug) {
   const candidates = [
-    resolve(slug),
-    resolve(ROOT, normalized),
-    join(CONFS_DIR, normalized),
-    normalized.startsWith("vids/") ? join(ROOT, normalized) : join(VIDS_DIR, normalized),
+    slug.startsWith("sessions/") ? join(V_DIR, slug) : join(CONFS_DIR, slug),
+    resolve(rawSlug),
+    resolve(ROOT, rawSlug),
   ];
   for (const candidate of candidates) {
     if (isDirectory(candidate)) return candidate;
   }
 
   throw new Error(
-    `Could not find a gallery directory "${slug}". Examples: KERI/2026/apr (under ${CONFS_DIR}) or vids/2026/jul.`
+    `Could not find a gallery directory "${slug}". Examples: KERI/2026/apr (under ${CONFS_DIR}) or sessions/2026/jul.`
   );
 }
 
@@ -131,10 +138,10 @@ function eventFromSlug(slug) {
     const month = MONTHS[conf[3].toLowerCase()] || conf[3];
     return { slug, year, shortName: org, name: `${org} ${month} ${year}`, date: "" };
   }
-  const vids = slug.match(/^vids\/(\d{4})\/([a-z]{3})$/i);
-  if (vids) {
-    const year = vids[1];
-    const month = MONTHS[vids[2].toLowerCase()] || vids[2];
+  const session = slug.match(/^sessions\/(\d{4})\/([a-z]{3})$/i);
+  if (session) {
+    const year = session[1];
+    const month = MONTHS[session[2].toLowerCase()] || session[2];
     return {
       slug,
       year,
@@ -1016,13 +1023,14 @@ function findChrome() {
 // ─── Main ───────────────────────────────────────────────────────────────────
 
 async function main() {
-  const { slug, openAfter, dryRun } = parseArgs(process.argv.slice(2));
-  if (!slug) {
+  const { slug: rawSlug, openAfter, dryRun } = parseArgs(process.argv.slice(2));
+  if (!rawSlug) {
     usage();
     process.exit(1);
   }
 
-  const eventDir = await findEventDir(slug);
+  const slug = normalizeGalleryId(rawSlug);
+  const eventDir = await findEventDir(rawSlug, slug);
   const event = await loadEventMeta(eventDir, slug);
   const outputPath = await resolvePdfOutputPath(eventDir, slug);
 

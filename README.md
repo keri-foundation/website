@@ -11,16 +11,17 @@
   - [Kerisse (`/kerisse/`)](#kerisse-kerisse)
   - [Various (`/various/`)](#various-various)
   - [Site customizations (`/custom/`)](#site-customizations-custom)
-  - [Conference galleries (`/confs/<ORG>/<YEAR>/<month>/`)](#conference-galleries-confsorgyearmonth)
+  - [Video galleries (`/v/`)](#video-galleries-v)
+  - [Conference galleries (`/v/confs/<ORG>/<YEAR>/<month>/`)](#conference-galleries-vconfsorgyearmonth)
     - [Top clips (`topClips`)](#top-clips-topclips)
     - [Chapters (`videos[].chapters`)](#chapters-videoschapters)
     - [Talk summaries](#talk-summaries)
-  - [Videos (`/vids/<YEAR>/<month>/`)](#videos-vidsyearmonth)
+  - [Sessions (`/v/sessions/<YEAR>/<month>/`)](#sessions-vsessionsyearmonth)
     - [New conference](#new-conference)
     - [Build and deploy](#build-and-deploy)
     - [Dependencies (`ffmpeg` / `ffprobe`)](#dependencies-ffmpeg--ffprobe)
-    - [Overviews and directory listings (`/confs/`, `/vids/`)](#overviews-and-directory-listings-confs-vids)
-    - [Legacy gallery URLs](#legacy-gallery-urls)
+    - [Overviews and directory listings (`/v/`, `/v/confs/`, `/v/sessions/`)](#overviews-and-directory-listings-v-vconfs-vsessions)
+    - [Old gallery URLs (`/confs/`, `/vids/`)](#legacy-gallery-urls)
   - [Subtitles](#subtitles)
     - [Scripts](#scripts)
   - [Video submission guide](#video-submission-guide)
@@ -35,7 +36,7 @@
 
 ## General information
 
-[https://keri.foundation](https://keri.foundation) runs on Hostinger. The live document root and this repository are different trees. This checkout versions `custom/`, `confs/`, `vids/`, `scripts/`, and the site-root `.htaccess`. WordPress itself, plus `/edu/`, `/kerisse/`, and `/various/`, live on the host and are maintained from their own projects. Database dumps and other archives are not tracked in git.
+[https://keri.foundation](https://keri.foundation) runs on Hostinger. The live document root and this repository are different trees. This checkout versions `custom/`, `v/` (the video galleries), `scripts/`, and the site-root `.htaccess`. WordPress itself, plus `/edu/`, `/kerisse/`, and `/various/`, live on the host and are maintained from their own projects. Database dumps and other archives are not tracked in git.
 
 Remote document root:
 
@@ -63,8 +64,9 @@ public_html/
 ├── wp-content/                themes, plugins, uploads
 ├── wp-includes/               WordPress core
 ├── digistate_logo.jpg
-├── confs/                     conference galleries — described below
-├── vids/                      non-conference video galleries — described below
+├── v/                         every recorded video — described below
+│   ├── confs/                 conference galleries
+│   └── sessions/              other talks and sessions
 ├── custom/                    WordPress look-and-feel — described below
 ├── edu/                       KERI Learning Hub (kerioke)
 ├── kerisse/                   Kerisse search index and dataset
@@ -74,14 +76,15 @@ public_html/
 | Path | Role |
 | ---- | ---- |
 | WordPress (`wp-admin/`, `wp-content/`, `wp-includes/`, the `wp-*.php` files, `.htaccess`, `index.php`) | The site |
-| `confs/` | Conference galleries: videos, audio, subtitles, slides, promo, transcripts |
-| `vids/` | Non-conference video galleries (`/vids/<YEAR>/<month>/`), same media layout as `confs/` |
+| `v/` | Entry point for every recorded video (`/v/`): an overview of all galleries |
+| `v/confs/` | Conference galleries: videos, audio, subtitles, slides, promo, transcripts |
+| `v/sessions/` | Other talks and sessions (`/v/sessions/<YEAR>/<month>/`), same media layout as `v/confs/` |
 | `custom/` | Stylesheet, page scripts, and the `[kc_banner]` shortcode, served from the document root |
 | `edu/` | Static KERI learning site, built and deployed from the kerioke project |
 | `kerisse/` | Search-index shards and the scraped corpus for the Kerisse search engine |
 | `various/` | Various things |
 
-`custom/` belongs to the WordPress site. `confs/` and `vids/` are separate static trees beside WordPress.
+`custom/` belongs to the WordPress site. `v/` is a separate static tree beside WordPress.
 
 ## Managing the website
 
@@ -91,7 +94,7 @@ Site administration is in Hostinger hPanel. Deploy scripts use the local SSH hos
 
 WordPress is installed in the document root. Administration is `wp-admin/`, core libraries are `wp-includes/`, and themes, plugins, and uploads are `wp-content/`. The usual entry points (`index.php`, `wp-login.php`, `wp-cron.php`, `xmlrpc.php`, and the rest of the `wp-*.php` files) sit next to them, along with `license.txt` and `readme.html`. `wp-config.php` stays on the server.
 
-`bash scripts/fetch-wordpress.sh` pulls that WordPress tree, and `custom/`, into this checkout. It leaves `confs/` and `vids/` alone.
+`bash scripts/fetch-wordpress.sh` pulls that WordPress tree, and `custom/`, into this checkout. It leaves `v/` alone.
 
 <a id="learning-site-edu"></a>
 
@@ -99,7 +102,7 @@ WordPress is installed in the document root. Administration is `wp-admin/`, core
 
 [https://keri.foundation/edu](https://keri.foundation/edu) is the KERI Learning Hub: tutorials, explanations, concept cards, learning modules, and H5P interactive video. It is a static Nuxt site from the **kerioke** project. Production is generated with base path `/edu/` (`generate:deploy` in that project) and deployed by `live.sh`, which rsyncs the build into `public_html/edu`.
 
-On a local kerioke checkout, `confs` and `videos` are symlinks so media plays at `localhost`. On this host those files already live at `/confs/` and `/videos/`. `live.sh` removes the symlink copies from the build output before upload, so a learning-site deploy leaves the galleries in place.
+On a local kerioke checkout, `public/confs` (a symlink to this checkout’s `v/confs/`) and `videos` let media play at `localhost`. On this host `/confs/…` answers with a 301 to `/v/confs/…`, and `/videos/` is WordPress. `live.sh` removes the symlink copies from the build output before upload, so a learning-site deploy leaves the galleries in place.
 
 <a id="kerisse-kerisse"></a>
 
@@ -158,19 +161,38 @@ custom/
 
 `kc-banner-shortcode.php` registers `[kc_banner]`. The shortcode shows a banner preview, the escaped HTML, and a copy button. Install it by copying the file to `wp-content/plugins/kc-banner/kc-banner.php` and activating the plugin, or by pasting the functions into the theme’s `functions.php`.
 
-<a id="conference-galleries"></a>
+<a id="video-galleries-v"></a>
 
-## Conference galleries (`/confs/<ORG>/<YEAR>/<month>/`)
+## Video galleries (`/v/`)
+
+[https://keri.foundation/v/](https://keri.foundation/v/) is the entry point for every recorded video, talk, and session. It lists all galleries, newest first. Below it are two trees that share one gallery app:
+
+```text
+v/
+├── .htaccess                       Options -Indexes, DirectoryIndex index.html
+├── overview.json                   page copy for the /v/ overview
+├── index.html                      generated overview of every gallery
+├── sitemap.xml                     generated; listed in robots.txt
+├── confs/                          conferences: confs/<ORG>/<YEAR>/<month>/
+└── sessions/                       other talks: sessions/<YEAR>/<month>/
+```
+
+These used to be `/confs/` and `/vids/`. Every old URL still works through a 301 (see [Old gallery URLs](#legacy-gallery-urls)).
+
+<a id="conference-galleries"></a>
+<a id="conference-galleries-confsorgyearmonth"></a>
+
+## Conference galleries (`/v/confs/<ORG>/<YEAR>/<month>/`)
 
 One folder per conference; the server mirrors this tree. A folder that is missing simply means that part does not exist for that conference (e.g. SEDI 2025 has no interviews).
 
 ```text
-confs/
+v/confs/
 ├── .htaccess                       directory listing rewrite (see below)
-├── overview.json                   page copy for the /confs/ overview
+├── overview.json                   page copy for the /v/confs/ overview
 ├── index.html                      generated overview of conference galleries
 ├── index.php                       folder browser for bare subdirectories
-├── KERI/2026/apr/                  → https://keri.foundation/confs/KERI/2026/apr/
+├── KERI/2026/apr/                  → https://keri.foundation/v/confs/KERI/2026/apr/
 │   ├── index.html                  gallery app (synced from the template on build)
 │   ├── index.json                  page copy, video list, paths
 │   ├── talks/                      *.mp4 + *.mp3 + *.srt side by side
@@ -181,7 +203,7 @@ confs/
 │       ├── html/talks/             generated static transcript pages
 │       ├── html/interviews/        generated (when interviews exist)
 │       └── pdf/talks/              concatenated transcript PDFs
-├── SEDI/2025/nov/                  → https://keri.foundation/confs/SEDI/2025/nov/
+├── SEDI/2025/nov/                  → https://keri.foundation/v/confs/SEDI/2025/nov/
 │   ├── talks/                      morning-…, lunch-…, afternoon-… (one folder)
 │   ├── promo/                      poster
 │   ├── speaker-photos/
@@ -192,15 +214,15 @@ confs/
     ├── index.html                  gallery app, copied into every gallery on build
     ├── index.json                  example gallery config
     ├── brand.json                  site name, icons, share image, wave, and colors
-    ├── overview.html               overview shell for /confs/ and /vids/
+    ├── overview.html               overview shell for /v/, /v/confs/, and /v/sessions/
     └── overview.json               example overview config
 ```
 
 `index.json` → `transcriptsDir` (`transcripts/html`) tells both the gallery and the generator where HTML transcript pages live, for example `transcripts/html/talks/<video-id>.html`. Concatenated PDFs go under `transcripts/pdf/talks/`.
 
-`build` / `deploy` always copy `confs/template-presentations-landingpage/index.html` over each gallery’s `index.html`. Edit the template only; page copy and the header `nav` live in each gallery’s `index.json`. The top-left links (Home, Conference index, Other videos) come from `brand.json` → `galleryLinks`, the same on every gallery and on `/confs/` and `/vids/`. Talk, interview, and PDF links are added when those files exist under `transcripts/`. That copy step writes the page header and those links into the HTML, and stamps the rest of the site chrome from `confs/template-presentations-landingpage/brand.json` (name, icons, share image, wave, colors). A gallery may override that with its own `brand` object. See `confs/template-presentations-landingpage/index.json` for a full example shape. Paths in `brand.json` that start with `/` are site-root paths; the stamp turns icon and share-image URLs into absolute links with `SITE_URL`.
+`build` / `deploy` always copy `v/confs/template-presentations-landingpage/index.html` over each gallery’s `index.html` (conference and session galleries alike). Edit the template only; page copy and the header `nav` live in each gallery’s `index.json`. The top-left links (Home, All videos, Conference index, Other videos) come from `brand.json` → `galleryLinks`, the same on every gallery and on the three overviews. Talk, interview, and PDF links are added when those files exist under `transcripts/`. That copy step writes the page header and those links into the HTML, and stamps the rest of the site chrome from `v/confs/template-presentations-landingpage/brand.json` (name, icons, share image, wave, colors). A gallery may override that with its own `brand` object. See `v/confs/template-presentations-landingpage/index.json` for a full example shape. Paths in `brand.json` that start with `/` are site-root paths; the stamp turns icon and share-image URLs into absolute links with `SITE_URL`.
 
-The same step writes `confs/index.html` and `vids/index.html` from `overview.html`. Page copy for those overviews lives in `confs/overview.json` and `vids/overview.json` (copy `template-presentations-landingpage/overview.json` and tailor it). Each card is filled from that gallery’s `index.json` (heading, subtitle, poster, video counts). Do not edit the generated `index.html` files by hand.
+The same step writes `v/index.html`, `v/confs/index.html`, and `v/sessions/index.html` from `overview.html`. Page copy for those overviews lives in `v/overview.json`, `v/confs/overview.json`, and `v/sessions/overview.json` (copy `template-presentations-landingpage/overview.json` and tailor it; `scope` is `all`, `confs`, or `sessions`). Each card is filled from that gallery’s `index.json` (heading, subtitle, poster, video counts). Do not edit the generated `index.html` files by hand.
 
 ### Top clips (`topClips`)
 
@@ -251,7 +273,7 @@ Optional jump list on a talk card and in the full-screen player. Add a `chapters
 }
 ```
 
-A **Chapters** button on the talk card (and in the full-screen player) opens a slide-up sheet on mobile / centered panel on larger screens. Choosing a chapter seeks that video, plays from there, updates the URL hash (`&t=`), and closes the sheet. Chapters with unparseable times or an empty description are skipped. See `vids/2026/jul/index.json` (“It's KERI or Surveillance”) for a full example.
+A **Chapters** button on the talk card (and in the full-screen player) opens a slide-up sheet on mobile / centered panel on larger screens. Choosing a chapter seeks that video, plays from there, updates the URL hash (`&t=`), and closes the sheet. Chapters with unparseable times or an empty description are skipped. See `v/sessions/2026/jul/index.json` (“It's KERI or Surveillance”) for a full example.
 
 ### Talk summaries
 
@@ -268,45 +290,45 @@ Write plain paragraphs separated by a blank line, about 200 words. A block that 
 
 <a id="yearly-videos"></a>
 <a id="videos-vidsyearmonth"></a>
+<a id="sessions-vsessionsyearmonth"></a>
 
-## Videos (`/vids/<YEAR>/<month>/`)
+## Sessions (`/v/sessions/<YEAR>/<month>/`)
 
-Same gallery app as the conferences, for videos that are not part of a conference. Layout matches `confs/<ORG>/<YEAR>/<month>/` (year and month folders; no org prefix). The public path is `/vids/` so WordPress can keep `/videos/`.
+Same gallery app as the conferences, for talks and sessions that are not part of a conference. Layout matches `v/confs/<ORG>/<YEAR>/<month>/` (year and month folders; no org prefix). WordPress keeps `/videos/`.
 
 ```text
-vids/
-├── .htaccess                       directory listing rewrite + legacy redirects
-├── overview.json                   page copy for the /vids/ overview
+v/sessions/
+├── .htaccess                       directory listing rewrite
+├── overview.json                   page copy for the /v/sessions/ overview
 ├── index.html                      generated overview of month galleries
 ├── index.php                       folder browser for bare subdirectories
-├── 2020/jul/                       → https://keri.foundation/vids/2020/jul/
-├── 2024/jan/                       → https://keri.foundation/vids/2024/jan/
-├── 2026/may/                       → https://keri.foundation/vids/2026/may/
-├── 2026/jul/                       → https://keri.foundation/vids/2026/jul/
-└── 2026/nov/                       → https://keri.foundation/vids/2026/nov/
+├── 2020/, 2024/, 2026/             index.html forwarding old year-gallery #talk-id links
+├── 2020/jul/                       → https://keri.foundation/v/sessions/2020/jul/
+├── 2024/jan/                       → https://keri.foundation/v/sessions/2024/jan/
+├── 2026/may/                       → https://keri.foundation/v/sessions/2026/may/
+├── 2026/jul/                       → https://keri.foundation/v/sessions/2026/jul/
+└── 2026/nov/                       → https://keri.foundation/v/sessions/2026/nov/
     ├── index.html                  gallery app (synced from the template on build)
     ├── index.json                  page copy and video list
     ├── talks/                      *.mp4 + *.mp3 + *.srt side by side
-    └── transcripts/html/talks/     generated static transcript pages
+    └── transcripts/
+        ├── html/talks/             generated static transcript pages
+        └── pdf/talks/              sessions-<YEAR>-<month>-Transcripts.pdf
 ```
 
-Legacy URLs:
-
-- `/videos/sam-smith/Its-KERI-or-Surveillance/Its-KERI-or-Surveillance.html` → `/vids/2026/jul/#it-s-keri-or-surveillance-samuel-smith` (site-root `.htaccess`)
-- `/vids/2026/#it-s-keri-or-surveillance-samuel-smith` and `/vids/2026/#introduction-to-keri-part-1-samuel-smith` → month galleries via `vids/2026/index.html`
-- Year-level talk media and transcript paths redirect in `vids/.htaccess`
+The year pages (`v/sessions/2026/index.html` and friends) forward old hash links such as `/vids/2026/#it-s-keri-or-surveillance-samuel-smith` to the month gallery in the browser, after the server’s 301 from `/vids/2026/` to `/v/sessions/2026/`.
 
 ### New conference
 
-1. Create `confs/<ORG>/<YEAR>/<month>/` and copy `index.json` from `confs/template-presentations-landingpage/` (edit page copy, nav, `transcriptLinks`, videos there).
+1. Create `v/confs/<ORG>/<YEAR>/<month>/` and copy `index.json` from `v/confs/template-presentations-landingpage/` (edit page copy, nav, `transcriptLinks`, videos there). Links to other galleries use the `/v/…` paths.
 2. Add media to `talks/` (and `interviews/`, `slides/`, … when present) and fill in `index.json`. `build` writes a podcast `.mp3` next to each `.mp4` when that `.mp3` is not there yet.
-3. Run `scripts/deploy-confs.sh landing-pages` (or `build`) so `index.html` is copied from the template and the `/confs/` overview is rewritten.
+3. Run `scripts/deploy-confs.sh landing-pages` (or `build`) so `index.html` is copied from the template and the `/v/` and `/v/confs/` overviews are rewritten.
 4. Edit `.srt` files in that conference folder. `scripts/subtitle-sources.tsv` is only for an optional copy from somewhere else.
 
 ### Build and deploy
 
 ```bash
-scripts/deploy-confs.sh landing-pages    # sync gallery index.html, and write /confs/ and /vids/ overviews
+scripts/deploy-confs.sh landing-pages    # sync gallery index.html, and write the /v/, /v/confs/, /v/sessions/ overviews
 scripts/deploy-confs.sh build            # landing-pages → audio → subtitles → transcripts → sitemap → pdfs → verify
 scripts/deploy-confs.sh audio            # podcast MP3 beside each MP4 that does not have one yet
 scripts/deploy-confs.sh verify           # referenced files exist locally
@@ -314,13 +336,14 @@ scripts/deploy-confs.sh unused           # list files not reached from any galle
 scripts/deploy-confs.sh verify-videos    # optional gallery MP4 encode checks (needs ffprobe; not in build/deploy)
 scripts/deploy-confs.sh -n push          # preview what would be uploaded
 scripts/deploy-confs.sh deploy           # build + push (rsync --delete) + check the live site
-scripts/deploy-confs.sh check-remote     # HEAD-request every referenced file on keri.foundation
+scripts/deploy-confs.sh check-remote     # HEAD-request every referenced file on keri.foundation, then check-redirects
+scripts/deploy-confs.sh check-redirects  # old /confs/ and /vids/ URLs must 301 once to a working /v/ URL
 scripts/deploy-confs.sh --conf KERI/2026/nov deploy
 scripts/deploy-confs.sh --conf SEDI/2025/nov push
-scripts/deploy-confs.sh --conf vids/2026/jul push
+scripts/deploy-confs.sh --conf sessions/2026/jul push
 ```
 
-`--conf` takes a gallery id, not a filesystem path from the repo root. Conference ids are relative to `confs/` (the script prepends that tree), so use `KERI/2026/nov`, not `confs/KERI/2026/nov`. Video galleries live outside `confs/`, so they keep the tree prefix: `vids/2026/jul`. Passing `confs/KERI/2026/nov` would look for `confs/confs/KERI/2026/nov` and miss.
+`--conf` takes a gallery id. Conference ids are relative to `v/confs/`: `KERI/2026/nov`. Session ids keep their tree name: `sessions/2026/jul`. The site paths (`v/confs/KERI/2026/nov`, `v/sessions/2026/jul`) and the old ids (`confs/KERI/2026/nov`, `vids/2026/jul`) are accepted too and mean the same gallery.
 
 `audio` (included in `build` and `deploy`) writes `talks/foo.mp3` from `talks/foo.mp4` when that MP3 is absent. The encode is mono, 44.1 kHz, 64 kbps MP3: about 28 MB per hour, clear enough for a spoken-word podcast. It needs `ffmpeg` with LAME. MP3s are gitignored; `push` uploads them with the gallery. An MP4 that is not on this machine is skipped, and `verify` still reports that file missing.
 
@@ -361,13 +384,15 @@ ffprobe -version
 
 On macOS, Homebrew’s `ffmpeg` formula includes `ffprobe` and LAME.
 
-`push` and `deploy` also upload the site-root `.htaccess` (the `/videos/` redirect), `robots.txt`, `confs/sitemap.xml`, and `vids/sitemap.xml`, plus the tree indexes: `confs/.htaccess`, `confs/index.php`, `confs/index.html`, and the same three files under `vids/`. A full push mirrors every `confs/<ORG>/` folder and the whole `vids/` tree. `--conf` limits the gallery mirror; the site-root `.htaccess`, `robots.txt`, both sitemaps, and both tree indexes are still uploaded.
+`push` and `deploy` also upload the site-root `.htaccess` (all redirects from old URLs), `robots.txt`, and `v/sitemap.xml`, plus the tree indexes: `v/.htaccess` and `v/index.html`, then `.htaccess`, `index.php`, and `index.html` under both `v/confs/` and `v/sessions/`. A full push mirrors every `v/confs/<ORG>/` folder and the whole `v/sessions/` tree. `--conf` limits the gallery mirror; the site-root `.htaccess`, `robots.txt`, the sitemap, and the tree indexes are still uploaded. `push` stops before uploading anything while the server still has a `confs/` or `vids/` folder in the document root (see [Old gallery URLs](#legacy-gallery-urls)).
 
-`sitemap` (included in `build` and `deploy`) writes those two XML files from the gallery `index.json` files. Each lists that tree’s overview, gallery pages, transcript indexes, and transcript HTML. Slides, video, and audio are left out. `robots.txt` in the site root is a real file (it replaces WordPress’s generated one) and names both sitemaps plus the WordPress sitemap.
+`sitemap` (included in `build` and `deploy`) writes `v/sitemap.xml` from the gallery `index.json` files. It lists the three overviews, gallery pages, transcript indexes, and transcript HTML. Slides, video, and audio are left out. `robots.txt` in the site root is a real file (it replaces WordPress’s generated one) and names that sitemap plus the WordPress sitemap.
 
-### Overviews and directory listings (`/confs/`, `/vids/`)
+<a id="overviews-and-directory-listings-confs-vids"></a>
 
-`/confs/` and `/vids/` are static overview pages in the same visual style as a gallery. `landing-pages` (and therefore `build` / `deploy`) writes them from `confs/template-presentations-landingpage/overview.html`. Edit `confs/overview.json` or `vids/overview.json` for the heading, subtitle, nav, and footer. Cards are built from each gallery’s `index.json` and listed newest first.
+### Overviews and directory listings (`/v/`, `/v/confs/`, `/v/sessions/`)
+
+`/v/` (every gallery), `/v/confs/`, and `/v/sessions/` are static overview pages in the same visual style as a gallery. `landing-pages` (and therefore `build` / `deploy`) writes them from `v/confs/template-presentations-landingpage/overview.html`. Edit `v/overview.json`, `v/confs/overview.json`, or `v/sessions/overview.json` for the heading, subtitle, nav, and footer. Cards are built from each gallery’s `index.json` and listed newest first.
 
 Hostinger runs **LiteSpeed**, not Apache. LiteSpeed’s built-in autoindex HTML-escapes `HEADER.html` and ignores `AutoIndexUri` in `.htaccess`, so folders that are not a gallery still need a PHP listing.
 
@@ -378,34 +403,51 @@ Hostinger runs **LiteSpeed**, not Apache. LiteSpeed’s built-in autoindex HTML-
 | `.htaccess` | `Options -Indexes`, `DirectoryIndex index.html index.php`, rewrite bare subdirs to `index.php?path=…` |
 | `index.php` | Dark-themed folder list for bare subdirectories (dirs first; media/config file types hidden) |
 
-`RewriteBase` must match the public URL of that tree (`/confs/` or `/vids/`). The PHP script derives link prefixes from its location under `DOCUMENT_ROOT`, so the same `index.php` works in either tree—only `.htaccess`’s `RewriteBase` must differ.
+`RewriteBase` must match the public URL of that tree (`/v/confs/` or `/v/sessions/`). The PHP script derives link prefixes from its location under `DOCUMENT_ROOT`, so the same `index.php` works in either tree—only `.htaccess`’s `RewriteBase` must differ. `v/` itself has no `index.php`; its only subfolders are the two trees.
 
 Behaviour:
 
-- `/confs/` and `/vids/` serve the generated `index.html` (`DirectoryIndex` prefers it over `index.php`).
+- `/v/`, `/v/confs/`, and `/v/sessions/` serve the generated `index.html` (`DirectoryIndex` prefers it over `index.php`).
 - A directory **with** its own `index.html` (a gallery) or its own `index.php` is left alone.
-- A bare directory (e.g. `/confs/KERI/`, `/confs/KERI/2026/`) is rewritten to that tree’s `index.php`.
-- Entries named in the script’s ignore list are omitted (including `template-presentations-landingpage` under `confs/`).
+- A bare directory (e.g. `/v/confs/KERI/`, `/v/confs/KERI/2026/`) is rewritten to that tree’s `index.php`.
+- Entries named in the script’s ignore list are omitted (including `template-presentations-landingpage` under `v/confs/`).
 
 Do not rely on `HEADER.html` or LiteSpeed `AutoIndexUri` on this host.
 
-### Legacy gallery URLs
+### Old gallery URLs (`/confs/`, `/vids/`)
 
-Old paths under `/confs/2026/videos/` are redirected with 301 rules in `confs/.htaccess` (not the site-root file, and not separate “moved” HTML pages). LiteSpeed ignores parent rewrite rules once `confs/.htaccess` turns on its own rewrite engine. Examples:
+The galleries lived at `/confs/` and `/vids/` before `/v/`. Neither folder exists on the server any more, so the site-root `.htaccess` (block `BEGIN media redirects`, kept outside the WordPress block) answers every old URL with a 301:
 
-- `/confs/2026/videos/` → `/confs/KERI/2026/apr/`
-- `/confs/2026/videos/SEDI/2025-11-SEDI/` → `/confs/SEDI/2025/nov/`
+- `/confs/…` → `/v/confs/…` and `/vids/…` → `/v/sessions/…`, same path below the prefix.
+- Older layouts go straight to their final URL in one hop, for example `/confs/2026/videos/` → `/v/confs/KERI/2026/apr/`, `/confs/2026/videos/SEDI/2025-11-SEDI/` → `/v/confs/SEDI/2025/nov/`, and year-level `/vids/2026/talks/…` → the month gallery. Deep links (talk media, subtitles, transcripts, slides, promo) are mapped the same way.
+- `/videos/sam-smith/Its-KERI-or-Surveillance/Its-KERI-or-Surveillance.html` → `/v/sessions/2026/jul/#it-s-keri-or-surveillance-samuel-smith`.
+- `/confs/sitemap.xml` and `/vids/sitemap.xml` → `/v/sitemap.xml`. Session transcript PDFs were named after the old id (`vids-2026-jul-Transcripts.pdf`); those URLs redirect to `sessions-2026-jul-Transcripts.pdf`.
 
-Deep links (talk media, subtitles, transcripts, slides, promo) are mapped the same way. The local `confs/2026/` tree is gone; keep the `.htaccess` rules until those old bookmarks can be retired.
+`scripts/deploy-confs.sh check-redirects` tests this: for every file each gallery references it requests the old URL, and it adds one real example per hand-written rule from `scripts/legacy-redirects.tsv`. Each must return one 301 to the expected `/v/` URL, and that URL must return 200. It runs at the end of `deploy` (as part of `check-remote`). To try the rules before deploying, serve this checkout with the macOS Apache and point the check at it:
+
+```bash
+scripts/serve-local.sh start             # http://127.0.0.1:8099/ (no PHP)
+SITE_URL=http://127.0.0.1:8099 scripts/deploy-confs.sh check-redirects
+scripts/serve-local.sh stop
+```
+
+Moving the server tree (done once, by hand, so `push` does not upload every MP4 again under a new path):
+
+```bash
+ssh kerifoundation "cd domains/keri.foundation/public_html && mkdir -p v && mv confs v/confs && mv vids v/sessions"
+scripts/deploy-confs.sh deploy
+```
+
+Run `deploy` right after the move: until the new site-root `.htaccess` is uploaded, old URLs return 404. `push` refuses to run while `confs/` or `vids/` still exist on the server. The rename of the session PDFs means `push` replaces five small `vids-*-Transcripts.pdf` files with `sessions-*` copies; no media is re-uploaded. Leftovers from the older `/confs/2026/` tree end up in `v/confs/2026/`, which `push` never touches; old URLs that are not covered by a specific rule still reach them through the prefix rule.
 
 ## Subtitles
 
 Curated captions for the conference galleries live in this repository, next to the videos:
 
 ```text
-confs/KERI/2026/apr/talks/          *.srt
-confs/KERI/2026/apr/interviews/     *.srt
-confs/SEDI/2025/nov/talks/          morning-|lunch-|afternoon-*.srt
+v/confs/KERI/2026/apr/talks/          *.srt
+v/confs/KERI/2026/apr/interviews/     *.srt
+v/confs/SEDI/2025/nov/talks/          morning-|lunch-|afternoon-*.srt
 ```
 
 Edit those files in place. `scripts/deploy-confs.sh build` regenerates the HTML transcript pages from them. There is no separate subtitles repository.
@@ -418,7 +460,7 @@ cd /path/to/KERI-subtitle-machine
 # http://127.0.0.1:8765 — drop .mp4 files; captions land in that project’s output/
 ```
 
-Copy a finished draft into the matching `confs/…` folder and clean it up. Keep the `.srt` name the gallery already references.
+Copy a finished draft into the matching `v/confs/…` folder and clean it up. Keep the `.srt` name the gallery already references.
 
 [Subtitle Edit](https://subtitleedit.github.io/subtitleedit/) is a fine editor.
 
@@ -430,10 +472,10 @@ Install once with `npm install` inside `scripts/`:
 
 ```bash
 node scripts/build-transcript-pdf.js KERI/2026/apr
-node scripts/remove-rolling-subtitles.js confs/KERI/2026/apr/talks
-node scripts/detect-nonsense-subtitles.js confs/KERI/2026/apr/interviews
-bash scripts/upload-youtube-subtitles.sh 'PLAYLIST_URL' confs/KERI/2026/apr/talks
-bash scripts/fetch-wordpress.sh  # pull live WordPress (not confs/ or vids/)
+node scripts/remove-rolling-subtitles.js v/confs/KERI/2026/apr/talks
+node scripts/detect-nonsense-subtitles.js v/confs/KERI/2026/apr/interviews
+bash scripts/upload-youtube-subtitles.sh 'PLAYLIST_URL' v/confs/KERI/2026/apr/talks
+bash scripts/fetch-wordpress.sh  # pull live WordPress (not v/)
 python3 scripts/generate_policy_brief_pdf.py
 ```
 
@@ -478,7 +520,7 @@ To upload fixed subtitles to YouTube, you need to set up OAuth2 credentials from
 From the repo root, after `npm install` in `scripts/`:
 
 ```bash
-bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' confs/KERI/2026/apr/talks
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' v/confs/KERI/2026/apr/talks
 ```
 
 **First time only:**
@@ -500,16 +542,16 @@ bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=
 From the kerifoundation repo root (after `npm install` in `scripts/`):
 
 ```bash
-bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' confs/KERI/2026/apr/talks
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' v/confs/KERI/2026/apr/talks
 
 # One file (English)
-bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' confs/KERI/2026/apr/talks --file 'Video Title.srt'
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' v/confs/KERI/2026/apr/talks --file 'Video Title.srt'
 
 # One file (other language)
-bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' confs/KERI/2026/apr/talks --file 'Video Title.nl.srt'
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' v/confs/KERI/2026/apr/talks --file 'Video Title.nl.srt'
 
 # Force OAuth re-consent
-bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' confs/KERI/2026/apr/talks --reauth
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' v/confs/KERI/2026/apr/talks --reauth
 ```
 
 ### Known playlists
@@ -518,26 +560,26 @@ bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=
 
 ```bash
 # Day 1 talks
-bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' confs/KERI/2026/apr/talks
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' v/confs/KERI/2026/apr/talks
 
 # Day 2 talks
-bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksMjwBseKJ7ivXiYukRvI65a' confs/KERI/2026/apr/talks
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksMjwBseKJ7ivXiYukRvI65a' v/confs/KERI/2026/apr/talks
 
 # Interviews (use the playlist that contains the interview videos)
-bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' confs/KERI/2026/apr/interviews
-bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksMjwBseKJ7ivXiYukRvI65a' confs/KERI/2026/apr/interviews
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' v/confs/KERI/2026/apr/interviews
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksMjwBseKJ7ivXiYukRvI65a' v/confs/KERI/2026/apr/interviews
 ```
 
 **KERI Mini Conference November 2026**
 
 ```bash
-bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLNq_uXoW6DaQ' confs/KERI/2026/nov/talks
+bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLNq_uXoW6DaQ' v/confs/KERI/2026/nov/talks
 ```
 
 ### How it works
 
 1. Fetches all videos from the YouTube playlist
-2. Loads the conference `index.json` next to the media folder you passed (for example `confs/KERI/2026/nov/index.json` for `…/nov/talks`)
+2. Loads the conference `index.json` next to the media folder you passed (for example `v/confs/KERI/2026/nov/index.json` for `…/nov/talks`)
 3. Matches each playlist video id to `videos[].youtubeId`, then uploads that entry’s subtitle file
 4. Also uploads sibling language tracks that share the same basename stem (`*.nl.srt`, `*.es.srt`, …)
 5. If a caption track for that language already exists, it updates it
@@ -574,7 +616,7 @@ Every uploadable gallery entry needs a `youtubeId`. Titles and filenames are not
 - Add the YouTube video id as `videos[].youtubeId` in that conference’s `index.json`
 - Check that `videos[].subtitle` points at a real file under the directory you passed
 - For other languages, keep the same basename stem and add a language suffix, for example `2026-11-02-kent-bull.nl.srt`
-- Edited subtitle files live next to the videos, for example `confs/KERI/2026/apr/talks/*.srt`
+- Edited subtitle files live next to the videos, for example `v/confs/KERI/2026/apr/talks/*.srt`
 - Unchanged-hash skips say `(subtitle unchanged)`. Pass `--force` to upload even when the local hash is unchanged
 
 **Authentication issues**
@@ -586,7 +628,7 @@ Every uploadable gallery entry needs a `youtubeId`. Titles and filenames are not
 
 - This usually means the saved refresh token was revoked or expired
 - The uploader now auto-detects this, removes stale credentials, and prompts login again
-- You can force a clean OAuth flow anytime with: `bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' confs/KERI/2026/apr/talks --reauth`
+- You can force a clean OAuth flow anytime with: `bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL' v/confs/KERI/2026/apr/talks --reauth`
 
 **"Insufficient Permission" when uploading captions**
 

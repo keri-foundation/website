@@ -11,7 +11,7 @@
  *
  * Usage:
  *   node scripts/generate-transcript-pages.mjs \
- *     --config confs/KERI/2026/apr/index.json
+ *     --config v/confs/KERI/2026/apr/index.json
  *
  * Options:
  *   --config <path>   Gallery index.json (required). Media root = its directory.

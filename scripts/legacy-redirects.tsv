@@ -1,0 +1,65 @@
+# Old URL → expected /v/ URL, one tab-separated pair per line (paths from the site root).
+# Used by: scripts/deploy-confs.sh check-redirects   (node scripts/confs.mjs check-redirects)
+#
+# One real example for each hand-written rule in the site-root .htaccess
+# "media redirects" block. The plain /confs/... → /v/confs/... and
+# /vids/... → /v/sessions/... cases are generated from every gallery's
+# index.json, so they are not listed here.
+
+# Standalone player under WordPress /videos/
+videos/sam-smith/Its-KERI-or-Surveillance/Its-KERI-or-Surveillance.html	v/sessions/2026/jul/#it-s-keri-or-surveillance-samuel-smith
+
+# KERI Conference April 2026 (former /confs/2026/videos/)
+confs/2026/videos	v/confs/KERI/2026/apr/
+confs/2026/videos/	v/confs/KERI/2026/apr/
+confs/2026/videos/index.html	v/confs/KERI/2026/apr/
+confs/2026/videos/index.json	v/confs/KERI/2026/apr/index.json
+confs/2026/videos/KERICONF26/subtitles/Cole Davis ｜ Contract Credentials & Verifiable Identity ｜ KERI Conference 2026.srt	v/confs/KERI/2026/apr/talks/Cole Davis ｜ Contract Credentials & Verifiable Identity ｜ KERI Conference 2026.srt
+confs/2026/videos/KERICONF26/presentations/Cole Davis ｜ Contract Credentials & Verifiable Identity ｜ KERI Conference 2026.pdf	v/confs/KERI/2026/apr/slides/Cole Davis ｜ Contract Credentials & Verifiable Identity ｜ KERI Conference 2026.pdf
+confs/2026/videos/KERICONF26/transcripts/acdcs-for-enterprises-alan-davies.html	v/confs/KERI/2026/apr/transcripts/html/talks/acdcs-for-enterprises-alan-davies.html
+confs/2026/videos/KERICONF26/Cole Davis ｜ Contract Credentials & Verifiable Identity ｜ KERI Conference 2026.mp4	v/confs/KERI/2026/apr/talks/Cole Davis ｜ Contract Credentials & Verifiable Identity ｜ KERI Conference 2026.mp4
+confs/2026/videos/KERICONF26/Alan Davies ｜ ACDCs for Enterprises ｜ KERI Conference 2026.mp3	v/confs/KERI/2026/apr/talks/Alan Davies ｜ ACDCs for Enterprises ｜ KERI Conference 2026.mp3
+confs/2026/videos/KERICONF26-interviews/subtitles/Ari-Argoud-Interview.srt	v/confs/KERI/2026/apr/interviews/Ari-Argoud-Interview.srt
+confs/2026/videos/KERICONF26-interviews/transcripts/interview-ari-argoud.html	v/confs/KERI/2026/apr/transcripts/html/interviews/interview-ari-argoud.html
+confs/2026/videos/KERICONF26-interviews/Ari-Argoud-Interview.mp4	v/confs/KERI/2026/apr/interviews/Ari-Argoud-Interview.mp4
+confs/2026/videos/KERICONF26-promo/Keri2026Promo.mp4	v/confs/KERI/2026/apr/promo/promo.mp4
+confs/2026/videos/KERICONF26-promo/Keri2026Promo.jpg	v/confs/KERI/2026/apr/promo/promo.jpg
+
+# SEDI Summit November 2025 (former /confs/2026/videos/SEDI/2025-11-SEDI/)
+confs/2026/videos/SEDI/2025-11-SEDI	v/confs/SEDI/2025/nov/
+confs/2026/videos/SEDI/2025-11-SEDI/index.html	v/confs/SEDI/2025/nov/
+confs/2026/videos/SEDI/2025-11-SEDI/index.json	v/confs/SEDI/2025/nov/index.json
+confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Morning-Session/speakers/00-03-34--00-18-20-Chris-Bramwell.mp4	v/confs/SEDI/2025/nov/talks/morning-00-03-34--00-18-20-Chris-Bramwell.mp4
+confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Lunch-Panel/speakers/00-20-51--00-32-51-Jay-Stanley.srt	v/confs/SEDI/2025/nov/talks/lunch-00-20-51--00-32-51-Jay-Stanley.srt
+confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Afternoon-Session/speakers/00-10-05--00-16-06-Alan-Fuller.mp3	v/confs/SEDI/2025/nov/talks/afternoon-00-10-05--00-16-06-Alan-Fuller.mp3
+confs/2026/videos/SEDI/2025-11-SEDI/speaker-photos/Alan-Fuller.jpg	v/confs/SEDI/2025/nov/speaker-photos/Alan-Fuller.jpg
+confs/2026/videos/SEDI/2025-11-SEDI/poster-sedi-summit.jpg	v/confs/SEDI/2025/nov/promo/poster-sedi-summit.jpg
+confs/2026/videos/SEDI/2025-11-SEDI/transcripts/alan-fuller.html	v/confs/SEDI/2025/nov/transcripts/html/talks/alan-fuller.html
+confs/2026/videos/SEDI/2025-11-SEDI/pdf/SEDI-2025-nov-Transcripts.pdf	v/confs/SEDI/2025/nov/transcripts/pdf/talks/SEDI-2025-nov-Transcripts.pdf
+
+# Former year-level session galleries (/vids/<YEAR>/talks/...)
+vids/2026/talks/2026-05-05-Introduction-to-KERI-Part-1-XYohZTh3yEw.mp4	v/sessions/2026/may/talks/2026-05-05-Introduction-to-KERI-Part-1-XYohZTh3yEw.mp4
+vids/2026/transcripts/html/talks/introduction-to-keri-part-1-samuel-smith.html	v/sessions/2026/may/transcripts/html/talks/introduction-to-keri-part-1-samuel-smith.html
+vids/2026/talks/Its-KERI-or-Surveillance.nl.srt	v/sessions/2026/jul/talks/Its-KERI-or-Surveillance.nl.srt
+vids/2026/talks/Its-KERI-or-Surveillance.pdf	v/sessions/2026/jul/talks/Its-KERI-or-Surveillance.pdf
+vids/2026/transcripts/html/talks/it-s-keri-or-surveillance-samuel-smith.html	v/sessions/2026/jul/transcripts/html/talks/it-s-keri-or-surveillance-samuel-smith.html
+vids/2020/talks/NonconformistKeynoteWeb20200702.mp3	v/sessions/2020/jul/talks/NonconformistKeynoteWeb20200702.mp3
+vids/2020/slides/NonconformistKeynoteWeb20200702.pdf	v/sessions/2020/jul/slides/NonconformistKeynoteWeb20200702.pdf
+vids/2020/transcripts/html/talks/nonconformist-keynote-samuel-smith.html	v/sessions/2020/jul/transcripts/html/talks/nonconformist-keynote-samuel-smith.html
+vids/2024/talks/2024-01-02-Introduction-to-KERI-Samuel-M-Smith-yP3eIl4VgA.de.srt	v/sessions/2024/jan/talks/2024-01-02-Introduction-to-KERI-Samuel-M-Smith-yP3eIl4VgA.de.srt
+vids/2024/transcripts/html/talks/introduction-to-keri-samuel-smith.html	v/sessions/2024/jan/transcripts/html/talks/introduction-to-keri-samuel-smith.html
+
+# Year pages (they forward #talk-id deep links in the browser)
+vids/2020/	v/sessions/2020/
+vids/2024/	v/sessions/2024/
+vids/2026/	v/sessions/2026/
+
+# Tree roots, bare-folder listings, and sitemaps
+confs	v/confs/
+confs/	v/confs/
+vids	v/sessions/
+vids/	v/sessions/
+confs/KERI/	v/confs/KERI/
+vids/2026/nov/talks/	v/sessions/2026/nov/talks/
+confs/sitemap.xml	v/sitemap.xml
+vids/sitemap.xml	v/sitemap.xml

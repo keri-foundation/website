@@ -11,13 +11,9 @@
 !/custom/
 !/custom/**
 
-# --- Conferences ---
-!/confs/
-!/confs/**
-
-# --- Standalone video galleries (/vids/; WordPress keeps /videos/) ---
-!/vids/
-!/vids/**
+# --- Recorded video galleries (/v/confs/ conferences, /v/sessions/ other talks; WordPress keeps /videos/) ---
+!/v/
+!/v/**
 
 # --- Conference build / deploy scripts ---
 !/scripts/
@@ -26,9 +22,9 @@
 # Re-ignore install output under scripts/ (the un-ignore above would otherwise track it)
 /scripts/node_modules/
 
-# Local promo clips (must come after !/confs/** — .gitignore beats info/exclude)
-/confs/2026/videos/clips/
-/confs/2026/videos/.venv-clips
+# Local promo clips (must come after !/v/** — .gitignore beats info/exclude)
+/v/confs/2026/videos/clips/
+/v/confs/2026/videos/.venv-clips
 
 # --- .github ---
 !/.github/
@@ -74,8 +70,8 @@
 # --- Documentation ---
 !/README.md
 !/VIDEO_SUBMISSION_GUIDE.md
-confs/2026/videos/KERICONF26/
-confs/2026/videos/KERICONF26-interviews/
+v/confs/2026/videos/KERICONF26/
+v/confs/2026/videos/KERICONF26-interviews/
 
 .DS_Store
 

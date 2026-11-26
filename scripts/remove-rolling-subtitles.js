@@ -167,7 +167,7 @@ function deduplicatePass(blocks) {
 export async function removeRollingSubtitles() {
   if (!SUBTITLES_DIR) {
     console.error("Usage: node scripts/remove-rolling-subtitles.js <directory>");
-    console.error("Example: node scripts/remove-rolling-subtitles.js confs/KERI/2026/apr/talks");
+    console.error("Example: node scripts/remove-rolling-subtitles.js v/confs/KERI/2026/apr/talks");
     process.exit(1);
   }
 

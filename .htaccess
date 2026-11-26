@@ -18,6 +18,77 @@ require all denied
 </IfModule>
 </Files>
 
+# BEGIN media redirects
+# Every recorded video lives under /v/: conferences in /v/confs/, other talks
+# and sessions in /v/sessions/. They used to be /confs/ and /vids/. Neither
+# directory exists on the server any more, so these site-root rules answer
+# every old URL. Older layouts point straight at their final /v/ URL (one hop);
+# everything else falls through to the prefix rules at the end.
+# Kept outside the WordPress block, which WordPress rewrites when permalinks are saved.
+# /videos/ stays with WordPress. Test: scripts/deploy-confs.sh check-redirects
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+
+# Standalone player moved into the July 2026 session gallery.
+RewriteRule ^videos/sam-smith/Its-KERI-or-Surveillance/Its-KERI-or-Surveillance\.html$ /v/sessions/2026/jul/#it-s-keri-or-surveillance-samuel-smith [R=301,L,NE]
+
+# KERI Conference April 2026 (former /confs/2026/videos/)
+RewriteRule ^confs/2026/videos/?$ /v/confs/KERI/2026/apr/ [R=301,L]
+RewriteRule ^confs/2026/videos/index\.html$ /v/confs/KERI/2026/apr/ [R=301,L]
+RewriteRule ^confs/2026/videos/index\.json$ /v/confs/KERI/2026/apr/index.json [R=301,L]
+
+RewriteRule ^confs/2026/videos/KERICONF26/subtitles/([^/]+)$ /v/confs/KERI/2026/apr/talks/$1 [R=301,L]
+RewriteRule ^confs/2026/videos/KERICONF26/presentations/([^/]+)$ /v/confs/KERI/2026/apr/slides/$1 [R=301,L]
+RewriteRule ^confs/2026/videos/KERICONF26/transcripts/(.*)$ /v/confs/KERI/2026/apr/transcripts/html/talks/$1 [R=301,L]
+RewriteRule ^confs/2026/videos/KERICONF26/([^/]+\.(mp4|mp3))$ /v/confs/KERI/2026/apr/talks/$1 [R=301,L]
+
+RewriteRule ^confs/2026/videos/KERICONF26-interviews/subtitles/([^/]+\.srt)$ /v/confs/KERI/2026/apr/interviews/$1 [R=301,L]
+RewriteRule ^confs/2026/videos/KERICONF26-interviews/transcripts/(.*)$ /v/confs/KERI/2026/apr/transcripts/html/interviews/$1 [R=301,L]
+RewriteRule ^confs/2026/videos/KERICONF26-interviews/([^/]+\.(mp4|mp3))$ /v/confs/KERI/2026/apr/interviews/$1 [R=301,L]
+
+RewriteRule ^confs/2026/videos/KERICONF26-promo/Keri2026Promo\.(mp4|jpg)$ /v/confs/KERI/2026/apr/promo/promo.$1 [R=301,L]
+
+# SEDI Summit November 2025 (former /confs/2026/videos/SEDI/2025-11-SEDI/)
+RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/?$ /v/confs/SEDI/2025/nov/ [R=301,L]
+RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/index\.html$ /v/confs/SEDI/2025/nov/ [R=301,L]
+RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/index\.json$ /v/confs/SEDI/2025/nov/index.json [R=301,L]
+
+RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Morning-Session/speakers/([^/]+)$ /v/confs/SEDI/2025/nov/talks/morning-$1 [R=301,L]
+RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Lunch-Panel/speakers/([^/]+)$ /v/confs/SEDI/2025/nov/talks/lunch-$1 [R=301,L]
+RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/State-Endorsed-Digital-Identity-Summit-Afternoon-Session/speakers/([^/]+)$ /v/confs/SEDI/2025/nov/talks/afternoon-$1 [R=301,L]
+
+RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/speaker-photos/([^/]+)$ /v/confs/SEDI/2025/nov/speaker-photos/$1 [R=301,L]
+RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/poster-sedi-summit\.jpg$ /v/confs/SEDI/2025/nov/promo/poster-sedi-summit.jpg [R=301,L]
+RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/transcripts/(.*)$ /v/confs/SEDI/2025/nov/transcripts/html/talks/$1 [R=301,L]
+RewriteRule ^confs/2026/videos/SEDI/2025-11-SEDI/pdf/([^/]+)$ /v/confs/SEDI/2025/nov/transcripts/pdf/talks/$1 [R=301,L]
+
+# Former year-level session galleries (/vids/<YEAR>/talks/...) now in month folders.
+RewriteRule ^vids/2026/talks/(2026-05-05-Introduction-to-KERI-Part-1-XYohZTh3yEw(?:\.[a-z]{2,3})?\.(?:mp4|mp3|srt))$ /v/sessions/2026/may/talks/$1 [R=301,L]
+RewriteRule ^vids/2026/transcripts/html/talks/introduction-to-keri-part-1-samuel-smith\.html$ /v/sessions/2026/may/transcripts/html/talks/introduction-to-keri-part-1-samuel-smith.html [R=301,L]
+
+RewriteRule ^vids/2026/talks/(Its-KERI-or-Surveillance(?:\.[a-z]{2,3})?\.(?:mp4|mp3|srt|pdf))$ /v/sessions/2026/jul/talks/$1 [R=301,L]
+RewriteRule ^vids/2026/transcripts/html/talks/it-s-keri-or-surveillance-samuel-smith\.html$ /v/sessions/2026/jul/transcripts/html/talks/it-s-keri-or-surveillance-samuel-smith.html [R=301,L]
+
+RewriteRule ^vids/2020/talks/(NonconformistKeynoteWeb20200702(?:\.[a-z]{2,3})?\.(?:mp4|mp3|srt))$ /v/sessions/2020/jul/talks/$1 [R=301,L]
+RewriteRule ^vids/2020/slides/(NonconformistKeynoteWeb20200702\.pdf)$ /v/sessions/2020/jul/slides/$1 [R=301,L]
+RewriteRule ^vids/2020/transcripts/html/talks/nonconformist-keynote-samuel-smith\.html$ /v/sessions/2020/jul/transcripts/html/talks/nonconformist-keynote-samuel-smith.html [R=301,L]
+
+RewriteRule ^vids/2024/talks/(2024-01-02-Introduction-to-KERI-Samuel-M-Smith-yP3eIl4VgA(?:\.[a-z]{2,3})?\.(?:mp4|mp3|srt))$ /v/sessions/2024/jan/talks/$1 [R=301,L]
+RewriteRule ^vids/2024/transcripts/html/talks/introduction-to-keri-samuel-smith\.html$ /v/sessions/2024/jan/transcripts/html/talks/introduction-to-keri-samuel-smith.html [R=301,L]
+
+# One sitemap for /v/. Session transcript PDFs were named after the old id.
+RewriteRule ^(?:confs|vids)/sitemap\.xml$ /v/sitemap.xml [R=301,L]
+RewriteRule ^vids/(\d{4})/([a-z]{3})/transcripts/pdf/talks/vids-\d{4}-[a-z]{3}-Transcripts\.pdf$ /v/sessions/$1/$2/transcripts/pdf/talks/sessions-$1-$2-Transcripts.pdf [R=301,L]
+
+# Everything else keeps its path below the new prefix.
+RewriteRule ^confs/?$ /v/confs/ [R=301,L]
+RewriteRule ^vids/?$ /v/sessions/ [R=301,L]
+RewriteRule ^confs/(.*)$ /v/confs/$1 [R=301,L]
+RewriteRule ^vids/(.*)$ /v/sessions/$1 [R=301,L]
+</IfModule>
+# END media redirects
+
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are
 # dynamically generated, and should only be modified via WordPress filters.
@@ -26,19 +97,6 @@ require all denied
 RewriteEngine On
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
 RewriteBase /
-
-
-# BEGIN vids redirects
-# Standalone player moved into the 2026 gallery. /videos/ stays with WordPress.
-# /confs/ and /vids/ redirects live in those directories' .htaccess files.
-# LiteSpeed does not apply parent rewrite rules there.
-RewriteRule ^videos/sam-smith/Its-KERI-or-Surveillance/Its-KERI-or-Surveillance\.html$ /vids/2026/jul/#it-s-keri-or-surveillance-samuel-smith [R=301,L,NE]
-# END vids redirects
-
-
-
-
-
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d

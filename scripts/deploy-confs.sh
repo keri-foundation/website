@@ -1,30 +1,28 @@
 #!/bin/bash
 set -euo pipefail
 
-# Build and deploy galleries:
-#   confs/<ORG>/<YEAR>/<month>/   conferences (e.g. confs/KERI/2026/apr/)
-#   vids/<YEAR>/<month>/          non-conference videos (e.g. vids/2026/jul/)
+# Build and deploy galleries. /v/ is the entry point for every recorded video:
+#   v/confs/<ORG>/<YEAR>/<month>/    conferences (e.g. v/confs/KERI/2026/apr/)
+#   v/sessions/<YEAR>/<month>/       other talks and sessions (e.g. v/sessions/2026/jul/)
 # The server mirrors those trees. /videos/ is left for WordPress.
 #
-# The legacy tree confs/2026/ is never pushed or deleted by this script. Old gallery
-# URLs redirect with rules in confs/.htaccess (and vids/.htaccess), which this
-# script uploads on push. Site-root rules do not run under those directories.
+# Before /v/ these lived at /confs/ and /vids/. Neither directory exists on the
+# server any more; every old URL is answered with a 301 from the site-root
+# .htaccess, which this script uploads on push. Anything under v/confs/ that is
+# not an ORG folder (such as the legacy v/confs/2026/ tree) is never pushed or
+# deleted by this script.
 
 SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 SITE_ROOT="$(cd "$SCRIPT_DIR/.." && pwd)"
-CONFS="$SITE_ROOT/confs"
+V="$SITE_ROOT/v"
+CONFS="$V/confs"
+SESSIONS="$V/sessions"
 
 # SSH host alias (user/host/port live in ~/.ssh/config). Path is relative to that
 # account's home so the Hostinger username is not stored in this repository.
 REMOTE_HOST="${REMOTE_HOST:-kerifoundation}"
 REMOTE_ROOT="${REMOTE_ROOT:-domains/keri.foundation/public_html}"
 SITE_URL="${SITE_URL:-https://keri.foundation}"
-
-# Legacy gallery entry pages (plain HTML "moved" notices → new conference paths).
-LEGACY_MOVED_PAGES=(
-    "confs/2026/videos/index.html"
-    "confs/2026/videos/SEDI/2025-11-SEDI/index.html"
-)
 
 RSYNC_EXCLUDES=(--exclude .DS_Store --exclude .gitkeep --exclude '._*' --exclude '*.log' --exclude '*.mp3.part')
 
@@ -33,25 +31,25 @@ usage() {
 Usage: scripts/deploy-confs.sh [options] <command>...
 
 Commands (run in the order given):
-  list            Show galleries: confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/<month>/
+  list            Show galleries: v/confs/<ORG>/<YEAR>/<month>/ (as ORG/YEAR/month) and v/sessions/<YEAR>/<month>/ (as sessions/YEAR/month)
   subtitles       Copy curated .srt files from scripts/subtitle-sources.tsv (no-op when that file has no sources; edit SRTs in place under the gallery)
-  landing-pages   Copy the shared template into every gallery and stamp social meta, header, transcript links, and optional talk summaries from index.json. Also write confs/index.html and vids/index.html from the overview template
+  landing-pages   Copy the shared template into every gallery and stamp social meta, header, transcript links, and optional talk summaries from index.json. Also write v/index.html, v/confs/index.html, and v/sessions/index.html from the overview template
   audio           Write a spoken-word MP3 beside each gallery MP4 when that MP3 does not exist yet
   transcripts     Regenerate the static transcript HTML pages from the .srt files (a sibling .md summary is included when present)
   pdfs            Build concatenated transcript PDFs under each gallery's transcripts/pdf/ (a sibling .md summary opens that talk's chapter when present)
-  sitemap         Write confs/sitemap.xml and vids/sitemap.xml (overviews, galleries, transcript HTML)
+  sitemap         Write v/sitemap.xml (overviews, galleries, transcript HTML)
   verify          Check every file referenced by each index.json exists locally
   unused          List gallery files that nothing on the gallery page references
   verify-videos   Optional gallery MP4 encode checks against VIDEO_SUBMISSION_GUIDE.md (not part of build/deploy; needs ffprobe)
   build           landing-pages + audio + subtitles + transcripts + sitemap + pdfs + verify
-  push            Mirror conference folders and vids/ to the server (rsync --delete), then re-upload every index.html and index.json, plus .htaccess redirects
-  check-remote    verify + HEAD-request every referenced file on the live site
+  push            Mirror v/confs/<ORG>/ folders and v/sessions/ to the server (rsync --delete), then re-upload every index.html and index.json, plus .htaccess redirects. Refuses to run while the server still has confs/ or vids/
+  check-remote    verify + HEAD-request every referenced file on the live site, then check-redirects
+  check-redirects Old /confs/ and /vids/ URLs must 301 once to the /v/ URL, which must return 200
   deploy          build + push + check-remote
-  push-legacy-moved  Upload the "moved" index.html pages for old gallery URLs
 
 Options:
   -n, --dry-run   Show what would change; write nothing locally or remotely
-  --conf ID       Limit to one gallery, e.g. --conf KERI/2026/apr or --conf vids/2026/jul (repeatable)
+  --conf ID       Limit to one gallery, e.g. --conf KERI/2026/apr or --conf sessions/2026/jul (repeatable; the old vids/2026/jul form also works)
   -y, --yes       Do not ask for confirmation before changing the server
   -h, --help      Show this help
 
@@ -67,8 +65,21 @@ Examples:
   scripts/deploy-confs.sh -n push                   # preview upload
   scripts/deploy-confs.sh deploy                    # build, upload, check live site
   scripts/deploy-confs.sh --conf SEDI/2025/nov push
-  scripts/deploy-confs.sh --conf vids/2026/jul push
+  scripts/deploy-confs.sh --conf sessions/2026/jul push
+  SITE_URL=http://127.0.0.1:8099 scripts/deploy-confs.sh check-redirects
 EOF
+}
+
+# Same rules as normalizeGalleryId() in confs.mjs.
+normalize_id() {
+    local id="${1#/}"
+    id="${id%/}"
+    id="${id#v/}"
+    case "$id" in
+        confs/*) id="${id#confs/}" ;;
+        vids/*) id="sessions/${id#vids/}" ;;
+    esac
+    printf '%s\n' "$id"
 }
 
 DRY_RUN=0
@@ -80,7 +91,7 @@ while [ $# -gt 0 ]; do
     case "$1" in
         -n|--dry-run) DRY_RUN=1 ;;
         -y|--yes) ASSUME_YES=1 ;;
-        --conf) shift; CONF_IDS+=("${1%/}") ;;
+        --conf) shift; CONF_IDS+=("$(normalize_id "$1")") ;;
         -h|--help) usage; exit 0 ;;
         -*) echo "Unknown option: $1" >&2; usage >&2; exit 1 ;;
         *) COMMANDS+=("$1") ;;
@@ -127,10 +138,10 @@ conferences() {
     run_node "$SCRIPT_DIR/confs.mjs" list
 }
 
-# Local directory for a gallery id (KERI/2026/apr or vids/2026/jul).
+# Local directory for a gallery id (KERI/2026/apr or sessions/2026/jul).
 gallery_dir() {
     case "$1" in
-        vids/*) printf '%s\n' "$SITE_ROOT/$1" ;;
+        sessions/*) printf '%s\n' "$V/$1" ;;
         *) printf '%s\n' "$CONFS/$1" ;;
     esac
 }
@@ -138,9 +149,23 @@ gallery_dir() {
 # Path under the server web root for a gallery id.
 gallery_remote_rel() {
     case "$1" in
-        vids/*) printf '%s\n' "$1" ;;
-        *) printf '%s\n' "confs/$1" ;;
+        sessions/*) printf '%s\n' "v/$1" ;;
+        *) printf '%s\n' "v/confs/$1" ;;
     esac
+}
+
+# The galleries were moved by hand on the server (confs/ → v/confs/, vids/ →
+# v/sessions/). Pushing before that would upload every MP4 again under v/, and
+# the old directories would shadow the site-root redirects.
+assert_remote_layout() {
+    local leftover
+    leftover="$(ssh "$REMOTE_HOST" "cd '$REMOTE_ROOT' && for d in confs vids; do [ -e \"\$d\" ] && echo \"\$d\"; done; true")"
+    if [ -n "$leftover" ]; then
+        echo "The server still has: $(echo $leftover)  (under $REMOTE_ROOT)" >&2
+        echo "Move them into v/ first, then push again:" >&2
+        echo "  ssh $REMOTE_HOST \"cd '$REMOTE_ROOT' && mkdir -p v && mv confs v/confs && mv vids v/sessions\"" >&2
+        exit 1
+    fi
 }
 
 step_list() {
@@ -178,7 +203,7 @@ step_transcripts() {
 }
 
 step_sitemap() {
-    echo "── Sitemaps (confs/sitemap.xml, vids/sitemap.xml)"
+    echo "── Sitemap (v/sitemap.xml)"
     run_node "$SCRIPT_DIR/confs.mjs" sitemap $(dry_flag)
 }
 
@@ -208,6 +233,7 @@ step_verify_videos() {
 
 step_push() {
     echo "── Push to $REMOTE_HOST:$REMOTE_ROOT/"
+    assert_remote_layout
     local -a mirror_local=()
     local -a mirror_remote=()
 
@@ -222,11 +248,11 @@ step_push() {
         while IFS= read -r org; do
             [ -n "$org" ] || continue
             mirror_local+=("$CONFS/$org/")
-            mirror_remote+=("$REMOTE_ROOT/confs/$org/")
-        done < <(conferences | awk -F/ '$1 != "vids" { print $1 }' | sort -u)
-        if conferences | grep -q '^vids/'; then
-            mirror_local+=("$SITE_ROOT/vids/")
-            mirror_remote+=("$REMOTE_ROOT/vids/")
+            mirror_remote+=("$REMOTE_ROOT/v/confs/$org/")
+        done < <(conferences | awk -F/ '$1 != "sessions" { print $1 }' | sort -u)
+        if conferences | grep -q '^sessions/'; then
+            mirror_local+=("$SESSIONS/")
+            mirror_remote+=("$REMOTE_ROOT/v/sessions/")
         fi
     fi
 
@@ -302,83 +328,66 @@ step_push() {
         rsync "${index_rsync[@]}" "${mirror_local[$i]}" "$REMOTE_HOST:${mirror_remote[$i]}"
     done
 
-    echo "── Site redirects (.htaccess), robots.txt, and media sitemaps"
+    echo "── Site redirects (.htaccess), robots.txt, and media sitemap"
     local ht_rsync=(-av --human-readable)
     [ "$DRY_RUN" -eq 1 ] && ht_rsync+=(--dry-run)
     local published
     for published in \
         "$SITE_ROOT/.htaccess" \
         "$SITE_ROOT/robots.txt" \
-        "$CONFS/sitemap.xml" \
-        "$SITE_ROOT/vids/sitemap.xml"
+        "$V/sitemap.xml"
     do
         if [ ! -f "$published" ]; then
             echo "Missing $published — run sitemap (or build) first" >&2
             exit 1
         fi
     done
+    [ "$DRY_RUN" -eq 1 ] || ssh "$REMOTE_HOST" "mkdir -p '$REMOTE_ROOT/v/confs' '$REMOTE_ROOT/v/sessions'"
     rsync "${ht_rsync[@]}" "$SITE_ROOT/.htaccess" "$REMOTE_HOST:$REMOTE_ROOT/.htaccess"
     rsync "${ht_rsync[@]}" "$SITE_ROOT/robots.txt" "$REMOTE_HOST:$REMOTE_ROOT/robots.txt"
-    rsync "${ht_rsync[@]}" "$CONFS/sitemap.xml" "$REMOTE_HOST:$REMOTE_ROOT/confs/sitemap.xml"
-    rsync "${ht_rsync[@]}" "$SITE_ROOT/vids/sitemap.xml" "$REMOTE_HOST:$REMOTE_ROOT/vids/sitemap.xml"
+    rsync "${ht_rsync[@]}" "$V/sitemap.xml" "$REMOTE_HOST:$REMOTE_ROOT/v/sitemap.xml"
 
-    echo "── Directory indexes (confs/ and vids/ overview HTML, plus PHP for bare subdirs)"
+    echo "── Directory indexes (v/, v/confs/, v/sessions/ overview HTML, plus PHP for bare subdirs)"
     local tree_index_rsync=(-av --human-readable)
     [ "$DRY_RUN" -eq 1 ] && tree_index_rsync+=(--dry-run)
     local overview
-    for overview in "$CONFS/index.html" "$SITE_ROOT/vids/index.html"; do
+    for overview in "$V/index.html" "$CONFS/index.html" "$SESSIONS/index.html"; do
         if [ ! -f "$overview" ]; then
             echo "Missing $overview — run landing-pages first" >&2
             exit 1
         fi
     done
-    [ "$DRY_RUN" -eq 1 ] || ssh "$REMOTE_HOST" "mkdir -p '$REMOTE_ROOT/confs' '$REMOTE_ROOT/vids'"
+    rsync "${tree_index_rsync[@]}" \
+        "$V/.htaccess" \
+        "$V/index.html" \
+        "$REMOTE_HOST:$REMOTE_ROOT/v/"
     rsync "${tree_index_rsync[@]}" \
         "$CONFS/.htaccess" \
         "$CONFS/index.php" \
         "$CONFS/index.html" \
-        "$REMOTE_HOST:$REMOTE_ROOT/confs/"
+        "$REMOTE_HOST:$REMOTE_ROOT/v/confs/"
     rsync "${tree_index_rsync[@]}" \
-        "$SITE_ROOT/vids/.htaccess" \
-        "$SITE_ROOT/vids/index.php" \
-        "$SITE_ROOT/vids/index.html" \
-        "$REMOTE_HOST:$REMOTE_ROOT/vids/"
-    # Drop leftovers from the earlier HEADER.html / AutoIndexUri approach.
+        "$SESSIONS/.htaccess" \
+        "$SESSIONS/index.php" \
+        "$SESSIONS/index.html" \
+        "$REMOTE_HOST:$REMOTE_ROOT/v/sessions/"
+    # Drop leftovers: per-tree sitemaps (replaced by v/sitemap.xml; v/sessions/ is
+    # mirrored with --delete, v/confs/ is not) and the earlier HEADER.html /
+    # AutoIndexUri approach.
     if [ "$DRY_RUN" -eq 0 ]; then
-        ssh "$REMOTE_HOST" "rm -f '$REMOTE_ROOT/confs/HEADER.html' '$REMOTE_ROOT/confs/autoindex.php'"
+        ssh "$REMOTE_HOST" "rm -f '$REMOTE_ROOT/v/confs/sitemap.xml' '$REMOTE_ROOT/v/confs/HEADER.html' '$REMOTE_ROOT/v/confs/autoindex.php'"
     fi
 }
 
 step_check_remote() {
     echo "── Verify ($SITE_URL)"
     run_node "$SCRIPT_DIR/confs.mjs" verify --remote "$SITE_URL"
+    step_check_redirects
 }
 
-step_push_legacy_moved() {
-    echo "── Legacy moved pages → $REMOTE_HOST"
-    local rel
-    for rel in "${LEGACY_MOVED_PAGES[@]}"; do
-        if [ ! -f "$SITE_ROOT/$rel" ]; then
-            echo "Missing $rel" >&2
-            exit 1
-        fi
-    done
-    confirm "Upload moved-gallery index.html pages to the legacy URLs?"
-    if [ "$DRY_RUN" -eq 1 ]; then
-        printf '[dry-run] would upload: %s\n' "${LEGACY_MOVED_PAGES[@]}"
-        return
-    fi
-    for rel in "${LEGACY_MOVED_PAGES[@]}"; do
-        ssh "$REMOTE_HOST" "mkdir -p '$REMOTE_ROOT/$(dirname "$rel")'"
-        rsync -av "$SITE_ROOT/$rel" "$REMOTE_HOST:$REMOTE_ROOT/$rel"
-        # Ensure no leftover DirectoryIndex / PHP stubs shadow the HTML page.
-        ssh "$REMOTE_HOST" "rm -f '$REMOTE_ROOT/$(dirname "$rel")/.htaccess' \
-            '$REMOTE_ROOT/$(dirname "$rel")/index.php' \
-            '$REMOTE_ROOT/$(dirname "$rel")/redirect-target.php'" || true
-    done
-    echo "Live:"
-    echo "  $SITE_URL/confs/2026/videos/"
-    echo "  $SITE_URL/confs/2026/videos/SEDI/2025-11-SEDI/"
+step_check_redirects() {
+    echo "── Old /confs/ and /vids/ URLs ($SITE_URL)"
+    run_node "$SCRIPT_DIR/confs.mjs" check-redirects --remote "$SITE_URL"
 }
 
 for cmd in "${COMMANDS[@]}"; do
@@ -396,11 +405,11 @@ for cmd in "${COMMANDS[@]}"; do
         build) step_landing_pages; step_audio; step_subtitles; step_transcripts; step_sitemap; step_pdfs; step_verify ;;
         push) step_push ;;
         check-remote) step_check_remote ;;
+        check-redirects) step_check_redirects ;;
         deploy)
             step_landing_pages; step_audio; step_subtitles; step_transcripts; step_sitemap; step_pdfs; step_verify; step_push
             [ "$DRY_RUN" -eq 1 ] || step_check_remote
             ;;
-        push-legacy-moved) step_push_legacy_moved ;;
         *) echo "Unknown command: $cmd" >&2; usage >&2; exit 1 ;;
     esac
 done

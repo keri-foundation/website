@@ -13,6 +13,7 @@ const HEX = /^#(?:[0-9a-fA-F]{3,4}|[0-9a-fA-F]{6}|[0-9a-fA-F]{8})$/;
 export const BRAND_FILE = join(
   dirname(fileURLToPath(import.meta.url)),
   "..",
+  "v",
   "confs",
   "template-presentations-landingpage",
   "brand.json"

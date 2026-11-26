@@ -1,6 +1,6 @@
 #!/bin/bash
 # Fetch keri.foundation WordPress production content into this checkout.
-# Does not touch confs/ or vids/ (those use scripts/deploy-confs.sh).
+# Does not touch v/ (the video galleries use scripts/deploy-confs.sh).
 # Run from anywhere: bash scripts/fetch-wordpress.sh
 
 set -euo pipefail
@@ -9,14 +9,14 @@ echo "⚡ Fetch remote WordPress..."
 
 # This script downloads (fetches) live WordPress site content from the remote
 # server into the local checkout. It is an allowlist: only the paths below are
-# transferred, so confs/, vids/, and other non-WordPress trees are skipped.
+# transferred, so v/ and other non-WordPress trees are skipped.
 echo "📥 Fetching WordPress from remote server..."
 
 # Toggle DRY_RUN=1 to test without writing:
 DRY_RUN=${DRY_RUN:-0}
 
 # Allowlist of WordPress paths under public_html/. First matching rule wins;
-# a final --exclude='*' drops everything else (confs/, vids/, etc.).
+# a final --exclude='*' drops everything else (v/, edu/, etc.).
 # Protect local secrets before the broad /*.php include.
 FILTERS=(
 	--exclude='/wp-config.php'
@@ -58,7 +58,7 @@ if [ "$DRY_RUN" = "1" ]; then
 else
 	echo "🔄 Downloading WordPress files from: ${REMOTE_HOST}:${REMOTE_ROOT}/"
 	echo "   → $LOCAL_PATH"
-	echo "   (allowlist: wp-admin, wp-content, wp-includes, custom, root WP files; skips confs/ & vids/)"
+	echo "   (allowlist: wp-admin, wp-content, wp-includes, custom, root WP files; skips v/)"
 	rsync "${RSYNC_OPTS[@]}" "${FILTERS[@]}" "${REMOTE_HOST}:${REMOTE_ROOT}/" "$LOCAL_PATH"
 	echo "✅ WordPress fetch completed successfully!"
 fi

@@ -1,0 +1,372 @@
+{
+  "page": {
+    "title": "KERI Mini Conference November 2026",
+    "heading": "KERI Mini Conference November 2026",
+    "headingHref": "/v/confs/KERI/2026/nov/",
+    "statusNotice": "",
+    "subtitle": "The videos from the KERI Mini Conference in November 2026 are now available.",
+    "footer": "KERI Foundation • Conference Videos Collection",
+    "searchPlaceholder": "Type to search across all talks…",
+    "searchLabel": "Search all transcripts",
+    "nav": [
+      {
+        "label": "Program",
+        "href": "https://kericonf.com/program/",
+        "external": false
+      },
+      {
+        "label": "Speakers",
+        "href": "https://kericonf.com/speakers/",
+        "external": false
+      },
+      {
+        "label": "YouTube",
+        "href": "https://www.youtube.com/playlist?list=PLNq_uXoW6DaQ",
+        "external": true
+      }
+    ]
+  },
+  "promo": {
+    "src": "promo/2026-11-02-miniconf-promo.mp4",
+    "poster": "promo/2026-11-02-miniconf-promo.jpg",
+    "title": "The videos from the KERI Mini Conference in November 2026 are now available."
+  },
+  "topClips": {
+    "enabled": true,
+    "title": "Top Clips",
+    "subtitle": "A few bite-size moments from the talks — each clip plays for 10–20 seconds.",
+    "clips": [
+      {
+        "videoTitle": "Samuel M. Smith – Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
+        "speaker": "Samuel M. Smith",
+        "talk": "AI Agent Surveillance Protection",
+        "start": 180.697,
+        "end": 344.422,
+        "quote": "Does that feel like a world you'd like to live in? But you understand that that is the world we're in right now."
+      },
+      {
+        "videoTitle": "Samuel M. Smith – Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
+        "speaker": "Samuel M. Smith",
+        "talk": "AI Agent Surveillance Protection",
+        "start": 63,
+        "end": 77,
+        "quote": "Continuous identity means I determine who you are by continuously surveilling everything that you do."
+      },
+      {
+        "videoTitle": "Samuel M. Smith – Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
+        "speaker": "Samuel M. Smith",
+        "talk": "AI Agent Surveillance Protection",
+        "start": 341,
+        "end": 348.5,
+        "quote": "That just means you've created an arms race of surveillance."
+      },
+      {
+        "videoTitle": "Samuel M. Smith – Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
+        "speaker": "Samuel M. Smith",
+        "talk": "AI Agent Surveillance Protection",
+        "start": 758.5,
+        "end": 771.5,
+        "quote": "The answer isn't continuous surveillance. It is just key management. If we do key management well, AI cyber can't attack us, can't attack you, can't attack anybody."
+      },
+      {
+        "videoTitle": "Samuel M. Smith: The state and the future of the KERI Suite",
+        "speaker": "Samuel M. Smith",
+        "talk": "State of the KERI Suite",
+        "start": 503,
+        "end": 519,
+        "quote": "I call it the era of the ledger wars. Everybody decided that digital identity based on blockchain was the coolest thing."
+      },
+      {
+        "videoTitle": "Samuel M. Smith & Ryan Hansen – Progress report: The 5W’s of KERI: Witnesses, Watchers, Wallet, Web, and Wizard PLUS Bulk issuances and anchoring in Merkle Trees",
+        "speaker": "Samuel M. Smith & Ryan Hansen",
+        "talk": "5W's Progress Report",
+        "start": 3493,
+        "end": 3501,
+        "quote": "Without anchoring, you've missed most of the security properties of what KERI provides."
+      },
+      {
+        "videoTitle": "Ryan Hansen & Samuel M. Smith –  Open infrastructure for KERI-based digital identity",
+        "speaker": "Ryan Hansen & Samuel M. Smith",
+        "talk": "Open Infrastructure",
+        "start": 71,
+        "end": 83.5,
+        "quote": "If you have vendor lock-in, it's not open infrastructure. Open standards and open source aren't enough if users still can't leave."
+      }
+    ]
+  },
+  "transcriptsDir": "transcripts/html",
+  "defaultPoster": "https://kericonf.com/wp-content/uploads/2026/05/KERI-mini-CONF26-scaled.png",
+  "speakerPhotos": {
+    "Samuel M. Smith": "https://kericonf.com/wp-content/uploads/2025/11/Samuel-Smith.jpg",
+    "Phil Feairheller": "https://kericonf.com/wp-content/uploads/2026/01/PhilFeairheller_v1.0-edited.jpeg",
+    "Daniel Hardman": "https://kericonf.com/wp-content/uploads/2026/01/DanielHardman_v1.0.png",
+    "George McEwan": "https://kericonf.com/wp-content/uploads/2026/01/GeorgeMcEwan_v1.0-scaled.jpg",
+    "Ari Argoud": "https://kericonf.com/wp-content/uploads/2026/02/AriArgoud_v1.0.jpeg",
+    "Thomas Mayfield": "https://kericonf.com/wp-content/uploads/2026/01/ThomasMayfield_v1.0-scaled.jpg",
+    "Jonathan Rayback": "https://kericonf.com/wp-content/uploads/2026/02/JonathanRayback_v1.0.jpg",
+    "Kent Bull": "https://kericonf.com/wp-content/uploads/2026/01/KentBull_v1.0.png",
+    "Ned Smith": "https://kericonf.com/wp-content/uploads/2026/02/NedSmith_v1.0.jpeg",
+    "Cole Davis": "https://kericonf.com/wp-content/uploads/2026/02/ColeDavis_v1.0-edited.jpeg",
+    "Alan Davies": "https://kericonf.com/wp-content/uploads/2026/02/AlanDavies_v1.0-edited.jpeg",
+    "Fergal O'Connor": "https://kericonf.com/wp-content/uploads/2026/03/FergalOConnor_v.1.0.png",
+    "Fergal O'Conner": "https://kericonf.com/wp-content/uploads/2026/03/FergalOConnor_v.1.0.png",
+    "Scott Stuewe": "https://kericonf.com/wp-content/uploads/2026/03/ScottStuewe_v1.0-e1773917316969.jpg",
+    "Jay Alexander Elliot": "https://kericonf.com/wp-content/uploads/2026/03/JayElliot_v1.0-scaled.jpg",
+    "Mark Scrimshire": "https://kericonf.com/wp-content/uploads/2026/03/MarkScripshire_v1.0.png",
+    "Phil Windley": "https://kericonf.com/wp-content/uploads/2026/03/phil-windley.jpg",
+    "Jared Jeffery": "https://kericonf.com/wp-content/uploads/2026/03/jared-jeffery.jpg",
+    "Jared Jefferey": "https://kericonf.com/wp-content/uploads/2026/03/jared-jeffery.jpg",
+    "Keanu Pahio": "https://kericonf.com/wp-content/uploads/2026/04/KeanuPahio_v1.0.jpg",
+    "Karla McKenna": "https://kericonf.com/wp-content/uploads/2026/04/KarlaMcKenna_v1.0-edited.jpg",
+    "Nicholas Racz": "https://kericonf.com/wp-content/uploads/2026/04/NicholasRacz_v1.0-edited.jpeg",
+    "Christopher Bramwell": "https://kericonf.com/wp-content/uploads/2026/04/ChristopherBramwell_v1.0-scaled.jpg",
+    "Evan Asakawa": "https://kericonf.com/wp-content/uploads/2026/04/EvanAsakawa_v1.0-scaled.jpg",
+    "Ryan Hansen": "https://kericonf.com/wp-content/uploads/2026/04/RyanHansen_v1.0.jpeg"
+  },
+  "targetGroups": [
+    {
+      "id": "developer",
+      "label": "Developer"
+    },
+    {
+      "id": "policymaker",
+      "label": "Policymaker"
+    },
+    {
+      "id": "legal-professional",
+      "label": "Legal Professional"
+    },
+    {
+      "id": "general-citizen",
+      "label": "General Citizen"
+    }
+  ],
+  "videos": [
+    {
+      "order": 1,
+      "day": "Mini Conference nov 2026",
+      "title": "Samuel M. Smith: The state and the future of the KERI Suite",
+      "youtubeId": "KMieUSLQ4WA",
+      "targetGroups": [
+        "developer",
+        "policymaker"
+      ],
+      "path": "talks/2026-11-02-samuel-m-smith-1.mp4",
+      "duration": "57:37",
+      "subtitle": "talks/2026-11-02-samuel-m-smith-1.srt",
+      "poster": "talks/2026-11-02-samuel-m-smith-1.jpg",
+      "presentation": "talks/2026-11-02-samuel-m-smith-1.pdf",
+      "chapters": [
+        {
+          "start": "00:00",
+          "description": "Opening: state and future of the KERI Suite"
+        },
+        {
+          "start": "15:24",
+          "description": "Design foundations and cryptographic agility"
+        },
+        {
+          "start": "28:24",
+          "description": "Mission: foster open KERI infrastructure"
+        },
+        {
+          "start": "36:31",
+          "description": "Failure detection first: wallet, witness, watcher"
+        },
+        {
+          "start": "42:03",
+          "description": "Bulk issuance, sparse Merkle trees, and herd privacy"
+        }
+      ]
+    },
+    {
+      "order": 6,
+      "day": "Mini Conference nov 2026",
+      "title": "Ryan Hansen & Samuel M. Smith –  Open infrastructure for KERI-based digital identity",
+      "youtubeId": "Rkw1eMqAqCY",
+      "targetGroups": [
+        "developer",
+        "policymaker",
+        "general-citizen"
+      ],
+      "path": "talks/2026-11-02-ryan-hansen-samuel-m-smith.mp4",
+      "duration": "55:51",
+      "subtitle": "talks/2026-11-02-ryan-hansen-samuel-m-smith.srt",
+      "poster": "talks/2026-11-02-ryan-hansen-samuel-m-smith.jpg",
+      "chapters": [
+        {
+          "start": "00:43",
+          "description": "What open infrastructure means for KERI"
+        },
+        {
+          "start": "07:54",
+          "description": "The cold-start / bootstrap problem"
+        },
+        {
+          "start": "11:12",
+          "description": "Regulated utilities as a model"
+        },
+        {
+          "start": "16:18",
+          "description": "Market incentives to bootstrap witnesses and watchers"
+        },
+        {
+          "start": "42:00",
+          "description": "Complexity, AI discovery, and adoption paths"
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "day": "Mini Conference nov 2026",
+      "title": "Kent Bull – did:webs, why the ‘s’ matters most",
+      "youtubeId": "u7Np4oU2LLM",
+      "targetGroups": [
+        "developer"
+      ],
+      "path": "talks/2026-11-02-kent-bull.mp4",
+      "duration": "59:26",
+      "subtitle": "talks/2026-11-02-kent-bull.srt",
+      "poster": "talks/2026-11-02-kent-bull.jpg",
+      "presentation": "talks/2026-11-02-kent-bull.pdf",
+      "chapters": [
+        {
+          "start": "00:00",
+          "description": "Introduction: did:webs and why it exists"
+        },
+        {
+          "start": "00:58",
+          "description": "TL;DR: where did:webs stands today"
+        },
+        {
+          "start": "05:46",
+          "description": "Why the “s” matters: key rotation beyond did:web"
+        },
+        {
+          "start": "30:43",
+          "description": "Multisig roles, authorizations, and real-world use"
+        },
+        {
+          "start": "49:08",
+          "description": "Spec status, resolver, and how to try it"
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "day": "Mini Conference nov 2026",
+      "title": "Samuel M. Smith – Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
+      "youtubeId": "96k4Is9xmMM",
+      "targetGroups": [
+        "developer",
+        "policymaker",
+        "legal-professional",
+        "general-citizen"
+      ],
+      "path": "talks/2026-11-02-samuel-m-smith-2.mp4",
+      "duration": "57:36",
+      "subtitle": "talks/2026-11-02-samuel-m-smith-2.srt",
+      "poster": "talks/2026-11-02-samuel-m-smith-2.jpg",
+      "presentation": "talks/2026-11-02-samuel-m-smith-2.pdf",
+      "chapters": [
+        {
+          "start": "00:57",
+          "description": "The AI continuous-identity surveillance problem"
+        },
+        {
+          "start": "17:28",
+          "description": "Threshold structures as the defense"
+        },
+        {
+          "start": "26:27",
+          "description": "SEDI citizen AIDs and core identity credentials"
+        },
+        {
+          "start": "32:35",
+          "description": "Guardianship and delegated authority"
+        },
+        {
+          "start": "40:26",
+          "description": "Agentic control: same KERI/ACDC infrastructure"
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "day": "Mini Conference nov 2026",
+      "title": "Ryan Hansen & Evan Asakawa – Demonstration KERISuite",
+      "youtubeId": "BKCFwTMDQic",
+      "targetGroups": [
+        "developer"
+      ],
+      "path": "talks/2026-11-02-ryan-hansen-evan-asakawa.mp4",
+      "duration": "52:31",
+      "subtitle": "talks/2026-11-02-ryan-hansen-evan-asakawa.srt",
+      "poster": "talks/2026-11-02-ryan-hansen-evan-asakawa.jpg",
+      "chapters": [
+        {
+          "start": "00:00",
+          "description": "Demo overview and what changed since last time"
+        },
+        {
+          "start": "01:37",
+          "description": "Infrastructure setup: witnesses, watchers, and deploy"
+        },
+        {
+          "start": "11:18",
+          "description": "Live Locksmith: new vault, AID, and plugin"
+        },
+        {
+          "start": "21:12",
+          "description": "Graduated disclosure and IPEX v2 roadmap"
+        },
+        {
+          "start": "34:25",
+          "description": "Q&A: when you need witnesses vs watchers"
+        }
+      ],
+      "links": [
+        "https://github.com/keri-foundation/sedi"
+      ]
+    },
+    {
+      "order": 2,
+      "day": "Mini Conference nov 2026",
+      "title": "Samuel M. Smith & Ryan Hansen – Progress report: The 5W’s of KERI: Witnesses, Watchers, Wallet, Web, and Wizard PLUS Bulk issuances and anchoring in Merkle Trees",
+      "youtubeId": "IUU4BOt4wWo",
+      "targetGroups": [
+        "developer",
+        "policymaker"
+      ],
+      "path": "talks/2026-11-02-samuel-m-smith-ryan-hansen.mp4",
+      "duration": "58:33",
+      "subtitle": "talks/2026-11-02-samuel-m-smith-ryan-hansen.srt",
+      "poster": "talks/2026-11-02-samuel-m-smith-ryan-hansen.jpg",
+      "chapters": [
+        {
+          "start": "00:15",
+          "description": "Overview of the five Ws"
+        },
+        {
+          "start": "02:54",
+          "description": "Wallet: home of identity, keys, and events"
+        },
+        {
+          "start": "06:55",
+          "description": "Watchers and duplicity detection"
+        },
+        {
+          "start": "14:41",
+          "description": "Current status: Fortweb, FortiOS, and kf-boot"
+        },
+        {
+          "start": "51:45",
+          "description": "Witnesses: availability, eclipse attacks, and detection"
+        }
+      ],
+      "links": [
+        "https://github.com/keri-foundation"
+      ]
+    }
+  ]
+}

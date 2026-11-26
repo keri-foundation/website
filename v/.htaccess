@@ -1,0 +1,5 @@
+# /v/ is the entry point for every recorded video: the generated overview
+# (index.html) plus the conference (confs/) and session (sessions/) trees,
+# which have their own .htaccess.
+Options -Indexes
+DirectoryIndex index.html

@@ -11,8 +11,8 @@
  * yes strips the loop and keeps any real words in the same cue. A cue that
  * is only the loop is deleted, and cue numbers are rewritten.
  *
- *   node scripts/detect-nonsense-subtitles.js confs/KERI/2026/apr/interviews
- *   node scripts/detect-nonsense-subtitles.js --report confs
+ *   node scripts/detect-nonsense-subtitles.js v/confs/KERI/2026/apr/interviews
+ *   node scripts/detect-nonsense-subtitles.js --report v
  *   node scripts/detect-nonsense-subtitles.js --yes path/to/file.srt
  *
  * Prompts: y remove, n leave, a remove this and everything after it, q save and stop.

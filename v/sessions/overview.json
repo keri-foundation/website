@@ -1,0 +1,11 @@
+{
+  "scope": "sessions",
+  "page": {
+    "title": "Videos",
+    "heading": "Videos",
+    "headingHref": "/v/sessions/",
+    "statusNotice": "",
+    "subtitle": "Talks from the KERI Foundation that are not part of a conference",
+    "footer": "KERI Foundation • Videos"
+  }
+}

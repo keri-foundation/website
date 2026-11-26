@@ -3,7 +3,7 @@
 # Upload fixed subtitles to YouTube videos in a playlist.
 # Run from the kerifoundation repo root.
 #
-#   bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=ID' confs/KERI/2026/apr/talks
+#   bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=ID' v/confs/KERI/2026/apr/talks
 
 set -e
 
@@ -49,7 +49,7 @@ if [ -z "$PLAYLIST_URL" ] || [ -z "$FIXED_DIR" ]; then
   echo "  bash scripts/upload-youtube-subtitles.sh PLAYLIST_URL SRT_DIR --force"
   echo "  bash scripts/upload-youtube-subtitles.sh PLAYLIST_URL SRT_DIR --reauth"
   echo "Example:"
-  echo "  bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=ID' confs/KERI/2026/apr/talks"
+  echo "  bash scripts/upload-youtube-subtitles.sh 'https://www.youtube.com/playlist?list=ID' v/confs/KERI/2026/apr/talks"
   exit 1
 fi
 

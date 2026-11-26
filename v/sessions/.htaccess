@@ -1,0 +1,32 @@
+# Hostinger/LiteSpeed ignores AutoIndexUri and HTML-escapes HEADER.html.
+# /v/sessions/ is the generated overview (index.html). Bare subdirs without
+# their own index are rewritten to index.php.
+#
+# Redirects from the old /vids/ URLs live in the site-root .htaccess. Once
+# this directory enables its own rewrite engine, LiteSpeed does not apply
+# parent rewrite rules to /v/sessions/ URLs, so do not rely on root rules here.
+Options -Indexes
+DirectoryIndex index.html index.php
+
+# Prefer HTML transcript pages in Google. Concatenated PDFs stay downloadable
+# but are not indexed (do not Disallow them in robots.txt — that freezes
+# already-indexed copies). Slide PDFs under slides/ are left alone.
+<IfModule mod_setenvif.c>
+SetEnvIf Request_URI "transcripts/pdf/.*\.pdf$" noindex_transcript_pdf
+</IfModule>
+<IfModule mod_headers.c>
+Header always set X-Robots-Tag "noindex, follow" env=noindex_transcript_pdf
+</IfModule>
+
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /v/sessions/
+
+# Directories that already have index.html / index.php keep those.
+# Year folders (2020/, 2024/, 2026/) ship a small redirect index.html for old
+# year-gallery bookmarks and hash deep links (/vids/2026/#talk-id).
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteCond %{REQUEST_FILENAME}/index.html !-f
+RewriteCond %{REQUEST_FILENAME}/index.php !-f
+RewriteRule ^(.*)$ index.php?path=$1 [L,QSA]
+</IfModule>

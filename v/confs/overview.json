@@ -1,0 +1,11 @@
+{
+  "scope": "confs",
+  "page": {
+    "title": "Conference Videos",
+    "heading": "Conference Videos",
+    "headingHref": "/v/confs/",
+    "statusNotice": "",
+    "subtitle": "Presentations and talks from KERI Foundation conferences",
+    "footer": "KERI Foundation • Conference Videos"
+  }
+}

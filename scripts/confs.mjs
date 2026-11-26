@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * Helper for the galleries under confs/<ORG>/<YEAR>/<month>/ and vids/<YEAR>/<month>/.
+ * Helper for the galleries under v/confs/<ORG>/<YEAR>/<month>/ and
+ * v/sessions/<YEAR>/<month>/. /v/ is the entry point for every recorded video.
  *
  * Usage:
  *   node scripts/confs.mjs list
@@ -11,17 +12,20 @@
  *   node scripts/confs.mjs unused [--conf KERI/2026/apr]...
  *   node scripts/confs.mjs verify-videos [--conf KERI/2026/apr]...
  *   node scripts/confs.mjs sitemap [--dry-run]
+ *   node scripts/confs.mjs check-redirects [--remote https://keri.foundation] [--conf KERI/2026/apr]...
+ *
+ * Gallery ids: conferences are ORG/YEAR/month, sessions are sessions/YEAR/month.
+ * --conf also accepts v/confs/..., v/sessions/..., and the old confs/... and vids/... forms.
  *
  * list            Print every gallery id that has an index.json.
- *                 Conferences are ORG/YEAR/month. Video galleries are vids/YEAR/month.
  * landing-pages   Copy the shared template into every gallery and stamp title /
  *                 description / canonical URL into the social meta tags from that
  *                 gallery's index.json. Site name, icons, share image, wave, and
  *                 colors come from template-presentations-landingpage/brand.json
  *                 (a gallery index.json "brand" object overrides that gallery).
  *                 Also writes the page header into the HTML as real content.
- *                 The shared top-left links (Home, Conference index, Other
- *                 videos) come from brand.json galleryLinks. Talk / interview /
+ *                 The shared top-left links (Home, All videos, Conference
+ *                 index, Other videos) come from brand.json galleryLinks. Talk / interview /
  *                 PDF links are discovered from transcripts/html/ and
  *                 transcripts/pdf/ and appended (stamped as
  *                 DISCOVERED_TRANSCRIPT_LINKS for the client). Optional
@@ -35,10 +39,12 @@
  *                 `talks/foo.srt`) when that file exists. Stamps optional talk
  *                 summaries from a sibling Markdown file (`talks/foo.mp4` →
  *                 `talks/foo.md`, any media folder). A missing file is omitted.
- *                 Then writes confs/index.html and vids/index.html from
+ *                 Then writes v/index.html (every gallery), v/confs/index.html,
+ *                 and v/sessions/index.html from
  *                 template-presentations-landingpage/overview.html, using each
- *                 tree's overview.json for page copy and each gallery index.json
- *                 for the cards. --conf limits which tree overview is rewritten.
+ *                 overview.json for page copy and each gallery index.json
+ *                 for the cards. --conf limits which tree overview is rewritten
+ *                 (v/index.html is always rewritten).
  * sync-subtitles  Copy curated .srt files from the source folders listed in
  *                 scripts/subtitle-sources.tsv into the conference folders. Only
  *                 subtitles referenced by that conference's index.json are copied
@@ -65,9 +71,13 @@
  *                 High profile level 3.1–4.2, 720p, bitrate, size/hour, AAC stereo,
  *                 fast start). Missing MP4s are skipped. Not part of build/deploy.
  *                 Needs ffprobe (ships with ffmpeg).
- * sitemap         Write confs/sitemap.xml and vids/sitemap.xml. Each lists that tree's
- *                 overview, gallery pages, transcript indexes, and transcript HTML.
- *                 --conf is ignored: a sitemap is always the full tree.
+ * sitemap         Write v/sitemap.xml: the three overviews, gallery pages, transcript
+ *                 indexes, and transcript HTML.
+ *                 --conf is ignored: the sitemap is always the full tree.
+ * check-redirects HEAD-request the pre-/v/ URL (/confs/..., /vids/...) of every file
+ *                 each gallery page references, plus scripts/legacy-redirects.tsv.
+ *                 Each must answer with one 301 to the /v/ URL, which must return
+ *                 200. Defaults to the live site; --remote points it elsewhere.
  */
 
 import { readFile, readdir, stat, copyFile, mkdir, writeFile, rename, unlink, open } from "node:fs/promises";
@@ -81,9 +91,11 @@ import { summaryMarkdownRel, summaryParagraphsFor } from "./talk-summary.mjs";
 
 const SCRIPT_DIR = dirname(fileURLToPath(import.meta.url));
 const SITE_ROOT = resolve(SCRIPT_DIR, "..");
-const CONFS_ROOT = join(SITE_ROOT, "confs");
-const VIDS_ROOT = join(SITE_ROOT, "vids");
+const V_ROOT = join(SITE_ROOT, "v");
+const CONFS_ROOT = join(V_ROOT, "confs");
+const SESSIONS_ROOT = join(V_ROOT, "sessions");
 const SOURCES_FILE = join(SCRIPT_DIR, "subtitle-sources.tsv");
+const LEGACY_REDIRECTS_FILE = join(SCRIPT_DIR, "legacy-redirects.tsv");
 const LANDING_TEMPLATE = join(CONFS_ROOT, "template-presentations-landingpage", "index.html");
 const OVERVIEW_TEMPLATE = join(CONFS_ROOT, "template-presentations-landingpage", "overview.html");
 const SITE_URL = (process.env.SITE_URL || "https://keri.foundation").replace(/\/+$/, "");
@@ -92,11 +104,24 @@ const ORG_RE = /^[A-Za-z][A-Za-z0-9_-]*$/;
 const YEAR_RE = /^\d{4}$/;
 const IGNORED_FILES = new Set([".DS_Store", ".gitkeep", "index.html", "index.json"]);
 
+/**
+ * Gallery id as used everywhere else: ORG/YEAR/month or sessions/YEAR/month.
+ * Also accepts site paths (v/confs/KERI/2026/apr, v/sessions/2026/jul) and the
+ * pre-/v/ forms (confs/KERI/2026/apr, vids/2026/jul).
+ */
+function normalizeGalleryId(raw) {
+  let id = String(raw || "").trim().replace(/^\/+|\/+$/g, "");
+  id = id.replace(/^v\//, "");
+  if (id.startsWith("confs/")) return id.slice("confs/".length);
+  if (id.startsWith("vids/")) return `sessions/${id.slice("vids/".length)}`;
+  return id;
+}
+
 function parseArgs(argv) {
   const opts = { command: argv[0], confs: [], dryRun: false, remote: null };
   for (let i = 1; i < argv.length; i++) {
     const a = argv[i];
-    if (a === "--conf") opts.confs.push(argv[++i].replace(/^\/+|\/+$/g, ""));
+    if (a === "--conf") opts.confs.push(normalizeGalleryId(argv[++i]));
     else if (a === "--dry-run" || a === "-n") opts.dryRun = true;
     else if (a === "--remote") opts.remote = argv[++i].replace(/\/+$/, "");
     else throw new Error(`Unknown argument: ${a}`);
@@ -607,29 +632,45 @@ async function cmdLandingPages(opts) {
   );
 }
 
-/** Tree-root overview pages. scope must match the directory the config lives in. */
+/**
+ * Overview pages. scope must match the "scope" in that overview.json.
+ * "all" is the /v/ entry point listing every gallery; the other two list one tree.
+ */
 const OVERVIEW_PAGES = [
   {
+    scope: "all",
+    urlPath: "v/",
+    configPath: join(V_ROOT, "overview.json"),
+    dest: join(V_ROOT, "index.html"),
+  },
+  {
     scope: "confs",
+    urlPath: "v/confs/",
     configPath: join(CONFS_ROOT, "overview.json"),
     dest: join(CONFS_ROOT, "index.html"),
   },
   {
-    scope: "vids",
-    configPath: join(VIDS_ROOT, "overview.json"),
-    dest: join(VIDS_ROOT, "index.html"),
+    scope: "sessions",
+    urlPath: "v/sessions/",
+    configPath: join(SESSIONS_ROOT, "overview.json"),
+    dest: join(SESSIONS_ROOT, "index.html"),
   },
 ];
 
+function inOverviewScope(scope, id) {
+  if (scope === "all") return true;
+  return scope === "sessions" ? isSessionsGallery(id) : !isSessionsGallery(id);
+}
+
 function overviewScopesFor(opts) {
-  if (!opts.confs.length) return new Set(["confs", "vids"]);
-  const scopes = new Set();
-  for (const id of opts.confs) scopes.add(isVidsGallery(id) ? "vids" : "confs");
+  if (!opts.confs.length) return new Set(OVERVIEW_PAGES.map((page) => page.scope));
+  const scopes = new Set(["all"]);
+  for (const id of opts.confs) scopes.add(isSessionsGallery(id) ? "sessions" : "confs");
   return scopes;
 }
 
 function gallerySortKey(id) {
-  // vids/YEAR/month or ORG/YEAR/month — year and month are always parts[1]/[2]
+  // sessions/YEAR/month or ORG/YEAR/month — year and month are always parts[1]/[2]
   const parts = id.split("/");
   const year = Number(parts[1]);
   const month = MONTH_INDEX[String(parts[2] || "").toLowerCase()] || 0;
@@ -643,7 +684,7 @@ function galleryWhen(id) {
 }
 
 function galleryOrg(id) {
-  return isVidsGallery(id) ? "" : id.split("/")[0];
+  return isSessionsGallery(id) ? "" : id.split("/")[0];
 }
 
 function countLabel(n, singular, plural) {
@@ -757,8 +798,8 @@ async function cmdOverviewPages(opts) {
     const title = pageCopy.title || pageCopy.heading || brand.titleFallback || "Videos";
     const description =
       pageCopy.subtitle || pageCopy.description || brand.descriptionFallback || "Presentations and talks.";
-    const url = `${SITE_URL}/${page.scope}/`;
-    const ids = all.filter((id) => (page.scope === "vids" ? isVidsGallery(id) : !isVidsGallery(id)));
+    const url = `${SITE_URL}/${page.urlPath}`;
+    const ids = all.filter((id) => inOverviewScope(page.scope, id));
     ids.sort((a, b) => gallerySortKey(b) - gallerySortKey(a) || a.localeCompare(b));
     const cards = [];
     for (const id of ids) {
@@ -789,7 +830,7 @@ async function cmdOverviewPages(opts) {
     )
       .replace(OVERVIEW_CARDS_MARKER, renderOverviewCards(cards))
       .replace(OVERVIEW_FOOTER_MARKER, escapeText(pageCopy.footer || ""));
-    const label = `${page.scope}/index.html`;
+    const label = `${page.urlPath}index.html`;
     let previous = null;
     try {
       previous = await readFile(page.dest, "utf8");
@@ -826,18 +867,18 @@ async function isDir(p) {
   }
 }
 
-function isVidsGallery(id) {
-  return id.startsWith("vids/");
+function isSessionsGallery(id) {
+  return id.startsWith("sessions/");
 }
 
-/** Absolute directory of a gallery (confs/ORG/YEAR/month or vids/YEAR/month). */
+/** Absolute directory of a gallery (v/confs/ORG/YEAR/month or v/sessions/YEAR/month). */
 function galleryDir(id) {
-  return isVidsGallery(id) ? join(SITE_ROOT, id) : join(CONFS_ROOT, id);
+  return isSessionsGallery(id) ? join(V_ROOT, id) : join(CONFS_ROOT, id);
 }
 
 /** Site-root prefix used in URLs and verify paths. */
 function galleryPrefix(id) {
-  return isVidsGallery(id) ? id : `confs/${id}`;
+  return isSessionsGallery(id) ? `v/${id}` : `v/confs/${id}`;
 }
 
 async function findConferences() {
@@ -855,12 +896,12 @@ async function findConferences() {
       }
     }
   }
-  if (await isDir(VIDS_ROOT)) {
-    for (const year of (await readdir(VIDS_ROOT)).sort()) {
-      if (!YEAR_RE.test(year) || !(await isDir(join(VIDS_ROOT, year)))) continue;
-      for (const month of (await readdir(join(VIDS_ROOT, year))).sort()) {
-        if (existsSync(join(VIDS_ROOT, year, month, "index.json"))) {
-          ids.push(`vids/${year}/${month}`);
+  if (await isDir(SESSIONS_ROOT)) {
+    for (const year of (await readdir(SESSIONS_ROOT)).sort()) {
+      if (!YEAR_RE.test(year) || !(await isDir(join(SESSIONS_ROOT, year)))) continue;
+      for (const month of (await readdir(join(SESSIONS_ROOT, year))).sort()) {
+        if (existsSync(join(SESSIONS_ROOT, year, month, "index.json"))) {
+          ids.push(`sessions/${year}/${month}`);
         }
       }
     }
@@ -1001,7 +1042,7 @@ function collectRefs(config, confDir = null, galleryId = null) {
   };
   const addLocalNav = (item) => {
     const href = String(item?.href || "");
-    if (href.startsWith("/confs/") || href.startsWith("/vids/") || (href && !href.startsWith("/"))) {
+    if (href.startsWith("/v/") || (href && !href.startsWith("/"))) {
       add("nav", item.label, href);
     }
   };
@@ -1039,7 +1080,7 @@ function collectRefs(config, confDir = null, galleryId = null) {
   return refs;
 }
 
-/** Map a reference to a path relative to the site root (e.g. confs/KERI/2026/apr/talks/x.mp4). */
+/** Map a reference to a path relative to the site root (e.g. v/confs/KERI/2026/apr/talks/x.mp4). */
 function siteRelative(id, href) {
   const clean = href.split(/[?#]/)[0];
   let rel = clean.startsWith("/") ? clean.slice(1) : `${galleryPrefix(id)}/${clean}`;
@@ -1365,6 +1406,110 @@ async function cmdVerify(opts) {
   console.log("\nverify: OK");
 }
 
+/** Pre-/v/ site path of a gallery: confs/ORG/YEAR/month or vids/YEAR/month. */
+function legacyGalleryPrefix(id) {
+  return isSessionsGallery(id) ? `vids/${id.slice("sessions/".length)}` : `confs/${id}`;
+}
+
+/** Session transcript PDFs were named after the old id (vids-2026-jul-Transcripts.pdf). */
+function legacySiteRel(id, rel) {
+  const inside = rel.slice(galleryPrefix(id).length);
+  const renamed = isSessionsGallery(id)
+    ? inside.replace(/\/sessions-(\d{4}-[a-z]{3}-Transcripts\.pdf)$/i, "/vids-$1")
+    : inside;
+  return `${legacyGalleryPrefix(id)}${renamed}`;
+}
+
+/** old path → new path pairs from scripts/legacy-redirects.tsv (paths without leading slash). */
+async function readLegacyRedirects() {
+  if (!existsSync(LEGACY_REDIRECTS_FILE)) return [];
+  const pairs = [];
+  for (const raw of (await readFile(LEGACY_REDIRECTS_FILE, "utf8")).split("\n")) {
+    const line = raw.trim();
+    if (!line || line.startsWith("#")) continue;
+    const cols = line.split("\t").map((col) => col.trim()).filter(Boolean);
+    if (cols.length !== 2) throw new Error(`Bad line in ${LEGACY_REDIRECTS_FILE}: ${raw}`);
+    pairs.push({ from: cols[0].replace(/^\/+/, ""), to: cols[1].replace(/^\/+/, ""), label: "legacy" });
+  }
+  return pairs;
+}
+
+/**
+ * Old /confs/ and /vids/ URLs must answer with one 301 straight to the /v/ URL,
+ * and that URL must return 200. Cases: every file each gallery page references
+ * (under its old prefix) plus scripts/legacy-redirects.tsv.
+ */
+async function cmdCheckRedirects(opts) {
+  const base = (opts.remote || SITE_URL).replace(/\/+$/, "");
+  const cases = await readLegacyRedirects();
+  const seen = new Set(cases.map((c) => c.from));
+  for (const id of await selectedConferences(opts)) {
+    const config = await loadConfig(id);
+    const confDir = galleryDir(id);
+    const rels = new Set([`${galleryPrefix(id)}/index.html`, `${galleryPrefix(id)}/index.json`]);
+    for (const ref of collectRefs(config, confDir, id)) {
+      const rel = siteRelative(id, ref.href);
+      if (rel.startsWith(`${galleryPrefix(id)}/`)) rels.add(rel);
+    }
+    for (const rel of rels) {
+      const to = rel.replace(/(^|\/)index\.html$/, "$1");
+      const from = legacySiteRel(id, to);
+      if (seen.has(from)) continue;
+      seen.add(from);
+      cases.push({ from, to, label: id });
+    }
+  }
+
+  const toUrl = (path) => {
+    const [pathPart, hash] = path.split("#");
+    return `${base}/${encodePath(pathPart)}${hash === undefined ? "" : `#${hash}`}`;
+  };
+  const decodedTarget = (url) => {
+    const u = new URL(url);
+    return decodeURIComponent(u.pathname) + (u.hash ? decodeURIComponent(u.hash) : "");
+  };
+
+  console.log(`check-redirects: ${cases.length} old URLs against ${base}`);
+  let bad = 0;
+  let next = 0;
+  async function worker() {
+    while (next < cases.length) {
+      const c = cases[next++];
+      const fromUrl = toUrl(c.from);
+      const expected = decodedTarget(toUrl(c.to));
+      try {
+        const res = await fetch(fromUrl, { method: "HEAD", redirect: "manual" });
+        const location = res.headers.get("location");
+        if (res.status !== 301 || !location) {
+          bad++;
+          console.log(`  ${res.status} (want 301)  /${c.from}`);
+          continue;
+        }
+        const target = new URL(location, fromUrl).href;
+        if (decodedTarget(target) !== expected) {
+          bad++;
+          console.log(`  WRONG  /${c.from}\n         → ${decodedTarget(target)}\n    want → ${expected}`);
+          continue;
+        }
+        const final = await fetch(target.split("#")[0], { method: "HEAD", redirect: "manual" });
+        if (final.status !== 200) {
+          bad++;
+          console.log(`  TARGET ${final.status}  /${c.from} → ${expected}`);
+        }
+      } catch (err) {
+        bad++;
+        console.log(`  error: ${err.cause?.code || err.message}  /${c.from}`);
+      }
+    }
+  }
+  await Promise.all(Array.from({ length: 6 }, worker));
+  if (bad) {
+    console.log(`\ncheck-redirects: ${bad} of ${cases.length} old URLs not OK`);
+    process.exit(1);
+  }
+  console.log(`check-redirects: all ${cases.length} old URLs redirect once to a working /v/ URL`);
+}
+
 async function readSources() {
   if (!existsSync(SOURCES_FILE)) return [];
   const lines = (await readFile(SOURCES_FILE, "utf8")).split("\n");
@@ -1374,22 +1519,22 @@ async function readSources() {
     if (!line || line.startsWith("#")) continue;
     const m = line.match(/^(\S+)\s+(.+)$/);
     if (!m) throw new Error(`Bad line in ${SOURCES_FILE}: ${raw}`);
-    const target = m[1].replace(/^\/+|\/+$/g, "");
+    const target = normalizeGalleryId(m[1]);
     const source = m[2].trim().replace(/^~(?=\/)/, homedir());
     const parts = target.split("/");
     let conf;
     let folder;
-    if (parts[0] === "vids") {
+    if (parts[0] === "sessions") {
       if (parts.length < 4 || !YEAR_RE.test(parts[1])) {
         throw new Error(
-          `Target must be vids/<YEAR>/<month>/<folder> (e.g. vids/2026/jul/talks): ${target}`
+          `Target must be sessions/<YEAR>/<month>/<folder> (e.g. sessions/2026/jul/talks): ${target}`
         );
       }
       conf = parts.slice(0, 3).join("/");
       folder = parts.slice(3).join("/");
     } else if (parts.length < 4) {
       throw new Error(
-        `Target must be <gallery id>/<folder> (e.g. KERI/2026/apr/talks or vids/2026/jul/talks): ${target}`
+        `Target must be <gallery id>/<folder> (e.g. KERI/2026/apr/talks or sessions/2026/jul/talks): ${target}`
       );
     } else {
       conf = parts.slice(0, 3).join("/");
@@ -1676,10 +1821,10 @@ async function lastmodOf(abs) {
 }
 
 /**
- * Overview, gallery, transcript index, and transcript HTML URLs for one tree.
+ * Overview, gallery, transcript index, and transcript HTML URLs under /v/.
  * Media, slides, and PDFs stay out: those are not the pages we want crawled for text.
  */
-async function sitemapEntriesForTree(scope) {
+async function sitemapEntries() {
   const entries = new Map();
   const addFile = async (siteRel) => {
     const abs = join(SITE_ROOT, siteRel);
@@ -1690,11 +1835,8 @@ async function sitemapEntriesForTree(scope) {
     if (!prev || lastmod > prev.lastmod) entries.set(loc, { loc, lastmod });
   };
 
-  await addFile(`${scope}/index.html`);
-  const ids = (await findConferences()).filter((id) =>
-    scope === "vids" ? isVidsGallery(id) : !isVidsGallery(id)
-  );
-  for (const id of ids) {
+  for (const page of OVERVIEW_PAGES) await addFile(`${page.urlPath}index.html`);
+  for (const id of await findConferences()) {
     await addFile(`${galleryPrefix(id)}/index.html`);
     const config = await loadConfig(id);
     const confDir = galleryDir(id);
@@ -1723,33 +1865,28 @@ function renderSitemap(entries) {
 
 async function cmdSitemap(opts) {
   if (opts.confs.length) {
-    console.log("sitemap: writing both full trees (--conf does not limit this)");
+    console.log("sitemap: writing the full /v/ tree (--conf does not limit this)");
   }
-  const files = [
-    { scope: "confs", dest: join(CONFS_ROOT, "sitemap.xml") },
-    { scope: "vids", dest: join(VIDS_ROOT, "sitemap.xml") },
-  ];
-  for (const { scope, dest } of files) {
-    const entries = await sitemapEntriesForTree(scope);
-    if (!entries.length) {
-      console.log(`sitemap: no ${scope} pages, skipped ${relative(SITE_ROOT, dest)}`);
-      continue;
-    }
-    const xml = renderSitemap(entries);
-    const rel = toPosix(relative(SITE_ROOT, dest));
-    let previous = null;
-    if (existsSync(dest)) previous = await readFile(dest, "utf8");
-    if (previous === xml) {
-      console.log(`unchanged ${rel} (${entries.length} urls)`);
-      continue;
-    }
-    if (opts.dryRun) {
-      console.log(`[dry-run] would update ${rel} (${entries.length} urls)`);
-      continue;
-    }
-    await writeFile(dest, xml, "utf8");
-    console.log(`updated  ${rel} (${entries.length} urls)`);
+  const dest = join(V_ROOT, "sitemap.xml");
+  const rel = toPosix(relative(SITE_ROOT, dest));
+  const entries = await sitemapEntries();
+  if (!entries.length) {
+    console.log(`sitemap: no pages, skipped ${rel}`);
+    return;
   }
+  const xml = renderSitemap(entries);
+  let previous = null;
+  if (existsSync(dest)) previous = await readFile(dest, "utf8");
+  if (previous === xml) {
+    console.log(`unchanged ${rel} (${entries.length} urls)`);
+    return;
+  }
+  if (opts.dryRun) {
+    console.log(`[dry-run] would update ${rel} (${entries.length} urls)`);
+    return;
+  }
+  await writeFile(dest, xml, "utf8");
+  console.log(`updated  ${rel} (${entries.length} urls)`);
 }
 
 async function cmdSyncSubtitles(opts) {
@@ -1831,9 +1968,12 @@ async function main() {
     case "sitemap":
       await cmdSitemap(opts);
       break;
+    case "check-redirects":
+      await cmdCheckRedirects(opts);
+      break;
     default:
       console.log(
-        "Usage: node scripts/confs.mjs <list|landing-pages|sync-subtitles|audio|verify|unused|verify-videos|sitemap> [--conf ORG/YEAR/month|vids/YEAR/month] [--dry-run] [--remote URL]"
+        "Usage: node scripts/confs.mjs <list|landing-pages|sync-subtitles|audio|verify|unused|verify-videos|sitemap|check-redirects> [--conf ORG/YEAR/month|sessions/YEAR/month] [--dry-run] [--remote URL]"
       );
       process.exit(opts.command ? 1 : 0);
   }
