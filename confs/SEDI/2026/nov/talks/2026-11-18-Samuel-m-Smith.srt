@@ -1705,11 +1705,11 @@ allows me to access my bank
 342
 00:30:13,300 --> 00:30:18,840
 account and the signing key
-is compromised, I'm done. Now,
+is compromised, I'm done.
 
 343
 00:30:18,840 --> 00:30:24,900
-that means that in KERI, we say
+That means that in KERI, we say
 that the fault isn't compromising the
 
 344
@@ -1759,13 +1759,13 @@ side channel attack that is really hard to
 
 353
 00:31:07,360 --> 00:31:11,940
-do that we say we're going to allow that
+do, that we say we're going to allow that
 as a fault that we can recover from means
 
 354
 00:31:11,940 --> 00:31:16,300
-that we're in a different regime from a
-security perspective. We have no we've
+that we're in a different regime
+from a security perspective. We've
 
 355
 00:31:16,300 --> 00:31:19,860
@@ -1830,27 +1830,27 @@ confident that there aren't any lurking
 367
 00:32:10,820 --> 00:32:16,380
 vulnerabilities? More than a
-decade. – but with the Gentic
+decade. – But with agentic
 
 368
 00:32:16,380 --> 00:32:23,840
 probing, perhaps, maybe that timeframe
-can be compressed. Perhaps. Perhaps.
+can be compressed. – Perhaps.
 
 369
 00:32:24,080 --> 00:32:28,120
 The point is that if we design a
-system that already has built into it
+system that already has vulnerabilities
 
 370
 00:32:28,120 --> 00:32:34,540
-vulnerabilities because we've taken risky
+built into it because we've taken risky
 design choices, then it's hard to make
 
 371
 00:32:34,540 --> 00:32:42,160
-guarantees. But ECC, so ECC has been
-around for over 30 years. It was on patent
+guarantees. Elliptic-curve cryptography has
+been around for over 30 years. It was on patent
 
 372
 00:32:42,160 --> 00:32:49,760
@@ -1869,8 +1869,8 @@ still just as strong as it ever was until
 
 375
 00:32:57,740 --> 00:33:03,560
-we get quantum computers and then quantum
-computers can break it. All right. We
+we get quantum computers and then
+quantum computers can break it. We
 
 376
 00:33:03,560 --> 00:33:08,820
@@ -1884,8 +1884,8 @@ system that has recoverability, the one
 
 378
 00:33:12,340 --> 00:33:18,900
-thing that you have to build first is
-detection of fault. Okay. You don't
+thing that you have to build
+first is detection of fault. You don't
 
 379
 00:33:18,900 --> 00:33:25,980
@@ -1914,13 +1914,13 @@ baked in. And people don't think of it
 
 384
 00:33:45,520 --> 00:33:48,120
-that way. And I'm not criticizing
-blockchain systems. I'm just saying that
+that way. I'm not criticizing
+blockchain systems. I'm just saying
 
 385
 00:33:48,120 --> 00:33:53,720
-that fault that exposing faults means that
-you usually make a trade-off where you say
+that exposing faults means that you
+usually make a trade-off where you say
 
 386
 00:33:53,720 --> 00:33:59,740
@@ -1939,7 +1939,7 @@ know about even if you don't need to fix it
 
 389
 00:34:08,300 --> 00:34:12,880
-just yet. You think, well, wait, I
+just yet. You think, wait, I
 don't need to fix it yet. Why do I
 
 390
@@ -1979,13 +1979,13 @@ designing KERI was that a compromised
 
 397
 00:34:49,700 --> 00:34:53,840
-controller and a malicious controller,
-compromised means their signing keys are
+controller and a malicious controller
+(compromised means their signing keys are
 
 398
 00:34:53,840 --> 00:34:57,300
 compromised or the signing infrastructure
-is compromised, and a controller is
+is compromised) and a controller is
 
 399
 00:34:57,300 --> 00:35:03,980
@@ -2009,12 +2009,12 @@ recovery, but it's not a very good fault
 
 403
 00:35:17,340 --> 00:35:22,020
--tolerant system because eventually after
-enough faults, it'll fail. It's just I've
+-tolerant system because
+eventually after enough faults, it'll fail.
 
 404
 00:35:22,020 --> 00:35:27,100
-just the timeframe extends. But if I can
+The timeframe extends. But if I can
 recover, then it's perpetually never going
 
 405
@@ -2064,7 +2064,7 @@ say, I can't trust that controller.
 
 414
 00:36:17,420 --> 00:36:23,480
-Very first line of duplicity, I stop.
+Very first sign of duplicity, I stop.
 That protects me from that fault causing
 
 415
@@ -2100,22 +2100,22 @@ Half of the interacting parties are
 421
 00:36:52,880 --> 00:36:58,400
 protected. Now, I have to worry about
-the controller. Okay? We force all faults
+the controller. We force all faults
 
 422
-00:36:58,400 --> 00:37:03,320
-to exhibit. I'm kind of saying the
-same thing over and over again. But this
+00:36:58,400 --> 00:37:02,997
+to exhibit duplicity. I'm kind of saying
+the same thing over and over again.
 
 423
-00:37:03,320 --> 00:37:08,620
-forcing of faults to exhibit as a
+00:37:02,997 --> 00:37:08,620
+But this forcing of faults to exhibit as a
 detectable fault makes it so that the
 
 424
 00:37:08,620 --> 00:37:14,400
-system relative to its properties is
-actually very, very, very simple. And
+system relative to its properties
+is actually very simple. And
 
 425
 00:37:14,400 --> 00:37:19,440
@@ -2160,12 +2160,12 @@ to quote a phrase. If I only have one
 433
 00:37:55,580 --> 00:38:02,680
 fault I have to detect. And all the
-faults exhibit that way, then and I can
+faults exhibit that way, and I can
 
 434
 00:38:02,680 --> 00:38:09,240
-make it easy if I can design the
-system so that everything that fails in a
+design the system so that
+everything that fails, fails in a
 
 435
 00:38:09,240 --> 00:38:14,720
@@ -2175,7 +2175,7 @@ endemically fault-tolerant system because
 436
 00:38:14,720 --> 00:38:18,540
 I'm just detecting one thing and
-repairing one thing over and over again.
+repairing one thing, over and over again.
 
 437
 00:38:19,060 --> 00:38:25,440
@@ -2195,7 +2195,7 @@ they attack. How do we make things
 440
 00:38:38,440 --> 00:38:45,200
 duplicity detectable? We sign and
-hash chain everything. Everything is
+hashchain everything. Everything is
 
 441
 00:38:45,200 --> 00:38:49,760
@@ -2249,8 +2249,8 @@ then there's only two possibilities.
 
 451
 00:39:38,980 --> 00:39:44,000
-properties. Either the signer acted
-maliciously using that private key to sign
+Either the signer acted maliciously
+using that private key to sign
 
 452
 00:39:44,000 --> 00:39:47,600
@@ -2284,7 +2284,7 @@ hashchain data structures make
 
 458
 00:40:12,080 --> 00:40:16,300
-everything provably deplices. And provably
+everything provably duplices. And provably
 means that I don't have to trust anybody.
 
 459
@@ -2314,8 +2314,8 @@ successful attacks are forced to exhibit
 
 464
 00:40:44,440 --> 00:40:49,440
-in a detectable way. All right. I know
-I've gone through a lot of slides with a
+in a detectable way. I know I've
+gone through a lot of slides with a
 
 465
 00:40:49,440 --> 00:40:57,700
@@ -2355,7 +2355,7 @@ number of attack surfaces that have to be
 472
 00:41:26,120 --> 00:41:32,700
 signlessly compromised. Let's say
-that I have a tiger tank and a squadron of
+that I have a Tiger tank and a squadron of
 
 473
 00:41:32,700 --> 00:41:38,840
@@ -2435,12 +2435,12 @@ will need for security. Whereas the root
 488
 00:42:59,820 --> 00:43:06,820
 of trust of GLEIF might need a hierarchy
-of delegated day IDs with 12 signers at
+of delegated AIDs with 12 signers at
 
 489
 00:43:06,820 --> 00:43:15,160
 the root and key escrow mechanisms and you
-can't have all seven signers that are life
+can't have all seven signers that are GLEIF
 
 490
 00:43:15,160 --> 00:43:18,400
@@ -2489,8 +2489,8 @@ profile may say, I don't really need more
 
 499
 00:44:04,480 --> 00:44:10,680
-security than X. if a passkey
-is really, really strong compared
+security than X. If a passkey
+is really strong compared
 
 500
 00:44:10,680 --> 00:44:15,000
@@ -2499,13 +2499,13 @@ then KERI is already stronger than a
 
 501
 00:44:15,000 --> 00:44:18,740
-passkey. Just a single SIG KERI
+passkey. Just a Single Sig KERI
 is stronger than a passkey. That's all
 
 502
 00:44:18,740 --> 00:44:22,740
-you'd ever need. The friction
-is really, really, really small. But
+you'd ever need. The
+friction is really small. But
 
 503
 00:44:22,740 --> 00:44:27,180
@@ -2524,7 +2524,7 @@ little bit stronger. What are those
 
 506
 00:44:35,040 --> 00:44:40,540
-threshold structures? Key event logs,
+threshold structures? Key Event Logs,
 signing keys, and pre-rotating keys.
 
 507
@@ -2544,12 +2544,12 @@ two and then each of those two could
 
 510
 00:44:56,860 --> 00:45:04,460
-be five or four or three. Now I
-have six. Okay? I went from, you
+be five or four or three. Now
+I have six. I went from
 
 511
 00:45:04,460 --> 00:45:10,900
-Two to six just by multiplying.
+two to six just by multiplying.
 Hierarchy of delegated AIDs. If I
 
 512
@@ -2570,7 +2570,7 @@ And if it has a delegator, then I have to
 515
 00:45:24,200 --> 00:45:28,460
 gain control of that one. And if this
-one's a single SIG, but the delegator is a
+one's a Single Sig, but the delegator is a
 
 516
 00:45:28,460 --> 00:45:32,000
@@ -2589,8 +2589,8 @@ to compromise in order to gain control of
 
 519
 00:45:39,680 --> 00:45:44,360
-this thing that's only single sig
-at the bottom. Okay. And it's not a
+this thing that's only single
+sig at the bottom. And it's not a
 
 520
 00:45:44,360 --> 00:45:47,860
@@ -2614,13 +2614,12 @@ a delegation every time they hire and fire
 
 524
 00:46:00,100 --> 00:46:04,860
-somebody, which is might be
-months? – Same. – Yeah. – 10 minutes.
+somebody, which might be months?
 
 525
 00:46:04,860 --> 00:46:09,160
-Okay. Witness pools. All right. I'm going
-to get to witness pools. Somebody wanted
+Witness pools. I'm going to get to
+witness pools. Somebody wanted
 
 526
 00:46:09,160 --> 00:46:12,340
@@ -2669,7 +2668,7 @@ that the first step of the attack has
 
 535
 00:46:56,580 --> 00:47:00,440
-already been detected. It, which means
+already been detected. Which means
 that I can stop the attack before it gets
 
 536
@@ -2679,8 +2678,8 @@ example. I want to borrow money from a
 
 537
 00:47:05,540 --> 00:47:10,420
-bank. Okay? Somebody wants to steal
-my identity, so they're going to go to the
+bank. Somebody wants to steal my
+identity, so they're going to go to the
 
 538
 00:47:10,420 --> 00:47:16,300
@@ -2719,13 +2718,13 @@ you sign a promissory note, you anchor the
 
 545
 00:47:44,580 --> 00:47:48,880
-promissory note in your key event log.
+promissory note in your Key Event Log.
 That now means that you have a detectable
 
 546
 00:47:48,880 --> 00:47:53,260
 event. The only way it gets anchored
-in the key event log is if they control the
+in the Key Event Log is if they control the
 
 547
 00:47:53,260 --> 00:47:57,680
@@ -2740,7 +2739,7 @@ been compromised. Either way, it's
 549
 00:48:02,600 --> 00:48:06,740
 detectable. Gets anchored in your
-key event log. All of a sudden, you get a
+Key Event Log. All of a sudden, you get a
 
 550
 00:48:06,740 --> 00:48:12,500
@@ -2785,7 +2784,7 @@ loaning you the money. They can't
 558
 00:48:44,260 --> 00:48:50,160
 ever steal your identity because
-you've extended it. In this case, right,
+you've extended it. – In this case,
 
 559
 00:48:50,300 --> 00:48:56,400
@@ -2804,13 +2803,13 @@ that also was… – It depends on how the
 
 562
 00:49:06,740 --> 00:49:09,320
-signing keys are compromised. – Right,
-right. But let's just presume it's both
+signing keys are compromised. –
+Right. But let's just presume it's both
 
 563
 00:49:09,320 --> 00:49:12,900
-like the same… – but you could
-have it. You could have a watcher that's
+like the same… – But you
+could have a watcher that's
 
 564
 00:49:12,900 --> 00:49:15,860
@@ -2819,8 +2818,8 @@ different device. – No, I understand. But
 
 565
 00:49:15,860 --> 00:49:21,400
-you also have to have, right, the user
-has to have awareness of some signal that
+the user has to have
+awareness of some signal that
 
 566
 00:49:21,400 --> 00:49:25,140
@@ -2829,17 +2828,17 @@ you did this. – Yes, that's called an
 
 567
 00:49:25,140 --> 00:49:31,460
-eclipse attack. Right. But those…
-You understand most attacks, unless
+eclipse attack.
+Most attacks, unless
 
 568
 00:49:31,460 --> 00:49:36,440
-you're attacking a high-value individual,
-right, don't have the resources to do all…
+you're attacking a high-value
+individual, don't have the resources to
 
 569
 00:49:36,440 --> 00:49:39,020
-to capture all of those. – I understand
+capture all of those. – I understand
 that, but I'm just still trying to think
 
 570
@@ -2849,7 +2848,7 @@ establish so that that signal could get to
 
 571
 00:49:43,320 --> 00:49:46,800
-you. – Yes. – Even if your device… –
+you. Even if your device… –
 If you have multiple watching devices,
 
 572
@@ -2860,7 +2859,7 @@ multiple ways to… And if you have enough
 573
 00:49:49,720 --> 00:49:54,120
 time, like 72 hours, then there's a really
-good chance that it's to get to you or you
+good chance […] or you
 
 574
 00:49:54,120 --> 00:49:57,320
@@ -2870,12 +2869,12 @@ have like a security mesh where you have a
 575
 00:49:57,320 --> 00:50:00,100
 collective agreement where I'm watching
-my friend. Yes, there's lots of more
+my friend. – Yes, there's lots of more
 
 576
 00:50:00,100 --> 00:50:04,080
-sophisticated ways you could do it. The
-fact that the principle isn't the actual
+sophisticated ways you could
+do it. The principle isn't the actual
 
 577
 00:50:04,080 --> 00:50:10,260
@@ -2884,18 +2883,18 @@ fault detection that has a latency, I can
 
 578
 00:50:10,260 --> 00:50:15,660
-design high value transactions so that
-they're always detectable. Right. Okay.
+design high value transactions
+so that they're always detectable.
 
 579
 00:50:15,780 --> 00:50:20,140
 And that means that no harm comes
-to me. I'm not disagreeing with you.
+to me. – I'm not disagreeing with you.
 
 580
 00:50:20,320 --> 00:50:26,240
-Yeah. And then TELs plus ACDCs
-just extend fault detection. To
+– TELs plus ACDCs
+just extend fault detection to
 
 581
 00:50:26,240 --> 00:50:29,480
@@ -2903,19 +2902,18 @@ things that are not just your
 key state. Those are the threshold
 
 582
-00:50:29,480 --> 00:50:34,240
-structures. Now, I won't… Actually, we're
-running out of time. I'm going to skip
+00:50:29,480 --> 00:50:30,591
+structures.
 
 583
-00:50:34,240 --> 00:50:39,800
-to the witnesses because I'll tell you
-why witnesses are a good fault detection
+00:50:37,356 --> 00:50:39,800
+I'll tell you why witnesses
+are a good fault detection
 
 584
 00:50:39,800 --> 00:50:47,380
-mechanism. Here we go. Witness pool
-as a fault detector. How does it work?
+mechanism. Witness pool as a
+fault detector. How does it work?
 
 585
 00:50:47,380 --> 00:50:50,780
@@ -2924,8 +2922,8 @@ KERI infrastructure. You see in there that
 
 586
 00:50:50,780 --> 00:50:55,220
-there's witnesses and watchers. All
-right. I'm just going to take one person
+there's witnesses and watchers.
+I'm just going to take one person,
 
 587
 00:50:55,220 --> 00:51:01,040
@@ -3015,7 +3013,7 @@ invalid in your witness pool. And that's
 604
 00:52:19,660 --> 00:52:23,720
 evidence of duplicity because I've got two
-different versions of the key event log.
+different versions of the Key Event Log.
 
 605
 00:52:23,820 --> 00:52:27,920
@@ -3044,8 +3042,8 @@ can issue an issuance if I have a policy
 
 610
 00:52:48,960 --> 00:52:55,160
-that I only issue issuances that are
-anchored, I forced all issuances to that
+that I only issue issuances that
+are anchored, I forced all issuances
 
 611
 00:52:55,160 --> 00:52:59,500
@@ -3084,8 +3082,8 @@ things. The attack surface for the
 
 618
 00:53:25,720 --> 00:53:30,340
-attacker gets really, really difficult.
-And all I have to do is go to multisig and
+attacker gets really difficult. And
+all I have to do is go to multisig and
 
 619
 00:53:30,340 --> 00:53:34,500
@@ -3098,23 +3096,23 @@ of keys they have to compromise is really
 high. And as far as I know, for multisig,
 
 621
-00:53:40,640 --> 00:53:46,440
+00:53:40,640 --> 00:53:47,289
 there have been very few successful
-attacks and most of them were not. The
+attacks and most of them were
 
 622
-00:53:46,440 --> 00:53:50,140
-successful attacks were things like a code
-supply chain attack. And I think there was
+00:53:47,289 --> 00:53:50,140
+things like a code supply chain
+attack. And I think there was
 
 623
 00:53:50,140 --> 00:53:54,580
 an exchange where they had a multisig
-wallet and it was compromised. It had two
+wallet and it was compromised. It had “two
 
 624
 00:53:54,580 --> 00:53:59,680
-or three and they sent an email to
+of three” and they sent an email to
 the three holders that said, there's an
 
 625
@@ -3125,7 +3123,7 @@ link. And they clicked on the link and it
 626
 00:54:04,380 --> 00:54:10,920
 downloaded a compromised
-wallet and then it explored the so yes.
+wallet and then it explored…
 
 627
 00:54:11,440 --> 00:54:16,520
@@ -3158,142 +3156,137 @@ Everything exhibits as duplicity and if
 I have a duplicity detection which is a
 
 633
-00:54:40,620 --> 00:54:47,300
-watcher, right, I just have that one thing
-that I can detect. We're one minute out
+00:54:40,620 --> 00:54:44,822
+watcher I just have that one thing
+that I can detect.
 
 634
-00:54:47,300 --> 00:54:51,200
-of time. I don't want I could go through
-other things but we're out of time. Any
+00:54:50,764 --> 00:55:02,640
+Any questions? – This is all
+great. You see the duplicity.
 
 635
-00:54:51,200 --> 00:55:02,640
-questions? – Make sense? – Yes. –
-This is all great. You see the duplicity.
-
-636
 00:55:02,640 --> 00:55:07,380
 Yes. – How quick is the recovery? You
-have pre-retreated keys that you can go
+have pre-rotated keys that you can go
 
-637
+636
 00:55:07,380 --> 00:55:13,200
-straight to? – Yes. – That… because
+straight to? – Yes. – Because
 what I'm looking at is, they can't
 
-638
+637
 00:55:13,200 --> 00:55:16,400
 get to the keys, but they could
 give a denial of service attack. – Yes,
 
-639
+638
 00:55:16,600 --> 00:55:21,300
 absolutely. – And just keep doing that
 to where… – It depends on how you do
 
-640
+639
 00:55:21,300 --> 00:55:25,540
 it. For example, if my pre
--rotated keys, I'm going to use the
+-rotated keys… I'm going to use the
 
-641
+640
 00:55:25,540 --> 00:55:30,220
 Veridian example because they give really
-good demo. Where was that? IAW, right?
+good demo. Where was that? IIW, right?
+
+641
+00:55:31,060 --> 00:55:35,840
+They have these little smart cards
+that have a biometric on them. They
 
 642
-00:55:31,060 --> 00:55:35,840
-Yeah. They have these little smart
-cards that have a biometric on them. They
-
-643
 00:55:35,840 --> 00:55:41,680
 cost dollars. Or pennies. What'd you
 say? Pennies now? – The ones with the
 
-644
+643
 00:55:41,680 --> 00:55:45,840
 biometrics are less than 10 bucks. –
 Less than 10 bucks. I have two of those.
 
-645
+644
 00:55:45,980 --> 00:55:51,760
 They're air-gapped. They're NFC.
 They're not using a network. I have to
 
-646
+645
 00:55:51,760 --> 00:55:57,620
 actually touch the device. I can store
 them in my safe. I can put one in a
 
-647
+646
 00:55:57,620 --> 00:56:02,500
 different house. And if I lose my
 device, I just get a new device and I can
 
-648
+647
 00:56:02,500 --> 00:56:07,000
 recover to a new device. Even if they
 get my phone and compromise my phone.
 
-649
+648
 00:56:07,620 --> 00:56:14,640
-As long as I have some notification
-that I get someplace, which could be any
+As long as I have some
+notification that I get someplace. Any
 
-650
+649
 00:56:14,640 --> 00:56:19,120
 of my devices could notify me that A
 that my keys have been compromised,
 
-651
+650
 00:56:19,120 --> 00:56:24,200
 then the recovery is how long does it take
 me to go get my smart card wherever it is
 
-652
+651
 00:56:24,200 --> 00:56:30,260
 like in house of my safe and recover to a
 new device? That's my recovery latency.
 
-653
+652
 00:56:31,620 --> 00:56:38,460
 And how do they do denial of service
 attack on an air-gapped system? It's
 
-654
+653
 00:56:38,460 --> 00:56:43,840
 really hard to do. Because I could
 recover on a device they don't know exists
 
-655
+654
 00:56:43,840 --> 00:56:48,060
 until I get the new device. They don't
 know that it's a device to attack unless
 
-656
+655
 00:56:48,060 --> 00:56:51,340
 they're like physically present following
 me around and most of these attackers are
 
-657
+656
 00:56:51,340 --> 00:56:55,140
 not physically present following
 me around. They're across the ocean
 
-658
+657
 00:56:55,140 --> 00:57:01,320
-someplace. It's not hard to build
-these systems to be really, really, really
+someplace. It's not hard to
+build these systems to be really
 
-659
+658
 00:57:01,320 --> 00:57:08,140
 secure relative to the threat profile or
 the risk profile. Anyway, I passed my
 
-660
+659
 00:57:08,140 --> 00:57:10,660
 time. I thank you so
-much. I'm sorry. Thank you.
+much. I'm sorry.
 
