@@ -81,7 +81,7 @@
         }
       ],
       "links": [
-        "https://example.com/related"
+        ["Related resource", "https://example.com/related"]
       ]
     },
     {

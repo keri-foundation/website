@@ -192,7 +192,7 @@
       "duration": "50:10",
       "subtitle": "talks/Samuel Smith ｜ State of the KERI Suite ｜ KERI Conference 2026.srt",
       "links": [
-        "https://keri.foundation"
+        ["https://keri.foundation", "https://keri.foundation"]
       ]
     },
     {
@@ -279,7 +279,7 @@
       "subtitle": "talks/Jay Alexander Elliot ｜ Open KERI Infrastructure ｜ KERI Conference 2026.srt",
       "presentation": "slides/Jay Alexander Elliot ｜ Open KERI Infrastructure ｜ KERI Conference 2026.pdf",
       "links": [
-        "https://github.com/jaelliot/locksmith-demo"
+        ["https://github.com/jaelliot/locksmith-demo", "https://github.com/jaelliot/locksmith-demo"]
       ]
     },
     {
@@ -469,7 +469,7 @@
       "duration": "43:10",
       "subtitle": "talks/Phil Windley ｜ Digital Identity Needs a Legal Foundation ｜ KERI Conference 2026.srt",
       "links": [
-        "https://thetrustgraph.substack.com/p/the-proof-gap"
+        ["https://thetrustgraph.substack.com/p/the-proof-gap", "https://thetrustgraph.substack.com/p/the-proof-gap"]
       ]
     },
     {
@@ -485,8 +485,8 @@
       "subtitle": "talks/Kent Bull ｜ KERIpy Async Architecture ｜ KERI Conference 2026.srt",
       "presentation": "slides/Kent Bull ｜ KERIpy Async Architecture ｜ KERI Conference 2026.pdf",
       "links": [
-        "https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/",
-        "https://www.fluentpython.com/"
+        ["https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/", "https://vorpus.org/blog/notes-on-structured-concurrency-or-go-statement-considered-harmful/"],
+        ["https://www.fluentpython.com/", "https://www.fluentpython.com/"]
       ]
     },
     {

@@ -326,7 +326,7 @@
         }
       ],
       "links": [
-        "https://github.com/keri-foundation/sedi"
+        ["https://github.com/keri-foundation/sedi", "https://github.com/keri-foundation/sedi"]
       ]
     },
     {
@@ -365,7 +365,7 @@
         }
       ],
       "links": [
-        "https://github.com/keri-foundation"
+        ["https://github.com/keri-foundation", "https://github.com/keri-foundation"]
       ]
     }
   ]
