@@ -13,8 +13,7 @@
     "enabled": true,
     "title": "Top Ten Clips",
     "subtitle": "Ten bite-size moments from the talks \u2014 each clip plays for 10\u201320 seconds.",
-    "clips": [
-    ]
+    "clips": []
   },
   "transcriptsDir": "transcripts/html",
   "videos": [
@@ -40,7 +39,11 @@
       "duration": "57:16",
       "subtitle": "talks/2026-11-18-Samuel-m-Smith.srt",
       "poster": "talks/2026-11-18-Samuel-m-Smith.jpg",
-      "presentation": "talks/2026-11-18-Samuel-m-Smith.pdf"
+      "presentation": "talks/2026-11-18-Samuel-m-Smith.pdf",
+      "links": [
+        "https://keri.foundation/v/sessions/2026/nov/#veridian-wallet-recovery-with-smart-cards-jaime-caso",
+        "https://keri.foundation/v/sessions/2026/nov/#keri-acdcs-as-openid-connect-roberto-c-morano"
+      ]
     }
   ]
 }
