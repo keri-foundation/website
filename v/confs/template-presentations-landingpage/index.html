@@ -140,6 +140,11 @@
             outline-offset: 3px;
         }
 
+        .page {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
         .visually-hidden {
             position: absolute;
             width: 1px;
@@ -3308,9 +3313,10 @@
 <body>
     <a class="skip-link" href="#mainContent">Skip to main content</a>
     <!--__V_SITE_NAV__-->
-    <header id="galleryHeader"><!--__GALLERY_HEADER__--></header>
+    <div class="page">
+        <header id="galleryHeader"><!--__GALLERY_HEADER__--></header>
 
-    <main id="mainContent">
+        <main id="mainContent">
         <div class="featured-media" id="featuredMedia">
             <section class="promo-section" id="promoSection" hidden aria-labelledby="promoTitle">
                 <h2 class="promo-title" id="promoTitle" hidden>Promo video</h2>
@@ -3374,9 +3380,10 @@
         <div class="video-container" id="videoContainer">
             <!-- Video cards generated from index.json -->
         </div>
-    </main>
+        </main>
 
-    <footer id="galleryFooter"></footer>
+        <footer id="galleryFooter"></footer>
+    </div>
 
     <script src="https://cdn.plyr.io/3.8.4/plyr.polyfilled.js"></script>
     <script>
