@@ -167,6 +167,8 @@
         }
 
         .v-site-nav-bar {
+            position: relative;
+            z-index: 2;
             background: var(--panel-bg);
             border-bottom: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
         }
@@ -226,10 +228,38 @@
 
         .v-site-nav-trigger[aria-expanded="true"]::after {
             transform: rotate(-135deg) translateY(0.05em);
-            opacity: 0.65;
+            opacity: 1;
+        }
+
+        /* Open tab shares fill with its panel and points down into it. */
+        .v-site-nav-trigger[aria-expanded="true"] {
+            position: relative;
+            z-index: 3;
+            color: var(--ink);
+            font-weight: 800;
+            background: color-mix(in srgb, var(--accent) 16%, var(--panel-bg));
+            border-bottom-color: transparent;
+            box-shadow: inset 0 3px 0 var(--accent);
+        }
+
+        .v-site-nav-trigger[aria-expanded="true"]::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            bottom: -8px;
+            width: 10px;
+            height: 10px;
+            margin-left: -5px;
+            background: color-mix(in srgb, var(--accent) 16%, var(--panel-bg));
+            border-right: 2px solid var(--accent);
+            border-bottom: 2px solid var(--accent);
+            transform: rotate(45deg);
+            pointer-events: none;
         }
 
         .v-site-nav-panels {
+            position: relative;
+            z-index: 1;
             background: color-mix(in srgb, var(--page-bg) 65%, var(--panel-bg));
         }
 
@@ -241,6 +271,13 @@
             padding: 16px 22px 18px;
             font-size: 1rem;
             line-height: 1.6;
+        }
+
+        .v-site-nav-panel:not([hidden]),
+        html:not(.js) .v-site-nav-panel {
+            border-top: 3px solid var(--accent);
+            background: color-mix(in srgb, var(--accent) 10%, var(--panel-bg));
+            box-shadow: inset 0 12px 18px color-mix(in srgb, var(--accent) 14%, transparent);
         }
 
         .v-site-nav-panel[hidden] {
@@ -483,6 +520,22 @@
             .v-site-nav-panel .v-site-nav-link + .v-site-nav-link::before,
             .v-site-nav-index:not(:last-child)::after {
                 content: none;
+            }
+
+            .v-site-nav-trigger[aria-expanded="true"] {
+                box-shadow: inset 4px 0 0 var(--accent);
+            }
+
+            .v-site-nav-trigger[aria-expanded="true"]::before {
+                content: none;
+            }
+
+            .v-site-nav-panel:not([hidden]),
+            html:not(.js) .v-site-nav-panel {
+                border-top: 0;
+                border-left: 4px solid var(--accent);
+                margin: 6px 12px 12px;
+                box-shadow: 0 8px 18px color-mix(in srgb, var(--ink) 14%, transparent);
             }
         }
 
@@ -7683,6 +7736,9 @@
                     let label = '';
                     if (typeof item === 'string') {
                         url = item.trim();
+                    } else if (Array.isArray(item) && item.length >= 2) {
+                        label = String(item[0] || '').trim();
+                        url = String(item[1] || '').trim();
                     } else if (item && typeof item === 'object') {
                         url = String(item.url || item.href || '').trim();
                         label = String(item.label || item.title || '').trim();

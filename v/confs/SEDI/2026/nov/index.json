@@ -41,8 +41,15 @@
       "poster": "talks/2026-11-18-Samuel-m-Smith.jpg",
       "presentation": "talks/2026-11-18-Samuel-m-Smith.pdf",
       "links": [
-        ["https://keri.foundation/v/sessions/2026/nov/#veridian-wallet-recovery-with-smart-cards-jaime-caso", "https://keri.foundation/v/sessions/2026/nov/#veridian-wallet-recovery-with-smart-cards-jaime-caso"],
-        ["https://keri.foundation/v/sessions/2026/nov/#keri-acdcs-as-openid-connect-roberto-c-morano", "https://keri.foundation/v/sessions/2026/nov/#keri-acdcs-as-openid-connect-roberto-c-morano"]
+        ["Veridian Wallet Recovery with Smart Cards - Jaime Caso", "https://keri.foundation/v/sessions/2026/nov/#veridian-wallet-recovery-with-smart-cards-jaime-caso"],
+        ["KERI ACDCs as OpenID Connect - Roberto C. Morano", "https://keri.foundation/v/sessions/2026/nov/#keri-acdcs-as-openid-connect-roberto-c-morano"],
+        ["keri.one", "https://keri.one/keri-resources/"],
+        ["KERI Foundation", "https://keri.foundation/resources/"],
+        ["KERI Foundation Github", "https://github.com/keri-foundation"],
+        ["Web of Trust Github", "https://github.com/WebOfTrust"],
+        ["ToIP KSWG", "https://lf-toip.atlassian.net/wiki/spaces/HOME/pages/56819755/KERI+Suite+Working+Group"],
+        ["ToIP Github", "https://github.com/orgs/trustoverip/repositories"],
+        ["Samuel Smith papers and presentations", "https://github.com/SmithSamuelM/Papers/tree/master"]
       ]
     }
   ]
