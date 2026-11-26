@@ -152,34 +152,151 @@
             border: 0;
         }
 
-        /* Gallery links. landing-pages writes page.transcriptLinks plus discovered transcript/PDF links; JS refreshes the same list. */
-        .seo-transcript-links {
-            margin: 0 0 10px;
-            padding: 6px 10px;
-            font-size: 1rem;
-            line-height: 1.4;
-            color: var(--muted);
-            opacity: 0.85;
+        /* Unified /v/ navigation (stamped by landing-pages; JS refreshes "This page"). */
+        .v-site-nav {
+            margin: 0 auto 16px;
+            max-width: 1100px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 1px solid color-mix(in srgb, var(--ink) 14%, transparent);
+            box-shadow: 0 2px 10px color-mix(in srgb, var(--ink) 8%, transparent);
         }
 
-        .seo-transcript-links a {
+        .v-site-nav-bar {
+            background: linear-gradient(
+                120deg,
+                var(--accent),
+                color-mix(in srgb, var(--accent) 55%, var(--ink))
+            );
+        }
+
+        .v-site-nav-primary {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: stretch;
+            gap: 2px;
+            padding: 4px 8px;
+        }
+
+        .v-site-nav-primary > a,
+        .v-site-nav-trigger {
+            font: inherit;
+            font-weight: 700;
+            font-size: 0.94rem;
+            color: var(--on-ink);
+            text-decoration: none;
+            padding: 11px 15px;
+            border: 0;
+            background: transparent;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: background 0.15s ease;
+        }
+
+        .v-site-nav-primary > a:hover,
+        .v-site-nav-trigger:hover,
+        .v-site-nav-trigger[aria-expanded="true"] {
+            background: color-mix(in srgb, var(--on-ink) 20%, transparent);
+        }
+
+        .v-site-nav-primary > a[aria-current="page"] {
+            box-shadow: inset 0 -3px 0 color-mix(in srgb, var(--on-ink) 85%, transparent);
+        }
+
+        .v-site-nav-panels {
+            background: var(--panel-bg);
+            border-top: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+        }
+
+        .v-site-nav-panel {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 8px 12px;
+            padding: 12px 16px;
+        }
+
+        .v-site-nav-panel[hidden] {
+            display: none !important;
+        }
+
+        html:not(.js) .v-site-nav-panel[hidden] {
+            display: flex !important;
+        }
+
+        html:not(.js) .v-site-nav-panel + .v-site-nav-panel {
+            border-top: 1px dashed color-mix(in srgb, var(--ink) 12%, transparent);
+        }
+
+        .v-site-nav-link {
+            font-weight: 600;
+            font-size: 0.9rem;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: var(--page-bg);
+            border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+            text-decoration: none;
             color: var(--link);
-            text-decoration: underline;
-            text-underline-offset: 2px;
+            transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
         }
 
-        .seo-transcript-links a:hover {
+        .v-site-nav-link:hover {
+            background: var(--hover);
             color: var(--ink);
         }
 
-        .seo-transcript-links .sep {
-            margin: 0 0.35em;
-            opacity: 0.55;
+        .v-site-nav-link[aria-current="page"] {
+            background: var(--ink);
+            color: var(--on-ink);
+            border-color: var(--ink);
         }
 
-        .gallery-nav {
-            margin-top: 14px;
-            font-size: 0.95rem;
+        .v-site-nav-index {
+            font-weight: 800;
+        }
+
+        .v-site-nav-group-label {
+            flex-basis: 100%;
+            font-size: 0.78rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            color: var(--muted);
+            margin-top: 6px;
+        }
+
+        .v-site-nav-group-label:first-child {
+            margin-top: 0;
+        }
+
+        .v-site-nav-group-label a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .v-site-nav-group-label a:hover {
+            color: var(--ink);
+            text-decoration: underline;
+        }
+
+        .v-site-nav-crumbs {
+            flex-basis: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.88rem;
+            margin-bottom: 2px;
+        }
+
+        .v-site-nav-crumb-sep {
+            opacity: 0.45;
+            color: var(--muted);
+        }
+
+        .v-site-nav-crumb-current {
+            font-weight: 700;
+            color: var(--ink);
         }
 
         .gallery-toolbar {
@@ -2976,8 +3093,17 @@
 
 <body>
     <a class="skip-link" href="#mainContent">Skip to main content</a>
-    <nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Gallery links"><a href="/">Home</a><span class="sep" aria-hidden="true">·</span><a href="/v/">All videos</a><span class="sep" aria-hidden="true">·</span><a href="/v/confs/">Conference index</a><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/">Other videos</a><span class="sep" aria-hidden="true">·</span><a href="transcripts/html/talks/">Talk transcripts</a><span class="sep" aria-hidden="true">·</span><a href="transcripts/html/interviews/">Interview transcripts</a><span class="sep" aria-hidden="true">·</span><a href="transcripts/pdf/talks/KERI-2026-apr-Transcripts.pdf">All Transcripts (PDF)</a></nav>
-    <header id="galleryHeader"><h1><a href="/v/confs/KERI/2026/apr/">KERI Conference April 2026</a></h1><p class="subtitle">A collection of presentations and talks from the KERI community</p><nav class="gallery-nav" aria-label="Related pages"><a href="https://kericonf.com/archive/kericonf26/program/">Conference april 2026 Program</a> | <a href="https://kericonf.com/archive/kericonf26/speakers-2026/">Speakers april 2026</a> | All videos on YouTube: <a href="https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiA4djggbC00LTIuNXYtMy4yTDggMTJ6Ii8+PC9zdmc+" alt="" width="24" height="24" style="vertical-align: middle; margin-right: 5px;">Day 1</a> <a href="https://www.youtube.com/playlist?list=PLnHy2ee5UksMjwBseKJ7ivXiYukRvI65a"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9ImN1cnJlbnRDb2xvciIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiIHN0cm9rZS1saW5lam9pbj0icm91bmQiPjxwYXRoIGQ9Ik0xMiA4djggbC00LTIuNXYtMy4yTDggMTJ6Ii8+PC9zdmc+" alt="" width="24" height="24" style="vertical-align: middle; margin-right: 5px;">Day 2</a></nav></header>
+    <nav class="v-site-nav" id="vSiteNav" aria-label="Video library navigation" data-default-panel="confs">
+    <div class="v-site-nav-bar">
+      <div class="v-site-nav-primary"><a href="/">Home</a><a href="/v/">All videos</a><button type="button" class="v-site-nav-trigger" data-panel="confs" aria-expanded="false" aria-controls="vNavPanelConfs">Conferences</button><button type="button" class="v-site-nav-trigger" data-panel="sessions" aria-expanded="false" aria-controls="vNavPanelSessions">Other videos</button><button type="button" class="v-site-nav-trigger" data-panel="here" aria-expanded="false" aria-controls="vNavPanelHere">This page</button></div>
+    </div>
+    <div class="v-site-nav-panels">
+      <div class="v-site-nav-panel" id="vNavPanelConfs" data-panel="confs" hidden><a class="v-site-nav-link v-site-nav-index" href="/v/confs/">Conference index</a><a class="v-site-nav-link" href="/v/confs/KERI/2026/nov/">KERI Mini Conference November 2026</a><a class="v-site-nav-link" href="/v/confs/SEDI/2026/nov/">State Endorsed Digital Identity Summit (SEDI) 2026</a><a class="v-site-nav-link" href="/v/confs/KERI/2026/apr/" aria-current="page">KERI Conference April 2026</a><a class="v-site-nav-link" href="/v/confs/SEDI/2025/nov/">State Endorsed Digital Identity Summit (SEDI) 2025</a></div>
+      <div class="v-site-nav-panel" id="vNavPanelSessions" data-panel="sessions" hidden><a class="v-site-nav-link v-site-nav-index" href="/v/sessions/">All session videos</a><span class="v-site-nav-group-label"><a href="/v/sessions/2026/">2026</a></span><a class="v-site-nav-link" href="/v/sessions/2026/nov/">November 2026 Videos</a><a class="v-site-nav-link" href="/v/sessions/2026/jul/">July 2026 Videos</a><a class="v-site-nav-link" href="/v/sessions/2026/may/">May 2026 Videos</a><span class="v-site-nav-group-label"><a href="/v/sessions/2024/">2024</a></span><a class="v-site-nav-link" href="/v/sessions/2024/jan/">January 2024 Videos</a><span class="v-site-nav-group-label"><a href="/v/sessions/2020/">2020</a></span><a class="v-site-nav-link" href="/v/sessions/2020/jul/">July 2020 Videos</a></div>
+      <div class="v-site-nav-panel" id="vNavPanelHere" data-panel="here" hidden><div class="v-site-nav-crumbs"><a class="v-site-nav-link" href="/v/">All videos</a><span class="v-site-nav-crumb-sep" aria-hidden="true">›</span><a class="v-site-nav-link" href="/v/confs/">Conferences</a><span class="v-site-nav-crumb-sep" aria-hidden="true">›</span><span class="v-site-nav-crumb-current" aria-current="location">KERI Conference April 2026</span></div><a class="v-site-nav-link" href="transcripts/html/talks/">Talk transcripts</a><a class="v-site-nav-link" href="transcripts/html/interviews/">Interview transcripts</a><a class="v-site-nav-link" href="transcripts/pdf/talks/KERI-2026-apr-Transcripts.pdf">All Transcripts (PDF)</a><a class="v-site-nav-link" href="https://kericonf.com/archive/kericonf26/program/">Conference april 2026 Program</a><a class="v-site-nav-link" href="https://kericonf.com/archive/kericonf26/speakers-2026/">Speakers april 2026</a><a class="v-site-nav-link" href="https://www.youtube.com/playlist?list=PLnHy2ee5UksOfPng7BGEN-XNVupzXpgSL">Day 1</a><a class="v-site-nav-link" href="https://www.youtube.com/playlist?list=PLnHy2ee5UksMjwBseKJ7ivXiYukRvI65a">Day 2</a></div>
+    </div>
+  </nav>
+    <header id="galleryHeader"><h1><a href="/v/confs/KERI/2026/apr/">KERI Conference April 2026</a></h1><p class="subtitle">A collection of presentations and talks from the KERI community</p></header>
 
     <main id="mainContent">
         <div class="featured-media" id="featuredMedia">
@@ -4185,52 +4311,138 @@
             // Stamped by landing-pages from transcripts/html and transcripts/pdf.
             const DISCOVERED_TRANSCRIPT_LINKS = [{"label":"Talk transcripts","href":"transcripts/html/talks/"},{"label":"Interview transcripts","href":"transcripts/html/interviews/"},{"label":"All Transcripts (PDF)","href":"transcripts/pdf/talks/KERI-2026-apr-Transcripts.pdf"}];
 
-            function renderTranscriptLinks(page) {
-                const nav = document.getElementById('seoTranscriptLinks');
-                if (!nav) return;
+            let vSiteNavReady = false;
 
-                nav.replaceChildren();
+            function initVSiteNav() {
+                const nav = document.getElementById('vSiteNav');
+                if (!nav || nav.dataset.vNavInit === 'true') return;
+                nav.dataset.vNavInit = 'true';
+                const triggers = nav.querySelectorAll('.v-site-nav-trigger');
+                const panels = nav.querySelectorAll('.v-site-nav-panel');
+
+                function closeAll() {
+                    triggers.forEach((t) => t.setAttribute('aria-expanded', 'false'));
+                    panels.forEach((p) => { p.hidden = true; });
+                }
+
+                function openPanel(name) {
+                    const panel = nav.querySelector(`.v-site-nav-panel[data-panel="${name}"]`);
+                    const trigger = nav.querySelector(`.v-site-nav-trigger[data-panel="${name}"]`);
+                    if (!panel || !trigger) return;
+                    const wasOpen = trigger.getAttribute('aria-expanded') === 'true';
+                    closeAll();
+                    if (!wasOpen) {
+                        trigger.setAttribute('aria-expanded', 'true');
+                        panel.hidden = false;
+                    }
+                }
+
+                triggers.forEach((trigger) => {
+                    trigger.addEventListener('click', () => openPanel(trigger.dataset.panel));
+                });
+
+                document.addEventListener('click', (event) => {
+                    if (!nav.contains(event.target)) closeAll();
+                });
+
+                document.addEventListener('keydown', (event) => {
+                    if (event.key === 'Escape') closeAll();
+                });
+
+                nav._openVNavPanel = openPanel;
+                nav._closeVNavPanels = closeAll;
+                vSiteNavReady = true;
+
+                const defaultPanel = nav.dataset.defaultPanel;
+                if (defaultPanel) openPanel(defaultPanel);
+            }
+
+            function normalizeUrlPath(path) {
+                return String(path || '').replace(/\/+$/, '') || '/';
+            }
+
+            function appendSiteNavLink(parent, item, pagePath) {
+                const openInNewTab = item.external === true;
+                const a = document.createElement('a');
+                a.className = 'v-site-nav-link';
+                a.href = item.href;
+                a.textContent = item.label;
+                if (openInNewTab) {
+                    a.target = '_blank';
+                    a.rel = 'noopener noreferrer';
+                    const hint = document.createElement('span');
+                    hint.className = 'visually-hidden';
+                    hint.textContent = ' (opens in a new tab)';
+                    a.appendChild(hint);
+                }
+                try {
+                    const itemPath = normalizeUrlPath(new URL(item.href, window.location.href).pathname);
+                    if (itemPath === pagePath) a.setAttribute('aria-current', 'page');
+                } catch {
+                    // Ignore invalid href values from config.
+                }
+                parent.appendChild(a);
+            }
+
+            function updateSiteNavHerePanel(page) {
+                initVSiteNav();
+                const panel = document.getElementById('vNavPanelHere');
+                if (!panel) return;
+
+                const pagePath = normalizeUrlPath(window.location.pathname);
+                panel.querySelectorAll(':scope > .v-site-nav-link').forEach((el) => el.remove());
+
                 const site = SITE_BRAND && Array.isArray(SITE_BRAND.galleryLinks)
                     ? SITE_BRAND.galleryLinks
                     : [];
+                const siteHrefs = new Set(
+                    site
+                        .filter((item) => item && item.href)
+                        .map((item) => String(item.href).trim())
+                );
                 const manual = Array.isArray(page && page.transcriptLinks) ? page.transcriptLinks : [];
                 const discovered = Array.isArray(DISCOVERED_TRANSCRIPT_LINKS)
                     ? DISCOVERED_TRANSCRIPT_LINKS
                     : [];
                 const seen = new Set();
-                const valid = [];
-                for (const item of [...site, ...manual, ...discovered]) {
+                const extras = [];
+                const collect = (item) => {
                     if (
                         !item
                         || typeof item.href !== 'string'
                         || !item.href.trim()
                         || typeof item.label !== 'string'
                         || !item.label.trim()
-                    ) continue;
+                    ) return;
                     const href = item.href.trim();
-                    if (seen.has(href)) continue;
+                    if (seen.has(href)) return;
                     seen.add(href);
-                    valid.push({ label: item.label.trim(), href });
-                }
-                if (!valid.length) {
-                    nav.hidden = true;
-                    return;
+                    if (siteHrefs.has(href)) return;
+                    extras.push({
+                        label: item.label.trim(),
+                        href,
+                        external: item.external === true,
+                    });
+                };
+                for (const item of [...manual, ...discovered]) collect(item);
+
+                const nav = Array.isArray(page && page.nav) ? page.nav : [];
+                for (const item of nav) {
+                    if (!item || !item.href || !item.label) continue;
+                    try {
+                        const itemPath = normalizeUrlPath(new URL(item.href, window.location.href).pathname);
+                        if (itemPath === pagePath) continue;
+                    } catch {
+                        // Ignore invalid href values from config.
+                    }
+                    collect({
+                        label: String(item.label).trim(),
+                        href: String(item.href).trim(),
+                        external: item.external === true,
+                    });
                 }
 
-                valid.forEach((item, i) => {
-                    if (i > 0) {
-                        const sep = document.createElement('span');
-                        sep.className = 'sep';
-                        sep.setAttribute('aria-hidden', 'true');
-                        sep.textContent = '\u00B7';
-                        nav.appendChild(sep);
-                    }
-                    const a = document.createElement('a');
-                    a.href = item.href;
-                    a.textContent = item.label;
-                    nav.appendChild(a);
-                });
-                nav.hidden = false;
+                for (const item of extras) appendSiteNavLink(panel, item, pagePath);
             }
 
             function setMetaContent(selector, content, attr = 'content') {
@@ -4312,7 +4524,8 @@
 
                 applySocialMeta(page, brand);
 
-                renderTranscriptLinks(page);
+                initVSiteNav();
+                updateSiteNavHerePanel(page);
 
                 const header = document.getElementById('galleryHeader');
                 if (header) {
@@ -4324,44 +4537,6 @@
                     }
                     if (page.subtitle) {
                         html += `<p class="subtitle">${escHtml(page.subtitle)}</p>`;
-                    }
-                    const nav = page.nav || [];
-                    if (nav.length) {
-                        const parts = [];
-                        nav.forEach((item, i) => {
-                            const prev = nav[i - 1];
-                            const openInNewTab = item.external === true;
-                            const target = openInNewTab ? ' target="_blank" rel="noopener noreferrer"' : '';
-                            let label = escHtml(item.label || '');
-                            if (item.icon === 'youtube') {
-                                label = `<img src="${YOUTUBE_ICON}" alt="" width="24" height="24" style="vertical-align: middle; margin-right: 5px;">${label}`;
-                            }
-                            const prefix = item.prefix ? `${escHtml(item.prefix)} ` : '';
-                            const newTabHint = openInNewTab
-                                ? ' <span class="visually-hidden">(opens in a new tab)</span>'
-                                : '';
-                            let currentAttr = '';
-                            try {
-                                const itemUrl = new URL(item.href, window.location.href);
-                                const normalize = (path) => path.replace(/\/+$/, '') || '/';
-                                if (normalize(itemUrl.pathname) === normalize(window.location.pathname)) {
-                                    currentAttr = ' aria-current="page"';
-                                }
-                            } catch {
-                                // Ignore invalid href values from config.
-                            }
-                            const link = `${prefix}<a href="${escHtml(item.href)}"${target}${currentAttr}>${label}${newTabHint}</a>`;
-                            if (i === 0) {
-                                parts.push(link);
-                            } else if (item.prefix) {
-                                parts.push(' | ' + link);
-                            } else if (prev && prev.icon === 'youtube' && item.icon === 'youtube') {
-                                parts.push(' ' + link);
-                            } else {
-                                parts.push(' | ' + link);
-                            }
-                        });
-                        html += `<nav class="gallery-nav" aria-label="Related pages">${parts.join('')}</nav>`;
                     }
                     header.innerHTML = html;
                 }
@@ -8632,6 +8807,7 @@
                 await initGallery(config);
             }
 
+            initVSiteNav();
             bootGallery().catch((err) => {
                 console.error(err);
                 const header = document.getElementById('galleryHeader');

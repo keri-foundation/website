@@ -148,8 +148,7 @@ const SUBTITLE_MTIME_MARKER = "/*__DISCOVERED_SUBTITLE_MTIMES__*/{}";
 const TRANSCRIPT_LINKS_MARKER = "/*__DISCOVERED_TRANSCRIPT_LINKS__*/[]";
 const SITE_BRAND_MARKER = "/*__SITE_BRAND__*/ null";
 const BRAND_THEME_RE = /<style id="brand-theme">[\s\S]*?<\/style>/;
-const TRANSCRIPT_NAV_MARKER =
-  '<nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Gallery links" hidden><!--__TRANSCRIPT_LINKS__--></nav>';
+const V_SITE_NAV_MARKER = "<!--__V_SITE_NAV__-->";
 const GALLERY_HEADER_MARKER = "<!--__GALLERY_HEADER__-->";
 const TALK_SUMMARIES_MARKER = "<!--__TALK_SUMMARIES__-->";
 const OVERVIEW_CARDS_MARKER = "<!--__OVERVIEW_CARDS__-->";
@@ -375,25 +374,223 @@ function mergeTranscriptLinks(page, confDir = null, galleryId = null, brand = nu
   return out;
 }
 
-function renderTranscriptNav(links) {
-  const parts = [];
-  links.forEach((item, i) => {
-    if (i > 0) parts.push('<span class="sep" aria-hidden="true">·</span>');
-    parts.push(
-      `<a href="${escapeAttr(item.href)}">${escapeText(item.label)}</a>`
-    );
-  });
-  const hidden = links.length ? "" : " hidden";
-  return `<nav class="seo-transcript-links" id="seoTranscriptLinks" aria-label="Gallery links"${hidden}>${parts.join("")}</nav>`;
+function normalizeUrlPath(path) {
+  return String(path || "").replace(/\/+$/, "") || "/";
 }
 
-function stampTranscriptLinks(html, page, confDir = null, galleryId = null, brand = null) {
-  if (!html.includes(TRANSCRIPT_NAV_MARKER)) {
-    throw new Error("landing-pages: template missing transcript links marker");
+function pathFromPageUrl(pageUrl) {
+  try {
+    return normalizeUrlPath(new URL(pageUrl).pathname);
+  } catch {
+    return "/";
   }
-  const discovered = discoverTranscriptLinks(confDir, galleryId);
+}
+
+function ariaCurrentForHref(href, pageUrl) {
+  try {
+    const itemPath = normalizeUrlPath(new URL(href, pageUrl).pathname);
+    if (itemPath === pathFromPageUrl(pageUrl)) return ' aria-current="page"';
+  } catch {
+    // Ignore invalid href values from config.
+  }
+  return "";
+}
+
+function galleryBreadcrumbs(galleryId, page) {
+  const crumbs = [{ label: "All videos", href: "/v/" }];
+  if (isSessionsGallery(galleryId)) {
+    crumbs.push({ label: "Other videos", href: "/v/sessions/" });
+    const parts = galleryId.split("/");
+    const year = parts[1];
+    if (year) crumbs.push({ label: year, href: `/v/sessions/${year}/` });
+  } else {
+    crumbs.push({ label: "Conferences", href: "/v/confs/" });
+  }
+  const heading = (page && (page.heading || page.title)) || galleryWhen(galleryId);
+  const href = (page && page.headingHref) || `/${galleryPrefix(galleryId)}/`;
+  crumbs.push({ label: heading, href, current: true });
+  return crumbs;
+}
+
+function overviewBreadcrumbs(scope) {
+  const crumbs = [{ label: "All videos", href: "/v/" }];
+  if (scope === "confs") crumbs.push({ label: "Conferences", href: "/v/confs/", current: true });
+  else if (scope === "sessions") crumbs.push({ label: "Other videos", href: "/v/sessions/", current: true });
+  else crumbs[0].current = true;
+  return crumbs;
+}
+
+function defaultNavPanel(pageUrl, galleryId, scope) {
+  if (galleryId) return isSessionsGallery(galleryId) ? "sessions" : "confs";
+  const path = pathFromPageUrl(pageUrl);
+  if (scope === "confs" || path === "/v/confs") return "confs";
+  if (scope === "sessions" || path === "/v/sessions") return "sessions";
+  return "";
+}
+
+function pageNavExtras(page, pageUrl, galleryId, confDir, brand) {
+  const siteHrefs = new Set(siteGalleryLinks(brand).map((item) => item.href.trim()));
   const merged = mergeTranscriptLinks(page, confDir, galleryId, brand);
-  let out = html.replace(TRANSCRIPT_NAV_MARKER, renderTranscriptNav(merged));
+  const extras = merged.filter((item) => !siteHrefs.has(item.href.trim()));
+  const nav = Array.isArray(page?.nav) ? page.nav : [];
+  const pagePath = pathFromPageUrl(pageUrl);
+  for (const item of nav) {
+    if (!item?.href || !item.label) continue;
+    try {
+      const itemPath = normalizeUrlPath(new URL(item.href, pageUrl).pathname);
+      if (itemPath === pagePath) continue;
+    } catch {
+      // Ignore invalid href values from config.
+    }
+    extras.push({
+      label: String(item.label).trim(),
+      href: String(item.href).trim(),
+      external: item.external === true,
+    });
+  }
+  return extras;
+}
+
+function renderPrimaryNavLink(item, pageUrl) {
+  const current = item.current ? ' aria-current="page"' : ariaCurrentForHref(item.href, pageUrl);
+  return `<a href="${escapeAttr(item.href)}"${current}>${escapeText(item.label)}</a>`;
+}
+
+function renderSiteNavLink(item, pageUrl) {
+  const openInNewTab = item.external === true;
+  const target = openInNewTab ? ' target="_blank" rel="noopener noreferrer"' : "";
+  const current = item.current ? ' aria-current="page"' : ariaCurrentForHref(item.href, pageUrl);
+  const hint = openInNewTab
+    ? ' <span class="visually-hidden">(opens in a new tab)</span>'
+    : "";
+  return `<a class="v-site-nav-link" href="${escapeAttr(item.href)}"${target}${current}>${escapeText(item.label)}${hint}</a>`;
+}
+
+function renderSiteNavCrumbs(crumbs, pageUrl) {
+  const parts = [];
+  crumbs.forEach((crumb, i) => {
+    if (i > 0) parts.push('<span class="v-site-nav-crumb-sep" aria-hidden="true">›</span>');
+    if (crumb.current) {
+      parts.push(`<span class="v-site-nav-crumb-current" aria-current="location">${escapeText(crumb.label)}</span>`);
+    } else {
+      parts.push(renderSiteNavLink(crumb, pageUrl));
+    }
+  });
+  return `<div class="v-site-nav-crumbs">${parts.join("")}</div>`;
+}
+
+function renderSessionsPanel(sessions, pageUrl) {
+  const chunks = [
+    `<a class="v-site-nav-link v-site-nav-index" href="/v/sessions/"${ariaCurrentForHref("/v/sessions/", pageUrl)}>All session videos</a>`,
+  ];
+  const byYear = new Map();
+  for (const item of sessions) {
+    const match = String(item.href).match(/\/v\/sessions\/(\d{4})\//);
+    const year = match ? match[1] : "";
+    if (!byYear.has(year)) byYear.set(year, []);
+    byYear.get(year).push(item);
+  }
+  for (const year of [...byYear.keys()].sort((a, b) => Number(b) - Number(a))) {
+    chunks.push(
+      `<span class="v-site-nav-group-label"><a href="/v/sessions/${escapeAttr(year)}/">${escapeText(year)}</a></span>`
+    );
+    for (const item of byYear.get(year)) chunks.push(renderSiteNavLink(item, pageUrl));
+  }
+  return chunks.join("");
+}
+
+function renderSiteNavHtml({ page, pageUrl, galleryId, scope, confs, sessions, pageExtras, defaultPanel }) {
+  const primary = [];
+  primary.push(renderPrimaryNavLink({ label: "Home", href: "/" }, pageUrl));
+  primary.push(renderPrimaryNavLink({ label: "All videos", href: "/v/" }, pageUrl));
+  primary.push(
+    '<button type="button" class="v-site-nav-trigger" data-panel="confs" aria-expanded="false" aria-controls="vNavPanelConfs">Conferences</button>'
+  );
+  primary.push(
+    '<button type="button" class="v-site-nav-trigger" data-panel="sessions" aria-expanded="false" aria-controls="vNavPanelSessions">Other videos</button>'
+  );
+
+  const confsPanel = [
+    `<a class="v-site-nav-link v-site-nav-index" href="/v/confs/"${ariaCurrentForHref("/v/confs/", pageUrl)}>Conference index</a>`,
+    ...confs.map((item) => renderSiteNavLink(item, pageUrl)),
+  ].join("");
+
+  const sessionsPanel = renderSessionsPanel(sessions, pageUrl);
+
+  let herePanel = "";
+  if (galleryId) {
+    herePanel += renderSiteNavCrumbs(galleryBreadcrumbs(galleryId, page), pageUrl);
+  } else if (scope) {
+    herePanel += renderSiteNavCrumbs(overviewBreadcrumbs(scope), pageUrl);
+  }
+  for (const item of pageExtras) herePanel += renderSiteNavLink(item, pageUrl);
+
+  const showHere = !!(galleryId || scope || pageExtras.length);
+  if (showHere) {
+    primary.push(
+      '<button type="button" class="v-site-nav-trigger" data-panel="here" aria-expanded="false" aria-controls="vNavPanelHere">This page</button>'
+    );
+  }
+
+  const defaultAttr = defaultPanel ? ` data-default-panel="${escapeAttr(defaultPanel)}"` : "";
+  const hereBlock = showHere
+    ? `<div class="v-site-nav-panel" id="vNavPanelHere" data-panel="here" hidden>${herePanel}</div>`
+    : "";
+
+  return `<nav class="v-site-nav" id="vSiteNav" aria-label="Video library navigation"${defaultAttr}>
+    <div class="v-site-nav-bar">
+      <div class="v-site-nav-primary">${primary.join("")}</div>
+    </div>
+    <div class="v-site-nav-panels">
+      <div class="v-site-nav-panel" id="vNavPanelConfs" data-panel="confs" hidden>${confsPanel}</div>
+      <div class="v-site-nav-panel" id="vNavPanelSessions" data-panel="sessions" hidden>${sessionsPanel}</div>
+      ${hereBlock}
+    </div>
+  </nav>`;
+}
+
+async function buildSiteNavCatalog() {
+  const ids = await findConferences();
+  const confs = [];
+  const sessions = [];
+  for (const id of ids) {
+    const config = await loadConfig(id);
+    const copy = config.page || {};
+    const label =
+      copy.heading ||
+      copy.title ||
+      (isSessionsGallery(id) ? galleryWhen(id) : `${galleryOrg(id)} ${galleryWhen(id)}`.trim());
+    const entry = { href: `/${galleryPrefix(id)}/`, label, sortKey: gallerySortKey(id) };
+    if (isSessionsGallery(id)) sessions.push(entry);
+    else confs.push(entry);
+  }
+  confs.sort((a, b) => b.sortKey - a.sortKey || a.label.localeCompare(b.label));
+  sessions.sort((a, b) => b.sortKey - a.sortKey || a.label.localeCompare(b.label));
+  return { confs, sessions };
+}
+
+function stampSiteNav(
+  html,
+  { page, pageUrl, galleryId = null, scope = null, confDir = null, brand = null, catalog = null }
+) {
+  if (!html.includes(V_SITE_NAV_MARKER)) {
+    throw new Error("landing-pages: template missing site nav marker");
+  }
+  const cat = catalog || { confs: [], sessions: [] };
+  const extras = pageNavExtras(page, pageUrl, galleryId, confDir, brand);
+  const defaultPanel = defaultNavPanel(pageUrl, galleryId, scope);
+  const navHtml = renderSiteNavHtml({
+    page,
+    pageUrl,
+    galleryId,
+    scope,
+    confs: cat.confs,
+    sessions: cat.sessions,
+    pageExtras: extras,
+    defaultPanel,
+  });
+  let out = html.replace(V_SITE_NAV_MARKER, navHtml);
+  const discovered = confDir && galleryId ? discoverTranscriptLinks(confDir, galleryId) : [];
   if (out.includes(TRANSCRIPT_LINKS_MARKER)) {
     out = out.replace(TRANSCRIPT_LINKS_MARKER, embedJson(discovered));
   }
@@ -410,38 +607,6 @@ function renderGalleryHeader(page, pageUrl) {
   }
   if (page.subtitle) {
     html += `<p class="subtitle">${escHtml(page.subtitle)}</p>`;
-  }
-  const nav = Array.isArray(page.nav) ? page.nav : [];
-  if (nav.length) {
-    const parts = [];
-    const normalize = (path) => path.replace(/\/+$/, "") || "/";
-    const pagePath = normalize(new URL(pageUrl).pathname);
-    nav.forEach((item, i) => {
-      const prev = nav[i - 1];
-      const openInNewTab = item.external === true;
-      const target = openInNewTab ? ' target="_blank" rel="noopener noreferrer"' : "";
-      let label = escHtml(item.label || "");
-      if (item.icon === "youtube") {
-        label = `<img src="${YOUTUBE_ICON}" alt="" width="24" height="24" style="vertical-align: middle; margin-right: 5px;">${label}`;
-      }
-      const prefix = item.prefix ? `${escHtml(item.prefix)} ` : "";
-      const newTabHint = openInNewTab
-        ? ' <span class="visually-hidden">(opens in a new tab)</span>'
-        : "";
-      let currentAttr = "";
-      try {
-        const itemUrl = new URL(item.href, pageUrl);
-        if (normalize(itemUrl.pathname) === pagePath) currentAttr = ' aria-current="page"';
-      } catch {
-        // Ignore invalid href values from config.
-      }
-      const link = `${prefix}<a href="${escHtml(item.href)}"${target}${currentAttr}>${label}${newTabHint}</a>`;
-      if (i === 0) parts.push(link);
-      else if (item.prefix) parts.push(" | " + link);
-      else if (prev && prev.icon === "youtube" && item.icon === "youtube") parts.push(" " + link);
-      else parts.push(" | " + link);
-    });
-    html += `<nav class="gallery-nav" aria-label="Related pages">${parts.join("")}</nav>`;
   }
   return html;
 }
@@ -567,8 +732,8 @@ async function cmdLandingPages(opts) {
   if (!templateHtml.includes(TRANSCRIPT_LINKS_MARKER)) {
     throw new Error("landing-pages: template missing DISCOVERED_TRANSCRIPT_LINKS marker");
   }
-  if (!templateHtml.includes(TRANSCRIPT_NAV_MARKER)) {
-    throw new Error("landing-pages: template missing transcript links marker");
+  if (!templateHtml.includes(V_SITE_NAV_MARKER)) {
+    throw new Error("landing-pages: template missing site nav marker");
   }
   if (!templateHtml.includes(GALLERY_HEADER_MARKER)) {
     throw new Error("landing-pages: template missing gallery header marker");
@@ -578,6 +743,7 @@ async function cmdLandingPages(opts) {
   }
   let updated = 0;
   let unchanged = 0;
+  const navCatalog = await buildSiteNavCatalog();
   for (const id of await selectedConferences(opts)) {
     const config = await loadConfig(id);
     const page = config.page || {};
@@ -591,14 +757,11 @@ async function cmdLandingPages(opts) {
     const mtimeMap = await discoveredSubtitleMtimes(config, confDir);
     const html = stampTalkSummaries(
       stampGalleryHeader(
-        stampTranscriptLinks(
+        stampSiteNav(
           stampLandingMeta(templateHtml, { title, description, url, brand })
             .replace(SUBTITLE_LANG_MARKER, embedJson(langMap))
             .replace(SUBTITLE_MTIME_MARKER, embedJson(mtimeMap)),
-          page,
-          confDir,
-          id,
-          brand
+          { page, pageUrl: url, galleryId: id, confDir, brand, catalog: navCatalog }
         ),
         page,
         url
@@ -788,11 +951,12 @@ async function cmdOverviewPages(opts) {
   if (!templateHtml.includes(OVERVIEW_FOOTER_MARKER)) {
     throw new Error("overview: template missing overview footer marker");
   }
-  if (!templateHtml.includes(TRANSCRIPT_NAV_MARKER)) {
-    throw new Error("overview: template missing transcript links marker");
+  if (!templateHtml.includes(V_SITE_NAV_MARKER)) {
+    throw new Error("overview: template missing site nav marker");
   }
   const scopes = overviewScopesFor(opts);
   const all = await findConferences();
+  const navCatalog = await buildSiteNavCatalog();
   let updated = 0;
   let unchanged = 0;
   for (const page of OVERVIEW_PAGES) {
@@ -828,16 +992,13 @@ async function cmdOverviewPages(opts) {
         countLabel: videoCountLabel(config.videos),
       });
     }
-    const html = stampTranscriptLinks(
+    const html = stampSiteNav(
       stampGalleryHeader(
         stampLandingMeta(templateHtml, { title, description, url, brand }),
         pageCopy,
         url
       ),
-      pageCopy,
-      null,
-      null,
-      brand
+      { page: pageCopy, pageUrl: url, scope: page.scope, brand, catalog: navCatalog }
     )
       .replace(OVERVIEW_INTRO_MARKER, renderOverviewIntro(pageCopy.introduction))
       .replace(OVERVIEW_CARDS_MARKER, renderOverviewCards(cards))
