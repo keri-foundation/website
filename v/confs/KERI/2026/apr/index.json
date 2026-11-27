@@ -46,7 +46,7 @@
     "clips": [
       {
         "videoTitle": "The Future of KERI - Samuel Smith",
-        "speaker": "Samuel Smith",
+        "speaker": "Samuel M. Smith",
         "talk": "The Future of KERI",
         "start": 29,
         "end": 43,
@@ -62,7 +62,7 @@
       },
       {
         "videoTitle": "State of the KERI Suite - Samuel Smith",
-        "speaker": "Samuel Smith",
+        "speaker": "Samuel M. Smith",
         "talk": "State of the KERI Suite",
         "start": 866,
         "end": 883,
@@ -134,7 +134,7 @@
   "transcriptsDir": "transcripts/html",
   "defaultPoster": "https://kericonf.com/wp-content/uploads/2025/11/logo-keri-conference-scaled.png",
   "speakerPhotos": {
-    "Samuel Smith": "/v/assets/Samuel-Smith-icon.jpg",
+    "Samuel M. Smith": "/v/assets/Samuel-Smith-icon.jpg",
     "Phil Feairheller": "https://kericonf.com/wp-content/uploads/2026/01/PhilFeairheller_v1.0-edited.jpeg",
     "Daniel Hardman": "https://kericonf.com/wp-content/uploads/2026/01/DanielHardman_v1.0.png",
     "George McEwan": "https://kericonf.com/wp-content/uploads/2026/01/GeorgeMcEwan_v1.0-scaled.jpg",
@@ -184,7 +184,7 @@
       "day": "KERICONF26 Day 1",
       "title": "State of the KERI Suite - Samuel Smith",
       "speakers": [
-        "Samuel Smith"
+        "Samuel M. Smith"
       ],
       "youtubeId": "S5MRx_fszOI",
       "targetGroups": [
@@ -373,7 +373,7 @@
       "day": "KERICONF26 Day 1",
       "title": "The Digital Identity Tradespace - Samuel Smith",
       "speakers": [
-        "Samuel Smith"
+        "Samuel M. Smith"
       ],
       "youtubeId": "wOVs1m3ju0A",
       "targetGroups": [
@@ -421,7 +421,7 @@
       "day": "KERICONF26 Day 2",
       "title": "The Future of KERI - Samuel Smith",
       "speakers": [
-        "Samuel Smith"
+        "Samuel M. Smith"
       ],
       "youtubeId": "CkLXjabk7xI",
       "targetGroups": [
@@ -627,7 +627,7 @@
       "day": "KERICONF26 Day 2",
       "title": "SPAC & TSP - Samuel Smith",
       "speakers": [
-        "Samuel Smith"
+        "Samuel M. Smith"
       ],
       "youtubeId": "j8gGty1pyvQ",
       "targetGroups": [

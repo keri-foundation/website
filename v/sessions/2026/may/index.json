@@ -36,7 +36,7 @@
   ],
   "transcriptsDir": "transcripts/html",
   "speakerPhotos": {
-    "Samuel Smith": "/v/assets/Samuel-Smith-icon.jpg"
+    "Samuel M. Smith": "/v/assets/Samuel-Smith-icon.jpg"
   },
   "videos": [
     {
@@ -44,7 +44,7 @@
       "day": "May 2026",
       "title": "Introduction to KERI Part 1 - Samuel Smith",
       "speakers": [
-        "Samuel Smith"
+        "Samuel M. Smith"
       ],
       "path": "talks/2026-05-05-Introduction-to-KERI-Part-1-XYohZTh3yEw.mp4",
       "duration": "49:10",

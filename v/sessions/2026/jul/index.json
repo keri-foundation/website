@@ -36,7 +36,7 @@
   ],
   "transcriptsDir": "transcripts/html",
   "speakerPhotos": {
-    "Samuel Smith": "/v/assets/Samuel-Smith-icon.jpg"
+    "Samuel M. Smith": "/v/assets/Samuel-Smith-icon.jpg"
   },
   "videos": [
     {
@@ -44,7 +44,7 @@
       "day": "July 2026",
       "title": "It's KERI or Surveillance - Samuel Smith",
       "speakers": [
-        "Samuel Smith"
+        "Samuel M. Smith"
       ],
       "path": "talks/Its-KERI-or-Surveillance.mp4",
       "duration": "54:25",

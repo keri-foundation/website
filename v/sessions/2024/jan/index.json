@@ -36,7 +36,7 @@
   ],
   "transcriptsDir": "transcripts/html",
   "speakerPhotos": {
-    "Samuel Smith": "/v/assets/Samuel-Smith-icon.jpg"
+    "Samuel M. Smith": "/v/assets/Samuel-Smith-icon.jpg"
   },
   "videos": [
     {
@@ -44,7 +44,7 @@
       "day": "January 2024",
       "title": "Introduction to KERI - Samuel Smith",
       "speakers": [
-        "Samuel Smith"
+        "Samuel M. Smith"
       ],
       "path": "talks/2024-01-02-Introduction-to-KERI-Samuel-M-Smith-yP3eIl4VgA.mp4",
       "duration": "10:57",
