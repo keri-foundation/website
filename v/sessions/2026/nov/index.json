@@ -43,7 +43,9 @@
       "order": 1,
       "day": "November 2026",
       "title": "Veridian Wallet Demos Intro - Karla McKenna",
-      "speaker": "Karla McKenna",
+      "speakers": [
+        "Karla McKenna"
+      ],
       "path": "talks/2026-11-24-16-01-50-KFMCA-Veridian-intro.mp4",
       "duration": "0:38",
       "subtitle": "talks/2026-11-24-16-01-50-KFMCA-Veridian-intro.srt"
@@ -52,7 +54,9 @@
       "order": 2,
       "day": "November 2026",
       "title": "Veridian Wallet Recovery with Smart Cards - Jaime Caso",
-      "speaker": "Jaime Caso",
+      "speakers": [
+        "Jaime Caso"
+      ],
       "path": "talks/2026-11-24-16-01-50-KFMCA-Veridian-part-1.mp4",
       "duration": "19:07",
       "subtitle": "talks/2026-11-24-16-01-50-KFMCA-Veridian-part-1.srt",
@@ -63,7 +67,9 @@
       "order": 3,
       "day": "November 2026",
       "title": "KERI ACDCs as OpenID Connect - Roberto C. Morano",
-      "speaker": "Roberto C. Morano",
+      "speakers": [
+        "Roberto C. Morano"
+      ],
       "path": "talks/2026-11-24-16-01-50-KFMCA-Veridian-part-2.mp4",
       "duration": "21:58",
       "subtitle": "talks/2026-11-24-16-01-50-KFMCA-Veridian-part-2.srt",

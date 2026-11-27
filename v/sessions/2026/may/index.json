@@ -43,7 +43,9 @@
       "order": 1,
       "day": "May 2026",
       "title": "Introduction to KERI Part 1 - Samuel Smith",
-      "speaker": "Samuel Smith",
+      "speakers": [
+        "Samuel Smith"
+      ],
       "path": "talks/2026-05-05-Introduction-to-KERI-Part-1-XYohZTh3yEw.mp4",
       "duration": "49:10",
       "subtitle": "talks/2026-05-05-Introduction-to-KERI-Part-1-XYohZTh3yEw.srt"

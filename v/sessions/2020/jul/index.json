@@ -43,7 +43,9 @@
       "order": 1,
       "day": "July 2020",
       "title": "Nonconformist Keynote - Samuel Smith",
-      "speaker": "Samuel Smith",
+      "speakers": [
+        "Samuel Smith"
+      ],
       "path": "talks/NonconformistKeynoteWeb20200702.mp4",
       "duration": "34:55",
       "subtitle": "talks/NonconformistKeynoteWeb20200702.srt",

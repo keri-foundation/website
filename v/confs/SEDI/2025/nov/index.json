@@ -132,6 +132,9 @@
       "order": 1,
       "day": "Morning Session",
       "title": "Opening - Christopher Bramwell",
+      "speakers": [
+        "Christopher Bramwell"
+      ],
       "path": "talks/morning-00-03-34--00-18-20-Chris-Bramwell.mp4",
       "duration": "14:50",
       "subtitle": "talks/morning-00-03-34--00-18-20-Chris-Bramwell.srt"
@@ -140,6 +143,9 @@
       "order": 2,
       "day": "Morning Session",
       "title": "Ryan Hurst",
+      "speakers": [
+        "Ryan Hurst"
+      ],
       "path": "talks/morning-00-19-05--00-29-15-Ryan-Hurst.mp4",
       "duration": "10:10",
       "subtitle": "talks/morning-00-19-05--00-29-15-Ryan-Hurst.srt"
@@ -148,6 +154,9 @@
       "order": 3,
       "day": "Morning Session",
       "title": "Cindy George",
+      "speakers": [
+        "Cindy George"
+      ],
       "path": "talks/morning-00-31-20--00-55-41-Cindy-George.mp4",
       "duration": "24:21",
       "subtitle": "talks/morning-00-31-20--00-55-41-Cindy-George.srt"
@@ -156,6 +165,9 @@
       "order": 4,
       "day": "Morning Session",
       "title": "Legislative Panel",
+      "speakers": [
+        "Legislative Panel"
+      ],
       "path": "talks/morning-00-59-44--01-29-30-Legislative-Panel.mp4",
       "duration": "29:50",
       "subtitle": "talks/morning-00-59-44--01-29-30-Legislative-Panel.srt"
@@ -164,6 +176,9 @@
       "order": 5,
       "day": "Morning Session",
       "title": "Daniel Hardman",
+      "speakers": [
+        "Daniel Hardman"
+      ],
       "path": "talks/morning-01-30-34--01-41-59-Daniel-Hardman.mp4",
       "duration": "11:29",
       "subtitle": "talks/morning-01-30-34--01-41-59-Daniel-Hardman.srt"
@@ -172,6 +187,9 @@
       "order": 6,
       "day": "Morning Session",
       "title": "Phil Windley",
+      "speakers": [
+        "Phil Windley"
+      ],
       "path": "talks/morning-01-43-00--01-50-14-Phil-Windley.mp4",
       "duration": "7:14",
       "subtitle": "talks/morning-01-43-00--01-50-14-Phil-Windley.srt"
@@ -180,6 +198,9 @@
       "order": 7,
       "day": "Morning Session",
       "title": "Joe Jackson",
+      "speakers": [
+        "Joe Jackson"
+      ],
       "path": "talks/morning-01-50-35--01-58-24-Joe-Jackson.mp4",
       "duration": "7:49",
       "subtitle": "talks/morning-01-50-35--01-58-24-Joe-Jackson.srt"
@@ -188,6 +209,9 @@
       "order": 8,
       "day": "Morning Session",
       "title": "Wayne Chang",
+      "speakers": [
+        "Wayne Chang"
+      ],
       "path": "talks/morning-01-58-29--02-20-59-Wayne-Chang.mp4",
       "duration": "22:34",
       "subtitle": "talks/morning-01-58-29--02-20-59-Wayne-Chang.srt"
@@ -196,6 +220,9 @@
       "order": 9,
       "day": "Morning Session",
       "title": "Paul Cutler",
+      "speakers": [
+        "Paul Cutler"
+      ],
       "path": "talks/morning-02-21-20--02-32-35-Paul-Cutler.mp4",
       "duration": "11:15",
       "subtitle": "talks/morning-02-21-20--02-32-35-Paul-Cutler.srt"
@@ -204,6 +231,9 @@
       "order": 1,
       "day": "Lunch Panel",
       "title": "Jay Stanley",
+      "speakers": [
+        "Jay Stanley"
+      ],
       "path": "talks/lunch-00-20-51--00-32-51-Jay-Stanley.mp4",
       "duration": "12:01",
       "subtitle": "talks/lunch-00-20-51--00-32-51-Jay-Stanley.srt"
@@ -212,6 +242,9 @@
       "order": 2,
       "day": "Lunch Panel",
       "title": "Jason Chipman",
+      "speakers": [
+        "Jason Chipman"
+      ],
       "path": "talks/lunch-00-33-30--00-41-34-Jason-Chipman.mp4",
       "duration": "8:04",
       "subtitle": "talks/lunch-00-33-30--00-41-34-Jason-Chipman.srt"
@@ -220,6 +253,9 @@
       "order": 3,
       "day": "Lunch Panel",
       "title": "Jeremy Grant",
+      "speakers": [
+        "Jeremy Grant"
+      ],
       "path": "talks/lunch-00-41-41--00-48-06-Jeremy-Grant.mp4",
       "duration": "6:26",
       "subtitle": "talks/lunch-00-41-41--00-48-06-Jeremy-Grant.srt"
@@ -228,6 +264,9 @@
       "order": 4,
       "day": "Lunch Panel",
       "title": "Christian Reza",
+      "speakers": [
+        "Christian Reza"
+      ],
       "path": "talks/lunch-00-48-12--00-52-35-Christian-Reza.mp4",
       "duration": "4:25",
       "subtitle": "talks/lunch-00-48-12--00-52-35-Christian-Reza.srt"
@@ -236,6 +275,9 @@
       "order": 5,
       "day": "Lunch Panel",
       "title": "Scott Stornetta",
+      "speakers": [
+        "Scott Stornetta"
+      ],
       "path": "talks/lunch-00-52-44--00-58-51-Scott-Stornetta.mp4",
       "duration": "6:11",
       "subtitle": "talks/lunch-00-52-44--00-58-51-Scott-Stornetta.srt"
@@ -244,6 +286,9 @@
       "order": 1,
       "day": "Afternoon Session",
       "title": "Alan Fuller",
+      "speakers": [
+        "Alan Fuller"
+      ],
       "path": "talks/afternoon-00-10-05--00-16-06-Alan-Fuller.mp4",
       "duration": "6:01",
       "subtitle": "talks/afternoon-00-10-05--00-16-06-Alan-Fuller.srt"
@@ -252,6 +297,9 @@
       "order": 2,
       "day": "Afternoon Session",
       "title": "Scott Perry",
+      "speakers": [
+        "Scott Perry"
+      ],
       "path": "talks/afternoon-00-16-06--00-26-12-Scott-Perry.mp4",
       "duration": "10:07",
       "subtitle": "talks/afternoon-00-16-06--00-26-12-Scott-Perry.srt"
@@ -260,6 +308,9 @@
       "order": 3,
       "day": "Afternoon Session",
       "title": "Timothy Ruff",
+      "speakers": [
+        "Timothy Ruff"
+      ],
       "path": "talks/afternoon-00-26-28--00-44-25-Timothy-Ruff.mp4",
       "duration": "18:00",
       "subtitle": "talks/afternoon-00-26-28--00-44-25-Timothy-Ruff.srt"
@@ -268,6 +319,9 @@
       "order": 4,
       "day": "Afternoon Session",
       "title": "Thomas Mayfield",
+      "speakers": [
+        "Thomas Mayfield"
+      ],
       "path": "talks/afternoon-00-45-26--01-02-47-Thomas-Mayfield.mp4",
       "duration": "17:22",
       "subtitle": "talks/afternoon-00-45-26--01-02-47-Thomas-Mayfield.srt"
@@ -276,6 +330,9 @@
       "order": 5,
       "day": "Afternoon Session",
       "title": "Michael Proper",
+      "speakers": [
+        "Michael Proper"
+      ],
       "path": "talks/afternoon-01-06-53--01-10-02-Utah-Life.mp4",
       "duration": "3:12",
       "subtitle": "talks/afternoon-01-06-53--01-10-02-Utah-Life.srt"
@@ -284,6 +341,9 @@
       "order": 6,
       "day": "Afternoon Session",
       "title": "Steve McCown",
+      "speakers": [
+        "Steve McCown"
+      ],
       "path": "talks/afternoon-01-11-15--01-21-17-Steve-McCown.mp4",
       "duration": "10:02",
       "subtitle": "talks/afternoon-01-11-15--01-21-17-Steve-McCown.srt"
@@ -292,6 +352,9 @@
       "order": 7,
       "day": "Afternoon Session",
       "title": "Simon Wood",
+      "speakers": [
+        "Simon Wood"
+      ],
       "path": "talks/afternoon-01-22-14--01-31-45-Simon-Wood.mp4",
       "duration": "9:35",
       "subtitle": "talks/afternoon-01-22-14--01-31-45-Simon-Wood.srt"
@@ -300,6 +363,9 @@
       "order": 8,
       "day": "Afternoon Session",
       "title": "Closing Q&A - Christopher Bramwell",
+      "speakers": [
+        "Christopher Bramwell"
+      ],
       "path": "talks/afternoon-01-32-08--02-32-06-Chris-Bramwell.mp4",
       "duration": "1:00:01",
       "subtitle": "talks/afternoon-01-32-08--02-32-06-Chris-Bramwell.srt"

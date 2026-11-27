@@ -183,6 +183,9 @@
       "order": 1,
       "day": "KERICONF26 Day 1",
       "title": "State of the KERI Suite - Samuel Smith",
+      "speakers": [
+        "Samuel Smith"
+      ],
       "youtubeId": "S5MRx_fszOI",
       "targetGroups": [
         "developer",
@@ -199,6 +202,9 @@
       "order": 2,
       "day": "KERICONF26 Day 1",
       "title": "Open Verifiable Communications - Daniel Hardman",
+      "speakers": [
+        "Daniel Hardman"
+      ],
       "youtubeId": "ihgVA7M6rZ8",
       "targetGroups": [
         "developer",
@@ -215,6 +221,11 @@
       "order": 3,
       "day": "KERICONF26 Day 1",
       "title": "Provenanting Patient's Medical Records - Scott Stuewe Mark Scrimshire Jared Jeffery",
+      "speakers": [
+        "Scott Stuewe",
+        "Mark Scrimshire",
+        "Jared Jeffery"
+      ],
       "youtubeId": "94xWRH_arug",
       "targetGroups": [
         "developer",
@@ -229,6 +240,9 @@
       "order": 4,
       "day": "KERICONF26 Day 1",
       "title": "The Landscape of SEDI - George McEwan",
+      "speakers": [
+        "George McEwan"
+      ],
       "youtubeId": "Q7YBSwKgtZM",
       "targetGroups": [
         "policymaker",
@@ -244,6 +258,9 @@
       "order": 5,
       "day": "KERICONF26 Day 1",
       "title": "Contract Credentials & Verifiable Identity - Cole Davis",
+      "speakers": [
+        "Cole Davis"
+      ],
       "youtubeId": "s5KrWnV4t3s",
       "targetGroups": [
         "developer",
@@ -258,6 +275,9 @@
       "order": 6,
       "day": "KERICONF26 Day 1",
       "title": "Infrastructure for Security - Phil Feairheller",
+      "speakers": [
+        "Phil Feairheller"
+      ],
       "youtubeId": "MFQLJ2IMnNw",
       "targetGroups": [
         "developer"
@@ -270,6 +290,9 @@
       "order": 7,
       "day": "KERICONF26 Day 1",
       "title": "Open KERI Infrastructure - Jay Alexander Elliot",
+      "speakers": [
+        "Jay Alexander Elliot"
+      ],
       "youtubeId": "bGzi_eza_Yw",
       "targetGroups": [
         "developer"
@@ -286,6 +309,9 @@
       "order": 8,
       "day": "KERICONF26 Day 1",
       "title": "KRAM IT! with Ari - Ari Argoud",
+      "speakers": [
+        "Ari Argoud"
+      ],
       "youtubeId": "sUVD_qdH3XQ",
       "targetGroups": [
         "developer"
@@ -298,6 +324,9 @@
       "order": 9,
       "day": "KERICONF26 Day 1",
       "title": "Signify Security Architecture - Fergal O'Conner",
+      "speakers": [
+        "Fergal O'Conner"
+      ],
       "youtubeId": "XklpffGGvFc",
       "targetGroups": [
         "developer"
@@ -311,6 +340,9 @@
       "order": 10,
       "day": "KERICONF26 Day 1",
       "title": "Witnesses & Watchers - Ryan Hansen",
+      "speakers": [
+        "Ryan Hansen"
+      ],
       "youtubeId": "0-q78pVZnik",
       "targetGroups": [
         "developer"
@@ -323,6 +355,9 @@
       "order": 11,
       "day": "KERICONF26 Day 1",
       "title": "FHIR and CMS - Jared Jefferey",
+      "speakers": [
+        "Jared Jefferey"
+      ],
       "youtubeId": "jYWqcI1KTx0",
       "targetGroups": [
         "developer",
@@ -337,6 +372,9 @@
       "order": 12,
       "day": "KERICONF26 Day 1",
       "title": "The Digital Identity Tradespace - Samuel Smith",
+      "speakers": [
+        "Samuel Smith"
+      ],
       "youtubeId": "wOVs1m3ju0A",
       "targetGroups": [
         "developer",
@@ -350,6 +388,9 @@
       "order": 13,
       "day": "KERICONF26 Day 1",
       "title": "KERIA Tutorial - Kent Bull",
+      "speakers": [
+        "Kent Bull"
+      ],
       "youtubeId": "pyUfe8uB3As",
       "targetGroups": [
         "developer"
@@ -363,6 +404,9 @@
       "order": 14,
       "day": "KERICONF26 Day 1",
       "title": "How KERI Enables Better Private-Public Partnerships - George McEwan",
+      "speakers": [
+        "George McEwan"
+      ],
       "youtubeId": "OU8fdXKVpJA",
       "targetGroups": [
         "policymaker",
@@ -376,6 +420,9 @@
       "order": 1,
       "day": "KERICONF26 Day 2",
       "title": "The Future of KERI - Samuel Smith",
+      "speakers": [
+        "Samuel Smith"
+      ],
       "youtubeId": "CkLXjabk7xI",
       "targetGroups": [
         "developer",
@@ -390,6 +437,9 @@
       "order": 2,
       "day": "KERICONF26 Day 2",
       "title": "ACDCs for Authorization - Phil Feairheller",
+      "speakers": [
+        "Phil Feairheller"
+      ],
       "youtubeId": "rgDwzABvO6U",
       "targetGroups": [
         "developer",
@@ -404,6 +454,9 @@
       "order": 3,
       "day": "KERICONF26 Day 2",
       "title": "KERI Infrastructure & the 5 W's - Thomas Mayfield",
+      "speakers": [
+        "Thomas Mayfield"
+      ],
       "youtubeId": "mhZnlQRWfTM",
       "targetGroups": [
         "developer",
@@ -418,6 +471,9 @@
       "order": 4,
       "day": "KERICONF26 Day 2",
       "title": "ACDCs for Enterprises - Alan Davies",
+      "speakers": [
+        "Alan Davies"
+      ],
       "youtubeId": "EVqNPLRfeg8",
       "targetGroups": [
         "developer",
@@ -433,6 +489,9 @@
       "order": 5,
       "day": "KERICONF26 Day 2",
       "title": "KERI Bridge to the DID World - Jonathan Rayback",
+      "speakers": [
+        "Jonathan Rayback"
+      ],
       "youtubeId": "y8ITm9lwIiI",
       "targetGroups": [
         "developer"
@@ -446,6 +505,9 @@
       "order": 6,
       "day": "KERICONF26 Day 2",
       "title": "Mobile Wallet - Evan Asakawa",
+      "speakers": [
+        "Evan Asakawa"
+      ],
       "youtubeId": "tWsLnm3GQBo",
       "targetGroups": [
         "developer"
@@ -459,6 +521,9 @@
       "order": 7,
       "day": "KERICONF26 Day 2",
       "title": "Digital Identity Needs a Legal Foundation - Phil Windley",
+      "speakers": [
+        "Phil Windley"
+      ],
       "youtubeId": "AirKxtdYAIo",
       "targetGroups": [
         "policymaker",
@@ -476,6 +541,9 @@
       "order": 8,
       "day": "KERICONF26 Day 2",
       "title": "KERIpy Async Architecture - Kent Bull",
+      "speakers": [
+        "Kent Bull"
+      ],
       "youtubeId": "TVrYxqw1YiQ",
       "targetGroups": [
         "developer"
@@ -493,6 +561,9 @@
       "order": 9,
       "day": "KERICONF26 Day 2",
       "title": "Secure Asset Transfer Protocol - Ned Smith",
+      "speakers": [
+        "Ned Smith"
+      ],
       "youtubeId": "y4GNshSUBDM",
       "targetGroups": [
         "developer",
@@ -506,6 +577,9 @@
       "order": 10,
       "day": "KERICONF26 Day 2",
       "title": "Investigating the Game of Trust - Nicholas Racz",
+      "speakers": [
+        "Nicholas Racz"
+      ],
       "youtubeId": "innX3p-RcTA",
       "targetGroups": [
         "policymaker",
@@ -519,6 +593,9 @@
       "order": 11,
       "day": "KERICONF26 Day 2",
       "title": "Applying KERI to General Evidence Problems - Daniel Hardman",
+      "speakers": [
+        "Daniel Hardman"
+      ],
       "youtubeId": "XDs9-9SXcwk",
       "targetGroups": [
         "developer",
@@ -533,6 +610,9 @@
       "order": 12,
       "day": "KERICONF26 Day 2",
       "title": "KERI Development & Deployment - Keanu Pahio",
+      "speakers": [
+        "Keanu Pahio"
+      ],
       "youtubeId": "NIE37MChKQc",
       "targetGroups": [
         "developer"
@@ -546,6 +626,9 @@
       "order": 13,
       "day": "KERICONF26 Day 2",
       "title": "SPAC & TSP - Samuel Smith",
+      "speakers": [
+        "Samuel Smith"
+      ],
       "youtubeId": "j8gGty1pyvQ",
       "targetGroups": [
         "developer",
@@ -561,6 +644,9 @@
       "order": 14,
       "day": "KERICONF26 Day 2",
       "title": "KERIA & Signify Path to Production - Fergal O'Connor",
+      "speakers": [
+        "Fergal O'Connor"
+      ],
       "youtubeId": "Dcld6UO2ocA",
       "targetGroups": [
         "developer"
@@ -574,6 +660,9 @@
       "order": 15,
       "day": "KERICONF26 Day 2",
       "title": "What KERI allows us to do that we couldn't before - Ryan Hansen Panel",
+      "speakers": [
+        "Ryan Hansen"
+      ],
       "youtubeId": "CSC0QNh2pzc",
       "targetGroups": [
         "developer",
@@ -588,6 +677,9 @@
       "order": 1,
       "day": "KERICONF26 Interviews",
       "title": "Interview - Ari Argoud",
+      "speakers": [
+        "Ari Argoud"
+      ],
       "targetGroups": [
         "developer",
         "policymaker"
@@ -600,6 +692,9 @@
       "order": 2,
       "day": "KERICONF26 Interviews",
       "title": "Interview - Cole Davis",
+      "speakers": [
+        "Cole Davis"
+      ],
       "targetGroups": [
         "developer",
         "legal-professional"
@@ -612,6 +707,9 @@
       "order": 3,
       "day": "KERICONF26 Interviews",
       "title": "Interview - Daniel Hardman",
+      "speakers": [
+        "Daniel Hardman"
+      ],
       "targetGroups": [
         "policymaker",
         "legal-professional",
@@ -625,6 +723,9 @@
       "order": 4,
       "day": "KERICONF26 Interviews",
       "title": "Interview - Fergal O'Connor",
+      "speakers": [
+        "Fergal O'Connor"
+      ],
       "targetGroups": [
         "developer"
       ],
@@ -636,6 +737,9 @@
       "order": 5,
       "day": "KERICONF26 Interviews",
       "title": "Interview - Jared Jefferey",
+      "speakers": [
+        "Jared Jefferey"
+      ],
       "targetGroups": [
         "developer",
         "policymaker"
@@ -648,6 +752,9 @@
       "order": 6,
       "day": "KERICONF26 Interviews",
       "title": "Interview - Jonathan Rayback",
+      "speakers": [
+        "Jonathan Rayback"
+      ],
       "targetGroups": [
         "developer"
       ],
@@ -659,6 +766,9 @@
       "order": 7,
       "day": "KERICONF26 Interviews",
       "title": "Interview - Keanu Pahio",
+      "speakers": [
+        "Keanu Pahio"
+      ],
       "targetGroups": [
         "developer"
       ],
@@ -670,6 +780,9 @@
       "order": 8,
       "day": "KERICONF26 Interviews",
       "title": "Interview - Kent Bull",
+      "speakers": [
+        "Kent Bull"
+      ],
       "targetGroups": [
         "developer"
       ],
@@ -681,6 +794,9 @@
       "order": 9,
       "day": "KERICONF26 Interviews",
       "title": "Interview - Ned Smith",
+      "speakers": [
+        "Ned Smith"
+      ],
       "targetGroups": [
         "developer",
         "legal-professional"
@@ -693,6 +809,9 @@
       "order": 10,
       "day": "KERICONF26 Interviews",
       "title": "Interview - Nicholas Racz",
+      "speakers": [
+        "Nicholas Racz"
+      ],
       "targetGroups": [
         "policymaker"
       ],
@@ -704,6 +823,9 @@
       "order": 11,
       "day": "KERICONF26 Interviews",
       "title": "Interview - Phil Feairheller",
+      "speakers": [
+        "Phil Feairheller"
+      ],
       "targetGroups": [
         "developer",
         "policymaker"
@@ -716,6 +838,9 @@
       "order": 12,
       "day": "KERICONF26 Interviews",
       "title": "Interview - Phil Windley",
+      "speakers": [
+        "Phil Windley"
+      ],
       "targetGroups": [
         "policymaker",
         "legal-professional",
@@ -729,6 +854,9 @@
       "order": 13,
       "day": "KERICONF26 Interviews",
       "title": "Interview - Ryan Hansen",
+      "speakers": [
+        "Ryan Hansen"
+      ],
       "targetGroups": [
         "developer"
       ],

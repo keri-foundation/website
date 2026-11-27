@@ -146,6 +146,9 @@
       "order": 1,
       "day": "Mini Conference nov 2026",
       "title": "Samuel M. Smith: The state and the future of the KERI Suite",
+      "speakers": [
+        "Samuel M. Smith"
+      ],
       "youtubeId": "KMieUSLQ4WA",
       "targetGroups": [
         "developer",
@@ -183,6 +186,10 @@
       "order": 6,
       "day": "Mini Conference nov 2026",
       "title": "Ryan Hansen & Samuel M. Smith –  Open infrastructure for KERI-based digital identity",
+      "speakers": [
+        "Ryan Hansen",
+        "Samuel M. Smith"
+      ],
       "youtubeId": "Rkw1eMqAqCY",
       "targetGroups": [
         "developer",
@@ -220,6 +227,9 @@
       "order": 3,
       "day": "Mini Conference nov 2026",
       "title": "Kent Bull – did:webs, why the ‘s’ matters most",
+      "speakers": [
+        "Kent Bull"
+      ],
       "youtubeId": "u7Np4oU2LLM",
       "targetGroups": [
         "developer"
@@ -256,6 +266,9 @@
       "order": 4,
       "day": "Mini Conference nov 2026",
       "title": "Samuel M. Smith – Utah SEDI Public Identity Utility as bootstrap for AI Agent Surveillance Protection with KERI",
+      "speakers": [
+        "Samuel M. Smith"
+      ],
       "youtubeId": "96k4Is9xmMM",
       "targetGroups": [
         "developer",
@@ -295,6 +308,10 @@
       "order": 5,
       "day": "Mini Conference nov 2026",
       "title": "Ryan Hansen & Evan Asakawa – Demonstration KERISuite",
+      "speakers": [
+        "Ryan Hansen",
+        "Evan Asakawa"
+      ],
       "youtubeId": "BKCFwTMDQic",
       "targetGroups": [
         "developer"
@@ -333,6 +350,10 @@
       "order": 2,
       "day": "Mini Conference nov 2026",
       "title": "Samuel M. Smith & Ryan Hansen – Progress report: The 5W’s of KERI: Witnesses, Watchers, Wallet, Web, and Wizard PLUS Bulk issuances and anchoring in Merkle Trees",
+      "speakers": [
+        "Samuel M. Smith",
+        "Ryan Hansen"
+      ],
       "youtubeId": "IUU4BOt4wWo",
       "targetGroups": [
         "developer",

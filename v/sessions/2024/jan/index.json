@@ -43,7 +43,9 @@
       "order": 1,
       "day": "January 2024",
       "title": "Introduction to KERI - Samuel Smith",
-      "speaker": "Samuel Smith",
+      "speakers": [
+        "Samuel Smith"
+      ],
       "path": "talks/2024-01-02-Introduction-to-KERI-Samuel-M-Smith-yP3eIl4VgA.mp4",
       "duration": "10:57",
       "subtitle": "talks/2024-01-02-Introduction-to-KERI-Samuel-M-Smith-yP3eIl4VgA.srt"

@@ -60,7 +60,7 @@
       "day": "Day 1",
       "title": "Talk Title - Speaker Name",
       "youtubeId": "YOUTUBE_VIDEO_ID",
-      "speaker": "Speaker Name",
+      "speakers": ["Speaker Name"],
       "path": "talks/Speaker-Name-Talk-Title.mp4",
       "duration": "20:00",
       "subtitle": "talks/Speaker-Name-Talk-Title.srt",
@@ -89,7 +89,7 @@
       "day": "Interviews",
       "title": "Interview - Speaker Name",
       "youtubeId": "YOUTUBE_VIDEO_ID",
-      "speaker": "Speaker Name",
+      "speakers": ["Speaker Name"],
       "path": "interviews/Speaker-Name-Interview.mp4",
       "duration": "1:30",
       "subtitle": "interviews/Speaker-Name-Interview.srt"
