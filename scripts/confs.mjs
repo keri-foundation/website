@@ -43,8 +43,9 @@
  *                 and v/sessions/index.html from
  *                 template-presentations-landingpage/overview.html, using each
  *                 overview.json for page copy and each gallery index.json
- *                 for the cards. --conf limits which tree overview is rewritten
- *                 (v/index.html is always rewritten).
+ *                 for the cards and the talk inventory. Talk links are the
+ *                 existing gallery URL plus the title hash. --conf limits which
+ *                 tree overview is rewritten (v/index.html is always rewritten).
  * sync-subtitles  Copy curated .srt files from the source folders listed in
  *                 scripts/subtitle-sources.tsv into the conference folders. Only
  *                 subtitles referenced by that conference's index.json are copied
@@ -153,7 +154,23 @@ const GALLERY_HEADER_MARKER = "<!--__GALLERY_HEADER__-->";
 const TALK_SUMMARIES_MARKER = "<!--__TALK_SUMMARIES__-->";
 const OVERVIEW_CARDS_MARKER = "<!--__OVERVIEW_CARDS__-->";
 const OVERVIEW_INTRO_MARKER = "<!--__OVERVIEW_INTRO__-->";
+const OVERVIEW_CATALOG_MARKER = "<!--__OVERVIEW_CATALOG__-->";
+const OVERVIEW_EVENTS_HEADING_MARKER = "<!--__OVERVIEW_EVENTS_HEADING__-->";
 const OVERVIEW_FOOTER_MARKER = "<!--__OVERVIEW_FOOTER__-->";
+const SPEAKER_NOISE = new Set([
+  "panel",
+  "panels",
+  "interview",
+  "keynote",
+  "talk",
+  "talks",
+  "session",
+  "opening",
+  "closing",
+  "q&a",
+  "qa",
+  "moderator",
+]);
 const MONTH_INDEX = {
   jan: 1,
   feb: 2,
@@ -973,8 +990,9 @@ function galleryPosterUrl(config, id) {
   }
   const photos = config.speakerPhotos && typeof config.speakerPhotos === "object" ? config.speakerPhotos : {};
   for (const video of config.videos || []) {
-    const name = video && video.speaker;
-    if (name && photos[name]) candidates.push(photos[name]);
+    for (const name of explicitSpeakerList(video)) {
+      if (photos[name]) candidates.push(photos[name]);
+    }
   }
   for (const raw of candidates) {
     const value = String(raw || "").trim();
@@ -986,6 +1004,319 @@ function galleryPosterUrl(config, id) {
     return `/${galleryPrefix(id)}/${rel}`;
   }
   return "";
+}
+
+function normName(value) {
+  return String(value || "")
+    .toLowerCase()
+    .replace(/[’‘]/g, "'")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function monthName(month) {
+  const key = Object.keys(MONTH_INDEX).find((name) => MONTH_INDEX[name] === month);
+  return key ? MONTH_NAME[key] : "";
+}
+
+/** Calendar day from a media basename, when it starts with a real date in this gallery's month. */
+function preciseDay(path, year, month) {
+  const base = String(path || "").split("/").pop() || "";
+  const iso = base.match(/(20\d{2})-(\d{2})-(\d{2})/);
+  const compact = !iso && base.match(/(20\d{2})(\d{2})(\d{2})/);
+  const hit = iso || compact;
+  if (!hit) return 0;
+  const y = Number(hit[1]);
+  const m = Number(hit[2]);
+  const d = Number(hit[3]);
+  if (y !== year || m !== month || d < 1 || d > 31) return 0;
+  return d;
+}
+
+function videoKind(path) {
+  const value = String(path || "");
+  if (value.startsWith("interviews/")) return "interview";
+  if (value.startsWith("talks/")) return "talk";
+  return "video";
+}
+
+/**
+ * Speaker text from a title. This corpus uses two conventions:
+ * `Title - Speaker` (hyphen) and `Speaker – Title` (en dash or em dash).
+ * `videos[].speakers` wins. A legacy `videos[].speaker` string, then a matching
+ * top clip, still fill in when `speakers` is absent.
+ */
+function speakerCandidate(title) {
+  const text = String(title || "").replace(/\s+/g, " ").trim();
+  if (!text) return "";
+  const interview = text.match(/^interview\s*[-–—:]\s*(.+)$/i);
+  if (interview) return interview[1].trim();
+  const dashed = text.split(/\s[–—]\s/);
+  if (dashed.length > 1) return dashed[0].trim();
+  const hyphens = text.split(" - ");
+  if (hyphens.length > 1) return hyphens[hyphens.length - 1].trim();
+  const colon = text.indexOf(": ");
+  if (colon > 0) {
+    const before = text.slice(0, colon).trim();
+    if (before.length <= 80 && before.split(/\s+/).length <= 8) return before;
+  }
+  return text;
+}
+
+function knownSpeakerNames(config) {
+  const names = new Set();
+  const add = (value) => {
+    const name = String(value || "").replace(/\s+/g, " ").trim();
+    if (name) names.add(name);
+  };
+  const photos = config.speakerPhotos && typeof config.speakerPhotos === "object" ? config.speakerPhotos : {};
+  for (const name of Object.keys(photos)) add(name);
+  const clips = config.topClips && Array.isArray(config.topClips.clips) ? config.topClips.clips : [];
+  for (const clip of clips) add(clip?.speaker);
+  for (const video of config.videos || []) {
+    for (const name of explicitSpeakerList(video)) add(name);
+  }
+  return [...names];
+}
+
+/** People credited on a video. `speakers` is the field; `speaker` is the old string. */
+function explicitSpeakerList(video) {
+  if (Array.isArray(video?.speakers)) {
+    return video.speakers.map((name) => String(name || "").replace(/\s+/g, " ").trim()).filter(Boolean);
+  }
+  const one = String(video?.speaker || "").replace(/\s+/g, " ").trim();
+  return one ? [one] : [];
+}
+
+function clipSpeakerByTitle(config) {
+  const map = new Map();
+  const clips = config.topClips && Array.isArray(config.topClips.clips) ? config.topClips.clips : [];
+  for (const clip of clips) {
+    const title = String(clip?.videoTitle || "").trim();
+    const speaker = String(clip?.speaker || "").replace(/\s+/g, " ").trim();
+    if (title && speaker && !map.has(title)) map.set(title, speaker);
+  }
+  return map;
+}
+
+/** Split a speaker credit into people, using known names when several share one credit. */
+function peopleIn(raw, knownNames) {
+  const text = String(raw || "").replace(/\s+/g, " ").trim();
+  if (!text) return [];
+  const split = text.split(/\s+(?:&|and)\s+|,\s+/i).map((part) => part.trim()).filter(Boolean);
+  if (split.length > 1) return split.flatMap((part) => peopleIn(part, knownNames));
+  const hits = [];
+  const lower = normName(text);
+  const used = [];
+  const names = [...knownNames].filter(Boolean).sort((a, b) => b.length - a.length);
+  for (const name of names) {
+    const needle = normName(name);
+    if (needle.length < 3) continue;
+    const idx = lower.indexOf(needle);
+    if (idx < 0) continue;
+    const end = idx + needle.length;
+    if (used.some(([start, stop]) => idx < stop && end > start)) continue;
+    hits.push({ name, idx });
+    used.push([idx, end]);
+  }
+  if (!hits.length) return [text];
+  hits.sort((a, b) => a.idx - b.idx);
+  let rest = lower;
+  for (const hit of [...hits].sort((a, b) => normName(b.name).length - normName(a.name).length)) {
+    rest = rest.replace(normName(hit.name), " ");
+  }
+  const leftover = rest.split(/[^a-z0-9&]+/).filter((word) => word && !SPEAKER_NOISE.has(word));
+  if (leftover.length) return [text];
+  return hits.map((hit) => hit.name);
+}
+
+function speakersFor(video, config, clips) {
+  const known = knownSpeakerNames(config);
+  const explicit = explicitSpeakerList(video);
+  if (explicit.length) return explicit.flatMap((name) => peopleIn(name, known));
+  const fromClip = clips.get(String(video?.title || "").trim()) || "";
+  return peopleIn(fromClip || speakerCandidate(video?.title), known);
+}
+
+function galleryYearMonth(id) {
+  const parts = id.split("/");
+  const year = Number(parts[1]);
+  const month = MONTH_INDEX[String(parts[2] || "").toLowerCase()] || 0;
+  return {
+    year,
+    month,
+    whenKey: year * 100 + month,
+    whenLabel: galleryWhen(id),
+  };
+}
+
+/** Program label such as "Day 1" or "Morning Session". Skip labels that only restate the date. */
+function programDay(day) {
+  const value = String(day || "").trim();
+  if (!value || /\b20\d{2}\b/.test(value)) return "";
+  return value;
+}
+
+function talksForGallery(config, id) {
+  const { year, month, whenKey, whenLabel } = galleryYearMonth(id);
+  const event = String(config.page?.heading || config.page?.title || id).trim();
+  const href = `/${galleryPrefix(id)}/`;
+  const clips = clipSpeakerByTitle(config);
+  const videos = Array.isArray(config.videos) ? config.videos : [];
+  const items = [];
+  videos.forEach((video, seq) => {
+    const title = String(video?.title || "").trim();
+    if (!title) return;
+    const speakers = speakersFor(video, config, clips);
+    const dayNum = preciseDay(video?.path, year, month);
+    const monthLabel = monthName(month);
+    const dateLabel = dayNum ? `${dayNum} ${monthLabel} ${year}` : whenLabel;
+    const session = programDay(video?.day);
+    const kind = videoKind(video?.path);
+    items.push({
+      title,
+      speakers,
+      event,
+      eventId: id,
+      href,
+      talkHref: `${href}#${generateVideoId(title)}`,
+      whenKey,
+      whenValue: `${year}-${String(month).padStart(2, "0")}`,
+      whenLabel,
+      dayNum,
+      dateLabel,
+      session,
+      kind,
+      duration: String(video?.duration || "").trim(),
+      order: Number(video?.order) || seq + 1,
+      seq,
+    });
+  });
+  return items;
+}
+
+function catalogHeading(items) {
+  const interviews = items.some((item) => item.kind === "interview");
+  const talks = items.some((item) => item.kind !== "interview");
+  if (interviews && talks) return "All talks and interviews";
+  if (interviews) return "All interviews";
+  return "All talks";
+}
+
+function optionList(entries) {
+  return entries
+    .map(
+      ([value, label]) =>
+        `                        <option value="${escapeAttr(value)}">${escapeText(label)}</option>`
+    )
+    .join("\n");
+}
+
+function renderTalkRow(item) {
+  const speakerLabel = item.speakers.join(" & ");
+  const showSpeaker = speakerLabel && normName(speakerLabel) !== normName(item.title);
+  const search = [item.title, speakerLabel, item.event, item.dateLabel, item.session, item.whenLabel, item.kind, item.duration]
+    .join(" ")
+    .toLowerCase();
+  const speakerHtml = showSpeaker
+    ? `<span class="talk-row-speaker">${escapeText(speakerLabel)}</span><span class="sep" aria-hidden="true">·</span>`
+    : "";
+  const sessionHtml = item.session
+    ? `<span class="sep" aria-hidden="true">·</span><span>${escapeText(item.session)}</span>`
+    : "";
+  const kindHtml = item.kind === "interview" ? `<span class="talk-row-kind">Interview</span>` : "";
+  const durationHtml = item.duration
+    ? `<span class="talk-row-duration">${escapeText(item.duration)}</span>`
+    : "";
+  return `                <li class="talk-row" data-speakers="${escapeAttr(item.speakers.join("|"))}" data-event="${escapeAttr(item.eventId)}" data-when="${escapeAttr(item.whenValue)}" data-kind="${escapeAttr(item.kind)}" data-search="${escapeAttr(search)}">
+                    <a class="talk-row-title" href="${escapeAttr(item.talkHref)}">${escapeText(item.title)}</a>
+                    <p class="talk-row-meta">${speakerHtml}<a href="${escapeAttr(item.href)}">${escapeText(item.event)}</a><span class="sep" aria-hidden="true">·</span><span>${escapeText(item.dateLabel)}</span>${sessionHtml}${kindHtml}${durationHtml}</p>
+                </li>`;
+}
+
+function renderTalkCatalog(items) {
+  if (!items.length) return "";
+  const speakers = [...new Set(items.flatMap((item) => item.speakers))]
+    .filter(Boolean)
+    .sort((a, b) => a.localeCompare(b, "en", { sensitivity: "base" }));
+  const events = [];
+  const seenEvents = new Set();
+  for (const item of items) {
+    if (seenEvents.has(item.eventId)) continue;
+    seenEvents.add(item.eventId);
+    events.push([item.eventId, item.event]);
+  }
+  const dates = [];
+  const seenDates = new Set();
+  const dated = [...items].sort((a, b) => b.whenKey - a.whenKey);
+  for (const item of dated) {
+    if (!item.whenValue || seenDates.has(item.whenValue)) continue;
+    seenDates.add(item.whenValue);
+    dates.push([item.whenValue, item.whenLabel]);
+  }
+  const kinds = [...new Set(items.map((item) => item.kind))];
+  const kindOptions = [
+    kinds.includes("talk") ? ["talk", "Talks"] : null,
+    kinds.includes("interview") ? ["interview", "Interviews"] : null,
+    kinds.includes("video") ? ["video", "Other videos"] : null,
+  ].filter(Boolean);
+  const kindField =
+    kindOptions.length > 1
+      ? `
+                    <div class="talk-filter">
+                        <label for="talkKind">Kind</label>
+                        <select id="talkKind" name="kind">
+                        <option value="">All</option>
+${optionList(kindOptions)}
+                        </select>
+                    </div>`
+      : "";
+  const count = items.length === 1 ? "1 video" : `${items.length} videos`;
+  return `            <section class="talk-catalog" id="talkCatalog" aria-labelledby="talkCatalogHeading">
+                <h2 class="overview-section-title" id="talkCatalogHeading">${escapeText(catalogHeading(items))}</h2>
+                <p class="talk-catalog-hint">Filter by title, speaker, event, or date. A title opens that talk on its existing page.</p>
+                <search class="talk-filters${kindField ? " has-kind" : ""}" aria-label="Filter talks">
+                    <div class="talk-filter talk-filter-query">
+                        <label for="talkQuery">Title</label>
+                        <input type="search" id="talkQuery" name="q" placeholder="Search titles…" autocomplete="off" spellcheck="false" enterkeyhint="search">
+                    </div>
+                    <div class="talk-filter">
+                        <label for="talkSpeaker">Speaker</label>
+                        <select id="talkSpeaker" name="speaker">
+                        <option value="">All speakers</option>
+${optionList(speakers.map((name) => [name, name]))}
+                        </select>
+                    </div>
+                    <div class="talk-filter">
+                        <label for="talkEvent">Event</label>
+                        <select id="talkEvent" name="event">
+                        <option value="">All events</option>
+${optionList(events)}
+                        </select>
+                    </div>
+                    <div class="talk-filter">
+                        <label for="talkDate">Date</label>
+                        <select id="talkDate" name="date">
+                        <option value="">All dates</option>
+${optionList(dates)}
+                        </select>
+                    </div>${kindField}
+                </search>
+                <div class="talk-catalog-tools">
+                    <p class="talk-catalog-status" id="talkCatalogStatus" role="status" aria-live="polite">${count}</p>
+                    <button type="button" class="talk-filters-clear" id="talkFiltersClear">Clear filters</button>
+                </div>
+                <ol class="talk-list">
+${items.map(renderTalkRow).join("\n")}
+                </ol>
+                <p class="talk-empty" id="talkEmpty" hidden>No talks match these filters.</p>
+            </section>
+`;
+}
+
+function renderEventsHeading(catalogHtml) {
+  if (!catalogHtml) return "";
+  return `                <h2 class="overview-section-title" id="eventsHeading">Events</h2>\n`;
 }
 
 function renderOverviewCard(card) {
@@ -1037,6 +1368,12 @@ async function cmdOverviewPages(opts) {
   if (!templateHtml.includes(OVERVIEW_INTRO_MARKER)) {
     throw new Error("overview: template missing overview intro marker");
   }
+  if (!templateHtml.includes(OVERVIEW_CATALOG_MARKER)) {
+    throw new Error("overview: template missing overview catalog marker");
+  }
+  if (!templateHtml.includes(OVERVIEW_EVENTS_HEADING_MARKER)) {
+    throw new Error("overview: template missing overview events heading marker");
+  }
   if (!templateHtml.includes(OVERVIEW_FOOTER_MARKER)) {
     throw new Error("overview: template missing overview footer marker");
   }
@@ -1066,6 +1403,7 @@ async function cmdOverviewPages(opts) {
     const ids = all.filter((id) => inOverviewScope(page.scope, id));
     ids.sort((a, b) => gallerySortKey(b) - gallerySortKey(a) || a.localeCompare(b));
     const cards = [];
+    const talks = [];
     for (const id of ids) {
       const config = await loadConfig(id);
       const copy = config.page || {};
@@ -1080,7 +1418,18 @@ async function cmdOverviewPages(opts) {
         when: galleryWhen(id),
         countLabel: videoCountLabel(config.videos),
       });
+      talks.push(...talksForGallery(config, id));
     }
+    talks.sort(
+      (a, b) =>
+        b.whenKey - a.whenKey ||
+        (b.dayNum || -1) - (a.dayNum || -1) ||
+        a.event.localeCompare(b.event) ||
+        (a.kind === "interview") - (b.kind === "interview") ||
+        a.order - b.order ||
+        a.seq - b.seq
+    );
+    const catalogHtml = renderTalkCatalog(talks);
     const html = stampSiteNav(
       stampGalleryHeader(
         stampLandingMeta(templateHtml, { title, description, url, brand }),
@@ -1089,9 +1438,11 @@ async function cmdOverviewPages(opts) {
       ),
       { page: pageCopy, pageUrl: url, scope: page.scope, brand, catalog: navCatalog }
     )
-      .replace(OVERVIEW_INTRO_MARKER, renderOverviewIntro(pageCopy.introduction))
-      .replace(OVERVIEW_CARDS_MARKER, renderOverviewCards(cards))
-      .replace(OVERVIEW_FOOTER_MARKER, escapeText(pageCopy.footer || ""));
+      .replace(OVERVIEW_INTRO_MARKER, () => renderOverviewIntro(pageCopy.introduction))
+      .replace(OVERVIEW_CATALOG_MARKER, () => catalogHtml)
+      .replace(OVERVIEW_EVENTS_HEADING_MARKER, () => renderEventsHeading(catalogHtml))
+      .replace(OVERVIEW_CARDS_MARKER, () => renderOverviewCards(cards))
+      .replace(OVERVIEW_FOOTER_MARKER, () => escapeText(pageCopy.footer || ""));
     const label = `${page.urlPath}index.html`;
     let previous = null;
     try {

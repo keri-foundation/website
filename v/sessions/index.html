@@ -3,10 +3,11 @@
 <!--
   Shared overview of the media trees (v/, v/confs/, v/sessions/).
   deploy-confs.sh landing-pages stamps this file into each tree root as
-  index.html. Page copy and page.transcriptLinks come from that tree's
-  overview.json (next to index.php). Site name, icons, share image, wave,
-  and colors come from brand.json beside the gallery template. Cards come
-  from every gallery index.json in the tree.
+  index.html. Page copy comes from that tree's overview.json. Site name,
+  icons, share image, wave, and colors come from brand.json beside the
+  gallery template. Cards and the talk inventory come from every gallery
+  index.json in the tree. Talk links stay the existing gallery URL plus the
+  title hash.
   Do not edit v/index.html, v/confs/index.html, or v/sessions/index.html by hand.
   Copy overview.json from this folder and tailor it beside each index.php.
 -->
@@ -635,6 +636,181 @@
             }
         }
 
+        .overview-section-title {
+            font-family: var(--heading-font);
+            font-size: 1.6rem;
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
+            margin: 8px 0 14px;
+        }
+
+        .talk-catalog {
+            margin: 0 0 28px;
+        }
+
+        .talk-catalog-hint {
+            margin: -6px 0 14px;
+            color: var(--muted);
+            font-size: 0.98rem;
+            line-height: 1.45;
+        }
+
+        .talk-filters {
+            display: grid;
+            grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .talk-filters.has-kind {
+            grid-template-columns: minmax(0, 1.4fr) repeat(4, minmax(0, 1fr));
+        }
+
+        .talk-filter label {
+            display: block;
+            margin-bottom: 4px;
+            font-size: 0.92rem;
+            font-weight: 600;
+            color: var(--muted);
+        }
+
+        .talk-filter input,
+        .talk-filter select {
+            width: 100%;
+            min-height: 44px;
+            padding: 8px 10px;
+            border: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
+            border-radius: 4px;
+            background: var(--panel-bg);
+            color: var(--ink);
+            font: inherit;
+        }
+
+        .talk-filter input:focus-visible,
+        .talk-filter select:focus-visible,
+        .talk-filters-clear:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .talk-catalog-tools {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px 16px;
+            margin-bottom: 12px;
+        }
+
+        .talk-catalog-status {
+            color: var(--muted);
+            font-size: 0.95rem;
+        }
+
+        .talk-filters-clear {
+            min-height: 44px;
+            padding: 8px 14px;
+            border: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
+            border-radius: 4px;
+            background: var(--panel-bg);
+            color: var(--ink);
+            font: inherit;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .talk-filters-clear:hover {
+            border-color: var(--accent);
+        }
+
+        .talk-filters-clear:disabled {
+            opacity: 0.45;
+            cursor: default;
+        }
+
+        .talk-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .talk-row {
+            background: var(--panel-bg);
+            border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
+            border-left: 3px solid var(--accent);
+            border-radius: 4px;
+            padding: 12px 14px;
+        }
+
+        .talk-row[hidden] {
+            display: none !important;
+        }
+
+        .talk-row-title {
+            font-family: var(--heading-font);
+            font-weight: 700;
+            font-size: 1.05rem;
+            line-height: 1.35;
+            text-decoration: none;
+        }
+
+        .talk-row-title:hover {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .talk-row-meta {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0;
+            margin-top: 4px;
+            color: var(--muted);
+            font-size: 0.92rem;
+            line-height: 1.45;
+        }
+
+        .talk-row-meta .sep {
+            margin: 0 0.4em;
+            opacity: 0.55;
+        }
+
+        .talk-row-speaker {
+            color: var(--ink);
+            font-weight: 600;
+        }
+
+        .talk-row-kind {
+            margin-left: 0.6em;
+            padding: 1px 7px;
+            border-radius: 20px;
+            background: color-mix(in srgb, var(--accent) 18%, transparent);
+            color: var(--ink);
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .talk-row-duration {
+            margin-left: auto;
+            background: color-mix(in srgb, var(--ink) 10%, transparent);
+            padding: 3px 8px;
+            border-radius: 20px;
+            color: var(--ink);
+            white-space: nowrap;
+        }
+
+        .talk-empty {
+            text-align: center;
+            color: var(--muted);
+            padding: 28px 16px;
+        }
+
+        .talk-empty[hidden] {
+            display: none !important;
+        }
+
         .video-container {
             padding: 8px 0 20px;
         }
@@ -831,9 +1007,33 @@
             }
         }
 
+        @media (max-width: 900px) {
+            .talk-filters,
+            .talk-filters.has-kind {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+            .talk-filter-query {
+                grid-column: 1 / -1;
+            }
+        }
+
         @media (max-width: 640px) {
             h1 {
                 font-size: 1.8rem;
+            }
+
+            .overview-section-title {
+                font-size: 1.35rem;
+            }
+
+            .talk-filters,
+            .talk-filters.has-kind {
+                grid-template-columns: minmax(0, 1fr);
+            }
+
+            .talk-row-duration {
+                margin-left: 0;
             }
 
             .video-grid {
@@ -862,7 +1062,87 @@
 
         <main id="mainContent">
             
+                        <section class="talk-catalog" id="talkCatalog" aria-labelledby="talkCatalogHeading">
+                <h2 class="overview-section-title" id="talkCatalogHeading">All talks</h2>
+                <p class="talk-catalog-hint">Filter by title, speaker, event, or date. A title opens that talk on its existing page.</p>
+                <search class="talk-filters" aria-label="Filter talks">
+                    <div class="talk-filter talk-filter-query">
+                        <label for="talkQuery">Title</label>
+                        <input type="search" id="talkQuery" name="q" placeholder="Search titles…" autocomplete="off" spellcheck="false" enterkeyhint="search">
+                    </div>
+                    <div class="talk-filter">
+                        <label for="talkSpeaker">Speaker</label>
+                        <select id="talkSpeaker" name="speaker">
+                        <option value="">All speakers</option>
+                        <option value="Jaime Caso">Jaime Caso</option>
+                        <option value="Karla McKenna">Karla McKenna</option>
+                        <option value="Roberto C. Morano">Roberto C. Morano</option>
+                        <option value="Samuel Smith">Samuel Smith</option>
+                        </select>
+                    </div>
+                    <div class="talk-filter">
+                        <label for="talkEvent">Event</label>
+                        <select id="talkEvent" name="event">
+                        <option value="">All events</option>
+                        <option value="sessions/2026/nov">November 2026 Videos</option>
+                        <option value="sessions/2026/jul">July 2026 Videos</option>
+                        <option value="sessions/2026/may">May 2026 Videos</option>
+                        <option value="sessions/2024/jan">January 2024 Videos</option>
+                        <option value="sessions/2020/jul">July 2020 Videos</option>
+                        </select>
+                    </div>
+                    <div class="talk-filter">
+                        <label for="talkDate">Date</label>
+                        <select id="talkDate" name="date">
+                        <option value="">All dates</option>
+                        <option value="2026-11">November 2026</option>
+                        <option value="2026-07">July 2026</option>
+                        <option value="2026-05">May 2026</option>
+                        <option value="2024-01">January 2024</option>
+                        <option value="2020-07">July 2020</option>
+                        </select>
+                    </div>
+                </search>
+                <div class="talk-catalog-tools">
+                    <p class="talk-catalog-status" id="talkCatalogStatus" role="status" aria-live="polite">7 videos</p>
+                    <button type="button" class="talk-filters-clear" id="talkFiltersClear">Clear filters</button>
+                </div>
+                <ol class="talk-list">
+                <li class="talk-row" data-speakers="Karla McKenna" data-event="sessions/2026/nov" data-when="2026-11" data-kind="talk" data-search="veridian wallet demos intro - karla mckenna karla mckenna november 2026 videos 24 november 2026  november 2026 talk 0:38">
+                    <a class="talk-row-title" href="/v/sessions/2026/nov/#veridian-wallet-demos-intro-karla-mckenna">Veridian Wallet Demos Intro - Karla McKenna</a>
+                    <p class="talk-row-meta"><span class="talk-row-speaker">Karla McKenna</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2026/nov/">November 2026 Videos</a><span class="sep" aria-hidden="true">·</span><span>24 November 2026</span><span class="talk-row-duration">0:38</span></p>
+                </li>
+                <li class="talk-row" data-speakers="Jaime Caso" data-event="sessions/2026/nov" data-when="2026-11" data-kind="talk" data-search="veridian wallet recovery with smart cards - jaime caso jaime caso november 2026 videos 24 november 2026  november 2026 talk 19:07">
+                    <a class="talk-row-title" href="/v/sessions/2026/nov/#veridian-wallet-recovery-with-smart-cards-jaime-caso">Veridian Wallet Recovery with Smart Cards - Jaime Caso</a>
+                    <p class="talk-row-meta"><span class="talk-row-speaker">Jaime Caso</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2026/nov/">November 2026 Videos</a><span class="sep" aria-hidden="true">·</span><span>24 November 2026</span><span class="talk-row-duration">19:07</span></p>
+                </li>
+                <li class="talk-row" data-speakers="Roberto C. Morano" data-event="sessions/2026/nov" data-when="2026-11" data-kind="talk" data-search="keri acdcs as openid connect - roberto c. morano roberto c. morano november 2026 videos 24 november 2026  november 2026 talk 21:58">
+                    <a class="talk-row-title" href="/v/sessions/2026/nov/#keri-acdcs-as-openid-connect-roberto-c-morano">KERI ACDCs as OpenID Connect - Roberto C. Morano</a>
+                    <p class="talk-row-meta"><span class="talk-row-speaker">Roberto C. Morano</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2026/nov/">November 2026 Videos</a><span class="sep" aria-hidden="true">·</span><span>24 November 2026</span><span class="talk-row-duration">21:58</span></p>
+                </li>
+                <li class="talk-row" data-speakers="Samuel Smith" data-event="sessions/2026/jul" data-when="2026-07" data-kind="talk" data-search="it's keri or surveillance - samuel smith samuel smith july 2026 videos july 2026  july 2026 talk 54:25">
+                    <a class="talk-row-title" href="/v/sessions/2026/jul/#it-s-keri-or-surveillance-samuel-smith">It's KERI or Surveillance - Samuel Smith</a>
+                    <p class="talk-row-meta"><span class="talk-row-speaker">Samuel Smith</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2026/jul/">July 2026 Videos</a><span class="sep" aria-hidden="true">·</span><span>July 2026</span><span class="talk-row-duration">54:25</span></p>
+                </li>
+                <li class="talk-row" data-speakers="Samuel Smith" data-event="sessions/2026/may" data-when="2026-05" data-kind="talk" data-search="introduction to keri part 1 - samuel smith samuel smith may 2026 videos 5 may 2026  may 2026 talk 49:10">
+                    <a class="talk-row-title" href="/v/sessions/2026/may/#introduction-to-keri-part-1-samuel-smith">Introduction to KERI Part 1 - Samuel Smith</a>
+                    <p class="talk-row-meta"><span class="talk-row-speaker">Samuel Smith</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2026/may/">May 2026 Videos</a><span class="sep" aria-hidden="true">·</span><span>5 May 2026</span><span class="talk-row-duration">49:10</span></p>
+                </li>
+                <li class="talk-row" data-speakers="Samuel Smith" data-event="sessions/2024/jan" data-when="2024-01" data-kind="talk" data-search="introduction to keri - samuel smith samuel smith january 2024 videos 2 january 2024  january 2024 talk 10:57">
+                    <a class="talk-row-title" href="/v/sessions/2024/jan/#introduction-to-keri-samuel-smith">Introduction to KERI - Samuel Smith</a>
+                    <p class="talk-row-meta"><span class="talk-row-speaker">Samuel Smith</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2024/jan/">January 2024 Videos</a><span class="sep" aria-hidden="true">·</span><span>2 January 2024</span><span class="talk-row-duration">10:57</span></p>
+                </li>
+                <li class="talk-row" data-speakers="Samuel Smith" data-event="sessions/2020/jul" data-when="2020-07" data-kind="talk" data-search="nonconformist keynote - samuel smith samuel smith july 2020 videos 2 july 2020  july 2020 talk 34:55">
+                    <a class="talk-row-title" href="/v/sessions/2020/jul/#nonconformist-keynote-samuel-smith">Nonconformist Keynote - Samuel Smith</a>
+                    <p class="talk-row-meta"><span class="talk-row-speaker">Samuel Smith</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2020/jul/">July 2020 Videos</a><span class="sep" aria-hidden="true">·</span><span>2 July 2020</span><span class="talk-row-duration">34:55</span></p>
+                </li>
+                </ol>
+                <p class="talk-empty" id="talkEmpty" hidden>No talks match these filters.</p>
+            </section>
+
             <div class="video-container">
+                                <h2 class="overview-section-title" id="eventsHeading">Events</h2>
+
                 <div class="video-grid" id="overviewGrid">
                 <article class="overview-card">
                     <a class="overview-card-link" href="/v/sessions/2026/nov/">
@@ -1027,6 +1307,101 @@
                 if (defaultPanel) openPanel(defaultPanel);
             }
 
+        })();
+    </script>
+    <script>
+        (function () {
+            const root = document.getElementById('talkCatalog');
+            if (!root) return;
+            const rows = Array.from(root.querySelectorAll('.talk-row'));
+            const queryInput = document.getElementById('talkQuery');
+            const speakerSelect = document.getElementById('talkSpeaker');
+            const eventSelect = document.getElementById('talkEvent');
+            const dateSelect = document.getElementById('talkDate');
+            const kindSelect = document.getElementById('talkKind');
+            const status = document.getElementById('talkCatalogStatus');
+            const empty = document.getElementById('talkEmpty');
+            const clearBtn = document.getElementById('talkFiltersClear');
+            const params = new URLSearchParams(window.location.search);
+
+            function setControl(el, key) {
+                if (!el) return;
+                const value = params.get(key);
+                if (!value) return;
+                if (el.tagName === 'SELECT') {
+                    const match = Array.from(el.options).some((option) => option.value === value);
+                    if (match) el.value = value;
+                    return;
+                }
+                el.value = value;
+            }
+
+            setControl(queryInput, 'q');
+            setControl(speakerSelect, 'speaker');
+            setControl(eventSelect, 'event');
+            setControl(dateSelect, 'date');
+            setControl(kindSelect, 'kind');
+
+            function selected(el) {
+                return el ? el.value : '';
+            }
+
+            function applyFilters() {
+                const terms = selected(queryInput).trim().toLowerCase().split(/\s+/).filter(Boolean);
+                const speaker = selected(speakerSelect);
+                const eventId = selected(eventSelect);
+                const when = selected(dateSelect);
+                const kind = selected(kindSelect);
+                let shown = 0;
+                rows.forEach((row) => {
+                    const speakers = (row.getAttribute('data-speakers') || '').split('|').filter(Boolean);
+                    const haystack = row.getAttribute('data-search') || '';
+                    const match = terms.every((term) => haystack.includes(term))
+                        && (!speaker || speakers.includes(speaker))
+                        && (!eventId || row.getAttribute('data-event') === eventId)
+                        && (!when || row.getAttribute('data-when') === when)
+                        && (!kind || row.getAttribute('data-kind') === kind);
+                    row.hidden = !match;
+                    if (match) shown += 1;
+                });
+                if (status) {
+                    const totalNoun = rows.length === 1 ? 'video' : 'videos';
+                    status.textContent = shown === rows.length
+                        ? `${rows.length} ${totalNoun}`
+                        : `${shown} of ${rows.length} ${totalNoun}`;
+                }
+                if (empty) empty.hidden = shown !== 0;
+                if (clearBtn) clearBtn.disabled = !terms.length && !speaker && !eventId && !when && !kind;
+
+                const next = new URLSearchParams(window.location.search);
+                ['q', 'speaker', 'event', 'date', 'kind'].forEach((key) => next.delete(key));
+                const typed = selected(queryInput).trim();
+                if (typed) next.set('q', typed);
+                if (speaker) next.set('speaker', speaker);
+                if (eventId) next.set('event', eventId);
+                if (when) next.set('date', when);
+                if (kind) next.set('kind', kind);
+                const search = next.toString();
+                const url = `${window.location.pathname}${search ? `?${search}` : ''}${window.location.hash}`;
+                const current = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+                if (current !== url) history.replaceState(null, '', url);
+            }
+
+            if (queryInput) queryInput.addEventListener('input', applyFilters);
+            [speakerSelect, eventSelect, dateSelect, kindSelect].forEach((el) => {
+                if (el) el.addEventListener('change', applyFilters);
+            });
+            if (clearBtn) {
+                clearBtn.addEventListener('click', () => {
+                    if (queryInput) queryInput.value = '';
+                    [speakerSelect, eventSelect, dateSelect, kindSelect].forEach((el) => {
+                        if (el) el.value = '';
+                    });
+                    applyFilters();
+                    if (queryInput) queryInput.focus();
+                });
+            }
+            applyFilters();
         })();
     </script>
 </body>

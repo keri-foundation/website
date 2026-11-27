@@ -3482,7 +3482,7 @@
          * Override config path with: window.GALLERY_CONFIG = 'index.json';
          * Site chrome is stamped from brand.json. Optional config.brand overrides it.
          *
-         * Posters: video.poster, then speakerPhotos keyed by video.speaker or a name
+         * Posters: video.poster, then speakerPhotos keyed by videos[].speakers or a name
          * found in the title / filename, then defaultPoster.
          */
         (function () {
@@ -4294,9 +4294,18 @@
                 return stem.replace(/[^\p{L}\p{N}'’]+/gu, ' ').replace(/\s+/g, ' ').trim();
             }
 
+            function videoSpeakerNames(video) {
+                if (Array.isArray(video.speakers)) {
+                    return video.speakers.map((name) => String(name || '').trim()).filter(Boolean);
+                }
+                return video.speaker ? [String(video.speaker).trim()] : [];
+            }
+
             function getSpeakerPoster(video) {
                 if (video.poster) return resolveAssetUrl(video.poster);
-                if (video.speaker && speakerPhotos[video.speaker]) return speakerPhotos[video.speaker];
+                for (const name of videoSpeakerNames(video)) {
+                    if (speakerPhotos[name]) return speakerPhotos[name];
+                }
 
                 const fromTitle = longestSpeakerPhotoMatch(video.title || '');
                 if (fromTitle) return fromTitle;
@@ -5199,7 +5208,7 @@
                     const poster = getSpeakerPoster(video);
                     navigator.mediaSession.metadata = new MediaMetadata({
                         title: video.title || 'Conference talk',
-                        artist: video.speaker || '',
+                        artist: videoSpeakerNames(video).join(' & '),
                         album: document.title || 'Conference Videos',
                         artwork: poster ? [{ src: poster, sizes: '512x512' }] : []
                     });

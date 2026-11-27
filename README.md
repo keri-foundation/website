@@ -394,6 +394,8 @@ On macOS, Homebrew’s `ffmpeg` formula includes `ffprobe` and LAME.
 
 `/v/` (every gallery), `/v/confs/`, and `/v/sessions/` are static overview pages in the same visual style as a gallery. `landing-pages` (and therefore `build` / `deploy`) writes them from `v/confs/template-presentations-landingpage/overview.html`. Edit `v/overview.json`, `v/confs/overview.json`, or `v/sessions/overview.json` for the heading, subtitle, optional `introduction` (lead copy below the masthead), nav, and footer. Cards are built from each gallery’s `index.json` and listed newest first.
 
+Below the introduction, each overview lists every talk and interview in that tree, with filters for title, speaker, event (the gallery heading: congress or session), and date (the gallery month, or the day when the media filename starts with `YYYY-MM-DD`). A title opens the existing gallery URL with the same hash the gallery already uses (`#` plus the slug of `videos[].title`). Those paths are not rewritten. Each `videos[]` entry has `speakers`, an array of people, in both conference and session galleries. The overview speaker filter uses that array. `topClips[].speaker` stays a single clip label.
+
 Hostinger runs **LiteSpeed**, not Apache. LiteSpeed’s built-in autoindex HTML-escapes `HEADER.html` and ignores `AutoIndexUri` in `.htaccess`, so folders that are not a gallery still need a PHP listing.
 
 | File | Role |
