@@ -1,7 +1,3 @@
 AI generated summary, if a statement needs explication, see the video.
 
-Ryan Hansen and Samuel M. Smith use the last session to define open infrastructure. Open standards and open source are the start, not the test. If a user still cannot leave a vendor, the infrastructure is not open. Smith's distinction is shared data without shared governance. A verifier who can check a key event log does not have to trust the sender, or a token-funded consensus set. Blockchain identity, in this account, asks everyone to trust the governance. KERI refuses that cost: data can be shared because each recipient verifies it alone.
-
-The practical problem is the cold start. Witnesses and watchers have to exist at scale before anyone but the first deployer benefits. A public identity utility is one bootstrap. The state already needs that infrastructure to transact with its own citizens, and once millions of people have it, others can sell witness service into the market the state created. A bank, an insurer, or an employer can also give the infrastructure away, because portable identity checks, claims, and hiring cost them more than the witnesses do.
-
-The money, Smith argues, is not in selling the rails. It is in assurance on top of rails that stay cheap because a high-assurance root was already paid for, often by the state. On SEDI, citizens opt in rather than being enrolled by default.
+Ryan Hansen and Samuel M. Smith define open infrastructure: shared data without shared governance. A verifier who can check a key event log need not trust the sender or a consensus set. The cold-start problem means witnesses and watchers must scale first — a public identity utility is one bootstrap. Money sits in assurance on top of cheap rails, not in selling the rails themselves.
