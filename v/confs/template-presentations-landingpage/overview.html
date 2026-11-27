@@ -5,8 +5,9 @@
   deploy-confs.sh landing-pages stamps this file into each tree root as
   index.html. Page copy comes from that tree's overview.json. Site name,
   icons, share image, wave, and colors come from brand.json beside the
-  gallery template. Cards and the talk inventory come from every gallery
-  index.json in the tree. Talk links stay the existing gallery URL plus the
+  gallery template. The talk inventory comes from every gallery index.json in
+  the tree. /v/confs/ and /v/sessions/ also get gallery cards; /v/ is the
+  filtered talk list only. Talk links stay the existing gallery URL plus the
   title hash.
   Do not edit v/index.html, v/confs/index.html, or v/sessions/index.html by hand.
   Copy overview.json from this folder and tailor it beside each index.php.
@@ -1052,12 +1053,7 @@
         <main id="mainContent">
             <!--__OVERVIEW_INTRO__-->
             <!--__OVERVIEW_CATALOG__-->
-            <div class="video-container">
-                <!--__OVERVIEW_EVENTS_HEADING__-->
-                <div class="video-grid" id="overviewGrid">
-<!--__OVERVIEW_CARDS__-->
-                </div>
-            </div>
+            <!--__OVERVIEW_EVENTS__-->
         </main>
 
         <footer id="galleryFooter"><!--__OVERVIEW_FOOTER__--></footer>

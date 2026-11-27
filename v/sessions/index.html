@@ -5,8 +5,9 @@
   deploy-confs.sh landing-pages stamps this file into each tree root as
   index.html. Page copy comes from that tree's overview.json. Site name,
   icons, share image, wave, and colors come from brand.json beside the
-  gallery template. Cards and the talk inventory come from every gallery
-  index.json in the tree. Talk links stay the existing gallery URL plus the
+  gallery template. The talk inventory comes from every gallery index.json in
+  the tree. /v/confs/ and /v/sessions/ also get gallery cards; /v/ is the
+  filtered talk list only. Talk links stay the existing gallery URL plus the
   title hash.
   Do not edit v/index.html, v/confs/index.html, or v/sessions/index.html by hand.
   Copy overview.json from this folder and tailor it beside each index.php.
@@ -1140,9 +1141,8 @@
                 <p class="talk-empty" id="talkEmpty" hidden>No talks match these filters.</p>
             </section>
 
-            <div class="video-container">
-                                <h2 class="overview-section-title" id="eventsHeading">Events</h2>
-
+                        <div class="video-container">
+                <h2 class="overview-section-title" id="eventsHeading">Events</h2>
                 <div class="video-grid" id="overviewGrid">
                 <article class="overview-card">
                     <a class="overview-card-link" href="/v/sessions/2026/nov/">
@@ -1194,9 +1194,9 @@
                         </div>
                     </a>
                 </article>
-
                 </div>
             </div>
+
         </main>
 
         <footer id="galleryFooter">KERI Foundation • Videos</footer>

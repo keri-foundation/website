@@ -152,10 +152,9 @@ const BRAND_THEME_RE = /<style id="brand-theme">[\s\S]*?<\/style>/;
 const V_SITE_NAV_MARKER = "<!--__V_SITE_NAV__-->";
 const GALLERY_HEADER_MARKER = "<!--__GALLERY_HEADER__-->";
 const TALK_SUMMARIES_MARKER = "<!--__TALK_SUMMARIES__-->";
-const OVERVIEW_CARDS_MARKER = "<!--__OVERVIEW_CARDS__-->";
 const OVERVIEW_INTRO_MARKER = "<!--__OVERVIEW_INTRO__-->";
 const OVERVIEW_CATALOG_MARKER = "<!--__OVERVIEW_CATALOG__-->";
-const OVERVIEW_EVENTS_HEADING_MARKER = "<!--__OVERVIEW_EVENTS_HEADING__-->";
+const OVERVIEW_EVENTS_MARKER = "<!--__OVERVIEW_EVENTS__-->";
 const OVERVIEW_FOOTER_MARKER = "<!--__OVERVIEW_FOOTER__-->";
 const MONTH_INDEX = {
   jan: 1,
@@ -1207,11 +1206,6 @@ ${items.map(renderTalkRow).join("\n")}
 `;
 }
 
-function renderEventsHeading(catalogHtml) {
-  if (!catalogHtml) return "";
-  return `                <h2 class="overview-section-title" id="eventsHeading">Events</h2>\n`;
-}
-
 function renderOverviewCard(card) {
   const poster = card.poster
     ? `<div class="overview-poster"><img src="${escapeAttr(card.poster)}" alt=""></div>`
@@ -1240,6 +1234,18 @@ function renderOverviewCards(cards) {
   return `${cards.map(renderOverviewCard).join("\n")}\n`;
 }
 
+/** Gallery cards for /v/confs/ and /v/sessions/. Omitted on /v/, which is the talk filter only. */
+function renderOverviewEvents(cards, { withHeading = false } = {}) {
+  const heading = withHeading
+    ? `                <h2 class="overview-section-title" id="eventsHeading">Events</h2>\n`
+    : "";
+  return `            <div class="video-container">
+${heading}                <div class="video-grid" id="overviewGrid">
+${renderOverviewCards(cards)}                </div>
+            </div>
+`;
+}
+
 /** Optional lead copy between the masthead and the video grid. */
 function renderOverviewIntro(text) {
   const intro = String(text || "").trim();
@@ -1255,17 +1261,14 @@ async function cmdOverviewPages(opts) {
   if (!templateHtml.includes(GALLERY_HEADER_MARKER)) {
     throw new Error("overview: template missing gallery header marker");
   }
-  if (!templateHtml.includes(OVERVIEW_CARDS_MARKER)) {
-    throw new Error("overview: template missing overview cards marker");
-  }
   if (!templateHtml.includes(OVERVIEW_INTRO_MARKER)) {
     throw new Error("overview: template missing overview intro marker");
   }
   if (!templateHtml.includes(OVERVIEW_CATALOG_MARKER)) {
     throw new Error("overview: template missing overview catalog marker");
   }
-  if (!templateHtml.includes(OVERVIEW_EVENTS_HEADING_MARKER)) {
-    throw new Error("overview: template missing overview events heading marker");
+  if (!templateHtml.includes(OVERVIEW_EVENTS_MARKER)) {
+    throw new Error("overview: template missing overview events marker");
   }
   if (!templateHtml.includes(OVERVIEW_FOOTER_MARKER)) {
     throw new Error("overview: template missing overview footer marker");
@@ -1295,22 +1298,25 @@ async function cmdOverviewPages(opts) {
     const url = `${SITE_URL}/${page.urlPath}`;
     const ids = all.filter((id) => inOverviewScope(page.scope, id));
     ids.sort((a, b) => gallerySortKey(b) - gallerySortKey(a) || a.localeCompare(b));
+    const showEventCards = page.scope !== "all";
     const cards = [];
     const talks = [];
     for (const id of ids) {
       const config = await loadConfig(id);
       const copy = config.page || {};
       const org = galleryOrg(id);
-      cards.push({
-        href: `/${galleryPrefix(id)}/`,
-        title: copy.heading || copy.title || id,
-        subtitle: copy.subtitle || "",
-        poster: galleryPosterUrl(config, id),
-        fallback: org || galleryWhen(id),
-        org,
-        when: galleryWhen(id),
-        countLabel: videoCountLabel(config.videos),
-      });
+      if (showEventCards) {
+        cards.push({
+          href: `/${galleryPrefix(id)}/`,
+          title: copy.heading || copy.title || id,
+          subtitle: copy.subtitle || "",
+          poster: galleryPosterUrl(config, id),
+          fallback: org || galleryWhen(id),
+          org,
+          when: galleryWhen(id),
+          countLabel: videoCountLabel(config.videos),
+        });
+      }
       talks.push(...talksForGallery(config, id));
     }
     talks.sort(
@@ -1323,6 +1329,9 @@ async function cmdOverviewPages(opts) {
         a.seq - b.seq
     );
     const catalogHtml = renderTalkCatalog(talks);
+    const eventsHtml = showEventCards
+      ? renderOverviewEvents(cards, { withHeading: Boolean(catalogHtml) })
+      : "";
     const html = stampSiteNav(
       stampGalleryHeader(
         stampLandingMeta(templateHtml, { title, description, url, brand }),
@@ -1333,8 +1342,7 @@ async function cmdOverviewPages(opts) {
     )
       .replace(OVERVIEW_INTRO_MARKER, () => renderOverviewIntro(pageCopy.introduction))
       .replace(OVERVIEW_CATALOG_MARKER, () => catalogHtml)
-      .replace(OVERVIEW_EVENTS_HEADING_MARKER, () => renderEventsHeading(catalogHtml))
-      .replace(OVERVIEW_CARDS_MARKER, () => renderOverviewCards(cards))
+      .replace(OVERVIEW_EVENTS_MARKER, () => eventsHtml)
       .replace(OVERVIEW_FOOTER_MARKER, () => escapeText(pageCopy.footer || ""));
     const label = `${page.urlPath}index.html`;
     let previous = null;

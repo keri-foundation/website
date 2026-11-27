@@ -5,8 +5,9 @@
   deploy-confs.sh landing-pages stamps this file into each tree root as
   index.html. Page copy comes from that tree's overview.json. Site name,
   icons, share image, wave, and colors come from brand.json beside the
-  gallery template. Cards and the talk inventory come from every gallery
-  index.json in the tree. Talk links stay the existing gallery URL plus the
+  gallery template. The talk inventory comes from every gallery index.json in
+  the tree. /v/confs/ and /v/sessions/ also get gallery cards; /v/ is the
+  filtered talk list only. Talk links stay the existing gallery URL plus the
   title hash.
   Do not edit v/index.html, v/confs/index.html, or v/sessions/index.html by hand.
   Copy overview.json from this folder and tailor it beside each index.php.
@@ -1481,103 +1482,7 @@
                 <p class="talk-empty" id="talkEmpty" hidden>No talks match these filters.</p>
             </section>
 
-            <div class="video-container">
-                                <h2 class="overview-section-title" id="eventsHeading">Events</h2>
-
-                <div class="video-grid" id="overviewGrid">
-                <article class="overview-card">
-                    <a class="overview-card-link" href="/v/confs/KERI/2026/nov/">
-                        <div class="overview-poster"><img src="/v/confs/KERI/2026/nov/promo/2026-11-02-miniconf-promo.jpg" alt=""></div>
-                        <div class="video-info">
-                            <h2 class="video-title">KERI Mini Conference November 2026</h2>
-                            <p class="overview-blurb">The videos from the KERI Mini Conference in November 2026 are now available.</p>
-                            <p class="video-meta"><span><span class="overview-org">KERI</span><span class="sep" aria-hidden="true">·</span>November 2026</span><span class="video-duration">6 talks</span></p>
-                        </div>
-                    </a>
-                </article>
-                <article class="overview-card">
-                    <a class="overview-card-link" href="/v/confs/SEDI/2026/nov/">
-                        <div class="overview-poster"><img src="/v/confs/SEDI/2026/nov/talks/2026-11-17-Samuel-m-Smith.jpg" alt=""></div>
-                        <div class="video-info">
-                            <h2 class="video-title">State Endorsed Digital Identity Summit (SEDI) 2026</h2>
-                            <p class="overview-blurb">KERI talks at the SEDI Summit 2026</p>
-                            <p class="video-meta"><span><span class="overview-org">SEDI</span><span class="sep" aria-hidden="true">·</span>November 2026</span><span class="video-duration">2 talks</span></p>
-                        </div>
-                    </a>
-                </article>
-                <article class="overview-card">
-                    <a class="overview-card-link" href="/v/sessions/2026/nov/">
-                        <div class="overview-poster"><img src="/v/sessions/2026/nov/talks/2026-11-24-16-01-50-KFMCA-Veridian-part-1.jpg" alt=""></div>
-                        <div class="video-info">
-                            <h2 class="video-title">November 2026 Videos</h2>
-                            <p class="overview-blurb">Veridian wallet demos from the KFMCA meetup</p>
-                            <p class="video-meta"><span>November 2026</span><span class="video-duration">3 talks</span></p>
-                        </div>
-                    </a>
-                </article>
-                <article class="overview-card">
-                    <a class="overview-card-link" href="/v/sessions/2026/jul/">
-                        <div class="overview-poster"><img src="/v/assets/Samuel-Smith-icon.jpg" alt=""></div>
-                        <div class="video-info">
-                            <h2 class="video-title">July 2026 Videos</h2>
-                            <p class="overview-blurb">Why the choice is KERI or surveillance</p>
-                            <p class="video-meta"><span>July 2026</span><span class="video-duration">1 talk</span></p>
-                        </div>
-                    </a>
-                </article>
-                <article class="overview-card">
-                    <a class="overview-card-link" href="/v/sessions/2026/may/">
-                        <div class="overview-poster"><img src="/v/assets/Samuel-Smith-icon.jpg" alt=""></div>
-                        <div class="video-info">
-                            <h2 class="video-title">May 2026 Videos</h2>
-                            <p class="overview-blurb">Samuel Smith introduces KERI</p>
-                            <p class="video-meta"><span>May 2026</span><span class="video-duration">1 talk</span></p>
-                        </div>
-                    </a>
-                </article>
-                <article class="overview-card">
-                    <a class="overview-card-link" href="/v/confs/KERI/2026/apr/">
-                        <div class="overview-poster"><img src="/v/confs/KERI/2026/apr/promo/promo.jpg" alt=""></div>
-                        <div class="video-info">
-                            <h2 class="video-title">KERI Conference April 2026</h2>
-                            <p class="overview-blurb">A collection of presentations and talks from the KERI community</p>
-                            <p class="video-meta"><span><span class="overview-org">KERI</span><span class="sep" aria-hidden="true">·</span>April 2026</span><span class="video-duration">29 talks, 13 interviews</span></p>
-                        </div>
-                    </a>
-                </article>
-                <article class="overview-card">
-                    <a class="overview-card-link" href="/v/confs/SEDI/2025/nov/">
-                        <div class="overview-poster"><img src="/v/confs/SEDI/2025/nov/promo/poster-sedi-summit.jpg" alt=""></div>
-                        <div class="video-info">
-                            <h2 class="video-title">State Endorsed Digital Identity Summit (SEDI) 2025</h2>
-                            <p class="overview-blurb">Morning, lunch panel, and afternoon talks from the UVU summit</p>
-                            <p class="video-meta"><span><span class="overview-org">SEDI</span><span class="sep" aria-hidden="true">·</span>November 2025</span><span class="video-duration">22 talks</span></p>
-                        </div>
-                    </a>
-                </article>
-                <article class="overview-card">
-                    <a class="overview-card-link" href="/v/sessions/2024/jan/">
-                        <div class="overview-poster"><img src="/v/assets/Samuel-Smith-icon.jpg" alt=""></div>
-                        <div class="video-info">
-                            <h2 class="video-title">January 2024 Videos</h2>
-                            <p class="overview-blurb">Samuel Smith introduces KERI, the Key Event Receipt Infrastructure</p>
-                            <p class="video-meta"><span>January 2024</span><span class="video-duration">1 talk</span></p>
-                        </div>
-                    </a>
-                </article>
-                <article class="overview-card">
-                    <a class="overview-card-link" href="/v/sessions/2020/jul/">
-                        <div class="overview-poster"><img src="/v/assets/Samuel-Smith-icon.jpg" alt=""></div>
-                        <div class="video-info">
-                            <h2 class="video-title">July 2020 Videos</h2>
-                            <p class="overview-blurb">Samuel Smith's Nonconformist keynote on the economics of its and bits</p>
-                            <p class="video-meta"><span>July 2020</span><span class="video-duration">1 talk</span></p>
-                        </div>
-                    </a>
-                </article>
-
-                </div>
-            </div>
+            
         </main>
 
         <footer id="galleryFooter">KERI Foundation • Videos</footer>
