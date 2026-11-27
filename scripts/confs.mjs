@@ -157,20 +157,6 @@ const OVERVIEW_INTRO_MARKER = "<!--__OVERVIEW_INTRO__-->";
 const OVERVIEW_CATALOG_MARKER = "<!--__OVERVIEW_CATALOG__-->";
 const OVERVIEW_EVENTS_HEADING_MARKER = "<!--__OVERVIEW_EVENTS_HEADING__-->";
 const OVERVIEW_FOOTER_MARKER = "<!--__OVERVIEW_FOOTER__-->";
-const SPEAKER_NOISE = new Set([
-  "panel",
-  "panels",
-  "interview",
-  "keynote",
-  "talk",
-  "talks",
-  "session",
-  "opening",
-  "closing",
-  "q&a",
-  "qa",
-  "moderator",
-]);
 const MONTH_INDEX = {
   jan: 1,
   feb: 2,
@@ -990,7 +976,7 @@ function galleryPosterUrl(config, id) {
   }
   const photos = config.speakerPhotos && typeof config.speakerPhotos === "object" ? config.speakerPhotos : {};
   for (const video of config.videos || []) {
-    for (const name of explicitSpeakerList(video)) {
+    for (const name of videoSpeakers(video)) {
       if (photos[name]) candidates.push(photos[name]);
     }
   }
@@ -1040,102 +1026,10 @@ function videoKind(path) {
   return "video";
 }
 
-/**
- * Speaker text from a title. This corpus uses two conventions:
- * `Title - Speaker` (hyphen) and `Speaker – Title` (en dash or em dash).
- * `videos[].speakers` wins. A legacy `videos[].speaker` string, then a matching
- * top clip, still fill in when `speakers` is absent.
- */
-function speakerCandidate(title) {
-  const text = String(title || "").replace(/\s+/g, " ").trim();
-  if (!text) return "";
-  const interview = text.match(/^interview\s*[-–—:]\s*(.+)$/i);
-  if (interview) return interview[1].trim();
-  const dashed = text.split(/\s[–—]\s/);
-  if (dashed.length > 1) return dashed[0].trim();
-  const hyphens = text.split(" - ");
-  if (hyphens.length > 1) return hyphens[hyphens.length - 1].trim();
-  const colon = text.indexOf(": ");
-  if (colon > 0) {
-    const before = text.slice(0, colon).trim();
-    if (before.length <= 80 && before.split(/\s+/).length <= 8) return before;
-  }
-  return text;
-}
-
-function knownSpeakerNames(config) {
-  const names = new Set();
-  const add = (value) => {
-    const name = String(value || "").replace(/\s+/g, " ").trim();
-    if (name) names.add(name);
-  };
-  const photos = config.speakerPhotos && typeof config.speakerPhotos === "object" ? config.speakerPhotos : {};
-  for (const name of Object.keys(photos)) add(name);
-  const clips = config.topClips && Array.isArray(config.topClips.clips) ? config.topClips.clips : [];
-  for (const clip of clips) add(clip?.speaker);
-  for (const video of config.videos || []) {
-    for (const name of explicitSpeakerList(video)) add(name);
-  }
-  return [...names];
-}
-
-/** People credited on a video. `speakers` is the field; `speaker` is the old string. */
-function explicitSpeakerList(video) {
-  if (Array.isArray(video?.speakers)) {
-    return video.speakers.map((name) => String(name || "").replace(/\s+/g, " ").trim()).filter(Boolean);
-  }
-  const one = String(video?.speaker || "").replace(/\s+/g, " ").trim();
-  return one ? [one] : [];
-}
-
-function clipSpeakerByTitle(config) {
-  const map = new Map();
-  const clips = config.topClips && Array.isArray(config.topClips.clips) ? config.topClips.clips : [];
-  for (const clip of clips) {
-    const title = String(clip?.videoTitle || "").trim();
-    const speaker = String(clip?.speaker || "").replace(/\s+/g, " ").trim();
-    if (title && speaker && !map.has(title)) map.set(title, speaker);
-  }
-  return map;
-}
-
-/** Split a speaker credit into people, using known names when several share one credit. */
-function peopleIn(raw, knownNames) {
-  const text = String(raw || "").replace(/\s+/g, " ").trim();
-  if (!text) return [];
-  const split = text.split(/\s+(?:&|and)\s+|,\s+/i).map((part) => part.trim()).filter(Boolean);
-  if (split.length > 1) return split.flatMap((part) => peopleIn(part, knownNames));
-  const hits = [];
-  const lower = normName(text);
-  const used = [];
-  const names = [...knownNames].filter(Boolean).sort((a, b) => b.length - a.length);
-  for (const name of names) {
-    const needle = normName(name);
-    if (needle.length < 3) continue;
-    const idx = lower.indexOf(needle);
-    if (idx < 0) continue;
-    const end = idx + needle.length;
-    if (used.some(([start, stop]) => idx < stop && end > start)) continue;
-    hits.push({ name, idx });
-    used.push([idx, end]);
-  }
-  if (!hits.length) return [text];
-  hits.sort((a, b) => a.idx - b.idx);
-  let rest = lower;
-  for (const hit of [...hits].sort((a, b) => normName(b.name).length - normName(a.name).length)) {
-    rest = rest.replace(normName(hit.name), " ");
-  }
-  const leftover = rest.split(/[^a-z0-9&]+/).filter((word) => word && !SPEAKER_NOISE.has(word));
-  if (leftover.length) return [text];
-  return hits.map((hit) => hit.name);
-}
-
-function speakersFor(video, config, clips) {
-  const known = knownSpeakerNames(config);
-  const explicit = explicitSpeakerList(video);
-  if (explicit.length) return explicit.flatMap((name) => peopleIn(name, known));
-  const fromClip = clips.get(String(video?.title || "").trim()) || "";
-  return peopleIn(fromClip || speakerCandidate(video?.title), known);
+/** Names on `videos[].speakers`. The overview filter and poster lookup use this list. */
+function videoSpeakers(video) {
+  if (!Array.isArray(video?.speakers)) return [];
+  return video.speakers.map((name) => String(name || "").replace(/\s+/g, " ").trim()).filter(Boolean);
 }
 
 function galleryYearMonth(id) {
@@ -1161,13 +1055,12 @@ function talksForGallery(config, id) {
   const { year, month, whenKey, whenLabel } = galleryYearMonth(id);
   const event = String(config.page?.heading || config.page?.title || id).trim();
   const href = `/${galleryPrefix(id)}/`;
-  const clips = clipSpeakerByTitle(config);
   const videos = Array.isArray(config.videos) ? config.videos : [];
   const items = [];
   videos.forEach((video, seq) => {
     const title = String(video?.title || "").trim();
     if (!title) return;
-    const speakers = speakersFor(video, config, clips);
+    const speakers = videoSpeakers(video);
     const dayNum = preciseDay(video?.path, year, month);
     const monthLabel = monthName(month);
     const dateLabel = dayNum ? `${dayNum} ${monthLabel} ${year}` : whenLabel;

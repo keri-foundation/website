@@ -4333,10 +4333,8 @@
             }
 
             function videoSpeakerNames(video) {
-                if (Array.isArray(video.speakers)) {
-                    return video.speakers.map((name) => String(name || '').trim()).filter(Boolean);
-                }
-                return video.speaker ? [String(video.speaker).trim()] : [];
+                if (!Array.isArray(video.speakers)) return [];
+                return video.speakers.map((name) => String(name || '').trim()).filter(Boolean);
             }
 
             function getSpeakerPoster(video) {
