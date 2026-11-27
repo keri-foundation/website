@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samuel M. Smith: The state and the future of the KERI Suite — Transcript</title>
-  <meta name="description" content="AI generated summary, if a statement needs explication, see the video. Samuel M. Smith opens with the state of the KERI suite and the properties it is built to guarantee. He…">
+  <meta name="description" content="AI generated summary. Samuel M. Smith opens on the KERI suite as minimally sufficient: control lives in a key event log, not a shared chain. Cryptographic agility retires broken…">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
@@ -202,10 +202,8 @@
     </header>
     <section class="summary" aria-labelledby="summary-heading">
       <h2 id="summary-heading">Summary</h2>
-      <p>AI generated summary, if a statement needs explication, see the video.</p>
-      <p>Samuel M. Smith opens with the state of the KERI suite and the properties it is built to guarantee. He calls the design minimally sufficient: only as complicated as those properties require. The path runs from earlier work on perpetual identity into the ledger wars, when each blockchain project wanted identifiers rooted on its own ledger. KERI keeps control in a key event log a controller can reconstitute from any copy, so the root of trust is not one shared chain.</p>
-      <p>Two commitments carry the talk. Cryptographic agility is built in, so a broken hash can be retired by switching algorithms instead of rewriting every tool on the suite. The security claim is fault-tolerant key management: more cryptography does not fix stolen keys, and a real system has to keep working after a compromise. Issuance and observation are split. A registrar publishes state, and a verifier checks an ACDC through an observer the issuer does not control, so revocation does not become a correlation point.</p>
-      <p>That same infrastructure is what makes a software agent accountable. An autonomous vehicle, or any other agent, needs a chain of authority back to the person or organization that holds the liability. Smith sets this against approaches, including many long-lived zero-knowledge proofs, that assume an issuer's keys are never compromised. Anchoring an issuance to key state is how a proof stays verifiable after those keys rotate.</p>
+      <p>AI generated summary.</p>
+      <p>Samuel M. Smith opens on the KERI suite as minimally sufficient: control lives in a key event log, not a shared chain. Cryptographic agility retires broken hashes without rewriting the stack. Fault-tolerant key management keeps systems working after compromise; issuance and observation stay split so revocation is not a correlation point. That same infrastructure makes software agents accountable through a chain of authority to the liable party.</p>
     </section>
     <article>
     <p class="cue" id="t0">

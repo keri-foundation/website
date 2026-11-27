@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kent Bull – did:webs, why the ‘s’ matters most — Transcript</title>
-  <meta name="description" content="AI generated summary, if a statement needs explication, see the video. Kent Bull, who works on the method at GLEIF, presents did:webs as a short step past did:web. The identifier…">
+  <meta name="description" content="AI generated summary. Kent Bull presents did:webs as a short step past did:web: the identifier is still a domain, but a keri.cesr CESR stream lets verifiers check key history…">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
@@ -202,10 +202,8 @@
     </header>
     <section class="summary" aria-labelledby="summary-heading">
       <h2 id="summary-heading">Summary</h2>
-      <p>AI generated summary, if a statement needs explication, see the video.</p>
-      <p>Kent Bull, who works on the method at GLEIF, presents did:webs as a short step past did:web. The identifier is still a domain name, and the DID document still lives at a predictable URL. What the extra &quot;s&quot; adds is a second file, keri.cesr: a CESR stream of KERI and ACDC objects. That stream is how a verifier checks that the same controller still holds the identifier after keys rotate, which did:web cannot do. Hosting can move from one name to a backup, and the identifier stays the same because the key history proves it is the same controller.</p>
-      <p>The feature he treats as distinctive is the designated alias. The stream carries an explicit commitment that this identifier is authorized for this domain, and a verifier should reject a document that lacks it. The document also has to describe nested, weighted multisig rather than a single key. ConditionalProof2022 states the threshold and which keys may sign, so a verifier that is not a KERI specialist can tell a valid multisig proof from one lone signature.</p>
-      <p>An implementation and a resolver exist, and the method is meant to be tried. The specification still has to say how a stream declares its protocol version, how historical keys are read, and how KERI version 2 registry state works, including blinded registries and when they unblind.</p>
+      <p>AI generated summary.</p>
+      <p>Kent Bull presents did:webs as a short step past did:web: the identifier is still a domain, but a keri.cesr CESR stream lets verifiers check key history after rotation. The designated alias commits the identifier to that domain, and ConditionalProof2022 describes nested weighted multisig so non-specialists can verify threshold proofs. An implementation exists; the spec still needs versioning and registry details.</p>
     </section>
     <article>
     <p class="cue" id="t0">
