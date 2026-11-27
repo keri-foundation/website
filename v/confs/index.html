@@ -1875,6 +1875,18 @@
             const clearBtn = document.getElementById('talkFiltersClear');
             const params = new URLSearchParams(window.location.search);
 
+            function optionCatalog(select) {
+                if (!select) return [];
+                return Array.from(select.options)
+                    .filter((option) => option.value)
+                    .map((option) => ({ value: option.value, label: option.textContent }));
+            }
+
+            const speakerOptions = optionCatalog(speakerSelect);
+            const eventOptions = optionCatalog(eventSelect);
+            const dateOptions = optionCatalog(dateSelect);
+            const kindOptions = optionCatalog(kindSelect);
+
             function setControl(el, key) {
                 if (!el) return;
                 const value = params.get(key);
@@ -1897,21 +1909,72 @@
                 return el ? el.value : '';
             }
 
+            function rowSpeakers(row) {
+                return (row.getAttribute('data-speakers') || '').split('|').filter(Boolean);
+            }
+
+            function rowMatches(row, filters) {
+                const terms = filters.terms || [];
+                const speakers = rowSpeakers(row);
+                const haystack = row.getAttribute('data-search') || '';
+                return terms.every((term) => haystack.includes(term))
+                    && (!filters.speaker || speakers.includes(filters.speaker))
+                    && (!filters.eventId || row.getAttribute('data-event') === filters.eventId)
+                    && (!filters.when || row.getAttribute('data-when') === filters.when)
+                    && (!filters.kind || row.getAttribute('data-kind') === filters.kind);
+            }
+
+            function rebuildSelect(select, catalog, allLabel, available, current) {
+                if (!select) return '';
+                const keep = current && available.has(current) ? current : '';
+                select.replaceChildren();
+                const all = document.createElement('option');
+                all.value = '';
+                all.textContent = allLabel;
+                select.appendChild(all);
+                catalog.forEach((entry) => {
+                    if (!available.has(entry.value)) return;
+                    const option = document.createElement('option');
+                    option.value = entry.value;
+                    option.textContent = entry.label;
+                    select.appendChild(option);
+                });
+                select.value = keep;
+                return keep;
+            }
+
             function applyFilters() {
                 const terms = selected(queryInput).trim().toLowerCase().split(/\s+/).filter(Boolean);
-                const speaker = selected(speakerSelect);
-                const eventId = selected(eventSelect);
-                const when = selected(dateSelect);
-                const kind = selected(kindSelect);
+                let speaker = selected(speakerSelect);
+                let eventId = selected(eventSelect);
+                let when = selected(dateSelect);
+                let kind = selected(kindSelect);
+
+                const speakersAvailable = new Set();
+                rows.filter((row) => rowMatches(row, { terms, eventId, when, kind }))
+                    .forEach((row) => rowSpeakers(row).forEach((name) => speakersAvailable.add(name)));
+                speaker = rebuildSelect(speakerSelect, speakerOptions, 'All speakers', speakersAvailable, speaker);
+
+                const eventsAvailable = new Set();
+                rows.filter((row) => rowMatches(row, { terms, speaker, when, kind }))
+                    .forEach((row) => eventsAvailable.add(row.getAttribute('data-event') || ''));
+                eventId = rebuildSelect(eventSelect, eventOptions, 'All events', eventsAvailable, eventId);
+
+                const datesAvailable = new Set();
+                rows.filter((row) => rowMatches(row, { terms, speaker, eventId, kind }))
+                    .forEach((row) => datesAvailable.add(row.getAttribute('data-when') || ''));
+                when = rebuildSelect(dateSelect, dateOptions, 'All dates', datesAvailable, when);
+
+                if (kindSelect) {
+                    const kindsAvailable = new Set();
+                    rows.filter((row) => rowMatches(row, { terms, speaker, eventId, when }))
+                        .forEach((row) => kindsAvailable.add(row.getAttribute('data-kind') || ''));
+                    kind = rebuildSelect(kindSelect, kindOptions, 'All', kindsAvailable, kind);
+                }
+
                 let shown = 0;
                 rows.forEach((row) => {
-                    const speakers = (row.getAttribute('data-speakers') || '').split('|').filter(Boolean);
-                    const haystack = row.getAttribute('data-search') || '';
-                    const match = terms.every((term) => haystack.includes(term))
-                        && (!speaker || speakers.includes(speaker))
-                        && (!eventId || row.getAttribute('data-event') === eventId)
-                        && (!when || row.getAttribute('data-when') === when)
-                        && (!kind || row.getAttribute('data-kind') === kind);
+                    const match = rowMatches(row, { terms, speaker, eventId, when, kind });
                     row.hidden = !match;
                     if (match) shown += 1;
                 });
