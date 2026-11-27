@@ -1,4 +1,4 @@
-AI generated summary, if a statement needs explication, see the video.
+AI generated summary.
 
 Jaime Caso, Innovation Engineer at Veridian, demos wallet recovery that replaces the seed phrase with biometric smart cards. In the Veridian wallet every key still derives from a bran, shown to the user as a seed phrase, but that phrase is easy to lose or steal. The design separates daily signing keys on the phone from rotation power held offline on cards.
 

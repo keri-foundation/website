@@ -1,4 +1,4 @@
-AI generated summary, if a statement needs explication, see the video.
+AI generated summary.
 
 Roberto C. Morano, Lead DevRel Advocate at Veridian, shows a bridge that treats KERI ACDCs as an OpenID Connect identity provider. Ideal apps would speak KERI natively; until they do, his proxy verifies credentials against KERI infrastructure and emits OIDC tokens that ordinary web apps already understand.
 

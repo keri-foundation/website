@@ -1,3 +1,3 @@
-AI generated summary, if a statement needs explication, see the video.
+AI generated summary.
 
 Nicholas Racz reports six years investing in KERI’s trust-spanning layer, framing KERI as the internet’s next essential protocol. He describes capital’s role in making that future real and reviews portfolio bets on industry adoption, including Provenant and healthKERI, with founders reflecting on healthcare’s slow security uptake.

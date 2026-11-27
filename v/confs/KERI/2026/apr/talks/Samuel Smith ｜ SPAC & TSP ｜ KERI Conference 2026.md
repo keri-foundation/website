@@ -1,3 +1,3 @@
-AI generated summary, if a statement needs explication, see the video.
+AI generated summary.
 
 Samuel Smith presents SPAC and TSP frameworks for privacy-preserving interaction. He contends systems must let first parties hold second parties accountable inside confidential contexts, using contractual or regulatory liability, and explains partitioning interaction contexts with high-entropy identifiers so routing metadata cannot correlate parties across disjoint relationships.
