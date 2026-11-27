@@ -738,15 +738,51 @@
         }
 
         .talk-row {
+            display: flex;
+            align-items: stretch;
+            gap: 14px;
             background: var(--panel-bg);
             border: 1px solid color-mix(in srgb, var(--ink) 10%, transparent);
             border-left: 3px solid var(--accent);
             border-radius: 4px;
-            padding: 12px 14px;
+            padding: 10px 14px 10px 10px;
         }
 
         .talk-row[hidden] {
             display: none !important;
+        }
+
+        .talk-row-thumb {
+            flex: 0 0 128px;
+            width: 128px;
+            aspect-ratio: 16 / 9;
+            align-self: center;
+            border-radius: 3px;
+            overflow: hidden;
+            background: color-mix(in srgb, var(--ink) 8%, var(--stone));
+            text-decoration: none;
+        }
+
+        .talk-row-thumb img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+            filter: var(--media-tone);
+        }
+
+        .talk-row-thumb-fallback {
+            display: block;
+        }
+
+        .talk-row-body {
+            min-width: 0;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 4px;
+            padding: 2px 0;
         }
 
         .talk-row-title {
@@ -767,7 +803,6 @@
             flex-wrap: wrap;
             align-items: baseline;
             gap: 0;
-            margin-top: 4px;
             color: var(--muted);
             font-size: 0.92rem;
             line-height: 1.45;
@@ -1033,6 +1068,16 @@
                 grid-template-columns: minmax(0, 1fr);
             }
 
+            .talk-row {
+                gap: 10px;
+                padding: 8px 10px 8px 8px;
+            }
+
+            .talk-row-thumb {
+                flex-basis: 96px;
+                width: 96px;
+            }
+
             .talk-row-duration {
                 margin-left: 0;
             }
@@ -1110,32 +1155,53 @@
                 </div>
                 <ol class="talk-list">
                 <li class="talk-row" data-speakers="Karla McKenna" data-event="sessions/2026/nov" data-when="2026-11" data-kind="talk" data-search="veridian wallet demos intro - karla mckenna karla mckenna november 2026 videos 24 november 2026  november 2026 talk 0:38">
-                    <a class="talk-row-title" href="/v/sessions/2026/nov/#veridian-wallet-demos-intro-karla-mckenna">Veridian Wallet Demos Intro - Karla McKenna</a>
-                    <p class="talk-row-meta"><span class="talk-row-speaker">Karla McKenna</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2026/nov/">November 2026 Videos</a><span class="sep" aria-hidden="true">·</span><span>24 November 2026</span><span class="talk-row-duration">0:38</span></p>
+                    <a class="talk-row-thumb" href="/v/sessions/2026/nov/#veridian-wallet-demos-intro-karla-mckenna" tabindex="-1" aria-hidden="true"><img src="https://kericonf.com/wp-content/uploads/2026/04/KarlaMcKenna_v1.0-edited.jpg" alt="" loading="lazy" decoding="async"></a>
+                    <div class="talk-row-body">
+                        <a class="talk-row-title" href="/v/sessions/2026/nov/#veridian-wallet-demos-intro-karla-mckenna">Veridian Wallet Demos Intro - Karla McKenna</a>
+                        <p class="talk-row-meta"><span class="talk-row-speaker">Karla McKenna</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2026/nov/">November 2026 Videos</a><span class="sep" aria-hidden="true">·</span><span>24 November 2026</span><span class="talk-row-duration">0:38</span></p>
+                    </div>
                 </li>
                 <li class="talk-row" data-speakers="Jaime Caso" data-event="sessions/2026/nov" data-when="2026-11" data-kind="talk" data-search="veridian wallet recovery with smart cards - jaime caso jaime caso november 2026 videos 24 november 2026  november 2026 talk 19:07">
-                    <a class="talk-row-title" href="/v/sessions/2026/nov/#veridian-wallet-recovery-with-smart-cards-jaime-caso">Veridian Wallet Recovery with Smart Cards - Jaime Caso</a>
-                    <p class="talk-row-meta"><span class="talk-row-speaker">Jaime Caso</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2026/nov/">November 2026 Videos</a><span class="sep" aria-hidden="true">·</span><span>24 November 2026</span><span class="talk-row-duration">19:07</span></p>
+                    <a class="talk-row-thumb" href="/v/sessions/2026/nov/#veridian-wallet-recovery-with-smart-cards-jaime-caso" tabindex="-1" aria-hidden="true"><img src="/v/sessions/2026/nov/talks/2026-11-24-16-01-50-KFMCA-Veridian-part-1.jpg" alt="" loading="lazy" decoding="async"></a>
+                    <div class="talk-row-body">
+                        <a class="talk-row-title" href="/v/sessions/2026/nov/#veridian-wallet-recovery-with-smart-cards-jaime-caso">Veridian Wallet Recovery with Smart Cards - Jaime Caso</a>
+                        <p class="talk-row-meta"><span class="talk-row-speaker">Jaime Caso</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2026/nov/">November 2026 Videos</a><span class="sep" aria-hidden="true">·</span><span>24 November 2026</span><span class="talk-row-duration">19:07</span></p>
+                    </div>
                 </li>
                 <li class="talk-row" data-speakers="Roberto C. Morano" data-event="sessions/2026/nov" data-when="2026-11" data-kind="talk" data-search="keri acdcs as openid connect - roberto c. morano roberto c. morano november 2026 videos 24 november 2026  november 2026 talk 21:58">
-                    <a class="talk-row-title" href="/v/sessions/2026/nov/#keri-acdcs-as-openid-connect-roberto-c-morano">KERI ACDCs as OpenID Connect - Roberto C. Morano</a>
-                    <p class="talk-row-meta"><span class="talk-row-speaker">Roberto C. Morano</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2026/nov/">November 2026 Videos</a><span class="sep" aria-hidden="true">·</span><span>24 November 2026</span><span class="talk-row-duration">21:58</span></p>
+                    <a class="talk-row-thumb" href="/v/sessions/2026/nov/#keri-acdcs-as-openid-connect-roberto-c-morano" tabindex="-1" aria-hidden="true"><img src="/v/sessions/2026/nov/talks/2026-11-24-16-01-50-KFMCA-Veridian-part-2.jpg" alt="" loading="lazy" decoding="async"></a>
+                    <div class="talk-row-body">
+                        <a class="talk-row-title" href="/v/sessions/2026/nov/#keri-acdcs-as-openid-connect-roberto-c-morano">KERI ACDCs as OpenID Connect - Roberto C. Morano</a>
+                        <p class="talk-row-meta"><span class="talk-row-speaker">Roberto C. Morano</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2026/nov/">November 2026 Videos</a><span class="sep" aria-hidden="true">·</span><span>24 November 2026</span><span class="talk-row-duration">21:58</span></p>
+                    </div>
                 </li>
                 <li class="talk-row" data-speakers="Samuel M. Smith" data-event="sessions/2026/jul" data-when="2026-07" data-kind="talk" data-search="it's keri or surveillance - samuel smith samuel m. smith july 2026 videos july 2026  july 2026 talk 54:25">
-                    <a class="talk-row-title" href="/v/sessions/2026/jul/#it-s-keri-or-surveillance-samuel-smith">It's KERI or Surveillance - Samuel Smith</a>
-                    <p class="talk-row-meta"><span class="talk-row-speaker">Samuel M. Smith</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2026/jul/">July 2026 Videos</a><span class="sep" aria-hidden="true">·</span><span>July 2026</span><span class="talk-row-duration">54:25</span></p>
+                    <a class="talk-row-thumb" href="/v/sessions/2026/jul/#it-s-keri-or-surveillance-samuel-smith" tabindex="-1" aria-hidden="true"><img src="/v/assets/Samuel-Smith-icon.jpg" alt="" loading="lazy" decoding="async"></a>
+                    <div class="talk-row-body">
+                        <a class="talk-row-title" href="/v/sessions/2026/jul/#it-s-keri-or-surveillance-samuel-smith">It's KERI or Surveillance - Samuel Smith</a>
+                        <p class="talk-row-meta"><span class="talk-row-speaker">Samuel M. Smith</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2026/jul/">July 2026 Videos</a><span class="sep" aria-hidden="true">·</span><span>July 2026</span><span class="talk-row-duration">54:25</span></p>
+                    </div>
                 </li>
                 <li class="talk-row" data-speakers="Samuel M. Smith" data-event="sessions/2026/may" data-when="2026-05" data-kind="talk" data-search="introduction to keri part 1 - samuel smith samuel m. smith may 2026 videos 5 may 2026  may 2026 talk 49:10">
-                    <a class="talk-row-title" href="/v/sessions/2026/may/#introduction-to-keri-part-1-samuel-smith">Introduction to KERI Part 1 - Samuel Smith</a>
-                    <p class="talk-row-meta"><span class="talk-row-speaker">Samuel M. Smith</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2026/may/">May 2026 Videos</a><span class="sep" aria-hidden="true">·</span><span>5 May 2026</span><span class="talk-row-duration">49:10</span></p>
+                    <a class="talk-row-thumb" href="/v/sessions/2026/may/#introduction-to-keri-part-1-samuel-smith" tabindex="-1" aria-hidden="true"><img src="/v/assets/Samuel-Smith-icon.jpg" alt="" loading="lazy" decoding="async"></a>
+                    <div class="talk-row-body">
+                        <a class="talk-row-title" href="/v/sessions/2026/may/#introduction-to-keri-part-1-samuel-smith">Introduction to KERI Part 1 - Samuel Smith</a>
+                        <p class="talk-row-meta"><span class="talk-row-speaker">Samuel M. Smith</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2026/may/">May 2026 Videos</a><span class="sep" aria-hidden="true">·</span><span>5 May 2026</span><span class="talk-row-duration">49:10</span></p>
+                    </div>
                 </li>
                 <li class="talk-row" data-speakers="Samuel M. Smith" data-event="sessions/2024/jan" data-when="2024-01" data-kind="talk" data-search="introduction to keri - samuel smith samuel m. smith january 2024 videos 2 january 2024  january 2024 talk 10:57">
-                    <a class="talk-row-title" href="/v/sessions/2024/jan/#introduction-to-keri-samuel-smith">Introduction to KERI - Samuel Smith</a>
-                    <p class="talk-row-meta"><span class="talk-row-speaker">Samuel M. Smith</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2024/jan/">January 2024 Videos</a><span class="sep" aria-hidden="true">·</span><span>2 January 2024</span><span class="talk-row-duration">10:57</span></p>
+                    <a class="talk-row-thumb" href="/v/sessions/2024/jan/#introduction-to-keri-samuel-smith" tabindex="-1" aria-hidden="true"><img src="/v/assets/Samuel-Smith-icon.jpg" alt="" loading="lazy" decoding="async"></a>
+                    <div class="talk-row-body">
+                        <a class="talk-row-title" href="/v/sessions/2024/jan/#introduction-to-keri-samuel-smith">Introduction to KERI - Samuel Smith</a>
+                        <p class="talk-row-meta"><span class="talk-row-speaker">Samuel M. Smith</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2024/jan/">January 2024 Videos</a><span class="sep" aria-hidden="true">·</span><span>2 January 2024</span><span class="talk-row-duration">10:57</span></p>
+                    </div>
                 </li>
                 <li class="talk-row" data-speakers="Samuel M. Smith" data-event="sessions/2020/jul" data-when="2020-07" data-kind="talk" data-search="nonconformist keynote - samuel smith samuel m. smith july 2020 videos 2 july 2020  july 2020 talk 34:55">
-                    <a class="talk-row-title" href="/v/sessions/2020/jul/#nonconformist-keynote-samuel-smith">Nonconformist Keynote - Samuel Smith</a>
-                    <p class="talk-row-meta"><span class="talk-row-speaker">Samuel M. Smith</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2020/jul/">July 2020 Videos</a><span class="sep" aria-hidden="true">·</span><span>2 July 2020</span><span class="talk-row-duration">34:55</span></p>
+                    <a class="talk-row-thumb" href="/v/sessions/2020/jul/#nonconformist-keynote-samuel-smith" tabindex="-1" aria-hidden="true"><img src="/v/assets/Samuel-Smith-icon.jpg" alt="" loading="lazy" decoding="async"></a>
+                    <div class="talk-row-body">
+                        <a class="talk-row-title" href="/v/sessions/2020/jul/#nonconformist-keynote-samuel-smith">Nonconformist Keynote - Samuel Smith</a>
+                        <p class="talk-row-meta"><span class="talk-row-speaker">Samuel M. Smith</span><span class="sep" aria-hidden="true">·</span><a href="/v/sessions/2020/jul/">July 2020 Videos</a><span class="sep" aria-hidden="true">·</span><span>2 July 2020</span><span class="talk-row-duration">34:55</span></p>
+                    </div>
                 </li>
                 </ol>
                 <p class="talk-empty" id="talkEmpty" hidden>No talks match these filters.</p>

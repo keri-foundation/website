@@ -965,6 +965,16 @@ function videoCountLabel(videos) {
   return parts.length ? parts.join(", ") : "No videos yet";
 }
 
+/** Turn a gallery-relative or absolute asset path into a site-root URL. */
+function resolveGalleryAsset(id, raw) {
+  const value = String(raw || "").trim();
+  if (!value) return "";
+  if (/^https?:\/\//i.test(value) || value.startsWith("/")) return value;
+  const rel = toPosix(value.replace(/^\.\//, ""));
+  if (!existsSync(join(galleryDir(id), rel))) return "";
+  return `/${galleryPrefix(id)}/${rel}`;
+}
+
 /** First usable poster: promo, defaultPoster, a video poster, then a speaker photo. */
 function galleryPosterUrl(config, id) {
   const candidates = [];
@@ -980,15 +990,58 @@ function galleryPosterUrl(config, id) {
     }
   }
   for (const raw of candidates) {
-    const value = String(raw || "").trim();
-    if (!value) continue;
-    if (/^https?:\/\//i.test(value)) return value;
-    if (value.startsWith("/")) return value;
-    const rel = toPosix(value.replace(/^\.\//, ""));
-    if (!existsSync(join(galleryDir(id), rel))) continue;
-    return `/${galleryPrefix(id)}/${rel}`;
+    const url = resolveGalleryAsset(id, raw);
+    if (url) return url;
   }
   return "";
+}
+
+/**
+ * Same poster order as the gallery player: video.poster, speakerPhotos for
+ * videos[].speakers, a name found in the title or filename, then defaultPoster.
+ */
+function videoPosterUrl(config, id, video) {
+  const photos = config.speakerPhotos && typeof config.speakerPhotos === "object" ? config.speakerPhotos : {};
+  const candidates = [];
+  if (video?.poster) candidates.push(video.poster);
+  for (const name of videoSpeakers(video)) {
+    if (photos[name]) candidates.push(photos[name]);
+  }
+  const fromTitle = longestSpeakerPhotoMatch(video?.title || "", photos);
+  if (fromTitle) candidates.push(fromTitle);
+  const fromPath = longestSpeakerPhotoMatch(filenameToSearchText(video?.path || ""), photos);
+  if (fromPath) candidates.push(fromPath);
+  if (config.defaultPoster) candidates.push(config.defaultPoster);
+  for (const raw of candidates) {
+    const url = resolveGalleryAsset(id, raw);
+    if (url) return url;
+  }
+  return "";
+}
+
+function filenameToSearchText(path) {
+  const stem = String(path || "").split("/").pop() || "";
+  return stem
+    .replace(/\.[^.]+$/i, "")
+    .replace(/[^\p{L}\p{N}'’]+/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function longestSpeakerPhotoMatch(text, photos) {
+  if (!text) return "";
+  const haystack = text.toLowerCase();
+  let bestSrc = "";
+  let bestLen = 0;
+  for (const [name, src] of Object.entries(photos || {})) {
+    if (!name) continue;
+    const needle = name.toLowerCase();
+    if (needle.length > bestLen && haystack.includes(needle)) {
+      bestSrc = src;
+      bestLen = needle.length;
+    }
+  }
+  return bestSrc;
 }
 
 function normName(value) {
@@ -1072,6 +1125,7 @@ function talksForGallery(config, id) {
       eventId: id,
       href,
       talkHref: `${href}#${generateVideoId(title)}`,
+      poster: videoPosterUrl(config, id, video),
       whenKey,
       whenValue: `${year}-${String(month).padStart(2, "0")}`,
       whenLabel,
@@ -1120,9 +1174,15 @@ function renderTalkRow(item) {
   const durationHtml = item.duration
     ? `<span class="talk-row-duration">${escapeText(item.duration)}</span>`
     : "";
+  const thumb = item.poster
+    ? `<a class="talk-row-thumb" href="${escapeAttr(item.talkHref)}" tabindex="-1" aria-hidden="true"><img src="${escapeAttr(item.poster)}" alt="" loading="lazy" decoding="async"></a>`
+    : `<a class="talk-row-thumb talk-row-thumb-fallback" href="${escapeAttr(item.talkHref)}" tabindex="-1" aria-hidden="true"><span></span></a>`;
   return `                <li class="talk-row" data-speakers="${escapeAttr(item.speakers.join("|"))}" data-event="${escapeAttr(item.eventId)}" data-when="${escapeAttr(item.whenValue)}" data-kind="${escapeAttr(item.kind)}" data-search="${escapeAttr(search)}">
-                    <a class="talk-row-title" href="${escapeAttr(item.talkHref)}">${escapeText(item.title)}</a>
-                    <p class="talk-row-meta">${speakerHtml}<a href="${escapeAttr(item.href)}">${escapeText(item.event)}</a><span class="sep" aria-hidden="true">·</span><span>${escapeText(item.dateLabel)}</span>${sessionHtml}${kindHtml}${durationHtml}</p>
+                    ${thumb}
+                    <div class="talk-row-body">
+                        <a class="talk-row-title" href="${escapeAttr(item.talkHref)}">${escapeText(item.title)}</a>
+                        <p class="talk-row-meta">${speakerHtml}<a href="${escapeAttr(item.href)}">${escapeText(item.event)}</a><span class="sep" aria-hidden="true">·</span><span>${escapeText(item.dateLabel)}</span>${sessionHtml}${kindHtml}${durationHtml}</p>
+                    </div>
                 </li>`;
 }
 
