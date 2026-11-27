@@ -657,6 +657,81 @@
             line-height: 1.45;
         }
 
+        .watch-lists {
+            margin: 0 0 22px;
+            padding: 18px 20px 16px;
+            background: var(--panel-bg);
+            border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .watch-lists .overview-section-title {
+            margin-bottom: 6px;
+        }
+
+        .watch-lists-hint {
+            max-width: 40rem;
+            margin: 0 auto 14px;
+            color: var(--muted);
+            font-size: 0.95rem;
+            line-height: 1.45;
+        }
+
+        .watch-list-options {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .watch-list-options button {
+            font: inherit;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--ink);
+            background: var(--page-bg);
+            border: 1px solid color-mix(in srgb, var(--ink) 18%, transparent);
+            border-radius: 999px;
+            padding: 8px 16px;
+            min-height: 44px;
+            cursor: pointer;
+        }
+
+        .watch-list-options button:hover {
+            background: var(--hover);
+        }
+
+        .watch-list-options button[aria-pressed="true"] {
+            background: var(--ink);
+            color: var(--on-ink);
+            border-color: var(--ink);
+        }
+
+        .watch-list-options button:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        .talk-list.is-ordered {
+            counter-reset: watch-step;
+        }
+
+        .talk-list.is-ordered .talk-row:not([hidden]) {
+            counter-increment: watch-step;
+        }
+
+        .talk-list.is-ordered .talk-row:not([hidden])::before {
+            content: counter(watch-step);
+            flex: 0 0 1.6rem;
+            align-self: center;
+            font-family: var(--heading-font);
+            font-weight: 800;
+            font-size: 1.05rem;
+            color: var(--accent);
+            text-align: center;
+        }
+
         .talk-filters {
             display: grid;
             grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr));
@@ -1221,10 +1296,25 @@
             const eventSelect = document.getElementById('talkEvent');
             const dateSelect = document.getElementById('talkDate');
             const kindSelect = document.getElementById('talkKind');
+            const heading = document.getElementById('talkCatalogHeading');
+            const hint = document.getElementById('talkCatalogHint');
+            const listEl = root.querySelector('.talk-list');
             const status = document.getElementById('talkCatalogStatus');
             const empty = document.getElementById('talkEmpty');
             const clearBtn = document.getElementById('talkFiltersClear');
+            const listButtons = Array.from(root.querySelectorAll('#watchLists [data-list]'));
             const params = new URLSearchParams(window.location.search);
+            const defaultHeading = heading ? heading.textContent : '';
+            const defaultHint = hint ? hint.textContent : '';
+            const lists = new Map();
+            listButtons.forEach((btn) => {
+                const id = btn.dataset.list || '';
+                if (!id) return;
+                lists.set(id, (btn.dataset.videos || '').split('|').filter(Boolean));
+            });
+            let activeList = '';
+            const fromUrl = params.get('list');
+            if (fromUrl && lists.has(fromUrl)) activeList = fromUrl;
 
             function optionCatalog(select) {
                 if (!select) return [];
@@ -1269,10 +1359,29 @@
                 const speakers = rowSpeakers(row);
                 const haystack = row.getAttribute('data-search') || '';
                 return terms.every((term) => haystack.includes(term))
+                    && (!filters.listSet || filters.listSet.has(row.getAttribute('data-key') || ''))
                     && (!filters.speaker || speakers.includes(filters.speaker))
                     && (!filters.eventId || row.getAttribute('data-event') === filters.eventId)
                     && (!filters.when || row.getAttribute('data-when') === filters.when)
                     && (!filters.kind || row.getAttribute('data-kind') === filters.kind);
+            }
+
+            function orderRows(keys) {
+                if (!listEl) return;
+                if (!keys) {
+                    rows.forEach((row) => listEl.appendChild(row));
+                    listEl.classList.remove('is-ordered');
+                    return;
+                }
+                const byKey = new Map(rows.map((row) => [row.getAttribute('data-key'), row]));
+                keys.forEach((key) => {
+                    const row = byKey.get(key);
+                    if (row) listEl.appendChild(row);
+                });
+                rows.forEach((row) => {
+                    if (!keys.includes(row.getAttribute('data-key'))) listEl.appendChild(row);
+                });
+                listEl.classList.add('is-ordered');
             }
 
             function rebuildSelect(select, catalog, allLabel, available, current) {
@@ -1300,52 +1409,74 @@
                 let eventId = selected(eventSelect);
                 let when = selected(dateSelect);
                 let kind = selected(kindSelect);
+                const listKeys = activeList ? lists.get(activeList) || [] : null;
+                const listSet = listKeys ? new Set(listKeys) : null;
+                orderRows(listKeys);
 
                 const speakersAvailable = new Set();
-                rows.filter((row) => rowMatches(row, { terms, eventId, when, kind }))
+                rows.filter((row) => rowMatches(row, { terms, eventId, when, kind, listSet }))
                     .forEach((row) => rowSpeakers(row).forEach((name) => speakersAvailable.add(name)));
                 speaker = rebuildSelect(speakerSelect, speakerOptions, 'All speakers', speakersAvailable, speaker);
 
                 const eventsAvailable = new Set();
-                rows.filter((row) => rowMatches(row, { terms, speaker, when, kind }))
+                rows.filter((row) => rowMatches(row, { terms, speaker, when, kind, listSet }))
                     .forEach((row) => eventsAvailable.add(row.getAttribute('data-event') || ''));
                 eventId = rebuildSelect(eventSelect, eventOptions, 'All events', eventsAvailable, eventId);
 
                 const datesAvailable = new Set();
-                rows.filter((row) => rowMatches(row, { terms, speaker, eventId, kind }))
+                rows.filter((row) => rowMatches(row, { terms, speaker, eventId, kind, listSet }))
                     .forEach((row) => datesAvailable.add(row.getAttribute('data-when') || ''));
                 when = rebuildSelect(dateSelect, dateOptions, 'All dates', datesAvailable, when);
 
                 if (kindSelect) {
                     const kindsAvailable = new Set();
-                    rows.filter((row) => rowMatches(row, { terms, speaker, eventId, when }))
+                    rows.filter((row) => rowMatches(row, { terms, speaker, eventId, when, listSet }))
                         .forEach((row) => kindsAvailable.add(row.getAttribute('data-kind') || ''));
                     kind = rebuildSelect(kindSelect, kindOptions, 'All', kindsAvailable, kind);
                 }
 
                 let shown = 0;
                 rows.forEach((row) => {
-                    const match = rowMatches(row, { terms, speaker, eventId, when, kind });
+                    const match = rowMatches(row, { terms, speaker, eventId, when, kind, listSet });
                     row.hidden = !match;
                     if (match) shown += 1;
                 });
+                const listButton = listButtons.find((btn) => (btn.dataset.list || '') === activeList);
+                const listLabel = listButton ? (listButton.dataset.label || activeList) : '';
+                if (heading) heading.textContent = activeList && listLabel ? listLabel : defaultHeading;
+                if (hint) {
+                    hint.textContent = activeList && listButton && listButton.dataset.description
+                        ? `${listButton.dataset.description} A title opens that talk on its existing page.`
+                        : defaultHint;
+                }
+                listButtons.forEach((btn) => {
+                    btn.setAttribute('aria-pressed', String((btn.dataset.list || '') === activeList));
+                });
                 if (status) {
-                    const totalNoun = rows.length === 1 ? 'video' : 'videos';
-                    status.textContent = shown === rows.length
-                        ? `${rows.length} ${totalNoun}`
-                        : `${shown} of ${rows.length} ${totalNoun}`;
+                    if (activeList && listKeys) {
+                        const noun = listKeys.length === 1 ? 'video' : 'videos';
+                        status.textContent = shown === listKeys.length
+                            ? `${shown} ${noun} in ${listLabel}`
+                            : `${shown} of ${listKeys.length} ${noun} in ${listLabel}`;
+                    } else {
+                        const totalNoun = rows.length === 1 ? 'video' : 'videos';
+                        status.textContent = shown === rows.length
+                            ? `${rows.length} ${totalNoun}`
+                            : `${shown} of ${rows.length} ${totalNoun}`;
+                    }
                 }
                 if (empty) empty.hidden = shown !== 0;
-                if (clearBtn) clearBtn.disabled = !terms.length && !speaker && !eventId && !when && !kind;
+                if (clearBtn) clearBtn.disabled = !terms.length && !speaker && !eventId && !when && !kind && !activeList;
 
                 const next = new URLSearchParams(window.location.search);
-                ['q', 'speaker', 'event', 'date', 'kind'].forEach((key) => next.delete(key));
+                ['q', 'speaker', 'event', 'date', 'kind', 'list'].forEach((key) => next.delete(key));
                 const typed = selected(queryInput).trim();
                 if (typed) next.set('q', typed);
                 if (speaker) next.set('speaker', speaker);
                 if (eventId) next.set('event', eventId);
                 if (when) next.set('date', when);
                 if (kind) next.set('kind', kind);
+                if (activeList) next.set('list', activeList);
                 const search = next.toString();
                 const url = `${window.location.pathname}${search ? `?${search}` : ''}${window.location.hash}`;
                 const current = `${window.location.pathname}${window.location.search}${window.location.hash}`;
@@ -1356,12 +1487,19 @@
             [speakerSelect, eventSelect, dateSelect, kindSelect].forEach((el) => {
                 if (el) el.addEventListener('change', applyFilters);
             });
+            listButtons.forEach((btn) => {
+                btn.addEventListener('click', () => {
+                    activeList = btn.dataset.list || '';
+                    applyFilters();
+                });
+            });
             if (clearBtn) {
                 clearBtn.addEventListener('click', () => {
                     if (queryInput) queryInput.value = '';
                     [speakerSelect, eventSelect, dateSelect, kindSelect].forEach((el) => {
                         if (el) el.value = '';
                     });
+                    activeList = '';
                     applyFilters();
                     if (queryInput) queryInput.focus();
                 });

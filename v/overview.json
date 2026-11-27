@@ -8,5 +8,78 @@
     "subtitle": "Recorded conferences, talks, and sessions from the KERI Foundation",
     "introduction": "Videos from KERI conferences, SEDI summits, and other sessions — from Samuel Smith’s introductions and keynotes to community talks and interviews on witnesses, wallets, ACDCs, did:webs, and Utah’s state-endorsed identity work, plus Veridian wallet demos. Each gallery has curated subtitles, searchable transcripts, and tools for creating clips.",
     "footer": "KERI Foundation • Videos"
-  }
+  },
+  "lists": [
+    {
+      "id": "new-to-keri",
+      "label": "New to KERI",
+      "description": "What KERI is, why it exists, and a first look at a wallet. Start with the short introduction.",
+      "videos": [
+        "sessions/2024/jan#introduction-to-keri-samuel-smith",
+        "sessions/2026/may#introduction-to-keri-part-1-samuel-smith",
+        "sessions/2026/jul#it-s-keri-or-surveillance-samuel-smith",
+        "KERI/2026/apr#keri-infrastructure-the-5-w-s-thomas-mayfield",
+        "KERI/2026/apr#the-landscape-of-sedi-george-mcewan",
+        "sessions/2026/nov#veridian-wallet-demos-intro-karla-mckenna",
+        "sessions/2026/nov#veridian-wallet-recovery-with-smart-cards-jaime-caso"
+      ]
+    },
+    {
+      "id": "legal",
+      "label": "Legal and policy",
+      "description": "The legal basis of digital identity, evidence, contracts, and Utah’s state-endorsed identity work.",
+      "videos": [
+        "KERI/2026/apr#the-landscape-of-sedi-george-mcewan",
+        "KERI/2026/apr#digital-identity-needs-a-legal-foundation-phil-windley",
+        "SEDI/2025/nov#legislative-panel",
+        "KERI/2026/apr#contract-credentials-verifiable-identity-cole-davis",
+        "KERI/2026/apr#applying-keri-to-general-evidence-problems-daniel-hardman",
+        "SEDI/2026/nov#sam-smith-sedi-acdcs-for-utah-s-state-endorsed-digital-identity",
+        "KERI/2026/apr#spac-tsp-samuel-smith",
+        "KERI/2026/apr#secure-asset-transfer-protocol-ned-smith"
+      ]
+    },
+    {
+      "id": "developers",
+      "label": "Developers",
+      "description": "From the KERI model to KERIA, Signify, did:webs, and a working suite demo.",
+      "videos": [
+        "sessions/2026/may#introduction-to-keri-part-1-samuel-smith",
+        "KERI/2026/nov#samuel-m-smith-the-state-and-the-future-of-the-keri-suite",
+        "KERI/2026/apr#keri-infrastructure-the-5-w-s-thomas-mayfield",
+        "KERI/2026/apr#keria-tutorial-kent-bull",
+        "KERI/2026/apr#signify-security-architecture-fergal-o-conner",
+        "KERI/2026/apr#keri-development-deployment-keanu-pahio",
+        "KERI/2026/nov#kent-bull-did-webs-why-the-s-matters-most",
+        "KERI/2026/nov#ryan-hansen-evan-asakawa-demonstration-kerisuite",
+        "sessions/2026/nov#keri-acdcs-as-openid-connect-roberto-c-morano"
+      ]
+    },
+    {
+      "id": "wallets",
+      "label": "Wallets and demos",
+      "description": "Wallet software, recovery, and live demonstrations of issuing and using credentials.",
+      "videos": [
+        "sessions/2026/nov#veridian-wallet-demos-intro-karla-mckenna",
+        "KERI/2026/apr#mobile-wallet-evan-asakawa",
+        "sessions/2026/nov#veridian-wallet-recovery-with-smart-cards-jaime-caso",
+        "KERI/2026/nov#ryan-hansen-evan-asakawa-demonstration-kerisuite",
+        "sessions/2026/nov#keri-acdcs-as-openid-connect-roberto-c-morano",
+        "KERI/2026/apr#witnesses-watchers-ryan-hansen"
+      ]
+    },
+    {
+      "id": "privacy",
+      "label": "Privacy and public identity",
+      "description": "Surveillance, the identity tradespace, and a public identity utility that people can verify.",
+      "videos": [
+        "sessions/2026/jul#it-s-keri-or-surveillance-samuel-smith",
+        "KERI/2026/apr#the-digital-identity-tradespace-samuel-smith",
+        "KERI/2026/nov#samuel-m-smith-utah-sedi-public-identity-utility-as-bootstrap-for-ai-agent-surveillance-protection-with-keri",
+        "KERI/2026/apr#how-keri-enables-better-private-public-partnerships-george-mcewan",
+        "KERI/2026/apr#investigating-the-game-of-trust-nicholas-racz",
+        "KERI/2026/apr#open-verifiable-communications-daniel-hardman"
+      ]
+    }
+  ]
 }

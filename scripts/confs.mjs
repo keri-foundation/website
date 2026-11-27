@@ -44,8 +44,10 @@
  *                 template-presentations-landingpage/overview.html, using each
  *                 overview.json for page copy and each gallery index.json
  *                 for the cards and the talk inventory. Talk links are the
- *                 existing gallery URL plus the title hash. --conf limits which
- *                 tree overview is rewritten (v/index.html is always rewritten).
+ *                 existing gallery URL plus the title hash. An overview.json
+ *                 "lists" array becomes Start here selections on that page
+ *                 (?list=id). --conf limits which tree overview is rewritten
+ *                 (v/index.html is always rewritten).
  * sync-subtitles  Copy curated .srt files from the source folders listed in
  *                 scripts/subtitle-sources.tsv into the conference folders. Only
  *                 subtitles referenced by that conference's index.json are copied
@@ -1149,6 +1151,69 @@ function catalogHeading(items) {
   return "All talks";
 }
 
+/** Stable key for a talk on an overview: gallery id + title slug. */
+function talkKey(item) {
+  return `${item.eventId}#${generateVideoId(item.title)}`;
+}
+
+const WATCH_LIST_ID_RE = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+
+/**
+ * Curated, ordered selections from overview.json "lists".
+ * Each video is "galleryId#title-slug", the same key stamped on the row.
+ */
+function normalizeWatchLists(raw, items) {
+  if (raw == null) return [];
+  if (!Array.isArray(raw)) throw new Error("overview lists must be an array");
+  const known = new Set(items.map((item) => talkKey(item)));
+  const seenIds = new Set();
+  return raw.map((list, index) => {
+    if (!list || typeof list !== "object") throw new Error(`lists[${index}] must be an object`);
+    const id = String(list.id || "").trim();
+    const label = String(list.label || "").trim();
+    const description = String(list.description || "").trim();
+    if (!WATCH_LIST_ID_RE.test(id)) {
+      throw new Error(`lists[${index}].id must be lowercase words separated by hyphens`);
+    }
+    if (seenIds.has(id)) throw new Error(`duplicate list id: ${id}`);
+    seenIds.add(id);
+    if (!label) throw new Error(`list ${id}: missing label`);
+    if (!description) throw new Error(`list ${id}: missing description`);
+    if (!Array.isArray(list.videos) || !list.videos.length) {
+      throw new Error(`list ${id}: videos must be a non-empty array`);
+    }
+    const videos = [];
+    const seen = new Set();
+    for (const entry of list.videos) {
+      const key = String(entry || "").trim();
+      if (!known.has(key)) throw new Error(`list ${id}: unknown video "${key}"`);
+      if (seen.has(key)) throw new Error(`list ${id}: duplicate video "${key}"`);
+      seen.add(key);
+      videos.push(key);
+    }
+    return { id, label, description, videos };
+  });
+}
+
+function renderWatchLists(lists) {
+  if (!lists.length) return "";
+  const buttons = [
+    `                        <button type="button" data-list="" aria-pressed="true">All videos</button>`,
+    ...lists.map(
+      (list) =>
+        `                        <button type="button" data-list="${escapeAttr(list.id)}" data-label="${escapeAttr(list.label)}" data-description="${escapeAttr(list.description)}" data-videos="${escapeAttr(list.videos.join("|"))}" aria-pressed="false">${escapeText(list.label)}</button>`
+    ),
+  ].join("\n");
+  return `                <div class="watch-lists" id="watchLists">
+                    <h2 class="overview-section-title" id="watchListsLabel">Start here</h2>
+                    <p class="watch-lists-hint" id="watchListsHint">Short, ordered selections for one audience. The address of this page keeps the selection, so you can send it.</p>
+                    <div class="watch-list-options" role="group" aria-labelledby="watchListsLabel">
+${buttons}
+                    </div>
+                </div>
+`;
+}
+
 function optionList(entries) {
   return entries
     .map(
@@ -1177,7 +1242,7 @@ function renderTalkRow(item) {
   const thumb = item.poster
     ? `<a class="talk-row-thumb" href="${escapeAttr(item.talkHref)}" tabindex="-1" aria-hidden="true"><img src="${escapeAttr(item.poster)}" alt="" loading="lazy" decoding="async"></a>`
     : `<a class="talk-row-thumb talk-row-thumb-fallback" href="${escapeAttr(item.talkHref)}" tabindex="-1" aria-hidden="true"><span></span></a>`;
-  return `                <li class="talk-row" data-speakers="${escapeAttr(item.speakers.join("|"))}" data-event="${escapeAttr(item.eventId)}" data-when="${escapeAttr(item.whenValue)}" data-kind="${escapeAttr(item.kind)}" data-search="${escapeAttr(search)}">
+  return `                <li class="talk-row" data-key="${escapeAttr(talkKey(item))}" data-speakers="${escapeAttr(item.speakers.join("|"))}" data-event="${escapeAttr(item.eventId)}" data-when="${escapeAttr(item.whenValue)}" data-kind="${escapeAttr(item.kind)}" data-search="${escapeAttr(search)}">
                     ${thumb}
                     <div class="talk-row-body">
                         <a class="talk-row-title" href="${escapeAttr(item.talkHref)}">${escapeText(item.title)}</a>
@@ -1186,7 +1251,7 @@ function renderTalkRow(item) {
                 </li>`;
 }
 
-function renderTalkCatalog(items) {
+function renderTalkCatalog(items, lists = []) {
   if (!items.length) return "";
   const speakers = [...new Set(items.flatMap((item) => item.speakers))]
     .filter(Boolean)
@@ -1225,8 +1290,8 @@ ${optionList(kindOptions)}
       : "";
   const count = items.length === 1 ? "1 video" : `${items.length} videos`;
   return `            <section class="talk-catalog" id="talkCatalog" aria-labelledby="talkCatalogHeading">
-                <h2 class="overview-section-title" id="talkCatalogHeading">${escapeText(catalogHeading(items))}</h2>
-                <p class="talk-catalog-hint">Filter by title, speaker, event, or date. A title opens that talk on its existing page.</p>
+${renderWatchLists(lists)}                <h2 class="overview-section-title" id="talkCatalogHeading">${escapeText(catalogHeading(items))}</h2>
+                <p class="talk-catalog-hint" id="talkCatalogHint">Filter by title, speaker, event, or date. A title opens that talk on its existing page.</p>
                 <search class="talk-filters${kindField ? " has-kind" : ""}" aria-label="Filter talks">
                     <div class="talk-filter talk-filter-query">
                         <label for="talkQuery">Title</label>
@@ -1388,7 +1453,7 @@ async function cmdOverviewPages(opts) {
         a.order - b.order ||
         a.seq - b.seq
     );
-    const catalogHtml = renderTalkCatalog(talks);
+    const catalogHtml = renderTalkCatalog(talks, normalizeWatchLists(overview.lists, talks));
     const eventsHtml = showEventCards
       ? renderOverviewEvents(cards, { withHeading: Boolean(catalogHtml) })
       : "";
