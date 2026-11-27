@@ -101,8 +101,8 @@
         "quote": "We wanted everything to happen in the browser — all of your keys created and stored on your device. Don't worry about them sitting on some server. We send you the app, and you get your in-browser wallet."
       },
       {
-        "videoTitle": "FHIR and CMS - Jared Jefferey",
-        "speaker": "Jared Jefferey",
+        "videoTitle": "FHIR and CMS - Jared Jeffery",
+        "speaker": "Jared Jeffery",
         "talk": "FHIR and CMS",
         "start": 1989,
         "end": 2003,
@@ -146,13 +146,13 @@
     "Cole Davis": "https://kericonf.com/wp-content/uploads/2026/02/ColeDavis_v1.0-edited.jpeg",
     "Alan Davies": "https://kericonf.com/wp-content/uploads/2026/02/AlanDavies_v1.0-edited.jpeg",
     "Fergal O'Connor": "https://kericonf.com/wp-content/uploads/2026/03/FergalOConnor_v.1.0.png",
-    "Fergal O'Conner": "https://kericonf.com/wp-content/uploads/2026/03/FergalOConnor_v.1.0.png",
+    "Fergal O'Connor": "https://kericonf.com/wp-content/uploads/2026/03/FergalOConnor_v.1.0.png",
     "Scott Stuewe": "https://kericonf.com/wp-content/uploads/2026/03/ScottStuewe_v1.0-e1773917316969.jpg",
     "Jay Alexander Elliot": "https://kericonf.com/wp-content/uploads/2026/03/JayElliot_v1.0-scaled.jpg",
     "Mark Scrimshire": "https://kericonf.com/wp-content/uploads/2026/03/MarkScripshire_v1.0.png",
     "Phil Windley": "https://kericonf.com/wp-content/uploads/2026/03/phil-windley.jpg",
     "Jared Jeffery": "https://kericonf.com/wp-content/uploads/2026/03/jared-jeffery.jpg",
-    "Jared Jefferey": "https://kericonf.com/wp-content/uploads/2026/03/jared-jeffery.jpg",
+    "Jared Jeffery": "https://kericonf.com/wp-content/uploads/2026/03/jared-jeffery.jpg",
     "Keanu Pahio": "https://kericonf.com/wp-content/uploads/2026/04/KeanuPahio_v1.0.jpg",
     "Karla McKenna": "https://kericonf.com/wp-content/uploads/2026/04/KarlaMcKenna_v1.0-edited.jpg",
     "Nicholas Racz": "https://kericonf.com/wp-content/uploads/2026/04/NicholasRacz_v1.0-edited.jpeg",
@@ -325,16 +325,16 @@
       "day": "KERICONF26 Day 1",
       "title": "Signify Security Architecture - Fergal O'Conner",
       "speakers": [
-        "Fergal O'Conner"
+        "Fergal O'Connor"
       ],
       "youtubeId": "XklpffGGvFc",
       "targetGroups": [
         "developer"
       ],
-      "path": "talks/Fergal O'Conner ｜ Signify Security Architecture ｜ KERI Conference 2026.mp4",
+      "path": "talks/Fergal O'Connor ｜ Signify Security Architecture ｜ KERI Conference 2026.mp4",
       "duration": "37:45",
-      "subtitle": "talks/Fergal O'Conner ｜ Signify Security Architecture ｜ KERI Conference 2026.srt",
-      "presentation": "slides/Fergal O'Conner ｜ Signify Security Architecture ｜ KERI Conference 2026.pdf"
+      "subtitle": "talks/Fergal O'Connor ｜ Signify Security Architecture ｜ KERI Conference 2026.srt",
+      "presentation": "slides/Fergal O'Connor ｜ Signify Security Architecture ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 10,
@@ -356,17 +356,17 @@
       "day": "KERICONF26 Day 1",
       "title": "FHIR and CMS - Jared Jefferey",
       "speakers": [
-        "Jared Jefferey"
+        "Jared Jeffery"
       ],
       "youtubeId": "jYWqcI1KTx0",
       "targetGroups": [
         "developer",
         "policymaker"
       ],
-      "path": "talks/Jared Jefferey ｜ FHIR and CMS ｜ KERI Conference 2026.mp4",
+      "path": "talks/Jared Jeffery ｜ FHIR and CMS ｜ KERI Conference 2026.mp4",
       "duration": "38:25",
-      "subtitle": "talks/Jared Jefferey ｜ FHIR and CMS ｜ KERI Conference 2026.srt",
-      "presentation": "slides/Jared Jefferey ｜ FHIR and CMS ｜ KERI Conference 2026.pdf"
+      "subtitle": "talks/Jared Jeffery ｜ FHIR and CMS ｜ KERI Conference 2026.srt",
+      "presentation": "slides/Jared Jeffery ｜ FHIR and CMS ｜ KERI Conference 2026.pdf"
     },
     {
       "order": 12,
@@ -738,15 +738,15 @@
       "day": "KERICONF26 Interviews",
       "title": "Interview - Jared Jefferey",
       "speakers": [
-        "Jared Jefferey"
+        "Jared Jeffery"
       ],
       "targetGroups": [
         "developer",
         "policymaker"
       ],
-      "path": "interviews/Jared-Jefferey-Interview.mp4",
+      "path": "interviews/Jared-Jeffery-Interview.mp4",
       "duration": "3:01",
-      "subtitle": "interviews/Jared-Jefferey-Interview.srt"
+      "subtitle": "interviews/Jared-Jeffery-Interview.srt"
     },
     {
       "order": 6,
