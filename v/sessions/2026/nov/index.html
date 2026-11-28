@@ -88,6 +88,7 @@
         }
 
         body {
+            position: relative;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background: var(--page-bg);
             color: var(--ink);
@@ -3219,24 +3220,40 @@
             color: var(--muted);
         }
 
+        .back-to-top-sentinel {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 1px;
+            height: 1px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            pointer-events: none;
+            opacity: 0;
+        }
+
         .back-to-top {
             position: fixed;
-            right: max(16px, env(safe-area-inset-right, 0px));
-            bottom: max(16px, env(safe-area-inset-bottom, 0px));
-            z-index: 60;
+            right: calc(12px + env(safe-area-inset-right, 0px));
+            bottom: calc(12px + env(safe-area-inset-bottom, 0px));
+            z-index: 900;
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 6px;
+            min-width: 44px;
             min-height: 44px;
             padding: 10px 14px;
-            border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+            border: 1px solid color-mix(in srgb, var(--accent) 55%, transparent);
             border-radius: 8px;
-            background: color-mix(in srgb, var(--panel-bg) 88%, var(--accent));
-            color: var(--ink);
+            background: var(--accent);
+            color: var(--on-ink);
             font: 700 0.85rem/1 var(--heading-font);
             letter-spacing: 0.02em;
-            box-shadow: 0 8px 20px color-mix(in srgb, var(--ink) 16%, transparent);
+            box-shadow: 0 8px 20px color-mix(in srgb, var(--ink) 22%, transparent);
             cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
             opacity: 0;
             visibility: hidden;
             pointer-events: none;
@@ -3253,9 +3270,8 @@
 
         .back-to-top:hover,
         .back-to-top:focus-visible {
-            background: var(--accent);
-            color: var(--on-ink);
-            border-color: var(--accent);
+            background: color-mix(in srgb, var(--accent) 82%, black);
+            border-color: color-mix(in srgb, var(--accent) 82%, black);
         }
 
         .back-to-top:focus-visible {
@@ -3517,6 +3533,7 @@
 </head>
 
 <body>
+    <div class="back-to-top-sentinel" id="backToTopSentinel" aria-hidden="true"></div>
     <a class="skip-link" href="#mainContent">Skip to main content</a>
     <nav class="v-site-nav" id="vSiteNav" aria-label="Video library navigation">
     <button type="button" class="v-site-nav-mobile-toggle" id="vNavMobileToggle" aria-expanded="false" aria-controls="vSiteNavBody">Menu</button>
@@ -9224,24 +9241,52 @@
             initVSiteNav();
             (function initBackToTop() {
                 const btn = document.getElementById('backToTop');
+                const sentinel = document.getElementById('backToTopSentinel');
                 if (!btn) return;
-                const threshold = () => Math.min(Math.round(window.innerHeight * 0.7), 520);
-                let ticking = false;
-                const sync = () => {
-                    ticking = false;
-                    btn.classList.toggle('is-visible', window.scrollY > threshold());
+
+                const scrollY = () =>
+                    window.scrollY
+                    || document.documentElement.scrollTop
+                    || document.body.scrollTop
+                    || 0;
+                const threshold = () => Math.min(Math.round(window.innerHeight * 0.35), 240);
+
+                const setVisible = (show) => {
+                    btn.classList.toggle('is-visible', !!show);
                 };
+
+                const syncFromScroll = () => setVisible(scrollY() > threshold());
+
+                if (sentinel && 'IntersectionObserver' in window) {
+                    const io = new IntersectionObserver((entries) => {
+                        const entry = entries[0];
+                        if (!entry) return;
+                        // Show once the page top has left the viewport.
+                        setVisible(!entry.isIntersecting && scrollY() > threshold());
+                    }, { root: null, threshold: 0 });
+                    io.observe(sentinel);
+                }
+
+                // Also watch scroll: more reliable on some mobile browsers / previews.
+                let ticking = false;
                 const onScroll = () => {
                     if (ticking) return;
                     ticking = true;
-                    requestAnimationFrame(sync);
+                    requestAnimationFrame(() => {
+                        ticking = false;
+                        syncFromScroll();
+                    });
                 };
                 window.addEventListener('scroll', onScroll, { passive: true });
+                document.addEventListener('scroll', onScroll, { passive: true, capture: true });
+                window.visualViewport?.addEventListener('scroll', onScroll, { passive: true });
+                window.visualViewport?.addEventListener('resize', onScroll, { passive: true });
                 window.addEventListener('resize', onScroll, { passive: true });
+                syncFromScroll();
+
                 btn.addEventListener('click', () => {
                     window.scrollTo({ top: 0, behavior: motionSafeBehavior() });
                 });
-                sync();
             })();
 
             bootGallery().catch((err) => {
