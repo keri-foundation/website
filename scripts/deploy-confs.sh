@@ -356,7 +356,7 @@ step_push() {
     local tree_index_rsync=(-av --human-readable)
     [ "$DRY_RUN" -eq 1 ] && tree_index_rsync+=(--dry-run)
     local overview
-    for overview in "$V/index.html" "$CONFS/index.html" "$SESSIONS/index.html"; do
+        for overview in "$V/index.html" "$V/search.json" "$CONFS/index.html" "$SESSIONS/index.html"; do
         if [ ! -f "$overview" ]; then
             echo "Missing $overview — run landing-pages first" >&2
             exit 1
@@ -365,6 +365,7 @@ step_push() {
     rsync "${tree_index_rsync[@]}" \
         "$V/.htaccess" \
         "$V/index.html" \
+        "$V/search.json" \
         "$REMOTE_HOST:$REMOTE_ROOT/v/"
     rsync "${tree_index_rsync[@]}" \
         "$CONFS/.htaccess" \

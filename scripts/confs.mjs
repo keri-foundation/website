@@ -46,7 +46,9 @@
  *                 for the cards and the talk inventory. Talk links are the
  *                 existing gallery URL plus the title hash. An overview.json
  *                 "lists" array becomes Start here selections on that page
- *                 (?list=id). --conf limits which tree overview is rewritten
+ *                 (?list=id). The /v/ page also gets a transcript search backed by
+ *                 v/search.json (English cue text from every gallery, rebuilt
+ *                 with that page). --conf limits which tree overview is rewritten
  *                 (v/index.html is always rewritten).
  * sync-subtitles  Copy curated .srt files from the source folders listed in
  *                 scripts/subtitle-sources.tsv into the conference folders. Only
@@ -1279,7 +1281,7 @@ ${group.items.map(renderTalkRow).join("\n")}
     .join("\n");
 }
 
-function renderTalkCatalog(items, lists = []) {
+function renderTalkCatalog(items, lists = [], options = {}) {
   if (!items.length) return "";
   const speakers = [...new Set(items.flatMap((item) => item.speakers))]
     .filter(Boolean)
@@ -1317,8 +1319,18 @@ ${optionList(kindOptions)}
                     </div>`
       : "";
   const count = items.length === 1 ? "1 video" : `${items.length} videos`;
+  const transcriptSearch = options.transcriptSearch
+    ? `                <search class="transcript-search" aria-label="Search transcripts">
+                    <label for="transcriptQuery">Search transcripts</label>
+                    <input type="search" id="transcriptQuery" name="tq" placeholder="Search what was said…" autocomplete="off" spellcheck="false" enterkeyhint="search">
+                    <p class="transcript-search-hint">English transcript of every talk. A result opens that moment.</p>
+                    <p class="transcript-search-status" id="transcriptSearchStatus" role="status" aria-live="polite"></p>
+                    <div class="transcript-search-results" id="transcriptSearchResults"></div>
+                </search>
+`
+    : "";
   return `            <section class="talk-catalog" id="talkCatalog" aria-labelledby="talkCatalogHeading">
-${renderWatchLists(lists)}                <h2 class="overview-section-title" id="talkCatalogHeading">${escapeText(catalogHeading(items))}</h2>
+${renderWatchLists(lists)}${transcriptSearch}                <h2 class="overview-section-title" id="talkCatalogHeading">${escapeText(catalogHeading(items))}</h2>
                 <p class="talk-catalog-hint" id="talkCatalogHint">Talks from the same event are grouped. Filter by title, speaker, event, or date. A title opens that talk on its existing page.</p>
                 <search class="talk-filters${kindField ? " has-kind" : ""}" aria-label="Filter talks">
                     <div class="talk-filter talk-filter-query">
@@ -1407,6 +1419,99 @@ function renderOverviewIntro(text) {
   return `<p class="overview-intro">${escapeText(intro)}</p>\n`;
 }
 
+const SRT_TIME_PAT =
+  /(\d{2}:\d{2}:\d{2})[.,](\d{3})\s*-->\s*(\d{2}:\d{2}:\d{2})[.,](\d{3})/;
+
+function srtClockToSeconds(hms, ms) {
+  const [h, m, s] = hms.split(":").map(Number);
+  return h * 3600 + m * 60 + s + Number(ms) / 1000;
+}
+
+function plainCueText(raw) {
+  return String(raw || "")
+    .replace(/<[^>]+>/g, "")
+    .replace(/\{[^}]*\}/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/** English cues from one .srt. Times are seconds. */
+function parseSrtCues(raw) {
+  const cues = [];
+  const normalized = String(raw || "").replace(/^\uFEFF/, "").replace(/\r\n/g, "\n").replace(/\r/g, "\n");
+  for (const block of normalized.split(/\n{2,}/)) {
+    const lines = block.trim().split("\n");
+    if (lines.length < 2) continue;
+    const timeLine = lines.findIndex((line) => SRT_TIME_PAT.test(line));
+    if (timeLine === -1) continue;
+    const match = lines[timeLine].match(SRT_TIME_PAT);
+    if (!match) continue;
+    const text = plainCueText(lines.slice(timeLine + 1).join(" "));
+    if (!text) continue;
+    const start = Math.round(srtClockToSeconds(match[1], match[2]) * 1000) / 1000;
+    cues.push({ start, text });
+  }
+  return cues;
+}
+
+/**
+ * One file the /v/ page searches instead of fetching every subtitle.
+ * talks[i] describes a video; cues are [talkIndex, startSeconds, text], in file order.
+ */
+async function buildTranscriptSearchIndex(ids) {
+  const talks = [];
+  const cues = [];
+  for (const id of ids) {
+    const config = await loadConfig(id);
+    const confDir = galleryDir(id);
+    const event = String(config.page?.heading || config.page?.title || id).trim();
+    const href = `/${galleryPrefix(id)}/`;
+    for (const video of config.videos || []) {
+      const title = String(video?.title || "").trim();
+      if (!title) continue;
+      const talkIndex = talks.length;
+      talks.push({
+        title,
+        event,
+        href: `${href}#${generateVideoId(title)}`,
+      });
+      const rel = englishSubtitleRel(video, confDir);
+      if (!rel || isExternal(rel) || rel.startsWith("/")) continue;
+      let raw = "";
+      try {
+        raw = await readFile(join(confDir, ...toPosix(rel).split("/")), "utf8");
+      } catch {
+        continue;
+      }
+      for (const cue of parseSrtCues(raw)) cues.push([talkIndex, cue.start, cue.text]);
+    }
+  }
+  return { talks, cues };
+}
+
+async function writeTranscriptSearchIndex(ids, opts) {
+  const index = await buildTranscriptSearchIndex(ids);
+  const json = JSON.stringify(index);
+  const dest = join(V_ROOT, "search.json");
+  const label = "v/search.json";
+  let previous = null;
+  try {
+    previous = await readFile(dest, "utf8");
+  } catch {
+    previous = null;
+  }
+  if (previous === json) {
+    console.log(`unchanged ${label} (${index.talks.length} talks, ${index.cues.length} cues)`);
+    return;
+  }
+  if (opts.dryRun) {
+    console.log(`[dry-run] would update ${label} (${index.talks.length} talks, ${index.cues.length} cues)`);
+    return;
+  }
+  await writeFile(dest, json, "utf8");
+  console.log(`updated  ${label} (${index.talks.length} talks, ${index.cues.length} cues)`);
+}
+
 async function cmdOverviewPages(opts) {
   if (!existsSync(OVERVIEW_TEMPLATE)) {
     throw new Error(`Missing template: ${OVERVIEW_TEMPLATE}`);
@@ -1485,10 +1590,15 @@ async function cmdOverviewPages(opts) {
     if (page.scope === "all") {
       for (const item of talks) item.talkHref += "&land=card";
     }
-    const catalogHtml = renderTalkCatalog(talks, normalizeWatchLists(overview.lists, talks));
+    const catalogHtml = renderTalkCatalog(talks, normalizeWatchLists(overview.lists, talks), {
+      transcriptSearch: page.scope === "all",
+    });
     const eventsHtml = showEventCards
       ? renderOverviewEvents(cards, { withHeading: Boolean(catalogHtml) })
       : "";
+    if (page.scope === "all") {
+      await writeTranscriptSearchIndex(ids, opts);
+    }
     const html = stampSiteNav(
       stampGalleryHeader(
         stampLandingMeta(templateHtml, { title, description, url, brand }),
