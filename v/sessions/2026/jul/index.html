@@ -862,10 +862,16 @@
             cursor: not-allowed;
         }
 
+        .search-hint,
         #searchStatus {
             font-size: 0.85rem;
             color: var(--muted);
             margin-top: 8px;
+            line-height: 1.4;
+        }
+
+        .search-hint {
+            margin-bottom: 0;
         }
 
         #searchResults {
@@ -3501,12 +3507,13 @@
                     <label for="transcriptSearch" id="searchLabel">Search all transcripts</label>
                     <div class="search-wrapper">
                         <input type="search" id="transcriptSearch" placeholder="Type to search…" autocomplete="off"
-                            spellcheck="false" enterkeyhint="search" aria-describedby="searchStatus">
+                            spellcheck="false" enterkeyhint="search" aria-describedby="searchHint searchStatus">
                         <button id="searchToggleAll" type="button" aria-expanded="true" aria-controls="searchResults"
                             title="Collapse or expand all result groups" disabled>Toggle All</button>
                         <button id="searchClear" type="button" aria-label="Clear search">Clear</button>
                     </div>
                 </div>
+                <p class="search-hint" id="searchHint">Simple string matching across this event’s transcripts.</p>
                 <div class="search-output">
                     <p id="searchStatus" role="status" aria-live="polite"></p>
                     <div id="searchResults"></div>
@@ -6984,10 +6991,10 @@
                 modalTranscriptSearchInput = document.createElement('input');
                 modalTranscriptSearchInput.type = 'search';
                 modalTranscriptSearchInput.className = 'video-modal-transcript-search';
-                modalTranscriptSearchInput.placeholder = 'Search this transcript…';
+                modalTranscriptSearchInput.placeholder = 'Simple string match…';
                 modalTranscriptSearchInput.autocomplete = 'off';
                 modalTranscriptSearchInput.disabled = true;
-                modalTranscriptSearchInput.setAttribute('aria-label', 'Search this transcript');
+                modalTranscriptSearchInput.setAttribute('aria-label', 'Search this transcript with simple string matching');
                 modalTranscriptSearchInput.setAttribute('aria-describedby', 'videoModalTranscriptSearchStatus');
                 modalTranscriptSearchInput.addEventListener('input', () => {
                     clearTimeout(modalTranscriptSearchTimer);

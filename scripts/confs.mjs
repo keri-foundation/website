@@ -1323,7 +1323,7 @@ ${optionList(kindOptions)}
     ? `                <search class="transcript-search" aria-label="Search transcripts">
                     <label for="transcriptQuery">Search transcripts</label>
                     <input type="search" id="transcriptQuery" name="tq" placeholder="Search what was said…" autocomplete="off" spellcheck="false" enterkeyhint="search">
-                    <p class="transcript-search-hint">English transcript of every talk. A result opens that moment.</p>
+                    <p class="transcript-search-hint">English transcript of every talk. Simple string matching — a result opens that moment.</p>
                     <p class="transcript-search-status" id="transcriptSearchStatus" role="status" aria-live="polite"></p>
                     <div class="transcript-search-results" id="transcriptSearchResults"></div>
                 </search>
@@ -1331,7 +1331,7 @@ ${optionList(kindOptions)}
     : "";
   return `            <section class="talk-catalog" id="talkCatalog" aria-labelledby="talkCatalogHeading">
 ${renderWatchLists(lists)}${transcriptSearch}                <h2 class="overview-section-title" id="talkCatalogHeading">${escapeText(catalogHeading(items))}</h2>
-                <p class="talk-catalog-hint" id="talkCatalogHint">Talks from the same event are grouped. Filter by title, speaker, event, or date. A title opens that talk on its existing page.</p>
+                <p class="talk-catalog-hint" id="talkCatalogHint">Talks from the same event are grouped. Title filter is simple string matching. Filter by title, speaker, event, or date. A title opens that talk on its existing page.</p>
                 <search class="talk-filters${kindField ? " has-kind" : ""}" aria-label="Filter talks">
                     <div class="talk-filter talk-filter-query">
                         <label for="talkQuery">Title</label>
