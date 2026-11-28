@@ -7554,6 +7554,7 @@
 
                 beginModalSession();
                 const cardPath = modalSourceVideoPath;
+                const closedVideoId = modalVideoId;
                 let time = 0;
                 try {
                     time = modalVideoEl ? modalVideoEl.currentTime : 0;
@@ -7588,9 +7589,12 @@
                     updateModalLinksToggle(null);
                     updateModalPdfButton(null);
                     if (isChaptersSheetOpen()) closeChaptersSheet({ restoreFocus: false });
-                    // Push a hashless URL so Back restores the full-screen entry.
+                    // Esc / ×: land on the talk card URL so Back restores full screen.
                     // Skip when Back/Forward already changed the location.
-                    if (!options.fromHistory) clearVideoUrlHash({ push: true });
+                    if (!options.fromHistory) {
+                        pushLandCardUrl(closedVideoId);
+                        highlightVideoCard(closedVideoId);
+                    }
                 }
 
                 if (modalPreviousFocus && typeof modalPreviousFocus.focus === 'function' && !isCoarsePointer()) {
@@ -7730,6 +7734,40 @@
                 const newUrl = `${window.location.pathname}${window.location.search}`;
                 if (options.push) history.pushState(null, '', newUrl);
                 else history.replaceState(null, '', newUrl);
+            }
+
+            /** Same shape as catalog links: #id&land=card (+ lang when not English). */
+            function buildLandCardHash(videoId) {
+                if (!videoId) return '';
+                let hash = `#${videoId}&land=card`;
+                const lang = captionLangPreference || readCaptionLangFromLocation();
+                if (lang && lang !== 'en') {
+                    hash += `&lang=${encodeURIComponent(lang)}`;
+                }
+                return hash;
+            }
+
+            function pushLandCardUrl(videoId) {
+                const hash = buildLandCardHash(videoId);
+                if (!hash) {
+                    clearVideoUrlHash({ push: true });
+                    return;
+                }
+                const newUrl = `${window.location.pathname}${window.location.search}${hash}`;
+                const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
+                if (currentUrl === newUrl) return;
+                history.pushState(null, '', newUrl);
+            }
+
+            function highlightVideoCard(videoId) {
+                if (!videoId) return;
+                const videoCard = document.getElementById(videoId);
+                if (!videoCard) return;
+                document.querySelectorAll('.video-card.highlighted').forEach((card) => {
+                    card.classList.remove('highlighted');
+                });
+                videoCard.classList.add('highlighted');
+                videoCard.scrollIntoView({ behavior: motionSafeBehavior(), block: 'center' });
             }
 
             function parseHashQuery(queryStr) {
