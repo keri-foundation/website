@@ -1323,7 +1323,13 @@ ${optionList(kindOptions)}
     ? `                <search class="transcript-search" aria-label="Search transcripts">
                     <label for="transcriptQuery">Search transcripts</label>
                     <input type="search" id="transcriptQuery" name="tq" placeholder="Search what was said…" autocomplete="off" spellcheck="false" enterkeyhint="search">
-                    <p class="transcript-search-hint">English transcript of every talk. Simple string matching — a result opens that moment.</p>
+                    <div class="transcript-search-options">
+                        <p class="transcript-search-hint">English transcript of every talk. Simple string matching — a result opens that moment.</p>
+                        <label class="transcript-match-case" for="transcriptMatchCase">
+                            <input type="checkbox" id="transcriptMatchCase" name="tc" value="1">
+                            Match case
+                        </label>
+                    </div>
                     <p class="transcript-search-status" id="transcriptSearchStatus" role="status" aria-live="polite"></p>
                     <div class="transcript-search-results" id="transcriptSearchResults"></div>
                 </search>

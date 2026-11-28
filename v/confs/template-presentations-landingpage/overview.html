@@ -699,12 +699,44 @@
             outline-offset: 2px;
         }
 
+        .transcript-search-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px 16px;
+            align-items: center;
+            margin-top: 8px;
+        }
+
         .transcript-search-hint,
         .transcript-search-status {
             margin: 8px 0 0;
             color: var(--muted);
             font-size: 0.92rem;
             line-height: 1.4;
+        }
+
+        .transcript-search-options .transcript-search-hint {
+            margin: 0;
+        }
+
+        .transcript-match-case {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.92rem;
+            line-height: 1.3;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .transcript-match-case input {
+            width: 1rem;
+            height: 1rem;
+            margin: 0;
+            accent-color: var(--accent);
+            cursor: pointer;
         }
 
         .transcript-search-status:empty {
@@ -1861,6 +1893,7 @@
 
             function initTranscriptSearch() {
                 const input = document.getElementById('transcriptQuery');
+                const matchCaseInput = document.getElementById('transcriptMatchCase');
                 const status = document.getElementById('transcriptSearchStatus');
                 const results = document.getElementById('transcriptSearchResults');
                 if (!input || !status || !results) return;
@@ -1872,6 +1905,11 @@
 
                 const params = new URLSearchParams(window.location.search);
                 if (params.get('tq')) input.value = params.get('tq');
+                if (matchCaseInput) matchCaseInput.checked = params.get('tc') === '1';
+
+                function matchCaseOn() {
+                    return !!(matchCaseInput && matchCaseInput.checked);
+                }
 
                 function loadIndex() {
                     if (!indexPromise) {
@@ -1893,19 +1931,19 @@
                     }[ch]));
                 }
 
-                function highlight(text, query) {
-                    const lower = text.toLowerCase();
-                    const q = query.toLowerCase();
+                function highlight(text, query, matchCase) {
+                    const haystack = matchCase ? text : text.toLowerCase();
+                    const needle = matchCase ? query : query.toLowerCase();
                     let html = '';
                     let i = 0;
                     while (i < text.length) {
-                        const at = lower.indexOf(q, i);
+                        const at = haystack.indexOf(needle, i);
                         if (at === -1) {
                             html += escapeHtml(text.slice(i));
                             break;
                         }
-                        html += `${escapeHtml(text.slice(i, at))}<mark>${escapeHtml(text.slice(at, at + q.length))}</mark>`;
-                        i = at + q.length;
+                        html += `${escapeHtml(text.slice(i, at))}<mark>${escapeHtml(text.slice(at, at + query.length))}</mark>`;
+                        i = at + query.length;
                     }
                     return html;
                 }
@@ -1926,10 +1964,12 @@
                     return String(Math.round(n * 1000) / 1000);
                 }
 
-                function syncQueryUrl(query) {
+                function syncQueryUrl(query, matchCase) {
                     const next = new URLSearchParams(window.location.search);
                     if (query) next.set('tq', query);
                     else next.delete('tq');
+                    if (matchCase) next.set('tc', '1');
+                    else next.delete('tc');
                     const search = next.toString();
                     const url = `${window.location.pathname}${search ? `?${search}` : ''}${window.location.hash}`;
                     const current = `${window.location.pathname}${window.location.search}${window.location.hash}`;
@@ -1938,6 +1978,7 @@
 
                 async function runSearch(query) {
                     const token = ++generation;
+                    const matchCase = matchCaseOn();
                     results.replaceChildren();
                     if (query.length < 2) {
                         status.textContent = query.length === 1 ? 'Type at least 2 characters…' : '';
@@ -1955,12 +1996,13 @@
                     if (token !== generation) return;
                     const talks = Array.isArray(index.talks) ? index.talks : [];
                     const cues = Array.isArray(index.cues) ? index.cues : [];
-                    const q = query.toLowerCase();
+                    const needle = matchCase ? query : query.toLowerCase();
                     const hits = [];
                     for (let i = 0; i < cues.length; i++) {
                         const cue = cues[i];
                         const text = String(cue[2] || '');
-                        if (!text.toLowerCase().includes(q)) continue;
+                        const haystack = matchCase ? text : text.toLowerCase();
+                        if (!haystack.includes(needle)) continue;
                         hits.push({ talk: cue[0], start: cue[1], text, index: i });
                         if (hits.length >= MAX_HITS) break;
                     }
@@ -2014,7 +2056,7 @@
                                 ? String(cues[hit.index + 1][2] || '')
                                 : '';
                             const snippet = [before, hit.text, after].filter(Boolean).join(' ');
-                            link.innerHTML = `<span class="transcript-hit-time">${escapeHtml(formatTime(Number(hit.start) || 0))}</span>${highlight(snippet, query)}`;
+                            link.innerHTML = `<span class="transcript-hit-time">${escapeHtml(formatTime(Number(hit.start) || 0))}</span>${highlight(snippet, query, matchCase)}`;
                             section.appendChild(link);
                         });
                         frag.appendChild(section);
@@ -2022,13 +2064,19 @@
                     results.appendChild(frag);
                 }
 
-                input.addEventListener('input', () => {
+                const scheduleSearch = () => {
                     const query = input.value.trim();
-                    syncQueryUrl(query);
+                    const matchCase = matchCaseOn();
+                    syncQueryUrl(query, matchCase);
                     clearTimeout(timer);
                     generation += 1;
                     timer = setTimeout(() => runSearch(query), 300);
-                });
+                };
+
+                input.addEventListener('input', scheduleSearch);
+                if (matchCaseInput) {
+                    matchCaseInput.addEventListener('change', scheduleSearch);
+                }
 
                 if (input.value.trim()) runSearch(input.value.trim());
             }

@@ -875,6 +875,38 @@
             margin-bottom: 0;
         }
 
+        .search-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px 16px;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        .search-options .search-hint {
+            margin-top: 0;
+        }
+
+        .search-match-case {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.85rem;
+            line-height: 1.3;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .search-match-case input {
+            width: 1rem;
+            height: 1rem;
+            margin: 0;
+            accent-color: var(--accent);
+            cursor: pointer;
+        }
+
         #searchResults {
             margin-top: 16px;
             display: flex;
@@ -2497,6 +2529,28 @@
             white-space: nowrap;
         }
 
+        .video-modal-transcript-match-case {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            flex: 0 0 auto;
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.75rem;
+            line-height: 1.2;
+            cursor: pointer;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        .video-modal-transcript-match-case input {
+            width: 0.9rem;
+            height: 0.9rem;
+            margin: 0;
+            accent-color: var(--accent);
+            cursor: pointer;
+        }
+
         .video-modal-transcript-sync-btn,
         .video-modal-transcript-view-btn {
             display: inline-flex;
@@ -3576,8 +3630,14 @@
                             title="Collapse or expand all result groups" disabled>Toggle All</button>
                         <button id="searchClear" type="button" aria-label="Clear search">Clear</button>
                     </div>
+                    <div class="search-options">
+                        <p class="search-hint" id="searchHint">Simple string matching across this event’s transcripts.</p>
+                        <label class="search-match-case" for="searchMatchCase">
+                            <input type="checkbox" id="searchMatchCase">
+                            Match case
+                        </label>
+                    </div>
                 </div>
-                <p class="search-hint" id="searchHint">Simple string matching across this event’s transcripts.</p>
                 <div class="search-output">
                     <p id="searchStatus" role="status" aria-live="polite"></p>
                     <div id="searchResults"></div>
@@ -4989,9 +5049,31 @@
                 return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
             }
 
-            function highlightMatch(text, query) {
+            let transcriptMatchCase = false;
+
+            function setTranscriptMatchCase(on, { syncControls = true } = {}) {
+                transcriptMatchCase = !!on;
+                if (!syncControls) return;
+                const galleryToggle = document.getElementById('searchMatchCase');
+                const modalToggle = document.getElementById('modalSearchMatchCase');
+                if (galleryToggle) galleryToggle.checked = transcriptMatchCase;
+                if (modalToggle) modalToggle.checked = transcriptMatchCase;
+            }
+
+            function searchNeedle(query, matchCase = transcriptMatchCase) {
+                return matchCase ? query : query.toLowerCase();
+            }
+
+            function textIncludesQuery(text, query, matchCase = transcriptMatchCase) {
+                if (!query) return true;
+                const haystack = matchCase ? text : text.toLowerCase();
+                return haystack.includes(searchNeedle(query, matchCase));
+            }
+
+            function highlightMatch(text, query, matchCase = transcriptMatchCase) {
                 if (!query) return escHtml(text);
-                const re = new RegExp(`(${escRe(query)})`, 'gi');
+                const flags = matchCase ? 'g' : 'gi';
+                const re = new RegExp(`(${escRe(query)})`, flags);
                 return escHtml(text).replace(re, '<mark>$1</mark>');
             }
 
@@ -5007,10 +5089,10 @@
                 return lines;
             }
 
-            function createSearchResultContextHTML(cues, index, query) {
+            function createSearchResultContextHTML(cues, index, query, matchCase = transcriptMatchCase) {
                 const lines = getCueContextLines(cues, index);
                 return `<span class="search-result-context">${lines.map(line =>
-                    `<span class="context-line ${line.type}">${highlightMatch(line.text, query)}</span>`
+                    `<span class="context-line ${line.type}">${highlightMatch(line.text, query, matchCase)}</span>`
                 ).join('')}</span>`;
             }
 
@@ -6626,11 +6708,12 @@
                     .map((lang) => ({ lang, cues: byLang[lang].cues }));
             }
 
-            function transcriptSearchHits(videoPath, normalizedQuery) {
+            function transcriptSearchHits(videoPath, query, matchCase = transcriptMatchCase) {
                 const hits = [];
+                if (!query) return hits;
                 for (const source of readyCaptionTracks(videoPath)) {
                     source.cues.forEach((cue, index) => {
-                        if (cue.text.toLowerCase().includes(normalizedQuery)) {
+                        if (textIncludesQuery(cue.text, query, matchCase)) {
                             hits.push({ cue, index, lang: source.lang, cues: source.cues });
                         }
                     });
@@ -7073,7 +7156,22 @@
                 modalTranscriptSearchStatus.setAttribute('role', 'status');
                 modalTranscriptSearchStatus.setAttribute('aria-live', 'polite');
 
+                const modalMatchCaseLabel = document.createElement('label');
+                modalMatchCaseLabel.className = 'video-modal-transcript-match-case';
+                modalMatchCaseLabel.htmlFor = 'modalSearchMatchCase';
+                const modalMatchCaseInput = document.createElement('input');
+                modalMatchCaseInput.type = 'checkbox';
+                modalMatchCaseInput.id = 'modalSearchMatchCase';
+                modalMatchCaseInput.checked = transcriptMatchCase;
+                modalMatchCaseInput.addEventListener('change', () => {
+                    setTranscriptMatchCase(modalMatchCaseInput.checked);
+                    runModalTranscriptSearch();
+                });
+                modalMatchCaseLabel.appendChild(modalMatchCaseInput);
+                modalMatchCaseLabel.appendChild(document.createTextNode(' Match case'));
+
                 searchWrap.appendChild(modalTranscriptSearchInput);
+                searchWrap.appendChild(modalMatchCaseLabel);
                 searchWrap.appendChild(modalTranscriptSearchStatus);
 
                 transcriptToolbar.appendChild(searchWrap);
@@ -7186,17 +7284,17 @@
                 setModalTranscriptViewEnabled(true);
 
                 const trimmedQuery = query.trim();
-                const normalizedQuery = trimmedQuery.toLowerCase();
+                const matchCase = transcriptMatchCase;
                 const currentLang = modalTranscriptLang || 'en';
                 let matchingHits;
-                if (!normalizedQuery) {
+                if (!trimmedQuery) {
                     matchingHits = store.cues.map((cue, index) => ({ cue, index, lang: null, cues: store.cues }));
                 } else if (readyCaptionTracks(videoPath).length) {
-                    matchingHits = transcriptSearchHits(videoPath, normalizedQuery);
+                    matchingHits = transcriptSearchHits(videoPath, trimmedQuery, matchCase);
                 } else {
                     matchingHits = [];
                     store.cues.forEach((cue, index) => {
-                        if (cue.text.toLowerCase().includes(normalizedQuery)) {
+                        if (textIncludesQuery(cue.text, trimmedQuery, matchCase)) {
                             matchingHits.push({ cue, index, lang: null, cues: store.cues });
                         }
                     });
@@ -7204,7 +7302,7 @@
                 const langsInHits = new Set(matchingHits.map((hit) => hit.lang).filter(Boolean));
                 const showLang = langsInHits.size > 1;
 
-                if (normalizedQuery && !matchingHits.length) {
+                if (trimmedQuery && !matchingHits.length) {
                     setModalTranscriptSyncEnabled(false);
                     const empty = document.createElement('p');
                     empty.className = 'transcript-loading';
@@ -7217,8 +7315,8 @@
                 }
 
                 if (modalTranscriptPlainView) {
-                    appendReadableTranscript(store.cues, normalizedQuery ? trimmedQuery : '');
-                    if (normalizedQuery) {
+                    appendReadableTranscript(store.cues, trimmedQuery || '');
+                    if (trimmedQuery) {
                         const extras = new Map();
                         for (const hit of matchingHits) {
                             if (!hit.lang || hit.lang === currentLang) continue;
@@ -7236,12 +7334,12 @@
                     setModalTranscriptSyncEnabled(false);
 
                     if (modalTranscriptSearchStatus) {
-                        modalTranscriptSearchStatus.textContent = normalizedQuery
+                        modalTranscriptSearchStatus.textContent = trimmedQuery
                             ? `${matchingHits.length} match${matchingHits.length === 1 ? '' : 'es'}`
                             : '';
                     }
 
-                    if (normalizedQuery) {
+                    if (trimmedQuery) {
                         const firstMark = modalTranscriptBody.querySelector('mark');
                         if (firstMark) scrollElementIntoContainer(modalTranscriptBody, firstMark);
                     }
@@ -7256,22 +7354,22 @@
                     frag.appendChild(makeCueLine(
                         hit.cue,
                         videoPath,
-                        normalizedQuery ? trimmedQuery : null,
+                        trimmedQuery || null,
                         modalVideoEl,
                         showLang ? hit.lang : null,
                         subtitleFileSrc(videoPath, cueLang, store)
                     ));
                 }
                 modalTranscriptBody.appendChild(frag);
-                setModalTranscriptSyncEnabled(!normalizedQuery);
+                setModalTranscriptSyncEnabled(!trimmedQuery);
 
                 if (modalTranscriptSearchStatus) {
-                    modalTranscriptSearchStatus.textContent = normalizedQuery
+                    modalTranscriptSearchStatus.textContent = trimmedQuery
                         ? `${matchingHits.length} match${matchingHits.length === 1 ? '' : 'es'}`
                         : '';
                 }
 
-                if (normalizedQuery && matchingHits.length) {
+                if (trimmedQuery && matchingHits.length) {
                     const firstLine = modalTranscriptBody.querySelector('.cue-line');
                     if (firstLine) scrollElementIntoContainer(modalTranscriptBody, firstLine);
                     return;
@@ -8812,6 +8910,7 @@
 
                 async function runSearch(query) {
                     const generation = ++searchGeneration;
+                    const matchCase = transcriptMatchCase;
 
                     searchResults.innerHTML = '';
                     if (!query || query.length < 2) {
@@ -8834,13 +8933,12 @@
                     // A newer search was started while we were waiting — discard our results
                     if (generation !== searchGeneration) return;
 
-                    const q = query.toLowerCase();
                     const matches = [];
 
                     for (const video of videos) {
                         if (!videoMatchesAudience(video)) continue;
                         if (!hasSubtitles(video)) continue;
-                        const hits = transcriptSearchHits(video.path, q);
+                        const hits = transcriptSearchHits(video.path, query, matchCase);
                         hits.sort((a, b) => a.cue.start - b.cue.start || a.lang.localeCompare(b.lang));
                         for (const hit of hits) {
                             matches.push({ video, ...hit });
@@ -8943,8 +9041,8 @@
                             const textEl = document.createElement('span');
                             textEl.className = 'search-result-text';
                             textEl.innerHTML = cueMatch.cues
-                                ? createSearchResultContextHTML(cueMatch.cues, cueMatch.index, query)
-                                : highlightMatch(cueMatch.cue.text, query);
+                                ? createSearchResultContextHTML(cueMatch.cues, cueMatch.index, query, matchCase)
+                                : highlightMatch(cueMatch.cue.text, query, matchCase);
                             textEl.setAttribute('aria-hidden', 'true');
 
                             item.appendChild(timeEl);
@@ -8973,12 +9071,22 @@
                 }
 
                 let searchTimer = null;
-                searchInput.addEventListener('input', () => {
+                const searchMatchCase = document.getElementById('searchMatchCase');
+                const scheduleSearch = () => {
                     clearTimeout(searchTimer);
                     // Bump the generation immediately so any in-flight search is discarded
                     searchGeneration++;
                     searchTimer = setTimeout(() => runSearch(searchInput.value.trim()), 300);
-                });
+                };
+                searchInput.addEventListener('input', scheduleSearch);
+                if (searchMatchCase) {
+                    searchMatchCase.checked = transcriptMatchCase;
+                    searchMatchCase.addEventListener('change', () => {
+                        setTranscriptMatchCase(searchMatchCase.checked);
+                        if (searchInput.value.trim().length >= 2) scheduleSearch();
+                        if (modalTranscriptSearchInput?.value?.trim()) runModalTranscriptSearch();
+                    });
+                }
 
                 searchToggleAll.addEventListener('click', () => {
                     const groups = document.querySelectorAll('.search-result-group-title[aria-controls]');
