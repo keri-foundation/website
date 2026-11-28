@@ -180,6 +180,8 @@
         h1,
         h1 a,
         h2,
+        .talk-event-title,
+        .talk-event-title a,
         .video-title {
             font-family: var(--heading-font);
         }
@@ -732,6 +734,66 @@
             text-align: center;
         }
 
+        .talk-groups {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .talk-groups[hidden],
+        .talk-event[hidden],
+        .talk-list[hidden] {
+            display: none !important;
+        }
+
+        .talk-event {
+            background: color-mix(in srgb, var(--stone) 65%, var(--panel-bg));
+            border: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+            border-left: 4px solid var(--accent);
+            border-radius: 8px;
+            padding: 12px 12px 10px;
+        }
+
+        .talk-event-head {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            justify-content: space-between;
+            gap: 4px 12px;
+            margin: 0 2px 10px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid color-mix(in srgb, var(--ink) 12%, transparent);
+        }
+
+        .talk-event-title {
+            margin: 0;
+            font-size: 1.15rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1.25;
+        }
+
+        .talk-event-title a {
+            text-decoration: none;
+        }
+
+        .talk-event-title a:hover {
+            text-decoration: underline;
+            text-underline-offset: 2px;
+        }
+
+        .talk-event-count {
+            margin: 0;
+            color: var(--muted);
+            font-size: 0.85rem;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        .talk-event .talk-row {
+            background: var(--panel-bg);
+        }
+
         .talk-filters {
             display: grid;
             grid-template-columns: minmax(0, 1.5fr) repeat(3, minmax(0, 1fr));
@@ -891,6 +953,25 @@
         .talk-row-speaker {
             color: var(--ink);
             font-weight: 600;
+        }
+
+        /* Shown only in a numbered watch list, where talks from different events mix. */
+        .talk-row-event {
+            display: none;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .talk-list.is-ordered .talk-row-event {
+            display: inline;
+        }
+
+        .talk-list.is-ordered .talk-row-event::before {
+            content: "·";
+            margin: 0 0.4em;
+            color: var(--muted);
+            font-weight: 400;
+            opacity: 0.55;
         }
 
         .talk-row-kind {
@@ -1143,6 +1224,14 @@
                 grid-template-columns: minmax(0, 1fr);
             }
 
+            .talk-event {
+                padding: 10px 10px 8px;
+            }
+
+            .talk-event-title {
+                font-size: 1.05rem;
+            }
+
             .talk-row {
                 gap: 10px;
                 padding: 8px 10px 8px 8px;
@@ -1298,7 +1387,10 @@
             const kindSelect = document.getElementById('talkKind');
             const heading = document.getElementById('talkCatalogHeading');
             const hint = document.getElementById('talkCatalogHint');
-            const listEl = root.querySelector('.talk-list');
+            const groupsEl = document.getElementById('talkGroups');
+            const flatList = document.getElementById('talkFlatList');
+            const groups = Array.from(root.querySelectorAll('.talk-event'));
+            const homeList = new Map(rows.map((row) => [row, row.parentElement]));
             const status = document.getElementById('talkCatalogStatus');
             const empty = document.getElementById('talkEmpty');
             const clearBtn = document.getElementById('talkFiltersClear');
@@ -1367,21 +1459,44 @@
             }
 
             function orderRows(keys) {
-                if (!listEl) return;
                 if (!keys) {
-                    rows.forEach((row) => listEl.appendChild(row));
-                    listEl.classList.remove('is-ordered');
+                    if (flatList) {
+                        flatList.classList.remove('is-ordered');
+                        flatList.hidden = true;
+                    }
+                    if (groupsEl) groupsEl.hidden = false;
+                    rows.forEach((row) => {
+                        const home = homeList.get(row);
+                        if (home) home.appendChild(row);
+                    });
                     return;
                 }
+                if (groupsEl) groupsEl.hidden = true;
+                if (!flatList) return;
+                flatList.hidden = false;
                 const byKey = new Map(rows.map((row) => [row.getAttribute('data-key'), row]));
                 keys.forEach((key) => {
                     const row = byKey.get(key);
-                    if (row) listEl.appendChild(row);
+                    if (row) flatList.appendChild(row);
                 });
                 rows.forEach((row) => {
-                    if (!keys.includes(row.getAttribute('data-key'))) listEl.appendChild(row);
+                    if (!keys.includes(row.getAttribute('data-key'))) flatList.appendChild(row);
                 });
-                listEl.classList.add('is-ordered');
+                flatList.classList.add('is-ordered');
+            }
+
+            function syncGroups() {
+                groups.forEach((group) => {
+                    const members = rows.filter((row) => homeList.get(row)?.closest('.talk-event') === group);
+                    const shown = members.filter((row) => !row.hidden).length;
+                    group.hidden = shown === 0;
+                    const countEl = group.querySelector('.talk-event-count');
+                    if (!countEl) return;
+                    const noun = shown === 1 ? 'video' : 'videos';
+                    countEl.textContent = shown === members.length
+                        ? `${members.length} ${noun}`
+                        : `${shown} of ${members.length}`;
+                });
             }
 
             function rebuildSelect(select, catalog, allLabel, available, current) {
@@ -1466,6 +1581,7 @@
                     }
                 }
                 if (empty) empty.hidden = shown !== 0;
+                if (!activeList) syncGroups();
                 if (clearBtn) clearBtn.disabled = !terms.length && !speaker && !eventId && !when && !kind && !activeList;
 
                 const next = new URLSearchParams(window.location.search);

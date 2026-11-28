@@ -1239,16 +1239,44 @@ function renderTalkRow(item) {
   const durationHtml = item.duration
     ? `<span class="talk-row-duration">${escapeText(item.duration)}</span>`
     : "";
+  const eventHtml = `<a class="talk-row-event" href="${escapeAttr(item.href)}">${escapeText(item.event)}</a>`;
   const thumb = item.poster
     ? `<a class="talk-row-thumb" href="${escapeAttr(item.talkHref)}" tabindex="-1" aria-hidden="true"><img src="${escapeAttr(item.poster)}" alt="" loading="lazy" decoding="async"></a>`
     : `<a class="talk-row-thumb talk-row-thumb-fallback" href="${escapeAttr(item.talkHref)}" tabindex="-1" aria-hidden="true"><span></span></a>`;
-  return `                <li class="talk-row" data-key="${escapeAttr(talkKey(item))}" data-speakers="${escapeAttr(item.speakers.join("|"))}" data-event="${escapeAttr(item.eventId)}" data-when="${escapeAttr(item.whenValue)}" data-kind="${escapeAttr(item.kind)}" data-search="${escapeAttr(search)}">
-                    ${thumb}
-                    <div class="talk-row-body">
-                        <a class="talk-row-title" href="${escapeAttr(item.talkHref)}">${escapeText(item.title)}</a>
-                        <p class="talk-row-meta">${speakerHtml}<a href="${escapeAttr(item.href)}">${escapeText(item.event)}</a><span class="sep" aria-hidden="true">·</span><span>${escapeText(item.dateLabel)}</span>${sessionHtml}${kindHtml}${durationHtml}</p>
-                    </div>
-                </li>`;
+  return `                        <li class="talk-row" data-key="${escapeAttr(talkKey(item))}" data-speakers="${escapeAttr(item.speakers.join("|"))}" data-event="${escapeAttr(item.eventId)}" data-when="${escapeAttr(item.whenValue)}" data-kind="${escapeAttr(item.kind)}" data-search="${escapeAttr(search)}">
+                            ${thumb}
+                            <div class="talk-row-body">
+                                <a class="talk-row-title" href="${escapeAttr(item.talkHref)}">${escapeText(item.title)}</a>
+                                <p class="talk-row-meta">${speakerHtml}<span>${escapeText(item.dateLabel)}</span>${sessionHtml}${eventHtml}${kindHtml}${durationHtml}</p>
+                            </div>
+                        </li>`;
+}
+
+function renderTalkGroups(items) {
+  const groups = [];
+  for (const item of items) {
+    let group = groups.find((entry) => entry.eventId === item.eventId);
+    if (!group) {
+      group = { eventId: item.eventId, event: item.event, href: item.href, items: [] };
+      groups.push(group);
+    }
+    group.items.push(item);
+  }
+  return groups
+    .map((group, index) => {
+      const count = group.items.length === 1 ? "1 video" : `${group.items.length} videos`;
+      const titleId = `talkEventTitle${index}`;
+      return `                <section class="talk-event" data-event="${escapeAttr(group.eventId)}" aria-labelledby="${titleId}">
+                    <header class="talk-event-head">
+                        <h3 class="talk-event-title" id="${titleId}"><a href="${escapeAttr(group.href)}">${escapeText(group.event)}</a></h3>
+                        <p class="talk-event-count">${count}</p>
+                    </header>
+                    <ol class="talk-list">
+${group.items.map(renderTalkRow).join("\n")}
+                    </ol>
+                </section>`;
+    })
+    .join("\n");
 }
 
 function renderTalkCatalog(items, lists = []) {
@@ -1291,7 +1319,7 @@ ${optionList(kindOptions)}
   const count = items.length === 1 ? "1 video" : `${items.length} videos`;
   return `            <section class="talk-catalog" id="talkCatalog" aria-labelledby="talkCatalogHeading">
 ${renderWatchLists(lists)}                <h2 class="overview-section-title" id="talkCatalogHeading">${escapeText(catalogHeading(items))}</h2>
-                <p class="talk-catalog-hint" id="talkCatalogHint">Filter by title, speaker, event, or date. A title opens that talk on its existing page.</p>
+                <p class="talk-catalog-hint" id="talkCatalogHint">Talks from the same event are grouped. Filter by title, speaker, event, or date. A title opens that talk on its existing page.</p>
                 <search class="talk-filters${kindField ? " has-kind" : ""}" aria-label="Filter talks">
                     <div class="talk-filter talk-filter-query">
                         <label for="talkQuery">Title</label>
@@ -1323,9 +1351,10 @@ ${optionList(dates)}
                     <p class="talk-catalog-status" id="talkCatalogStatus" role="status" aria-live="polite">${count}</p>
                     <button type="button" class="talk-filters-clear" id="talkFiltersClear">Clear filters</button>
                 </div>
-                <ol class="talk-list">
-${items.map(renderTalkRow).join("\n")}
-                </ol>
+                <div class="talk-groups" id="talkGroups">
+${renderTalkGroups(items)}
+                </div>
+                <ol class="talk-list" id="talkFlatList" hidden></ol>
                 <p class="talk-empty" id="talkEmpty" hidden>No talks match these filters.</p>
             </section>
 `;
