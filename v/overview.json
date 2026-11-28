@@ -80,6 +80,68 @@
         "KERI/2026/apr#investigating-the-game-of-trust-nicholas-racz",
         "KERI/2026/apr#open-verifiable-communications-daniel-hardman"
       ]
+    },
+    {
+      "id": "healthcare",
+      "label": "Healthcare",
+      "description": "healthKERI: patient-record provenance, FHIR and CMS policy, and wallet authorization in care settings.",
+      "videos": [
+        "KERI/2026/apr#provenanting-patient-s-medical-records-scott-stuewe-mark-scrimshire-jared-jeffery",
+        "KERI/2026/apr#fhir-and-cms-jared-jefferey",
+        "KERI/2026/apr#acdcs-for-authorization-phil-feairheller",
+        "KERI/2026/apr#infrastructure-for-security-phil-feairheller",
+        "KERI/2026/apr#how-keri-enables-better-private-public-partnerships-george-mcewan",
+        "KERI/2026/apr#open-keri-infrastructure-jay-alexander-elliot",
+        "KERI/2026/apr#interview-jared-jefferey"
+      ]
+    },
+    {
+      "id": "telecom",
+      "label": "Telecom",
+      "description": "Verifiable calling and messaging so networks can prove who is on the line and cut scam traffic.",
+      "videos": [
+        "KERI/2026/apr#open-verifiable-communications-daniel-hardman",
+        "KERI/2026/apr#interview-daniel-hardman",
+        "SEDI/2025/nov#daniel-hardman",
+        "KERI/2026/apr#investigating-the-game-of-trust-nicholas-racz",
+        "KERI/2026/apr#state-of-the-keri-suite-samuel-smith"
+      ]
+    },
+    {
+      "id": "online-extortion",
+      "label": "Online extortion",
+      "description": "Sextortion, scam calls, and child online harm—why weak identity online hurts people, and what can change.",
+      "videos": [
+        "SEDI/2025/nov#opening-christopher-bramwell",
+        "SEDI/2025/nov#cindy-george",
+        "SEDI/2025/nov#thomas-mayfield",
+        "KERI/2026/apr#open-verifiable-communications-daniel-hardman",
+        "sessions/2026/jul#it-s-keri-or-surveillance-samuel-smith"
+      ]
+    },
+    {
+      "id": "enterprises",
+      "label": "Enterprises",
+      "description": "ACDCs for business trust, attributable actions, and secure asset transfer beyond passwords and logs.",
+      "videos": [
+        "KERI/2026/apr#acdcs-for-enterprises-alan-davies",
+        "KERI/2026/apr#secure-asset-transfer-protocol-ned-smith",
+        "KERI/2026/apr#spac-tsp-samuel-smith",
+        "KERI/2026/apr#investigating-the-game-of-trust-nicholas-racz",
+        "KERI/2026/apr#contract-credentials-verifiable-identity-cole-davis"
+      ]
+    },
+    {
+      "id": "guardianship",
+      "label": "Guardianship",
+      "description": "Delegated authority for children and dependents—the missing piece of government digital identity.",
+      "videos": [
+        "SEDI/2025/nov#timothy-ruff",
+        "SEDI/2025/nov#thomas-mayfield",
+        "SEDI/2026/nov#sam-smith-sedi-acdcs-for-utah-s-state-endorsed-digital-identity",
+        "KERI/2026/apr#the-landscape-of-sedi-george-mcewan",
+        "SEDI/2025/nov#opening-christopher-bramwell"
+      ]
     }
   ]
 }
