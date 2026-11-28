@@ -1285,6 +1285,57 @@
             color: var(--muted);
         }
 
+        .back-to-top {
+            position: fixed;
+            right: max(16px, env(safe-area-inset-right, 0px));
+            bottom: max(16px, env(safe-area-inset-bottom, 0px));
+            z-index: 60;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            min-height: 44px;
+            padding: 10px 14px;
+            border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+            border-radius: 8px;
+            background: color-mix(in srgb, var(--panel-bg) 88%, var(--accent));
+            color: var(--ink);
+            font: 700 0.85rem/1 var(--heading-font);
+            letter-spacing: 0.02em;
+            box-shadow: 0 8px 20px color-mix(in srgb, var(--ink) 16%, transparent);
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transform: translateY(10px);
+            transition: opacity 0.2s ease, transform 0.2s ease, visibility 0.2s;
+        }
+
+        .back-to-top.is-visible {
+            opacity: 1;
+            visibility: visible;
+            pointer-events: auto;
+            transform: none;
+        }
+
+        .back-to-top:hover,
+        .back-to-top:focus-visible {
+            background: var(--accent);
+            color: var(--on-ink);
+            border-color: var(--accent);
+        }
+
+        .back-to-top:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .back-to-top {
+                transition: none;
+                transform: none;
+            }
+        }
+
         footer::after {
             content: "";
             position: absolute;
@@ -1390,6 +1441,33 @@
 
         <footer id="galleryFooter"><!--__OVERVIEW_FOOTER__--></footer>
     </div>
+
+    <button type="button" class="back-to-top" id="backToTop" aria-label="Back to top">↑ Top</button>
+
+    <script>
+        (function initBackToTop() {
+            const btn = document.getElementById('backToTop');
+            if (!btn) return;
+            const reduceMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            const threshold = () => Math.min(Math.round(window.innerHeight * 0.7), 520);
+            let ticking = false;
+            const sync = () => {
+                ticking = false;
+                btn.classList.toggle('is-visible', window.scrollY > threshold());
+            };
+            const onScroll = () => {
+                if (ticking) return;
+                ticking = true;
+                requestAnimationFrame(sync);
+            };
+            window.addEventListener('scroll', onScroll, { passive: true });
+            window.addEventListener('resize', onScroll, { passive: true });
+            btn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: reduceMotion() ? 'auto' : 'smooth' });
+            });
+            sync();
+        })();
+    </script>
     <script>
         (function () {
             const nav = document.getElementById('vSiteNav');
