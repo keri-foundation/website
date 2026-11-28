@@ -7362,12 +7362,16 @@
                 videoModalOverlay.hidden = false;
                 document.body.style.overflow = 'hidden';
                 syncModalPanelLayout();
-                updateVideoUrlForModal(modalVideoId, time, hasClipEnd ? endTime : null);
+                // Push when this talk was not already the modal URL (Watch full screen, another talk).
+                // Replace when the address bar already opened this modal (shared link, Back/Forward).
+                updateVideoUrlForModal(modalVideoId, time, hasClipEnd ? endTime : null, {
+                    push: modalHashVideoId() !== modalVideoId
+                });
                 setBackgroundAriaHidden(true);
                 focusModalPlayControl();
             }
 
-            function closeVideoModal() {
+            function closeVideoModal(options = {}) {
                 if (!videoModalOverlay || videoModalOverlay.hidden) return;
 
                 beginModalSession();
@@ -7406,7 +7410,9 @@
                     updateModalLinksToggle(null);
                     updateModalPdfButton(null);
                     if (isChaptersSheetOpen()) closeChaptersSheet({ restoreFocus: false });
-                    clearVideoUrlHash();
+                    // Push a hashless URL so Back restores the full-screen entry.
+                    // Skip when Back/Forward already changed the location.
+                    if (!options.fromHistory) clearVideoUrlHash({ push: true });
                 }
 
                 if (modalPreviousFocus && typeof modalPreviousFocus.focus === 'function' && !isCoarsePointer()) {
@@ -7519,17 +7525,33 @@
                 return hash;
             }
 
-            function updateVideoUrlForModal(videoId, time, endTime) {
+            /** Video id in the hash when that hash means the full-screen modal (not land=card). */
+            function modalHashVideoId() {
+                const hash = window.location.hash;
+                if (!hash || hash.length < 2) return null;
+                const hashPart = hash.substring(1);
+                const ampIndex = hashPart.indexOf('&');
+                const videoId = ampIndex === -1 ? hashPart : hashPart.substring(0, ampIndex);
+                if (!videoId) return null;
+                const queryStr = ampIndex === -1 ? '' : hashPart.substring(ampIndex + 1);
+                if (parseHashQuery(queryStr).land === 'card') return null;
+                return videoId;
+            }
+
+            function updateVideoUrlForModal(videoId, time, endTime, options = {}) {
                 const hash = buildVideoHash(videoId, time, endTime);
                 const newUrl = `${window.location.pathname}${window.location.search}${hash}`;
                 const currentUrl = `${window.location.pathname}${window.location.search}${window.location.hash}`;
                 if (currentUrl === newUrl) return;
-                history.replaceState(null, '', newUrl);
+                if (options.push) history.pushState(null, '', newUrl);
+                else history.replaceState(null, '', newUrl);
             }
 
-            function clearVideoUrlHash() {
+            function clearVideoUrlHash(options = {}) {
                 if (!window.location.hash) return;
-                history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+                const newUrl = `${window.location.pathname}${window.location.search}`;
+                if (options.push) history.pushState(null, '', newUrl);
+                else history.replaceState(null, '', newUrl);
             }
 
             function parseHashQuery(queryStr) {
@@ -9008,7 +9030,12 @@
                 // ─────────────────────────────────────────────────────────────────────
                 function handleHashChange() {
                     const hash = window.location.hash;
-                    if (!hash) return;
+                    if (!hash) {
+                        if (videoModalOverlay && !videoModalOverlay.hidden) {
+                            closeVideoModal({ fromHistory: true });
+                        }
+                        return;
+                    }
 
                     const hashPart = hash.substring(1);
                     const ampIndex = hashPart.indexOf('&');
@@ -9022,6 +9049,10 @@
                     if (hasSubtitles(video) && land !== 'card') {
                         openVideoModal(video, timestamp ?? 0, endTimestamp);
                         return;
+                    }
+
+                    if (videoModalOverlay && !videoModalOverlay.hidden) {
+                        closeVideoModal({ fromHistory: true });
                     }
 
                     const videoCard = document.getElementById(videoId);
@@ -9067,6 +9098,8 @@
                 // late load listener would never run (hash URLs would show the gallery only).
                 handleHashChange();
                 window.addEventListener('hashchange', handleHashChange);
+                // pushState/replaceState do not fire hashchange; Back/Forward need popstate.
+                window.addEventListener('popstate', handleHashChange);
 
             }
 
