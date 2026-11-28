@@ -1075,11 +1075,12 @@ function preciseDay(path, year, month) {
   return d;
 }
 
-function videoKind(path) {
+function videoKind(path, presentation = "") {
   const value = String(path || "");
   if (value.startsWith("interviews/")) return "interview";
-  if (value.startsWith("talks/")) return "talk";
-  return "video";
+  const hasSlides = Boolean(String(presentation || "").trim());
+  if (value.startsWith("talks/")) return hasSlides ? "talk-slides" : "talk-no-slides";
+  return hasSlides ? "video-slides" : "video";
 }
 
 /** Names on `videos[].speakers`. The overview filter and poster lookup use this list. */
@@ -1121,7 +1122,7 @@ function talksForGallery(config, id) {
     const monthLabel = monthName(month);
     const dateLabel = dayNum ? `${dayNum} ${monthLabel} ${year}` : whenLabel;
     const session = programDay(video?.day);
-    const kind = videoKind(video?.path);
+    const kind = videoKind(video?.path, video?.presentation);
     items.push({
       title,
       speakers,
@@ -1145,9 +1146,13 @@ function talksForGallery(config, id) {
   return items;
 }
 
+function isInterviewKind(kind) {
+  return kind === "interview";
+}
+
 function catalogHeading(items) {
-  const interviews = items.some((item) => item.kind === "interview");
-  const talks = items.some((item) => item.kind !== "interview");
+  const interviews = items.some((item) => isInterviewKind(item.kind));
+  const talks = items.some((item) => !isInterviewKind(item.kind));
   if (interviews && talks) return "All talks and interviews";
   if (interviews) return "All interviews";
   return "All talks";
@@ -1237,7 +1242,7 @@ function renderTalkRow(item) {
   const sessionHtml = item.session
     ? `<span class="sep" aria-hidden="true">·</span><span>${escapeText(item.session)}</span>`
     : "";
-  const kindHtml = item.kind === "interview" ? `<span class="talk-row-kind">Interview</span>` : "";
+  const kindHtml = isInterviewKind(item.kind) ? `<span class="talk-row-kind">Interview</span>` : "";
   const durationHtml = item.duration
     ? `<span class="talk-row-duration">${escapeText(item.duration)}</span>`
     : "";
@@ -1303,9 +1308,11 @@ function renderTalkCatalog(items, lists = [], options = {}) {
   }
   const kinds = [...new Set(items.map((item) => item.kind))];
   const kindOptions = [
-    kinds.includes("talk") ? ["talk", "Talks"] : null,
+    kinds.includes("talk-slides") ? ["talk-slides", "Talks with slides"] : null,
+    kinds.includes("talk-no-slides") ? ["talk-no-slides", "Talks, no slides"] : null,
     kinds.includes("interview") ? ["interview", "Interviews"] : null,
-    kinds.includes("video") ? ["video", "Other videos"] : null,
+    kinds.includes("video-slides") ? ["video-slides", "Other videos with slides"] : null,
+    kinds.includes("video") ? ["video", "Other videos, no slides"] : null,
   ].filter(Boolean);
   const kindField =
     kindOptions.length > 1
@@ -1589,7 +1596,7 @@ async function cmdOverviewPages(opts) {
         b.whenKey - a.whenKey ||
         (b.dayNum || -1) - (a.dayNum || -1) ||
         a.event.localeCompare(b.event) ||
-        (a.kind === "interview") - (b.kind === "interview") ||
+        Number(isInterviewKind(a.kind)) - Number(isInterviewKind(b.kind)) ||
         a.order - b.order ||
         a.seq - b.seq
     );
