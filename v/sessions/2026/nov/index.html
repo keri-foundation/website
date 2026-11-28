@@ -1680,6 +1680,20 @@
             outline-offset: 2px;
         }
 
+        .open-video-modal-btn {
+            background: var(--play);
+            border: 2px solid var(--ink);
+            color: var(--on-ink);
+            font-weight: 800;
+            box-shadow: 0 0 0 3px color-mix(in srgb, var(--play) 55%, transparent);
+        }
+
+        .open-video-modal-btn:hover,
+        .open-video-modal-btn:focus-visible {
+            background: var(--play-press);
+            color: var(--on-ink);
+        }
+
         .video-card-actions .chapters-toggle-btn,
         .video-card-actions .links-toggle-btn {
             flex: 1 1 7rem;
@@ -2635,8 +2649,8 @@
         }
 
         .video-card.highlighted {
-            border-color: var(--accent);
-            border-width: 2px;
+            border-color: var(--ink);
+            box-shadow: 0 0 0 4px var(--accent), 0 0 0 8px color-mix(in srgb, var(--accent) 40%, transparent);
         }
 
         :root {
@@ -7519,7 +7533,7 @@
             }
 
             function parseHashQuery(queryStr) {
-                const result = { start: null, end: null, from: null, lang: null };
+                const result = { start: null, end: null, from: null, lang: null, land: null };
                 if (!queryStr) return result;
 
                 for (const param of queryStr.split('&')) {
@@ -7547,6 +7561,8 @@
                         } catch {
                             result.lang = normalizeLangCode(raw);
                         }
+                    } else if (key === 'land' && raw === 'card') {
+                        result.land = 'card';
                     }
                 }
 
@@ -8998,12 +9014,12 @@
                     const ampIndex = hashPart.indexOf('&');
                     const videoId = ampIndex === -1 ? hashPart : hashPart.substring(0, ampIndex);
                     const queryStr = ampIndex === -1 ? '' : hashPart.substring(ampIndex + 1);
-                    const { start: timestamp, end: endTimestamp, from, lang } = parseHashQuery(queryStr);
+                    const { start: timestamp, end: endTimestamp, from, lang, land } = parseHashQuery(queryStr);
                     if (lang) setCaptionLangPreference(lang, { syncUrl: false });
                     hashSourceUrl = resolveSourceUrl(from);
                     const video = findVideoById(videoId);
 
-                    if (hasSubtitles(video)) {
+                    if (hasSubtitles(video) && land !== 'card') {
                         openVideoModal(video, timestamp ?? 0, endTimestamp);
                         return;
                     }
@@ -9011,8 +9027,11 @@
                     const videoCard = document.getElementById(videoId);
 
                     if (videoCard) {
-                        videoCard.scrollIntoView({ behavior: motionSafeBehavior(), block: 'center' });
+                        document.querySelectorAll('.video-card.highlighted').forEach((card) => {
+                            card.classList.remove('highlighted');
+                        });
                         videoCard.classList.add('highlighted');
+                        videoCard.scrollIntoView({ behavior: motionSafeBehavior(), block: 'center' });
 
                         if (timestamp !== null) {
                             if (video?.path) rememberClock(video.path, timestamp);

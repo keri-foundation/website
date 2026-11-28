@@ -1482,6 +1482,9 @@ async function cmdOverviewPages(opts) {
         a.order - b.order ||
         a.seq - b.seq
     );
+    if (page.scope === "all") {
+      for (const item of talks) item.talkHref += "&land=card";
+    }
     const catalogHtml = renderTalkCatalog(talks, normalizeWatchLists(overview.lists, talks));
     const eventsHtml = showEventCards
       ? renderOverviewEvents(cards, { withHeading: Boolean(catalogHtml) })
